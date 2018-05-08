@@ -1,0 +1,64 @@
+---
+layout: default
+permalink: :title
+---
+{%- assign name = page.name | remove: ".html" -%}
+{%- assign f = site.data.formulae[name] -%}
+<h2>{{ f.name }}</h2>
+<p>{{ f.desc }}</p>
+<p>
+    <a href="{{ f.homepage }}">{{ f.homepage }}</a>
+</p>
+
+{%- if f.aliases.size > 0 -%}
+<p>
+    Also known as:
+    <strong>{{ f.aliases | join: "</strong>,
+    <strong>" }}</strong>
+</p>
+{%- endif -%}
+
+<h3>Current versions</h3>
+<table>
+    <tr>
+        <td>stable</td>
+        <td>✅</td>
+        <td>{{ f.versions.stable }}</td>
+    </tr>
+    {%- if f.versions.devel -%}
+    <tr>
+        <td>devel</td>
+        <td>🛠</td>
+        <td>{{ f.versions.stable }}</td>
+    </tr>
+    {%- endif -%}
+    {%- if f.versions.head -%}
+    <tr>
+        <td>head</td>
+        <td>⚡️</td>
+        <td>{{ f.versions.head }}</td>
+    </tr>
+    {%- endif -%}
+</table>
+
+{%- if f.revision > 0 -%}
+<h3>Revision: {{ f.revision }}</h3>
+{%- endif -%}
+
+{%- if f.dependencies.size > 0 -%}
+<p>gcc requires the following formulae to be installed:</p>
+<table>
+    {%- for dependency_name in f.dependencies -%}
+    <tr>
+        {%- assign d = site.data.formulae[dependency_name] -%}
+        <td><a href="{{ site.baseurl }}/formulae/{{ d.name }}">{{ d.name }}</a></td>
+        <td>✅</td>
+        <td>{{ d.versions.stable }}</td>
+        <td>{{ d.desc }}</td>
+    </tr>
+    {%- endfor -%}
+</table>
+{%- endif -%}
+
+<p><a href="{{ site.baseurl }}/api/formulae/{{ f.name }}.json">JSON API for {{ f.name }}</a></p>
+<p><a target="_blank" href="https://github.com/Homebrew/homebrew-core/blob/master/Formula/{{ f.name }}.rb">Formula code</a> on GitHub</p>
