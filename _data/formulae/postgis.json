@@ -1,0 +1,103 @@
+{
+  "name": "postgis",
+  "full_name": "postgis",
+  "desc": "Adds support for geographic objects to PostgreSQL",
+  "homepage": "https://postgis.net/",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "2.4.4",
+    "bottle": true,
+    "devel": null,
+    "head": "HEAD"
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "pkg-config",
+    "gpp",
+    "postgresql",
+    "proj",
+    "geos",
+    "json-c",
+    "gdal",
+    "pcre",
+    "sfcgal",
+    "protobuf-c"
+  ],
+  "recommended_dependencies": [
+    "gdal",
+    "sfcgal"
+  ],
+  "optional_dependencies": [
+    "protobuf-c"
+  ],
+  "build_dependencies": [
+    "pkg-config",
+    "gpp"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "To create a spatially-enabled database, see the documentation:\n  https://postgis.net/docs/manual-2.4/postgis_installation.html#create_new_db_extensions\nIf you are currently using PostGIS 2.0+, you can go the soft upgrade path:\n  ALTER EXTENSION postgis UPDATE TO \"2.4.4\";\nUsers of 1.5 and below will need to go the hard-upgrade path, see here:\n  https://postgis.net/docs/manual-2.4/postgis_installation.html#upgrading\n\nPostGIS SQL scripts installed to:\n  /usr/local/opt/postgis/share/postgis\nPostGIS plugin libraries installed to:\n  /usr/local/lib\nPostGIS extension modules installed to:\n  /usr/local/share/postgresql/extension\n",
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--with-gui",
+      "description": "Build shp2pgsql-gui in addition to command line tools"
+    },
+    {
+      "option": "--without-gdal",
+      "description": "Disable postgis raster support"
+    },
+    {
+      "option": "--with-html-docs",
+      "description": "Generate multi-file HTML documentation"
+    },
+    {
+      "option": "--with-api-docs",
+      "description": "Generate developer API documentation (long process)"
+    },
+    {
+      "option": "--with-protobuf-c",
+      "description": "Build with protobuf-c to enable Geobuf and Mapbox Vector Tile support"
+    },
+    {
+      "option": "--without-sfcgal",
+      "description": "Build without sfcgal support"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/postgis-2.4.4.high_sierra.bottle.tar.gz",
+          "sha256": "a4ba0e8faa5878171d0544b9c426e9cb5d0ce356d25a5a73a872af7477b649b3"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/postgis-2.4.4.sierra.bottle.tar.gz",
+          "sha256": "9937b5d45d7acb82bb89ef8b400cf4ac3c85a581174f9b4f98b8f57973fe08a9"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/postgis-2.4.4.el_capitan.bottle.tar.gz",
+          "sha256": "5de66201a8236e67e8dcba2563ca20ab2308eef8dc7709842a2c8a0eed2feeb4"
+        }
+      }
+    }
+  }
+}

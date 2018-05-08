@@ -1,0 +1,81 @@
+{
+  "name": "scipy",
+  "full_name": "scipy",
+  "desc": "Software for mathematics, science, and engineering",
+  "homepage": "https://www.scipy.org",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "1.1.0",
+    "bottle": true,
+    "devel": null,
+    "head": "HEAD"
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "swig",
+    "gcc",
+    "numpy",
+    "python@2",
+    "python"
+  ],
+  "recommended_dependencies": [
+    "python@2",
+    "python"
+  ],
+  "optional_dependencies": [
+
+  ],
+  "build_dependencies": [
+    "swig"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "If you use system python (that comes - depending on the OS X version -\nwith older versions of numpy, scipy and matplotlib), you may need to\nensure that the brewed packages come earlier in Python's sys.path with:\n  mkdir -p /Users/mike/Library/Python/2.7/lib/python/site-packages\n  echo 'import sys; sys.path.insert(1, \"/usr/local/lib/python3.6/site-packages\")' >> /Users/mike/Library/Python/2.7/lib/python/site-packages/homebrew.pth\n",
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--without-python",
+      "description": "Build without python2 support"
+    },
+    {
+      "option": "--without-python@2",
+      "description": "Build without python@2 support"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/scipy-1.1.0.high_sierra.bottle.tar.gz",
+          "sha256": "14f480aab5e6de3cabe57b824ee37bc012b8c502e85329be737bffe652124a24"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/scipy-1.1.0.sierra.bottle.tar.gz",
+          "sha256": "886a096bcb5872cf150601a539f0431c5ac7ca1cc8a4c0e6be86db2ec3ac8530"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/scipy-1.1.0.el_capitan.bottle.tar.gz",
+          "sha256": "e4c87ee62b66c9e021a0b6e8e5d4c4db4177b6da074914a82a4a029a552dcefc"
+        }
+      }
+    }
+  }
+}

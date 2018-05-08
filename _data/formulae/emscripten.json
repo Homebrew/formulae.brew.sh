@@ -1,0 +1,76 @@
+{
+  "name": "emscripten",
+  "full_name": "emscripten",
+  "desc": "LLVM bytecode to JavaScript compiler",
+  "homepage": "https://kripken.github.io/emscripten-site/",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "1.37.39",
+    "bottle": true,
+    "devel": null,
+    "head": "HEAD"
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "python@2",
+    "cmake",
+    "node",
+    "closure-compiler",
+    "yuicompressor"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "closure-compiler"
+  ],
+  "build_dependencies": [
+    "cmake"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "Manually set LLVM_ROOT to\n  /usr/local/opt/emscripten/libexec/llvm/bin\nand comment out BINARYEN_ROOT\nin ~/.emscripten after running `emcc` for the first time.\n",
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--with-closure-compiler",
+      "description": "Build with closure-compiler support"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/emscripten-1.37.39.high_sierra.bottle.tar.gz",
+          "sha256": "bd7868fec7b37ad76edc66c34fe22bec102186bf1c380e1a39ffcc18c949e1c4"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/emscripten-1.37.39.sierra.bottle.tar.gz",
+          "sha256": "98a19d7fddba1bd42c902727e569048acd1d1149d9b9746a2815c3d589f687a9"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/emscripten-1.37.39.el_capitan.bottle.tar.gz",
+          "sha256": "aa65bd9d23407b3e30351667314c6d7b2d9b5a8e2a8c131bf1fd9c08841959ca"
+        }
+      }
+    }
+  }
+}

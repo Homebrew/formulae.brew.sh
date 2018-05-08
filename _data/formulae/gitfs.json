@@ -1,0 +1,74 @@
+{
+  "name": "gitfs",
+  "full_name": "gitfs",
+  "desc": "Version controlled file system",
+  "homepage": "https://www.presslabs.com/gitfs",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "0.4.5.1",
+    "bottle": true,
+    "devel": null,
+    "head": "HEAD"
+  },
+  "revision": 2,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "libgit2",
+    "python@2"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "build_dependencies": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "gitfs clones repos in /var/lib/gitfs. You can either create it with\nsudo mkdir -m 1777 /var/lib/gitfs or use another folder with the\nrepo_path argument.\n\nAlso make sure OSXFUSE is properly installed by running brew info osxfuse.\n",
+  "requirements": [
+    {
+      "name": "osxfuse",
+      "cask": "osxfuse",
+      "download": "https://osxfuse.github.io/"
+    }
+  ],
+  "options": [
+
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/gitfs-0.4.5.1_2.high_sierra.bottle.tar.gz",
+          "sha256": "af08101f0ee679adb39c35c4ea0440c955ae8977d6bc4515dae5a370f5ff1d27"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/gitfs-0.4.5.1_2.sierra.bottle.tar.gz",
+          "sha256": "0a2ce36c53e015e646926d891bf7488dc17a495a03d5b4763cc48252f1f4e188"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/gitfs-0.4.5.1_2.el_capitan.bottle.tar.gz",
+          "sha256": "4c899d61b1beb761d0da77472627bc3a0dc210fd610c6892f24d14f7315e0b17"
+        }
+      }
+    }
+  }
+}

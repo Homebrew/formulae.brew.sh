@@ -1,0 +1,100 @@
+{
+  "name": "poppler",
+  "full_name": "poppler",
+  "desc": "PDF rendering library (based on the xpdf-3.0 code base)",
+  "homepage": "https://poppler.freedesktop.org/",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "0.64.0",
+    "bottle": true,
+    "devel": null,
+    "head": "HEAD"
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "cmake",
+    "gobject-introspection",
+    "pkg-config",
+    "cairo",
+    "fontconfig",
+    "freetype",
+    "gettext",
+    "glib",
+    "jpeg",
+    "libpng",
+    "libtiff",
+    "openjpeg",
+    "qt",
+    "little-cms2",
+    "nss"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "qt",
+    "little-cms2",
+    "nss"
+  ],
+  "build_dependencies": [
+    "cmake",
+    "gobject-introspection",
+    "pkg-config"
+  ],
+  "conflicts_with": [
+    "pdftohtml",
+    "pdf2image",
+    "xpdf"
+  ],
+  "caveats": null,
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--with-qt",
+      "description": "Build Qt5 backend"
+    },
+    {
+      "option": "--with-little-cms2",
+      "description": "Use color management system"
+    },
+    {
+      "option": "--with-nss",
+      "description": "Use NSS library for PDF signature validation"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/poppler-0.64.0.high_sierra.bottle.tar.gz",
+          "sha256": "fae8e28f893316a98df04746bd437233c5a8cd63df27ffee5fb82f79bd139d77"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/poppler-0.64.0.sierra.bottle.tar.gz",
+          "sha256": "14430fd4f774cd862215b91c9e9a4801a064c943638a576038c139fd617495d9"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/poppler-0.64.0.el_capitan.bottle.tar.gz",
+          "sha256": "b24d5a380d95dc37576bb7929906d54704cc58270f66100cd783cfe0b695ae00"
+        }
+      }
+    }
+  }
+}

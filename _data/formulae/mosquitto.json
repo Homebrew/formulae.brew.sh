@@ -1,0 +1,77 @@
+{
+  "name": "mosquitto",
+  "full_name": "mosquitto",
+  "desc": "Message broker implementing the MQTT protocol",
+  "homepage": "https://mosquitto.org/",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "1.4.14",
+    "bottle": true,
+    "devel": null,
+    "head": null
+  },
+  "revision": 2,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "pkg-config",
+    "cmake",
+    "c-ares",
+    "openssl",
+    "libwebsockets"
+  ],
+  "recommended_dependencies": [
+    "libwebsockets"
+  ],
+  "optional_dependencies": [
+
+  ],
+  "build_dependencies": [
+    "pkg-config",
+    "cmake"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "mosquitto has been installed with a default configuration file.\nYou can make changes to the configuration by editing:\n    /usr/local/etc/mosquitto/mosquitto.conf\n",
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--without-libwebsockets",
+      "description": "Build without libwebsockets support"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/mosquitto-1.4.14_2.high_sierra.bottle.tar.gz",
+          "sha256": "db6cc90bff7409aa2d287a9e090458fc5ffd2ef882c6d38efee28bfe9bc43bae"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/mosquitto-1.4.14_2.sierra.bottle.tar.gz",
+          "sha256": "88a6fd908f71fdf46ed19f0baa7154759751227c92234afe30ba27bf218db653"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/mosquitto-1.4.14_2.el_capitan.bottle.tar.gz",
+          "sha256": "d3195ebbcd82c77b56a0e65c1752ae803d5593d2a39b665e0524c853a0520878"
+        }
+      }
+    }
+  }
+}

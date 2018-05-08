@@ -1,0 +1,91 @@
+{
+  "name": "gdb",
+  "full_name": "gdb",
+  "desc": "GNU debugger",
+  "homepage": "https://www.gnu.org/software/gdb/",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "8.1",
+    "bottle": true,
+    "devel": null,
+    "head": null
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "pkg-config",
+    "python@2",
+    "guile@2.0"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "python@2",
+    "guile@2.0"
+  ],
+  "build_dependencies": [
+    "pkg-config"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "gdb requires special privileges to access Mach ports.\nYou will need to codesign the binary. For instructions, see:\n\n  https://sourceware.org/gdb/wiki/BuildingOnDarwin\n\nOn 10.12 (Sierra) or later with SIP, you need to run this:\n\n  echo \"set startup-with-shell off\" >> ~/.gdbinit\n",
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--with-python",
+      "description": "Use the Homebrew version of Python; by default system Python is used"
+    },
+    {
+      "option": "--with-version-suffix",
+      "description": "Add a version suffix to program"
+    },
+    {
+      "option": "--with-all-targets",
+      "description": "Build with support for all targets"
+    },
+    {
+      "option": "--with-python@2",
+      "description": "Build with python@2 support"
+    },
+    {
+      "option": "--with-guile@2.0",
+      "description": "Build with guile@2.0 support"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/gdb-8.1.high_sierra.bottle.tar.gz",
+          "sha256": "43a6d6cca157ef70d13848f35c04e11d832dc0c96f5bcf53a43330f524b3ac40"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/gdb-8.1.sierra.bottle.tar.gz",
+          "sha256": "fe7c6261f9164e7a744c9c512ba7e5afff0e74e373ece9b5aa19d5da6443bfc2"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/gdb-8.1.el_capitan.bottle.tar.gz",
+          "sha256": "cd89001bcf8c93b5d6425ab91a400aeffe0cd5bbb0eccd8ab38c719ab5ca34ba"
+        }
+      }
+    }
+  }
+}

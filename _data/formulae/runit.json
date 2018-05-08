@@ -1,0 +1,73 @@
+{
+  "name": "runit",
+  "full_name": "runit",
+  "desc": "Collection of tools for managing UNIX services",
+  "homepage": "http://smarden.org/runit",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "2.1.2",
+    "bottle": true,
+    "devel": null,
+    "head": null
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "build_dependencies": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "This formula does not install runit as a replacement for init.\nThe service directory is /usr/local/var/service instead of /service.\n\nTo have runit ready to run services, start runsvdir:\n     runsvdir -P /usr/local/var/service\n\nDepending on the services managed by runit, this may need to start as root.\n",
+  "requirements": [
+
+  ],
+  "options": [
+
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/runit-2.1.2.high_sierra.bottle.tar.gz",
+          "sha256": "6f5e25b4f9d7d9128726aa72f97fda3b480cd36a5002041210e11303811f2369"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/runit-2.1.2.sierra.bottle.tar.gz",
+          "sha256": "4eefe737db7b327dd6c595f57f34a8b564e170427ffc24ab35c4cd5ee79a6ec1"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/runit-2.1.2.el_capitan.bottle.tar.gz",
+          "sha256": "3dbc4f1ba3d86e5f3d6900a19ff90b32d2aff91ffb68914be8740d916f3622da"
+        },
+        "yosemite": {
+          "url": "https://homebrew.bintray.com/bottles/runit-2.1.2.yosemite.bottle.tar.gz",
+          "sha256": "c268f70014699ba6be9a198686547ddd150f0b779aa0a1e623df60068d8cd4be"
+        }
+      }
+    }
+  }
+}

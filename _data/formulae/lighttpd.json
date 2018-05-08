@@ -1,0 +1,87 @@
+{
+  "name": "lighttpd",
+  "full_name": "lighttpd",
+  "desc": "Small memory footprint, flexible web-server",
+  "homepage": "https://www.lighttpd.net/",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "1.4.48",
+    "bottle": true,
+    "devel": null,
+    "head": null
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "pkg-config",
+    "autoconf",
+    "automake",
+    "libtool",
+    "pcre",
+    "openssl",
+    "lua@5.1",
+    "libev"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "lua@5.1",
+    "libev"
+  ],
+  "build_dependencies": [
+    "pkg-config",
+    "autoconf",
+    "automake",
+    "libtool"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "Docroot is: /usr/local/var/www\n\nThe default port has been set in /usr/local/etc/lighttpd/lighttpd.conf to 8080 so that\nlighttpd can run without sudo.\n",
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--with-lua@5.1",
+      "description": "Include Lua scripting support for mod_magnet"
+    },
+    {
+      "option": "--with-libev",
+      "description": "Build with libev support"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/lighttpd-1.4.48.high_sierra.bottle.tar.gz",
+          "sha256": "b7b7b0351d2ad65f6c71c594f4df2f865c31834007e0811d99356c339c53c3e4"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/lighttpd-1.4.48.sierra.bottle.tar.gz",
+          "sha256": "2eaa0285cf8e0e4616b804e5a7d4059e0d8549e90c167dfc8bea2ef269706f80"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/lighttpd-1.4.48.el_capitan.bottle.tar.gz",
+          "sha256": "c8aaafd41d8b8bdd4b823a09694246752b64cd3db9a8557e8c4c0d0716372785"
+        }
+      }
+    }
+  }
+}

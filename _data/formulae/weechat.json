@@ -1,0 +1,114 @@
+{
+  "name": "weechat",
+  "full_name": "weechat",
+  "desc": "Extensible IRC client",
+  "homepage": "https://www.weechat.org",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "2.1",
+    "bottle": true,
+    "devel": null,
+    "head": "HEAD"
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "cmake",
+    "pkg-config",
+    "gnutls",
+    "libgcrypt",
+    "gettext",
+    "aspell",
+    "lua",
+    "perl",
+    "python@2",
+    "curl"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "aspell",
+    "lua",
+    "perl",
+    "python@2",
+    "curl"
+  ],
+  "build_dependencies": [
+    "cmake",
+    "pkg-config"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "Weechat can depend on Aspell if you choose the --with-aspell option, but\nAspell should be installed manually before installing Weechat so that\nyou can choose the dictionaries you want.  If Aspell was installed\nautomatically as part of weechat, there won't be any dictionaries.\n",
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--with-perl",
+      "description": "Build the perl module"
+    },
+    {
+      "option": "--with-ruby",
+      "description": "Build the ruby module"
+    },
+    {
+      "option": "--with-curl",
+      "description": "Build with brewed curl"
+    },
+    {
+      "option": "--with-debug",
+      "description": "Build with debug information"
+    },
+    {
+      "option": "--without-tcl",
+      "description": "Do not build the tcl module"
+    },
+    {
+      "option": "--with-aspell",
+      "description": "Build with aspell support"
+    },
+    {
+      "option": "--with-lua",
+      "description": "Build with lua support"
+    },
+    {
+      "option": "--with-python@2",
+      "description": "Build with python@2 support"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/weechat-2.1.high_sierra.bottle.tar.gz",
+          "sha256": "7aa5f3fe12d6d3480110a5f6da0b5db854be8b867a0a07c94e7f350b62f9d18b"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/weechat-2.1.sierra.bottle.tar.gz",
+          "sha256": "75a32256d8605e51838172c82ce845f94740da23a0cfff440026e152c61f9cc3"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/weechat-2.1.el_capitan.bottle.tar.gz",
+          "sha256": "28381b3e219908e19860b10d5dd680f8e25efb3145da6164df51d6d9070a6739"
+        }
+      }
+    }
+  }
+}

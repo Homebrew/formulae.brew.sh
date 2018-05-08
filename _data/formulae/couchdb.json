@@ -1,0 +1,74 @@
+{
+  "name": "couchdb",
+  "full_name": "couchdb",
+  "desc": "Document database server",
+  "homepage": "https://couchdb.apache.org/",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "1.7.1",
+    "bottle": true,
+    "devel": null,
+    "head": "HEAD"
+  },
+  "revision": 5,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "erlang@19",
+    "spidermonkey",
+    "icu4c"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "build_dependencies": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "To test CouchDB run:\n    curl http://127.0.0.1:5984/\nThe reply should look like:\n    {\"couchdb\":\"Welcome\",\"uuid\":\"....\",\"version\":\"1.7.1\",\"vendor\":{\"version\":\"1.7.1-1\",\"name\":\"Homebrew\"}}\n",
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--with-geocouch",
+      "description": "Build with GeoCouch spatial index extension"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/couchdb-1.7.1_5.high_sierra.bottle.tar.gz",
+          "sha256": "9c557e15ee0b340330d014c93df0c4a1cf784b89ef3e3d8370c9a46e15d368b7"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/couchdb-1.7.1_5.sierra.bottle.tar.gz",
+          "sha256": "afd477886aa6831e5b3407727134d2560e27405cc6ca6e0431a90fcb6360d26d"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/couchdb-1.7.1_5.el_capitan.bottle.tar.gz",
+          "sha256": "5c4d68980434f501b71dc9578b68ded4adfbf0756f5b0a6df8b7addd2770e1b0"
+        }
+      }
+    }
+  }
+}

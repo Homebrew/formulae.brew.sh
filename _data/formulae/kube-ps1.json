@@ -1,0 +1,52 @@
+{
+  "name": "kube-ps1",
+  "full_name": "kube-ps1",
+  "desc": "Kubernetes prompt info for bash and zsh",
+  "homepage": "https://github.com/jonmosco/kube-ps1",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "0.6.0",
+    "bottle": false,
+    "devel": null,
+    "head": "HEAD"
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "kubernetes-cli"
+  ],
+  "recommended_dependencies": [
+    "kubernetes-cli"
+  ],
+  "optional_dependencies": [
+
+  ],
+  "build_dependencies": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "Make sure kube-ps1 is loaded from your ~/.zshrc or ~/.bashrc:\n  For zsh:\n  source \"/usr/local/opt/kube-ps1/share/kube-ps1.sh\"\n  PROMPT='$(kube_ps1)'$PROMPT\n\n  For Bash:\n  source \"/usr/local/opt/kube-ps1/share/kube-ps1.sh\"\n  PS1=\"[$(kube_ps1)]$ \"\n",
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--without-kubernetes-cli",
+      "description": "Build without kubernetes-cli support"
+    }
+  ],
+  "bottle": {
+  }
+}

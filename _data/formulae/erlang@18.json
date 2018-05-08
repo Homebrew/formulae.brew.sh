@@ -1,0 +1,107 @@
+{
+  "name": "erlang@18",
+  "full_name": "erlang@18",
+  "desc": "Programming language for highly scalable real-time systems",
+  "homepage": "https://www.erlang.org/",
+  "oldname": "erlang-r18",
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "18.3.4.9",
+    "bottle": true,
+    "devel": null,
+    "head": "HEAD"
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": true,
+  "dependencies": [
+    "autoconf",
+    "automake",
+    "libtool",
+    "openssl",
+    "fop",
+    "wxmac"
+  ],
+  "recommended_dependencies": [
+    "wxmac"
+  ],
+  "optional_dependencies": [
+    "fop"
+  ],
+  "build_dependencies": [
+    "autoconf",
+    "automake",
+    "libtool"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "Man pages can be found in:\n  /usr/local/opt/erlang@18/lib/erlang/man\nAccess them with `erl -man`, or add this directory to MANPATH.\n",
+  "requirements": [
+    {
+      "name": "java",
+      "cask": "java",
+      "download": "https://www.oracle.com/technetwork/java/javase/downloads/index.html"
+    }
+  ],
+  "options": [
+    {
+      "option": "--without-hipe",
+      "description": "Disable building hipe; fails on various macOS systems"
+    },
+    {
+      "option": "--with-native-libs",
+      "description": "Enable native library compilation"
+    },
+    {
+      "option": "--with-dirty-schedulers",
+      "description": "Enable experimental dirty schedulers"
+    },
+    {
+      "option": "--with-java",
+      "description": "Build jinterface application"
+    },
+    {
+      "option": "--without-docs",
+      "description": "Do not install documentation"
+    },
+    {
+      "option": "--with-fop",
+      "description": "Build with fop support"
+    },
+    {
+      "option": "--without-wxmac",
+      "description": "Build without wxmac support"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/erlang@18-18.3.4.9.high_sierra.bottle.tar.gz",
+          "sha256": "2a379d09b405738143d3f05a719738e2cac285107e1c5115ae6bceb301ef1c44"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/erlang@18-18.3.4.9.sierra.bottle.tar.gz",
+          "sha256": "3d70eb44b2d7e4038d85c946973b57fd1bc0ddfb638e4f84b001393d3bcbc699"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/erlang@18-18.3.4.9.el_capitan.bottle.tar.gz",
+          "sha256": "66f38b4af3fc08e302d421d1bd4bd5e40125d920968a46c1aed7d4056ec7a033"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "name": "pgbouncer",
+  "full_name": "pgbouncer",
+  "desc": "Lightweight connection pooler for PostgreSQL",
+  "homepage": "https://wiki.postgresql.org/wiki/PgBouncer",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "1.8.1",
+    "bottle": true,
+    "devel": null,
+    "head": null
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "asciidoc",
+    "xmlto",
+    "libevent"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "build_dependencies": [
+    "asciidoc",
+    "xmlto"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "The config file: /usr/local/etc/pgbouncer.ini is in the \"ini\" format and you\nwill need to edit it for your particular setup. See:\nhttps://pgbouncer.github.io/config.html\n\nThe auth_file option should point to the /usr/local/etc/userlist.txt file which\ncan be populated by the /usr/local/Cellar/pgbouncer/1.8.1/bin/mkauth.py script.\n",
+  "requirements": [
+
+  ],
+  "options": [
+
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/pgbouncer-1.8.1.high_sierra.bottle.tar.gz",
+          "sha256": "c6c51632e0c13fcccac322fe8ee11217af80b3bfa02f737b0ad05528511ceeff"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/pgbouncer-1.8.1.sierra.bottle.tar.gz",
+          "sha256": "8831a6603870ca7e6e2833acaaced55ee1ae89065d0841454ddfc510433bf7fb"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/pgbouncer-1.8.1.el_capitan.bottle.tar.gz",
+          "sha256": "37b2e592b6d012a6b59f69bb7f55187465f0e91771d9cc2aa84b8d78f4c69fa2"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "name": "postgresql",
+  "full_name": "postgresql",
+  "desc": "Object-relational database system",
+  "homepage": "https://www.postgresql.org/",
+  "oldname": null,
+  "aliases": [
+    "postgres",
+    "postgresql@10"
+  ],
+  "versions": {
+    "stable": "10.3",
+    "bottle": true,
+    "devel": null,
+    "head": "HEAD"
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+    {
+      "version": "10.3",
+      "used_options": [
+
+      ],
+      "built_as_bottle": true,
+      "poured_from_bottle": true,
+      "runtime_dependencies": [
+        {
+          "full_name": "openssl",
+          "version": "1.0.2n"
+        },
+        {
+          "full_name": "readline",
+          "version": "7.0.3"
+        }
+      ],
+      "installed_as_dependency": false,
+      "installed_on_request": true
+    }
+  ],
+  "linked_keg": "10.3",
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "openssl",
+    "readline",
+    "python",
+    "python@2"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "python",
+    "python@2"
+  ],
+  "build_dependencies": [
+
+  ],
+  "conflicts_with": [
+    "postgres-xc"
+  ],
+  "caveats": "To migrate existing data from a previous major version of PostgreSQL run:\n  brew postgresql-upgrade-database\n",
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--without-perl",
+      "description": "Build without Perl support"
+    },
+    {
+      "option": "--without-tcl",
+      "description": "Build without Tcl support"
+    },
+    {
+      "option": "--with-dtrace",
+      "description": "Build with DTrace support"
+    },
+    {
+      "option": "--with-python",
+      "description": "Enable PL/Python3 (incompatible with --with-python@2)"
+    },
+    {
+      "option": "--with-python@2",
+      "description": "Enable PL/Python2"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/postgresql-10.3.high_sierra.bottle.tar.gz",
+          "sha256": "632a988ae9a6b45acd3fca3f05af7dbec02e01fa91814ff8ba238cc20d1a7f38"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/postgresql-10.3.sierra.bottle.tar.gz",
+          "sha256": "c5412eb34006856a6f0aca2ca2c69e2b8da706f1c6a6aae200aa81d0cda23207"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/postgresql-10.3.el_capitan.bottle.tar.gz",
+          "sha256": "0581e9efe089864abbcc938f70a5175ff5595ffd701062bafec0be041ba56258"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "name": "memcached",
+  "full_name": "memcached",
+  "desc": "High performance, distributed memory object caching system",
+  "homepage": "https://memcached.org/",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "1.5.7",
+    "bottle": true,
+    "devel": null,
+    "head": null
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+    {
+      "version": "1.5.7",
+      "used_options": [
+
+      ],
+      "built_as_bottle": true,
+      "poured_from_bottle": true,
+      "runtime_dependencies": [
+        {
+          "full_name": "openssl",
+          "version": "1.0.2o"
+        },
+        {
+          "full_name": "libevent",
+          "version": "2.1.8"
+        }
+      ],
+      "installed_as_dependency": false,
+      "installed_on_request": true
+    }
+  ],
+  "linked_keg": "1.5.7",
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "libevent"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "build_dependencies": [
+
+  ],
+  "conflicts_with": [
+    "mysql-cluster"
+  ],
+  "caveats": null,
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--with-sasl",
+      "description": "Enable SASL support -- disables ASCII protocol!"
+    },
+    {
+      "option": "--with-sasl-pwdb",
+      "description": "Enable SASL with memcached's own plain text password db support -- disables ASCII protocol!"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/memcached-1.5.7.high_sierra.bottle.tar.gz",
+          "sha256": "acd08eb0c4e2b4237364123faade971a049f09d92fd1c0221867fb009705d671"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/memcached-1.5.7.sierra.bottle.tar.gz",
+          "sha256": "88f2db94e693718d392b3bf6a2433a64453fd2f949c911956125e47a7222ceed"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/memcached-1.5.7.el_capitan.bottle.tar.gz",
+          "sha256": "80c5d28051f3e6ee6b3033e22ad9e6aa9f6f174077ecf4752a4d38e082470a17"
+        }
+      }
+    }
+  }
+}

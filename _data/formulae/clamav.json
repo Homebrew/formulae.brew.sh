@@ -1,0 +1,85 @@
+{
+  "name": "clamav",
+  "full_name": "clamav",
+  "desc": "Anti-virus software",
+  "homepage": "https://www.clamav.net/",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "0.100.0",
+    "bottle": true,
+    "devel": null,
+    "head": "HEAD"
+  },
+  "revision": 1,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "pkg-config",
+    "openssl",
+    "pcre",
+    "yara",
+    "json-c"
+  ],
+  "recommended_dependencies": [
+    "pcre"
+  ],
+  "optional_dependencies": [
+    "yara",
+    "json-c"
+  ],
+  "build_dependencies": [
+    "pkg-config"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "To finish installation & run clamav you will need to edit\nthe example conf files at /usr/local/etc/clamav/\n",
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--without-pcre",
+      "description": "Build without pcre support"
+    },
+    {
+      "option": "--with-yara",
+      "description": "Build with yara support"
+    },
+    {
+      "option": "--with-json-c",
+      "description": "Build with json-c support"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/clamav-0.100.0_1.high_sierra.bottle.tar.gz",
+          "sha256": "8b13c6dc87bb7ac7fa174000219003416d54afa40b65aa9b972075bc427bfcb2"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/clamav-0.100.0_1.sierra.bottle.tar.gz",
+          "sha256": "76181827f686178ce1126d14e198389612bff286dda50418f507dde10df2d93e"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/clamav-0.100.0_1.el_capitan.bottle.tar.gz",
+          "sha256": "139d2858a08fdca1c015d8bea1f824c9d82212d1687aa108ef68e59bdcf5603c"
+        }
+      }
+    }
+  }
+}

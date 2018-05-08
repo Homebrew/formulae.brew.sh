@@ -1,0 +1,114 @@
+{
+  "name": "llvm@3.9",
+  "full_name": "llvm@3.9",
+  "desc": "Next-gen compiler infrastructure",
+  "homepage": "https://llvm.org/",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "3.9.1",
+    "bottle": true,
+    "devel": null,
+    "head": "HEAD"
+  },
+  "revision": 1,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": true,
+  "dependencies": [
+    "libffi",
+    "graphviz",
+    "ocaml",
+    "python@2",
+    "cmake"
+  ],
+  "recommended_dependencies": [
+    "libffi"
+  ],
+  "optional_dependencies": [
+    "graphviz",
+    "ocaml",
+    "python@2"
+  ],
+  "build_dependencies": [
+    "cmake"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "LLVM executables are installed in /usr/local/opt/llvm@3.9/bin.\nExtra tools are installed in /usr/local/opt/llvm@3.9/share/llvm@3.9.\nTo use the bundled libc++ please add the following LDFLAGS:\n  LDFLAGS=\"-L/usr/local/opt/llvm@3.9/lib -Wl,-rpath,/usr/local/opt/llvm@3.9/lib\"\n",
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--without-compiler-rt",
+      "description": "Do not build Clang runtime support libraries for code sanitizers, builtins, and profiling"
+    },
+    {
+      "option": "--without-libcxx",
+      "description": "Do not build libc++ standard library"
+    },
+    {
+      "option": "--with-toolchain",
+      "description": "Build with Toolchain to facilitate overriding system compiler"
+    },
+    {
+      "option": "--with-lldb",
+      "description": "Build LLDB debugger"
+    },
+    {
+      "option": "--with-python@2",
+      "description": "Build bindings against Homebrew's Python 2"
+    },
+    {
+      "option": "--with-shared-libs",
+      "description": "Build shared instead of static libraries"
+    },
+    {
+      "option": "--without-libffi",
+      "description": "Do not use libffi to call external functions"
+    },
+    {
+      "option": "--with-graphviz",
+      "description": "Build with graphviz support"
+    },
+    {
+      "option": "--with-ocaml",
+      "description": "Build with ocaml support"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/llvm@3.9-3.9.1_1.high_sierra.bottle.tar.gz",
+          "sha256": "82fcabcbc4e8594bba74a511c0f127f7b8187e5452e0cd77d6e6fc2f008f1b1c"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/llvm@3.9-3.9.1_1.sierra.bottle.tar.gz",
+          "sha256": "6349b9f0e6202230c159a3b08ca835931b922589e328b5f7fc850ac651c3eff6"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/llvm@3.9-3.9.1_1.el_capitan.bottle.tar.gz",
+          "sha256": "227667c28cb291529dba440a43cc19504ef621ffd1990303f0d7f2b4a9978e67"
+        },
+        "yosemite": {
+          "url": "https://homebrew.bintray.com/bottles/llvm@3.9-3.9.1_1.yosemite.bottle.tar.gz",
+          "sha256": "aed4411921127ddfc377c4203dc2a4f313d56103a79126be83a9b954d1cb8223"
+        }
+      }
+    }
+  }
+}

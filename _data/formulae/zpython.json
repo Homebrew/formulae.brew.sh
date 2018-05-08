@@ -1,0 +1,78 @@
+{
+  "name": "zpython",
+  "full_name": "zpython",
+  "desc": "Embeds a Python interpreter into zsh",
+  "homepage": "https://bitbucket.org/ZyX_I/zsh",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "00-5.0.5",
+    "bottle": true,
+    "devel": null,
+    "head": "HEAD"
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "zsh",
+    "autoconf"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "build_dependencies": [
+    "autoconf"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "To use the zpython module in zsh you need to\nadd the following line to your .zshrc:\n\n  module_path=($module_path /usr/local/lib/zpython)\n\nIf you want to use this with powerline, make sure you set\nit early in .zshrc, before your prompt gets initialized.\n\nAfter reloading your shell you can test with:\n  zmodload zsh/zpython && zpython 'print \"hello world\"'\n",
+  "requirements": [
+
+  ],
+  "options": [
+
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any_skip_relocation",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/zpython-00-5.0.5.high_sierra.bottle.tar.gz",
+          "sha256": "0c575603cf568eaef05ef7de2a0f5f143a08728c97baebf508fc132926028146"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/zpython-00-5.0.5.sierra.bottle.tar.gz",
+          "sha256": "6fd2ca965e862af6ebf0b24e158d34bbe66bafc522854adc96efa70e2a0fdb9b"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/zpython-00-5.0.5.el_capitan.bottle.tar.gz",
+          "sha256": "aa8efa349bbf477746aee3cb977d1b0c430ec05d1947f2bd33667f054d8692cc"
+        },
+        "yosemite": {
+          "url": "https://homebrew.bintray.com/bottles/zpython-00-5.0.5.yosemite.bottle.tar.gz",
+          "sha256": "3f469a0820ec250a6875c97fd50626462b94a6d81ea93888d32391ababcf25bf"
+        },
+        "mavericks": {
+          "url": "https://homebrew.bintray.com/bottles/zpython-00-5.0.5.mavericks.bottle.tar.gz",
+          "sha256": "9137eefb79a7a529b016e3c949e24a15d4747e4f35108f91db6ea58441f456a9"
+        }
+      }
+    }
+  }
+}

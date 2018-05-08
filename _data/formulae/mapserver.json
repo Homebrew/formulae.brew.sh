@@ -1,0 +1,101 @@
+{
+  "name": "mapserver",
+  "full_name": "mapserver",
+  "desc": "Publish spatial data and interactive mapping apps to the web",
+  "homepage": "http://mapserver.org/",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "7.0.7",
+    "bottle": true,
+    "devel": null,
+    "head": null
+  },
+  "revision": 2,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "pkg-config",
+    "cmake",
+    "swig",
+    "freetype",
+    "libpng",
+    "giflib",
+    "gd",
+    "proj",
+    "gdal",
+    "geos",
+    "cairo"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "geos",
+    "cairo"
+  ],
+  "build_dependencies": [
+    "pkg-config",
+    "cmake",
+    "swig"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "The Mapserver CGI executable is /usr/local/opt/mapserver/bin/mapserv\n\nIf you built the PHP option:\n  * Add the following line to php.ini:\n    extension=\"/usr/local/opt/mapserver/lib/php/extensions/php_mapscript.so\"\n  * Execute \"php -m\"\n  * You should see MapScript in the module list\n",
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--with-fastcgi",
+      "description": "Build with fastcgi support"
+    },
+    {
+      "option": "--with-geos",
+      "description": "Build support for GEOS spatial operations"
+    },
+    {
+      "option": "--with-php",
+      "description": "Build PHP MapScript module"
+    },
+    {
+      "option": "--with-postgresql",
+      "description": "Build support for PostgreSQL as a data source"
+    },
+    {
+      "option": "--with-cairo",
+      "description": "Build with cairo support"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/mapserver-7.0.7_2.high_sierra.bottle.tar.gz",
+          "sha256": "861890728eb6d3fb016b9b820f301da7f79136f454820ef8d3eb1387711f8df3"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/mapserver-7.0.7_2.sierra.bottle.tar.gz",
+          "sha256": "00e9069aba52817cbd8e27ee77113bdfd4f4ac3f0fc6fb89f16b8ae451e53fda"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/mapserver-7.0.7_2.el_capitan.bottle.tar.gz",
+          "sha256": "e1c69d346d18201436a8afdbc40e7ef0b0e6ed80ec8ac47eba6ac5e04f65af8e"
+        }
+      }
+    }
+  }
+}

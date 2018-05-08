@@ -1,0 +1,73 @@
+{
+  "name": "grep",
+  "full_name": "grep",
+  "desc": "GNU grep, egrep and fgrep",
+  "homepage": "https://www.gnu.org/software/grep/",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "3.1",
+    "bottle": true,
+    "devel": null,
+    "head": null
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "pkg-config",
+    "pcre"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "build_dependencies": [
+    "pkg-config"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "The command has been installed with the prefix \"g\".\nIf you do not want the prefix, install using the \"with-default-names\"\noption.\n\nIf you need to use these commands with their normal names, you\ncan add a \"gnubin\" directory to your PATH from your bashrc like:\n  PATH=\"/usr/local/opt/grep/libexec/gnubin:$PATH\"\n\nAdditionally, you can access their man pages with normal names if you add\nthe \"gnuman\" directory to your MANPATH from your bashrc as well:\n  MANPATH=\"/usr/local/opt/grep/libexec/gnuman:$MANPATH\"\n",
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--with-default-names",
+      "description": "Do not prepend 'g' to the binary"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 1,
+      "cellar": ":any",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/grep-3.1.high_sierra.bottle.1.tar.gz",
+          "sha256": "17972d85803a24a567b92b1b25df46c5510684fe7ca64f29e277d27f9ca134b2"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/grep-3.1.sierra.bottle.1.tar.gz",
+          "sha256": "65cb0f628d3678c4dd7bf6af1c736d717c1eb8975e203619123379447063fec1"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/grep-3.1.el_capitan.bottle.1.tar.gz",
+          "sha256": "1556c6afb5cbc430e647e70fcd521ce42e203a0c5833cb6a2c6be4413b200c3b"
+        }
+      }
+    }
+  }
+}

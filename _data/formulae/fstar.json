@@ -1,0 +1,78 @@
+{
+  "name": "fstar",
+  "full_name": "fstar",
+  "desc": "ML-like language aimed at program verification",
+  "homepage": "https://www.fstar-lang.org/",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "0.9.5.0",
+    "bottle": true,
+    "devel": null,
+    "head": "HEAD"
+  },
+  "revision": 1,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "opam",
+    "gmp",
+    "ocaml"
+  ],
+  "recommended_dependencies": [
+    "ocaml"
+  ],
+  "optional_dependencies": [
+
+  ],
+  "build_dependencies": [
+    "opam"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "F* code can be extracted to OCaml code.\nTo compile the generated OCaml code, you must install\nsome packages from the OPAM package manager:\n- brew install opam\n- opam install batteries zarith yojson pprint stdint menhir\n\nF* code can be extracted to F# code.\nTo compile the generated F# (.NET) code, you must install\nthe 'mono' package that includes the fsharp compiler:\n- brew install mono\n",
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--without-ocaml",
+      "description": "Build without ocaml support"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/fstar-0.9.5.0_1.high_sierra.bottle.tar.gz",
+          "sha256": "93b27e70d7bcd7111a3243cab9d2528673a5435cb27b7fc422d0a61099386e80"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/fstar-0.9.5.0_1.sierra.bottle.tar.gz",
+          "sha256": "03c763ac9849ce6faa1919117390264e4e306cb0bd23a8fa903c7470a668697b"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/fstar-0.9.5.0_1.el_capitan.bottle.tar.gz",
+          "sha256": "5824c5f020a119683a8f5e1d3520d30fc81f03fd0f2c4544e5faa503e7626528"
+        },
+        "yosemite": {
+          "url": "https://homebrew.bintray.com/bottles/fstar-0.9.5.0_1.yosemite.bottle.tar.gz",
+          "sha256": "4e730cfbc2c181a1ccc605e84f4d79c228ee698fddd9dfe719b8ac0cfc5599bc"
+        }
+      }
+    }
+  }
+}

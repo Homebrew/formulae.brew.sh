@@ -1,0 +1,103 @@
+{
+  "name": "mongodb@3.2",
+  "full_name": "mongodb@3.2",
+  "desc": "High-performance, schema-free, document-oriented database",
+  "homepage": "https://www.mongodb.org/",
+  "oldname": "mongodb32",
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "3.2.19",
+    "bottle": true,
+    "devel": null,
+    "head": null
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+    {
+      "version": "3.2.19",
+      "used_options": [
+
+      ],
+      "built_as_bottle": true,
+      "poured_from_bottle": true,
+      "runtime_dependencies": [
+        {
+          "full_name": "openssl",
+          "version": "1.0.2n"
+        }
+      ],
+      "installed_as_dependency": false,
+      "installed_on_request": true
+    }
+  ],
+  "linked_keg": "3.2.19",
+  "pinned": false,
+  "outdated": false,
+  "keg_only": true,
+  "dependencies": [
+    "boost",
+    "go",
+    "scons",
+    "openssl"
+  ],
+  "recommended_dependencies": [
+    "openssl"
+  ],
+  "optional_dependencies": [
+    "boost"
+  ],
+  "build_dependencies": [
+    "go",
+    "scons"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "requirements": [
+    {
+      "name": "macos",
+      "cask": null,
+      "download": null
+    }
+  ],
+  "options": [
+    {
+      "option": "--with-boost",
+      "description": "Compile using installed boost, not the version shipped with mongodb"
+    },
+    {
+      "option": "--with-sasl",
+      "description": "Compile with SASL support"
+    },
+    {
+      "option": "--without-openssl",
+      "description": "Build without openssl support"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/mongodb@3.2-3.2.19.high_sierra.bottle.tar.gz",
+          "sha256": "8a28e51cfe9578d76f8a3cb2a6bad6349bfebd0b3df56720b76ca20ddd81f7df"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/mongodb@3.2-3.2.19.sierra.bottle.tar.gz",
+          "sha256": "d7290078780d7e9f6ee6af5cb9e0595b016f8e07341b116c34f99011110cd17d"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/mongodb@3.2-3.2.19.el_capitan.bottle.tar.gz",
+          "sha256": "3ca894e3ebd3fe11a4438a5e7cad782245fb90f86c74d2898cc111cc87f9affc"
+        }
+      }
+    }
+  }
+}

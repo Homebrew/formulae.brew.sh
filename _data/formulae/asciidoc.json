@@ -1,0 +1,72 @@
+{
+  "name": "asciidoc",
+  "full_name": "asciidoc",
+  "desc": "Formatter/translator for text files to numerous formats. Includes a2x",
+  "homepage": "http://asciidoc.org/",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "8.6.10",
+    "bottle": true,
+    "devel": null,
+    "head": "HEAD"
+  },
+  "revision": 1,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "autoconf",
+    "docbook-xsl",
+    "docbook"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "build_dependencies": [
+    "autoconf",
+    "docbook-xsl"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "If you intend to process AsciiDoc files through an XML stage\n(such as a2x for manpage generation) you need to add something\nlike:\n\n  export XML_CATALOG_FILES=/usr/local/etc/xml/catalog\n\nto your shell rc file so that xmllint can find AsciiDoc's\ncatalog files.\n\nSee `man 1 xmllint' for more.\n",
+  "requirements": [
+
+  ],
+  "options": [
+
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any_skip_relocation",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/asciidoc-8.6.10_1.high_sierra.bottle.tar.gz",
+          "sha256": "c82aaf006c1e61742f4b0d01106b34efa0bba4c7b315f31298b6cce1d9616947"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/asciidoc-8.6.10_1.sierra.bottle.tar.gz",
+          "sha256": "c82aaf006c1e61742f4b0d01106b34efa0bba4c7b315f31298b6cce1d9616947"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/asciidoc-8.6.10_1.el_capitan.bottle.tar.gz",
+          "sha256": "c82aaf006c1e61742f4b0d01106b34efa0bba4c7b315f31298b6cce1d9616947"
+        }
+      }
+    }
+  }
+}

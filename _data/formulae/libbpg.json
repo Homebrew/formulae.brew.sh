@@ -1,0 +1,80 @@
+{
+  "name": "libbpg",
+  "full_name": "libbpg",
+  "desc": "Image format meant to improve on JPEG quality and file size",
+  "homepage": "https://bellard.org/bpg/",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "0.9.8",
+    "bottle": true,
+    "devel": null,
+    "head": null
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "cmake",
+    "yasm",
+    "libpng",
+    "jpeg"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "build_dependencies": [
+    "cmake",
+    "yasm"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--with-jctvc",
+      "description": "Enable built-in JCTVC encoder - Mono threaded, slower but produce smaller file"
+    },
+    {
+      "option": "--without-x265",
+      "description": "Disable built-in x265 encoder - Multi threaded, faster but produce bigger file"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/libbpg-0.9.8.high_sierra.bottle.tar.gz",
+          "sha256": "b040d31f8abd45f50f8ba634c97eb81a0ec89ecada773223b2ac362ddd20baff"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/libbpg-0.9.8.sierra.bottle.tar.gz",
+          "sha256": "77ae8a79d99cae86c42e4eaad0cc240efe98425f58143c940a3525d29d7cb25c"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/libbpg-0.9.8.el_capitan.bottle.tar.gz",
+          "sha256": "49027f81f126e8bdc24587d43b127815e3a53fafa92b6326c857526678932bef"
+        }
+      }
+    }
+  }
+}

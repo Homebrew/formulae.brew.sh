@@ -1,0 +1,110 @@
+{
+  "name": "llvm@5",
+  "full_name": "llvm@5",
+  "desc": "Next-gen compiler infrastructure",
+  "homepage": "https://llvm.org/",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "5.0.1",
+    "bottle": true,
+    "devel": null,
+    "head": "HEAD"
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": true,
+  "dependencies": [
+    "libffi",
+    "graphviz",
+    "ocaml",
+    "python@2",
+    "cmake"
+  ],
+  "recommended_dependencies": [
+    "libffi"
+  ],
+  "optional_dependencies": [
+    "graphviz",
+    "ocaml",
+    "python@2"
+  ],
+  "build_dependencies": [
+    "cmake"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "To use the bundled libc++ please add the following LDFLAGS:\n  LDFLAGS=\"-L/usr/local/opt/llvm@5/lib -Wl,-rpath,/usr/local/opt/llvm@5/lib\"\n",
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--without-compiler-rt",
+      "description": "Do not build Clang runtime support libraries for code sanitizers, builtins, and profiling"
+    },
+    {
+      "option": "--without-libcxx",
+      "description": "Do not build libc++ standard library"
+    },
+    {
+      "option": "--with-toolchain",
+      "description": "Build with Toolchain to facilitate overriding system compiler"
+    },
+    {
+      "option": "--with-lldb",
+      "description": "Build LLDB debugger"
+    },
+    {
+      "option": "--with-python@2",
+      "description": "Build bindings against Homebrew's Python 2"
+    },
+    {
+      "option": "--with-shared-libs",
+      "description": "Build shared instead of static libraries"
+    },
+    {
+      "option": "--without-libffi",
+      "description": "Do not use libffi to call external functions"
+    },
+    {
+      "option": "--with-graphviz",
+      "description": "Build with graphviz support"
+    },
+    {
+      "option": "--with-ocaml",
+      "description": "Build with ocaml support"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/llvm@5-5.0.1.high_sierra.bottle.tar.gz",
+          "sha256": "bc1f754761a77c5f9d8ac9ab04a3e6ac1105084bf1e6e24d4ec181042a6605af"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/llvm@5-5.0.1.sierra.bottle.tar.gz",
+          "sha256": "c762b37fc89fbc7f71bcae4cd1e9740a40aefd823a8daa8c1f7d43a52eddbeda"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/llvm@5-5.0.1.el_capitan.bottle.tar.gz",
+          "sha256": "c2efb36438b01e305fd50b556b9acf72d5aba073aa9781a91d25ec7b764fb536"
+        }
+      }
+    }
+  }
+}

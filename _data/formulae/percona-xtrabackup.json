@@ -1,0 +1,82 @@
+{
+  "name": "percona-xtrabackup",
+  "full_name": "percona-xtrabackup",
+  "desc": "Open source hot backup tool for InnoDB and XtraDB databases",
+  "homepage": "https://www.percona.com/software/mysql-database/percona-xtrabackup",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "2.4.10",
+    "bottle": true,
+    "devel": null,
+    "head": null
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "cmake",
+    "sphinx-doc",
+    "mysql",
+    "libev",
+    "libgcrypt",
+    "openssl"
+  ],
+  "recommended_dependencies": [
+    "mysql"
+  ],
+  "optional_dependencies": [
+
+  ],
+  "build_dependencies": [
+    "cmake",
+    "sphinx-doc"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--without-docs",
+      "description": "Build without man pages (which requires python-sphinx)"
+    },
+    {
+      "option": "--without-mysql",
+      "description": "Build without bundled Perl DBD::mysql module, to use the database of your choice."
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/percona-xtrabackup-2.4.10.high_sierra.bottle.tar.gz",
+          "sha256": "cb72c3a73e3ae5c7bb6e792b938a3a2f6a46548cfc297e2be328815aff13b5a4"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/percona-xtrabackup-2.4.10.sierra.bottle.tar.gz",
+          "sha256": "404795f3f2d5e965abc02b0c0cbb4a9beaa057343c182fc5220f1fee664182e8"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/percona-xtrabackup-2.4.10.el_capitan.bottle.tar.gz",
+          "sha256": "3d973e16cd11550df895d2a9c42e93c883fdceb0edb20d6493fbeb3961e0121b"
+        }
+      }
+    }
+  }
+}

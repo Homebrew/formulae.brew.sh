@@ -1,0 +1,75 @@
+{
+  "name": "cockroach",
+  "full_name": "cockroach",
+  "desc": "Distributed SQL database",
+  "homepage": "https://www.cockroachlabs.com",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "2.0.1",
+    "bottle": true,
+    "devel": null,
+    "head": "HEAD"
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "autoconf",
+    "cmake",
+    "go",
+    "xz"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "build_dependencies": [
+    "autoconf",
+    "cmake",
+    "go",
+    "xz"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "For local development only, this formula ships a launchd configuration to\nstart a single-node cluster that stores its data under:\n  /usr/local/var/cockroach/\nInstead of the default port of 8080, the node serves its admin UI at:\n  \u001b[4mhttp://localhost:26256\u001b[24m\n\nDo NOT use this cluster to store data you care about; it runs in insecure\nmode and may expose data publicly in e.g. a DNS rebinding attack. To run\nCockroachDB securely, please see:\n  \u001b[4mhttps://www.cockroachlabs.com/docs/secure-a-cluster.html\u001b[24m\n",
+  "requirements": [
+
+  ],
+  "options": [
+
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any_skip_relocation",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/cockroach-2.0.1.high_sierra.bottle.tar.gz",
+          "sha256": "8c6c3011cf1ed64d7c0d4a5b7ccaeb08b05d7f40ed49b854ffa556768034ff5d"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/cockroach-2.0.1.sierra.bottle.tar.gz",
+          "sha256": "ed8f7bf78acec12cbc321555fb996c92cc5511e1ca44c8e7d3b948826e75d47a"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/cockroach-2.0.1.el_capitan.bottle.tar.gz",
+          "sha256": "ca238206eac0199947c6dab60d8a9d330e65282262984137327ec7b9dccbd5f0"
+        }
+      }
+    }
+  }
+}

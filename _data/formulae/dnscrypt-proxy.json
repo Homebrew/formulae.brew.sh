@@ -1,0 +1,69 @@
+{
+  "name": "dnscrypt-proxy",
+  "full_name": "dnscrypt-proxy",
+  "desc": "Secure communications between a client and a DNS resolver",
+  "homepage": "https://github.com/jedisct1/dnscrypt-proxy",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "2.0.11",
+    "bottle": true,
+    "devel": null,
+    "head": "HEAD"
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "go"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "build_dependencies": [
+    "go"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "After starting dnscrypt-proxy, you will need to point your\nlocal DNS server to 127.0.0.1. You can do this by going to\nSystem Preferences > \"Network\" and clicking the \"Advanced...\"\nbutton for your interface. You will see a \"DNS\" tab where you\ncan click \"+\" and enter 127.0.0.1 in the \"DNS Servers\" section.\n\nBy default, dnscrypt-proxy runs on localhost (127.0.0.1), port 53,\nbalancing traffic across a set of resolvers. If you would like to\nchange these settings, you will have to edit the configuration file:\n  /usr/local/etc/dnscrypt-proxy.toml\n\nTo check that dnscrypt-proxy is working correctly, open Terminal and enter the\nfollowing command. Replace en1 with whatever network interface you're using:\n\n  sudo tcpdump -i en1 -vvv 'port 443'\n\nYou should see a line in the result that looks like this:\n\n resolver.dnscrypt.info\n",
+  "requirements": [
+
+  ],
+  "options": [
+
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any_skip_relocation",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/dnscrypt-proxy-2.0.11.high_sierra.bottle.tar.gz",
+          "sha256": "aa2b8bd7b3d0a848bd5549933d39168aa8aa879355063254455233296279b249"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/dnscrypt-proxy-2.0.11.sierra.bottle.tar.gz",
+          "sha256": "ddc5a07f5354299149660a16329bd58d46d98ba28fcce8401cc36603069469a0"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/dnscrypt-proxy-2.0.11.el_capitan.bottle.tar.gz",
+          "sha256": "17c76cb0371bdae9e5cf84b8c0cf6c6a9b358f10677691194719faf22b21fb51"
+        }
+      }
+    }
+  }
+}

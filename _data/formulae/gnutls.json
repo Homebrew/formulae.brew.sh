@@ -1,0 +1,88 @@
+{
+  "name": "gnutls",
+  "full_name": "gnutls",
+  "desc": "GNU Transport Layer Security (TLS) Library",
+  "homepage": "https://gnutls.org/",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "3.5.18",
+    "bottle": true,
+    "devel": "3.6.2",
+    "head": null
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "pkg-config",
+    "libtasn1",
+    "gmp",
+    "nettle",
+    "libunistring",
+    "p11-kit",
+    "guile",
+    "unbound"
+  ],
+  "recommended_dependencies": [
+    "p11-kit"
+  ],
+  "optional_dependencies": [
+    "guile",
+    "unbound"
+  ],
+  "build_dependencies": [
+    "pkg-config"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--without-p11-kit",
+      "description": "Build without p11-kit support"
+    },
+    {
+      "option": "--with-guile",
+      "description": "Build with guile support"
+    },
+    {
+      "option": "--with-unbound",
+      "description": "Build with unbound support"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/gnutls-3.5.18.high_sierra.bottle.tar.gz",
+          "sha256": "ba36c5fd1956fff7edd9ba56c737cc2821905e7b308efcf66b8fb5f6046c123d"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/gnutls-3.5.18.sierra.bottle.tar.gz",
+          "sha256": "6f47b7360580591ffb10e2e7a2cc1427988f16a06df21b109eeb03f1fa15ffc7"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/gnutls-3.5.18.el_capitan.bottle.tar.gz",
+          "sha256": "a9313514b645aad1ed99805bd8d499da84de422d106be985fb64b6a25cda5290"
+        }
+      }
+    }
+  }
+}

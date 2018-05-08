@@ -1,0 +1,77 @@
+{
+  "name": "passenger",
+  "full_name": "passenger",
+  "desc": "Server for Ruby, Python, and Node.js apps via Apache/NGINX",
+  "homepage": "https://www.phusionpassenger.com/",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "5.2.3",
+    "bottle": true,
+    "devel": null,
+    "head": "HEAD"
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "pcre",
+    "openssl"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "build_dependencies": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "To activate Phusion Passenger for Nginx, run:\n  brew install nginx --with-passenger\n\nTo activate Phusion Passenger for Apache, create /etc/apache2/other/passenger.conf:\n  LoadModule passenger_module /usr/local/opt/passenger/libexec/buildout/apache2/mod_passenger.so\n  PassengerRoot /usr/local/opt/passenger/libexec/src/ruby_supportlib/phusion_passenger/locations.ini\n  PassengerDefaultRuby /usr/bin/ruby\n\n",
+  "requirements": [
+    {
+      "name": "macos",
+      "cask": null,
+      "download": null
+    }
+  ],
+  "options": [
+    {
+      "option": "--without-apache2-module",
+      "description": "Disable Apache2 module"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/passenger-5.2.3.high_sierra.bottle.tar.gz",
+          "sha256": "d0619a778c90e2df7fdd4d1ee04b194e5797306b3730d4c9380cf2aecd3455d2"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/passenger-5.2.3.sierra.bottle.tar.gz",
+          "sha256": "89898f30e16a661e0e4ad156ddfeed66ee64d1214476abe17ec732547519ae2c"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/passenger-5.2.3.el_capitan.bottle.tar.gz",
+          "sha256": "a924eeed46731cff530eeb60eb804614098df8864ed3744b75ac0c5e5762afb1"
+        }
+      }
+    }
+  }
+}

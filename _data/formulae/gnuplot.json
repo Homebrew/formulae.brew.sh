@@ -1,0 +1,102 @@
+{
+  "name": "gnuplot",
+  "full_name": "gnuplot",
+  "desc": "Command-driven, interactive function plotting",
+  "homepage": "http://www.gnuplot.info/",
+  "oldname": null,
+  "aliases": [
+    "gnuplot@5"
+  ],
+  "versions": {
+    "stable": "5.2.3",
+    "bottle": true,
+    "devel": null,
+    "head": "HEAD"
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "pkg-config",
+    "gd",
+    "readline",
+    "lua",
+    "qt",
+    "wxmac"
+  ],
+  "recommended_dependencies": [
+    "lua"
+  ],
+  "optional_dependencies": [
+    "qt",
+    "wxmac"
+  ],
+  "build_dependencies": [
+    "pkg-config"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "requirements": [
+    {
+      "name": "x11",
+      "cask": "xquartz",
+      "download": "https://xquartz.macosforge.org"
+    }
+  ],
+  "options": [
+    {
+      "option": "--with-cairo",
+      "description": "Build the Cairo based terminals"
+    },
+    {
+      "option": "--without-lua",
+      "description": "Build without the lua/TikZ terminal"
+    },
+    {
+      "option": "--with-wxmac",
+      "description": "Build wxmac support. Need with-cairo to build wxt terminal"
+    },
+    {
+      "option": "--with-aquaterm",
+      "description": "Build with AquaTerm support"
+    },
+    {
+      "option": "--with-qt",
+      "description": "Build with qt support"
+    },
+    {
+      "option": "--with-x11",
+      "description": "Build with x11 support"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/gnuplot-5.2.3.high_sierra.bottle.tar.gz",
+          "sha256": "9b72f49cead49807ab76c7b9792f4f699368ab11e3d97c8adbd404762fd1abdd"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/gnuplot-5.2.3.sierra.bottle.tar.gz",
+          "sha256": "474abc69cfff327e7d7f0fa71e6e6907bcd4b39d05cf580b3a1b10b66a81ba0b"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/gnuplot-5.2.3.el_capitan.bottle.tar.gz",
+          "sha256": "37e710c47efc97629ae5d3b83c3f1c2199aea5e78b9a420b141aaac487ab7fdc"
+        }
+      }
+    }
+  }
+}

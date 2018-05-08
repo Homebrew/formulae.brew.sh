@@ -1,0 +1,75 @@
+{
+  "name": "coreutils",
+  "full_name": "coreutils",
+  "desc": "GNU File, Shell, and Text utilities",
+  "homepage": "https://www.gnu.org/software/coreutils",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "8.29",
+    "bottle": true,
+    "devel": null,
+    "head": "HEAD"
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "gmp"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "gmp"
+  ],
+  "build_dependencies": [
+
+  ],
+  "conflicts_with": [
+    "ganglia",
+    "gegl",
+    "idutils",
+    "aardvark_shell_utils"
+  ],
+  "caveats": "All commands have been installed with the prefix 'g'.\n\nIf you really need to use these commands with their normal names, you\ncan add a \"gnubin\" directory to your PATH from your bashrc like:\n\n    PATH=\"/usr/local/opt/coreutils/libexec/gnubin:$PATH\"\n\nAdditionally, you can access their man pages with normal names if you add\nthe \"gnuman\" directory to your MANPATH from your bashrc as well:\n\n    MANPATH=\"/usr/local/opt/coreutils/libexec/gnuman:$MANPATH\"\n\n",
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--with-gmp",
+      "description": "Build with gmp support"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/coreutils-8.29.high_sierra.bottle.tar.gz",
+          "sha256": "20e12e8aaa50778db12accc12fc2ae5e29cdd58988064dbc912bcfb10a106272"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/coreutils-8.29.sierra.bottle.tar.gz",
+          "sha256": "83cb185057a6add9b9289504801240f33020494c4b85af07272a85050cd99f65"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/coreutils-8.29.el_capitan.bottle.tar.gz",
+          "sha256": "0c25b2cebfd54bf325360b6ab566df78a6711f5526fd44fc244558748bd27475"
+        }
+      }
+    }
+  }
+}

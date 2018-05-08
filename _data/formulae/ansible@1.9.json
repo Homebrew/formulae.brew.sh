@@ -1,0 +1,71 @@
+{
+  "name": "ansible@1.9",
+  "full_name": "ansible@1.9",
+  "desc": "Automate deployment, configuration, and upgrading",
+  "homepage": "https://www.ansible.com/",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "1.9.6",
+    "bottle": true,
+    "devel": null,
+    "head": "HEAD"
+  },
+  "revision": 1,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": true,
+  "dependencies": [
+    "python@2",
+    "libyaml",
+    "openssl"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "build_dependencies": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "Homebrew writes wrapper scripts that set PYTHONPATH in ansible's\nexecution environment, which is inherited by Python scripts invoked\nby ansible. If this causes problems, you can modify your playbooks\nto invoke python with -E, which causes python to ignore PYTHONPATH.\n",
+  "requirements": [
+
+  ],
+  "options": [
+
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 1,
+      "cellar": ":any",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/ansible@1.9-1.9.6_1.high_sierra.bottle.1.tar.gz",
+          "sha256": "a95cfcd12d83aa49aabc2361ff2724eaba69d772ae4af3108b57163023a807f5"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/ansible@1.9-1.9.6_1.sierra.bottle.1.tar.gz",
+          "sha256": "511ea537dda8cdb0ecc2205712615bd6877d66046abccefaec98c4bb679e1c1d"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/ansible@1.9-1.9.6_1.el_capitan.bottle.1.tar.gz",
+          "sha256": "849e7dc0c4bb63586ef120d1a21e6c1ff51a2c41a33e34291b13c506b3be5880"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "name": "libressl",
+  "full_name": "libressl",
+  "desc": "Version of the SSL/TLS protocol forked from OpenSSL",
+  "homepage": "https://www.libressl.org/",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "2.7.3",
+    "bottle": true,
+    "devel": null,
+    "head": "HEAD"
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": true,
+  "dependencies": [
+
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "build_dependencies": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "A CA file has been bootstrapped using certificates from the SystemRoots\nkeychain. To add additional certificates (e.g. the certificates added in\nthe System keychain), place .pem files in\n  /usr/local/etc/libressl/certs\n\nand run\n  /usr/local/opt/libressl/bin/openssl certhash /usr/local/etc/libressl/certs\n",
+  "requirements": [
+
+  ],
+  "options": [
+
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/libressl-2.7.3.high_sierra.bottle.tar.gz",
+          "sha256": "a11a0810cdf2b09fad184be1c6e27bad459a373398e5d88fc57849d20ffe1aeb"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/libressl-2.7.3.sierra.bottle.tar.gz",
+          "sha256": "29e5e1105cbac9bed9f7cb2cec58d2417151a42737a43467d9e3f692ac8d221d"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/libressl-2.7.3.el_capitan.bottle.tar.gz",
+          "sha256": "469cbafd3055e727bf23b4405caaa0138363936aa5d755f46de18b8ae40fda12"
+        }
+      }
+    }
+  }
+}

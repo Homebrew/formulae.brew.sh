@@ -1,0 +1,79 @@
+{
+  "name": "numpy",
+  "full_name": "numpy",
+  "desc": "Package for scientific computing with Python",
+  "homepage": "https://www.numpy.org/",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "1.14.3",
+    "bottle": true,
+    "devel": null,
+    "head": "HEAD"
+  },
+  "revision": 1,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "gcc",
+    "python@2",
+    "python"
+  ],
+  "recommended_dependencies": [
+    "python@2",
+    "python"
+  ],
+  "optional_dependencies": [
+
+  ],
+  "build_dependencies": [
+    "gcc"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "If you use system python (that comes - depending on the OS X version -\nwith older versions of numpy, scipy and matplotlib), you may need to\nensure that the brewed packages come earlier in Python's sys.path with:\n  mkdir -p /Users/mike/Library/Python/2.7/lib/python/site-packages\n  echo 'import sys; sys.path.insert(1, \"/usr/local/lib/python3.6/site-packages\")' >> /Users/mike/Library/Python/2.7/lib/python/site-packages/homebrew.pth\n",
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--without-python@2",
+      "description": "Build without python2 support"
+    },
+    {
+      "option": "--without-python",
+      "description": "Build without python support"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/numpy-1.14.3_1.high_sierra.bottle.tar.gz",
+          "sha256": "4ec78166efce2904beb06ecc251b8a851207829c37e04a244ed6b004edeec7f1"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/numpy-1.14.3_1.sierra.bottle.tar.gz",
+          "sha256": "176cbf7a2393199c1cbb77e36811cb244793e40125454904d3070c21cece8483"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/numpy-1.14.3_1.el_capitan.bottle.tar.gz",
+          "sha256": "34f1cc206f1d59892a8f277cd8a0e39d991cb53c12e1628c6465b9c9c893a937"
+        }
+      }
+    }
+  }
+}

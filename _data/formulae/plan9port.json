@@ -1,0 +1,84 @@
+{
+  "name": "plan9port",
+  "full_name": "plan9port",
+  "desc": "Many Plan 9 programs ported to UNIX-like operating systems",
+  "homepage": "https://swtch.com/plan9port/",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "20140306",
+    "bottle": true,
+    "devel": null,
+    "head": "HEAD"
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "build_dependencies": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "In order not to collide with OSX system binaries, the Plan 9 binaries have\nbeen installed to /usr/local/opt/plan9port/libexec/bin.\nTo run the Plan 9 version of a command simply call it through the command\n\"9\", which has been installed into the Homebrew prefix bin.  For example,\nto run Plan 9's ls run:\n    # 9 ls\n",
+  "requirements": [
+    {
+      "name": "x11",
+      "cask": "xquartz",
+      "download": "https://xquartz.macosforge.org"
+    }
+  ],
+  "options": [
+    {
+      "option": "--with-x11",
+      "description": "Build with x11 support"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any_skip_relocation",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/plan9port-20140306.high_sierra.bottle.tar.gz",
+          "sha256": "5c2efeb97b9d5a9171fc41e862223682a5b86a9af064a13381d10624bdf32d04"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/plan9port-20140306.sierra.bottle.tar.gz",
+          "sha256": "5f2d48d2f3a732795c8ab050bb705caf59a18ee86d3d89c143b22533a46bd71c"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/plan9port-20140306.el_capitan.bottle.tar.gz",
+          "sha256": "eb56faa4c63a522e34ba609fc0d4eb5af9b22715c0915629776129eb64d8625f"
+        },
+        "yosemite": {
+          "url": "https://homebrew.bintray.com/bottles/plan9port-20140306.yosemite.bottle.tar.gz",
+          "sha256": "86fd2ed15a0fe79927c04a064222f88455bfc0e72bc1f97576e2962b11a70cc8"
+        },
+        "mavericks": {
+          "url": "https://homebrew.bintray.com/bottles/plan9port-20140306.mavericks.bottle.tar.gz",
+          "sha256": "ef0059997655128f6b41faa1023b37a071ff9976f4c94d3b3bd706be65177aa1"
+        }
+      }
+    }
+  }
+}

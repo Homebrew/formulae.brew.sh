@@ -1,0 +1,88 @@
+{
+  "name": "dcmtk",
+  "full_name": "dcmtk",
+  "desc": "OFFIS DICOM toolkit command-line utilities",
+  "homepage": "https://dicom.offis.de/dcmtk.php.en",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "3.6.3",
+    "bottle": true,
+    "devel": null,
+    "head": "HEAD"
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "cmake",
+    "libpng",
+    "libtiff",
+    "openssl",
+    "libiconv"
+  ],
+  "recommended_dependencies": [
+    "openssl"
+  ],
+  "optional_dependencies": [
+    "libiconv"
+  ],
+  "build_dependencies": [
+    "cmake"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--with-docs",
+      "description": "Install development libraries/headers and HTML docs"
+    },
+    {
+      "option": "--with-libiconv",
+      "description": "Build with brewed libiconv. Dcmtk and system libiconv can have problems with utf8."
+    },
+    {
+      "option": "--with-dicomdict",
+      "description": "Build with baked-in DICOM data dictionary."
+    },
+    {
+      "option": "--without-openssl",
+      "description": "Build without openssl support"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/dcmtk-3.6.3.high_sierra.bottle.tar.gz",
+          "sha256": "ebc1492ba0b008c2d84e84cce1be2da9eb9210ffa8809bcfc710a0bcf35d5575"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/dcmtk-3.6.3.sierra.bottle.tar.gz",
+          "sha256": "c7771b2deb50e919f2b332d532f7f81bd67331a2350aea85f7f61658a70b5b15"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/dcmtk-3.6.3.el_capitan.bottle.tar.gz",
+          "sha256": "586903834cdc7bbc4ffc7adb5478b63fb80df1f95b1a631a8b41d5b54bbc275f"
+        }
+      }
+    }
+  }
+}

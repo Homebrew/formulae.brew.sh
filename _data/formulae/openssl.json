@@ -1,0 +1,84 @@
+{
+  "name": "openssl",
+  "full_name": "openssl",
+  "desc": "SSL/TLS cryptography library",
+  "homepage": "https://openssl.org/",
+  "oldname": null,
+  "aliases": [
+    "openssl@1.0"
+  ],
+  "versions": {
+    "stable": "1.0.2o",
+    "bottle": true,
+    "devel": null,
+    "head": null
+  },
+  "revision": 1,
+  "version_scheme": 0,
+  "installed": [
+    {
+      "version": "1.0.2o_1",
+      "used_options": [
+
+      ],
+      "built_as_bottle": true,
+      "poured_from_bottle": true,
+      "runtime_dependencies": [
+
+      ],
+      "installed_as_dependency": true,
+      "installed_on_request": true
+    }
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": true,
+  "dependencies": [
+    "makedepend"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "build_dependencies": [
+    "makedepend"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "A CA file has been bootstrapped using certificates from the SystemRoots\nkeychain. To add additional certificates (e.g. the certificates added in\nthe System keychain), place .pem files in\n  /usr/local/etc/openssl/certs\n\nand run\n  /usr/local/opt/openssl/bin/c_rehash\n",
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--without-test",
+      "description": "Skip build-time tests (not recommended)"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/openssl-1.0.2o_1.high_sierra.bottle.tar.gz",
+          "sha256": "67a795f419adcc7f2cc9c204538f2606ed9cf11f2e9587dea9c4f8189a592dee"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/openssl-1.0.2o_1.sierra.bottle.tar.gz",
+          "sha256": "06ae39a0167691a104a490b5518600f314f72944a18dc1fbdae8405d000b585b"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/openssl-1.0.2o_1.el_capitan.bottle.tar.gz",
+          "sha256": "3470a25f36a68d96b00dffcd1452d3d5d171ab3656e126f6e2cf233e2705423d"
+        }
+      }
+    }
+  }
+}

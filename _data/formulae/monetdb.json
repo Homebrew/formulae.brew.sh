@@ -1,0 +1,118 @@
+{
+  "name": "monetdb",
+  "full_name": "monetdb",
+  "desc": "Column-store database",
+  "homepage": "https://www.monetdb.org/",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "11.29.3",
+    "bottle": true,
+    "devel": null,
+    "head": "HEAD"
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "pkg-config",
+    "ant",
+    "libatomic_ops",
+    "pcre",
+    "readline",
+    "openssl",
+    "unixodbc",
+    "geos",
+    "gsl",
+    "cfitsio"
+  ],
+  "recommended_dependencies": [
+    "libatomic_ops"
+  ],
+  "optional_dependencies": [
+    "unixodbc",
+    "geos",
+    "gsl",
+    "cfitsio"
+  ],
+  "build_dependencies": [
+    "pkg-config",
+    "ant",
+    "libatomic_ops"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "requirements": [
+    {
+      "name": "r",
+      "cask": null,
+      "download": null
+    }
+  ],
+  "options": [
+    {
+      "option": "--with-java",
+      "description": "Build the JDBC driver"
+    },
+    {
+      "option": "--with-ruby",
+      "description": "Build the Ruby driver"
+    },
+    {
+      "option": "--with-r",
+      "description": "Build the R integration module"
+    },
+    {
+      "option": "--without-libatomic_ops",
+      "description": "Build without libatomic_ops support"
+    },
+    {
+      "option": "--with-unixodbc",
+      "description": "Build with unixodbc support"
+    },
+    {
+      "option": "--with-geos",
+      "description": "Build with geos support"
+    },
+    {
+      "option": "--with-gsl",
+      "description": "Build with gsl support"
+    },
+    {
+      "option": "--with-cfitsio",
+      "description": "Build with cfitsio support"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/monetdb-11.29.3.high_sierra.bottle.tar.gz",
+          "sha256": "524334a54122d87d29e15f15da8620d804ee6a791396a8da698cc378fe8db10a"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/monetdb-11.29.3.sierra.bottle.tar.gz",
+          "sha256": "b0c68409cc0783fcf83fd84496556a3a6c80bbe4bb1414f687cd10c3eddd85da"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/monetdb-11.29.3.el_capitan.bottle.tar.gz",
+          "sha256": "c17635a041cf7fdf5458ed70f4cf8b10f53fe1a5ccf2109d5c8e262b978eab16"
+        }
+      }
+    }
+  }
+}

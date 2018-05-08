@@ -1,0 +1,79 @@
+{
+  "name": "tomcat-native",
+  "full_name": "tomcat-native",
+  "desc": "Lets Tomcat use some native resources for performance",
+  "homepage": "https://tomcat.apache.org/native-doc/",
+  "oldname": null,
+  "aliases": [
+    "libtcnative"
+  ],
+  "versions": {
+    "stable": "1.2.16",
+    "bottle": true,
+    "devel": null,
+    "head": null
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "libtool",
+    "tomcat",
+    "openssl",
+    "apr"
+  ],
+  "recommended_dependencies": [
+    "tomcat"
+  ],
+  "optional_dependencies": [
+
+  ],
+  "build_dependencies": [
+    "libtool"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "In order for tomcat's APR lifecycle listener to find this library, you'll\nneed to add it to java.library.path. This can be done by adding this line\nto $CATALINA_HOME/bin/setenv.sh\n\n  CATALINA_OPTS=\"$CATALINA_OPTS -Djava.library.path=/usr/local/opt/tomcat-native/lib\"\n\nIf $CATALINA_HOME/bin/setenv.sh doesn't exist, create it and make it executable.\n",
+  "requirements": [
+    {
+      "name": "java",
+      "cask": "java",
+      "download": "https://www.oracle.com/technetwork/java/javase/downloads/index.html"
+    }
+  ],
+  "options": [
+    {
+      "option": "--without-tomcat",
+      "description": "Build without tomcat support"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/tomcat-native-1.2.16.high_sierra.bottle.tar.gz",
+          "sha256": "b78686398145610c37d78f93d75cd7e0b28fa28c27a4f2b2731f292b98ed2f55"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/tomcat-native-1.2.16.sierra.bottle.tar.gz",
+          "sha256": "1e80549899d29dcd3d9e396bcbd016ee0f01f2f7cd65f98d699748e6c381e8c6"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/tomcat-native-1.2.16.el_capitan.bottle.tar.gz",
+          "sha256": "478df4f9c769f5f904e65938ff961dd24d9d5b9a742ad2545d3ef9e58babe394"
+        }
+      }
+    }
+  }
+}

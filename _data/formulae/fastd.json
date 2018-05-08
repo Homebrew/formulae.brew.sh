@@ -1,0 +1,88 @@
+{
+  "name": "fastd",
+  "full_name": "fastd",
+  "desc": "Fast and Secure Tunnelling Daemon",
+  "homepage": "https://projects.universe-factory.net/projects/fastd",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "18",
+    "bottle": true,
+    "devel": null,
+    "head": "HEAD"
+  },
+  "revision": 3,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "cmake",
+    "libuecc",
+    "libsodium",
+    "bison",
+    "pkg-config",
+    "json-c",
+    "openssl"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "openssl"
+  ],
+  "build_dependencies": [
+    "cmake",
+    "bison",
+    "pkg-config"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "requirements": [
+    {
+      "name": "tuntap",
+      "cask": "tuntap",
+      "download": null
+    }
+  ],
+  "options": [
+    {
+      "option": "--with-openssl",
+      "description": "Build with openssl support"
+    },
+    {
+      "option": "--with-tuntap",
+      "description": "Build with tuntap support"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/fastd-18_3.high_sierra.bottle.tar.gz",
+          "sha256": "e2ffc27c91c3f114e3aee16fa984508285ac470206987f57acbd71300f44c79f"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/fastd-18_3.sierra.bottle.tar.gz",
+          "sha256": "c4003d1015702e51335a6c283031427c8ba46297f70ea24173070276d5d47505"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/fastd-18_3.el_capitan.bottle.tar.gz",
+          "sha256": "b118c9000eaf4c64d8e2faedae20b9309c46c84042bb011c20c28786b507398b"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "name": "mysql",
+  "full_name": "mysql",
+  "desc": "Open source relational database management system",
+  "homepage": "https://dev.mysql.com/doc/refman/5.7/en/",
+  "oldname": null,
+  "aliases": [
+    "mysql@5.7"
+  ],
+  "versions": {
+    "stable": "5.7.22",
+    "bottle": true,
+    "devel": "8.0.4-rc",
+    "head": null
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+    {
+      "version": "5.7.22",
+      "used_options": [
+
+      ],
+      "built_as_bottle": true,
+      "poured_from_bottle": true,
+      "runtime_dependencies": [
+        {
+          "full_name": "openssl",
+          "version": "1.0.2o"
+        }
+      ],
+      "installed_as_dependency": false,
+      "installed_on_request": true
+    }
+  ],
+  "linked_keg": "5.7.22",
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "cmake",
+    "openssl"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "build_dependencies": [
+    "cmake"
+  ],
+  "conflicts_with": [
+    "mysql-cluster",
+    "mariadb",
+    "percona-server",
+    "mysql-connector-c",
+    "mariadb-connector-c"
+  ],
+  "caveats": "We've installed your MySQL database without a root password. To secure it run:\n    mysql_secure_installation\n\nMySQL is configured to only allow connections from localhost by default\n\nTo connect run:\n    mysql -uroot\n",
+  "requirements": [
+    {
+      "name": "macos",
+      "cask": null,
+      "download": null
+    }
+  ],
+  "options": [
+    {
+      "option": "--with-debug",
+      "description": "Build with debug support"
+    },
+    {
+      "option": "--with-embedded",
+      "description": "Build the embedded server"
+    },
+    {
+      "option": "--with-local-infile",
+      "description": "Build with local infile loading support"
+    },
+    {
+      "option": "--with-memcached",
+      "description": "Build with InnoDB Memcached plugin"
+    },
+    {
+      "option": "--with-test",
+      "description": "Build with unit tests"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/mysql-5.7.22.high_sierra.bottle.tar.gz",
+          "sha256": "55b0311fdd9b9d6e369f3b7ea0c7c82692073502215ac7a00055a2189d5478a2"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/mysql-5.7.22.sierra.bottle.tar.gz",
+          "sha256": "8e01836f50bf3f907e2357384442e8c938615c5fe2ba35f9e255aa08ff6bca0d"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/mysql-5.7.22.el_capitan.bottle.tar.gz",
+          "sha256": "1a190fa7803e5706c690b8281f61e861a5db68781ee2193c17119d4dd1d0cb1d"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "name": "h2o",
+  "full_name": "h2o",
+  "desc": "HTTP server with support for HTTP/1.x and HTTP/2",
+  "homepage": "https://github.com/h2o/h2o/",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "2.2.4",
+    "bottle": true,
+    "devel": null,
+    "head": null
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "cmake",
+    "pkg-config",
+    "openssl",
+    "libuv",
+    "wslay"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "libuv",
+    "wslay"
+  ],
+  "build_dependencies": [
+    "cmake",
+    "pkg-config"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "A basic example configuration file has been placed in /usr/local/etc/h2o.\nYou can find fuller, unmodified examples here:\n  https://github.com/h2o/h2o/tree/master/examples/h2o\n",
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--with-libuv",
+      "description": "Build the H2O library in addition to the executable"
+    },
+    {
+      "option": "--without-mruby",
+      "description": "Don't build the bundled statically-linked mruby"
+    },
+    {
+      "option": "--with-wslay",
+      "description": "Build with wslay support"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/h2o-2.2.4.high_sierra.bottle.tar.gz",
+          "sha256": "18a5cc03a32ef932ef0ab7da282b493218f552c7d9fb928957dace5ac343119c"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/h2o-2.2.4.sierra.bottle.tar.gz",
+          "sha256": "2aa8bba21a1ca614e9924a069463710cc48c9a1926300a3e2acd56da0f64974f"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/h2o-2.2.4.el_capitan.bottle.tar.gz",
+          "sha256": "b54f61f4a00bb1a0fe01b8c1525a48ab6a361497d3d8415cc0267d030c53961e"
+        }
+      }
+    }
+  }
+}

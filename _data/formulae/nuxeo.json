@@ -1,0 +1,68 @@
+{
+  "name": "nuxeo",
+  "full_name": "nuxeo",
+  "desc": "Enterprise Content Management",
+  "homepage": "https://nuxeo.github.io/",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "10.1",
+    "bottle": false,
+    "devel": null,
+    "head": null
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "poppler",
+    "pdftohtml",
+    "imagemagick",
+    "ghostscript",
+    "ufraw",
+    "libwpd",
+    "exiftool",
+    "ffmpeg"
+  ],
+  "recommended_dependencies": [
+    "poppler"
+  ],
+  "optional_dependencies": [
+    "pdftohtml",
+    "ffmpeg"
+  ],
+  "build_dependencies": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "You need to edit /usr/local/etc/nuxeo.conf file to configure manually the server.\nAlso, in case of upgrade, run 'nuxeoctl mp-upgrade' to ensure all\ndownloaded addons are up to date.\n",
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--without-poppler",
+      "description": "Build without poppler support"
+    },
+    {
+      "option": "--with-pdftohtml",
+      "description": "Build with pdftohtml support"
+    },
+    {
+      "option": "--with-ffmpeg",
+      "description": "Build with ffmpeg support"
+    }
+  ],
+  "bottle": {
+  }
+}

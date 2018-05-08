@@ -1,0 +1,92 @@
+{
+  "name": "postgresql@9.6",
+  "full_name": "postgresql@9.6",
+  "desc": "Object-relational database system",
+  "homepage": "https://www.postgresql.org/",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "9.6.8",
+    "bottle": true,
+    "devel": null,
+    "head": null
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": true,
+  "dependencies": [
+    "openssl",
+    "readline",
+    "python",
+    "python@2"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "python",
+    "python@2"
+  ],
+  "build_dependencies": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "If builds of PostgreSQL 9 are failing and you have version 8.x installed,\nyou may need to remove the previous version first. See:\n  https://github.com/Homebrew/legacy-homebrew/issues/2510\n\nTo migrate existing data from a previous major version (pre-9.0) of PostgreSQL, see:\n  https://www.postgresql.org/docs/9.6/static/upgrading.html\n\nTo migrate existing data from a previous minor version (9.0-9.5) of PostgreSQL, see:\n  https://www.postgresql.org/docs/9.6/static/pgupgrade.html\n\n  You will need your previous PostgreSQL installation from brew to perform `pg_upgrade`.\n    Do not run `brew cleanup postgresql@9.6` until you have performed the migration.\n",
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--without-perl",
+      "description": "Build without Perl support"
+    },
+    {
+      "option": "--without-tcl",
+      "description": "Build without Tcl support"
+    },
+    {
+      "option": "--with-dtrace",
+      "description": "Build with DTrace support"
+    },
+    {
+      "option": "--with-python",
+      "description": "Enable PL/Python3 (incompatible with --with-python@2)"
+    },
+    {
+      "option": "--with-python@2",
+      "description": "Enable PL/Python2"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/postgresql@9.6-9.6.8.high_sierra.bottle.tar.gz",
+          "sha256": "65a15219e94cb7d5d37e9897a5089201bf37ae764d58483d25637cc766d7ec27"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/postgresql@9.6-9.6.8.sierra.bottle.tar.gz",
+          "sha256": "25610e42e781365da3baf3f1bcdea23cdadf0c662fcc0170aa63a48840ac8022"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/postgresql@9.6-9.6.8.el_capitan.bottle.tar.gz",
+          "sha256": "0aa048011d36027d078c5d1efd720518439fdf05b5356ac4ec4f8cacd6598d99"
+        }
+      }
+    }
+  }
+}

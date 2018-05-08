@@ -1,0 +1,74 @@
+{
+  "name": "google-authenticator-libpam",
+  "full_name": "google-authenticator-libpam",
+  "desc": "PAM module for two-factor authentication",
+  "homepage": "https://github.com/google/google-authenticator-libpam",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "1.05",
+    "bottle": true,
+    "devel": null,
+    "head": null
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "autoconf",
+    "automake",
+    "libtool",
+    "qrencode"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "build_dependencies": [
+    "autoconf",
+    "automake",
+    "libtool"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "Add 2-factor authentication for ssh:\n  echo \"auth required /usr/local/opt/google-authenticator-libpam/lib/security/pam_google_authenticator.so\" \\\n  | sudo tee -a /etc/pam.d/sshd\n\nAdd 2-factor authentication for ssh allowing users to log in without OTP:\n  echo \"auth required /usr/local/opt/google-authenticator-libpam/lib/security/pam_google_authenticator.so\" \\\n  \"nullok\" | sudo tee -a /etc/pam.d/sshd\n\n(Or just manually edit /etc/pam.d/sshd)\n",
+  "requirements": [
+
+  ],
+  "options": [
+
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any_skip_relocation",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/google-authenticator-libpam-1.05.high_sierra.bottle.tar.gz",
+          "sha256": "6b76859ee4008c2d66712585617f0b47d5a40cb4583fda5784f9b7f05260387e"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/google-authenticator-libpam-1.05.sierra.bottle.tar.gz",
+          "sha256": "1082f7a7a81ac9e3045176b66baedbdf956aca8ccd7e4b008013b24f0d2ed3c2"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/google-authenticator-libpam-1.05.el_capitan.bottle.tar.gz",
+          "sha256": "2d48707e7e2dc9821c6954295c983ad76c9edcd6bac71f9da1cb2ecdb7b560a2"
+        }
+      }
+    }
+  }
+}

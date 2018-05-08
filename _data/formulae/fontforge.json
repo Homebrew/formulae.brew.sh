@@ -1,0 +1,107 @@
+{
+  "name": "fontforge",
+  "full_name": "fontforge",
+  "desc": "Command-line outline and bitmap font editor/converter",
+  "homepage": "https://fontforge.github.io",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "20170731",
+    "bottle": true,
+    "devel": null,
+    "head": null
+  },
+  "revision": 3,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "pkg-config",
+    "libtool",
+    "gettext",
+    "pango",
+    "cairo",
+    "fontconfig",
+    "libpng",
+    "jpeg",
+    "libtiff",
+    "giflib",
+    "libspiro",
+    "libuninameslist",
+    "python@2"
+  ],
+  "recommended_dependencies": [
+    "jpeg",
+    "libtiff"
+  ],
+  "optional_dependencies": [
+    "giflib",
+    "libspiro",
+    "libuninameslist"
+  ],
+  "build_dependencies": [
+    "pkg-config"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "This formula only installs the command line utilities.\n\nFontForge.app can be downloaded directly from the website:\n  https://fontforge.github.io\n\nAlternatively, install with Homebrew-Cask:\n  brew cask install fontforge\n",
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--with-giflib",
+      "description": "Build with GIF support"
+    },
+    {
+      "option": "--with-extra-tools",
+      "description": "Build with additional font tools"
+    },
+    {
+      "option": "--without-jpeg",
+      "description": "Build without jpeg support"
+    },
+    {
+      "option": "--without-libtiff",
+      "description": "Build without libtiff support"
+    },
+    {
+      "option": "--with-libspiro",
+      "description": "Build with libspiro support"
+    },
+    {
+      "option": "--with-libuninameslist",
+      "description": "Build with libuninameslist support"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/fontforge-20170731_3.high_sierra.bottle.tar.gz",
+          "sha256": "06dbc9a8d4bc58b2097d455074118db2b0c9063d6e341e8f36034f7dbb896aec"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/fontforge-20170731_3.sierra.bottle.tar.gz",
+          "sha256": "c1c341cc9e10bb504fee8b8cdcb827ae1ee32db9a2c723743a79e39df32da8fd"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/fontforge-20170731_3.el_capitan.bottle.tar.gz",
+          "sha256": "ec69ac98f88c91f84f83d929310c6b7bdb4ccdc731e2603d2402dbdccd54a6d2"
+        }
+      }
+    }
+  }
+}

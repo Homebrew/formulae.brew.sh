@@ -1,0 +1,91 @@
+{
+  "name": "knot-resolver",
+  "full_name": "knot-resolver",
+  "desc": "Minimalistic, caching, DNSSEC-validating DNS resolver",
+  "homepage": "https://www.knot-resolver.cz",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "2.3.0",
+    "bottle": true,
+    "devel": null,
+    "head": "HEAD"
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "cmocka",
+    "pkg-config",
+    "gnutls",
+    "knot",
+    "luajit",
+    "libuv",
+    "lmdb",
+    "nettle",
+    "hiredis",
+    "libmemcached"
+  ],
+  "recommended_dependencies": [
+    "nettle"
+  ],
+  "optional_dependencies": [
+    "hiredis",
+    "libmemcached"
+  ],
+  "build_dependencies": [
+    "cmocka",
+    "pkg-config"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--without-nettle",
+      "description": "Compile without DNS cookies support"
+    },
+    {
+      "option": "--with-hiredis",
+      "description": "Compile with Redis cache storage support"
+    },
+    {
+      "option": "--with-libmemcached",
+      "description": "Compile with memcached cache storage support"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/knot-resolver-2.3.0.high_sierra.bottle.tar.gz",
+          "sha256": "dd496ee05149df3956ff847ca3a050b8a37dd4433b9d559b23aa993c36203a0b"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/knot-resolver-2.3.0.sierra.bottle.tar.gz",
+          "sha256": "ccd5b5cd6ed613292b78b004eaa7086bac2b774e8ab5cdca65ac79b3cf49869b"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/knot-resolver-2.3.0.el_capitan.bottle.tar.gz",
+          "sha256": "36733f655b19474e7fd2deca365bbc812edfb745b9adf40bf6087b8e874cef52"
+        }
+      }
+    }
+  }
+}

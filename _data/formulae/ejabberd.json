@@ -1,0 +1,76 @@
+{
+  "name": "ejabberd",
+  "full_name": "ejabberd",
+  "desc": "XMPP application server",
+  "homepage": "https://www.ejabberd.im",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "18.04",
+    "bottle": true,
+    "devel": null,
+    "head": "HEAD"
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "openssl",
+    "erlang",
+    "gd",
+    "libyaml",
+    "imagemagick"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "imagemagick"
+  ],
+  "build_dependencies": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "If you face nodedown problems, concat your machine name to:\n  /private/etc/hosts\nafter 'localhost'.\n",
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--with-imagemagick",
+      "description": "Build with imagemagick support"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/ejabberd-18.04.high_sierra.bottle.tar.gz",
+          "sha256": "9f9b034d58cea40f3da6b2ddc750cbebcc20e4a60fdc108d978ac513be394651"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/ejabberd-18.04.sierra.bottle.tar.gz",
+          "sha256": "eebf922658e9075b48c39802f41ced1a0fff2e6bf084c798c0a8966dd91135ec"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/ejabberd-18.04.el_capitan.bottle.tar.gz",
+          "sha256": "e8c9f05d90035141be73d1042fd3704ea9db3a850559e3935681a4a6b23f4409"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "name": "vsftpd",
+  "full_name": "vsftpd",
+  "desc": "Secure FTP server for UNIX",
+  "homepage": "https://security.appspot.com/vsftpd.html",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "3.0.3",
+    "bottle": true,
+    "devel": null,
+    "head": null
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "openssl"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "openssl"
+  ],
+  "build_dependencies": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "To use chroot, vsftpd requires root privileges, so you will need to run\n`sudo vsftpd`.\nYou should be certain that you trust any software you grant root privileges.\n\nThe vsftpd.conf file must be owned by root or vsftpd will refuse to start:\n  sudo chown root /usr/local/etc/vsftpd.conf\n",
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--with-openssl",
+      "description": "Build with openssl support"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 2,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/vsftpd-3.0.3.high_sierra.bottle.2.tar.gz",
+          "sha256": "dbfc9b28f5ea49dda09d31fb630d995b72fd63b83b358e04156329252c3ab25b"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/vsftpd-3.0.3.sierra.bottle.2.tar.gz",
+          "sha256": "22349437bd4d75b1ffd2fddfd90f92367e0a4f478f540b9086457541883f2c3b"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/vsftpd-3.0.3.el_capitan.bottle.2.tar.gz",
+          "sha256": "108243559f3fea06d140173a3e3cb497c2f22c47d45e85ae108c088c1a1370df"
+        },
+        "yosemite": {
+          "url": "https://homebrew.bintray.com/bottles/vsftpd-3.0.3.yosemite.bottle.2.tar.gz",
+          "sha256": "25a9d2e92ca7e3efda6c9882a62ad5927c0c5e450eca4d62d7829c467dd086d9"
+        }
+      }
+    }
+  }
+}

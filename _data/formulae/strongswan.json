@@ -1,0 +1,77 @@
+{
+  "name": "strongswan",
+  "full_name": "strongswan",
+  "desc": "VPN based on IPsec",
+  "homepage": "https://www.strongswan.org",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "5.6.2",
+    "bottle": true,
+    "devel": null,
+    "head": "HEAD"
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "openssl",
+    "curl"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "curl"
+  ],
+  "build_dependencies": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "strongSwan's configuration files are placed in:\n  /usr/local/etc\n\nYou will have to run both \"ipsec\" and \"charon-cmd\" with \"sudo\".\n",
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--with-curl",
+      "description": "Build with libcurl based fetcher"
+    },
+    {
+      "option": "--with-suite-b",
+      "description": "Build with Suite B support (does not use the IPsec implementation provided by the kernel)"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/strongswan-5.6.2.high_sierra.bottle.tar.gz",
+          "sha256": "48f2e53c4525ebcd34a0f90e6ff7449ac87e289a79da136d4db2bb1fb2bf92ee"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/strongswan-5.6.2.sierra.bottle.tar.gz",
+          "sha256": "11b4f357405eb1fcdacd2dc69bc54775170405ff4346e803de511b53d5c5d161"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/strongswan-5.6.2.el_capitan.bottle.tar.gz",
+          "sha256": "894be0c9cab897e2c5a1d6f8ce2fe5cacc8cf17e4d99ab449fdc56b3e1539d81"
+        }
+      }
+    }
+  }
+}

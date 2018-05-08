@@ -1,0 +1,84 @@
+{
+  "name": "opam",
+  "full_name": "opam",
+  "desc": "Package manager for OCaml",
+  "homepage": "https://opam.ocaml.org",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "1.2.2",
+    "bottle": true,
+    "devel": null,
+    "head": "HEAD"
+  },
+  "revision": 4,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "ocaml",
+    "camlp4",
+    "aspcud"
+  ],
+  "recommended_dependencies": [
+    "ocaml",
+    "camlp4",
+    "aspcud"
+  ],
+  "optional_dependencies": [
+
+  ],
+  "build_dependencies": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "OPAM uses ~/.opam by default for its package database, so you need to\ninitialize it first by running (as a normal user):\n\n$  opam init\n\nRun the following to initialize your environment variables:\n\n$  eval `opam config env`\n\nTo export the needed variables every time, add them to your dotfiles.\n  * On Bash, add them to `~/.bash_profile`.\n  * On Zsh, add them to `~/.zprofile` or `~/.zshrc` instead.\n\nDocumentation and tutorials are available at https://opam.ocaml.org, or\nvia \"man opam\" and \"opam --help\".\n",
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--without-ocaml",
+      "description": "Build without ocaml support"
+    },
+    {
+      "option": "--without-camlp4",
+      "description": "Build without camlp4 support"
+    },
+    {
+      "option": "--without-aspcud",
+      "description": "Build without aspcud support"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any_skip_relocation",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/opam-1.2.2_4.high_sierra.bottle.tar.gz",
+          "sha256": "b5e2621c1bca5f8374ee07ef878e5572e04debf9ba1d3aa4a2e16b8e26728e68"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/opam-1.2.2_4.sierra.bottle.tar.gz",
+          "sha256": "cd52d891272efc754a838e8a08a4a7c5030ff908430c3ed1303a549cd1a4f73d"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/opam-1.2.2_4.el_capitan.bottle.tar.gz",
+          "sha256": "74f8341302bb5a933276cff7f9dff7240ad59a4d968050674b63869d9963de7e"
+        }
+      }
+    }
+  }
+}

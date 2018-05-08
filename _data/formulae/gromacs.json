@@ -1,0 +1,86 @@
+{
+  "name": "gromacs",
+  "full_name": "gromacs",
+  "desc": "Versatile package for molecular dynamics calculations",
+  "homepage": "http://www.gromacs.org/",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "2018.1",
+    "bottle": true,
+    "devel": null,
+    "head": null
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "cmake",
+    "fftw",
+    "gsl"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "build_dependencies": [
+    "cmake"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "GMXRC and other scripts installed to:\n  /usr/local/share/gromacs\n",
+  "requirements": [
+    {
+      "name": "x11",
+      "cask": "xquartz",
+      "download": "https://xquartz.macosforge.org"
+    }
+  ],
+  "options": [
+    {
+      "option": "--with-double",
+      "description": "Enables double precision"
+    },
+    {
+      "option": "--with-mpi",
+      "description": "Enable parallel support"
+    },
+    {
+      "option": "--with-x11",
+      "description": "Build with x11 support"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/gromacs-2018.1.high_sierra.bottle.tar.gz",
+          "sha256": "87af5516efcdf5abf238d36f13060649e767a1e729095daa534760f49deb12dc"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/gromacs-2018.1.sierra.bottle.tar.gz",
+          "sha256": "b0645796ec3a3362a9e81de36b193c1e265d099ae496e1d74b32b4f4b1e02c8f"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/gromacs-2018.1.el_capitan.bottle.tar.gz",
+          "sha256": "0d59a8c98be5188486cd1738fee23ed5461edee59a26715af50cda323ab83659"
+        }
+      }
+    }
+  }
+}

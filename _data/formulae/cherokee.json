@@ -1,0 +1,78 @@
+{
+  "name": "cherokee",
+  "full_name": "cherokee",
+  "desc": "Modern, user friendly web server",
+  "homepage": "http://cherokee-project.com/",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "1.2.103",
+    "bottle": true,
+    "devel": null,
+    "head": null
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "gettext",
+    "openssl"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "build_dependencies": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "Cherokee is setup to run with your user permissions as part of the\nwww group on port 80. This can be changed in the cherokee-admin\nbut be aware the new user will need permissions to write to:\n  /usr/local/var/cherokee\nfor logging and runtime files.\n\nBy default, documents will be served out of:\n  /usr/local/etc/cherokee/htdocs\n\nAnd CGI scripts from:\n  /usr/local/etc/cherokee/cgi-bin\n\n If this is your first install, automatically load on startup with:\n    sudo cp /usr/local/Cellar/cherokee/1.2.103/org.cherokee.webserver.plist /Library/LaunchDaemons\n    sudo launchctl load -w /Library/LaunchDaemons/org.cherokee.webserver.plist\n\nIf this is an upgrade and you already have the plist loaded:\n    sudo launchctl unload -w /Library/LaunchDaemons/org.cherokee.webserver.plist\n    sudo cp /usr/local/Cellar/cherokee/1.2.103/org.cherokee.webserver.plist /Library/LaunchDaemons\n    sudo launchctl load -w /Library/LaunchDaemons/org.cherokee.webserver.plist\n",
+  "requirements": [
+
+  ],
+  "options": [
+
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/cherokee-1.2.103.high_sierra.bottle.tar.gz",
+          "sha256": "e149e2a50f0954be520def65943abf020f44460ceeb41d428627c5d65be2d177"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/cherokee-1.2.103.sierra.bottle.tar.gz",
+          "sha256": "db0adb2f4e099777e5309d1b2ca2102c8ae576eb45a51c827f0e2fb7866b66ed"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/cherokee-1.2.103.el_capitan.bottle.tar.gz",
+          "sha256": "f6944776619d9338169b1676cc10d9960c27cb7a88b1189a4e02e1f577d4e2d6"
+        },
+        "yosemite": {
+          "url": "https://homebrew.bintray.com/bottles/cherokee-1.2.103.yosemite.bottle.tar.gz",
+          "sha256": "af00f0cc177c2c16063aa3abe8dfe025568874db126edfacce4a33c8a3fbd5cb"
+        },
+        "mavericks": {
+          "url": "https://homebrew.bintray.com/bottles/cherokee-1.2.103.mavericks.bottle.tar.gz",
+          "sha256": "ef4d94b51cc425dd704d0007cf9980024035406cb00345158fd84b1901c04437"
+        }
+      }
+    }
+  }
+}

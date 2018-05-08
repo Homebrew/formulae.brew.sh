@@ -1,0 +1,90 @@
+{
+  "name": "open-ocd",
+  "full_name": "open-ocd",
+  "desc": "On-chip debugging, in-system programming and boundary-scan testing",
+  "homepage": "https://sourceforge.net/projects/openocd/",
+  "oldname": null,
+  "aliases": [
+    "openocd"
+  ],
+  "versions": {
+    "stable": "0.10.0",
+    "bottle": true,
+    "devel": null,
+    "head": "HEAD"
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "pkg-config",
+    "libusb",
+    "libusb-compat",
+    "libftdi",
+    "hidapi"
+  ],
+  "recommended_dependencies": [
+    "libusb",
+    "libftdi",
+    "hidapi"
+  ],
+  "optional_dependencies": [
+
+  ],
+  "build_dependencies": [
+    "pkg-config"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--without-hidapi",
+      "description": "Disable building support for devices using HIDAPI (CMSIS-DAP)"
+    },
+    {
+      "option": "--without-libftdi",
+      "description": "Disable building support for libftdi-based drivers (USB-Blaster, ASIX Presto, OpenJTAG)"
+    },
+    {
+      "option": "--without-libusb",
+      "description": "Disable building support for all other USB adapters"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 1,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/open-ocd-0.10.0.high_sierra.bottle.1.tar.gz",
+          "sha256": "eab0153f54c97d4922386996d7517b6dc22c8e418b620ba42dd6f190fc0c48f7"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/open-ocd-0.10.0.sierra.bottle.1.tar.gz",
+          "sha256": "281978e21362ed00dd198715825d77f0f2aeb64ad99954714a34ce128e1a0df8"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/open-ocd-0.10.0.el_capitan.bottle.1.tar.gz",
+          "sha256": "e1fc5f8a8bf079954a56459b330313cd82a69a219114821c14f9d3df2fd3ea25"
+        },
+        "yosemite": {
+          "url": "https://homebrew.bintray.com/bottles/open-ocd-0.10.0.yosemite.bottle.1.tar.gz",
+          "sha256": "568ae702a3488805b8651b5456346c9484ca6f8486a09f3c2a4473664370a481"
+        }
+      }
+    }
+  }
+}

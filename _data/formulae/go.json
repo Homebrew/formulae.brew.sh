@@ -1,0 +1,94 @@
+{
+  "name": "go",
+  "full_name": "go",
+  "desc": "Open source programming language to build simple/reliable/efficient software",
+  "homepage": "https://golang.org",
+  "oldname": null,
+  "aliases": [
+    "go@1.10",
+    "golang",
+    "google-go"
+  ],
+  "versions": {
+    "stable": "1.10.2",
+    "bottle": true,
+    "devel": null,
+    "head": "HEAD"
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+    {
+      "version": "1.10.1",
+      "used_options": [
+
+      ],
+      "built_as_bottle": true,
+      "poured_from_bottle": true,
+      "runtime_dependencies": [
+
+      ],
+      "installed_as_dependency": false,
+      "installed_on_request": true
+    }
+  ],
+  "linked_keg": "1.10.1",
+  "pinned": false,
+  "outdated": true,
+  "keg_only": false,
+  "dependencies": [
+
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "build_dependencies": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "A valid GOPATH is required to use the `go get` command.\nIf $GOPATH is not specified, $HOME/go will be used by default:\n  https://golang.org/doc/code.html#GOPATH\n\nYou may wish to add the GOROOT-based install location to your PATH:\n  export PATH=$PATH:/usr/local/opt/go/libexec/bin\n",
+  "requirements": [
+    {
+      "name": "macos",
+      "cask": null,
+      "download": null
+    }
+  ],
+  "options": [
+    {
+      "option": "--without-cgo",
+      "description": "Build without cgo (also disables race detector)"
+    },
+    {
+      "option": "--without-race",
+      "description": "Build without race detector"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/go-1.10.2.high_sierra.bottle.tar.gz",
+          "sha256": "ea9791a2a59ce984fbedec912a2ae3803b6ef710a39dc69bc4b5d0d7a0f5a19e"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/go-1.10.2.sierra.bottle.tar.gz",
+          "sha256": "4823ec642228f0a3746fe490ebd33f935d1c53424638792c20035ce0c3e8281e"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/go-1.10.2.el_capitan.bottle.tar.gz",
+          "sha256": "ffa756c299b5e13beff6af8ccbb06e7677a9f2038f5081026bd55024220b71e4"
+        }
+      }
+    }
+  }
+}

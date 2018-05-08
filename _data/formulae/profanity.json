@@ -1,0 +1,90 @@
+{
+  "name": "profanity",
+  "full_name": "profanity",
+  "desc": "Console based XMPP client",
+  "homepage": "http://www.profanity.im/",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "0.5.1",
+    "bottle": true,
+    "devel": null,
+    "head": "HEAD"
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "pkg-config",
+    "ossp-uuid",
+    "libstrophe",
+    "readline",
+    "glib",
+    "openssl",
+    "gnutls",
+    "libotr",
+    "gpgme",
+    "terminal-notifier"
+  ],
+  "recommended_dependencies": [
+    "libotr",
+    "gpgme"
+  ],
+  "optional_dependencies": [
+    "terminal-notifier"
+  ],
+  "build_dependencies": [
+    "pkg-config"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--without-libotr",
+      "description": "Build without libotr support"
+    },
+    {
+      "option": "--without-gpgme",
+      "description": "Build without gpgme support"
+    },
+    {
+      "option": "--with-terminal-notifier",
+      "description": "Build with terminal-notifier support"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 1,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/profanity-0.5.1.high_sierra.bottle.1.tar.gz",
+          "sha256": "927877fecb1306de71150281968d62ebc20d3e2fb70a43706d759d31f9b46d3d"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/profanity-0.5.1.sierra.bottle.1.tar.gz",
+          "sha256": "e1944f29f1fb1233f43c9beac4e4f6c4af247e64e94fa9c1c3b77fc4071124aa"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/profanity-0.5.1.el_capitan.bottle.1.tar.gz",
+          "sha256": "759ebf658a3a869b22da48f7c6a99dbad605c75af19931cef996ef3484df5d29"
+        }
+      }
+    }
+  }
+}

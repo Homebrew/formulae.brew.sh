@@ -1,0 +1,86 @@
+{
+  "name": "root",
+  "full_name": "root",
+  "desc": "Object oriented framework for large scale data analysis",
+  "homepage": "https://root.cern.ch",
+  "oldname": "root6",
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "6.12.06",
+    "bottle": true,
+    "devel": null,
+    "head": "HEAD"
+  },
+  "revision": 2,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "cmake",
+    "fftw",
+    "gcc",
+    "graphviz",
+    "gsl",
+    "openssl",
+    "pcre",
+    "xrootd",
+    "xz",
+    "python",
+    "python@2"
+  ],
+  "recommended_dependencies": [
+    "python"
+  ],
+  "optional_dependencies": [
+    "python@2"
+  ],
+  "build_dependencies": [
+    "cmake"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "Because ROOT depends on several installation-dependent\nenvironment variables to function properly, you should\nadd the following commands to your shell initialization\nscript (.bashrc/.profile/etc.), or call them directly\nbefore using ROOT.\n\nFor bash users:\n  . /usr/local/bin/thisroot.sh\nFor zsh users:\n  pushd /usr/local >/dev/null; . bin/thisroot.sh; popd >/dev/null\nFor csh/tcsh users:\n  source /usr/local/bin/thisroot.csh\n",
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--without-python",
+      "description": "Build without python support"
+    },
+    {
+      "option": "--with-python@2",
+      "description": "Build with python@2 support"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/root-6.12.06_2.high_sierra.bottle.tar.gz",
+          "sha256": "82f22f87fd132f5e3b2615b17451fae0abbfafe71f83beef16608ede2ca78abc"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/root-6.12.06_2.sierra.bottle.tar.gz",
+          "sha256": "2f6071e0c6f78f3a59c89af0486efd116b0c16bcaf77ad54dab2855fa741d73d"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/root-6.12.06_2.el_capitan.bottle.tar.gz",
+          "sha256": "4400792fe6f399824bae49a8c40f8cb0519260becade2a375c9f79e678b5f374"
+        }
+      }
+    }
+  }
+}

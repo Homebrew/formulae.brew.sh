@@ -1,0 +1,77 @@
+{
+  "name": "boot2docker",
+  "full_name": "boot2docker",
+  "desc": "Lightweight Linux for Docker",
+  "homepage": "https://github.com/boot2docker/boot2docker-cli",
+  "oldname": null,
+  "aliases": [
+    "boot2docker-cli"
+  ],
+  "versions": {
+    "stable": "1.8.0",
+    "bottle": true,
+    "devel": null,
+    "head": "HEAD"
+  },
+  "revision": 1,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "docker",
+    "go"
+  ],
+  "recommended_dependencies": [
+    "docker"
+  ],
+  "optional_dependencies": [
+
+  ],
+  "build_dependencies": [
+    "go"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "Rebuild the VM after an upgrade with:\n  boot2docker destroy && boot2docker upgrade\n",
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--without-docker",
+      "description": "Build without docker support"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 1,
+      "cellar": ":any_skip_relocation",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/boot2docker-1.8.0_1.high_sierra.bottle.1.tar.gz",
+          "sha256": "16ffa6973df56dafed83d373d88c94dd422330462909dc44a17580d0bd61760b"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/boot2docker-1.8.0_1.sierra.bottle.1.tar.gz",
+          "sha256": "dfb9853a87594fde5243295f959f70625db43b0fa4ebd95f1d43e8e8981488ce"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/boot2docker-1.8.0_1.el_capitan.bottle.1.tar.gz",
+          "sha256": "557a4c650af0733d298eb68cdd10d192944841e1cea57a9ac2abb1346b79c88f"
+        },
+        "yosemite": {
+          "url": "https://homebrew.bintray.com/bottles/boot2docker-1.8.0_1.yosemite.bottle.1.tar.gz",
+          "sha256": "d994acb53e60099a0cfab0f3261adbda070add67eff32ea05754d3975c14891d"
+        }
+      }
+    }
+  }
+}

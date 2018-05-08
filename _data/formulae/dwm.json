@@ -1,0 +1,80 @@
+{
+  "name": "dwm",
+  "full_name": "dwm",
+  "desc": "Dynamic window manager",
+  "homepage": "https://dwm.suckless.org/",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "6.1",
+    "bottle": true,
+    "devel": null,
+    "head": "HEAD"
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "dmenu"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "dmenu"
+  ],
+  "build_dependencies": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "In order to use the Mac OS X command key for dwm commands,\nchange the X11 keyboard modifier map using xmodmap (1).\n\ne.g. by running the following command from $HOME/.xinitrc\nxmodmap -e 'remove Mod2 = Meta_L' -e 'add Mod1 = Meta_L'&\n\nSee also https://gist.github.com/311377 for a handful of tips and tricks\nfor running dwm on Mac OS X.\n",
+  "requirements": [
+    {
+      "name": "x11",
+      "cask": "xquartz",
+      "download": "https://xquartz.macosforge.org"
+    }
+  ],
+  "options": [
+    {
+      "option": "--with-dmenu",
+      "description": "Build with dmenu support"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any_skip_relocation",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/dwm-6.1.high_sierra.bottle.tar.gz",
+          "sha256": "6cc50618320a56720dd41717990c9cee08b2de731814b6b05275e9d6712cb80c"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/dwm-6.1.sierra.bottle.tar.gz",
+          "sha256": "ab241356f8f38fb9e1ff6bba2dfbb07b8b82a5be0eee7fe75ba128548034115a"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/dwm-6.1.el_capitan.bottle.tar.gz",
+          "sha256": "1f900b061eb8c36118c85c494aeb634da01d5dd7e3d6e58f9a1d8d5c53da2208"
+        },
+        "yosemite": {
+          "url": "https://homebrew.bintray.com/bottles/dwm-6.1.yosemite.bottle.tar.gz",
+          "sha256": "0e8c7d9f991b3269569e0d990dbf9fc56e89f9a6274a1abd72d41248253afca8"
+        }
+      }
+    }
+  }
+}

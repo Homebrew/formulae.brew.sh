@@ -1,0 +1,80 @@
+{
+  "name": "lua@5.1",
+  "full_name": "lua@5.1",
+  "desc": "Powerful, lightweight programming language (v5.1.5)",
+  "homepage": "https://www.lua.org/",
+  "oldname": "lua51",
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "5.1.5",
+    "bottle": true,
+    "devel": null,
+    "head": null
+  },
+  "revision": 7,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "build_dependencies": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "Please be aware due to the way Luarocks is designed any binaries installed\nvia Luarocks-5.3 AND 5.1 will overwrite each other in /usr/local/bin.\n\nThis is, for now, unavoidable. If this is troublesome for you, you can build\nrocks with the `--tree=` command to a special, non-conflicting location and\nthen add that to your `$PATH`.\n",
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--with-completion",
+      "description": "Enables advanced readline support"
+    },
+    {
+      "option": "--without-sigaction",
+      "description": "Revert to ANSI signal instead of improved POSIX sigaction"
+    },
+    {
+      "option": "--without-luarocks",
+      "description": "Don't build with Luarocks support embedded"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/lua@5.1-5.1.5_7.high_sierra.bottle.tar.gz",
+          "sha256": "d15ca25fd066ed059219faf39a6597ea5b0777ad9ca733b2c2a5f7ddf84bf582"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/lua@5.1-5.1.5_7.sierra.bottle.tar.gz",
+          "sha256": "a6304c0dee627086dbba1a26e514d94602db0dffe629f190762d805afafc4952"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/lua@5.1-5.1.5_7.el_capitan.bottle.tar.gz",
+          "sha256": "808ca67cb42bf72cab1a62cefecb1f0848b004d90762ab2086cbad5ffddfae37"
+        }
+      }
+    }
+  }
+}

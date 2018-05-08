@@ -1,0 +1,84 @@
+{
+  "name": "mu",
+  "full_name": "mu",
+  "desc": "Tool for searching e-mail messages stored in the maildir-format",
+  "homepage": "https://www.djcbsoftware.nl/code/mu/",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "1.0",
+    "bottle": true,
+    "devel": null,
+    "head": "HEAD"
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "autoconf",
+    "automake",
+    "libtool",
+    "pkg-config",
+    "libgpg-error",
+    "gettext",
+    "glib",
+    "xapian",
+    "emacs"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "emacs"
+  ],
+  "build_dependencies": [
+    "autoconf",
+    "automake",
+    "libtool",
+    "pkg-config",
+    "libgpg-error"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "Existing mu users are recommended to run the following after upgrading:\n\n  mu index --rebuild\n",
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--with-emacs",
+      "description": "Build with emacs support"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/mu-1.0.high_sierra.bottle.tar.gz",
+          "sha256": "d6d58dc0b9fc5d5454c0bf68230f6f8fb8cb973821de3e41ec267ce2614d8ec3"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/mu-1.0.sierra.bottle.tar.gz",
+          "sha256": "0a818cbcfa365710bd48a97092218042dc8d00afd73b3f781c0982f8668a8410"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/mu-1.0.el_capitan.bottle.tar.gz",
+          "sha256": "588ebfb6e7d577e8efd4a38ca1ae598998c8e015dd1101db8785641bdea17f6a"
+        }
+      }
+    }
+  }
+}

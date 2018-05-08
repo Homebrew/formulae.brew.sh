@@ -1,0 +1,105 @@
+{
+  "name": "pulseaudio",
+  "full_name": "pulseaudio",
+  "desc": "Sound system for POSIX OSes",
+  "homepage": "https://wiki.freedesktop.org/www/Software/PulseAudio/",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "11.1",
+    "bottle": true,
+    "devel": null,
+    "head": "HEAD"
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "pkg-config",
+    "libtool",
+    "json-c",
+    "libsndfile",
+    "libsoxr",
+    "openssl",
+    "speexdsp",
+    "glib",
+    "gconf",
+    "gtk+3",
+    "jack"
+  ],
+  "recommended_dependencies": [
+    "speexdsp"
+  ],
+  "optional_dependencies": [
+    "glib",
+    "gconf",
+    "gtk+3",
+    "jack"
+  ],
+  "build_dependencies": [
+    "pkg-config"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--with-nls",
+      "description": "Build with native language support"
+    },
+    {
+      "option": "--without-speexdsp",
+      "description": "Build without speexdsp support"
+    },
+    {
+      "option": "--with-glib",
+      "description": "Build with glib support"
+    },
+    {
+      "option": "--with-gconf",
+      "description": "Build with gconf support"
+    },
+    {
+      "option": "--with-gtk+3",
+      "description": "Build with gtk+3 support"
+    },
+    {
+      "option": "--with-jack",
+      "description": "Build with jack support"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/pulseaudio-11.1.high_sierra.bottle.tar.gz",
+          "sha256": "4c978ad02a720678b6f4e5255d540cb859ba9d9b6ec22dcd9251f9d64df366f4"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/pulseaudio-11.1.sierra.bottle.tar.gz",
+          "sha256": "65f121b3c8a4d159a9acd803adfb3eb4b2fed82ba5b21d3867fe9dfb08941a5b"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/pulseaudio-11.1.el_capitan.bottle.tar.gz",
+          "sha256": "0ba8b12b715a1259e5fade3ea45238994f0e46f00d8f687e043f47c3474f643c"
+        }
+      }
+    }
+  }
+}

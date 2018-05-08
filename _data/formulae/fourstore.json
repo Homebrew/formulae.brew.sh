@@ -1,0 +1,88 @@
+{
+  "name": "fourstore",
+  "full_name": "fourstore",
+  "desc": "Efficient, stable RDF database",
+  "homepage": "https://github.com/4store/4store",
+  "oldname": null,
+  "aliases": [
+    "4store"
+  ],
+  "versions": {
+    "stable": "1.1.6",
+    "bottle": true,
+    "devel": null,
+    "head": null
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "pkg-config",
+    "autoconf",
+    "automake",
+    "libtool",
+    "gettext",
+    "glib",
+    "pcre",
+    "raptor",
+    "rasqal"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "build_dependencies": [
+    "pkg-config",
+    "autoconf",
+    "automake",
+    "libtool"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "Databases will be created at /usr/local/var/fourstore.\n\nCreate and start up a database:\n    4s-backend-setup mydb\n    4s-backend mydb\n\nLoad RDF data:\n    4s-import mydb datafile.rdf\n\nStart up HTTP SPARQL server without daemonizing:\n    4s-httpd -p 8000 -D mydb\n\nSee https://4store.danielknoell.de/trac/wiki/Documentation/ for more information.\n",
+  "requirements": [
+
+  ],
+  "options": [
+
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/fourstore-1.1.6.high_sierra.bottle.tar.gz",
+          "sha256": "413841f69291b5a871c9fefc96f8bd439348cbb5fe35e03e6670ac74cbe89771"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/fourstore-1.1.6.sierra.bottle.tar.gz",
+          "sha256": "8f9626f161e1b3f063672cd07cc0d62d476eeaed5ca420aee90882d5efb9424f"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/fourstore-1.1.6.el_capitan.bottle.tar.gz",
+          "sha256": "e19d98e6be69d8f75483403714a639cf21976a9d21b1c10252f5798049690581"
+        },
+        "yosemite": {
+          "url": "https://homebrew.bintray.com/bottles/fourstore-1.1.6.yosemite.bottle.tar.gz",
+          "sha256": "ce5b35020141bbe67afde2d1882ba39cdb00da479d64a833004d0688e9537581"
+        },
+        "mavericks": {
+          "url": "https://homebrew.bintray.com/bottles/fourstore-1.1.6.mavericks.bottle.tar.gz",
+          "sha256": "b2ad54ba983117388e256212e55ea67e4f9548c0c7d0d1c1b8a420ac025b5f10"
+        }
+      }
+    }
+  }
+}

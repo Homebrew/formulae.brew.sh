@@ -1,0 +1,95 @@
+{
+  "name": "icecream",
+  "full_name": "icecream",
+  "desc": "Distributed compiler with a central scheduler to share build load",
+  "homepage": "https://en.opensuse.org/Icecream",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "1.1",
+    "bottle": true,
+    "devel": null,
+    "head": null
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "autoconf",
+    "automake",
+    "libtool",
+    "lzo",
+    "docbook2x"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "docbook2x"
+  ],
+  "build_dependencies": [
+    "autoconf",
+    "automake",
+    "libtool",
+    "docbook2x"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "To override the toolset with icecc, add to your path:\n  /usr/local/opt/icecream/libexec/icecc/bin\n\nTo have launchd start the icecc daemon at login:\n  cp /usr/local/opt/icecream/org.opensuse.icecc.plist ~/Library/LaunchAgents/\n  launchctl load -w ~/Library/LaunchAgents/org.opensuse.icecc.plist\n",
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--with-docbook2X",
+      "description": "Build with man page"
+    },
+    {
+      "option": "--without-clang-wrappers",
+      "description": "Don't use symlink wrappers for clang/clang++"
+    },
+    {
+      "option": "--with-clang-rewrite-includes",
+      "description": "Use by default Clang's -frewrite-includes option"
+    },
+    {
+      "option": "--with-docbook2x",
+      "description": "Build with docbook2x support"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/icecream-1.1.high_sierra.bottle.tar.gz",
+          "sha256": "ac7f6745981bd1c0853af12c4a460cd196a95b7c27c6072746db62086e6afcf0"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/icecream-1.1.sierra.bottle.tar.gz",
+          "sha256": "ff931dd74efc02cad494df41e2df0919fd1a65b2908ade15566b5a6f0974e3ee"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/icecream-1.1.el_capitan.bottle.tar.gz",
+          "sha256": "744922ad03cb2468d1b3251238f7130fb1e4295388370bf47d6edeb43a8c36b2"
+        },
+        "yosemite": {
+          "url": "https://homebrew.bintray.com/bottles/icecream-1.1.yosemite.bottle.tar.gz",
+          "sha256": "0adc60662ea9ede33caf1fffb35a129593479a99c34bb36525c1c718b0a77639"
+        }
+      }
+    }
+  }
+}

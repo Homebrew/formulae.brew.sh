@@ -1,0 +1,96 @@
+{
+  "name": "sphinx",
+  "full_name": "sphinx",
+  "desc": "Full-text search engine",
+  "homepage": "http://www.sphinxsearch.com",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "2.2.11",
+    "bottle": true,
+    "devel": null,
+    "head": "HEAD"
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "re2",
+    "mysql",
+    "postgresql"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "re2",
+    "mysql",
+    "postgresql"
+  ],
+  "build_dependencies": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "This is not sphinx - the Python Documentation Generator.\nTo install sphinx-python use pip.\n\nSphinx has been compiled with libstemmer support.\n\nSphinx depends on either MySQL or PostreSQL as a datasource.\n\nYou can install these with Homebrew with:\n  brew install mysql\n    For MySQL server.\n\n  brew install mysql-connector-c\n    For MySQL client libraries only.\n\n  brew install postgresql\n    For PostgreSQL server.\n\nWe don't install these for you when you install this formula, as\nwe don't know which datasource you intend to use.\n",
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--with-mysql",
+      "description": "Force compiling against MySQL"
+    },
+    {
+      "option": "--with-postgresql",
+      "description": "Force compiling against PostgreSQL"
+    },
+    {
+      "option": "--with-id64",
+      "description": "Force compiling with 64-bit ID support"
+    },
+    {
+      "option": "--with-re2",
+      "description": "Build with re2 support"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/sphinx-2.2.11.high_sierra.bottle.tar.gz",
+          "sha256": "b890cf523db9777c7d125842fd6b0a53fe9a7a5a4cb816389ba6f5ee6483c78d"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/sphinx-2.2.11.sierra.bottle.tar.gz",
+          "sha256": "55ce34bdedf13946fa614bde50839d93135eae720f1021e2c87807d04515ab18"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/sphinx-2.2.11.el_capitan.bottle.tar.gz",
+          "sha256": "c75e018d69afb7d3cb662ebd129af67607d47f7b7f71ce8ea95be75d66dc502d"
+        },
+        "yosemite": {
+          "url": "https://homebrew.bintray.com/bottles/sphinx-2.2.11.yosemite.bottle.tar.gz",
+          "sha256": "f89b43df8735d295a55c74f18d6af4a1a10b9f3ae81df69713c27f9240f78d14"
+        },
+        "mavericks": {
+          "url": "https://homebrew.bintray.com/bottles/sphinx-2.2.11.mavericks.bottle.tar.gz",
+          "sha256": "4ec1f1ea71e17b9e924e9f36747d7184114463640f100022cdbb46202e46261f"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "name": "audacious",
+  "full_name": "audacious",
+  "desc": "Free and advanced audio player based on GTK+",
+  "homepage": "https://audacious-media-player.org/",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "3.9",
+    "bottle": true,
+    "devel": null,
+    "head": "HEAD"
+  },
+  "revision": 2,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "gettext",
+    "make",
+    "pkg-config",
+    "faad2",
+    "ffmpeg",
+    "flac",
+    "fluid-synth",
+    "glib",
+    "lame",
+    "libbs2b",
+    "libcue",
+    "libnotify",
+    "libsamplerate",
+    "libsoxr",
+    "libvorbis",
+    "mpg123",
+    "neon",
+    "sdl2",
+    "wavpack",
+    "python@2",
+    "qt",
+    "gtk+",
+    "jack",
+    "libmms",
+    "libmodplug"
+  ],
+  "recommended_dependencies": [
+    "qt"
+  ],
+  "optional_dependencies": [
+    "gtk+",
+    "jack",
+    "libmms",
+    "libmodplug"
+  ],
+  "build_dependencies": [
+    "gettext",
+    "make",
+    "pkg-config"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "audtool does not work due to a broken dbus implementation on macOS, so is not built\ncoreaudio output has been disabled as it does not work (Fails to set audio unit input property.)\nGTK+ gui is not built by default as the QT gui has better integration with macOS, and when built, the gtk gui takes precedence\n",
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--without-qt",
+      "description": "Build without qt support"
+    },
+    {
+      "option": "--with-gtk+",
+      "description": "Build with gtk+ support"
+    },
+    {
+      "option": "--with-jack",
+      "description": "Build with jack support"
+    },
+    {
+      "option": "--with-libmms",
+      "description": "Build with libmms support"
+    },
+    {
+      "option": "--with-libmodplug",
+      "description": "Build with libmodplug support"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/audacious-3.9_2.high_sierra.bottle.tar.gz",
+          "sha256": "facd97bdfb3935149d7c51035b38e3a1f7f3c7b705074eb75a1a795844bf739a"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/audacious-3.9_2.sierra.bottle.tar.gz",
+          "sha256": "1acf6566b58d9ab31e088ed8e3f30aba30e171a32e0121f46f0f954a3871f7e9"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/audacious-3.9_2.el_capitan.bottle.tar.gz",
+          "sha256": "c9238f08f8f9328ca7b427e2616698d6bea975b33fbcbe2e52c8a2f4b8f5b009"
+        }
+      }
+    }
+  }
+}

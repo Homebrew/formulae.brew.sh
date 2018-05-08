@@ -1,0 +1,84 @@
+{
+  "name": "shibboleth-sp",
+  "full_name": "shibboleth-sp",
+  "desc": "Shibboleth 2 Service Provider daemon",
+  "homepage": "https://wiki.shibboleth.net/confluence/display/SHIB2",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "2.6.1",
+    "bottle": true,
+    "devel": null,
+    "head": null
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "curl",
+    "httpd",
+    "opensaml",
+    "xml-tooling-c",
+    "xerces-c",
+    "xml-security-c",
+    "log4shib",
+    "boost",
+    "unixodbc",
+    "apr-util",
+    "apr"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "build_dependencies": [
+    "apr-util",
+    "apr"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "You must manually edit httpd.conf to include\nLoadModule mod_shib /usr/local/opt/shibboleth-sp/lib/shibboleth/mod_shib_24.so\nYou must also manually configure\n  /usr/local/etc/shibboleth/shibboleth2.xml\nas per your own requirements. For more information please see\n  https://wiki.shibboleth.net/confluence/display/EDS10/3.1+Configuring+the+Service+Provider\n",
+  "requirements": [
+    {
+      "name": "macos",
+      "cask": null,
+      "download": null
+    }
+  ],
+  "options": [
+
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/shibboleth-sp-2.6.1.high_sierra.bottle.tar.gz",
+          "sha256": "1a91c531f1be5c05e66aa27f486034dc80f8a43b831ef7af67cbf4df5b8b3f67"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/shibboleth-sp-2.6.1.sierra.bottle.tar.gz",
+          "sha256": "e2bd8a05bf07e9b746b240331b9b5a8588cedf2b21d6919fc8096c00721e9e16"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/shibboleth-sp-2.6.1.el_capitan.bottle.tar.gz",
+          "sha256": "e6be9e88eaf93270e7cb2aad05fb3841d39560220ca2b4541c7bc24762d36b59"
+        }
+      }
+    }
+  }
+}

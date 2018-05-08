@@ -1,0 +1,91 @@
+{
+  "name": "opentsdb",
+  "full_name": "opentsdb",
+  "desc": "Scalable, distributed Time Series Database",
+  "homepage": "http://opentsdb.net/",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "2.3.0",
+    "bottle": true,
+    "devel": null,
+    "head": null
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "hbase",
+    "lzo",
+    "gnuplot"
+  ],
+  "recommended_dependencies": [
+    "lzo"
+  ],
+  "optional_dependencies": [
+    "gnuplot"
+  ],
+  "build_dependencies": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "requirements": [
+    {
+      "name": "java",
+      "cask": "java",
+      "download": "https://www.oracle.com/technetwork/java/javase/downloads/index.html"
+    },
+    {
+      "name": "hbaselzo",
+      "cask": null,
+      "download": null
+    }
+  ],
+  "options": [
+    {
+      "option": "--without-lzo",
+      "description": "Build without lzo support"
+    },
+    {
+      "option": "--with-gnuplot",
+      "description": "Build with gnuplot support"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any_skip_relocation",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/opentsdb-2.3.0.high_sierra.bottle.tar.gz",
+          "sha256": "cbf21f845ccb3f79b9f0a31f44c7581de4f59cfedf62283ea8793d740b74c945"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/opentsdb-2.3.0.sierra.bottle.tar.gz",
+          "sha256": "4ef2e9151ebc7aafccdeb170495d2a3308ce92f8cbac68cf88c71558d4b8aaf7"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/opentsdb-2.3.0.el_capitan.bottle.tar.gz",
+          "sha256": "0e8eb571054d13d3abcb06940c481814dd54dbb94104cedcdedbd57c09721743"
+        },
+        "yosemite": {
+          "url": "https://homebrew.bintray.com/bottles/opentsdb-2.3.0.yosemite.bottle.tar.gz",
+          "sha256": "07ba3d636bad55c244e259d5eb619f09367f16b3e14e8caea74bbd19c33f44d5"
+        }
+      }
+    }
+  }
+}

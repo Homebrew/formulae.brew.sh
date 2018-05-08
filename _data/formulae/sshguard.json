@@ -1,0 +1,69 @@
+{
+  "name": "sshguard",
+  "full_name": "sshguard",
+  "desc": "Protect from brute force attacks against SSH",
+  "homepage": "https://www.sshguard.net/",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "2.1.0",
+    "bottle": true,
+    "devel": null,
+    "head": "HEAD"
+  },
+  "revision": 0,
+  "version_scheme": 1,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "build_dependencies": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "Add the following lines to /etc/pf.conf to block entries in the sshguard\ntable (replace $ext_if with your WAN interface):\n\n  table <sshguard> persist\n  block in quick on $ext_if proto tcp from <sshguard> to any port 22 label \"ssh bruteforce\"\n\nThen run sudo pfctl -f /etc/pf.conf to reload the rules.\n",
+  "requirements": [
+
+  ],
+  "options": [
+
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any_skip_relocation",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/sshguard-2.1.0.high_sierra.bottle.tar.gz",
+          "sha256": "eb13c51b65f9007163ade54a5f01699da82b4ba3c225af30a57ed05593bfe60e"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/sshguard-2.1.0.sierra.bottle.tar.gz",
+          "sha256": "63b4d94b319432258792e9d00a0474c11c1bc37fe19deee1c7ee62f2980c982d"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/sshguard-2.1.0.el_capitan.bottle.tar.gz",
+          "sha256": "4231ea2fbff92a76b72e8f3707e4600451e9315740cd5864c54641dc8bd75857"
+        }
+      }
+    }
+  }
+}

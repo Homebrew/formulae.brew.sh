@@ -1,0 +1,78 @@
+{
+  "name": "mono",
+  "full_name": "mono",
+  "desc": "Cross platform, open source .NET development framework",
+  "homepage": "https://www.mono-project.com/",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "5.4.1.6",
+    "bottle": true,
+    "devel": null,
+    "head": null
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "automake",
+    "autoconf",
+    "pkg-config",
+    "cmake"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "build_dependencies": [
+    "automake",
+    "autoconf",
+    "pkg-config",
+    "cmake"
+  ],
+  "conflicts_with": [
+    "xsd"
+  ],
+  "caveats": "To use the assemblies from other formulae you need to set:\n  export MONO_GAC_PREFIX=\"/usr/local\"\nNote that the 'mono' formula now includes F#. If you have\nthe 'fsharp' formula installed, remove it with 'brew uninstall fsharp'.\n",
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--without-fsharp",
+      "description": "Build without support for the F# language."
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/mono-5.4.1.6.high_sierra.bottle.tar.gz",
+          "sha256": "4180790335196a33a716ddb0bb1b6ba6a3487babedd8baac6de2458aff038906"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/mono-5.4.1.6.sierra.bottle.tar.gz",
+          "sha256": "8ae5763ad3b6e84ac078ca83f729fe47e5f8d048a87ab0a5892c2b22b4c5854a"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/mono-5.4.1.6.el_capitan.bottle.tar.gz",
+          "sha256": "8476cab8863aabdd7c64bff4a31b57aed56192baa71383b8f3ffcc8f41a45fb5"
+        }
+      }
+    }
+  }
+}

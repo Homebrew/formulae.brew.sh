@@ -1,0 +1,76 @@
+{
+  "name": "minidlna",
+  "full_name": "minidlna",
+  "desc": "Media server software, compliant with DLNA/UPnP-AV clients",
+  "homepage": "https://sourceforge.net/projects/minidlna/",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "1.2.1",
+    "bottle": true,
+    "devel": null,
+    "head": "HEAD"
+  },
+  "revision": 1,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "libexif",
+    "jpeg",
+    "libid3tag",
+    "flac",
+    "libogg",
+    "libvorbis",
+    "sqlite",
+    "ffmpeg"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "build_dependencies": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "Simple single-user configuration:\n\nmkdir -p ~/.config/minidlna\ncp /usr/local/opt/minidlna/share/minidlna/minidlna.conf ~/.config/minidlna/minidlna.conf\nln -s YOUR_MEDIA_DIR ~/.config/minidlna/media\nminidlnad -f ~/.config/minidlna/minidlna.conf -P ~/.config/minidlna/minidlna.pid\n",
+  "requirements": [
+
+  ],
+  "options": [
+
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/minidlna-1.2.1_1.high_sierra.bottle.tar.gz",
+          "sha256": "ed1b022aaea8beed91a26b9907c8253da9c5c441fa52482ae0255571cd1744ad"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/minidlna-1.2.1_1.sierra.bottle.tar.gz",
+          "sha256": "5145b3bae1ebb4add544bc8877668a5cea2e80a380a5a0beaba94a6e88cbf33c"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/minidlna-1.2.1_1.el_capitan.bottle.tar.gz",
+          "sha256": "16fb753050582f030bcc16de31ccac3faa74f5ada3d1bed4d17895dd8628f772"
+        }
+      }
+    }
+  }
+}

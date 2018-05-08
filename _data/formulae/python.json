@@ -1,0 +1,112 @@
+{
+  "name": "python",
+  "full_name": "python",
+  "desc": "Interpreted, interactive, object-oriented programming language",
+  "homepage": "https://www.python.org/",
+  "oldname": "python3",
+  "aliases": [
+    "python3",
+    "python@3"
+  ],
+  "versions": {
+    "stable": "3.6.5",
+    "bottle": true,
+    "devel": "3.7.0b4",
+    "head": "HEAD"
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+    {
+      "version": "3.6.5",
+      "used_options": [
+
+      ],
+      "built_as_bottle": true,
+      "poured_from_bottle": true,
+      "runtime_dependencies": [
+        {
+          "full_name": "gdbm",
+          "version": "1.14.1"
+        },
+        {
+          "full_name": "openssl",
+          "version": "1.0.2o"
+        },
+        {
+          "full_name": "readline",
+          "version": "7.0.3"
+        },
+        {
+          "full_name": "sqlite",
+          "version": "3.22.0"
+        },
+        {
+          "full_name": "xz",
+          "version": "5.2.3"
+        }
+      ],
+      "installed_as_dependency": false,
+      "installed_on_request": true
+    }
+  ],
+  "linked_keg": "3.6.5",
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "pkg-config",
+    "sphinx-doc",
+    "gdbm",
+    "openssl",
+    "readline",
+    "sqlite",
+    "xz",
+    "tcl-tk"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "tcl-tk"
+  ],
+  "build_dependencies": [
+    "pkg-config",
+    "sphinx-doc"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "Python has been installed as\n  /usr/local/bin/python3\n\nUnversioned symlinks `python`, `python-config`, `pip` etc. pointing to\n`python3`, `python3-config`, `pip3` etc., respectively, have been installed into\n  /usr/local/opt/python/libexec/bin\n\nIf you need Homebrew's Python 2.7 run\n  brew install python@2\n\nPip, setuptools, and wheel have been installed. To update them run\n  pip3 install --upgrade pip setuptools wheel\n\nYou can install Python packages with\n  pip3 install <package>\nThey will install into the site-package directory\n  /usr/local/lib/python3.6/site-packages\n\nSee: https://docs.brew.sh/Homebrew-and-Python\n",
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--with-tcl-tk",
+      "description": "Use Homebrew's Tk instead of macOS Tk (has optional Cocoa and threads support)"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 1,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/python-3.6.5.high_sierra.bottle.1.tar.gz",
+          "sha256": "7e0fc1b078b51d9478ab08660d5df01611976a7af0f6c24054bda58264bb506c"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/python-3.6.5.sierra.bottle.1.tar.gz",
+          "sha256": "2fe5ca9be0f1596798927c4aa1d4d187ca7f83adc4681483cec2cc52d7c95386"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/python-3.6.5.el_capitan.bottle.1.tar.gz",
+          "sha256": "bccf50de973644608af29652f2660124d033f3213d422fe44a7f012a47643a95"
+        }
+      }
+    }
+  }
+}

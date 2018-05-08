@@ -1,0 +1,91 @@
+{
+  "name": "ffmbc",
+  "full_name": "ffmbc",
+  "desc": "FFmpeg customized for broadcast and professional usage",
+  "homepage": "https://code.google.com/p/ffmbc/",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "0.7.2",
+    "bottle": true,
+    "devel": null,
+    "head": null
+  },
+  "revision": 6,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "texi2html",
+    "yasm",
+    "faac",
+    "lame",
+    "x264",
+    "xvid",
+    "libvorbis",
+    "libvpx",
+    "theora"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "libvorbis",
+    "libvpx",
+    "theora"
+  ],
+  "build_dependencies": [
+    "texi2html",
+    "yasm"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "Due to naming conflicts with other FFmpeg forks, this formula installs\nonly static binaries - no shared libraries are built.\n\nThe `ffprobe` program has been renamed to `ffprobe-bc` to avoid name\nconflicts with the FFmpeg executable of the same name.\n",
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--with-libvorbis",
+      "description": "Build with libvorbis support"
+    },
+    {
+      "option": "--with-libvpx",
+      "description": "Build with libvpx support"
+    },
+    {
+      "option": "--with-theora",
+      "description": "Build with theora support"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/ffmbc-0.7.2_6.high_sierra.bottle.tar.gz",
+          "sha256": "42c6aeb47134046a3aff40034342233f86fe21c834cfba6d35cc0846a79a32d1"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/ffmbc-0.7.2_6.sierra.bottle.tar.gz",
+          "sha256": "c6cc044c9ef2a89a5f8ab81e57bc9cb55c0f7a77561188d53b9045c83a5bb5d1"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/ffmbc-0.7.2_6.el_capitan.bottle.tar.gz",
+          "sha256": "54eb992aee2503bbfdb90ec483ed92a8c3606245692ea587af27f6a6c7af9e41"
+        }
+      }
+    }
+  }
+}

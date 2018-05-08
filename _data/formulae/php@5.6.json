@@ -1,0 +1,90 @@
+{
+  "name": "php@5.6",
+  "full_name": "php@5.6",
+  "desc": "General-purpose scripting language",
+  "homepage": "https://secure.php.net/",
+  "oldname": "php56",
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "5.6.36",
+    "bottle": true,
+    "devel": null,
+    "head": null
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": true,
+  "dependencies": [
+    "httpd",
+    "pkg-config",
+    "apr",
+    "apr-util",
+    "aspell",
+    "autoconf",
+    "freetds",
+    "freetype",
+    "gettext",
+    "glib",
+    "gmp",
+    "icu4c",
+    "jpeg",
+    "libpng",
+    "libpq",
+    "libzip",
+    "mcrypt",
+    "openssl",
+    "pcre",
+    "unixodbc",
+    "webp"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "build_dependencies": [
+    "httpd",
+    "pkg-config"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "To enable PHP in Apache add the following to httpd.conf and restart Apache:\n    LoadModule php5_module /usr/local/opt/php@5.6/lib/httpd/modules/libphp5.so\n\n    <FilesMatch \\.php$>\n        SetHandler application/x-httpd-php\n    </FilesMatch>\n\nFinally, check DirectoryIndex includes index.php\n    DirectoryIndex index.php index.html\n\nThe php.ini and php-fpm.ini file can be found in:\n    /usr/local/etc/php/5.6/\n",
+  "requirements": [
+
+  ],
+  "options": [
+
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/php@5.6-5.6.36.high_sierra.bottle.tar.gz",
+          "sha256": "155b0e18a062c0e752358e6c50f515ca3d1ae34ef3dc75841574de87963f87bc"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/php@5.6-5.6.36.sierra.bottle.tar.gz",
+          "sha256": "10c12ba37b930d4d628899248c34185fd496c0d13893f1c7250e4884e967b2e7"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/php@5.6-5.6.36.el_capitan.bottle.tar.gz",
+          "sha256": "6f708e907c631691f98f4e564bc7aa8cccec0aa287a9790473d9d8c55a01440c"
+        }
+      }
+    }
+  }
+}

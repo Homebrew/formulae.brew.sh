@@ -1,0 +1,83 @@
+{
+  "name": "avfs",
+  "full_name": "avfs",
+  "desc": "Virtual file system that facilitates looking inside archives",
+  "homepage": "https://avf.sourceforge.io/",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "1.0.5",
+    "bottle": true,
+    "devel": null,
+    "head": null
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "pkg-config",
+    "xz",
+    "openssl"
+  ],
+  "recommended_dependencies": [
+    "xz"
+  ],
+  "optional_dependencies": [
+    "openssl"
+  ],
+  "build_dependencies": [
+    "pkg-config"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "requirements": [
+    {
+      "name": "macos",
+      "cask": null,
+      "download": null
+    },
+    {
+      "name": "osxfuse",
+      "cask": "osxfuse",
+      "download": "https://osxfuse.github.io/"
+    }
+  ],
+  "options": [
+    {
+      "option": "--without-xz",
+      "description": "Build without xz support"
+    },
+    {
+      "option": "--with-openssl",
+      "description": "Build with openssl support"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/avfs-1.0.5.high_sierra.bottle.tar.gz",
+          "sha256": "18dd2a2958a2a07b74309e3ec832dcc4c99de70b73e5d5b263be8833cc820ebb"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/avfs-1.0.5.sierra.bottle.tar.gz",
+          "sha256": "23a05f6de2db30b39d4ce575afe7feca996439857798628645f258085b6dbda5"
+        }
+      }
+    }
+  }
+}

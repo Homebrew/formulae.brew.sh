@@ -1,0 +1,78 @@
+{
+  "name": "xdotool",
+  "full_name": "xdotool",
+  "desc": "Fake keyboard/mouse input and window management for X",
+  "homepage": "https://www.semicomplete.com/projects/xdotool/",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "3.20160805.1",
+    "bottle": true,
+    "devel": null,
+    "head": null
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "pkg-config",
+    "libxkbcommon"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "build_dependencies": [
+    "pkg-config"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "You will probably want to enable XTEST in your X11 server now by running:\n  defaults write org.x.X11 enable_test_extensions -boolean true\n\nFor the source of this useful hint:\n  https://stackoverflow.com/questions/1264210/does-mac-x11-have-the-xtest-extension\n",
+  "requirements": [
+    {
+      "name": "x11",
+      "cask": "xquartz",
+      "download": "https://xquartz.macosforge.org"
+    }
+  ],
+  "options": [
+
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/xdotool-3.20160805.1.high_sierra.bottle.tar.gz",
+          "sha256": "2f949fc70d828db23364beed16bdbd15c728d790601e5e0a59b110f8f6eb3826"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/xdotool-3.20160805.1.sierra.bottle.tar.gz",
+          "sha256": "13b1b017e94c76bde510b06427cf517c0d78028994e3b1bb8501ec2cbd5c7ef1"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/xdotool-3.20160805.1.el_capitan.bottle.tar.gz",
+          "sha256": "d7fad4610977a3a5f8879b4f51d35e08e4ef3e65cfbc04353e67bdc14b279867"
+        },
+        "yosemite": {
+          "url": "https://homebrew.bintray.com/bottles/xdotool-3.20160805.1.yosemite.bottle.tar.gz",
+          "sha256": "037a599194a39189e8d8397c358dce21c1425065fdeeb29e59db26b696425f63"
+        }
+      }
+    }
+  }
+}

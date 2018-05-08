@@ -1,0 +1,100 @@
+{
+  "name": "freetds",
+  "full_name": "freetds",
+  "desc": "Libraries to talk to Microsoft SQL Server and Sybase databases",
+  "homepage": "http://www.freetds.org/",
+  "oldname": null,
+  "aliases": [
+    "freetds@1.00"
+  ],
+  "versions": {
+    "stable": "1.00.91",
+    "bottle": true,
+    "devel": null,
+    "head": "HEAD"
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "pkg-config",
+    "unixodbc",
+    "libiodbc",
+    "openssl"
+  ],
+  "recommended_dependencies": [
+    "openssl"
+  ],
+  "optional_dependencies": [
+    "unixodbc",
+    "libiodbc"
+  ],
+  "build_dependencies": [
+    "pkg-config"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--with-msdblib",
+      "description": "Enable Microsoft behavior in the DB-Library API where it diverges from Sybase's"
+    },
+    {
+      "option": "--with-sybase-compat",
+      "description": "Enable close compatibility with Sybase's ABI, at the expense of other features"
+    },
+    {
+      "option": "--with-odbc-wide",
+      "description": "Enable odbc wide, prevent unicode - MemoryError's"
+    },
+    {
+      "option": "--with-krb5",
+      "description": "Enable Kerberos support"
+    },
+    {
+      "option": "--with-unixodbc",
+      "description": "Build with unixodbc support"
+    },
+    {
+      "option": "--with-libiodbc",
+      "description": "Build with libiodbc support"
+    },
+    {
+      "option": "--without-openssl",
+      "description": "Build without openssl support"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/freetds-1.00.91.high_sierra.bottle.tar.gz",
+          "sha256": "e2b7a2f7565b47714430e049543ba5c32c2b890c69c35d81703e26998433b84b"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/freetds-1.00.91.sierra.bottle.tar.gz",
+          "sha256": "560183072d88b347b0225c27d4958df4b8c0b43eb18922619bbdad9e4f8b6533"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/freetds-1.00.91.el_capitan.bottle.tar.gz",
+          "sha256": "f6d2610cfe728baf6cb17c616f704662a2fe9b68a15f172968dd661dc1b99165"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "name": "gpsd",
+  "full_name": "gpsd",
+  "desc": "Global Positioning System (GPS) daemon",
+  "homepage": "http://catb.org/gpsd/",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "3.17",
+    "bottle": true,
+    "devel": null,
+    "head": null
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "scons",
+    "libusb"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "libusb"
+  ],
+  "build_dependencies": [
+    "scons"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "gpsd does not automatically detect GPS device addresses. Once started, you\nneed to force it to connect to your GPS:\n\n  GPSD_SOCKET=\"/usr/local/var/gpsd.sock\" /usr/local/Cellar/gpsd/3.17/sbin/gpsdctl add /dev/tty.usbserial-XYZ\n",
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--with-libusb",
+      "description": "Build with libusb support"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/gpsd-3.17.high_sierra.bottle.tar.gz",
+          "sha256": "89237ff11349f301e4a41a9f1d0ad7948f9a257d91a95be6ec6b4c9e26187f72"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/gpsd-3.17.sierra.bottle.tar.gz",
+          "sha256": "1a7912b32f3cc2d59d5d7b615ec3e8e2d14399d0256f2768b91be029f64e2438"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/gpsd-3.17.el_capitan.bottle.tar.gz",
+          "sha256": "6fb615b0aba85f6692cf6f8ac529ee8a2777d300bba6a9d8ff8abe90784d0fa5"
+        }
+      }
+    }
+  }
+}

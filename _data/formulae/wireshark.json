@@ -1,0 +1,119 @@
+{
+  "name": "wireshark",
+  "full_name": "wireshark",
+  "desc": "Graphical network analyzer and capture tool",
+  "homepage": "https://www.wireshark.org",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "2.6.0",
+    "bottle": true,
+    "devel": null,
+    "head": "HEAD"
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "cmake",
+    "c-ares",
+    "glib",
+    "gnutls",
+    "libgcrypt",
+    "libmaxminddb",
+    "lua",
+    "libsmi",
+    "libssh",
+    "nghttp2",
+    "portaudio",
+    "qt",
+    "gtk+3",
+    "gtk+"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "libsmi",
+    "libssh",
+    "nghttp2",
+    "portaudio",
+    "qt",
+    "gtk+3",
+    "gtk+"
+  ],
+  "build_dependencies": [
+    "cmake"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "This formula only installs the command-line utilities by default.\n\nWireshark.app can be downloaded directly from the website:\n  https://www.wireshark.org/\n\nAlternatively, install with Homebrew-Cask:\n  brew cask install wireshark\n\nIf your list of available capture interfaces is empty\n(default macOS behavior), install ChmodBPF:\n\n  brew cask install wireshark-chmodbpf\n",
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--with-gtk+3",
+      "description": "Build the wireshark command with gtk+3"
+    },
+    {
+      "option": "--with-gtk+",
+      "description": "Build the wireshark command with gtk+"
+    },
+    {
+      "option": "--with-qt",
+      "description": "Build the wireshark command with Qt (can be used with or without either GTK option)"
+    },
+    {
+      "option": "--with-headers",
+      "description": "Install Wireshark library headers for plug-in development"
+    },
+    {
+      "option": "--with-nghttp2",
+      "description": "Enable HTTP/2 header dissection"
+    },
+    {
+      "option": "--with-libsmi",
+      "description": "Build with libsmi support"
+    },
+    {
+      "option": "--with-libssh",
+      "description": "Build with libssh support"
+    },
+    {
+      "option": "--with-portaudio",
+      "description": "Build with portaudio support"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/wireshark-2.6.0.high_sierra.bottle.tar.gz",
+          "sha256": "5bb80bfd27c7b455a951afa29ad244f58b77b22cb2ba3be12ef54f41ed41243c"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/wireshark-2.6.0.sierra.bottle.tar.gz",
+          "sha256": "42f6409d8d57ab65630cdc4b467a8ed9b5fadc4484c86383e6b2e9f48e7ff339"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/wireshark-2.6.0.el_capitan.bottle.tar.gz",
+          "sha256": "479b873745e8c807d649e711cbd3bfd2f3c83201288264153eb3ae664c0841ed"
+        }
+      }
+    }
+  }
+}

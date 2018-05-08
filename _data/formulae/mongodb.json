@@ -1,0 +1,91 @@
+{
+  "name": "mongodb",
+  "full_name": "mongodb",
+  "desc": "High-performance, schema-free, document-oriented database",
+  "homepage": "https://www.mongodb.org/",
+  "oldname": null,
+  "aliases": [
+    "mongo",
+    "mongodb@3.6"
+  ],
+  "versions": {
+    "stable": "3.6.4",
+    "bottle": true,
+    "devel": null,
+    "head": null
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "go",
+    "scons",
+    "python@2",
+    "openssl",
+    "boost"
+  ],
+  "recommended_dependencies": [
+    "openssl"
+  ],
+  "optional_dependencies": [
+    "boost"
+  ],
+  "build_dependencies": [
+    "go",
+    "scons"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "requirements": [
+    {
+      "name": "xcode",
+      "cask": null,
+      "download": null
+    },
+    {
+      "name": "macos",
+      "cask": null,
+      "download": null
+    }
+  ],
+  "options": [
+    {
+      "option": "--with-boost",
+      "description": "Compile using installed boost, not the version shipped with mongodb"
+    },
+    {
+      "option": "--with-sasl",
+      "description": "Compile with SASL support"
+    },
+    {
+      "option": "--without-openssl",
+      "description": "Build without openssl support"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/mongodb-3.6.4.high_sierra.bottle.tar.gz",
+          "sha256": "175c4f8d79a08cc16b73224386120048da35e1c1dcf4f2131b610249fb2c003d"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/mongodb-3.6.4.sierra.bottle.tar.gz",
+          "sha256": "2e7a2af3866c4464cd7929761abb5dc8ab3b9233ddc60c7441596ad0450feb4b"
+        }
+      }
+    }
+  }
+}

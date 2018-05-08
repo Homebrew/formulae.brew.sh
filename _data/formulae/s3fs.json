@@ -1,0 +1,80 @@
+{
+  "name": "s3fs",
+  "full_name": "s3fs",
+  "desc": "FUSE-based file system backed by Amazon S3",
+  "homepage": "https://github.com/s3fs-fuse/s3fs-fuse/wiki",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "1.83",
+    "bottle": true,
+    "devel": null,
+    "head": "HEAD"
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "pkg-config",
+    "autoconf",
+    "automake",
+    "gnutls",
+    "nettle",
+    "libgcrypt"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "build_dependencies": [
+    "pkg-config",
+    "autoconf",
+    "automake"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "Be aware that s3fs has some caveats concerning S3 \"directories\"\nthat have been created by other tools. See the following issue for\ndetails:\n\n  https://code.google.com/p/s3fs/issues/detail?id=73\n",
+  "requirements": [
+    {
+      "name": "osxfuse",
+      "cask": "osxfuse",
+      "download": "https://osxfuse.github.io/"
+    }
+  ],
+  "options": [
+
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/s3fs-1.83.high_sierra.bottle.tar.gz",
+          "sha256": "a2561b0db0c7eb9a4355b42a38f307f4e432da3db3b3580a68eeee8001b12ffd"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/s3fs-1.83.sierra.bottle.tar.gz",
+          "sha256": "d6b4884bb5138ff0f10f2149668b09685567c8f55069525ec5557f54033d191f"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/s3fs-1.83.el_capitan.bottle.tar.gz",
+          "sha256": "9dcbe3450e2fdf5498c18e11390c9d48474c91c1bcd4f8cad6a7e3057fb9b3ee"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "name": "llnode",
+  "full_name": "llnode",
+  "desc": "LLDB plugin for live/post-mortem debugging of node.js apps",
+  "homepage": "https://github.com/nodejs/llnode",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "1.6.3",
+    "bottle": true,
+    "devel": null,
+    "head": null
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "python@2"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "build_dependencies": [
+    "python@2"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "`brew install llnode` does not link the plugin to LLDB PlugIns dir.\n\nTo load this plugin in LLDB, one will need to either\n\n* Type `plugin load /usr/local/opt/llnode/llnode.dylib` on each run of lldb\n* Install plugin into PlugIns dir manually:\n\n    mkdir -p ~/Library/Application\\ Support/LLDB/PlugIns\n    ln -sf /usr/local/opt/llnode/llnode.dylib \\\n        ~/Library/Application\\ Support/LLDB/PlugIns/\n",
+  "requirements": [
+    {
+      "name": "macos",
+      "cask": null,
+      "download": null
+    }
+  ],
+  "options": [
+
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/llnode-1.6.3.high_sierra.bottle.tar.gz",
+          "sha256": "c8468aa60cd92328bdc294c5a69c932f8418dd5e2b6e5f3d597e0904c0e26e1b"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/llnode-1.6.3.sierra.bottle.tar.gz",
+          "sha256": "e0867b7317b88b570b05faee5d36a4cc7c2e71383e95f8dd4cef7d26286bc75f"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/llnode-1.6.3.el_capitan.bottle.tar.gz",
+          "sha256": "e047f606e4923900a3285acc8a352f847d387e877d5436ddf5cdbf37d256cf27"
+        }
+      }
+    }
+  }
+}

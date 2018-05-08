@@ -1,0 +1,278 @@
+{
+  "name": "ffmpeg@2.8",
+  "full_name": "ffmpeg@2.8",
+  "desc": "Play, record, convert, and stream audio and video",
+  "homepage": "https://ffmpeg.org/",
+  "oldname": "ffmpeg28",
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "2.8.13",
+    "bottle": true,
+    "devel": null,
+    "head": null
+  },
+  "revision": 2,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": true,
+  "dependencies": [
+    "pkg-config",
+    "texi2html",
+    "yasm",
+    "x264",
+    "lame",
+    "libvo-aacenc",
+    "xvid",
+    "faac",
+    "fontconfig",
+    "freetype",
+    "theora",
+    "libvorbis",
+    "libvpx",
+    "rtmpdump",
+    "opencore-amr",
+    "libass",
+    "openjpeg",
+    "snappy",
+    "speex",
+    "schroedinger",
+    "fdk-aac",
+    "opus",
+    "frei0r",
+    "libcaca",
+    "libbluray",
+    "libsoxr",
+    "libquvi",
+    "libvidstab",
+    "x265",
+    "openssl",
+    "libssh",
+    "webp",
+    "zeromq",
+    "libbs2b",
+    "dcadec"
+  ],
+  "recommended_dependencies": [
+    "x264",
+    "lame",
+    "libvo-aacenc",
+    "xvid"
+  ],
+  "optional_dependencies": [
+    "faac",
+    "fontconfig",
+    "freetype",
+    "theora",
+    "libvorbis",
+    "libvpx",
+    "rtmpdump",
+    "opencore-amr",
+    "libass",
+    "openjpeg",
+    "snappy",
+    "speex",
+    "schroedinger",
+    "fdk-aac",
+    "opus",
+    "frei0r",
+    "libcaca",
+    "libbluray",
+    "libsoxr",
+    "libquvi",
+    "libvidstab",
+    "x265",
+    "openssl",
+    "libssh",
+    "webp",
+    "zeromq",
+    "libbs2b",
+    "dcadec"
+  ],
+  "build_dependencies": [
+    "pkg-config",
+    "texi2html",
+    "yasm"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "FFmpeg has been built without libfaac for licensing reasons;\nlibvo-aacenc is used by default.\nTo install with libfaac, you can:\n  brew reinstall ffmpeg28 --with-faac\n\nYou can also use the experimental FFmpeg encoder, libfdk-aac, or\nlibvo_aacenc to encode AAC audio:\n  ffmpeg -i input.wav -c:a aac -strict experimental output.m4a\nOr:\n  brew reinstall ffmpeg28 --with-fdk-aac\n  ffmpeg -i input.wav -c:a libfdk_aac output.m4a\n",
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--without-x264",
+      "description": "Disable H.264 encoder"
+    },
+    {
+      "option": "--without-lame",
+      "description": "Disable MP3 encoder"
+    },
+    {
+      "option": "--without-libvo-aacenc",
+      "description": "Disable VisualOn AAC encoder"
+    },
+    {
+      "option": "--without-xvid",
+      "description": "Disable Xvid MPEG-4 video encoder"
+    },
+    {
+      "option": "--without-qtkit",
+      "description": "Disable deprecated QuickTime framework"
+    },
+    {
+      "option": "--without-securetransport",
+      "description": "Disable use of SecureTransport"
+    },
+    {
+      "option": "--with-rtmpdump",
+      "description": "Enable RTMP protocol"
+    },
+    {
+      "option": "--with-libass",
+      "description": "Enable ASS/SSA subtitle format"
+    },
+    {
+      "option": "--with-opencore-amr",
+      "description": "Enable Opencore AMR NR/WB audio format"
+    },
+    {
+      "option": "--with-openjpeg",
+      "description": "Enable JPEG 2000 image format"
+    },
+    {
+      "option": "--with-openssl",
+      "description": "Enable SSL support"
+    },
+    {
+      "option": "--with-libssh",
+      "description": "Enable SFTP protocol via libssh"
+    },
+    {
+      "option": "--with-schroedinger",
+      "description": "Enable Dirac video format"
+    },
+    {
+      "option": "--with-ffplay",
+      "description": "Enable FFplay media player"
+    },
+    {
+      "option": "--with-tools",
+      "description": "Enable additional FFmpeg tools"
+    },
+    {
+      "option": "--with-fdk-aac",
+      "description": "Enable the Fraunhofer FDK AAC library"
+    },
+    {
+      "option": "--with-libvidstab",
+      "description": "Enable vid.stab support for video stabilization"
+    },
+    {
+      "option": "--with-x265",
+      "description": "Enable x265 encoder"
+    },
+    {
+      "option": "--with-libsoxr",
+      "description": "Enable the soxr resample library"
+    },
+    {
+      "option": "--with-webp",
+      "description": "Enable using libwebp to encode WEBP images"
+    },
+    {
+      "option": "--with-zeromq",
+      "description": "Enable using libzeromq to receive commands sent through a libzeromq client"
+    },
+    {
+      "option": "--with-snappy",
+      "description": "Enable Snappy library"
+    },
+    {
+      "option": "--with-dcadec",
+      "description": "Enable dcadec library"
+    },
+    {
+      "option": "--with-faac",
+      "description": "Build with faac support"
+    },
+    {
+      "option": "--with-fontconfig",
+      "description": "Build with fontconfig support"
+    },
+    {
+      "option": "--with-freetype",
+      "description": "Build with freetype support"
+    },
+    {
+      "option": "--with-theora",
+      "description": "Build with theora support"
+    },
+    {
+      "option": "--with-libvorbis",
+      "description": "Build with libvorbis support"
+    },
+    {
+      "option": "--with-libvpx",
+      "description": "Build with libvpx support"
+    },
+    {
+      "option": "--with-speex",
+      "description": "Build with speex support"
+    },
+    {
+      "option": "--with-opus",
+      "description": "Build with opus support"
+    },
+    {
+      "option": "--with-frei0r",
+      "description": "Build with frei0r support"
+    },
+    {
+      "option": "--with-libcaca",
+      "description": "Build with libcaca support"
+    },
+    {
+      "option": "--with-libbluray",
+      "description": "Build with libbluray support"
+    },
+    {
+      "option": "--with-libquvi",
+      "description": "Build with libquvi support"
+    },
+    {
+      "option": "--with-libbs2b",
+      "description": "Build with libbs2b support"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/ffmpeg@2.8-2.8.13_2.high_sierra.bottle.tar.gz",
+          "sha256": "aa356ed2a33d8a1bfc32c1541b42a666ce24201709b82fbbf4f24bcf418735bf"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/ffmpeg@2.8-2.8.13_2.sierra.bottle.tar.gz",
+          "sha256": "280d377b3853063069f174efae5fa7d00fba939bb05090e6ed1e3bf51c97e0a2"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/ffmpeg@2.8-2.8.13_2.el_capitan.bottle.tar.gz",
+          "sha256": "4081321d6ca435f867efeab84e8ae1bb8b1f87263a7a2936043cc9e91e0413e6"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "name": "pam-u2f",
+  "full_name": "pam-u2f",
+  "desc": "Provides an easy way to use U2F-compliant authenticators with PAM",
+  "homepage": "https://developers.yubico.com/pam-u2f/",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "1.0.6",
+    "bottle": true,
+    "devel": null,
+    "head": "HEAD"
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "pkg-config",
+    "libtool",
+    "autoconf",
+    "automake",
+    "asciidoc",
+    "libu2f-host",
+    "libu2f-server"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "build_dependencies": [
+    "pkg-config",
+    "libtool",
+    "autoconf",
+    "automake",
+    "asciidoc"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "To use a U2F key for PAM authentication, specify the full path to the\nmodule (/usr/local/opt/pam-u2f/lib/pam/pam_u2f.so) in a PAM\nconfiguration. You can find all PAM configurations in /etc/pam.d.\n\nFor further installation instructions, please visit\nhttps://developers.yubico.com/pam-u2f/#installation.\n",
+  "requirements": [
+
+  ],
+  "options": [
+
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/pam-u2f-1.0.6.high_sierra.bottle.tar.gz",
+          "sha256": "afca2620432c6409c74c05964351b689d0ef531bf3f92c03ac4e550fc54841fb"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/pam-u2f-1.0.6.sierra.bottle.tar.gz",
+          "sha256": "5b8df58d53948ff20dd7f6284a6d830f0e4087e573ba210adc526a3b9273ca1c"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/pam-u2f-1.0.6.el_capitan.bottle.tar.gz",
+          "sha256": "ddfb23e7cddf6b47e78c889a8041690aab670d7724ebfcc27ca60018d780d127"
+        }
+      }
+    }
+  }
+}

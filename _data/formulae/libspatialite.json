@@ -1,0 +1,86 @@
+{
+  "name": "libspatialite",
+  "full_name": "libspatialite",
+  "desc": "Adds spatial SQL capabilities to SQLite",
+  "homepage": "https://www.gaia-gis.it/fossil/libspatialite/index",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versions": {
+    "stable": "4.3.0a",
+    "bottle": true,
+    "devel": null,
+    "head": "HEAD"
+  },
+  "revision": 6,
+  "version_scheme": 0,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "keg_only": false,
+  "dependencies": [
+    "pkg-config",
+    "proj",
+    "geos",
+    "sqlite",
+    "libxml2",
+    "freexl"
+  ],
+  "recommended_dependencies": [
+    "libxml2",
+    "freexl"
+  ],
+  "optional_dependencies": [
+
+  ],
+  "build_dependencies": [
+    "pkg-config"
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "requirements": [
+
+  ],
+  "options": [
+    {
+      "option": "--without-freexl",
+      "description": "Build without support for reading Excel files"
+    },
+    {
+      "option": "--without-libxml2",
+      "description": "Disable support for xml parsing (parsing needed by spatialite-gui)"
+    },
+    {
+      "option": "--without-geopackage",
+      "description": "Build without OGC GeoPackage support"
+    }
+  ],
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/libspatialite-4.3.0a_6.high_sierra.bottle.tar.gz",
+          "sha256": "2a41b0baab67ec8b35f3c68b392439907a1b003a84437b8437b3ca3ecdcf35f4"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/libspatialite-4.3.0a_6.sierra.bottle.tar.gz",
+          "sha256": "4b73791b59c7766a4e20d9ca77502d2866f7d07fb7aeba660bf38e41077ba60e"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/libspatialite-4.3.0a_6.el_capitan.bottle.tar.gz",
+          "sha256": "eff5f3de6139cfe0adff6ec2fe306c7f11ee1f7b9195089d514902b11b0675d0"
+        }
+      }
+    }
+  }
+}
