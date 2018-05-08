@@ -16,24 +16,9 @@
   "revision": 0,
   "version_scheme": 0,
   "installed": [
-    {
-      "version": "5.7.22",
-      "used_options": [
 
-      ],
-      "built_as_bottle": true,
-      "poured_from_bottle": true,
-      "runtime_dependencies": [
-        {
-          "full_name": "openssl",
-          "version": "1.0.2o"
-        }
-      ],
-      "installed_as_dependency": false,
-      "installed_on_request": true
-    }
   ],
-  "linked_keg": "5.7.22",
+  "linked_keg": null,
   "pinned": false,
   "outdated": false,
   "keg_only": false,
@@ -57,7 +42,7 @@
     "mysql-connector-c",
     "mariadb-connector-c"
   ],
-  "caveats": "We've installed your MySQL database without a root password. To secure it run:\n    mysql_secure_installation\n\nMySQL is configured to only allow connections from localhost by default\n\nTo connect run:\n    mysql -uroot\n",
+  "caveats": "We've installed your MySQL database without a root password. To secure it run:\n    mysql_secure_installation\n\nMySQL is configured to only allow connections from localhost by default\n\nTo connect run:\n    mysql -uroot\n\nA \"/etc/mysql/my.cnf\" from another install may interfere with a Homebrew-built\nserver starting up correctly.\n",
   "requirements": [
     {
       "name": "macos",

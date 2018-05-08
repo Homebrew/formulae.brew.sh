@@ -31,7 +31,6 @@
     "glpk",
     "hdf5",
     "json-c",
-    "lapack",
     "lzo",
     "nlopt",
     "python@2",
@@ -52,7 +51,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "If you use system python (that comes - depending on the macOS version -\nwith an old version of numpy), you may need to ensure that the brewed\npackages come earlier in Python's sys.path with:\n  mkdir -p /Users/mike/Library/Python/2.7/lib/python/site-packages\n  echo 'import sys; sys.path.insert(1, \"/usr/local/lib/python3.6/site-packages\")' >> /Users/mike/Library/Python/2.7/lib/python/site-packages/homebrew.pth\n",
+  "caveats": "If you use system python (that comes - depending on the macOS version -\nwith an old version of numpy), you may need to ensure that the brewed\npackages come earlier in Python's sys.path with:\n  mkdir -p /home/travis/.local/lib/python2.7/site-packages\n  echo 'import sys; sys.path.insert(1, \"/home/travis/Homebrew/lib/python3.6/site-packages\")' >> /home/travis/.local/lib/python2.7/site-packages/homebrew.pth\n",
   "requirements": [
     {
       "name": "java",

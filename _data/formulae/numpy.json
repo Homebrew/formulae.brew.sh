@@ -40,7 +40,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "If you use system python (that comes - depending on the OS X version -\nwith older versions of numpy, scipy and matplotlib), you may need to\nensure that the brewed packages come earlier in Python's sys.path with:\n  mkdir -p /Users/mike/Library/Python/2.7/lib/python/site-packages\n  echo 'import sys; sys.path.insert(1, \"/usr/local/lib/python3.6/site-packages\")' >> /Users/mike/Library/Python/2.7/lib/python/site-packages/homebrew.pth\n",
+  "caveats": "If you use system python (that comes - depending on the OS X version -\nwith older versions of numpy, scipy and matplotlib), you may need to\nensure that the brewed packages come earlier in Python's sys.path with:\n  mkdir -p /home/travis/.local/lib/python2.7/site-packages\n  echo 'import sys; sys.path.insert(1, \"/home/travis/Homebrew/lib/python3.6/site-packages\")' >> /home/travis/.local/lib/python2.7/site-packages/homebrew.pth\n",
   "requirements": [
 
   ],
