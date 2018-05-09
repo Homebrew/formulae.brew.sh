@@ -50,11 +50,8 @@ permalink: :title
 <table>
     {%- for dependency_name in f.dependencies -%}
     <tr>
-        {%- assign d = site.data.formulae[dependency_name] -%}
-        <td><a href="{{ site.baseurl }}/formulae/{{ d.name }}">{{ d.name }}</a></td>
-        <td>✅</td>
-        <td>{{ d.versions.stable }}</td>
-        <td>{{ d.desc }}</td>
+        {%- assign dep = site.data.formulae[dependency_name] -%}
+        {%- include formula.html formula=dep -%}
     </tr>
     {%- endfor -%}
 </table>
