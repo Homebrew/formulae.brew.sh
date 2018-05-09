@@ -9,12 +9,7 @@ layout: default
 
     <tr>
         {%- assign f = formula[1] -%}
-        <td>
-            <a href="{{ site.baseurl }}/formulae/{{ f.name }}">{{ f.name }}</a>
-        </td>
-        <td>✅</td>
-        <td>{{ f.versions.stable }}</td>
-        <td>{{ f.desc }}</td>
+        {%- include formula.html formula=f -%}
     </tr>
     {%- endfor -%}
 </table>
