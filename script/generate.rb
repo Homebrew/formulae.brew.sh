@@ -8,5 +8,5 @@ Formula.each do |f|
 
   html = IO.read "_formulae.html.in"
   html.gsub!("title: $TITLE", "title: #{f.name}")
-  IO.write("formulae/#{f.name}.html", html)
+  IO.write("formula/#{f.name}.html", html)
 end
