@@ -1,7 +1,7 @@
 ---
 ---
 [
-{%- assign sorted_formulae = site.data.formulae | sort -%}
+{%- assign sorted_formulae = site.data.formula | sort -%}
 {%- for formula in sorted_formulae %}
   {{ formula[1] | jsonify }}
   {%- unless forloop.last -%}

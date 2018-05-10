@@ -3,7 +3,7 @@ layout: default
 permalink: :title
 ---
 {%- assign name = page.name | remove: ".html" | remove: "@" -%}
-{%- assign f = site.data.formulae[name] -%}
+{%- assign f = site.data.formula[name] -%}
 <h2>{{ f.name }}</h2>
 <p>{{ f.desc }}</p>
 <p>
@@ -51,12 +51,12 @@ permalink: :title
     {%- for d in f.dependencies -%}
     {%- assign dependency_name = d | remove: "@" -%}
     <tr>
-        {%- assign dep = site.data.formulae[dependency_name] -%}
+        {%- assign dep = site.data.formula[dependency_name] -%}
         {%- include formula.html formula=dep -%}
     </tr>
     {%- endfor -%}
 </table>
 {%- endif -%}
 
-<p><a href="{{ site.baseurl }}/api/formulae/{{ f.name }}.json">JSON API for {{ f.name }}</a></p>
+<p><a href="{{ site.baseurl }}/api/formula/{{ f.name }}.json">JSON API for {{ f.name }}</a></p>
 <p><a target="_blank" href="https://github.com/Homebrew/homebrew-core/blob/master/Formula/{{ f.name }}.rb">Formula code</a> on GitHub</p>
