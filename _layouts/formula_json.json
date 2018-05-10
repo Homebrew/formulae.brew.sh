@@ -1,7 +1,5 @@
 ---
 ---
-{
-  {%- assign name = page.name | remove: ".json" -%}
-  {%- assign formula = site.data.formulae[name] -%}
-  {{ name | jsonify }}: {{ formula | jsonify }}
-}
+{%- assign name = page.name | remove: ".json" | remove: "@" -%}
+{%- assign formula = site.data.formulae[name] -%}
+{{ formula | jsonify }}
