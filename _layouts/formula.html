@@ -2,7 +2,7 @@
 layout: default
 permalink: :title
 ---
-{%- assign name = page.name | remove: ".html" -%}
+{%- assign name = page.name | remove: ".html" | remove: "@" -%}
 {%- assign f = site.data.formulae[name] -%}
 <h2>{{ f.name }}</h2>
 <p>{{ f.desc }}</p>
@@ -48,7 +48,8 @@ permalink: :title
 {%- if f.dependencies.size > 0 -%}
 <p>gcc requires the following formulae to be installed:</p>
 <table>
-    {%- for dependency_name in f.dependencies -%}
+    {%- for d in f.dependencies -%}
+    {%- assign dependency_name = d | remove: "@" -%}
     <tr>
         {%- assign dep = site.data.formulae[dependency_name] -%}
         {%- include formula.html formula=dep -%}
