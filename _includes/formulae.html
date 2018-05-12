@@ -1,0 +1,12 @@
+{%- if include.formulae.size > 0 -%}
+<p>{{ include.description }}:</p>
+<table>
+    {%- for f in include.formulae -%}
+    {%- assign formula_name = f | remove: "@" | remove: "." -%}
+    <tr>
+        {%- assign formula = site.data.formula[formula_name] -%}
+        {%- include formula.html formula=formula -%}
+    </tr>
+    {%- endfor -%}
+</table>
+{%- endif -%}
