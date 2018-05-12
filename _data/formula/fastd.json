@@ -1,68 +1,23 @@
 {
   "name": "fastd",
   "full_name": "fastd",
-  "desc": "Fast and Secure Tunnelling Daemon",
-  "homepage": "https://projects.universe-factory.net/projects/fastd",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Fast and Secure Tunnelling Daemon",
+  "homepage": "https://projects.universe-factory.net/projects/fastd",
   "versions": {
     "stable": "18",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 4,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "cmake",
-    "libuecc",
-    "libsodium",
-    "bison",
-    "pkg-config",
-    "json-c",
-    "openssl"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-    "openssl"
-  ],
-  "build_dependencies": [
-    "cmake",
-    "bison",
-    "pkg-config"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-    {
-      "name": "tuntap",
-      "cask": "tuntap",
-      "download": null
-    }
-  ],
-  "options": [
-    {
-      "option": "--with-openssl",
-      "description": "Build with openssl support"
-    },
-    {
-      "option": "--with-tuntap",
-      "description": "Build with tuntap support"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -84,5 +39,49 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--with-openssl",
+      "description": "Build with openssl support"
+    },
+    {
+      "option": "--with-tuntap",
+      "description": "Build with tuntap support"
+    }
+  ],
+  "build_dependencies": [
+    "cmake",
+    "bison",
+    "pkg-config"
+  ],
+  "dependencies": [
+    "libuecc",
+    "libsodium",
+    "json-c"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "openssl"
+  ],
+  "requirements": [
+    {
+      "name": "tuntap",
+      "cask": "tuntap",
+      "download": null
+    }
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

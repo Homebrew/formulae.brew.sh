@@ -1,68 +1,23 @@
 {
   "name": "zmap",
   "full_name": "zmap",
-  "desc": "Network scanner for Internet-wide network studies",
-  "homepage": "https://zmap.io",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Network scanner for Internet-wide network studies",
+  "homepage": "https://zmap.io",
   "versions": {
     "stable": "2.1.1",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 1,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "cmake",
-    "gengetopt",
-    "byacc",
-    "pkg-config",
-    "gmp",
-    "libdnet",
-    "json-c",
-    "hiredis",
-    "mongo-c-driver"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-    "hiredis",
-    "mongo-c-driver"
-  ],
-  "build_dependencies": [
-    "cmake",
-    "gengetopt",
-    "byacc",
-    "pkg-config"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--with-hiredis",
-      "description": "Build with hiredis support"
-    },
-    {
-      "option": "--with-mongo-c-driver",
-      "description": "Build with mongo-c-driver support"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -84,5 +39,47 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--with-hiredis",
+      "description": "Build with hiredis support"
+    },
+    {
+      "option": "--with-mongo-c-driver",
+      "description": "Build with mongo-c-driver support"
+    }
+  ],
+  "build_dependencies": [
+    "cmake",
+    "gengetopt",
+    "byacc",
+    "pkg-config"
+  ],
+  "dependencies": [
+    "gmp",
+    "libdnet",
+    "json-c"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "hiredis",
+    "mongo-c-driver"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

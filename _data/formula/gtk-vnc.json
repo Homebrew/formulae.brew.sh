@@ -1,74 +1,23 @@
 {
   "name": "gtk-vnc",
   "full_name": "gtk-vnc",
-  "desc": "VNC viewer widget for GTK",
-  "homepage": "https://wiki.gnome.org/Projects/gtk-vnc",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "VNC viewer widget for GTK",
+  "homepage": "https://wiki.gnome.org/Projects/gtk-vnc",
   "versions": {
     "stable": "0.7.2",
-    "bottle": true,
     "devel": null,
-    "head": null
+    "head": null,
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "gettext",
-    "gobject-introspection",
-    "intltool",
-    "libtool",
-    "pkg-config",
-    "gnutls",
-    "gtk+3",
-    "libgcrypt",
-    "pulseaudio",
-    "vala"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-    "pulseaudio",
-    "vala"
-  ],
-  "build_dependencies": [
-    "gettext",
-    "gobject-introspection",
-    "intltool",
-    "libtool",
-    "pkg-config"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-    {
-      "name": "macos",
-      "cask": null,
-      "download": null
-    }
-  ],
-  "options": [
-    {
-      "option": "--with-pulseaudio",
-      "description": "Build with pulseaudio support"
-    },
-    {
-      "option": "--with-vala",
-      "description": "Build with vala support"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -90,5 +39,52 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--with-pulseaudio",
+      "description": "Build with pulseaudio support"
+    },
+    {
+      "option": "--with-vala",
+      "description": "Build with vala support"
+    }
+  ],
+  "build_dependencies": [
+    "gettext",
+    "gobject-introspection",
+    "intltool",
+    "libtool",
+    "pkg-config"
+  ],
+  "dependencies": [
+    "gnutls",
+    "gtk+3",
+    "libgcrypt"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "pulseaudio",
+    "vala"
+  ],
+  "requirements": [
+    {
+      "name": "macos",
+      "cask": null,
+      "download": null
+    }
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

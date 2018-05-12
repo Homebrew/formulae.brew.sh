@@ -1,66 +1,23 @@
 {
   "name": "postgresql@9.4",
   "full_name": "postgresql@9.4",
-  "desc": "Object-relational database system",
-  "homepage": "https://www.postgresql.org/",
   "oldname": "postgresql94",
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Object-relational database system",
+  "homepage": "https://www.postgresql.org/",
   "versions": {
     "stable": "9.4.18",
-    "bottle": true,
     "devel": null,
-    "head": null
+    "head": null,
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": true,
-  "dependencies": [
-    "openssl",
-    "readline",
-    "python@2"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-    "python@2"
-  ],
-  "build_dependencies": [
-
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "If builds of PostgreSQL 9 are failing and you have version 8.x installed,\nyou may need to remove the previous version first. See:\n  https://github.com/Homebrew/legacy-homebrew/issues/2510\n\nTo migrate existing data from a previous major version (pre-9.3) of PostgreSQL, see:\n  https://www.postgresql.org/docs/9.3/static/upgrading.html\n\nWhen installing the postgres gem, including ARCHFLAGS is recommended:\n  ARCHFLAGS=\"-arch x86_64\" gem install pg\n\nTo install gems without sudo, see the Homebrew documentation:\n  https://docs.brew.sh/Gems,-Eggs-and-Perl-Modules\n",
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--without-perl",
-      "description": "Build without Perl support"
-    },
-    {
-      "option": "--without-tcl",
-      "description": "Build without Tcl support"
-    },
-    {
-      "option": "--with-dtrace",
-      "description": "Build with DTrace support"
-    },
-    {
-      "option": "--with-python@2",
-      "description": "Build with python@2 support"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -82,5 +39,50 @@
         }
       }
     }
-  }
+  },
+  "keg_only": true,
+  "options": [
+    {
+      "option": "--without-perl",
+      "description": "Build without Perl support"
+    },
+    {
+      "option": "--without-tcl",
+      "description": "Build without Tcl support"
+    },
+    {
+      "option": "--with-dtrace",
+      "description": "Build with DTrace support"
+    },
+    {
+      "option": "--with-python@2",
+      "description": "Build with python@2 support"
+    }
+  ],
+  "build_dependencies": [
+
+  ],
+  "dependencies": [
+    "openssl",
+    "readline"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "python@2"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "If builds of PostgreSQL 9 are failing and you have version 8.x installed,\nyou may need to remove the previous version first. See:\n  https://github.com/Homebrew/legacy-homebrew/issues/2510\n\nTo migrate existing data from a previous major version (pre-9.3) of PostgreSQL, see:\n  https://www.postgresql.org/docs/9.3/static/upgrading.html\n\nWhen installing the postgres gem, including ARCHFLAGS is recommended:\n  ARCHFLAGS=\"-arch x86_64\" gem install pg\n\nTo install gems without sudo, see the Homebrew documentation:\n  https://docs.brew.sh/Gems,-Eggs-and-Perl-Modules\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

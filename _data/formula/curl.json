@@ -1,56 +1,46 @@
 {
   "name": "curl",
   "full_name": "curl",
-  "desc": "Get a file from an HTTP, HTTPS or FTP server",
-  "homepage": "https://curl.haxx.se/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Get a file from an HTTP, HTTPS or FTP server",
+  "homepage": "https://curl.haxx.se/",
   "versions": {
     "stable": "7.59.0",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/curl-7.59.0.high_sierra.bottle.tar.gz",
+          "sha256": "c16e7fdef8713270d2b0dc1ddaaafcd14101f58a412e0922edc3fedfa20121c4"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/curl-7.59.0.sierra.bottle.tar.gz",
+          "sha256": "36bd62e7b1ec2f4af90c4e808ce7503e7e783f4480076309faadfd9363528fb1"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/curl-7.59.0.el_capitan.bottle.tar.gz",
+          "sha256": "a143b0d967f76643af51dfe0f67c4c869dfa0fdc3e7902ced5fa8eed9c48501d"
+        }
+      }
+    }
+  },
   "keg_only": true,
-  "dependencies": [
-    "openssl",
-    "pkg-config",
-    "rtmpdump",
-    "libssh2",
-    "c-ares",
-    "libmetalink",
-    "nghttp2"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-    "rtmpdump",
-    "libssh2",
-    "c-ares",
-    "libmetalink",
-    "nghttp2"
-  ],
-  "build_dependencies": [
-    "pkg-config"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-
-  ],
   "options": [
     {
       "option": "--with-rtmpdump",
@@ -77,26 +67,33 @@
       "description": "Build with HTTP/2 support (requires OpenSSL)"
     }
   ],
-  "bottle": {
-    "stable": {
-      "rebuild": 0,
-      "cellar": ":any",
-      "prefix": "/usr/local",
-      "root_url": "https://homebrew.bintray.com/bottles",
-      "files": {
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/curl-7.59.0.high_sierra.bottle.tar.gz",
-          "sha256": "c16e7fdef8713270d2b0dc1ddaaafcd14101f58a412e0922edc3fedfa20121c4"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/curl-7.59.0.sierra.bottle.tar.gz",
-          "sha256": "36bd62e7b1ec2f4af90c4e808ce7503e7e783f4480076309faadfd9363528fb1"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/curl-7.59.0.el_capitan.bottle.tar.gz",
-          "sha256": "a143b0d967f76643af51dfe0f67c4c869dfa0fdc3e7902ced5fa8eed9c48501d"
-        }
-      }
-    }
-  }
+  "build_dependencies": [
+    "pkg-config"
+  ],
+  "dependencies": [
+    "openssl"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "rtmpdump",
+    "libssh2",
+    "c-ares",
+    "libmetalink",
+    "nghttp2"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

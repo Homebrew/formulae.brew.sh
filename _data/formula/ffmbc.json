@@ -1,71 +1,23 @@
 {
   "name": "ffmbc",
   "full_name": "ffmbc",
-  "desc": "FFmpeg customized for broadcast and professional usage",
-  "homepage": "https://code.google.com/p/ffmbc/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "FFmpeg customized for broadcast and professional usage",
+  "homepage": "https://code.google.com/p/ffmbc/",
   "versions": {
     "stable": "0.7.2",
-    "bottle": true,
     "devel": null,
-    "head": null
+    "head": null,
+    "bottle": true
   },
   "revision": 6,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "texi2html",
-    "yasm",
-    "faac",
-    "lame",
-    "x264",
-    "xvid",
-    "libvorbis",
-    "libvpx",
-    "theora"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-    "libvorbis",
-    "libvpx",
-    "theora"
-  ],
-  "build_dependencies": [
-    "texi2html",
-    "yasm"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "Due to naming conflicts with other FFmpeg forks, this formula installs\nonly static binaries - no shared libraries are built.\n\nThe `ffprobe` program has been renamed to `ffprobe-bc` to avoid name\nconflicts with the FFmpeg executable of the same name.\n",
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--with-libvorbis",
-      "description": "Build with libvorbis support"
-    },
-    {
-      "option": "--with-libvpx",
-      "description": "Build with libvpx support"
-    },
-    {
-      "option": "--with-theora",
-      "description": "Build with theora support"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -87,5 +39,51 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--with-libvorbis",
+      "description": "Build with libvorbis support"
+    },
+    {
+      "option": "--with-libvpx",
+      "description": "Build with libvpx support"
+    },
+    {
+      "option": "--with-theora",
+      "description": "Build with theora support"
+    }
+  ],
+  "build_dependencies": [
+    "texi2html",
+    "yasm"
+  ],
+  "dependencies": [
+    "faac",
+    "lame",
+    "x264",
+    "xvid"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "libvorbis",
+    "libvpx",
+    "theora"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "Due to naming conflicts with other FFmpeg forks, this formula installs\nonly static binaries - no shared libraries are built.\n\nThe `ffprobe` program has been renamed to `ffprobe-bc` to avoid name\nconflicts with the FFmpeg executable of the same name.\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

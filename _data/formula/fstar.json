@@ -1,54 +1,23 @@
 {
   "name": "fstar",
   "full_name": "fstar",
-  "desc": "ML-like language aimed at program verification",
-  "homepage": "https://www.fstar-lang.org/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "ML-like language aimed at program verification",
+  "homepage": "https://www.fstar-lang.org/",
   "versions": {
     "stable": "0.9.5.0",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 1,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "opam",
-    "gmp",
-    "ocaml"
-  ],
-  "recommended_dependencies": [
-    "ocaml"
-  ],
-  "optional_dependencies": [
-
-  ],
-  "build_dependencies": [
-    "opam"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "F* code can be extracted to OCaml code.\nTo compile the generated OCaml code, you must install\nsome packages from the OPAM package manager:\n- brew install opam\n- opam install batteries zarith yojson pprint stdint menhir\n\nF* code can be extracted to F# code.\nTo compile the generated F# (.NET) code, you must install\nthe 'mono' package that includes the fsharp compiler:\n- brew install mono\n",
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--without-ocaml",
-      "description": "Build without ocaml support"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -74,5 +43,37 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--without-ocaml",
+      "description": "Build without ocaml support"
+    }
+  ],
+  "build_dependencies": [
+    "opam"
+  ],
+  "dependencies": [
+    "gmp"
+  ],
+  "recommended_dependencies": [
+    "ocaml"
+  ],
+  "optional_dependencies": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "F* code can be extracted to OCaml code.\nTo compile the generated OCaml code, you must install\nsome packages from the OPAM package manager:\n- brew install opam\n- opam install batteries zarith yojson pprint stdint menhir\n\nF* code can be extracted to F# code.\nTo compile the generated F# (.NET) code, you must install\nthe 'mono' package that includes the fsharp compiler:\n- brew install mono\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

@@ -1,88 +1,46 @@
 {
   "name": "mpd",
   "full_name": "mpd",
-  "desc": "Music Player Daemon",
-  "homepage": "https://www.musicpd.org/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Music Player Daemon",
+  "homepage": "https://www.musicpd.org/",
   "versions": {
     "stable": "0.20.19",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/mpd-0.20.19.high_sierra.bottle.tar.gz",
+          "sha256": "7ea26cc7814c50902a8d289f1e28281c39b1b4fc239b5b29b0b6142d171dc7b2"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/mpd-0.20.19.sierra.bottle.tar.gz",
+          "sha256": "ba5a989e8b702c7fa816f59ce3364bcade14f315895d738ef2a4fc2717482b14"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/mpd-0.20.19.el_capitan.bottle.tar.gz",
+          "sha256": "51f6d8ec6d782a8d93b7252c4cb8d70063f22547ae8fc6490dad2c47f61dd601"
+        }
+      }
+    }
+  },
   "keg_only": false,
-  "dependencies": [
-    "pkg-config",
-    "boost",
-    "glib",
-    "libid3tag",
-    "sqlite",
-    "libsamplerate",
-    "icu4c",
-    "libmpdclient",
-    "ffmpeg",
-    "fluid-synth",
-    "faad2",
-    "wavpack",
-    "libshout",
-    "lame",
-    "two-lame",
-    "flac",
-    "jack",
-    "libmms",
-    "libzzip",
-    "yajl",
-    "opus",
-    "libvorbis",
-    "libnfs",
-    "mad",
-    "libmodplug",
-    "pulseaudio",
-    "libao"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-    "wavpack",
-    "libshout",
-    "lame",
-    "two-lame",
-    "flac",
-    "jack",
-    "libmms",
-    "libzzip",
-    "yajl",
-    "opus",
-    "libvorbis",
-    "libnfs",
-    "mad",
-    "libmodplug",
-    "pulseaudio",
-    "libao"
-  ],
-  "build_dependencies": [
-    "pkg-config",
-    "boost"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-
-  ],
   "options": [
     {
       "option": "--with-wavpack",
@@ -157,26 +115,53 @@
       "description": "Build with libao support"
     }
   ],
-  "bottle": {
-    "stable": {
-      "rebuild": 0,
-      "cellar": "/usr/local/Cellar",
-      "prefix": "/usr/local",
-      "root_url": "https://homebrew.bintray.com/bottles",
-      "files": {
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/mpd-0.20.19.high_sierra.bottle.tar.gz",
-          "sha256": "7ea26cc7814c50902a8d289f1e28281c39b1b4fc239b5b29b0b6142d171dc7b2"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/mpd-0.20.19.sierra.bottle.tar.gz",
-          "sha256": "ba5a989e8b702c7fa816f59ce3364bcade14f315895d738ef2a4fc2717482b14"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/mpd-0.20.19.el_capitan.bottle.tar.gz",
-          "sha256": "51f6d8ec6d782a8d93b7252c4cb8d70063f22547ae8fc6490dad2c47f61dd601"
-        }
-      }
-    }
-  }
+  "build_dependencies": [
+    "pkg-config",
+    "boost"
+  ],
+  "dependencies": [
+    "glib",
+    "libid3tag",
+    "sqlite",
+    "libsamplerate",
+    "icu4c",
+    "libmpdclient",
+    "ffmpeg",
+    "fluid-synth",
+    "faad2"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "wavpack",
+    "libshout",
+    "lame",
+    "two-lame",
+    "flac",
+    "jack",
+    "libmms",
+    "libzzip",
+    "yajl",
+    "opus",
+    "libvorbis",
+    "libnfs",
+    "mad",
+    "libmodplug",
+    "pulseaudio",
+    "libao"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

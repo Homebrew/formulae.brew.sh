@@ -1,55 +1,46 @@
 {
   "name": "vim",
   "full_name": "vim",
-  "desc": "Vi 'workalike' with many additional features",
-  "homepage": "https://www.vim.org/",
   "oldname": null,
   "aliases": [
     "vim@8.0"
   ],
+  "versioned_formulae": [
+    "vim@7.4"
+  ],
+  "desc": "Vi 'workalike' with many additional features",
+  "homepage": "https://www.vim.org/",
   "versions": {
     "stable": "8.0.1800",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/vim-8.0.1800.high_sierra.bottle.tar.gz",
+          "sha256": "def44d7f28a1d47fe0de0d2619ef2ff7c7586ada153ee0a0a0c602ab3af8912d"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/vim-8.0.1800.sierra.bottle.tar.gz",
+          "sha256": "f8a7a357d7b549d20d723350051fe996ba13d8fa857d036488ea96e00c303e06"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/vim-8.0.1800.el_capitan.bottle.tar.gz",
+          "sha256": "824cbee9ecd8810035d3a2cdd461b199d71c439467869b7898dfa6a0afd891ed"
+        }
+      }
+    }
+  },
   "keg_only": false,
-  "dependencies": [
-    "perl",
-    "ruby",
-    "python",
-    "gettext",
-    "lua",
-    "luajit",
-    "python@2"
-  ],
-  "recommended_dependencies": [
-    "python"
-  ],
-  "optional_dependencies": [
-    "gettext",
-    "lua",
-    "luajit",
-    "python@2"
-  ],
-  "build_dependencies": [
-
-  ],
-  "conflicts_with": [
-    "ex-vi"
-  ],
-  "caveats": null,
-  "requirements": [
-
-  ],
   "options": [
     {
       "option": "--with-override-system-vi",
@@ -84,26 +75,33 @@
       "description": "Build with luajit support"
     }
   ],
-  "bottle": {
-    "stable": {
-      "rebuild": 0,
-      "cellar": "/usr/local/Cellar",
-      "prefix": "/usr/local",
-      "root_url": "https://homebrew.bintray.com/bottles",
-      "files": {
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/vim-8.0.1800.high_sierra.bottle.tar.gz",
-          "sha256": "def44d7f28a1d47fe0de0d2619ef2ff7c7586ada153ee0a0a0c602ab3af8912d"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/vim-8.0.1800.sierra.bottle.tar.gz",
-          "sha256": "f8a7a357d7b549d20d723350051fe996ba13d8fa857d036488ea96e00c303e06"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/vim-8.0.1800.el_capitan.bottle.tar.gz",
-          "sha256": "824cbee9ecd8810035d3a2cdd461b199d71c439467869b7898dfa6a0afd891ed"
-        }
-      }
-    }
-  }
+  "build_dependencies": [
+
+  ],
+  "dependencies": [
+    "perl",
+    "ruby"
+  ],
+  "recommended_dependencies": [
+    "python"
+  ],
+  "optional_dependencies": [
+    "gettext",
+    "lua",
+    "luajit",
+    "python@2"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+    "ex-vi"
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

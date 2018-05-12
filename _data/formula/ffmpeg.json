@@ -1,128 +1,46 @@
 {
   "name": "ffmpeg",
   "full_name": "ffmpeg",
-  "desc": "Play, record, convert, and stream audio and video",
-  "homepage": "https://ffmpeg.org/",
   "oldname": null,
   "aliases": [
     "ffmpeg@4"
   ],
+  "versioned_formulae": [
+    "ffmpeg@2.8"
+  ],
+  "desc": "Play, record, convert, and stream audio and video",
+  "homepage": "https://ffmpeg.org/",
   "versions": {
     "stable": "4.0",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/ffmpeg-4.0.high_sierra.bottle.tar.gz",
+          "sha256": "81e41ed56f44fdceec52d14a2815abd0ec14415c0ce2ca8136df6d4b6d02a818"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/ffmpeg-4.0.sierra.bottle.tar.gz",
+          "sha256": "f0d43e35dd75d0c8069e2ebbd0710667793c00f5f9fef3094f651c3c22fd4fd3"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/ffmpeg-4.0.el_capitan.bottle.tar.gz",
+          "sha256": "1f642ce937d45b32737d7983790ff2f97133efa31c4e3d13268ca6e475c925cc"
+        }
+      }
+    }
+  },
   "keg_only": false,
-  "dependencies": [
-    "nasm",
-    "pkg-config",
-    "texi2html",
-    "lame",
-    "x264",
-    "xvid",
-    "chromaprint",
-    "fdk-aac",
-    "fontconfig",
-    "freetype",
-    "frei0r",
-    "game-music-emu",
-    "libass",
-    "libbluray",
-    "libbs2b",
-    "libcaca",
-    "libgsm",
-    "libmodplug",
-    "librsvg",
-    "libsoxr",
-    "libssh",
-    "libvidstab",
-    "libvorbis",
-    "libvpx",
-    "opencore-amr",
-    "openh264",
-    "openjpeg",
-    "openssl",
-    "opus",
-    "rtmpdump",
-    "rubberband",
-    "sdl2",
-    "snappy",
-    "speex",
-    "tesseract",
-    "theora",
-    "two-lame",
-    "wavpack",
-    "webp",
-    "x265",
-    "xz",
-    "zeromq",
-    "zimg"
-  ],
-  "recommended_dependencies": [
-    "lame",
-    "x264",
-    "xvid"
-  ],
-  "optional_dependencies": [
-    "chromaprint",
-    "fdk-aac",
-    "fontconfig",
-    "freetype",
-    "frei0r",
-    "game-music-emu",
-    "libass",
-    "libbluray",
-    "libbs2b",
-    "libcaca",
-    "libgsm",
-    "libmodplug",
-    "librsvg",
-    "libsoxr",
-    "libssh",
-    "libvidstab",
-    "libvorbis",
-    "libvpx",
-    "opencore-amr",
-    "openh264",
-    "openjpeg",
-    "openssl",
-    "opus",
-    "rtmpdump",
-    "rubberband",
-    "sdl2",
-    "snappy",
-    "speex",
-    "tesseract",
-    "theora",
-    "two-lame",
-    "wavpack",
-    "webp",
-    "x265",
-    "xz",
-    "zeromq",
-    "zimg"
-  ],
-  "build_dependencies": [
-    "nasm",
-    "pkg-config",
-    "texi2html"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-
-  ],
   "options": [
     {
       "option": "--with-chromaprint",
@@ -301,26 +219,69 @@
       "description": "Build with wavpack support"
     }
   ],
-  "bottle": {
-    "stable": {
-      "rebuild": 0,
-      "cellar": "/usr/local/Cellar",
-      "prefix": "/usr/local",
-      "root_url": "https://homebrew.bintray.com/bottles",
-      "files": {
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/ffmpeg-4.0.high_sierra.bottle.tar.gz",
-          "sha256": "81e41ed56f44fdceec52d14a2815abd0ec14415c0ce2ca8136df6d4b6d02a818"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/ffmpeg-4.0.sierra.bottle.tar.gz",
-          "sha256": "f0d43e35dd75d0c8069e2ebbd0710667793c00f5f9fef3094f651c3c22fd4fd3"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/ffmpeg-4.0.el_capitan.bottle.tar.gz",
-          "sha256": "1f642ce937d45b32737d7983790ff2f97133efa31c4e3d13268ca6e475c925cc"
-        }
-      }
-    }
-  }
+  "build_dependencies": [
+    "nasm",
+    "pkg-config",
+    "texi2html"
+  ],
+  "dependencies": [
+
+  ],
+  "recommended_dependencies": [
+    "lame",
+    "x264",
+    "xvid"
+  ],
+  "optional_dependencies": [
+    "chromaprint",
+    "fdk-aac",
+    "fontconfig",
+    "freetype",
+    "frei0r",
+    "game-music-emu",
+    "libass",
+    "libbluray",
+    "libbs2b",
+    "libcaca",
+    "libgsm",
+    "libmodplug",
+    "librsvg",
+    "libsoxr",
+    "libssh",
+    "libvidstab",
+    "libvorbis",
+    "libvpx",
+    "opencore-amr",
+    "openh264",
+    "openjpeg",
+    "openssl",
+    "opus",
+    "rtmpdump",
+    "rubberband",
+    "sdl2",
+    "snappy",
+    "speex",
+    "tesseract",
+    "theora",
+    "two-lame",
+    "wavpack",
+    "webp",
+    "x265",
+    "xz",
+    "zeromq",
+    "zimg"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

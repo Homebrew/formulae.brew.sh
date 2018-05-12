@@ -1,69 +1,23 @@
 {
   "name": "bitlbee",
   "full_name": "bitlbee",
-  "desc": "IRC to other chat networks gateway",
-  "homepage": "https://www.bitlbee.org/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "IRC to other chat networks gateway",
+  "homepage": "https://www.bitlbee.org/",
   "versions": {
     "stable": "3.5.1",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "pkg-config",
-    "gettext",
-    "glib",
-    "gnutls",
-    "libgcrypt",
-    "pidgin",
-    "libotr",
-    "libevent"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-    "pidgin",
-    "libotr",
-    "libevent"
-  ],
-  "build_dependencies": [
-    "pkg-config"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--with-pidgin",
-      "description": "Use finch/libpurple for all communication with instant messaging networks"
-    },
-    {
-      "option": "--with-libotr",
-      "description": "Build with otr (off the record) support"
-    },
-    {
-      "option": "--with-libevent",
-      "description": "Use libevent for the event-loop handling rather than glib."
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -89,5 +43,50 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--with-pidgin",
+      "description": "Use finch/libpurple for all communication with instant messaging networks"
+    },
+    {
+      "option": "--with-libotr",
+      "description": "Build with otr (off the record) support"
+    },
+    {
+      "option": "--with-libevent",
+      "description": "Use libevent for the event-loop handling rather than glib."
+    }
+  ],
+  "build_dependencies": [
+    "pkg-config"
+  ],
+  "dependencies": [
+    "gettext",
+    "glib",
+    "gnutls",
+    "libgcrypt"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "pidgin",
+    "libotr",
+    "libevent"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

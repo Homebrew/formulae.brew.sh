@@ -1,57 +1,46 @@
 {
   "name": "mutt",
   "full_name": "mutt",
-  "desc": "Mongrel of mail user agents (part elm, pine, mush, mh, etc.)",
-  "homepage": "http://www.mutt.org/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Mongrel of mail user agents (part elm, pine, mush, mh, etc.)",
+  "homepage": "http://www.mutt.org/",
   "versions": {
     "stable": "1.9.5",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/mutt-1.9.5.high_sierra.bottle.tar.gz",
+          "sha256": "34f2d81ebe67fe3049a22a9ee31111575c708db2307b974bfaa046af4a2bcbdf"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/mutt-1.9.5.sierra.bottle.tar.gz",
+          "sha256": "96e72bfbfcc89e66037b98cf1d6a262d697e99a9c18a6d3390864a97f91c4593"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/mutt-1.9.5.el_capitan.bottle.tar.gz",
+          "sha256": "062df74d0def4530f280ca9a9affe82d819ba73f076de164262b152ecc83e7ce"
+        }
+      }
+    }
+  },
   "keg_only": false,
-  "dependencies": [
-    "autoconf",
-    "automake",
-    "openssl",
-    "tokyo-cabinet",
-    "gettext",
-    "gpgme",
-    "libidn",
-    "s-lang"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-    "gettext",
-    "gpgme",
-    "libidn",
-    "s-lang"
-  ],
-  "build_dependencies": [
-    "autoconf",
-    "automake"
-  ],
-  "conflicts_with": [
-    "tin"
-  ],
-  "caveats": null,
-  "requirements": [
-
-  ],
   "options": [
     {
       "option": "--with-debug",
@@ -74,26 +63,34 @@
       "description": "Build with libidn support"
     }
   ],
-  "bottle": {
-    "stable": {
-      "rebuild": 0,
-      "cellar": "/usr/local/Cellar",
-      "prefix": "/usr/local",
-      "root_url": "https://homebrew.bintray.com/bottles",
-      "files": {
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/mutt-1.9.5.high_sierra.bottle.tar.gz",
-          "sha256": "34f2d81ebe67fe3049a22a9ee31111575c708db2307b974bfaa046af4a2bcbdf"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/mutt-1.9.5.sierra.bottle.tar.gz",
-          "sha256": "96e72bfbfcc89e66037b98cf1d6a262d697e99a9c18a6d3390864a97f91c4593"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/mutt-1.9.5.el_capitan.bottle.tar.gz",
-          "sha256": "062df74d0def4530f280ca9a9affe82d819ba73f076de164262b152ecc83e7ce"
-        }
-      }
-    }
-  }
+  "build_dependencies": [
+    "autoconf",
+    "automake"
+  ],
+  "dependencies": [
+    "openssl",
+    "tokyo-cabinet"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "gettext",
+    "gpgme",
+    "libidn",
+    "s-lang"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+    "tin"
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

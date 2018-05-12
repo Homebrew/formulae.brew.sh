@@ -1,71 +1,23 @@
 {
   "name": "gnupg@2.0",
   "full_name": "gnupg@2.0",
-  "desc": "GNU Privacy Guard: a free PGP replacement",
-  "homepage": "https://www.gnupg.org/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "GNU Privacy Guard: a free PGP replacement",
+  "homepage": "https://www.gnupg.org/",
   "versions": {
     "stable": "2.0.31",
-    "bottle": true,
     "devel": null,
-    "head": null
+    "head": null,
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": true,
-  "dependencies": [
-    "libgpg-error",
-    "libgcrypt",
-    "libksba",
-    "libassuan",
-    "pinentry",
-    "pth",
-    "gpg-agent",
-    "curl",
-    "dirmngr",
-    "libusb-compat",
-    "readline"
-  ],
-  "recommended_dependencies": [
-    "dirmngr",
-    "libusb-compat"
-  ],
-  "optional_dependencies": [
-    "readline"
-  ],
-  "build_dependencies": [
-
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--without-dirmngr",
-      "description": "Build without dirmngr support"
-    },
-    {
-      "option": "--without-libusb-compat",
-      "description": "Build without libusb-compat support"
-    },
-    {
-      "option": "--with-readline",
-      "description": "Build with readline support"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -87,5 +39,53 @@
         }
       }
     }
-  }
+  },
+  "keg_only": true,
+  "options": [
+    {
+      "option": "--without-dirmngr",
+      "description": "Build without dirmngr support"
+    },
+    {
+      "option": "--without-libusb-compat",
+      "description": "Build without libusb-compat support"
+    },
+    {
+      "option": "--with-readline",
+      "description": "Build with readline support"
+    }
+  ],
+  "build_dependencies": [
+
+  ],
+  "dependencies": [
+    "libgpg-error",
+    "libgcrypt",
+    "libksba",
+    "libassuan",
+    "pinentry",
+    "pth",
+    "gpg-agent",
+    "curl"
+  ],
+  "recommended_dependencies": [
+    "dirmngr",
+    "libusb-compat"
+  ],
+  "optional_dependencies": [
+    "readline"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

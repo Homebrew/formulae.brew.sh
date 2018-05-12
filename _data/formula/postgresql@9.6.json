@@ -1,50 +1,46 @@
 {
   "name": "postgresql@9.6",
   "full_name": "postgresql@9.6",
-  "desc": "Object-relational database system",
-  "homepage": "https://www.postgresql.org/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Object-relational database system",
+  "homepage": "https://www.postgresql.org/",
   "versions": {
     "stable": "9.6.9",
-    "bottle": true,
     "devel": null,
-    "head": null
+    "head": null,
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/postgresql@9.6-9.6.9.high_sierra.bottle.tar.gz",
+          "sha256": "8859dd51837e8481e8d354f0c6d75bc2de220a36494e7fb7174b34f9faec14ff"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/postgresql@9.6-9.6.9.sierra.bottle.tar.gz",
+          "sha256": "565b824e8c026973d33f67a525dc84b1182f7f2a34c6e9961ba8d13af8c17a96"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/postgresql@9.6-9.6.9.el_capitan.bottle.tar.gz",
+          "sha256": "fe05cdb8675ef328c2b5fb2f094c7a28099c229130e026292fe80fc725651fd4"
+        }
+      }
+    }
+  },
   "keg_only": true,
-  "dependencies": [
-    "openssl",
-    "readline",
-    "python",
-    "python@2"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-    "python",
-    "python@2"
-  ],
-  "build_dependencies": [
-
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "If builds of PostgreSQL 9 are failing and you have version 8.x installed,\nyou may need to remove the previous version first. See:\n  https://github.com/Homebrew/legacy-homebrew/issues/2510\n\nTo migrate existing data from a previous major version (pre-9.0) of PostgreSQL, see:\n  https://www.postgresql.org/docs/9.6/static/upgrading.html\n\nTo migrate existing data from a previous minor version (9.0-9.5) of PostgreSQL, see:\n  https://www.postgresql.org/docs/9.6/static/pgupgrade.html\n\n  You will need your previous PostgreSQL installation from brew to perform `pg_upgrade`.\n    Do not run `brew cleanup postgresql@9.6` until you have performed the migration.\n",
-  "requirements": [
-
-  ],
   "options": [
     {
       "option": "--without-perl",
@@ -67,26 +63,31 @@
       "description": "Enable PL/Python2"
     }
   ],
-  "bottle": {
-    "stable": {
-      "rebuild": 0,
-      "cellar": "/usr/local/Cellar",
-      "prefix": "/usr/local",
-      "root_url": "https://homebrew.bintray.com/bottles",
-      "files": {
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/postgresql@9.6-9.6.9.high_sierra.bottle.tar.gz",
-          "sha256": "8859dd51837e8481e8d354f0c6d75bc2de220a36494e7fb7174b34f9faec14ff"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/postgresql@9.6-9.6.9.sierra.bottle.tar.gz",
-          "sha256": "565b824e8c026973d33f67a525dc84b1182f7f2a34c6e9961ba8d13af8c17a96"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/postgresql@9.6-9.6.9.el_capitan.bottle.tar.gz",
-          "sha256": "fe05cdb8675ef328c2b5fb2f094c7a28099c229130e026292fe80fc725651fd4"
-        }
-      }
-    }
-  }
+  "build_dependencies": [
+
+  ],
+  "dependencies": [
+    "openssl",
+    "readline"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "python",
+    "python@2"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "If builds of PostgreSQL 9 are failing and you have version 8.x installed,\nyou may need to remove the previous version first. See:\n  https://github.com/Homebrew/legacy-homebrew/issues/2510\n\nTo migrate existing data from a previous major version (pre-9.0) of PostgreSQL, see:\n  https://www.postgresql.org/docs/9.6/static/upgrading.html\n\nTo migrate existing data from a previous minor version (9.0-9.5) of PostgreSQL, see:\n  https://www.postgresql.org/docs/9.6/static/pgupgrade.html\n\n  You will need your previous PostgreSQL installation from brew to perform `pg_upgrade`.\n    Do not run `brew cleanup postgresql@9.6` until you have performed the migration.\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

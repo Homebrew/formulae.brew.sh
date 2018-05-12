@@ -1,60 +1,23 @@
 {
   "name": "liblas",
   "full_name": "liblas",
-  "desc": "C/C++ library for reading and writing the LAS LiDAR format",
-  "homepage": "https://liblas.org/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "C/C++ library for reading and writing the LAS LiDAR format",
+  "homepage": "https://liblas.org/",
   "versions": {
     "stable": "1.8.1",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 1,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "cmake",
-    "libgeotiff",
-    "gdal",
-    "boost",
-    "laszip"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-    "laszip"
-  ],
-  "build_dependencies": [
-    "cmake"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--with-test",
-      "description": "Verify during install with `make test`"
-    },
-    {
-      "option": "--with-laszip",
-      "description": "Build with laszip support"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -76,5 +39,43 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--with-test",
+      "description": "Verify during install with `make test`"
+    },
+    {
+      "option": "--with-laszip",
+      "description": "Build with laszip support"
+    }
+  ],
+  "build_dependencies": [
+    "cmake"
+  ],
+  "dependencies": [
+    "libgeotiff",
+    "gdal",
+    "boost"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "laszip"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

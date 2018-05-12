@@ -1,8 +1,6 @@
 {
   "name": "node",
   "full_name": "node",
-  "desc": "Platform built on V8 to build network applications",
-  "homepage": "https://nodejs.org/",
   "oldname": null,
   "aliases": [
     "node.js",
@@ -10,44 +8,44 @@
     "nodejs",
     "npm"
   ],
+  "versioned_formulae": [
+    "node@4",
+    "node@6",
+    "node@8"
+  ],
+  "desc": "Platform built on V8 to build network applications",
+  "homepage": "https://nodejs.org/",
   "versions": {
     "stable": "10.1.0",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/node-10.1.0.high_sierra.bottle.tar.gz",
+          "sha256": "ceed388d101a5c8e4c24e087495196f9a61770b6b76d38b9e14930ebb768fb94"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/node-10.1.0.sierra.bottle.tar.gz",
+          "sha256": "181bcb0de3d466124dcf2e83378afaf20c802cba6968e857e689dfb3980b6665"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/node-10.1.0.el_capitan.bottle.tar.gz",
+          "sha256": "85106cd804040fe7a0bde68edfa3b27896951f6f313a4af90eda2d781750d07e"
+        }
+      }
+    }
+  },
   "keg_only": false,
-  "dependencies": [
-    "python@2",
-    "pkg-config",
-    "icu4c",
-    "openssl@1.1"
-  ],
-  "recommended_dependencies": [
-    "icu4c"
-  ],
-  "optional_dependencies": [
-    "openssl@1.1"
-  ],
-  "build_dependencies": [
-    "python@2",
-    "pkg-config"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-
-  ],
   "options": [
     {
       "option": "--with-debug",
@@ -70,26 +68,30 @@
       "description": "Build with small-icu (English only) instead of system-icu (all locales)"
     }
   ],
-  "bottle": {
-    "stable": {
-      "rebuild": 0,
-      "cellar": "/usr/local/Cellar",
-      "prefix": "/usr/local",
-      "root_url": "https://homebrew.bintray.com/bottles",
-      "files": {
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/node-10.1.0.high_sierra.bottle.tar.gz",
-          "sha256": "ceed388d101a5c8e4c24e087495196f9a61770b6b76d38b9e14930ebb768fb94"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/node-10.1.0.sierra.bottle.tar.gz",
-          "sha256": "181bcb0de3d466124dcf2e83378afaf20c802cba6968e857e689dfb3980b6665"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/node-10.1.0.el_capitan.bottle.tar.gz",
-          "sha256": "85106cd804040fe7a0bde68edfa3b27896951f6f313a4af90eda2d781750d07e"
-        }
-      }
-    }
-  }
+  "build_dependencies": [
+    "python@2",
+    "pkg-config"
+  ],
+  "dependencies": [
+
+  ],
+  "recommended_dependencies": [
+    "icu4c"
+  ],
+  "optional_dependencies": [
+    "openssl@1.1"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

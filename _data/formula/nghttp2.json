@@ -1,73 +1,23 @@
 {
   "name": "nghttp2",
   "full_name": "nghttp2",
-  "desc": "HTTP/2 C Library",
-  "homepage": "https://nghttp2.org/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "HTTP/2 C Library",
+  "homepage": "https://nghttp2.org/",
   "versions": {
     "stable": "1.32.0",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "python",
-    "sphinx-doc",
-    "libxml2",
-    "pkg-config",
-    "cunit",
-    "c-ares",
-    "libev",
-    "openssl",
-    "libevent",
-    "jansson",
-    "boost",
-    "jemalloc"
-  ],
-  "recommended_dependencies": [
-    "jemalloc"
-  ],
-  "optional_dependencies": [
-    "python"
-  ],
-  "build_dependencies": [
-    "sphinx-doc",
-    "pkg-config",
-    "cunit"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--with-examples",
-      "description": "Compile and install example programs"
-    },
-    {
-      "option": "--with-python",
-      "description": "Build python3 bindings"
-    },
-    {
-      "option": "--without-jemalloc",
-      "description": "Build without jemalloc support"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -89,5 +39,53 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--with-examples",
+      "description": "Compile and install example programs"
+    },
+    {
+      "option": "--with-python",
+      "description": "Build python3 bindings"
+    },
+    {
+      "option": "--without-jemalloc",
+      "description": "Build without jemalloc support"
+    }
+  ],
+  "build_dependencies": [
+    "sphinx-doc",
+    "pkg-config",
+    "cunit"
+  ],
+  "dependencies": [
+    "libxml2",
+    "c-ares",
+    "libev",
+    "openssl",
+    "libevent",
+    "jansson",
+    "boost"
+  ],
+  "recommended_dependencies": [
+    "jemalloc"
+  ],
+  "optional_dependencies": [
+    "python"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

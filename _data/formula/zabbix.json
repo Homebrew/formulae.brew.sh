@@ -1,66 +1,23 @@
 {
   "name": "zabbix",
   "full_name": "zabbix",
-  "desc": "Availability and monitoring solution",
-  "homepage": "https://www.zabbix.com/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Availability and monitoring solution",
+  "homepage": "https://www.zabbix.com/",
   "versions": {
     "stable": "3.4.9",
-    "bottle": true,
     "devel": null,
-    "head": null
+    "head": null,
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "openssl",
-    "pcre",
-    "mysql",
-    "postgresql",
-    "fping",
-    "libevent",
-    "libssh2"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-    "mysql"
-  ],
-  "build_dependencies": [
-
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--with-mysql",
-      "description": "Use Zabbix Server with MySQL library instead PostgreSQL."
-    },
-    {
-      "option": "--with-sqlite",
-      "description": "Use Zabbix Server with SQLite library instead PostgreSQL."
-    },
-    {
-      "option": "--without-server-proxy",
-      "description": "Install only the Zabbix Agent without Server and Proxy."
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -82,5 +39,50 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--with-mysql",
+      "description": "Use Zabbix Server with MySQL library instead PostgreSQL."
+    },
+    {
+      "option": "--with-sqlite",
+      "description": "Use Zabbix Server with SQLite library instead PostgreSQL."
+    },
+    {
+      "option": "--without-server-proxy",
+      "description": "Install only the Zabbix Agent without Server and Proxy."
+    }
+  ],
+  "build_dependencies": [
+
+  ],
+  "dependencies": [
+    "openssl",
+    "pcre",
+    "postgresql",
+    "fping",
+    "libevent",
+    "libssh2"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "mysql"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

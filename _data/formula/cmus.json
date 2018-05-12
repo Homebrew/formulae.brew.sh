@@ -1,73 +1,23 @@
 {
   "name": "cmus",
   "full_name": "cmus",
-  "desc": "Music player with an ncurses based interface",
-  "homepage": "https://cmus.github.io/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Music player with an ncurses based interface",
+  "homepage": "https://cmus.github.io/",
   "versions": {
     "stable": "2.7.1",
-    "bottle": true,
     "devel": "2.8.0-rc0",
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 2,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "pkg-config",
-    "libao",
-    "mad",
-    "libogg",
-    "libvorbis",
-    "faad2",
-    "flac",
-    "mp4v2",
-    "libcue",
-    "ffmpeg",
-    "opusfile",
-    "jack"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-    "ffmpeg",
-    "opusfile",
-    "jack"
-  ],
-  "build_dependencies": [
-    "pkg-config"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--with-ffmpeg",
-      "description": "Build with ffmpeg support"
-    },
-    {
-      "option": "--with-opusfile",
-      "description": "Build with opusfile support"
-    },
-    {
-      "option": "--with-jack",
-      "description": "Build with jack support"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -93,5 +43,54 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--with-ffmpeg",
+      "description": "Build with ffmpeg support"
+    },
+    {
+      "option": "--with-opusfile",
+      "description": "Build with opusfile support"
+    },
+    {
+      "option": "--with-jack",
+      "description": "Build with jack support"
+    }
+  ],
+  "build_dependencies": [
+    "pkg-config"
+  ],
+  "dependencies": [
+    "libao",
+    "mad",
+    "libogg",
+    "libvorbis",
+    "faad2",
+    "flac",
+    "mp4v2",
+    "libcue"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "ffmpeg",
+    "opusfile",
+    "jack"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

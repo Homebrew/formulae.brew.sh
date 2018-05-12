@@ -1,62 +1,23 @@
 {
   "name": "suil",
   "full_name": "suil",
-  "desc": "Lightweight C library for loading and wrapping LV2 plugin UIs",
-  "homepage": "https://drobilla.net/software/suil/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Lightweight C library for loading and wrapping LV2 plugin UIs",
+  "homepage": "https://drobilla.net/software/suil/",
   "versions": {
     "stable": "0.10.0",
-    "bottle": true,
     "devel": null,
-    "head": null
+    "head": null,
+    "bottle": true
   },
   "revision": 1,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "pkg-config",
-    "lv2",
-    "gtk+"
-  ],
-  "recommended_dependencies": [
-    "gtk+"
-  ],
-  "optional_dependencies": [
-
-  ],
-  "build_dependencies": [
-    "pkg-config"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-    {
-      "name": "x11",
-      "cask": "xquartz",
-      "download": "https://xquartz.macosforge.org"
-    }
-  ],
-  "options": [
-    {
-      "option": "--without-gtk+",
-      "description": "Build without gtk+ support"
-    },
-    {
-      "option": "--with-x11",
-      "description": "Build with x11 support"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -78,5 +39,45 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--without-gtk+",
+      "description": "Build without gtk+ support"
+    },
+    {
+      "option": "--with-x11",
+      "description": "Build with x11 support"
+    }
+  ],
+  "build_dependencies": [
+    "pkg-config"
+  ],
+  "dependencies": [
+    "lv2"
+  ],
+  "recommended_dependencies": [
+    "gtk+"
+  ],
+  "optional_dependencies": [
+
+  ],
+  "requirements": [
+    {
+      "name": "x11",
+      "cask": "xquartz",
+      "download": "https://xquartz.macosforge.org"
+    }
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

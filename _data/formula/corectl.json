@@ -1,60 +1,23 @@
 {
   "name": "corectl",
   "full_name": "corectl",
-  "desc": "CoreOS over macOS made very simple",
-  "homepage": "https://github.com/TheNewNormal/corectl",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "CoreOS over macOS made very simple",
+  "homepage": "https://github.com/TheNewNormal/corectl",
   "versions": {
     "stable": "0.7.18",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 1,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "go",
-    "libev",
-    "ocaml",
-    "aspcud",
-    "opam"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-
-  ],
-  "build_dependencies": [
-    "go",
-    "ocaml",
-    "aspcud",
-    "opam"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "Starting with 0.7 \"corectl\" has a client/server architecture. So before you\ncan use the \"corectl\" cli, you have to start the server daemon:\n\n$ corectld start\n\n",
-  "requirements": [
-    {
-      "name": "macos",
-      "cask": null,
-      "download": null
-    }
-  ],
-  "options": [
-
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -80,5 +43,41 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+    "go",
+    "ocaml",
+    "aspcud",
+    "opam"
+  ],
+  "dependencies": [
+    "libev"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "requirements": [
+    {
+      "name": "macos",
+      "cask": null,
+      "download": null
+    }
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "Starting with 0.7 \"corectl\" has a client/server architecture. So before you\ncan use the \"corectl\" cli, you have to start the server daemon:\n\n$ corectld start\n\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

@@ -1,56 +1,23 @@
 {
   "name": "minidlna",
   "full_name": "minidlna",
-  "desc": "Media server software, compliant with DLNA/UPnP-AV clients",
-  "homepage": "https://sourceforge.net/projects/minidlna/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Media server software, compliant with DLNA/UPnP-AV clients",
+  "homepage": "https://sourceforge.net/projects/minidlna/",
   "versions": {
     "stable": "1.2.1",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 1,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "libexif",
-    "jpeg",
-    "libid3tag",
-    "flac",
-    "libogg",
-    "libvorbis",
-    "sqlite",
-    "ffmpeg"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-
-  ],
-  "build_dependencies": [
-
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "Simple single-user configuration:\n\nmkdir -p ~/.config/minidlna\ncp /home/travis/Homebrew/opt/minidlna/share/minidlna/minidlna.conf ~/.config/minidlna/minidlna.conf\nln -s YOUR_MEDIA_DIR ~/.config/minidlna/media\nminidlnad -f ~/.config/minidlna/minidlna.conf -P ~/.config/minidlna/minidlna.pid\n",
-  "requirements": [
-
-  ],
-  "options": [
-
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -72,5 +39,41 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+
+  ],
+  "dependencies": [
+    "libexif",
+    "jpeg",
+    "libid3tag",
+    "flac",
+    "libogg",
+    "libvorbis",
+    "sqlite",
+    "ffmpeg"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "Simple single-user configuration:\n\nmkdir -p ~/.config/minidlna\ncp /home/travis/Homebrew/opt/minidlna/share/minidlna/minidlna.conf ~/.config/minidlna/minidlna.conf\nln -s YOUR_MEDIA_DIR ~/.config/minidlna/media\nminidlnad -f ~/.config/minidlna/minidlna.conf -P ~/.config/minidlna/minidlna.pid\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

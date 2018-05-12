@@ -1,63 +1,23 @@
 {
   "name": "mvtools",
   "full_name": "mvtools",
-  "desc": "Filters for motion estimation and compensation",
-  "homepage": "https://github.com/dubhater/vapoursynth-mvtools",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Filters for motion estimation and compensation",
+  "homepage": "https://github.com/dubhater/vapoursynth-mvtools",
   "versions": {
     "stable": "19",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "pkg-config",
-    "yasm",
-    "vapoursynth",
-    "fftw",
-    "autoconf",
-    "automake",
-    "libtool"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-
-  ],
-  "build_dependencies": [
-    "pkg-config",
-    "yasm",
-    "autoconf",
-    "automake",
-    "libtool"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "MVTools will not be autoloaded in your VapourSynth scripts. To use it\nuse the following code in your scripts:\n\n  core.std.LoadPlugin(path=\"/home/travis/Homebrew/lib/libmvtools.dylib\")\n",
-  "requirements": [
-    {
-      "name": "macos",
-      "cask": null,
-      "download": null
-    }
-  ],
-  "options": [
-
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -79,5 +39,43 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+    "pkg-config",
+    "yasm",
+    "autoconf",
+    "automake",
+    "libtool"
+  ],
+  "dependencies": [
+    "vapoursynth",
+    "fftw"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "requirements": [
+    {
+      "name": "macos",
+      "cask": null,
+      "download": null
+    }
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "MVTools will not be autoloaded in your VapourSynth scripts. To use it\nuse the following code in your scripts:\n\n  core.std.LoadPlugin(path=\"/home/travis/Homebrew/lib/libmvtools.dylib\")\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

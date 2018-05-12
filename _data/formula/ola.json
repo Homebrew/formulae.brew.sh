@@ -1,56 +1,46 @@
 {
   "name": "ola",
   "full_name": "ola",
-  "desc": "Open Lighting Architecture for lighting control information",
-  "homepage": "https://www.openlighting.org/ola/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Open Lighting Architecture for lighting control information",
+  "homepage": "https://www.openlighting.org/ola/",
   "versions": {
     "stable": "0.10.6",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/ola-0.10.6.high_sierra.bottle.tar.gz",
+          "sha256": "ada249b3e16aaee5610c9c4a2c438b158c1dcf36be684af62e4af6095984fe7b"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/ola-0.10.6.sierra.bottle.tar.gz",
+          "sha256": "06defbab5f678025a309989dc0c84aed8c2a315f880d9610263d2bdaab2d5c4c"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/ola-0.10.6.el_capitan.bottle.tar.gz",
+          "sha256": "9230a8fcc75bcc0c29c57dbd012909a2d7331823e70db1fc58462143c7350cf3"
+        }
+      }
+    }
+  },
   "keg_only": false,
-  "dependencies": [
-    "pkg-config",
-    "libmicrohttpd",
-    "ossp-uuid",
-    "protobuf@3.1",
-    "python@2",
-    "liblo",
-    "libusb",
-    "doxygen",
-    "libftdi"
-  ],
-  "recommended_dependencies": [
-    "liblo",
-    "libusb"
-  ],
-  "optional_dependencies": [
-    "doxygen",
-    "libftdi"
-  ],
-  "build_dependencies": [
-    "pkg-config"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-
-  ],
   "options": [
     {
       "option": "--with-libftdi",
@@ -73,26 +63,34 @@
       "description": "Build with doxygen support"
     }
   ],
-  "bottle": {
-    "stable": {
-      "rebuild": 0,
-      "cellar": "/usr/local/Cellar",
-      "prefix": "/usr/local",
-      "root_url": "https://homebrew.bintray.com/bottles",
-      "files": {
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/ola-0.10.6.high_sierra.bottle.tar.gz",
-          "sha256": "ada249b3e16aaee5610c9c4a2c438b158c1dcf36be684af62e4af6095984fe7b"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/ola-0.10.6.sierra.bottle.tar.gz",
-          "sha256": "06defbab5f678025a309989dc0c84aed8c2a315f880d9610263d2bdaab2d5c4c"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/ola-0.10.6.el_capitan.bottle.tar.gz",
-          "sha256": "9230a8fcc75bcc0c29c57dbd012909a2d7331823e70db1fc58462143c7350cf3"
-        }
-      }
-    }
-  }
+  "build_dependencies": [
+    "pkg-config"
+  ],
+  "dependencies": [
+    "libmicrohttpd",
+    "ossp-uuid",
+    "protobuf@3.1",
+    "python@2"
+  ],
+  "recommended_dependencies": [
+    "liblo",
+    "libusb"
+  ],
+  "optional_dependencies": [
+    "doxygen",
+    "libftdi"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

@@ -1,51 +1,23 @@
 {
   "name": "llvm@3.7",
   "full_name": "llvm@3.7",
-  "desc": "Next-gen compiler infrastructure",
-  "homepage": "https://llvm.org/",
   "oldname": "llvm37",
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Next-gen compiler infrastructure",
+  "homepage": "https://llvm.org/",
   "versions": {
     "stable": "3.7.1",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "gnu-sed",
-    "gmp",
-    "libffi"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-
-  ],
-  "build_dependencies": [
-    "gnu-sed"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "Extra tools are installed in /home/travis/Homebrew/opt/llvm@3.7/share/clang-3.7\n\nTo link to libc++, something like the following is required:\n  CXX=\"clang++-3.7 -stdlib=libc++\"\n  CXXFLAGS=\"$CXXFLAGS -nostdinc++ -I/home/travis/Homebrew/opt/llvm@3.7/lib/llvm-3.7/include/c++/v1\"\n  LDFLAGS=\"$LDFLAGS -L/home/travis/Homebrew/opt/llvm@3.7/lib/llvm-3.7/lib\"\n",
-  "requirements": [
-
-  ],
-  "options": [
-
-  ],
   "bottle": {
     "stable": {
       "rebuild": 1,
@@ -71,5 +43,35 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+    "gnu-sed"
+  ],
+  "dependencies": [
+    "gmp",
+    "libffi"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "Extra tools are installed in /home/travis/Homebrew/opt/llvm@3.7/share/clang-3.7\n\nTo link to libc++, something like the following is required:\n  CXX=\"clang++-3.7 -stdlib=libc++\"\n  CXXFLAGS=\"$CXXFLAGS -nostdinc++ -I/home/travis/Homebrew/opt/llvm@3.7/lib/llvm-3.7/include/c++/v1\"\n  LDFLAGS=\"$LDFLAGS -L/home/travis/Homebrew/opt/llvm@3.7/lib/llvm-3.7/lib\"\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

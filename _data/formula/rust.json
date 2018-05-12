@@ -1,56 +1,23 @@
 {
   "name": "rust",
   "full_name": "rust",
-  "desc": "Safe, concurrent, practical language",
-  "homepage": "https://www.rust-lang.org/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Safe, concurrent, practical language",
+  "homepage": "https://www.rust-lang.org/",
   "versions": {
     "stable": "1.26.0",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "cmake",
-    "pkg-config",
-    "llvm",
-    "openssl",
-    "libssh2"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-    "llvm"
-  ],
-  "build_dependencies": [
-    "cmake"
-  ],
-  "conflicts_with": [
-    "cargo-completion"
-  ],
-  "caveats": null,
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--with-llvm",
-      "description": "Build with brewed LLVM. By default, Rust's LLVM will be used."
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -72,5 +39,39 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--with-llvm",
+      "description": "Build with brewed LLVM. By default, Rust's LLVM will be used."
+    }
+  ],
+  "build_dependencies": [
+    "cmake"
+  ],
+  "dependencies": [
+    "pkg-config",
+    "openssl",
+    "libssh2"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "llvm"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+    "cargo-completion"
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

@@ -1,68 +1,23 @@
 {
   "name": "percona-server-mongodb",
   "full_name": "percona-server-mongodb",
-  "desc": "Drop-in MongoDB replacement",
-  "homepage": "https://www.percona.com",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Drop-in MongoDB replacement",
+  "homepage": "https://www.percona.com",
   "versions": {
     "stable": "3.6.3-1.1",
-    "bottle": true,
     "devel": null,
-    "head": null
+    "head": null,
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "boost",
-    "go",
-    "scons",
-    "openssl"
-  ],
-  "recommended_dependencies": [
-    "openssl"
-  ],
-  "optional_dependencies": [
-    "boost"
-  ],
-  "build_dependencies": [
-    "go",
-    "scons"
-  ],
-  "conflicts_with": [
-    "mongodb"
-  ],
-  "caveats": null,
-  "requirements": [
-    {
-      "name": "macos",
-      "cask": null,
-      "download": null
-    }
-  ],
-  "options": [
-    {
-      "option": "--with-boost",
-      "description": "Compile using installed boost, not the version shipped with this formula"
-    },
-    {
-      "option": "--with-sasl",
-      "description": "Compile with SASL support"
-    },
-    {
-      "option": "--without-openssl",
-      "description": "Build without openssl support"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -80,5 +35,50 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--with-boost",
+      "description": "Compile using installed boost, not the version shipped with this formula"
+    },
+    {
+      "option": "--with-sasl",
+      "description": "Compile with SASL support"
+    },
+    {
+      "option": "--without-openssl",
+      "description": "Build without openssl support"
+    }
+  ],
+  "build_dependencies": [
+    "go",
+    "scons"
+  ],
+  "dependencies": [
+
+  ],
+  "recommended_dependencies": [
+    "openssl"
+  ],
+  "optional_dependencies": [
+    "boost"
+  ],
+  "requirements": [
+    {
+      "name": "macos",
+      "cask": null,
+      "download": null
+    }
+  ],
+  "conflicts_with": [
+    "mongodb"
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

@@ -1,59 +1,46 @@
 {
   "name": "subversion@1.8",
   "full_name": "subversion@1.8",
-  "desc": "Version control system",
-  "homepage": "https://subversion.apache.org/",
   "oldname": "subversion18",
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Version control system",
+  "homepage": "https://subversion.apache.org/",
   "versions": {
     "stable": "1.8.19",
-    "bottle": true,
     "devel": null,
-    "head": null
+    "head": null,
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": true,
-  "dependencies": [
-    "pkg-config",
-    "apr-util",
-    "apr",
-    "sqlite",
-    "python@2",
-    "scons",
-    "openssl",
-    "gpg-agent"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-    "python@2",
-    "gpg-agent"
-  ],
-  "build_dependencies": [
-    "pkg-config",
-    "scons"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "svntools have been installed to:\n  /home/travis/Homebrew/opt/subversion@1.8/libexec\n",
-  "requirements": [
-    {
-      "name": "java",
-      "cask": "java",
-      "download": "https://www.oracle.com/technetwork/java/javase/downloads/index.html"
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/subversion@1.8-1.8.19.high_sierra.bottle.tar.gz",
+          "sha256": "3a4e79dead2f4d209e06fe631903ed870610ddfc9ac091ec7d734f5025d0642e"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/subversion@1.8-1.8.19.sierra.bottle.tar.gz",
+          "sha256": "a3d73ecc8eddacfe764f5a83d5215220b7d3100d694c17ac3bed68089984e863"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/subversion@1.8-1.8.19.el_capitan.bottle.tar.gz",
+          "sha256": "0a39c347943ac7f025af06571378987e5d69805ab45cafd38215b5929a5a3722"
+        }
+      }
     }
-  ],
+  },
+  "keg_only": true,
   "options": [
     {
       "option": "--with-java",
@@ -76,26 +63,38 @@
       "description": "Build with python@2 support"
     }
   ],
-  "bottle": {
-    "stable": {
-      "rebuild": 0,
-      "cellar": "/usr/local/Cellar",
-      "prefix": "/usr/local",
-      "root_url": "https://homebrew.bintray.com/bottles",
-      "files": {
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/subversion@1.8-1.8.19.high_sierra.bottle.tar.gz",
-          "sha256": "3a4e79dead2f4d209e06fe631903ed870610ddfc9ac091ec7d734f5025d0642e"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/subversion@1.8-1.8.19.sierra.bottle.tar.gz",
-          "sha256": "a3d73ecc8eddacfe764f5a83d5215220b7d3100d694c17ac3bed68089984e863"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/subversion@1.8-1.8.19.el_capitan.bottle.tar.gz",
-          "sha256": "0a39c347943ac7f025af06571378987e5d69805ab45cafd38215b5929a5a3722"
-        }
-      }
+  "build_dependencies": [
+    "pkg-config",
+    "scons"
+  ],
+  "dependencies": [
+    "apr-util",
+    "apr",
+    "sqlite",
+    "openssl"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "python@2",
+    "gpg-agent"
+  ],
+  "requirements": [
+    {
+      "name": "java",
+      "cask": "java",
+      "download": "https://www.oracle.com/technetwork/java/javase/downloads/index.html"
     }
-  }
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "svntools have been installed to:\n  /home/travis/Homebrew/opt/subversion@1.8/libexec\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

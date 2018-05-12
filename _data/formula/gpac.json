@@ -1,68 +1,50 @@
 {
   "name": "gpac",
   "full_name": "gpac",
-  "desc": "Multimedia framework for research and academic purposes",
-  "homepage": "https://gpac.wp.mines-telecom.fr/",
   "oldname": null,
   "aliases": [
     "mp4box"
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Multimedia framework for research and academic purposes",
+  "homepage": "https://gpac.wp.mines-telecom.fr/",
   "versions": {
     "stable": "0.7.1",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "openssl",
-    "pkg-config",
-    "a52dec",
-    "jpeg",
-    "faad2",
-    "libogg",
-    "libvorbis",
-    "mad",
-    "sdl",
-    "theora",
-    "ffmpeg"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-    "a52dec",
-    "jpeg",
-    "faad2",
-    "libogg",
-    "libvorbis",
-    "mad",
-    "sdl",
-    "theora",
-    "ffmpeg"
-  ],
-  "build_dependencies": [
-    "pkg-config"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-    {
-      "name": "x11",
-      "cask": "xquartz",
-      "download": "https://xquartz.macosforge.org"
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/gpac-0.7.1.high_sierra.bottle.tar.gz",
+          "sha256": "f804e53b18a3ce388ebd48b0e14ee159835b38bc0c917b7f8ee09858f809b40a"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/gpac-0.7.1.sierra.bottle.tar.gz",
+          "sha256": "d685f84d817cfc62818f37d0eac9d743458973d7ec261a90fc9e8d1524f9f8bd"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/gpac-0.7.1.el_capitan.bottle.tar.gz",
+          "sha256": "fa0031a62d043da3a90d3d63113bcc8206313cf0ce649d6e8ca5b5edfb23818c"
+        },
+        "yosemite": {
+          "url": "https://homebrew.bintray.com/bottles/gpac-0.7.1.yosemite.bottle.tar.gz",
+          "sha256": "d0ae48d8fd147077cf818df012921e7ae7e39a1768d61d9f82a9f361c1fff067"
+        }
+      }
     }
-  ],
+  },
+  "keg_only": false,
   "options": [
     {
       "option": "--with-x11",
@@ -105,30 +87,41 @@
       "description": "Build with ffmpeg support"
     }
   ],
-  "bottle": {
-    "stable": {
-      "rebuild": 0,
-      "cellar": "/usr/local/Cellar",
-      "prefix": "/usr/local",
-      "root_url": "https://homebrew.bintray.com/bottles",
-      "files": {
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gpac-0.7.1.high_sierra.bottle.tar.gz",
-          "sha256": "f804e53b18a3ce388ebd48b0e14ee159835b38bc0c917b7f8ee09858f809b40a"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gpac-0.7.1.sierra.bottle.tar.gz",
-          "sha256": "d685f84d817cfc62818f37d0eac9d743458973d7ec261a90fc9e8d1524f9f8bd"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/gpac-0.7.1.el_capitan.bottle.tar.gz",
-          "sha256": "fa0031a62d043da3a90d3d63113bcc8206313cf0ce649d6e8ca5b5edfb23818c"
-        },
-        "yosemite": {
-          "url": "https://homebrew.bintray.com/bottles/gpac-0.7.1.yosemite.bottle.tar.gz",
-          "sha256": "d0ae48d8fd147077cf818df012921e7ae7e39a1768d61d9f82a9f361c1fff067"
-        }
-      }
+  "build_dependencies": [
+    "pkg-config"
+  ],
+  "dependencies": [
+    "openssl"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "a52dec",
+    "jpeg",
+    "faad2",
+    "libogg",
+    "libvorbis",
+    "mad",
+    "sdl",
+    "theora",
+    "ffmpeg"
+  ],
+  "requirements": [
+    {
+      "name": "x11",
+      "cask": "xquartz",
+      "download": "https://xquartz.macosforge.org"
     }
-  }
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

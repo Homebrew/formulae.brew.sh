@@ -1,50 +1,46 @@
 {
   "name": "x3270",
   "full_name": "x3270",
-  "desc": "IBM 3270 terminal emulator for the X Window System and Windows",
-  "homepage": "http://x3270.bgp.nu/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "IBM 3270 terminal emulator for the X Window System and Windows",
+  "homepage": "http://x3270.bgp.nu/",
   "versions": {
     "stable": "3.6ga5",
-    "bottle": true,
     "devel": null,
-    "head": null
+    "head": null,
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "openssl"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-
-  ],
-  "build_dependencies": [
-
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-    {
-      "name": "x11",
-      "cask": "xquartz",
-      "download": "https://xquartz.macosforge.org"
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/x3270-3.6ga5.high_sierra.bottle.tar.gz",
+          "sha256": "f67129f6e0d14448939953d4c8966a5770d8a65aecdf42108f43dd4914dda9d8"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/x3270-3.6ga5.sierra.bottle.tar.gz",
+          "sha256": "08de119ad4c2626d8f8b5da84976601b89f1428af4274c2f5e1ed48b3805254d"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/x3270-3.6ga5.el_capitan.bottle.tar.gz",
+          "sha256": "c82c4f5ceb379a44acab4592f3d1d9cd05d499541b806397bd656e2152474815"
+        }
+      }
     }
-  ],
+  },
+  "keg_only": false,
   "options": [
     {
       "option": "--with-x11",
@@ -67,26 +63,33 @@
       "description": "Exclude pr3287 (printer emulation)"
     }
   ],
-  "bottle": {
-    "stable": {
-      "rebuild": 0,
-      "cellar": "/usr/local/Cellar",
-      "prefix": "/usr/local",
-      "root_url": "https://homebrew.bintray.com/bottles",
-      "files": {
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/x3270-3.6ga5.high_sierra.bottle.tar.gz",
-          "sha256": "f67129f6e0d14448939953d4c8966a5770d8a65aecdf42108f43dd4914dda9d8"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/x3270-3.6ga5.sierra.bottle.tar.gz",
-          "sha256": "08de119ad4c2626d8f8b5da84976601b89f1428af4274c2f5e1ed48b3805254d"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/x3270-3.6ga5.el_capitan.bottle.tar.gz",
-          "sha256": "c82c4f5ceb379a44acab4592f3d1d9cd05d499541b806397bd656e2152474815"
-        }
-      }
+  "build_dependencies": [
+
+  ],
+  "dependencies": [
+    "openssl"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "requirements": [
+    {
+      "name": "x11",
+      "cask": "xquartz",
+      "download": "https://xquartz.macosforge.org"
     }
-  }
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

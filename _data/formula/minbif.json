@@ -1,69 +1,23 @@
 {
   "name": "minbif",
   "full_name": "minbif",
-  "desc": "IRC-to-other-IM-networks gateway using Pidgin library",
-  "homepage": "https://symlink.me/projects/minbif/wiki/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "IRC-to-other-IM-networks gateway using Pidgin library",
+  "homepage": "https://symlink.me/projects/minbif/wiki/",
   "versions": {
     "stable": "1.0.5-20150505",
-    "bottle": true,
     "devel": null,
-    "head": null
+    "head": null,
+    "bottle": true
   },
   "revision": 2,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "pkg-config",
-    "cmake",
-    "glib",
-    "gettext",
-    "pidgin",
-    "gnutls",
-    "imlib2",
-    "libcaca"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-    "imlib2",
-    "libcaca"
-  ],
-  "build_dependencies": [
-    "pkg-config",
-    "cmake"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "Minbif must be passed its config as first argument:\n    minbif /home/travis/Homebrew/etc/minbif/minbif.conf\n\nLearn more about minbif: https://symlink.me/projects/minbif/wiki/Quick_start\n",
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--with-pam",
-      "description": "Build with PAM support, patching for OSX PAM headers"
-    },
-    {
-      "option": "--with-imlib2",
-      "description": "Build with imlib2 support"
-    },
-    {
-      "option": "--with-libcaca",
-      "description": "Build with libcaca support"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -85,5 +39,50 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--with-pam",
+      "description": "Build with PAM support, patching for OSX PAM headers"
+    },
+    {
+      "option": "--with-imlib2",
+      "description": "Build with imlib2 support"
+    },
+    {
+      "option": "--with-libcaca",
+      "description": "Build with libcaca support"
+    }
+  ],
+  "build_dependencies": [
+    "pkg-config",
+    "cmake"
+  ],
+  "dependencies": [
+    "glib",
+    "gettext",
+    "pidgin",
+    "gnutls"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "imlib2",
+    "libcaca"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "Minbif must be passed its config as first argument:\n    minbif /home/travis/Homebrew/etc/minbif/minbif.conf\n\nLearn more about minbif: https://symlink.me/projects/minbif/wiki/Quick_start\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

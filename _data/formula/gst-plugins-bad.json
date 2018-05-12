@@ -1,85 +1,46 @@
 {
   "name": "gst-plugins-bad",
   "full_name": "gst-plugins-bad",
-  "desc": "GStreamer plugins less supported, not fully tested",
-  "homepage": "https://gstreamer.freedesktop.org/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "GStreamer plugins less supported, not fully tested",
+  "homepage": "https://gstreamer.freedesktop.org/",
   "versions": {
     "stable": "1.14.0",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 1,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/gst-plugins-bad-1.14.0_1.high_sierra.bottle.tar.gz",
+          "sha256": "308d9c4c72913fc8765a01448ca32570df1bc502440ff44fbffc340964348b54"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/gst-plugins-bad-1.14.0_1.sierra.bottle.tar.gz",
+          "sha256": "84f80a511ddcb9943756c51b7ae6590d1edd56dca35db1db80ec3a525c0de29e"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/gst-plugins-bad-1.14.0_1.el_capitan.bottle.tar.gz",
+          "sha256": "1d376f912b04d799e2fc4a23c272540520737134995ac5025fd1312946b7a8a6"
+        }
+      }
+    }
+  },
   "keg_only": false,
-  "dependencies": [
-    "libtool",
-    "pkg-config",
-    "gettext",
-    "gst-plugins-base",
-    "openssl",
-    "jpeg",
-    "orc",
-    "dirac",
-    "faac",
-    "faad2",
-    "fdk-aac",
-    "gnutls",
-    "libdvdread",
-    "libexif",
-    "libmms",
-    "libnice",
-    "libvo-aacenc",
-    "opencv@2",
-    "opus",
-    "rtmpdump",
-    "schroedinger",
-    "sound-touch",
-    "srt"
-  ],
-  "recommended_dependencies": [
-    "jpeg",
-    "orc"
-  ],
-  "optional_dependencies": [
-    "dirac",
-    "faac",
-    "faad2",
-    "fdk-aac",
-    "gnutls",
-    "libdvdread",
-    "libexif",
-    "libmms",
-    "libnice",
-    "libvo-aacenc",
-    "opencv@2",
-    "opus",
-    "rtmpdump",
-    "schroedinger",
-    "sound-touch",
-    "srt"
-  ],
-  "build_dependencies": [
-    "libtool",
-    "pkg-config"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-
-  ],
   "options": [
     {
       "option": "--without-jpeg",
@@ -154,26 +115,48 @@
       "description": "Build with srt support"
     }
   ],
-  "bottle": {
-    "stable": {
-      "rebuild": 0,
-      "cellar": "/usr/local/Cellar",
-      "prefix": "/usr/local",
-      "root_url": "https://homebrew.bintray.com/bottles",
-      "files": {
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gst-plugins-bad-1.14.0_1.high_sierra.bottle.tar.gz",
-          "sha256": "308d9c4c72913fc8765a01448ca32570df1bc502440ff44fbffc340964348b54"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gst-plugins-bad-1.14.0_1.sierra.bottle.tar.gz",
-          "sha256": "84f80a511ddcb9943756c51b7ae6590d1edd56dca35db1db80ec3a525c0de29e"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/gst-plugins-bad-1.14.0_1.el_capitan.bottle.tar.gz",
-          "sha256": "1d376f912b04d799e2fc4a23c272540520737134995ac5025fd1312946b7a8a6"
-        }
-      }
-    }
-  }
+  "build_dependencies": [
+    "libtool",
+    "pkg-config"
+  ],
+  "dependencies": [
+    "gettext",
+    "gst-plugins-base",
+    "openssl"
+  ],
+  "recommended_dependencies": [
+    "jpeg",
+    "orc"
+  ],
+  "optional_dependencies": [
+    "dirac",
+    "faac",
+    "faad2",
+    "fdk-aac",
+    "gnutls",
+    "libdvdread",
+    "libexif",
+    "libmms",
+    "libnice",
+    "libvo-aacenc",
+    "opencv@2",
+    "opus",
+    "rtmpdump",
+    "schroedinger",
+    "sound-touch",
+    "srt"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

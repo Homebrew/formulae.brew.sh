@@ -1,63 +1,50 @@
 {
   "name": "xplanet",
   "full_name": "xplanet",
-  "desc": "Create HQ wallpapers of planet Earth",
-  "homepage": "https://xplanet.sourceforge.io/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Create HQ wallpapers of planet Earth",
+  "homepage": "https://xplanet.sourceforge.io/",
   "versions": {
     "stable": "1.3.1",
-    "bottle": true,
     "devel": null,
-    "head": null
+    "head": null,
+    "bottle": true
   },
   "revision": 2,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "pkg-config",
-    "giflib",
-    "jpeg",
-    "libpng",
-    "libtiff",
-    "netpbm",
-    "pango",
-    "cspice",
-    "freetype"
-  ],
-  "recommended_dependencies": [
-    "giflib",
-    "jpeg",
-    "libpng",
-    "libtiff"
-  ],
-  "optional_dependencies": [
-    "netpbm",
-    "pango",
-    "cspice"
-  ],
-  "build_dependencies": [
-    "pkg-config"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-    {
-      "name": "x11",
-      "cask": "xquartz",
-      "download": "https://xquartz.macosforge.org"
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/xplanet-1.3.1_2.high_sierra.bottle.tar.gz",
+          "sha256": "bd4d0b8ed3bf33f6c6da0b43574fb08d054603d0b36b228a87d1ae070274ac7c"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/xplanet-1.3.1_2.sierra.bottle.tar.gz",
+          "sha256": "eedbdc803d69fa1635e763eafa90ffd071b537e994a5fbdbe9eb84e69c0fc645"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/xplanet-1.3.1_2.el_capitan.bottle.tar.gz",
+          "sha256": "6d37f0965bc1b1f1aa438fec8ea9e57a096681336dba25dc880f25cb752f3910"
+        },
+        "yosemite": {
+          "url": "https://homebrew.bintray.com/bottles/xplanet-1.3.1_2.yosemite.bottle.tar.gz",
+          "sha256": "4c0e0c1b025079129f808e85d3d5e76280799929fa6e9d119000e94283769a8d"
+        }
+      }
     }
-  ],
+  },
+  "keg_only": false,
   "options": [
     {
       "option": "--with-x11",
@@ -96,30 +83,38 @@
       "description": "Build without libtiff support"
     }
   ],
-  "bottle": {
-    "stable": {
-      "rebuild": 0,
-      "cellar": "/usr/local/Cellar",
-      "prefix": "/usr/local",
-      "root_url": "https://homebrew.bintray.com/bottles",
-      "files": {
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/xplanet-1.3.1_2.high_sierra.bottle.tar.gz",
-          "sha256": "bd4d0b8ed3bf33f6c6da0b43574fb08d054603d0b36b228a87d1ae070274ac7c"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/xplanet-1.3.1_2.sierra.bottle.tar.gz",
-          "sha256": "eedbdc803d69fa1635e763eafa90ffd071b537e994a5fbdbe9eb84e69c0fc645"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/xplanet-1.3.1_2.el_capitan.bottle.tar.gz",
-          "sha256": "6d37f0965bc1b1f1aa438fec8ea9e57a096681336dba25dc880f25cb752f3910"
-        },
-        "yosemite": {
-          "url": "https://homebrew.bintray.com/bottles/xplanet-1.3.1_2.yosemite.bottle.tar.gz",
-          "sha256": "4c0e0c1b025079129f808e85d3d5e76280799929fa6e9d119000e94283769a8d"
-        }
-      }
+  "build_dependencies": [
+    "pkg-config"
+  ],
+  "dependencies": [
+    "freetype"
+  ],
+  "recommended_dependencies": [
+    "giflib",
+    "jpeg",
+    "libpng",
+    "libtiff"
+  ],
+  "optional_dependencies": [
+    "netpbm",
+    "pango",
+    "cspice"
+  ],
+  "requirements": [
+    {
+      "name": "x11",
+      "cask": "xquartz",
+      "download": "https://xquartz.macosforge.org"
     }
-  }
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

@@ -1,70 +1,23 @@
 {
   "name": "profanity",
   "full_name": "profanity",
-  "desc": "Console based XMPP client",
-  "homepage": "http://www.profanity.im/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Console based XMPP client",
+  "homepage": "http://www.profanity.im/",
   "versions": {
     "stable": "0.5.1",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "pkg-config",
-    "ossp-uuid",
-    "libstrophe",
-    "readline",
-    "glib",
-    "openssl",
-    "gnutls",
-    "libotr",
-    "gpgme",
-    "terminal-notifier"
-  ],
-  "recommended_dependencies": [
-    "libotr",
-    "gpgme"
-  ],
-  "optional_dependencies": [
-    "terminal-notifier"
-  ],
-  "build_dependencies": [
-    "pkg-config"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--without-libotr",
-      "description": "Build without libotr support"
-    },
-    {
-      "option": "--without-gpgme",
-      "description": "Build without gpgme support"
-    },
-    {
-      "option": "--with-terminal-notifier",
-      "description": "Build with terminal-notifier support"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 1,
@@ -86,5 +39,51 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--without-libotr",
+      "description": "Build without libotr support"
+    },
+    {
+      "option": "--without-gpgme",
+      "description": "Build without gpgme support"
+    },
+    {
+      "option": "--with-terminal-notifier",
+      "description": "Build with terminal-notifier support"
+    }
+  ],
+  "build_dependencies": [
+    "pkg-config"
+  ],
+  "dependencies": [
+    "ossp-uuid",
+    "libstrophe",
+    "readline",
+    "glib",
+    "openssl",
+    "gnutls"
+  ],
+  "recommended_dependencies": [
+    "libotr",
+    "gpgme"
+  ],
+  "optional_dependencies": [
+    "terminal-notifier"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

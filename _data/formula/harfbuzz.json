@@ -1,69 +1,23 @@
 {
   "name": "harfbuzz",
   "full_name": "harfbuzz",
-  "desc": "OpenType text shaping engine",
-  "homepage": "https://wiki.freedesktop.org/www/Software/HarfBuzz/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "OpenType text shaping engine",
+  "homepage": "https://wiki.freedesktop.org/www/Software/HarfBuzz/",
   "versions": {
     "stable": "1.7.6",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 2,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "pkg-config",
-    "gobject-introspection",
-    "freetype",
-    "graphite2",
-    "icu4c",
-    "cairo",
-    "glib"
-  ],
-  "recommended_dependencies": [
-    "freetype",
-    "graphite2",
-    "icu4c"
-  ],
-  "optional_dependencies": [
-
-  ],
-  "build_dependencies": [
-    "pkg-config",
-    "gobject-introspection"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--without-freetype",
-      "description": "Build without freetype support"
-    },
-    {
-      "option": "--without-graphite2",
-      "description": "Build without graphite2 support"
-    },
-    {
-      "option": "--without-icu4c",
-      "description": "Build without icu4c support"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 1,
@@ -85,5 +39,49 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--without-freetype",
+      "description": "Build without freetype support"
+    },
+    {
+      "option": "--without-graphite2",
+      "description": "Build without graphite2 support"
+    },
+    {
+      "option": "--without-icu4c",
+      "description": "Build without icu4c support"
+    }
+  ],
+  "build_dependencies": [
+    "pkg-config",
+    "gobject-introspection"
+  ],
+  "dependencies": [
+    "cairo",
+    "glib"
+  ],
+  "recommended_dependencies": [
+    "freetype",
+    "graphite2",
+    "icu4c"
+  ],
+  "optional_dependencies": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

@@ -1,66 +1,23 @@
 {
   "name": "h2o",
   "full_name": "h2o",
-  "desc": "HTTP server with support for HTTP/1.x and HTTP/2",
-  "homepage": "https://github.com/h2o/h2o/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "HTTP server with support for HTTP/1.x and HTTP/2",
+  "homepage": "https://github.com/h2o/h2o/",
   "versions": {
     "stable": "2.2.4",
-    "bottle": true,
     "devel": null,
-    "head": null
+    "head": null,
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "cmake",
-    "pkg-config",
-    "openssl",
-    "libuv",
-    "wslay"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-    "libuv",
-    "wslay"
-  ],
-  "build_dependencies": [
-    "cmake",
-    "pkg-config"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "A basic example configuration file has been placed in /home/travis/Homebrew/etc/h2o.\nYou can find fuller, unmodified examples here:\n  https://github.com/h2o/h2o/tree/master/examples/h2o\n",
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--with-libuv",
-      "description": "Build the H2O library in addition to the executable"
-    },
-    {
-      "option": "--without-mruby",
-      "description": "Don't build the bundled statically-linked mruby"
-    },
-    {
-      "option": "--with-wslay",
-      "description": "Build with wslay support"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -82,5 +39,47 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--with-libuv",
+      "description": "Build the H2O library in addition to the executable"
+    },
+    {
+      "option": "--without-mruby",
+      "description": "Don't build the bundled statically-linked mruby"
+    },
+    {
+      "option": "--with-wslay",
+      "description": "Build with wslay support"
+    }
+  ],
+  "build_dependencies": [
+    "cmake",
+    "pkg-config"
+  ],
+  "dependencies": [
+    "openssl"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "libuv",
+    "wslay"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "A basic example configuration file has been placed in /home/travis/Homebrew/etc/h2o.\nYou can find fuller, unmodified examples here:\n  https://github.com/h2o/h2o/tree/master/examples/h2o\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

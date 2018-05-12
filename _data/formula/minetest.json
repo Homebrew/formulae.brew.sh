@@ -1,84 +1,23 @@
 {
   "name": "minetest",
   "full_name": "minetest",
-  "desc": "Free, open source voxel game engine and game",
-  "homepage": "https://www.minetest.net/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Free, open source voxel game engine and game",
+  "homepage": "https://www.minetest.net/",
   "versions": {
     "stable": "0.4.16",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 1,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "cmake",
-    "irrlicht",
-    "jpeg",
-    "libogg",
-    "libvorbis",
-    "luajit",
-    "freetype",
-    "gettext",
-    "leveldb",
-    "redis"
-  ],
-  "recommended_dependencies": [
-    "luajit",
-    "freetype",
-    "gettext"
-  ],
-  "optional_dependencies": [
-    "leveldb",
-    "redis"
-  ],
-  "build_dependencies": [
-    "cmake"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "Put additional subgames and mods into \"games\" and \"mods\" folders under\n\"~/Library/Application Support/minetest/\", respectively (you may have\nto create those folders first).\n\nIf you would like to start the Minetest server from a terminal, run\n\"/Applications/minetest.app/Contents/MacOS/minetest --server\".\n",
-  "requirements": [
-    {
-      "name": "x11",
-      "cask": "xquartz",
-      "download": "https://xquartz.macosforge.org"
-    }
-  ],
-  "options": [
-    {
-      "option": "--without-luajit",
-      "description": "Build without luajit support"
-    },
-    {
-      "option": "--without-freetype",
-      "description": "Build without freetype support"
-    },
-    {
-      "option": "--without-gettext",
-      "description": "Build without gettext support"
-    },
-    {
-      "option": "--with-leveldb",
-      "description": "Build with leveldb support"
-    },
-    {
-      "option": "--with-redis",
-      "description": "Build with redis support"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -104,5 +43,63 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--without-luajit",
+      "description": "Build without luajit support"
+    },
+    {
+      "option": "--without-freetype",
+      "description": "Build without freetype support"
+    },
+    {
+      "option": "--without-gettext",
+      "description": "Build without gettext support"
+    },
+    {
+      "option": "--with-leveldb",
+      "description": "Build with leveldb support"
+    },
+    {
+      "option": "--with-redis",
+      "description": "Build with redis support"
+    }
+  ],
+  "build_dependencies": [
+    "cmake"
+  ],
+  "dependencies": [
+    "irrlicht",
+    "jpeg",
+    "libogg",
+    "libvorbis"
+  ],
+  "recommended_dependencies": [
+    "luajit",
+    "freetype",
+    "gettext"
+  ],
+  "optional_dependencies": [
+    "leveldb",
+    "redis"
+  ],
+  "requirements": [
+    {
+      "name": "x11",
+      "cask": "xquartz",
+      "download": "https://xquartz.macosforge.org"
+    }
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "Put additional subgames and mods into \"games\" and \"mods\" folders under\n\"~/Library/Application Support/minetest/\", respectively (you may have\nto create those folders first).\n\nIf you would like to start the Minetest server from a terminal, run\n\"/Applications/minetest.app/Contents/MacOS/minetest --server\".\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

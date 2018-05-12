@@ -1,63 +1,23 @@
 {
   "name": "shibboleth-sp",
   "full_name": "shibboleth-sp",
-  "desc": "Shibboleth 2 Service Provider daemon",
-  "homepage": "https://wiki.shibboleth.net/confluence/display/SHIB2",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Shibboleth 2 Service Provider daemon",
+  "homepage": "https://wiki.shibboleth.net/confluence/display/SHIB2",
   "versions": {
     "stable": "2.6.1",
-    "bottle": true,
     "devel": null,
-    "head": null
+    "head": null,
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "curl",
-    "opensaml",
-    "xml-tooling-c",
-    "xerces-c",
-    "xml-security-c",
-    "log4shib",
-    "boost",
-    "unixodbc",
-    "apr-util",
-    "apr"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-
-  ],
-  "build_dependencies": [
-    "apr-util",
-    "apr"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "You must manually edit httpd.conf to include\nLoadModule mod_shib /home/travis/Homebrew/opt/shibboleth-sp/lib/shibboleth/mod_shib_24.so\nYou must also manually configure\n  /home/travis/Homebrew/etc/shibboleth/shibboleth2.xml\nas per your own requirements. For more information please see\n  https://wiki.shibboleth.net/confluence/display/EDS10/3.1+Configuring+the+Service+Provider\n",
-  "requirements": [
-    {
-      "name": "macos",
-      "cask": null,
-      "download": null
-    }
-  ],
-  "options": [
-
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -79,5 +39,46 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+    "apr-util",
+    "apr"
+  ],
+  "dependencies": [
+    "curl",
+    "opensaml",
+    "xml-tooling-c",
+    "xerces-c",
+    "xml-security-c",
+    "log4shib",
+    "boost",
+    "unixodbc"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "requirements": [
+    {
+      "name": "macos",
+      "cask": null,
+      "download": null
+    }
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "You must manually edit httpd.conf to include\nLoadModule mod_shib /home/travis/Homebrew/opt/shibboleth-sp/lib/shibboleth/mod_shib_24.so\nYou must also manually configure\n  /home/travis/Homebrew/etc/shibboleth/shibboleth2.xml\nas per your own requirements. For more information please see\n  https://wiki.shibboleth.net/confluence/display/EDS10/3.1+Configuring+the+Service+Provider\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

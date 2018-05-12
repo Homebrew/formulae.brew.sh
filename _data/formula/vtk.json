@@ -1,71 +1,23 @@
 {
   "name": "vtk",
   "full_name": "vtk",
-  "desc": "Toolkit for 3D computer graphics, image processing, and visualization",
-  "homepage": "https://www.vtk.org/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Toolkit for 3D computer graphics, image processing, and visualization",
+  "homepage": "https://www.vtk.org/",
   "versions": {
     "stable": "8.1.0",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 2,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "cmake",
-    "boost",
-    "fontconfig",
-    "hdf5",
-    "jpeg",
-    "libpng",
-    "libtiff",
-    "netcdf",
-    "python@2",
-    "python",
-    "qt"
-  ],
-  "recommended_dependencies": [
-    "python@2"
-  ],
-  "optional_dependencies": [
-    "python",
-    "qt"
-  ],
-  "build_dependencies": [
-    "cmake"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "Even without the --with-qt option, you can display native VTK render windows\nfrom python. Alternatively, you can integrate the RenderWindowInteractor\nin PyQt5, Tk or Wx at runtime. Read more:\n  import vtk.qt5; help(vtk.qt5) or import vtk.wx; help(vtk.wx)\n",
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--without-python@2",
-      "description": "Build without python2 support"
-    },
-    {
-      "option": "--with-python",
-      "description": "Build with python support"
-    },
-    {
-      "option": "--with-qt",
-      "description": "Build with qt support"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -87,5 +39,52 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--without-python@2",
+      "description": "Build without python2 support"
+    },
+    {
+      "option": "--with-python",
+      "description": "Build with python support"
+    },
+    {
+      "option": "--with-qt",
+      "description": "Build with qt support"
+    }
+  ],
+  "build_dependencies": [
+    "cmake"
+  ],
+  "dependencies": [
+    "boost",
+    "fontconfig",
+    "hdf5",
+    "jpeg",
+    "libpng",
+    "libtiff",
+    "netcdf"
+  ],
+  "recommended_dependencies": [
+    "python@2"
+  ],
+  "optional_dependencies": [
+    "python",
+    "qt"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "Even without the --with-qt option, you can display native VTK render windows\nfrom python. Alternatively, you can integrate the RenderWindowInteractor\nin PyQt5, Tk or Wx at runtime. Read more:\n  import vtk.qt5; help(vtk.qt5) or import vtk.wx; help(vtk.wx)\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

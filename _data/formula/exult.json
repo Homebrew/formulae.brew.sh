@@ -1,61 +1,23 @@
 {
   "name": "exult",
   "full_name": "exult",
-  "desc": "Recreation of Ultima 7",
-  "homepage": "https://exult.sourceforge.io/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Recreation of Ultima 7",
+  "homepage": "https://exult.sourceforge.io/",
   "versions": {
     "stable": "1.4.9rc1+r7520",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "autoconf",
-    "automake",
-    "libtool",
-    "pkg-config",
-    "sdl2",
-    "libogg",
-    "libvorbis"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-
-  ],
-  "build_dependencies": [
-    "autoconf",
-    "automake",
-    "libtool",
-    "pkg-config"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "Note that this includes only the game engine; you will need to supply your own\nown legal copy of the Ultima 7 game files. Try here (amazon.com):\n  https://bit.ly/8JzovU\n\nUpdate audio settings accordingly with configuration file:\n  ~/Library/Preferences/exult.cfg\n\n  To use CoreAudio, set `driver` to `CoreAudio`.\n  To use audio pack, set `use_oggs` to `yes`.\n",
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--with-audio-pack",
-      "description": "Install audio pack"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 1,
@@ -77,5 +39,42 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--with-audio-pack",
+      "description": "Install audio pack"
+    }
+  ],
+  "build_dependencies": [
+    "autoconf",
+    "automake",
+    "libtool",
+    "pkg-config"
+  ],
+  "dependencies": [
+    "sdl2",
+    "libogg",
+    "libvorbis"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "Note that this includes only the game engine; you will need to supply your own\nown legal copy of the Ultima 7 game files. Try here (amazon.com):\n  https://bit.ly/8JzovU\n\nUpdate audio settings accordingly with configuration file:\n  ~/Library/Preferences/exult.cfg\n\n  To use CoreAudio, set `driver` to `CoreAudio`.\n  To use audio pack, set `use_oggs` to `yes`.\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

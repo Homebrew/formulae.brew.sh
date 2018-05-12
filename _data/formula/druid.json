@@ -1,27 +1,35 @@
 {
   "name": "druid",
   "full_name": "druid",
-  "desc": "High-performance, column-oriented, distributed data store",
-  "homepage": "http://druid.io",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "High-performance, column-oriented, distributed data store",
+  "homepage": "http://druid.io",
   "versions": {
     "stable": "0.12.0",
-    "bottle": false,
     "devel": null,
-    "head": null
+    "head": null,
+    "bottle": false
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
+  "bottle": {
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--with-mysql",
+      "description": "Build with mysql-metadata-storage plugin"
+    }
+  ],
+  "build_dependencies": [
 
   ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
   "dependencies": [
     "zookeeper"
   ],
@@ -31,13 +39,6 @@
   "optional_dependencies": [
 
   ],
-  "build_dependencies": [
-
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
   "requirements": [
     {
       "name": "java",
@@ -45,12 +46,14 @@
       "download": "https://www.oracle.com/technetwork/java/javase/downloads/index.html"
     }
   ],
-  "options": [
-    {
-      "option": "--with-mysql",
-      "description": "Build with mysql-metadata-storage plugin"
-    }
+  "conflicts_with": [
+
   ],
-  "bottle": {
-  }
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

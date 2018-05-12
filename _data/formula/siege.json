@@ -1,49 +1,23 @@
 {
   "name": "siege",
   "full_name": "siege",
-  "desc": "HTTP regression testing and benchmarking utility",
-  "homepage": "https://www.joedog.org/siege-home/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "HTTP regression testing and benchmarking utility",
+  "homepage": "https://www.joedog.org/siege-home/",
   "versions": {
     "stable": "4.0.4",
-    "bottle": true,
     "devel": null,
-    "head": null
+    "head": null,
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "openssl"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-
-  ],
-  "build_dependencies": [
-
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "macOS has only 16K ports available that won't be released until socket\nTIME_WAIT is passed. The default timeout for TIME_WAIT is 15 seconds.\nConsider reducing in case of available port bottleneck.\n\nYou can check whether this is a problem with netstat:\n\n    # sysctl net.inet.tcp.msl\n    net.inet.tcp.msl: 15000\n\n    # sudo sysctl -w net.inet.tcp.msl=1000\n    net.inet.tcp.msl: 15000 -> 1000\n\nRun siege.config to create the ~/.siegerc config file.\n",
-  "requirements": [
-
-  ],
-  "options": [
-
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -65,5 +39,34 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+
+  ],
+  "dependencies": [
+    "openssl"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "macOS has only 16K ports available that won't be released until socket\nTIME_WAIT is passed. The default timeout for TIME_WAIT is 15 seconds.\nConsider reducing in case of available port bottleneck.\n\nYou can check whether this is a problem with netstat:\n\n    # sysctl net.inet.tcp.msl\n    net.inet.tcp.msl: 15000\n\n    # sudo sysctl -w net.inet.tcp.msl=1000\n    net.inet.tcp.msl: 15000 -> 1000\n\nRun siege.config to create the ~/.siegerc config file.\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

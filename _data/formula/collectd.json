@@ -1,56 +1,46 @@
 {
   "name": "collectd",
   "full_name": "collectd",
-  "desc": "Statistics collection and monitoring daemon",
-  "homepage": "https://collectd.org/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Statistics collection and monitoring daemon",
+  "homepage": "https://collectd.org/",
   "versions": {
     "stable": "5.8.0",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 1,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "pkg-config",
-    "libgcrypt",
-    "libtool",
-    "riemann-client",
-    "python@2",
-    "net-snmp"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-    "riemann-client",
-    "python@2"
-  ],
-  "build_dependencies": [
-    "pkg-config"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-    {
-      "name": "java",
-      "cask": "java",
-      "download": "https://www.oracle.com/technetwork/java/javase/downloads/index.html"
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/collectd-5.8.0_1.high_sierra.bottle.tar.gz",
+          "sha256": "637a48e49e734788715da134195794f4c42b9dae7b0d0335bdaaf0ae3008ccef"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/collectd-5.8.0_1.sierra.bottle.tar.gz",
+          "sha256": "c32a6fd895ded01ae5da1263aa337ecd8a2446d9353a57daecd51acfe3b9f14c"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/collectd-5.8.0_1.el_capitan.bottle.tar.gz",
+          "sha256": "aef564883d2a92d6cce279c80e36d775af71c7629253166f935de8f91f856cef"
+        }
+      }
     }
-  ],
+  },
+  "keg_only": false,
   "options": [
     {
       "option": "--with-java",
@@ -73,26 +63,36 @@
       "description": "Build with python@2 support"
     }
   ],
-  "bottle": {
-    "stable": {
-      "rebuild": 0,
-      "cellar": "/usr/local/Cellar",
-      "prefix": "/usr/local",
-      "root_url": "https://homebrew.bintray.com/bottles",
-      "files": {
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/collectd-5.8.0_1.high_sierra.bottle.tar.gz",
-          "sha256": "637a48e49e734788715da134195794f4c42b9dae7b0d0335bdaaf0ae3008ccef"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/collectd-5.8.0_1.sierra.bottle.tar.gz",
-          "sha256": "c32a6fd895ded01ae5da1263aa337ecd8a2446d9353a57daecd51acfe3b9f14c"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/collectd-5.8.0_1.el_capitan.bottle.tar.gz",
-          "sha256": "aef564883d2a92d6cce279c80e36d775af71c7629253166f935de8f91f856cef"
-        }
-      }
+  "build_dependencies": [
+    "pkg-config"
+  ],
+  "dependencies": [
+    "libgcrypt",
+    "libtool",
+    "net-snmp"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "riemann-client",
+    "python@2"
+  ],
+  "requirements": [
+    {
+      "name": "java",
+      "cask": "java",
+      "download": "https://www.oracle.com/technetwork/java/javase/downloads/index.html"
     }
-  }
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

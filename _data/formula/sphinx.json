@@ -1,68 +1,23 @@
 {
   "name": "sphinx",
   "full_name": "sphinx",
-  "desc": "Full-text search engine",
-  "homepage": "http://www.sphinxsearch.com",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Full-text search engine",
+  "homepage": "http://www.sphinxsearch.com",
   "versions": {
     "stable": "2.2.11",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "re2",
-    "mysql",
-    "postgresql"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-    "re2",
-    "mysql",
-    "postgresql"
-  ],
-  "build_dependencies": [
-
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "This is not sphinx - the Python Documentation Generator.\nTo install sphinx-python use pip.\n\nSphinx has been compiled with libstemmer support.\n\nSphinx depends on either MySQL or PostreSQL as a datasource.\n\nYou can install these with Homebrew with:\n  brew install mysql\n    For MySQL server.\n\n  brew install mysql-connector-c\n    For MySQL client libraries only.\n\n  brew install postgresql\n    For PostgreSQL server.\n\nWe don't install these for you when you install this formula, as\nwe don't know which datasource you intend to use.\n",
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--with-mysql",
-      "description": "Force compiling against MySQL"
-    },
-    {
-      "option": "--with-postgresql",
-      "description": "Force compiling against PostgreSQL"
-    },
-    {
-      "option": "--with-id64",
-      "description": "Force compiling with 64-bit ID support"
-    },
-    {
-      "option": "--with-re2",
-      "description": "Build with re2 support"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -92,5 +47,51 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--with-mysql",
+      "description": "Force compiling against MySQL"
+    },
+    {
+      "option": "--with-postgresql",
+      "description": "Force compiling against PostgreSQL"
+    },
+    {
+      "option": "--with-id64",
+      "description": "Force compiling with 64-bit ID support"
+    },
+    {
+      "option": "--with-re2",
+      "description": "Build with re2 support"
+    }
+  ],
+  "build_dependencies": [
+
+  ],
+  "dependencies": [
+
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "re2",
+    "mysql",
+    "postgresql"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "This is not sphinx - the Python Documentation Generator.\nTo install sphinx-python use pip.\n\nSphinx has been compiled with libstemmer support.\n\nSphinx depends on either MySQL or PostreSQL as a datasource.\n\nYou can install these with Homebrew with:\n  brew install mysql\n    For MySQL server.\n\n  brew install mysql-connector-c\n    For MySQL client libraries only.\n\n  brew install postgresql\n    For PostgreSQL server.\n\nWe don't install these for you when you install this formula, as\nwe don't know which datasource you intend to use.\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

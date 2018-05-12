@@ -1,60 +1,23 @@
 {
   "name": "arx-libertatis",
   "full_name": "arx-libertatis",
-  "desc": "Cross-platform, open source port of Arx Fatalis",
-  "homepage": "https://arx-libertatis.org/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Cross-platform, open source port of Arx Fatalis",
+  "homepage": "https://arx-libertatis.org/",
   "versions": {
     "stable": "1.1.2",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 1,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "cmake",
-    "boost",
-    "glm",
-    "freetype",
-    "glew",
-    "sdl",
-    "innoextract"
-  ],
-  "recommended_dependencies": [
-    "innoextract"
-  ],
-  "optional_dependencies": [
-
-  ],
-  "build_dependencies": [
-    "cmake",
-    "boost",
-    "glm"
-  ],
-  "conflicts_with": [
-    "rnv"
-  ],
-  "caveats": "This package only contains the Arx Libertatis binary, not the game data.\nTo play Arx Fatalis you will need to obtain the game from GOG.com and install\nthe game data with:\n\n  arx-install-data /path/to/setup_arx_fatalis.exe\n",
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--without-innoextract",
-      "description": "Build without arx-install-data"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -80,5 +43,41 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--without-innoextract",
+      "description": "Build without arx-install-data"
+    }
+  ],
+  "build_dependencies": [
+    "cmake",
+    "boost",
+    "glm"
+  ],
+  "dependencies": [
+    "freetype",
+    "glew",
+    "sdl"
+  ],
+  "recommended_dependencies": [
+    "innoextract"
+  ],
+  "optional_dependencies": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+    "rnv"
+  ],
+  "caveats": "This package only contains the Arx Libertatis binary, not the game data.\nTo play Arx Fatalis you will need to obtain the game from GOG.com and install\nthe game data with:\n\n  arx-install-data /path/to/setup_arx_fatalis.exe\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

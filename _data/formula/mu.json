@@ -1,64 +1,23 @@
 {
   "name": "mu",
   "full_name": "mu",
-  "desc": "Tool for searching e-mail messages stored in the maildir-format",
-  "homepage": "https://www.djcbsoftware.nl/code/mu/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Tool for searching e-mail messages stored in the maildir-format",
+  "homepage": "https://www.djcbsoftware.nl/code/mu/",
   "versions": {
     "stable": "1.0",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "autoconf",
-    "automake",
-    "libtool",
-    "pkg-config",
-    "libgpg-error",
-    "gettext",
-    "glib",
-    "xapian",
-    "emacs"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-    "emacs"
-  ],
-  "build_dependencies": [
-    "autoconf",
-    "automake",
-    "libtool",
-    "pkg-config",
-    "libgpg-error"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "Existing mu users are recommended to run the following after upgrading:\n\n  mu index --rebuild\n",
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--with-emacs",
-      "description": "Build with emacs support"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -80,5 +39,43 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--with-emacs",
+      "description": "Build with emacs support"
+    }
+  ],
+  "build_dependencies": [
+    "autoconf",
+    "automake",
+    "libtool",
+    "pkg-config",
+    "libgpg-error"
+  ],
+  "dependencies": [
+    "gettext",
+    "glib",
+    "xapian"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "emacs"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "Existing mu users are recommended to run the following after upgrading:\n\n  mu index --rebuild\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

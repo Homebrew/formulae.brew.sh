@@ -1,27 +1,32 @@
 {
   "name": "pow",
   "full_name": "pow",
-  "desc": "Zero-config Rack server for local apps on macOS",
-  "homepage": "http://pow.cx/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Zero-config Rack server for local apps on macOS",
+  "homepage": "http://pow.cx/",
   "versions": {
     "stable": "0.6.0",
-    "bottle": false,
     "devel": null,
-    "head": null
+    "head": null,
+    "bottle": false
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
+  "bottle": {
+  },
+  "keg_only": false,
+  "options": [
 
   ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
+  "build_dependencies": [
+
+  ],
   "dependencies": [
     "node"
   ],
@@ -31,19 +36,17 @@
   "optional_dependencies": [
 
   ],
-  "build_dependencies": [
+  "requirements": [
 
   ],
   "conflicts_with": [
 
   ],
   "caveats": "Create the required host directories:\n  mkdir -p ~/Library/Application\\ Support/Pow/Hosts\n  ln -s ~/Library/Application\\ Support/Pow/Hosts ~/.pow\n\nSetup port 80 forwarding and launchd agents:\n  sudo pow --install-system\n  pow --install-local\n\nLoad launchd agents:\n  sudo launchctl load -w /Library/LaunchDaemons/cx.pow.firewall.plist\n  launchctl load -w ~/Library/LaunchAgents/cx.pow.powd.plist\n",
-  "requirements": [
+  "installed": [
 
   ],
-  "options": [
-
-  ],
-  "bottle": {
-  }
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

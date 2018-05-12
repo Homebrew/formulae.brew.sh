@@ -1,54 +1,23 @@
 {
   "name": "exim",
   "full_name": "exim",
-  "desc": "Complete replacement for sendmail",
-  "homepage": "https://exim.org",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Complete replacement for sendmail",
+  "homepage": "https://exim.org",
   "versions": {
     "stable": "4.91",
-    "bottle": true,
     "devel": null,
-    "head": null
+    "head": null,
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "pcre",
-    "berkeley-db@4",
-    "openssl"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-
-  ],
-  "build_dependencies": [
-
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "Start with:\n  exim_ctl start\nDon't forget to run it as root to be able to bind port 25.\n",
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--with-maildir",
-      "description": "Support delivery in Maildir format"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -70,5 +39,39 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--with-maildir",
+      "description": "Support delivery in Maildir format"
+    }
+  ],
+  "build_dependencies": [
+
+  ],
+  "dependencies": [
+    "pcre",
+    "berkeley-db@4",
+    "openssl"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "Start with:\n  exim_ctl start\nDon't forget to run it as root to be able to bind port 25.\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

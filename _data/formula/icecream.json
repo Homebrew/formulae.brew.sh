@@ -1,71 +1,23 @@
 {
   "name": "icecream",
   "full_name": "icecream",
-  "desc": "Distributed compiler with a central scheduler to share build load",
-  "homepage": "https://en.opensuse.org/Icecream",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Distributed compiler with a central scheduler to share build load",
+  "homepage": "https://en.opensuse.org/Icecream",
   "versions": {
     "stable": "1.1",
-    "bottle": true,
     "devel": null,
-    "head": null
+    "head": null,
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "autoconf",
-    "automake",
-    "libtool",
-    "lzo",
-    "docbook2x"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-    "docbook2x"
-  ],
-  "build_dependencies": [
-    "autoconf",
-    "automake",
-    "libtool",
-    "docbook2x"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "To override the toolset with icecc, add to your path:\n  /home/travis/Homebrew/opt/icecream/libexec/icecc/bin\n\nTo have launchd start the icecc daemon at login:\n  cp /home/travis/Homebrew/opt/icecream/org.opensuse.icecc.plist ~/Library/LaunchAgents/\n  launchctl load -w ~/Library/LaunchAgents/org.opensuse.icecc.plist\n",
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--with-docbook2X",
-      "description": "Build with man page"
-    },
-    {
-      "option": "--without-clang-wrappers",
-      "description": "Don't use symlink wrappers for clang/clang++"
-    },
-    {
-      "option": "--with-clang-rewrite-includes",
-      "description": "Use by default Clang's -frewrite-includes option"
-    },
-    {
-      "option": "--with-docbook2x",
-      "description": "Build with docbook2x support"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -91,5 +43,52 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--with-docbook2X",
+      "description": "Build with man page"
+    },
+    {
+      "option": "--without-clang-wrappers",
+      "description": "Don't use symlink wrappers for clang/clang++"
+    },
+    {
+      "option": "--with-clang-rewrite-includes",
+      "description": "Use by default Clang's -frewrite-includes option"
+    },
+    {
+      "option": "--with-docbook2x",
+      "description": "Build with docbook2x support"
+    }
+  ],
+  "build_dependencies": [
+    "autoconf",
+    "automake",
+    "libtool",
+    "docbook2x"
+  ],
+  "dependencies": [
+    "lzo"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "docbook2x"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "To override the toolset with icecc, add to your path:\n  /home/travis/Homebrew/opt/icecream/libexec/icecc/bin\n\nTo have launchd start the icecc daemon at login:\n  cp /home/travis/Homebrew/opt/icecream/org.opensuse.icecc.plist ~/Library/LaunchAgents/\n  launchctl load -w ~/Library/LaunchAgents/org.opensuse.icecc.plist\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

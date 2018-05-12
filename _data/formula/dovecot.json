@@ -1,47 +1,46 @@
 {
   "name": "dovecot",
   "full_name": "dovecot",
-  "desc": "IMAP/POP3 server",
-  "homepage": "https://dovecot.org/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "IMAP/POP3 server",
+  "homepage": "https://dovecot.org/",
   "versions": {
     "stable": "2.3.1",
-    "bottle": true,
     "devel": null,
-    "head": null
+    "head": null,
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/dovecot-2.3.1.high_sierra.bottle.tar.gz",
+          "sha256": "45f1715564e702c8219d24089b09b526582cac66fbba92b64a0a3a7ad6fb8adf"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/dovecot-2.3.1.sierra.bottle.tar.gz",
+          "sha256": "99ba590650def35c3fc895f768fdcb28095fd9297d47040801383e8314ceff62"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/dovecot-2.3.1.el_capitan.bottle.tar.gz",
+          "sha256": "655ad80916e6f404014e9338ee691b053eb245dd5719adfffe75ddb82d6d1e83"
+        }
+      }
+    }
+  },
   "keg_only": false,
-  "dependencies": [
-    "openssl",
-    "clucene"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-    "clucene"
-  ],
-  "build_dependencies": [
-
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "For Dovecot to work, you may need to create a dovecot user\nand group depending on your configuration file options.\n",
-  "requirements": [
-
-  ],
   "options": [
     {
       "option": "--with-pam",
@@ -64,26 +63,29 @@
       "description": "Build with clucene support"
     }
   ],
-  "bottle": {
-    "stable": {
-      "rebuild": 0,
-      "cellar": "/usr/local/Cellar",
-      "prefix": "/usr/local",
-      "root_url": "https://homebrew.bintray.com/bottles",
-      "files": {
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/dovecot-2.3.1.high_sierra.bottle.tar.gz",
-          "sha256": "45f1715564e702c8219d24089b09b526582cac66fbba92b64a0a3a7ad6fb8adf"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/dovecot-2.3.1.sierra.bottle.tar.gz",
-          "sha256": "99ba590650def35c3fc895f768fdcb28095fd9297d47040801383e8314ceff62"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/dovecot-2.3.1.el_capitan.bottle.tar.gz",
-          "sha256": "655ad80916e6f404014e9338ee691b053eb245dd5719adfffe75ddb82d6d1e83"
-        }
-      }
-    }
-  }
+  "build_dependencies": [
+
+  ],
+  "dependencies": [
+    "openssl"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "clucene"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "For Dovecot to work, you may need to create a dovecot user\nand group depending on your configuration file options.\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

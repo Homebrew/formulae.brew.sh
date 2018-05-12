@@ -1,64 +1,23 @@
 {
   "name": "opencolorio",
   "full_name": "opencolorio",
-  "desc": "Color management solution geared towards motion picture production",
-  "homepage": "http://opencolorio.org/",
   "oldname": null,
   "aliases": [
     "ocio"
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Color management solution geared towards motion picture production",
+  "homepage": "http://opencolorio.org/",
   "versions": {
     "stable": "1.1.0",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "cmake",
-    "pkg-config",
-    "little-cms2",
-    "python@2"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-    "python@2"
-  ],
-  "build_dependencies": [
-    "cmake",
-    "pkg-config"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "OpenColorIO requires several environment variables to be set.\nYou can source the following script in your shell-startup to do that:\n\n    /home/travis/Homebrew/share/ocio/setup_ocio.sh\n\nAlternatively the documentation describes what env-variables need set:\n\n    http://opencolorio.org/installation.html#environment-variables\n\nYou will require a config for OCIO to be useful. Sample configuration files\nand reference images can be found at:\n\n    http://opencolorio.org/downloads.html\n",
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--with-test",
-      "description": "Verify the build with its unit tests (~1min)"
-    },
-    {
-      "option": "--with-docs",
-      "description": "Build the documentation"
-    },
-    {
-      "option": "--with-python@2",
-      "description": "Build with python@2 support"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -80,5 +39,46 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--with-test",
+      "description": "Verify the build with its unit tests (~1min)"
+    },
+    {
+      "option": "--with-docs",
+      "description": "Build the documentation"
+    },
+    {
+      "option": "--with-python@2",
+      "description": "Build with python@2 support"
+    }
+  ],
+  "build_dependencies": [
+    "cmake",
+    "pkg-config"
+  ],
+  "dependencies": [
+    "little-cms2"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "python@2"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "OpenColorIO requires several environment variables to be set.\nYou can source the following script in your shell-startup to do that:\n\n    /home/travis/Homebrew/share/ocio/setup_ocio.sh\n\nAlternatively the documentation describes what env-variables need set:\n\n    http://opencolorio.org/installation.html#environment-variables\n\nYou will require a config for OCIO to be useful. Sample configuration files\nand reference images can be found at:\n\n    http://opencolorio.org/downloads.html\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

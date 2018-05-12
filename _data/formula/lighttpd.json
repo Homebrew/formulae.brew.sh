@@ -1,67 +1,23 @@
 {
   "name": "lighttpd",
   "full_name": "lighttpd",
-  "desc": "Small memory footprint, flexible web-server",
-  "homepage": "https://www.lighttpd.net/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Small memory footprint, flexible web-server",
+  "homepage": "https://www.lighttpd.net/",
   "versions": {
     "stable": "1.4.48",
-    "bottle": true,
     "devel": null,
-    "head": null
+    "head": null,
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "pkg-config",
-    "autoconf",
-    "automake",
-    "libtool",
-    "pcre",
-    "openssl",
-    "lua@5.1",
-    "libev"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-    "lua@5.1",
-    "libev"
-  ],
-  "build_dependencies": [
-    "pkg-config",
-    "autoconf",
-    "automake",
-    "libtool"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "Docroot is: /home/travis/Homebrew/var/www\n\nThe default port has been set in /home/travis/Homebrew/etc/lighttpd/lighttpd.conf to 8080 so that\nlighttpd can run without sudo.\n",
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--with-lua@5.1",
-      "description": "Include Lua scripting support for mod_magnet"
-    },
-    {
-      "option": "--with-libev",
-      "description": "Build with libev support"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -83,5 +39,46 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--with-lua@5.1",
+      "description": "Include Lua scripting support for mod_magnet"
+    },
+    {
+      "option": "--with-libev",
+      "description": "Build with libev support"
+    }
+  ],
+  "build_dependencies": [
+    "pkg-config",
+    "autoconf",
+    "automake",
+    "libtool"
+  ],
+  "dependencies": [
+    "pcre",
+    "openssl"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "lua@5.1",
+    "libev"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "Docroot is: /home/travis/Homebrew/var/www\n\nThe default port has been set in /home/travis/Homebrew/etc/lighttpd/lighttpd.conf to 8080 so that\nlighttpd can run without sudo.\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

@@ -1,59 +1,26 @@
 {
   "name": "gcc",
   "full_name": "gcc",
-  "desc": "GNU compiler collection",
-  "homepage": "https://gcc.gnu.org/",
   "oldname": null,
   "aliases": [
     "gcc@8"
   ],
+  "versioned_formulae": [
+    "gcc@4.9",
+    "gcc@5",
+    "gcc@6",
+    "gcc@7"
+  ],
+  "desc": "GNU compiler collection",
+  "homepage": "https://gcc.gnu.org/",
   "versions": {
     "stable": "8.1.0",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "gmp",
-    "isl",
-    "libmpc",
-    "mpfr"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-
-  ],
-  "build_dependencies": [
-
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--with-jit",
-      "description": "Build just-in-time compiler"
-    },
-    {
-      "option": "--with-nls",
-      "description": "Build with native language support (localization)"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -75,5 +42,44 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--with-jit",
+      "description": "Build just-in-time compiler"
+    },
+    {
+      "option": "--with-nls",
+      "description": "Build with native language support (localization)"
+    }
+  ],
+  "build_dependencies": [
+
+  ],
+  "dependencies": [
+    "gmp",
+    "isl",
+    "libmpc",
+    "mpfr"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

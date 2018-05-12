@@ -1,58 +1,46 @@
 {
   "name": "gmic",
   "full_name": "gmic",
-  "desc": "Full-Featured Open-Source Framework for Image Processing",
-  "homepage": "https://gmic.eu/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Full-Featured Open-Source Framework for Image Processing",
+  "homepage": "https://gmic.eu/",
   "versions": {
     "stable": "2.1.5",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 1,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/gmic-2.1.5_1.high_sierra.bottle.tar.gz",
+          "sha256": "13ccaf356dc8be85d6d60078c5c10ad3ae6fd515169c396b6cb1c28b2a348c15"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/gmic-2.1.5_1.sierra.bottle.tar.gz",
+          "sha256": "7ed192f9ad04036d236cbe9b854ea54325bb366ec392d4cb977e227167ce1ebf"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/gmic-2.1.5_1.el_capitan.bottle.tar.gz",
+          "sha256": "db45390cb89c9a1d1280f05543555917d161be399223e79d99f6fcacae6532bf"
+        }
+      }
+    }
+  },
   "keg_only": false,
-  "dependencies": [
-    "cmake",
-    "jpeg",
-    "libpng",
-    "fftw",
-    "opencv@2",
-    "ffmpeg",
-    "libtiff",
-    "openexr"
-  ],
-  "recommended_dependencies": [
-    "jpeg",
-    "libpng",
-    "fftw"
-  ],
-  "optional_dependencies": [
-    "opencv@2",
-    "ffmpeg",
-    "libtiff",
-    "openexr"
-  ],
-  "build_dependencies": [
-    "cmake"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-
-  ],
   "options": [
     {
       "option": "--without-jpeg",
@@ -83,26 +71,34 @@
       "description": "Build with openexr support"
     }
   ],
-  "bottle": {
-    "stable": {
-      "rebuild": 0,
-      "cellar": ":any",
-      "prefix": "/usr/local",
-      "root_url": "https://homebrew.bintray.com/bottles",
-      "files": {
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gmic-2.1.5_1.high_sierra.bottle.tar.gz",
-          "sha256": "13ccaf356dc8be85d6d60078c5c10ad3ae6fd515169c396b6cb1c28b2a348c15"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gmic-2.1.5_1.sierra.bottle.tar.gz",
-          "sha256": "7ed192f9ad04036d236cbe9b854ea54325bb366ec392d4cb977e227167ce1ebf"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/gmic-2.1.5_1.el_capitan.bottle.tar.gz",
-          "sha256": "db45390cb89c9a1d1280f05543555917d161be399223e79d99f6fcacae6532bf"
-        }
-      }
-    }
-  }
+  "build_dependencies": [
+    "cmake"
+  ],
+  "dependencies": [
+
+  ],
+  "recommended_dependencies": [
+    "jpeg",
+    "libpng",
+    "fftw"
+  ],
+  "optional_dependencies": [
+    "opencv@2",
+    "ffmpeg",
+    "libtiff",
+    "openexr"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

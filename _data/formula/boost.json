@@ -1,60 +1,26 @@
 {
   "name": "boost",
   "full_name": "boost",
-  "desc": "Collection of portable C++ source libraries",
-  "homepage": "https://www.boost.org/",
   "oldname": null,
   "aliases": [
     "boost@1.67"
   ],
+  "versioned_formulae": [
+    "boost@1.55",
+    "boost@1.57",
+    "boost@1.59",
+    "boost@1.60"
+  ],
+  "desc": "Collection of portable C++ source libraries",
+  "homepage": "https://www.boost.org/",
   "versions": {
     "stable": "1.67.0",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 1,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "icu4c"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-    "icu4c"
-  ],
-  "build_dependencies": [
-
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "Building of Boost.Log is disabled because it requires newer GCC or Clang.\n",
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--with-icu4c",
-      "description": "Build regexp engine with icu support"
-    },
-    {
-      "option": "--without-single",
-      "description": "Disable building single-threading variant"
-    },
-    {
-      "option": "--without-static",
-      "description": "Disable building static library variant"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -76,5 +42,45 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--with-icu4c",
+      "description": "Build regexp engine with icu support"
+    },
+    {
+      "option": "--without-single",
+      "description": "Disable building single-threading variant"
+    },
+    {
+      "option": "--without-static",
+      "description": "Disable building static library variant"
+    }
+  ],
+  "build_dependencies": [
+
+  ],
+  "dependencies": [
+
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "icu4c"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "Building of Boost.Log is disabled because it requires newer GCC or Clang.\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

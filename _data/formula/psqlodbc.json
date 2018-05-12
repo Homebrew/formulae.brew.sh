@@ -1,59 +1,23 @@
 {
   "name": "psqlodbc",
   "full_name": "psqlodbc",
-  "desc": "Official PostgreSQL ODBC driver",
-  "homepage": "https://odbc.postgresql.org",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Official PostgreSQL ODBC driver",
+  "homepage": "https://odbc.postgresql.org",
   "versions": {
     "stable": "10.02.0000",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "openssl",
-    "postgresql",
-    "unixodbc",
-    "libiodbc"
-  ],
-  "recommended_dependencies": [
-    "unixodbc"
-  ],
-  "optional_dependencies": [
-    "libiodbc"
-  ],
-  "build_dependencies": [
-
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--without-unixodbc",
-      "description": "Build without unixodbc support"
-    },
-    {
-      "option": "--with-libiodbc",
-      "description": "Build with libiodbc support"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -75,5 +39,42 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--without-unixodbc",
+      "description": "Build without unixodbc support"
+    },
+    {
+      "option": "--with-libiodbc",
+      "description": "Build with libiodbc support"
+    }
+  ],
+  "build_dependencies": [
+
+  ],
+  "dependencies": [
+    "openssl",
+    "postgresql"
+  ],
+  "recommended_dependencies": [
+    "unixodbc"
+  ],
+  "optional_dependencies": [
+    "libiodbc"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

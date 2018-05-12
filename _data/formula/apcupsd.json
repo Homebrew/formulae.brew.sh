@@ -1,50 +1,23 @@
 {
   "name": "apcupsd",
   "full_name": "apcupsd",
-  "desc": "Daemon for controlling APC UPSes",
-  "homepage": "http://www.apcupsd.org",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Daemon for controlling APC UPSes",
+  "homepage": "http://www.apcupsd.org",
   "versions": {
     "stable": "3.14.14",
-    "bottle": true,
     "devel": null,
-    "head": null
+    "head": null,
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "gd",
-    "libusb-compat"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-
-  ],
-  "build_dependencies": [
-
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "For apcupsd to be able to communicate with UPSes connected via USB,\nthe kernel extension must be installed by the root user:\n\n  sudo cp -pR /home/travis/Homebrew/Cellar/apcupsd/3.14.14/Library/Extensions/ApcupsdDummy.kext /System/Library/Extensions/\n  sudo chown -R root:wheel /System/Library/Extensions/ApcupsdDummy.kext\n  sudo touch /System/Library/Extensions/\n\nTo load apcupsd at startup, activate the included Launch Daemon:\n\n  sudo cp /home/travis/Homebrew/Cellar/apcupsd/3.14.14/Library/LaunchDaemons/org.apcupsd.apcupsd.plist /Library/LaunchDaemons\n  sudo chmod 644 /Library/LaunchDaemons/org.apcupsd.apcupsd.plist\n  sudo launchctl load -w /Library/LaunchDaemons/org.apcupsd.apcupsd.plist\n\nIf this is an upgrade and you already have the Launch Daemon loaded, you\nhave to unload the Launch Daemon before reinstalling it:\n\n  sudo launchctl unload -w /Library/LaunchDaemons/org.apcupsd.apcupsd.plist\n  sudo rm /Library/LaunchDaemons/org.apcupsd.apcupsd.plist\n",
-  "requirements": [
-
-  ],
-  "options": [
-
-  ],
   "bottle": {
     "stable": {
       "rebuild": 1,
@@ -66,5 +39,35 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+
+  ],
+  "dependencies": [
+    "gd",
+    "libusb-compat"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "For apcupsd to be able to communicate with UPSes connected via USB,\nthe kernel extension must be installed by the root user:\n\n  sudo cp -pR /home/travis/Homebrew/Cellar/apcupsd/3.14.14/Library/Extensions/ApcupsdDummy.kext /System/Library/Extensions/\n  sudo chown -R root:wheel /System/Library/Extensions/ApcupsdDummy.kext\n  sudo touch /System/Library/Extensions/\n\nTo load apcupsd at startup, activate the included Launch Daemon:\n\n  sudo cp /home/travis/Homebrew/Cellar/apcupsd/3.14.14/Library/LaunchDaemons/org.apcupsd.apcupsd.plist /Library/LaunchDaemons\n  sudo chmod 644 /Library/LaunchDaemons/org.apcupsd.apcupsd.plist\n  sudo launchctl load -w /Library/LaunchDaemons/org.apcupsd.apcupsd.plist\n\nIf this is an upgrade and you already have the Launch Daemon loaded, you\nhave to unload the Launch Daemon before reinstalling it:\n\n  sudo launchctl unload -w /Library/LaunchDaemons/org.apcupsd.apcupsd.plist\n  sudo rm /Library/LaunchDaemons/org.apcupsd.apcupsd.plist\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

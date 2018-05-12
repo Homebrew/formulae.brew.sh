@@ -1,69 +1,23 @@
 {
   "name": "open-mpi",
   "full_name": "open-mpi",
-  "desc": "High performance message passing library",
-  "homepage": "https://www.open-mpi.org/",
   "oldname": null,
   "aliases": [
     "openmpi"
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "High performance message passing library",
+  "homepage": "https://www.open-mpi.org/",
   "versions": {
     "stable": "3.0.1",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 1,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "gcc",
-    "libevent"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-
-  ],
-  "build_dependencies": [
-
-  ],
-  "conflicts_with": [
-    "mpich"
-  ],
-  "caveats": null,
-  "requirements": [
-    {
-      "name": "java",
-      "cask": "java",
-      "download": "https://www.oracle.com/technetwork/java/javase/downloads/index.html"
-    }
-  ],
-  "options": [
-    {
-      "option": "--with-mpi-thread-multiple",
-      "description": "Enable MPI_THREAD_MULTIPLE"
-    },
-    {
-      "option": "--with-cxx-bindings",
-      "description": "Enable C++ MPI bindings (deprecated as of MPI-3.0)"
-    },
-    {
-      "option": "--without-fortran",
-      "description": "Do not build the Fortran bindings"
-    },
-    {
-      "option": "--with-java",
-      "description": "Build with java support"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -85,5 +39,54 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--with-mpi-thread-multiple",
+      "description": "Enable MPI_THREAD_MULTIPLE"
+    },
+    {
+      "option": "--with-cxx-bindings",
+      "description": "Enable C++ MPI bindings (deprecated as of MPI-3.0)"
+    },
+    {
+      "option": "--without-fortran",
+      "description": "Do not build the Fortran bindings"
+    },
+    {
+      "option": "--with-java",
+      "description": "Build with java support"
+    }
+  ],
+  "build_dependencies": [
+
+  ],
+  "dependencies": [
+    "gcc",
+    "libevent"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "requirements": [
+    {
+      "name": "java",
+      "cask": "java",
+      "download": "https://www.oracle.com/technetwork/java/javase/downloads/index.html"
+    }
+  ],
+  "conflicts_with": [
+    "mpich"
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

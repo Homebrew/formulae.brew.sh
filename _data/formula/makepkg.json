@@ -1,72 +1,23 @@
 {
   "name": "makepkg",
   "full_name": "makepkg",
-  "desc": "Compile and build packages suitable for installation with pacman",
-  "homepage": "https://wiki.archlinux.org/index.php/makepkg",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Compile and build packages suitable for installation with pacman",
+  "homepage": "https://wiki.archlinux.org/index.php/makepkg",
   "versions": {
     "stable": "5.0.2",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "automake",
-    "autoconf",
-    "asciidoc",
-    "docbook-xsl",
-    "libtool",
-    "pkg-config",
-    "libarchive",
-    "bash",
-    "fakeroot",
-    "gettext",
-    "openssl",
-    "gpgme"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-    "gpgme"
-  ],
-  "build_dependencies": [
-    "automake",
-    "autoconf",
-    "asciidoc",
-    "docbook-xsl",
-    "libtool",
-    "pkg-config"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-    {
-      "name": "macos",
-      "cask": null,
-      "download": null
-    }
-  ],
-  "options": [
-    {
-      "option": "--with-gpgme",
-      "description": "Build with gpgme support"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -92,5 +43,50 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--with-gpgme",
+      "description": "Build with gpgme support"
+    }
+  ],
+  "build_dependencies": [
+    "automake",
+    "autoconf",
+    "asciidoc",
+    "docbook-xsl",
+    "libtool",
+    "pkg-config"
+  ],
+  "dependencies": [
+    "libarchive",
+    "bash",
+    "fakeroot",
+    "gettext",
+    "openssl"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "gpgme"
+  ],
+  "requirements": [
+    {
+      "name": "macos",
+      "cask": null,
+      "download": null
+    }
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

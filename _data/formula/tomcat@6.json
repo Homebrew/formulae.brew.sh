@@ -1,27 +1,35 @@
 {
   "name": "tomcat@6",
   "full_name": "tomcat@6",
-  "desc": "Implementation of Java Servlet and JavaServer Pages",
-  "homepage": "https://tomcat.apache.org/",
   "oldname": "tomcat6",
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Implementation of Java Servlet and JavaServer Pages",
+  "homepage": "https://tomcat.apache.org/",
   "versions": {
     "stable": "6.0.53",
-    "bottle": false,
     "devel": null,
-    "head": null
+    "head": null,
+    "bottle": false
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
+  "bottle": {
+  },
+  "keg_only": true,
+  "options": [
+    {
+      "option": "--with-fulldocs",
+      "description": "Install full documentation locally"
+    }
+  ],
+  "build_dependencies": [
 
   ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": true,
   "dependencies": [
 
   ],
@@ -31,13 +39,6 @@
   "optional_dependencies": [
 
   ],
-  "build_dependencies": [
-
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "Some of the support scripts used by Tomcat have very generic names.\nThese are likely to conflict with support scripts used by other Java-based\nserver software.\nYou can add /home/travis/Homebrew/Cellar/tomcat@6/6.0.53/bin to your PATH instead.\n",
   "requirements": [
     {
       "name": "java",
@@ -45,12 +46,14 @@
       "download": "https://www.oracle.com/technetwork/java/javase/downloads/index.html"
     }
   ],
-  "options": [
-    {
-      "option": "--with-fulldocs",
-      "description": "Install full documentation locally"
-    }
+  "conflicts_with": [
+
   ],
-  "bottle": {
-  }
+  "caveats": "Some of the support scripts used by Tomcat have very generic names.\nThese are likely to conflict with support scripts used by other Java-based\nserver software.\nYou can add /home/travis/Homebrew/Cellar/tomcat@6/6.0.53/bin to your PATH instead.\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

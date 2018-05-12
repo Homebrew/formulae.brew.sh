@@ -1,57 +1,46 @@
 {
   "name": "postgis",
   "full_name": "postgis",
-  "desc": "Adds support for geographic objects to PostgreSQL",
-  "homepage": "https://postgis.net/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Adds support for geographic objects to PostgreSQL",
+  "homepage": "https://postgis.net/",
   "versions": {
     "stable": "2.4.4",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 1,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/postgis-2.4.4_1.high_sierra.bottle.tar.gz",
+          "sha256": "39ca73e792f68197d9c7543300cfea6a36326c4ced5ac5b1f46484dbffad8fd2"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/postgis-2.4.4_1.sierra.bottle.tar.gz",
+          "sha256": "7d4bb0d80a5a7221815514b10781d021901b489cb405b02b0d0975661ea0a348"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/postgis-2.4.4_1.el_capitan.bottle.tar.gz",
+          "sha256": "2bb8047b0735acf4bec62f60aad084cf7b32a1e426d7def2dc00d8591030f46d"
+        }
+      }
+    }
+  },
   "keg_only": false,
-  "dependencies": [
-    "pkg-config",
-    "gpp",
-    "postgresql",
-    "proj",
-    "geos",
-    "json-c",
-    "gdal",
-    "pcre",
-    "sfcgal",
-    "protobuf-c"
-  ],
-  "recommended_dependencies": [
-    "gdal",
-    "sfcgal"
-  ],
-  "optional_dependencies": [
-    "protobuf-c"
-  ],
-  "build_dependencies": [
-    "pkg-config",
-    "gpp"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "To create a spatially-enabled database, see the documentation:\n  https://postgis.net/docs/manual-2.4/postgis_installation.html#create_new_db_extensions\nIf you are currently using PostGIS 2.0+, you can go the soft upgrade path:\n  ALTER EXTENSION postgis UPDATE TO \"2.4.4\";\nUsers of 1.5 and below will need to go the hard-upgrade path, see here:\n  https://postgis.net/docs/manual-2.4/postgis_installation.html#upgrading\n\nPostGIS SQL scripts installed to:\n  /home/travis/Homebrew/opt/postgis/share/postgis\nPostGIS plugin libraries installed to:\n  /home/travis/Homebrew/lib\nPostGIS extension modules installed to:\n  /home/travis/Homebrew/share/postgresql/extension\n",
-  "requirements": [
-
-  ],
   "options": [
     {
       "option": "--with-gui",
@@ -78,26 +67,35 @@
       "description": "Build without sfcgal support"
     }
   ],
-  "bottle": {
-    "stable": {
-      "rebuild": 0,
-      "cellar": ":any",
-      "prefix": "/usr/local",
-      "root_url": "https://homebrew.bintray.com/bottles",
-      "files": {
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/postgis-2.4.4_1.high_sierra.bottle.tar.gz",
-          "sha256": "39ca73e792f68197d9c7543300cfea6a36326c4ced5ac5b1f46484dbffad8fd2"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/postgis-2.4.4_1.sierra.bottle.tar.gz",
-          "sha256": "7d4bb0d80a5a7221815514b10781d021901b489cb405b02b0d0975661ea0a348"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/postgis-2.4.4_1.el_capitan.bottle.tar.gz",
-          "sha256": "2bb8047b0735acf4bec62f60aad084cf7b32a1e426d7def2dc00d8591030f46d"
-        }
-      }
-    }
-  }
+  "build_dependencies": [
+    "pkg-config",
+    "gpp"
+  ],
+  "dependencies": [
+    "postgresql",
+    "proj",
+    "geos",
+    "json-c",
+    "pcre"
+  ],
+  "recommended_dependencies": [
+    "gdal",
+    "sfcgal"
+  ],
+  "optional_dependencies": [
+    "protobuf-c"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "To create a spatially-enabled database, see the documentation:\n  https://postgis.net/docs/manual-2.4/postgis_installation.html#create_new_db_extensions\nIf you are currently using PostGIS 2.0+, you can go the soft upgrade path:\n  ALTER EXTENSION postgis UPDATE TO \"2.4.4\";\nUsers of 1.5 and below will need to go the hard-upgrade path, see here:\n  https://postgis.net/docs/manual-2.4/postgis_installation.html#upgrading\n\nPostGIS SQL scripts installed to:\n  /home/travis/Homebrew/opt/postgis/share/postgis\nPostGIS plugin libraries installed to:\n  /home/travis/Homebrew/lib\nPostGIS extension modules installed to:\n  /home/travis/Homebrew/share/postgresql/extension\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

@@ -1,51 +1,46 @@
 {
   "name": "openvdb",
   "full_name": "openvdb",
-  "desc": "Sparse volume processing toolkit",
-  "homepage": "http://www.openvdb.org/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Sparse volume processing toolkit",
+  "homepage": "http://www.openvdb.org/",
   "versions": {
     "stable": "5.1.0",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 1,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/openvdb-5.1.0_1.high_sierra.bottle.tar.gz",
+          "sha256": "43580bd6634304a2e88d98c26c027de4692fd780e81e0e162398011db19b74a0"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/openvdb-5.1.0_1.sierra.bottle.tar.gz",
+          "sha256": "f3db82e403b65d5b1aaba6294882d763542f2cf5b0732b8572e477d088112811"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/openvdb-5.1.0_1.el_capitan.bottle.tar.gz",
+          "sha256": "dda43c9bd28c392b6375547ba303c0a4946aad2543f5cb3e90a7d020978a8d5e"
+        }
+      }
+    }
+  },
   "keg_only": false,
-  "dependencies": [
-    "boost",
-    "ilmbase",
-    "openexr",
-    "tbb",
-    "jemalloc",
-    "glfw"
-  ],
-  "recommended_dependencies": [
-    "jemalloc"
-  ],
-  "optional_dependencies": [
-    "glfw"
-  ],
-  "build_dependencies": [
-
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-
-  ],
   "options": [
     {
       "option": "--with-glfw",
@@ -68,26 +63,32 @@
       "description": "Build without jemalloc support"
     }
   ],
-  "bottle": {
-    "stable": {
-      "rebuild": 0,
-      "cellar": "/usr/local/Cellar",
-      "prefix": "/usr/local",
-      "root_url": "https://homebrew.bintray.com/bottles",
-      "files": {
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/openvdb-5.1.0_1.high_sierra.bottle.tar.gz",
-          "sha256": "43580bd6634304a2e88d98c26c027de4692fd780e81e0e162398011db19b74a0"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/openvdb-5.1.0_1.sierra.bottle.tar.gz",
-          "sha256": "f3db82e403b65d5b1aaba6294882d763542f2cf5b0732b8572e477d088112811"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/openvdb-5.1.0_1.el_capitan.bottle.tar.gz",
-          "sha256": "dda43c9bd28c392b6375547ba303c0a4946aad2543f5cb3e90a7d020978a8d5e"
-        }
-      }
-    }
-  }
+  "build_dependencies": [
+
+  ],
+  "dependencies": [
+    "boost",
+    "ilmbase",
+    "openexr",
+    "tbb"
+  ],
+  "recommended_dependencies": [
+    "jemalloc"
+  ],
+  "optional_dependencies": [
+    "glfw"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

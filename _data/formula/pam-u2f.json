@@ -1,59 +1,23 @@
 {
   "name": "pam-u2f",
   "full_name": "pam-u2f",
-  "desc": "Provides an easy way to use U2F-compliant authenticators with PAM",
-  "homepage": "https://developers.yubico.com/pam-u2f/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Provides an easy way to use U2F-compliant authenticators with PAM",
+  "homepage": "https://developers.yubico.com/pam-u2f/",
   "versions": {
     "stable": "1.0.6",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "pkg-config",
-    "libtool",
-    "autoconf",
-    "automake",
-    "asciidoc",
-    "libu2f-host",
-    "libu2f-server"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-
-  ],
-  "build_dependencies": [
-    "pkg-config",
-    "libtool",
-    "autoconf",
-    "automake",
-    "asciidoc"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "To use a U2F key for PAM authentication, specify the full path to the\nmodule (/home/travis/Homebrew/opt/pam-u2f/lib/pam/pam_u2f.so) in a PAM\nconfiguration. You can find all PAM configurations in /etc/pam.d.\n\nFor further installation instructions, please visit\nhttps://developers.yubico.com/pam-u2f/#installation.\n",
-  "requirements": [
-
-  ],
-  "options": [
-
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -75,5 +39,39 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+    "pkg-config",
+    "libtool",
+    "autoconf",
+    "automake",
+    "asciidoc"
+  ],
+  "dependencies": [
+    "libu2f-host",
+    "libu2f-server"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "To use a U2F key for PAM authentication, specify the full path to the\nmodule (/home/travis/Homebrew/opt/pam-u2f/lib/pam/pam_u2f.so) in a PAM\nconfiguration. You can find all PAM configurations in /etc/pam.d.\n\nFor further installation instructions, please visit\nhttps://developers.yubico.com/pam-u2f/#installation.\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

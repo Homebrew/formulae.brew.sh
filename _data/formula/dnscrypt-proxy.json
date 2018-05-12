@@ -1,49 +1,23 @@
 {
   "name": "dnscrypt-proxy",
   "full_name": "dnscrypt-proxy",
-  "desc": "Secure communications between a client and a DNS resolver",
-  "homepage": "https://github.com/jedisct1/dnscrypt-proxy",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Secure communications between a client and a DNS resolver",
+  "homepage": "https://github.com/jedisct1/dnscrypt-proxy",
   "versions": {
     "stable": "2.0.12",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "go"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-
-  ],
-  "build_dependencies": [
-    "go"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "After starting dnscrypt-proxy, you will need to point your\nlocal DNS server to 127.0.0.1. You can do this by going to\nSystem Preferences > \"Network\" and clicking the \"Advanced...\"\nbutton for your interface. You will see a \"DNS\" tab where you\ncan click \"+\" and enter 127.0.0.1 in the \"DNS Servers\" section.\n\nBy default, dnscrypt-proxy runs on localhost (127.0.0.1), port 53,\nbalancing traffic across a set of resolvers. If you would like to\nchange these settings, you will have to edit the configuration file:\n  /home/travis/Homebrew/etc/dnscrypt-proxy.toml\n\nTo check that dnscrypt-proxy is working correctly, open Terminal and enter the\nfollowing command. Replace en1 with whatever network interface you're using:\n\n  sudo tcpdump -i en1 -vvv 'port 443'\n\nYou should see a line in the result that looks like this:\n\n resolver.dnscrypt.info\n",
-  "requirements": [
-
-  ],
-  "options": [
-
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -65,5 +39,34 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+    "go"
+  ],
+  "dependencies": [
+
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "After starting dnscrypt-proxy, you will need to point your\nlocal DNS server to 127.0.0.1. You can do this by going to\nSystem Preferences > \"Network\" and clicking the \"Advanced...\"\nbutton for your interface. You will see a \"DNS\" tab where you\ncan click \"+\" and enter 127.0.0.1 in the \"DNS Servers\" section.\n\nBy default, dnscrypt-proxy runs on localhost (127.0.0.1), port 53,\nbalancing traffic across a set of resolvers. If you would like to\nchange these settings, you will have to edit the configuration file:\n  /home/travis/Homebrew/etc/dnscrypt-proxy.toml\n\nTo check that dnscrypt-proxy is working correctly, open Terminal and enter the\nfollowing command. Replace en1 with whatever network interface you're using:\n\n  sudo tcpdump -i en1 -vvv 'port 443'\n\nYou should see a line in the result that looks like this:\n\n resolver.dnscrypt.info\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

@@ -1,54 +1,46 @@
 {
   "name": "getdns",
   "full_name": "getdns",
-  "desc": "Modern asynchronous DNS API",
-  "homepage": "https://getdnsapi.net",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Modern asynchronous DNS API",
+  "homepage": "https://getdnsapi.net",
   "versions": {
     "stable": "1.4.2",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/getdns-1.4.2.high_sierra.bottle.tar.gz",
+          "sha256": "27ebde7d04d9f9f3add35f91ab6d01aa5ac26014a7875ce1c769a4ebe8013688"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/getdns-1.4.2.sierra.bottle.tar.gz",
+          "sha256": "ea8ec5281cfcd4b930769ac4e70cb81da85383cd0d4c97d0e8d41173800da46d"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/getdns-1.4.2.el_capitan.bottle.tar.gz",
+          "sha256": "27791fe9a71bafb478549389c132b63187037297a9f349bf45301b5df4f9d863"
+        }
+      }
+    }
+  },
   "keg_only": false,
-  "dependencies": [
-    "openssl",
-    "unbound",
-    "libidn",
-    "libevent",
-    "libuv",
-    "libev"
-  ],
-  "recommended_dependencies": [
-    "unbound",
-    "libidn",
-    "libevent"
-  ],
-  "optional_dependencies": [
-    "libuv",
-    "libev"
-  ],
-  "build_dependencies": [
-
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-
-  ],
   "options": [
     {
       "option": "--without-unbound",
@@ -71,26 +63,32 @@
       "description": "Build with libev support"
     }
   ],
-  "bottle": {
-    "stable": {
-      "rebuild": 0,
-      "cellar": "/usr/local/Cellar",
-      "prefix": "/usr/local",
-      "root_url": "https://homebrew.bintray.com/bottles",
-      "files": {
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/getdns-1.4.2.high_sierra.bottle.tar.gz",
-          "sha256": "27ebde7d04d9f9f3add35f91ab6d01aa5ac26014a7875ce1c769a4ebe8013688"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/getdns-1.4.2.sierra.bottle.tar.gz",
-          "sha256": "ea8ec5281cfcd4b930769ac4e70cb81da85383cd0d4c97d0e8d41173800da46d"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/getdns-1.4.2.el_capitan.bottle.tar.gz",
-          "sha256": "27791fe9a71bafb478549389c132b63187037297a9f349bf45301b5df4f9d863"
-        }
-      }
-    }
-  }
+  "build_dependencies": [
+
+  ],
+  "dependencies": [
+    "openssl"
+  ],
+  "recommended_dependencies": [
+    "unbound",
+    "libidn",
+    "libevent"
+  ],
+  "optional_dependencies": [
+    "libuv",
+    "libev"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

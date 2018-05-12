@@ -1,64 +1,23 @@
 {
   "name": "crystal-lang",
   "full_name": "crystal-lang",
-  "desc": "Fast and statically typed, compiled language with Ruby-like syntax",
-  "homepage": "https://crystal-lang.org/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Fast and statically typed, compiled language with Ruby-like syntax",
+  "homepage": "https://crystal-lang.org/",
   "versions": {
     "stable": "0.24.2",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 1,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "pkg-config",
-    "libatomic_ops",
-    "libevent",
-    "bdw-gc",
-    "llvm@5",
-    "pcre",
-    "gmp",
-    "libyaml"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-
-  ],
-  "build_dependencies": [
-    "pkg-config",
-    "libatomic_ops"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--without-release",
-      "description": "Do not build the compiler in release mode"
-    },
-    {
-      "option": "--without-shards",
-      "description": "Do not include `shards` dependency manager"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -80,5 +39,47 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--without-release",
+      "description": "Do not build the compiler in release mode"
+    },
+    {
+      "option": "--without-shards",
+      "description": "Do not include `shards` dependency manager"
+    }
+  ],
+  "build_dependencies": [
+    "pkg-config",
+    "libatomic_ops"
+  ],
+  "dependencies": [
+    "libevent",
+    "bdw-gc",
+    "llvm@5",
+    "pcre",
+    "gmp",
+    "libyaml"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

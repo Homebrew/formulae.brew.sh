@@ -1,57 +1,23 @@
 {
   "name": "mosquitto",
   "full_name": "mosquitto",
-  "desc": "Message broker implementing the MQTT protocol",
-  "homepage": "https://mosquitto.org/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Message broker implementing the MQTT protocol",
+  "homepage": "https://mosquitto.org/",
   "versions": {
     "stable": "1.4.14",
-    "bottle": true,
     "devel": null,
-    "head": null
+    "head": null,
+    "bottle": true
   },
   "revision": 2,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "pkg-config",
-    "cmake",
-    "c-ares",
-    "openssl",
-    "libwebsockets"
-  ],
-  "recommended_dependencies": [
-    "libwebsockets"
-  ],
-  "optional_dependencies": [
-
-  ],
-  "build_dependencies": [
-    "pkg-config",
-    "cmake"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "mosquitto has been installed with a default configuration file.\nYou can make changes to the configuration by editing:\n    /home/travis/Homebrew/etc/mosquitto/mosquitto.conf\n",
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--without-libwebsockets",
-      "description": "Build without libwebsockets support"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -73,5 +39,39 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--without-libwebsockets",
+      "description": "Build without libwebsockets support"
+    }
+  ],
+  "build_dependencies": [
+    "pkg-config",
+    "cmake"
+  ],
+  "dependencies": [
+    "c-ares",
+    "openssl"
+  ],
+  "recommended_dependencies": [
+    "libwebsockets"
+  ],
+  "optional_dependencies": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "mosquitto has been installed with a default configuration file.\nYou can make changes to the configuration by editing:\n    /home/travis/Homebrew/etc/mosquitto/mosquitto.conf\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

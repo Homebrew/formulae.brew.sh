@@ -1,66 +1,23 @@
 {
   "name": "gromacs",
   "full_name": "gromacs",
-  "desc": "Versatile package for molecular dynamics calculations",
-  "homepage": "http://www.gromacs.org/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Versatile package for molecular dynamics calculations",
+  "homepage": "http://www.gromacs.org/",
   "versions": {
     "stable": "2018.1",
-    "bottle": true,
     "devel": null,
-    "head": null
+    "head": null,
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "cmake",
-    "fftw",
-    "gsl"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-
-  ],
-  "build_dependencies": [
-    "cmake"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "GMXRC and other scripts installed to:\n  /home/travis/Homebrew/share/gromacs\n",
-  "requirements": [
-    {
-      "name": "x11",
-      "cask": "xquartz",
-      "download": "https://xquartz.macosforge.org"
-    }
-  ],
-  "options": [
-    {
-      "option": "--with-double",
-      "description": "Enables double precision"
-    },
-    {
-      "option": "--with-mpi",
-      "description": "Enable parallel support"
-    },
-    {
-      "option": "--with-x11",
-      "description": "Build with x11 support"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -82,5 +39,50 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--with-double",
+      "description": "Enables double precision"
+    },
+    {
+      "option": "--with-mpi",
+      "description": "Enable parallel support"
+    },
+    {
+      "option": "--with-x11",
+      "description": "Build with x11 support"
+    }
+  ],
+  "build_dependencies": [
+    "cmake"
+  ],
+  "dependencies": [
+    "fftw",
+    "gsl"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "requirements": [
+    {
+      "name": "x11",
+      "cask": "xquartz",
+      "download": "https://xquartz.macosforge.org"
+    }
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "GMXRC and other scripts installed to:\n  /home/travis/Homebrew/share/gromacs\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

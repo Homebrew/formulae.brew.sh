@@ -1,57 +1,23 @@
 {
   "name": "osm2pgsql",
   "full_name": "osm2pgsql",
-  "desc": "OpenStreetMap data to PostgreSQL converter",
-  "homepage": "https://wiki.openstreetmap.org/wiki/Osm2pgsql",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "OpenStreetMap data to PostgreSQL converter",
+  "homepage": "https://wiki.openstreetmap.org/wiki/Osm2pgsql",
   "versions": {
     "stable": "0.96.0",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "cmake",
-    "postgresql",
-    "boost",
-    "geos",
-    "proj",
-    "lua"
-  ],
-  "recommended_dependencies": [
-    "lua"
-  ],
-  "optional_dependencies": [
-
-  ],
-  "build_dependencies": [
-    "cmake"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--without-lua",
-      "description": "Build without lua support"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -73,5 +39,40 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--without-lua",
+      "description": "Build without lua support"
+    }
+  ],
+  "build_dependencies": [
+    "cmake"
+  ],
+  "dependencies": [
+    "postgresql",
+    "boost",
+    "geos",
+    "proj"
+  ],
+  "recommended_dependencies": [
+    "lua"
+  ],
+  "optional_dependencies": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

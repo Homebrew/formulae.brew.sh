@@ -1,61 +1,23 @@
 {
   "name": "pdns",
   "full_name": "pdns",
-  "desc": "Authoritative nameserver",
-  "homepage": "https://www.powerdns.com",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Authoritative nameserver",
+  "homepage": "https://www.powerdns.com",
   "versions": {
     "stable": "4.1.2",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "pkg-config",
-    "boost",
-    "lua",
-    "openssl",
-    "sqlite",
-    "postgresql"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-    "postgresql"
-  ],
-  "build_dependencies": [
-    "pkg-config"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--with-postgresql",
-      "description": "Enable the PostgreSQL backend"
-    },
-    {
-      "option": "--with-remote",
-      "description": "enable the Remote backend"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -77,5 +39,44 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--with-postgresql",
+      "description": "Enable the PostgreSQL backend"
+    },
+    {
+      "option": "--with-remote",
+      "description": "enable the Remote backend"
+    }
+  ],
+  "build_dependencies": [
+    "pkg-config"
+  ],
+  "dependencies": [
+    "boost",
+    "lua",
+    "openssl",
+    "sqlite"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "postgresql"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

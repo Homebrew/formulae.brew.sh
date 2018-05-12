@@ -1,56 +1,46 @@
 {
   "name": "links",
   "full_name": "links",
-  "desc": "Lynx-like WWW browser that supports tables, menus, etc.",
-  "homepage": "http://links.twibright.com/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Lynx-like WWW browser that supports tables, menus, etc.",
+  "homepage": "http://links.twibright.com/",
   "versions": {
     "stable": "2.16",
-    "bottle": true,
     "devel": null,
-    "head": null
+    "head": null,
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "pkg-config",
-    "openssl",
-    "libtiff",
-    "jpeg",
-    "librsvg"
-  ],
-  "recommended_dependencies": [
-    "openssl"
-  ],
-  "optional_dependencies": [
-    "libtiff",
-    "jpeg",
-    "librsvg"
-  ],
-  "build_dependencies": [
-    "pkg-config"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-    {
-      "name": "x11",
-      "cask": "xquartz",
-      "download": "https://xquartz.macosforge.org"
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/links-2.16.high_sierra.bottle.tar.gz",
+          "sha256": "8e70c80765c28eaec7146aaa806d3294e1857f06148c21900f7e4e505c561495"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/links-2.16.sierra.bottle.tar.gz",
+          "sha256": "d26fabd7bc2111c443b5c3169ed5f4c246e5d0a234cb7da98ff040e83ff1e232"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/links-2.16.el_capitan.bottle.tar.gz",
+          "sha256": "72b090e5cd35aced4c32e269ce546c4f39184f94b6efa4214e01f520ea666aee"
+        }
+      }
     }
-  ],
+  },
+  "keg_only": false,
   "options": [
     {
       "option": "--without-openssl",
@@ -73,26 +63,35 @@
       "description": "Build with x11 support"
     }
   ],
-  "bottle": {
-    "stable": {
-      "rebuild": 0,
-      "cellar": ":any",
-      "prefix": "/usr/local",
-      "root_url": "https://homebrew.bintray.com/bottles",
-      "files": {
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/links-2.16.high_sierra.bottle.tar.gz",
-          "sha256": "8e70c80765c28eaec7146aaa806d3294e1857f06148c21900f7e4e505c561495"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/links-2.16.sierra.bottle.tar.gz",
-          "sha256": "d26fabd7bc2111c443b5c3169ed5f4c246e5d0a234cb7da98ff040e83ff1e232"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/links-2.16.el_capitan.bottle.tar.gz",
-          "sha256": "72b090e5cd35aced4c32e269ce546c4f39184f94b6efa4214e01f520ea666aee"
-        }
-      }
+  "build_dependencies": [
+    "pkg-config"
+  ],
+  "dependencies": [
+
+  ],
+  "recommended_dependencies": [
+    "openssl"
+  ],
+  "optional_dependencies": [
+    "libtiff",
+    "jpeg",
+    "librsvg"
+  ],
+  "requirements": [
+    {
+      "name": "x11",
+      "cask": "xquartz",
+      "download": "https://xquartz.macosforge.org"
     }
-  }
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

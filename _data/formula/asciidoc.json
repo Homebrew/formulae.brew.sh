@@ -1,52 +1,23 @@
 {
   "name": "asciidoc",
   "full_name": "asciidoc",
-  "desc": "Formatter/translator for text files to numerous formats. Includes a2x",
-  "homepage": "http://asciidoc.org/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Formatter/translator for text files to numerous formats. Includes a2x",
+  "homepage": "http://asciidoc.org/",
   "versions": {
     "stable": "8.6.10",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 1,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "autoconf",
-    "docbook-xsl",
-    "docbook"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-
-  ],
-  "build_dependencies": [
-    "autoconf",
-    "docbook-xsl"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "If you intend to process AsciiDoc files through an XML stage\n(such as a2x for manpage generation) you need to add something\nlike:\n\n  export XML_CATALOG_FILES=/home/travis/Homebrew/etc/xml/catalog\n\nto your shell rc file so that xmllint can find AsciiDoc's\ncatalog files.\n\nSee `man 1 xmllint' for more.\n",
-  "requirements": [
-
-  ],
-  "options": [
-
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -68,5 +39,35 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+    "autoconf",
+    "docbook-xsl"
+  ],
+  "dependencies": [
+    "docbook"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "If you intend to process AsciiDoc files through an XML stage\n(such as a2x for manpage generation) you need to add something\nlike:\n\n  export XML_CATALOG_FILES=/home/travis/Homebrew/etc/xml/catalog\n\nto your shell rc file so that xmllint can find AsciiDoc's\ncatalog files.\n\nSee `man 1 xmllint' for more.\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

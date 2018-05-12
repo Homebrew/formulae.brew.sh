@@ -1,63 +1,23 @@
 {
   "name": "uhd",
   "full_name": "uhd",
-  "desc": "Hardware driver for all USRP devices",
-  "homepage": "https://files.ettus.com/manual/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Hardware driver for all USRP devices",
+  "homepage": "https://files.ettus.com/manual/",
   "versions": {
     "stable": "3.11.0.1",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 1,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "cmake",
-    "boost",
-    "libusb",
-    "python@2",
-    "doxygen",
-    "gpsd"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-    "doxygen",
-    "gpsd"
-  ],
-  "build_dependencies": [
-    "cmake",
-    "doxygen"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--with-doxygen",
-      "description": "Build with doxygen support"
-    },
-    {
-      "option": "--with-gpsd",
-      "description": "Build with gpsd support"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -79,5 +39,45 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--with-doxygen",
+      "description": "Build with doxygen support"
+    },
+    {
+      "option": "--with-gpsd",
+      "description": "Build with gpsd support"
+    }
+  ],
+  "build_dependencies": [
+    "cmake",
+    "doxygen"
+  ],
+  "dependencies": [
+    "boost",
+    "libusb",
+    "python@2"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "doxygen",
+    "gpsd"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

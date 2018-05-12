@@ -1,63 +1,46 @@
 {
   "name": "gegl",
   "full_name": "gegl",
-  "desc": "Graph based image processing framework",
-  "homepage": "http://www.gegl.org/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Graph based image processing framework",
+  "homepage": "http://www.gegl.org/",
   "versions": {
     "stable": "0.4.0",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/gegl-0.4.0.high_sierra.bottle.tar.gz",
+          "sha256": "81a85ee7818d0ccd64ad8320a2a3ebbb026d8692bc8dbcb161e919c7260c82f7"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/gegl-0.4.0.sierra.bottle.tar.gz",
+          "sha256": "3a4e087d25229997fb8e53b5df3193ca9a63bd50be0cbf8fe89b1789ae8642a7"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/gegl-0.4.0.el_capitan.bottle.tar.gz",
+          "sha256": "9283489d42667e47005b08d3ac63c28c74ff8ad3d140e0ae330fcf68e3de439d"
+        }
+      }
+    }
+  },
   "keg_only": false,
-  "dependencies": [
-    "intltool",
-    "pkg-config",
-    "babl",
-    "gettext",
-    "glib",
-    "jpeg",
-    "json-glib",
-    "libpng",
-    "cairo",
-    "librsvg",
-    "lua",
-    "pango",
-    "sdl"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-    "cairo",
-    "librsvg",
-    "lua",
-    "pango",
-    "sdl"
-  ],
-  "build_dependencies": [
-    "intltool",
-    "pkg-config"
-  ],
-  "conflicts_with": [
-    "coreutils"
-  ],
-  "caveats": null,
-  "requirements": [
-
-  ],
   "options": [
     {
       "option": "--with-cairo",
@@ -80,26 +63,39 @@
       "description": "Build with sdl support"
     }
   ],
-  "bottle": {
-    "stable": {
-      "rebuild": 0,
-      "cellar": "/usr/local/Cellar",
-      "prefix": "/usr/local",
-      "root_url": "https://homebrew.bintray.com/bottles",
-      "files": {
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gegl-0.4.0.high_sierra.bottle.tar.gz",
-          "sha256": "81a85ee7818d0ccd64ad8320a2a3ebbb026d8692bc8dbcb161e919c7260c82f7"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gegl-0.4.0.sierra.bottle.tar.gz",
-          "sha256": "3a4e087d25229997fb8e53b5df3193ca9a63bd50be0cbf8fe89b1789ae8642a7"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/gegl-0.4.0.el_capitan.bottle.tar.gz",
-          "sha256": "9283489d42667e47005b08d3ac63c28c74ff8ad3d140e0ae330fcf68e3de439d"
-        }
-      }
-    }
-  }
+  "build_dependencies": [
+    "intltool",
+    "pkg-config"
+  ],
+  "dependencies": [
+    "babl",
+    "gettext",
+    "glib",
+    "jpeg",
+    "json-glib",
+    "libpng"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "cairo",
+    "librsvg",
+    "lua",
+    "pango",
+    "sdl"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+    "coreutils"
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

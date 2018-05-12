@@ -1,56 +1,23 @@
 {
   "name": "emscripten",
   "full_name": "emscripten",
-  "desc": "LLVM bytecode to JavaScript compiler",
-  "homepage": "https://kripken.github.io/emscripten-site/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "LLVM bytecode to JavaScript compiler",
+  "homepage": "https://kripken.github.io/emscripten-site/",
   "versions": {
     "stable": "1.38.0",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "python@2",
-    "cmake",
-    "node",
-    "closure-compiler",
-    "yuicompressor"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-    "closure-compiler"
-  ],
-  "build_dependencies": [
-    "cmake"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "Manually set LLVM_ROOT to\n  /home/travis/Homebrew/opt/emscripten/libexec/llvm/bin\nand comment out BINARYEN_ROOT\nin ~/.emscripten after running `emcc` for the first time.\n",
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--with-closure-compiler",
-      "description": "Build with closure-compiler support"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -72,5 +39,39 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--with-closure-compiler",
+      "description": "Build with closure-compiler support"
+    }
+  ],
+  "build_dependencies": [
+    "cmake"
+  ],
+  "dependencies": [
+    "python@2",
+    "node",
+    "yuicompressor"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "closure-compiler"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "Manually set LLVM_ROOT to\n  /home/travis/Homebrew/opt/emscripten/libexec/llvm/bin\nand comment out BINARYEN_ROOT\nin ~/.emscripten after running `emcc` for the first time.\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

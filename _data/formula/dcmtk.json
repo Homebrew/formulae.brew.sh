@@ -1,68 +1,23 @@
 {
   "name": "dcmtk",
   "full_name": "dcmtk",
-  "desc": "OFFIS DICOM toolkit command-line utilities",
-  "homepage": "https://dicom.offis.de/dcmtk.php.en",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "OFFIS DICOM toolkit command-line utilities",
+  "homepage": "https://dicom.offis.de/dcmtk.php.en",
   "versions": {
     "stable": "3.6.3",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "cmake",
-    "libpng",
-    "libtiff",
-    "openssl",
-    "libiconv"
-  ],
-  "recommended_dependencies": [
-    "openssl"
-  ],
-  "optional_dependencies": [
-    "libiconv"
-  ],
-  "build_dependencies": [
-    "cmake"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--with-docs",
-      "description": "Install development libraries/headers and HTML docs"
-    },
-    {
-      "option": "--with-libiconv",
-      "description": "Build with brewed libiconv. Dcmtk and system libiconv can have problems with utf8."
-    },
-    {
-      "option": "--with-dicomdict",
-      "description": "Build with baked-in DICOM data dictionary."
-    },
-    {
-      "option": "--without-openssl",
-      "description": "Build without openssl support"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -84,5 +39,50 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--with-docs",
+      "description": "Install development libraries/headers and HTML docs"
+    },
+    {
+      "option": "--with-libiconv",
+      "description": "Build with brewed libiconv. Dcmtk and system libiconv can have problems with utf8."
+    },
+    {
+      "option": "--with-dicomdict",
+      "description": "Build with baked-in DICOM data dictionary."
+    },
+    {
+      "option": "--without-openssl",
+      "description": "Build without openssl support"
+    }
+  ],
+  "build_dependencies": [
+    "cmake"
+  ],
+  "dependencies": [
+    "libpng",
+    "libtiff"
+  ],
+  "recommended_dependencies": [
+    "openssl"
+  ],
+  "optional_dependencies": [
+    "libiconv"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

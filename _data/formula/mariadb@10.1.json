@@ -1,47 +1,46 @@
 {
   "name": "mariadb@10.1",
   "full_name": "mariadb@10.1",
-  "desc": "Drop-in replacement for MySQL",
-  "homepage": "https://mariadb.org/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Drop-in replacement for MySQL",
+  "homepage": "https://mariadb.org/",
   "versions": {
     "stable": "10.1.33",
-    "bottle": true,
     "devel": null,
-    "head": null
+    "head": null,
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/mariadb@10.1-10.1.33.high_sierra.bottle.tar.gz",
+          "sha256": "061390ae6b6f68c31573e621f96bd4bf8aa1c92b9587713956d61c7dc511d026"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/mariadb@10.1-10.1.33.sierra.bottle.tar.gz",
+          "sha256": "5140c537c1b64d7b0a4cede64fe62b6cc00825364eb97208d153187e2bff15c6"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/mariadb@10.1-10.1.33.el_capitan.bottle.tar.gz",
+          "sha256": "5ff61e18763ee119cdaa29a2205156bdb72336261c5b915a1774172c918f3ba2"
+        }
+      }
+    }
+  },
   "keg_only": true,
-  "dependencies": [
-    "cmake",
-    "openssl"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-
-  ],
-  "build_dependencies": [
-    "cmake"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "A \"/etc/my.cnf\" from another install may interfere with a Homebrew-built\nserver starting up correctly.\n\nMySQL is configured to only allow connections from localhost by default\n\nTo connect:\n    mysql -uroot\n",
-  "requirements": [
-
-  ],
   "options": [
     {
       "option": "--with-test",
@@ -72,26 +71,29 @@
       "description": "Build with local infile loading support"
     }
   ],
-  "bottle": {
-    "stable": {
-      "rebuild": 0,
-      "cellar": "/usr/local/Cellar",
-      "prefix": "/usr/local",
-      "root_url": "https://homebrew.bintray.com/bottles",
-      "files": {
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/mariadb@10.1-10.1.33.high_sierra.bottle.tar.gz",
-          "sha256": "061390ae6b6f68c31573e621f96bd4bf8aa1c92b9587713956d61c7dc511d026"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/mariadb@10.1-10.1.33.sierra.bottle.tar.gz",
-          "sha256": "5140c537c1b64d7b0a4cede64fe62b6cc00825364eb97208d153187e2bff15c6"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/mariadb@10.1-10.1.33.el_capitan.bottle.tar.gz",
-          "sha256": "5ff61e18763ee119cdaa29a2205156bdb72336261c5b915a1774172c918f3ba2"
-        }
-      }
-    }
-  }
+  "build_dependencies": [
+    "cmake"
+  ],
+  "dependencies": [
+    "openssl"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "A \"/etc/my.cnf\" from another install may interfere with a Homebrew-built\nserver starting up correctly.\n\nMySQL is configured to only allow connections from localhost by default\n\nTo connect:\n    mysql -uroot\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

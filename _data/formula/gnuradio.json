@@ -1,73 +1,46 @@
 {
   "name": "gnuradio",
   "full_name": "gnuradio",
-  "desc": "SDK providing the signal processing runtime and processing blocks",
-  "homepage": "https://gnuradio.org/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "SDK providing the signal processing runtime and processing blocks",
+  "homepage": "https://gnuradio.org/",
   "versions": {
     "stable": "3.7.11",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 4,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/gnuradio-3.7.11_4.high_sierra.bottle.tar.gz",
+          "sha256": "b7659bc81db490f2f12aac8c08a8687f3b44d4e4c40adb284c32780066f42f3a"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/gnuradio-3.7.11_4.sierra.bottle.tar.gz",
+          "sha256": "bb9aa035ea9c23b78830f829741ede4a5592036588fb870b8b42760b38bbfb1c"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/gnuradio-3.7.11_4.el_capitan.bottle.tar.gz",
+          "sha256": "0d8f3e33186012db38826db7560616c43b18cee8cfbf469d2edb36499e94481d"
+        }
+      }
+    }
+  },
   "keg_only": false,
-  "dependencies": [
-    "cmake",
-    "pkg-config",
-    "python@2",
-    "boost",
-    "fftw",
-    "gsl",
-    "zeromq",
-    "swig",
-    "numpy",
-    "doxygen",
-    "sphinx-doc",
-    "uhd",
-    "sdl",
-    "jack",
-    "portaudio",
-    "pygtk",
-    "wxpython"
-  ],
-  "recommended_dependencies": [
-    "python@2",
-    "uhd",
-    "portaudio"
-  ],
-  "optional_dependencies": [
-    "doxygen",
-    "sphinx-doc",
-    "sdl",
-    "jack",
-    "pygtk",
-    "wxpython"
-  ],
-  "build_dependencies": [
-    "cmake",
-    "pkg-config",
-    "swig",
-    "doxygen",
-    "sphinx-doc"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-
-  ],
   "options": [
     {
       "option": "--without-python@2",
@@ -106,26 +79,44 @@
       "description": "Build with wxpython support"
     }
   ],
-  "bottle": {
-    "stable": {
-      "rebuild": 0,
-      "cellar": "/usr/local/Cellar",
-      "prefix": "/usr/local",
-      "root_url": "https://homebrew.bintray.com/bottles",
-      "files": {
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gnuradio-3.7.11_4.high_sierra.bottle.tar.gz",
-          "sha256": "b7659bc81db490f2f12aac8c08a8687f3b44d4e4c40adb284c32780066f42f3a"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gnuradio-3.7.11_4.sierra.bottle.tar.gz",
-          "sha256": "bb9aa035ea9c23b78830f829741ede4a5592036588fb870b8b42760b38bbfb1c"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/gnuradio-3.7.11_4.el_capitan.bottle.tar.gz",
-          "sha256": "0d8f3e33186012db38826db7560616c43b18cee8cfbf469d2edb36499e94481d"
-        }
-      }
-    }
-  }
+  "build_dependencies": [
+    "cmake",
+    "pkg-config",
+    "swig",
+    "doxygen",
+    "sphinx-doc"
+  ],
+  "dependencies": [
+    "boost",
+    "fftw",
+    "gsl",
+    "zeromq",
+    "numpy"
+  ],
+  "recommended_dependencies": [
+    "python@2",
+    "uhd",
+    "portaudio"
+  ],
+  "optional_dependencies": [
+    "doxygen",
+    "sphinx-doc",
+    "sdl",
+    "jack",
+    "pygtk",
+    "wxpython"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

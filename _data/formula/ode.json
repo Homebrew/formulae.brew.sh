@@ -1,71 +1,23 @@
 {
   "name": "ode",
   "full_name": "ode",
-  "desc": "Simulating articulated rigid body dynamics",
-  "homepage": "http://www.ode.org/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Simulating articulated rigid body dynamics",
+  "homepage": "http://www.ode.org/",
   "versions": {
     "stable": "0.15.2",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 1,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "autoconf",
-    "automake",
-    "libtool",
-    "pkg-config",
-    "libccd"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-
-  ],
-  "build_dependencies": [
-    "autoconf",
-    "automake",
-    "libtool",
-    "pkg-config"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-    {
-      "name": "x11",
-      "cask": "xquartz",
-      "download": "https://xquartz.macosforge.org"
-    }
-  ],
-  "options": [
-    {
-      "option": "--with-double-precision",
-      "description": "Compile ODE with double precision"
-    },
-    {
-      "option": "--with-shared",
-      "description": "Compile ODE with shared library support"
-    },
-    {
-      "option": "--with-x11",
-      "description": "Build the drawstuff library and demos"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -87,5 +39,52 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--with-double-precision",
+      "description": "Compile ODE with double precision"
+    },
+    {
+      "option": "--with-shared",
+      "description": "Compile ODE with shared library support"
+    },
+    {
+      "option": "--with-x11",
+      "description": "Build the drawstuff library and demos"
+    }
+  ],
+  "build_dependencies": [
+    "autoconf",
+    "automake",
+    "libtool",
+    "pkg-config"
+  ],
+  "dependencies": [
+    "libccd"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "requirements": [
+    {
+      "name": "x11",
+      "cask": "xquartz",
+      "download": "https://xquartz.macosforge.org"
+    }
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

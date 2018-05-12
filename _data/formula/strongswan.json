@@ -1,57 +1,23 @@
 {
   "name": "strongswan",
   "full_name": "strongswan",
-  "desc": "VPN based on IPsec",
-  "homepage": "https://www.strongswan.org",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "VPN based on IPsec",
+  "homepage": "https://www.strongswan.org",
   "versions": {
     "stable": "5.6.2",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "openssl",
-    "curl"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-    "curl"
-  ],
-  "build_dependencies": [
-
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "strongSwan's configuration files are placed in:\n  /home/travis/Homebrew/etc\n\nYou will have to run both \"ipsec\" and \"charon-cmd\" with \"sudo\".\n",
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--with-curl",
-      "description": "Build with libcurl based fetcher"
-    },
-    {
-      "option": "--with-suite-b",
-      "description": "Build with Suite B support (does not use the IPsec implementation provided by the kernel)"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -73,5 +39,41 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--with-curl",
+      "description": "Build with libcurl based fetcher"
+    },
+    {
+      "option": "--with-suite-b",
+      "description": "Build with Suite B support (does not use the IPsec implementation provided by the kernel)"
+    }
+  ],
+  "build_dependencies": [
+
+  ],
+  "dependencies": [
+    "openssl"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "curl"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "strongSwan's configuration files are placed in:\n  /home/travis/Homebrew/etc\n\nYou will have to run both \"ipsec\" and \"charon-cmd\" with \"sudo\".\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

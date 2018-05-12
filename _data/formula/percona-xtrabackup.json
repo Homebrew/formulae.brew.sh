@@ -1,62 +1,23 @@
 {
   "name": "percona-xtrabackup",
   "full_name": "percona-xtrabackup",
-  "desc": "Open source hot backup tool for InnoDB and XtraDB databases",
-  "homepage": "https://www.percona.com/software/mysql-database/percona-xtrabackup",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Open source hot backup tool for InnoDB and XtraDB databases",
+  "homepage": "https://www.percona.com/software/mysql-database/percona-xtrabackup",
   "versions": {
     "stable": "2.4.10",
-    "bottle": true,
     "devel": null,
-    "head": null
+    "head": null,
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "cmake",
-    "sphinx-doc",
-    "mysql",
-    "libev",
-    "libgcrypt",
-    "openssl"
-  ],
-  "recommended_dependencies": [
-    "mysql"
-  ],
-  "optional_dependencies": [
-
-  ],
-  "build_dependencies": [
-    "cmake",
-    "sphinx-doc"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--without-docs",
-      "description": "Build without man pages (which requires python-sphinx)"
-    },
-    {
-      "option": "--without-mysql",
-      "description": "Build without bundled Perl DBD::mysql module, to use the database of your choice."
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -78,5 +39,44 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--without-docs",
+      "description": "Build without man pages (which requires python-sphinx)"
+    },
+    {
+      "option": "--without-mysql",
+      "description": "Build without bundled Perl DBD::mysql module, to use the database of your choice."
+    }
+  ],
+  "build_dependencies": [
+    "cmake",
+    "sphinx-doc"
+  ],
+  "dependencies": [
+    "libev",
+    "libgcrypt",
+    "openssl"
+  ],
+  "recommended_dependencies": [
+    "mysql"
+  ],
+  "optional_dependencies": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

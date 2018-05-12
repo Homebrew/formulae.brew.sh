@@ -1,68 +1,23 @@
 {
   "name": "gnutls",
   "full_name": "gnutls",
-  "desc": "GNU Transport Layer Security (TLS) Library",
-  "homepage": "https://gnutls.org/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "GNU Transport Layer Security (TLS) Library",
+  "homepage": "https://gnutls.org/",
   "versions": {
     "stable": "3.5.18",
-    "bottle": true,
     "devel": "3.6.2",
-    "head": null
+    "head": null,
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "pkg-config",
-    "libtasn1",
-    "gmp",
-    "nettle",
-    "libunistring",
-    "p11-kit",
-    "guile",
-    "unbound"
-  ],
-  "recommended_dependencies": [
-    "p11-kit"
-  ],
-  "optional_dependencies": [
-    "guile",
-    "unbound"
-  ],
-  "build_dependencies": [
-    "pkg-config"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--without-p11-kit",
-      "description": "Build without p11-kit support"
-    },
-    {
-      "option": "--with-guile",
-      "description": "Build with guile support"
-    },
-    {
-      "option": "--with-unbound",
-      "description": "Build with unbound support"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -84,5 +39,49 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--without-p11-kit",
+      "description": "Build without p11-kit support"
+    },
+    {
+      "option": "--with-guile",
+      "description": "Build with guile support"
+    },
+    {
+      "option": "--with-unbound",
+      "description": "Build with unbound support"
+    }
+  ],
+  "build_dependencies": [
+    "pkg-config"
+  ],
+  "dependencies": [
+    "libtasn1",
+    "gmp",
+    "nettle",
+    "libunistring"
+  ],
+  "recommended_dependencies": [
+    "p11-kit"
+  ],
+  "optional_dependencies": [
+    "guile",
+    "unbound"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

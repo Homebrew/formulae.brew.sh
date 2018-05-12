@@ -1,49 +1,23 @@
 {
   "name": "spoof-mac",
   "full_name": "spoof-mac",
-  "desc": "Spoof your MAC address in macOS",
-  "homepage": "https://github.com/feross/SpoofMAC",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Spoof your MAC address in macOS",
+  "homepage": "https://github.com/feross/SpoofMAC",
   "versions": {
     "stable": "2.1.1",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "python@2"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-
-  ],
-  "build_dependencies": [
-
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "Although spoof-mac can run without root, you must be root to change the MAC.\n\nThe launchdaemon is set to randomize en0.\nYou can find the interfaces available by running:\n    \"spoof-mac list\"\n\nIf you wish to change interface randomized at startup change the plist line:\n    <string>en0</string>\nto e.g.:\n    <string>en1</string>\n",
-  "requirements": [
-
-  ],
-  "options": [
-
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -73,5 +47,34 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+
+  ],
+  "dependencies": [
+    "python@2"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "Although spoof-mac can run without root, you must be root to change the MAC.\n\nThe launchdaemon is set to randomize en0.\nYou can find the interfaces available by running:\n    \"spoof-mac list\"\n\nIf you wish to change interface randomized at startup change the plist line:\n    <string>en0</string>\nto e.g.:\n    <string>en1</string>\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

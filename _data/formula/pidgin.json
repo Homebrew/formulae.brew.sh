@@ -1,72 +1,23 @@
 {
   "name": "pidgin",
   "full_name": "pidgin",
-  "desc": "Multi-protocol chat client",
-  "homepage": "https://pidgin.im/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Multi-protocol chat client",
+  "homepage": "https://pidgin.im/",
   "versions": {
     "stable": "2.13.0",
-    "bottle": true,
     "devel": null,
-    "head": null
+    "head": null,
+    "bottle": true
   },
   "revision": 1,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "pkg-config",
-    "intltool",
-    "gettext",
-    "gsasl",
-    "gnutls",
-    "libgcrypt",
-    "libidn",
-    "glib",
-    "gtk+",
-    "cairo",
-    "pango",
-    "libotr"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-    "gsasl"
-  ],
-  "build_dependencies": [
-    "pkg-config",
-    "intltool"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--with-perl",
-      "description": "Build Pidgin with Perl support"
-    },
-    {
-      "option": "--without-gui",
-      "description": "Build only Finch, the command-line client"
-    },
-    {
-      "option": "--with-gsasl",
-      "description": "Build with gsasl support"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -88,5 +39,54 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--with-perl",
+      "description": "Build Pidgin with Perl support"
+    },
+    {
+      "option": "--without-gui",
+      "description": "Build only Finch, the command-line client"
+    },
+    {
+      "option": "--with-gsasl",
+      "description": "Build with gsasl support"
+    }
+  ],
+  "build_dependencies": [
+    "pkg-config",
+    "intltool"
+  ],
+  "dependencies": [
+    "gettext",
+    "gnutls",
+    "libgcrypt",
+    "libidn",
+    "glib",
+    "gtk+",
+    "cairo",
+    "pango",
+    "libotr"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "gsasl"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

@@ -1,49 +1,23 @@
 {
   "name": "pgbadger",
   "full_name": "pgbadger",
-  "desc": "Log analyzer for PostgreSQL",
-  "homepage": "https://dalibo.github.io/pgbadger/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Log analyzer for PostgreSQL",
+  "homepage": "https://dalibo.github.io/pgbadger/",
   "versions": {
     "stable": "9.2",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-
-  ],
-  "build_dependencies": [
-
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "You must configure your PostgreSQL server before using pgBadger.\nEdit postgresql.conf (in /home/travis/Homebrew/var/postgres if you use Homebrew's\nPostgreSQL), set the following parameters, and restart PostgreSQL:\n\n  log_destination = 'stderr'\n  log_line_prefix = '%t [%p]: [%l-1] user=%u,db=%d '\n  log_statement = 'none'\n  log_duration = off\n  log_min_duration_statement = 0\n  log_checkpoints = on\n  log_connections = on\n  log_disconnections = on\n  log_lock_waits = on\n  log_temp_files = 0\n  lc_messages = 'C'\n",
-  "requirements": [
-
-  ],
-  "options": [
-
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -69,5 +43,34 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+
+  ],
+  "dependencies": [
+
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "You must configure your PostgreSQL server before using pgBadger.\nEdit postgresql.conf (in /home/travis/Homebrew/var/postgres if you use Homebrew's\nPostgreSQL), set the following parameters, and restart PostgreSQL:\n\n  log_destination = 'stderr'\n  log_line_prefix = '%t [%p]: [%l-1] user=%u,db=%d '\n  log_statement = 'none'\n  log_duration = off\n  log_min_duration_statement = 0\n  log_checkpoints = on\n  log_connections = on\n  log_disconnections = on\n  log_lock_waits = on\n  log_temp_files = 0\n  lc_messages = 'C'\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

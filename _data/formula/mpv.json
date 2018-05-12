@@ -1,88 +1,46 @@
 {
   "name": "mpv",
   "full_name": "mpv",
-  "desc": "Media player based on MPlayer and mplayer2",
-  "homepage": "https://mpv.io",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Media player based on MPlayer and mplayer2",
+  "homepage": "https://mpv.io",
   "versions": {
     "stable": "0.28.2",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "pkg-config",
-    "python",
-    "libass",
-    "ffmpeg",
-    "lua@5.1",
-    "jpeg",
-    "little-cms2",
-    "mujs",
-    "youtube-dl",
-    "jack",
-    "libaacs",
-    "libarchive",
-    "libbluray",
-    "libcaca",
-    "libdvdnav",
-    "libdvdread",
-    "pulseaudio",
-    "rubberband",
-    "uchardet",
-    "vapoursynth"
-  ],
-  "recommended_dependencies": [
-    "jpeg",
-    "little-cms2",
-    "mujs",
-    "youtube-dl"
-  ],
-  "optional_dependencies": [
-    "jack",
-    "libaacs",
-    "libarchive",
-    "libbluray",
-    "libcaca",
-    "libdvdnav",
-    "libdvdread",
-    "pulseaudio",
-    "rubberband",
-    "uchardet",
-    "vapoursynth"
-  ],
-  "build_dependencies": [
-    "pkg-config",
-    "python"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-    {
-      "name": "x11",
-      "cask": "xquartz",
-      "download": "https://xquartz.macosforge.org"
-    },
-    {
-      "name": "macos",
-      "cask": null,
-      "download": null
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/mpv-0.28.2.high_sierra.bottle.tar.gz",
+          "sha256": "1dee05ae50b43c059c11c667a2e70b51bccfb373248ad8f877eeef9a8afe7c67"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/mpv-0.28.2.sierra.bottle.tar.gz",
+          "sha256": "9c43d85b504b5edd2cbcf87ed219dc7a75c771b763e66fd64305b93c5070c993"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/mpv-0.28.2.el_capitan.bottle.tar.gz",
+          "sha256": "301203ddeb374ecce692a47b59ff8396b63e2f40530f6f82dc037992a53a0ebc"
+        }
+      }
     }
-  ],
+  },
+  "keg_only": false,
   "options": [
     {
       "option": "--with-bundle",
@@ -153,26 +111,54 @@
       "description": "Build with x11 support"
     }
   ],
-  "bottle": {
-    "stable": {
-      "rebuild": 0,
-      "cellar": "/usr/local/Cellar",
-      "prefix": "/usr/local",
-      "root_url": "https://homebrew.bintray.com/bottles",
-      "files": {
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/mpv-0.28.2.high_sierra.bottle.tar.gz",
-          "sha256": "1dee05ae50b43c059c11c667a2e70b51bccfb373248ad8f877eeef9a8afe7c67"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/mpv-0.28.2.sierra.bottle.tar.gz",
-          "sha256": "9c43d85b504b5edd2cbcf87ed219dc7a75c771b763e66fd64305b93c5070c993"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/mpv-0.28.2.el_capitan.bottle.tar.gz",
-          "sha256": "301203ddeb374ecce692a47b59ff8396b63e2f40530f6f82dc037992a53a0ebc"
-        }
-      }
+  "build_dependencies": [
+    "pkg-config",
+    "python"
+  ],
+  "dependencies": [
+    "libass",
+    "ffmpeg",
+    "lua@5.1"
+  ],
+  "recommended_dependencies": [
+    "jpeg",
+    "little-cms2",
+    "mujs",
+    "youtube-dl"
+  ],
+  "optional_dependencies": [
+    "jack",
+    "libaacs",
+    "libarchive",
+    "libbluray",
+    "libcaca",
+    "libdvdnav",
+    "libdvdread",
+    "pulseaudio",
+    "rubberband",
+    "uchardet",
+    "vapoursynth"
+  ],
+  "requirements": [
+    {
+      "name": "x11",
+      "cask": "xquartz",
+      "download": "https://xquartz.macosforge.org"
+    },
+    {
+      "name": "macos",
+      "cask": null,
+      "download": null
     }
-  }
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

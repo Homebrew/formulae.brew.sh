@@ -1,54 +1,23 @@
 {
   "name": "couchdb",
   "full_name": "couchdb",
-  "desc": "Document database server",
-  "homepage": "https://couchdb.apache.org/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Document database server",
+  "homepage": "https://couchdb.apache.org/",
   "versions": {
     "stable": "1.7.1",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 5,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "erlang@19",
-    "spidermonkey",
-    "icu4c"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-
-  ],
-  "build_dependencies": [
-
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "To test CouchDB run:\n    curl http://127.0.0.1:5984/\nThe reply should look like:\n    {\"couchdb\":\"Welcome\",\"uuid\":\"....\",\"version\":\"1.7.1\",\"vendor\":{\"version\":\"1.7.1-1\",\"name\":\"Homebrew\"}}\n",
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--with-geocouch",
-      "description": "Build with GeoCouch spatial index extension"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -70,5 +39,39 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--with-geocouch",
+      "description": "Build with GeoCouch spatial index extension"
+    }
+  ],
+  "build_dependencies": [
+
+  ],
+  "dependencies": [
+    "erlang@19",
+    "spidermonkey",
+    "icu4c"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "To test CouchDB run:\n    curl http://127.0.0.1:5984/\nThe reply should look like:\n    {\"couchdb\":\"Welcome\",\"uuid\":\"....\",\"version\":\"1.7.1\",\"vendor\":{\"version\":\"1.7.1-1\",\"name\":\"Homebrew\"}}\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

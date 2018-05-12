@@ -1,72 +1,23 @@
 {
   "name": "open-babel",
   "full_name": "open-babel",
-  "desc": "Chemical toolbox",
-  "homepage": "https://openbabel.org",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Chemical toolbox",
+  "homepage": "https://openbabel.org",
   "versions": {
     "stable": "2.4.1",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "pkg-config",
-    "cmake",
-    "python@2",
-    "wxmac",
-    "cairo",
-    "eigen"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-    "python@2",
-    "wxmac",
-    "cairo"
-  ],
-  "build_dependencies": [
-    "pkg-config",
-    "cmake"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "Java libraries are installed to /home/travis/Homebrew/opt/open-babel/share/open-babel/java so this path should\nbe included in the CLASSPATH environment variable.\n",
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--with-cairo",
-      "description": "Support PNG depiction"
-    },
-    {
-      "option": "--with-java",
-      "description": "Compile Java language bindings"
-    },
-    {
-      "option": "--with-python@2",
-      "description": "Compile Python 2 language bindings"
-    },
-    {
-      "option": "--with-wxmac",
-      "description": "Build with GUI"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -92,5 +43,52 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--with-cairo",
+      "description": "Support PNG depiction"
+    },
+    {
+      "option": "--with-java",
+      "description": "Compile Java language bindings"
+    },
+    {
+      "option": "--with-python@2",
+      "description": "Compile Python 2 language bindings"
+    },
+    {
+      "option": "--with-wxmac",
+      "description": "Build with GUI"
+    }
+  ],
+  "build_dependencies": [
+    "pkg-config",
+    "cmake"
+  ],
+  "dependencies": [
+    "eigen"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "python@2",
+    "wxmac",
+    "cairo"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "Java libraries are installed to /home/travis/Homebrew/opt/open-babel/share/open-babel/java so this path should\nbe included in the CLASSPATH environment variable.\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

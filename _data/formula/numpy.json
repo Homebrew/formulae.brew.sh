@@ -1,59 +1,23 @@
 {
   "name": "numpy",
   "full_name": "numpy",
-  "desc": "Package for scientific computing with Python",
-  "homepage": "https://www.numpy.org/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Package for scientific computing with Python",
+  "homepage": "https://www.numpy.org/",
   "versions": {
     "stable": "1.14.3",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 1,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "gcc",
-    "python@2",
-    "python"
-  ],
-  "recommended_dependencies": [
-    "python@2",
-    "python"
-  ],
-  "optional_dependencies": [
-
-  ],
-  "build_dependencies": [
-    "gcc"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "If you use system python (that comes - depending on the OS X version -\nwith older versions of numpy, scipy and matplotlib), you may need to\nensure that the brewed packages come earlier in Python's sys.path with:\n  mkdir -p /home/travis/.local/lib/python2.7/site-packages\n  echo 'import sys; sys.path.insert(1, \"/home/travis/Homebrew/lib/python3.6/site-packages\")' >> /home/travis/.local/lib/python2.7/site-packages/homebrew.pth\n",
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--without-python@2",
-      "description": "Build without python2 support"
-    },
-    {
-      "option": "--without-python",
-      "description": "Build without python support"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -75,5 +39,42 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--without-python@2",
+      "description": "Build without python2 support"
+    },
+    {
+      "option": "--without-python",
+      "description": "Build without python support"
+    }
+  ],
+  "build_dependencies": [
+    "gcc"
+  ],
+  "dependencies": [
+
+  ],
+  "recommended_dependencies": [
+    "python@2",
+    "python"
+  ],
+  "optional_dependencies": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "If you use system python (that comes - depending on the OS X version -\nwith older versions of numpy, scipy and matplotlib), you may need to\nensure that the brewed packages come earlier in Python's sys.path with:\n  mkdir -p /home/travis/.local/lib/python2.7/site-packages\n  echo 'import sys; sys.path.insert(1, \"/home/travis/Homebrew/lib/python3.6/site-packages\")' >> /home/travis/.local/lib/python2.7/site-packages/homebrew.pth\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

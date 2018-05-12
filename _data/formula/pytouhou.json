@@ -1,69 +1,23 @@
 {
   "name": "pytouhou",
   "full_name": "pytouhou",
-  "desc": "Libre implementation of Touhou 6 engine",
-  "homepage": "https://pytouhou.linkmauve.fr/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Libre implementation of Touhou 6 engine",
+  "homepage": "https://pytouhou.linkmauve.fr/",
   "versions": {
     "stable": "634",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 4,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "mercurial",
-    "python",
-    "pkg-config",
-    "libepoxy",
-    "sdl2",
-    "sdl2_image",
-    "sdl2_mixer",
-    "sdl2_ttf",
-    "gtk+3",
-    "py3cairo",
-    "pygobject3",
-    "lha"
-  ],
-  "recommended_dependencies": [
-    "gtk+3"
-  ],
-  "optional_dependencies": [
-
-  ],
-  "build_dependencies": [
-    "mercurial",
-    "pkg-config",
-    "lha"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "The default path for the game data is:\n  /home/travis/Homebrew/Cellar/pytouhou/634_4/share/pytouhou/game\n",
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--with-demo",
-      "description": "Install demo version of Touhou 6"
-    },
-    {
-      "option": "--without-gtk+3",
-      "description": "Build without gtk+3 support"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -85,5 +39,50 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--with-demo",
+      "description": "Install demo version of Touhou 6"
+    },
+    {
+      "option": "--without-gtk+3",
+      "description": "Build without gtk+3 support"
+    }
+  ],
+  "build_dependencies": [
+    "mercurial",
+    "pkg-config",
+    "lha"
+  ],
+  "dependencies": [
+    "python",
+    "libepoxy",
+    "sdl2",
+    "sdl2_image",
+    "sdl2_mixer",
+    "sdl2_ttf",
+    "py3cairo",
+    "pygobject3"
+  ],
+  "recommended_dependencies": [
+    "gtk+3"
+  ],
+  "optional_dependencies": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "The default path for the game data is:\n  /home/travis/Homebrew/Cellar/pytouhou/634_4/share/pytouhou/game\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

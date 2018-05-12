@@ -1,61 +1,24 @@
 {
   "name": "python",
   "full_name": "python",
-  "desc": "Interpreted, interactive, object-oriented programming language",
-  "homepage": "https://www.python.org/",
   "oldname": "python3",
   "aliases": [
     "python3",
     "python@3"
   ],
+  "versioned_formulae": [
+    "python@2"
+  ],
+  "desc": "Interpreted, interactive, object-oriented programming language",
+  "homepage": "https://www.python.org/",
   "versions": {
     "stable": "3.6.5",
-    "bottle": true,
     "devel": "3.7.0b4",
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "pkg-config",
-    "sphinx-doc",
-    "gdbm",
-    "openssl",
-    "readline",
-    "sqlite",
-    "xz",
-    "tcl-tk"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-    "tcl-tk"
-  ],
-  "build_dependencies": [
-    "pkg-config",
-    "sphinx-doc"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "Python has been installed as\n  /home/travis/Homebrew/bin/python3\n\nUnversioned symlinks `python`, `python-config`, `pip` etc. pointing to\n`python3`, `python3-config`, `pip3` etc., respectively, have been installed into\n  /home/travis/Homebrew/opt/python/libexec/bin\n\nIf you need Homebrew's Python 2.7 run\n  brew install python@2\n\nPip, setuptools, and wheel have been installed. To update them run\n  pip3 install --upgrade pip setuptools wheel\n\nYou can install Python packages with\n  pip3 install <package>\nThey will install into the site-package directory\n  /home/travis/Homebrew/lib/python3.6/site-packages\n\nSee: https://docs.brew.sh/Homebrew-and-Python\n\nApple's Tcl/Tk is not recommended for use with Python on Mac OS X 10.6.\nFor more information see: https://www.python.org/download/mac/tcltk/\n",
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--with-tcl-tk",
-      "description": "Use Homebrew's Tk instead of macOS Tk (has optional Cocoa and threads support)"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 1,
@@ -77,5 +40,42 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--with-tcl-tk",
+      "description": "Use Homebrew's Tk instead of macOS Tk (has optional Cocoa and threads support)"
+    }
+  ],
+  "build_dependencies": [
+    "pkg-config",
+    "sphinx-doc"
+  ],
+  "dependencies": [
+    "gdbm",
+    "openssl",
+    "readline",
+    "sqlite",
+    "xz"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "tcl-tk"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "Python has been installed as\n  /home/travis/Homebrew/bin/python3\n\nUnversioned symlinks `python`, `python-config`, `pip` etc. pointing to\n`python3`, `python3-config`, `pip3` etc., respectively, have been installed into\n  /home/travis/Homebrew/opt/python/libexec/bin\n\nIf you need Homebrew's Python 2.7 run\n  brew install python@2\n\nPip, setuptools, and wheel have been installed. To update them run\n  pip3 install --upgrade pip setuptools wheel\n\nYou can install Python packages with\n  pip3 install <package>\nThey will install into the site-package directory\n  /home/travis/Homebrew/lib/python3.6/site-packages\n\nSee: https://docs.brew.sh/Homebrew-and-Python\n\nApple's Tcl/Tk is not recommended for use with Python on Mac OS X 10.6.\nFor more information see: https://www.python.org/download/mac/tcltk/\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

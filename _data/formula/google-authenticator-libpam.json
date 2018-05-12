@@ -1,54 +1,23 @@
 {
   "name": "google-authenticator-libpam",
   "full_name": "google-authenticator-libpam",
-  "desc": "PAM module for two-factor authentication",
-  "homepage": "https://github.com/google/google-authenticator-libpam",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "PAM module for two-factor authentication",
+  "homepage": "https://github.com/google/google-authenticator-libpam",
   "versions": {
     "stable": "1.05",
-    "bottle": true,
     "devel": null,
-    "head": null
+    "head": null,
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "autoconf",
-    "automake",
-    "libtool",
-    "qrencode"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-
-  ],
-  "build_dependencies": [
-    "autoconf",
-    "automake",
-    "libtool"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "Add 2-factor authentication for ssh:\n  echo \"auth required /home/travis/Homebrew/opt/google-authenticator-libpam/lib/security/pam_google_authenticator.so\" \\\n  | sudo tee -a /etc/pam.d/sshd\n\nAdd 2-factor authentication for ssh allowing users to log in without OTP:\n  echo \"auth required /home/travis/Homebrew/opt/google-authenticator-libpam/lib/security/pam_google_authenticator.so\" \\\n  \"nullok\" | sudo tee -a /etc/pam.d/sshd\n\n(Or just manually edit /etc/pam.d/sshd)\n",
-  "requirements": [
-
-  ],
-  "options": [
-
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -70,5 +39,36 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+    "autoconf",
+    "automake",
+    "libtool"
+  ],
+  "dependencies": [
+    "qrencode"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "Add 2-factor authentication for ssh:\n  echo \"auth required /home/travis/Homebrew/opt/google-authenticator-libpam/lib/security/pam_google_authenticator.so\" \\\n  | sudo tee -a /etc/pam.d/sshd\n\nAdd 2-factor authentication for ssh allowing users to log in without OTP:\n  echo \"auth required /home/travis/Homebrew/opt/google-authenticator-libpam/lib/security/pam_google_authenticator.so\" \\\n  \"nullok\" | sudo tee -a /etc/pam.d/sshd\n\n(Or just manually edit /etc/pam.d/sshd)\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

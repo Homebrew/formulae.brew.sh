@@ -1,68 +1,23 @@
 {
   "name": "pypy",
   "full_name": "pypy",
-  "desc": "Highly performant implementation of Python 2 in Python",
-  "homepage": "https://pypy.org/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Highly performant implementation of Python 2 in Python",
+  "homepage": "https://pypy.org/",
   "versions": {
     "stable": "5.10.0",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 1,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "pkg-config",
-    "gdbm",
-    "sqlite",
-    "openssl"
-  ],
-  "recommended_dependencies": [
-    "gdbm",
-    "sqlite"
-  ],
-  "optional_dependencies": [
-
-  ],
-  "build_dependencies": [
-    "pkg-config"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "A \"distutils.cfg\" has been written to:\n  /home/travis/Homebrew/Cellar/pypy/5.10.0_1/libexec/lib-python/2.7/distutils\nspecifying the install-scripts folder as:\n  /home/travis/Homebrew/share/pypy\n\nIf you install Python packages via \"pypy setup.py install\", easy_install_pypy,\nor pip_pypy, any provided scripts will go into the install-scripts folder\nabove, so you may want to add it to your PATH *after* /home/travis/Homebrew/bin\nso you don't overwrite tools from CPython.\n\nSetuptools and pip have been installed, so you can use easy_install_pypy and\npip_pypy.\nTo update setuptools and pip between pypy releases, run:\n    pip_pypy install --upgrade pip setuptools\n\nSee: https://docs.brew.sh/Homebrew-and-Python\n",
-  "requirements": [
-    {
-      "name": "arch",
-      "cask": null,
-      "download": null
-    }
-  ],
-  "options": [
-    {
-      "option": "--without-bootstrap",
-      "description": "Translate Pypy with system Python instead of downloading a Pypy binary distribution to perform the translation (adds 30-60 minutes to build)"
-    },
-    {
-      "option": "--without-gdbm",
-      "description": "Build without gdbm support"
-    },
-    {
-      "option": "--without-sqlite",
-      "description": "Build without sqlite support"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 1,
@@ -84,5 +39,50 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--without-bootstrap",
+      "description": "Translate Pypy with system Python instead of downloading a Pypy binary distribution to perform the translation (adds 30-60 minutes to build)"
+    },
+    {
+      "option": "--without-gdbm",
+      "description": "Build without gdbm support"
+    },
+    {
+      "option": "--without-sqlite",
+      "description": "Build without sqlite support"
+    }
+  ],
+  "build_dependencies": [
+    "pkg-config"
+  ],
+  "dependencies": [
+    "openssl"
+  ],
+  "recommended_dependencies": [
+    "gdbm",
+    "sqlite"
+  ],
+  "optional_dependencies": [
+
+  ],
+  "requirements": [
+    {
+      "name": "arch",
+      "cask": null,
+      "download": null
+    }
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "A \"distutils.cfg\" has been written to:\n  /home/travis/Homebrew/Cellar/pypy/5.10.0_1/libexec/lib-python/2.7/distutils\nspecifying the install-scripts folder as:\n  /home/travis/Homebrew/share/pypy\n\nIf you install Python packages via \"pypy setup.py install\", easy_install_pypy,\nor pip_pypy, any provided scripts will go into the install-scripts folder\nabove, so you may want to add it to your PATH *after* /home/travis/Homebrew/bin\nso you don't overwrite tools from CPython.\n\nSetuptools and pip have been installed, so you can use easy_install_pypy and\npip_pypy.\nTo update setuptools and pip between pypy releases, run:\n    pip_pypy install --upgrade pip setuptools\n\nSee: https://docs.brew.sh/Homebrew-and-Python\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

@@ -1,112 +1,46 @@
 {
   "name": "ffmpeg@2.8",
   "full_name": "ffmpeg@2.8",
-  "desc": "Play, record, convert, and stream audio and video",
-  "homepage": "https://ffmpeg.org/",
   "oldname": "ffmpeg28",
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Play, record, convert, and stream audio and video",
+  "homepage": "https://ffmpeg.org/",
   "versions": {
     "stable": "2.8.13",
-    "bottle": true,
     "devel": null,
-    "head": null
+    "head": null,
+    "bottle": true
   },
   "revision": 2,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/ffmpeg@2.8-2.8.13_2.high_sierra.bottle.tar.gz",
+          "sha256": "aa356ed2a33d8a1bfc32c1541b42a666ce24201709b82fbbf4f24bcf418735bf"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/ffmpeg@2.8-2.8.13_2.sierra.bottle.tar.gz",
+          "sha256": "280d377b3853063069f174efae5fa7d00fba939bb05090e6ed1e3bf51c97e0a2"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/ffmpeg@2.8-2.8.13_2.el_capitan.bottle.tar.gz",
+          "sha256": "4081321d6ca435f867efeab84e8ae1bb8b1f87263a7a2936043cc9e91e0413e6"
+        }
+      }
+    }
+  },
   "keg_only": true,
-  "dependencies": [
-    "pkg-config",
-    "texi2html",
-    "yasm",
-    "x264",
-    "lame",
-    "libvo-aacenc",
-    "xvid",
-    "faac",
-    "fontconfig",
-    "freetype",
-    "theora",
-    "libvorbis",
-    "libvpx",
-    "rtmpdump",
-    "opencore-amr",
-    "libass",
-    "openjpeg",
-    "snappy",
-    "speex",
-    "schroedinger",
-    "fdk-aac",
-    "opus",
-    "frei0r",
-    "libcaca",
-    "libbluray",
-    "libsoxr",
-    "libquvi",
-    "libvidstab",
-    "x265",
-    "openssl",
-    "libssh",
-    "webp",
-    "zeromq",
-    "libbs2b",
-    "dcadec"
-  ],
-  "recommended_dependencies": [
-    "x264",
-    "lame",
-    "libvo-aacenc",
-    "xvid"
-  ],
-  "optional_dependencies": [
-    "faac",
-    "fontconfig",
-    "freetype",
-    "theora",
-    "libvorbis",
-    "libvpx",
-    "rtmpdump",
-    "opencore-amr",
-    "libass",
-    "openjpeg",
-    "snappy",
-    "speex",
-    "schroedinger",
-    "fdk-aac",
-    "opus",
-    "frei0r",
-    "libcaca",
-    "libbluray",
-    "libsoxr",
-    "libquvi",
-    "libvidstab",
-    "x265",
-    "openssl",
-    "libssh",
-    "webp",
-    "zeromq",
-    "libbs2b",
-    "dcadec"
-  ],
-  "build_dependencies": [
-    "pkg-config",
-    "texi2html",
-    "yasm"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "FFmpeg has been built without libfaac for licensing reasons;\nlibvo-aacenc is used by default.\nTo install with libfaac, you can:\n  brew reinstall ffmpeg28 --with-faac\n\nYou can also use the experimental FFmpeg encoder, libfdk-aac, or\nlibvo_aacenc to encode AAC audio:\n  ffmpeg -i input.wav -c:a aac -strict experimental output.m4a\nOr:\n  brew reinstall ffmpeg28 --with-fdk-aac\n  ffmpeg -i input.wav -c:a libfdk_aac output.m4a\n",
-  "requirements": [
-
-  ],
   "options": [
     {
       "option": "--without-x264",
@@ -253,26 +187,61 @@
       "description": "Build with libbs2b support"
     }
   ],
-  "bottle": {
-    "stable": {
-      "rebuild": 0,
-      "cellar": "/usr/local/Cellar",
-      "prefix": "/usr/local",
-      "root_url": "https://homebrew.bintray.com/bottles",
-      "files": {
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/ffmpeg@2.8-2.8.13_2.high_sierra.bottle.tar.gz",
-          "sha256": "aa356ed2a33d8a1bfc32c1541b42a666ce24201709b82fbbf4f24bcf418735bf"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/ffmpeg@2.8-2.8.13_2.sierra.bottle.tar.gz",
-          "sha256": "280d377b3853063069f174efae5fa7d00fba939bb05090e6ed1e3bf51c97e0a2"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/ffmpeg@2.8-2.8.13_2.el_capitan.bottle.tar.gz",
-          "sha256": "4081321d6ca435f867efeab84e8ae1bb8b1f87263a7a2936043cc9e91e0413e6"
-        }
-      }
-    }
-  }
+  "build_dependencies": [
+    "pkg-config",
+    "texi2html",
+    "yasm"
+  ],
+  "dependencies": [
+
+  ],
+  "recommended_dependencies": [
+    "x264",
+    "lame",
+    "libvo-aacenc",
+    "xvid"
+  ],
+  "optional_dependencies": [
+    "faac",
+    "fontconfig",
+    "freetype",
+    "theora",
+    "libvorbis",
+    "libvpx",
+    "rtmpdump",
+    "opencore-amr",
+    "libass",
+    "openjpeg",
+    "snappy",
+    "speex",
+    "schroedinger",
+    "fdk-aac",
+    "opus",
+    "frei0r",
+    "libcaca",
+    "libbluray",
+    "libsoxr",
+    "libquvi",
+    "libvidstab",
+    "x265",
+    "openssl",
+    "libssh",
+    "webp",
+    "zeromq",
+    "libbs2b",
+    "dcadec"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "FFmpeg has been built without libfaac for licensing reasons;\nlibvo-aacenc is used by default.\nTo install with libfaac, you can:\n  brew reinstall ffmpeg28 --with-faac\n\nYou can also use the experimental FFmpeg encoder, libfdk-aac, or\nlibvo_aacenc to encode AAC audio:\n  ffmpeg -i input.wav -c:a aac -strict experimental output.m4a\nOr:\n  brew reinstall ffmpeg28 --with-fdk-aac\n  ffmpeg -i input.wav -c:a libfdk_aac output.m4a\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

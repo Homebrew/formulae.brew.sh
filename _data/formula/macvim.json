@@ -1,57 +1,46 @@
 {
   "name": "macvim",
   "full_name": "macvim",
-  "desc": "GUI for vim, made for macOS",
-  "homepage": "https://github.com/macvim-dev/macvim",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "GUI for vim, made for macOS",
+  "homepage": "https://github.com/macvim-dev/macvim",
   "versions": {
     "stable": "8.0-146",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 1,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "cscope",
-    "python",
-    "lua",
-    "luajit",
-    "python@2"
-  ],
-  "recommended_dependencies": [
-    "cscope",
-    "python"
-  ],
-  "optional_dependencies": [
-    "lua",
-    "luajit",
-    "python@2"
-  ],
-  "build_dependencies": [
-
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-    {
-      "name": "xcode",
-      "cask": null,
-      "download": null
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/macvim-8.0-146_1.high_sierra.bottle.tar.gz",
+          "sha256": "9150724774b95837fabbcd245e992119bd7c00d88c6a2b41a345c0471ed4b831"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/macvim-8.0-146_1.sierra.bottle.tar.gz",
+          "sha256": "b8ff3db922ebc801bce4d998082c0cdfc76dc82bbcd55fcef840298bc1c4df97"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/macvim-8.0-146_1.el_capitan.bottle.tar.gz",
+          "sha256": "c86706fc3141fdd2ed22188de2e49481c83b1fdb61c9c26f53fe5fdcd2b29638"
+        }
+      }
     }
-  ],
+  },
+  "keg_only": false,
   "options": [
     {
       "option": "--with-override-system-vim",
@@ -78,26 +67,36 @@
       "description": "Build with python@2 support"
     }
   ],
-  "bottle": {
-    "stable": {
-      "rebuild": 0,
-      "cellar": "/usr/local/Cellar",
-      "prefix": "/usr/local",
-      "root_url": "https://homebrew.bintray.com/bottles",
-      "files": {
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/macvim-8.0-146_1.high_sierra.bottle.tar.gz",
-          "sha256": "9150724774b95837fabbcd245e992119bd7c00d88c6a2b41a345c0471ed4b831"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/macvim-8.0-146_1.sierra.bottle.tar.gz",
-          "sha256": "b8ff3db922ebc801bce4d998082c0cdfc76dc82bbcd55fcef840298bc1c4df97"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/macvim-8.0-146_1.el_capitan.bottle.tar.gz",
-          "sha256": "c86706fc3141fdd2ed22188de2e49481c83b1fdb61c9c26f53fe5fdcd2b29638"
-        }
-      }
+  "build_dependencies": [
+
+  ],
+  "dependencies": [
+
+  ],
+  "recommended_dependencies": [
+    "cscope",
+    "python"
+  ],
+  "optional_dependencies": [
+    "lua",
+    "luajit",
+    "python@2"
+  ],
+  "requirements": [
+    {
+      "name": "xcode",
+      "cask": null,
+      "download": null
     }
-  }
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

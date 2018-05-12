@@ -1,65 +1,23 @@
 {
   "name": "nsd",
   "full_name": "nsd",
-  "desc": "Name server daemon",
-  "homepage": "https://www.nlnetlabs.nl/projects/nsd/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Name server daemon",
+  "homepage": "https://www.nlnetlabs.nl/projects/nsd/",
   "versions": {
     "stable": "4.1.20",
-    "bottle": true,
     "devel": null,
-    "head": null
+    "head": null,
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "libevent",
-    "openssl"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-
-  ],
-  "build_dependencies": [
-
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--with-root-server",
-      "description": "Allow NSD to run as a root name server"
-    },
-    {
-      "option": "--with-bind8-stats",
-      "description": "Enable BIND8-like NSTATS & XSTATS"
-    },
-    {
-      "option": "--with-ratelimit",
-      "description": "Enable rate limiting"
-    },
-    {
-      "option": "--with-zone-stats",
-      "description": "Enable per-zone statistics"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -81,5 +39,50 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--with-root-server",
+      "description": "Allow NSD to run as a root name server"
+    },
+    {
+      "option": "--with-bind8-stats",
+      "description": "Enable BIND8-like NSTATS & XSTATS"
+    },
+    {
+      "option": "--with-ratelimit",
+      "description": "Enable rate limiting"
+    },
+    {
+      "option": "--with-zone-stats",
+      "description": "Enable per-zone statistics"
+    }
+  ],
+  "build_dependencies": [
+
+  ],
+  "dependencies": [
+    "libevent",
+    "openssl"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

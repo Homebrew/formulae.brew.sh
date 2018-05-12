@@ -1,57 +1,54 @@
 {
   "name": "nut",
   "full_name": "nut",
-  "desc": "Network UPS Tools: Support for various power devices",
-  "homepage": "https://networkupstools.org/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Network UPS Tools: Support for various power devices",
+  "homepage": "https://networkupstools.org/",
   "versions": {
     "stable": "2.7.4",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/nut-2.7.4.high_sierra.bottle.tar.gz",
+          "sha256": "102d8b6e9635321a7585d79c8c3c95d0f973c91cbf031be4d6839cf10c06ad2d"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/nut-2.7.4.sierra.bottle.tar.gz",
+          "sha256": "45949916c354f6c3ba50df8ada5690f36d15ca1114185f1d92f66c4b08110f63"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/nut-2.7.4.el_capitan.bottle.tar.gz",
+          "sha256": "df1f1a4b7efa73d48ada9d97ec13983fd1ba674773a058f771044dcd841a4b79"
+        },
+        "yosemite": {
+          "url": "https://homebrew.bintray.com/bottles/nut-2.7.4.yosemite.bottle.tar.gz",
+          "sha256": "d544abc34f9ed56f76fae104b8a472fe081c5072e32aeddbbd674316e9c0931d"
+        },
+        "mavericks": {
+          "url": "https://homebrew.bintray.com/bottles/nut-2.7.4.mavericks.bottle.tar.gz",
+          "sha256": "83183c2346ec3642b45a20e47439225d94a58d6617669dd2001922f12d544942"
+        }
+      }
+    }
+  },
   "keg_only": false,
-  "dependencies": [
-    "pkg-config",
-    "libusb-compat",
-    "net-snmp",
-    "neon",
-    "powerman",
-    "freeipmi",
-    "openssl",
-    "libtool"
-  ],
-  "recommended_dependencies": [
-    "libusb-compat"
-  ],
-  "optional_dependencies": [
-    "net-snmp",
-    "neon",
-    "powerman",
-    "freeipmi"
-  ],
-  "build_dependencies": [
-    "pkg-config",
-    "libtool"
-  ],
-  "conflicts_with": [
-    "rhino"
-  ],
-  "caveats": null,
-  "requirements": [
-
-  ],
   "options": [
     {
       "option": "--without-serial",
@@ -90,34 +87,33 @@
       "description": "Adds dynamic loading support of plugins using libltdl"
     }
   ],
-  "bottle": {
-    "stable": {
-      "rebuild": 0,
-      "cellar": "/usr/local/Cellar",
-      "prefix": "/usr/local",
-      "root_url": "https://homebrew.bintray.com/bottles",
-      "files": {
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/nut-2.7.4.high_sierra.bottle.tar.gz",
-          "sha256": "102d8b6e9635321a7585d79c8c3c95d0f973c91cbf031be4d6839cf10c06ad2d"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/nut-2.7.4.sierra.bottle.tar.gz",
-          "sha256": "45949916c354f6c3ba50df8ada5690f36d15ca1114185f1d92f66c4b08110f63"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/nut-2.7.4.el_capitan.bottle.tar.gz",
-          "sha256": "df1f1a4b7efa73d48ada9d97ec13983fd1ba674773a058f771044dcd841a4b79"
-        },
-        "yosemite": {
-          "url": "https://homebrew.bintray.com/bottles/nut-2.7.4.yosemite.bottle.tar.gz",
-          "sha256": "d544abc34f9ed56f76fae104b8a472fe081c5072e32aeddbbd674316e9c0931d"
-        },
-        "mavericks": {
-          "url": "https://homebrew.bintray.com/bottles/nut-2.7.4.mavericks.bottle.tar.gz",
-          "sha256": "83183c2346ec3642b45a20e47439225d94a58d6617669dd2001922f12d544942"
-        }
-      }
-    }
-  }
+  "build_dependencies": [
+    "pkg-config",
+    "libtool"
+  ],
+  "dependencies": [
+    "openssl"
+  ],
+  "recommended_dependencies": [
+    "libusb-compat"
+  ],
+  "optional_dependencies": [
+    "net-snmp",
+    "neon",
+    "powerman",
+    "freeipmi"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+    "rhino"
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

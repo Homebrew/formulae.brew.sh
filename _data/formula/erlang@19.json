@@ -1,57 +1,46 @@
 {
   "name": "erlang@19",
   "full_name": "erlang@19",
-  "desc": "Programming language for highly scalable real-time systems",
-  "homepage": "https://www.erlang.org/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Programming language for highly scalable real-time systems",
+  "homepage": "https://www.erlang.org/",
   "versions": {
     "stable": "19.3.6.9",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": true,
-  "dependencies": [
-    "autoconf",
-    "automake",
-    "libtool",
-    "openssl",
-    "fop",
-    "wxmac"
-  ],
-  "recommended_dependencies": [
-    "wxmac"
-  ],
-  "optional_dependencies": [
-    "fop"
-  ],
-  "build_dependencies": [
-    "autoconf",
-    "automake",
-    "libtool"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "Man pages can be found in:\n  /home/travis/Homebrew/opt/erlang@19/lib/erlang/man\nAccess them with `erl -man`, or add this directory to MANPATH.\n",
-  "requirements": [
-    {
-      "name": "java",
-      "cask": "java",
-      "download": "https://www.oracle.com/technetwork/java/javase/downloads/index.html"
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/erlang@19-19.3.6.9.high_sierra.bottle.tar.gz",
+          "sha256": "c97c12d0b33578f375233cf71786191129fe341eb8a021ccd09d7291e4e4e41b"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/erlang@19-19.3.6.9.sierra.bottle.tar.gz",
+          "sha256": "f01be69cb639c882c022cdfba350750ed8328b3fb315141bfebc46f10a19ec7f"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/erlang@19-19.3.6.9.el_capitan.bottle.tar.gz",
+          "sha256": "f8e7a6745628bb71070898ec4b8cc6befdd7b804d46063bd1ef5475538f2d8d2"
+        }
+      }
     }
-  ],
+  },
+  "keg_only": true,
   "options": [
     {
       "option": "--without-hipe",
@@ -82,26 +71,35 @@
       "description": "Build without wxmac support"
     }
   ],
-  "bottle": {
-    "stable": {
-      "rebuild": 0,
-      "cellar": ":any",
-      "prefix": "/usr/local",
-      "root_url": "https://homebrew.bintray.com/bottles",
-      "files": {
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/erlang@19-19.3.6.9.high_sierra.bottle.tar.gz",
-          "sha256": "c97c12d0b33578f375233cf71786191129fe341eb8a021ccd09d7291e4e4e41b"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/erlang@19-19.3.6.9.sierra.bottle.tar.gz",
-          "sha256": "f01be69cb639c882c022cdfba350750ed8328b3fb315141bfebc46f10a19ec7f"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/erlang@19-19.3.6.9.el_capitan.bottle.tar.gz",
-          "sha256": "f8e7a6745628bb71070898ec4b8cc6befdd7b804d46063bd1ef5475538f2d8d2"
-        }
-      }
+  "build_dependencies": [
+    "autoconf",
+    "automake",
+    "libtool"
+  ],
+  "dependencies": [
+    "openssl"
+  ],
+  "recommended_dependencies": [
+    "wxmac"
+  ],
+  "optional_dependencies": [
+    "fop"
+  ],
+  "requirements": [
+    {
+      "name": "java",
+      "cask": "java",
+      "download": "https://www.oracle.com/technetwork/java/javase/downloads/index.html"
     }
-  }
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "Man pages can be found in:\n  /home/travis/Homebrew/opt/erlang@19/lib/erlang/man\nAccess them with `erl -man`, or add this directory to MANPATH.\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

@@ -1,8 +1,6 @@
 {
   "name": "gnupg",
   "full_name": "gnupg",
-  "desc": "GNU Pretty Good Privacy (PGP) package",
-  "homepage": "https://gnupg.org/",
   "oldname": "gnupg2",
   "aliases": [
     "gnupg2",
@@ -10,53 +8,43 @@
     "gpg",
     "gpg2"
   ],
+  "versioned_formulae": [
+    "gnupg@1.4",
+    "gnupg@2.0"
+  ],
+  "desc": "GNU Pretty Good Privacy (PGP) package",
+  "homepage": "https://gnupg.org/",
   "versions": {
     "stable": "2.2.7",
-    "bottle": true,
     "devel": null,
-    "head": null
+    "head": null,
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/gnupg-2.2.7.high_sierra.bottle.tar.gz",
+          "sha256": "04b66440416de2c8573fb070e5186e838f2c48b208ceb8b4fdbf5e6431091e10"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/gnupg-2.2.7.sierra.bottle.tar.gz",
+          "sha256": "6170381a7ffcb15e93b5a201e5fcaa7badc1cf61519ec530bf06706f2450c710"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/gnupg-2.2.7.el_capitan.bottle.tar.gz",
+          "sha256": "e19fb1c8ca817a250efa13cfe2d89d62a69f760cc6b5e3c3ba8bbfac5d25690a"
+        }
+      }
+    }
+  },
   "keg_only": false,
-  "dependencies": [
-    "pkg-config",
-    "npth",
-    "gnutls",
-    "libgpg-error",
-    "libgcrypt",
-    "libksba",
-    "libassuan",
-    "pinentry",
-    "gettext",
-    "adns",
-    "libusb",
-    "readline",
-    "encfs"
-  ],
-  "recommended_dependencies": [
-    "libusb"
-  ],
-  "optional_dependencies": [
-    "readline",
-    "encfs"
-  ],
-  "build_dependencies": [
-    "pkg-config"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "Once you run this version of gpg you may find it difficult to return to using\na prior 1.4.x or 2.0.x. Most notably the prior versions will not automatically\nknow about new secret keys created or imported by this version. We recommend\ncreating a backup of your `~/.gnupg` prior to first use.\n\nFor full details on each change and how it could impact you please see\n  https://www.gnupg.org/faq/whats-new-in-2.1.html\n",
-  "requirements": [
-
-  ],
   "options": [
     {
       "option": "--with-gpgsplit",
@@ -83,26 +71,38 @@
       "description": "Build with encfs support"
     }
   ],
-  "bottle": {
-    "stable": {
-      "rebuild": 0,
-      "cellar": "/usr/local/Cellar",
-      "prefix": "/usr/local",
-      "root_url": "https://homebrew.bintray.com/bottles",
-      "files": {
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gnupg-2.2.7.high_sierra.bottle.tar.gz",
-          "sha256": "04b66440416de2c8573fb070e5186e838f2c48b208ceb8b4fdbf5e6431091e10"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gnupg-2.2.7.sierra.bottle.tar.gz",
-          "sha256": "6170381a7ffcb15e93b5a201e5fcaa7badc1cf61519ec530bf06706f2450c710"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/gnupg-2.2.7.el_capitan.bottle.tar.gz",
-          "sha256": "e19fb1c8ca817a250efa13cfe2d89d62a69f760cc6b5e3c3ba8bbfac5d25690a"
-        }
-      }
-    }
-  }
+  "build_dependencies": [
+    "pkg-config"
+  ],
+  "dependencies": [
+    "npth",
+    "gnutls",
+    "libgpg-error",
+    "libgcrypt",
+    "libksba",
+    "libassuan",
+    "pinentry",
+    "gettext",
+    "adns"
+  ],
+  "recommended_dependencies": [
+    "libusb"
+  ],
+  "optional_dependencies": [
+    "readline",
+    "encfs"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "Once you run this version of gpg you may find it difficult to return to using\na prior 1.4.x or 2.0.x. Most notably the prior versions will not automatically\nknow about new secret keys created or imported by this version. We recommend\ncreating a backup of your `~/.gnupg` prior to first use.\n\nFor full details on each change and how it could impact you please see\n  https://www.gnupg.org/faq/whats-new-in-2.1.html\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

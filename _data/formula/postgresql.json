@@ -1,51 +1,49 @@
 {
   "name": "postgresql",
   "full_name": "postgresql",
-  "desc": "Object-relational database system",
-  "homepage": "https://www.postgresql.org/",
   "oldname": null,
   "aliases": [
     "postgres",
     "postgresql@10"
   ],
+  "versioned_formulae": [
+    "postgresql@9.4",
+    "postgresql@9.5",
+    "postgresql@9.6"
+  ],
+  "desc": "Object-relational database system",
+  "homepage": "https://www.postgresql.org/",
   "versions": {
     "stable": "10.4",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/postgresql-10.4.high_sierra.bottle.tar.gz",
+          "sha256": "1e7b54fb14f79b5ebda6ff50432abfc8fc0ee1b608d7c0c0f6b1503eab4dfafc"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/postgresql-10.4.sierra.bottle.tar.gz",
+          "sha256": "4da4fd7d3d855816470392f64a07fad981dbf67457202d7f7cbdf90afe8ce09c"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/postgresql-10.4.el_capitan.bottle.tar.gz",
+          "sha256": "626d253e3fa4c8464e30ff0cfe595b1fb7663597dd9918e73f3789aff2776233"
+        }
+      }
+    }
+  },
   "keg_only": false,
-  "dependencies": [
-    "openssl",
-    "readline",
-    "python",
-    "python@2"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-    "python",
-    "python@2"
-  ],
-  "build_dependencies": [
-
-  ],
-  "conflicts_with": [
-    "postgres-xc"
-  ],
-  "caveats": "To migrate existing data from a previous major version of PostgreSQL run:\n  brew postgresql-upgrade-database\n",
-  "requirements": [
-
-  ],
   "options": [
     {
       "option": "--without-perl",
@@ -68,26 +66,31 @@
       "description": "Enable PL/Python2"
     }
   ],
-  "bottle": {
-    "stable": {
-      "rebuild": 0,
-      "cellar": "/usr/local/Cellar",
-      "prefix": "/usr/local",
-      "root_url": "https://homebrew.bintray.com/bottles",
-      "files": {
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/postgresql-10.4.high_sierra.bottle.tar.gz",
-          "sha256": "1e7b54fb14f79b5ebda6ff50432abfc8fc0ee1b608d7c0c0f6b1503eab4dfafc"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/postgresql-10.4.sierra.bottle.tar.gz",
-          "sha256": "4da4fd7d3d855816470392f64a07fad981dbf67457202d7f7cbdf90afe8ce09c"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/postgresql-10.4.el_capitan.bottle.tar.gz",
-          "sha256": "626d253e3fa4c8464e30ff0cfe595b1fb7663597dd9918e73f3789aff2776233"
-        }
-      }
-    }
-  }
+  "build_dependencies": [
+
+  ],
+  "dependencies": [
+    "openssl",
+    "readline"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "python",
+    "python@2"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+    "postgres-xc"
+  ],
+  "caveats": "To migrate existing data from a previous major version of PostgreSQL run:\n  brew postgresql-upgrade-database\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

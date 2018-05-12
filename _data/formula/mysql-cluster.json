@@ -1,55 +1,50 @@
 {
   "name": "mysql-cluster",
   "full_name": "mysql-cluster",
-  "desc": "Shared-nothing clustering and auto-sharding for MySQL",
-  "homepage": "https://www.mysql.com/products/cluster/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Shared-nothing clustering and auto-sharding for MySQL",
+  "homepage": "https://www.mysql.com/products/cluster/",
   "versions": {
     "stable": "7.5.7",
-    "bottle": true,
     "devel": null,
-    "head": null
+    "head": null,
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "cmake",
-    "pidof",
-    "openssl"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-
-  ],
-  "build_dependencies": [
-    "cmake"
-  ],
-  "conflicts_with": [
-    "memcached",
-    "mysql",
-    "mariadb",
-    "percona-server"
-  ],
-  "caveats": "To get started with MySQL Cluster, read MySQL Cluster Quick Start at\n  https://dev.mysql.com/downloads/cluster/\n\nDefault configuration files have been created inside:\n  /home/travis/Homebrew/var/mysql-cluster\nNote that in a production system there are other parameters\nthat you would set to tune the configuration.\nMySQL is configured to only allow connections from localhost by default\n\nSet up databases to run AS YOUR USER ACCOUNT with:\n  unset TMPDIR\n  mysql_install_db --verbose --user=`whoami` --basedir=\"/home/travis/Homebrew/opt/mysql-cluster\" --datadir=/home/travis/Homebrew/var/mysql-cluster/mysqld_data --tmpdir=/tmp\n\nFor a first cluster, you may start with a single MySQL Server (mysqld),\na pair of Data Nodes (ndbd) and a single management node (ndb_mgmd):\n\n  ndb_mgmd -f /home/travis/Homebrew/var/mysql-cluster/conf/config.ini --initial --configdir=/home/travis/Homebrew/var/mysql-cluster/conf/\n  ndbd -c localhost:1186\n  ndbd -c localhost:1186\n  mysqld --defaults-file=/home/travis/Homebrew/var/mysql-cluster/conf/my.cnf &\n  mysql -h 127.0.0.1 -P 5000 -u root -p\n  (Leave the password empty and press Enter)\n    create database clusterdb;\n    use clusterdb;\n    create table simples (id int not null primary key) engine=ndb;\n    insert into simples values (1),(2),(3),(4);\n    select * from simples;\n\nTo shutdown everything:\n\n  mysqladmin -u root -p shutdown\n  ndb_mgm -e shutdown\n",
-  "requirements": [
-    {
-      "name": "java",
-      "cask": "java",
-      "download": "https://www.oracle.com/technetwork/java/javase/downloads/index.html"
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/mysql-cluster-7.5.7.high_sierra.bottle.tar.gz",
+          "sha256": "a45135631bc0a4af03386ff3d812b1375dcd6f1cfc609b19bbdcf67dd676396a"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/mysql-cluster-7.5.7.sierra.bottle.tar.gz",
+          "sha256": "91bf3e3613e86df1f8fec9785d236a9ecffe72bc0e8fbe81e1c5961f77052f48"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/mysql-cluster-7.5.7.el_capitan.bottle.tar.gz",
+          "sha256": "84a754a7f71e34ee076774027930bbd7667961e2ecf82724a56d3b73b5eeac76"
+        },
+        "yosemite": {
+          "url": "https://homebrew.bintray.com/bottles/mysql-cluster-7.5.7.yosemite.bottle.tar.gz",
+          "sha256": "29692861b897e6b013d01396bd0cea9541b109a7d691007ddb67a64de91d0a44"
+        }
+      }
     }
-  ],
+  },
+  "keg_only": false,
   "options": [
     {
       "option": "--with-test",
@@ -80,30 +75,37 @@
       "description": "Build with debug support"
     }
   ],
-  "bottle": {
-    "stable": {
-      "rebuild": 0,
-      "cellar": "/usr/local/Cellar",
-      "prefix": "/usr/local",
-      "root_url": "https://homebrew.bintray.com/bottles",
-      "files": {
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/mysql-cluster-7.5.7.high_sierra.bottle.tar.gz",
-          "sha256": "a45135631bc0a4af03386ff3d812b1375dcd6f1cfc609b19bbdcf67dd676396a"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/mysql-cluster-7.5.7.sierra.bottle.tar.gz",
-          "sha256": "91bf3e3613e86df1f8fec9785d236a9ecffe72bc0e8fbe81e1c5961f77052f48"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/mysql-cluster-7.5.7.el_capitan.bottle.tar.gz",
-          "sha256": "84a754a7f71e34ee076774027930bbd7667961e2ecf82724a56d3b73b5eeac76"
-        },
-        "yosemite": {
-          "url": "https://homebrew.bintray.com/bottles/mysql-cluster-7.5.7.yosemite.bottle.tar.gz",
-          "sha256": "29692861b897e6b013d01396bd0cea9541b109a7d691007ddb67a64de91d0a44"
-        }
-      }
+  "build_dependencies": [
+    "cmake"
+  ],
+  "dependencies": [
+    "pidof",
+    "openssl"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "requirements": [
+    {
+      "name": "java",
+      "cask": "java",
+      "download": "https://www.oracle.com/technetwork/java/javase/downloads/index.html"
     }
-  }
+  ],
+  "conflicts_with": [
+    "memcached",
+    "mysql",
+    "mariadb",
+    "percona-server"
+  ],
+  "caveats": "To get started with MySQL Cluster, read MySQL Cluster Quick Start at\n  https://dev.mysql.com/downloads/cluster/\n\nDefault configuration files have been created inside:\n  /home/travis/Homebrew/var/mysql-cluster\nNote that in a production system there are other parameters\nthat you would set to tune the configuration.\nMySQL is configured to only allow connections from localhost by default\n\nSet up databases to run AS YOUR USER ACCOUNT with:\n  unset TMPDIR\n  mysql_install_db --verbose --user=`whoami` --basedir=\"/home/travis/Homebrew/opt/mysql-cluster\" --datadir=/home/travis/Homebrew/var/mysql-cluster/mysqld_data --tmpdir=/tmp\n\nFor a first cluster, you may start with a single MySQL Server (mysqld),\na pair of Data Nodes (ndbd) and a single management node (ndb_mgmd):\n\n  ndb_mgmd -f /home/travis/Homebrew/var/mysql-cluster/conf/config.ini --initial --configdir=/home/travis/Homebrew/var/mysql-cluster/conf/\n  ndbd -c localhost:1186\n  ndbd -c localhost:1186\n  mysqld --defaults-file=/home/travis/Homebrew/var/mysql-cluster/conf/my.cnf &\n  mysql -h 127.0.0.1 -P 5000 -u root -p\n  (Leave the password empty and press Enter)\n    create database clusterdb;\n    use clusterdb;\n    create table simples (id int not null primary key) engine=ndb;\n    insert into simples values (1),(2),(3),(4);\n    select * from simples;\n\nTo shutdown everything:\n\n  mysqladmin -u root -p shutdown\n  ndb_mgm -e shutdown\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

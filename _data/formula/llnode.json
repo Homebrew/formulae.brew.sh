@@ -1,53 +1,23 @@
 {
   "name": "llnode",
   "full_name": "llnode",
-  "desc": "LLDB plugin for live/post-mortem debugging of node.js apps",
-  "homepage": "https://github.com/nodejs/llnode",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "LLDB plugin for live/post-mortem debugging of node.js apps",
+  "homepage": "https://github.com/nodejs/llnode",
   "versions": {
     "stable": "1.6.3",
-    "bottle": true,
     "devel": null,
-    "head": null
+    "head": null,
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "python@2"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-
-  ],
-  "build_dependencies": [
-    "python@2"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "`brew install llnode` does not link the plugin to LLDB PlugIns dir.\n\nTo load this plugin in LLDB, one will need to either\n\n* Type `plugin load /home/travis/Homebrew/opt/llnode/llnode.dylib` on each run of lldb\n* Install plugin into PlugIns dir manually:\n\n    mkdir -p ~/Library/Application\\ Support/LLDB/PlugIns\n    ln -sf /home/travis/Homebrew/opt/llnode/llnode.dylib \\\n        ~/Library/Application\\ Support/LLDB/PlugIns/\n",
-  "requirements": [
-    {
-      "name": "macos",
-      "cask": null,
-      "download": null
-    }
-  ],
-  "options": [
-
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -69,5 +39,38 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+    "python@2"
+  ],
+  "dependencies": [
+
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "requirements": [
+    {
+      "name": "macos",
+      "cask": null,
+      "download": null
+    }
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "`brew install llnode` does not link the plugin to LLDB PlugIns dir.\n\nTo load this plugin in LLDB, one will need to either\n\n* Type `plugin load /home/travis/Homebrew/opt/llnode/llnode.dylib` on each run of lldb\n* Install plugin into PlugIns dir manually:\n\n    mkdir -p ~/Library/Application\\ Support/LLDB/PlugIns\n    ln -sf /home/travis/Homebrew/opt/llnode/llnode.dylib \\\n        ~/Library/Application\\ Support/LLDB/PlugIns/\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

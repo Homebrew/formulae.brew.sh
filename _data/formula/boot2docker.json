@@ -1,53 +1,23 @@
 {
   "name": "boot2docker",
   "full_name": "boot2docker",
-  "desc": "Lightweight Linux for Docker",
-  "homepage": "https://github.com/boot2docker/boot2docker-cli",
   "oldname": null,
   "aliases": [
     "boot2docker-cli"
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Lightweight Linux for Docker",
+  "homepage": "https://github.com/boot2docker/boot2docker-cli",
   "versions": {
     "stable": "1.8.0",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 1,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "docker",
-    "go"
-  ],
-  "recommended_dependencies": [
-    "docker"
-  ],
-  "optional_dependencies": [
-
-  ],
-  "build_dependencies": [
-    "go"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "Rebuild the VM after an upgrade with:\n  boot2docker destroy && boot2docker upgrade\n",
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--without-docker",
-      "description": "Build without docker support"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 1,
@@ -73,5 +43,37 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--without-docker",
+      "description": "Build without docker support"
+    }
+  ],
+  "build_dependencies": [
+    "go"
+  ],
+  "dependencies": [
+
+  ],
+  "recommended_dependencies": [
+    "docker"
+  ],
+  "optional_dependencies": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "Rebuild the VM after an upgrade with:\n  boot2docker destroy && boot2docker upgrade\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

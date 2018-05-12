@@ -1,51 +1,23 @@
 {
   "name": "ansible@1.9",
   "full_name": "ansible@1.9",
-  "desc": "Automate deployment, configuration, and upgrading",
-  "homepage": "https://www.ansible.com/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Automate deployment, configuration, and upgrading",
+  "homepage": "https://www.ansible.com/",
   "versions": {
     "stable": "1.9.6",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 1,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": true,
-  "dependencies": [
-    "python@2",
-    "libyaml",
-    "openssl"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-
-  ],
-  "build_dependencies": [
-
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "Homebrew writes wrapper scripts that set PYTHONPATH in ansible's\nexecution environment, which is inherited by Python scripts invoked\nby ansible. If this causes problems, you can modify your playbooks\nto invoke python with -E, which causes python to ignore PYTHONPATH.\n",
-  "requirements": [
-
-  ],
-  "options": [
-
-  ],
   "bottle": {
     "stable": {
       "rebuild": 2,
@@ -67,5 +39,36 @@
         }
       }
     }
-  }
+  },
+  "keg_only": true,
+  "options": [
+
+  ],
+  "build_dependencies": [
+
+  ],
+  "dependencies": [
+    "python@2",
+    "libyaml",
+    "openssl"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "Homebrew writes wrapper scripts that set PYTHONPATH in ansible's\nexecution environment, which is inherited by Python scripts invoked\nby ansible. If this causes problems, you can modify your playbooks\nto invoke python with -E, which causes python to ignore PYTHONPATH.\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

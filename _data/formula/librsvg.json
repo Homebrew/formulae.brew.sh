@@ -1,62 +1,23 @@
 {
   "name": "librsvg",
   "full_name": "librsvg",
-  "desc": "Library to render SVG files using Cairo",
-  "homepage": "https://live.gnome.org/LibRsvg",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Library to render SVG files using Cairo",
+  "homepage": "https://live.gnome.org/LibRsvg",
   "versions": {
     "stable": "2.42.2",
-    "bottle": true,
     "devel": null,
-    "head": null
+    "head": null,
+    "bottle": true
   },
   "revision": 2,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "pkg-config",
-    "rust",
-    "gobject-introspection",
-    "cairo",
-    "gdk-pixbuf",
-    "glib",
-    "libcroco",
-    "pango",
-    "gtk+3"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-    "gtk+3"
-  ],
-  "build_dependencies": [
-    "pkg-config",
-    "rust",
-    "gobject-introspection"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--with-gtk+3",
-      "description": "Build with gtk+3 support"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -78,5 +39,43 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--with-gtk+3",
+      "description": "Build with gtk+3 support"
+    }
+  ],
+  "build_dependencies": [
+    "pkg-config",
+    "rust",
+    "gobject-introspection"
+  ],
+  "dependencies": [
+    "cairo",
+    "gdk-pixbuf",
+    "glib",
+    "libcroco",
+    "pango"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "gtk+3"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

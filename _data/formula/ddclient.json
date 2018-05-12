@@ -1,27 +1,32 @@
 {
   "name": "ddclient",
   "full_name": "ddclient",
-  "desc": "Update dynamic DNS entries",
-  "homepage": "https://sourceforge.net/p/ddclient/wiki/Home",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Update dynamic DNS entries",
+  "homepage": "https://sourceforge.net/p/ddclient/wiki/Home",
   "versions": {
     "stable": "3.8.3",
-    "bottle": false,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": false
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
+  "bottle": {
+  },
+  "keg_only": false,
+  "options": [
 
   ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
+  "build_dependencies": [
+
+  ],
   "dependencies": [
 
   ],
@@ -31,19 +36,17 @@
   "optional_dependencies": [
 
   ],
-  "build_dependencies": [
+  "requirements": [
 
   ],
   "conflicts_with": [
 
   ],
   "caveats": "For ddclient to work, you will need to create a configuration file\nin /home/travis/Homebrew/etc/ddclient, a sample configuration can be found in\n/home/travis/Homebrew/opt/ddclient/share/doc/ddclient.\n\nNote: don't enable daemon mode in the configuration file; see\nadditional information below.\n\nThe next reboot of the system will automatically start ddclient.\n\nYou can adjust the execution interval by changing the value of\nStartInterval (in seconds) in /Library/LaunchDaemons/homebrew.mxcl.ddclient.plist,\nand then\n",
-  "requirements": [
+  "installed": [
 
   ],
-  "options": [
-
-  ],
-  "bottle": {
-  }
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

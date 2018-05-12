@@ -1,58 +1,23 @@
 {
   "name": "mono",
   "full_name": "mono",
-  "desc": "Cross platform, open source .NET development framework",
-  "homepage": "https://www.mono-project.com/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Cross platform, open source .NET development framework",
+  "homepage": "https://www.mono-project.com/",
   "versions": {
     "stable": "5.4.1.6",
-    "bottle": true,
     "devel": null,
-    "head": null
+    "head": null,
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "automake",
-    "autoconf",
-    "pkg-config",
-    "cmake"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-
-  ],
-  "build_dependencies": [
-    "automake",
-    "autoconf",
-    "pkg-config",
-    "cmake"
-  ],
-  "conflicts_with": [
-    "xsd"
-  ],
-  "caveats": "To use the assemblies from other formulae you need to set:\n  export MONO_GAC_PREFIX=\"/home/travis/Homebrew\"\nNote that the 'mono' formula now includes F#. If you have\nthe 'fsharp' formula installed, remove it with 'brew uninstall fsharp'.\n",
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--without-fsharp",
-      "description": "Build without support for the F# language."
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -74,5 +39,40 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--without-fsharp",
+      "description": "Build without support for the F# language."
+    }
+  ],
+  "build_dependencies": [
+    "automake",
+    "autoconf",
+    "pkg-config",
+    "cmake"
+  ],
+  "dependencies": [
+
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+    "xsd"
+  ],
+  "caveats": "To use the assemblies from other formulae you need to set:\n  export MONO_GAC_PREFIX=\"/home/travis/Homebrew\"\nNote that the 'mono' formula now includes F#. If you have\nthe 'fsharp' formula installed, remove it with 'brew uninstall fsharp'.\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

@@ -1,53 +1,23 @@
 {
   "name": "gpsd",
   "full_name": "gpsd",
-  "desc": "Global Positioning System (GPS) daemon",
-  "homepage": "http://catb.org/gpsd/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Global Positioning System (GPS) daemon",
+  "homepage": "http://catb.org/gpsd/",
   "versions": {
     "stable": "3.17",
-    "bottle": true,
     "devel": null,
-    "head": null
+    "head": null,
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "scons",
-    "libusb"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-    "libusb"
-  ],
-  "build_dependencies": [
-    "scons"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "gpsd does not automatically detect GPS device addresses. Once started, you\nneed to force it to connect to your GPS:\n\n  GPSD_SOCKET=\"/home/travis/Homebrew/var/gpsd.sock\" /home/travis/Homebrew/Cellar/gpsd/3.17/sbin/gpsdctl add /dev/tty.usbserial-XYZ\n",
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--with-libusb",
-      "description": "Build with libusb support"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -69,5 +39,37 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--with-libusb",
+      "description": "Build with libusb support"
+    }
+  ],
+  "build_dependencies": [
+    "scons"
+  ],
+  "dependencies": [
+
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "libusb"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "gpsd does not automatically detect GPS device addresses. Once started, you\nneed to force it to connect to your GPS:\n\n  GPSD_SOCKET=\"/home/travis/Homebrew/var/gpsd.sock\" /home/travis/Homebrew/Cellar/gpsd/3.17/sbin/gpsdctl add /dev/tty.usbserial-XYZ\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

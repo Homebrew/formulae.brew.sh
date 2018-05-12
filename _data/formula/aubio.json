@@ -1,63 +1,46 @@
 {
   "name": "aubio",
   "full_name": "aubio",
-  "desc": "Extract annotations from audio signals",
-  "homepage": "https://aubio.org/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Extract annotations from audio signals",
+  "homepage": "https://aubio.org/",
   "versions": {
     "stable": "0.4.6",
-    "bottle": true,
     "devel": null,
-    "head": null
+    "head": null,
+    "bottle": true
   },
   "revision": 1,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "pkg-config",
-    "libtool",
-    "numpy",
-    "python@2",
-    "libav",
-    "libsndfile",
-    "libsamplerate",
-    "fftw",
-    "jack"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-    "libav",
-    "libsndfile",
-    "libsamplerate",
-    "fftw",
-    "jack"
-  ],
-  "build_dependencies": [
-    "pkg-config",
-    "libtool"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-    {
-      "name": "macos",
-      "cask": null,
-      "download": null
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/aubio-0.4.6_1.high_sierra.bottle.tar.gz",
+          "sha256": "aa38cdd6191590eed102eb940da4e8e21daf5fc3628a747360d09b269c18cbf2"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/aubio-0.4.6_1.sierra.bottle.tar.gz",
+          "sha256": "cbca234f689b0f8daae34c15df6234b5477fac3723fe2bb140f693746b1d86f3"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/aubio-0.4.6_1.el_capitan.bottle.tar.gz",
+          "sha256": "ad6cdea7d6a62f5b6d4101f4b4225e4d4fe4f940d5ab0eae8cdf1b1cf3a60d01"
+        }
+      }
     }
-  ],
+  },
+  "keg_only": false,
   "options": [
     {
       "option": "--with-libav",
@@ -80,26 +63,39 @@
       "description": "Build with jack support"
     }
   ],
-  "bottle": {
-    "stable": {
-      "rebuild": 0,
-      "cellar": ":any",
-      "prefix": "/usr/local",
-      "root_url": "https://homebrew.bintray.com/bottles",
-      "files": {
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/aubio-0.4.6_1.high_sierra.bottle.tar.gz",
-          "sha256": "aa38cdd6191590eed102eb940da4e8e21daf5fc3628a747360d09b269c18cbf2"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/aubio-0.4.6_1.sierra.bottle.tar.gz",
-          "sha256": "cbca234f689b0f8daae34c15df6234b5477fac3723fe2bb140f693746b1d86f3"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/aubio-0.4.6_1.el_capitan.bottle.tar.gz",
-          "sha256": "ad6cdea7d6a62f5b6d4101f4b4225e4d4fe4f940d5ab0eae8cdf1b1cf3a60d01"
-        }
-      }
+  "build_dependencies": [
+    "pkg-config",
+    "libtool"
+  ],
+  "dependencies": [
+    "numpy",
+    "python@2"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "libav",
+    "libsndfile",
+    "libsamplerate",
+    "fftw",
+    "jack"
+  ],
+  "requirements": [
+    {
+      "name": "macos",
+      "cask": null,
+      "download": null
     }
-  }
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

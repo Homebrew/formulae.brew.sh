@@ -1,57 +1,23 @@
 {
   "name": "snort",
   "full_name": "snort",
-  "desc": "Flexible Network Intrusion Detection System",
-  "homepage": "https://www.snort.org",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Flexible Network Intrusion Detection System",
+  "homepage": "https://www.snort.org",
   "versions": {
     "stable": "2.9.11.1",
-    "bottle": true,
     "devel": null,
-    "head": null
+    "head": null,
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "pkg-config",
-    "luajit",
-    "daq",
-    "libdnet",
-    "pcre",
-    "openssl"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-
-  ],
-  "build_dependencies": [
-    "pkg-config"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "For snort to be functional, you need to update the permissions for /dev/bpf*\nso that they can be read by non-root users.  This can be done manually using:\n    sudo chmod o+r /dev/bpf*\nor you could create a startup item to do this for you.\n",
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--with-debug",
-      "description": "Compile Snort with debug options enabled"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -73,5 +39,41 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--with-debug",
+      "description": "Compile Snort with debug options enabled"
+    }
+  ],
+  "build_dependencies": [
+    "pkg-config"
+  ],
+  "dependencies": [
+    "luajit",
+    "daq",
+    "libdnet",
+    "pcre",
+    "openssl"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "For snort to be functional, you need to update the permissions for /dev/bpf*\nso that they can be read by non-root users.  This can be done manually using:\n    sudo chmod o+r /dev/bpf*\nor you could create a startup item to do this for you.\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

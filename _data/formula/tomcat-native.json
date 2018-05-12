@@ -1,59 +1,23 @@
 {
   "name": "tomcat-native",
   "full_name": "tomcat-native",
-  "desc": "Lets Tomcat use some native resources for performance",
-  "homepage": "https://tomcat.apache.org/native-doc/",
   "oldname": null,
   "aliases": [
     "libtcnative"
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Lets Tomcat use some native resources for performance",
+  "homepage": "https://tomcat.apache.org/native-doc/",
   "versions": {
     "stable": "1.2.16",
-    "bottle": true,
     "devel": null,
-    "head": null
+    "head": null,
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "libtool",
-    "tomcat",
-    "openssl",
-    "apr"
-  ],
-  "recommended_dependencies": [
-    "tomcat"
-  ],
-  "optional_dependencies": [
-
-  ],
-  "build_dependencies": [
-    "libtool"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "In order for tomcat's APR lifecycle listener to find this library, you'll\nneed to add it to java.library.path. This can be done by adding this line\nto $CATALINA_HOME/bin/setenv.sh\n\n  CATALINA_OPTS=\"$CATALINA_OPTS -Djava.library.path=/home/travis/Homebrew/opt/tomcat-native/lib\"\n\nIf $CATALINA_HOME/bin/setenv.sh doesn't exist, create it and make it executable.\n",
-  "requirements": [
-    {
-      "name": "java",
-      "cask": "java",
-      "download": "https://www.oracle.com/technetwork/java/javase/downloads/index.html"
-    }
-  ],
-  "options": [
-    {
-      "option": "--without-tomcat",
-      "description": "Build without tomcat support"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -75,5 +39,42 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--without-tomcat",
+      "description": "Build without tomcat support"
+    }
+  ],
+  "build_dependencies": [
+    "libtool"
+  ],
+  "dependencies": [
+    "openssl",
+    "apr"
+  ],
+  "recommended_dependencies": [
+    "tomcat"
+  ],
+  "optional_dependencies": [
+
+  ],
+  "requirements": [
+    {
+      "name": "java",
+      "cask": "java",
+      "download": "https://www.oracle.com/technetwork/java/javase/downloads/index.html"
+    }
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "In order for tomcat's APR lifecycle listener to find this library, you'll\nneed to add it to java.library.path. This can be done by adding this line\nto $CATALINA_HOME/bin/setenv.sh\n\n  CATALINA_OPTS=\"$CATALINA_OPTS -Djava.library.path=/home/travis/Homebrew/opt/tomcat-native/lib\"\n\nIf $CATALINA_HOME/bin/setenv.sh doesn't exist, create it and make it executable.\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

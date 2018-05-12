@@ -1,64 +1,46 @@
 {
   "name": "weechat",
   "full_name": "weechat",
-  "desc": "Extensible IRC client",
-  "homepage": "https://www.weechat.org",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Extensible IRC client",
+  "homepage": "https://www.weechat.org",
   "versions": {
     "stable": "2.1",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
+  "bottle": {
+    "stable": {
+      "rebuild": 1,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/weechat-2.1.high_sierra.bottle.1.tar.gz",
+          "sha256": "08863a70ef255dc707ee7c4e4ffc1d5ee08e3288e299e6387836e6a22640e33d"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/weechat-2.1.sierra.bottle.1.tar.gz",
+          "sha256": "713e6d6a49b193d4b191b93231563bf7126ebe62f9580c7903303fd4d37e9622"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/weechat-2.1.el_capitan.bottle.1.tar.gz",
+          "sha256": "3b0a3ee4aea39eff4a066705950feccf630bdc6ecc4d5137dadfa4dcbb36c674"
+        }
+      }
+    }
+  },
   "keg_only": false,
-  "dependencies": [
-    "asciidoctor",
-    "cmake",
-    "pkg-config",
-    "gnutls",
-    "libgcrypt",
-    "gettext",
-    "aspell",
-    "lua",
-    "perl",
-    "python@2",
-    "ruby",
-    "curl"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-    "aspell",
-    "lua",
-    "perl",
-    "python@2",
-    "ruby",
-    "curl"
-  ],
-  "build_dependencies": [
-    "asciidoctor",
-    "cmake",
-    "pkg-config"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "Weechat can depend on Aspell if you choose the --with-aspell option, but\nAspell should be installed manually before installing Weechat so that\nyou can choose the dictionaries you want.  If Aspell was installed\nautomatically as part of weechat, there won't be any dictionaries.\n",
-  "requirements": [
-
-  ],
   "options": [
     {
       "option": "--with-perl",
@@ -93,26 +75,38 @@
       "description": "Build with python@2 support"
     }
   ],
-  "bottle": {
-    "stable": {
-      "rebuild": 1,
-      "cellar": "/usr/local/Cellar",
-      "prefix": "/usr/local",
-      "root_url": "https://homebrew.bintray.com/bottles",
-      "files": {
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/weechat-2.1.high_sierra.bottle.1.tar.gz",
-          "sha256": "08863a70ef255dc707ee7c4e4ffc1d5ee08e3288e299e6387836e6a22640e33d"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/weechat-2.1.sierra.bottle.1.tar.gz",
-          "sha256": "713e6d6a49b193d4b191b93231563bf7126ebe62f9580c7903303fd4d37e9622"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/weechat-2.1.el_capitan.bottle.1.tar.gz",
-          "sha256": "3b0a3ee4aea39eff4a066705950feccf630bdc6ecc4d5137dadfa4dcbb36c674"
-        }
-      }
-    }
-  }
+  "build_dependencies": [
+    "asciidoctor",
+    "cmake",
+    "pkg-config"
+  ],
+  "dependencies": [
+    "gnutls",
+    "libgcrypt",
+    "gettext"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "aspell",
+    "lua",
+    "perl",
+    "python@2",
+    "ruby",
+    "curl"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "Weechat can depend on Aspell if you choose the --with-aspell option, but\nAspell should be installed manually before installing Weechat so that\nyou can choose the dictionaries you want.  If Aspell was installed\nautomatically as part of weechat, there won't be any dictionaries.\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

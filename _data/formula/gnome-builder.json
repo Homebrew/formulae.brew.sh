@@ -1,76 +1,46 @@
 {
   "name": "gnome-builder",
   "full_name": "gnome-builder",
-  "desc": "IDE for GNOME",
-  "homepage": "https://wiki.gnome.org/Apps/Builder",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "IDE for GNOME",
+  "homepage": "https://wiki.gnome.org/Apps/Builder",
   "versions": {
     "stable": "3.24.2",
-    "bottle": true,
     "devel": null,
-    "head": null
+    "head": null,
+    "bottle": true
   },
   "revision": 8,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/gnome-builder-3.24.2_8.high_sierra.bottle.tar.gz",
+          "sha256": "5dae501a05c149c8e33c4e439935b0683a10f82b59ca2fcaef67069dfd342162"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/gnome-builder-3.24.2_8.sierra.bottle.tar.gz",
+          "sha256": "b062c8251f55aa62a601c6dfd18cf53e6ba0e4af2f99cfd74053bb17653efe86"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/gnome-builder-3.24.2_8.el_capitan.bottle.tar.gz",
+          "sha256": "cc0889d2e8f59b5dbe66b67ab1d4a8bbac12403617e9a264e0426f076ed5fbad"
+        }
+      }
+    }
+  },
   "keg_only": false,
-  "dependencies": [
-    "gobject-introspection",
-    "pkg-config",
-    "intltool",
-    "itstool",
-    "coreutils",
-    "libgit2",
-    "libgit2-glib",
-    "gtk+3",
-    "libpeas",
-    "gtksourceview3",
-    "hicolor-icon-theme",
-    "adwaita-icon-theme",
-    "desktop-file-utils",
-    "pcre",
-    "json-glib",
-    "libsoup",
-    "gspell",
-    "enchant",
-    "libxml2",
-    "gjs",
-    "vala",
-    "ctags",
-    "meson",
-    "python"
-  ],
-  "recommended_dependencies": [
-    "gjs",
-    "vala",
-    "ctags",
-    "meson"
-  ],
-  "optional_dependencies": [
-    "python"
-  ],
-  "build_dependencies": [
-    "gobject-introspection",
-    "pkg-config",
-    "intltool",
-    "itstool",
-    "coreutils"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-
-  ],
   "options": [
     {
       "option": "--without-gjs",
@@ -93,26 +63,49 @@
       "description": "Build with python support"
     }
   ],
-  "bottle": {
-    "stable": {
-      "rebuild": 0,
-      "cellar": "/usr/local/Cellar",
-      "prefix": "/usr/local",
-      "root_url": "https://homebrew.bintray.com/bottles",
-      "files": {
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gnome-builder-3.24.2_8.high_sierra.bottle.tar.gz",
-          "sha256": "5dae501a05c149c8e33c4e439935b0683a10f82b59ca2fcaef67069dfd342162"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gnome-builder-3.24.2_8.sierra.bottle.tar.gz",
-          "sha256": "b062c8251f55aa62a601c6dfd18cf53e6ba0e4af2f99cfd74053bb17653efe86"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/gnome-builder-3.24.2_8.el_capitan.bottle.tar.gz",
-          "sha256": "cc0889d2e8f59b5dbe66b67ab1d4a8bbac12403617e9a264e0426f076ed5fbad"
-        }
-      }
-    }
-  }
+  "build_dependencies": [
+    "gobject-introspection",
+    "pkg-config",
+    "intltool",
+    "itstool",
+    "coreutils"
+  ],
+  "dependencies": [
+    "libgit2",
+    "libgit2-glib",
+    "gtk+3",
+    "libpeas",
+    "gtksourceview3",
+    "hicolor-icon-theme",
+    "adwaita-icon-theme",
+    "desktop-file-utils",
+    "pcre",
+    "json-glib",
+    "libsoup",
+    "gspell",
+    "enchant",
+    "libxml2"
+  ],
+  "recommended_dependencies": [
+    "gjs",
+    "vala",
+    "ctags",
+    "meson"
+  ],
+  "optional_dependencies": [
+    "python"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

@@ -1,62 +1,46 @@
 {
   "name": "suricata",
   "full_name": "suricata",
-  "desc": "Network IDS, IPS, and security monitoring engine",
-  "homepage": "https://suricata-ids.org/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Network IDS, IPS, and security monitoring engine",
+  "homepage": "https://suricata-ids.org/",
   "versions": {
     "stable": "4.0.4",
-    "bottle": true,
     "devel": null,
-    "head": null
+    "head": null,
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/suricata-4.0.4.high_sierra.bottle.tar.gz",
+          "sha256": "d01576e7a951c8909a2193e758ca7d19b5d47d818547172317d4e47a63b08245"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/suricata-4.0.4.sierra.bottle.tar.gz",
+          "sha256": "45581acbe7020a50fea0dc1fb72a71739053b1ad12f493f10b20b2a910809c9f"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/suricata-4.0.4.el_capitan.bottle.tar.gz",
+          "sha256": "76b6f1235a829f6744181f82ed216a31060b1e266cbdb519d78629416b46b18a"
+        }
+      }
+    }
+  },
   "keg_only": false,
-  "dependencies": [
-    "python@2",
-    "pkg-config",
-    "libmagic",
-    "libnet",
-    "libyaml",
-    "pcre",
-    "nss",
-    "nspr",
-    "geoip",
-    "lua",
-    "luajit",
-    "jansson",
-    "hiredis"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-    "geoip",
-    "lua",
-    "luajit",
-    "jansson",
-    "hiredis"
-  ],
-  "build_dependencies": [
-    "pkg-config"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-
-  ],
   "options": [
     {
       "option": "--with-geoip",
@@ -79,26 +63,39 @@
       "description": "Build with hiredis support"
     }
   ],
-  "bottle": {
-    "stable": {
-      "rebuild": 0,
-      "cellar": "/usr/local/Cellar",
-      "prefix": "/usr/local",
-      "root_url": "https://homebrew.bintray.com/bottles",
-      "files": {
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/suricata-4.0.4.high_sierra.bottle.tar.gz",
-          "sha256": "d01576e7a951c8909a2193e758ca7d19b5d47d818547172317d4e47a63b08245"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/suricata-4.0.4.sierra.bottle.tar.gz",
-          "sha256": "45581acbe7020a50fea0dc1fb72a71739053b1ad12f493f10b20b2a910809c9f"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/suricata-4.0.4.el_capitan.bottle.tar.gz",
-          "sha256": "76b6f1235a829f6744181f82ed216a31060b1e266cbdb519d78629416b46b18a"
-        }
-      }
-    }
-  }
+  "build_dependencies": [
+    "pkg-config"
+  ],
+  "dependencies": [
+    "python@2",
+    "libmagic",
+    "libnet",
+    "libyaml",
+    "pcre",
+    "nss",
+    "nspr"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "geoip",
+    "lua",
+    "luajit",
+    "jansson",
+    "hiredis"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

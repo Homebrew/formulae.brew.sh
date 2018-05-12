@@ -1,80 +1,23 @@
 {
   "name": "poppler",
   "full_name": "poppler",
-  "desc": "PDF rendering library (based on the xpdf-3.0 code base)",
-  "homepage": "https://poppler.freedesktop.org/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "PDF rendering library (based on the xpdf-3.0 code base)",
+  "homepage": "https://poppler.freedesktop.org/",
   "versions": {
     "stable": "0.64.0",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "cmake",
-    "gobject-introspection",
-    "pkg-config",
-    "cairo",
-    "fontconfig",
-    "freetype",
-    "gettext",
-    "glib",
-    "jpeg",
-    "libpng",
-    "libtiff",
-    "openjpeg",
-    "qt",
-    "little-cms2",
-    "nss"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-    "qt",
-    "little-cms2",
-    "nss"
-  ],
-  "build_dependencies": [
-    "cmake",
-    "gobject-introspection",
-    "pkg-config"
-  ],
-  "conflicts_with": [
-    "pdftohtml",
-    "pdf2image",
-    "xpdf"
-  ],
-  "caveats": null,
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--with-qt",
-      "description": "Build Qt5 backend"
-    },
-    {
-      "option": "--with-little-cms2",
-      "description": "Use color management system"
-    },
-    {
-      "option": "--with-nss",
-      "description": "Use NSS library for PDF signature validation"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -96,5 +39,59 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--with-qt",
+      "description": "Build Qt5 backend"
+    },
+    {
+      "option": "--with-little-cms2",
+      "description": "Use color management system"
+    },
+    {
+      "option": "--with-nss",
+      "description": "Use NSS library for PDF signature validation"
+    }
+  ],
+  "build_dependencies": [
+    "cmake",
+    "gobject-introspection",
+    "pkg-config"
+  ],
+  "dependencies": [
+    "cairo",
+    "fontconfig",
+    "freetype",
+    "gettext",
+    "glib",
+    "jpeg",
+    "libpng",
+    "libtiff",
+    "openjpeg"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "qt",
+    "little-cms2",
+    "nss"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+    "pdftohtml",
+    "pdf2image",
+    "xpdf"
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

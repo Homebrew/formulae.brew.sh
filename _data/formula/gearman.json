@@ -1,63 +1,46 @@
 {
   "name": "gearman",
   "full_name": "gearman",
-  "desc": "Application framework to farm out work to other machines or processes",
-  "homepage": "http://gearman.org/",
   "oldname": null,
   "aliases": [
     "gearmand"
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Application framework to farm out work to other machines or processes",
+  "homepage": "http://gearman.org/",
   "versions": {
     "stable": "1.1.18",
-    "bottle": true,
     "devel": null,
-    "head": null
+    "head": null,
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/gearman-1.1.18.high_sierra.bottle.tar.gz",
+          "sha256": "ecabdc718b87f1c8772a86c5cdcbfb69c538891c842132ab2a88b92fb7ebe176"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/gearman-1.1.18.sierra.bottle.tar.gz",
+          "sha256": "1c1de51b9c2445c05df372a9e0f5c7d8595b4160df0515b96d014925e3e85ac8"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/gearman-1.1.18.el_capitan.bottle.tar.gz",
+          "sha256": "b2d1ba15ccdf0688decb8ecb0503ffa9fe507dccb5828de1007f130266ef98b1"
+        }
+      }
+    }
+  },
   "keg_only": false,
-  "dependencies": [
-    "pkg-config",
-    "sphinx-doc",
-    "boost",
-    "libevent",
-    "mysql",
-    "postgresql",
-    "hiredis",
-    "libmemcached",
-    "openssl",
-    "wolfssl",
-    "tokyo-cabinet"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-    "mysql",
-    "postgresql",
-    "hiredis",
-    "libmemcached",
-    "openssl",
-    "wolfssl",
-    "tokyo-cabinet"
-  ],
-  "build_dependencies": [
-    "pkg-config",
-    "sphinx-doc"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-
-  ],
   "options": [
     {
       "option": "--with-mysql",
@@ -88,26 +71,37 @@
       "description": "Build with tokyo-cabinet support"
     }
   ],
-  "bottle": {
-    "stable": {
-      "rebuild": 0,
-      "cellar": "/usr/local/Cellar",
-      "prefix": "/usr/local",
-      "root_url": "https://homebrew.bintray.com/bottles",
-      "files": {
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gearman-1.1.18.high_sierra.bottle.tar.gz",
-          "sha256": "ecabdc718b87f1c8772a86c5cdcbfb69c538891c842132ab2a88b92fb7ebe176"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gearman-1.1.18.sierra.bottle.tar.gz",
-          "sha256": "1c1de51b9c2445c05df372a9e0f5c7d8595b4160df0515b96d014925e3e85ac8"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/gearman-1.1.18.el_capitan.bottle.tar.gz",
-          "sha256": "b2d1ba15ccdf0688decb8ecb0503ffa9fe507dccb5828de1007f130266ef98b1"
-        }
-      }
-    }
-  }
+  "build_dependencies": [
+    "pkg-config",
+    "sphinx-doc"
+  ],
+  "dependencies": [
+    "boost",
+    "libevent"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "mysql",
+    "postgresql",
+    "hiredis",
+    "libmemcached",
+    "openssl",
+    "wolfssl",
+    "tokyo-cabinet"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

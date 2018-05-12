@@ -1,66 +1,23 @@
 {
   "name": "libspatialite",
   "full_name": "libspatialite",
-  "desc": "Adds spatial SQL capabilities to SQLite",
-  "homepage": "https://www.gaia-gis.it/fossil/libspatialite/index",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Adds spatial SQL capabilities to SQLite",
+  "homepage": "https://www.gaia-gis.it/fossil/libspatialite/index",
   "versions": {
     "stable": "4.3.0a",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 6,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "pkg-config",
-    "proj",
-    "geos",
-    "sqlite",
-    "libxml2",
-    "freexl"
-  ],
-  "recommended_dependencies": [
-    "libxml2",
-    "freexl"
-  ],
-  "optional_dependencies": [
-
-  ],
-  "build_dependencies": [
-    "pkg-config"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-
-  ],
-  "options": [
-    {
-      "option": "--without-freexl",
-      "description": "Build without support for reading Excel files"
-    },
-    {
-      "option": "--without-libxml2",
-      "description": "Disable support for xml parsing (parsing needed by spatialite-gui)"
-    },
-    {
-      "option": "--without-geopackage",
-      "description": "Build without OGC GeoPackage support"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -82,5 +39,48 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--without-freexl",
+      "description": "Build without support for reading Excel files"
+    },
+    {
+      "option": "--without-libxml2",
+      "description": "Disable support for xml parsing (parsing needed by spatialite-gui)"
+    },
+    {
+      "option": "--without-geopackage",
+      "description": "Build without OGC GeoPackage support"
+    }
+  ],
+  "build_dependencies": [
+    "pkg-config"
+  ],
+  "dependencies": [
+    "proj",
+    "geos",
+    "sqlite"
+  ],
+  "recommended_dependencies": [
+    "libxml2",
+    "freexl"
+  ],
+  "optional_dependencies": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

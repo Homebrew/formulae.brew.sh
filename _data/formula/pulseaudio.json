@@ -1,59 +1,46 @@
 {
   "name": "pulseaudio",
   "full_name": "pulseaudio",
-  "desc": "Sound system for POSIX OSes",
-  "homepage": "https://wiki.freedesktop.org/www/Software/PulseAudio/",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Sound system for POSIX OSes",
+  "homepage": "https://wiki.freedesktop.org/www/Software/PulseAudio/",
   "versions": {
     "stable": "11.1",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 1,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/pulseaudio-11.1_1.high_sierra.bottle.tar.gz",
+          "sha256": "a449d66ca202e6ba2106af19ab3513ab17841ad45db2069bd8e18c5fa3341189"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/pulseaudio-11.1_1.sierra.bottle.tar.gz",
+          "sha256": "80fdcab93388854621cd2392e3e0782587efda978c2f0de51381d3c3a264301e"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/pulseaudio-11.1_1.el_capitan.bottle.tar.gz",
+          "sha256": "9ae35d388adbb4164afd5c121e5c8105886be394ad21921c33ebcff375ec8dff"
+        }
+      }
+    }
+  },
   "keg_only": false,
-  "dependencies": [
-    "pkg-config",
-    "libtool",
-    "json-c",
-    "libsndfile",
-    "libsoxr",
-    "openssl",
-    "speexdsp",
-    "glib",
-    "gconf",
-    "gtk+3",
-    "jack"
-  ],
-  "recommended_dependencies": [
-    "speexdsp"
-  ],
-  "optional_dependencies": [
-    "glib",
-    "gconf",
-    "gtk+3",
-    "jack"
-  ],
-  "build_dependencies": [
-    "pkg-config"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-
-  ],
   "options": [
     {
       "option": "--with-nls",
@@ -80,26 +67,36 @@
       "description": "Build with jack support"
     }
   ],
-  "bottle": {
-    "stable": {
-      "rebuild": 0,
-      "cellar": "/usr/local/Cellar",
-      "prefix": "/usr/local",
-      "root_url": "https://homebrew.bintray.com/bottles",
-      "files": {
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/pulseaudio-11.1_1.high_sierra.bottle.tar.gz",
-          "sha256": "a449d66ca202e6ba2106af19ab3513ab17841ad45db2069bd8e18c5fa3341189"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/pulseaudio-11.1_1.sierra.bottle.tar.gz",
-          "sha256": "80fdcab93388854621cd2392e3e0782587efda978c2f0de51381d3c3a264301e"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/pulseaudio-11.1_1.el_capitan.bottle.tar.gz",
-          "sha256": "9ae35d388adbb4164afd5c121e5c8105886be394ad21921c33ebcff375ec8dff"
-        }
-      }
-    }
-  }
+  "build_dependencies": [
+    "pkg-config"
+  ],
+  "dependencies": [
+    "libtool",
+    "json-c",
+    "libsndfile",
+    "libsoxr",
+    "openssl"
+  ],
+  "recommended_dependencies": [
+    "speexdsp"
+  ],
+  "optional_dependencies": [
+    "glib",
+    "gconf",
+    "gtk+3",
+    "jack"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

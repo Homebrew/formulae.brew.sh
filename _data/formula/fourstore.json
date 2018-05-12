@@ -1,60 +1,23 @@
 {
   "name": "fourstore",
   "full_name": "fourstore",
-  "desc": "Efficient, stable RDF database",
-  "homepage": "https://github.com/4store/4store",
   "oldname": null,
   "aliases": [
     "4store"
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Efficient, stable RDF database",
+  "homepage": "https://github.com/4store/4store",
   "versions": {
     "stable": "1.1.6",
-    "bottle": true,
     "devel": null,
-    "head": null
+    "head": null,
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "pkg-config",
-    "autoconf",
-    "automake",
-    "libtool",
-    "gettext",
-    "glib",
-    "pcre",
-    "raptor",
-    "rasqal"
-  ],
-  "recommended_dependencies": [
-
-  ],
-  "optional_dependencies": [
-
-  ],
-  "build_dependencies": [
-    "pkg-config",
-    "autoconf",
-    "automake",
-    "libtool"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": "Databases will be created at /home/travis/Homebrew/var/fourstore.\n\nCreate and start up a database:\n    4s-backend-setup mydb\n    4s-backend mydb\n\nLoad RDF data:\n    4s-import mydb datafile.rdf\n\nStart up HTTP SPARQL server without daemonizing:\n    4s-httpd -p 8000 -D mydb\n\nSee https://4store.danielknoell.de/trac/wiki/Documentation/ for more information.\n",
-  "requirements": [
-
-  ],
-  "options": [
-
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -84,5 +47,41 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+    "pkg-config",
+    "autoconf",
+    "automake",
+    "libtool"
+  ],
+  "dependencies": [
+    "gettext",
+    "glib",
+    "pcre",
+    "raptor",
+    "rasqal"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "Databases will be created at /home/travis/Homebrew/var/fourstore.\n\nCreate and start up a database:\n    4s-backend-setup mydb\n    4s-backend mydb\n\nLoad RDF data:\n    4s-import mydb datafile.rdf\n\nStart up HTTP SPARQL server without daemonizing:\n    4s-httpd -p 8000 -D mydb\n\nSee https://4store.danielknoell.de/trac/wiki/Documentation/ for more information.\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

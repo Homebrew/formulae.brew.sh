@@ -1,67 +1,23 @@
 {
   "name": "hbase",
   "full_name": "hbase",
-  "desc": "Hadoop database: a distributed, scalable, big data store",
-  "homepage": "https://hbase.apache.org",
   "oldname": null,
   "aliases": [
 
   ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Hadoop database: a distributed, scalable, big data store",
+  "homepage": "https://hbase.apache.org",
   "versions": {
     "stable": "1.2.6",
-    "bottle": true,
     "devel": null,
-    "head": null
+    "head": null,
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "hadoop",
-    "lzo",
-    "ant"
-  ],
-  "recommended_dependencies": [
-    "lzo"
-  ],
-  "optional_dependencies": [
-    "hadoop"
-  ],
-  "build_dependencies": [
-    "ant"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-    {
-      "name": "java",
-      "cask": "java",
-      "download": "https://www.oracle.com/technetwork/java/javase/downloads/index.html"
-    },
-    {
-      "name": "arch",
-      "cask": null,
-      "download": null
-    }
-  ],
-  "options": [
-    {
-      "option": "--with-hadoop",
-      "description": "Build with hadoop support"
-    },
-    {
-      "option": "--without-lzo",
-      "description": "Build without lzo support"
-    }
-  ],
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -87,5 +43,50 @@
         }
       }
     }
-  }
+  },
+  "keg_only": false,
+  "options": [
+    {
+      "option": "--with-hadoop",
+      "description": "Build with hadoop support"
+    },
+    {
+      "option": "--without-lzo",
+      "description": "Build without lzo support"
+    }
+  ],
+  "build_dependencies": [
+    "ant"
+  ],
+  "dependencies": [
+
+  ],
+  "recommended_dependencies": [
+    "lzo"
+  ],
+  "optional_dependencies": [
+    "hadoop"
+  ],
+  "requirements": [
+    {
+      "name": "java",
+      "cask": "java",
+      "download": "https://www.oracle.com/technetwork/java/javase/downloads/index.html"
+    },
+    {
+      "name": "arch",
+      "cask": null,
+      "download": null
+    }
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }

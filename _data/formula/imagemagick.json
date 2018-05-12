@@ -1,86 +1,46 @@
 {
   "name": "imagemagick",
   "full_name": "imagemagick",
-  "desc": "Tools and libraries to manipulate images in many formats",
-  "homepage": "https://www.imagemagick.org/",
   "oldname": null,
   "aliases": [
     "imagemagick@7"
   ],
+  "versioned_formulae": [
+    "imagemagick@6"
+  ],
+  "desc": "Tools and libraries to manipulate images in many formats",
+  "homepage": "https://www.imagemagick.org/",
   "versions": {
     "stable": "7.0.7-31",
-    "bottle": true,
     "devel": null,
-    "head": "HEAD"
+    "head": "HEAD",
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
-  "installed": [
-
-  ],
-  "linked_keg": null,
-  "pinned": false,
-  "outdated": false,
-  "keg_only": false,
-  "dependencies": [
-    "pkg-config",
-    "libtool",
-    "xz",
-    "jpeg",
-    "libpng",
-    "libtiff",
-    "freetype",
-    "fontconfig",
-    "little-cms",
-    "little-cms2",
-    "libde265",
-    "libwmf",
-    "librsvg",
-    "liblqr",
-    "openexr",
-    "ghostscript",
-    "webp",
-    "openjpeg",
-    "fftw",
-    "pango",
-    "perl"
-  ],
-  "recommended_dependencies": [
-    "jpeg",
-    "libpng",
-    "libtiff",
-    "freetype"
-  ],
-  "optional_dependencies": [
-    "fontconfig",
-    "little-cms",
-    "little-cms2",
-    "libde265",
-    "libwmf",
-    "librsvg",
-    "liblqr",
-    "openexr",
-    "ghostscript",
-    "webp",
-    "openjpeg",
-    "fftw",
-    "pango",
-    "perl"
-  ],
-  "build_dependencies": [
-    "pkg-config"
-  ],
-  "conflicts_with": [
-
-  ],
-  "caveats": null,
-  "requirements": [
-    {
-      "name": "x11",
-      "cask": "xquartz",
-      "download": "https://xquartz.macosforge.org"
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/imagemagick-7.0.7-31.high_sierra.bottle.tar.gz",
+          "sha256": "ef30c05b0e11d611345a1ef7a7f806cd7889395868073697ca9ea092af95fa02"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/imagemagick-7.0.7-31.sierra.bottle.tar.gz",
+          "sha256": "f91eb0089867d91b5c4c7bcc15e942b2c37789955182b5d4e5d6b15aeb11d6cc"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/imagemagick-7.0.7-31.el_capitan.bottle.tar.gz",
+          "sha256": "d06d56d8003aa075d2628d67dd8114efddba0acb08d6e7e9df967af1479ae942"
+        }
+      }
     }
-  ],
+  },
+  "keg_only": false,
   "options": [
     {
       "option": "--with-fftw",
@@ -187,26 +147,50 @@
       "description": "Build with pango support"
     }
   ],
-  "bottle": {
-    "stable": {
-      "rebuild": 0,
-      "cellar": "/usr/local/Cellar",
-      "prefix": "/usr/local",
-      "root_url": "https://homebrew.bintray.com/bottles",
-      "files": {
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/imagemagick-7.0.7-31.high_sierra.bottle.tar.gz",
-          "sha256": "ef30c05b0e11d611345a1ef7a7f806cd7889395868073697ca9ea092af95fa02"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/imagemagick-7.0.7-31.sierra.bottle.tar.gz",
-          "sha256": "f91eb0089867d91b5c4c7bcc15e942b2c37789955182b5d4e5d6b15aeb11d6cc"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/imagemagick-7.0.7-31.el_capitan.bottle.tar.gz",
-          "sha256": "d06d56d8003aa075d2628d67dd8114efddba0acb08d6e7e9df967af1479ae942"
-        }
-      }
+  "build_dependencies": [
+    "pkg-config"
+  ],
+  "dependencies": [
+    "libtool",
+    "xz"
+  ],
+  "recommended_dependencies": [
+    "jpeg",
+    "libpng",
+    "libtiff",
+    "freetype"
+  ],
+  "optional_dependencies": [
+    "fontconfig",
+    "little-cms",
+    "little-cms2",
+    "libde265",
+    "libwmf",
+    "librsvg",
+    "liblqr",
+    "openexr",
+    "ghostscript",
+    "webp",
+    "openjpeg",
+    "fftw",
+    "pango",
+    "perl"
+  ],
+  "requirements": [
+    {
+      "name": "x11",
+      "cask": "xquartz",
+      "download": "https://xquartz.macosforge.org"
     }
-  }
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": null,
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
 }
