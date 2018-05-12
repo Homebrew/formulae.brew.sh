@@ -2,23 +2,24 @@
 layout: default
 permalink: :title
 ---
-{%- assign name = page.name | remove: ".html" | remove: "@" -%}
+{%- assign name = page.name | remove: ".html" | remove: "@" | remove: "." -%}
 {%- assign f = site.data.formula[name] -%}
 <h2>{{ f.name }}</h2>
+{%- if f.aliases.size > 0 -%}
+<p>
+    Also known as:
+    <strong>{{ f.aliases | join: "</strong>, <strong>" }}</strong>
+</p>
+{%- endif -%}
+{%- if f.oldname -%}
+<p>Formerly known as: <strong>{{ f.oldname }}</strong></p>
+{%- endif -%}
 <p>{{ f.desc }}</p>
 <p>
     <a href="{{ f.homepage }}">{{ f.homepage }}</a>
 </p>
 
-{%- if f.aliases.size > 0 -%}
-<p>
-    Also known as:
-    <strong>{{ f.aliases | join: "</strong>,
-    <strong>" }}</strong>
-</p>
-{%- endif -%}
-
-<h3>Current versions</h3>
+<p>Current versions:</p>
 <table>
     <tr>
         <td>stable</td>
@@ -39,23 +40,62 @@ permalink: :title
         <td>{{ f.versions.head }}</td>
     </tr>
     {%- endif -%}
+    {%- if f.versions.bottle -%}
+    <tr>
+        <td>bottle</td>
+        <td>🍾</td>
+        <td>
+            {%- for b in f.bottle.stable.files -%}
+            {{ b[0] }}
+            {%- unless forloop.last -%}, {% endunless -%}
+            {%- endfor -%}
+        </td>
+    </tr>
+    {%- endif -%}
 </table>
 
+{%- include formulae.html formulae=f.versioned_formulae description="Other versions" -%}
+
 {%- if f.revision > 0 -%}
-<h3>Revision: {{ f.revision }}</h3>
+<p>Revision: <strong>{{ f.revision }}</strong></p>
 {%- endif -%}
 
-{%- if f.dependencies.size > 0 -%}
-<p>gcc requires the following formulae to be installed:</p>
+{%- if f.keg_only -%}
+<p>Keg-only</p>
+{%- endif -%}
+
+{%- if f.options.size > 0 -%}
+<p>Options:</p>
 <table>
-    {%- for d in f.dependencies -%}
-    {%- assign dependency_name = d | remove: "@" -%}
+    {%- for o in f.options -%}
     <tr>
-        {%- assign dep = site.data.formula[dependency_name] -%}
-        {%- include formula.html formula=dep -%}
+        <td>{{ o.option }}</td>
+        <td>{{ o.description}}</td>
     </tr>
     {%- endfor -%}
 </table>
+{%- endif -%}
+
+{%- include formulae.html formulae=f.dependencies description="Depends on" -%}
+{%- include formulae.html formulae=f.recommended_dependencies description="Depends on recommended" -%}
+{%- include formulae.html formulae=f.optional_dependencies description="Depends on optionally" -%}
+{%- include formulae.html formulae=f.build_dependencies description="Depends on when building from source" -%}
+
+{%- if f.requirements.size > 0 -%}
+<p>
+    Requires:
+    {% for r in f.requirements -%}
+        <strong>:{{ r.name }}</strong>
+        {%- unless forloop.last -%}, {% endunless -%}
+    {%- endfor -%}
+</p>
+{%- endif -%}
+
+{%- if f.conflicts_with.size > 0 -%}
+<p>
+    Conflicts with:
+    <strong>{{ f.conflicts_with | join: "</strong>,<strong>" }}</strong>
+</p>
 {%- endif -%}
 
 <p><a href="{{ site.baseurl }}/api/formula/{{ f.name }}.json">JSON API for {{ f.name }}</a></p>
