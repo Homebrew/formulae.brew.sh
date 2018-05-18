@@ -11,12 +11,12 @@
   "desc": "IDE for GNOME",
   "homepage": "https://wiki.gnome.org/Apps/Builder",
   "versions": {
-    "stable": "3.24.2",
+    "stable": "3.28.0",
     "devel": null,
     "head": null,
     "bottle": true
   },
-  "revision": 8,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -26,74 +26,52 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gnome-builder-3.24.2_8.high_sierra.bottle.tar.gz",
-          "sha256": "5dae501a05c149c8e33c4e439935b0683a10f82b59ca2fcaef67069dfd342162"
+          "url": "https://homebrew.bintray.com/bottles/gnome-builder-3.28.0.high_sierra.bottle.tar.gz",
+          "sha256": "140d6098647ff5f8da9ef2baa4df1f5406e8854e036c9399c9483155652bdb34"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gnome-builder-3.24.2_8.sierra.bottle.tar.gz",
-          "sha256": "b062c8251f55aa62a601c6dfd18cf53e6ba0e4af2f99cfd74053bb17653efe86"
+          "url": "https://homebrew.bintray.com/bottles/gnome-builder-3.28.0.sierra.bottle.tar.gz",
+          "sha256": "68bbafd16612683a043856e207fd9228fadd036afcb37a4a25e1e2368f04db29"
         },
         "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/gnome-builder-3.24.2_8.el_capitan.bottle.tar.gz",
-          "sha256": "cc0889d2e8f59b5dbe66b67ab1d4a8bbac12403617e9a264e0426f076ed5fbad"
+          "url": "https://homebrew.bintray.com/bottles/gnome-builder-3.28.0.el_capitan.bottle.tar.gz",
+          "sha256": "9c28f09823068feb4f489ee4e30457a0a4b316aaca768e1f955b81d34d017e72"
         }
       }
     }
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--without-gjs",
-      "description": "Build without gjs support"
-    },
-    {
-      "option": "--without-vala",
-      "description": "Build without vala support"
-    },
-    {
-      "option": "--without-ctags",
-      "description": "Build without ctags support"
-    },
-    {
-      "option": "--without-meson",
-      "description": "Build without meson support"
-    },
-    {
-      "option": "--with-python",
-      "description": "Build with python support"
-    }
+
   ],
   "build_dependencies": [
     "gobject-introspection",
     "pkg-config",
-    "intltool",
-    "itstool",
-    "coreutils"
+    "meson-internal",
+    "ninja",
+    "python"
   ],
   "dependencies": [
-    "libgit2",
-    "libgit2-glib",
+    "dbus",
     "gtk+3",
-    "libpeas",
+    "libdazzle",
     "gtksourceview3",
-    "hicolor-icon-theme",
-    "adwaita-icon-theme",
-    "desktop-file-utils",
-    "pcre",
     "json-glib",
-    "libsoup",
+    "jsonrpc-glib",
+    "template-glib",
+    "libpeas",
+    "vte3",
+    "libxml2",
+    "libgit2-glib",
     "gspell",
-    "enchant",
-    "libxml2"
+    "hicolor-icon-theme",
+    "adwaita-icon-theme"
   ],
   "recommended_dependencies": [
-    "gjs",
-    "vala",
-    "ctags",
-    "meson"
+
   ],
   "optional_dependencies": [
-    "python"
+
   ],
   "requirements": [
 
