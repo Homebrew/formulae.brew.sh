@@ -11,7 +11,7 @@
   "desc": "Graphical network analyzer and capture tool",
   "homepage": "https://www.wireshark.org",
   "versions": {
-    "stable": "2.6.0",
+    "stable": "2.6.1",
     "devel": null,
     "head": "HEAD",
     "bottle": true
@@ -26,16 +26,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/wireshark-2.6.0.high_sierra.bottle.tar.gz",
-          "sha256": "5bb80bfd27c7b455a951afa29ad244f58b77b22cb2ba3be12ef54f41ed41243c"
+          "url": "https://homebrew.bintray.com/bottles/wireshark-2.6.1.high_sierra.bottle.tar.gz",
+          "sha256": "0b3c8f3dec1fb90c9704d7009adcb09281491583eb92fc3f38e1210d6ef895b0"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/wireshark-2.6.0.sierra.bottle.tar.gz",
-          "sha256": "42f6409d8d57ab65630cdc4b467a8ed9b5fadc4484c86383e6b2e9f48e7ff339"
+          "url": "https://homebrew.bintray.com/bottles/wireshark-2.6.1.sierra.bottle.tar.gz",
+          "sha256": "ec69fa058d4d165234182069940a20f8b6b9a08898818854eec88c4890ca69e3"
         },
         "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/wireshark-2.6.0.el_capitan.bottle.tar.gz",
-          "sha256": "479b873745e8c807d649e711cbd3bfd2f3c83201288264153eb3ae664c0841ed"
+          "url": "https://homebrew.bintray.com/bottles/wireshark-2.6.1.el_capitan.bottle.tar.gz",
+          "sha256": "cbd0649938676719180cf30b2c8932e7d49f400e302978a5e8719a33b37d0502"
         }
       }
     }
@@ -43,16 +43,8 @@
   "keg_only": false,
   "options": [
     {
-      "option": "--with-gtk+3",
-      "description": "Build the wireshark command with gtk+3"
-    },
-    {
-      "option": "--with-gtk+",
-      "description": "Build the wireshark command with gtk+"
-    },
-    {
       "option": "--with-qt",
-      "description": "Build the wireshark command with Qt (can be used with or without either GTK option)"
+      "description": "Build the wireshark command with Qt"
     },
     {
       "option": "--with-headers",
@@ -69,10 +61,6 @@
     {
       "option": "--with-libssh",
       "description": "Build with libssh support"
-    },
-    {
-      "option": "--with-portaudio",
-      "description": "Build with portaudio support"
     }
   ],
   "build_dependencies": [
@@ -84,7 +72,7 @@
     "gnutls",
     "libgcrypt",
     "libmaxminddb",
-    "lua"
+    "lua@5.1"
   ],
   "recommended_dependencies": [
 
@@ -93,10 +81,7 @@
     "libsmi",
     "libssh",
     "nghttp2",
-    "portaudio",
-    "qt",
-    "gtk+3",
-    "gtk+"
+    "qt"
   ],
   "requirements": [
 
