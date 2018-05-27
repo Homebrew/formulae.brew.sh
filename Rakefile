@@ -1,7 +1,7 @@
 require "rake"
 require "rake/clean"
 
-task default: :jekyll
+task default: :deps
 
 task :deps do
   sh "brew", "ruby", "script/generate.rb"
