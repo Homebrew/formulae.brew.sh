@@ -1,6 +1,7 @@
 ---
 title: JSON API documentation
 layout: page
+permalink: /docs/api/
 ---
 ## Formulae
 ### List formulae metadata for all homebrew-core formulae
