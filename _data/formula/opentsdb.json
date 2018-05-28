@@ -43,10 +43,6 @@
   "keg_only": false,
   "options": [
     {
-      "option": "--without-lzo",
-      "description": "Build without lzo support"
-    },
-    {
       "option": "--with-gnuplot",
       "description": "Build with gnuplot support"
     }
@@ -55,10 +51,11 @@
 
   ],
   "dependencies": [
-    "hbase"
+    "hbase",
+    "lzo"
   ],
   "recommended_dependencies": [
-    "lzo"
+
   ],
   "optional_dependencies": [
     "gnuplot"
@@ -68,11 +65,6 @@
       "name": "java",
       "cask": "homebrew/cask-versions/java8",
       "download": "https://www.oracle.com/technetwork/java/javase/downloads/index.html"
-    },
-    {
-      "name": "hbaselzo",
-      "cask": null,
-      "download": null
     }
   ],
   "conflicts_with": [
