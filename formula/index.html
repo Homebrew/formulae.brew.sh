@@ -3,6 +3,8 @@ layout: default
 ---
 <p>This is a listing of all packages available via the <a href="https://brew.sh">Homebrew</a> package manager for macOS.</p>
 
+<h2><a href="{{ site.baseurl }}/api/formula.json"><code>/api/formula.json</code> (JSON API)</a></h2>
+
 <table>
     {%- assign sorted_formulae = site.data.formula | sort -%}
     {%- for formula in sorted_formulae %}
