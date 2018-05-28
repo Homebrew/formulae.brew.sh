@@ -8,7 +8,7 @@ permalink: /docs/api/
 List the `brew info --json=v1` output for all current Homebrew/homebrew-core formulae.
 
 ```
-GET /api/formula.json
+GET https://formulae.brew.sh/api/formula.json
 ```
 
 #### Response
@@ -102,7 +102,7 @@ GET /api/formula.json
 Get the `brew info --json=v1` output for a single, current Homebrew/homebrew-core formula.
 
 ```
-GET /api/formula/${FORMULA}.json
+GET https://formulae.brew.sh/api/formula/${FORMULA}.json
 ```
 
 #### Variables
@@ -197,7 +197,7 @@ GET /api/formula/${FORMULA}.json
 List all analytics events for a specified category and number of days.
 
 ```
-GET /api/analytics/${CATEGORY}/${DAYS}.json
+GET https://formulae.brew.sh/api/analytics/${CATEGORY}/${DAYS}.json
 ```
 
 #### Variables
@@ -243,7 +243,7 @@ GET /api/analytics/${CATEGORY}/${DAYS}.json
 List all the Homebrew/homebrew-core formulae's analytics events for a specified category and number of days (grouped by formula name).
 
 ```
-GET /api/analytics/${CATEGORY}/homebrew-core/${DAYS}.json
+GET https://formulae.brew.sh/api/analytics/${CATEGORY}/homebrew-core/${DAYS}.json
 ```
 
 #### Variables
