@@ -1,0 +1,10 @@
+---
+---
+{%- assign days = page.name | remove: ".json" -%}
+{%- if page.homebrew-core -%}
+    {%- assign json =
+        site.data.analytics[page.category].homebrew-core[days] -%}
+{%- else - %}
+    {%- assign json = site.data.analytics[page.category][days] -%}
+{%- endif -%}
+{{ json | jsonify }}
