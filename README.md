@@ -2,7 +2,19 @@
 
 [Homebrew Formulae](https://formulae.brew.sh) is an online package browser for [Homebrew](https://brew.sh).
 
-It displays a list of all packages in [Homebrew/homebrew-core](https://github.com/Homebrew/homebrew-core) and provides a JSON API for all packages (or individual packages) in [Homebrew/homebrew-core](https://github.com/Homebrew/homebrew-core). It is deployed to GitHub Pages after every [Homebrew/homebrew-core](https://github.com/Homebrew/homebrew-core) commit by [Travis CI](https://travis-ci.org).
+It displays all packages in [Homebrew/homebrew-core](https://github.com/Homebrew/homebrew-core). It is deployed to GitHub Pages after every [Homebrew/homebrew-core](https://github.com/Homebrew/homebrew-core) commit by [Travis CI](https://travis-ci.org).
+
+## JSON API
+
+It also provides a JSON API for all packages (or individual packages) in [Homebrew/homebrew-core](https://github.com/Homebrew/homebrew-core) and their related analytics. This JSON data is used for the creation of the HTML resources on this site.
+
+Currently available:
+- List formulae metadata for all homebrew-core formulae
+- Get formula metadata for a homebrew-core formula
+- List analytics events
+- List analytics events for all homebrew-core formulae
+
+Read more in the [JSON API documentation](https://formulae.brew.sh/docs/api/).
 
 ## Usage
 Open https://formulae.brew.sh/ in your web browser.

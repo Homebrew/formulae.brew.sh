@@ -1,0 +1,24 @@
+---
+layout: base
+---
+{% assign json = site.data.analytics[page.category][page.days] %}
+<h2>{{ page.category_pretty }} Events</h2>
+
+<h3><a href="{{ site.baseurl }}/api/analytics/{{ page.category }}/{{ page.days}}.json"><code>/api/analytics/{{ page.category }}/{{ page.days}}.json</code> (JSON API)</a></h3>
+
+<table class="full-width">
+  <tr>
+    <th></th>
+    <th>{% if page.category == "os-version" %}Version{% else %}Formula{% endif %}</th>
+    <th>Events</th>
+    <th>%</th>
+  </tr>
+{% for item in json.items %}
+  <tr>
+    <td class="number-data">#{{ item.number }}</td>
+    <td><code>{% if page.category == "os-version" %}{{ item.os_version }}{% else %}{{ item.formula }}{% endif %}</code></td>
+    <td class="number-data">{{ item.count }}</td>
+    <td class="number-data">{{ item.percent }}%</td>
+  </tr>
+{% endfor %}
+</table>
