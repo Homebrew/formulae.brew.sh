@@ -11,7 +11,7 @@
   "desc": "Scalable, distributed Time Series Database",
   "homepage": "http://opentsdb.net/",
   "versions": {
-    "stable": "2.3.0",
+    "stable": "2.3.1",
     "devel": null,
     "head": null,
     "bottle": true
@@ -26,30 +26,22 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/opentsdb-2.3.0.high_sierra.bottle.tar.gz",
-          "sha256": "cbf21f845ccb3f79b9f0a31f44c7581de4f59cfedf62283ea8793d740b74c945"
+          "url": "https://homebrew.bintray.com/bottles/opentsdb-2.3.1.high_sierra.bottle.tar.gz",
+          "sha256": "a6b9311bccbf95f6117413ef081f3eb6d52f50fec4f9b1829cf4440e119cafc7"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/opentsdb-2.3.0.sierra.bottle.tar.gz",
-          "sha256": "4ef2e9151ebc7aafccdeb170495d2a3308ce92f8cbac68cf88c71558d4b8aaf7"
+          "url": "https://homebrew.bintray.com/bottles/opentsdb-2.3.1.sierra.bottle.tar.gz",
+          "sha256": "4933e90ddc979787f2e477ecefcd36e5075c33cc91a5a88f5d4ddec49dfc3b8f"
         },
         "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/opentsdb-2.3.0.el_capitan.bottle.tar.gz",
-          "sha256": "0e8eb571054d13d3abcb06940c481814dd54dbb94104cedcdedbd57c09721743"
-        },
-        "yosemite": {
-          "url": "https://homebrew.bintray.com/bottles/opentsdb-2.3.0.yosemite.bottle.tar.gz",
-          "sha256": "07ba3d636bad55c244e259d5eb619f09367f16b3e14e8caea74bbd19c33f44d5"
+          "url": "https://homebrew.bintray.com/bottles/opentsdb-2.3.1.el_capitan.bottle.tar.gz",
+          "sha256": "440446c0474ce94a7c4724de2971cef50786285c636d32f1dea9f2164dccbb5d"
         }
       }
     }
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--without-lzo",
-      "description": "Build without lzo support"
-    },
     {
       "option": "--with-gnuplot",
       "description": "Build with gnuplot support"
@@ -59,10 +51,11 @@
 
   ],
   "dependencies": [
-    "hbase"
+    "hbase",
+    "lzo"
   ],
   "recommended_dependencies": [
-    "lzo"
+
   ],
   "optional_dependencies": [
     "gnuplot"
@@ -70,13 +63,8 @@
   "requirements": [
     {
       "name": "java",
-      "cask": "java",
+      "cask": "homebrew/cask-versions/java8",
       "download": "https://www.oracle.com/technetwork/java/javase/downloads/index.html"
-    },
-    {
-      "name": "hbaselzo",
-      "cask": null,
-      "download": null
     }
   ],
   "conflicts_with": [

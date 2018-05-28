@@ -9,9 +9,9 @@
 
   ],
   "desc": "Data Matrix library",
-  "homepage": "https://www.libdmtx.org/",
+  "homepage": "https://libdmtx.sourceforge.io",
   "versions": {
-    "stable": "0.7.4",
+    "stable": "0.7.5",
     "devel": null,
     "head": null,
     "bottle": true
@@ -20,34 +20,22 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "cellar": ":any",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/libdmtx-0.7.4.high_sierra.bottle.1.tar.gz",
-          "sha256": "4385284c846997c65dfcce5911ac0fe5b3229c9b877497fcaab6d738ae5f3132"
+          "url": "https://homebrew.bintray.com/bottles/libdmtx-0.7.5.high_sierra.bottle.tar.gz",
+          "sha256": "eb892feb7d29f9291a0edc2be6c34b4584614103d4af9d1c62eb54370decd8e1"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/libdmtx-0.7.4.sierra.bottle.1.tar.gz",
-          "sha256": "ff67a8026fd8853489878fd980ec7d01a60b5b1bfa74ac45408fcf2ef8580bd8"
+          "url": "https://homebrew.bintray.com/bottles/libdmtx-0.7.5.sierra.bottle.tar.gz",
+          "sha256": "c93913cd5aff29278c538957fd6890d990f760abaff1b14cea6f6f171194b706"
         },
         "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/libdmtx-0.7.4.el_capitan.bottle.1.tar.gz",
-          "sha256": "5517994e8a97229ac3ba665b5a13cb622f6bf09097c84d86cf85c72b1e1f4a37"
-        },
-        "yosemite": {
-          "url": "https://homebrew.bintray.com/bottles/libdmtx-0.7.4.yosemite.bottle.1.tar.gz",
-          "sha256": "ecb61e93fa9c7698011856693ac7b5335008cbda9807cc5852f0b47dcf1188d8"
-        },
-        "mavericks": {
-          "url": "https://homebrew.bintray.com/bottles/libdmtx-0.7.4.mavericks.bottle.1.tar.gz",
-          "sha256": "c6c2c336211aca2d6fc9c1a71ed4028d99ce2e0f3f50b34e6b916068557c7c18"
-        },
-        "mountain_lion": {
-          "url": "https://homebrew.bintray.com/bottles/libdmtx-0.7.4.mountain_lion.bottle.1.tar.gz",
-          "sha256": "86300de879b8d17dbf3f075a5fa1f1d3762c1eebb77e0fdd05ed38f76b75769e"
+          "url": "https://homebrew.bintray.com/bottles/libdmtx-0.7.5.el_capitan.bottle.tar.gz",
+          "sha256": "ebcd82bf4d9da2a71bd066722ce6750d6cf064b1c8f477ba9aca47987acd330c"
         }
       }
     }
@@ -57,7 +45,9 @@
 
   ],
   "build_dependencies": [
-    "pkg-config"
+    "autoconf",
+    "automake",
+    "libtool"
   ],
   "dependencies": [
 

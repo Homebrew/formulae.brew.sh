@@ -16,37 +16,36 @@
     "head": "HEAD",
     "bottle": true
   },
-  "revision": 1,
+  "revision": 2,
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 2,
+      "rebuild": 0,
       "cellar": ":any",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/libewf-20140608_1.high_sierra.bottle.2.tar.gz",
-          "sha256": "c362a1ee13cd7a9208d6d742acf4136a61e71d9de1451140ffae4b82ca108ab4"
+          "url": "https://homebrew.bintray.com/bottles/libewf-20140608_2.high_sierra.bottle.tar.gz",
+          "sha256": "10efe12416e50457d968107669bfd2b1bb6e79865301950eb4335ffd6ed43c59"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/libewf-20140608_1.sierra.bottle.2.tar.gz",
-          "sha256": "5abcb4aaa80ac85b86b3b5d3bc4dce613fe4692d29edff5e48a8e871d2e89225"
+          "url": "https://homebrew.bintray.com/bottles/libewf-20140608_2.sierra.bottle.tar.gz",
+          "sha256": "c77f644a80bf109f62a9b410917954a79e03ed47fff73b3d0da4f25de6afdf95"
         },
         "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/libewf-20140608_1.el_capitan.bottle.2.tar.gz",
-          "sha256": "4d0d3cb0aa198dc0ca569b04d748b3d4f92cdb9e0580c70b9ab6a25dc44ca2f9"
-        },
-        "yosemite": {
-          "url": "https://homebrew.bintray.com/bottles/libewf-20140608_1.yosemite.bottle.2.tar.gz",
-          "sha256": "71af7ed8bbc39e690ef8b22adf5a8e0399fec4d6661323dfdda4581f55ca7dbd"
+          "url": "https://homebrew.bintray.com/bottles/libewf-20140608_2.el_capitan.bottle.tar.gz",
+          "sha256": "5a9c6ce83af6069f84aaf30a5a6ae42eff2e98078835af1c06555852c696b5b4"
         }
       }
     }
   },
   "keg_only": false,
   "options": [
-
+    {
+      "option": "--with-osxfuse",
+      "description": "Build with osxfuse support"
+    }
   ],
   "build_dependencies": [
     "pkg-config"
@@ -61,7 +60,11 @@
 
   ],
   "requirements": [
-
+    {
+      "name": "osxfuse",
+      "cask": "osxfuse",
+      "download": "https://github.com/libfuse/libfuse"
+    }
   ],
   "conflicts_with": [
 
