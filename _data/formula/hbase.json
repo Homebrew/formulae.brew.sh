@@ -16,7 +16,7 @@
     "head": null,
     "bottle": true
   },
-  "revision": 2,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -26,16 +26,20 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/hbase-1.2.6_2.high_sierra.bottle.tar.gz",
-          "sha256": "684094d83f3f181cb2970c61ec7b0ce557b0959b252f41b7d27732677b9d1743"
+          "url": "https://homebrew.bintray.com/bottles/hbase-1.2.6.high_sierra.bottle.tar.gz",
+          "sha256": "d24c34f859029e79977587f0926ce6fbe14336a044311d4d97fddacf86e2d42e"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/hbase-1.2.6_2.sierra.bottle.tar.gz",
-          "sha256": "91645c07ede24d70444ddfa7143ad43dcdae381e410d53919412a9f7e931e428"
+          "url": "https://homebrew.bintray.com/bottles/hbase-1.2.6.sierra.bottle.tar.gz",
+          "sha256": "bb48048be73c3782d7d56725228998a0ee62673ba9d628ae9869e7e855109f5b"
         },
         "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/hbase-1.2.6_2.el_capitan.bottle.tar.gz",
-          "sha256": "fc2f0ebeca26bda50fe3c224a222bf245faa0c878ff1bbd9fcabc01a01e16bd2"
+          "url": "https://homebrew.bintray.com/bottles/hbase-1.2.6.el_capitan.bottle.tar.gz",
+          "sha256": "546eba2acf3f87d88dc9208d687dfa02c88fcada2f3ede27d732b9415187b0f8"
+        },
+        "yosemite": {
+          "url": "https://homebrew.bintray.com/bottles/hbase-1.2.6.yosemite.bottle.tar.gz",
+          "sha256": "49ca44b35f6d9239eb6f02ea504e2a83f78552faa85e30dd1b8f6b4664875494"
         }
       }
     }
@@ -45,16 +49,20 @@
     {
       "option": "--with-hadoop",
       "description": "Build with hadoop support"
+    },
+    {
+      "option": "--without-lzo",
+      "description": "Build without lzo support"
     }
   ],
   "build_dependencies": [
     "ant"
   ],
   "dependencies": [
-    "lzo"
+
   ],
   "recommended_dependencies": [
-
+    "lzo"
   ],
   "optional_dependencies": [
     "hadoop"
@@ -62,7 +70,7 @@
   "requirements": [
     {
       "name": "java",
-      "cask": "homebrew/cask-versions/java8",
+      "cask": "java",
       "download": "https://www.oracle.com/technetwork/java/javase/downloads/index.html"
     },
     {
