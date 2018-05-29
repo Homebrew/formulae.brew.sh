@@ -10,27 +10,44 @@ task :formulae do
   sh "brew", "ruby", "script/generate.rb"
 end
 
-desc "Dump analytics data"
-task :analytics do
+def generate_analytics?
   json_file = "_data/analytics/build-error/30d.json"
-  if File.exist?(json_file)
-    json = JSON.parse(IO.read(json_file))
-    end_date = Date.parse(json["end_date"])
-    next if end_date >= Date.today
-  end
+  return true unless File.exist?(json_file)
 
+  json = JSON.parse(IO.read(json_file))
+  end_date = Date.parse(json["end_date"])
+  end_date < Date.today
+end
+
+def setup_analytics_credentials
   ga_credentials = ".homebrew_analytics.json"
-  if File.exist?(ga_credentials)
-    ga_credentials_home = File.expand_path("~/#{ga_credentials}")
-    unless File.exist?(ga_credentials_home)
-      FileUtils.cp ga_credentials, ga_credentials_home
-    end
-  end
+  return unless File.exist?(ga_credentials)
 
+  ga_credentials_home = File.expand_path("~/#{ga_credentials}")
+  return if File.exist?(ga_credentials_home)
+
+  FileUtils.cp ga_credentials, ga_credentials_home
+end
+
+def setup_formula_analytics_cmd
   ENV["HOMEBREW_NO_AUTO_UPDATE"] = "1"
   unless `brew tap`.include?("homebrew/formula-analytics")
     sh "brew", "tap", "Homebrew/formula-analytics"
   end
+
+  sh "brew", "formula-analytics", "--setup"
+end
+
+def setup_analytics
+  setup_analytics_credentials
+  setup_formula_analytics_cmd
+end
+
+desc "Dump analytics data"
+task :analytics do
+  next unless generate_analytics?
+
+  setup_analytics
 
   %w[build-error os-version
      install install-on-request
