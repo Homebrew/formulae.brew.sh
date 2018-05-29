@@ -250,6 +250,7 @@ GET https://formulae.brew.sh/api/analytics/${CATEGORY}/homebrew-core/${DAYS}.jso
 - `${CATEGORY}`: the category of the analytics events i.e.
   - `install`: the installation of all homebrew-core formulae
   - `install-on-request`: the requested installation of all homebrew-core formulae (i.e. not as a dependency of other formulae)
+  - `build-error`: the installation failure of all homebrew-core formulae. Only `${DAYS}: 30d` (30 days) is available)
 - `${DAYS}`: the number of days of analytics events i.e.
   - `30d`: 30 days
   - `90d`: 90 days
