@@ -11,7 +11,7 @@ task :formulae do
 end
 
 desc "Dump analytics data"
-task analytics: :setup_analytics_credentials do
+task :analytics do
   json_file = "_data/analytics/build-error/30d.json"
   if File.exist?(json_file)
     json = JSON.parse(IO.read(json_file))
