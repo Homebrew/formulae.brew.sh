@@ -49,10 +49,12 @@ task :analytics do
 
   setup_analytics
 
-  %w[build-error os-version
-     install install-on-request
-     core-install core-install-on-request].each do |category|
+  %w[build-error install install-on-request os-version
+     core-build-error core-install core-install-on-request].each do |category|
     case category
+    when "core-build-error"
+      category = "all-core-formulae-json --build-error"
+      category_name = "build-error/homebrew-core"
     when "core-install"
       category = "all-core-formulae-json --install"
       category_name = "install/homebrew-core"
@@ -64,6 +66,7 @@ task :analytics do
     end
     FileUtils.mkdir_p "_data/analytics/#{category_name}"
     %w[30 90 365].each do |days|
+      next if days != "30" && category_name.include?("homebrew-core")
       sh "brew formula-analytics --days-ago=#{days} --json --#{category} " \
         "> _data/analytics/#{category_name}/#{days}d.json"
     end

@@ -114,24 +114,6 @@ permalink: :title
     </tr>
     {%- endfor -%}
     <tr>
-        <th colspan="2">Installs (90 days)</th>
-    </tr>
-    {%- for fa in site.data.analytics.install.homebrew-core["90d"].formulae[name] -%}
-    <tr>
-        <td><code>{{ fa.formula }}</code></td>
-        <td class="number-data">{{ fa.count }}</td>
-    </tr>
-    {%- endfor -%}
-    <tr>
-        <th colspan="2">Installs (365 days)</th>
-    </tr>
-    {%- for fa in site.data.analytics.install.homebrew-core["365d"].formulae[name] -%}
-    <tr>
-        <td><code>{{ fa.formula }}</code></td>
-        <td class="number-data">{{ fa.count }}</td>
-    </tr>
-    {%- endfor -%}
-    <tr>
         <th colspan="2">Installs on Request (30 days)</th>
     </tr>
     {%- for fa in site.data.analytics.install-on-request.homebrew-core["30d"].formulae[name] -%}
@@ -141,9 +123,36 @@ permalink: :title
     </tr>
     {%- endfor -%}
     <tr>
+        <th colspan="2">Build Errors (30 days)</th>
+    </tr>
+    {%- for fa in site.data.analytics.build-error.homebrew-core["30d"].formulae[name] -%}
+    <tr>
+        <td><code>{{ fa.formula }}</code></td>
+        <td class="number-data">{{ fa.count }}</td>
+    </tr>
+    {%- endfor -%}
+    <tr>
+        <th colspan="2">Installs (90 days)</th>
+    </tr>
+    {%- for fa in site.data.analytics.install.homebrew-core["90d"].formulae[name] -%}
+    <tr>
+        <td><code>{{ fa.formula }}</code></td>
+        <td class="number-data">{{ fa.count }}</td>
+    </tr>
+    {%- endfor -%}
+    <tr>
         <th colspan="2">Installs on Request (90 days)</th>
     </tr>
     {%- for fa in site.data.analytics.install-on-request.homebrew-core["90d"].formulae[name] -%}
+    <tr>
+        <td><code>{{ fa.formula }}</code></td>
+        <td class="number-data">{{ fa.count }}</td>
+    </tr>
+    {%- endfor -%}
+    <tr>
+        <th colspan="2">Installs (365 days)</th>
+    </tr>
+    {%- for fa in site.data.analytics.install.homebrew-core["365d"].formulae[name] -%}
     <tr>
         <td><code>{{ fa.formula }}</code></td>
         <td class="number-data">{{ fa.count }}</td>
