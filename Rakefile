@@ -10,8 +10,15 @@ task :formulae do
   sh "brew", "ruby", "script/generate.rb"
 end
 
-desc "Setup analytics"
-task :setup_analytics do
+desc "Dump analytics data"
+task analytics: :setup_analytics_credentials do
+  json_file = "_data/analytics/build-error/30d.json"
+  if File.exist?(json_file)
+    json = JSON.parse(IO.read(json_file))
+    end_date = Date.parse(json["end_date"])
+    next if end_date >= Date.today
+  end
+
   ga_credentials = ".homebrew_analytics.json"
   if File.exist?(ga_credentials)
     ga_credentials_home = File.expand_path("~/#{ga_credentials}")
@@ -20,21 +27,11 @@ task :setup_analytics do
     end
   end
 
-  unless system "brew command formula-analytics &>/dev/null"
+  ENV["HOMEBREW_NO_AUTO_UPDATE"] = "1"
+  unless `brew tap`.include?("homebrew/formula-analytics")
     sh "brew", "tap", "Homebrew/formula-analytics"
   end
-end
 
-desc "Dump analytics data"
-task analytics: :setup_analytics do
-  json_file = "_data/analytics/build-error/30d.json"
-  if File.exist?(json_file)
-    json = JSON.parse(IO.read(json_file))
-    end_date = Date.parse(json["end_date"])
-    next if end_date >= Date.today
-  end
-
-  # TODO: add API for each endpoint (at top of pages, move formulae JSON API links to top)
   %w[build-error os-version
      install install-on-request
      core-install core-install-on-request].each do |category|
