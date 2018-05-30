@@ -11,6 +11,8 @@ task :formulae do
 end
 
 def generate_analytics?
+  return false if ENV["HOMEBREW_NO_ANALYTICS"]
+
   json_file = "_data/analytics/build-error/30d.json"
   return true unless File.exist?(json_file)
 
