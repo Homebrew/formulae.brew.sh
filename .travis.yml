@@ -18,6 +18,10 @@ before_install:
   - brew help
   - bundle install
 
+before_script:
+  - rm -rf _data/analytics
+  - openssl aes-256-cbc -K $encrypted_973277d8afbb_key -iv $encrypted_973277d8afbb_iv -in .homebrew_analytics.json.enc -out .homebrew_analytics.json -d
+
 script:
   - export HOMEBREW_NO_ANALYTICS=1
   - rake jekyll
