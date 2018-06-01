@@ -11,12 +11,12 @@
   "desc": "ML-like language aimed at program verification",
   "homepage": "https://www.fstar-lang.org/",
   "versions": {
-    "stable": "0.9.5.0",
+    "stable": "0.9.6.0",
     "devel": null,
     "head": "HEAD",
     "bottle": true
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -26,20 +26,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/fstar-0.9.5.0_1.high_sierra.bottle.tar.gz",
-          "sha256": "93b27e70d7bcd7111a3243cab9d2528673a5435cb27b7fc422d0a61099386e80"
+          "url": "https://homebrew.bintray.com/bottles/fstar-0.9.6.0.high_sierra.bottle.tar.gz",
+          "sha256": "0735e6b0677201a2548f104841afb544074954a3204de59d53f36dea1abddc8f"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/fstar-0.9.5.0_1.sierra.bottle.tar.gz",
-          "sha256": "03c763ac9849ce6faa1919117390264e4e306cb0bd23a8fa903c7470a668697b"
+          "url": "https://homebrew.bintray.com/bottles/fstar-0.9.6.0.sierra.bottle.tar.gz",
+          "sha256": "2eab5e2c691cbb0480468a9561ca059f51bb0e10ef0944ff360595709d536327"
         },
         "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/fstar-0.9.5.0_1.el_capitan.bottle.tar.gz",
-          "sha256": "5824c5f020a119683a8f5e1d3520d30fc81f03fd0f2c4544e5faa503e7626528"
-        },
-        "yosemite": {
-          "url": "https://homebrew.bintray.com/bottles/fstar-0.9.5.0_1.yosemite.bottle.tar.gz",
-          "sha256": "4e730cfbc2c181a1ccc605e84f4d79c228ee698fddd9dfe719b8ac0cfc5599bc"
+          "url": "https://homebrew.bintray.com/bottles/fstar-0.9.6.0.el_capitan.bottle.tar.gz",
+          "sha256": "1b410c9bb0dca7b9a5988cc6522404e54b793aaed2a88a973ffb3b409a12ca89"
         }
       }
     }
@@ -52,6 +48,9 @@
     }
   ],
   "build_dependencies": [
+    "ocaml",
+    "ocamlbuild",
+    "camlp4",
     "opam"
   ],
   "dependencies": [
