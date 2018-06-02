@@ -20,44 +20,41 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 0,
+      "rebuild": 1,
       "cellar": ":any",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/fstar-0.9.6.0.high_sierra.bottle.tar.gz",
-          "sha256": "0735e6b0677201a2548f104841afb544074954a3204de59d53f36dea1abddc8f"
+          "url": "https://homebrew.bintray.com/bottles/fstar-0.9.6.0.high_sierra.bottle.1.tar.gz",
+          "sha256": "0f34d17323fcb9b80201951f3205344025349a41efe9d4c38e9c0587ea2d0314"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/fstar-0.9.6.0.sierra.bottle.tar.gz",
-          "sha256": "2eab5e2c691cbb0480468a9561ca059f51bb0e10ef0944ff360595709d536327"
+          "url": "https://homebrew.bintray.com/bottles/fstar-0.9.6.0.sierra.bottle.1.tar.gz",
+          "sha256": "a399b0f098766ba38a0b5836a514735427a9664212b35115040410c88ef484db"
         },
         "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/fstar-0.9.6.0.el_capitan.bottle.tar.gz",
-          "sha256": "1b410c9bb0dca7b9a5988cc6522404e54b793aaed2a88a973ffb3b409a12ca89"
+          "url": "https://homebrew.bintray.com/bottles/fstar-0.9.6.0.el_capitan.bottle.1.tar.gz",
+          "sha256": "c6e164c3851993e7d8d920edfc093b82fd1b86f35ccc6326746a3f60d5120cb5"
         }
       }
     }
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--without-ocaml",
-      "description": "Build without ocaml support"
-    }
+
   ],
   "build_dependencies": [
-    "ocaml",
     "ocamlbuild",
     "camlp4",
     "opam"
   ],
   "dependencies": [
-    "gmp"
+    "gmp",
+    "ocaml"
   ],
   "recommended_dependencies": [
-    "ocaml"
+
   ],
   "optional_dependencies": [
 
