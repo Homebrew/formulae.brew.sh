@@ -2,7 +2,8 @@
 layout: default
 permalink: :title
 ---
-{%- assign name = page.name | remove: ".html" | remove: "@" | remove: "." -%}
+{%- assign full_name = page.name | remove: ".html" -%}
+{%- assign name = full_name | remove: "@" | remove: "." -%}
 {%- assign f = site.data.formula[name] -%}
 <h2>{{ f.name }}</h2>
 {%- if f.aliases.size > 0 -%}
@@ -101,67 +102,88 @@ permalink: :title
 </p>
 {%- endif -%}
 
-{%- if site.data.analytics.install.homebrew-core["30d"].formulae[name].size > 0 -%}
+{%- if site.data.analytics.install.homebrew-core["30d"].formulae[full_name].size > 0 -%}
 <p>Analytics:</p>
 <table>
     <tr>
         <th colspan="2">Installs (30 days)</th>
     </tr>
-    {%- for fa in site.data.analytics.install.homebrew-core["30d"].formulae[name] -%}
+
+    {%- for fa in site.data.analytics.install.homebrew-core["30d"].formulae[full_name] -%}
     <tr>
         <td><code>{{ fa.formula }}</code></td>
         <td class="number-data">{{ fa.count }}</td>
     </tr>
     {%- endfor -%}
+
     <tr>
         <th colspan="2">Installs on Request (30 days)</th>
     </tr>
-    {%- for fa in site.data.analytics.install-on-request.homebrew-core["30d"].formulae[name] -%}
+
+    {%- for fa in site.data.analytics.install-on-request.homebrew-core["30d"].formulae[full_name] -%}
     <tr>
         <td><code>{{ fa.formula }}</code></td>
         <td class="number-data">{{ fa.count }}</td>
     </tr>
     {%- endfor -%}
+
     <tr>
         <th colspan="2">Build Errors (30 days)</th>
     </tr>
-    {%- for fa in site.data.analytics.build-error.homebrew-core["30d"].formulae[name] -%}
+
+    {%- if site.data.analytics.build-error.homebrew-core["30d"].formulae[full_name].size > 0 -%}
+    {%- for fa in site.data.analytics.build-error.homebrew-core["30d"].formulae[full_name] -%}
     <tr>
         <td><code>{{ fa.formula }}</code></td>
         <td class="number-data">{{ fa.count }}</td>
     </tr>
     {%- endfor -%}
+    {%- else -%}
+    <tr>
+        <td><code>{{ full_name }}</code></td>
+        <td class="number-data">0</td>
+    </tr>
+    {%- endif -%}
+
+
     <tr>
         <th colspan="2">Installs (90 days)</th>
     </tr>
-    {%- for fa in site.data.analytics.install.homebrew-core["90d"].formulae[name] -%}
+
+    {%- for fa in site.data.analytics.install.homebrew-core["90d"].formulae[full_name] -%}
     <tr>
         <td><code>{{ fa.formula }}</code></td>
         <td class="number-data">{{ fa.count }}</td>
     </tr>
     {%- endfor -%}
+
     <tr>
         <th colspan="2">Installs on Request (90 days)</th>
     </tr>
-    {%- for fa in site.data.analytics.install-on-request.homebrew-core["90d"].formulae[name] -%}
+
+    {%- for fa in site.data.analytics.install-on-request.homebrew-core["90d"].formulae[full_name] -%}
     <tr>
         <td><code>{{ fa.formula }}</code></td>
         <td class="number-data">{{ fa.count }}</td>
     </tr>
     {%- endfor -%}
+
     <tr>
         <th colspan="2">Installs (365 days)</th>
     </tr>
-    {%- for fa in site.data.analytics.install.homebrew-core["365d"].formulae[name] -%}
+
+    {%- for fa in site.data.analytics.install.homebrew-core["365d"].formulae[full_name] -%}
     <tr>
         <td><code>{{ fa.formula }}</code></td>
         <td class="number-data">{{ fa.count }}</td>
     </tr>
     {%- endfor -%}
+
     <tr>
         <th colspan="2">Installs on Request (365 days)</th>
     </tr>
-    {%- for fa in site.data.analytics.install-on-request.homebrew-core["365d"].formulae[name] -%}
+
+    {%- for fa in site.data.analytics.install-on-request.homebrew-core["365d"].formulae[full_name] -%}
     <tr>
         <td><code>{{ fa.formula }}</code></td>
         <td class="number-data">{{ fa.count }}</td>
