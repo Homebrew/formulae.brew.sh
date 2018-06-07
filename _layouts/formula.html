@@ -3,7 +3,7 @@ layout: default
 permalink: :title
 ---
 {%- assign full_name = page.name | remove: ".html" -%}
-{%- assign name = full_name | remove: "@" | remove: "." -%}
+{%- assign name = full_name | remove: "@" | remove: "." | remove: '+' -%}
 {%- assign f = site.data.formula[name] -%}
 <h2>{{ f.name }}</h2>
 {%- if f.aliases.size > 0 -%}
@@ -15,7 +15,7 @@ permalink: :title
 {%- if f.oldname -%}
 <p>Formerly known as: <strong>{{ f.oldname }}</strong></p>
 {%- endif -%}
-<p>{{ f.desc }}</p>
+<p>{{ f.desc | xml_escape }}</p>
 <p>
     <a href="{{ f.homepage }}">{{ f.homepage }}</a>
 </p>

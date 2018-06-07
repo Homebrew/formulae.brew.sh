@@ -17,7 +17,7 @@ before_install:
   # trigger vendored ruby installation
   - brew help
   - bundle install
+  - export HOMEBREW_NO_ANALYTICS=1
 
 script:
-  - export HOMEBREW_NO_ANALYTICS=1
-  - rake jekyll
+  - bundle exec rake test
