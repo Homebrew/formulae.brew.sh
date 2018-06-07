@@ -79,8 +79,46 @@ desc "Dump formulae and analytics data"
 task dump: %i[formulae analytics]
 
 desc "Build the site"
-task jekyll: :dump do
+task build: :dump do
   sh "bundle", "exec", "jekyll", "build"
 end
+
+desc "Run html proofer to validate the HTML output."
+task html_proofer: :build do
+  require "html-proofer"
+  HTMLProofer.check_directory(
+    "./_site",
+    parallel: { in_threads: 4 },
+    favicon: true,
+    http_status_ignore: [0],
+    assume_extension: true,
+    check_external_hash: true,
+    check_favicon: true,
+    check_opengraph: true,
+    check_html: true,
+    check_img_http: true,
+    disable_external: true,
+    url_ignore: ["http://formulae.brew.sh"]
+  ).run
+end
+
+desc "Run JSON Lint to validate the JSON output."
+task jsonlint: :build do
+  require "jsonlint"
+  files_to_check = Rake::FileList.new(["./_site/**/*.json"])
+  puts "Running JSON Lint on #{files_to_check.flatten.length} files..."
+
+  linter = JsonLint::Linter.new
+  linter.check_all(files_to_check)
+
+  if linter.errors?
+    linter.display_errors
+    abort "JSON Lint found #{linter.errors_count} errors!"
+  else
+    puts "JSON Lint finished successfully."
+  end
+end
+
+task test: [:html_proofer, :jsonlint]
 
 CLEAN.include FileList["_site"]
