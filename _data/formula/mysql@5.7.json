@@ -1,19 +1,17 @@
 {
-  "name": "mysql",
-  "full_name": "mysql",
+  "name": "mysql@5.7",
+  "full_name": "mysql@5.7",
   "oldname": null,
   "aliases": [
-    "mysql@8.0"
+
   ],
   "versioned_formulae": [
-    "mysql@5.5",
-    "mysql@5.6",
-    "mysql@5.7"
+
   ],
   "desc": "Open source relational database management system",
-  "homepage": "https://dev.mysql.com/doc/refman/8.0/en/",
+  "homepage": "https://dev.mysql.com/doc/refman/5.7/en/",
   "versions": {
-    "stable": "8.0.11",
+    "stable": "5.7.22",
     "devel": null,
     "head": null,
     "bottle": true
@@ -28,17 +26,21 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/mysql-8.0.11.high_sierra.bottle.tar.gz",
-          "sha256": "01824871432664b7ba9f0c8e7ee620625e48614befc12cf736405bc403d528ee"
+          "url": "https://homebrew.bintray.com/bottles/mysql@5.7-5.7.22.high_sierra.bottle.tar.gz",
+          "sha256": "1f236eb1e522d4b5b89ff80170c3a5aee9eef55da6ab4dce01a1a8261e1b7077"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/mysql-8.0.11.sierra.bottle.tar.gz",
-          "sha256": "f97901de99ff29356a12ff9ef00e041bccb023bd75b473e53f59745e8292771f"
+          "url": "https://homebrew.bintray.com/bottles/mysql@5.7-5.7.22.sierra.bottle.tar.gz",
+          "sha256": "bf73281119799191f7d446d82735f25f5b059cd26075ddd3931ae594bce21656"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/mysql@5.7-5.7.22.el_capitan.bottle.tar.gz",
+          "sha256": "4911e822fa6d0737d6e6a95bfd9e1fd970b1db60303a4087ee0f514624440aea"
         }
       }
     }
   },
-  "keg_only": false,
+  "keg_only": true,
   "options": [
     {
       "option": "--with-debug",
@@ -81,11 +83,7 @@
     }
   ],
   "conflicts_with": [
-    "mysql-cluster",
-    "mariadb",
-    "percona-server",
-    "mysql-connector-c",
-    "mariadb-connector-c"
+
   ],
   "caveats": "We've installed your MySQL database without a root password. To secure it run:\n    mysql_secure_installation\n\nMySQL is configured to only allow connections from localhost by default\n\nTo connect run:\n    mysql -uroot\n\nA \"/etc/mysql/my.cnf\" from another install may interfere with a Homebrew-built\nserver starting up correctly.\n",
   "installed": [
