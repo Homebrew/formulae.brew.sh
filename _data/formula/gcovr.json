@@ -11,14 +11,34 @@
   "desc": "Reports from gcov test coverage program",
   "homepage": "https://gcovr.com/",
   "versions": {
-    "stable": "3.4",
+    "stable": "4.0",
     "devel": null,
     "head": "HEAD",
-    "bottle": false
+    "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any_skip_relocation",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/gcovr-4.0.high_sierra.bottle.tar.gz",
+          "sha256": "59df642ddfc6f02b6b7d016b5981d052993810172ffd6c40b762b4b29f2cc945"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/gcovr-4.0.sierra.bottle.tar.gz",
+          "sha256": "d7af2533c0368f4b09171804c04e482dcb275bc733192dbb7ae614a65190ffc0"
+        },
+        "el_capitan": {
+          "url": "https://homebrew.bintray.com/bottles/gcovr-4.0.el_capitan.bottle.tar.gz",
+          "sha256": "7a763937433619fc56d1a44f20ff21ac509a04da217b211743d0299e49f6d510"
+        }
+      }
+    }
   },
   "keg_only": false,
   "options": [
@@ -28,7 +48,7 @@
 
   ],
   "dependencies": [
-
+    "python"
   ],
   "recommended_dependencies": [
 
