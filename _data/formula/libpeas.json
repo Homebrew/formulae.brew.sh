@@ -16,7 +16,7 @@
     "head": null,
     "bottle": true
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -26,23 +26,26 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/libpeas-1.22.0.high_sierra.bottle.tar.gz",
-          "sha256": "2ea4bc3ecb98d714926827f205ec7a38023c99809e6c76112966c46ca029560e"
+          "url": "https://homebrew.bintray.com/bottles/libpeas-1.22.0_1.high_sierra.bottle.tar.gz",
+          "sha256": "a7275673282b2f86db3e88d31349ab620556697701154def6e24f57506fc4279"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/libpeas-1.22.0.sierra.bottle.tar.gz",
-          "sha256": "761fe27f39245b4e7604d8dc49872a659432e788c179209b63b3a993f273071a"
+          "url": "https://homebrew.bintray.com/bottles/libpeas-1.22.0_1.sierra.bottle.tar.gz",
+          "sha256": "9a96ba9f338664b798978f6a6154e6b6bd5740c851bbd9b08c67f712f343dee8"
         },
         "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/libpeas-1.22.0.el_capitan.bottle.tar.gz",
-          "sha256": "0f521913ca0eaf13b55aacb75e4b87a730be1f527215741ae2ba207caac523b2"
+          "url": "https://homebrew.bintray.com/bottles/libpeas-1.22.0_1.el_capitan.bottle.tar.gz",
+          "sha256": "7e73e7d8429e1bf7f0f554e2aebae754fe29a800a4aca53b83071a3cd46de4bb"
         }
       }
     }
   },
   "keg_only": false,
   "options": [
-
+    {
+      "option": "--with-python@2",
+      "description": "Build with support for python2 plugins"
+    }
   ],
   "build_dependencies": [
     "gettext",
@@ -52,13 +55,15 @@
   "dependencies": [
     "glib",
     "gobject-introspection",
-    "gtk+3"
+    "gtk+3",
+    "python",
+    "pygobject3"
   ],
   "recommended_dependencies": [
 
   ],
   "optional_dependencies": [
-
+    "python@2"
   ],
   "requirements": [
 
