@@ -11,12 +11,12 @@
   "desc": "Adds an OCR text layer to scanned PDF files",
   "homepage": "https://github.com/jbarlow83/OCRmyPDF",
   "versions": {
-    "stable": "6.2.1",
+    "stable": "7.0.0",
     "devel": null,
     "head": null,
     "bottle": true
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -26,16 +26,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/ocrmypdf-6.2.1_1.high_sierra.bottle.tar.gz",
-          "sha256": "2a6700bf8a0693310ebb56fcd151b6e2c9037554149dd069ecfdd1f79b3a639a"
+          "url": "https://homebrew.bintray.com/bottles/ocrmypdf-7.0.0.high_sierra.bottle.tar.gz",
+          "sha256": "1d80f46e19d294271caa65389d77230c9ff7eac9adb4394a14ff6bc070dfda87"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/ocrmypdf-6.2.1_1.sierra.bottle.tar.gz",
-          "sha256": "e8aa0dad49cb9061af519091aeac025ff8d234a87fc54b9ba39a479af5fa3ffd"
+          "url": "https://homebrew.bintray.com/bottles/ocrmypdf-7.0.0.sierra.bottle.tar.gz",
+          "sha256": "801e7f55e80432cfe9a7078d27154c162400eac16386fbe9d71e595c32ca3946"
         },
         "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/ocrmypdf-6.2.1_1.el_capitan.bottle.tar.gz",
-          "sha256": "ed3976367dbde22692e846e9b2c9426415513f3219573f43f32ee1f2d73fb90c"
+          "url": "https://homebrew.bintray.com/bottles/ocrmypdf-7.0.0.el_capitan.bottle.tar.gz",
+          "sha256": "7a48d7c099d1f2869b39f7be98cd243b0792f3a2b86e2680229b1f574663178f"
         }
       }
     }
@@ -45,14 +45,17 @@
 
   ],
   "build_dependencies": [
-    "mupdf-tools",
     "pkg-config"
   ],
   "dependencies": [
+    "exempi",
     "freetype",
     "ghostscript",
+    "jbig2enc",
     "jpeg",
+    "leptonica",
     "libpng",
+    "pngquant",
     "python",
     "qpdf",
     "tesseract",
