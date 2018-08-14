@@ -11,7 +11,7 @@
   "desc": "C/C++ language server",
   "homepage": "https://github.com/cquery-project/cquery",
   "versions": {
-    "stable": "20180302",
+    "stable": "20180718",
     "devel": null,
     "head": "HEAD",
     "bottle": true
@@ -21,21 +21,17 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": "/usr/local/Cellar",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/cquery-20180302.high_sierra.bottle.tar.gz",
-          "sha256": "0f567e5d88299f28d489b666fca2cf320b91062fc053e0c2a8a1ad9e1bc76598"
+          "url": "https://homebrew.bintray.com/bottles/cquery-20180718.high_sierra.bottle.tar.gz",
+          "sha256": "ee46fd2b279edc3b52df5ca9b84bdce404bb888f8a7d31e092b3fda33285a02b"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/cquery-20180302.sierra.bottle.tar.gz",
-          "sha256": "06bb25b1c91c76c894d3aebdc18b76591ab2ff1c5f8190c376b69e60d6c22787"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/cquery-20180302.el_capitan.bottle.tar.gz",
-          "sha256": "9692d28682c009a9bec583ff20aa16ce5c790975375755a5a48a28ec3e3953c4"
+          "url": "https://homebrew.bintray.com/bottles/cquery-20180718.sierra.bottle.tar.gz",
+          "sha256": "ac3ad5aada30ca31d70f36e6e3ba76d96aa0e235ccdd62259a086578fe182b44"
         }
       }
     }
@@ -45,10 +41,10 @@
 
   ],
   "build_dependencies": [
-
+    "cmake"
   ],
   "dependencies": [
-
+    "llvm"
   ],
   "recommended_dependencies": [
 
@@ -57,7 +53,11 @@
 
   ],
   "requirements": [
-
+    {
+      "name": "macos",
+      "cask": null,
+      "download": null
+    }
   ],
   "conflicts_with": [
 
