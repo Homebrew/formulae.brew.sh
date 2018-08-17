@@ -11,7 +11,7 @@
   "desc": "Network monitoring and management system",
   "homepage": "https://www.nagios.org/",
   "versions": {
-    "stable": "4.4.1",
+    "stable": "4.4.2",
     "devel": null,
     "head": null,
     "bottle": true
@@ -26,16 +26,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/nagios-4.4.1.high_sierra.bottle.tar.gz",
-          "sha256": "94e1ae384932d8ae6dfb9bd162f334d392bebf9ebd8b3f2e7aa394a11b873454"
+          "url": "https://homebrew.bintray.com/bottles/nagios-4.4.2.high_sierra.bottle.tar.gz",
+          "sha256": "0abc72531983bb73c1bf18ff524c3eda9dd011ef3010a4cecf9350169b8a4208"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/nagios-4.4.1.sierra.bottle.tar.gz",
-          "sha256": "cc094f5d2942fea47209b854e5e8f6130afa5e9f1886f998eade7b91a471f2c8"
+          "url": "https://homebrew.bintray.com/bottles/nagios-4.4.2.sierra.bottle.tar.gz",
+          "sha256": "289f19421ed2ca7f36b159fcaffb9167400da75f427d34f682419c8cede08726"
         },
         "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/nagios-4.4.1.el_capitan.bottle.tar.gz",
-          "sha256": "2e6c0455216d0c083088c2cb3d92e682b8e5f0ddef45dec8fca7e08aa9445f6d"
+          "url": "https://homebrew.bintray.com/bottles/nagios-4.4.2.el_capitan.bottle.tar.gz",
+          "sha256": "584570d4e0cd38b238fcd53b84fe70035dd664ba56e349d598f5a6bc3e6b63e2"
         }
       }
     }
@@ -64,7 +64,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "First we need to create a command dir using superhuman powers:\n\n  mkdir -p /home/travis/Homebrew/var/lib/nagios/rw\n  sudo chgrp _www /home/travis/Homebrew/var/lib/nagios/rw\n  sudo chmod 2775 /home/travis/Homebrew/var/lib/nagios/rw\n\nThen install the Nagios web frontend into Apple's build-in Apache:\n\n  1) Turn on Personal Web Sharing.\n\n  2) Load the cgi and php modules by patching /etc/apache2/httpd.conf:\n\n    -#LoadModule php5_module        libexec/apache2/libphp5.so\n    +LoadModule php5_module        libexec/apache2/libphp5.so\n\n    -#LoadModule cgi_module libexec/apache2/mod_cgi.so\n    +LoadModule cgi_module libexec/apache2/mod_cgi.so\n\n  3) Symlink the sample config and create your web account:\n\n    sudo ln -sf /home/travis/Homebrew/Cellar/nagios/4.4.1/share/nagios.conf /etc/apache2/other/\n    htpasswd -cs /home/travis/Homebrew/etc/nagios/htpasswd.users nagiosadmin\n    sudo apachectl restart\n\nLog in with your web account (and don't forget to RTFM :-)\n\n  open http://localhost/nagios\n\n",
+  "caveats": "First we need to create a command dir using superhuman powers:\n\n  mkdir -p /home/travis/Homebrew/var/lib/nagios/rw\n  sudo chgrp _www /home/travis/Homebrew/var/lib/nagios/rw\n  sudo chmod 2775 /home/travis/Homebrew/var/lib/nagios/rw\n\nThen install the Nagios web frontend into Apple's build-in Apache:\n\n  1) Turn on Personal Web Sharing.\n\n  2) Load the cgi and php modules by patching /etc/apache2/httpd.conf:\n\n    -#LoadModule php5_module        libexec/apache2/libphp5.so\n    +LoadModule php5_module        libexec/apache2/libphp5.so\n\n    -#LoadModule cgi_module libexec/apache2/mod_cgi.so\n    +LoadModule cgi_module libexec/apache2/mod_cgi.so\n\n  3) Symlink the sample config and create your web account:\n\n    sudo ln -sf /home/travis/Homebrew/Cellar/nagios/4.4.2/share/nagios.conf /etc/apache2/other/\n    htpasswd -cs /home/travis/Homebrew/etc/nagios/htpasswd.users nagiosadmin\n    sudo apachectl restart\n\nLog in with your web account (and don't forget to RTFM :-)\n\n  open http://localhost/nagios\n\n",
   "installed": [
 
   ],
