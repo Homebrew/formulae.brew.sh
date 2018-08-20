@@ -16,7 +16,7 @@
     "head": null,
     "bottle": true
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -25,31 +25,24 @@
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
-        "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/lua-5.3.5.mojave.bottle.tar.gz",
-          "sha256": "e4878844eb5b248ac72df3fead9d5dac8b432ad4385c1956d8577884fb2520c1"
-        },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/lua-5.3.5.high_sierra.bottle.tar.gz",
-          "sha256": "0519eedf38f18d868842cead8c66ea1784ead938e0eed940d89e7d50c8259884"
+          "url": "https://homebrew.bintray.com/bottles/lua-5.3.5_1.high_sierra.bottle.tar.gz",
+          "sha256": "fcf36c0a4785ed9f515a1a18d8e158ad806c8ff92a5359959fbfa1b84bc52454"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/lua-5.3.5.sierra.bottle.tar.gz",
-          "sha256": "e93b77f260956a5f16ff0df19c8bdaa6047ff6fe7cde806f65624c728db63ae9"
+          "url": "https://homebrew.bintray.com/bottles/lua-5.3.5_1.sierra.bottle.tar.gz",
+          "sha256": "17947facfc289e35fc19a1c4091f4d26387bdc254150df75e0aa95d881e58135"
         },
         "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/lua-5.3.5.el_capitan.bottle.tar.gz",
-          "sha256": "79caa0554afffb84b0827f50e65dc57d7e7d34ff83db76341427ed5293b3a21c"
+          "url": "https://homebrew.bintray.com/bottles/lua-5.3.5_1.el_capitan.bottle.tar.gz",
+          "sha256": "b6e9699312e768aaa800d06e1f1e445f1bed64c8eb614083915c60e0a2e3d746"
         }
       }
     }
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--without-luarocks",
-      "description": "Don't build with Luarocks support embedded"
-    }
+
   ],
   "build_dependencies": [
 
@@ -69,7 +62,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "Please be aware due to the way Luarocks is designed any binaries installed\nvia Luarocks-5.3 AND 5.1 will overwrite each other in /home/travis/Homebrew/bin.\n\nThis is, for now, unavoidable. If this is troublesome for you, you can build\nrocks with the `--tree=` command to a special, non-conflicting location and\nthen add that to your `$PATH`.\n",
+  "caveats": "You may also want luarocks:\n  brew install luarocks\n",
   "installed": [
 
   ],
