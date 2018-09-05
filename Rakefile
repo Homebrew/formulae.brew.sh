@@ -95,7 +95,6 @@ task html_proofer: :build do
     check_external_hash: true,
     check_favicon: true,
     check_opengraph: true,
-    check_html: true,
     check_img_http: true,
     disable_external: true,
     url_ignore: ["http://formulae.brew.sh"]
