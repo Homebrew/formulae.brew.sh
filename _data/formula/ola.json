@@ -53,35 +53,23 @@
     {
       "option": "--with-rdm-tests",
       "description": "Install RDM Tests for OLA."
-    },
-    {
-      "option": "--without-liblo",
-      "description": "Build without liblo support"
-    },
-    {
-      "option": "--without-libusb",
-      "description": "Build without libusb support"
-    },
-    {
-      "option": "--with-doxygen",
-      "description": "Build with doxygen support"
     }
   ],
   "build_dependencies": [
     "pkg-config"
   ],
   "dependencies": [
+    "liblo",
     "libmicrohttpd",
+    "libusb",
     "ossp-uuid",
     "protobuf@3.1",
     "python@2"
   ],
   "recommended_dependencies": [
-    "liblo",
-    "libusb"
+
   ],
   "optional_dependencies": [
-    "doxygen",
     "libftdi"
   ],
   "requirements": [

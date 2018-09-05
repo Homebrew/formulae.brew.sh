@@ -54,58 +54,20 @@
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--without-serial",
-      "description": "Omits serial drivers"
-    },
-    {
-      "option": "--without-libusb-compat",
-      "description": "Omits USB drivers"
-    },
-    {
-      "option": "--with-dev",
-      "description": "Includes dev headers"
-    },
-    {
-      "option": "--with-net-snmp",
-      "description": "Builds SNMP support"
-    },
-    {
-      "option": "--with-neon",
-      "description": "Builds XML-HTTP support"
-    },
-    {
-      "option": "--with-powerman",
-      "description": "Builds powerman PDU support"
-    },
-    {
-      "option": "--with-freeipmi",
-      "description": "Builds IPMI PSU support"
-    },
-    {
-      "option": "--with-cgi",
-      "description": "Builds CGI wrappers"
-    },
-    {
-      "option": "--with-libltdl",
-      "description": "Adds dynamic loading support of plugins using libltdl"
-    }
+
   ],
   "build_dependencies": [
-    "pkg-config",
-    "libtool"
+    "pkg-config"
   ],
   "dependencies": [
+    "libusb-compat",
     "openssl"
   ],
   "recommended_dependencies": [
-    "libusb-compat"
+
   ],
   "optional_dependencies": [
-    "net-snmp",
-    "neon",
-    "powerman",
-    "freeipmi"
+
   ],
   "requirements": [
 

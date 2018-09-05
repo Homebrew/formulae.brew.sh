@@ -43,64 +43,37 @@
   "keg_only": false,
   "options": [
     {
-      "option": "--with-docs",
-      "description": "Build the documentation with Doxygen and Graphviz"
-    },
-    {
-      "option": "--with-gdal",
-      "description": "Build with gdal support"
-    },
-    {
-      "option": "--with-jasper",
-      "description": "Build with jasper support"
-    },
-    {
-      "option": "--with-openexr",
-      "description": "Build with openexr support"
-    },
-    {
-      "option": "--with-dcmtk",
-      "description": "Build with dcmtk support"
-    },
-    {
-      "option": "--with-librsvg",
-      "description": "Build with librsvg support"
-    },
-    {
       "option": "--with-collada-dom",
       "description": "Build with collada-dom support"
     },
     {
-      "option": "--with-gnuplot",
-      "description": "Build with gnuplot support"
-    },
-    {
       "option": "--with-ffmpeg",
       "description": "Build with ffmpeg support"
+    },
+    {
+      "option": "--with-gdal",
+      "description": "Build with gdal support"
     }
   ],
   "build_dependencies": [
     "cmake",
+    "doxygen",
+    "graphviz",
     "pkg-config"
   ],
   "dependencies": [
-    "jpeg",
-    "gtkglext",
     "freetype",
+    "gtkglext",
+    "jpeg",
     "sdl"
   ],
   "recommended_dependencies": [
 
   ],
   "optional_dependencies": [
-    "gdal",
-    "jasper",
-    "openexr",
-    "dcmtk",
-    "librsvg",
     "collada-dom",
-    "gnuplot",
-    "ffmpeg"
+    "ffmpeg",
+    "gdal"
   ],
   "requirements": [
 

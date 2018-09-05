@@ -47,29 +47,17 @@
   "keg_only": false,
   "options": [
     {
-      "option": "--with-libav",
-      "description": "Build with libav support"
-    },
-    {
-      "option": "--with-libsndfile",
-      "description": "Build with libsndfile support"
-    },
-    {
-      "option": "--with-libsamplerate",
-      "description": "Build with libsamplerate support"
-    },
-    {
       "option": "--with-fftw",
       "description": "Build with fftw support"
     },
     {
-      "option": "--with-jack",
-      "description": "Build with jack support"
+      "option": "--with-libav",
+      "description": "Build with libav support"
     }
   ],
   "build_dependencies": [
-    "pkg-config",
-    "libtool"
+    "libtool",
+    "pkg-config"
   ],
   "dependencies": [
     "numpy",
@@ -79,11 +67,8 @@
 
   ],
   "optional_dependencies": [
-    "libav",
-    "libsndfile",
-    "libsamplerate",
     "fftw",
-    "jack"
+    "libav"
   ],
   "requirements": [
     {
