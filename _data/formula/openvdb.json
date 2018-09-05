@@ -49,35 +49,20 @@
     {
       "option": "--with-glfw",
       "description": "Installs the command-line tool to view OpenVDB files"
-    },
-    {
-      "option": "--with-test",
-      "description": "Installs the unit tests for the OpenVDB library"
-    },
-    {
-      "option": "--with-logging",
-      "description": "Requires log4cplus"
-    },
-    {
-      "option": "--with-docs",
-      "description": "Installs documentation"
-    },
-    {
-      "option": "--without-jemalloc",
-      "description": "Build without jemalloc support"
     }
   ],
   "build_dependencies": [
-
+    "doxygen"
   ],
   "dependencies": [
     "boost",
     "ilmbase",
+    "jemalloc",
     "openexr",
     "tbb"
   ],
   "recommended_dependencies": [
-    "jemalloc"
+
   ],
   "optional_dependencies": [
     "glfw"

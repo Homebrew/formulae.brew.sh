@@ -46,39 +46,28 @@
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--with-perl",
-      "description": "Build Pidgin with Perl support"
-    },
-    {
-      "option": "--without-gui",
-      "description": "Build only Finch, the command-line client"
-    },
-    {
-      "option": "--with-gsasl",
-      "description": "Build with gsasl support"
-    }
+
   ],
   "build_dependencies": [
-    "pkg-config",
-    "intltool"
+    "intltool",
+    "pkg-config"
   ],
   "dependencies": [
+    "cairo",
     "gettext",
+    "glib",
     "gnutls",
+    "gtk+",
     "libgcrypt",
     "libidn",
-    "glib",
-    "gtk+",
-    "cairo",
-    "pango",
-    "libotr"
+    "libotr",
+    "pango"
   ],
   "recommended_dependencies": [
 
   ],
   "optional_dependencies": [
-    "gsasl"
+
   ],
   "requirements": [
 

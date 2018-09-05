@@ -47,14 +47,6 @@
   "keg_only": false,
   "options": [
     {
-      "option": "--without-stdlib",
-      "description": "Don't install the Agda standard library"
-    },
-    {
-      "option": "--without-ghc",
-      "description": "Disable the GHC backend"
-    },
-    {
       "option": "--without-emacs",
       "description": "Build without emacs support"
     }
@@ -63,10 +55,9 @@
     "cabal-install"
   ],
   "dependencies": [
-
+    "ghc"
   ],
   "recommended_dependencies": [
-    "ghc",
     "emacs"
   ],
   "optional_dependencies": [
