@@ -16,7 +16,7 @@
     "head": "HEAD",
     "bottle": true
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -26,35 +26,34 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/git-2.19.0.mojave.bottle.tar.gz",
-          "sha256": "1c90a0ac7d9f027bd24cc54043b996dd0d3d11462c83d8b8c1660299a53cf23d"
+          "url": "https://linuxbrew.bintray.com/bottles/git-2.19.0_1.mojave.bottle.tar.gz",
+          "sha256": "f061e24aa928a97ef77b7f443c165172c0c85511c3411b98226cf657dfc2aa1b"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/git-2.19.0.high_sierra.bottle.tar.gz",
-          "sha256": "b10bcf50b981b0d5b0407fc0fc5d87054b0dbeab401f6eaedfa7d8f4b278a603"
+          "url": "https://linuxbrew.bintray.com/bottles/git-2.19.0_1.high_sierra.bottle.tar.gz",
+          "sha256": "85ab559f0870530b3fa59c405245a33d97ea57bcb1566aa97c492c2ccb01d2b4"
         },
         "sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/git-2.19.0.sierra.bottle.tar.gz",
-          "sha256": "60f02d9b13bed6e99197d66e6cbb39af1f037ebbce3c1594959012ad93aa9e4b"
+          "url": "https://linuxbrew.bintray.com/bottles/git-2.19.0_1.sierra.bottle.tar.gz",
+          "sha256": "14191459ad180081eb11e41b5ce1ee35e89351869fe94530cbd8a783bb41b61d"
         },
         "el_capitan": {
-          "url": "https://linuxbrew.bintray.com/bottles/git-2.19.0.el_capitan.bottle.tar.gz",
-          "sha256": "bec8956a4e80bd8eeff0abc640b776afe637bfeb3b6d323f5a95d00074565df4"
+          "url": "https://linuxbrew.bintray.com/bottles/git-2.19.0_1.el_capitan.bottle.tar.gz",
+          "sha256": "0b983c47e72a8d474771597178d921b068100f471c28276f8be193433cb547ea"
         }
       }
     }
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--with-pcre2",
-      "description": "Build with pcre2 support"
-    }
+
   ],
   "build_dependencies": [
 
   ],
   "dependencies": [
+    "gettext",
+    "pcre2",
     "openssl",
     "curl"
   ],
@@ -62,7 +61,7 @@
 
   ],
   "optional_dependencies": [
-    "pcre2"
+
   ],
   "requirements": [
 
