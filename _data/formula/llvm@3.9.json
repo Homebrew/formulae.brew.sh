@@ -47,14 +47,6 @@
   "keg_only": true,
   "options": [
     {
-      "option": "--without-compiler-rt",
-      "description": "Do not build Clang runtime support libraries for code sanitizers, builtins, and profiling"
-    },
-    {
-      "option": "--without-libcxx",
-      "description": "Do not build libc++ standard library"
-    },
-    {
       "option": "--with-toolchain",
       "description": "Build with Toolchain to facilitate overriding system compiler"
     },
@@ -65,36 +57,20 @@
     {
       "option": "--with-python@2",
       "description": "Build bindings against Homebrew's Python 2"
-    },
-    {
-      "option": "--with-shared-libs",
-      "description": "Build shared instead of static libraries"
-    },
-    {
-      "option": "--without-libffi",
-      "description": "Do not use libffi to call external functions"
-    },
-    {
-      "option": "--with-graphviz",
-      "description": "Build with graphviz support"
-    },
-    {
-      "option": "--with-ocaml",
-      "description": "Build with ocaml support"
     }
   ],
   "build_dependencies": [
     "cmake"
   ],
   "dependencies": [
+    "libffi",
     "python@2"
   ],
   "recommended_dependencies": [
-    "libffi"
+
   ],
   "optional_dependencies": [
-    "graphviz",
-    "ocaml"
+
   ],
   "requirements": [
 
@@ -102,7 +78,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "LLVM executables are installed in /home/travis/Homebrew/opt/llvm@3.9/bin.\nExtra tools are installed in /home/travis/Homebrew/opt/llvm@3.9/share/llvm@3.9.\nTo use the bundled libc++ please add the following LDFLAGS:\n  LDFLAGS=\"-L/home/travis/Homebrew/opt/llvm@3.9/lib -Wl,-rpath,/home/travis/Homebrew/opt/llvm@3.9/lib\"\n",
+  "caveats": "LLVM executables are installed in /home/travis/Homebrew/opt/llvm@3.9/bin.\nExtra tools are installed in /home/travis/Homebrew/opt/llvm@3.9/share/llvm@3.9.\n\nTo use the bundled libc++ please add the following LDFLAGS:\n  LDFLAGS=\"-L/home/travis/Homebrew/opt/llvm@3.9/lib -Wl,-rpath,/home/travis/Homebrew/opt/llvm@3.9/lib\"\n",
   "installed": [
 
   ],
