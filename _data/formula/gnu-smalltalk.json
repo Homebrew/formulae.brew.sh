@@ -47,20 +47,8 @@
   "keg_only": false,
   "options": [
     {
-      "option": "--with-test",
-      "description": "Verify the build with make check (this may hang)"
-    },
-    {
       "option": "--with-tcltk",
       "description": "Build the Tcl/Tk module that requires X11"
-    },
-    {
-      "option": "--without-libffi",
-      "description": "Build without libffi support"
-    },
-    {
-      "option": "--without-libsigsegv",
-      "description": "Build without libsigsegv support"
     },
     {
       "option": "--with-glew",
@@ -70,18 +58,19 @@
   "build_dependencies": [
     "autoconf",
     "automake",
-    "pkg-config",
-    "gawk"
+    "gawk",
+    "pkg-config"
   ],
   "dependencies": [
-    "libtool",
-    "readline",
+    "gdbm",
     "gnutls",
-    "gdbm"
+    "libffi",
+    "libsigsegv",
+    "libtool",
+    "readline"
   ],
   "recommended_dependencies": [
-    "libffi",
-    "libsigsegv"
+
   ],
   "optional_dependencies": [
     "glew"

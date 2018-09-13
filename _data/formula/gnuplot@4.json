@@ -59,43 +59,28 @@
       "description": "Build the Cairo based terminals"
     },
     {
-      "option": "--without-lua@5.1",
-      "description": "Build without the lua/TikZ terminal"
-    },
-    {
-      "option": "--with-test",
-      "description": "Verify the build with make check (1 min)"
-    },
-    {
-      "option": "--without-emacs",
-      "description": "Do not build Emacs lisp files"
-    },
-    {
       "option": "--with-aquaterm",
       "description": "Build with AquaTerm support"
     },
     {
       "option": "--with-x11",
       "description": "Build with X11 support"
-    },
-    {
-      "option": "--without-gd",
-      "description": "Build without gd support"
     }
   ],
   "build_dependencies": [
     "pkg-config"
   ],
   "dependencies": [
-    "readline",
-    "libpng",
+    "fontconfig",
+    "gd",
     "jpeg",
+    "libpng",
     "libtiff",
-    "fontconfig"
+    "lua@5.1",
+    "readline"
   ],
   "recommended_dependencies": [
-    "lua@5.1",
-    "gd"
+
   ],
   "optional_dependencies": [
     "pdflib-lite",
