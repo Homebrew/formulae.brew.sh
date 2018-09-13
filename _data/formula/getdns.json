@@ -42,41 +42,22 @@
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--without-unbound",
-      "description": "Build without unbound support"
-    },
-    {
-      "option": "--without-libidn",
-      "description": "Build without libidn support"
-    },
-    {
-      "option": "--without-libevent",
-      "description": "Build without libevent support"
-    },
-    {
-      "option": "--with-libuv",
-      "description": "Build with libuv support"
-    },
-    {
-      "option": "--with-libev",
-      "description": "Build with libev support"
-    }
+
   ],
   "build_dependencies": [
 
   ],
   "dependencies": [
-    "openssl"
+    "libevent",
+    "libidn",
+    "openssl",
+    "unbound"
   ],
   "recommended_dependencies": [
-    "unbound",
-    "libidn",
-    "libevent"
+
   ],
   "optional_dependencies": [
-    "libuv",
-    "libev"
+
   ],
   "requirements": [
 

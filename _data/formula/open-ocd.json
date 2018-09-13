@@ -50,29 +50,19 @@
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--without-hidapi",
-      "description": "Disable building support for devices using HIDAPI (CMSIS-DAP)"
-    },
-    {
-      "option": "--without-libftdi",
-      "description": "Disable building support for libftdi-based drivers (USB-Blaster, ASIX Presto, OpenJTAG)"
-    },
-    {
-      "option": "--without-libusb",
-      "description": "Disable building support for all other USB adapters"
-    }
+
   ],
   "build_dependencies": [
     "pkg-config"
   ],
   "dependencies": [
+    "hidapi",
+    "libftdi",
+    "libusb",
     "libusb-compat"
   ],
   "recommended_dependencies": [
-    "libusb",
-    "libftdi",
-    "hidapi"
+
   ],
   "optional_dependencies": [
 

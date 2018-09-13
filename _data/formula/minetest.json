@@ -46,44 +46,25 @@
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--without-luajit",
-      "description": "Build without luajit support"
-    },
-    {
-      "option": "--without-freetype",
-      "description": "Build without freetype support"
-    },
-    {
-      "option": "--without-gettext",
-      "description": "Build without gettext support"
-    },
-    {
-      "option": "--with-leveldb",
-      "description": "Build with leveldb support"
-    },
-    {
-      "option": "--with-redis",
-      "description": "Build with redis support"
-    }
+
   ],
   "build_dependencies": [
     "cmake"
   ],
   "dependencies": [
+    "freetype",
+    "gettext",
     "irrlicht",
     "jpeg",
     "libogg",
-    "libvorbis"
+    "libvorbis",
+    "luajit"
   ],
   "recommended_dependencies": [
-    "luajit",
-    "freetype",
-    "gettext"
+
   ],
   "optional_dependencies": [
-    "leveldb",
-    "redis"
+
   ],
   "requirements": [
     {
