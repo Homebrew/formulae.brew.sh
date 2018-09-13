@@ -46,25 +46,19 @@
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--without-libffi",
-      "description": "Build without libffi support"
-    },
-    {
-      "option": "--without-readline",
-      "description": "Build without readline support"
-    }
+
   ],
   "build_dependencies": [
-    "pkg-config",
-    "bison"
+    "bison",
+    "pkg-config"
   ],
   "dependencies": [
-    "python"
+    "libffi",
+    "python",
+    "readline"
   ],
   "recommended_dependencies": [
-    "libffi",
-    "readline"
+
   ],
   "optional_dependencies": [
 
