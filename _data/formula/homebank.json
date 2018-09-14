@@ -16,7 +16,7 @@
     "head": null,
     "bottle": true
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -26,19 +26,19 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/homebank-5.2.mojave.bottle.tar.gz",
+          "url": "https://linuxbrew.bintray.com/bottles/homebank-5.2_1.mojave.bottle.tar.gz",
           "sha256": "6714b6331c71bcde205ec1ec301331fe3355d64ca29801f09f9a547e343cb1d6"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/homebank-5.2.high_sierra.bottle.tar.gz",
+          "url": "https://linuxbrew.bintray.com/bottles/homebank-5.2_1.high_sierra.bottle.tar.gz",
           "sha256": "d62df5ebd994fa030be7667bb8fb75ccce33d4c557554e19300ef48c1a960f5f"
         },
         "sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/homebank-5.2.sierra.bottle.tar.gz",
+          "url": "https://linuxbrew.bintray.com/bottles/homebank-5.2_1.sierra.bottle.tar.gz",
           "sha256": "486d1d5f5d8d2132d2d1cb814e68b6d1241886b2746fc083886dc0068c5b2eee"
         },
         "el_capitan": {
-          "url": "https://linuxbrew.bintray.com/bottles/homebank-5.2.el_capitan.bottle.tar.gz",
+          "url": "https://linuxbrew.bintray.com/bottles/homebank-5.2_1.el_capitan.bottle.tar.gz",
           "sha256": "9766b5b98e8386e815d4851be914cc0306526de66cb35d99eb022371af0a0708"
         }
       }
@@ -46,29 +46,27 @@
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--with-libofx",
-      "description": "Build with libofx support"
-    }
+
   ],
   "build_dependencies": [
-    "pkg-config",
-    "intltool"
+    "intltool",
+    "pkg-config"
   ],
   "dependencies": [
+    "adwaita-icon-theme",
+    "fontconfig",
+    "freetype",
     "gettext",
     "gtk+3",
-    "adwaita-icon-theme",
     "hicolor-icon-theme",
-    "freetype",
-    "fontconfig",
+    "libofx",
     "libsoup"
   ],
   "recommended_dependencies": [
 
   ],
   "optional_dependencies": [
-    "libofx"
+
   ],
   "requirements": [
 
