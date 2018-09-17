@@ -59,24 +59,24 @@
       "description": "Build with sphinx-doc support"
     },
     {
-      "option": "--without-uhd",
-      "description": "Build without uhd support"
+      "option": "--without-portaudio",
+      "description": "Build without portaudio support"
     },
     {
-      "option": "--with-sdl",
-      "description": "Build with sdl support"
+      "option": "--without-uhd",
+      "description": "Build without uhd support"
     },
     {
       "option": "--with-jack",
       "description": "Build with jack support"
     },
     {
-      "option": "--without-portaudio",
-      "description": "Build without portaudio support"
-    },
-    {
       "option": "--with-pygtk",
       "description": "Build with pygtk support"
+    },
+    {
+      "option": "--with-sdl",
+      "description": "Build with sdl support"
     },
     {
       "option": "--with-wxpython",
@@ -85,10 +85,10 @@
   ],
   "build_dependencies": [
     "cmake",
-    "pkg-config",
-    "swig",
     "doxygen",
-    "sphinx-doc"
+    "pkg-config",
+    "sphinx-doc",
+    "swig"
   ],
   "dependencies": [
     "boost",
@@ -98,16 +98,16 @@
     "numpy"
   ],
   "recommended_dependencies": [
+    "portaudio",
     "python@2",
-    "uhd",
-    "portaudio"
+    "uhd"
   ],
   "optional_dependencies": [
     "doxygen",
     "sphinx-doc",
-    "sdl",
     "jack",
     "pygtk",
+    "sdl",
     "wxpython"
   ],
   "requirements": [
