@@ -47,21 +47,21 @@
   "keg_only": false,
   "options": [
     {
+      "option": "--with-fluid-synth",
+      "description": "Build with fluid-synth support"
+    },
+    {
       "option": "--with-portaudio",
       "description": "Build with portaudio support"
     },
     {
       "option": "--with-pulseaudio",
       "description": "Build with pulseaudio support"
-    },
-    {
-      "option": "--with-fluid-synth",
-      "description": "Build with fluid-synth support"
     }
   ],
   "build_dependencies": [
-    "pkg-config",
-    "cmake"
+    "cmake",
+    "pkg-config"
   ],
   "dependencies": [
 
@@ -70,9 +70,9 @@
 
   ],
   "optional_dependencies": [
+    "fluid-synth",
     "portaudio",
-    "pulseaudio",
-    "fluid-synth"
+    "pulseaudio"
   ],
   "requirements": [
 
