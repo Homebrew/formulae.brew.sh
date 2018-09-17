@@ -46,30 +46,20 @@
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--without-freexl",
-      "description": "Build without support for reading Excel files"
-    },
-    {
-      "option": "--without-libxml2",
-      "description": "Disable support for xml parsing (parsing needed by spatialite-gui)"
-    },
-    {
-      "option": "--without-geopackage",
-      "description": "Build without OGC GeoPackage support"
-    }
+
   ],
   "build_dependencies": [
     "pkg-config"
   ],
   "dependencies": [
-    "proj",
+    "freexl",
     "geos",
+    "libxml2",
+    "proj",
     "sqlite"
   ],
   "recommended_dependencies": [
-    "libxml2",
-    "freexl"
+
   ],
   "optional_dependencies": [
 

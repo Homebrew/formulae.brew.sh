@@ -47,36 +47,8 @@
   "keg_only": false,
   "options": [
     {
-      "option": "--without-magick-plus-plus",
-      "description": "disable build/install of Magick++"
-    },
-    {
-      "option": "--without-svg",
-      "description": "Compile without svg support"
-    },
-    {
       "option": "--with-perl",
       "description": "Build PerlMagick; provides the Graphics::Magick module"
-    },
-    {
-      "option": "--without-jpeg",
-      "description": "Build without jpeg support"
-    },
-    {
-      "option": "--without-libpng",
-      "description": "Build without libpng support"
-    },
-    {
-      "option": "--without-libtiff",
-      "description": "Build without libtiff support"
-    },
-    {
-      "option": "--without-freetype",
-      "description": "Build without freetype support"
-    },
-    {
-      "option": "--without-jasper",
-      "description": "Build without jasper support"
     },
     {
       "option": "--with-little-cms2",
@@ -103,14 +75,15 @@
     "pkg-config"
   ],
   "dependencies": [
-    "libtool"
-  ],
-  "recommended_dependencies": [
+    "freetype",
+    "jasper",
     "jpeg",
     "libpng",
     "libtiff",
-    "freetype",
-    "jasper"
+    "libtool"
+  ],
+  "recommended_dependencies": [
+
   ],
   "optional_dependencies": [
     "little-cms2",

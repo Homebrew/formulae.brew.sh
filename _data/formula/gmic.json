@@ -47,28 +47,16 @@
   "keg_only": false,
   "options": [
     {
-      "option": "--without-jpeg",
-      "description": "Build without jpeg support"
-    },
-    {
-      "option": "--without-libpng",
-      "description": "Build without libpng support"
-    },
-    {
-      "option": "--without-fftw",
-      "description": "Build without fftw support"
-    },
-    {
-      "option": "--with-opencv@2",
-      "description": "Build with opencv@2 support"
-    },
-    {
       "option": "--with-ffmpeg",
       "description": "Build with ffmpeg support"
     },
     {
       "option": "--with-libtiff",
       "description": "Build with libtiff support"
+    },
+    {
+      "option": "--with-opencv@2",
+      "description": "Build with opencv@2 support"
     },
     {
       "option": "--with-openexr",
@@ -79,17 +67,17 @@
     "cmake"
   ],
   "dependencies": [
-
+    "fftw",
+    "jpeg",
+    "libpng"
   ],
   "recommended_dependencies": [
-    "jpeg",
-    "libpng",
-    "fftw"
+
   ],
   "optional_dependencies": [
-    "opencv@2",
     "ffmpeg",
     "libtiff",
+    "opencv@2",
     "openexr"
   ],
   "requirements": [

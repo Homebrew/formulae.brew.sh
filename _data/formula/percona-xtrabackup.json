@@ -42,14 +42,7 @@
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--without-docs",
-      "description": "Build without man pages (which requires python-sphinx)"
-    },
-    {
-      "option": "--without-mysql-client",
-      "description": "Build without bundled Perl DBD::mysql module, to use the database of your choice."
-    }
+
   ],
   "build_dependencies": [
     "cmake",
@@ -58,10 +51,11 @@
   "dependencies": [
     "libev",
     "libgcrypt",
+    "mysql-client",
     "openssl"
   ],
   "recommended_dependencies": [
-    "mysql-client"
+
   ],
   "optional_dependencies": [
 
