@@ -47,12 +47,12 @@
   "keg_only": false,
   "options": [
     {
-      "option": "--without-vala",
-      "description": "Build without vala support"
-    },
-    {
       "option": "--without-autogen",
       "description": "Build without autogen support"
+    },
+    {
+      "option": "--without-vala",
+      "description": "Build without vala support"
     },
     {
       "option": "--with-gnome-themes-standard",
@@ -60,25 +60,25 @@
     }
   ],
   "build_dependencies": [
-    "pkg-config",
     "intltool",
-    "itstool"
+    "itstool",
+    "pkg-config"
   ],
   "dependencies": [
-    "python@2",
-    "gtksourceview3",
-    "libxml2",
-    "libgda",
-    "gdl",
-    "vte3",
-    "hicolor-icon-theme",
     "adwaita-icon-theme",
+    "gdl",
     "gnutls",
-    "shared-mime-info"
+    "gtksourceview3",
+    "hicolor-icon-theme",
+    "libgda",
+    "libxml2",
+    "python@2",
+    "shared-mime-info",
+    "vte3"
   ],
   "recommended_dependencies": [
-    "vala",
-    "autogen"
+    "autogen",
+    "vala"
   ],
   "optional_dependencies": [
     "gnome-themes-standard"
