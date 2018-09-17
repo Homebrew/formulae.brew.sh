@@ -83,6 +83,10 @@
       "description": "Disables depending on XML configuration files"
     },
     {
+      "option": "--without-freetype",
+      "description": "Build without freetype support"
+    },
+    {
       "option": "--without-jpeg",
       "description": "Build without jpeg support"
     },
@@ -95,12 +99,24 @@
       "description": "Build without libtiff support"
     },
     {
-      "option": "--without-freetype",
-      "description": "Build without freetype support"
-    },
-    {
       "option": "--with-fontconfig",
       "description": "Build with fontconfig support"
+    },
+    {
+      "option": "--with-ghostscript",
+      "description": "Build with ghostscript support"
+    },
+    {
+      "option": "--with-liblqr",
+      "description": "Build with liblqr support"
+    },
+    {
+      "option": "--with-librsvg",
+      "description": "Build with librsvg support"
+    },
+    {
+      "option": "--with-libwmf",
+      "description": "Build with libwmf support"
     },
     {
       "option": "--with-little-cms",
@@ -111,28 +127,8 @@
       "description": "Build with little-cms2 support"
     },
     {
-      "option": "--with-libwmf",
-      "description": "Build with libwmf support"
-    },
-    {
-      "option": "--with-librsvg",
-      "description": "Build with librsvg support"
-    },
-    {
-      "option": "--with-liblqr",
-      "description": "Build with liblqr support"
-    },
-    {
       "option": "--with-openexr",
       "description": "Build with openexr support"
-    },
-    {
-      "option": "--with-ghostscript",
-      "description": "Build with ghostscript support"
-    },
-    {
-      "option": "--with-webp",
-      "description": "Build with webp support"
     },
     {
       "option": "--with-openjpeg",
@@ -141,6 +137,10 @@
     {
       "option": "--with-pango",
       "description": "Build with pango support"
+    },
+    {
+      "option": "--with-webp",
+      "description": "Build with webp support"
     }
   ],
   "build_dependencies": [
@@ -151,25 +151,25 @@
     "xz"
   ],
   "recommended_dependencies": [
+    "freetype",
     "jpeg",
     "libpng",
-    "libtiff",
-    "freetype"
+    "libtiff"
   ],
   "optional_dependencies": [
+    "fftw",
     "fontconfig",
+    "ghostscript",
+    "liblqr",
+    "librsvg",
+    "libwmf",
     "little-cms",
     "little-cms2",
-    "libwmf",
-    "librsvg",
-    "liblqr",
     "openexr",
-    "ghostscript",
-    "webp",
     "openjpeg",
-    "fftw",
     "pango",
-    "perl"
+    "perl",
+    "webp"
   ],
   "requirements": [
 
