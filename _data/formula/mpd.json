@@ -16,7 +16,7 @@
     "head": "HEAD",
     "bottle": true
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -26,19 +26,19 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/mpd-0.20.21.mojave.bottle.tar.gz",
+          "url": "https://linuxbrew.bintray.com/bottles/mpd-0.20.21_1.mojave.bottle.tar.gz",
           "sha256": "e8745fde74d53001ceab4881a52b8484d2251e9bd695a7ca0b49fd2fdd1fcdf0"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/mpd-0.20.21.high_sierra.bottle.tar.gz",
+          "url": "https://linuxbrew.bintray.com/bottles/mpd-0.20.21_1.high_sierra.bottle.tar.gz",
           "sha256": "da4ed86f57b7cf8dfafb0eda2292761adfb1a472c519b45574667bcecc3cb277"
         },
         "sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/mpd-0.20.21.sierra.bottle.tar.gz",
+          "url": "https://linuxbrew.bintray.com/bottles/mpd-0.20.21_1.sierra.bottle.tar.gz",
           "sha256": "dea4dd579189abb931a01a9d499e07d283a07d452c27f71ba0c43d151b901d2d"
         },
         "el_capitan": {
-          "url": "https://linuxbrew.bintray.com/bottles/mpd-0.20.21.el_capitan.bottle.tar.gz",
+          "url": "https://linuxbrew.bintray.com/bottles/mpd-0.20.21_1.el_capitan.bottle.tar.gz",
           "sha256": "aff57f03edaf545460b4474be279f4a0c7062a11ead05f8ee7a985e3b49fb59d"
         }
       }
@@ -46,114 +46,35 @@
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--with-wavpack",
-      "description": "Build with wavpack support (for .wv files)"
-    },
-    {
-      "option": "--with-lastfm",
-      "description": "Build with last-fm support (for experimental Last.fm radio)"
-    },
-    {
-      "option": "--with-lame",
-      "description": "Build with lame support (for MP3 encoding when streaming)"
-    },
-    {
-      "option": "--with-two-lame",
-      "description": "Build with two-lame support (for MP2 encoding when streaming)"
-    },
-    {
-      "option": "--with-flac",
-      "description": "Build with flac support (for Flac encoding when streaming)"
-    },
-    {
-      "option": "--with-libvorbis",
-      "description": "Build with vorbis support (for Ogg encoding)"
-    },
-    {
-      "option": "--with-yajl",
-      "description": "Build with yajl support (for playing from soundcloud)"
-    },
-    {
-      "option": "--with-opus",
-      "description": "Build with opus support (for Opus encoding and decoding)"
-    },
-    {
-      "option": "--with-libmodplug",
-      "description": "Build with modplug support (for decoding modules supported by MODPlug)"
-    },
-    {
-      "option": "--with-pulseaudio",
-      "description": "Build with PulseAudio support (for sending audio output to a PulseAudio sound server)"
-    },
-    {
-      "option": "--with-upnp",
-      "description": "Build with upnp database plugin support"
-    },
-    {
-      "option": "--with-libshout",
-      "description": "Build with libshout support"
-    },
-    {
-      "option": "--with-jack",
-      "description": "Build with jack support"
-    },
-    {
-      "option": "--with-libmms",
-      "description": "Build with libmms support"
-    },
-    {
-      "option": "--with-libzzip",
-      "description": "Build with libzzip support"
-    },
-    {
-      "option": "--with-libnfs",
-      "description": "Build with libnfs support"
-    },
-    {
-      "option": "--with-mad",
-      "description": "Build with mad support"
-    },
-    {
-      "option": "--with-libao",
-      "description": "Build with libao support"
-    }
+
   ],
   "build_dependencies": [
-    "pkg-config",
-    "boost"
+    "boost",
+    "pkg-config"
   ],
   "dependencies": [
-    "glib",
-    "libid3tag",
-    "sqlite",
-    "libsamplerate",
-    "icu4c",
-    "libmpdclient",
+    "expat",
+    "faad2",
     "ffmpeg",
+    "flac",
     "fluid-synth",
-    "faad2"
+    "glib",
+    "icu4c",
+    "lame",
+    "libao",
+    "libid3tag",
+    "libmpdclient",
+    "libsamplerate",
+    "libupnp",
+    "libvorbis",
+    "opus",
+    "sqlite"
   ],
   "recommended_dependencies": [
 
   ],
   "optional_dependencies": [
-    "wavpack",
-    "libshout",
-    "lame",
-    "two-lame",
-    "flac",
-    "jack",
-    "libmms",
-    "libzzip",
-    "yajl",
-    "opus",
-    "libvorbis",
-    "libnfs",
-    "mad",
-    "libmodplug",
-    "pulseaudio",
-    "libao"
+
   ],
   "requirements": [
 

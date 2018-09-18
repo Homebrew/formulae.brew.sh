@@ -51,14 +51,6 @@
   "keg_only": false,
   "options": [
     {
-      "option": "--with-bindings",
-      "description": "Build Perl/Python/Ruby/etc. bindings"
-    },
-    {
-      "option": "--with-pango",
-      "description": "Build with Pango/Cairo for alternate PDF output"
-    },
-    {
       "option": "--with-app",
       "description": "Build GraphViz.app (requires full XCode install)"
     },
@@ -67,16 +59,12 @@
       "description": "Build with GNU GTS support (required by prism)"
     },
     {
-      "option": "--with-freetype",
-      "description": "Build with freetype support"
+      "option": "--with-pango",
+      "description": "Build with Pango/Cairo for alternate PDF output"
     },
     {
       "option": "--with-librsvg",
       "description": "Build with librsvg support"
-    },
-    {
-      "option": "--with-x11",
-      "description": "Build with x11 support"
     }
   ],
   "build_dependencies": [
@@ -91,17 +79,12 @@
 
   ],
   "optional_dependencies": [
-    "freetype",
     "gts",
     "librsvg",
     "pango"
   ],
   "requirements": [
-    {
-      "name": "x11",
-      "cask": "xquartz",
-      "download": "https://xquartz.macosforge.org"
-    }
+
   ],
   "conflicts_with": [
 
