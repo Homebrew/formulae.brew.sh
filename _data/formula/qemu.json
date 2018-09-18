@@ -51,14 +51,6 @@
       "description": "Build without libpng support"
     },
     {
-      "option": "--with-vde",
-      "description": "Build with vde support"
-    },
-    {
-      "option": "--with-sdl2",
-      "description": "Build with sdl2 support"
-    },
-    {
       "option": "--with-gtk+3",
       "description": "Build with gtk+3 support"
     },
@@ -69,16 +61,24 @@
     {
       "option": "--with-libusb",
       "description": "Build with libusb support"
+    },
+    {
+      "option": "--with-sdl2",
+      "description": "Build with sdl2 support"
+    },
+    {
+      "option": "--with-vde",
+      "description": "Build with vde support"
     }
   ],
   "build_dependencies": [
-    "pkg-config",
-    "libtool"
+    "libtool",
+    "pkg-config"
   ],
   "dependencies": [
-    "jpeg",
-    "gnutls",
     "glib",
+    "gnutls",
+    "jpeg",
     "ncurses",
     "pixman"
   ],
@@ -86,11 +86,11 @@
     "libpng"
   ],
   "optional_dependencies": [
-    "vde",
-    "sdl2",
     "gtk+3",
     "libssh2",
-    "libusb"
+    "libusb",
+    "sdl2",
+    "vde"
   ],
   "requirements": [
 
