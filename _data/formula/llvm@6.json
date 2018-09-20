@@ -1,22 +1,19 @@
 {
-  "name": "llvm",
-  "full_name": "llvm",
+  "name": "llvm@6",
+  "full_name": "llvm@6",
   "oldname": null,
   "aliases": [
-    "llvm@7"
+
   ],
   "versioned_formulae": [
-    "llvm@3.9",
-    "llvm@4",
-    "llvm@5",
-    "llvm@6"
+
   ],
   "desc": "Next-gen compiler infrastructure",
   "homepage": "https://llvm.org/",
   "versions": {
-    "stable": "7.0.0",
+    "stable": "6.0.1",
     "devel": null,
-    "head": "HEAD",
+    "head": null,
     "bottle": true
   },
   "revision": 0,
@@ -29,21 +26,21 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/llvm-7.0.0.mojave.bottle.tar.gz",
-          "sha256": "324b61fd7879dd9e3e282aaa0335d33ce7394a6bf717b6083f61aaeb5473c24a"
+          "url": "https://linuxbrew.bintray.com/bottles/llvm@6-6.0.1.mojave.bottle.tar.gz",
+          "sha256": "00a274a6799b0dfb2851e7ab0f62bcdacd7d605a95eeda34b7e4e40f57602281"
         },
         "sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/llvm-7.0.0.sierra.bottle.tar.gz",
-          "sha256": "92210cda305148ab90a1db8ef741f239a186ea48aaaa71f236e4aefbba02276a"
+          "url": "https://linuxbrew.bintray.com/bottles/llvm@6-6.0.1.sierra.bottle.tar.gz",
+          "sha256": "225ef581098fab984f29fc2f8c6c67bdc399640a4e61df87d2c151ea39682cca"
         },
         "el_capitan": {
-          "url": "https://linuxbrew.bintray.com/bottles/llvm-7.0.0.el_capitan.bottle.tar.gz",
-          "sha256": "528d98ec47c9f82d5442576d51ad2dbefcea8f69914a3a0133e3d25c1fae96f1"
+          "url": "https://linuxbrew.bintray.com/bottles/llvm@6-6.0.1.el_capitan.bottle.tar.gz",
+          "sha256": "498629ce0ce23a2ca425cde388b292f78a8d8becb12ecd1248c0b047f0f3016e"
         }
       }
     }
   },
-  "keg_only": false,
+  "keg_only": true,
   "options": [
     {
       "option": "--with-toolchain",
@@ -77,7 +74,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "To use the bundled libc++ please add the following LDFLAGS:\n  LDFLAGS=\"-L/home/travis/Homebrew/opt/llvm/lib -Wl,-rpath,/home/travis/Homebrew/opt/llvm/lib\"\n",
+  "caveats": "To use the bundled libc++ please add the following LDFLAGS:\n  LDFLAGS=\"-L/home/travis/Homebrew/opt/llvm@6/lib -Wl,-rpath,/home/travis/Homebrew/opt/llvm@6/lib\"\n",
   "installed": [
 
   ],
