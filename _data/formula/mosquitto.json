@@ -11,7 +11,7 @@
   "desc": "Message broker implementing the MQTT protocol",
   "homepage": "https://mosquitto.org/",
   "versions": {
-    "stable": "1.5.1",
+    "stable": "1.5.2",
     "devel": null,
     "head": null,
     "bottle": true
@@ -26,40 +26,38 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/mosquitto-1.5.1.mojave.bottle.tar.gz",
-          "sha256": "c79522eea6110ddea1497cf252c2f1991107cfafa114f5280f3cf787cd2cf884"
+          "url": "https://linuxbrew.bintray.com/bottles/mosquitto-1.5.2.mojave.bottle.tar.gz",
+          "sha256": "9f8a48f1841e761956a31628e8aff3ea38524756f7ddf7d916d5a4f340bfc4e4"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/mosquitto-1.5.1.high_sierra.bottle.tar.gz",
-          "sha256": "b7f54c6f51a798b11d33bde6fe7a927aba784de317a1abc0e6e0ff0ef2d9f2c6"
+          "url": "https://linuxbrew.bintray.com/bottles/mosquitto-1.5.2.high_sierra.bottle.tar.gz",
+          "sha256": "5bc4c7b72153aeeb107e4af15620ad99b5cc553e35ae77b640fa9c21082a1b7a"
         },
         "sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/mosquitto-1.5.1.sierra.bottle.tar.gz",
-          "sha256": "67afe32dcd96e598b112b1b26cec5f0725f6db8e2e898644c197594bb7fef020"
+          "url": "https://linuxbrew.bintray.com/bottles/mosquitto-1.5.2.sierra.bottle.tar.gz",
+          "sha256": "cf5c2831ebe5680dc875f42864c805dbc8b2d7b5de35f6f7f626f9af09e50953"
         },
         "el_capitan": {
-          "url": "https://linuxbrew.bintray.com/bottles/mosquitto-1.5.1.el_capitan.bottle.tar.gz",
-          "sha256": "0d984daefe7158e3c049d100f80327789425cb15dc2ca86b64134fb42befd9a6"
+          "url": "https://linuxbrew.bintray.com/bottles/mosquitto-1.5.2.el_capitan.bottle.tar.gz",
+          "sha256": "d746ae9e41a0c61e1dbaddf0eb96215c9587add7a7913d8ec08669ce118ff2f8"
         }
       }
     }
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--without-libwebsockets",
-      "description": "Build without libwebsockets support"
-    }
+
   ],
   "build_dependencies": [
     "cmake",
     "pkg-config"
   ],
   "dependencies": [
+    "libwebsockets",
     "openssl"
   ],
   "recommended_dependencies": [
-    "libwebsockets"
+
   ],
   "optional_dependencies": [
 
