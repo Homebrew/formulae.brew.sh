@@ -8,15 +8,15 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Package manager for OCaml",
+  "desc": "The OCaml package manager",
   "homepage": "https://opam.ocaml.org",
   "versions": {
-    "stable": "1.2.2",
+    "stable": "2.0.0",
     "devel": null,
     "head": "HEAD",
     "bottle": true
   },
-  "revision": 4,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -26,51 +26,39 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/opam-1.2.2_4.mojave.bottle.tar.gz",
-          "sha256": "07f2777f0dda170b36e409a6db773a5aae0e202e812127b388a05afaa89b3949"
+          "url": "https://linuxbrew.bintray.com/bottles/opam-2.0.0.mojave.bottle.tar.gz",
+          "sha256": "6fc6f874caa189da262165ed96a5c736fa2b1a0cae2d2b001a385d97ee64d5a7"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/opam-1.2.2_4.high_sierra.bottle.tar.gz",
-          "sha256": "b5e2621c1bca5f8374ee07ef878e5572e04debf9ba1d3aa4a2e16b8e26728e68"
+          "url": "https://linuxbrew.bintray.com/bottles/opam-2.0.0.high_sierra.bottle.tar.gz",
+          "sha256": "bf493fae73098388300f324fe116fc4f16bd8a0e52a9e40b2d74e50cf930d613"
         },
         "sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/opam-1.2.2_4.sierra.bottle.tar.gz",
-          "sha256": "cd52d891272efc754a838e8a08a4a7c5030ff908430c3ed1303a549cd1a4f73d"
+          "url": "https://linuxbrew.bintray.com/bottles/opam-2.0.0.sierra.bottle.tar.gz",
+          "sha256": "dfb95d7d716cea33067b600c7322cddbd1fb9a2e2578c75a38c83b0cc6b36900"
         },
         "el_capitan": {
-          "url": "https://linuxbrew.bintray.com/bottles/opam-1.2.2_4.el_capitan.bottle.tar.gz",
-          "sha256": "74f8341302bb5a933276cff7f9dff7240ad59a4d968050674b63869d9963de7e"
+          "url": "https://linuxbrew.bintray.com/bottles/opam-2.0.0.el_capitan.bottle.tar.gz",
+          "sha256": "ef2fce566058d21f080ae5229c9f84a2d692845530acb5ed272c41dfd68c5138"
         }
       }
     }
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--without-ocaml",
-      "description": "Build without ocaml support"
-    },
-    {
-      "option": "--without-camlp4",
-      "description": "Build without camlp4 support"
-    },
-    {
-      "option": "--with-aspcud",
-      "description": "Build with aspcud support"
-    }
+
   ],
   "build_dependencies": [
-
+    "ocaml"
   ],
   "dependencies": [
 
   ],
   "recommended_dependencies": [
-    "ocaml",
-    "camlp4"
+
   ],
   "optional_dependencies": [
-    "aspcud"
+
   ],
   "requirements": [
 
@@ -78,7 +66,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "OPAM uses ~/.opam by default for its package database, so you need to\ninitialize it first by running (as a normal user):\n\n$  opam init\n\nRun the following to initialize your environment variables:\n\n$  eval `opam config env`\n\nTo export the needed variables every time, add them to your dotfiles.\n  * On Bash, add them to `~/.bash_profile`.\n  * On Zsh, add them to `~/.zprofile` or `~/.zshrc` instead.\n\nDocumentation and tutorials are available at https://opam.ocaml.org, or\nvia \"man opam\" and \"opam --help\".\n",
+  "caveats": "OPAM uses ~/.opam by default for its package database, so you need to\ninitialize it first by running:\n\n$  opam init\n",
   "installed": [
 
   ],
