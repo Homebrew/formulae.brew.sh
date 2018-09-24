@@ -46,25 +46,19 @@
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--without-gnutls",
-      "description": "Build without gnutls support"
-    },
-    {
-      "option": "--without-openssl",
-      "description": "Build without openssl support"
-    }
+
   ],
   "build_dependencies": [
     "pkg-config"
   ],
   "dependencies": [
+    "gnutls",
+    "libgcrypt",
     "libxml2",
-    "libgcrypt"
+    "openssl"
   ],
   "recommended_dependencies": [
-    "gnutls",
-    "openssl"
+
   ],
   "optional_dependencies": [
 
