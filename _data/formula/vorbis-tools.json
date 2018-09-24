@@ -16,49 +16,43 @@
     "head": null,
     "bottle": true
   },
-  "revision": 1,
+  "revision": 2,
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/vorbis-tools-1.4.0_1.mojave.bottle.1.tar.gz",
-          "sha256": "92c11dabfc26b7fd84178700b02329fac05ab8eaff5eb55a613132ad93fe8e65"
+          "url": "https://linuxbrew.bintray.com/bottles/vorbis-tools-1.4.0_2.mojave.bottle.tar.gz",
+          "sha256": "ebcf801412fdea4ebf8e3dc850317fe6c8f8c4d9eeb10e3ba9c09bff3300b5cb"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/vorbis-tools-1.4.0_1.high_sierra.bottle.1.tar.gz",
-          "sha256": "b764cae12c12c9338b96023d5e855aa6f39b989c19dea650d43edc219135b17d"
+          "url": "https://linuxbrew.bintray.com/bottles/vorbis-tools-1.4.0_2.high_sierra.bottle.tar.gz",
+          "sha256": "fd042bd1be3987bfd945e4e681d246b179af2f67ec139c51d62ce7ab27ff0fdd"
         },
         "sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/vorbis-tools-1.4.0_1.sierra.bottle.1.tar.gz",
-          "sha256": "a062b8dbfe05458dc18c311b16260da2ae12b00b3537643b4336094d731f8808"
+          "url": "https://linuxbrew.bintray.com/bottles/vorbis-tools-1.4.0_2.sierra.bottle.tar.gz",
+          "sha256": "6f6d8a2ac7093b409aae173ac42877fd9b3360284c17eb8789923c36e88acf00"
         },
         "el_capitan": {
-          "url": "https://linuxbrew.bintray.com/bottles/vorbis-tools-1.4.0_1.el_capitan.bottle.1.tar.gz",
-          "sha256": "5ec349e8c68d23599b9e3185c6b8b1a6a3294d3f0056b740e7b29f141a4c70b3"
-        },
-        "yosemite": {
-          "url": "https://linuxbrew.bintray.com/bottles/vorbis-tools-1.4.0_1.yosemite.bottle.1.tar.gz",
-          "sha256": "643822a271f6748dc635cede3cdf7b53558cc25f4663014006d46cda817a7c8c"
+          "url": "https://linuxbrew.bintray.com/bottles/vorbis-tools-1.4.0_2.el_capitan.bottle.tar.gz",
+          "sha256": "d5ef7448a1d2373a418c87dbd5a74975b0979c0c3c411e49414fe54869f31482"
         }
       }
     }
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--with-flac",
-      "description": "Build with flac support"
-    }
+
   ],
   "build_dependencies": [
     "pkg-config"
   ],
   "dependencies": [
+    "flac",
     "libao",
     "libogg",
     "libvorbis"
@@ -67,7 +61,7 @@
 
   ],
   "optional_dependencies": [
-    "flac"
+
   ],
   "requirements": [
 

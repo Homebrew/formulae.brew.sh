@@ -16,7 +16,7 @@
     "head": "HEAD",
     "bottle": true
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -26,35 +26,33 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/urh-2.2.3.mojave.bottle.tar.gz",
-          "sha256": "155cffae0b114e0171c2573e7e301fe88f2296165739c134fc951d25fbe05010"
+          "url": "https://linuxbrew.bintray.com/bottles/urh-2.2.3_1.mojave.bottle.tar.gz",
+          "sha256": "31e1196e53213644c17bc3df1c2af4ba5159dd2b8312150a56a3ea37d8c660ca"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/urh-2.2.3.high_sierra.bottle.tar.gz",
-          "sha256": "e4d57293514939fad69cbef3457434e2e2ef7d34343b4798b5ad2e44caecb95a"
+          "url": "https://linuxbrew.bintray.com/bottles/urh-2.2.3_1.high_sierra.bottle.tar.gz",
+          "sha256": "c77f3080e796ed94595a9de1743491aed7396214070163d9e4cf11571f5b95d1"
         },
         "sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/urh-2.2.3.sierra.bottle.tar.gz",
-          "sha256": "d4fcd83777c1c99dc0c554e6b38ff390a776a7e63beb2b7f497b09ea81fa85e0"
+          "url": "https://linuxbrew.bintray.com/bottles/urh-2.2.3_1.sierra.bottle.tar.gz",
+          "sha256": "696d51839952863780505a3ff51bb5c0cce60498241a73cfe88203fbc3440b39"
         },
         "el_capitan": {
-          "url": "https://linuxbrew.bintray.com/bottles/urh-2.2.3.el_capitan.bottle.tar.gz",
-          "sha256": "d9d5a11c82514ba825e31b9857c63cd60823f6bbf45d5acc1895006e15d2f400"
+          "url": "https://linuxbrew.bintray.com/bottles/urh-2.2.3_1.el_capitan.bottle.tar.gz",
+          "sha256": "d390fd9273b25cfd8b8211bde9b1d1f39bd63d0eb6898a2c67103a18cbdc9a58"
         }
       }
     }
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--with-hackrf",
-      "description": "Build with libhackrf support"
-    }
+
   ],
   "build_dependencies": [
     "pkg-config"
   ],
   "dependencies": [
+    "hackrf",
     "numpy",
     "pyqt",
     "python",
@@ -64,7 +62,7 @@
 
   ],
   "optional_dependencies": [
-    "hackrf"
+
   ],
   "requirements": [
 

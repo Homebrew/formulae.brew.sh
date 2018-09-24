@@ -16,7 +16,7 @@
     "head": null,
     "bottle": true
   },
-  "revision": 2,
+  "revision": 3,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -26,38 +26,27 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/anjuta-3.28.0_2.mojave.bottle.tar.gz",
-          "sha256": "3a7427832904f3e1de9884ef7bc770b83440f5252d3d30eb2aa77691e0b12de5"
+          "url": "https://linuxbrew.bintray.com/bottles/anjuta-3.28.0_3.mojave.bottle.tar.gz",
+          "sha256": "3111ff1e5198e4505b17527924a1956f65162f673c88e02ee96e230530d1fc99"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/anjuta-3.28.0_2.high_sierra.bottle.tar.gz",
-          "sha256": "fda24ffc6e28c9ec6ff0110f2c22f688947f08291f5c59522e0597658baa8815"
+          "url": "https://linuxbrew.bintray.com/bottles/anjuta-3.28.0_3.high_sierra.bottle.tar.gz",
+          "sha256": "8713e98f2ceedb8d4070c7d4f10cd2fd6f68103fdf7299cffb5b6aca8cfbcf5d"
         },
         "sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/anjuta-3.28.0_2.sierra.bottle.tar.gz",
-          "sha256": "f0ee5bba46be9a314b2454e789e97bba477d1044dd7fac957bda39366286a870"
+          "url": "https://linuxbrew.bintray.com/bottles/anjuta-3.28.0_3.sierra.bottle.tar.gz",
+          "sha256": "899a5d1ef2499ed5ef9601d43f9bc4bcdf67ecee763473e00c849cd1d6a24c03"
         },
         "el_capitan": {
-          "url": "https://linuxbrew.bintray.com/bottles/anjuta-3.28.0_2.el_capitan.bottle.tar.gz",
-          "sha256": "cf198c5bada78c4b4e0d71cc1c1f52b9af4e069ddbcfa678672b66a40aa1b41d"
+          "url": "https://linuxbrew.bintray.com/bottles/anjuta-3.28.0_3.el_capitan.bottle.tar.gz",
+          "sha256": "b6ff526b0b5adf18ac42b77d880286b4f3602d361dae8531c158e118943c0b67"
         }
       }
     }
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--without-autogen",
-      "description": "Build without autogen support"
-    },
-    {
-      "option": "--without-vala",
-      "description": "Build without vala support"
-    },
-    {
-      "option": "--with-gnome-themes-standard",
-      "description": "Build with gnome-themes-standard support"
-    }
+
   ],
   "build_dependencies": [
     "intltool",
@@ -66,7 +55,9 @@
   ],
   "dependencies": [
     "adwaita-icon-theme",
+    "autogen",
     "gdl",
+    "gnome-themes-standard",
     "gnutls",
     "gtksourceview3",
     "hicolor-icon-theme",
@@ -74,14 +65,14 @@
     "libxml2",
     "python@2",
     "shared-mime-info",
+    "vala",
     "vte3"
   ],
   "recommended_dependencies": [
-    "autogen",
-    "vala"
+
   ],
   "optional_dependencies": [
-    "gnome-themes-standard"
+
   ],
   "requirements": [
 
