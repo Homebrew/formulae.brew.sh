@@ -47,24 +47,8 @@
       "description": "Build shp2pgsql-gui in addition to command line tools"
     },
     {
-      "option": "--without-gdal",
-      "description": "Disable postgis raster support"
-    },
-    {
-      "option": "--with-html-docs",
-      "description": "Generate multi-file HTML documentation"
-    },
-    {
-      "option": "--with-api-docs",
-      "description": "Generate developer API documentation (long process)"
-    },
-    {
       "option": "--with-protobuf-c",
       "description": "Build with protobuf-c to enable Geobuf and Mapbox Vector Tile support"
-    },
-    {
-      "option": "--without-sfcgal",
-      "description": "Build without sfcgal support"
     }
   ],
   "build_dependencies": [
@@ -72,15 +56,16 @@
     "pkg-config"
   ],
   "dependencies": [
+    "gdal",
     "geos",
     "json-c",
+    "pcre",
     "postgresql",
     "proj",
-    "pcre"
+    "sfcgal"
   ],
   "recommended_dependencies": [
-    "gdal",
-    "sfcgal"
+
   ],
   "optional_dependencies": [
     "protobuf-c"

@@ -42,28 +42,18 @@
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--without-bootstrap",
-      "description": "Translate Pypy with system Python instead of downloading a Pypy binary distribution to perform the translation (adds 30-60 minutes to build)"
-    },
-    {
-      "option": "--without-gdbm",
-      "description": "Build without gdbm support"
-    },
-    {
-      "option": "--without-sqlite",
-      "description": "Build without sqlite support"
-    }
+
   ],
   "build_dependencies": [
     "pkg-config"
   ],
   "dependencies": [
-    "openssl"
+    "gdbm",
+    "openssl",
+    "sqlite"
   ],
   "recommended_dependencies": [
-    "gdbm",
-    "sqlite"
+
   ],
   "optional_dependencies": [
 

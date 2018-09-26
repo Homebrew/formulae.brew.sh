@@ -67,36 +67,8 @@
       "description": "Compile with PerlMagick"
     },
     {
-      "option": "--without-magick-plus-plus",
-      "description": "disable build/install of Magick++"
-    },
-    {
-      "option": "--without-modules",
-      "description": "Disable support for dynamically loadable modules"
-    },
-    {
-      "option": "--without-threads",
-      "description": "Disable threads support"
-    },
-    {
       "option": "--with-zero-configuration",
       "description": "Disables depending on XML configuration files"
-    },
-    {
-      "option": "--without-freetype",
-      "description": "Build without freetype support"
-    },
-    {
-      "option": "--without-jpeg",
-      "description": "Build without jpeg support"
-    },
-    {
-      "option": "--without-libpng",
-      "description": "Build without libpng support"
-    },
-    {
-      "option": "--without-libtiff",
-      "description": "Build without libtiff support"
     },
     {
       "option": "--with-fontconfig",
@@ -151,14 +123,15 @@
     "pkg-config"
   ],
   "dependencies": [
+    "freetype",
+    "jpeg",
+    "libpng",
+    "libtiff",
     "libtool",
     "xz"
   ],
   "recommended_dependencies": [
-    "freetype",
-    "jpeg",
-    "libpng",
-    "libtiff"
+
   ],
   "optional_dependencies": [
     "fftw",
