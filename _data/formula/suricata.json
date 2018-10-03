@@ -16,7 +16,7 @@
     "head": null,
     "bottle": true
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -26,51 +26,29 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/suricata-4.0.5.mojave.bottle.tar.gz",
-          "sha256": "7b41bdf288494d0a227e895e0b9c4dc24a8c0f00f4d8bd164e8f6f78905cb854"
+          "url": "https://linuxbrew.bintray.com/bottles/suricata-4.0.5_1.mojave.bottle.tar.gz",
+          "sha256": "03e7d21ac53d1377f7428adc1f86de957da3c0b5486aa663c71d3f6f7c835296"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/suricata-4.0.5.high_sierra.bottle.tar.gz",
-          "sha256": "1225733c82f67b32bc7c4c15f6946b0d5a56f97bf87522b89a7fb703c6fd5808"
+          "url": "https://linuxbrew.bintray.com/bottles/suricata-4.0.5_1.high_sierra.bottle.tar.gz",
+          "sha256": "48a98548def7a0382371d68b032c9d8e462d627b38b8ed2b7df52a1df91cc028"
         },
         "sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/suricata-4.0.5.sierra.bottle.tar.gz",
-          "sha256": "017a69cecd0cfb8437eb585f0c0b6a86f6b277cf99e369476a2d329feace7c76"
-        },
-        "el_capitan": {
-          "url": "https://linuxbrew.bintray.com/bottles/suricata-4.0.5.el_capitan.bottle.tar.gz",
-          "sha256": "b6f820a45e9e169a7bde63fe1d2baa0045f39c1dd9e793cfd6a370f349841926"
+          "url": "https://linuxbrew.bintray.com/bottles/suricata-4.0.5_1.sierra.bottle.tar.gz",
+          "sha256": "99074511a644cfb7688607a9895fc0b431c5f64642566764d5ec911860f8711b"
         }
       }
     }
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--with-geoip",
-      "description": "Build with geoip support"
-    },
-    {
-      "option": "--with-hiredis",
-      "description": "Build with hiredis support"
-    },
-    {
-      "option": "--with-jansson",
-      "description": "Build with jansson support"
-    },
-    {
-      "option": "--with-lua",
-      "description": "Build with lua support"
-    },
-    {
-      "option": "--with-luajit",
-      "description": "Build with luajit support"
-    }
+
   ],
   "build_dependencies": [
     "pkg-config"
   ],
   "dependencies": [
+    "jansson",
     "libmagic",
     "libnet",
     "libyaml",
@@ -83,11 +61,7 @@
 
   ],
   "optional_dependencies": [
-    "geoip",
-    "hiredis",
-    "jansson",
-    "lua",
-    "luajit"
+
   ],
   "requirements": [
 

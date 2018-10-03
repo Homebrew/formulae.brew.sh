@@ -16,7 +16,7 @@
     "head": "HEAD",
     "bottle": true
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -26,42 +26,23 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/abcde-2.9.2.mojave.bottle.tar.gz",
-          "sha256": "99162c8df7fc5eafd59e0e9eb858abbbfb34205fffb5a20134c6551502638a57"
+          "url": "https://linuxbrew.bintray.com/bottles/abcde-2.9.2_1.mojave.bottle.tar.gz",
+          "sha256": "9b390aaedef649f141a790b7291db5db37e288a28a11962b30799769cc8fe979"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/abcde-2.9.2.high_sierra.bottle.tar.gz",
-          "sha256": "6b7ee1b87d6c028ce17940bb59890f2f6e3d256310a06b8dc21bf35d07bf650b"
+          "url": "https://linuxbrew.bintray.com/bottles/abcde-2.9.2_1.high_sierra.bottle.tar.gz",
+          "sha256": "d24c74859027cb359cd0b1eb3966551da4641dd44ea001c33b45e596ccc7b9bb"
         },
         "sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/abcde-2.9.2.sierra.bottle.tar.gz",
-          "sha256": "6b7ee1b87d6c028ce17940bb59890f2f6e3d256310a06b8dc21bf35d07bf650b"
-        },
-        "el_capitan": {
-          "url": "https://linuxbrew.bintray.com/bottles/abcde-2.9.2.el_capitan.bottle.tar.gz",
-          "sha256": "6b7ee1b87d6c028ce17940bb59890f2f6e3d256310a06b8dc21bf35d07bf650b"
+          "url": "https://linuxbrew.bintray.com/bottles/abcde-2.9.2_1.sierra.bottle.tar.gz",
+          "sha256": "d24c74859027cb359cd0b1eb3966551da4641dd44ea001c33b45e596ccc7b9bb"
         }
       }
     }
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--with-flac",
-      "description": "Build with flac support"
-    },
-    {
-      "option": "--with-glyr",
-      "description": "Build with glyr support"
-    },
-    {
-      "option": "--with-lame",
-      "description": "Build with lame support"
-    },
-    {
-      "option": "--with-vorbis-tools",
-      "description": "Build with vorbis-tools support"
-    }
+
   ],
   "build_dependencies": [
 
@@ -69,17 +50,18 @@
   "dependencies": [
     "cd-discid",
     "cdrtools",
+    "flac",
+    "glyr",
     "id3v2",
-    "mkcue"
+    "lame",
+    "mkcue",
+    "vorbis-tools"
   ],
   "recommended_dependencies": [
 
   ],
   "optional_dependencies": [
-    "flac",
-    "glyr",
-    "lame",
-    "vorbis-tools"
+
   ],
   "requirements": [
 
