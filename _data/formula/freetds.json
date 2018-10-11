@@ -11,7 +11,7 @@
   "desc": "Libraries to talk to Microsoft SQL Server and Sybase databases",
   "homepage": "http://www.freetds.org/",
   "versions": {
-    "stable": "1.00.98",
+    "stable": "1.00.104",
     "devel": null,
     "head": "HEAD",
     "bottle": true
@@ -26,20 +26,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/freetds-1.00.98.mojave.bottle.tar.gz",
-          "sha256": "bcd468f7e79650683c46172ddf35606fe36453009b54877e3bf6e941ec153312"
+          "url": "https://homebrew.bintray.com/bottles/freetds-1.00.104.mojave.bottle.tar.gz",
+          "sha256": "90914c82e7bcc6dd60a71a380e77ddd32a8d87dcbbee8de7b749fbe0eb025906"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/freetds-1.00.98.high_sierra.bottle.tar.gz",
-          "sha256": "5ed416f2e9b2308da78bb031e69866f12343b288db3cbe08d4c892cf65a598ad"
+          "url": "https://homebrew.bintray.com/bottles/freetds-1.00.104.high_sierra.bottle.tar.gz",
+          "sha256": "da0b1d22579cf3e949ab1b9692a0cc8a9860fa264c9fc523324440705072de7b"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/freetds-1.00.98.sierra.bottle.tar.gz",
-          "sha256": "b22d8d8bf72c139e56ec7d5389a6459669852e17fe2e2e84ddcc352e694995d2"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/freetds-1.00.98.el_capitan.bottle.tar.gz",
-          "sha256": "1d280805055fd549f0ad1da5d79387aa4ae18e11f486f07f619ba6f135d776fa"
+          "url": "https://homebrew.bintray.com/bottles/freetds-1.00.104.sierra.bottle.tar.gz",
+          "sha256": "5eb80bcc14d56d4c7aa389f5883bcc0b852f3cd087144dee361c5453c464820f"
         }
       }
     }
@@ -49,44 +45,20 @@
     {
       "option": "--with-msdblib",
       "description": "Enable Microsoft behavior in the DB-Library API where it diverges from Sybase's"
-    },
-    {
-      "option": "--with-sybase-compat",
-      "description": "Enable close compatibility with Sybase's ABI, at the expense of other features"
-    },
-    {
-      "option": "--with-odbc-wide",
-      "description": "Enable odbc wide, prevent unicode - MemoryError's"
-    },
-    {
-      "option": "--with-krb5",
-      "description": "Enable Kerberos support"
-    },
-    {
-      "option": "--without-openssl",
-      "description": "Build without openssl support"
-    },
-    {
-      "option": "--with-libiodbc",
-      "description": "Build with libiodbc support"
-    },
-    {
-      "option": "--with-unixodbc",
-      "description": "Build with unixodbc support"
     }
   ],
   "build_dependencies": [
     "pkg-config"
   ],
   "dependencies": [
-
+    "openssl",
+    "unixodbc"
   ],
   "recommended_dependencies": [
-    "openssl"
+
   ],
   "optional_dependencies": [
-    "libiodbc",
-    "unixodbc"
+
   ],
   "requirements": [
 
