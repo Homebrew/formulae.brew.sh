@@ -16,7 +16,7 @@
     "head": null,
     "bottle": true
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -26,48 +26,39 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/libpst-0.6.72.mojave.bottle.tar.gz",
-          "sha256": "ce0dae8dfd7289abb17a6830e6996171a711f3cd852ed62c7cc0dac43e66741d"
+          "url": "https://homebrew.bintray.com/bottles/libpst-0.6.72_1.mojave.bottle.tar.gz",
+          "sha256": "0e97a5313eb5bb39daf62fca974333b69a0cb03ee6602820b5bfa0702c44a7c2"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/libpst-0.6.72.high_sierra.bottle.tar.gz",
-          "sha256": "f07260d9a5ef17c294acc30f4405d90467110fda3e824b62cc2e2a0b5cb557da"
+          "url": "https://homebrew.bintray.com/bottles/libpst-0.6.72_1.high_sierra.bottle.tar.gz",
+          "sha256": "e7b74eccf8c9929f6f6673a3064dadcfc4eb7b63d43776920c9733ebc01af7a5"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/libpst-0.6.72.sierra.bottle.tar.gz",
-          "sha256": "bc247e859e53a24a53b99f4e088341dac9c197b96b2c58bd0953baab39b8c4f8"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/libpst-0.6.72.el_capitan.bottle.tar.gz",
-          "sha256": "154c2402a1949c8bcd7b784181b9f1d47705b035ea996506f6d142c3c92e2423"
+          "url": "https://homebrew.bintray.com/bottles/libpst-0.6.72_1.sierra.bottle.tar.gz",
+          "sha256": "bfa351efefe41b8a3726c616fe6d9f1e8d920902cccb36d23f530ae28d2a9522"
         }
       }
     }
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--with-pst2dii",
-      "description": "Build pst2dii using gd"
-    },
-    {
-      "option": "--with-python@2",
-      "description": "Build with python@2 support"
-    }
+
   ],
   "build_dependencies": [
     "pkg-config"
   ],
   "dependencies": [
     "boost",
+    "boost-python",
     "gettext",
-    "libgsf"
+    "libgsf",
+    "python@2"
   ],
   "recommended_dependencies": [
 
   ],
   "optional_dependencies": [
-    "python@2"
+
   ],
   "requirements": [
 

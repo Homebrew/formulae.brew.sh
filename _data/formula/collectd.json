@@ -16,7 +16,7 @@
     "head": "HEAD",
     "bottle": true
   },
-  "revision": 2,
+  "revision": 3,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -26,42 +26,23 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/collectd-5.8.0_2.mojave.bottle.tar.gz",
-          "sha256": "cc40ab3b126a55310a7e0687be7ce458a5203578015f287377e6a52cbf1d2903"
+          "url": "https://homebrew.bintray.com/bottles/collectd-5.8.0_3.mojave.bottle.tar.gz",
+          "sha256": "4c34b8bd58b65b573a54f88e9cf362cef892708479e6ab9a3ed8173c86be198c"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/collectd-5.8.0_2.high_sierra.bottle.tar.gz",
-          "sha256": "c4bca62c6c0b73f7004eceb75fa218a4f8f1d9a0bea09ae8a1b38d4c14663892"
+          "url": "https://homebrew.bintray.com/bottles/collectd-5.8.0_3.high_sierra.bottle.tar.gz",
+          "sha256": "5c81fed20b8c66cffa1ab39e0940f34a364527a52efdd2ecd3d9dceb622fc27d"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/collectd-5.8.0_2.sierra.bottle.tar.gz",
-          "sha256": "0e29acd0077f1ad18ee6258b1cd17c407b2ae6ce39b6c8b8c1ecb9c5d9b429c6"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/collectd-5.8.0_2.el_capitan.bottle.tar.gz",
-          "sha256": "0370541be09ba68caed1f335e4a961d6f889f1fc2d30741e7da1aaf5a6fd0b51"
+          "url": "https://homebrew.bintray.com/bottles/collectd-5.8.0_3.sierra.bottle.tar.gz",
+          "sha256": "6a23251995667772df3deb07c6c557bfadcc22dc6e06cdc95e7ad5827a381def"
         }
       }
     }
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--with-java",
-      "description": "Enable Java support"
-    },
-    {
-      "option": "--with-python",
-      "description": "Enable Python support"
-    },
-    {
-      "option": "--with-riemann-client",
-      "description": "Enable write_riemann support"
-    },
-    {
-      "option": "--with-python@2",
-      "description": "Build with python@2 support"
-    }
+
   ],
   "build_dependencies": [
     "pkg-config"
@@ -69,21 +50,17 @@
   "dependencies": [
     "libgcrypt",
     "libtool",
-    "net-snmp"
+    "net-snmp",
+    "riemann-client"
   ],
   "recommended_dependencies": [
 
   ],
   "optional_dependencies": [
-    "python@2",
-    "riemann-client"
+
   ],
   "requirements": [
-    {
-      "name": "java",
-      "cask": "java",
-      "download": "https://www.oracle.com/technetwork/java/javase/downloads/index.html"
-    }
+
   ],
   "conflicts_with": [
 
