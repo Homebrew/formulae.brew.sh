@@ -11,35 +11,31 @@
   "desc": "GNOME GUI client to view git repositories",
   "homepage": "https://wiki.gnome.org/Apps/Gitg",
   "versions": {
-    "stable": "3.26.0",
+    "stable": "3.30.0",
     "devel": null,
     "head": null,
     "bottle": true
   },
-  "revision": 4,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/gitg-3.26.0_4.mojave.bottle.1.tar.gz",
-          "sha256": "d564572062da36ddb977eb799aa4394923622583d796c7198d020fbc4eee9558"
+          "url": "https://homebrew.bintray.com/bottles/gitg-3.30.0.mojave.bottle.tar.gz",
+          "sha256": "0dba644784645a1a977233da73d97a4299ff08fed57e9745e74f6e5fa27e5617"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gitg-3.26.0_4.high_sierra.bottle.1.tar.gz",
-          "sha256": "49afdc45be635182e05346030c603b71690cbae0f845a577af2386c72d7bf2b8"
+          "url": "https://homebrew.bintray.com/bottles/gitg-3.30.0.high_sierra.bottle.tar.gz",
+          "sha256": "351b3dfa3ebb00def0bb4543f273cf2496fc9578fe1bd6d314a24d51e3b7255a"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gitg-3.26.0_4.sierra.bottle.1.tar.gz",
-          "sha256": "c0510a1824cea49680dd1384713573e5894bff20fb8f8795e7fb1a0309a352e8"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/gitg-3.26.0_4.el_capitan.bottle.1.tar.gz",
-          "sha256": "e3b511e5c3a4892e27ca0f777be10a7bfbcfdb25dd98a976217f0d1e2fa40607"
+          "url": "https://homebrew.bintray.com/bottles/gitg-3.30.0.sierra.bottle.tar.gz",
+          "sha256": "66bf910fe6d96457982e0fad397a3b17cd2e2e7368da92c78e2bada3c519c52a"
         }
       }
     }
@@ -50,17 +46,18 @@
   ],
   "build_dependencies": [
     "intltool",
+    "meson-internal",
+    "ninja",
     "pkg-config",
     "vala"
   ],
   "dependencies": [
     "adwaita-icon-theme",
     "gobject-introspection",
-    "gsettings-desktop-schemas",
+    "gtk+3",
     "gtksourceview3",
     "gtkspell3",
     "hicolor-icon-theme",
-    "json-glib",
     "libgee",
     "libgit2",
     "libgit2-glib",

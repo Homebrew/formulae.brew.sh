@@ -11,12 +11,12 @@
   "desc": "Gtk widget for highlighting and replacing misspelled words",
   "homepage": "https://gtkspell.sourceforge.io/",
   "versions": {
-    "stable": "3.0.9",
+    "stable": "3.0.10",
     "devel": null,
     "head": null,
     "bottle": true
   },
-  "revision": 3,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -26,20 +26,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/gtkspell3-3.0.9_3.mojave.bottle.tar.gz",
-          "sha256": "7c52aea6699ea8f9eb0e67f78d53ae2efc71c7f7e599985c678188e1cb1dbc0e"
+          "url": "https://homebrew.bintray.com/bottles/gtkspell3-3.0.10.mojave.bottle.tar.gz",
+          "sha256": "8649edc45b2ac203946b689fbeb11a5624e17d0f9dbcbad0e7f767a5835a1e78"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gtkspell3-3.0.9_3.high_sierra.bottle.tar.gz",
-          "sha256": "ab277eb4f040f5032fdcf73dc1c7ba270398753c2e0c1cd994df348226bc0740"
+          "url": "https://homebrew.bintray.com/bottles/gtkspell3-3.0.10.high_sierra.bottle.tar.gz",
+          "sha256": "9f4f62410af27e84a4cec1f05b4f3017e9712f40f0d937041b89c29cf2a1dcd0"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gtkspell3-3.0.9_3.sierra.bottle.tar.gz",
-          "sha256": "faf983f8d91c4419199e27a3ccb49c8427b4d51d488cf1734c7db6b3f39f72b3"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/gtkspell3-3.0.9_3.el_capitan.bottle.tar.gz",
-          "sha256": "63b6f8d3dc5fc4b01348f91b79013ff3db1b834163c93476609dfd13e6e0930f"
+          "url": "https://homebrew.bintray.com/bottles/gtkspell3-3.0.10.sierra.bottle.tar.gz",
+          "sha256": "2cf46aa9544572a29d3278fd3420582171e239f2731ade416e00d0521a883f9b"
         }
       }
     }
@@ -49,8 +45,13 @@
 
   ],
   "build_dependencies": [
+    "autoconf",
+    "automake",
+    "gobject-introspection",
     "intltool",
-    "pkg-config"
+    "libtool",
+    "pkg-config",
+    "vala"
   ],
   "dependencies": [
     "enchant",
