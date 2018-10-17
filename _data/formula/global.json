@@ -16,7 +16,7 @@
     "head": "HEAD",
     "bottle": true
   },
-  "revision": 1,
+  "revision": 2,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -26,50 +26,36 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/global-6.6.2_1.mojave.bottle.tar.gz",
-          "sha256": "e167057b7c2806c437a72c4a079859005f4cd2a901cb3702a92735477f1749c2"
+          "url": "https://homebrew.bintray.com/bottles/global-6.6.2_2.mojave.bottle.tar.gz",
+          "sha256": "fdfaa65482f1433005ca4f3e295c28f1c7b3aea22e89f43930e6c59c007b63ff"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/global-6.6.2_1.high_sierra.bottle.tar.gz",
-          "sha256": "edda8dcf4e58e9fde59fa4aa144581b73f61c1bf4ff2357c2bb8d5c4814eaf56"
+          "url": "https://homebrew.bintray.com/bottles/global-6.6.2_2.high_sierra.bottle.tar.gz",
+          "sha256": "c99b703c42d068d74c2671142edbf4edf977274f53f021e7986edc66b2556d95"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/global-6.6.2_1.sierra.bottle.tar.gz",
-          "sha256": "e16018befb94709f6bbdca2e7c6b1e2314b6aa9bd0d0ff98070a63a0d0be6bf8"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/global-6.6.2_1.el_capitan.bottle.tar.gz",
-          "sha256": "b7369855f9cbc9f4443e4f0ff2e180fc3dcf9f16579165b189c848d04c75820c"
+          "url": "https://homebrew.bintray.com/bottles/global-6.6.2_2.sierra.bottle.tar.gz",
+          "sha256": "9ada0d7fadc16f38cc579cabe9ee0bac2bd7b5d51cf6eeb60d700cd6dc328d9b"
         }
       }
     }
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--with-ctags",
-      "description": "Enable Exuberant Ctags as a plug-in parser"
-    },
-    {
-      "option": "--with-pygments",
-      "description": "Enable Pygments as a plug-in parser (should enable exuberant-ctags too)"
-    },
-    {
-      "option": "--with-sqlite3",
-      "description": "Use SQLite3 API instead of BSD/DB API for making tag files"
-    }
+
   ],
   "build_dependencies": [
 
   ],
   "dependencies": [
-    "python@2"
+    "ctags",
+    "python"
   ],
   "recommended_dependencies": [
 
   ],
   "optional_dependencies": [
-    "ctags"
+
   ],
   "requirements": [
 
