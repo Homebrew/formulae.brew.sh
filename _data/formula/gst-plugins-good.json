@@ -16,7 +16,7 @@
     "head": "HEAD",
     "bottle": true
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -26,16 +26,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/gst-plugins-good-1.14.4.mojave.bottle.tar.gz",
-          "sha256": "008476a42bc0d81c9fde5874630c2bb354d6562a0737533c8fcb50edafe29b96"
+          "url": "https://homebrew.bintray.com/bottles/gst-plugins-good-1.14.4_1.mojave.bottle.tar.gz",
+          "sha256": "b064a88166dde9a0728e2b4931265c36331fe04763cd86a374f7e871970154b7"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gst-plugins-good-1.14.4.high_sierra.bottle.tar.gz",
-          "sha256": "9f437a2f9156f256ffe5d7d4c39bd0d718253cf2d01245ebdc275321d758a19f"
+          "url": "https://homebrew.bintray.com/bottles/gst-plugins-good-1.14.4_1.high_sierra.bottle.tar.gz",
+          "sha256": "4690c041a027f7f8a4d50a50b704bf4474c457bf6d5587d4f6d00b02e0ae9770"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gst-plugins-good-1.14.4.sierra.bottle.tar.gz",
-          "sha256": "8ba60a17e345f65f542b7325e1d54e92c21d375268d4e839d05b9314863e8bd1"
+          "url": "https://homebrew.bintray.com/bottles/gst-plugins-good-1.14.4_1.sierra.bottle.tar.gz",
+          "sha256": "a992fea0e10e1227d9747bfac9a8df892a63e1e23efe753e65a8e9a93f363c34"
         }
       }
     }
@@ -47,24 +47,8 @@
       "description": "Build with check support"
     },
     {
-      "option": "--without-jpeg",
-      "description": "Build without jpeg support"
-    },
-    {
-      "option": "--without-orc",
-      "description": "Build without orc support"
-    },
-    {
       "option": "--with-aalib",
       "description": "Build with aalib support"
-    },
-    {
-      "option": "--with-cairo",
-      "description": "Build with cairo support"
-    },
-    {
-      "option": "--with-flac",
-      "description": "Build with flac support"
     },
     {
       "option": "--with-gdk-pixbuf",
@@ -87,28 +71,8 @@
       "description": "Build with libdv support"
     },
     {
-      "option": "--with-libpng",
-      "description": "Build with libpng support"
-    },
-    {
-      "option": "--with-libshout",
-      "description": "Build with libshout support"
-    },
-    {
-      "option": "--with-libvpx",
-      "description": "Build with libvpx support"
-    },
-    {
       "option": "--with-pulseaudio",
       "description": "Build with pulseaudio support"
-    },
-    {
-      "option": "--with-speex",
-      "description": "Build with speex support"
-    },
-    {
-      "option": "--with-taglib",
-      "description": "Build with taglib support"
     },
     {
       "option": "--with-x11",
@@ -119,30 +83,31 @@
     "pkg-config"
   ],
   "dependencies": [
+    "cairo",
+    "flac",
     "gettext",
     "gst-plugins-base",
-    "libsoup"
+    "jpeg",
+    "libpng",
+    "libshout",
+    "libsoup",
+    "libvpx",
+    "orc",
+    "speex",
+    "taglib"
   ],
   "recommended_dependencies": [
-    "jpeg",
-    "orc"
+
   ],
   "optional_dependencies": [
     "check",
     "aalib",
-    "cairo",
-    "flac",
     "gdk-pixbuf",
     "gtk+3",
     "jack",
     "libcaca",
     "libdv",
-    "libpng",
-    "libshout",
-    "libvpx",
-    "pulseaudio",
-    "speex",
-    "taglib"
+    "pulseaudio"
   ],
   "requirements": [
     {

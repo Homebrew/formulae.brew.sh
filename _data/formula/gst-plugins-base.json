@@ -20,52 +20,29 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 0,
+      "rebuild": 1,
       "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/gst-plugins-base-1.14.4.mojave.bottle.tar.gz",
-          "sha256": "e9dcf94418b1c531625b9c4b7cb4f19bb68c303960f92d4460df7f1a8114f9e7"
+          "url": "https://homebrew.bintray.com/bottles/gst-plugins-base-1.14.4.mojave.bottle.1.tar.gz",
+          "sha256": "fcc26319fbbf1f7d5951eace892d229cb18bcc9a259477dbf3ab6419b5b5af85"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gst-plugins-base-1.14.4.high_sierra.bottle.tar.gz",
-          "sha256": "5c41c822d4452fb6425120dbfde14cb50330d83ad6538d23cbadf6cb9a01bf89"
+          "url": "https://homebrew.bintray.com/bottles/gst-plugins-base-1.14.4.high_sierra.bottle.1.tar.gz",
+          "sha256": "788b5bcda573c8563910146ad91392800132c14063e843262e9eae1da22d336c"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gst-plugins-base-1.14.4.sierra.bottle.tar.gz",
-          "sha256": "a9135ed9c9a81431434cb6c481d5557537cc2eb52e683b10e41e59db77da21c2"
+          "url": "https://homebrew.bintray.com/bottles/gst-plugins-base-1.14.4.sierra.bottle.1.tar.gz",
+          "sha256": "27a0d237751a222f151b96b400c11644a1e1f76e0659cd4c7d8bb4b89b28523b"
         }
       }
     }
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--without-orc",
-      "description": "Build without orc support"
-    },
-    {
-      "option": "--without-pango",
-      "description": "Build without pango support"
-    },
-    {
-      "option": "--with-libogg",
-      "description": "Build with libogg support"
-    },
-    {
-      "option": "--with-libvorbis",
-      "description": "Build with libvorbis support"
-    },
-    {
-      "option": "--with-opus",
-      "description": "Build with opus support"
-    },
-    {
-      "option": "--with-theora",
-      "description": "Build with theora support"
-    }
+
   ],
   "build_dependencies": [
     "gobject-introspection",
@@ -73,17 +50,19 @@
   ],
   "dependencies": [
     "gettext",
-    "gstreamer"
-  ],
-  "recommended_dependencies": [
-    "orc",
-    "pango"
-  ],
-  "optional_dependencies": [
+    "gstreamer",
     "libogg",
     "libvorbis",
     "opus",
+    "orc",
+    "pango",
     "theora"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
   ],
   "requirements": [
 

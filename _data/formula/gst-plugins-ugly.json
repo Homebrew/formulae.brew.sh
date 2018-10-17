@@ -16,7 +16,7 @@
     "head": "HEAD",
     "bottle": true
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -26,26 +26,22 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/gst-plugins-ugly-1.14.4.mojave.bottle.tar.gz",
-          "sha256": "f2a66569b4d7a6a5ca09c025b58bb18023d7867617c6c9a4bc8e39f042df92e1"
+          "url": "https://homebrew.bintray.com/bottles/gst-plugins-ugly-1.14.4_1.mojave.bottle.tar.gz",
+          "sha256": "c4fc899a52bf7ec12b6865bc2f4c9c305c8c3008b9e9528b57df508661133bf8"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gst-plugins-ugly-1.14.4.high_sierra.bottle.tar.gz",
-          "sha256": "e6b8371d2c5562f213dd4b5836a83edf220c6d8d19b4630d1f8faf4540bb9167"
+          "url": "https://homebrew.bintray.com/bottles/gst-plugins-ugly-1.14.4_1.high_sierra.bottle.tar.gz",
+          "sha256": "d5713e7f82c2e57bdb2a59599ce830213221b385088a0cb50e688f013eef80ab"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gst-plugins-ugly-1.14.4.sierra.bottle.tar.gz",
-          "sha256": "0231f4300eeea2d6d159c2d23c814e8e6e46b4bc491fb8cb6f05981637007bcd"
+          "url": "https://homebrew.bintray.com/bottles/gst-plugins-ugly-1.14.4_1.sierra.bottle.tar.gz",
+          "sha256": "b762bf517f6fb89f2524224b0b20c51bab7c96762f7d28ad7692546382e2efc4"
         }
       }
     }
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--without-jpeg",
-      "description": "Build without jpeg support"
-    },
     {
       "option": "--with-a52dec",
       "description": "Build with a52dec support"
@@ -63,16 +59,8 @@
       "description": "Build with dirac support"
     },
     {
-      "option": "--with-flac",
-      "description": "Build with flac support"
-    },
-    {
       "option": "--with-gtk+",
       "description": "Build with gtk+ support"
-    },
-    {
-      "option": "--with-lame",
-      "description": "Build with lame support"
     },
     {
       "option": "--with-libcaca",
@@ -83,24 +71,12 @@
       "description": "Build with libdvdread support"
     },
     {
-      "option": "--with-libmms",
-      "description": "Build with libmms support"
-    },
-    {
       "option": "--with-libmpeg2",
       "description": "Build with libmpeg2 support"
     },
     {
       "option": "--with-liboil",
       "description": "Build with liboil support"
-    },
-    {
-      "option": "--with-libshout",
-      "description": "Build with libshout support"
-    },
-    {
-      "option": "--with-libvorbis",
-      "description": "Build with libvorbis support"
     },
     {
       "option": "--with-mad",
@@ -111,53 +87,42 @@
       "description": "Build with opencore-amr support"
     },
     {
-      "option": "--with-pango",
-      "description": "Build with pango support"
-    },
-    {
-      "option": "--with-theora",
-      "description": "Build with theora support"
-    },
-    {
       "option": "--with-two-lame",
       "description": "Build with two-lame support"
-    },
-    {
-      "option": "--with-x264",
-      "description": "Build with x264 support"
     }
   ],
   "build_dependencies": [
     "pkg-config"
   ],
   "dependencies": [
+    "flac",
     "gettext",
-    "gst-plugins-base"
+    "gst-plugins-base",
+    "jpeg",
+    "lame",
+    "libmms",
+    "libshout",
+    "libvorbis",
+    "pango",
+    "theora",
+    "x264"
   ],
   "recommended_dependencies": [
-    "jpeg"
+
   ],
   "optional_dependencies": [
     "a52dec",
     "aalib",
     "cdparanoia",
     "dirac",
-    "flac",
     "gtk+",
-    "lame",
     "libcaca",
     "libdvdread",
-    "libmms",
     "libmpeg2",
     "liboil",
-    "libshout",
-    "libvorbis",
     "mad",
     "opencore-amr",
-    "pango",
-    "theora",
-    "two-lame",
-    "x264"
+    "two-lame"
   ],
   "requirements": [
 
