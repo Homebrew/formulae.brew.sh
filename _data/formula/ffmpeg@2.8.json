@@ -16,7 +16,7 @@
     "head": null,
     "bottle": true
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -26,19 +26,19 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/ffmpeg@2.8-2.8.15.mojave.bottle.tar.gz",
+          "url": "https://homebrew.bintray.com/bottles/ffmpeg@2.8-2.8.15_1.mojave.bottle.tar.gz",
           "sha256": "95179f517090dd0fbdca100668ca9baea81b6d4bb9ebd3b1888f5f49970abbf2"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/ffmpeg@2.8-2.8.15.high_sierra.bottle.tar.gz",
+          "url": "https://homebrew.bintray.com/bottles/ffmpeg@2.8-2.8.15_1.high_sierra.bottle.tar.gz",
           "sha256": "77714c2ed74758ffca2e0852c7784022a06903be46a4094b5813cdcd3a3f7caf"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/ffmpeg@2.8-2.8.15.sierra.bottle.tar.gz",
+          "url": "https://homebrew.bintray.com/bottles/ffmpeg@2.8-2.8.15_1.sierra.bottle.tar.gz",
           "sha256": "e5c3822571957ffa442a96f4287c591b4943bf03c89d8fe3dafbf3efc7e98013"
         },
         "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/ffmpeg@2.8-2.8.15.el_capitan.bottle.tar.gz",
+          "url": "https://homebrew.bintray.com/bottles/ffmpeg@2.8-2.8.15_1.el_capitan.bottle.tar.gz",
           "sha256": "aaa810b670d9d60e1f81d8bd7f0cd6bebba3732b48f42749af59b1839a4c5727"
         }
       }
@@ -46,30 +46,6 @@
   },
   "keg_only": true,
   "options": [
-    {
-      "option": "--without-x264",
-      "description": "Disable H.264 encoder"
-    },
-    {
-      "option": "--without-lame",
-      "description": "Disable MP3 encoder"
-    },
-    {
-      "option": "--without-libvo-aacenc",
-      "description": "Disable VisualOn AAC encoder"
-    },
-    {
-      "option": "--without-xvid",
-      "description": "Disable Xvid MPEG-4 video encoder"
-    },
-    {
-      "option": "--without-qtkit",
-      "description": "Disable deprecated QuickTime framework"
-    },
-    {
-      "option": "--without-securetransport",
-      "description": "Disable use of SecureTransport"
-    },
     {
       "option": "--with-rtmpdump",
       "description": "Enable RTMP protocol"
@@ -99,24 +75,12 @@
       "description": "Enable Dirac video format"
     },
     {
-      "option": "--with-ffplay",
-      "description": "Enable FFplay media player"
-    },
-    {
-      "option": "--with-tools",
-      "description": "Enable additional FFmpeg tools"
-    },
-    {
       "option": "--with-fdk-aac",
       "description": "Enable the Fraunhofer FDK AAC library"
     },
     {
       "option": "--with-libvidstab",
       "description": "Enable vid.stab support for video stabilization"
-    },
-    {
-      "option": "--with-x265",
-      "description": "Enable x265 encoder"
     },
     {
       "option": "--with-libsoxr",
@@ -129,10 +93,6 @@
     {
       "option": "--with-zeromq",
       "description": "Enable using libzeromq to receive commands sent through a libzeromq client"
-    },
-    {
-      "option": "--with-snappy",
-      "description": "Enable Snappy library"
     },
     {
       "option": "--with-dcadec",
@@ -171,24 +131,8 @@
       "description": "Build with libquvi support"
     },
     {
-      "option": "--with-libvorbis",
-      "description": "Build with libvorbis support"
-    },
-    {
-      "option": "--with-libvpx",
-      "description": "Build with libvpx support"
-    },
-    {
-      "option": "--with-opus",
-      "description": "Build with opus support"
-    },
-    {
       "option": "--with-speex",
       "description": "Build with speex support"
-    },
-    {
-      "option": "--with-theora",
-      "description": "Build with theora support"
     }
   ],
   "build_dependencies": [
@@ -197,13 +141,20 @@
     "yasm"
   ],
   "dependencies": [
-
-  ],
-  "recommended_dependencies": [
     "lame",
     "libvo-aacenc",
+    "libvorbis",
+    "libvpx",
+    "opus",
+    "sdl",
+    "snappy",
+    "theora",
     "x264",
+    "x265",
     "xvid"
+  ],
+  "recommended_dependencies": [
+
   ],
   "optional_dependencies": [
     "dcadec",
@@ -220,19 +171,13 @@
     "libsoxr",
     "libssh",
     "libvidstab",
-    "libvorbis",
-    "libvpx",
     "opencore-amr",
     "openjpeg",
     "openssl",
-    "opus",
     "rtmpdump",
     "schroedinger",
-    "snappy",
     "speex",
-    "theora",
     "webp",
-    "x265",
     "zeromq"
   ],
   "requirements": [
@@ -241,7 +186,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "FFmpeg has been built without libfaac for licensing reasons;\nlibvo-aacenc is used by default.\nTo install with libfaac, you can:\n  brew reinstall ffmpeg28 --with-faac\n\nYou can also use the experimental FFmpeg encoder, libfdk-aac, or\nlibvo_aacenc to encode AAC audio:\n  ffmpeg -i input.wav -c:a aac -strict experimental output.m4a\nOr:\n  brew reinstall ffmpeg28 --with-fdk-aac\n  ffmpeg -i input.wav -c:a libfdk_aac output.m4a\n",
+  "caveats": null,
   "installed": [
 
   ],
