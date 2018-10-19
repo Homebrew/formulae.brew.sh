@@ -16,7 +16,7 @@
     "head": "HEAD",
     "bottle": true
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -26,16 +26,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/imagemagick@6-6.9.10-12.mojave.bottle.tar.gz",
-          "sha256": "6c85cb939742c9f26accce54d4d9ac4f1a830f9afa2686c06546fd537fcf24a9"
+          "url": "https://homebrew.bintray.com/bottles/imagemagick@6-6.9.10-12_1.mojave.bottle.tar.gz",
+          "sha256": "81fa40049e584093d403fec2dd5e98f6dd9c5b409361a81ce4f03b4a102a6b40"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/imagemagick@6-6.9.10-12.high_sierra.bottle.tar.gz",
-          "sha256": "d7413052972e2630d2ee0e55da4483bca8c3bcc52ed4f403abcee08df9411179"
+          "url": "https://homebrew.bintray.com/bottles/imagemagick@6-6.9.10-12_1.high_sierra.bottle.tar.gz",
+          "sha256": "b947c98b41ccc9986d89dd50603de75f62e0e4ba80bd8b588dbd2e9d15d6ccb0"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/imagemagick@6-6.9.10-12.sierra.bottle.tar.gz",
-          "sha256": "55c3d32afb612c2aa170dc94602b0fbd081faa77fb606540fafa4aca0edbeeec"
+          "url": "https://homebrew.bintray.com/bottles/imagemagick@6-6.9.10-12_1.sierra.bottle.tar.gz",
+          "sha256": "96bbc45f3b1426d48c8e1005c3de48d9a25806f898aedd05214ebcf39ef19cf5"
         }
       }
     }
@@ -51,16 +51,8 @@
       "description": "Compile with HDRI support"
     },
     {
-      "option": "--with-openmp",
-      "description": "Compile with OpenMP support"
-    },
-    {
       "option": "--with-perl",
       "description": "Compile with PerlMagick"
-    },
-    {
-      "option": "--with-zero-configuration",
-      "description": "Disables depending on XML configuration files"
     },
     {
       "option": "--with-fontconfig",
@@ -87,24 +79,12 @@
       "description": "Build with little-cms support"
     },
     {
-      "option": "--with-little-cms2",
-      "description": "Build with little-cms2 support"
-    },
-    {
       "option": "--with-openexr",
       "description": "Build with openexr support"
     },
     {
-      "option": "--with-openjpeg",
-      "description": "Build with openjpeg support"
-    },
-    {
       "option": "--with-pango",
       "description": "Build with pango support"
-    },
-    {
-      "option": "--with-webp",
-      "description": "Build with webp support"
     }
   ],
   "build_dependencies": [
@@ -116,6 +96,9 @@
     "libpng",
     "libtiff",
     "libtool",
+    "little-cms2",
+    "openjpeg",
+    "webp",
     "xz"
   ],
   "recommended_dependencies": [
@@ -129,12 +112,9 @@
     "librsvg",
     "libwmf",
     "little-cms",
-    "little-cms2",
     "openexr",
-    "openjpeg",
     "pango",
-    "perl",
-    "webp"
+    "perl"
   ],
   "requirements": [
 
