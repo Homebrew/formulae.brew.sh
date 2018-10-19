@@ -11,7 +11,7 @@
   "desc": "HTTP/2 C Library",
   "homepage": "https://nghttp2.org/",
   "versions": {
-    "stable": "1.33.0",
+    "stable": "1.34.0",
     "devel": null,
     "head": "HEAD",
     "bottle": true
@@ -26,20 +26,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/nghttp2-1.33.0.mojave.bottle.tar.gz",
-          "sha256": "a0a79d8de3450162bf674dcf8a6dec4f293f814542ea6c3499401988eab5fe6e"
+          "url": "https://homebrew.bintray.com/bottles/nghttp2-1.34.0.mojave.bottle.tar.gz",
+          "sha256": "a882c48e3d738c192cdd535ff785a96e9d77d87d894e53a75e2533742277fdba"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/nghttp2-1.33.0.high_sierra.bottle.tar.gz",
-          "sha256": "d3c1efec430bbb8ac88ac24583100a561018a5b80039208478e781f8aceaf1e8"
+          "url": "https://homebrew.bintray.com/bottles/nghttp2-1.34.0.high_sierra.bottle.tar.gz",
+          "sha256": "1668315be30654d2cce6a8e4f7036f7460ad72be418070106a0a9a706c347db2"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/nghttp2-1.33.0.sierra.bottle.tar.gz",
-          "sha256": "a94cbf23943a9892a100227a68aa29c3164d4a16219fb8c76e0752f43a864f58"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/nghttp2-1.33.0.el_capitan.bottle.tar.gz",
-          "sha256": "3988e15fb6b5392e5c57f2b6cd710309afc065675892fca42b9b9aac075c5a18"
+          "url": "https://homebrew.bintray.com/bottles/nghttp2-1.34.0.sierra.bottle.tar.gz",
+          "sha256": "87b22ce014eb075dd0c0723b5921f1d6e8136270343dd90d36232010fd552725"
         }
       }
     }
@@ -47,16 +43,8 @@
   "keg_only": false,
   "options": [
     {
-      "option": "--with-examples",
-      "description": "Compile and install example programs"
-    },
-    {
       "option": "--with-python",
       "description": "Build python3 bindings"
-    },
-    {
-      "option": "--without-jemalloc",
-      "description": "Build without jemalloc support"
     }
   ],
   "build_dependencies": [
@@ -68,13 +56,14 @@
     "boost",
     "c-ares",
     "jansson",
+    "jemalloc",
     "libev",
     "libevent",
     "libxml2",
     "openssl"
   ],
   "recommended_dependencies": [
-    "jemalloc"
+
   ],
   "optional_dependencies": [
     "python"
