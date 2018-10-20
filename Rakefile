@@ -7,6 +7,7 @@ task default: :dump
 
 desc "Dump formulae data"
 task :formulae do
+  ENV["HOMEBREW_FORCE_HOMEBREW_ON_LINUX"] = "1"
   sh "brew", "ruby", "script/generate.rb"
 end
 
@@ -68,7 +69,8 @@ task :analytics do
     end
     FileUtils.mkdir_p "_data/analytics/#{category_name}"
     %w[30 90 365].each do |days|
-      next if days != "30" && category_name.include?("homebrew-core")
+      next if days != "30" && category_name == "build-error/homebrew-core"
+
       sh "brew formula-analytics --days-ago=#{days} --json --#{category} " \
         "> _data/analytics/#{category_name}/#{days}d.json"
     end
@@ -118,6 +120,6 @@ task jsonlint: :build do
   end
 end
 
-task test: [:html_proofer, :jsonlint]
+task test: %i[html_proofer jsonlint]
 
 CLEAN.include FileList["_site"]
