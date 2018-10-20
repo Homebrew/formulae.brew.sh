@@ -11,7 +11,7 @@
   "desc": "Command-driven, interactive function plotting",
   "homepage": "http://www.gnuplot.info/",
   "versions": {
-    "stable": "5.2.4",
+    "stable": "5.2.5",
     "devel": null,
     "head": "HEAD",
     "bottle": true
@@ -26,20 +26,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/gnuplot-5.2.4.mojave.bottle.tar.gz",
-          "sha256": "de4c1ae7e84496672a59e46e57bbb52de0c30e52e5fc057b41e7d6a6f0a754e8"
+          "url": "https://homebrew.bintray.com/bottles/gnuplot-5.2.5.mojave.bottle.tar.gz",
+          "sha256": "eaf80b9ce3cf64e57e005af62067e526d57755ef26b3ee0596581f2caf070692"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gnuplot-5.2.4.high_sierra.bottle.tar.gz",
-          "sha256": "83e62efd791e58c6be41b8da6975e66bf88ee01c2d364dc56f4496a2ec2c20aa"
+          "url": "https://homebrew.bintray.com/bottles/gnuplot-5.2.5.high_sierra.bottle.tar.gz",
+          "sha256": "1faefa9ab294f7e29d977c3a3d2234ac2ae3cfb414a1987d8bfb287e445ef6ba"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gnuplot-5.2.4.sierra.bottle.tar.gz",
-          "sha256": "bdd5bf26cfe0c268092d6120f1aaa57cf9f7c99464c83de1b64ac3d7c24f1741"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/gnuplot-5.2.4.el_capitan.bottle.tar.gz",
-          "sha256": "b0d21667f51ef06d824a1b68ed41d32d85848e8da4b9ac8fa9fdf09c31f7f05b"
+          "url": "https://homebrew.bintray.com/bottles/gnuplot-5.2.5.sierra.bottle.tar.gz",
+          "sha256": "b6e37f6657837216d5214e96ad4d2024e5b38ec12f12aac0ea1c97b9d06ee10e"
         }
       }
     }
@@ -47,20 +43,12 @@
   "keg_only": false,
   "options": [
     {
-      "option": "--with-cairo",
-      "description": "Build the Cairo based terminals"
-    },
-    {
-      "option": "--without-lua",
-      "description": "Build without the lua/TikZ terminal"
+      "option": "--with-aquaterm",
+      "description": "Build with AquaTerm support"
     },
     {
       "option": "--with-wxmac",
-      "description": "Build wxmac support. Need with-cairo to build wxt terminal"
-    },
-    {
-      "option": "--with-aquaterm",
-      "description": "Build with AquaTerm support"
+      "description": "Build with wxmac support"
     },
     {
       "option": "--with-qt",
@@ -76,10 +64,12 @@
   ],
   "dependencies": [
     "gd",
+    "lua",
+    "pango",
     "readline"
   ],
   "recommended_dependencies": [
-    "lua"
+
   ],
   "optional_dependencies": [
     "qt",
