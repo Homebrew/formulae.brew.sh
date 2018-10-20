@@ -11,7 +11,7 @@
   "desc": "Manage files with git without checking in file contents",
   "homepage": "https://git-annex.branchable.com/",
   "versions": {
-    "stable": "6.20180926",
+    "stable": "6.20181011",
     "devel": null,
     "head": "HEAD",
     "bottle": true
@@ -26,30 +26,23 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/git-annex-6.20180926.mojave.bottle.tar.gz",
-          "sha256": "bf4d1c2787b44a8724ae1c5a402b1bab043399cb78c7bc1256a0c5ea5befb180"
+          "url": "https://homebrew.bintray.com/bottles/git-annex-6.20181011.mojave.bottle.tar.gz",
+          "sha256": "3de536085890f16136d8f95ca8328b07d9d8e1a64e31c51ea64c4866887b96eb"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/git-annex-6.20180926.high_sierra.bottle.tar.gz",
-          "sha256": "3bb20d613b13cec529f74769de9214d8e9556266be272a0a51f316430c21458c"
+          "url": "https://homebrew.bintray.com/bottles/git-annex-6.20181011.high_sierra.bottle.tar.gz",
+          "sha256": "0dec2e07b446289426b35e90d288fb50ceb305ef6fb37221df4255e4a69d4280"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/git-annex-6.20180926.sierra.bottle.tar.gz",
-          "sha256": "3c51fa068af0798623d4e23ee763fe0503d4b880c4822c053b4a7381dec0ac3b"
+          "url": "https://homebrew.bintray.com/bottles/git-annex-6.20181011.sierra.bottle.tar.gz",
+          "sha256": "e14e425f71603482458acc3a98ba4031d81ef7a37276e8bdcc22c28bd468e0af"
         }
       }
     }
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--with-git-union-merge",
-      "description": "Build the git-union-merge tool"
-    },
-    {
-      "option": "--without-xdot",
-      "description": "Build without xdot support"
-    }
+
   ],
   "build_dependencies": [
     "cabal-install",
@@ -59,10 +52,11 @@
   "dependencies": [
     "gsasl",
     "libmagic",
-    "quvi"
+    "quvi",
+    "xdot"
   ],
   "recommended_dependencies": [
-    "xdot"
+
   ],
   "optional_dependencies": [
 
