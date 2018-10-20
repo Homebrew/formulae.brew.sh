@@ -1,7 +1,7 @@
 {
-  "name": "gtksourceview",
-  "full_name": "gtksourceview",
-  "oldname": null,
+  "name": "gtksourceview4",
+  "full_name": "gtksourceview4",
+  "oldname": "gtksourceview@4",
   "aliases": [
 
   ],
@@ -11,12 +11,12 @@
   "desc": "Text view with syntax, undo/redo, and text marks",
   "homepage": "https://projects.gnome.org/gtksourceview/",
   "versions": {
-    "stable": "2.10.5",
+    "stable": "4.0.3",
     "devel": null,
     "head": null,
     "bottle": true
   },
-  "revision": 3,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -26,20 +26,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/gtksourceview-2.10.5_3.mojave.bottle.tar.gz",
-          "sha256": "affe9da1741f86e41df21458b7d397414ac268840e6a299683c82c76798d2f32"
+          "url": "https://homebrew.bintray.com/bottles/gtksourceview4-4.0.3.mojave.bottle.tar.gz",
+          "sha256": "7d17461644a667ba14d5c76e0f99dfbe820f982ac7106e26294f6648a6edd4af"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gtksourceview-2.10.5_3.high_sierra.bottle.tar.gz",
-          "sha256": "b3ba6e3ef4aa4d3abc3ac572ce649290dadc386589c45b6abdf8ae6f2269823c"
+          "url": "https://homebrew.bintray.com/bottles/gtksourceview4-4.0.3.high_sierra.bottle.tar.gz",
+          "sha256": "9b70d2f3882b03d185615688425f61d157eebd96f3987b1cb51080654512c90f"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gtksourceview-2.10.5_3.sierra.bottle.tar.gz",
-          "sha256": "2577ba17156b384fb3fa3c90f638e6bef9886c3268fb321d02fc012e330baac8"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/gtksourceview-2.10.5_3.el_capitan.bottle.tar.gz",
-          "sha256": "2924c33793615aa02e2e46917ba58a3e8e8db1aaf0f7f9210b54acd725b76ef0"
+          "url": "https://homebrew.bintray.com/bottles/gtksourceview4-4.0.3.sierra.bottle.tar.gz",
+          "sha256": "7dd057f3add8bceb8a1062798e38adb7bdb3ff29159d5069a5ed4d7aa91b739d"
         }
       }
     }
@@ -49,13 +45,14 @@
 
   ],
   "build_dependencies": [
+    "gobject-introspection",
     "intltool",
-    "pkg-config"
+    "pkg-config",
+    "vala"
   ],
   "dependencies": [
     "gettext",
-    "gtk+",
-    "gtk-mac-integration"
+    "gtk+3"
   ],
   "recommended_dependencies": [
 
