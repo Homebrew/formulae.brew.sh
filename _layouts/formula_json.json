@@ -10,86 +10,86 @@
 {%- endfor -%}
 
 "analytics":{"install":{"30d":{
-{%- if site.data.analytics.install.homebrew-core["30d"].formulae[name].size > 0 -%}
-  {%- for fa in site.data.analytics.install.homebrew-core["30d"].formulae[name] -%}
+{%- if site.data.analytics.install.homebrew-core["30d"].formulae[full_name].size > 0 -%}
+  {%- for fa in site.data.analytics.install.homebrew-core["30d"].formulae[full_name] -%}
     {{ fa.formula | jsonify }}:{{ fa.count | remove: "," | plus: 0 }}
     {%- if forloop.last == false -%}
     ,
     {%- endif -%}
   {%- endfor -%}
 {%- else -%}
-  {{ name | jsonify }}:0
+  {{ full_name | jsonify }}:0
 {%- endif -%}
 },"90d":{
 
-{%- if site.data.analytics.install.homebrew-core["90d"].formulae[name].size > 0 -%}
-  {%- for fa in site.data.analytics.install.homebrew-core["90d"].formulae[name] -%}
+{%- if site.data.analytics.install.homebrew-core["90d"].formulae[full_name].size > 0 -%}
+  {%- for fa in site.data.analytics.install.homebrew-core["90d"].formulae[full_name] -%}
     {{ fa.formula | jsonify }}:{{ fa.count | remove: "," | plus: 0 }}
     {%- if forloop.last == false -%}
     ,
     {%- endif -%}
   {%- endfor -%}
 {%- else -%}
-  {{ name | jsonify }}:0
+  {{ full_name | jsonify }}:0
 {%- endif -%}
 },"365d":{
 
-{%- if site.data.analytics.install.homebrew-core["365d"].formulae[name].size > 0 -%}
-  {%- for fa in site.data.analytics.install.homebrew-core["365d"].formulae[name] -%}
+{%- if site.data.analytics.install.homebrew-core["365d"].formulae[full_name].size > 0 -%}
+  {%- for fa in site.data.analytics.install.homebrew-core["365d"].formulae[full_name] -%}
     {{ fa.formula | jsonify }}:{{ fa.count | remove: "," | plus: 0 }}
     {%- if forloop.last == false -%}
     ,
     {%- endif -%}
   {%- endfor -%}
 {%- else -%}
-  {{ name | jsonify }}:0
+  {{ full_name | jsonify }}:0
 {%- endif -%}
 }},"install_on_request":{"30d":{
 
-{%- if site.data.analytics.install-on-request.homebrew-core["30d"].formulae[name].size > 0 -%}
-  {%- for fa in site.data.analytics.install-on-request.homebrew-core["30d"].formulae[name] -%}
+{%- if site.data.analytics.install-on-request.homebrew-core["30d"].formulae[full_name].size > 0 -%}
+  {%- for fa in site.data.analytics.install-on-request.homebrew-core["30d"].formulae[full_name] -%}
     {{ fa.formula | jsonify }}:{{ fa.count | remove: "," | plus: 0 }}
     {%- if forloop.last == false -%}
     ,
     {%- endif -%}
   {%- endfor -%}
 {%- else -%}
-  {{ name | jsonify }}:0
+  {{ full_name | jsonify }}:0
 {%- endif -%}
 },"90d":{
 
-{%- if site.data.analytics.install-on-request.homebrew-core["90d"].formulae[name].size > 0 -%}
-  {%- for fa in site.data.analytics.install-on-request.homebrew-core["90d"].formulae[name] -%}
+{%- if site.data.analytics.install-on-request.homebrew-core["90d"].formulae[full_name].size > 0 -%}
+  {%- for fa in site.data.analytics.install-on-request.homebrew-core["90d"].formulae[full_name] -%}
     {{ fa.formula | jsonify }}:{{ fa.count | remove: "," | plus: 0 }}
     {%- if forloop.last == false -%}
     ,
     {%- endif -%}
   {%- endfor -%}
 {%- else -%}
-  {{ name | jsonify }}:0
+  {{ full_name | jsonify }}:0
 {%- endif -%}
 },"365d":{
 
-{%- if site.data.analytics.install-on-request.homebrew-core["365d"].formulae[name].size > 0 -%}
-  {%- for fa in site.data.analytics.install-on-request.homebrew-core["365d"].formulae[name] -%}
+{%- if site.data.analytics.install-on-request.homebrew-core["365d"].formulae[full_name].size > 0 -%}
+  {%- for fa in site.data.analytics.install-on-request.homebrew-core["365d"].formulae[full_name] -%}
     {{ fa.formula | jsonify }}:{{ fa.count | remove: "," | plus: 0 }}
     {%- if forloop.last == false -%}
     ,
     {%- endif -%}
   {%- endfor -%}
 {%- else -%}
-  {{ name | jsonify }}:0
+  {{ full_name | jsonify }}:0
 {%- endif -%}
 }},"build_error":{"30d":{
 
-{%- if site.data.analytics.build-error.homebrew-core["30d"].formulae[full_name].size > 0 -%}
-  {%- for fa in site.data.analytics.build-error.homebrew-core["30d"].formulae[full_name] -%}
+{%- if site.data.analytics.build-error.homebrew-core["30d"].formulae[full_full_name].size > 0 -%}
+  {%- for fa in site.data.analytics.build-error.homebrew-core["30d"].formulae[full_full_name] -%}
     {{ fa.formula | jsonify }}:{{ fa.count | remove: "," | plus: 0 }}
     {%- if forloop.last == false -%}
     ,
     {%- endif -%}
   {%- endfor -%}
 {%- else -%}
-  {{ name | jsonify }}:0
+  {{ full_name | jsonify }}:0
 {%- endif -%}
 }}}}
