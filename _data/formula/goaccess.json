@@ -16,57 +16,47 @@
     "head": "HEAD",
     "bottle": true
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "cellar": "/usr/local/Cellar",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/goaccess-1.2.mojave.bottle.1.tar.gz",
-          "sha256": "02fb228fc96aa4d5f0d1e130428cbba4e7fd47ebfb01f7158c7ba757a1559a41"
+          "url": "https://homebrew.bintray.com/bottles/goaccess-1.2_1.mojave.bottle.tar.gz",
+          "sha256": "97d3bd323111361a0c0790dd9f1a3d50a96941e0c0f53d0f09bb8cea9d7c2807"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/goaccess-1.2.high_sierra.bottle.1.tar.gz",
-          "sha256": "33833da9143c81fab96a7bf19452f54e94d32952f86d4a5e110c77e9854deaf9"
+          "url": "https://homebrew.bintray.com/bottles/goaccess-1.2_1.high_sierra.bottle.tar.gz",
+          "sha256": "fbab9c91c705da72e58919231feac0949f2a557185a884686f189d24e25d3908"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/goaccess-1.2.sierra.bottle.1.tar.gz",
-          "sha256": "7b794bcc28f24f010682e2e18d0c480cdf9d75d07b50964944f3b3fd6428972a"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/goaccess-1.2.el_capitan.bottle.1.tar.gz",
-          "sha256": "272e53e58e3fcd8c894285d1a90a3288edde0959a3f049bff24a6ed9180dbc3c"
-        },
-        "yosemite": {
-          "url": "https://homebrew.bintray.com/bottles/goaccess-1.2.yosemite.bottle.1.tar.gz",
-          "sha256": "af9801407d647456b2421673aeefdc5d1bd00446d912126c8bc662cfad437937"
+          "url": "https://homebrew.bintray.com/bottles/goaccess-1.2_1.sierra.bottle.tar.gz",
+          "sha256": "a6dfa226d34a108be47db6ba5e1515b50b25e7ded1af71145dd43c2d6dcbd688"
         }
       }
     }
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--with-libmaxminddb",
-      "description": "Enable IP location information using enhanced GeoIP2 databases"
-    }
+
   ],
   "build_dependencies": [
     "autoconf",
     "automake"
   ],
   "dependencies": [
+    "libmaxminddb",
     "tokyo-cabinet"
   ],
   "recommended_dependencies": [
 
   ],
   "optional_dependencies": [
-    "libmaxminddb"
+
   ],
   "requirements": [
 
