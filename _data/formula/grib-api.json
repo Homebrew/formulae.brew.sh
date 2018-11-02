@@ -16,7 +16,7 @@
     "head": null,
     "bottle": true
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -26,51 +26,38 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/grib-api-1.27.0.mojave.bottle.tar.gz",
-          "sha256": "cd972852461b2d0fd723e47bcef574a6701f71177d1aaa5f7b66844c9f86b602"
+          "url": "https://homebrew.bintray.com/bottles/grib-api-1.27.0_1.mojave.bottle.tar.gz",
+          "sha256": "437fe07006a50a5111d757ce44441d1b1c2a0f26399c7a0bd6e1842d9ebc624e"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/grib-api-1.27.0.high_sierra.bottle.tar.gz",
-          "sha256": "158fccf39188a5abd7281866f1d89f8c91c2b0885d85e92d207dfa40678d57c9"
+          "url": "https://homebrew.bintray.com/bottles/grib-api-1.27.0_1.high_sierra.bottle.tar.gz",
+          "sha256": "f67e6242e60d5359dc5d05705c00b95df89f8783fe8704b0d59e4f5118664981"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/grib-api-1.27.0.sierra.bottle.tar.gz",
-          "sha256": "79a6e75196027e6d8310f12dac756776ed8f422268aa0623b6f28b400feeba93"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/grib-api-1.27.0.el_capitan.bottle.tar.gz",
-          "sha256": "923b9062ff3f34b4517c52def1831b0bd0b4debd555f12655fdf6776be965521"
+          "url": "https://homebrew.bintray.com/bottles/grib-api-1.27.0_1.sierra.bottle.tar.gz",
+          "sha256": "0b950cbf4e4fbc91e1c034a6fc6aacdebe57caa3b79ece787e4e93105e7b8959"
         }
       }
     }
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--with-static",
-      "description": "Build static instead of shared library."
-    },
-    {
-      "option": "--without-jasper",
-      "description": "Build without jasper support"
-    },
-    {
-      "option": "--with-libpng",
-      "description": "Build with libpng support"
-    }
+
   ],
   "build_dependencies": [
     "cmake"
   ],
   "dependencies": [
     "gcc",
+    "jasper",
+    "libpng",
     "numpy"
   ],
   "recommended_dependencies": [
-    "jasper"
+
   ],
   "optional_dependencies": [
-    "libpng"
+
   ],
   "requirements": [
 

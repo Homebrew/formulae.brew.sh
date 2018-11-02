@@ -16,7 +16,7 @@
     "head": "HEAD",
     "bottle": true
   },
-  "revision": 1,
+  "revision": 2,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -26,26 +26,23 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/openvdb-5.2.0_1.mojave.bottle.tar.gz",
-          "sha256": "8a4a4c65328e9d303e174c89a89cd7a838fe51eb30376a76523f95c1b3275918"
+          "url": "https://homebrew.bintray.com/bottles/openvdb-5.2.0_2.mojave.bottle.tar.gz",
+          "sha256": "00211fc05a2115a68dc0313494976e5bec61ada1c90a768d595293e8275791b5"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/openvdb-5.2.0_1.high_sierra.bottle.tar.gz",
-          "sha256": "05deec4062038c7274fbf9f4bb7565818fa4d8a922ff7e2af5dc6f7639004342"
+          "url": "https://homebrew.bintray.com/bottles/openvdb-5.2.0_2.high_sierra.bottle.tar.gz",
+          "sha256": "6685baa769a463f33b79d522d1dd4cc74507e6c71b34cf4e70820a84ae0e6628"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/openvdb-5.2.0_1.sierra.bottle.tar.gz",
-          "sha256": "021270661f0d57dd6b5dac9660cedf5f239b12b55b9781a8e2c952b6a3dd854d"
+          "url": "https://homebrew.bintray.com/bottles/openvdb-5.2.0_2.sierra.bottle.tar.gz",
+          "sha256": "44c17a11b7f0859bd7738400e793a129d57964281ad1a69b836c8b6dbd97d3bd"
         }
       }
     }
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--with-glfw",
-      "description": "Installs the command-line tool to view OpenVDB files"
-    }
+
   ],
   "build_dependencies": [
     "doxygen"
@@ -53,6 +50,7 @@
   "dependencies": [
     "boost",
     "c-blosc",
+    "glfw",
     "ilmbase",
     "jemalloc",
     "openexr",
@@ -62,7 +60,7 @@
 
   ],
   "optional_dependencies": [
-    "glfw"
+
   ],
   "requirements": [
 
