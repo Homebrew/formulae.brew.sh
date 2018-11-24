@@ -16,7 +16,7 @@
     "head": "HEAD",
     "bottle": true
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -26,70 +26,39 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/vim-8.1.0500.mojave.bottle.tar.gz",
-          "sha256": "8655aaa0b9cb558bb5a7d3b64ba1332ce6af7a761d884d4373ddf2b53a934329"
+          "url": "https://homebrew.bintray.com/bottles/vim-8.1.0500_1.mojave.bottle.tar.gz",
+          "sha256": "2fb8c80818bfba57b7868697a0c446e2d06d4330c3bebdda266abffa6c9dbe79"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/vim-8.1.0500.high_sierra.bottle.tar.gz",
-          "sha256": "258a9ea36248d39901a2fca7a281f4449d20d6bd11cd3eca1291cbacf8595483"
+          "url": "https://homebrew.bintray.com/bottles/vim-8.1.0500_1.high_sierra.bottle.tar.gz",
+          "sha256": "0c459bb997b8e70f68d563cec3e23dced023ba009b08e1a8a8a827861fdde44f"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/vim-8.1.0500.sierra.bottle.tar.gz",
-          "sha256": "5c8a3c1d8fd3131a74805491f1e6c2c412670bf043bfcb8f7fff35465cb80540"
+          "url": "https://homebrew.bintray.com/bottles/vim-8.1.0500_1.sierra.bottle.tar.gz",
+          "sha256": "a7843cb521569ca8586fc34fcfc2317e0437e5d93ac2987c1911d0872f3bb015"
         }
       }
     }
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--with-override-system-vi",
-      "description": "Override system vi"
-    },
-    {
-      "option": "--with-gettext",
-      "description": "Build vim with National Language Support (translated messages, keymaps)"
-    },
-    {
-      "option": "--with-client-server",
-      "description": "Enable client/server mode"
-    },
-    {
-      "option": "--with-python@2",
-      "description": "Build vim with python@2 instead of python[3] support"
-    },
-    {
-      "option": "--with-lua",
-      "description": "Build vim with lua support"
-    },
-    {
-      "option": "--with-tcl",
-      "description": "Build vim with tcl support"
-    },
-    {
-      "option": "--without-python",
-      "description": "Build vim without python support"
-    },
-    {
-      "option": "--with-luajit",
-      "description": "Build with luajit support"
-    }
+
   ],
   "build_dependencies": [
 
   ],
   "dependencies": [
+    "gettext",
+    "lua",
     "perl",
+    "python",
     "ruby"
   ],
   "recommended_dependencies": [
-    "python"
+
   ],
   "optional_dependencies": [
-    "gettext",
-    "lua",
-    "luajit",
-    "python@2"
+
   ],
   "requirements": [
 
