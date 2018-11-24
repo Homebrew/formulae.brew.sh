@@ -16,7 +16,7 @@
     "head": null,
     "bottle": true
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -26,38 +26,23 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/node@6-6.14.4.mojave.bottle.tar.gz",
-          "sha256": "ecc570659de3cf194eb2ec670adb6046c109d1af4e34fe01b2d456da321af900"
+          "url": "https://homebrew.bintray.com/bottles/node@6-6.14.4_1.mojave.bottle.tar.gz",
+          "sha256": "5c493aa31e3950ef73fc825c60a152a2653d89ae6a2cad8e4632502ed4738a5d"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/node@6-6.14.4.high_sierra.bottle.tar.gz",
-          "sha256": "c0fe2f41ed0533f5fdf262291fbdcdf880a9c6c292b37d9436a7968e60fe09be"
+          "url": "https://homebrew.bintray.com/bottles/node@6-6.14.4_1.high_sierra.bottle.tar.gz",
+          "sha256": "be5b70fa6c55407565e6b9bbd913efcd357d7e38175869d8dfe1b97347a2ca99"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/node@6-6.14.4.sierra.bottle.tar.gz",
-          "sha256": "174a693040cf7b8e036a4221faf7b83fee3f8e37c9be4b48779843b9b62601de"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/node@6-6.14.4.el_capitan.bottle.tar.gz",
-          "sha256": "a169290323f22eab6e34c03b6ac07c23ff9ef5e457c9c0930913190918530270"
+          "url": "https://homebrew.bintray.com/bottles/node@6-6.14.4_1.sierra.bottle.tar.gz",
+          "sha256": "3393c15c0362128e3579ef41e3dd82d1fb182db60d4fbe2b554088df7f9199ac"
         }
       }
     }
   },
   "keg_only": true,
   "options": [
-    {
-      "option": "--with-openssl",
-      "description": "Build against Homebrew's OpenSSL instead of the bundled OpenSSL"
-    },
-    {
-      "option": "--without-npm",
-      "description": "npm will not be installed"
-    },
-    {
-      "option": "--with-full-icu",
-      "description": "Build with full-icu (all locales) instead of small-icu (English only)"
-    }
+
   ],
   "build_dependencies": [
     "pkg-config",
@@ -70,7 +55,7 @@
 
   ],
   "optional_dependencies": [
-    "openssl"
+
   ],
   "requirements": [
 
@@ -78,7 +63,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "Please note by default only English locale support is provided. If you need\nfull locale support you should either rebuild with full icu:\n  `brew reinstall node --with-full-icu`\nor add full icu data at runtime following:\n  https://github.com/nodejs/node/wiki/Intl#using-and-customizing-the-small-icu-build\n",
+  "caveats": null,
   "installed": [
 
   ],
