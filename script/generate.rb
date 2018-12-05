@@ -1,5 +1,7 @@
 #!/usr/bin/env brew ruby
-FileUtils.mkdir_p(["_data/formula", "api/formula", "formula"])
+directories = ["_data/formula", "api/formula", "formula"]
+FileUtils.rm_rf directories
+FileUtils.mkdir_p directories
 
 Formula.each do |f|
   json_filename = "#{f.name}.json"
