@@ -16,7 +16,22 @@ layout: base
 {% for item in json.items %}
   <tr>
     <td class="number-data">#{{ item.number }}</td>
-    <td><code>{% if page.category == "os-version" %}{{ item.os_version }}{% else %}{{ item.formula }}{% endif %}</code></td>
+    <td>
+    {%- if page.category == "os-version" -%}
+      <code>{{ item.os_version }}</code>
+    {%- else -%}
+      {%- assign name = item.formula | split: " " | first -%}
+      {%- assign data_name = name | remove: "@" | remove: "." | remove: '+' -%}
+      {%- assign formula_data = site.data.formula[data_name] -%}
+      {%- if name == formula_data.name -%}
+        <a href="{{ site.baseurl }}/formula/{{ name }}">
+          <code>{{ item.formula }}</code>
+        </a>
+      {%- else -%}
+        <code>{{ item.formula }}</code>
+      {%- endif -%}
+    {%- endif -%}
+    </td>
     <td class="number-data">{{ item.count }}</td>
     <td class="number-data">{{ item.percent }}%</td>
   </tr>
