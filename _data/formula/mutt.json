@@ -11,7 +11,7 @@
   "desc": "Mongrel of mail user agents (part elm, pine, mush, mh, etc.)",
   "homepage": "http://www.mutt.org/",
   "versions": {
-    "stable": "1.10.1",
+    "stable": "1.11.1",
     "devel": null,
     "head": "HEAD",
     "bottle": true
@@ -26,20 +26,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/mutt-1.10.1.mojave.bottle.tar.gz",
-          "sha256": "389639d2cfb581fbf101df8e0c9eecb255314f1be38864acc7bf2c1c9a2c4a11"
+          "url": "https://homebrew.bintray.com/bottles/mutt-1.11.1.mojave.bottle.tar.gz",
+          "sha256": "cc81730a08426a73c58da6e76c91852eddc2a8a5eecfa48110959d7af0bb4ec7"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/mutt-1.10.1.high_sierra.bottle.tar.gz",
-          "sha256": "ba0ec065c7692ce00cbf5cc47cb4804253c6fd388b3cbdcea0a65a20ef1bc616"
+          "url": "https://homebrew.bintray.com/bottles/mutt-1.11.1.high_sierra.bottle.tar.gz",
+          "sha256": "8d4627fa9074eb9d72f7653fd02d7c4c2f88a341955a3ce59437c4e3b93b11e4"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/mutt-1.10.1.sierra.bottle.tar.gz",
-          "sha256": "34d1cd11dc3d60fd6ae0365b90e7ab03e73e16494c1b31ec853741984207a6b1"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/mutt-1.10.1.el_capitan.bottle.tar.gz",
-          "sha256": "56802f8c1f2646be1ee70e3ea3ad711546a8e359d6a24b27a506bab24a845809"
+          "url": "https://homebrew.bintray.com/bottles/mutt-1.11.1.sierra.bottle.tar.gz",
+          "sha256": "a608389b2a68f3e986e5487ad817e0b8688df96f02a799dd4440991eb20ca069"
         }
       }
     }
@@ -47,20 +43,8 @@
   "keg_only": false,
   "options": [
     {
-      "option": "--with-s-lang",
-      "description": "Build against slang instead of ncurses"
-    },
-    {
-      "option": "--with-gettext",
-      "description": "Build with gettext support"
-    },
-    {
       "option": "--with-gpgme",
       "description": "Build with gpgme support"
-    },
-    {
-      "option": "--with-libidn",
-      "description": "Build with libidn support"
     }
   ],
   "build_dependencies": [
@@ -75,10 +59,7 @@
 
   ],
   "optional_dependencies": [
-    "gettext",
-    "gpgme",
-    "libidn",
-    "s-lang"
+    "gpgme"
   ],
   "requirements": [
 
