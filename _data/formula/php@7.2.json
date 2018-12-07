@@ -1,7 +1,7 @@
 {
-  "name": "php@7.0",
-  "full_name": "php@7.0",
-  "oldname": "php70",
+  "name": "php@7.2",
+  "full_name": "php@7.2",
+  "oldname": null,
   "aliases": [
 
   ],
@@ -11,12 +11,12 @@
   "desc": "General-purpose scripting language",
   "homepage": "https://secure.php.net/",
   "versions": {
-    "stable": "7.0.32",
+    "stable": "7.2.13",
     "devel": null,
     "head": null,
     "bottle": true
   },
-  "revision": 2,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -26,16 +26,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/php@7.0-7.0.32_2.mojave.bottle.tar.gz",
-          "sha256": "690f494debe1a4c0959f9d8ad2e994b805e5ccf599facf7ef6389e49e20a0083"
+          "url": "https://homebrew.bintray.com/bottles/php@7.2-7.2.13.mojave.bottle.tar.gz",
+          "sha256": "6dfcf4baffb4a9b929725a69d6d162dcf38f403788ef45740a2572cb1b610765"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/php@7.0-7.0.32_2.high_sierra.bottle.tar.gz",
-          "sha256": "c78c6fdf10de0b2c0cf3d513d74248676d421e3a00306cd18db2174bd82058b1"
+          "url": "https://homebrew.bintray.com/bottles/php@7.2-7.2.13.high_sierra.bottle.tar.gz",
+          "sha256": "30f1ada91bee7fe2fb2ee69ce6b7714dae947f2fafe8a408ca4e19b2d4e5d3da"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/php@7.0-7.0.32_2.sierra.bottle.tar.gz",
-          "sha256": "9f3b8dd88c1dc6bbcd1de60bbaadccd5d28a73043c115a49f9f3e742c647ab83"
+          "url": "https://homebrew.bintray.com/bottles/php@7.2-7.2.13.sierra.bottle.tar.gz",
+          "sha256": "7a1c6d536b23d1c2fc06b17ada65c8d62ad56cf4304b3f1fdb41dd66db48e38b"
         }
       }
     }
@@ -51,6 +51,7 @@
   "dependencies": [
     "apr",
     "apr-util",
+    "argon2",
     "aspell",
     "autoconf",
     "curl-openssl",
@@ -63,9 +64,8 @@
     "jpeg",
     "libpng",
     "libpq",
-    "libtool",
+    "libsodium",
     "libzip",
-    "mcrypt",
     "openldap",
     "openssl",
     "pcre",
@@ -86,7 +86,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "To enable PHP in Apache add the following to httpd.conf and restart Apache:\n    LoadModule php7_module /home/travis/Homebrew/opt/php@7.0/lib/httpd/modules/libphp7.so\n\n    <FilesMatch \\.php$>\n        SetHandler application/x-httpd-php\n    </FilesMatch>\n\nFinally, check DirectoryIndex includes index.php\n    DirectoryIndex index.php index.html\n\nThe php.ini and php-fpm.ini file can be found in:\n    /home/travis/Homebrew/etc/php/7.0/\n",
+  "caveats": "To enable PHP in Apache add the following to httpd.conf and restart Apache:\n    LoadModule php7_module /home/travis/Homebrew/opt/php@7.2/lib/httpd/modules/libphp7.so\n\n    <FilesMatch \\.php$>\n        SetHandler application/x-httpd-php\n    </FilesMatch>\n\nFinally, check DirectoryIndex includes index.php\n    DirectoryIndex index.php index.html\n\nThe php.ini and php-fpm.ini file can be found in:\n    /home/travis/Homebrew/etc/php/7.2/\n",
   "installed": [
 
   ],
