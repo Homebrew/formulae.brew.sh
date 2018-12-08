@@ -11,7 +11,7 @@
   "desc": "Programming language for highly scalable real-time systems",
   "homepage": "https://www.erlang.org/",
   "versions": {
-    "stable": "20.3.8.14",
+    "stable": "20.3.8.15",
     "devel": null,
     "head": null,
     "bottle": true
@@ -26,46 +26,23 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/erlang@20-20.3.8.14.mojave.bottle.tar.gz",
-          "sha256": "f6733c53336dda54c4700334371f47d2b5868879178c45e80d8d2f1079c87fd4"
+          "url": "https://homebrew.bintray.com/bottles/erlang@20-20.3.8.15.mojave.bottle.tar.gz",
+          "sha256": "4a1d222ab690294c9affccc4333df59497f714e9d0e366df77daea4ec42efa89"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/erlang@20-20.3.8.14.high_sierra.bottle.tar.gz",
-          "sha256": "619d787a3ee9970e691558a8364cbe1cce5bbb15983ed4d514a4135d2fc79cc4"
+          "url": "https://homebrew.bintray.com/bottles/erlang@20-20.3.8.15.high_sierra.bottle.tar.gz",
+          "sha256": "24b795efe2766156f5f62fcaf91eddc16fe53b0f8e19967c8fc0ce791e524601"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/erlang@20-20.3.8.14.sierra.bottle.tar.gz",
-          "sha256": "eaea0b3997b350c3b0f1af2c71dfed694dcaeb83ed34a32d29de16df2d6e6aef"
+          "url": "https://homebrew.bintray.com/bottles/erlang@20-20.3.8.15.sierra.bottle.tar.gz",
+          "sha256": "8bc94fb29c94ae33f2fd08ed44323d3a034c4cfe838513fb5334f56248176f18"
         }
       }
     }
   },
   "keg_only": true,
   "options": [
-    {
-      "option": "--without-hipe",
-      "description": "Disable building hipe; fails on various macOS systems"
-    },
-    {
-      "option": "--with-native-libs",
-      "description": "Enable native library compilation"
-    },
-    {
-      "option": "--with-dirty-schedulers",
-      "description": "Enable experimental dirty schedulers"
-    },
-    {
-      "option": "--with-java",
-      "description": "Build jinterface application"
-    },
-    {
-      "option": "--without-wxmac",
-      "description": "Build without wxmac support"
-    },
-    {
-      "option": "--with-fop",
-      "description": "Build with fop support"
-    }
+
   ],
   "build_dependencies": [
     "autoconf",
@@ -73,20 +50,17 @@
     "libtool"
   ],
   "dependencies": [
-    "openssl"
-  ],
-  "recommended_dependencies": [
+    "openssl",
     "wxmac"
   ],
+  "recommended_dependencies": [
+
+  ],
   "optional_dependencies": [
-    "fop"
+
   ],
   "requirements": [
-    {
-      "name": "java",
-      "cask": "java",
-      "download": "https://www.oracle.com/technetwork/java/javase/downloads/index.html"
-    }
+
   ],
   "conflicts_with": [
 
