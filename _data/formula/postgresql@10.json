@@ -1,23 +1,19 @@
 {
-  "name": "postgresql",
-  "full_name": "postgresql",
+  "name": "postgresql@10",
+  "full_name": "postgresql@10",
   "oldname": null,
   "aliases": [
-    "postgres",
-    "postgresql@11"
+
   ],
   "versioned_formulae": [
-    "postgresql@10",
-    "postgresql@9.4",
-    "postgresql@9.5",
-    "postgresql@9.6"
+
   ],
   "desc": "Object-relational database system",
   "homepage": "https://www.postgresql.org/",
   "versions": {
-    "stable": "11.1",
+    "stable": "10.6",
     "devel": null,
-    "head": "HEAD",
+    "head": null,
     "bottle": true
   },
   "revision": 0,
@@ -30,21 +26,21 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/postgresql-11.1.mojave.bottle.tar.gz",
-          "sha256": "d82e5ff0b8996cd40daba78d9279c94def44e653899084bda9f218c4bafc7253"
+          "url": "https://homebrew.bintray.com/bottles/postgresql@10-10.6.mojave.bottle.tar.gz",
+          "sha256": "11ef89aadb1a8446c2b5f2ab80c9e7b08be256ee83ad358b71abd687f477cf1e"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/postgresql-11.1.high_sierra.bottle.tar.gz",
-          "sha256": "9c9f814e08bc7a28105e326a04271031c38dd8e0e5da3781434dcca9ceb364a5"
+          "url": "https://homebrew.bintray.com/bottles/postgresql@10-10.6.high_sierra.bottle.tar.gz",
+          "sha256": "ec63d333a8363645cd5e62d6ff8486eb0875d2d9404925971544bccd3bb963a9"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/postgresql-11.1.sierra.bottle.tar.gz",
-          "sha256": "eacc5bd8eac9c6f77831346095393f6ed0361d1697f0fe071927e7c556ff1a86"
+          "url": "https://homebrew.bintray.com/bottles/postgresql@10-10.6.sierra.bottle.tar.gz",
+          "sha256": "4474f061c11832651e1fe0426396219358f8e585bd503d0b7fecb8773c9c8658"
         }
       }
     }
   },
-  "keg_only": false,
+  "keg_only": true,
   "options": [
     {
       "option": "--with-python",
@@ -69,7 +65,7 @@
 
   ],
   "conflicts_with": [
-    "postgres-xc"
+
   ],
   "caveats": "To migrate existing data from a previous major version of PostgreSQL run:\n  brew postgresql-upgrade-database\n",
   "installed": [
