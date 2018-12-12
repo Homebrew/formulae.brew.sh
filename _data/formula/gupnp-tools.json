@@ -11,12 +11,12 @@
   "desc": "Free replacements of Intel's UPnP tools",
   "homepage": "https://wiki.gnome.org/GUPnP/",
   "versions": {
-    "stable": "0.8.14",
+    "stable": "0.8.15",
     "devel": null,
     "head": null,
     "bottle": true
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -26,20 +26,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/gupnp-tools-0.8.14_1.mojave.bottle.tar.gz",
-          "sha256": "4e56b83a3164e3ffa9adae38accc5099ae421727dde982f38dbbc912566b5e90"
+          "url": "https://homebrew.bintray.com/bottles/gupnp-tools-0.8.15.mojave.bottle.tar.gz",
+          "sha256": "f330d39c1cd4c6420b5d0bfa9c8382c9180e8e09e07cb87cf3b4100db7b493d8"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gupnp-tools-0.8.14_1.high_sierra.bottle.tar.gz",
-          "sha256": "45ebb44e94ed47a5e47e6eb7de6fa4abc68029ca96a9f5217dfb3176c95c343f"
+          "url": "https://homebrew.bintray.com/bottles/gupnp-tools-0.8.15.high_sierra.bottle.tar.gz",
+          "sha256": "f969a56e68b6d5c4f768bd16e3e2f52c9d4d44c6a51124059598bb92a270adf8"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gupnp-tools-0.8.14_1.sierra.bottle.tar.gz",
-          "sha256": "270aa92cd6ae9fd83560c997d444afff984615c71bf81600701c22fe0216c058"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/gupnp-tools-0.8.14_1.el_capitan.bottle.tar.gz",
-          "sha256": "dd76de959f08a89e5cba3c135607af53a922413f584397cd141fb6a93b52587c"
+          "url": "https://homebrew.bintray.com/bottles/gupnp-tools-0.8.15.sierra.bottle.tar.gz",
+          "sha256": "02eccc04224dbb48ac598e7e18c50be6a0669f657f6ce220d42bbbbb1e319f01"
         }
       }
     }
@@ -49,15 +45,17 @@
 
   ],
   "build_dependencies": [
-    "intltool",
+    "meson",
+    "ninja",
     "pkg-config"
   ],
   "dependencies": [
     "gettext",
     "gtk+3",
-    "gtksourceview3",
+    "gtksourceview4",
     "gupnp",
-    "gupnp-av"
+    "gupnp-av",
+    "libsoup"
   ],
   "recommended_dependencies": [
 
