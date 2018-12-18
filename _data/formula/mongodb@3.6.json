@@ -42,18 +42,7 @@
   },
   "keg_only": true,
   "options": [
-    {
-      "option": "--with-boost",
-      "description": "Compile using installed boost, not the version shipped with mongodb"
-    },
-    {
-      "option": "--with-sasl",
-      "description": "Compile with SASL support"
-    },
-    {
-      "option": "--without-openssl",
-      "description": "Build without openssl support"
-    }
+
   ],
   "build_dependencies": [
     "go",
@@ -61,13 +50,14 @@
     "scons"
   ],
   "dependencies": [
+    "openssl",
     "python@2"
   ],
   "recommended_dependencies": [
-    "openssl"
+
   ],
   "optional_dependencies": [
-    "boost"
+
   ],
   "requirements": [
     {
