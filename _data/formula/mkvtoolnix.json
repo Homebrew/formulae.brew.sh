@@ -9,9 +9,9 @@
 
   ],
   "desc": "Matroska media files manipulation tools",
-  "homepage": "https://www.bunkus.org/videotools/mkvtoolnix/",
+  "homepage": "https://mkvtoolnix.download/",
   "versions": {
-    "stable": "28.2.0",
+    "stable": "29.0.0",
     "devel": null,
     "head": "HEAD",
     "bottle": true
@@ -21,21 +21,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": "/usr/local/Cellar",
+      "cellar": ":any",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/mkvtoolnix-28.2.0.mojave.bottle.tar.gz",
-          "sha256": "867c24499ef7b380be139c5dae287548808892469479738d825348f582248185"
+          "url": "https://homebrew.bintray.com/bottles/mkvtoolnix-29.0.0.mojave.bottle.tar.gz",
+          "sha256": "b6c8999dfb41a67970f9883975aba05a77f3aaccd8d830e3e88200b483ec2611"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/mkvtoolnix-28.2.0.high_sierra.bottle.tar.gz",
-          "sha256": "9d8c46126e6643a5f15400dd7988d1b881a9471fa4f705d58f6b608ccba8d36c"
+          "url": "https://homebrew.bintray.com/bottles/mkvtoolnix-29.0.0.high_sierra.bottle.tar.gz",
+          "sha256": "e45b90f2c248a4a3696793faf21238655a8e0244aea4367b0f8df7c296eb31b0"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/mkvtoolnix-28.2.0.sierra.bottle.tar.gz",
-          "sha256": "1fba15cc9878269d10c4f2a529a5840ba2388c2ff7d39b64e67401b2f7ba454e"
+          "url": "https://homebrew.bintray.com/bottles/mkvtoolnix-29.0.0.sierra.bottle.tar.gz",
+          "sha256": "4c1e2666d68e3035f230c3da8fb94b374d9348fee404d600d70997496150addd"
         }
       }
     }
@@ -53,6 +53,7 @@
   ],
   "build_dependencies": [
     "docbook-xsl",
+    "fmt",
     "pkg-config",
     "pugixml",
     "ruby"
@@ -60,6 +61,7 @@
   "dependencies": [
     "boost",
     "flac",
+    "fmt",
     "libebml",
     "libmagic",
     "libmatroska",
