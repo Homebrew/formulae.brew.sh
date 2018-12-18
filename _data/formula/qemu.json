@@ -16,7 +16,7 @@
     "head": "HEAD",
     "bottle": true
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -26,16 +26,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/qemu-3.1.0.mojave.bottle.tar.gz",
-          "sha256": "c8702ae7c6d5306c6545c055f6d34236476b234d4ab6fb85a671f94e519da694"
+          "url": "https://homebrew.bintray.com/bottles/qemu-3.1.0_1.mojave.bottle.tar.gz",
+          "sha256": "a4c1c5528954059bc7ae79f6a572a8292a5f87d6b8d4800b5c304202719a95fa"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/qemu-3.1.0.high_sierra.bottle.tar.gz",
-          "sha256": "8a8f3eb928890d30ec01626dd73e952f89cae9780d08b9cb1c825386aa33709e"
+          "url": "https://homebrew.bintray.com/bottles/qemu-3.1.0_1.high_sierra.bottle.tar.gz",
+          "sha256": "1e8861a371dabaa1f1612df71fe32ceee5bbe36dc85f7485616b1d5f505c143e"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/qemu-3.1.0.sierra.bottle.tar.gz",
-          "sha256": "4506f3d8397c16c3280aba314de3817e1a794409ad6355e8397d423e0e105c06"
+          "url": "https://homebrew.bintray.com/bottles/qemu-3.1.0_1.sierra.bottle.tar.gz",
+          "sha256": "f3dc9262cdc1ee6ebbf15e93a47dfc54933871cf60302b3abb77fed9c2b9e738"
         }
       }
     }
@@ -43,28 +43,12 @@
   "keg_only": false,
   "options": [
     {
-      "option": "--without-libpng",
-      "description": "Build without libpng support"
-    },
-    {
       "option": "--with-gtk+3",
       "description": "Build with gtk+3 support"
     },
     {
-      "option": "--with-libssh2",
-      "description": "Build with libssh2 support"
-    },
-    {
-      "option": "--with-libusb",
-      "description": "Build with libusb support"
-    },
-    {
       "option": "--with-sdl2",
       "description": "Build with sdl2 support"
-    },
-    {
-      "option": "--with-vde",
-      "description": "Build with vde support"
     }
   ],
   "build_dependencies": [
@@ -75,18 +59,19 @@
     "glib",
     "gnutls",
     "jpeg",
+    "libpng",
+    "libssh2",
+    "libusb",
     "ncurses",
-    "pixman"
+    "pixman",
+    "vde"
   ],
   "recommended_dependencies": [
-    "libpng"
+
   ],
   "optional_dependencies": [
     "gtk+3",
-    "libssh2",
-    "libusb",
-    "sdl2",
-    "vde"
+    "sdl2"
   ],
   "requirements": [
 
