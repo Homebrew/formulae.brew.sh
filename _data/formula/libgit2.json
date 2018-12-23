@@ -20,42 +20,40 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 0,
+      "rebuild": 1,
       "cellar": ":any",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/libgit2-0.27.7.mojave.bottle.tar.gz",
-          "sha256": "640ab236291c600299d1a59545fa4087d5f29672d2687d7e797755e69058edc8"
+          "url": "https://homebrew.bintray.com/bottles/libgit2-0.27.7.mojave.bottle.1.tar.gz",
+          "sha256": "d9c0bb9fc757af21ca690e0262edb2fdfac710cfd4897399fa4a8f52debacbcd"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/libgit2-0.27.7.high_sierra.bottle.tar.gz",
-          "sha256": "3ec4d61485eb4e46976aaed7fd1d2cd7f842f8b2c649c870ec3a2ba79517fdd0"
+          "url": "https://homebrew.bintray.com/bottles/libgit2-0.27.7.high_sierra.bottle.1.tar.gz",
+          "sha256": "15fe42707016a29881b1093ef9f6e6bebf4388ad0395d63ba4dd2da73cef6d4f"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/libgit2-0.27.7.sierra.bottle.tar.gz",
-          "sha256": "9946b33af89f683497ba8a2ac7b992b12d25792ae6b28b6995282c748bfb4c79"
+          "url": "https://homebrew.bintray.com/bottles/libgit2-0.27.7.sierra.bottle.1.tar.gz",
+          "sha256": "feb602bd610351dc95ed7532f74a3ca5fb5946159bd4e2f81d2df03752128398"
         }
       }
     }
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--without-libssh2",
-      "description": "Build without libssh2 support"
-    }
+
   ],
   "build_dependencies": [
     "cmake",
     "pkg-config"
   ],
   "dependencies": [
+    "libssh2",
     "openssl"
   ],
   "recommended_dependencies": [
-    "libssh2"
+
   ],
   "optional_dependencies": [
 

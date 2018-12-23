@@ -16,7 +16,7 @@
     "head": "HEAD",
     "bottle": true
   },
-  "revision": 3,
+  "revision": 4,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -26,26 +26,23 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/ffmpeg2theora-0.30_3.mojave.bottle.tar.gz",
-          "sha256": "b151520e1a7c211f7e488564a9293f4c1e80de0913ec2bac633d688b14ecf6f0"
+          "url": "https://homebrew.bintray.com/bottles/ffmpeg2theora-0.30_4.mojave.bottle.tar.gz",
+          "sha256": "110c82493cedbf7b5c1ba0840eb5a01d33ace587db01fc1ed4e9707073a21322"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/ffmpeg2theora-0.30_3.high_sierra.bottle.tar.gz",
-          "sha256": "a0caf912922e2a78d18af10724df81befd8f7e672dc5173cee4d0b29cd482257"
+          "url": "https://homebrew.bintray.com/bottles/ffmpeg2theora-0.30_4.high_sierra.bottle.tar.gz",
+          "sha256": "5fb50e2d8436ef85aa47efca7494e0d25f43e46a1f66895d1457771a65b08f6b"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/ffmpeg2theora-0.30_3.sierra.bottle.tar.gz",
-          "sha256": "8759af5194f13281394af44330ef522186f6d68fc12e2036c235df4894be376c"
+          "url": "https://homebrew.bintray.com/bottles/ffmpeg2theora-0.30_4.sierra.bottle.tar.gz",
+          "sha256": "5bd541db8f60a4f6a432794c800c8a6fc68cd74e5a96ca6547bdfc5cc64e4b1f"
         }
       }
     }
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--with-libkate",
-      "description": "Build with libkate support"
-    }
+
   ],
   "build_dependencies": [
     "pkg-config",
@@ -53,6 +50,7 @@
   ],
   "dependencies": [
     "ffmpeg",
+    "libkate",
     "libogg",
     "libvorbis",
     "theora"
@@ -61,7 +59,7 @@
 
   ],
   "optional_dependencies": [
-    "libkate"
+
   ],
   "requirements": [
 

@@ -20,36 +20,29 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 0,
+      "rebuild": 1,
       "cellar": "/usr/local/Cellar",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/tiger-vnc-1.9.0_1.mojave.bottle.tar.gz",
-          "sha256": "4ad5a8b50a61a62438621ea836b22da7635a85b71147f4edba7079e840e70792"
+          "url": "https://homebrew.bintray.com/bottles/tiger-vnc-1.9.0_1.mojave.bottle.1.tar.gz",
+          "sha256": "a048d592b84fae525742e746550892c20319af975bf01b2ca87a975a7abfae86"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/tiger-vnc-1.9.0_1.high_sierra.bottle.tar.gz",
-          "sha256": "904d4aa7c63b84d8f4104a8e24616923f9c24718b5b27649fc86903c37a961ec"
+          "url": "https://homebrew.bintray.com/bottles/tiger-vnc-1.9.0_1.high_sierra.bottle.1.tar.gz",
+          "sha256": "1040513ec177df5275b41b8b1dda64126a6e88327771803600e5635b2983505f"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/tiger-vnc-1.9.0_1.sierra.bottle.tar.gz",
-          "sha256": "3a880103ebe8542903019c855d9fd12edaa4646d32748af10fb5e6a0e4f57bfc"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/tiger-vnc-1.9.0_1.el_capitan.bottle.tar.gz",
-          "sha256": "d510cb87760d8d36e312410d95a49ab30208b63912fc453faeefd39164167373"
+          "url": "https://homebrew.bintray.com/bottles/tiger-vnc-1.9.0_1.sierra.bottle.1.tar.gz",
+          "sha256": "dca94ec794ece0340d127104ad373a185535317b130c96863f69c9a2c00e1ccd"
         }
       }
     }
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--without-gnutls",
-      "description": "Build without gnutls support"
-    }
+
   ],
   "build_dependencies": [
     "cmake"
@@ -57,10 +50,11 @@
   "dependencies": [
     "fltk",
     "gettext",
+    "gnutls",
     "jpeg-turbo"
   ],
   "recommended_dependencies": [
-    "gnutls"
+
   ],
   "optional_dependencies": [
 
