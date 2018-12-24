@@ -16,7 +16,7 @@
     "head": null,
     "bottle": true
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -26,56 +26,35 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/vips-8.7.2.mojave.bottle.tar.gz",
-          "sha256": "da18d5cf5f5df9e8de4a2c966aedb4eedb4825d3d1bf3530562785cf21c5c95e"
+          "url": "https://homebrew.bintray.com/bottles/vips-8.7.2_1.mojave.bottle.tar.gz",
+          "sha256": "0af014d20d528dbdff5f7c680419ab15cd57da114d85ea1bb8ceaf066f3dd5c3"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/vips-8.7.2.high_sierra.bottle.tar.gz",
-          "sha256": "9e21aeca8abe4b046ce62773a43ed780a992ce4d470d91f72e17be2eb56845ea"
+          "url": "https://homebrew.bintray.com/bottles/vips-8.7.2_1.high_sierra.bottle.tar.gz",
+          "sha256": "f2c9b7f718c8bfce4be10563b4e56961f1ed172dcffa974e46773481e4d788a8"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/vips-8.7.2.sierra.bottle.tar.gz",
-          "sha256": "6b4fbc2e8cdd56844c63d4b2b1c9fe7817ee7e33aebffb946cf487aa972f2045"
+          "url": "https://homebrew.bintray.com/bottles/vips-8.7.2_1.sierra.bottle.tar.gz",
+          "sha256": "6273864ad44f4f1224313eceeb9faae9e19053a23ddf31a05104608183cf6a56"
         }
       }
     }
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--without-fftw",
-      "description": "Build without fftw support"
-    },
-    {
-      "option": "--without-graphicsmagick",
-      "description": "Build without graphicsmagick support"
-    },
-    {
-      "option": "--without-poppler",
-      "description": "Build without poppler support"
-    },
-    {
-      "option": "--with-imagemagick",
-      "description": "Build with imagemagick support"
-    },
-    {
-      "option": "--with-openexr",
-      "description": "Build with openexr support"
-    },
-    {
-      "option": "--with-openslide",
-      "description": "Build with openslide support"
-    }
+
   ],
   "build_dependencies": [
     "gobject-introspection",
     "pkg-config"
   ],
   "dependencies": [
+    "fftw",
     "fontconfig",
     "gettext",
     "giflib",
     "glib",
+    "graphicsmagick",
     "jpeg",
     "libexif",
     "libgsf",
@@ -83,19 +62,18 @@
     "librsvg",
     "libtiff",
     "little-cms2",
+    "openexr",
+    "openslide",
     "orc",
     "pango",
+    "poppler",
     "webp"
   ],
   "recommended_dependencies": [
-    "fftw",
-    "graphicsmagick",
-    "poppler"
+
   ],
   "optional_dependencies": [
-    "imagemagick",
-    "openexr",
-    "openslide"
+
   ],
   "requirements": [
 

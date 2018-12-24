@@ -20,40 +20,29 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 0,
-      "cellar": "/usr/local/Cellar",
+      "rebuild": 1,
+      "cellar": ":any",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/percona-server-mongodb-3.6.6-1.4.mojave.bottle.tar.gz",
-          "sha256": "c496e0f350cdceb2c82a14f206cf4210c44faf4b01033c6d31d6240a7cf4d665"
+          "url": "https://homebrew.bintray.com/bottles/percona-server-mongodb-3.6.6-1.4.mojave.bottle.1.tar.gz",
+          "sha256": "65e23fd9b4e0a03964950fa1d0323e3730c41d47c511e3f7ef8c08352538e2de"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/percona-server-mongodb-3.6.6-1.4.high_sierra.bottle.tar.gz",
-          "sha256": "a6649a385a19ab31d07d50c45779aea87bbd8ea149b099d57975859a6cb546ce"
+          "url": "https://homebrew.bintray.com/bottles/percona-server-mongodb-3.6.6-1.4.high_sierra.bottle.1.tar.gz",
+          "sha256": "2908790361d2e6248f0505c6e7997f6fb45f33e436a6eb8c35e42fc49625486d"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/percona-server-mongodb-3.6.6-1.4.sierra.bottle.tar.gz",
-          "sha256": "62478907290b11c522b15b06ceb4038a0244f90d2ac2da2587534f3fcb476707"
+          "url": "https://homebrew.bintray.com/bottles/percona-server-mongodb-3.6.6-1.4.sierra.bottle.1.tar.gz",
+          "sha256": "f43cd51a2678db2ca1a1ef80076bd029681c91cc8ccb176dc9931b1638b1db82"
         }
       }
     }
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--with-boost",
-      "description": "Compile using installed boost, not the version shipped with this formula"
-    },
-    {
-      "option": "--with-sasl",
-      "description": "Compile with SASL support"
-    },
-    {
-      "option": "--without-openssl",
-      "description": "Build without openssl support"
-    }
+
   ],
   "build_dependencies": [
     "go",
@@ -61,13 +50,13 @@
     "scons"
   ],
   "dependencies": [
-
-  ],
-  "recommended_dependencies": [
     "openssl"
   ],
+  "recommended_dependencies": [
+
+  ],
   "optional_dependencies": [
-    "boost"
+
   ],
   "requirements": [
     {

@@ -16,7 +16,7 @@
     "head": null,
     "bottle": true
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -26,62 +26,40 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/leptonica-1.77.0.mojave.bottle.tar.gz",
-          "sha256": "43edf41dc303d9aa89e6b03663a81eab3a28c4cd5a319d064b6dae4c841a0553"
+          "url": "https://homebrew.bintray.com/bottles/leptonica-1.77.0_1.mojave.bottle.tar.gz",
+          "sha256": "b57475fe16858c93395c7bc20dbd0494cf768c3e73713987990c9a51106d4db0"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/leptonica-1.77.0.high_sierra.bottle.tar.gz",
-          "sha256": "06ef285a85c0797f177faaddc4f727526afb7757d6c673fb1a8eb29fc9b9ff23"
+          "url": "https://homebrew.bintray.com/bottles/leptonica-1.77.0_1.high_sierra.bottle.tar.gz",
+          "sha256": "c7b6ba6ecfeed9ed6e42c6e83069be0aeea12e0afc5162950f154887d5297ba1"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/leptonica-1.77.0.sierra.bottle.tar.gz",
-          "sha256": "d730eb3b285fb88fba5496157a5d26ee4d3460f5414b0aee811ea715d09e550f"
+          "url": "https://homebrew.bintray.com/bottles/leptonica-1.77.0_1.sierra.bottle.tar.gz",
+          "sha256": "cebb1952b28481e8d8c31df505d9e342321819fec4e9c2690c37e1efa1063bbb"
         }
       }
     }
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--without-jpeg",
-      "description": "Build without jpeg support"
-    },
-    {
-      "option": "--without-libpng",
-      "description": "Build without libpng support"
-    },
-    {
-      "option": "--without-libtiff",
-      "description": "Build without libtiff support"
-    },
-    {
-      "option": "--with-giflib",
-      "description": "Build with giflib support"
-    },
-    {
-      "option": "--with-openjpeg",
-      "description": "Build with openjpeg support"
-    },
-    {
-      "option": "--with-webp",
-      "description": "Build with webp support"
-    }
+
   ],
   "build_dependencies": [
     "pkg-config"
   ],
   "dependencies": [
-
-  ],
-  "recommended_dependencies": [
+    "giflib",
     "jpeg",
     "libpng",
-    "libtiff"
-  ],
-  "optional_dependencies": [
-    "giflib",
+    "libtiff",
     "openjpeg",
     "webp"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
   ],
   "requirements": [
 
