@@ -5,15 +5,6 @@ pool:
   vmImage: 'Ubuntu-16.04'
 
 steps:
-- task: UseRubyVersion@0
-  inputs:
-    versionSpec: '>= 2.5'
-
-- script: |
-    gem install bundler
-    bundle install --retry=3 --jobs=4
-  displayName: 'bundle install'
-
 - script: |
     HOMEBREW_REPOSITORY="$HOME/Homebrew"
     export PATH="$HOMEBREW_REPOSITORY/bin:$PATH"
@@ -23,11 +14,22 @@ steps:
     mkdir -p "$HOMEBREW_CORE_TAP_DIR"
     rm -rf "$HOMEBREW_CORE_TAP_DIR"
     git clone --depth=1 https://github.com/Homebrew/homebrew-core "$HOMEBREW_CORE_TAP_DIR"
+    export HOMEBREW_NO_ANALYTICS=1
     # trigger vendored ruby installation
     brew help
   displayName: 'Install Homebrew'
 
-- script: bundle exec rake
+- task: UseRubyVersion@0
+  inputs:
+    versionSpec: '>= 2.3'
+
+- script: |
+    gem install bundler
+    bundle install --retry=3 --jobs=4
+  displayName: 'bundle install'
+
+- script: |
+    HOMEBREW_REPOSITORY="$HOME/Homebrew"
+    export PATH="$HOMEBREW_REPOSITORY/bin:$PATH"
+    bundle exec rake
   displayName: 'bundle exec rake test'
-  env: 
-    HOMEBREW_NO_ANALYTICS: 1
