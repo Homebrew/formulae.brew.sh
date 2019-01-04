@@ -11,12 +11,12 @@
   "desc": "Network logon cracker which supports many services",
   "homepage": "https://github.com/vanhauser-thc/thc-hydra",
   "versions": {
-    "stable": "8.6",
+    "stable": "8.8",
     "devel": null,
     "head": "HEAD",
     "bottle": true
   },
-  "revision": 2,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -26,39 +26,29 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/hydra-8.6_2.mojave.bottle.tar.gz",
-          "sha256": "53a99c685662301197e3fc43696f7da59b408947055a94786874e413546a3c81"
+          "url": "https://homebrew.bintray.com/bottles/hydra-8.8.mojave.bottle.tar.gz",
+          "sha256": "dc025662292dff699b05e525ca4e19ce9b62385eeec20fa2597e2bbfdb2c3d10"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/hydra-8.6_2.high_sierra.bottle.tar.gz",
-          "sha256": "d49e7d0dd322ece528244fa888edc4f98e945e8b88a6c30f2f70b449e0d637b1"
+          "url": "https://homebrew.bintray.com/bottles/hydra-8.8.high_sierra.bottle.tar.gz",
+          "sha256": "6c1d497320f91e0a366278b5186f21b5337bdd24760cb82c8225f34746ff8cf8"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/hydra-8.6_2.sierra.bottle.tar.gz",
-          "sha256": "bae23f8f760bc421dbc27877a2433f69189d17cce3a9153d74de3140a4d8ee5f"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/hydra-8.6_2.el_capitan.bottle.tar.gz",
-          "sha256": "ebeb58bc9aaf69d80552337c6f8adbe923390a8cc1d694dbef51c0a9d42699a6"
+          "url": "https://homebrew.bintray.com/bottles/hydra-8.8.sierra.bottle.tar.gz",
+          "sha256": "0d92b2dcac84f0dfbb12b0a26c7213a4bc1e9742ab93e061cef02958cd8fd2ef"
         }
       }
     }
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--with-gtk+",
-      "description": "Build with gtk+ support"
-    },
-    {
-      "option": "--with-libssh",
-      "description": "Build with libssh support"
-    }
+
   ],
   "build_dependencies": [
     "pkg-config"
   ],
   "dependencies": [
+    "libssh",
     "mysql-client",
     "openssl"
   ],
@@ -66,8 +56,7 @@
 
   ],
   "optional_dependencies": [
-    "gtk+",
-    "libssh"
+
   ],
   "requirements": [
 
