@@ -16,40 +16,33 @@
     "head": null,
     "bottle": true
   },
-  "revision": 1,
+  "revision": 2,
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "cellar": ":any",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
+        "mojave": {
+          "url": "https://homebrew.bintray.com/bottles/podofo-0.9.5_2.mojave.bottle.tar.gz",
+          "sha256": "b744f10486e5373bc3ca29b1a5530008f90b48ea176b8098ae73fd91070ea60b"
+        },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/podofo-0.9.5_1.high_sierra.bottle.1.tar.gz",
-          "sha256": "047ebd5eb48107fcc54e2e2692cfe8ee55f1b8408ae06b0d5d193e260217ea91"
+          "url": "https://homebrew.bintray.com/bottles/podofo-0.9.5_2.high_sierra.bottle.tar.gz",
+          "sha256": "b1ec1d67c725b6021617013c49d989bd0c91be23e5302f6d3421e6fb0c9aeb5d"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/podofo-0.9.5_1.sierra.bottle.1.tar.gz",
-          "sha256": "1bee565ed640de58ab42229e0b8d87b723e7148006fe18d609e27e78614407c6"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/podofo-0.9.5_1.el_capitan.bottle.1.tar.gz",
-          "sha256": "03db2d2fbfdd25788c6b8d44eb51d436bc9a15319ef540e59a72693eb80c2a92"
-        },
-        "yosemite": {
-          "url": "https://homebrew.bintray.com/bottles/podofo-0.9.5_1.yosemite.bottle.1.tar.gz",
-          "sha256": "8564686fa0043a7dd94bc00f09f1a2b4bb3ba063cff6ff7e59eee6912a213913"
+          "url": "https://homebrew.bintray.com/bottles/podofo-0.9.5_2.sierra.bottle.tar.gz",
+          "sha256": "aea9066461ba04300b0cd20a30063c349a821b62a5285aaa2abea9068966da82"
         }
       }
     }
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--with-libidn",
-      "description": "Build with libidn support"
-    }
+
   ],
   "build_dependencies": [
     "cmake"
@@ -58,6 +51,7 @@
     "fontconfig",
     "freetype",
     "jpeg",
+    "libidn",
     "libpng",
     "libtiff",
     "openssl"
@@ -66,7 +60,7 @@
 
   ],
   "optional_dependencies": [
-    "libidn"
+
   ],
   "requirements": [
 
