@@ -20,36 +20,29 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 2,
-      "cellar": "/usr/local/Cellar",
+      "rebuild": 3,
+      "cellar": ":any_skip_relocation",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/findutils-4.6.0.mojave.bottle.2.tar.gz",
-          "sha256": "f7c4ad2d9948296b0b5af9e3dd7e02015fe20d64af9b7a479af76d07fb5c6059"
+          "url": "https://homebrew.bintray.com/bottles/findutils-4.6.0.mojave.bottle.3.tar.gz",
+          "sha256": "d0f28626392b25451b03772cce4fa33a8b087982a99640f56aa666db5fce250a"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/findutils-4.6.0.high_sierra.bottle.2.tar.gz",
-          "sha256": "8411fd3a9a42a2be0c52b4ae8cad2dd60add473a4cf882620200ab43442fb5c2"
+          "url": "https://homebrew.bintray.com/bottles/findutils-4.6.0.high_sierra.bottle.3.tar.gz",
+          "sha256": "9f3953da6f5e1ad0d21d12e557061dfdddb45424fa7ca6495772c781048bc6bc"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/findutils-4.6.0.sierra.bottle.2.tar.gz",
-          "sha256": "c1ecad1c780cb569d268ca5648570dcc753cca720ead2783943aea0363af728e"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/findutils-4.6.0.el_capitan.bottle.2.tar.gz",
-          "sha256": "bc20b7e2a97c3277ea13fd91b44fbc0015628e8684a2bba203c38a4c7357f6c7"
+          "url": "https://homebrew.bintray.com/bottles/findutils-4.6.0.sierra.bottle.3.tar.gz",
+          "sha256": "7c54d099f7ddf872fe22b6fa155ed31d80ab6c4e93735dfe25d4051a4abd1d30"
         }
       }
     }
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--with-default-names",
-      "description": "Do not prepend 'g' to the binary"
-    }
+
   ],
   "build_dependencies": [
 
@@ -69,7 +62,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "All commands have been installed with the prefix 'g'.\nIf you do not want the prefix, install using the \"with-default-names\" option.\n\nIf you need to use these commands with their normal names, you\ncan add a \"gnubin\" directory to your PATH from your bashrc like:\n\n    PATH=\"/home/travis/Homebrew/opt/findutils/libexec/gnubin:$PATH\"\n\nAdditionally, you can access their man pages with normal names if you add\nthe \"gnuman\" directory to your MANPATH from your bashrc as well:\n\n    MANPATH=\"/home/travis/Homebrew/opt/findutils/libexec/gnuman:$MANPATH\"\n",
+  "caveats": "All commands have been installed with the prefix \"g\".\nIf you need to use these commands with their normal names, you\ncan add a \"gnubin\" directory to your PATH from your bashrc like:\n  PATH=\"/home/travis/Homebrew/opt/findutils/libexec/gnubin:$PATH\"\n\nAdditionally, you can access their man pages with normal names if you add\nthe \"gnuman\" directory to your MANPATH from your bashrc as well:\n  MANPATH=\"/home/travis/Homebrew/opt/findutils/libexec/gnuman:$MANPATH\"\n",
   "installed": [
 
   ],

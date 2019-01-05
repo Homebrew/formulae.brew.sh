@@ -20,32 +20,29 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 0,
+      "rebuild": 1,
       "cellar": "/usr/local/Cellar",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/gnu-units-2.18.mojave.bottle.tar.gz",
-          "sha256": "1aa452c7a4984005145a7900c5f44e899efacffa307cee4014f472cb939ff789"
+          "url": "https://homebrew.bintray.com/bottles/gnu-units-2.18.mojave.bottle.1.tar.gz",
+          "sha256": "0e53b24aacb7f43b04827b8aa8b2f2b7dc5a8e8e983cfe0aff96a4a7188be6bb"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gnu-units-2.18.high_sierra.bottle.tar.gz",
-          "sha256": "1c3aacea01deab09ec709f91539fe43839846d7be5f3e0a130ea1e8ae7606fff"
+          "url": "https://homebrew.bintray.com/bottles/gnu-units-2.18.high_sierra.bottle.1.tar.gz",
+          "sha256": "103a1b009704edce77f545c8d88d87247f9d3f17c819bc8dad2c0eb80e12dce5"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gnu-units-2.18.sierra.bottle.tar.gz",
-          "sha256": "3ed2c600cbc2af885b6c3d660b2a707e74cec265d94e141a62e40bb9517348c6"
+          "url": "https://homebrew.bintray.com/bottles/gnu-units-2.18.sierra.bottle.1.tar.gz",
+          "sha256": "8f3c81dedbd869e5cd946e6ad9545872acf8c8c51cb49389eb5f729eefde8ccf"
         }
       }
     }
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--with-default-names",
-      "description": "Do not prepend 'g' to the binary"
-    }
+
   ],
   "build_dependencies": [
 
@@ -65,7 +62,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": null,
+  "caveats": "All commands have been installed with the prefix \"g\".\nIf you need to use these commands with their normal names, you\ncan add a \"gnubin\" directory to your PATH from your bashrc like:\n  PATH=\"/home/travis/Homebrew/opt/gnu-units/libexec/gnubin:$PATH\"\n\nAdditionally, you can access their man pages with normal names if you add\nthe \"gnuman\" directory to your MANPATH from your bashrc as well:\n  MANPATH=\"/home/travis/Homebrew/opt/gnu-units/libexec/gnuman:$MANPATH\"\n",
   "installed": [
 
   ],
