@@ -11,39 +11,31 @@
   "desc": "GObject based library for handling and rendering XPS documents",
   "homepage": "https://wiki.gnome.org/Projects/libgxps",
   "versions": {
-    "stable": "0.2.5",
+    "stable": "0.3.1",
     "devel": null,
     "head": "HEAD",
     "bottle": true
   },
-  "revision": 2,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": "/usr/local/Cellar",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/libgxps-0.2.5_2.mojave.bottle.tar.gz",
-          "sha256": "b1980e4de0e2d17d0232472ba8d1591d81196514461d89ea1b32a20d469ad4ad"
+          "url": "https://homebrew.bintray.com/bottles/libgxps-0.3.1.mojave.bottle.tar.gz",
+          "sha256": "f2a0b5d1e9d85ad84ab041381c3c0bdd8f6f98d2be8586cdf48958e4a85aab27"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/libgxps-0.2.5_2.high_sierra.bottle.tar.gz",
-          "sha256": "c3e944367cacd85f4a7d2baa0c2d6174d80b586591b9664ef4b36f758ae597f9"
+          "url": "https://homebrew.bintray.com/bottles/libgxps-0.3.1.high_sierra.bottle.tar.gz",
+          "sha256": "ef0b670a2dcbbbc2e42e6dd9ada96353fad1d039c42d8a41ef5271b8370bdd25"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/libgxps-0.2.5_2.sierra.bottle.tar.gz",
-          "sha256": "4cfffe7346052e0b1e58d90c121a3f5019a5dbc84ba615f2b61d12489b6f83a6"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/libgxps-0.2.5_2.el_capitan.bottle.tar.gz",
-          "sha256": "98487c22daa05bf49ae4975759c71f568b574a55f96cdbdd9834c4d05293155c"
-        },
-        "yosemite": {
-          "url": "https://homebrew.bintray.com/bottles/libgxps-0.2.5_2.yosemite.bottle.tar.gz",
-          "sha256": "234ce5d81d10db1eac54601306fb9889a549559c4e2a87e972782971103ae399"
+          "url": "https://homebrew.bintray.com/bottles/libgxps-0.3.1.sierra.bottle.tar.gz",
+          "sha256": "949980a659fa2c301992af86c54a91e47a9721e372348bb1e5b49891d55b5285"
         }
       }
     }
@@ -53,17 +45,15 @@
 
   ],
   "build_dependencies": [
-    "autoconf",
-    "automake",
+    "gobject-introspection",
+    "meson-internal",
+    "ninja",
     "pkg-config"
   ],
   "dependencies": [
-    "cairo",
-    "freetype",
-    "jpeg",
+    "glib",
+    "gtk+3",
     "libarchive",
-    "libpng",
-    "libtiff",
     "little-cms2"
   ],
   "recommended_dependencies": [
