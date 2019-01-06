@@ -11,7 +11,7 @@
   "desc": "EXIF and IPTC metadata manipulation library and tools",
   "homepage": "http://www.exiv2.org/",
   "versions": {
-    "stable": "0.26",
+    "stable": "0.27.0a",
     "devel": null,
     "head": "HEAD",
     "bottle": true
@@ -20,30 +20,22 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "cellar": ":any",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/exiv2-0.26.mojave.bottle.1.tar.gz",
-          "sha256": "6499dd1ef18e797aa8f54f1cecd973007c7bf75f3fcc783dd408a6b091f989f0"
+          "url": "https://homebrew.bintray.com/bottles/exiv2-0.27.0a.mojave.bottle.tar.gz",
+          "sha256": "0d55621ba183fee1850242a07fd5cd78622daff82f9a4877a4c1aa14e114cbf7"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/exiv2-0.26.high_sierra.bottle.1.tar.gz",
-          "sha256": "5b7833350aac57127e8cb770b3c310503d43f03f4ecccdbdfda17132dbd201d1"
+          "url": "https://homebrew.bintray.com/bottles/exiv2-0.27.0a.high_sierra.bottle.tar.gz",
+          "sha256": "36d48ac8ec05df9ae69d35561d14dde24e5a6b31e44fae3235d648c62bb9abfc"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/exiv2-0.26.sierra.bottle.1.tar.gz",
-          "sha256": "c651fe47fec9f541d47d2dd769cf94d4063baeff2b08be2b8c1056d6609499fc"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/exiv2-0.26.el_capitan.bottle.1.tar.gz",
-          "sha256": "9f5f339b761aca8910ee859e6630e9eb3f84a7298c029b98baf801f36075ab51"
-        },
-        "yosemite": {
-          "url": "https://homebrew.bintray.com/bottles/exiv2-0.26.yosemite.bottle.1.tar.gz",
-          "sha256": "1d14797afa32ff75b50ff2737baa8ac27ab7bf90da38359a9721f7e15c398481"
+          "url": "https://homebrew.bintray.com/bottles/exiv2-0.27.0a.sierra.bottle.tar.gz",
+          "sha256": "5c0229876d4183240896b8d31347adf99c90ff45b8d3dd45ec5d13bdd83c1e2b"
         }
       }
     }
@@ -53,10 +45,11 @@
 
   ],
   "build_dependencies": [
-
+    "cmake"
   ],
   "dependencies": [
-
+    "gettext",
+    "libssh"
   ],
   "recommended_dependencies": [
 
