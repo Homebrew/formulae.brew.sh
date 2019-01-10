@@ -20,42 +20,36 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 2,
       "cellar": "/usr/local/Cellar",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/ettercap-0.8.2_1.mojave.bottle.1.tar.gz",
-          "sha256": "8e248cd983f18f1bb5c8efe25f67b94b928121cc0bc1aecaad30a2b495895a54"
+          "url": "https://homebrew.bintray.com/bottles/ettercap-0.8.2_1.mojave.bottle.2.tar.gz",
+          "sha256": "107e746f7ced82f3af46914005e6f4043d9e03d85d08c79512cd7f3833a99cc2"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/ettercap-0.8.2_1.high_sierra.bottle.1.tar.gz",
-          "sha256": "0176b4a57909fc8c448df8b0e88b6063267ec80c6de740d597cfffc531ac98c6"
+          "url": "https://homebrew.bintray.com/bottles/ettercap-0.8.2_1.high_sierra.bottle.2.tar.gz",
+          "sha256": "5006d29356b76d963228389bc9e04e8f15c8851130208ac32d987554308e7aa1"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/ettercap-0.8.2_1.sierra.bottle.1.tar.gz",
-          "sha256": "84b9f55fd615340f552685901bc93f7c9c1a5412f82342a692684aa26b0441d0"
+          "url": "https://homebrew.bintray.com/bottles/ettercap-0.8.2_1.sierra.bottle.2.tar.gz",
+          "sha256": "a81409380c3025a5eea3a52fb5c6a7de0d865f4477b47ebe3c8cfd580195fcac"
         }
       }
     }
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--with-gtk+",
-      "description": "Build with gtk+ support"
-    },
-    {
-      "option": "--with-gtk+3",
-      "description": "Build with gtk+3 support"
-    }
+
   ],
   "build_dependencies": [
     "cmake"
   ],
   "dependencies": [
     "curl",
+    "gtk+3",
     "libnet",
     "openssl",
     "pcre"
@@ -64,8 +58,7 @@
 
   ],
   "optional_dependencies": [
-    "gtk+",
-    "gtk+3"
+
   ],
   "requirements": [
 

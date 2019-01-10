@@ -20,32 +20,29 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 0,
+      "rebuild": 1,
       "cellar": "/usr/local/Cellar",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/mono-5.18.0.225.mojave.bottle.tar.gz",
-          "sha256": "103ef04b636d095f21f4447d7e835dcfc17279c7eb4bc19cdea1535099b830b2"
+          "url": "https://homebrew.bintray.com/bottles/mono-5.18.0.225.mojave.bottle.1.tar.gz",
+          "sha256": "9eafd6e0b93f4c2b93b1ea57c42f3282f052db3ac712f31465564ba76faea936"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/mono-5.18.0.225.high_sierra.bottle.tar.gz",
-          "sha256": "44434e90915ed9849886e568a2434f484e3dda5adfd5f5a07c3f77eb421b1fde"
+          "url": "https://homebrew.bintray.com/bottles/mono-5.18.0.225.high_sierra.bottle.1.tar.gz",
+          "sha256": "e0b8d7a241aba9e236af9626006cf8a8c0a7c7a0eaeb764e5d7e28d4da4d82e8"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/mono-5.18.0.225.sierra.bottle.tar.gz",
-          "sha256": "9b5c5dfae0a67c324ff9cfaf9723f52d913006116f26dc1b88459d8da82f82f0"
+          "url": "https://homebrew.bintray.com/bottles/mono-5.18.0.225.sierra.bottle.1.tar.gz",
+          "sha256": "3e09a75b4dac30fc56cec97e3127b3c047f7613fd259f68c08444806cf7e8e7a"
         }
       }
     }
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--without-fsharp",
-      "description": "Build without support for the F# language."
-    }
+
   ],
   "build_dependencies": [
     "cmake",
@@ -66,7 +63,7 @@
   "conflicts_with": [
     "xsd"
   ],
-  "caveats": "To use the assemblies from other formulae you need to set:\n  export MONO_GAC_PREFIX=\"/home/travis/Homebrew\"\nNote that the 'mono' formula now includes F#. If you have\nthe 'fsharp' formula installed, remove it with 'brew uninstall fsharp'.\n",
+  "caveats": "To use the assemblies from other formulae you need to set:\n  export MONO_GAC_PREFIX=\"/home/travis/Homebrew\"\n",
   "installed": [
 
   ],

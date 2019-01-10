@@ -16,40 +16,33 @@
     "head": "HEAD",
     "bottle": true
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": "/usr/local/Cellar",
+      "cellar": ":any",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/mu-1.0.mojave.bottle.tar.gz",
-          "sha256": "c17d20c6deebf4f75da2f7fa028114f48176714c46d1f204d469880121e9b6d0"
+          "url": "https://homebrew.bintray.com/bottles/mu-1.0_1.mojave.bottle.tar.gz",
+          "sha256": "0e4a61daf8d93a9aa866da1891d69f34024344910c98b3efae13f83fd850cb2f"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/mu-1.0.high_sierra.bottle.tar.gz",
-          "sha256": "d6d58dc0b9fc5d5454c0bf68230f6f8fb8cb973821de3e41ec267ce2614d8ec3"
+          "url": "https://homebrew.bintray.com/bottles/mu-1.0_1.high_sierra.bottle.tar.gz",
+          "sha256": "8ee77a30b4b54367394b3a37b419d3d183950762728b118154e0bacf91e4f059"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/mu-1.0.sierra.bottle.tar.gz",
-          "sha256": "0a818cbcfa365710bd48a97092218042dc8d00afd73b3f781c0982f8668a8410"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/mu-1.0.el_capitan.bottle.tar.gz",
-          "sha256": "588ebfb6e7d577e8efd4a38ca1ae598998c8e015dd1101db8785641bdea17f6a"
+          "url": "https://homebrew.bintray.com/bottles/mu-1.0_1.sierra.bottle.tar.gz",
+          "sha256": "d6ecd32c774b34ab93ac9aefd16d8a703976a3bee23b581f803153b19f42772e"
         }
       }
     }
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--with-emacs",
-      "description": "Build with emacs support"
-    }
+
   ],
   "build_dependencies": [
     "autoconf",
@@ -59,6 +52,7 @@
     "pkg-config"
   ],
   "dependencies": [
+    "emacs",
     "gettext",
     "glib",
     "xapian"
@@ -67,7 +61,7 @@
 
   ],
   "optional_dependencies": [
-    "emacs"
+
   ],
   "requirements": [
 
