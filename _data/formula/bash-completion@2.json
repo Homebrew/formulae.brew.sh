@@ -20,26 +20,22 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 0,
+      "rebuild": 1,
       "cellar": ":any_skip_relocation",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/bash-completion@2-2.8.mojave.bottle.tar.gz",
-          "sha256": "ed117a12f9b0fff798402a52c6823e3f7b167bcaadbbe1e42798870aa04ac80e"
+          "url": "https://homebrew.bintray.com/bottles/bash-completion@2-2.8.mojave.bottle.1.tar.gz",
+          "sha256": "4377303d2f57e4fd4887201a15c6ffe9e41e0636b8b83cf7a4a53ce76f85a5e7"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/bash-completion@2-2.8.high_sierra.bottle.tar.gz",
-          "sha256": "08ccf4c84786d7881c5d58fd9122b62e828859c57b28652df923a105f9a94b8b"
+          "url": "https://homebrew.bintray.com/bottles/bash-completion@2-2.8.high_sierra.bottle.1.tar.gz",
+          "sha256": "ae0fd1bc4b23207417f5d070eeedb4d3158cc170dcf9c84f04c23fe479c219dc"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/bash-completion@2-2.8.sierra.bottle.tar.gz",
-          "sha256": "08ccf4c84786d7881c5d58fd9122b62e828859c57b28652df923a105f9a94b8b"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/bash-completion@2-2.8.el_capitan.bottle.tar.gz",
-          "sha256": "08ccf4c84786d7881c5d58fd9122b62e828859c57b28652df923a105f9a94b8b"
+          "url": "https://homebrew.bintray.com/bottles/bash-completion@2-2.8.sierra.bottle.1.tar.gz",
+          "sha256": "ae0fd1bc4b23207417f5d070eeedb4d3158cc170dcf9c84f04c23fe479c219dc"
         }
       }
     }
@@ -66,7 +62,7 @@
   "conflicts_with": [
     "bash-completion"
   ],
-  "caveats": "Add the following to your ~/.bash_profile:\n  if [ -f /home/travis/Homebrew/share/bash-completion/bash_completion ]; then\n    . /home/travis/Homebrew/share/bash-completion/bash_completion\n  fi\n",
+  "caveats": "Add the following to your ~/.bash_profile:\n  [[ -r \"/home/travis/Homebrew/etc/profile.d/bash_completion.sh\" ]] && . \"/home/travis/Homebrew/etc/profile.d/bash_completion.sh\"\n",
   "installed": [
 
   ],
