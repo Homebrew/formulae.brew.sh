@@ -66,7 +66,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "On Apple Clang, you need to add several options to use OpenMP's front end\ninstead of the standard driver option. This usually looks like\n  -Xpreprocessor -fopenmp -lomp\n\nYou might need to make sure the lib and include directories are discoverable\nif /home/travis/Homebrew is not searched:\n\n  -L/home/travis/Homebrew/opt/libomp/lib -I/home/travis/Homebrew/opt/libomp/include\n\nFor CMake, the following flags will cause the OpenMP::OpenMP_CXX target to\nbe set up correctly:\n  -DOpenMP_CXX_FLAGS=\"-Xpreprocessor -fopenmp -I/home/travis/Homebrew/opt/libomp/include\" -DOpenMP_CXX_LIB_NAMES=\"omp\" -DOpenMP_omp_LIBRARY=/home/travis/Homebrew/opt/libomp/lib/libomp.dylib\n",
+  "caveats": null,
   "installed": [
 
   ],
