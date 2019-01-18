@@ -16,64 +16,29 @@
     "head": null,
     "bottle": true
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": "/usr/local/Cellar",
+      "cellar": ":any",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/gearman-1.1.18.mojave.bottle.tar.gz",
-          "sha256": "df5a14dc5c29d07d373d42888d589f6d1ec053b8965d939b6647052aa694ebf5"
-        },
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gearman-1.1.18.high_sierra.bottle.tar.gz",
-          "sha256": "ecabdc718b87f1c8772a86c5cdcbfb69c538891c842132ab2a88b92fb7ebe176"
+          "url": "https://homebrew.bintray.com/bottles/gearman-1.1.18_1.mojave.bottle.tar.gz",
+          "sha256": "a29334389cd7ca1245ee0a914959bd3472ae3562b2e4b2f92e44f0ec70d02022"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gearman-1.1.18.sierra.bottle.tar.gz",
-          "sha256": "1c1de51b9c2445c05df372a9e0f5c7d8595b4160df0515b96d014925e3e85ac8"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/gearman-1.1.18.el_capitan.bottle.tar.gz",
-          "sha256": "b2d1ba15ccdf0688decb8ecb0503ffa9fe507dccb5828de1007f130266ef98b1"
+          "url": "https://homebrew.bintray.com/bottles/gearman-1.1.18_1.sierra.bottle.tar.gz",
+          "sha256": "1d069b8eca915e388207d735c45f143b139f801eedd302b6c690d1f8e4aaee30"
         }
       }
     }
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--with-mysql",
-      "description": "Compile with MySQL persistent queue enabled"
-    },
-    {
-      "option": "--with-postgresql",
-      "description": "Compile with Postgresql persistent queue enabled"
-    },
-    {
-      "option": "--with-hiredis",
-      "description": "Build with hiredis support"
-    },
-    {
-      "option": "--with-libmemcached",
-      "description": "Build with libmemcached support"
-    },
-    {
-      "option": "--with-openssl",
-      "description": "Build with openssl support"
-    },
-    {
-      "option": "--with-tokyo-cabinet",
-      "description": "Build with tokyo-cabinet support"
-    },
-    {
-      "option": "--with-wolfssl",
-      "description": "Build with wolfssl support"
-    }
+
   ],
   "build_dependencies": [
     "pkg-config",
@@ -81,19 +46,14 @@
   ],
   "dependencies": [
     "boost",
-    "libevent"
+    "libevent",
+    "libmemcached"
   ],
   "recommended_dependencies": [
 
   ],
   "optional_dependencies": [
-    "hiredis",
-    "libmemcached",
-    "mysql",
-    "openssl",
-    "postgresql",
-    "tokyo-cabinet",
-    "wolfssl"
+
   ],
   "requirements": [
 
