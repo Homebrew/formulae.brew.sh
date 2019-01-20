@@ -11,12 +11,12 @@
   "desc": "Modern typesetting system inspired by TeX",
   "homepage": "http://www.sile-typesetter.org/",
   "versions": {
-    "stable": "0.9.5-alpha",
+    "stable": "0.9.5.1",
     "devel": null,
     "head": "HEAD",
     "bottle": true
   },
-  "revision": 6,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -25,13 +25,17 @@
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
+        "mojave": {
+          "url": "https://homebrew.bintray.com/bottles/sile-0.9.5.1.mojave.bottle.tar.gz",
+          "sha256": "f966c2b80512713a9713f7ed16a6ae4e22d23d6f5844fd6cb279e7630a407f39"
+        },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/sile-0.9.5-alpha_6.high_sierra.bottle.tar.gz",
-          "sha256": "b61fe2666c3f6ee368fd65961a87b39e8a4b8933f409b1e7f702df7c41dee727"
+          "url": "https://homebrew.bintray.com/bottles/sile-0.9.5.1.high_sierra.bottle.tar.gz",
+          "sha256": "f058ac6422c8461beb8a5f6ba84c8413e8f0cbc51d6d31706ea9888f4465124e"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/sile-0.9.5-alpha_6.sierra.bottle.tar.gz",
-          "sha256": "b1af4d23ced07f8cd03ea77bffd65637fcc0f3105e1364d872cf976d05417ffa"
+          "url": "https://homebrew.bintray.com/bottles/sile-0.9.5.1.sierra.bottle.tar.gz",
+          "sha256": "3e4c53dd7d45b1846014a14d5f6e9e85c4753b0a8da934e1827fdb0a3e8426ed"
         }
       }
     }
@@ -41,18 +45,18 @@
 
   ],
   "build_dependencies": [
-    "autoconf",
-    "automake",
-    "libtool",
     "luarocks",
     "pkg-config"
   ],
   "dependencies": [
+    "expat",
     "fontconfig",
     "harfbuzz",
     "icu4c",
     "libpng",
-    "lua"
+    "lua",
+    "openssl",
+    "zlib"
   ],
   "recommended_dependencies": [
 
