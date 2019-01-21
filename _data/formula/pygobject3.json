@@ -42,30 +42,25 @@
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--without-python",
-      "description": "Build without python3 support"
-    },
-    {
-      "option": "--with-python@2",
-      "description": "Build with python2 support"
-    }
+
   ],
   "build_dependencies": [
     "meson",
     "ninja",
-    "pkg-config",
-    "python"
+    "pkg-config"
   ],
   "dependencies": [
     "gobject-introspection",
-    "py3cairo"
+    "py2cairo",
+    "py3cairo",
+    "python",
+    "python@2"
   ],
   "recommended_dependencies": [
-    "python"
+
   ],
   "optional_dependencies": [
-    "python@2"
+
   ],
   "requirements": [
 
