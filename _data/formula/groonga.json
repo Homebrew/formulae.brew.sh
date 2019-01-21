@@ -20,41 +20,36 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 0,
+      "rebuild": 1,
       "cellar": "/usr/local/Cellar",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/groonga-8.0.5.mojave.bottle.tar.gz",
-          "sha256": "17be506e20179e3211f5c9d379601ed475625e30bf9b57064643b2ab0ac688a0"
+          "url": "https://homebrew.bintray.com/bottles/groonga-8.0.5.mojave.bottle.1.tar.gz",
+          "sha256": "16e338e7d998b9ea6f99312a865d36126b0f4d9a0faf9087554766386b8f89ed"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/groonga-8.0.5.high_sierra.bottle.tar.gz",
-          "sha256": "c90ce281c566184a1deafbf78d0b62694ddc9e33bd19e5488999a56b0f469b90"
+          "url": "https://homebrew.bintray.com/bottles/groonga-8.0.5.high_sierra.bottle.1.tar.gz",
+          "sha256": "bb0c0210ca8e0fcee0eeabdab29019311c3a24405216628563077e5661213ccc"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/groonga-8.0.5.sierra.bottle.tar.gz",
-          "sha256": "6702ed199953048e627754a14ee831912adaf4a7ba93db957bdcb120af59cebf"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/groonga-8.0.5.el_capitan.bottle.tar.gz",
-          "sha256": "920ce31a60645f983cb15548d8dd8b0454a77a38b11f8744926a18d7e20d1e1b"
+          "url": "https://homebrew.bintray.com/bottles/groonga-8.0.5.sierra.bottle.1.tar.gz",
+          "sha256": "659bde69a31408795dea26cab1b27efd9d3090c609245394255d8f7a471a83cb"
         }
       }
     }
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--with-mecab",
-      "description": "Build with mecab support"
-    }
+
   ],
   "build_dependencies": [
     "pkg-config"
   ],
   "dependencies": [
+    "mecab",
+    "mecab-ipadic",
     "msgpack",
     "openssl",
     "pcre"
@@ -63,7 +58,7 @@
 
   ],
   "optional_dependencies": [
-    "mecab"
+
   ],
   "requirements": [
 
