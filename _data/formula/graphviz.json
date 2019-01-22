@@ -20,58 +20,36 @@
   "version_scheme": 1,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 2,
       "cellar": "/usr/local/Cellar",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/graphviz-2.40.1.mojave.bottle.1.tar.gz",
-          "sha256": "668c64749620f556cf7d26ac96088005b4439acd9488be4c640fdc9cfe66d563"
+          "url": "https://homebrew.bintray.com/bottles/graphviz-2.40.1.mojave.bottle.2.tar.gz",
+          "sha256": "554a0f729bf393301fb3fd796d771a63c51871d6aaf498a7af6c7f98a64979bd"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/graphviz-2.40.1.high_sierra.bottle.1.tar.gz",
-          "sha256": "b592ce51c2a929c3da82e96ec856571ebfc54cf4dac90c2924cd3845078d7082"
+          "url": "https://homebrew.bintray.com/bottles/graphviz-2.40.1.high_sierra.bottle.2.tar.gz",
+          "sha256": "769e9c92c5e08e803b54d2940df74aeb7202e5bc5019eb602d36116ea7cddcf3"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/graphviz-2.40.1.sierra.bottle.1.tar.gz",
-          "sha256": "41b5811054f03978db12525919540fe41e073fb2c20e899247ed9c2a191f7a66"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/graphviz-2.40.1.el_capitan.bottle.1.tar.gz",
-          "sha256": "cab27f92a59d543e2f2c1494c28c7563a4c2d7e0dce4c4fbc22587db91cafc5b"
-        },
-        "yosemite": {
-          "url": "https://homebrew.bintray.com/bottles/graphviz-2.40.1.yosemite.bottle.1.tar.gz",
-          "sha256": "6bd4c01e724cfc965871e1aad9a4fb2a6afef90a1e254d81e2fe33a997f50aaa"
+          "url": "https://homebrew.bintray.com/bottles/graphviz-2.40.1.sierra.bottle.2.tar.gz",
+          "sha256": "4267fe0d22373837bc22dfca35e8a925ed660e3b403b76af791a30fc074130c9"
         }
       }
     }
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--with-app",
-      "description": "Build GraphViz.app (requires full XCode install)"
-    },
-    {
-      "option": "--with-gts",
-      "description": "Build with GNU GTS support (required by prism)"
-    },
-    {
-      "option": "--with-pango",
-      "description": "Build with Pango/Cairo for alternate PDF output"
-    },
-    {
-      "option": "--with-librsvg",
-      "description": "Build with librsvg support"
-    }
+
   ],
   "build_dependencies": [
     "pkg-config"
   ],
   "dependencies": [
     "gd",
+    "gts",
     "libpng",
     "libtool"
   ],
@@ -79,9 +57,7 @@
 
   ],
   "optional_dependencies": [
-    "gts",
-    "librsvg",
-    "pango"
+
   ],
   "requirements": [
 
