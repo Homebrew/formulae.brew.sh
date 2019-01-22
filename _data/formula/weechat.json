@@ -20,52 +20,29 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 0,
+      "rebuild": 1,
       "cellar": "/usr/local/Cellar",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/weechat-2.3_1.mojave.bottle.tar.gz",
-          "sha256": "bd6340bac1555785aeff6584ab61d104402297b78a67d424517c4e6c613074d8"
+          "url": "https://homebrew.bintray.com/bottles/weechat-2.3_1.mojave.bottle.1.tar.gz",
+          "sha256": "ee048586abb72f35c7f091e205d4a09039ef886671e098dc7f9d0cdd7261327f"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/weechat-2.3_1.high_sierra.bottle.tar.gz",
-          "sha256": "e97739b3e529fce08adb86b86cc4b2c660528ee9b2929ba783ab2ecf4b7acf42"
+          "url": "https://homebrew.bintray.com/bottles/weechat-2.3_1.high_sierra.bottle.1.tar.gz",
+          "sha256": "11024e9ad3f7bb9e5c544d6c9a3d1fe4d57993ac919ee6cc0bf8dc522bb2d53b"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/weechat-2.3_1.sierra.bottle.tar.gz",
-          "sha256": "630b354c0f7dc8c814a3d1d7c5c369c61f8111763e339d878ce5ebf0a2b7ad40"
+          "url": "https://homebrew.bintray.com/bottles/weechat-2.3_1.sierra.bottle.1.tar.gz",
+          "sha256": "bfc4321d59755a47b281c288ac5f290593839144a0471c835aa48c72c6fb3334"
         }
       }
     }
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--with-perl",
-      "description": "Build the perl module"
-    },
-    {
-      "option": "--with-ruby",
-      "description": "Build the ruby module"
-    },
-    {
-      "option": "--with-curl",
-      "description": "Build with brewed curl"
-    },
-    {
-      "option": "--with-aspell",
-      "description": "Build with aspell support"
-    },
-    {
-      "option": "--with-lua",
-      "description": "Build with lua support"
-    },
-    {
-      "option": "--with-python@2",
-      "description": "Build with python@2 support"
-    }
+
   ],
   "build_dependencies": [
     "asciidoctor",
@@ -73,21 +50,22 @@
     "pkg-config"
   ],
   "dependencies": [
+    "aspell",
+    "curl",
     "gettext",
     "gnutls",
     "libgcrypt",
-    "ncurses"
+    "lua",
+    "ncurses",
+    "perl",
+    "python@2",
+    "ruby"
   ],
   "recommended_dependencies": [
 
   ],
   "optional_dependencies": [
-    "aspell",
-    "curl",
-    "lua",
-    "perl",
-    "python@2",
-    "ruby"
+
   ],
   "requirements": [
 
@@ -95,7 +73,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "Weechat can depend on Aspell if you choose the --with-aspell option, but\nAspell should be installed manually before installing Weechat so that\nyou can choose the dictionaries you want.  If Aspell was installed\nautomatically as part of weechat, there won't be any dictionaries.\n",
+  "caveats": null,
   "installed": [
 
   ],
