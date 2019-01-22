@@ -20,40 +20,29 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 0,
+      "rebuild": 1,
       "cellar": ":any",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/libav-12.3_2.mojave.bottle.tar.gz",
-          "sha256": "2ba7f645ee21d7cf659e22d1088b5811b0fb94c5352c12f74bdf76e1b28ea4ae"
+          "url": "https://homebrew.bintray.com/bottles/libav-12.3_2.mojave.bottle.1.tar.gz",
+          "sha256": "7cdb84c6fc90873040d71b19dbe1eb618d0f8dcec9a886500f983b7faaa163d0"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/libav-12.3_2.high_sierra.bottle.tar.gz",
-          "sha256": "2ed7f49968fc0dbfd20e2cc176438303ea4440486cb9160719ee8fa582e23a01"
+          "url": "https://homebrew.bintray.com/bottles/libav-12.3_2.high_sierra.bottle.1.tar.gz",
+          "sha256": "a366d17a48d20315e20dc391357f4936c9f5ec80c3dba94da417b64d8d7e7d0d"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/libav-12.3_2.sierra.bottle.tar.gz",
-          "sha256": "97188f142c5d4c358f191697c1d9b306594c7e8e0fa8f528e7cd398d9053fa6a"
+          "url": "https://homebrew.bintray.com/bottles/libav-12.3_2.sierra.bottle.1.tar.gz",
+          "sha256": "7625aeaf88043a02112a90c26a0813fc3e3104aa29862fddb2e52caadf97046b"
         }
       }
     }
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--with-openssl",
-      "description": "Enable SSL support"
-    },
-    {
-      "option": "--with-sdl",
-      "description": "Enable avplay"
-    },
-    {
-      "option": "--with-theora",
-      "description": "Enable Theora encoding via libtheora"
-    }
+
   ],
   "build_dependencies": [
     "pkg-config",
@@ -67,6 +56,8 @@
     "libvorbis",
     "libvpx",
     "opus",
+    "sdl",
+    "theora",
     "x264",
     "xvid"
   ],
@@ -74,9 +65,7 @@
 
   ],
   "optional_dependencies": [
-    "openssl",
-    "sdl",
-    "theora"
+
   ],
   "requirements": [
 
