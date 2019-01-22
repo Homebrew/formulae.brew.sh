@@ -20,44 +20,29 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 2,
       "cellar": ":any",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/notmuch-0.27.mojave.bottle.1.tar.gz",
-          "sha256": "81d9986da9f924e96e01a5bac0aa7e17c817c09636d71142014c9f3829f708c9"
+          "url": "https://homebrew.bintray.com/bottles/notmuch-0.27.mojave.bottle.2.tar.gz",
+          "sha256": "85ed63058e3f8a62375e9df08963fdcf06423cfa8e8e42b1b43952b93d5828b6"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/notmuch-0.27.high_sierra.bottle.1.tar.gz",
-          "sha256": "369405e2329d4a7b2ba458523100a8f3983bfa0ade7409cd6eb0b6d58bedbc18"
+          "url": "https://homebrew.bintray.com/bottles/notmuch-0.27.high_sierra.bottle.2.tar.gz",
+          "sha256": "241b8649b30055854bfea7f0540099895e7915402c5b278ef5db838545f006a7"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/notmuch-0.27.sierra.bottle.1.tar.gz",
-          "sha256": "aa6bb5fe775c2034e5ababa0ca796853ad52e8e58328eef29fc728fc1b1ddc29"
+          "url": "https://homebrew.bintray.com/bottles/notmuch-0.27.sierra.bottle.2.tar.gz",
+          "sha256": "bc53f8af373350cb3a993ca381eaaf1245d70874e24611c9a7e95568e96f922a"
         }
       }
     }
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--without-python@2",
-      "description": "Build without python2 support"
-    },
-    {
-      "option": "--with-emacs",
-      "description": "Build with emacs support"
-    },
-    {
-      "option": "--with-python",
-      "description": "Build with python support"
-    },
-    {
-      "option": "--with-ruby",
-      "description": "Build with ruby support"
-    }
+
   ],
   "build_dependencies": [
     "doxygen",
@@ -66,19 +51,19 @@
     "sphinx-doc"
   ],
   "dependencies": [
+    "emacs",
     "glib",
     "gmime",
+    "python@2",
     "talloc",
     "xapian",
     "zlib"
   ],
   "recommended_dependencies": [
-    "python@2"
+
   ],
   "optional_dependencies": [
-    "emacs",
-    "python",
-    "ruby"
+
   ],
   "requirements": [
 
