@@ -20,52 +20,46 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 0,
+      "rebuild": 1,
       "cellar": ":any_skip_relocation",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/zim-0.69.mojave.bottle.tar.gz",
-          "sha256": "40371c83122357897c923c61ce784a8bc14d08ee5cbfa025caca43ce8ff6b515"
+          "url": "https://homebrew.bintray.com/bottles/zim-0.69.mojave.bottle.1.tar.gz",
+          "sha256": "7bfda6cf67fadbe225b2172db307035b6e9e4ac8aad27ea19d2034135e9b60d9"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/zim-0.69.high_sierra.bottle.tar.gz",
-          "sha256": "434beb268dd464539454cf3f523e49628b8b3f6a128ab1a9f1eb9ea373c64fd4"
+          "url": "https://homebrew.bintray.com/bottles/zim-0.69.high_sierra.bottle.1.tar.gz",
+          "sha256": "fa9cebd29083953555ea47a23e75d27f6e110041475524f316f29c156067e502"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/zim-0.69.sierra.bottle.tar.gz",
-          "sha256": "434beb268dd464539454cf3f523e49628b8b3f6a128ab1a9f1eb9ea373c64fd4"
+          "url": "https://homebrew.bintray.com/bottles/zim-0.69.sierra.bottle.1.tar.gz",
+          "sha256": "fa9cebd29083953555ea47a23e75d27f6e110041475524f316f29c156067e502"
         }
       }
     }
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--with-graphviz",
-      "description": "Build with graphviz support"
-    },
-    {
-      "option": "--with-pygtksourceview",
-      "description": "Build with pygtksourceview support"
-    }
+
   ],
   "build_dependencies": [
     "pkg-config"
   ],
   "dependencies": [
+    "graphviz",
     "gtk+",
     "pygobject",
     "pygtk",
+    "pygtksourceview",
     "python@2"
   ],
   "recommended_dependencies": [
 
   ],
   "optional_dependencies": [
-    "graphviz",
-    "pygtksourceview"
+
   ],
   "requirements": [
 
