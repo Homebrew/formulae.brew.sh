@@ -42,14 +42,7 @@
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--with-gui",
-      "description": "Build shp2pgsql-gui in addition to command line tools"
-    },
-    {
-      "option": "--with-protobuf-c",
-      "description": "Build with protobuf-c to enable Geobuf and Mapbox Vector Tile support"
-    }
+
   ],
   "build_dependencies": [
     "gpp",
@@ -68,7 +61,7 @@
 
   ],
   "optional_dependencies": [
-    "protobuf-c"
+
   ],
   "requirements": [
 
@@ -76,7 +69,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "To create a spatially-enabled database, see the documentation:\n  https://postgis.net/docs/manual-2.4/postgis_installation.html#create_new_db_extensions\nIf you are currently using PostGIS 2.0+, you can go the soft upgrade path:\n  ALTER EXTENSION postgis UPDATE TO \"2.5.1\";\nUsers of 1.5 and below will need to go the hard-upgrade path, see here:\n  https://postgis.net/docs/manual-2.4/postgis_installation.html#upgrading\n\nPostGIS SQL scripts installed to:\n  /home/travis/Homebrew/opt/postgis/share/postgis\nPostGIS plugin libraries installed to:\n  /home/travis/Homebrew/lib\nPostGIS extension modules installed to:\n  /home/travis/Homebrew/share/postgresql/extension\n",
+  "caveats": null,
   "installed": [
 
   ],
