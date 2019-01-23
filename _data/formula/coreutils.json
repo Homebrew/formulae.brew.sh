@@ -16,26 +16,26 @@
     "head": "HEAD",
     "bottle": true
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 2,
+      "rebuild": 0,
       "cellar": "/usr/local/Cellar",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/coreutils-8.30.mojave.bottle.2.tar.gz",
-          "sha256": "7ae7e78a769306a603165a04b9af47fad86af275cc748ce669e557dc0cae3cce"
+          "url": "https://homebrew.bintray.com/bottles/coreutils-8.30_1.mojave.bottle.tar.gz",
+          "sha256": "1e28c4b94c10933a6711717a5632112d3284b926b7082d15eca5bd4f042b4e50"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/coreutils-8.30.high_sierra.bottle.2.tar.gz",
-          "sha256": "7baed00bd79f22c733d6a1ba11d130dbc4bb87177ed5fddb234f335dd9776c62"
+          "url": "https://homebrew.bintray.com/bottles/coreutils-8.30_1.high_sierra.bottle.tar.gz",
+          "sha256": "5866b7f1d78a3b1d5e32483d8d50dc3eebaafd0aae8a04ab07616c17d034d7ca"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/coreutils-8.30.sierra.bottle.2.tar.gz",
-          "sha256": "d9473848f0c916ad5994eaa5f9ed9efca533ced6aab095687272e782202884bb"
+          "url": "https://homebrew.bintray.com/bottles/coreutils-8.30_1.sierra.bottle.tar.gz",
+          "sha256": "f9665cf214650a1c4cdc316671b37605e3c63a68b67bfd12b58ed4b6422f0aad"
         }
       }
     }
@@ -60,10 +60,13 @@
 
   ],
   "conflicts_with": [
+    "aardvark_shell_utils",
+    "b2sum",
     "ganglia",
     "gegl",
     "idutils",
-    "aardvark_shell_utils"
+    "md5sha1sum",
+    "truncate"
   ],
   "caveats": "All commands have been installed with the prefix \"g\".\nIf you need to use these commands with their normal names, you\ncan add a \"gnubin\" directory to your PATH from your bashrc like:\n  PATH=\"/home/travis/Homebrew/opt/coreutils/libexec/gnubin:$PATH\"\n",
   "installed": [
