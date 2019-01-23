@@ -20,50 +20,36 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 0,
+      "rebuild": 1,
       "cellar": ":any",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/fftw-3.3.8.mojave.bottle.tar.gz",
-          "sha256": "9de0f472ee7346aca3d44e10c94f4c3fcb89f0c3ba223aaaa530a4a3d9234980"
+          "url": "https://homebrew.bintray.com/bottles/fftw-3.3.8.mojave.bottle.1.tar.gz",
+          "sha256": "8df061c7222cc121bda7fa99383762de7a4e4f5f7b722ed324e5db3aeccf7c87"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/fftw-3.3.8.high_sierra.bottle.tar.gz",
-          "sha256": "79b08a5da9b091c43d4fdaabd73ecb6e4dba6525598d376d7d74bdf5d1183acc"
+          "url": "https://homebrew.bintray.com/bottles/fftw-3.3.8.high_sierra.bottle.1.tar.gz",
+          "sha256": "61cae18adcd0140264dd31818f3986b58b3399201ec3fc9bbc18666a815c1af9"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/fftw-3.3.8.sierra.bottle.tar.gz",
-          "sha256": "17f2f88898b2754adb35f19857cd7c80966299fcdf2158cc1466b054deaa460e"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/fftw-3.3.8.el_capitan.bottle.tar.gz",
-          "sha256": "a94c5f646948f918e986ab0be56672ac52f527debe1ed4cc783fd1ba6c99fe73"
+          "url": "https://homebrew.bintray.com/bottles/fftw-3.3.8.sierra.bottle.1.tar.gz",
+          "sha256": "30dd2e1659c5288859e19204aa2afeb61a514cb12fc9e75a849b7c944ced314b"
         }
       }
     }
   },
   "keg_only": false,
   "options": [
-    {
-      "option": "--with-mpi",
-      "description": "Enable MPI parallel transforms"
-    },
-    {
-      "option": "--with-openmp",
-      "description": "Enable OpenMP parallel transforms"
-    },
-    {
-      "option": "--without-fortran",
-      "description": "Disable Fortran bindings"
-    }
+
   ],
   "build_dependencies": [
 
   ],
   "dependencies": [
-    "gcc"
+    "gcc",
+    "open-mpi"
   ],
   "recommended_dependencies": [
 
