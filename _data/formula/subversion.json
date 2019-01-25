@@ -21,22 +21,22 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 0,
+      "rebuild": 1,
       "cellar": "/usr/local/Cellar",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/subversion-1.11.1.mojave.bottle.tar.gz",
-          "sha256": "1d0858de6bed79c12fa438af3bf072a5634af792f8e56504df662ec26ce9c7a9"
+          "url": "https://homebrew.bintray.com/bottles/subversion-1.11.1.mojave.bottle.1.tar.gz",
+          "sha256": "9d3a8c168d6f349d1b61fa842107b74d4a5b14518785ed14a78fd5330e80e7a0"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/subversion-1.11.1.high_sierra.bottle.tar.gz",
-          "sha256": "91995ed6997fb8018e1e29ff683cb711903dcd7b24919eb82980b87424f2280a"
+          "url": "https://homebrew.bintray.com/bottles/subversion-1.11.1.high_sierra.bottle.1.tar.gz",
+          "sha256": "27c5465c3a107fb20afd70740d058802df1354aaea46b3c60615d49f2592cad8"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/subversion-1.11.1.sierra.bottle.tar.gz",
-          "sha256": "2b522d92eb311ab33348a4b414abaa2b8887b87e3a85c1fc36e28a81420d3b3e"
+          "url": "https://homebrew.bintray.com/bottles/subversion-1.11.1.sierra.bottle.1.tar.gz",
+          "sha256": "95b7ba66dbc0450c66af5874df960f675a01ea3ed6a849af629a921a07101e75"
         }
       }
     }
@@ -67,12 +67,16 @@
 
   ],
   "requirements": [
-
+    {
+      "name": "java",
+      "cask": "java",
+      "download": "https://www.oracle.com/technetwork/java/javase/downloads/index.html"
+    }
   ],
   "conflicts_with": [
 
   ],
-  "caveats": "svntools have been installed to:\n  /home/travis/Homebrew/opt/subversion/libexec\n\nThe perl bindings are located in various subdirectories of:\n  /home/travis/Homebrew/opt/subversion/lib/perl5\n\nIf you wish to use the Ruby bindings you may need to add:\n  /home/travis/Homebrew/lib/ruby\nto your RUBYLIB.\n",
+  "caveats": "svntools have been installed to:\n  /home/travis/Homebrew/opt/subversion/libexec\n\nThe perl bindings are located in various subdirectories of:\n  /home/travis/Homebrew/opt/subversion/lib/perl5\n\nIf you wish to use the Ruby bindings you may need to add:\n  /home/travis/Homebrew/lib/ruby\nto your RUBYLIB.\n\nYou may need to link the Java bindings into the Java Extensions folder:\n  sudo mkdir -p /Library/Java/Extensions\n  sudo ln -s /home/travis/Homebrew/lib/libsvnjavahl-1.dylib /Library/Java/Extensions/libsvnjavahl-1.dylib\n",
   "installed": [
 
   ],
