@@ -66,7 +66,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": null,
+  "caveats": "Add the following lines to /etc/pf.conf to block entries in the sshguard\ntable (replace $ext_if with your WAN interface):\n\n  table <sshguard> persist\n  block in quick on $ext_if proto tcp from <sshguard> to any port 22 label \"ssh bruteforce\"\n\nThen run sudo pfctl -f /etc/pf.conf to reload the rules.\n",
   "installed": [
 
   ],
