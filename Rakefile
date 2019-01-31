@@ -52,7 +52,7 @@ task :analytics do
 
   setup_analytics
 
-  %w[build-error install install-on-request os-version
+  %w[build-error install cask-install install-on-request os-version
      core-build-error core-install core-install-on-request].each do |category|
     case category
     when "core-build-error"
