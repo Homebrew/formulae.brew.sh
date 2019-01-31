@@ -1,0 +1,54 @@
+{
+  "name": [
+    "BlueStacks"
+  ],
+  "homepage": "https://www.bluestacks.com/",
+  "url": "https://cdn3.bluestacks.com/mac/2.0.1.14/BlueStacksInstaller.dmg",
+  "appcast": null,
+  "version": "2.0.1.14",
+  "sha256": "b3e2f0133b21a1c92866735e0e4f4b08ce53d6f2e77ab87ca6b402cf73f040b0",
+  "artifacts": [
+    "uninstall_preflight (Preflight Block)",
+    {
+      "launchctl": [
+        "com.BlueStacks.AppPlayer.bstservice_helper",
+        "com.BlueStacks.AppPlayer.Service",
+        "com.BlueStacks.AppPlayer.UninstallWatcher",
+        "com.BlueStacks.AppPlayer.Updater"
+      ],
+      "delete": "/Library/PrivilegedHelperTools/com.BlueStacks.AppPlayer.bstservice_helper",
+      "signal": [
+
+      ]
+    },
+    {
+      "path": "BlueStacks Installer.app"
+    },
+    {
+      "trash": [
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bluestacks.bluestacks.sfl*",
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bluestacks.bluestacks-support-tool.sfl*",
+        "~/Library/BlueStacks",
+        "~/Library/Caches/com.bluestacks.BlueStacks",
+        "~/Library/Caches/com.bluestacks.BlueStacks-Support-Tool",
+        "~/Library/Caches/KSCrashReports/BlueStacks",
+        "~/Library/Logs/BlueStacks",
+        "~/Library/Preferences/com.BlueStacks.AppPlayer.DiagnosticTimestamp.txt",
+        "~/Library/Preferences/com.BlueStacks.AppPlayer.plist",
+        "~/Library/Preferences/com.BlueStacks.AppPlayer.SavedFrame.plist",
+        "~/Library/Preferences/com.bluestacks.BlueStacks.plist"
+      ],
+      "rmdir": "~/Library/Caches/KSCrashReports",
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+  },
+  "conflicts_with": {
+  },
+  "container": null,
+  "auto_updates": null
+}

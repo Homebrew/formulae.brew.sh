@@ -1,0 +1,49 @@
+{
+  "name": [
+    "Continuum Analytics Miniconda"
+  ],
+  "homepage": "https://conda.io/miniconda.html",
+  "url": "https://repo.anaconda.com/miniconda/Miniconda3-4.5.12-MacOSX-x86_64.sh",
+  "appcast": null,
+  "version": "4.5.12",
+  "sha256": "8ebb463ddf46dd003616b2f6b678403a708e2c54dcc58e212bd35e257761912c",
+  "artifacts": [
+    {
+      "delete": "/usr/local/miniconda3",
+      "signal": [
+
+      ]
+    },
+    {
+      "path": "Miniconda3-4.5.12-MacOSX-x86_64.sh",
+      "args": {
+        "must_succeed": true,
+        "sudo": true,
+        "args": [
+          "-b",
+          "-p",
+          "/usr/local/miniconda3"
+        ],
+        "print_stdout": true
+      }
+    },
+    "postflight (Postflight Block)",
+    {
+      "trash": [
+        "~/.condarc",
+        "~/.conda",
+        "~/.continuum"
+      ],
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "Cask #<Cask::Cask:0x00007fc3c935ba30> installs files under /usr/local. The presence of such\nfiles can cause warnings when running \"brew doctor\", which is considered\nto be a bug in Homebrew Cask.\n",
+  "depends_on": {
+  },
+  "conflicts_with": {
+  },
+  "container": "{:type=>:naked}",
+  "auto_updates": true
+}

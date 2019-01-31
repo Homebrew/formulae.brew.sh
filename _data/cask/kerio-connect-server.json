@@ -1,0 +1,40 @@
+{
+  "name": [
+    "Kerio Connect"
+  ],
+  "homepage": "https://www.kerio.de/products/kerio-connect",
+  "url": "https://cdn.kerio.com/dwn/connect/connect-9.2.7-4117/kerio-connect-9.2.7-4117-p2-mac.dmg",
+  "appcast": null,
+  "version": "9.2.7-4117,p2",
+  "sha256": "a771933ead0810f5b195c3a77a94b0e41c6beb81cc2cf3002e90e73186575da5",
+  "artifacts": [
+    {
+      "early_script": {
+        "executable": "/bin/launchctl",
+        "args": [
+          "unload",
+          "-w",
+          "/Library/LaunchDaemons/com.kerio.mailserver.plist"
+        ],
+        "must_succeed": false,
+        "sudo": true
+      },
+      "pkgutil": [
+        "com.kerio.connect.server.pkg",
+        "com.kerio.connect.server.installer.pkg"
+      ],
+      "launchctl": "KerioConnect",
+      "signal": [
+
+      ]
+    },
+    "Kerio Connect Installer.pkg (Pkg)"
+  ],
+  "caveats": "",
+  "depends_on": {
+  },
+  "conflicts_with": {
+  },
+  "container": null,
+  "auto_updates": null
+}

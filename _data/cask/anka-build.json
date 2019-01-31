@@ -1,0 +1,59 @@
+{
+  "name": [
+    "Veertu Anka Build"
+  ],
+  "homepage": "https://veertu.com/",
+  "url": "https://d1efqjhnhbvc57.cloudfront.net/AnkaBuild-1.4.1.99.pkg",
+  "appcast": "https://ankadoc.bitbucket.io/release-notes/index.html",
+  "version": "1.4.1.99",
+  "sha256": "a9840a3bbc76e52d9a987e03e553bd614544f5069ef35e3346d66d114a9af994",
+  "artifacts": [
+    {
+      "launchctl": [
+        "com.veertu.nlimit",
+        "com.veertu.vlaunch",
+        "com.veertu.anka.lupd"
+      ],
+      "script": {
+        "executable": "/Library/Application Support/Veertu/Anka/tools/uninstall.sh",
+        "args": [
+          "-f"
+        ],
+        "sudo": true
+      },
+      "signal": [
+
+      ]
+    },
+    "AnkaBuild-1.4.1.99.pkg (Pkg)",
+    {
+      "trash": [
+        "~/.anka",
+        "~/Library/Application Support/Veertu/Anka",
+        "~/Library/Logs/Anka",
+        "~/Library/Preferences/com.veertu.ankaview.plist",
+        "/Library/Application Support/Veertu/Anka"
+      ],
+      "rmdir": [
+        "~/Library/Application Support/Veertu",
+        "/Library/Application Support/Veertu"
+      ],
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "Installing #<Cask::Cask:0x00007fc3ca1628b8> means you have AGREED to the license at\n  https://veertu.com/terms-and-conditions/\n",
+  "depends_on": {
+    "macos": [
+      [
+        ">=",
+        "10.10"
+      ]
+    ]
+  },
+  "conflicts_with": {
+  },
+  "container": null,
+  "auto_updates": null
+}

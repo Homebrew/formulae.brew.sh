@@ -1,0 +1,61 @@
+{
+  "name": [
+    "LuLu"
+  ],
+  "homepage": "https://objective-see.com/products/lulu.html",
+  "url": "https://bitbucket.org/objective-see/deploy/downloads/LuLu_1.1.2.zip",
+  "appcast": "https://objective-see.com/products/changelogs/LuLu.txt",
+  "version": "1.1.2",
+  "sha256": "18fb1eab5003cf51ec6a4d8612a6a3d0e7e02f8165d06eb88cd637be527e5a16",
+  "artifacts": [
+    {
+      "script": {
+        "executable": "/usr/local/Caskroom/lulu/1.1.2/Lulu Installer.app/Contents/MacOS/LuLu Installer",
+        "args": [
+          "-uninstall"
+        ],
+        "sudo": true
+      },
+      "signal": [
+
+      ]
+    },
+    {
+      "path": "/usr/local/Caskroom/lulu/1.1.2/Lulu Installer.app/Contents/MacOS/LuLu Installer",
+      "args": {
+        "must_succeed": true,
+        "sudo": true,
+        "args": [
+          "-install"
+        ],
+        "print_stdout": true
+      }
+    },
+    {
+      "trash": [
+        "~/Library/Caches/com.objective-see.lulu",
+        "~/Library/Caches/com.objective-see.luluHelper",
+        "~/Library/Preferences/com.objective-see.lulu.plist",
+        "~/Library/Preferences/com.objective-see.luluHelper.plist",
+        "/Library/LaunchDaemons/com.objective-see.lulu.plist",
+        "/Library/Logs/LuLu.log"
+      ],
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "To install and/or use #<Cask::Cask:0x00007fc3e5238ce0> you may need to enable their kernel extension in\n\n  System Preferences → Security & Privacy → General\n\nFor more information refer to vendor documentation or the Apple Technical Note:\n\n  \u001b[4mhttps://developer.apple.com/library/content/technotes/tn2459/_index.html\u001b[24m\n",
+  "depends_on": {
+    "macos": [
+      [
+        ">=",
+        "10.12"
+      ]
+    ]
+  },
+  "conflicts_with": {
+  },
+  "container": null,
+  "auto_updates": null
+}

@@ -1,0 +1,41 @@
+{
+  "name": [
+    "Private Internet Access"
+  ],
+  "homepage": "https://www.privateinternetaccess.com/",
+  "url": "https://installers.privateinternetaccess.com/download/pia-v82-installer-mac.dmg",
+  "appcast": null,
+  "version": "82",
+  "sha256": "e849df3ef9c7114b3b163ad5a3183ee9f55f37dc89089c2f4ca92c16cd758f5d",
+  "artifacts": [
+    {
+      "delete": "/Applications/Private Internet Access.app",
+      "signal": [
+
+      ]
+    },
+    {
+      "path": "Private Internet Access Installer.app"
+    },
+    "postflight (Postflight Block)",
+    {
+      "trash": "~/.pia_manager",
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+    "macos": [
+      [
+        ">=",
+        "10.10"
+      ]
+    ]
+  },
+  "conflicts_with": {
+  },
+  "container": null,
+  "auto_updates": null
+}

@@ -1,0 +1,59 @@
+{
+  "name": [
+    ".Net Core Runtime"
+  ],
+  "homepage": "https://www.microsoft.com/net/core#macos",
+  "url": "https://download.visualstudio.microsoft.com/download/pr/80a93bfc-dd53-474b-94f4-1dea02dec70c/eab2c0d078899ad0d8f8a15bf84a7f63/dotnet-runtime-2.2.1-osx-x64.pkg",
+  "appcast": "https://www.microsoft.com/net/download/macos",
+  "version": "2.2.1",
+  "sha256": "10d1893ef62861f3e1491f35b05a7f0279fad34b6f97c35a172c04b34987448e",
+  "artifacts": [
+    {
+      "pkgutil": "com.microsoft.dotnet.*",
+      "delete": "/etc/paths.d/dotnet",
+      "signal": [
+
+      ]
+    },
+    "dotnet-runtime-2.2.1-osx-x64.pkg (Pkg)",
+    {
+      "trash": "~/.nuget",
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+    "macos": [
+      [
+        ">=",
+        "10.12"
+      ]
+    ]
+  },
+  "conflicts_with": {
+    "formula": [
+
+    ],
+    "cask": [
+      "dotnet-sdk",
+      "dotnet-preview",
+      "dotnet-sdk-preview"
+    ],
+    "macos": [
+
+    ],
+    "arch": [
+
+    ],
+    "x11": [
+
+    ],
+    "java": [
+
+    ]
+  },
+  "container": null,
+  "auto_updates": null
+}

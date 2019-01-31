@@ -1,0 +1,50 @@
+{
+  "name": [
+    "eqMac"
+  ],
+  "homepage": "https://www.bitgapp.com/eqmac/",
+  "url": "https://github.com/nodeful/eqMac2/releases/download/V2.2/eqMac2.dmg",
+  "appcast": "https://github.com/nodeful/eqMac2/releases.atom",
+  "version": "2.2",
+  "sha256": "ff60579197b52571d9686bbfaec695dfa75797b8a9314fbf69a673bbeb12e1fc",
+  "artifacts": [
+    {
+      "login_item": "eqMac2",
+      "quit": "com.bitgapp.eqMac2",
+      "script": {
+        "executable": "/Applications/eqMac2.app/Contents/Resources/uninstall_driver.sh",
+        "sudo": true
+      },
+      "signal": [
+
+      ]
+    },
+    {
+      "path": "/usr/local/Caskroom/eqmac/2.2/eqMac2.app/Contents/Resources/install_driver.sh",
+      "args": {
+        "must_succeed": true,
+        "sudo": true,
+        "print_stdout": true
+      }
+    },
+    [
+      "eqMac2.app"
+    ],
+    {
+      "trash": [
+        "~/Library/Caches/com.bitgapp.eqMac2",
+        "~/Library/Cookies/com.bitgapp.eqMac2.binarycookies"
+      ],
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+  },
+  "conflicts_with": {
+  },
+  "container": null,
+  "auto_updates": null
+}

@@ -1,0 +1,37 @@
+{
+  "name": [
+    "Private Eye"
+  ],
+  "homepage": "https://radiosilenceapp.com/private-eye",
+  "url": "https://radiosilenceapp.com/downloads/Private_Eye_for_OS_X_10.9_and_later.pkg",
+  "appcast": null,
+  "version": "latest",
+  "sha256": "no_check",
+  "artifacts": [
+    {
+      "early_script": {
+        "executable": "/sbin/kextunload",
+        "args": [
+          "-b",
+          "com.radiosilenceapp.nke.PrivateEye"
+        ],
+        "must_succeed": false
+      },
+      "quit": "com.radiosilenceapp.PrivateEye",
+      "kext": "com.radiosilenceapp.nke.PrivateEye",
+      "pkgutil": "com.radiosilenceapp.privateEye.*",
+      "launchctl": "com.radiosilenceapp.nke.PrivateEye",
+      "signal": [
+
+      ]
+    },
+    "Private_Eye_for_OS_X_10.9_and_later.pkg (Pkg)"
+  ],
+  "caveats": "To install and/or use #<Cask::Cask:0x00007fc3e4e391a8> you may need to enable their kernel extension in\n\n  System Preferences → Security & Privacy → General\n\nFor more information refer to vendor documentation or the Apple Technical Note:\n\n  \u001b[4mhttps://developer.apple.com/library/content/technotes/tn2459/_index.html\u001b[24m\n",
+  "depends_on": {
+  },
+  "conflicts_with": {
+  },
+  "container": null,
+  "auto_updates": null
+}

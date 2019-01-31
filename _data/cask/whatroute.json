@@ -1,0 +1,49 @@
+{
+  "name": [
+    "WhatRoute"
+  ],
+  "homepage": "https://www.whatroute.net/",
+  "url": "https://downloads.whatroute.net/software/whatroute-2.1.12.zip",
+  "appcast": "https://www.whatroute.net/whatroute2appcast.xml",
+  "version": "2.1.12",
+  "sha256": "86259a2f57b4e5eaacaeefe32e14cb467de0746b7adb8af4423e4faf2ecd271d",
+  "artifacts": [
+    {
+      "delete": "/Library/PrivilegedHelperTools/net.whatroute.whatroute2helper",
+      "launchctl": [
+        "net.whatroute.LaunchHelper",
+        "net.whatroute.whatroute2helper"
+      ],
+      "quit": "net.whatroute.whatroute2",
+      "signal": [
+
+      ]
+    },
+    [
+      "WhatRoute.app"
+    ],
+    {
+      "trash": [
+        "~/Library/Caches/net.whatroute.whatroute2",
+        "~/Library/Logs/net.whatroute.whatroute2",
+        "~/Library/Preferences/net.whatroute.whatroute2.plist"
+      ],
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+    "macos": [
+      [
+        ">=",
+        "10.10"
+      ]
+    ]
+  },
+  "conflicts_with": {
+  },
+  "container": null,
+  "auto_updates": null
+}

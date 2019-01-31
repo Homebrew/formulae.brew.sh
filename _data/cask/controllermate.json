@@ -1,0 +1,57 @@
+{
+  "name": [
+    "ControllerMate"
+  ],
+  "homepage": "https://www.orderedbytes.com/controllermate/",
+  "url": "https://s3.amazonaws.com/orderedbytes/ControllerMate4111.zip",
+  "appcast": "https://www.orderedbytes.com/sparkle/appcast_cm460.xml",
+  "version": "4.11.1",
+  "sha256": "dd95d0b2abd6c23148092c96593fb303befc374c6a912afad57efb48b0a1e04b",
+  "artifacts": [
+    {
+      "launchctl": [
+        "com.orderedbytes.ControllerMateHelper",
+        "com.orderedbytes.ControllerMate.KextHelper"
+      ],
+      "kext": [
+        "com.orderedbytes.driver.CMUSBDevices",
+        "com.orderedbytes.driver.ControllerMateFamily"
+      ],
+      "signal": [
+        [
+          "TERM",
+          "com.orderedbytes.ControllerMate4"
+        ],
+        [
+          "TERM",
+          "com.orderedbytes.ControllerMateHelper"
+        ]
+      ],
+      "delete": [
+        "/Library/Extensions/ControllerMate.kext,/Library/Application Support/ControllerMate/",
+        "/Library/LaunchAgents/com.orderedbytes.ControllerMateHelper.plist",
+        "/Applications/ControllerMate.app",
+        "/private/var/db/receipts/com.orderedbytes.controllermate.*"
+      ]
+    },
+    "#temp#/ControllerMate.sparkle_interactive.pkg (Pkg)",
+    {
+      "trash": [
+        "~/Library/Application Support/ControllerMate",
+        "~/Library/Caches/com.orderedbytes.ControllerMate4",
+        "~/Library/Logs/ControllerMate MIDI",
+        "~/Library/Logs/ControllerMate"
+      ],
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "To install and/or use #<Cask::Cask:0x00007fc3e4db3198> you may need to enable their kernel extension in\n\n  System Preferences → Security & Privacy → General\n\nFor more information refer to vendor documentation or the Apple Technical Note:\n\n  \u001b[4mhttps://developer.apple.com/library/content/technotes/tn2459/_index.html\u001b[24m\n\nYou must reboot for the installation of #<Cask::Cask:0x00007fc3e4db3198> to take effect.\n",
+  "depends_on": {
+  },
+  "conflicts_with": {
+  },
+  "container": null,
+  "auto_updates": null
+}

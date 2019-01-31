@@ -1,0 +1,42 @@
+{
+  "name": [
+    "Burp Suite"
+  ],
+  "homepage": "https://portswigger.net/burp/",
+  "url": "https://portswigger.net/burp/releases/download?product=community&version=1.7.36&type=macosx",
+  "appcast": "https://portswigger.net/burp/releasesarchive/community",
+  "version": "1.7.36",
+  "sha256": "79e306ad9566947b11342cb61f768f508b4bc776aa326ffcdc384ebc63a1eebe",
+  "artifacts": [
+    {
+      "delete": "/Applications/Burp Suite Community Edition.app",
+      "signal": [
+
+      ]
+    },
+    {
+      "path": "Burp Suite Community Edition Installer.app/Contents/MacOS/JavaApplicationStub",
+      "args": {
+        "must_succeed": true,
+        "sudo": true,
+        "args": [
+          "-q"
+        ],
+        "print_stdout": true
+      }
+    },
+    {
+      "trash": "~/.BurpSuite",
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+  },
+  "conflicts_with": {
+  },
+  "container": null,
+  "auto_updates": null
+}

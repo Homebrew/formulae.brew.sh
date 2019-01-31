@@ -1,0 +1,34 @@
+{
+  "name": [
+    "Minecraft Server"
+  ],
+  "homepage": "https://minecraft.net/",
+  "url": "https://launcher.mojang.com/v1/objects/3737db93722a9e39eeada7c27e7aca28b144ffa7/server.jar",
+  "appcast": "https://minecraft.net/en-us/download/server/",
+  "version": "1.13.2,3737db93722a9e39eeada7c27e7aca28b144ffa7",
+  "sha256": "ffd3aa2c25c5ba68a706b59f2abdc69ac1748e115ca9d3b47941e197736f088e",
+  "artifacts": [
+    "preflight (Preflight Block)",
+    "uninstall_preflight (Preflight Block)",
+    [
+      "/usr/local/Caskroom/minecraft-server/1.13.2,3737db93722a9e39eeada7c27e7aca28b144ffa7/minecraft-server.wrapper.sh",
+      {
+        "target": "minecraft-server"
+      }
+    ],
+    "postflight (Postflight Block)",
+    {
+      "trash": "/usr/local/etc/minecraft-server",
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "Configuration files are located in\n\n  /usr/local/etc/minecraft-server\n\n#<Cask::Cask:0x00007fc3e6711360> requires Java. You can install the latest version with\n\n  brew cask install java\n",
+  "depends_on": {
+  },
+  "conflicts_with": {
+  },
+  "container": "{:type=>:naked}",
+  "auto_updates": null
+}

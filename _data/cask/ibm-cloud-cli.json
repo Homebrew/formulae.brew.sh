@@ -1,0 +1,48 @@
+{
+  "name": [
+    "Bluemix-CLI",
+    "IBM Cloud CLI"
+  ],
+  "homepage": "https://clis.ng.bluemix.net/ui/home.html",
+  "url": "https://public.dhe.ibm.com/cloud/bluemix/cli/bluemix-cli/0.13.1/IBM_Cloud_CLI_0.13.1.pkg",
+  "appcast": "https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases.atom",
+  "version": "0.13.1",
+  "sha256": "3cb8e9dbc74d6800c8befec6f9d19b4f0ab816f7259cfa6689ec56a44fe3ac38",
+  "artifacts": [
+    {
+      "pkgutil": "com.ibm.cloud.cli",
+      "delete": [
+        "/usr/local/bin/bluemix",
+        "/usr/local/bin/bx",
+        "/usr/local/bin/bluemix-analytics",
+        "/usr/local/Bluemix",
+        "/usr/local/ibmcloud"
+      ],
+      "signal": [
+
+      ]
+    },
+    "IBM_Cloud_CLI_0.13.1.pkg (Pkg)",
+    "uninstall_postflight (Postflight Block)",
+    {
+      "trash": "~/.bluemix",
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "Cask #<Cask::Cask:0x00007fc3ca22a890> installs files under /usr/local. The presence of such\nfiles can cause warnings when running \"brew doctor\", which is considered\nto be a bug in Homebrew Cask.\n",
+  "depends_on": {
+    "cask": [
+      "docker"
+    ],
+    "formula": [
+      "kubectl",
+      "kubernetes-helm"
+    ]
+  },
+  "conflicts_with": {
+  },
+  "container": null,
+  "auto_updates": null
+}

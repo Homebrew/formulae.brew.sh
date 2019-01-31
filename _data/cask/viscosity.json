@@ -1,0 +1,47 @@
+{
+  "name": [
+    "Viscosity"
+  ],
+  "homepage": "https://www.sparklabs.com/viscosity/",
+  "url": "https://swupdate.sparklabs.com/download/mac/release/viscosity/Viscosity%201.7.14.dmg",
+  "appcast": "https://swupdate.sparklabs.com/appcast/mac/release/viscosity/",
+  "version": "1.7.14",
+  "sha256": "71e0d6e63b86122fc771095cb0c4a6c99758c8a71f48f31651a03e64bc7705c5",
+  "artifacts": [
+    {
+      "delete": [
+        "/Library/Application Support/Viscosity",
+        "/Library/PrivilegedHelperTools/com.sparklabs.ViscosityHelper"
+      ],
+      "launchctl": "com.sparklabs.ViscosityHelper",
+      "login_item": "Viscosity",
+      "signal": [
+        [
+          "TERM",
+          "com.viscosityvpn.Viscosity"
+        ]
+      ]
+    },
+    [
+      "Viscosity.app"
+    ],
+    {
+      "trash": [
+        "~/Library/Application Support/Viscosity",
+        "~/Library/Caches/com.viscosityvpn.Viscosity",
+        "~/Library/Cookies/com.viscosityvpn.Viscosity.binarycookies",
+        "~/Library/Preferences/com.viscosityvpn.Viscosity.plist"
+      ],
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+  },
+  "conflicts_with": {
+  },
+  "container": null,
+  "auto_updates": true
+}

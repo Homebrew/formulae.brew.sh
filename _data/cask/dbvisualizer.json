@@ -1,0 +1,49 @@
+{
+  "name": [
+    "DbVisualizer"
+  ],
+  "homepage": "https://www.dbvis.com/",
+  "url": "https://www.dbvis.com/product_download/dbvis-10.0.16/media/dbvis_macos_10_0_16_jre.dmg",
+  "appcast": null,
+  "version": "10.0.16",
+  "sha256": "196d9ade076da077848e54d48db57131c441f88d6e4846c56da786759bafd82e",
+  "artifacts": [
+    {
+      "signal": [
+        [
+          "TERM",
+          "com.dbvis.DbVisualizer"
+        ]
+      ]
+    },
+    {
+      "path": "DbVisualizer Installer.app/Contents/MacOS/JavaApplicationStub",
+      "args": {
+        "must_succeed": true,
+        "sudo": false,
+        "args": [
+          "-q",
+          "-dir",
+          "/usr/local/Caskroom/dbvisualizer/10.0.16"
+        ],
+        "print_stdout": true
+      }
+    },
+    [
+      "DbVisualizer.app"
+    ],
+    {
+      "trash": "~/.dbvis",
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "#<Cask::Cask:0x00007fc3ca2e8020> requires Java 8. You can install it with\n\n  brew cask install homebrew/cask-versions/java8\n",
+  "depends_on": {
+  },
+  "conflicts_with": {
+  },
+  "container": null,
+  "auto_updates": null
+}

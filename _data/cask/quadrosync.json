@@ -1,0 +1,43 @@
+{
+  "name": [
+    "QuadroSync"
+  ],
+  "homepage": "https://www.quadro.me/sync",
+  "url": "https://s3-eu-west-1.amazonaws.com/quadro-downloads/daemon/mac/QuadroSync_mac.dmg",
+  "appcast": null,
+  "version": "latest",
+  "sha256": "no_check",
+  "artifacts": [
+    {
+      "quit": [
+        "com.quadro.QuadroSync",
+        "com.quadro.QuadroNGui"
+      ],
+      "delete": [
+        "/Applications/QuadroSync.app",
+        "/Applications/QuadroNGui.app"
+      ],
+      "launchctl": "com.quadro.QuadroInstaller.HelperTool",
+      "login_item": "QuadroSync",
+      "signal": [
+
+      ]
+    },
+    {
+      "path": "QuadroInstaller.app"
+    },
+    {
+      "trash": "/Library/Application Support/Quadro",
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+  },
+  "conflicts_with": {
+  },
+  "container": null,
+  "auto_updates": null
+}

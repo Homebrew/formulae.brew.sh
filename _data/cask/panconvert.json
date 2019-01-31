@@ -1,0 +1,43 @@
+{
+  "name": [
+    "PanConvert"
+  ],
+  "homepage": "https://panconvert.sourceforge.io/",
+  "url": "https://downloads.sourceforge.net/panconvert/Panconvert-0.2.7-osx-installer.app.dmg",
+  "appcast": "https://sourceforge.net/projects/panconvert/rss?path=/Newest",
+  "version": "0.2.7",
+  "sha256": "1533540b3a28fb2ba263e9a79a813e0968c674a5ad6d370ee0163fd828ba7c42",
+  "artifacts": [
+    {
+      "script": {
+        "executable": "/Applications/Panconvert-0.2.7/uninstall.app/Contents/MacOS/osx-intel",
+        "args": [
+          "--mode",
+          "unattended"
+        ]
+      },
+      "signal": [
+
+      ]
+    },
+    {
+      "path": "/usr/local/Caskroom/panconvert/0.2.7/Panconvert-0.2.7-osx-installer.app/Contents/MacOS/installbuilder.sh",
+      "args": {
+        "must_succeed": true,
+        "sudo": false,
+        "args": [
+          "--mode",
+          "unattended"
+        ],
+        "print_stdout": true
+      }
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+  },
+  "conflicts_with": {
+  },
+  "container": null,
+  "auto_updates": null
+}

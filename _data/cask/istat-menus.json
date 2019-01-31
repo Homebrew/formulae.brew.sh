@@ -1,0 +1,86 @@
+{
+  "name": [
+    "iStats Menus"
+  ],
+  "homepage": "https://bjango.com/mac/istatmenus/",
+  "url": "https://files.bjango.com/istatmenus6/istatmenus6.31.zip",
+  "appcast": null,
+  "version": "6.31",
+  "sha256": "no_check",
+  "artifacts": [
+    {
+      "delete": [
+        "/Library/Application Support/iStat Menus 6",
+        "/Library/PrivilegedHelperTools/com.bjango.istatmenus.installerhelper"
+      ],
+      "launchctl": [
+        "com.bjango.istatmenus.agent",
+        "com.bjango.istatmenus.daemon",
+        "com.bjango.istatmenusnotifications",
+        "com.bjango.istatmenus.status",
+        "com.bjango.istatmenus.installerhelper"
+      ],
+      "signal": [
+        [
+          "TERM",
+          "com.bjango.iStat-Menus-Notifications"
+        ],
+        [
+          "TERM",
+          "com.bjango.iStatMenusAgent"
+        ],
+        [
+          "TERM",
+          "com.bjango.istatmenusstatus"
+        ],
+        [
+          "TERM",
+          "com.bjango.istatmenus"
+        ],
+        [
+          "HUP",
+          "com.bjango.istatmenus"
+        ]
+      ]
+    },
+    [
+      "iStat Menus.app"
+    ],
+    {
+      "trash": [
+        "~/Library/Application Support/iStat Menus",
+        "~/Library/Application Scripts/com.bjango.istatmenus.iStat-Menus-Widget",
+        "~/Library/Caches/com.bjango.istatmenus",
+        "~/Library/Caches/com.bjango.istatmenus.status",
+        "~/Library/Caches/com.bjango.istatmenus.agent",
+        "~/Library/Caches/com.bjango.iStat-Menus-Updater",
+        "~/Library/Caches/com.bjango.iStatMenusAgent",
+        "~/Library/Caches/iStat Menus",
+        "~/Library/Containers/com.bjango.istatmenus.iStat-Menus-Widget",
+        "~/Library/Cookies/com.bjango.istatmenus.binarycookies",
+        "~/Library/Logs/iStat Menus",
+        "~/Library/Preferences/com.bjango.istatmenus.plist",
+        "~/Library/Preferences/com.bjango.istatmenus6.extras.plist",
+        "~/Library/Preferences/com.bjango.istatmenus.status.plist",
+        "/Library/Logs/iStat Menus",
+        "/Users/Shared/.iStatMenus"
+      ],
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+    "macos": [
+      [
+        ">=",
+        "10.11"
+      ]
+    ]
+  },
+  "conflicts_with": {
+  },
+  "container": null,
+  "auto_updates": true
+}

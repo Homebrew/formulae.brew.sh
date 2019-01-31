@@ -1,0 +1,27 @@
+{
+  "name": [
+    "LogDNA Agent"
+  ],
+  "homepage": "https://logdna.com/",
+  "url": "https://github.com/logdna/logdna-agent/releases/download/1.4.5/logdna-agent-1.4.5.pkg",
+  "appcast": "https://github.com/logdna/logdna-agent/releases.atom",
+  "version": "1.4.5",
+  "sha256": "947982b99b60e3df674e16de3ec486c36525e3a85dacfd473c1dcfa6e9cf35bf",
+  "artifacts": [
+    {
+      "pkgutil": "com.logdna.logdna-agent",
+      "launchctl": "com.logdna.logdna-agentd",
+      "signal": [
+
+      ]
+    },
+    "logdna-agent-1.4.5.pkg (Pkg)"
+  ],
+  "caveats": "When you first start logdna-agent, you must set your LogDNA API key with the command:\n  sudo logdna-agent -k <api-key>\n\nTo always run logdna-agent in the background, use the command:\n  sudo launchctl load -w /Library/LaunchDaemons/com.logdna.logdna-agent.plist\n",
+  "depends_on": {
+  },
+  "conflicts_with": {
+  },
+  "container": null,
+  "auto_updates": null
+}

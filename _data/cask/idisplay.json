@@ -1,0 +1,39 @@
+{
+  "name": [
+    "iDisplay"
+  ],
+  "homepage": "https://getidisplay.com/",
+  "url": "https://getidisplay.com/downloads/iDisplayMac.dmg",
+  "appcast": null,
+  "version": "latest",
+  "sha256": "no_check",
+  "artifacts": [
+    {
+      "launchctl": "ag.shape.MSMToolHelper",
+      "pkgutil": [
+        "ag.shape.iDisplay.pkg",
+        "ag.shape.MSM*.pkg"
+      ],
+      "signal": [
+        [
+          "TERM",
+          "com.shapeservices.idisplay-host-full"
+        ]
+      ]
+    },
+    "iDisplay.pkg (Pkg)",
+    {
+      "trash": "~/Library/Preferences/com.shapeservices.idisplay-host-full.plist",
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "To install and/or use #<Cask::Cask:0x00007fc3e6fd5960> you may need to enable their kernel extension in\n\n  System Preferences → Security & Privacy → General\n\nFor more information refer to vendor documentation or the Apple Technical Note:\n\n  \u001b[4mhttps://developer.apple.com/library/content/technotes/tn2459/_index.html\u001b[24m\n\nYou must reboot for the installation of #<Cask::Cask:0x00007fc3e6fd5960> to take effect.\n",
+  "depends_on": {
+  },
+  "conflicts_with": {
+  },
+  "container": null,
+  "auto_updates": null
+}

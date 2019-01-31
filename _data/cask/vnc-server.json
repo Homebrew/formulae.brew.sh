@@ -1,0 +1,43 @@
+{
+  "name": [
+    "Real VNC Server"
+  ],
+  "homepage": "https://www.realvnc.com/",
+  "url": "https://www.realvnc.com/download/file/vnc.files/VNC-Server-6.4.0-MacOSX-x86_64.pkg",
+  "appcast": null,
+  "version": "6.4.0",
+  "sha256": "c71b3e53b3477aec1a7c4a228b4ba0a728d151214e0f3c750d97cd73dff0470b",
+  "artifacts": [
+    "uninstall_preflight (Preflight Block)",
+    {
+      "launchctl": [
+        "com.realvnc.vncserver",
+        "com.realvnc.vncserver.peruser"
+      ],
+      "pkgutil": [
+        "com.realvnc.vncserver.pkg"
+      ],
+      "signal": [
+
+      ]
+    },
+    "VNC-Server-6.4.0-MacOSX-x86_64.pkg (Pkg)",
+    {
+      "trash": [
+        "/Library/Logs/vncserver.log.bak",
+        "~/Library/Saved Application State/com.realvnc.vnclicensewiz.savedState",
+        "~/Library/Saved Application State/com.realvnc.vncserver.savedState"
+      ],
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+  },
+  "conflicts_with": {
+  },
+  "container": null,
+  "auto_updates": null
+}

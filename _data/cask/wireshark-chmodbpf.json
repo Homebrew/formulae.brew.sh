@@ -1,0 +1,56 @@
+{
+  "name": [
+    "Wireshark-ChmodBPF"
+  ],
+  "homepage": "https://www.wireshark.org/",
+  "url": "https://www.wireshark.org/download/osx/Wireshark%202.6.6%20Intel%2064.dmg",
+  "appcast": "https://www.wireshark.org/download/osx/",
+  "version": "2.6.6",
+  "sha256": "71920bf98e2867703759b0c98395480f88dee1c332efd3f2bc6a91eaec75b0a3",
+  "artifacts": [
+    "uninstall_preflight (Preflight Block)",
+    {
+      "pkgutil": "org.wireshark.ChmodBPF.pkg",
+      "launchctl": "org.wireshark.ChmodBPF",
+      "script": {
+        "executable": "/usr/sbin/dseditgroup",
+        "args": [
+          "-o",
+          "delete",
+          "access_bpf"
+        ],
+        "must_succeed": false,
+        "sudo": true
+      },
+      "signal": [
+
+      ]
+    },
+    "Wireshark 2.6.6 Intel 64.pkg (Pkg)"
+  ],
+  "caveats": "This cask will install only the ChmodBPF package from the current Wireshark\nstable install package.\nAn access_bpf group will be created and its members allowed access to BPF\ndevices at boot to allow unprivileged packet captures.\nThis cask is not required if installing the Wireshark cask. It is meant to\nsupport Wireshark installed from Homebrew or other cases where unprivileged\naccess to macOS packet capture devices is desired without installing the binary\ndistribution of Wireshark.\nThe user account used to install this cask will be added to the access_bpf\ngroup automatically.\n\nYou must reboot for the installation of #<Cask::Cask:0x00007fc3ccacb588> to take effect.\n",
+  "depends_on": {
+  },
+  "conflicts_with": {
+    "formula": [
+
+    ],
+    "cask": [
+      "wireshark"
+    ],
+    "macos": [
+
+    ],
+    "arch": [
+
+    ],
+    "x11": [
+
+    ],
+    "java": [
+
+    ]
+  },
+  "container": null,
+  "auto_updates": null
+}

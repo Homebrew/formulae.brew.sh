@@ -1,0 +1,42 @@
+{
+  "name": [
+    "SwitchResX"
+  ],
+  "homepage": "https://www.madrau.com/",
+  "url": "https://www.madrau.com/data/switchresx/SwitchResX4.zip",
+  "appcast": null,
+  "version": "4.8.1",
+  "sha256": "no_check",
+  "artifacts": [
+    {
+      "quit": [
+        "fr.madrau.switchresx.app",
+        "fr.madrau.switchresx.daemon"
+      ],
+      "signal": [
+        [
+          "INT",
+          "fr.madrau.switchresx.daemon"
+        ],
+        [
+          "KILL",
+          "fr.madrau.switchresx.daemon"
+        ]
+      ],
+      "delete": [
+        "/Library/ScriptingAdditions/SwitchResX Extensions.osax",
+        "/Library/ScriptingAdditions/SwitchResX Menu.osax"
+      ]
+    },
+    [
+      "SwitchResX.app/Contents/Resources/SwitchResX.prefPane"
+    ]
+  ],
+  "caveats": "",
+  "depends_on": {
+  },
+  "conflicts_with": {
+  },
+  "container": null,
+  "auto_updates": null
+}

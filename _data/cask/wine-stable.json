@@ -1,0 +1,101 @@
+{
+  "name": [
+    "WineHQ-stable"
+  ],
+  "homepage": "https://wiki.winehq.org/MacOS",
+  "url": "https://dl.winehq.org/wine-builds/macosx/pool/winehq-stable-4.0.pkg",
+  "appcast": "https://dl.winehq.org/wine-builds/macosx/download.html",
+  "version": "4.0",
+  "sha256": "ea5b74683461c4c89e05eae500478194658c6c9923f6edc89930c190575531c9",
+  "artifacts": [
+    {
+      "pkgutil": [
+        "org.winehq.wine-stable",
+        "org.winehq.wine-stable-deps",
+        "org.winehq.wine-stable-deps64",
+        "org.winehq.wine-stable32",
+        "org.winehq.wine-stable64"
+      ],
+      "delete": "/Applications/Wine stable.app",
+      "signal": [
+
+      ]
+    },
+    "winehq-stable-4.0.pkg (Pkg)",
+    [
+      "/Applications/Wine Stable.app/Contents/Resources/start/bin/appdb"
+    ],
+    [
+      "/Applications/Wine Stable.app/Contents/Resources/wine/bin/msiexec"
+    ],
+    [
+      "/Applications/Wine Stable.app/Contents/Resources/wine/bin/notepad"
+    ],
+    [
+      "/Applications/Wine Stable.app/Contents/Resources/wine/bin/regedit"
+    ],
+    [
+      "/Applications/Wine Stable.app/Contents/Resources/wine/bin/regsvr32"
+    ],
+    [
+      "/Applications/Wine Stable.app/Contents/Resources/wine/bin/wine"
+    ],
+    [
+      "/Applications/Wine Stable.app/Contents/Resources/wine/bin/wine64"
+    ],
+    [
+      "/Applications/Wine Stable.app/Contents/Resources/wine/bin/wineboot"
+    ],
+    [
+      "/Applications/Wine Stable.app/Contents/Resources/wine/bin/winecfg"
+    ],
+    [
+      "/Applications/Wine Stable.app/Contents/Resources/wine/bin/wineconsole"
+    ],
+    [
+      "/Applications/Wine Stable.app/Contents/Resources/wine/bin/winedbg"
+    ],
+    [
+      "/Applications/Wine Stable.app/Contents/Resources/wine/bin/winefile"
+    ],
+    [
+      "/Applications/Wine Stable.app/Contents/Resources/wine/bin/winemine"
+    ],
+    [
+      "/Applications/Wine Stable.app/Contents/Resources/wine/bin/winepath"
+    ],
+    [
+      "/Applications/Wine Stable.app/Contents/Resources/wine/bin/wineserver"
+    ],
+    [
+      "/Applications/Wine Stable.app/Contents/Resources/start/bin/winehelp"
+    ]
+  ],
+  "caveats": "wine-stable installs support for running 64 bit applications in Wine, which is considered experimental.\nIf you do not want 64 bit support, you should download and install the wine-stable package manually.\n",
+  "depends_on": {
+    "x11": true
+  },
+  "conflicts_with": {
+    "formula": [
+      "wine"
+    ],
+    "cask": [
+      "wine-devel",
+      "wine-staging"
+    ],
+    "macos": [
+
+    ],
+    "arch": [
+
+    ],
+    "x11": [
+
+    ],
+    "java": [
+
+    ]
+  },
+  "container": null,
+  "auto_updates": null
+}

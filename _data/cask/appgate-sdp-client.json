@@ -1,0 +1,56 @@
+{
+  "name": [
+    "AppGate SDP Client for macOS"
+  ],
+  "homepage": "https://www.cryptzone.com/downloadcenter/appgate-sdp",
+  "url": "https://sdpdownloads.cyxtera.com/AppGate-SDP-4.2/clients/AppGate-SDP-4.2.0-Installer.dmg",
+  "appcast": null,
+  "version": "4.2.0",
+  "sha256": "3152524e415274f1c025dda77f8cbf72aa3bf54c028e7dc6fb94b14c263e6b04",
+  "artifacts": [
+    {
+      "launchctl": [
+        "com.cyxtera.appgate.sdp.client.agent",
+        "com.cyxtera.appgate.sdp.helper",
+        "com.cyxtera.appgate.sdp.tun",
+        "com.cyxtera.appgate.sdp.updater"
+      ],
+      "quit": [
+        "com.cyxtera.appgate.helper",
+        "com.cyxtera.appgate.sdp"
+      ],
+      "signal": [
+        [
+          "QUIT",
+          "com.cyxtera.appgate"
+        ]
+      ],
+      "pkgutil": "com.appgate.pkg.appgatetun.component"
+    },
+    "AppGate SDP Installer.pkg (Pkg)",
+    {
+      "trash": [
+        "~/Library/Application Support/appgate-ui",
+        "~/Library/Caches/com.cyxtera.appgate.sdp.uninstall",
+        "~/Library/Preferences/com.cyxtera.appgate.sdp*",
+        "~/Library/Saved Application State/com.cyxtera.appgate.sdp.savedState"
+      ],
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+    "macos": [
+      [
+        ">=",
+        "10.11"
+      ]
+    ]
+  },
+  "conflicts_with": {
+  },
+  "container": null,
+  "auto_updates": null
+}

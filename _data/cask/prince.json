@@ -1,0 +1,36 @@
+{
+  "name": [
+    "Prince"
+  ],
+  "homepage": "https://www.princexml.com/",
+  "url": "https://www.princexml.com/download/prince-12.2.1-macosx.tar.gz",
+  "appcast": null,
+  "version": "12.2.1",
+  "sha256": "12b9583052c347e3ded19f501ed4935bf6c3cf6a44928ee31c19b8beadfdcc09",
+  "artifacts": [
+    {
+      "delete": [
+        "/usr/local/bin/prince",
+        "/usr/local/lib/prince"
+      ],
+      "signal": [
+
+      ]
+    },
+    {
+      "path": "prince-12.2.1-macosx/install.sh",
+      "args": {
+        "must_succeed": true,
+        "sudo": false,
+        "print_stdout": true
+      }
+    }
+  ],
+  "caveats": "Cask #<Cask::Cask:0x00007fc3e5533c38> installs files under /usr/local. The presence of such\nfiles can cause warnings when running \"brew doctor\", which is considered\nto be a bug in Homebrew Cask.\n",
+  "depends_on": {
+  },
+  "conflicts_with": {
+  },
+  "container": null,
+  "auto_updates": null
+}

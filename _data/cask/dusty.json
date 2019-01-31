@@ -1,0 +1,48 @@
+{
+  "name": [
+    "Dusty"
+  ],
+  "homepage": "https://github.com/gamechanger/dusty",
+  "url": "https://github.com/gamechanger/dusty/releases/download/0.7.3/dusty.tar.gz",
+  "appcast": "https://github.com/gamechanger/dusty/releases.atom",
+  "version": "0.7.3",
+  "sha256": "6cf61f0dcdc541de123ffd1d8e035eb3fc36e51b626a072355df76c3efd15af9",
+  "artifacts": [
+    {
+      "launchctl": "com.gamechanger.dusty",
+      "signal": [
+
+      ]
+    },
+    {
+      "path": "brew-install.sh",
+      "args": {
+        "must_succeed": true,
+        "sudo": true,
+        "args": [
+          "/usr/local/Caskroom/dusty/0.7.3"
+        ],
+        "print_stdout": true
+      }
+    },
+    [
+      "dusty"
+    ],
+    {
+      "trash": "/etc/dusty",
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+    "cask": [
+      "docker-toolbox"
+    ]
+  },
+  "conflicts_with": {
+  },
+  "container": "{:type=>:tar}",
+  "auto_updates": null
+}

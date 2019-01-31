@@ -1,0 +1,59 @@
+{
+  "name": [
+    "GPG Suite Pinentry"
+  ],
+  "homepage": "https://gpgtools.org/",
+  "url": "https://releases.gpgtools.org/GPG_Suite-2018.5.dmg",
+  "appcast": "https://gpgtools.org/releases/gka/appcast.xml",
+  "version": "2018.5",
+  "sha256": "c66ecf48ccf709f704f02097cf9d68ba97b0efba24f7a0b7b46adfd1133cb86a",
+  "artifacts": [
+    {
+      "pkgutil": "org.gpgtools.pinentry.*",
+      "quit": "org.gpgtools.pinentry-mac",
+      "delete": "/usr/local/MacGPG2",
+      "signal": [
+
+      ]
+    },
+    "Install.pkg (Pkg)",
+    {
+      "trash": "~/Library/Preferences/org.gpgtools.common.plist",
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "Cask #<Cask::Cask:0x00007fc3ca290190> installs files under /usr/local. The presence of such\nfiles can cause warnings when running \"brew doctor\", which is considered\nto be a bug in Homebrew Cask.\n",
+  "depends_on": {
+    "macos": [
+      [
+        ">=",
+        "10.12"
+      ]
+    ]
+  },
+  "conflicts_with": {
+    "formula": [
+
+    ],
+    "cask": [
+      "gpg-suite",
+      "gpg-suite-nightly"
+    ],
+    "macos": [
+
+    ],
+    "arch": [
+
+    ],
+    "x11": [
+
+    ],
+    "java": [
+
+    ]
+  },
+  "container": null,
+  "auto_updates": true
+}

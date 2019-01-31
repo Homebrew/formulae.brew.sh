@@ -1,0 +1,67 @@
+{
+  "name": [
+    "Google Photos Backup And Sync"
+  ],
+  "homepage": "https://photos.google.com/apps",
+  "url": "https://dl.google.com/drive/InstallPhotosBackupAndSync.dmg",
+  "appcast": null,
+  "version": "latest",
+  "sha256": "no_check",
+  "artifacts": [
+    {
+      "login_item": "Backup and sync from Google",
+      "quit": "com.google.GoogleDrive",
+      "signal": [
+
+      ]
+    },
+    [
+      "Backup and Sync.app"
+    ],
+    {
+      "trash": [
+        "~/Library/Application Scripts/com.google.GoogleDrive.FinderSyncAPIExtension",
+        "~/Library/Application Support/Google/Drive",
+        "~/Library/Caches/com.google.GoogleDrive",
+        "~/Library/Containers/com.google.GoogleDrive.FinderSyncAPIExtension",
+        "~/Library/Cookies/com.google.GoogleDrive.binarycookies",
+        "~/Library/Group Containers/google_drive",
+        "~/Library/Preferences/com.google.GoogleDrive.plist"
+      ],
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "Although google-photos-backup-and-sync may be installed alongside google-drive-file-stream, you should not use the same account with both.\n\n  https://support.google.com/a/answer/7496409#allowboth\n",
+  "depends_on": {
+    "macos": [
+      [
+        ">=",
+        "10.9"
+      ]
+    ]
+  },
+  "conflicts_with": {
+    "formula": [
+
+    ],
+    "cask": [
+      "google-backup-and-sync"
+    ],
+    "macos": [
+
+    ],
+    "arch": [
+
+    ],
+    "x11": [
+
+    ],
+    "java": [
+
+    ]
+  },
+  "container": null,
+  "auto_updates": null
+}

@@ -1,0 +1,42 @@
+{
+  "name": [
+    "EasyTax AG"
+  ],
+  "homepage": "https://msg-easytax.ch/",
+  "url": "https://msg-easytax.ch/ag/2017/EasyTax2017AG_macos_1_3_mitJRE.dmg",
+  "appcast": null,
+  "version": "2017,1.3",
+  "sha256": "ab8857d14e336b103f56764b5d4b9dc416767184ee0efadcb2503ebde7095427",
+  "artifacts": [
+    {
+      "script": {
+        "executable": "/Applications/EasyTax/AG2017/EasyTax 2017 AG Deinstallationsprogramm.app/Contents/MacOS/JavaApplicationStub",
+        "args": [
+          "-q"
+        ]
+      },
+      "rmdir": "/Applications/EasyTax",
+      "signal": [
+
+      ]
+    },
+    {
+      "path": "EasyTax 2017 AG Installationsprogramm.app/Contents/MacOS/JavaApplicationStub",
+      "args": {
+        "must_succeed": true,
+        "sudo": false,
+        "args": [
+          "-q"
+        ],
+        "print_stdout": true
+      }
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+  },
+  "conflicts_with": {
+  },
+  "container": null,
+  "auto_updates": null
+}

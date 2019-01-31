@@ -1,0 +1,47 @@
+{
+  "name": [
+    "Bonita Studio Community Edition"
+  ],
+  "homepage": "https://www.bonitasoft.com/downloads",
+  "url": "https://release.ow2.org/bonita/BonitaStudioCommunity-7.8.0-x86_64.dmg",
+  "appcast": "https://www.bonitasoft.com/downloads",
+  "version": "7.8.0",
+  "sha256": "678be6e4f16e60059790fd51cb1d2bd6bf33f90bc8f669d7f1101a6e921c767d",
+  "artifacts": [
+    {
+      "quit": "org.bonitasoft.studio.product",
+      "delete": "/Applications/BonitaStudioCommunity-7.8.0.app",
+      "signal": [
+
+      ]
+    },
+    {
+      "path": "/usr/local/Caskroom/bonitastudiocommunity/7.8.0/BonitaStudioCommunity-7.8.0.app/Contents/MacOS/installbuilder.sh",
+      "args": {
+        "must_succeed": true,
+        "sudo": false,
+        "args": [
+          "--mode",
+          "unattended"
+        ],
+        "print_stdout": true
+      }
+    },
+    {
+      "trash": [
+        "~/Library/Preferences/org.bonitasoft.studio.product.plist",
+        "/Library/Caches/org.bonitasoft.studio.product"
+      ],
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+  },
+  "conflicts_with": {
+  },
+  "container": null,
+  "auto_updates": null
+}

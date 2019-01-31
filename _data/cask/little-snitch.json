@@ -1,0 +1,88 @@
+{
+  "name": [
+    "Little Snitch"
+  ],
+  "homepage": "https://www.obdev.at/products/littlesnitch/index.html",
+  "url": "https://www.obdev.at/downloads/littlesnitch/LittleSnitch-4.2.4.dmg",
+  "appcast": "https://www.obdev.at/products/littlesnitch/releasenotes.html",
+  "version": "4.2.4",
+  "sha256": "f30744d2f62aaae5b2b4a9cc81cb757f987cc1046c0dfd14e9ed329765432871",
+  "artifacts": [
+    {
+      "launchctl": [
+        "at.obdev.LittleSnitchUIAgent",
+        "at.obdev.LittleSnitchHelper",
+        "at.obdev.littlesnitchd"
+      ],
+      "signal": [
+
+      ]
+    },
+    {
+      "path": "LittleSnitch-4.2.4.dmg/Little Snitch Installer.app"
+    },
+    {
+      "trash": [
+        "/Library/Application Support/Objective Development/Little Snitch",
+        "/Library/Caches/at.obdev.LittleSnitchConfiguration",
+        "/Library/Little Snitch",
+        "/Library/Logs/LittleSnitchDaemon.log",
+        "~/Library/Application Support/Little Snitch",
+        "~/Library/Caches/at.obdev.LittleSnitchAgent",
+        "~/Library/Caches/at.obdev.LittleSnitchConfiguration",
+        "~/Library/Caches/at.obdev.LittleSnitchHelper",
+        "~/Library/Caches/at.obdev.LittleSnitchSoftwareUpdate",
+        "~/Library/Caches/com.apple.helpd/Generated/at.obdev.LittleSnitchConfiguration.help*",
+        "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/at.obdev.LittleSnitchConfiguration.help*",
+        "~/Library/Logs/Little Snitch Agent.log",
+        "~/Library/Logs/Little Snitch Helper.log",
+        "~/Library/Logs/Little Snitch Installer.log",
+        "~/Library/Logs/Little Snitch Network Monitor.log",
+        "~/Library/Preferences/at.obdev.LittleSnitchAgent.plist",
+        "~/Library/Preferences/at.obdev.LittleSnitchConfiguration.plist",
+        "~/Library/Preferences/at.obdev.LittleSnitchInstaller.plist",
+        "~/Library/Preferences/at.obdev.LittleSnitchNetworkMonitor.plist",
+        "~/Library/Preferences/at.obdev.LittleSnitchSoftwareUpdate.plist",
+        "~/Library/Saved Application State/at.obdev.LittleSnitchInstaller.savedState",
+        "~/Library/WebKit/at.obdev.LittleSnitchConfiguration",
+        "/Library/Extensions/LittleSnitch.kext",
+        "/Library/StagedExtensions/Library/Extensions/LittleSnitch.kext"
+      ],
+      "rmdir": "/Library/Application Support/Objective Development",
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "To install and/or use #<Cask::Cask:0x00007fc3dde75010> you may need to enable their kernel extension in\n\n  System Preferences → Security & Privacy → General\n\nFor more information refer to vendor documentation or the Apple Technical Note:\n\n  \u001b[4mhttps://developer.apple.com/library/content/technotes/tn2459/_index.html\u001b[24m\n\nYou must reboot for the installation of #<Cask::Cask:0x00007fc3dde75010> to take effect.\n",
+  "depends_on": {
+    "macos": [
+      [
+        ">=",
+        "10.11"
+      ]
+    ]
+  },
+  "conflicts_with": {
+    "formula": [
+
+    ],
+    "cask": [
+      "little-snitch-nightly"
+    ],
+    "macos": [
+
+    ],
+    "arch": [
+
+    ],
+    "x11": [
+
+    ],
+    "java": [
+
+    ]
+  },
+  "container": "{:type=>:naked}",
+  "auto_updates": true
+}

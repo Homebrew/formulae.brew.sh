@@ -1,0 +1,44 @@
+{
+  "name": [
+    "Paragon ExtFS"
+  ],
+  "homepage": "https://www.paragon-software.com/ufsdhome/extfs-mac/",
+  "url": "https://dl.paragon-software.com/demo/trial_extfs.dmg",
+  "appcast": null,
+  "version": "latest",
+  "sha256": "no_check",
+  "artifacts": [
+    {
+      "kext": "com.paragon-software.filesystems.extfs",
+      "launchctl": "com.paragon-software.extfs*",
+      "pkgutil": "com.paragon-software.pkg.extfs",
+      "quit": "com.paragon-software.extfs*",
+      "signal": [
+        [
+          "KILL",
+          "com.paragon-software.extfs.FSMenuApp"
+        ],
+        [
+          "KILL",
+          "com.paragon-software.extfs.notification-agent"
+        ]
+      ]
+    },
+    {
+      "path": "Install Paragon ExtFS for Mac.app"
+    },
+    {
+      "trash": "~/Library/Preferences/com.paragon-software.extfs.fsapp.plist",
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "To install and/or use #<Cask::Cask:0x00007fc3c91a9110> you may need to enable their kernel extension in\n\n  System Preferences → Security & Privacy → General\n\nFor more information refer to vendor documentation or the Apple Technical Note:\n\n  \u001b[4mhttps://developer.apple.com/library/content/technotes/tn2459/_index.html\u001b[24m\n",
+  "depends_on": {
+  },
+  "conflicts_with": {
+  },
+  "container": null,
+  "auto_updates": null
+}

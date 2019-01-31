@@ -1,0 +1,28 @@
+{
+  "name": [
+    "RStudio"
+  ],
+  "homepage": "https://www.rstudio.com/",
+  "url": "https://download1.rstudio.org/RStudio-1.1.463.dmg",
+  "appcast": "https://www.rstudio.com/products/rstudio/download/",
+  "version": "1.1.463",
+  "sha256": "c6956721114b160e581e02edfe53bc412f9882bdd907a1967f7cdd7ce007094d",
+  "artifacts": [
+    [
+      "RStudio.app"
+    ],
+    {
+      "trash": "~/.rstudio-desktop",
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "rstudio depends on R.\nThere are different ways to satisfy that dependency. RStudio recommends installing R from The R Project, which is required to install binary R packages, without needing to compile packages from source.\n\nhttps://support.rstudio.com/hc/en-us/articles/217799238\n\nTo install the R Project package run:\n\n  brew cask install r-app\n\nAlternative ways to satisfy the dependency are:\n\n  brew install r\n\nThis requires compiling R packages from source.\n",
+  "depends_on": {
+  },
+  "conflicts_with": {
+  },
+  "container": null,
+  "auto_updates": null
+}

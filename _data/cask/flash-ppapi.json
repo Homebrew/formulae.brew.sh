@@ -1,0 +1,37 @@
+{
+  "name": [
+    "Adobe Flash Player PPAPI (plugin for Opera and Chromium)"
+  ],
+  "homepage": "https://get.adobe.com/flashplayer/otherversions/",
+  "url": "https://fpdownload.adobe.com/pub/flashplayer/pdc/32.0.0.114/install_flash_player_osx_ppapi.dmg",
+  "appcast": "https://fpdownload.adobe.com/pub/flashplayer/update/current/xml/version_en_mac_pep.xml",
+  "version": "32.0.0.114",
+  "sha256": "b342ff579b0eacf5da252fa70f53eb03d19178d7b0e18b26775cd588cbc02e8c",
+  "artifacts": [
+    {
+      "pkgutil": "com.adobe.pkg.PepperFlashPlayer",
+      "launchctl": "com.adobe.fpsaud",
+      "delete": "/Library/Internet Plug-Ins/PepperFlashPlayer",
+      "signal": [
+
+      ]
+    },
+    "Install Adobe Pepper Flash Player.app/Contents/Resources/Adobe Flash Player.pkg (Pkg)",
+    {
+      "trash": [
+        "~/Library/Caches/Adobe/Flash Player",
+        "~/Library/Logs/FlashPlayerInstallManager.log"
+      ],
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+  },
+  "conflicts_with": {
+  },
+  "container": null,
+  "auto_updates": true
+}

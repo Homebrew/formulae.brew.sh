@@ -1,0 +1,46 @@
+{
+  "name": [
+    "Tunnelblick"
+  ],
+  "homepage": "https://www.tunnelblick.net/",
+  "url": "https://github.com/Tunnelblick/Tunnelblick/releases/download/v3.7.8/Tunnelblick_3.7.8_build_5180.dmg",
+  "appcast": "https://github.com/Tunnelblick/Tunnelblick/releases.atom",
+  "version": "3.7.8,5180",
+  "sha256": "0918551e80b3f861eb075cae790f3834a81a163a2793d2414064a1451bda3370",
+  "artifacts": [
+    "uninstall_preflight (Preflight Block)",
+    {
+      "launchctl": [
+        "net.tunnelblick.tunnelblick.LaunchAtLogin",
+        "net.tunnelblick.tunnelblick.tunnelblickd"
+      ],
+      "quit": "net.tunnelblick.tunnelblick",
+      "signal": [
+
+      ]
+    },
+    [
+      "Tunnelblick.app"
+    ],
+    {
+      "trash": [
+        "~/Library/Application Support/Tunnelblick",
+        "~/Library/Caches/net.tunnelblick.tunnelblick",
+        "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/Tunnelblick*",
+        "~/Library/Cookies/net.tunnelblick.tunnelblick.binarycookies",
+        "~/Library/Preferences/net.tunnelblick.tunnelblick.plist",
+        "/Library/Application Support/Tunnelblick"
+      ],
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "For security reasons, tunnelblick must be installed to /Applications,\nand will request to be moved at launch.\n",
+  "depends_on": {
+  },
+  "conflicts_with": {
+  },
+  "container": null,
+  "auto_updates": true
+}

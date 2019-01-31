@@ -1,0 +1,50 @@
+{
+  "name": [
+    "Microsoft R Open",
+    "MRO"
+  ],
+  "homepage": "https://mran.microsoft.com/",
+  "url": "https://mran.blob.core.windows.net/install/mro/3.5.1/microsoft-r-open-3.5.1.pkg",
+  "appcast": "https://github.com/Microsoft/microsoft-r-open/releases.atom",
+  "version": "3.5.1",
+  "sha256": "95739c07d4fb90f9a3aef19269dd4939f368457d928328adf5126b30c4229601",
+  "artifacts": [
+    {
+      "pkgutil": [
+        "com.microsoft.pkg.mro-framework",
+        "com.microsoft.pkg.mro-gui"
+      ],
+      "delete": [
+        "/usr/bin/R",
+        "/usr/bin/Rscript",
+        "/Library/Frameworks/R.Framework/Versions/Current",
+        "/Library/Frameworks/R.Framework/Versions/3.5"
+      ],
+      "signal": [
+
+      ]
+    },
+    "microsoft-r-open-3.5.1.pkg (Pkg)",
+    {
+      "trash": [
+        "~/.R",
+        "~/.RData",
+        "~/.Rapp.history",
+        "~/.Rhistory",
+        "~/.Rprofile",
+        "~/Library/R",
+        "~/Library/Caches/org.R-project.R"
+      ],
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+  },
+  "conflicts_with": {
+  },
+  "container": null,
+  "auto_updates": null
+}

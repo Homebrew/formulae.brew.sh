@@ -1,0 +1,67 @@
+{
+  "name": [
+    "Keybase"
+  ],
+  "homepage": "https://keybase.io/",
+  "url": "https://prerelease.keybase.io/darwin-updates/Keybase-2.13.2-20190123014357%2B6bb157b5d0.zip",
+  "appcast": "https://prerelease.keybase.io/update-darwin-prod-v2.json",
+  "version": "2.13.2-20190123014357,6bb157b5d0",
+  "sha256": "3dfee180640cba6abadac28a31ca48d8081d30d21955314ede0166875f4bfc93",
+  "artifacts": [
+    {
+      "delete": "/Library/PrivilegedHelperTools/keybase.Helper",
+      "launchctl": "keybase.Helper",
+      "login_item": "Keybase",
+      "signal": [
+        [
+          "TERM",
+          "keybase.Electron"
+        ],
+        [
+          "TERM",
+          "keybase.ElectronHelper"
+        ],
+        [
+          "KILL",
+          "keybase.Electron"
+        ],
+        [
+          "KILL",
+          "keybase.ElectronHelper"
+        ]
+      ],
+      "script": {
+        "executable": "/Applications/Keybase.app/Contents/SharedSupport/bin/keybase",
+        "args": [
+          "uninstall"
+        ]
+      }
+    },
+    [
+      "Keybase.app"
+    ],
+    "postflight (Postflight Block)",
+    {
+      "trash": [
+        "~/Library/Application Support/Keybase",
+        "~/Library/Caches/Keybase",
+        "~/Library/Group Containers/keybase",
+        "~/Library/Logs/Keybase*",
+        "~/Library/Logs/keybase*",
+        "~/Library/Preferences/keybase*",
+        "/Library/Logs/keybase*"
+      ],
+      "rmdir": "/keybase",
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+  },
+  "conflicts_with": {
+  },
+  "container": null,
+  "auto_updates": true
+}

@@ -1,0 +1,34 @@
+{
+  "name": [
+    "Xamarin Platform"
+  ],
+  "homepage": "https://www.xamarin.com/platform",
+  "url": "https://download.xamarin.com/Installer/Mac/XamarinInstaller.dmg",
+  "appcast": null,
+  "version": "latest",
+  "sha256": "no_check",
+  "artifacts": [
+    {
+      "delete": "/Applications/Xamarin Studio.app",
+      "signal": [
+
+      ]
+    },
+    {
+      "path": "Install Xamarin.app"
+    },
+    {
+      "trash": "~/Library/Developer/Xamarin",
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "#<Cask::Cask:0x00007fc3cb801d58> requires Java. You can install the latest version with\n\n  brew cask install java\n",
+  "depends_on": {
+  },
+  "conflicts_with": {
+  },
+  "container": null,
+  "auto_updates": null
+}

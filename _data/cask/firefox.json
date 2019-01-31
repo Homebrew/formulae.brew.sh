@@ -1,0 +1,60 @@
+{
+  "name": [
+    "Mozilla Firefox"
+  ],
+  "homepage": "https://www.mozilla.org/firefox/",
+  "url": "https://download-installer.cdn.mozilla.net/pub/firefox/releases/65.0/mac/en-US/Firefox%2065.0.dmg",
+  "appcast": "https://www.mozilla.org/en-US/firefox/releases/",
+  "version": "65.0",
+  "sha256": "6175e0b96e452696ea0263d13faf86f038476d9bb6a5dd32288e8c3c44d3c115",
+  "artifacts": [
+    [
+      "Firefox.app"
+    ],
+    {
+      "trash": [
+        "/Library/Logs/DiagnosticReports/firefox_*",
+        "~/Library/Application Support/Firefox",
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.mozilla.firefox.sfl*",
+        "~/Library/Caches/Firefox",
+        "~/Library/Caches/Mozilla/updates/Applications/Firefox",
+        "~/Library/Preferences/org.mozilla.firefox.plist"
+      ],
+      "rmdir": [
+        "~/Library/Application Support/Mozilla",
+        "~/Library/Caches/Mozilla/updates/Applications",
+        "~/Library/Caches/Mozilla/updates",
+        "~/Library/Caches/Mozilla"
+      ],
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+  },
+  "conflicts_with": {
+    "formula": [
+
+    ],
+    "cask": [
+      "firefox-beta",
+      "firefox-esr"
+    ],
+    "macos": [
+
+    ],
+    "arch": [
+
+    ],
+    "x11": [
+
+    ],
+    "java": [
+
+    ]
+  },
+  "container": null,
+  "auto_updates": true
+}

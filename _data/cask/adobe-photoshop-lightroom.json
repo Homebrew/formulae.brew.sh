@@ -1,0 +1,33 @@
+{
+  "name": [
+    "Adobe Photoshop Lightroom"
+  ],
+  "homepage": "https://www.adobe.com/products/photoshop-lightroom.html",
+  "url": "http://swupdl.adobe.com/updates/oobe/aam20/mac/AdobeLightroom-6.0/6.14/setup.dmg",
+  "appcast": null,
+  "version": "6.14",
+  "sha256": "a9fba25594181acdb72d713fcbba5a1f3816ad18b974af2918e41e9ba5cc63ab",
+  "artifacts": [
+    "preflight (Preflight Block)",
+    "uninstall_preflight (Preflight Block)",
+    {
+      "trash": [
+        "~/Library/Application Support/Adobe/Lightroom",
+        "~/Library/Preferences/com.adobe.Lightroom6.plist"
+      ],
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "Installation or Uninstallation may fail with Exit Code 19 (Conflicting Processes running) if Browsers, Safari Notification Service or SIMBL Services (e.g. Flashlight) are running or Adobe Creative Cloud or any other Adobe Products are already installed. See Logs in /Library/Logs/Adobe/Installers if Installation or Uninstallation fails, to identifify the conflicting processes.\n",
+  "depends_on": {
+    "cask": [
+      "homebrew/cask-versions/adobe-photoshop-lightroom600"
+    ]
+  },
+  "conflicts_with": {
+  },
+  "container": null,
+  "auto_updates": true
+}

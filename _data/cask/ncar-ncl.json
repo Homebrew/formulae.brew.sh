@@ -1,0 +1,55 @@
+{
+  "name": [
+    "NCAR Command Language",
+    "ncl"
+  ],
+  "homepage": "https://www.ncl.ucar.edu/",
+  "url": "https://www.earthsystemgrid.org/dataset/ncl.650.dap/file/ncl_ncarg-6.5.0-MacOS_10.13_64bit_gnu730.tar.gz",
+  "appcast": "https://www.ncl.ucar.edu/current_release.shtml",
+  "version": "6.5.0",
+  "sha256": "18d95acc8a9904c930d61b24348d13603c53a28e7c50c86f28b4354f823dc3df",
+  "artifacts": [
+    "preflight (Preflight Block)",
+    {
+      "delete": "/usr/local/ncl-6.5.0",
+      "signal": [
+
+      ]
+    },
+    [
+      "include",
+      {
+        "target": "/usr/local/ncl-6.5.0/include"
+      }
+    ],
+    [
+      "bin",
+      {
+        "target": "/usr/local/ncl-6.5.0/bin"
+      }
+    ],
+    [
+      "lib",
+      {
+        "target": "/usr/local/ncl-6.5.0/lib"
+      }
+    ]
+  ],
+  "caveats": "To use ncar-ncl, you must add the ${NCARG_ROOT}/bin directory\nto your PATH environment variable.\n\nFor bash shell, add these lines to ~/.bash_profile:\n\n  export NCARG_ROOT=\"/usr/local/ncl-6.5.0\"\n  export PATH=\"${NCARG_ROOT}/bin:${PATH}\"\n\nYou may also need to modify your DYLD_FALLBACK_LIBRARY_PATH\nenvironment variable:\n\nexport DYLD_FALLBACK_LIBRARY_PATH=$(dirname $(gfortran --print-file-name libgfortran.3.dylib)):$DYLD_FALLBACK_LIBRARY_PATH\n\nFor other information, please see:\nhttps://www.ncl.ucar.edu/Download/macosx.shtml\n",
+  "depends_on": {
+    "x11": true,
+    "formula": [
+      "gcc"
+    ],
+    "macos": [
+      [
+        ">=",
+        "10.12"
+      ]
+    ]
+  },
+  "conflicts_with": {
+  },
+  "container": null,
+  "auto_updates": null
+}

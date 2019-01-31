@@ -1,0 +1,58 @@
+{
+  "name": [
+    "Parallels Access"
+  ],
+  "homepage": "https://www.parallels.com/products/access/",
+  "url": "https://download.parallels.com/pmobile/v3/3.2.0-31423/ParallelsAccess-3.2.0-31423-mac.dmg",
+  "appcast": null,
+  "version": "3.2.0-31423",
+  "sha256": "e5fd360aa76f3ba5a681b065fbdeaa5b43a4fc8a6bae0b182a27bcdde55d183a",
+  "artifacts": [
+    "preflight (Preflight Block)",
+    {
+      "launchctl": [
+        "com.parallels.mobile.startgui.launchagent",
+        "com.parallels.mobile.dispatcher.launchdaemon",
+        "com.parallels.mobile.kextloader.launchdaemon",
+        "com.parallels.mobile.prl_deskctl_agent.launchagent"
+      ],
+      "quit": [
+        "com.parallels.inputmethod.ParallelsIM"
+      ],
+      "signal": [
+        [
+          "TERM",
+          "com.parallels.mobile"
+        ],
+        [
+          "TERM",
+          "com.parallels.mobile.prl_deskctl_agent"
+        ]
+      ],
+      "kext": [
+        "com.parallels.virtualhid",
+        "com.parallels.virtualsound"
+      ],
+      "delete": "/Applications/Parallels Access.app"
+    },
+    {
+      "trash": [
+        "~/Library/Cookies/com.parallels.mobile.prl_deskctl_agent.binarycookies",
+        "~/Library/Group Containers/4C6364ACXT.com.parallels.Access",
+        "~/Library/Preferences/com.parallels.Parallels Access.plist",
+        "~/Library/Preferences/com.parallels.Parallels Access.plist.sdb",
+        "~/Library/Preferences/com.parallels.mobile.plist"
+      ],
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "To install and/or use #<Cask::Cask:0x00007fc3e53d3938> you may need to enable their kernel extension in\n\n  System Preferences → Security & Privacy → General\n\nFor more information refer to vendor documentation or the Apple Technical Note:\n\n  \u001b[4mhttps://developer.apple.com/library/content/technotes/tn2459/_index.html\u001b[24m\n",
+  "depends_on": {
+  },
+  "conflicts_with": {
+  },
+  "container": "{:type=>:naked}",
+  "auto_updates": null
+}

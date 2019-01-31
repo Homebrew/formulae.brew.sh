@@ -1,0 +1,49 @@
+{
+  "name": [
+    "V2RayX"
+  ],
+  "homepage": "https://github.com/Cenmrev/V2RayX",
+  "url": "https://github.com/Cenmrev/V2RayX/releases/download/v1.5.0/V2RayX.app.zip",
+  "appcast": "https://github.com/Cenmrev/V2RayX/releases.atom",
+  "version": "1.5.0",
+  "sha256": "e299f69105659a5ccd6c23f5b94ebe785898bf9e1d8a7760ae6ae907df9e854c",
+  "artifacts": [
+    "uninstall_preflight (Preflight Block)",
+    {
+      "delete": "/Library/Application Support/V2RayX",
+      "launchctl": "v2rayproject.v2rayx.v2ray-core",
+      "script": {
+        "executable": "/Applications/V2RayX.app/Contents/Resources/v2rayx_sysconf",
+        "args": [
+          "off"
+        ],
+        "sudo": true
+      },
+      "signal": [
+        [
+          "TERM",
+          "cenmrev.V2RayX"
+        ]
+      ]
+    },
+    [
+      "V2RayX.app"
+    ],
+    {
+      "trash": [
+        "~/Library/Application Support/V2RayX",
+        "~/Library/Preferences/cenmrev.V2RayX.plist"
+      ],
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+  },
+  "conflicts_with": {
+  },
+  "container": null,
+  "auto_updates": null
+}

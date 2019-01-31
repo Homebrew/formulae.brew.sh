@@ -1,0 +1,40 @@
+{
+  "name": [
+    "Resolume Arena"
+  ],
+  "homepage": "https://resolume.com/",
+  "url": "https://resolume.com/download/Resolume_Arena_6_1_2_rev_62447_Installer.dmg",
+  "appcast": "https://resolume.com/update/arena_mac.xml",
+  "version": "6.1.2,62447",
+  "sha256": "8bc73f4fe19c0c338f0258e1f1168fb5173ce7feab56405de3764ac6071f72e6",
+  "artifacts": [
+    {
+      "pkgutil": "com.resolume.pkg.ResolumeArena.*",
+      "delete": "/Applications/Resolume Arena 6",
+      "signal": [
+        [
+          "TERM",
+          "com.resolume.arena"
+        ]
+      ],
+      "launchctl": "com.resolume.arena"
+    },
+    "Resolume Arena Installer.pkg (Pkg)",
+    {
+      "pkgutil": [
+        "com.resolume.pkg.ResolumeDXV",
+        "com.resolume.pkg.ResolumeQuickLook"
+      ],
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+  },
+  "conflicts_with": {
+  },
+  "container": null,
+  "auto_updates": null
+}

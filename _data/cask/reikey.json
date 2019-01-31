@@ -1,0 +1,60 @@
+{
+  "name": [
+    "ReiKey"
+  ],
+  "homepage": "https://objective-see.com/products/reikey.html",
+  "url": "https://bitbucket.org/objective-see/deploy/downloads/ReiKey_1.3.0.zip",
+  "appcast": "https://objective-see.com/products/changelogs/ReiKey.txt",
+  "version": "1.3.0",
+  "sha256": "d65a64fda45dc5e02db7f8bbdd2fdf07ce814bd9bdcc7f48aee090030942d7c0",
+  "artifacts": [
+    {
+      "script": {
+        "executable": "/usr/local/Caskroom/reikey/1.3.0/ReiKey Installer.app/Contents/MacOS/ReiKey Installer",
+        "args": [
+          "-uninstall"
+        ],
+        "sudo": true
+      },
+      "signal": [
+
+      ]
+    },
+    {
+      "path": "/usr/local/Caskroom/reikey/1.3.0/ReiKey Installer.app/Contents/MacOS/ReiKey Installer",
+      "args": {
+        "must_succeed": true,
+        "sudo": true,
+        "args": [
+          "-install"
+        ],
+        "print_stdout": true
+      }
+    },
+    {
+      "trash": [
+        "~/Library/Caches/SentryCrash/ReiKey Installer",
+        "~/Library/Caches/SentryCrash/ReiKey Installer/Data",
+        "~/Library/Caches/SentryCrash/ReiKey Installer/Data/ConsoleLog.txt",
+        "~/Library/Caches/SentryCrash/ReiKey Installer/Data/CrashState.json",
+        "~/Library/Caches/SentryCrash/ReiKey Installer/Reports"
+      ],
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+    "macos": [
+      [
+        ">=",
+        "10.13"
+      ]
+    ]
+  },
+  "conflicts_with": {
+  },
+  "container": null,
+  "auto_updates": null
+}

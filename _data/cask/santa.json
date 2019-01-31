@@ -1,0 +1,32 @@
+{
+  "name": [
+    "Santa"
+  ],
+  "homepage": "https://github.com/google/santa",
+  "url": "https://github.com/google/santa/releases/download/0.9.30/santa-0.9.30.dmg",
+  "appcast": "https://github.com/google/santa/releases.atom",
+  "version": "0.9.30",
+  "sha256": "d13c852a0297c392cefd2bc504287c6e63771a17663c173ed71cadf0704137e1",
+  "artifacts": [
+    {
+      "delete": "/usr/local/bin/santactl",
+      "kext": "com.google.santa-driver",
+      "launchctl": [
+        "com.google.santad",
+        "com.google.santagui"
+      ],
+      "pkgutil": "com.google.santa",
+      "signal": [
+
+      ]
+    },
+    "santa-0.9.30.pkg (Pkg)"
+  ],
+  "caveats": "To install and/or use #<Cask::Cask:0x00007fc3e5649cd0> you may need to enable their kernel extension in\n\n  System Preferences → Security & Privacy → General\n\nFor more information refer to vendor documentation or the Apple Technical Note:\n\n  \u001b[4mhttps://developer.apple.com/library/content/technotes/tn2459/_index.html\u001b[24m\n",
+  "depends_on": {
+  },
+  "conflicts_with": {
+  },
+  "container": null,
+  "auto_updates": null
+}

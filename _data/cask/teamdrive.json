@@ -1,0 +1,68 @@
+{
+  "name": [
+    "TeamDrive"
+  ],
+  "homepage": "https://www.teamdrive.com/",
+  "url": "http://s3download.teamdrive.net.s3.amazonaws.com/4.6.2205/TMDR/mac-10.13.4/Install-TeamDrive-4.6.6.2205_TMDR.dmg",
+  "appcast": null,
+  "version": "4.6.6.2205",
+  "sha256": "ed848ead4c21346c1ca313159adfe1cbc6b88a335229ea4e2cb04099b8172400",
+  "artifacts": [
+    {
+      "script": {
+        "executable": "/Applications/TeamDrive/uninstall.app/Contents/MacOS/osx-x86_64",
+        "args": [
+          "--mode",
+          "unattended"
+        ]
+      },
+      "signal": [
+        [
+          "QUIT",
+          "com.teamdrive.teamdrive3"
+        ],
+        [
+          "KILL",
+          "com.teamdrive.teamdrive3"
+        ],
+        [
+          "QUIT",
+          "com.teamdrive.teamdrive3.FinderExt"
+        ],
+        [
+          "KILL",
+          "com.teamdrive.teamdrive3.FinderExt"
+        ],
+        [
+          "QUIT",
+          "com.teamdrive.teamdrive3.MenuExt"
+        ],
+        [
+          "KILL",
+          "com.teamdrive.teamdrive3.MenuExt"
+        ]
+      ]
+    },
+    {
+      "path": "Install-TeamDrive-4.6.6.2205_TMDR.app/Contents/MacOS/osx-x86_64",
+      "args": {
+        "must_succeed": true,
+        "sudo": false,
+        "args": [
+          "--unattendedmodeui",
+          "none",
+          "--mode",
+          "unattended"
+        ],
+        "print_stdout": true
+      }
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+  },
+  "conflicts_with": {
+  },
+  "container": null,
+  "auto_updates": null
+}

@@ -1,0 +1,51 @@
+{
+  "name": [
+    "Receitanet"
+  ],
+  "homepage": "http://idg.receita.fazenda.gov.br/interface/cidadao/irpf/2016/",
+  "url": "http://downloadirpf.receita.fazenda.gov.br/receitanet/Receitanet-1.07.app.tar.gz",
+  "appcast": null,
+  "version": "1.07",
+  "sha256": "409f74f4cda60739030a19a418ff7534987ace02da1093a5f494b042986dc5a4",
+  "artifacts": [
+    {
+      "script": {
+        "executable": "Desinstalador",
+        "args": [
+          "--mode",
+          "silent"
+        ],
+        "sudo": true
+      },
+      "signal": [
+
+      ]
+    },
+    {
+      "path": "Receitanet-1.07.app/Contents/MacOS/installer",
+      "args": {
+        "must_succeed": true,
+        "sudo": true,
+        "args": [
+          "--response-file",
+          "response",
+          "--mode",
+          "silent",
+          "--prefix",
+          "/usr/local/Caskroom/receitanet/1.07"
+        ],
+        "print_stdout": true
+      }
+    },
+    [
+      "Receitanet.app"
+    ]
+  ],
+  "caveats": "#<Cask::Cask:0x00007fc3e6668e40> requires Java 7+. You can install the latest version with\n\n  brew cask install java\n",
+  "depends_on": {
+  },
+  "conflicts_with": {
+  },
+  "container": null,
+  "auto_updates": null
+}

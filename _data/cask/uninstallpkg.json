@@ -1,0 +1,39 @@
+{
+  "name": [
+    "UninstallPKG"
+  ],
+  "homepage": "https://www.corecode.io/uninstallpkg/",
+  "url": "https://www.corecode.io/downloads/uninstallpkg_1.1.5.zip",
+  "appcast": "https://www.corecode.io/uninstallpkg/uninstallpkg.xml",
+  "version": "1.1.5",
+  "sha256": "8a92278d73334007d1df581584f7364adede9b74d4d46580055a435484c459cd",
+  "artifacts": [
+    {
+      "delete": "/Library/PrivilegedHelperTools/com.corecode.UninstallPKGDeleteHelper",
+      "launchctl": "com.corecode.UninstallPKGDeleteHelper",
+      "signal": [
+
+      ]
+    },
+    [
+      "UninstallPKG.app"
+    ],
+    {
+      "trash": [
+        "~/Library/Application Support/UninstallPKG",
+        "~/Library/Preferences/com.corecode.UninstallPKG.plist",
+        "~/Library/Saved Application State/com.corecode.UninstallPKG.savedState"
+      ],
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+  },
+  "conflicts_with": {
+  },
+  "container": null,
+  "auto_updates": null
+}
