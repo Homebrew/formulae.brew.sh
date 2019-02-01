@@ -312,6 +312,7 @@ GET https://formulae.brew.sh/api/analytics/${CATEGORY}/${DAYS}.json
 - `${CATEGORY}`: the category of the analytics events i.e.
   - `install`: the installation of all formulae
   - `install-on-request`: the requested installation of all formulae (i.e. not as a dependency of other formulae)
+  - `cask-install`: the installation of all casks
   - `build-error`: the installation failure of all formulae
   - `os-version`: the macOS version of the machine that submitted an event
 - `${DAYS}`: the number of days of analytics events i.e.
