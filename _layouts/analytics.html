@@ -20,7 +20,7 @@ layout: base
     {%- if page.category == "os-version" -%}
       <code>{{ item.os_version }}</code>
     {%- elsif page.category == "cask-install" -%}
-      <code>{{ item.formula }}</code>
+      <code>{{ item.cask }}</code>
     {%- else -%}
       {%- assign name = item.formula | split: " " | first -%}
       {%- assign data_name = name | remove: "@" | remove: "." | remove: '+' -%}
