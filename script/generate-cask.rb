@@ -5,7 +5,7 @@ FileUtils.rm_rf directories
 FileUtils.mkdir_p directories
 
 Cask::Cask.each do |c|
-  json_filename = "#{File.basename(c.sourcefile_path,'.rb')}.json"
+  json_filename = "#{c.token}.json"
   IO.write("_data/cask/#{json_filename}", JSON.pretty_generate(c.to_h))
-  FileUtils.cp "_api_formula.json.in", "api/cask/#{json_filename}"
+  FileUtils.cp "_api_cask.json.in", "api/cask/#{json_filename}"
 end
