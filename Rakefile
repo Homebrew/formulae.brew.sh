@@ -3,7 +3,7 @@ require "rake/clean"
 require "json"
 require "date"
 
-task default: :dump
+task default: :formula_and_analytics
 
 desc "Dump formulae data"
 task :formulae do
@@ -84,10 +84,10 @@ task :analytics do
 end
 
 desc "Dump formulae and analytics data"
-task dump: %i[formulae analytics]
+task formula_and_analytics: %i[formulae analytics]
 
 desc "Build the site"
-task build: :dump do
+task build: [:formula_and_analytics, :cask] do
   sh "bundle", "exec", "jekyll", "build"
 end
 
