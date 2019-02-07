@@ -11,12 +11,12 @@
   "desc": "ClutterMedia interface using GStreamer for video and audio",
   "homepage": "https://developer.gnome.org/clutter-gst/",
   "versions": {
-    "stable": "3.0.26",
+    "stable": "3.0.27",
     "devel": null,
     "head": null,
     "bottle": true
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -25,17 +25,17 @@
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
+        "mojave": {
+          "url": "https://homebrew.bintray.com/bottles/clutter-gst-3.0.27.mojave.bottle.tar.gz",
+          "sha256": "4ea9ed8a60919e1971e10623a59c9e43a110c3dcf06bc80b643244fbf2fecce0"
+        },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/clutter-gst-3.0.26_1.high_sierra.bottle.tar.gz",
-          "sha256": "4b5dba13db6ed368bd34224d1b3ad0f1d73a0092a398fd7c8a25a23a646c5bf7"
+          "url": "https://homebrew.bintray.com/bottles/clutter-gst-3.0.27.high_sierra.bottle.tar.gz",
+          "sha256": "0b75349dfc8507b63397f4e8465e90c1ae8d4828b3b140477c3f56b559520d15"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/clutter-gst-3.0.26_1.sierra.bottle.tar.gz",
-          "sha256": "bc573f8872242e53f361fcb7819c9141fb7a36807595de5b4ce127b791dc1373"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/clutter-gst-3.0.26_1.el_capitan.bottle.tar.gz",
-          "sha256": "887250619929ceed1616de68dfeb95818ff87a3c67e739897b728fdb0df539f4"
+          "url": "https://homebrew.bintray.com/bottles/clutter-gst-3.0.27.sierra.bottle.tar.gz",
+          "sha256": "8b8200f4f41d56c0de1e2f809a4fcb4ee52e7cc428826c82fa8b2fc1eb299232"
         }
       }
     }
@@ -45,6 +45,7 @@
 
   ],
   "build_dependencies": [
+    "gobject-introspection",
     "pkg-config"
   ],
   "dependencies": [
