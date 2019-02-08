@@ -1,0 +1,47 @@
+---
+---
+{%- assign full_name = page.name | remove: ".json" -%}
+{%- assign name = full_name -%}
+{%- assign cask = site.data.cask[name] -%}
+{
+
+{%- for key_value in cask -%}
+  {{ key_value[0] | jsonify }}:{{ key_value[1] | jsonify }},
+{%- endfor -%}
+
+"analytics":{"install":{"30d":{
+{%- if site.data.analytics.cask-install["30d"].items[full_name].size > 0 -%}
+  {%- for fa in site.data.analytics.cask-install["30d"].items[full_name] -%}
+    {{ fa.cask | jsonify }}:{{ fa.count | remove: "," | plus: 0 }}
+    {%- if forloop.last == false -%}
+    ,
+    {%- endif -%}
+  {%- endfor -%}
+{%- else -%}
+  {{ full_name | jsonify }}:0
+{%- endif -%}
+},"90d":{
+
+{%- if site.data.analytics.cask-install["90d"].items[full_name].size > 0 -%}
+  {%- for fa in site.data.analytics.cask-install["90d"].items[full_name] -%}
+    {{ fa.cask | jsonify }}:{{ fa.count | remove: "," | plus: 0 }}
+    {%- if forloop.last == false -%}
+    ,
+    {%- endif -%}
+  {%- endfor -%}
+{%- else -%}
+  {{ full_name | jsonify }}:0
+{%- endif -%}
+},"365d":{
+
+{%- if site.data.analytics.cask-install["365d"].items[full_name].size > 0 -%}
+  {%- for fa in site.data.analytics.cask-install["365d"].items[full_name] -%}
+    {{ fa.cask | jsonify }}:{{ fa.count | remove: "," | plus: 0 }}
+    {%- if forloop.last == false -%}
+    ,
+    {%- endif -%}
+  {%- endfor -%}
+{%- else -%}
+  {{ full_name | jsonify }}:0
+{%- endif -%}
+}}}}
