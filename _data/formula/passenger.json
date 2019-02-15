@@ -20,22 +20,22 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 2,
+      "rebuild": 0,
       "cellar": ":any",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/passenger-6.0.1.mojave.bottle.2.tar.gz",
-          "sha256": "3b5e444fe0ac01be904a4f08d5c24e32f04eea2f73dff333a06dc6cfd765e30b"
+          "url": "https://homebrew.bintray.com/bottles/passenger-6.0.1.mojave.bottle.tar.gz",
+          "sha256": "c8df29e4977d5e7495ac2bca1a5299a38a361955014e2ccb200f6495b2dee464"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/passenger-6.0.1.high_sierra.bottle.2.tar.gz",
-          "sha256": "83e9714af4d118daaf04d2601fceaee8b6254ab82f84abf6a7584a7e7e987ba3"
+          "url": "https://homebrew.bintray.com/bottles/passenger-6.0.1.high_sierra.bottle.tar.gz",
+          "sha256": "4cd91a1f49d517eb4752bfe0c328f97c040a6bde02200863009c3e61bd329eb6"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/passenger-6.0.1.sierra.bottle.2.tar.gz",
-          "sha256": "e5ac3df781538eaa706dabd46d237e09d6a6db84a0cc7331d0d8c6b83080dddd"
+          "url": "https://homebrew.bintray.com/bottles/passenger-6.0.1.sierra.bottle.tar.gz",
+          "sha256": "d094cecf62e66a527482b681bdfa01cc7fa956a16ad9e4d2fea520ffc63cac6f"
         }
       }
     }
@@ -45,7 +45,7 @@
 
   ],
   "build_dependencies": [
-    "nginx"
+
   ],
   "dependencies": [
     "openssl",
@@ -63,7 +63,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "To activate Phusion Passenger for Nginx, run:\n  brew install nginx\nAnd add the following to /home/travis/Homebrew/etc/nginx/nginx.conf at the top scope (outside http{}):\n  load_module /home/travis/Homebrew/opt/passenger/libexec/modules/ngx_http_passenger_module.so;\nAnd add the following to /home/travis/Homebrew/etc/nginx/nginx.conf in the http scope:\n  passenger_root /home/travis/Homebrew/opt/passenger/libexec/src/ruby_supportlib/phusion_passenger/locations.ini;\n  passenger_ruby /usr/bin/ruby;\n\nTo activate Phusion Passenger for Apache, create /etc/apache2/other/passenger.conf:\n  LoadModule passenger_module /home/travis/Homebrew/opt/passenger/libexec/buildout/apache2/mod_passenger.so\n  PassengerRoot /home/travis/Homebrew/opt/passenger/libexec/src/ruby_supportlib/phusion_passenger/locations.ini\n  PassengerDefaultRuby /usr/bin/ruby\n",
+  "caveats": "To activate Phusion Passenger for Nginx, run:\n  brew install nginx --with-passenger\n\nTo activate Phusion Passenger for Apache, create /etc/apache2/other/passenger.conf:\n  LoadModule passenger_module /home/travis/Homebrew/opt/passenger/libexec/buildout/apache2/mod_passenger.so\n  PassengerRoot /home/travis/Homebrew/opt/passenger/libexec/src/ruby_supportlib/phusion_passenger/locations.ini\n  PassengerDefaultRuby /usr/bin/ruby\n",
   "installed": [
 
   ],
