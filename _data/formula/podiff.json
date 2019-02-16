@@ -74,7 +74,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "To use with git, add this to your .git/config or global git config file:\n\n  [diff \"podiff\"]\n  command = /home/travis/Homebrew/bin/podiff -D-u\n\nThen add the following line to the .gitattributes file in\nthe directory with your PO files:\n\n  *.po diff=podiff\n\nSee `man podiff` for more information.\n",
+  "caveats": "To use with git, add this to your .git/config or global git config file:\n\n  [diff \"podiff\"]\n  command = $(brew --prefix)/bin/podiff -D-u\n\nThen add the following line to the .gitattributes file in\nthe directory with your PO files:\n\n  *.po diff=podiff\n\nSee `man podiff` for more information.\n",
   "installed": [
 
   ],

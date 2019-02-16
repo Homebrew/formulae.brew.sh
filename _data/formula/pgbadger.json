@@ -62,7 +62,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "You must configure your PostgreSQL server before using pgBadger.\nEdit postgresql.conf (in /home/travis/Homebrew/var/postgres if you use Homebrew's\nPostgreSQL), set the following parameters, and restart PostgreSQL:\n\n  log_destination = 'stderr'\n  log_line_prefix = '%t [%p]: [%l-1] user=%u,db=%d '\n  log_statement = 'none'\n  log_duration = off\n  log_min_duration_statement = 0\n  log_checkpoints = on\n  log_connections = on\n  log_disconnections = on\n  log_lock_waits = on\n  log_temp_files = 0\n  lc_messages = 'C'\n",
+  "caveats": "You must configure your PostgreSQL server before using pgBadger.\nEdit postgresql.conf (in $(brew --prefix)/var/postgres if you use Homebrew's\nPostgreSQL), set the following parameters, and restart PostgreSQL:\n\n  log_destination = 'stderr'\n  log_line_prefix = '%t [%p]: [%l-1] user=%u,db=%d '\n  log_statement = 'none'\n  log_duration = off\n  log_min_duration_statement = 0\n  log_checkpoints = on\n  log_connections = on\n  log_disconnections = on\n  log_lock_waits = on\n  log_temp_files = 0\n  lc_messages = 'C'\n",
   "installed": [
 
   ],

@@ -66,7 +66,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "This install of \"pdnsd\" expects config files to be in /home/travis/Homebrew/etc\nAll state files (status and cache) are stored in /home/travis/Homebrew/var/cache/pdnsd.\n\npdnsd needs to run as root since it listens on privileged ports.\n\nSample config file can be found at /home/travis/Homebrew/etc/pdnsd.conf.sample.\n\nNote that you must create the config file before starting the service,\nand change ownership to \"root\" or pdnsd will refuse to run:\n  sudo chown root /home/travis/Homebrew/etc/pdnsd.conf\n\nFor other related utilities, e.g. pdnsd-ctl, to run, change the ownership\nto the user (default: nobody) running the service:\n  sudo chown -R nobody /home/travis/Homebrew/var/log/pdnsd.log /home/travis/Homebrew/var/cache/pdnsd\n",
+  "caveats": "This install of \"pdnsd\" expects config files to be in $(brew --prefix)/etc\nAll state files (status and cache) are stored in $(brew --prefix)/var/cache/pdnsd.\n\npdnsd needs to run as root since it listens on privileged ports.\n\nSample config file can be found at $(brew --prefix)/etc/pdnsd.conf.sample.\n\nNote that you must create the config file before starting the service,\nand change ownership to \"root\" or pdnsd will refuse to run:\n  sudo chown root $(brew --prefix)/etc/pdnsd.conf\n\nFor other related utilities, e.g. pdnsd-ctl, to run, change the ownership\nto the user (default: nobody) running the service:\n  sudo chown -R nobody $(brew --prefix)/var/log/pdnsd.log $(brew --prefix)/var/cache/pdnsd\n",
   "installed": [
 
   ],

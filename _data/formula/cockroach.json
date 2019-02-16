@@ -66,7 +66,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "For local development only, this formula ships a launchd configuration to\nstart a single-node cluster that stores its data under:\n  /home/travis/Homebrew/var/cockroach/\nInstead of the default port of 8080, the node serves its admin UI at:\n  http://localhost:26256\n\nDo NOT use this cluster to store data you care about; it runs in insecure\nmode and may expose data publicly in e.g. a DNS rebinding attack. To run\nCockroachDB securely, please see:\n  https://www.cockroachlabs.com/docs/secure-a-cluster.html\n",
+  "caveats": "For local development only, this formula ships a launchd configuration to\nstart a single-node cluster that stores its data under:\n  $(brew --prefix)/var/cockroach/\nInstead of the default port of 8080, the node serves its admin UI at:\n  http://localhost:26256\n\nDo NOT use this cluster to store data you care about; it runs in insecure\nmode and may expose data publicly in e.g. a DNS rebinding attack. To run\nCockroachDB securely, please see:\n  https://www.cockroachlabs.com/docs/secure-a-cluster.html\n",
   "installed": [
 
   ],

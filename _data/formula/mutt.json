@@ -65,7 +65,7 @@
   "conflicts_with": [
     "tin"
   ],
-  "caveats": "mutt_dotlock(1) has been installed, but does not have the permissions lock\nspool files in /var/mail. To grant the necessary permissions, run\n\n  sudo chgrp mail /home/travis/Homebrew/Cellar/mutt/1.11.3/bin/mutt_dotlock\n  sudo chmod g+s /home/travis/Homebrew/Cellar/mutt/1.11.3/bin/mutt_dotlock\n\nAlternatively, you may configure `spoolfile` in your .muttrc to a file inside\nyour home directory.\n",
+  "caveats": "mutt_dotlock(1) has been installed, but does not have the permissions lock\nspool files in /var/mail. To grant the necessary permissions, run\n\n  sudo chgrp mail $(brew --prefix)/Cellar/mutt/1.11.3/bin/mutt_dotlock\n  sudo chmod g+s $(brew --prefix)/Cellar/mutt/1.11.3/bin/mutt_dotlock\n\nAlternatively, you may configure `spoolfile` in your .muttrc to a file inside\nyour home directory.\n",
   "installed": [
 
   ],

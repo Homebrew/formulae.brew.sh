@@ -70,7 +70,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "To use chroot, vsftpd requires root privileges, so you will need to run\n`sudo vsftpd`.\nYou should be certain that you trust any software you grant root privileges.\n\nThe vsftpd.conf file must be owned by root or vsftpd will refuse to start:\n  sudo chown root /home/travis/Homebrew/etc/vsftpd.conf\n",
+  "caveats": "To use chroot, vsftpd requires root privileges, so you will need to run\n`sudo vsftpd`.\nYou should be certain that you trust any software you grant root privileges.\n\nThe vsftpd.conf file must be owned by root or vsftpd will refuse to start:\n  sudo chown root $(brew --prefix)/etc/vsftpd.conf\n",
   "installed": [
 
   ],

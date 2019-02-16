@@ -42,7 +42,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "You should add the following to your .bashrc (or .bash_profile):\n  if [ -f \"/home/travis/Homebrew/opt/bash-git-prompt/share/gitprompt.sh\" ]; then\n    __GIT_PROMPT_DIR=\"/home/travis/Homebrew/opt/bash-git-prompt/share\"\n    source \"/home/travis/Homebrew/opt/bash-git-prompt/share/gitprompt.sh\"\n  fi\n",
+  "caveats": "You should add the following to your .bashrc (or .bash_profile):\n  if [ -f \"$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh\" ]; then\n    __GIT_PROMPT_DIR=\"$(brew --prefix)/opt/bash-git-prompt/share\"\n    source \"$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh\"\n  fi\n",
   "installed": [
 
   ],

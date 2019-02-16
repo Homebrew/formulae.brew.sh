@@ -64,7 +64,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "If you intend to process AsciiDoc files through an XML stage\n(such as a2x for manpage generation) you need to add something\nlike:\n\n  export XML_CATALOG_FILES=/home/travis/Homebrew/etc/xml/catalog\n\nto your shell rc file so that xmllint can find AsciiDoc's\ncatalog files.\n\nSee `man 1 xmllint' for more.\n",
+  "caveats": "If you intend to process AsciiDoc files through an XML stage\n(such as a2x for manpage generation) you need to add something\nlike:\n\n  export XML_CATALOG_FILES=$(brew --prefix)/etc/xml/catalog\n\nto your shell rc file so that xmllint can find AsciiDoc's\ncatalog files.\n\nSee `man 1 xmllint' for more.\n",
   "installed": [
 
   ],

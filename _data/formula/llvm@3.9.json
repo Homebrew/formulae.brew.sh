@@ -62,7 +62,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "LLVM executables are installed in /home/travis/Homebrew/opt/llvm@3.9/bin.\nExtra tools are installed in /home/travis/Homebrew/opt/llvm@3.9/share/llvm@3.9.\n\nTo use the bundled libc++ please add the following LDFLAGS:\n  LDFLAGS=\"-L/home/travis/Homebrew/opt/llvm@3.9/lib -Wl,-rpath,/home/travis/Homebrew/opt/llvm@3.9/lib\"\n",
+  "caveats": "LLVM executables are installed in $(brew --prefix)/opt/llvm@3.9/bin.\nExtra tools are installed in $(brew --prefix)/opt/llvm@3.9/share/llvm@3.9.\n\nTo use the bundled libc++ please add the following LDFLAGS:\n  LDFLAGS=\"-L$(brew --prefix)/opt/llvm@3.9/lib -Wl,-rpath,$(brew --prefix)/opt/llvm@3.9/lib\"\n",
   "installed": [
 
   ],

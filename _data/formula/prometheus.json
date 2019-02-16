@@ -62,7 +62,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "When used with `brew services`, prometheus' configuration is stored as command line flags in\n  /home/travis/Homebrew/etc/prometheus.args\n\nExample configuration:\n  echo \"--config.file ~/.config/prometheus.yml\" > /home/travis/Homebrew/etc/prometheus.args\n\n",
+  "caveats": "When used with `brew services`, prometheus' configuration is stored as command line flags in\n  $(brew --prefix)/etc/prometheus.args\n\nExample configuration:\n  echo \"--config.file ~/.config/prometheus.yml\" > $(brew --prefix)/etc/prometheus.args\n\n",
   "installed": [
 
   ],

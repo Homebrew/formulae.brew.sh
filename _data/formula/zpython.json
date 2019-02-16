@@ -66,7 +66,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "To use the zpython module in zsh you need to\nadd the following line to your .zshrc:\n\n  module_path=($module_path /home/travis/Homebrew/lib/zpython)\n\nIf you want to use this with powerline, make sure you set\nit early in .zshrc, before your prompt gets initialized.\n\nAfter reloading your shell you can test with:\n  zmodload zsh/zpython && zpython 'print \"hello world\"'\n",
+  "caveats": "To use the zpython module in zsh you need to\nadd the following line to your .zshrc:\n\n  module_path=($module_path $(brew --prefix)/lib/zpython)\n\nIf you want to use this with powerline, make sure you set\nit early in .zshrc, before your prompt gets initialized.\n\nAfter reloading your shell you can test with:\n  zmodload zsh/zpython && zpython 'print \"hello world\"'\n",
   "installed": [
 
   ],

@@ -70,7 +70,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "This formula does not install runit as a replacement for init.\nThe service directory is /home/travis/Homebrew/var/service instead of /service.\n\nTo have runit ready to run services, start runsvdir:\n     runsvdir -P /home/travis/Homebrew/var/service\n\nDepending on the services managed by runit, this may need to start as root.\n",
+  "caveats": "This formula does not install runit as a replacement for init.\nThe service directory is $(brew --prefix)/var/service instead of /service.\n\nTo have runit ready to run services, start runsvdir:\n     runsvdir -P $(brew --prefix)/var/service\n\nDepending on the services managed by runit, this may need to start as root.\n",
   "installed": [
 
   ],

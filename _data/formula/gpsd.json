@@ -62,7 +62,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "gpsd does not automatically detect GPS device addresses. Once started, you\nneed to force it to connect to your GPS:\n\n  GPSD_SOCKET=\"/home/travis/Homebrew/var/gpsd.sock\" /home/travis/Homebrew/Cellar/gpsd/3.17/sbin/gpsdctl add /dev/tty.usbserial-XYZ\n",
+  "caveats": "gpsd does not automatically detect GPS device addresses. Once started, you\nneed to force it to connect to your GPS:\n\n  GPSD_SOCKET=\"$(brew --prefix)/var/gpsd.sock\" $(brew --prefix)/Cellar/gpsd/3.17/sbin/gpsdctl add /dev/tty.usbserial-XYZ\n",
   "installed": [
 
   ],

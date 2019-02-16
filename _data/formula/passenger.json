@@ -63,7 +63,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "To activate Phusion Passenger for Nginx, run:\n  brew install nginx\nAnd add the following to /home/travis/Homebrew/etc/nginx/nginx.conf at the top scope (outside http{}):\n  load_module /home/travis/Homebrew/opt/passenger/libexec/modules/ngx_http_passenger_module.so;\nAnd add the following to /home/travis/Homebrew/etc/nginx/nginx.conf in the http scope:\n  passenger_root /home/travis/Homebrew/opt/passenger/libexec/src/ruby_supportlib/phusion_passenger/locations.ini;\n  passenger_ruby /usr/bin/ruby;\n\nTo activate Phusion Passenger for Apache, create /etc/apache2/other/passenger.conf:\n  LoadModule passenger_module /home/travis/Homebrew/opt/passenger/libexec/buildout/apache2/mod_passenger.so\n  PassengerRoot /home/travis/Homebrew/opt/passenger/libexec/src/ruby_supportlib/phusion_passenger/locations.ini\n  PassengerDefaultRuby /usr/bin/ruby\n",
+  "caveats": "To activate Phusion Passenger for Nginx, run:\n  brew install nginx\nAnd add the following to $(brew --prefix)/etc/nginx/nginx.conf at the top scope (outside http{}):\n  load_module $(brew --prefix)/opt/passenger/libexec/modules/ngx_http_passenger_module.so;\nAnd add the following to $(brew --prefix)/etc/nginx/nginx.conf in the http scope:\n  passenger_root $(brew --prefix)/opt/passenger/libexec/src/ruby_supportlib/phusion_passenger/locations.ini;\n  passenger_ruby /usr/bin/ruby;\n\nTo activate Phusion Passenger for Apache, create /etc/apache2/other/passenger.conf:\n  LoadModule passenger_module $(brew --prefix)/opt/passenger/libexec/buildout/apache2/mod_passenger.so\n  PassengerRoot $(brew --prefix)/opt/passenger/libexec/src/ruby_supportlib/phusion_passenger/locations.ini\n  PassengerDefaultRuby /usr/bin/ruby\n",
   "installed": [
 
   ],

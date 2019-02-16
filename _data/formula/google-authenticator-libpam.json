@@ -68,7 +68,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "Add 2-factor authentication for ssh:\n  echo \"auth required /home/travis/Homebrew/opt/google-authenticator-libpam/lib/security/pam_google_authenticator.so\" \\\n  | sudo tee -a /etc/pam.d/sshd\n\nAdd 2-factor authentication for ssh allowing users to log in without OTP:\n  echo \"auth required /home/travis/Homebrew/opt/google-authenticator-libpam/lib/security/pam_google_authenticator.so\" \\\n  \"nullok\" | sudo tee -a /etc/pam.d/sshd\n\n(Or just manually edit /etc/pam.d/sshd)\n",
+  "caveats": "Add 2-factor authentication for ssh:\n  echo \"auth required $(brew --prefix)/opt/google-authenticator-libpam/lib/security/pam_google_authenticator.so\" \\\n  | sudo tee -a /etc/pam.d/sshd\n\nAdd 2-factor authentication for ssh allowing users to log in without OTP:\n  echo \"auth required $(brew --prefix)/opt/google-authenticator-libpam/lib/security/pam_google_authenticator.so\" \\\n  \"nullok\" | sudo tee -a /etc/pam.d/sshd\n\n(Or just manually edit /etc/pam.d/sshd)\n",
   "installed": [
 
   ],

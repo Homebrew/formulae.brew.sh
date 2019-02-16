@@ -66,7 +66,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "This formula does not install either `gpg` or `gpgv` executables into\nthe PATH.\n\nIf you simply require `gpg` and `gpgv` executables without explicitly\nneeding GnuPG 1.x we recommend:\n  brew install gnupg\n\nIf you really need to use these tools without the \"1\" suffix you can\nadd a \"gpgbin\" directory to your PATH from your ~/.bash_profile like:\n\n    PATH=\"/home/travis/Homebrew/opt/gnupg@1.4/libexec/gpgbin:$PATH\"\n\nNote that doing so may interfere with GPG-using formulae installed via\nHomebrew.\n",
+  "caveats": "This formula does not install either `gpg` or `gpgv` executables into\nthe PATH.\n\nIf you simply require `gpg` and `gpgv` executables without explicitly\nneeding GnuPG 1.x we recommend:\n  brew install gnupg\n\nIf you really need to use these tools without the \"1\" suffix you can\nadd a \"gpgbin\" directory to your PATH from your ~/.bash_profile like:\n\n    PATH=\"$(brew --prefix)/opt/gnupg@1.4/libexec/gpgbin:$PATH\"\n\nNote that doing so may interfere with GPG-using formulae installed via\nHomebrew.\n",
   "installed": [
 
   ],

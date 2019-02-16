@@ -73,7 +73,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "Because ROOT depends on several installation-dependent\nenvironment variables to function properly, you should\nadd the following commands to your shell initialization\nscript (.bashrc/.profile/etc.), or call them directly\nbefore using ROOT.\n\nFor bash users:\n  . /home/travis/Homebrew/bin/thisroot.sh\nFor zsh users:\n  pushd /home/travis/Homebrew >/dev/null; . bin/thisroot.sh; popd >/dev/null\nFor csh/tcsh users:\n  source /home/travis/Homebrew/bin/thisroot.csh\n",
+  "caveats": "Because ROOT depends on several installation-dependent\nenvironment variables to function properly, you should\nadd the following commands to your shell initialization\nscript (.bashrc/.profile/etc.), or call them directly\nbefore using ROOT.\n\nFor bash users:\n  . $(brew --prefix)/bin/thisroot.sh\nFor zsh users:\n  pushd $(brew --prefix) >/dev/null; . bin/thisroot.sh; popd >/dev/null\nFor csh/tcsh users:\n  source $(brew --prefix)/bin/thisroot.csh\n",
   "installed": [
 
   ],

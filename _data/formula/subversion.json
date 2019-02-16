@@ -76,7 +76,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "svntools have been installed to:\n  /home/travis/Homebrew/opt/subversion/libexec\n\nThe perl bindings are located in various subdirectories of:\n  /home/travis/Homebrew/opt/subversion/lib/perl5\n\nIf you wish to use the Ruby bindings you may need to add:\n  /home/travis/Homebrew/lib/ruby\nto your RUBYLIB.\n\nYou may need to link the Java bindings into the Java Extensions folder:\n  sudo mkdir -p /Library/Java/Extensions\n  sudo ln -s /home/travis/Homebrew/lib/libsvnjavahl-1.dylib /Library/Java/Extensions/libsvnjavahl-1.dylib\n",
+  "caveats": "svntools have been installed to:\n  $(brew --prefix)/opt/subversion/libexec\n\nThe perl bindings are located in various subdirectories of:\n  $(brew --prefix)/opt/subversion/lib/perl5\n\nIf you wish to use the Ruby bindings you may need to add:\n  $(brew --prefix)/lib/ruby\nto your RUBYLIB.\n\nYou may need to link the Java bindings into the Java Extensions folder:\n  sudo mkdir -p /Library/Java/Extensions\n  sudo ln -s $(brew --prefix)/lib/libsvnjavahl-1.dylib /Library/Java/Extensions/libsvnjavahl-1.dylib\n",
   "installed": [
 
   ],

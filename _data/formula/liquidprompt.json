@@ -42,7 +42,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "Add the following lines to your bash or zsh config (e.g. ~/.bash_profile):\n  if [ -f /home/travis/Homebrew/share/liquidprompt ]; then\n    . /home/travis/Homebrew/share/liquidprompt\n  fi\n\nIf you'd like to reconfigure options, you may do so in ~/.liquidpromptrc.\nA sample file you may copy and modify has been installed to\n  /home/travis/Homebrew/share/liquidpromptrc-dist\n",
+  "caveats": "Add the following lines to your bash or zsh config (e.g. ~/.bash_profile):\n  if [ -f $(brew --prefix)/share/liquidprompt ]; then\n    . $(brew --prefix)/share/liquidprompt\n  fi\n\nIf you'd like to reconfigure options, you may do so in ~/.liquidpromptrc.\nA sample file you may copy and modify has been installed to\n  $(brew --prefix)/share/liquidpromptrc-dist\n",
   "installed": [
 
   ],
