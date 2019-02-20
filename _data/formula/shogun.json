@@ -77,7 +77,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "If you use system python (that comes - depending on the macOS version -\nwith an old version of numpy), you may need to ensure that the brewed\npackages come earlier in Python's sys.path with:\n  mkdir -p \n  echo 'import sys; sys.path.insert(1, \"$(brew --prefix)/lib/python3.7/site-packages\")' >> /homebrew.pth\n",
+  "caveats": "If you use system python (that comes - depending on the macOS version -\nwith an old version of numpy), you may need to ensure that the brewed\npackages come earlier in Python's sys.path with:\n  mkdir -p /home/travis/.local/lib/python2.7/site-packages\n  echo 'import sys; sys.path.insert(1, \"$(brew --prefix)/lib/python3.7/site-packages\")' >> /home/travis/.local/lib/python2.7/site-packages/homebrew.pth\n",
   "installed": [
 
   ],
