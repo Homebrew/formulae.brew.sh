@@ -11,7 +11,7 @@
   "desc": "Swiss army knife for network attacks and monitoring",
   "homepage": "https://www.bettercap.org/",
   "versions": {
-    "stable": "2.17",
+    "stable": "2.18",
     "devel": null,
     "head": null,
     "bottle": true
@@ -21,21 +21,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any_skip_relocation",
+      "cellar": ":any",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/bettercap-2.17.mojave.bottle.tar.gz",
-          "sha256": "cbebd63ad2480bead55a585653d25a9689a8dbd60c057265e13f5a00936c9b49"
+          "url": "https://homebrew.bintray.com/bottles/bettercap-2.18.mojave.bottle.tar.gz",
+          "sha256": "d6d1af4fe8c00d22aaefe5444b7aa96ec089abfe9a0aa3b294784bc24afb6f70"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/bettercap-2.17.high_sierra.bottle.tar.gz",
-          "sha256": "11620c3ed5fbaa20c51cba7441b01be64ae1ff89e6d8c761d0c99237369f6834"
+          "url": "https://homebrew.bintray.com/bottles/bettercap-2.18.high_sierra.bottle.tar.gz",
+          "sha256": "237fac184ed8ca40437ad5dee9c7184e3038d87d3bdcfe1ea0c623f2a9c90912"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/bettercap-2.17.sierra.bottle.tar.gz",
-          "sha256": "df952789786eaa259b98a6ba27bdd71786c7fe0d76510992299b1bb82a2a44c2"
+          "url": "https://homebrew.bintray.com/bottles/bettercap-2.18.sierra.bottle.tar.gz",
+          "sha256": "144839353b66662cab7ca93a6e216f7d0cf3a946785e7e1e3ab3497986281763"
         }
       }
     }
@@ -46,10 +46,11 @@
   ],
   "build_dependencies": [
     "dep",
-    "go"
+    "go",
+    "pkg-config"
   ],
   "dependencies": [
-
+    "libusb"
   ],
   "recommended_dependencies": [
 
