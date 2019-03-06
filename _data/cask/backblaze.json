@@ -1,0 +1,42 @@
+{
+  "name": [
+    "Backblaze"
+  ],
+  "homepage": "https://www.backblaze.com/",
+  "url": "https://secure.backblaze.com/mac/install_backblaze.dmg",
+  "appcast": null,
+  "version": "latest",
+  "sha256": "no_check",
+  "artifacts": [
+    {
+      "launchctl": [
+        "com.backblaze.bzserv.plist",
+        "com.backblaze.bzbmenu.plist"
+      ],
+      "delete": "/Library/PreferencePanes/BackblazeBackup.prefPane",
+      "signal": [
+
+      ]
+    },
+    {
+      "path": "Backblaze Installer.app"
+    },
+    {
+      "trash": [
+        "/Library/Backblaze.bzpkg",
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.backblaze.backblazebackup.sfl*",
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.backblaze.bzdoinstall.sfl*",
+        "~/Library/Logs/BackblazeGUIInstaller"
+      ],
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": null
+}

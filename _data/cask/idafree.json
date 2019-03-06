@@ -1,0 +1,43 @@
+{
+  "name": [
+    "IDA Free"
+  ],
+  "homepage": "https://www.hex-rays.com/index.shtml",
+  "url": "https://out7.hex-rays.com/files/idafree70_mac.tgz",
+  "appcast": null,
+  "version": "7.0",
+  "sha256": "7cbcfbcbff4154e358428987e8511196cc84a1562de4406ba13c6df5d2230bcb",
+  "artifacts": [
+    {
+      "script": {
+        "executable": "/Applications/IDA Free/uninstall.app/Contents/MacOS/installbuilder.sh",
+        "args": [
+          "--mode",
+          "unattended"
+        ],
+        "sudo": true
+      },
+      "signal": [
+
+      ]
+    },
+    {
+      "path": "idafree-7.0-osx-installer.app/Contents/MacOS/installbuilder.sh",
+      "args": {
+        "must_succeed": true,
+        "sudo": false,
+        "args": [
+          "--mode",
+          "unattended"
+        ],
+        "print_stdout": true
+      }
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": null
+}

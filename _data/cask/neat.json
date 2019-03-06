@@ -1,0 +1,56 @@
+{
+  "name": [
+    "Neat"
+  ],
+  "homepage": "https://www.neat.com/",
+  "url": "https://neatsupport.wpengine.com/wp-content/uploads/helpcenter/software/Neat-Mac.dmg",
+  "appcast": "https://s3.amazonaws.com/helium-updater/Autoupdate/UPDATE.XML",
+  "version": "1.5.2.11",
+  "sha256": "c00a69a137b0515e621abe3df939c3469b30e6f0480c5c2aec71df4f770b9374",
+  "artifacts": [
+    {
+      "quit": "com.neat.helium",
+      "script": {
+        "executable": "/Applications/The Neat Company/Neat Smart Organization System/uninstall.app/Contents/MacOS/installbuilder.sh",
+        "args": [
+          "--mode",
+          "unattended"
+        ],
+        "sudo": true
+      },
+      "signal": [
+
+      ]
+    },
+    {
+      "path": "/home/linuxbrew/.linuxbrew/Caskroom/neat/1.5.2.11/Neat-Installer.app/Contents/MacOS/installbuilder.sh",
+      "args": {
+        "must_succeed": true,
+        "sudo": true,
+        "args": [
+          "--mode",
+          "unattended"
+        ],
+        "print_stdout": true
+      }
+    },
+    {
+      "trash": [
+        "~/Neat-Helium-Logs",
+        "~/Library/Application Support/Neat",
+        "~/Library/Caches/Neat",
+        "~/Library/Preferences/com.neat.helium.plist",
+        "~/Library/Saved Application State/com.neat.helium.savedState"
+      ],
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": true
+}

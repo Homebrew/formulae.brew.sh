@@ -1,0 +1,38 @@
+{
+  "name": [
+    "Airtool"
+  ],
+  "homepage": "https://www.adriangranados.com/apps/airtool",
+  "url": "https://www.adriangranados.com/downloads/airtool_1.7.3.pkg",
+  "appcast": "https://updates.devmate.com/com.adriangranados.Airtool.xml",
+  "version": "1.7.3",
+  "sha256": "721ed94e45a71a02f211ede7fcd93d0152c51d80b269c49c9b35c62f1c3e7817",
+  "artifacts": [
+    "uninstall_preflight (Preflight Block)",
+    {
+      "pkgutil": [
+        "com.adriangranados.airtool.airtool-bpf.*",
+        "com.adriangranados.airtool.Airtool.pkg"
+      ],
+      "launchctl": "com.adriangranados.airtool.airtool-bpf",
+      "login_item": "Airtool",
+      "delete": "/Library/Application Support/Airtool",
+      "signal": [
+
+      ]
+    },
+    "airtool_1.7.3.pkg (Pkg)",
+    {
+      "trash": "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.adriangranados.airtool.sfl*",
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": null
+}

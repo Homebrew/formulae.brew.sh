@@ -1,0 +1,43 @@
+{
+  "name": [
+    "Pritunl OpenVPN Client"
+  ],
+  "homepage": "https://client.pritunl.com/",
+  "url": "https://github.com/pritunl/pritunl-client-electron/releases/download/1.0.1953.32/Pritunl.pkg.zip",
+  "appcast": "https://github.com/pritunl/pritunl-client-electron/releases.atom",
+  "version": "1.0.1953.32",
+  "sha256": "179ddc935fa0962989c4c82757e94379f83a5c611216b5060141ddcd87c7b1e6",
+  "artifacts": [
+    {
+      "pkgutil": "com.pritunl.pkg.Pritunl",
+      "launchctl": [
+        "com.pritunl.client",
+        "com.pritunl.service"
+      ],
+      "signal": [
+        [
+          "TERM",
+          "com.electron.pritunl"
+        ]
+      ],
+      "delete": "/Applications/Pritunl.app"
+    },
+    "Pritunl.pkg (Pkg)",
+    {
+      "trash": [
+        "~/Library/Application Support/pritunl",
+        "~/Library/Caches/pritunl",
+        "~/Library/Preferences/com.electron.pritunl*"
+      ],
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": null
+}

@@ -1,0 +1,27 @@
+{
+  "name": [
+    "SQuirrel SQL"
+  ],
+  "homepage": "http://www.squirrelsql.org/",
+  "url": "https://downloads.sourceforge.net/squirrel-sql/1-stable/3.8.1/squirrel-sql-3.8.1-MACOSX-install.jar",
+  "appcast": "https://sourceforge.net/projects/squirrel-sql/rss?path=/1-stable",
+  "version": "3.8.1",
+  "sha256": "c3ff5203477536d347f9531a8070465267b1a81751e964b97e427cd13af224d9",
+  "artifacts": [
+    "preflight (Preflight Block)",
+    "postflight (Postflight Block)",
+    "uninstall_postflight (Postflight Block)",
+    {
+      "trash": "~/.squirrel-sql",
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "squirrelsql requires Java 8+. You can install the latest version with\n\n  brew cask install java\n",
+  "depends_on": {
+  },
+  "conflicts_with": null,
+  "container": "{:type=>:naked}",
+  "auto_updates": null
+}

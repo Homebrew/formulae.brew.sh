@@ -1,0 +1,63 @@
+{
+  "name": [
+    "ShadowsocksX-NG"
+  ],
+  "homepage": "https://github.com/shadowsocks/ShadowsocksX-NG/",
+  "url": "https://github.com/shadowsocks/ShadowsocksX-NG/releases/download/v1.8.2/ShadowsocksX-NG.app.1.8.2.zip",
+  "appcast": "https://github.com/shadowsocks/ShadowsocksX-NG/releases.atom",
+  "version": "1.8.2",
+  "sha256": "ebb27da5c6fdfcbcbcb2e073c408f10412e702b9c9dfc34f862c080a232ec74c",
+  "artifacts": [
+    {
+      "delete": "/Library/Application Support/ShadowsocksX-NG",
+      "launchctl": [
+        "com.qiuyuzhou.shadowsocksX-NG.http",
+        "com.qiuyuzhou.shadowsocksX-NG.kcptun",
+        "com.qiuyuzhou.shadowsocksX-NG.local",
+        "com.qiuyuzhou.ShadowsocksX-NG.LaunchHelper"
+      ],
+      "quit": "com.qiuyuzhou.ShadowsocksX-NG",
+      "script": {
+        "executable": "/Applications/ShadowsocksX-NG.app/Contents/Resources/proxy_conf_helper",
+        "args": [
+          "--mode",
+          "off"
+        ],
+        "sudo": true
+      },
+      "signal": [
+
+      ]
+    },
+    [
+      "ShadowsocksX-NG.app"
+    ],
+    {
+      "trash": [
+        "~/.ShadowsocksX-NG",
+        "~/Library/Application Support/ShadowsocksX-NG",
+        "~/Library/Caches/com.qiuyuzhou.ShadowsocksX-NG",
+        "~/Library/Preferences/com.qiuyuzhou.ShadowsocksX-NG.plist"
+      ],
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+    "macos": [
+      [
+        ">=",
+        "10.11"
+      ]
+    ]
+  },
+  "conflicts_with": {
+    "cask": [
+      "shadowsocksx"
+    ]
+  },
+  "container": null,
+  "auto_updates": null
+}

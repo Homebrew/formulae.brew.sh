@@ -1,0 +1,55 @@
+{
+  "name": [
+    "BasicTeX"
+  ],
+  "homepage": "https://www.tug.org/mactex/morepackages.html",
+  "url": "http://mirror.ctan.org/systems/mac/mactex/mactex-basictex-20180417.pkg",
+  "appcast": null,
+  "version": "2018.0417",
+  "sha256": "f815d68391f74c5bc639ae421804bfb1342eb346e1eca23d11eb9ee3d4d9db46",
+  "artifacts": [
+    {
+      "pkgutil": "org.tug.mactex.basictex2018",
+      "delete": [
+        "/usr/local/texlive/2018basic",
+        "/etc/paths.d/TeX",
+        "/etc/manpaths.d/TeX",
+        "/Library/TeX"
+      ],
+      "signal": [
+
+      ]
+    },
+    "mactex-basictex-20180417.pkg (Pkg)",
+    {
+      "trash": [
+        "/usr/local/texlive/texmf-local",
+        "~/Library/texlive/2018basic"
+      ],
+      "rmdir": [
+        "/usr/local/texlive",
+        "~/Library/texlive"
+      ],
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+    "macos": [
+      [
+        ">=",
+        "10.10"
+      ]
+    ]
+  },
+  "conflicts_with": {
+    "cask": [
+      "mactex-no-gui",
+      "mactex"
+    ]
+  },
+  "container": null,
+  "auto_updates": null
+}

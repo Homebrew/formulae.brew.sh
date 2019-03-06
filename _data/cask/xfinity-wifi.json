@@ -1,0 +1,45 @@
+{
+  "name": [
+    "XFINITY WiFi"
+  ],
+  "homepage": "https://wifi.xfinity.com/",
+  "url": "https://wifi.xfinity.com/download_mac.php",
+  "appcast": null,
+  "version": "latest",
+  "sha256": "no_check",
+  "artifacts": [
+    "preflight (Preflight Block)",
+    {
+      "pkgutil": "com.smithmicro.netwise.osx.comcast.installer",
+      "launchctl": "com.smithmicro.netwise.osx.helper",
+      "quit": [
+        "com.smithmicro.netwise.HotspotAuthenticatorOSX",
+        "com.smithmicro.netwise.osx.comcast",
+        "com.smithmicro.netwise.osx.comcast.help"
+      ],
+      "signal": [
+
+      ]
+    },
+    "XFINITY_WiFi.pkg (Pkg)",
+    {
+      "trash": [
+        "/Library/PrivilegedHelperTools/com.smithmicro.netwise.osx.helper",
+        "~/Library/Application Support/com.smithmicro.netwise.osx.comcast",
+        "~/Library/Caches/com.crashlytics.data/com.smithmicro.netwise.osx.comcast",
+        "~/Library/Caches/com.smithmicro.netwise.osx.comcast",
+        "~/Library/Logs/XFINITY WiFi",
+        "~/Library/Preferences/com.smithmicro.netwise.osx.comcast.plist"
+      ],
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+  },
+  "conflicts_with": null,
+  "container": "{:type=>:pkg}",
+  "auto_updates": null
+}

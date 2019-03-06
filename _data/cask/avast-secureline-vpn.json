@@ -1,0 +1,43 @@
+{
+  "name": [
+    "Avast SecureLine VPN"
+  ],
+  "homepage": "https://www.avast.com/secureline-vpn#mac",
+  "url": "http://mac.sl.d.avast.com/mac/avast_secureline.dmg",
+  "appcast": null,
+  "version": "latest",
+  "sha256": "no_check",
+  "artifacts": [
+    {
+      "pkgutil": "com.avast.secureline",
+      "launchctl": [
+        "com.avast.secureline*",
+        "*.com.avast.osx.secureline.avastsecurelinehelper",
+        "com.avast.secureline.home.userinit"
+      ],
+      "delete": "/Applications/AvastSecureLine.app",
+      "signal": [
+
+      ]
+    },
+    "Avast SecureLine VPN.pkg (Pkg)",
+    {
+      "trash": [
+        "~/Library/Cookies/com.avast.osx.secureline.binarycookies",
+        "~/Library/Caches/com.avast.osx.secureline",
+        "~/Library/Group Containers/*.com.avast.osx.secureline*",
+        "~/Library/Preferences/*.com.avast.osx.secureline.plist",
+        "~/Library/Group Containers/*.group.com.avast.osx"
+      ],
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": null
+}

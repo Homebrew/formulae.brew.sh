@@ -1,0 +1,45 @@
+{
+  "name": [
+    "XAMPP"
+  ],
+  "homepage": "https://www.apachefriends.org/index.html",
+  "url": "https://downloadsapachefriends.global.ssl.fastly.net/xampp-files/7.3.1/xampp-osx-7.3.1-0-installer.dmg",
+  "appcast": null,
+  "version": "7.3.1-0",
+  "sha256": "b6564cd35a9a9cff1a4a232b911da8c3b2a524486c9697b54603445a868e80bb",
+  "artifacts": [
+    {
+      "quit": "com.bitnami.manager",
+      "script": {
+        "executable": "/Applications/XAMPP/uninstall.app/Contents/MacOS/osx-intel",
+        "args": [
+          "--mode",
+          "unattended"
+        ],
+        "sudo": true
+      },
+      "delete": "/Applications/XAMPP/",
+      "signal": [
+
+      ]
+    },
+    {
+      "path": "XAMPP.app/Contents/MacOS/osx-intel",
+      "args": {
+        "must_succeed": true,
+        "sudo": true,
+        "args": [
+          "--mode",
+          "unattended"
+        ],
+        "print_stdout": true
+      }
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": null
+}

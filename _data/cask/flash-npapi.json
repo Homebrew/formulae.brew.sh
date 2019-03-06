@@ -1,0 +1,37 @@
+{
+  "name": [
+    "Adobe Flash Player NPAPI (plugin for Safari and Firefox)"
+  ],
+  "homepage": "https://get.adobe.com/flashplayer/",
+  "url": "https://fpdownload.adobe.com/pub/flashplayer/pdc/32.0.0.142/install_flash_player_osx.dmg",
+  "appcast": "https://fpdownload.adobe.com/pub/flashplayer/update/current/xml/version_en_mac_pl.xml",
+  "version": "32.0.0.142",
+  "sha256": "305b452c0dcf36b9ddc526804e25d7a0913250769b57150ee69062fdc99ccc80",
+  "artifacts": [
+    {
+      "pkgutil": "com.adobe.pkg.FlashPlayer",
+      "launchctl": "com.adobe.fpsaud",
+      "delete": "/Library/Internet Plug-Ins/Flash Player.plugin",
+      "signal": [
+
+      ]
+    },
+    "Install Adobe Flash Player.app/Contents/Resources/Adobe Flash Player.pkg (Pkg)",
+    {
+      "trash": [
+        "~/Library/Caches/Adobe/Flash Player",
+        "~/Library/Logs/FlashPlayerInstallManager.log",
+        "/Library/Internet Plug-Ins/flashplayer.xpt"
+      ],
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": true
+}

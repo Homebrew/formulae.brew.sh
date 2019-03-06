@@ -1,0 +1,47 @@
+{
+  "name": [
+    "Acquia Dev Desktop"
+  ],
+  "homepage": "https://www.acquia.com/products-services/dev-desktop",
+  "url": "https://www.acquia.com/sites/default/files/downloads/dev-desktop/AcquiaDevDesktop-2-2018-09-20.dmg",
+  "appcast": "https://dev.acquia.com/downloads",
+  "version": "2-2018-09-20",
+  "sha256": "e578709869d32d60d21e9fba7e2c20ffdd574ebc2b3503a6675e2b047298bf8a",
+  "artifacts": [
+    {
+      "script": {
+        "executable": "/Applications/DevDesktop/uninstall.app/Contents/MacOS/installbuilder.sh",
+        "args": [
+          "--mode",
+          "unattended",
+          "--unattendedmodeui",
+          "none"
+        ],
+        "sudo": true
+      },
+      "signal": [
+
+      ]
+    },
+    {
+      "path": "Acquia Dev Desktop Installer.app/Contents/MacOS/installbuilder.sh",
+      "args": {
+        "must_succeed": true,
+        "sudo": true,
+        "args": [
+          "--mode",
+          "unattended",
+          "--unattendedmodeui",
+          "none"
+        ],
+        "print_stdout": true
+      }
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": null
+}

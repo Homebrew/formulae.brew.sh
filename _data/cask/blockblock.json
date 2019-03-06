@@ -1,0 +1,47 @@
+{
+  "name": [
+    "BlockBlock"
+  ],
+  "homepage": "https://objective-see.com/products/blockblock.html",
+  "url": "https://bitbucket.org/objective-see/deploy/downloads/BlockBlock_0.9.9.4.zip",
+  "appcast": "https://objective-see.com/products/changelogs/BlockBlock.txt",
+  "version": "0.9.9.4",
+  "sha256": "6ab3a8224e8bc77b9abe8d41492c161454c6b0266e60e61b06931fed4b431282",
+  "artifacts": [
+    {
+      "script": {
+        "executable": "/home/linuxbrew/.linuxbrew/Caskroom/blockblock/0.9.9.4/BlockBlock Installer.app/Contents/MacOS/BlockBlock",
+        "args": [
+          "-uninstall"
+        ],
+        "sudo": true
+      },
+      "signal": [
+
+      ]
+    },
+    {
+      "path": "/home/linuxbrew/.linuxbrew/Caskroom/blockblock/0.9.9.4/BlockBlock Installer.app/Contents/MacOS/BlockBlock",
+      "args": {
+        "must_succeed": true,
+        "sudo": true,
+        "args": [
+          "-install"
+        ],
+        "print_stdout": true
+      }
+    },
+    {
+      "trash": "~/Library/Preferences/com.objectiveSee.BlockBlock.plist",
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": null
+}

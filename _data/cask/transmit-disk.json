@@ -1,0 +1,44 @@
+{
+  "name": [
+    "transmit-disk"
+  ],
+  "homepage": "https://panic.com/transmit/",
+  "url": "https://download.panic.com/transmit/Transmit%20Disk%204.4.13.pkg.zip",
+  "appcast": null,
+  "version": "4.4.13",
+  "sha256": "e1a8a1c7ca874b1126c023b22435ded74a4f8af168d487dd1cbac0c0a770a515",
+  "artifacts": [
+    {
+      "quit": [
+        "com.panic.Transmit",
+        "com.panic.Transmit.TransmitDisk",
+        "com.panic.Transmit.TransmitMenu"
+      ],
+      "pkgutil": [
+        "com.panic.TransmitDisk.pkg",
+        "com.panic.TransmitDisk.filesystem.tdfuse.pkg"
+      ],
+      "delete": "/Applications/Transmit Disk.app",
+      "signal": [
+
+      ]
+    },
+    "Transmit Disk 4.4.13.pkg (Pkg)",
+    "postflight (Postflight Block)",
+    {
+      "trash": [
+        "~/Library/Preferences/com.panic.Transmit.TransmitDisk.plist",
+        "/Library/Filesystems/transmitdisk.fs/"
+      ],
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": null
+}

@@ -1,0 +1,36 @@
+{
+  "name": [
+    "Private Eye"
+  ],
+  "homepage": "https://radiosilenceapp.com/private-eye",
+  "url": "https://radiosilenceapp.com/downloads/Private_Eye_for_OS_X_10.9_and_later.pkg",
+  "appcast": null,
+  "version": "latest",
+  "sha256": "no_check",
+  "artifacts": [
+    {
+      "early_script": {
+        "executable": "/sbin/kextunload",
+        "args": [
+          "-b",
+          "com.radiosilenceapp.nke.PrivateEye"
+        ],
+        "must_succeed": false
+      },
+      "quit": "com.radiosilenceapp.PrivateEye",
+      "kext": "com.radiosilenceapp.nke.PrivateEye",
+      "pkgutil": "com.radiosilenceapp.privateEye.*",
+      "launchctl": "com.radiosilenceapp.nke.PrivateEye",
+      "signal": [
+
+      ]
+    },
+    "Private_Eye_for_OS_X_10.9_and_later.pkg (Pkg)"
+  ],
+  "caveats": "",
+  "depends_on": {
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": null
+}

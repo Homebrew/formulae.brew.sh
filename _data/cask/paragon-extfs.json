@@ -1,0 +1,43 @@
+{
+  "name": [
+    "Paragon ExtFS"
+  ],
+  "homepage": "https://www.paragon-software.com/ufsdhome/extfs-mac/",
+  "url": "https://dl.paragon-software.com/demo/trial_extfs.dmg",
+  "appcast": null,
+  "version": "latest",
+  "sha256": "no_check",
+  "artifacts": [
+    {
+      "kext": "com.paragon-software.filesystems.extfs",
+      "launchctl": "com.paragon-software.extfs*",
+      "pkgutil": "com.paragon-software.pkg.extfs",
+      "quit": "com.paragon-software.extfs*",
+      "signal": [
+        [
+          "KILL",
+          "com.paragon-software.extfs.FSMenuApp"
+        ],
+        [
+          "KILL",
+          "com.paragon-software.extfs.notification-agent"
+        ]
+      ]
+    },
+    {
+      "path": "Install Paragon ExtFS for Mac.app"
+    },
+    {
+      "trash": "~/Library/Preferences/com.paragon-software.extfs.fsapp.plist",
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": null
+}

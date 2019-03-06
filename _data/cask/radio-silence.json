@@ -1,0 +1,46 @@
+{
+  "name": [
+    "Radio Silence"
+  ],
+  "homepage": "https://radiosilenceapp.com/",
+  "url": "https://radiosilenceapp.com/downloads/Radio_Silence_2.3.pkg",
+  "appcast": "https://radiosilenceapp.com/update",
+  "version": "2.3",
+  "sha256": "0127f722cb15768392437b917d2beed2cbcab35eeccee2d77c61ac2a5997ebd1",
+  "artifacts": [
+    {
+      "early_script": {
+        "executable": "/sbin/kextunload",
+        "args": [
+          "-b",
+          "com.radiosilenceapp.nke.filter"
+        ],
+        "must_succeed": false
+      },
+      "quit": "com.radiosilenceapp.client",
+      "kext": "com.radiosilenceapp.nke.filter",
+      "pkgutil": "com.radiosilenceapp.*",
+      "launchctl": [
+        "com.radiosilenceapp.trial",
+        "com.radiosilenceapp.agent",
+        "com.radiosilenceapp.nke"
+      ],
+      "signal": [
+
+      ]
+    },
+    "Radio_Silence_2.3.pkg (Pkg)",
+    {
+      "trash": "~/Library/Application Support/Radio Silence",
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": null
+}

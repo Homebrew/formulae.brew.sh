@@ -1,0 +1,39 @@
+{
+  "name": [
+    "gfortran"
+  ],
+  "homepage": "https://gcc.gnu.org/wiki/GFortranBinaries",
+  "url": "https://github.com/fxcoudert/gfortran-for-macOS/releases/download/6.3/gfortran-6.3-Sierra.dmg",
+  "appcast": "https://github.com/fxcoudert/gfortran-for-macOS/releases.atom",
+  "version": "6.3",
+  "sha256": "38b81bc878dba41cfdbb0c335aec5a97554a5d1766fb3e3ca6be7da0df9e8e09",
+  "artifacts": [
+    {
+      "delete": [
+        "/usr/local/gfortran",
+        "/usr/local/bin/gfortran"
+      ],
+      "pkgutil": "com.gnu.gfortran",
+      "signal": [
+
+      ]
+    },
+    "gfortran.pkg (Pkg)"
+  ],
+  "caveats": "",
+  "depends_on": {
+    "macos": [
+      [
+        ">=",
+        "10.11"
+      ]
+    ]
+  },
+  "conflicts_with": {
+    "formula": [
+      "gcc"
+    ]
+  },
+  "container": null,
+  "auto_updates": null
+}

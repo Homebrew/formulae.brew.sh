@@ -1,0 +1,41 @@
+{
+  "name": [
+    "Vuze"
+  ],
+  "homepage": "https://www.vuze.com/",
+  "url": "https://cf1.vuze.com/files/J7/VuzeBittorrentClientInstaller.dmg",
+  "appcast": null,
+  "version": "latest",
+  "sha256": "no_check",
+  "artifacts": [
+    {
+      "delete": "/Applications/Vuze.app",
+      "signal": [
+
+      ]
+    },
+    {
+      "path": "Vuze Installer.app/Contents/MacOS/JavaApplicationStub",
+      "args": {
+        "must_succeed": true,
+        "sudo": true,
+        "args": [
+          "-q"
+        ],
+        "print_stdout": true
+      }
+    },
+    {
+      "trash": "~/Library/Application Support/Vuze",
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "vuze requires Java. You can install the latest version with\n\n  brew cask install java\n",
+  "depends_on": {
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": null
+}

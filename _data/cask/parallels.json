@@ -1,0 +1,51 @@
+{
+  "name": [
+    "Parallels Desktop"
+  ],
+  "homepage": "https://www.parallels.com/products/desktop/",
+  "url": "https://download.parallels.com/desktop/v14/14.0.1-45154/ParallelsDesktop-14.0.1-45154.dmg",
+  "appcast": "https://kb.parallels.com/eu/124521",
+  "version": "14.0.1-45154",
+  "sha256": "2d3157fa684c9e255927ae4a04f303107427a3ea166eea6ea86f0963cb24e4bb",
+  "artifacts": [
+    "uninstall_preflight (Preflight Block)",
+    {
+      "delete": [
+        "/usr/local/bin/prl_convert",
+        "/usr/local/bin/prl_disk_tool",
+        "/usr/local/bin/prl_perf_ctl",
+        "/usr/local/bin/prlcore2dmp",
+        "/usr/local/bin/prlctl",
+        "/usr/local/bin/prlexec",
+        "/usr/local/bin/prlsrvctl"
+      ],
+      "signal": [
+
+      ]
+    },
+    [
+      "Parallels Desktop.app"
+    ],
+    "postflight (Postflight Block)",
+    {
+      "trash": [
+        "~/.parallels_settings",
+        "~/Library/Caches/com.parallels.desktop.console",
+        "~/Library/Preferences/com.parallels.desktop.console.LSSharedFileList.plist",
+        "~/Library/Preferences/com.parallels.desktop.console.plist",
+        "~/Library/Preferences/com.parallels.Parallels Desktop Statistics.plist",
+        "~/Library/Preferences/com.parallels.Parallels Desktop.plist",
+        "~/Library/Preferences/com.parallels.Parallels.plist"
+      ],
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": null
+}

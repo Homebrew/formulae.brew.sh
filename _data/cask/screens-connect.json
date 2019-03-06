@@ -1,0 +1,51 @@
+{
+  "name": [
+    "Screens Connect"
+  ],
+  "homepage": "https://screensconnect.com/",
+  "url": "https://dl.devmate.com/com.edovia.Screens-Connect/6100/1551210912/ScreensConnect-6100.zip",
+  "appcast": "https://updates.devmate.com/com.edovia.Screens-Connect.xml",
+  "version": "4.8.6100,1551210912",
+  "sha256": "bcfbb10e988288661cdd6cbd7c6c51527284c3202b559d5ddf7e225fd8df7872",
+  "artifacts": [
+    {
+      "quit": "com.edovia.Screens-Connect",
+      "launchctl": [
+        "com.edovia.Screens-Connect.launcher",
+        "com.edovia.screens.connect"
+      ],
+      "script": {
+        "executable": "/Applications/Screens Connect.app/Contents/Resources/sc-uninstaller.tool",
+        "must_succeed": false,
+        "sudo": true
+      },
+      "signal": [
+
+      ]
+    },
+    [
+      "Screens Connect.app"
+    ],
+    {
+      "trash": [
+        "~/Library/Preferences/com.edovia.Screens-Connect.plist",
+        "~/Library/Preferences/com.edovia.ScreensConnect.Shared.plist"
+      ],
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+    "macos": [
+      [
+        ">=",
+        "10.11"
+      ]
+    ]
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": null
+}

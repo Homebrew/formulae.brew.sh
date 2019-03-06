@@ -1,0 +1,43 @@
+{
+  "name": [
+    "Paragon NTFS for Mac"
+  ],
+  "homepage": "https://www.paragon-software.com/ufsdhome/ntfs-mac/",
+  "url": "https://dl.paragon-software.com/demo/ntfsmac15_trial.dmg",
+  "appcast": null,
+  "version": "15",
+  "sha256": "no_check",
+  "artifacts": [
+    {
+      "kext": "com.paragon-software.filesystems.ntfs",
+      "launchctl": "com.paragon-software.ntfs*",
+      "pkgutil": "com.paragon-software.pkg.ntfs",
+      "quit": "com.paragon-software.ntfs*",
+      "signal": [
+        [
+          "KILL",
+          "com.paragon-software.ntfs.FSMenuApp"
+        ],
+        [
+          "KILL",
+          "com.paragon-software.ntfs.notification-agent"
+        ]
+      ]
+    },
+    {
+      "path": "Install Paragon NTFS for Mac 15.app"
+    },
+    {
+      "trash": "~/Library/Preferences/com.paragon-software.ntfs.fsapp.plist",
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": true
+}

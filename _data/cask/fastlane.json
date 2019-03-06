@@ -1,0 +1,42 @@
+{
+  "name": [
+    "fastlane"
+  ],
+  "homepage": "https://fastlane.tools/",
+  "url": "https://fastlane.tools/fastlane.zip",
+  "appcast": null,
+  "version": "latest",
+  "sha256": "no_check",
+  "artifacts": [
+    {
+      "script": {
+        "executable": "/home/linuxbrew/.linuxbrew/Caskroom/fastlane/latest/uninstall",
+        "args": [
+          "-y"
+        ]
+      },
+      "signal": [
+
+      ]
+    },
+    {
+      "path": "/home/linuxbrew/.linuxbrew/Caskroom/fastlane/latest/install",
+      "args": {
+        "must_succeed": true,
+        "sudo": false,
+        "args": [
+          "-p",
+          "-u",
+          "-b"
+        ],
+        "print_stdout": true
+      }
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": null
+}

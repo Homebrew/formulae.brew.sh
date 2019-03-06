@@ -1,0 +1,49 @@
+{
+  "name": [
+    "Amazon Music"
+  ],
+  "homepage": "https://www.amazon.com/musicapps",
+  "url": "https://images-na.ssl-images-amazon.com/images/G/01/digital/music/morpho/installers/20190220/054453483a/AmazonMusicInstaller.dmg",
+  "appcast": "https://www.amazon.com/gp/dmusic/desktop/downloadPlayer",
+  "version": "7.2.2,20190220:054453483a",
+  "sha256": "8a1c2697b2b11224dc39fef1b345ca34b8cf0650ae44337b15b09ca621b1e2b1",
+  "artifacts": [
+    {
+      "quit": [
+        "com.amazon.music",
+        "com.amazon.music-renderer"
+      ],
+      "delete": "/Applications/Amazon Music.app",
+      "launchctl": [
+        "com.amazon.music",
+        "com.amazon.music.startup"
+      ],
+      "signal": [
+
+      ]
+    },
+    {
+      "path": "Amazon Music Installer.app/Contents/MacOS/installbuilder.sh",
+      "args": {
+        "must_succeed": true,
+        "sudo": false,
+        "print_stdout": true
+      }
+    },
+    {
+      "trash": [
+        "~/Library/Preferences/com.amazon.music.plist",
+        "~/Library/Application Support/Amazon Music"
+      ],
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "If the app will not launch after installation, try\n\n  brew cask zap amazon-music\n  brew cask install amazon-music\n\nthen re-launch the app.\n",
+  "depends_on": {
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": true
+}

@@ -1,0 +1,53 @@
+{
+  "name": [
+    "Continuum Analytics Anaconda"
+  ],
+  "homepage": "https://www.anaconda.com/",
+  "url": "https://repo.anaconda.com/archive/Anaconda3-2018.12-MacOSX-x86_64.sh",
+  "appcast": null,
+  "version": "2018.12",
+  "sha256": "4ccd3944d994fd47e5701c341725a63e984f8c042bf4dc19c9dfc7c135e7d8e4",
+  "artifacts": [
+    {
+      "delete": [
+        "/home/linuxbrew/.linuxbrew/anaconda3",
+        "/Applications/Anaconda-Navigator.app"
+      ],
+      "signal": [
+
+      ]
+    },
+    {
+      "path": "Anaconda3-2018.12-MacOSX-x86_64.sh",
+      "args": {
+        "must_succeed": true,
+        "sudo": true,
+        "args": [
+          "-b",
+          "-p",
+          "/home/linuxbrew/.linuxbrew/anaconda3"
+        ],
+        "print_stdout": true
+      }
+    },
+    "postflight (Postflight Block)",
+    {
+      "trash": [
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.continuum.io.sfl*",
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.continuum.python.sfl*",
+        "~/.anaconda",
+        "~/.conda",
+        "~/.condarc"
+      ],
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+  },
+  "conflicts_with": null,
+  "container": "{:type=>:naked}",
+  "auto_updates": true
+}

@@ -1,0 +1,45 @@
+{
+  "name": [
+    "What's Your Sign?"
+  ],
+  "homepage": "https://objective-see.com/products/whatsyoursign.html",
+  "url": "https://bitbucket.org/objective-see/deploy/downloads/WhatsYourSign_1.5.0.zip",
+  "appcast": "https://objective-see.com/products/changelogs/WhatsYourSign.txt",
+  "version": "1.5.0",
+  "sha256": "04176ae70b0850f963951a7d1e28beafbd004d5bcdc4b707dbe2b15fe59a3d83",
+  "artifacts": [
+    {
+      "delete": [
+        "/Applications/WhatsYourSign.app",
+        "~/Library/Application Scripts/com.objective-see.WhatsYourSignExt.FinderSync",
+        "~/Library/Containers/com.objective-see.WhatsYourSignExt.FinderSync"
+      ],
+      "script": {
+        "executable": "/usr/bin/pluginkit",
+        "args": [
+          "-r",
+          "/Applications/WhatsYourSign.app/Contents/PlugIns/WhatsYourSign.appex"
+        ],
+        "must_succeed": false
+      },
+      "signal": [
+
+      ]
+    },
+    {
+      "path": "WhatsYourSign Installer.app"
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+    "macos": [
+      [
+        ">=",
+        "10.10"
+      ]
+    ]
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": null
+}

@@ -1,0 +1,38 @@
+{
+  "name": [
+    "iDisplay"
+  ],
+  "homepage": "https://getidisplay.com/",
+  "url": "https://getidisplay.com/downloads/iDisplayMac.dmg",
+  "appcast": null,
+  "version": "latest",
+  "sha256": "no_check",
+  "artifacts": [
+    {
+      "launchctl": "ag.shape.MSMToolHelper",
+      "pkgutil": [
+        "ag.shape.iDisplay.pkg",
+        "ag.shape.MSM*.pkg"
+      ],
+      "signal": [
+        [
+          "TERM",
+          "com.shapeservices.idisplay-host-full"
+        ]
+      ]
+    },
+    "iDisplay.pkg (Pkg)",
+    {
+      "trash": "~/Library/Preferences/com.shapeservices.idisplay-host-full.plist",
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "You must reboot for the installation of idisplay to take effect.\n",
+  "depends_on": {
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": null
+}

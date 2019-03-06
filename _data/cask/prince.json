@@ -1,0 +1,35 @@
+{
+  "name": [
+    "Prince"
+  ],
+  "homepage": "https://www.princexml.com/",
+  "url": "https://www.princexml.com/download/prince-12.4-macosx.tar.gz",
+  "appcast": null,
+  "version": "12.4",
+  "sha256": "7f8abe72b88468c36f41754f9fd7f17821cef0c7f8d7e83f861b39b8bf393597",
+  "artifacts": [
+    {
+      "delete": [
+        "/usr/local/bin/prince",
+        "/usr/local/lib/prince"
+      ],
+      "signal": [
+
+      ]
+    },
+    {
+      "path": "prince-12.4-macosx/install.sh",
+      "args": {
+        "must_succeed": true,
+        "sudo": false,
+        "print_stdout": true
+      }
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": null
+}

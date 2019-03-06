@@ -1,0 +1,33 @@
+{
+  "name": [
+    "Mono"
+  ],
+  "homepage": "https://www.mono-project.com/",
+  "url": "https://download.mono-project.com/archive/5.18.0/macos-10-universal/MonoFramework-MDK-5.18.0.240.macos10.xamarin.universal.pkg",
+  "appcast": "https://www.mono-project.com/download/stable/",
+  "version": "5.18.0.240",
+  "sha256": "06d0ca93068e5cb85dff4eeb7dcc272522d4c7813a5b6359e941b831ce475678",
+  "artifacts": [
+    {
+      "delete": [
+        "/Library/Frameworks/Mono.framework/Versions/5.18.0",
+        "/private/etc/paths.d/mono-commands"
+      ],
+      "pkgutil": "com.xamarin.mono-*",
+      "rmdir": [
+        "/Library/Frameworks/Mono.framework/Versions",
+        "/Library/Frameworks/Mono.framework"
+      ],
+      "signal": [
+
+      ]
+    },
+    "MonoFramework-MDK-5.18.0.240.macos10.xamarin.universal.pkg (Pkg)"
+  ],
+  "caveats": "Installing mono-mdk removes mono and mono dependant formula binaries in\n/usr/local/bin and adds mono-mdk to /private/etc/paths.d/\nYou may want to:\n\n  brew unlink {formula} && brew link {formula}\n\nand/or remove /private/etc/paths.d/mono-commands\n",
+  "depends_on": {
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": null
+}

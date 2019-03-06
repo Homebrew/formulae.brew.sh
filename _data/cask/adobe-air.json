@@ -1,0 +1,56 @@
+{
+  "name": [
+    "Adobe AIR"
+  ],
+  "homepage": "https://get.adobe.com/air/",
+  "url": "https://airdownload.adobe.com/air/mac/download/32.0/AdobeAIR.dmg",
+  "appcast": "https://helpx.adobe.com/au/air/kb/archived-air-sdk-version.html",
+  "version": "32.0.0.89",
+  "sha256": "e3c0a9154a5c3bca5f91be93b88e10960a1799f5592112ed282c8b475489fae2",
+  "artifacts": [
+    {
+      "script": {
+        "executable": "Adobe AIR Installer.app/Contents/MacOS/Adobe AIR Installer",
+        "args": [
+          "-uninstall"
+        ],
+        "sudo": true
+      },
+      "rmdir": [
+        "/Applications/Adobe/Flash Player/AddIns",
+        "/Applications/Adobe/Flash Player",
+        "/Applications/Adobe"
+      ],
+      "signal": [
+
+      ]
+    },
+    {
+      "path": "Adobe AIR Installer.app/Contents/MacOS/Adobe AIR Installer",
+      "args": {
+        "must_succeed": true,
+        "sudo": true,
+        "args": [
+          "-silent"
+        ],
+        "print_stdout": true
+      }
+    },
+    {
+      "trash": [
+        "~/Library/Application Support/Adobe/AIR",
+        "~/Library/Caches/com.adobe.air.ApplicationInstaller"
+      ],
+      "rmdir": "~/Library/Application Support/Adobe/",
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": null
+}

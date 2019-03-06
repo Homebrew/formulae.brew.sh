@@ -1,0 +1,50 @@
+{
+  "name": [
+    "PowerShell"
+  ],
+  "homepage": "https://github.com/PowerShell/PowerShell",
+  "url": "https://github.com/PowerShell/PowerShell/releases/download/v6.1.3/powershell-6.1.3-osx-x64.pkg",
+  "appcast": "https://github.com/PowerShell/PowerShell/releases.atom",
+  "version": "6.1.3",
+  "sha256": "f7a30b0e163df70e5d8a3edcdc9b3ff81d093070ae2041e50004b473d3db4ebd",
+  "artifacts": [
+    {
+      "pkgutil": "com.microsoft.powershell",
+      "signal": [
+
+      ]
+    },
+    "powershell-6.1.3-osx-x64.pkg (Pkg)",
+    {
+      "trash": [
+        "~/.cache/powershell",
+        "~/.config/PowerShell",
+        "~/.local/share/powershell"
+      ],
+      "rmdir": [
+        "~/.cache",
+        "~/.config",
+        "~/.local/share",
+        "~/.local"
+      ],
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+    "formula": [
+      "openssl"
+    ],
+    "macos": [
+      [
+        ">=",
+        "10.12"
+      ]
+    ]
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": null
+}

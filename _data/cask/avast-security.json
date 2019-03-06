@@ -1,0 +1,39 @@
+{
+  "name": [
+    "Avast Security"
+  ],
+  "homepage": "https://www.avast.com/",
+  "url": "http://download.ff.avast.com/mac/avast_security_online.dmg",
+  "appcast": null,
+  "version": "latest",
+  "sha256": "no_check",
+  "artifacts": [
+    {
+      "script": {
+        "executable": "/Applications/Avast.app/Contents/Backend/hub/uninstall.sh",
+        "must_succeed": false,
+        "sudo": true
+      },
+      "pkgutil": "com.avast.AAFM",
+      "signal": [
+
+      ]
+    },
+    "Avast Security.pkg (Pkg)",
+    {
+      "trash": [
+        "~/Library/Preferences/com.avast.avast!.plist",
+        "~/Library/Cookies/com.avast.AAFM.binarycookies"
+      ],
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": null
+}

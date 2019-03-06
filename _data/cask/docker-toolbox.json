@@ -1,0 +1,42 @@
+{
+  "name": [
+    "Docker Toolbox"
+  ],
+  "homepage": "https://www.docker.com/products/docker-toolbox",
+  "url": "https://github.com/docker/toolbox/releases/download/v18.06.1-ce/DockerToolbox-18.06.1-ce.pkg",
+  "appcast": "https://github.com/docker/toolbox/releases.atom",
+  "version": "18.06.1-ce",
+  "sha256": "7a946ce1090c48e604c54d3ab91b99401a92664afba32434b616ff047cd4fa9e",
+  "artifacts": [
+    {
+      "pkgutil": [
+        "io.boot2dockeriso.pkg.boot2dockeriso",
+        "io.docker.pkg.docker",
+        "io.docker.pkg.dockercompose",
+        "io.docker.pkg.dockermachine",
+        "io.docker.pkg.dockerquickstartterminalapp",
+        "io.docker.pkg.kitematicapp"
+      ],
+      "signal": [
+
+      ]
+    },
+    "DockerToolbox-18.06.1-ce.pkg (Pkg)",
+    "postflight (Postflight Block)",
+    {
+      "trash": "~/.docker",
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+    "cask": [
+      "virtualbox"
+    ]
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": null
+}

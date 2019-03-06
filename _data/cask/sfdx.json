@@ -1,0 +1,42 @@
+{
+  "name": [
+    "Salesforce DX CLI"
+  ],
+  "homepage": "https://developer.salesforce.com/tools/sfdxcli",
+  "url": "https://developer.salesforce.com/media/salesforce-cli/sfdx-osx.pkg",
+  "appcast": null,
+  "version": "latest",
+  "sha256": "no_check",
+  "artifacts": [
+    {
+      "pkgutil": "com.sfdx.cli",
+      "delete": "/usr/local/bin/sfdx",
+      "signal": [
+
+      ]
+    },
+    "sfdx-osx.pkg (Pkg)",
+    {
+      "trash": [
+        "~/.cache/sfdx",
+        "~/.config/sfdx",
+        "~/.local/share/sfdx"
+      ],
+      "rmdir": [
+        "~/.cache",
+        "~/.config",
+        "~/.local/share",
+        "~/.local"
+      ],
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": null
+}

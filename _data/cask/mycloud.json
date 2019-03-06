@@ -1,0 +1,42 @@
+{
+  "name": [
+    "Swisscom myCloud Desktop"
+  ],
+  "homepage": "https://desktop.mycloud.ch/",
+  "url": "https://desktop-client-installer-server-mac.prod.mdl.swisscom.ch/myCloud%20Desktop%20installer.pkg",
+  "appcast": null,
+  "version": "latest",
+  "sha256": "no_check",
+  "artifacts": [
+    {
+      "pkgutil": "com.github.tornaia.desktop-client",
+      "login_item": "myCloudDesktop",
+      "quit": "ch.swisscom.mycloud.desktop.finder",
+      "signal": [
+        [
+          "TERM",
+          "ch.swisscom.mycloud.desktop"
+        ]
+      ]
+    },
+    {
+      "path": "myCloud Desktop installer.pkg"
+    },
+    {
+      "trash": [
+        "~/Library/Application Support/myCloudDesktop",
+        "~/Library/Preferences/ch.swisscom.mycloud.desktop.plist",
+        "~/Library/Preferences/ch.swisscom.mycloud.desktop.helper.plist"
+      ],
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": null
+}
