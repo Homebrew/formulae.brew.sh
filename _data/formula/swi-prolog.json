@@ -11,12 +11,12 @@
   "desc": "ISO/Edinburgh-style Prolog interpreter",
   "homepage": "http://www.swi-prolog.org/",
   "versions": {
-    "stable": "7.6.4",
+    "stable": "8.0.2",
     "devel": null,
     "head": "HEAD",
     "bottle": true
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -26,16 +26,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/swi-prolog-7.6.4_1.mojave.bottle.tar.gz",
-          "sha256": "4ce8634e10c98507c9a56d69a3793194f1997918643e4d2c0b1a76c62a238e3d"
+          "url": "https://homebrew.bintray.com/bottles/swi-prolog-8.0.2.mojave.bottle.tar.gz",
+          "sha256": "1cec5efa06e469a67a7701fa8bc08f320f95ec766f494c305453301a5f8335e6"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/swi-prolog-7.6.4_1.high_sierra.bottle.tar.gz",
-          "sha256": "6e1bbd48b46ecedbeddff4b6a23138fe5b1784c8f8152772fbe945bfb27425f2"
+          "url": "https://homebrew.bintray.com/bottles/swi-prolog-8.0.2.high_sierra.bottle.tar.gz",
+          "sha256": "824e9a80488a9f91f2bab57653baa6794be59c049bdbab464bd8d00510b1147f"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/swi-prolog-7.6.4_1.sierra.bottle.tar.gz",
-          "sha256": "503b3bf2fb95bd8914617732ac23970789b471e44211c240bab6a63d5a210513"
+          "url": "https://homebrew.bintray.com/bottles/swi-prolog-8.0.2.sierra.bottle.tar.gz",
+          "sha256": "29f73701075df1cd1bedd01b13fe085d23c74c87285ab12116e1f68554bcfe1b"
         }
       }
     }
@@ -45,13 +45,20 @@
 
   ],
   "build_dependencies": [
+    "cmake",
     "pkg-config"
   ],
   "dependencies": [
+    "berkeley-db",
     "gmp",
+    "jpeg",
     "libarchive",
+    "libyaml",
     "openssl",
-    "readline"
+    "ossp-uuid",
+    "pcre",
+    "readline",
+    "unixodbc"
   ],
   "recommended_dependencies": [
 
