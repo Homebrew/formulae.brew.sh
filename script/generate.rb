@@ -9,6 +9,6 @@ Formula.each do |f|
   FileUtils.cp "_api_formula.json.in", "api/formula/#{json_filename}"
 
   html = IO.read "_formula.html.in"
-  html.gsub!("title: $TITLE", "title: #{f.name}")
+  html.gsub!("title: $TITLE", "title: \"#{f.name}\"")
   IO.write("formula/#{f.name}.html", html)
 end
