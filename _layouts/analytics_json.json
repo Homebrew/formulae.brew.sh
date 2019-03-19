@@ -4,7 +4,7 @@
 {%- if page.homebrew-core -%}
     {%- assign json =
         site.data.analytics[page.category].homebrew-core[days] -%}
-{%- else - %}
+{%- else -%}
     {%- assign json = site.data.analytics[page.category][days] -%}
 {%- endif -%}
 {{ json | jsonify }}
