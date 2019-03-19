@@ -9,7 +9,7 @@ layout: base
 <table class="full-width">
   <tr>
     <th></th>
-    <th>{% if page.category == "os-version" %}Version{% else %}Formula{% endif %}</th>
+    <th>{% case page.category %}{% when "os-version" %}Version{% when "cask-install" %}Cask{% else %}Formula{% endcase %}</th>
     <th>Events</th>
     <th>%</th>
   </tr>
@@ -20,7 +20,13 @@ layout: base
     {%- if page.category == "os-version" -%}
       <code>{{ item.os_version }}</code>
     {%- elsif page.category == "cask-install" -%}
-      <code>{{ item.cask }}</code>
+      {%- if site.data.cask[item.cask] != nil -%}
+        <a href="{{ site.baseurl }}/cask/{{ item.cask }}">
+          <code>{{ item.cask }}</code>
+        </a>
+      {%- else -%}
+        <code>{{ item.cask }}</code>
+      {%- endif -%}
     {%- else -%}
       {%- assign name = item.formula | split: " " | first -%}
       {%- assign data_name = name | remove: "@" | remove: "." | remove: '+' -%}
