@@ -1,0 +1,19 @@
+---
+layout: default
+permalink: /cask/
+---
+<p>This is a listing of all casks available via the <a href="https://brew.sh">Homebrew</a> package manager for macOS.</p>
+
+<h2><a href="{{ site.baseurl }}/api/cask.json"><code>/api/cask.json</code> (JSON API)</a></h2>
+
+<table>
+    {%- assign sorted_casks = site.data.cask | sort -%}
+    {%- for c in sorted_casks -%}
+
+    <tr>
+        {%- assign token = c[0] -%}
+        {%- assign cask = c[1] -%}
+        {%- include cask.html token=token cask=cask -%}
+    </tr>
+    {%- endfor -%}
+</table>
