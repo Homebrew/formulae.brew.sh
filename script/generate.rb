@@ -3,7 +3,8 @@ directories = ["_data/formula", "api/formula", "formula"]
 FileUtils.rm_rf directories
 FileUtils.mkdir_p directories
 
-Formula.each do |f|
+CoreTap.instance.formula_names.each do |n|
+  f = Formulary.factory(n)
   json_filename = "#{f.name}.json"
   IO.write("_data/formula/#{json_filename}", JSON.pretty_generate(f.to_hash))
   FileUtils.cp "_api_formula.json.in", "api/formula/#{json_filename}"
