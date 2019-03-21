@@ -3,13 +3,91 @@
     "KiCad"
   ],
   "homepage": "http://kicad-pcb.org/",
-  "url": "http://downloads.kicad-pcb.org/osx/stable/kicad-unified-5.0.1.dmg",
-  "appcast": "http://downloads.kicad-pcb.org/osx/stable/",
-  "version": "5.0.1",
-  "sha256": "3066e7c8da09afea2e27b4dc5d0742c83c5a2e93408d9d76e342e14e594bc7b3",
+  "url": "https://kicad-downloads.s3.cern.ch/osx/stable/kicad-unified-5.1.0.dmg",
+  "appcast": "https://kicad-downloads.s3.cern.ch/?delimiter=/&prefix=osx/stable/",
+  "version": "5.1.0",
+  "sha256": "be024d121a42c9d1e1ea08fdf9dd2ad24cf77879d7f32214b2de13322cd18bae",
   "artifacts": [
+    {
+      "rmdir": [
+        "/Library/Application Support/kicad",
+        "/Applications/KiCad"
+      ],
+      "signal": [
+
+      ]
+    },
     [
-      "KiCad"
+      "KiCad/kicad.app",
+      {
+        "target": "KiCad/KiCad.app"
+      }
+    ],
+    [
+      "KiCad/bitmap2component.app",
+      {
+        "target": "KiCad/bitmap2component.app"
+      }
+    ],
+    [
+      "KiCad/eeschema.app",
+      {
+        "target": "KiCad/eeschema.app"
+      }
+    ],
+    [
+      "KiCad/gerbview.app",
+      {
+        "target": "KiCad/gerbview.app"
+      }
+    ],
+    [
+      "KiCad/pcb_calculator.app",
+      {
+        "target": "KiCad/pcb_calculator.app"
+      }
+    ],
+    [
+      "KiCad/pcbnew.app",
+      {
+        "target": "KiCad/pcbnew.app"
+      }
+    ],
+    [
+      "KiCad/pl_editor.app",
+      {
+        "target": "KiCad/pl_editor.app"
+      }
+    ],
+    [
+      "kicad/help",
+      {
+        "target": "/Library/Application Support/kicad/help"
+      }
+    ],
+    [
+      "kicad/library",
+      {
+        "target": "/Library/Application Support/kicad/library"
+      }
+    ],
+    [
+      "kicad/modules",
+      {
+        "target": "/Library/Application Support/kicad/modules"
+      }
+    ],
+    [
+      "kicad/share",
+      {
+        "target": "/Library/Application Support/kicad/share"
+      }
+    ],
+    [
+      "kicad/template",
+      {
+        "target": "/Library/Application Support/kicad/template"
+      }
     ],
     {
       "trash": "~/Library/Preferences/kicad",
