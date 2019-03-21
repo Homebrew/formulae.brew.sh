@@ -10,7 +10,19 @@
   "artifacts": [
     [
       "MacPass.app"
-    ]
+    ],
+    {
+      "delete": [
+        "~/Library/Application Support/MacPass",
+        "~/Library/Caches/com.hicknhacksoftware.MacPass",
+        "~/Library/Cookies/com.hicknhacksoftware.MacPass.binarycookies",
+        "~/Library/Preferences/com.hicknhacksoftware.MacPass.plist",
+        "~/Library/Saved Application State/com.hicknhacksoftware.MacPass.savedState"
+      ],
+      "signal": [
+
+      ]
+    }
   ],
   "caveats": "",
   "depends_on": {
@@ -23,5 +35,5 @@
   },
   "conflicts_with": null,
   "container": null,
-  "auto_updates": null
+  "auto_updates": true
 }
