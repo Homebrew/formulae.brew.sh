@@ -1,7 +1,7 @@
 ---
 layout: base
 ---
-{% assign json = site.data.analytics[page.category][page.days] %}
+{%- assign json = site.data.analytics[page.category][page.days] -%}
 <h2>{{ page.category_pretty }} Events</h2>
 
 <h3><a href="{{ site.baseurl }}/api/analytics/{{ page.category }}/{{ page.days}}.json"><code>/api/analytics/{{ page.category }}/{{ page.days}}.json</code> (JSON API)</a></h3>
@@ -20,7 +20,9 @@ layout: base
     {%- if page.category == "os-version" -%}
       <code>{{ item.os_version }}</code>
     {%- elsif page.category == "cask-install" -%}
-      <code>{{ item.cask }}</code>
+      <a href="{{ site.baseurl }}/cask/{{ item.cask }}">
+        <code>{{ item.cask }}</code>
+      </a>
     {%- else -%}
       {%- assign name = item.formula | split: " " | first -%}
       {%- assign data_name = name | remove: "@" | remove: "." | remove: '+' -%}

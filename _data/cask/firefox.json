@@ -1,0 +1,45 @@
+{
+  "name": [
+    "Mozilla Firefox"
+  ],
+  "homepage": "https://www.mozilla.org/firefox/",
+  "url": "https://download-installer.cdn.mozilla.net/pub/firefox/releases/66.0/mac/en-US/Firefox%2066.0.dmg",
+  "appcast": "https://www.macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://download.mozilla.org/%3Fproduct=firefox-latest-ssl%26os=osx",
+  "version": "66.0",
+  "sha256": "64e15f0e2a977ea9e1d3a14c674ebf84ee6234f896e719d6c57aeecd8785fa78",
+  "artifacts": [
+    [
+      "Firefox.app"
+    ],
+    {
+      "trash": [
+        "/Library/Logs/DiagnosticReports/firefox_*",
+        "~/Library/Application Support/Firefox",
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.mozilla.firefox.sfl*",
+        "~/Library/Caches/Firefox",
+        "~/Library/Caches/Mozilla/updates/Applications/Firefox",
+        "~/Library/Preferences/org.mozilla.firefox.plist"
+      ],
+      "rmdir": [
+        "~/Library/Application Support/Mozilla",
+        "~/Library/Caches/Mozilla/updates/Applications",
+        "~/Library/Caches/Mozilla/updates",
+        "~/Library/Caches/Mozilla"
+      ],
+      "signal": [
+
+      ]
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+  },
+  "conflicts_with": {
+    "cask": [
+      "firefox-beta",
+      "firefox-esr"
+    ]
+  },
+  "container": null,
+  "auto_updates": true
+}
