@@ -1,7 +1,7 @@
 ---
 layout: base
 ---
-{% assign json = site.data.analytics[page.category][page.days] %}
+{%- assign json = site.data.analytics[page.category][page.days] -%}
 <h2>{{ page.category_pretty }} Events</h2>
 
 <h3><a href="{{ site.baseurl }}/api/analytics/{{ page.category }}/{{ page.days}}.json"><code>/api/analytics/{{ page.category }}/{{ page.days}}.json</code> (JSON API)</a></h3>

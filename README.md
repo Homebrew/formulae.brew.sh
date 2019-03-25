@@ -2,7 +2,7 @@
 
 [Homebrew Formulae](https://formulae.brew.sh) is an online package browser for [Homebrew](https://brew.sh).
 
-It displays all packages in [Homebrew/homebrew-core](https://github.com/Homebrew/homebrew-core). It is deployed to GitHub Pages after every [Homebrew/homebrew-core](https://github.com/Homebrew/homebrew-core) commit by [Travis CI](https://travis-ci.org).
+It displays all packages in [Homebrew/homebrew-core](https://github.com/Homebrew/homebrew-core). A GitHub Action in [homebrew-core](https://github.com/Homebrew/homebrew-core/blob/master/.github/main.workflow) is run on each commit, which deploys the site to GitHub Pages.
 
 ## JSON API
 
@@ -19,7 +19,7 @@ Read more in the [JSON API documentation](https://formulae.brew.sh/docs/api/).
 ## Usage
 Open https://formulae.brew.sh/ in your web browser.
 
-Instead, to run Homebrew Formulae locally run:
+To instead run Homebrew Formulae locally, run:
 ```bash
 git clone https://github.com/Homebrew/formulae.brew.sh
 cd formulae.brew.sh
