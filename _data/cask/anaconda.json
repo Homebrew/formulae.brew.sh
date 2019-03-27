@@ -10,7 +10,7 @@
   "artifacts": [
     {
       "delete": [
-        "/home/linuxbrew/.linuxbrew/anaconda3",
+        "/usr/local/anaconda3",
         "/Applications/Anaconda-Navigator.app"
       ],
       "signal": [
@@ -25,7 +25,7 @@
         "args": [
           "-b",
           "-p",
-          "/home/linuxbrew/.linuxbrew/anaconda3"
+          "/usr/local/anaconda3"
         ],
         "print_stdout": true
       }
@@ -44,7 +44,7 @@
       ]
     }
   ],
-  "caveats": "",
+  "caveats": "Cask anaconda installs files under /usr/local. The presence of such\nfiles can cause warnings when running \"brew doctor\", which is considered\nto be a bug in Homebrew Cask.\n",
   "depends_on": {
   },
   "conflicts_with": null,

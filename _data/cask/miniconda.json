@@ -9,7 +9,7 @@
   "sha256": "8ebb463ddf46dd003616b2f6b678403a708e2c54dcc58e212bd35e257761912c",
   "artifacts": [
     {
-      "delete": "/home/linuxbrew/.linuxbrew/miniconda3",
+      "delete": "/usr/local/miniconda3",
       "signal": [
 
       ]
@@ -22,7 +22,7 @@
         "args": [
           "-b",
           "-p",
-          "/home/linuxbrew/.linuxbrew/miniconda3"
+          "/usr/local/miniconda3"
         ],
         "print_stdout": true
       }
@@ -39,7 +39,7 @@
       ]
     }
   ],
-  "caveats": "",
+  "caveats": "Cask miniconda installs files under /usr/local. The presence of such\nfiles can cause warnings when running \"brew doctor\", which is considered\nto be a bug in Homebrew Cask.\n",
   "depends_on": {
   },
   "conflicts_with": null,
