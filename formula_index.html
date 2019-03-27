@@ -8,11 +8,11 @@ permalink: /formula/
 
 <table>
     {%- assign sorted_formulae = site.data.formula | sort -%}
-    {%- for formula in sorted_formulae -%}
+    {%- for f in sorted_formulae -%}
 
     <tr>
-        {%- assign f = formula[1] -%}
-        {%- include formula.html formula=f -%}
+        {%- assign formula = f[1] -%}
+        {%- include formula.html formula=formula -%}
     </tr>
     {%- endfor -%}
 </table>
