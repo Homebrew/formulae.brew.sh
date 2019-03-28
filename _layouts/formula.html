@@ -3,7 +3,7 @@ layout: default
 permalink: :title
 ---
 {%- assign full_name = page.title -%}
-{%- assign name = full_name | remove: "@" | remove: "." | replace: '+', '_' -%}
+{%- assign name = full_name | remove: "@" | remove: "." | replace: "+", "_" -%}
 {%- assign f = site.data.formula[name] -%}
 <h2>{{ f.name }}</h2>
 {%- if f.aliases.size > 0 -%}
