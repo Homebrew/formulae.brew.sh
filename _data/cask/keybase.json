@@ -12,24 +12,10 @@
       "delete": "/Library/PrivilegedHelperTools/keybase.Helper",
       "launchctl": "keybase.Helper",
       "login_item": "Keybase",
-      "signal": [
-        [
-          "TERM",
-          "keybase.Electron"
-        ],
-        [
-          "TERM",
-          "keybase.ElectronHelper"
-        ],
-        [
-          "KILL",
-          "keybase.Electron"
-        ],
-        [
-          "KILL",
-          "keybase.ElectronHelper"
-        ]
-      ],
+      "signal": {
+        "TERM": "keybase.ElectronHelper",
+        "KILL": "keybase.ElectronHelper"
+      },
       "script": {
         "executable": "/Applications/Keybase.app/Contents/SharedSupport/bin/keybase",
         "args": [
@@ -52,9 +38,8 @@
         "/Library/Logs/keybase*"
       ],
       "rmdir": "/keybase",
-      "signal": [
-
-      ]
+      "signal": {
+      }
     }
   ],
   "caveats": "",

@@ -10,25 +10,24 @@
   "artifacts": [
     {
       "script": {
-        "executable": "/home/linuxbrew/.linuxbrew/Caskroom/oversight/1.2.0/OverSight_Installer.app/Contents/MacOS/OverSight_Installer",
+        "executable": "$(brew --prefix)/Caskroom/oversight/1.2.0/OverSight_Installer.app/Contents/MacOS/OverSight_Installer",
         "args": [
           "-uninstall"
         ],
-        "sudo": true
+        "sudo": "true"
       },
-      "signal": [
-
-      ]
+      "signal": {
+      }
     },
     {
-      "path": "/home/linuxbrew/.linuxbrew/Caskroom/oversight/1.2.0/OverSight_Installer.app/Contents/MacOS/OverSight_Installer",
+      "path": "$(brew --prefix)/Caskroom/oversight/1.2.0/OverSight_Installer.app/Contents/MacOS/OverSight_Installer",
       "args": {
-        "must_succeed": true,
-        "sudo": true,
+        "must_succeed": "true",
+        "sudo": "true",
         "args": [
           "-install"
         ],
-        "print_stdout": true
+        "print_stdout": "true"
       }
     },
     {
@@ -39,9 +38,8 @@
         "~/Library/Preferences/com.objective-see.OverSight.plist",
         "~/Library/Preferences/com.objective-see.OverSightHelper.plist"
       ],
-      "signal": [
-
-      ]
+      "signal": {
+      }
     }
   ],
   "caveats": "",

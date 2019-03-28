@@ -10,15 +10,14 @@
   "artifacts": [
     {
       "delete": "/Applications/JabRef.app",
-      "signal": [
-
-      ]
+      "signal": {
+      }
     },
     {
       "path": "JabRef Installer.app/Contents/MacOS/JavaApplicationStub",
       "args": {
-        "must_succeed": true,
-        "sudo": false,
+        "must_succeed": "true",
+        "sudo": "false",
         "args": [
           "-q",
           "-VcreateDesktopLinkAction$Boolean=false",
@@ -27,7 +26,7 @@
           "-Vsys.installationDir=/Applications",
           "-VexecutionLauncherAction$Boolean=false"
         ],
-        "print_stdout": true
+        "print_stdout": "true"
       }
     }
   ],

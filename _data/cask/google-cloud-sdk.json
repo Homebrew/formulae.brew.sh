@@ -9,16 +9,15 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "delete": "/home/linuxbrew/.linuxbrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk",
-      "signal": [
-
-      ]
+      "delete": "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk",
+      "signal": {
+      }
     },
     {
       "path": "google-cloud-sdk/install.sh",
       "args": {
-        "must_succeed": true,
-        "sudo": false,
+        "must_succeed": "true",
+        "sudo": "false",
         "args": [
           "--usage-reporting",
           "false",
@@ -30,7 +29,7 @@
           "false",
           "--quiet"
         ],
-        "print_stdout": true
+        "print_stdout": "true"
       }
     },
     [
@@ -49,7 +48,7 @@
       "google-cloud-sdk/bin/gsutil"
     ]
   ],
-  "caveats": "google-cloud-sdk is installed at /home/linuxbrew/.linuxbrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk. Add your profile:\n\n  for bash users\n    source '/home/linuxbrew/.linuxbrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc'\n    source '/home/linuxbrew/.linuxbrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc'\n\n  for zsh users\n    source '/home/linuxbrew/.linuxbrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'\n    source '/home/linuxbrew/.linuxbrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'\n",
+  "caveats": "google-cloud-sdk is installed at $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk. Add your profile:\n\n  for bash users\n    source '$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc'\n    source '$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc'\n\n  for zsh users\n    source '$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'\n    source '$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'\n",
   "depends_on": {
   },
   "conflicts_with": null,

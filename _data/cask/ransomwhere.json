@@ -10,25 +10,24 @@
   "artifacts": [
     {
       "script": {
-        "executable": "/home/linuxbrew/.linuxbrew/Caskroom/ransomwhere/1.2.5/RansomWhere_Installer.app/Contents/MacOS/RansomWhere_Installer",
+        "executable": "$(brew --prefix)/Caskroom/ransomwhere/1.2.5/RansomWhere_Installer.app/Contents/MacOS/RansomWhere_Installer",
         "args": [
           "-uninstall"
         ],
-        "sudo": true
+        "sudo": "true"
       },
-      "signal": [
-
-      ]
+      "signal": {
+      }
     },
     {
-      "path": "/home/linuxbrew/.linuxbrew/Caskroom/ransomwhere/1.2.5/RansomWhere_Installer.app/Contents/MacOS/RansomWhere_Installer",
+      "path": "$(brew --prefix)/Caskroom/ransomwhere/1.2.5/RansomWhere_Installer.app/Contents/MacOS/RansomWhere_Installer",
       "args": {
-        "must_succeed": true,
-        "sudo": true,
+        "must_succeed": "true",
+        "sudo": "true",
         "args": [
           "-install"
         ],
-        "print_stdout": true
+        "print_stdout": "true"
       }
     }
   ],

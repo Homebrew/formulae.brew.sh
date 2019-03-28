@@ -14,31 +14,29 @@
         "args": [
           "-q"
         ],
-        "sudo": true
+        "sudo": "true"
       },
-      "signal": [
-
-      ]
+      "signal": {
+      }
     },
     {
       "path": "jMetrik Installer.app/Contents/MacOS/JavaApplicationStub",
       "args": {
-        "must_succeed": true,
-        "sudo": true,
+        "must_succeed": "true",
+        "sudo": "true",
         "args": [
           "-q",
           "-VcreateDesktopLinkAction$Boolean=false",
           "-VexecutionLauncherAction$Boolean=false",
           "-Vsys.installationDir=/Applications/jMetrik"
         ],
-        "print_stdout": true
+        "print_stdout": "true"
       }
     },
     {
       "trash": "~/jmetrik",
-      "signal": [
-
-      ]
+      "signal": {
+      }
     }
   ],
   "caveats": "jmetrik requires Java 7+. You can install the latest version with\n\n  brew cask install java\n",

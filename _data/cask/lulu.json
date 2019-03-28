@@ -10,25 +10,24 @@
   "artifacts": [
     {
       "script": {
-        "executable": "/home/linuxbrew/.linuxbrew/Caskroom/lulu/1.2.0/Lulu Installer.app/Contents/MacOS/LuLu Installer",
+        "executable": "$(brew --prefix)/Caskroom/lulu/1.2.0/Lulu Installer.app/Contents/MacOS/LuLu Installer",
         "args": [
           "-uninstall"
         ],
-        "sudo": true
+        "sudo": "true"
       },
-      "signal": [
-
-      ]
+      "signal": {
+      }
     },
     {
-      "path": "/home/linuxbrew/.linuxbrew/Caskroom/lulu/1.2.0/Lulu Installer.app/Contents/MacOS/LuLu Installer",
+      "path": "$(brew --prefix)/Caskroom/lulu/1.2.0/Lulu Installer.app/Contents/MacOS/LuLu Installer",
       "args": {
-        "must_succeed": true,
-        "sudo": true,
+        "must_succeed": "true",
+        "sudo": "true",
         "args": [
           "-install"
         ],
-        "print_stdout": true
+        "print_stdout": "true"
       }
     },
     {
@@ -40,9 +39,8 @@
         "/Library/LaunchDaemons/com.objective-see.lulu.plist",
         "/Library/Logs/LuLu.log"
       ],
-      "signal": [
-
-      ]
+      "signal": {
+      }
     }
   ],
   "caveats": "",

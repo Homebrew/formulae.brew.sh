@@ -9,24 +9,21 @@
   "sha256": "a8c26a6788be31e05bf9a8011e6e37d2e666f360fed349d5676acbb472ea508d",
   "artifacts": [
     {
-      "signal": [
-        [
-          "TERM",
-          "com.dbvis.DbVisualizer"
-        ]
-      ]
+      "signal": {
+        "TERM": "com.dbvis.DbVisualizer"
+      }
     },
     {
       "path": "DbVisualizer Installer.app/Contents/MacOS/JavaApplicationStub",
       "args": {
-        "must_succeed": true,
-        "sudo": false,
+        "must_succeed": "true",
+        "sudo": "false",
         "args": [
           "-q",
           "-dir",
-          "/home/linuxbrew/.linuxbrew/Caskroom/dbvisualizer/10.0.18"
+          "$(brew --prefix)/Caskroom/dbvisualizer/10.0.18"
         ],
-        "print_stdout": true
+        "print_stdout": "true"
       }
     },
     [
@@ -34,9 +31,8 @@
     ],
     {
       "trash": "~/.dbvis",
-      "signal": [
-
-      ]
+      "signal": {
+      }
     }
   ],
   "caveats": "dbvisualizer requires Java 8. You can install it with\n\n  brew cask install homebrew/cask-versions/java8\n",

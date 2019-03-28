@@ -11,20 +11,19 @@
     {
       "quit": "org.bonitasoft.studio.product",
       "delete": "/Applications/BonitaStudioCommunity-7.8.2.app",
-      "signal": [
-
-      ]
+      "signal": {
+      }
     },
     {
-      "path": "/home/linuxbrew/.linuxbrew/Caskroom/bonitastudiocommunity/7.8.2/BonitaStudioCommunity-7.8.2.app/Contents/MacOS/installbuilder.sh",
+      "path": "$(brew --prefix)/Caskroom/bonitastudiocommunity/7.8.2/BonitaStudioCommunity-7.8.2.app/Contents/MacOS/installbuilder.sh",
       "args": {
-        "must_succeed": true,
-        "sudo": false,
+        "must_succeed": "true",
+        "sudo": "false",
         "args": [
           "--mode",
           "unattended"
         ],
-        "print_stdout": true
+        "print_stdout": "true"
       }
     },
     {
@@ -32,9 +31,8 @@
         "~/Library/Preferences/org.bonitasoft.studio.product.plist",
         "/Library/Caches/org.bonitasoft.studio.product"
       ],
-      "signal": [
-
-      ]
+      "signal": {
+      }
     }
   ],
   "caveats": "",

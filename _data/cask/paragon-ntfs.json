@@ -13,25 +13,17 @@
       "launchctl": "com.paragon-software.ntfs*",
       "pkgutil": "com.paragon-software.pkg.ntfs",
       "quit": "com.paragon-software.ntfs*",
-      "signal": [
-        [
-          "KILL",
-          "com.paragon-software.ntfs.FSMenuApp"
-        ],
-        [
-          "KILL",
-          "com.paragon-software.ntfs.notification-agent"
-        ]
-      ]
+      "signal": {
+        "KILL": "com.paragon-software.ntfs.notification-agent"
+      }
     },
     {
       "path": "Install Paragon NTFS for Mac 15.app"
     },
     {
       "trash": "~/Library/Preferences/com.paragon-software.ntfs.fsapp.plist",
-      "signal": [
-
-      ]
+      "signal": {
+      }
     }
   ],
   "caveats": "",

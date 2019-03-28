@@ -10,32 +10,30 @@
   "artifacts": [
     {
       "script": {
-        "executable": "/home/linuxbrew/.linuxbrew/Caskroom/blockblock/0.9.9.4/BlockBlock Installer.app/Contents/MacOS/BlockBlock",
+        "executable": "$(brew --prefix)/Caskroom/blockblock/0.9.9.4/BlockBlock Installer.app/Contents/MacOS/BlockBlock",
         "args": [
           "-uninstall"
         ],
-        "sudo": true
+        "sudo": "true"
       },
-      "signal": [
-
-      ]
+      "signal": {
+      }
     },
     {
-      "path": "/home/linuxbrew/.linuxbrew/Caskroom/blockblock/0.9.9.4/BlockBlock Installer.app/Contents/MacOS/BlockBlock",
+      "path": "$(brew --prefix)/Caskroom/blockblock/0.9.9.4/BlockBlock Installer.app/Contents/MacOS/BlockBlock",
       "args": {
-        "must_succeed": true,
-        "sudo": true,
+        "must_succeed": "true",
+        "sudo": "true",
         "args": [
           "-install"
         ],
-        "print_stdout": true
+        "print_stdout": "true"
       }
     },
     {
       "trash": "~/Library/Preferences/com.objectiveSee.BlockBlock.plist",
-      "signal": [
-
-      ]
+      "signal": {
+      }
     }
   ],
   "caveats": "",

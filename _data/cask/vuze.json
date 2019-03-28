@@ -10,26 +10,24 @@
   "artifacts": [
     {
       "delete": "/Applications/Vuze.app",
-      "signal": [
-
-      ]
+      "signal": {
+      }
     },
     {
       "path": "Vuze Installer.app/Contents/MacOS/JavaApplicationStub",
       "args": {
-        "must_succeed": true,
-        "sudo": true,
+        "must_succeed": "true",
+        "sudo": "true",
         "args": [
           "-q"
         ],
-        "print_stdout": true
+        "print_stdout": "true"
       }
     },
     {
       "trash": "~/Library/Application Support/Vuze",
-      "signal": [
-
-      ]
+      "signal": {
+      }
     }
   ],
   "caveats": "vuze requires Java. You can install the latest version with\n\n  brew cask install java\n",

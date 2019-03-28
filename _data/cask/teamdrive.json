@@ -16,45 +16,23 @@
           "unattended"
         ]
       },
-      "signal": [
-        [
-          "QUIT",
-          "com.teamdrive.teamdrive3"
-        ],
-        [
-          "KILL",
-          "com.teamdrive.teamdrive3"
-        ],
-        [
-          "QUIT",
-          "com.teamdrive.teamdrive3.FinderExt"
-        ],
-        [
-          "KILL",
-          "com.teamdrive.teamdrive3.FinderExt"
-        ],
-        [
-          "QUIT",
-          "com.teamdrive.teamdrive3.MenuExt"
-        ],
-        [
-          "KILL",
-          "com.teamdrive.teamdrive3.MenuExt"
-        ]
-      ]
+      "signal": {
+        "QUIT": "com.teamdrive.teamdrive3.MenuExt",
+        "KILL": "com.teamdrive.teamdrive3.MenuExt"
+      }
     },
     {
       "path": "Install-TeamDrive-4.6.7.2230_TMDR.app/Contents/MacOS/osx-x86_64",
       "args": {
-        "must_succeed": true,
-        "sudo": false,
+        "must_succeed": "true",
+        "sudo": "false",
         "args": [
           "--unattendedmodeui",
           "none",
           "--mode",
           "unattended"
         ],
-        "print_stdout": true
+        "print_stdout": "true"
       }
     }
   ],

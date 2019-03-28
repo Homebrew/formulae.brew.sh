@@ -10,38 +10,38 @@
   "artifacts": [
     "preflight (Preflight Block)",
     [
-      "/home/linuxbrew/.linuxbrew/Caskroom/android-ndk/19/ndk_exec.sh",
+      "$(brew --prefix)/Caskroom/android-ndk/19/ndk_exec.sh",
       {
         "target": "ndk-build"
       }
     ],
     [
-      "/home/linuxbrew/.linuxbrew/Caskroom/android-ndk/19/ndk_exec.sh",
+      "$(brew --prefix)/Caskroom/android-ndk/19/ndk_exec.sh",
       {
         "target": "ndk-depends"
       }
     ],
     [
-      "/home/linuxbrew/.linuxbrew/Caskroom/android-ndk/19/ndk_exec.sh",
+      "$(brew --prefix)/Caskroom/android-ndk/19/ndk_exec.sh",
       {
         "target": "ndk-gdb"
       }
     ],
     [
-      "/home/linuxbrew/.linuxbrew/Caskroom/android-ndk/19/ndk_exec.sh",
+      "$(brew --prefix)/Caskroom/android-ndk/19/ndk_exec.sh",
       {
         "target": "ndk-stack"
       }
     ],
     [
-      "/home/linuxbrew/.linuxbrew/Caskroom/android-ndk/19/ndk_exec.sh",
+      "$(brew --prefix)/Caskroom/android-ndk/19/ndk_exec.sh",
       {
         "target": "ndk-which"
       }
     ],
     "uninstall_postflight (Postflight Block)"
   ],
-  "caveats": "You may want to add to your profile:\n   'export ANDROID_NDK_HOME=\"/home/linuxbrew/.linuxbrew/share/android-ndk\"'\n",
+  "caveats": "You may want to add to your profile:\n   'export ANDROID_NDK_HOME=\"$(brew --prefix)/share/android-ndk\"'\n",
   "depends_on": {
   },
   "conflicts_with": {

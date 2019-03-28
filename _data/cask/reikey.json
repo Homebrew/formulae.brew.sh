@@ -10,25 +10,24 @@
   "artifacts": [
     {
       "script": {
-        "executable": "/home/linuxbrew/.linuxbrew/Caskroom/reikey/1.4.0/ReiKey Installer.app/Contents/MacOS/ReiKey Installer",
+        "executable": "$(brew --prefix)/Caskroom/reikey/1.4.0/ReiKey Installer.app/Contents/MacOS/ReiKey Installer",
         "args": [
           "-uninstall"
         ],
-        "sudo": true
+        "sudo": "true"
       },
-      "signal": [
-
-      ]
+      "signal": {
+      }
     },
     {
-      "path": "/home/linuxbrew/.linuxbrew/Caskroom/reikey/1.4.0/ReiKey Installer.app/Contents/MacOS/ReiKey Installer",
+      "path": "$(brew --prefix)/Caskroom/reikey/1.4.0/ReiKey Installer.app/Contents/MacOS/ReiKey Installer",
       "args": {
-        "must_succeed": true,
-        "sudo": true,
+        "must_succeed": "true",
+        "sudo": "true",
         "args": [
           "-install"
         ],
-        "print_stdout": true
+        "print_stdout": "true"
       }
     },
     {
@@ -39,9 +38,8 @@
         "~/Library/Caches/SentryCrash/ReiKey Installer/Data/CrashState.json",
         "~/Library/Caches/SentryCrash/ReiKey Installer/Reports"
       ],
-      "signal": [
-
-      ]
+      "signal": {
+      }
     }
   ],
   "caveats": "",

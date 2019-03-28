@@ -10,13 +10,12 @@
   "artifacts": [
     {
       "script": {
-        "executable": "/home/linuxbrew/.linuxbrew/Caskroom/trusteer-rapport/latest/Uninstall Rapport.app/Contents/Resources/RapportUninstaller.sh",
-        "sudo": true
+        "executable": "$(brew --prefix)/Caskroom/trusteer-rapport/latest/Uninstall Rapport.app/Contents/Resources/RapportUninstaller.sh",
+        "sudo": "true"
       },
       "pkgutil": "com.trusteer.ibmSecurityTrusteerEndpointProtection.*",
-      "signal": [
-
-      ]
+      "signal": {
+      }
     },
     "Rapport.pkg (Pkg)",
     {
@@ -24,9 +23,8 @@
         "~/Library/Application Support/Rapport",
         "~/Library/Preferences/com.trusteer.rapportd.plist"
       ],
-      "signal": [
-
-      ]
+      "signal": {
+      }
     }
   ],
   "caveats": "",

@@ -10,26 +10,24 @@
   "artifacts": [
     {
       "delete": "/Applications/Burp Suite Community Edition.app",
-      "signal": [
-
-      ]
+      "signal": {
+      }
     },
     {
       "path": "Burp Suite Community Edition Installer.app/Contents/MacOS/JavaApplicationStub",
       "args": {
-        "must_succeed": true,
-        "sudo": true,
+        "must_succeed": "true",
+        "sudo": "true",
         "args": [
           "-q"
         ],
-        "print_stdout": true
+        "print_stdout": "true"
       }
     },
     {
       "trash": "~/.BurpSuite",
-      "signal": [
-
-      ]
+      "signal": {
+      }
     }
   ],
   "caveats": "",

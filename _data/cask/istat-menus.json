@@ -20,28 +20,10 @@
         "com.bjango.istatmenus.status",
         "com.bjango.istatmenus.installerhelper"
       ],
-      "signal": [
-        [
-          "TERM",
-          "com.bjango.iStat-Menus-Notifications"
-        ],
-        [
-          "TERM",
-          "com.bjango.iStatMenusAgent"
-        ],
-        [
-          "TERM",
-          "com.bjango.istatmenusstatus"
-        ],
-        [
-          "TERM",
-          "com.bjango.istatmenus"
-        ],
-        [
-          "HUP",
-          "com.bjango.istatmenus"
-        ]
-      ]
+      "signal": {
+        "TERM": "com.bjango.istatmenus",
+        "HUP": "com.bjango.istatmenus"
+      }
     },
     [
       "iStat Menus.app"
@@ -66,9 +48,8 @@
         "/Library⁩/LaunchDaemons⁩/com.bjango.istatmenus.fans.plist",
         "/Users/Shared/.iStatMenus"
       ],
-      "signal": [
-
-      ]
+      "signal": {
+      }
     }
   ],
   "caveats": "",

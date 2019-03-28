@@ -10,26 +10,24 @@
   "artifacts": [
     {
       "delete": "/Applications/Kafka Tool.app",
-      "signal": [
-
-      ]
+      "signal": {
+      }
     },
     {
       "path": "Kafka Tool 2 Installer.app/Contents/MacOS/JavaApplicationStub",
       "args": {
-        "must_succeed": true,
-        "sudo": false,
+        "must_succeed": "true",
+        "sudo": "false",
         "args": [
           "-q"
         ],
-        "print_stdout": true
+        "print_stdout": "true"
       }
     },
     {
       "trash": "~/.kafkatool2",
-      "signal": [
-
-      ]
+      "signal": {
+      }
     }
   ],
   "caveats": "kafka-tool requires Java 8. You can install it with\n\n  brew cask install homebrew/cask-versions/java8\n",

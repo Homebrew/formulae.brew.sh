@@ -10,15 +10,14 @@
   "artifacts": [
     {
       "script": {
-        "executable": "/home/linuxbrew/.linuxbrew/Caskroom/ezeep/latest/ezeep Installer.app/Contents/Resources/uninstall.sh",
+        "executable": "$(brew --prefix)/Caskroom/ezeep/latest/ezeep Installer.app/Contents/Resources/uninstall.sh",
         "args": [
           "production"
         ],
-        "sudo": true
+        "sudo": "true"
       },
-      "signal": [
-
-      ]
+      "signal": {
+      }
     },
     {
       "path": "ezeep Installer.app"

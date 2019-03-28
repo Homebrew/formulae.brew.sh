@@ -11,12 +11,9 @@
     {
       "delete": "/Applications/zoom.us.app",
       "quit": "us.zoom.ZoomOpener",
-      "signal": [
-        [
-          "KILL",
-          "us.zoom.xos"
-        ]
-      ]
+      "signal": {
+        "KILL": "us.zoom.xos"
+      }
     },
     "zoomusInstaller.pkg (Pkg)",
     "postflight (Postflight Block)",
@@ -32,9 +29,8 @@
         "~/Library/Preferences/us.zoom.xos.plist",
         "~/Library/Saved Application State/us.zoom.xos.savedState"
       ],
-      "signal": [
-
-      ]
+      "signal": {
+      }
     }
   ],
   "caveats": "",

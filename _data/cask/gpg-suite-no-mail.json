@@ -10,8 +10,8 @@
   "artifacts": [
     {
       "script": {
-        "executable": "/home/linuxbrew/.linuxbrew/Caskroom/gpg-suite-no-mail/2018.5/Uninstall.app/Contents/Resources/GPG Suite Uninstaller.app/Contents/Resources/uninstall.sh",
-        "sudo": true
+        "executable": "$(brew --prefix)/Caskroom/gpg-suite-no-mail/2018.5/Uninstall.app/Contents/Resources/GPG Suite Uninstaller.app/Contents/Resources/uninstall.sh",
+        "sudo": "true"
       },
       "pkgutil": "org.gpgtools.*",
       "quit": [
@@ -37,9 +37,8 @@
         "/Library/Application Support/GPGTools",
         "/Library/Frameworks/Libmacgpg.framework"
       ],
-      "signal": [
-
-      ]
+      "signal": {
+      }
     },
     "Install.pkg (Pkg)",
     "uninstall_postflight (Postflight Block)",
@@ -53,9 +52,8 @@
         "~/Library/Application Support/GPGTools",
         "~/Library/Preferences/org.gpgtools.*"
       ],
-      "signal": [
-
-      ]
+      "signal": {
+      }
     }
   ],
   "caveats": "",

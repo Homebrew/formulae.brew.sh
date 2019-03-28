@@ -10,26 +10,25 @@
   "artifacts": [
     {
       "script": {
-        "executable": "/home/linuxbrew/.linuxbrew/Caskroom/fastlane/latest/uninstall",
+        "executable": "$(brew --prefix)/Caskroom/fastlane/latest/uninstall",
         "args": [
           "-y"
         ]
       },
-      "signal": [
-
-      ]
+      "signal": {
+      }
     },
     {
-      "path": "/home/linuxbrew/.linuxbrew/Caskroom/fastlane/latest/install",
+      "path": "$(brew --prefix)/Caskroom/fastlane/latest/install",
       "args": {
-        "must_succeed": true,
-        "sudo": false,
+        "must_succeed": "true",
+        "sudo": "false",
         "args": [
           "-p",
           "-u",
           "-b"
         ],
-        "print_stdout": true
+        "print_stdout": "true"
       }
     }
   ],

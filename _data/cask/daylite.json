@@ -19,20 +19,10 @@
         "com.marketcircle.Daylite-Helper",
         "com.marketcircle.persistence.autoupdate"
       ],
-      "signal": [
-        [
-          "TERM",
-          "com.marketcircle.daylite"
-        ],
-        [
-          "TERM",
-          "com.marketcircle.persistence.autoupdate"
-        ],
-        [
-          "KILL",
-          "*.com.marketcircle.Daylite-Helper"
-        ]
-      ]
+      "signal": {
+        "TERM": "com.marketcircle.persistence.autoupdate",
+        "KILL": "*.com.marketcircle.Daylite-Helper"
+      }
     },
     "Install Daylite & Mail Assistant.pkg (Pkg)",
     {
@@ -44,9 +34,8 @@
         "~/Library/Preferences/com.marketcircle.daylite.plist",
         "~/Library/Saved Application State/com.marketcircle.daylite.savedState"
       ],
-      "signal": [
-
-      ]
+      "signal": {
+      }
     }
   ],
   "caveats": "",

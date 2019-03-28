@@ -10,19 +10,18 @@
   "artifacts": [
     {
       "launchctl": "com.gamechanger.dusty",
-      "signal": [
-
-      ]
+      "signal": {
+      }
     },
     {
       "path": "brew-install.sh",
       "args": {
-        "must_succeed": true,
-        "sudo": true,
+        "must_succeed": "true",
+        "sudo": "true",
         "args": [
-          "/home/linuxbrew/.linuxbrew/Caskroom/dusty/0.7.3"
+          "$(brew --prefix)/Caskroom/dusty/0.7.3"
         ],
-        "print_stdout": true
+        "print_stdout": "true"
       }
     },
     [
@@ -30,9 +29,8 @@
     ],
     {
       "trash": "/etc/dusty",
-      "signal": [
-
-      ]
+      "signal": {
+      }
     }
   ],
   "caveats": "",

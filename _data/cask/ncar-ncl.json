@@ -11,31 +11,30 @@
   "artifacts": [
     "preflight (Preflight Block)",
     {
-      "delete": "/home/linuxbrew/.linuxbrew/ncl-6.5.0",
-      "signal": [
-
-      ]
+      "delete": "$(brew --prefix)/ncl-6.5.0",
+      "signal": {
+      }
     },
     [
       "include",
       {
-        "target": "/home/linuxbrew/.linuxbrew/ncl-6.5.0/include"
+        "target": "$(brew --prefix)/ncl-6.5.0/include"
       }
     ],
     [
       "bin",
       {
-        "target": "/home/linuxbrew/.linuxbrew/ncl-6.5.0/bin"
+        "target": "$(brew --prefix)/ncl-6.5.0/bin"
       }
     ],
     [
       "lib",
       {
-        "target": "/home/linuxbrew/.linuxbrew/ncl-6.5.0/lib"
+        "target": "$(brew --prefix)/ncl-6.5.0/lib"
       }
     ]
   ],
-  "caveats": "To use ncar-ncl, you must add the ${NCARG_ROOT}/bin directory\nto your PATH environment variable.\n\nFor bash shell, add these lines to ~/.bash_profile:\n\n  export NCARG_ROOT=\"/home/linuxbrew/.linuxbrew/ncl-6.5.0\"\n  export PATH=\"${NCARG_ROOT}/bin:${PATH}\"\n\nYou may also need to modify your DYLD_FALLBACK_LIBRARY_PATH\nenvironment variable:\n\nexport DYLD_FALLBACK_LIBRARY_PATH=$(dirname $(gfortran --print-file-name libgfortran.3.dylib)):$DYLD_FALLBACK_LIBRARY_PATH\n\nFor other information, please see:\nhttps://www.ncl.ucar.edu/Download/macosx.shtml\n",
+  "caveats": "To use ncar-ncl, you must add the ${NCARG_ROOT}/bin directory\nto your PATH environment variable.\n\nFor bash shell, add these lines to ~/.bash_profile:\n\n  export NCARG_ROOT=\"$(brew --prefix)/ncl-6.5.0\"\n  export PATH=\"${NCARG_ROOT}/bin:${PATH}\"\n\nYou may also need to modify your DYLD_FALLBACK_LIBRARY_PATH\nenvironment variable:\n\nexport DYLD_FALLBACK_LIBRARY_PATH=$(dirname $(gfortran --print-file-name libgfortran.3.dylib)):$DYLD_FALLBACK_LIBRARY_PATH\n\nFor other information, please see:\nhttps://www.ncl.ucar.edu/Download/macosx.shtml\n",
   "depends_on": {
     "x11": true,
     "formula": [

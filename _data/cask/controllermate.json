@@ -17,16 +17,9 @@
         "com.orderedbytes.driver.CMUSBDevices",
         "com.orderedbytes.driver.ControllerMateFamily"
       ],
-      "signal": [
-        [
-          "TERM",
-          "com.orderedbytes.ControllerMate4"
-        ],
-        [
-          "TERM",
-          "com.orderedbytes.ControllerMateHelper"
-        ]
-      ],
+      "signal": {
+        "TERM": "com.orderedbytes.ControllerMateHelper"
+      },
       "delete": [
         "/Library/Extensions/ControllerMate.kext,/Library/Application Support/ControllerMate/",
         "/Library/LaunchAgents/com.orderedbytes.ControllerMateHelper.plist",
@@ -42,9 +35,8 @@
         "~/Library/Logs/ControllerMate MIDI",
         "~/Library/Logs/ControllerMate"
       ],
-      "signal": [
-
-      ]
+      "signal": {
+      }
     }
   ],
   "caveats": "You must reboot for the installation of controllermate to take effect.\n",

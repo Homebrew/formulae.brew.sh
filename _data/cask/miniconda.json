@@ -9,22 +9,21 @@
   "sha256": "8ebb463ddf46dd003616b2f6b678403a708e2c54dcc58e212bd35e257761912c",
   "artifacts": [
     {
-      "delete": "/home/linuxbrew/.linuxbrew/miniconda3",
-      "signal": [
-
-      ]
+      "delete": "$(brew --prefix)/miniconda3",
+      "signal": {
+      }
     },
     {
       "path": "Miniconda3-4.5.12-MacOSX-x86_64.sh",
       "args": {
-        "must_succeed": true,
-        "sudo": true,
+        "must_succeed": "true",
+        "sudo": "true",
         "args": [
           "-b",
           "-p",
-          "/home/linuxbrew/.linuxbrew/miniconda3"
+          "$(brew --prefix)/miniconda3"
         ],
-        "print_stdout": true
+        "print_stdout": "true"
       }
     },
     "postflight (Postflight Block)",
@@ -34,9 +33,8 @@
         "~/.conda",
         "~/.continuum"
       ],
-      "signal": [
-
-      ]
+      "signal": {
+      }
     }
   ],
   "caveats": "",

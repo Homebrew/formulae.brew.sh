@@ -11,12 +11,11 @@
     {
       "delete": "~/zfsuninstaller.*",
       "script": {
-        "executable": "/home/linuxbrew/.linuxbrew/Caskroom/openzfs/1.8.1,25/Docs & Scripts/uninstall-openzfsonosx.sh",
-        "sudo": true
+        "executable": "$(brew --prefix)/Caskroom/openzfs/1.8.1,25/Docs & Scripts/uninstall-openzfsonosx.sh",
+        "sudo": "true"
       },
-      "signal": [
-
-      ]
+      "signal": {
+      }
     }
   ],
   "caveats": "",

@@ -13,25 +13,17 @@
       "launchctl": "com.paragon-software.extfs*",
       "pkgutil": "com.paragon-software.pkg.extfs",
       "quit": "com.paragon-software.extfs*",
-      "signal": [
-        [
-          "KILL",
-          "com.paragon-software.extfs.FSMenuApp"
-        ],
-        [
-          "KILL",
-          "com.paragon-software.extfs.notification-agent"
-        ]
-      ]
+      "signal": {
+        "KILL": "com.paragon-software.extfs.notification-agent"
+      }
     },
     {
       "path": "Install Paragon ExtFS for Mac.app"
     },
     {
       "trash": "~/Library/Preferences/com.paragon-software.extfs.fsapp.plist",
-      "signal": [
-
-      ]
+      "signal": {
+      }
     }
   ],
   "caveats": "",
