@@ -29,7 +29,7 @@ layout: base
       {%- endif -%}
     {%- else -%}
       {%- assign name = item.formula | split: " " | first -%}
-      {%- assign data_name = name | remove: "@" | remove: "." | remove: '+' -%}
+      {%- assign data_name = name | remove: "@" | remove: "." | replace: "+", "_" -%}
       {%- assign formula_data = site.data.formula[data_name] -%}
       {%- if name == formula_data.name -%}
         <a href="{{ site.baseurl }}/formula/{{ name }}">

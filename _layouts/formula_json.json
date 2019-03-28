@@ -1,7 +1,7 @@
 ---
 ---
 {%- assign full_name = page.name | remove: ".json" -%}
-{%- assign name = full_name | remove: "@" | remove: "." | replace: '+', '_' -%}
+{%- assign name = full_name | remove: "@" | remove: "." | replace: "+", "_" -%}
 {%- assign formula = site.data.formula[name] -%}
 {
 
