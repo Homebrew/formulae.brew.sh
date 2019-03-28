@@ -18,7 +18,7 @@
       ]
     }
   ],
-  "caveats": "rstudio depends on R.\nThere are different ways to satisfy that dependency. RStudio recommends installing R from The R Project, which is required to install binary R packages, without needing to compile packages from source.\n\nhttps://support.rstudio.com/hc/en-us/articles/217799238\n\nTo install the R Project package run:\n\n  brew cask install r\n\nAlternative ways to satisfy the dependency are:\n\n  brew install r\n\nThis requires compiling R packages from source.\n",
+  "caveats": "rstudio depends on R. The R Project provides official binaries:\n\n  brew cask install r\n\nAlternatively, the Homebrew-compiled version of R omits the GUI app:\n\n  brew install r\n",
   "depends_on": {
   },
   "conflicts_with": null,
