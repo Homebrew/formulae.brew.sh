@@ -1,0 +1,77 @@
+{
+  "name": "llvm@7",
+  "full_name": "llvm@7",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Next-gen compiler infrastructure",
+  "homepage": "https://llvm.org/",
+  "versions": {
+    "stable": "7.0.1",
+    "devel": null,
+    "head": null,
+    "bottle": true
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "mojave": {
+          "url": "https://homebrew.bintray.com/bottles/llvm@7-7.0.1.mojave.bottle.tar.gz",
+          "sha256": "60e011bf286ac6ede425b9caeb5da079d5760430d86fab9d4587772610da7199"
+        },
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/llvm@7-7.0.1.high_sierra.bottle.tar.gz",
+          "sha256": "49d98a3e550e3ff6f9e10340d837f050e584ead9821e6794ed893345c86fe17b"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/llvm@7-7.0.1.sierra.bottle.tar.gz",
+          "sha256": "b95cb6fcd934d686003127f49b3208e4da901390bf5d258c2d3304e7b576e192"
+        }
+      }
+    }
+  },
+  "keg_only": true,
+  "bottle_disabled": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+    "cmake"
+  ],
+  "dependencies": [
+    "libffi"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "requirements": [
+    {
+      "name": "xcode",
+      "cask": null,
+      "download": null
+    }
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "To use the bundled libc++ please add the following LDFLAGS:\n  LDFLAGS=\"-L$(brew --prefix)/opt/llvm@7/lib -Wl,-rpath,$(brew --prefix)/opt/llvm@7/lib\"\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
+}
