@@ -11,7 +11,7 @@
   "desc": "Framework for creating UPnP devices and control points",
   "homepage": "https://wiki.gnome.org/Projects/GUPnP",
   "versions": {
-    "stable": "1.0.3",
+    "stable": "1.2.0",
     "devel": null,
     "head": null,
     "bottle": true
@@ -20,26 +20,22 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
-      "cellar": ":any",
+      "rebuild": 0,
+      "cellar": "/usr/local/Cellar",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/gupnp-1.0.3.mojave.bottle.1.tar.gz",
-          "sha256": "42609b06fc41288eea51b93cd7f5b1148eb37643487e9e98e0f6843f4427c2d2"
+          "url": "https://homebrew.bintray.com/bottles/gupnp-1.2.0.mojave.bottle.tar.gz",
+          "sha256": "295cfce3c4ec93475d6ee8a1acde0dd3912b6ed260b7f43af2f99dba53f36b99"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gupnp-1.0.3.high_sierra.bottle.1.tar.gz",
-          "sha256": "7e27871e73f36e0a957dc59f591aa09972471cc8c3a25e7994735382e2f02daa"
+          "url": "https://homebrew.bintray.com/bottles/gupnp-1.2.0.high_sierra.bottle.tar.gz",
+          "sha256": "b6918c132d6c4a3343a82aa8985d62cea64ce0623498de0d90c8f3232f5cc403"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gupnp-1.0.3.sierra.bottle.1.tar.gz",
-          "sha256": "b7e235858bce8ebc12d6f4c61a2506c6cf6fefd2ffdea083a0c474486374be6c"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/gupnp-1.0.3.el_capitan.bottle.1.tar.gz",
-          "sha256": "3382f7c4a3b884bb604179f554d55e31028e40ba97c031fc29c4284ac8c4c19f"
+          "url": "https://homebrew.bintray.com/bottles/gupnp-1.2.0.sierra.bottle.tar.gz",
+          "sha256": "e18535de152d6b26d5589eacddc4969a0f4ac7e09d51992b94f3494cccc4f1ba"
         }
       }
     }
@@ -50,7 +46,9 @@
 
   ],
   "build_dependencies": [
-    "intltool",
+    "gobject-introspection",
+    "meson",
+    "ninja",
     "pkg-config"
   ],
   "dependencies": [
