@@ -11,12 +11,12 @@
   "desc": "Library that sends desktop notifications to a notification daemon",
   "homepage": "https://developer.gnome.org/libnotify",
   "versions": {
-    "stable": "0.7.7",
+    "stable": "0.7.8",
     "devel": null,
     "head": null,
     "bottle": true
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -26,20 +26,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/libnotify-0.7.7_1.mojave.bottle.tar.gz",
-          "sha256": "d45147d1218ee584b2d67ce23e6bd60553a83424c3c0a69cd8a14f6e238a398c"
+          "url": "https://homebrew.bintray.com/bottles/libnotify-0.7.8.mojave.bottle.tar.gz",
+          "sha256": "890c7a9086b1e6bc54cc28fbcae17c8f1a2106953ecb06a41b72bb134dc8052f"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/libnotify-0.7.7_1.high_sierra.bottle.tar.gz",
-          "sha256": "f88f445a6b5719c695aa606da3050d3e24ddc1c7a586f6541186025551d273e6"
+          "url": "https://homebrew.bintray.com/bottles/libnotify-0.7.8.high_sierra.bottle.tar.gz",
+          "sha256": "e3089bf440369fc09f2498402a235f96ea0de37c7a39e7d1b089e4594381acd6"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/libnotify-0.7.7_1.sierra.bottle.tar.gz",
-          "sha256": "09166e1efa743eed930b7aca87b084de644735f8af17133bf697e24b70f8018f"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/libnotify-0.7.7_1.el_capitan.bottle.tar.gz",
-          "sha256": "0139ddf8047c88ee6c29abfa8a112dce897150d54a0d83b9d2892d5033829a6d"
+          "url": "https://homebrew.bintray.com/bottles/libnotify-0.7.8.sierra.bottle.tar.gz",
+          "sha256": "7adeffb01878acf29de20e4c22714597ba09c80aee07755c31c1287116c7618a"
         }
       }
     }
@@ -50,7 +46,11 @@
 
   ],
   "build_dependencies": [
+    "autoconf",
+    "automake",
     "gobject-introspection",
+    "gtk-doc",
+    "libtool",
     "pkg-config"
   ],
   "dependencies": [
