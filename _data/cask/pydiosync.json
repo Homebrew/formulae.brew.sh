@@ -3,19 +3,27 @@
     "PydioSync"
   ],
   "homepage": "https://pydio.com/",
-  "url": "https://download.pydio.com/pub/pydio-sync/release/1.2.8/PydioSync-MacOSX-Installer-v1.2.8.dmg",
+  "url": "https://download.pydio.com/pub/pydio-sync/release/2.2.0/PydioSync-MacOSX-Installer-v2.2.0.dmg",
   "appcast": null,
-  "version": "1.2.8",
-  "sha256": "da7ef2a6729b27bb9837d7637da6b7c2288a595b6bec52288b0f123f85e8021e",
+  "version": "2.2.0",
+  "sha256": "02cceaa7de07596543b60b10bfe07c250b0b823c4455989362446699924db6f3",
   "artifacts": [
     {
       "pkgutil": "io.pyd.sync.installer.PydioSync",
+      "launchctl": [
+        "PydioSync",
+        "PydioSyncUI"
+      ],
       "signal": {
       }
     },
     "PydioSync-Setup.pkg (Pkg)",
     {
-      "trash": "~/Pydio",
+      "trash": [
+        "~/Library/Preferences/io.pyd.sync.PydioTray",
+        "~/Library/Caches/com.pydio.pydioswiftsync",
+        "~/Library/Group Containers/PydioSync.pydio"
+      ],
       "signal": {
       }
     }
