@@ -8,12 +8,12 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Cross-platform command-line utility to manage DC/OS clusters",
-  "homepage": "https://dcos.io/docs/latest/cli/",
+  "desc": "The DC/OS command-line interface",
+  "homepage": "https://docs.mesosphere.com/latest/cli/",
   "versions": {
-    "stable": "0.6.3",
+    "stable": "0.8.0",
     "devel": null,
-    "head": "HEAD",
+    "head": null,
     "bottle": true
   },
   "revision": 0,
@@ -21,25 +21,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": ":any_skip_relocation",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/dcos-cli-0.6.3.mojave.bottle.tar.gz",
-          "sha256": "96c9722c152028ed02e76bd782c50722fb6469677e0f4d59e351f5da36802855"
+          "url": "https://homebrew.bintray.com/bottles/dcos-cli-0.8.0.mojave.bottle.tar.gz",
+          "sha256": "fd4e092a54674868edcfb46f90b8d1e0d83c2f5c1ca1750b84eeed390a4b766b"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/dcos-cli-0.6.3.high_sierra.bottle.tar.gz",
-          "sha256": "290b09815b412354a29728fd37bb1217192bf6e91913dbc43dbc798f237a6e5a"
+          "url": "https://homebrew.bintray.com/bottles/dcos-cli-0.8.0.high_sierra.bottle.tar.gz",
+          "sha256": "fb0548c2f3983d2d7dacf74681e0453c6628215ddfd58f0aaccb81f6813850bb"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/dcos-cli-0.6.3.sierra.bottle.tar.gz",
-          "sha256": "052ac256bd597fce2dd43ea317f493ec2f355407a525261bb3e6fc8561ce27d4"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/dcos-cli-0.6.3.el_capitan.bottle.tar.gz",
-          "sha256": "f682f24ac66465cc1367e7fe30be40e430f420d8d65a0e7b4fcecc65ae6cad8f"
+          "url": "https://homebrew.bintray.com/bottles/dcos-cli-0.8.0.sierra.bottle.tar.gz",
+          "sha256": "fbba6c02bd1004e1f8eb64c2055e9227a2da2239b76b26704c082f711c0e3f3a"
         }
       }
     }
@@ -50,11 +46,10 @@
 
   ],
   "build_dependencies": [
-
+    "go"
   ],
   "dependencies": [
-    "openssl",
-    "python"
+
   ],
   "recommended_dependencies": [
 
