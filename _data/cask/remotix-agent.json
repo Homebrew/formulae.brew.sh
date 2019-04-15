@@ -1,0 +1,41 @@
+{
+  "name": [
+    "Remotix Agent"
+  ],
+  "homepage": "https://remotixcloud.com/",
+  "url": "https://downloads.remotixcloud.com/agent-mac/RemotixAgent.pkg",
+  "appcast": null,
+  "version": "1.0.6",
+  "sha256": "66ecec55fa40ead964ad8da472c99d4eda3a1cbf65e60e531f0fd790f5743b11",
+  "artifacts": [
+    {
+      "pkgutil": [
+        "com.nulana.rxagentmac.daemon",
+        "com.nulana.rxagentmac"
+      ],
+      "signal": {
+        "TERM": "com.nulana.rxagentmac",
+        "QUIT": "com.nulana.rxagentmac",
+        "INT": "com.nulana.rxagentmac",
+        "HUP": "com.nulana.rxagentmac",
+        "KILL": "com.nulana.rxagentmac"
+      },
+      "launchctl": [
+        "com.nulana.rxagentmac.user",
+        "com.nulana.rxagentmac.daemon"
+      ],
+      "login_item": "Remotix Agent",
+      "delete": [
+        "/Library/LaunchAgents/com.nulana.rxagentmac.user.plist",
+        "/Library/LaunchDaemons/com.nulana.rxagentmac.daemon.plist"
+      ]
+    },
+    "RemotixAgent.pkg (Pkg)"
+  ],
+  "caveats": "",
+  "depends_on": {
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": true
+}
