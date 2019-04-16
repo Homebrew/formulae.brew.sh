@@ -16,26 +16,26 @@
     "head": "HEAD",
     "bottle": true
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": "/usr/local/Cellar",
+      "cellar": ":any",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/vapoursynth-45.1.mojave.bottle.tar.gz",
-          "sha256": "c713072de8230c28fa9a76532b8fd79354addf33017519205a98a56c44f0cebb"
+          "url": "https://homebrew.bintray.com/bottles/vapoursynth-45.1_1.mojave.bottle.tar.gz",
+          "sha256": "521193ca2eae647c44b10b5d7cb35412648a9597783c386a6a5e7092f9ea6f0b"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/vapoursynth-45.1.high_sierra.bottle.tar.gz",
-          "sha256": "40a4f329f1414e8c6ebc4b1388119ab3908f90e0a5bbec76109a3f86bd1e914e"
+          "url": "https://homebrew.bintray.com/bottles/vapoursynth-45.1_1.high_sierra.bottle.tar.gz",
+          "sha256": "70b9d58584a6ab74962105699c63f08c291eeb0871ed0777c1b112bdad065110"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/vapoursynth-45.1.sierra.bottle.tar.gz",
-          "sha256": "6d55273a72e636657c5ed8d192876b4da757c07fa991fdd1488ac1cf8792520a"
+          "url": "https://homebrew.bintray.com/bottles/vapoursynth-45.1_1.sierra.bottle.tar.gz",
+          "sha256": "a97cac8bd38657bc16572d9611f1088465ecc09efb10cba714ef9e896fe38e65"
         }
       }
     }
@@ -53,9 +53,7 @@
     "pkg-config"
   ],
   "dependencies": [
-    "libass",
     "python",
-    "tesseract",
     "zimg"
   ],
   "recommended_dependencies": [
@@ -74,7 +72,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": null,
+  "caveats": "This formula does not contain optional filters that require extra dependencies.\nTo use \u001b[3m\u001b[1mvapoursynth.core.sub\u001b[0m, execute:\n  brew install vapoursynth-sub\nTo use \u001b[3m\u001b[1mvapoursynth.core.ocr\u001b[0m, execute:\n  brew install vapoursynth-ocr\nTo use \u001b[3m\u001b[1mvapoursynth.core.imwri\u001b[0m, execute:\n  brew install vapoursynth-imwri\nTo use \u001b[3m\u001b[1mvapoursynth.core.ffms2\u001b[0m, execute the following:\n  brew install ffms2\n  ln -s \"../libffms2.dylib\" \"$(brew --prefix)/lib/vapoursynth/libffms2.dylib\"\nFor more information regarding plugins, please visit:\n  \u001b[4mhttp://www.vapoursynth.com/doc/pluginlist.html\u001b[0m\n",
   "installed": [
 
   ],
