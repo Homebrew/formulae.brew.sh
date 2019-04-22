@@ -11,7 +11,7 @@
   "desc": "Network monitoring and management system",
   "homepage": "https://www.nagios.org/",
   "versions": {
-    "stable": "4.4.2",
+    "stable": "4.4.3",
     "devel": null,
     "head": null,
     "bottle": true
@@ -26,20 +26,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/nagios-4.4.2.mojave.bottle.tar.gz",
-          "sha256": "9d36b9cbf38eb6eba90297622401db6a0e9d7d1f1ad183b4bb2f2cdf91702a13"
+          "url": "https://homebrew.bintray.com/bottles/nagios-4.4.3.mojave.bottle.tar.gz",
+          "sha256": "c43d0121dfd38b6ddb681b9246423bd1df13d613ef8127a12cf44b2658e22c4f"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/nagios-4.4.2.high_sierra.bottle.tar.gz",
-          "sha256": "0abc72531983bb73c1bf18ff524c3eda9dd011ef3010a4cecf9350169b8a4208"
+          "url": "https://homebrew.bintray.com/bottles/nagios-4.4.3.high_sierra.bottle.tar.gz",
+          "sha256": "ede951f998ff5b872fe1f7c9ea82c316af1d2ccdd9dc60137c9d1019ded9c079"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/nagios-4.4.2.sierra.bottle.tar.gz",
-          "sha256": "289f19421ed2ca7f36b159fcaffb9167400da75f427d34f682419c8cede08726"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/nagios-4.4.2.el_capitan.bottle.tar.gz",
-          "sha256": "584570d4e0cd38b238fcd53b84fe70035dd664ba56e349d598f5a6bc3e6b63e2"
+          "url": "https://homebrew.bintray.com/bottles/nagios-4.4.3.sierra.bottle.tar.gz",
+          "sha256": "7ec696beb2bb347fffdb159ecc0ac46e9b71ead5ae560e9d09b9b8d391885150"
         }
       }
     }
@@ -69,7 +65,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "First we need to create a command dir using superhuman powers:\n\n  mkdir -p $(brew --prefix)/var/lib/nagios/rw\n  sudo chgrp _www $(brew --prefix)/var/lib/nagios/rw\n  sudo chmod 2775 $(brew --prefix)/var/lib/nagios/rw\n\nThen install the Nagios web frontend into Apple's build-in Apache:\n\n  1) Turn on Personal Web Sharing.\n\n  2) Load the cgi and php modules by patching /etc/apache2/httpd.conf:\n\n    -#LoadModule php5_module        libexec/apache2/libphp5.so\n    +LoadModule php5_module        libexec/apache2/libphp5.so\n\n    -#LoadModule cgi_module libexec/apache2/mod_cgi.so\n    +LoadModule cgi_module libexec/apache2/mod_cgi.so\n\n  3) Symlink the sample config and create your web account:\n\n    sudo ln -sf $(brew --prefix)/Cellar/nagios/4.4.2/share/nagios.conf /etc/apache2/other/\n    htpasswd -cs $(brew --prefix)/etc/nagios/htpasswd.users nagiosadmin\n    sudo apachectl restart\n\nLog in with your web account (and don't forget to RTFM :-)\n\n  open http://localhost/nagios\n\n",
+  "caveats": "First we need to create a command dir using superhuman powers:\n\n  mkdir -p $(brew --prefix)/var/lib/nagios/rw\n  sudo chgrp _www $(brew --prefix)/var/lib/nagios/rw\n  sudo chmod 2775 $(brew --prefix)/var/lib/nagios/rw\n\nThen install the Nagios web frontend into Apple's build-in Apache:\n\n  1) Turn on Personal Web Sharing.\n\n  2) Load the cgi and php modules by patching /etc/apache2/httpd.conf:\n\n    -#LoadModule php5_module        libexec/apache2/libphp5.so\n    +LoadModule php5_module        libexec/apache2/libphp5.so\n\n    -#LoadModule cgi_module libexec/apache2/mod_cgi.so\n    +LoadModule cgi_module libexec/apache2/mod_cgi.so\n\n  3) Symlink the sample config and create your web account:\n\n    sudo ln -sf $(brew --prefix)/Cellar/nagios/4.4.3/share/nagios.conf /etc/apache2/other/\n    htpasswd -cs $(brew --prefix)/etc/nagios/htpasswd.users nagiosadmin\n    sudo apachectl restart\n\nLog in with your web account (and don't forget to RTFM :-)\n\n  open http://localhost/nagios\n\n",
   "installed": [
 
   ],
