@@ -11,7 +11,7 @@
   "desc": "Fast and statically typed, compiled language with Ruby-like syntax",
   "homepage": "https://crystal-lang.org/",
   "versions": {
-    "stable": "0.27.2",
+    "stable": "0.28.0",
     "devel": null,
     "head": "HEAD",
     "bottle": true
@@ -21,21 +21,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": "/usr/local/Cellar",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/crystal-0.27.2.mojave.bottle.tar.gz",
-          "sha256": "d2af850ac6832460a4f88d9788cd205412a73e5f0807e27b61b7bb3c39c2f0cd"
+          "url": "https://homebrew.bintray.com/bottles/crystal-0.28.0.mojave.bottle.tar.gz",
+          "sha256": "131fc2303d2f15e46f3c928487ed64bf0d139cb3deb64fe9ff25c0df886f4101"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/crystal-0.27.2.high_sierra.bottle.tar.gz",
-          "sha256": "1274def6adff3b374aa5a4eeba12ac1664e3cd1405036c288834cd7ad2599071"
+          "url": "https://homebrew.bintray.com/bottles/crystal-0.28.0.high_sierra.bottle.tar.gz",
+          "sha256": "1189ba40af5f99c898361112a0c393bf5ca98f2cb1ac01e0d75edaf44ed12fee"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/crystal-0.27.2.sierra.bottle.tar.gz",
-          "sha256": "02804838a14b4c196ea615d3813cad05d912d09d85a4920a894e2e1ef9ed5bf1"
+          "url": "https://homebrew.bintray.com/bottles/crystal-0.28.0.sierra.bottle.tar.gz",
+          "sha256": "e9ced10a0d2b3e5a4d19b8f1c6dc84c432abddfbc380317c4d1ddd6bec6be4c4"
         }
       }
     }
@@ -46,10 +46,12 @@
 
   ],
   "build_dependencies": [
-    "libatomic_ops"
+    "autoconf",
+    "automake",
+    "libatomic_ops",
+    "libtool"
   ],
   "dependencies": [
-    "bdw-gc",
     "gmp",
     "libevent",
     "libyaml",
