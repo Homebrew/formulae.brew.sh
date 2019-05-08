@@ -1,6 +1,6 @@
 {
-  "name": "kahip",
-  "full_name": "kahip",
+  "name": "gcc@8",
+  "full_name": "gcc@8",
   "oldname": null,
   "aliases": [
 
@@ -8,34 +8,34 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Karlsruhe High Quality Partitioning",
-  "homepage": "https://algo2.iti.kit.edu/documents/kahip/index.html",
+  "desc": "GNU compiler collection",
+  "homepage": "https://gcc.gnu.org/",
   "versions": {
-    "stable": "2.11",
+    "stable": "8.3.0",
     "devel": null,
     "head": null,
     "bottle": true
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": "/usr/local/Cellar",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/kahip-2.11_1.mojave.bottle.tar.gz",
-          "sha256": "adf04905ebd11dca87434d8185a16e910522bd2faaf983dc20c2f83819da9b4b"
+          "url": "https://homebrew.bintray.com/bottles/gcc@8-8.3.0.mojave.bottle.tar.gz",
+          "sha256": "b1e150c72b4c3b7f3493371d71cdb668f691bfee2e998e5b0bf570eed28254d6"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/kahip-2.11_1.high_sierra.bottle.tar.gz",
-          "sha256": "99eab0a417cd7596eebd646f3da9571a40ce0154e88dcfd01361ab2bb4721282"
+          "url": "https://homebrew.bintray.com/bottles/gcc@8-8.3.0.high_sierra.bottle.tar.gz",
+          "sha256": "9fe980d09d28fa000058afc02efc5b3e1b2d27a636608d337c6d777f8a3e5f24"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/kahip-2.11_1.sierra.bottle.tar.gz",
-          "sha256": "7061f28f5f464e69c5b4af293e1aa4a13f14b86ad56889f9d2d6be54c632f199"
+          "url": "https://homebrew.bintray.com/bottles/gcc@8-8.3.0.sierra.bottle.tar.gz",
+          "sha256": "a62506316b82ad0298e13d94921086117536ddf1d72de571a9fcd8d0fa1823ef"
         }
       }
     }
@@ -46,11 +46,13 @@
 
   ],
   "build_dependencies": [
-    "cmake"
+
   ],
   "dependencies": [
-    "gcc",
-    "open-mpi"
+    "gmp",
+    "isl",
+    "libmpc",
+    "mpfr"
   ],
   "recommended_dependencies": [
 
