@@ -26,7 +26,11 @@
   "caveats": "Installing mono-mdk removes mono and mono dependant formula binaries in\n/usr/local/bin and adds mono-mdk to /private/etc/paths.d/\nYou may want to:\n\n  brew unlink {formula} && brew link {formula}\n\nand/or remove /private/etc/paths.d/mono-commands\n",
   "depends_on": {
   },
-  "conflicts_with": null,
+  "conflicts_with": {
+    "cask": [
+      "mono-mdk516"
+    ]
+  },
   "container": null,
   "auto_updates": null
 }
