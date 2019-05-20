@@ -16,7 +16,7 @@
     "head": null,
     "bottle": true
   },
-  "revision": 3,
+  "revision": 4,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -26,16 +26,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/shogun-6.1.3_3.mojave.bottle.tar.gz",
-          "sha256": "7f46d34b9fb84e45da8010cd796d28860a16dfa8ec3b4e3bae234cf5c9f3db4e"
+          "url": "https://homebrew.bintray.com/bottles/shogun-6.1.3_4.mojave.bottle.tar.gz",
+          "sha256": "64f4bf221b7c087076161b0dbfd0fd21f621bbc547080a74a09f2c85a3c5d5c4"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/shogun-6.1.3_3.high_sierra.bottle.tar.gz",
-          "sha256": "e432dbe32889e4dc9bc2501a61934fe6f1ed5c13b613d79cb22c34a1d8543e99"
+          "url": "https://homebrew.bintray.com/bottles/shogun-6.1.3_4.high_sierra.bottle.tar.gz",
+          "sha256": "d320e38e795a86bf78421ae58931894d39ef22b9adb4b68f65934eccee9f84a9"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/shogun-6.1.3_3.sierra.bottle.tar.gz",
-          "sha256": "f9c0b2fdec633139f4187c3acf571a9e56ef627d417ff385583bc1c214d64647"
+          "url": "https://homebrew.bintray.com/bottles/shogun-6.1.3_4.sierra.bottle.tar.gz",
+          "sha256": "0555cc4fcb1dfe0c7d762076664fd7075e5b5d46fe905b3a40d6f4945589100d"
         }
       }
     }
@@ -47,8 +47,7 @@
   ],
   "build_dependencies": [
     "cmake",
-    "pkg-config",
-    "swig"
+    "pkg-config"
   ],
   "dependencies": [
     "arpack",
@@ -58,7 +57,8 @@
     "json-c",
     "lzo",
     "nlopt",
-    "python@2",
+    "openblas",
+    "protobuf",
     "snappy",
     "xz"
   ],
@@ -69,16 +69,12 @@
 
   ],
   "requirements": [
-    {
-      "name": "java",
-      "cask": null,
-      "download": null
-    }
+
   ],
   "conflicts_with": [
 
   ],
-  "caveats": "If you use system python (that comes - depending on the macOS version -\nwith an old version of numpy), you may need to ensure that the brewed\npackages come earlier in Python's sys.path with:\n  mkdir -p \n  echo 'import sys; sys.path.insert(1, \"$(brew --prefix)/lib/python3.7/site-packages\")' >> /homebrew.pth\n",
+  "caveats": null,
   "installed": [
 
   ],
