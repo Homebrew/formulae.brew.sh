@@ -16,7 +16,7 @@
     "head": null,
     "bottle": true
   },
-  "revision": 1,
+  "revision": 2,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -26,16 +26,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/csound-6.12.2_1.mojave.bottle.tar.gz",
-          "sha256": "90be0b3b8bd7e174b9e08eac56a9e76780e95be8f1a0025fb82e75eff67e741b"
+          "url": "https://homebrew.bintray.com/bottles/csound-6.12.2_2.mojave.bottle.tar.gz",
+          "sha256": "0b391ad5c63f24dff9f82b95545c2868f917ae1beadfea5dc4a1e4011b98f610"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/csound-6.12.2_1.high_sierra.bottle.tar.gz",
-          "sha256": "f97c2e61a573ddeb770f0718ffe28167deba0358c58f2c96c5d45351f0d4a6e7"
+          "url": "https://homebrew.bintray.com/bottles/csound-6.12.2_2.high_sierra.bottle.tar.gz",
+          "sha256": "9f63f9c43fb7a3c48c7ea94b67a45149de337b6da6d8561b1cca039ca0320d08"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/csound-6.12.2_1.sierra.bottle.tar.gz",
-          "sha256": "c7ffe61743dadae44f72e1d1707637d17da2721e6134b443964e3a76091e62a7"
+          "url": "https://homebrew.bintray.com/bottles/csound-6.12.2_2.sierra.bottle.tar.gz",
+          "sha256": "3f003ad77d5abbc304cb60f16cf6d1fed60058f540d83f16be146e12d791f332"
         }
       }
     }
@@ -46,13 +46,16 @@
 
   ],
   "build_dependencies": [
-    "cmake"
+    "cmake",
+    "python",
+    "python@2"
   ],
   "dependencies": [
     "fltk",
     "liblo",
     "libsamplerate",
     "libsndfile",
+    "numpy",
     "portaudio",
     "portmidi",
     "stk"
@@ -69,7 +72,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": null,
+  "caveats": "To use the Python bindings, you may need to add to your .bash_profile:\n  export DYLD_FRAMEWORK_PATH=\"$DYLD_FRAMEWORK_PATH:$(brew --prefix)/opt/csound/Frameworks\"\n",
   "installed": [
 
   ],
