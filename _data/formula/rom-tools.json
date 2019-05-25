@@ -11,7 +11,7 @@
   "desc": "Tools for Multiple Arcade Machine Emulator",
   "homepage": "https://mamedev.org/",
   "versions": {
-    "stable": "0.206",
+    "stable": "0.209",
     "devel": null,
     "head": "HEAD",
     "bottle": true
@@ -26,16 +26,12 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/rom-tools-0.206.mojave.bottle.tar.gz",
-          "sha256": "1d8a87c5f9b41e4ef10f993b60f3be96435574c67949ee59949a2eed38e0fe8a"
+          "url": "https://homebrew.bintray.com/bottles/rom-tools-0.209.mojave.bottle.tar.gz",
+          "sha256": "809592bc53245a584072281b38831bc434d560cfd0b605116a380b369b92be84"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/rom-tools-0.206.high_sierra.bottle.tar.gz",
-          "sha256": "00819099afd31de6800565bbbfdc857c640c217e882f6c06a4f57ee6e4a77974"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/rom-tools-0.206.sierra.bottle.tar.gz",
-          "sha256": "62e9d54a1cb122eac6db54c374450004292a23a2c0a706e3af914b1d88bdef8b"
+          "url": "https://homebrew.bintray.com/bottles/rom-tools-0.209.high_sierra.bottle.tar.gz",
+          "sha256": "60048cf134052444f598c6610d2c5e45cf203619e458e20b6087d0700eb8d6a3"
         }
       }
     }
@@ -46,11 +42,11 @@
 
   ],
   "build_dependencies": [
+    "asio",
     "pkg-config"
   ],
   "dependencies": [
     "flac",
-    "portmidi",
     "sdl2",
     "utf8proc"
   ],
@@ -61,7 +57,11 @@
 
   ],
   "requirements": [
-
+    {
+      "name": "macos",
+      "cask": null,
+      "download": null
+    }
   ],
   "conflicts_with": [
 
