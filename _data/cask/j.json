@@ -3,62 +3,66 @@
     "J"
   ],
   "homepage": "https://www.jsoftware.com/",
-  "url": "https://www.jsoftware.com/download/j806/install/j806_mac64.zip",
+  "url": "https://www.jsoftware.com/download/j807/install/j807_mac64.zip",
   "appcast": null,
-  "version": "806",
-  "sha256": "29df4c491b50f5cfef73a2f4a6e89d18bc514a45851a2766d617746f615b934c",
+  "version": "807",
+  "sha256": "3c78500eded82cd70dfff522ae61c54c0b7b8e746e43535e47f8e4c9df0987bd",
   "artifacts": [
     {
-      "delete": "$(brew --prefix)/Caskroom/j/806/j",
+      "delete": "$(brew --prefix)/Caskroom/j/807/j",
       "signal": {
       }
     },
     {
-      "path": "j64-806/updatejqt.sh",
+      "path": "j64-807/bin/jconsole",
       "args": {
         "must_succeed": "true",
         "sudo": "false",
+        "args": [
+          "-js",
+          "exit install'qtide'"
+        ],
         "print_stdout": "true"
       }
     },
     [
-      "j64-806/jbrk.app"
+      "j64-807/jbrk.app"
     ],
     [
-      "j64-806/jcon.app"
+      "j64-807/jcon.app"
     ],
     [
-      "j64-806/jhs.app"
+      "j64-807/jhs.app"
     ],
     [
-      "j64-806/jqt.app"
+      "j64-807/jqt.app"
     ],
     [
-      "j64-806/bin/jconsole",
+      "j64-807/bin/jconsole",
       {
         "target": "jcon"
       }
     ],
     [
-      "j64-806/bin/jconsole",
+      "j64-807/bin/jconsole",
       {
         "target": "jconsole"
       }
     ],
     [
-      "j64-806/bin/jbrk.command",
+      "j64-807/bin/jbrk.command",
       {
         "target": "jbrk"
       }
     ],
     [
-      "j64-806/bin/jhs.command",
+      "j64-807/bin/jhs.command",
       {
         "target": "jhs"
       }
     ],
     [
-      "j64-806/bin/jqt.command",
+      "j64-807/bin/jqt.command",
       {
         "target": "jqt"
       }
