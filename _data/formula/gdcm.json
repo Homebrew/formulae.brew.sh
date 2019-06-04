@@ -11,7 +11,7 @@
   "desc": "Grassroots DICOM library and utilities for medical files",
   "homepage": "https://sourceforge.net/projects/gdcm/",
   "versions": {
-    "stable": "2.8.9",
+    "stable": "3.0.0",
     "devel": null,
     "head": null,
     "bottle": true
@@ -26,16 +26,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/gdcm-2.8.9.mojave.bottle.tar.gz",
-          "sha256": "2b35bf311cd1fc39e0fc1b73e7dfe665eb252a5dfc9e5c0c9895bfd62d852b80"
+          "url": "https://homebrew.bintray.com/bottles/gdcm-3.0.0.mojave.bottle.tar.gz",
+          "sha256": "214d4be15b09fe8657cd0a8ec4fb5356bce7d8b96948f60eee5f1989eaa15c59"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gdcm-2.8.9.high_sierra.bottle.tar.gz",
-          "sha256": "1f87e9ab9d895d9d165aa3f50ee925ad122dffcc42d741ed9ebda4149b976bce"
+          "url": "https://homebrew.bintray.com/bottles/gdcm-3.0.0.high_sierra.bottle.tar.gz",
+          "sha256": "21fc5ac113f00a5485c39cc8d5a93b33a194ad773038f5ef31321153b4438b9a"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gdcm-2.8.9.sierra.bottle.tar.gz",
-          "sha256": "3b8d6d994433e18654c7d1ca23238b6f09f171da8ace355b0ee93902bcec37a5"
+          "url": "https://homebrew.bintray.com/bottles/gdcm-3.0.0.sierra.bottle.tar.gz",
+          "sha256": "abee457c7b024fa8a8b935b4c282d6835ff2ba158144fa8c6f2f9c1671287fc6"
         }
       }
     }
@@ -47,13 +47,15 @@
   ],
   "build_dependencies": [
     "cmake",
+    "ninja",
     "pkg-config",
     "swig"
   ],
   "dependencies": [
     "openjpeg",
     "openssl",
-    "python"
+    "python",
+    "vtk"
   ],
   "recommended_dependencies": [
 
