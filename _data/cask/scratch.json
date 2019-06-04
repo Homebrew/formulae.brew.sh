@@ -3,40 +3,22 @@
     "Scratch"
   ],
   "homepage": "https://scratch.mit.edu/download",
-  "url": "https://scratch.mit.edu/scratchr2/static/sa/Scratch-461.dmg",
-  "appcast": "https://scratch.mit.edu/scratchr2/static/sa/version.xml",
-  "version": "2.0,461",
-  "sha256": "dcd311b455be8c19861df3b1077c4175b168688ea8e69296a3f5aee6192a13e0",
+  "url": "https://downloads.scratch.mit.edu/desktop/Scratch%20Desktop-3.3.0.dmg",
+  "appcast": null,
+  "version": "3.3.0",
+  "sha256": "e1cfa639dd796f0ac3c0cd4743c90396a10a80c82ca0f3cfc08ea514ebe3d5bf",
   "artifacts": [
-    {
-      "script": {
-        "executable": "/Applications/Utilities/Adobe AIR Application Installer.app/Contents/MacOS/Adobe AIR Application Installer",
-        "args": [
-          "-uninstall",
-          "-silent",
-          "/Applications/Scratch 2.app"
-        ],
-        "sudo": "true"
-      },
-      "signal": {
-      }
-    },
-    {
-      "path": "Install Scratch 2.app/Contents/MacOS/Install Scratch 2",
-      "args": {
-        "must_succeed": "true",
-        "sudo": "true",
-        "args": [
-          "-silent"
-        ],
-        "print_stdout": "true"
-      }
-    }
+    [
+      "Scratch Desktop.app"
+    ]
   ],
   "caveats": "",
   "depends_on": {
-    "cask": [
-      "adobe-air"
+    "macos": [
+      [
+        ">=",
+        "10.13"
+      ]
     ]
   },
   "conflicts_with": null,
