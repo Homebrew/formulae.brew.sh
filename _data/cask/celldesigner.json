@@ -1,0 +1,52 @@
+{
+  "name": [
+    "CellDesigner"
+  ],
+  "homepage": "http://systems-biology.org/software/celldesigner/",
+  "url": "http://www.systems-biology.org/download/CellDesigner-4.4.2-osx-installer.dmg",
+  "appcast": "http://systems-biology.org/software/celldesigner/",
+  "version": "4.4.2",
+  "sha256": "b23708f82842f4c138c2ba8d2ecd7d94942c9cedf05bcf6cc6b683e11305209c",
+  "artifacts": [
+    {
+      "script": {
+        "executable": "/Applications/CellDesigner4.4.2/uninstall.app/Contents/MacOS/installbuilder.sh",
+        "args": [
+          "--mode",
+          "unattended"
+        ]
+      },
+      "delete": "/Applications/CellDesigner4.4.2",
+      "signal": {
+      }
+    },
+    {
+      "path": "$(brew --prefix)/Caskroom/celldesigner/4.4.2/CellDesigner-4.4.2-osx-installer.app/Contents/MacOS/installbuilder.sh",
+      "args": {
+        "must_succeed": "true",
+        "sudo": "false",
+        "args": [
+          "--mode",
+          "unattended"
+        ],
+        "print_stdout": "true"
+      }
+    },
+    {
+      "trash": [
+        "~/.celldesigner",
+        "~/.copasi",
+        "~/.sbw",
+        "~/.oracle_jre_usage"
+      ],
+      "signal": {
+      }
+    }
+  ],
+  "caveats": "celldesigner requires Java 6+. You can install the latest version with:\n  brew cask install java\n",
+  "depends_on": {
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": null
+}
