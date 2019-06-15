@@ -1,0 +1,18 @@
+---
+layout: default
+permalink: /formula-linux/
+---
+<p>This is a listing of all packages available via the <a href="https://brew.sh">Homebrew</a> package manager for Linux.</p>
+
+<h2><a href="{{ site.baseurl }}/api/formula-linux.json"><code>/api/formula-linux.json</code> (JSON API)</a></h2>
+
+<table>
+    {%- assign sorted_formulae = site.data.formula-linux | sort -%}
+    {%- for f in sorted_formulae -%}
+
+    <tr>
+        {%- assign formula = f[1] -%}
+        {%- include formula.html formula=formula -%}
+    </tr>
+    {%- endfor -%}
+</table>
