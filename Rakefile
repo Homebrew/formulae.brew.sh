@@ -12,6 +12,12 @@ task :formulae do
   sh "brew", "ruby", "script/generate.rb"
 end
 
+desc "Dump Linux formulae data"
+task :formulae_linux do
+  ENV["HOMEBREW_FORCE_HOMEBREW_ON_LINUX"] = "1"
+  sh "brew", "ruby", "script/generate-linux.rb"
+end
+
 desc "Dump cask data"
 task :cask do
   ENV["HOMEBREW_FORCE_HOMEBREW_ON_LINUX"] = "1"
@@ -85,8 +91,42 @@ task :analytics do
   end
 end
 
+desc "Dump Linux analytics data"
+task :analytics_linux do
+  next unless generate_analytics?
+
+  setup_analytics
+
+  %w[build-error install cask-install install-on-request os-version
+     core-build-error core-install core-install-on-request].each do |category|
+    case category
+    when "core-build-error"
+      category = "all-core-formulae-json --build-error"
+      category_name = "build-error/linuxbrew-core"
+    when "core-install"
+      category = "all-core-formulae-json --install"
+      category_name = "install/linuxbrew-core"
+    when "core-install-on-request"
+      category = "all-core-formulae-json --install-on-request"
+      category_name = "install-on-request/linuxbrew-core"
+    else
+      category_name = category
+    end
+    FileUtils.mkdir_p "_data/analytics-linux/#{category_name}"
+    %w[30 90 365].each do |days|
+      next if days != "30" && category_name == "build-error/linuxbrew-core"
+
+      sh "brew formula-analytics --linux --days-ago=#{days} --json --#{category} " \
+        "> _data/analytics-linux/#{category_name}/#{days}d.json"
+    end
+  end
+end
+
 desc "Dump formulae and analytics data"
 task formula_and_analytics: %i[formulae analytics]
+
+desc "Dump Linux formulae and analytics data"
+task linux_formula_and_analytics: %i[formulae_linux analytics_linux]
 
 desc "Build the site"
 task build: [:formula_and_analytics, :cask] do
