@@ -1,20 +1,17 @@
 {
-  "name": "mariadb",
-  "full_name": "mariadb",
+  "name": "mariadb@10.3",
+  "full_name": "mariadb@10.3",
   "oldname": null,
   "aliases": [
-    "mariadb@10.4"
+
   ],
   "versioned_formulae": [
-    "mariadb@10.0",
-    "mariadb@10.1",
-    "mariadb@10.2",
-    "mariadb@10.3"
+
   ],
   "desc": "Drop-in replacement for MySQL",
   "homepage": "https://mariadb.org/",
   "versions": {
-    "stable": "10.4.6",
+    "stable": "10.3.16",
     "devel": null,
     "head": null,
     "bottle": true
@@ -29,21 +26,21 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/mariadb-10.4.6.mojave.bottle.tar.gz",
-          "sha256": "8feb884d8e39b94822ea9ed6fa19239b1eea53f6a4496f932908562008a01e35"
+          "url": "https://homebrew.bintray.com/bottles/mariadb@10.3-10.3.16.mojave.bottle.tar.gz",
+          "sha256": "d8f2f82a4d210481595defcaf814656c8dc9a3cf2be007ea907ea24501994c84"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/mariadb-10.4.6.high_sierra.bottle.tar.gz",
-          "sha256": "b4466c2e19ab1e71f29f1b2a864869840c1ad1ff3c37a4e7a68573d503d30a00"
+          "url": "https://homebrew.bintray.com/bottles/mariadb@10.3-10.3.16.high_sierra.bottle.tar.gz",
+          "sha256": "fddf0b25b61966bc059c1861491ba4ab209450b7a073888df8df183fa20d77b6"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/mariadb-10.4.6.sierra.bottle.tar.gz",
-          "sha256": "09e00953ff3e5d48e3cfb308d91dca128bec4a4354970666c0b9fe489fdb8ee0"
+          "url": "https://homebrew.bintray.com/bottles/mariadb@10.3-10.3.16.sierra.bottle.tar.gz",
+          "sha256": "e042378d7348833c6de65b8db933620360258f86e6ae78f4e359a4ad92204b70"
         }
       }
     }
   },
-  "keg_only": false,
+  "keg_only": true,
   "bottle_disabled": false,
   "options": [
 
@@ -64,12 +61,7 @@
 
   ],
   "conflicts_with": [
-    "mysql",
-    "mysql-cluster",
-    "percona-server",
-    "mysql-connector-c",
-    "mytop",
-    "mariadb-connector-c"
+
   ],
   "caveats": "A \"/etc/my.cnf\" from another install may interfere with a Homebrew-built\nserver starting up correctly.\n\nMySQL is configured to only allow connections from localhost by default\n\nTo connect:\n    mysql -uroot\n",
   "installed": [
