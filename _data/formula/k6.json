@@ -1,6 +1,6 @@
 {
-  "name": "jhipster",
-  "full_name": "jhipster",
+  "name": "k6",
+  "full_name": "k6",
   "oldname": null,
   "aliases": [
 
@@ -8,10 +8,10 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Generate, develop and deploy Spring Boot + Angular/React applications",
-  "homepage": "https://www.jhipster.tech/",
+  "desc": "Modern load testing tool, using Go and JavaScript",
+  "homepage": "https://k6.io",
   "versions": {
-    "stable": "6.1.1",
+    "stable": "0.24.0",
     "devel": null,
     "head": null,
     "bottle": true
@@ -26,16 +26,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/jhipster-6.1.1.mojave.bottle.tar.gz",
-          "sha256": "69cae2bfd371cf576fa6e0884ba70d94f09fd49d21c690b158fb41869c3f9c95"
+          "url": "https://homebrew.bintray.com/bottles/k6-0.24.0.mojave.bottle.tar.gz",
+          "sha256": "7bf3b04410bacde97e906860addced0403d96a4c0fcab8efcec811c4a0bf9da3"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/jhipster-6.1.1.high_sierra.bottle.tar.gz",
-          "sha256": "4f15a1b0c7928cf059634d32e47fee340a772b60d155cc69f370d97f25cac6be"
+          "url": "https://homebrew.bintray.com/bottles/k6-0.24.0.high_sierra.bottle.tar.gz",
+          "sha256": "0a59d836290c7b499dfa5718dcbf05559f6fdc9b287a737bbfecf0bdb6dc3c6e"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/jhipster-6.1.1.sierra.bottle.tar.gz",
-          "sha256": "403109affa011dfad5202c16913179b2b26e434d3b0f1015a4b24773eba6359d"
+          "url": "https://homebrew.bintray.com/bottles/k6-0.24.0.sierra.bottle.tar.gz",
+          "sha256": "3c32a857ca8b388bc4715bf73a3f661a500d25795c6b213012beb8c6bab657f4"
         }
       }
     }
@@ -46,10 +46,11 @@
 
   ],
   "build_dependencies": [
-
+    "dep",
+    "go"
   ],
   "dependencies": [
-    "node"
+
   ],
   "recommended_dependencies": [
 
@@ -58,11 +59,7 @@
 
   ],
   "requirements": [
-    {
-      "name": "java",
-      "cask": "adoptopenjdk",
-      "download": null
-    }
+
   ],
   "conflicts_with": [
 
