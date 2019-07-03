@@ -9,7 +9,7 @@
   "sha256": "2ec958508139289df3b5e2c10257311af4f0ebf39242f61d39f11e7fa14ebb40",
   "artifacts": [
     {
-      "delete": "$(brew --prefix)/miniconda3",
+      "delete": "$(brew --prefix)/Caskroom/miniconda/4.6.14/miniconda3",
       "signal": {
       }
     },
@@ -17,16 +17,18 @@
       "path": "Miniconda3-4.6.14-MacOSX-x86_64.sh",
       "args": {
         "must_succeed": "true",
-        "sudo": "true",
+        "sudo": "false",
         "args": [
           "-b",
           "-p",
-          "$(brew --prefix)/miniconda3"
+          "$(brew --prefix)/Caskroom/miniconda/4.6.14/miniconda3"
         ],
         "print_stdout": "true"
       }
     },
-    "postflight (Postflight Block)",
+    [
+      "miniconda3/condabin/conda"
+    ],
     {
       "trash": [
         "~/.condarc",
