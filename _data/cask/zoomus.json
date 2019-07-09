@@ -9,16 +9,22 @@
   "sha256": "28f45c74dd1161994865e08fba7b0e83166e00225fe09b599df849612136033c",
   "artifacts": [
     {
-      "delete": "/Applications/zoom.us.app",
       "quit": "us.zoom.ZoomOpener",
       "signal": {
         "KILL": "us.zoom.xos"
-      }
+      },
+      "login_item": "ZoomOpener",
+      "delete": [
+        "/Applications/zoom.us.app",
+        "~/.zoomus/ZoomOpener.app",
+        "~/Library/Internet Plug-Ins/ZoomUsPlugIn.plugin"
+      ]
     },
     "zoomusInstaller.pkg (Pkg)",
     "postflight (Postflight Block)",
     {
       "trash": [
+        "~/.zoomus",
         "~/Desktop/Zoom",
         "~/Library/Application Support/zoom.us",
         "~/Library/Caches/us.zoom.xos",
