@@ -11,7 +11,7 @@
   "desc": "Multitrack-capable audio recorder and effect processor",
   "homepage": "https://www.eca.cx/ecasound/",
   "versions": {
-    "stable": "2.9.1",
+    "stable": "2.9.2",
     "devel": null,
     "head": null,
     "bottle": true
@@ -20,22 +20,22 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "cellar": "/usr/local/Cellar",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/ecasound-2.9.1.mojave.bottle.1.tar.gz",
-          "sha256": "6166bd8bfe46c9cd397ebbdd309228ebdaf4ba85be03b3b5190ee85a78a149c9"
+          "url": "https://homebrew.bintray.com/bottles/ecasound-2.9.2.mojave.bottle.tar.gz",
+          "sha256": "9bd0c3a15f5efa4ac0a97350ac54ea363ccca4b6d213dc961d8490276a69552a"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/ecasound-2.9.1.high_sierra.bottle.1.tar.gz",
-          "sha256": "b0d1ebfd5db18a8141c0a9ddc9a9a62f155d4db16d6f68e7162cd9cf27a0a02d"
+          "url": "https://homebrew.bintray.com/bottles/ecasound-2.9.2.high_sierra.bottle.tar.gz",
+          "sha256": "e9f0021e07723fc2e5a4d4cb3b5a27cecafd52fefce3255c488183122d0d718d"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/ecasound-2.9.1.sierra.bottle.1.tar.gz",
-          "sha256": "fe062d9a9f6c5072c2a6dd8778c1fd842694e43fb91dede0f877628a2d8eb27f"
+          "url": "https://homebrew.bintray.com/bottles/ecasound-2.9.2.sierra.bottle.tar.gz",
+          "sha256": "05131605c2721fe09dca3699c9662d2dec290f8640a6e3daef1d2ac84b9f51d4"
         }
       }
     }
@@ -49,7 +49,9 @@
 
   ],
   "dependencies": [
-
+    "jack",
+    "libsamplerate",
+    "libsndfile"
   ],
   "recommended_dependencies": [
 
