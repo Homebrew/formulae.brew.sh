@@ -8,7 +8,7 @@ html_template = IO.read "_formula.html.in"
 
 CoreTap.instance.formula_names.each do |n|
   f = Formulary.factory(n)
-  IO.write("_data/formula/#{f.name.tr("+", "_")}.json", JSON.pretty_generate(f.to_hash))
+  IO.write("_data/formula/#{f.name.tr("+", "_")}.json", "#{JSON.pretty_generate(f.to_hash)}\n")
   IO.write("api/formula/#{f.name}.json", json_template)
   IO.write("formula/#{f.name}.html", html_template.gsub("title: $TITLE", "title: \"#{f.name}\""))
 end
