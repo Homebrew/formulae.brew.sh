@@ -11,12 +11,12 @@
   "desc": "Command-line outline and bitmap font editor/converter",
   "homepage": "https://fontforge.github.io",
   "versions": {
-    "stable": "20190413",
+    "stable": "20190801",
     "devel": null,
     "head": null,
     "bottle": true
   },
-  "revision": 2,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -26,16 +26,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/fontforge-20190413_2.mojave.bottle.tar.gz",
-          "sha256": "755c0de75b7900bfbc5c2d65cad3d65ea51335694738e3bed652ff07fa0fe4cd"
+          "url": "https://homebrew.bintray.com/bottles/fontforge-20190801.mojave.bottle.tar.gz",
+          "sha256": "1f9682e52b812f5b365ba32e7447afa6dfbffb0aa15b6f4687acd050638174e0"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/fontforge-20190413_2.high_sierra.bottle.tar.gz",
-          "sha256": "50baa3d0a77de516261e0e81344aac39a40658203badc8916018701e703a2cd9"
+          "url": "https://homebrew.bintray.com/bottles/fontforge-20190801.high_sierra.bottle.tar.gz",
+          "sha256": "e96f5fb275b708c9387e5968d7d97692221cd8b76805f65719601125bb7e6f6b"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/fontforge-20190413_2.sierra.bottle.tar.gz",
-          "sha256": "e9961cd990142589ced45395a0fb676b2bd8181032ca19cd9575e3641832347b"
+          "url": "https://homebrew.bintray.com/bottles/fontforge-20190801.sierra.bottle.tar.gz",
+          "sha256": "5dedc46d7f5e9278e644318a50132cb4050f129c922aeed7b290bcb42c7aeb32"
         }
       }
     }
@@ -46,14 +46,15 @@
 
   ],
   "build_dependencies": [
-    "pkg-config",
-    "python"
+    "pkg-config"
   ],
   "dependencies": [
     "cairo",
     "fontconfig",
+    "freetype",
     "gettext",
     "giflib",
+    "glib",
     "jpeg",
     "libpng",
     "libspiro",
@@ -61,6 +62,8 @@
     "libtool",
     "libuninameslist",
     "pango",
+    "python",
+    "readline",
     "libxml2"
   ],
   "recommended_dependencies": [
