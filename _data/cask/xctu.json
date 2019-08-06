@@ -1,0 +1,45 @@
+{
+  "token": "xctu",
+  "name": [
+    "XCTU"
+  ],
+  "homepage": "https://www.digi.com/products/iot-platform/xctu",
+  "url": "http://ftp1.digi.com/support/utilities/40003027_W.zip",
+  "appcast": null,
+  "version": "latest",
+  "sha256": "no_check",
+  "artifacts": [
+    {
+      "trash": "/Applications/XCTU.app",
+      "signal": {
+      }
+    },
+    {
+      "path": "$(brew --prefix)/Caskroom/xctu/latest/xctu_installer.app/Contents/MacOS/osx-intel",
+      "args": {
+        "must_succeed": "true",
+        "sudo": "false",
+        "args": [
+          "--mode",
+          "unattended"
+        ],
+        "print_stdout": "true"
+      }
+    },
+    {
+      "trash": [
+        "~/Library/Caches/XCTU",
+        "~/Library/Preferences/XCTU.plist",
+        "~/Library/Saved Application State/XCTU.savedState"
+      ],
+      "signal": {
+      }
+    }
+  ],
+  "caveats": "",
+  "depends_on": {
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": null
+}
