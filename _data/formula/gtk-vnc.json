@@ -11,12 +11,12 @@
   "desc": "VNC viewer widget for GTK",
   "homepage": "https://wiki.gnome.org/Projects/gtk-vnc",
   "versions": {
-    "stable": "0.9.0",
+    "stable": "1.0.0",
     "devel": null,
     "head": null,
     "bottle": true
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -26,16 +26,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/gtk-vnc-0.9.0_1.mojave.bottle.tar.gz",
-          "sha256": "9a9ede3c57a077ae5c902388bad783b6a808ef7f4c80f0f9eb8a51a3cecea9c1"
+          "url": "https://homebrew.bintray.com/bottles/gtk-vnc-1.0.0.mojave.bottle.tar.gz",
+          "sha256": "1e932ef0f54e09e9cf107c6ef386ff49e1b1cfd107eca77e4d1c5569da71909d"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gtk-vnc-0.9.0_1.high_sierra.bottle.tar.gz",
-          "sha256": "dd9cba44071679e9c8d64520a63e83c7e0349bd96050c1a24f47efe0ee656f2f"
+          "url": "https://homebrew.bintray.com/bottles/gtk-vnc-1.0.0.high_sierra.bottle.tar.gz",
+          "sha256": "efb82f38076361165896bbf906881331c349082464fa8fc0b6b81f4c58b52f0a"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gtk-vnc-0.9.0_1.sierra.bottle.tar.gz",
-          "sha256": "1b5d1a04226901626d222b0c0df62eb7f76cddaabb8596ae18c0a571e5dfad9b"
+          "url": "https://homebrew.bintray.com/bottles/gtk-vnc-1.0.0.sierra.bottle.tar.gz",
+          "sha256": "c244ffda67d3e559172ba2b9e2b1015011733630232c203f733f259d8a6dd485"
         }
       }
     }
@@ -48,9 +48,9 @@
   "build_dependencies": [
     "gettext",
     "gobject-introspection",
-    "intltool",
-    "pkg-config",
-    "python"
+    "meson",
+    "ninja",
+    "pkg-config"
   ],
   "dependencies": [
     "gnutls",
@@ -64,11 +64,7 @@
 
   ],
   "requirements": [
-    {
-      "name": "macos",
-      "cask": null,
-      "download": null
-    }
+
   ],
   "conflicts_with": [
 
