@@ -1,0 +1,38 @@
+name: GitHub Actions CI
+on: [push]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Set up Git repository
+      uses: actions/checkout@master
+
+    - name: Set up Homebrew
+      run: |
+        HOMEBREW_REPOSITORY="$HOME/Homebrew"
+        export PATH="$HOMEBREW_REPOSITORY/bin:$PATH"
+        rm -rf $HOMEBREW_REPOSITORY
+        git clone --depth=1 https://github.com/Homebrew/brew "$HOMEBREW_REPOSITORY"
+        HOMEBREW_CORE_TAP_DIR="$HOMEBREW_REPOSITORY/Library/Taps/homebrew/homebrew-core"
+        mkdir -p "$HOMEBREW_CORE_TAP_DIR"
+        rm -rf "$HOMEBREW_CORE_TAP_DIR"
+        git clone --depth=1 https://github.com/Homebrew/homebrew-core "$HOMEBREW_CORE_TAP_DIR"
+        export HOMEBREW_NO_ANALYTICS=1
+        # trigger vendored ruby installation
+        brew help
+
+    - name: Set up Ruby
+      uses: actions/setup-ruby@v1
+      with:
+        version: '>=2.3'
+
+    - name: Install RubyGems
+      run: |
+        gem install bundler
+        bundle install --jobs 4 --retry 3
+
+    - name: Generate site
+      run: |
+        HOMEBREW_REPOSITORY="$HOME/Homebrew"
+        export PATH="$HOMEBREW_REPOSITORY/bin:$PATH"
+        bundle exec rake formulae cask
