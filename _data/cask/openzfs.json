@@ -9,6 +9,7 @@
   "version": "1.9.0,18",
   "sha256": "a6b05d29e9ae1f313e642109d18da6d930b1991bcd24c5f91ecc6a64bdc130fc",
   "artifacts": [
+    "uninstall_preflight (Preflight Block)",
     {
       "delete": "~/zfsuninstaller.*",
       "script": {
@@ -17,9 +18,10 @@
       },
       "signal": {
       }
-    }
+    },
+    "OpenZFS on OS X 1.9.0 Mojave.pkg (Pkg)"
   ],
-  "caveats": "",
+  "caveats": "To install and/or use openzfs you may need to enable its kernel extension in:\n  System Preferences → Security & Privacy → General\nFor more information refer to vendor documentation or this Apple Technical Note:\n  https://developer.apple.com/library/content/technotes/tn2459/_index.html\n",
   "depends_on": {
     "macos": [
       "10.9",

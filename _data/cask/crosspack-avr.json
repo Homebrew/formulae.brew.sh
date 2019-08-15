@@ -11,7 +11,7 @@
   "artifacts": [
     {
       "script": {
-        "executable": "/usr/local/CrossPack-AVR/uninstall",
+        "executable": "$(brew --prefix)/CrossPack-AVR/uninstall",
         "input": [
           "Yes"
         ],
@@ -23,7 +23,7 @@
     },
     "CrossPack-AVR.pkg (Pkg)"
   ],
-  "caveats": "",
+  "caveats": "Cask crosspack-avr installs files under $(brew --prefix). The presence of such\nfiles can cause warnings when running `brew doctor`, which is considered\nto be a bug in Homebrew Cask.\n",
   "depends_on": {
   },
   "conflicts_with": null,

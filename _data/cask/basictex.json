@@ -12,7 +12,7 @@
     {
       "pkgutil": "org.tug.mactex.basictex2019",
       "delete": [
-        "/usr/local/texlive/2019basic",
+        "$(brew --prefix)/texlive/2019basic",
         "/etc/paths.d/TeX",
         "/etc/manpaths.d/TeX",
         "/Library/TeX"
@@ -23,11 +23,11 @@
     "mactex-basictex-20190410.pkg (Pkg)",
     {
       "trash": [
-        "/usr/local/texlive/texmf-local",
+        "$(brew --prefix)/texlive/texmf-local",
         "~/Library/texlive/2019basic"
       ],
       "rmdir": [
-        "/usr/local/texlive",
+        "$(brew --prefix)/texlive",
         "~/Library/texlive"
       ],
       "signal": {

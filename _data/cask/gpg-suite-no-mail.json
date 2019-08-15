@@ -30,7 +30,7 @@
       ],
       "delete": [
         "/Library/Services/GPGServices.service",
-        "/usr/local/MacGPG2",
+        "$(brew --prefix)/MacGPG2",
         "/private/etc/paths.d/MacGPG2",
         "/private/etc/manpaths.d/MacGPG2",
         "/private/tmp/gpg-agent",
@@ -57,7 +57,7 @@
       }
     }
   ],
-  "caveats": "",
+  "caveats": "Cask gpg-suite-no-mail installs files under $(brew --prefix). The presence of such\nfiles can cause warnings when running `brew doctor`, which is considered\nto be a bug in Homebrew Cask.\n",
   "depends_on": {
     "macos": [
       [

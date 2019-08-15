@@ -13,11 +13,11 @@
     {
       "pkgutil": "com.ibm.cloud.cli",
       "delete": [
-        "/usr/local/bin/bluemix",
-        "/usr/local/bin/bx",
-        "/usr/local/bin/bluemix-analytics",
-        "/usr/local/Bluemix",
-        "/usr/local/ibmcloud"
+        "$(brew --prefix)/bin/bluemix",
+        "$(brew --prefix)/bin/bx",
+        "$(brew --prefix)/bin/bluemix-analytics",
+        "$(brew --prefix)/Bluemix",
+        "$(brew --prefix)/ibmcloud"
       ],
       "signal": {
       }
@@ -30,7 +30,7 @@
       }
     }
   ],
-  "caveats": "",
+  "caveats": "Cask ibm-cloud-cli installs files under $(brew --prefix). The presence of such\nfiles can cause warnings when running `brew doctor`, which is considered\nto be a bug in Homebrew Cask.\n",
   "depends_on": {
     "cask": [
       "docker"

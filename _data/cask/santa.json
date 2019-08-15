@@ -10,7 +10,7 @@
   "sha256": "6843afe8a924c0a9498d07d40acac4d5daafa0177dbf70181bc6be97e0067645",
   "artifacts": [
     {
-      "delete": "/usr/local/bin/santactl",
+      "delete": "$(brew --prefix)/bin/santactl",
       "kext": "com.google.santa-driver",
       "launchctl": [
         "com.google.santad",
@@ -22,7 +22,7 @@
     },
     "santa-0.9.31.pkg (Pkg)"
   ],
-  "caveats": "",
+  "caveats": "To install and/or use santa you may need to enable its kernel extension in:\n  System Preferences → Security & Privacy → General\nFor more information refer to vendor documentation or this Apple Technical Note:\n  https://developer.apple.com/library/content/technotes/tn2459/_index.html\n",
   "depends_on": {
   },
   "conflicts_with": null,

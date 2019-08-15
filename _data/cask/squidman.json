@@ -13,12 +13,12 @@
       "SquidMan.app"
     ],
     {
-      "trash": "/usr/local/squid",
+      "trash": "$(brew --prefix)/squid",
       "signal": {
       }
     }
   ],
-  "caveats": "",
+  "caveats": "Cask squidman installs files under $(brew --prefix). The presence of such\nfiles can cause warnings when running `brew doctor`, which is considered\nto be a bug in Homebrew Cask.\n",
   "depends_on": {
   },
   "conflicts_with": null,

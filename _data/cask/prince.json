@@ -11,8 +11,8 @@
   "artifacts": [
     {
       "delete": [
-        "/usr/local/bin/prince",
-        "/usr/local/lib/prince"
+        "$(brew --prefix)/bin/prince",
+        "$(brew --prefix)/lib/prince"
       ],
       "signal": {
       }
@@ -26,7 +26,7 @@
       }
     }
   ],
-  "caveats": "",
+  "caveats": "Cask prince installs files under $(brew --prefix). The presence of such\nfiles can cause warnings when running `brew doctor`, which is considered\nto be a bug in Homebrew Cask.\n",
   "depends_on": {
   },
   "conflicts_with": null,

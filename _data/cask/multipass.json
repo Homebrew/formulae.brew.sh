@@ -13,8 +13,8 @@
       "launchctl": "com.canonical.multipassd",
       "pkgutil": "com.canonical.multipass.*",
       "delete": [
-        "/usr/local/bin/multipass",
-        "/usr/local/etc/bash_completion.d/multipass",
+        "$(brew --prefix)/bin/multipass",
+        "$(brew --prefix)/etc/bash_completion.d/multipass",
         "/var/root/Library/Caches/multipassd"
       ],
       "signal": {

@@ -11,8 +11,8 @@
   "artifacts": [
     {
       "delete": [
-        "/usr/local/gfortran",
-        "/usr/local/bin/gfortran"
+        "$(brew --prefix)/gfortran",
+        "$(brew --prefix)/bin/gfortran"
       ],
       "pkgutil": "com.gnu.gfortran",
       "signal": {
@@ -20,7 +20,7 @@
     },
     "gfortran.pkg (Pkg)"
   ],
-  "caveats": "",
+  "caveats": "Cask gfortran installs files under $(brew --prefix). The presence of such\nfiles can cause warnings when running `brew doctor`, which is considered\nto be a bug in Homebrew Cask.\n",
   "depends_on": {
     "macos": [
       [
