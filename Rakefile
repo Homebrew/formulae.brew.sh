@@ -8,12 +8,14 @@ task default: :formula_and_analytics
 desc "Dump formulae data"
 task :formulae do
   ENV["HOMEBREW_FORCE_HOMEBREW_ON_LINUX"] = "1"
+  ENV["HOMEBREW_NO_COLOR"] = "1"
   sh "brew", "ruby", "script/generate.rb"
 end
 
 desc "Dump cask data"
 task :cask do
   ENV["HOMEBREW_FORCE_HOMEBREW_ON_LINUX"] = "1"
+  ENV["HOMEBREW_NO_COLOR"] = "1"
   sh "brew", "ruby", "script/generate-cask.rb"
 end
 
