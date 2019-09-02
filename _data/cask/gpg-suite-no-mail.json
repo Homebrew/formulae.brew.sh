@@ -59,7 +59,11 @@
   ],
   "caveats": "Cask gpg-suite-no-mail installs files under $(brew --prefix). The presence of such\nfiles can cause warnings when running `brew doctor`, which is considered\nto be a bug in Homebrew Cask.\n",
   "depends_on": {
-    "macos": "#<MacOSRequirement:0x00007ff8b5189e70>"
+    "macos": {
+      ">=": [
+        "10.12"
+      ]
+    }
   },
   "conflicts_with": {
     "cask": [
