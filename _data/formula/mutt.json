@@ -16,7 +16,7 @@
     "head": "HEAD",
     "bottle": true
   },
-  "revision": 1,
+  "revision": 2,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -26,16 +26,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/mutt-1.12.1_1.mojave.bottle.tar.gz",
-          "sha256": "e0c20be9ff6d0ce29d610cb61ed92f35bfb3abe7a49c8927ecbf6aecad49d375"
+          "url": "https://homebrew.bintray.com/bottles/mutt-1.12.1_2.mojave.bottle.tar.gz",
+          "sha256": "60e75a481a2b25d50d0c404a14233e79579ee61e72cb14769c0a021dabf81428"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/mutt-1.12.1_1.high_sierra.bottle.tar.gz",
-          "sha256": "4ea37a2acfe5c0ea6ecc4ae5a0cf53db7a6ff7c9aef50ea971ea359e49160ec6"
+          "url": "https://homebrew.bintray.com/bottles/mutt-1.12.1_2.high_sierra.bottle.tar.gz",
+          "sha256": "7d51106017603dec20a15e483b8aca629b3d4d34e3aa92094842c2b8f8ef83d2"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/mutt-1.12.1_1.sierra.bottle.tar.gz",
-          "sha256": "78f11d068e9732a78ee2dc6340876ec4b4d5e38a1123f636161ec03329ffc15d"
+          "url": "https://homebrew.bintray.com/bottles/mutt-1.12.1_2.sierra.bottle.tar.gz",
+          "sha256": "ae8f34c0378d4e1f40f31bbe841f4ee89fe26774305ad1c4a42d090b8b9f11ec"
         }
       }
     }
@@ -51,7 +51,7 @@
   ],
   "dependencies": [
     "gpgme",
-    "openssl",
+    "openssl@1.1",
     "tokyo-cabinet"
   ],
   "recommended_dependencies": [
@@ -66,7 +66,7 @@
   "conflicts_with": [
     "tin"
   ],
-  "caveats": "mutt_dotlock(1) has been installed, but does not have the permissions lock\nspool files in /var/mail. To grant the necessary permissions, run\n\n  sudo chgrp mail $(brew --prefix)/Cellar/mutt/1.12.1_1/bin/mutt_dotlock\n  sudo chmod g+s $(brew --prefix)/Cellar/mutt/1.12.1_1/bin/mutt_dotlock\n\nAlternatively, you may configure `spoolfile` in your .muttrc to a file inside\nyour home directory.\n",
+  "caveats": "mutt_dotlock(1) has been installed, but does not have the permissions lock\nspool files in /var/mail. To grant the necessary permissions, run\n\n  sudo chgrp mail $(brew --prefix)/Cellar/mutt/1.12.1_2/bin/mutt_dotlock\n  sudo chmod g+s $(brew --prefix)/Cellar/mutt/1.12.1_2/bin/mutt_dotlock\n\nAlternatively, you may configure `spoolfile` in your .muttrc to a file inside\nyour home directory.\n",
   "installed": [
 
   ],
