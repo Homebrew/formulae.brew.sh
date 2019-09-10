@@ -11,31 +11,31 @@
   "desc": "Text view with syntax, undo/redo, and text marks",
   "homepage": "https://projects.gnome.org/gtksourceview/",
   "versions": {
-    "stable": "4.2.0",
+    "stable": "4.4.0",
     "devel": null,
     "head": null,
     "bottle": true
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "cellar": "/usr/local/Cellar",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/gtksourceview4-4.2.0_1.mojave.bottle.1.tar.gz",
-          "sha256": "078bbfa52c8fa4b9a8fef3ab1dbdac7d0312b2aae3e34f2180e393b9463fb0d5"
+          "url": "https://homebrew.bintray.com/bottles/gtksourceview4-4.4.0.mojave.bottle.tar.gz",
+          "sha256": "d0c76f227d0754e6a98d8842c4019bdbf7cc483cc7f4ea70f0e546221e29b52d"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gtksourceview4-4.2.0_1.high_sierra.bottle.1.tar.gz",
-          "sha256": "75ae49438e1dc29dc232323b8366a663dbd3a03376eb99b66d770322220dfe8e"
+          "url": "https://homebrew.bintray.com/bottles/gtksourceview4-4.4.0.high_sierra.bottle.tar.gz",
+          "sha256": "80489123e8993fb5149f920ad5182a1bdd1f6b4ff68f78ccf7f0adfd539d2347"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gtksourceview4-4.2.0_1.sierra.bottle.1.tar.gz",
-          "sha256": "d9057fa87a94605444b1541c0dd36aac9d4aa68607cc82b53feaec5a3d55619c"
+          "url": "https://homebrew.bintray.com/bottles/gtksourceview4-4.4.0.sierra.bottle.tar.gz",
+          "sha256": "795f7291d8baadba01c0a61b843177a4760bbab82c81b26058d1665c64657454"
         }
       }
     }
@@ -47,12 +47,12 @@
   ],
   "build_dependencies": [
     "gobject-introspection",
-    "intltool",
+    "meson",
+    "ninja",
     "pkg-config",
     "vala"
   ],
   "dependencies": [
-    "gettext",
     "gtk+3"
   ],
   "recommended_dependencies": [
