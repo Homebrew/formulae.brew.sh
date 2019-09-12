@@ -49,5 +49,13 @@ permalink: :title
 {%- include formulae.html formulae=conflicts_with_formula description="Conflicts with" -%}
 
 {%- if c.caveats -%}
-<p>{{ c.caveats | xml_escape }}</p>
+{%- capture soft_indent %}
+  {% endcapture -%}
+{%- capture hard_indent %}
+&nbsp;&nbsp;&nbsp;&nbsp;{% endcapture -%}
+<table class="full-width">
+    <tr>
+        <td>{{ c.caveats | xml_escape | replace: soft_indent, hard_indent | newline_to_br }}</td>
+    </tr>
+</table>
 {%- endif -%}
