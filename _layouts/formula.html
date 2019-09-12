@@ -102,6 +102,18 @@ permalink: :title
 </p>
 {%- endif -%}
 
+{%- if f.caveats -%}
+{%- capture soft_indent %}
+  {% endcapture -%}
+{%- capture hard_indent %}
+&nbsp;&nbsp;&nbsp;&nbsp;{% endcapture -%}
+<table class="full-width">
+    <tr>
+        <td>{{ f.caveats | xml_escape | replace: soft_indent, hard_indent | newline_to_br }}</td>
+    </tr>
+</table>
+{%- endif -%}
+
 {%- if site.data.analytics.install.homebrew-core["30d"].formulae[full_name].size > 0 -%}
 <p>Analytics:</p>
 <table>
