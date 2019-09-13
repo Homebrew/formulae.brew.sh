@@ -11,31 +11,31 @@
   "desc": "Text mode RSS newsreader",
   "homepage": "https://github.com/kouya/snownews",
   "versions": {
-    "stable": "1.5.13",
+    "stable": "1.6.10",
     "devel": null,
     "head": null,
     "bottle": true
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "cellar": "/usr/local/Cellar",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/snownews-1.5.13_1.mojave.bottle.1.tar.gz",
-          "sha256": "3971c56d4b11dce284c01eac7b2c27a1f39b282056b2348587845af8098aca64"
+          "url": "https://homebrew.bintray.com/bottles/snownews-1.6.10.mojave.bottle.tar.gz",
+          "sha256": "db1d20c1468867a2eeb77b521fdfac4e167393797506afd6bbd603fb40c435bf"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/snownews-1.5.13_1.high_sierra.bottle.1.tar.gz",
-          "sha256": "dff9318381ed26526315a52edb7e5de362db958cadd1c7c774256ddf9160bb99"
+          "url": "https://homebrew.bintray.com/bottles/snownews-1.6.10.high_sierra.bottle.tar.gz",
+          "sha256": "0e1eed435b2c94a95e35ee89c3b68be6cfa9867d75dc9fbb46b19a66ff6da915"
         },
         "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/snownews-1.5.13_1.sierra.bottle.1.tar.gz",
-          "sha256": "099b010a3f16d1e32fabaa8351bf0a3ac13eb6b3aec802d05af83b4fee4545dd"
+          "url": "https://homebrew.bintray.com/bottles/snownews-1.6.10.sierra.bottle.tar.gz",
+          "sha256": "6437a67fb63f92f3c4d57b69505cb5146e2d7325da0d6fd73b57ac0f1461c807"
         }
       }
     }
@@ -46,11 +46,12 @@
 
   ],
   "build_dependencies": [
-
+    "coreutils",
+    "pkg-config"
   ],
   "dependencies": [
     "gettext",
-    "openssl"
+    "ncurses"
   ],
   "recommended_dependencies": [
 
