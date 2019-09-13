@@ -79,9 +79,56 @@
   ],
   "caveats": "svntools have been installed to:\n  $(brew --prefix)/opt/subversion/libexec\n\nThe perl bindings are located in various subdirectories of:\n  $(brew --prefix)/opt/subversion/lib/perl5\n\nIf you wish to use the Ruby bindings you may need to add:\n  $(brew --prefix)/lib/ruby\nto your RUBYLIB.\n\nYou may need to link the Java bindings into the Java Extensions folder:\n  sudo mkdir -p /Library/Java/Extensions\n  sudo ln -s $(brew --prefix)/lib/libsvnjavahl-1.dylib /Library/Java/Extensions/libsvnjavahl-1.dylib\n",
   "installed": [
+    {
+      "version": "1.12.2",
+      "used_options": [
 
+      ],
+      "built_as_bottle": true,
+      "poured_from_bottle": true,
+      "runtime_dependencies": [
+        {
+          "full_name": "apr",
+          "version": "1.7.0"
+        },
+        {
+          "full_name": "openssl",
+          "version": "1.0.2s"
+        },
+        {
+          "full_name": "apr-util",
+          "version": "1.6.1"
+        },
+        {
+          "full_name": "gettext",
+          "version": "0.20.1"
+        },
+        {
+          "full_name": "lz4",
+          "version": "1.9.1"
+        },
+        {
+          "full_name": "perl",
+          "version": "5.30.0"
+        },
+        {
+          "full_name": "readline",
+          "version": "8.0.0"
+        },
+        {
+          "full_name": "sqlite",
+          "version": "3.29.0"
+        },
+        {
+          "full_name": "utf8proc",
+          "version": "2.4.0"
+        }
+      ],
+      "installed_as_dependency": false,
+      "installed_on_request": true
+    }
   ],
-  "linked_keg": null,
+  "linked_keg": "1.12.2",
   "pinned": false,
-  "outdated": false
+  "outdated": true
 }
