@@ -1,6 +1,6 @@
 {
-  "name": "speexdsp",
-  "full_name": "speexdsp",
+  "name": "open-image-denoise",
+  "full_name": "open-image-denoise",
   "oldname": null,
   "aliases": [
 
@@ -8,10 +8,10 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Speex audio processing library",
-  "homepage": "https://github.com/xiph/speexdsp",
+  "desc": "High-performance denoising library for ray tracing",
+  "homepage": "https://openimagedenoise.github.io",
   "versions": {
-    "stable": "1.2.0",
+    "stable": "1.0.0",
     "devel": null,
     "head": null,
     "bottle": true
@@ -26,16 +26,12 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/speexdsp-1.2.0.mojave.bottle.tar.gz",
-          "sha256": "0d61efd09b255e0856833e51bdbdaabcaaa325824a71ec326da61ffd8e200675"
+          "url": "https://homebrew.bintray.com/bottles/open-image-denoise-1.0.0.mojave.bottle.tar.gz",
+          "sha256": "b63fc5dea6c3114322d85193c709a5d5313fc53eacc359b818ffd3808f0ce2ed"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/speexdsp-1.2.0.high_sierra.bottle.tar.gz",
-          "sha256": "7473fce6835c55f0547e60ff32b9ee1d16c2d3a490f618310dd276e34126bd1f"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/speexdsp-1.2.0.sierra.bottle.tar.gz",
-          "sha256": "b96155ea177b81d37a86a9b57dc38643680bbf6b22a6a2b826734f3cb2b5aa93"
+          "url": "https://homebrew.bintray.com/bottles/open-image-denoise-1.0.0.high_sierra.bottle.tar.gz",
+          "sha256": "2cf532b344578f9e6350816858e6fdbd5fd13bfd992fbbbaeab120e2ecbd42fd"
         }
       }
     }
@@ -46,13 +42,10 @@
 
   ],
   "build_dependencies": [
-    "autoconf",
-    "automake",
-    "libtool",
-    "pkg-config"
+    "cmake"
   ],
   "dependencies": [
-
+    "tbb"
   ],
   "recommended_dependencies": [
 
@@ -61,7 +54,11 @@
 
   ],
   "requirements": [
-
+    {
+      "name": "macos",
+      "cask": null,
+      "download": null
+    }
   ],
   "conflicts_with": [
 
