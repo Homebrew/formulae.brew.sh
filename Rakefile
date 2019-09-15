@@ -5,7 +5,7 @@ require "date"
 
 task default: :formula_and_analytics
 
-desc "Dump formulae data"
+desc "Dump macOS formulae data"
 task :formulae do
   ENV["HOMEBREW_FORCE_HOMEBREW_ON_LINUX"] = "1"
   ENV["HOMEBREW_NO_COLOR"] = "1"
@@ -14,7 +14,7 @@ end
 
 desc "Dump Linux formulae data"
 task :formulae_linux do
-  ENV["HOMEBREW_FORCE_HOMEBREW_ON_LINUX"] = "1"
+  ENV["HOMEBREW_NO_COLOR"] = "1"
   sh "brew", "ruby", "script/generate-linux.rb"
 end
 
@@ -122,14 +122,14 @@ task :analytics_linux do
   end
 end
 
-desc "Dump formulae and analytics data"
+desc "Dump macOS formulae and analytics data"
 task formula_and_analytics: %i[formulae analytics]
 
 desc "Dump Linux formulae and analytics data"
 task linux_formula_and_analytics: %i[formulae_linux analytics_linux]
 
 desc "Build the site"
-task build: [:formula_and_analytics, :cask] do
+task build: [:formula_and_analytics, :cask, :linux_formula_and_analytics] do
   sh "bundle", "exec", "jekyll", "build"
 end
 
