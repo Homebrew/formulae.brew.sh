@@ -58,7 +58,7 @@ permalink: :title
     {%- endif -%}
 </table>
 
-{%- include formulae.html formulae=f.versioned_formulae description="Other versions" -%}
+{%- include formulae-linux.html formulae=f.versioned_formulae description="Other versions" -%}
 
 {%- if f.revision > 0 -%}
 <p>Revision: <strong>{{ f.revision }}</strong></p>
@@ -80,10 +80,10 @@ permalink: :title
 </table>
 {%- endif -%}
 
-{%- include formulae.html formulae=f.dependencies description="Depends on" -%}
-{%- include formulae.html formulae=f.recommended_dependencies description="Depends on recommended" -%}
-{%- include formulae.html formulae=f.optional_dependencies description="Depends on optionally" -%}
-{%- include formulae.html formulae=f.build_dependencies description="Depends on when building from source" -%}
+{%- include formulae-linux.html formulae=f.dependencies description="Depends on" -%}
+{%- include formulae-linux.html formulae=f.recommended_dependencies description="Depends on recommended" -%}
+{%- include formulae-linux.html formulae=f.optional_dependencies description="Depends on optionally" -%}
+{%- include formulae-linux.html formulae=f.build_dependencies description="Depends on when building from source" -%}
 
 {%- if f.requirements.size > 0 -%}
 <p>
