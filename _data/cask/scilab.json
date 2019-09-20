@@ -7,7 +7,7 @@
   "url": "https://www.utc.fr/~mottelet/scilab/download/6.0.2/scilab-6.0.2-x86_64.dmg",
   "appcast": "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.scilab.org/download/",
   "version": "6.0.2",
-  "sha256": "307be532115eecc2cfbb3d5656f7424544368b972767cd3fc9616e6cf77d4a37",
+  "sha256": "136a9d405cebd425458076073a84dc256f69f1d4b8dc1c87612e6cc4bbf6ab5d",
   "artifacts": [
     [
       "scilab-6.0.2.app"
@@ -19,14 +19,13 @@
       "/Applications/Scilab-6.0.2.app/Contents/MacOS/bin/scilab-cli"
     ]
   ],
-  "caveats": "scilab requires Java 6. You can install it with:\n  brew cask install homebrew/cask-versions/java6\n",
+  "caveats": "scilab requires Java 6. You can install it with:\n  brew cask install homebrew/cask-versions/adoptopenjdk6\n",
   "depends_on": {
-    "macos": [
-      [
-        ">=",
+    "macos": {
+      ">=": [
         "10.12"
       ]
-    ]
+    }
   },
   "conflicts_with": null,
   "container": null,

@@ -4,10 +4,10 @@
     "Microsoft Office"
   ],
   "homepage": "https://products.office.com/mac/microsoft-office-for-mac/",
-  "url": "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Office_16.28.19081202_Installer.pkg",
+  "url": "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Office_16.29.19090802_Installer.pkg",
   "appcast": null,
-  "version": "16.28.19081202",
-  "sha256": "1c5f385d0a7d0b613d77fe6da77f428a5911d2d4075002b34415d567e71b5aea",
+  "version": "16.29.19090802",
+  "sha256": "613b9f0dadafe6d65aca12c86208848d865230f73c840a0627987f3e10722906",
   "artifacts": [
     {
       "pkgutil": [
@@ -20,7 +20,8 @@
         "com.microsoft.package.Microsoft_PowerPoint.app",
         "com.microsoft.package.Microsoft_Word.app",
         "com.microsoft.package.Proofing_Tools",
-        "com.microsoft.pkg.licensing"
+        "com.microsoft.pkg.licensing",
+        "com.microsoft.OneDrive"
       ],
       "delete": [
         "/Applications/Microsoft Excel.app",
@@ -31,12 +32,15 @@
       ],
       "launchctl": [
         "com.microsoft.office.licensing.helper",
-        "com.microsoft.office.licensingV2.helper"
+        "com.microsoft.office.licensingV2.helper",
+        "com.microsoft.OneDriveStandaloneUpdater",
+        "com.microsoft.OneDriveStandaloneUpdaterDaemon",
+        "com.microsoft.OneDriveUpdaterDaemon"
       ],
       "signal": {
       }
     },
-    "Microsoft_Office_16.28.19081202_Installer.pkg (Pkg)",
+    "Microsoft_Office_16.29.19090802_Installer.pkg (Pkg)",
     {
       "trash": [
         "~/Library/Application Scripts/com.microsoft.Excel",
@@ -84,33 +88,29 @@
       "launchctl": [
         "com.microsoft.autoupdate.helpertool",
         "com.microsoft.autoupdate.helper",
-        "com.microsoft.update.agent",
-        "com.microsoft.OneDriveStandaloneUpdater",
-        "com.microsoft.OneDriveStandaloneUpdaterDaemon",
-        "com.microsoft.OneDriveUpdaterDaemon"
+        "com.microsoft.update.agent"
       ],
       "pkgutil": [
-        "com.microsoft.package.Microsoft_AutoUpdate.app",
-        "com.microsoft.OneDrive"
+        "com.microsoft.package.Microsoft_AutoUpdate.app"
       ],
       "signal": {
       }
     }
   ],
-  "caveats": "",
+  "caveats": null,
   "depends_on": {
-    "macos": [
-      [
-        ">=",
+    "macos": {
+      ">=": [
         "10.12"
       ]
-    ]
+    }
   },
   "conflicts_with": {
     "cask": [
       "microsot-word",
       "microsot-excel",
-      "microsot-powerpoint"
+      "microsot-powerpoint",
+      "onedrive"
     ]
   },
   "container": null,
