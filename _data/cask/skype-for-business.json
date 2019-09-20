@@ -3,14 +3,13 @@
   "name": [
     "Skype for Business"
   ],
-  "homepage": "https://www.microsoft.com/download/details.aspx?id=54108",
-  "url": "https://download.microsoft.com/download/D/0/5/D055DA17-C7B8-4257-89A1-78E7BBE3833F/SkypeForBusinessInstaller-16.28.0.116.pkg",
-  "appcast": "https://www.microsoft.com/download/details.aspx?id=54108",
-  "version": "16.28.0.116",
-  "sha256": "2445a12f4ebf0b9da26ba27cf19b5d0399d5479f7223ab1b640f067b5a92f15e",
+  "homepage": "https://www.microsoft.com/en-us/download/details.aspx?id=54108",
+  "url": "https://download.microsoft.com/download/D/0/5/D055DA17-C7B8-4257-89A1-78E7BBE3833F/SkypeForBusinessInstaller-16.27.0.37.pkg",
+  "appcast": "https://www.microsoft.com/en-us/download/details.aspx?id=54108",
+  "version": "16.27.0.37",
+  "sha256": "ac33fbfa83e304e1ac3ba7365e8bf307b117ec954fd48902991356ee86f2e836",
   "artifacts": [
     {
-      "delete": "/Applications/Skype for Business.app",
       "pkgutil": [
         "com.microsoft.SkypeForBusiness",
         "com.microsoft.SkypeForBusiness.MeetingJoinPlugin"
@@ -19,7 +18,7 @@
       "signal": {
       }
     },
-    "SkypeForBusinessInstaller-16.28.0.116.pkg (Pkg)",
+    "SkypeForBusinessInstaller-16.27.0.37.pkg (Pkg)",
     {
       "trash": [
         "/Library/Internet Plug-Ins/MeetingJoinPlugin.plugin",
@@ -28,26 +27,21 @@
         "~/Library/Application Support/com.microsoft.SkypeForBusinessTAP",
         "~/Library/Application Support/Skype for Business"
       ],
-      "launchctl": [
-        "com.microsoft.autoupdate.helper",
-        "com.microsoft.update.agent"
-      ],
+      "launchctl": "com.microsoft.autoupdate.helper",
       "rmdir": "/Library/Application Support/Microsoft",
-      "pkgutil": [
-        "com.microsoft.package.Microsoft_AU_Bootstrapper.app",
-        "com.microsoft.package.Microsoft_AutoUpdate.app"
-      ],
+      "pkgutil": "com.microsoft.package.Microsoft_AutoUpdate.app",
       "signal": {
       }
     }
   ],
-  "caveats": null,
+  "caveats": "",
   "depends_on": {
-    "macos": {
-      ">=": [
+    "macos": [
+      [
+        ">=",
         "10.11"
       ]
-    }
+    ]
   },
   "conflicts_with": null,
   "container": null,
