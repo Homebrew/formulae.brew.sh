@@ -1,6 +1,6 @@
 {
-  "name": "drone-cli",
-  "full_name": "drone-cli",
+  "name": "gleam",
+  "full_name": "gleam",
   "oldname": null,
   "aliases": [
 
@@ -8,10 +8,10 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Drone CLI",
-  "homepage": "https://drone.io",
+  "desc": "✨ A statically typed language for the Erlang VM",
+  "homepage": "https://gleam.run",
   "versions": {
-    "stable": "1.2.0",
+    "stable": "0.4.0",
     "devel": null,
     "head": null,
     "bottle": true
@@ -25,17 +25,17 @@
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
-        "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/drone-cli-1.2.0.catalina.bottle.tar.gz",
-          "sha256": "cde21f2a1c918e095f138b6cccc9870c2a1a76bee8a9a8e3dbee33ab4c54bfbd"
-        },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/drone-cli-1.2.0.mojave.bottle.tar.gz",
-          "sha256": "a059cdbe892dd4a7058636503d690da54ac8fab3eaeff7d1ae32e07229282b1a"
+          "url": "https://homebrew.bintray.com/bottles/gleam-0.4.0.mojave.bottle.tar.gz",
+          "sha256": "3b7d2b2d9c2243737031bb43cbc02a0e82e87057aa7fd7eeeeb702f7b0f6f60a"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/drone-cli-1.2.0.high_sierra.bottle.tar.gz",
-          "sha256": "5753b74f0c5ede30868d431cc877f934eb5e10a7bc59ede9da54d2f3b785fa8b"
+          "url": "https://homebrew.bintray.com/bottles/gleam-0.4.0.high_sierra.bottle.tar.gz",
+          "sha256": "896ed7d9f5146c1ed18df18f88271194ba7d2d927bb07625186ee665e3750e59"
+        },
+        "sierra": {
+          "url": "https://homebrew.bintray.com/bottles/gleam-0.4.0.sierra.bottle.tar.gz",
+          "sha256": "90e947bd357a947529cdf47f56e8a73ac318d672fefdc88966ff1242ad88005e"
         }
       }
     }
@@ -46,10 +46,11 @@
 
   ],
   "build_dependencies": [
-    "go"
+    "rust"
   ],
   "dependencies": [
-
+    "erlang",
+    "rebar3"
   ],
   "recommended_dependencies": [
 
