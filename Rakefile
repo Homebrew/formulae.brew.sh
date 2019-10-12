@@ -25,10 +25,10 @@ task :cask do
   sh "brew", "ruby", "script/generate-cask.rb"
 end
 
-def generate_analytics?
+def generate_analytics?(os = nil)
   return false if ENV["HOMEBREW_NO_ANALYTICS"]
 
-  json_file = "_data/analytics/build-error/30d.json"
+  json_file = "_data/analytics#{"-linux" if os}/build-error/30d.json"
   return true unless File.exist?(json_file)
 
   json = JSON.parse(IO.read(json_file))
@@ -93,7 +93,7 @@ end
 
 desc "Dump Linux analytics data"
 task :analytics_linux do
-  next unless generate_analytics?
+  next unless generate_analytics?("linux")
 
   setup_analytics
 
