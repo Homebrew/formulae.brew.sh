@@ -61,8 +61,15 @@ def setup_analytics
 end
 
 def generate_analytics_files(os)
-  core_tap_name = os == "mac" ? "homebrew-core" : "linuxbrew-core"
-  analytics_data_path = "_data/analytics#{"-linux" if os == "linux"}"
+  analytics_data_path = "_data/analytics"
+  core_tap_name = "homebrew-core"
+  formula_analytics_os_arg = nil
+
+  if os == "linux"
+    analytics_data_path = "_data/analytics-linux"
+    core_tap_name = "linuxbrew-core"
+    formula_analytics_os_arg = "--linux"
+  end
 
   %w[build-error install cask-install install-on-request os-version
      core-build-error core-install core-install-on-request].each do |category|
@@ -84,7 +91,7 @@ def generate_analytics_files(os)
     %w[30 90 365].each do |days|
       next if days != "30" && category_name == "build-error/#{core_tap_name}"
 
-      sh "brew formula-analytics #{"--linux" if os == "linux"} --days-ago=#{days} --json --#{category} " \
+      sh "brew formula-analytics #{formula_analytics_os_arg} --days-ago=#{days} --json --#{category} " \
         "> #{analytics_data_path}/#{category_name}/#{days}d.json"
     end
   end
