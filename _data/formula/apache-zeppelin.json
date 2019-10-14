@@ -11,7 +11,7 @@
   "desc": "Web-based notebook that enables interactive data analytics",
   "homepage": "https://zeppelin.apache.org",
   "versions": {
-    "stable": "0.8.1",
+    "stable": "0.8.2",
     "devel": null,
     "head": "HEAD",
     "bottle": false
@@ -37,8 +37,15 @@
   "optional_dependencies": [
 
   ],
-  "requirements": [
+  "uses_from_macos": [
 
+  ],
+  "requirements": [
+    {
+      "name": "java",
+      "cask": "adoptopenjdk",
+      "download": null
+    }
   ],
   "conflicts_with": [
 
