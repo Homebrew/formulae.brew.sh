@@ -6,16 +6,12 @@ require "date"
 task default: :formula_and_analytics
 
 desc "Dump macOS formulae data"
-task :formulae do
-  ENV["HOMEBREW_FORCE_HOMEBREW_ON_LINUX"] = "1"
-  ENV["HOMEBREW_NO_COLOR"] = "1"
-  sh "brew", "ruby", "script/generate.rb"
-end
+task :formulae, [:os] do |task, args|
+  args.with_defaults(:os => "mac")
 
-desc "Dump Linux formulae data"
-task :formulae_linux do
+  ENV["HOMEBREW_FORCE_HOMEBREW_ON_LINUX"] = "1" if args.os == "mac"
   ENV["HOMEBREW_NO_COLOR"] = "1"
-  sh "brew", "ruby", "script/generate-linux.rb"
+  sh "brew", "ruby", "script/generate.rb", args.os
 end
 
 desc "Dump cask data"
@@ -113,7 +109,7 @@ task formula_and_analytics: %i[formulae analytics]
 
 desc "Dump Linux formulae and analytics data"
 task :linux_formula_and_analytics do
-  Rake::Task["formulae_linux"].invoke
+  Rake::Task["formulae"].invoke("linux")
   Rake::Task["analytics"].invoke("linux")
 end
 
