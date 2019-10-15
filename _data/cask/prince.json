@@ -5,28 +5,19 @@
   ],
   "homepage": "https://www.princexml.com/",
   "url": "https://www.princexml.com/download/prince-12.5-macosx.tar.gz",
-  "appcast": null,
+  "appcast": "https://www.princexml.com/download/",
   "version": "12.5",
   "sha256": "d7940c2f60b1e9657db1deb1144b2496cc34c728f650c36b24d6885b964e9aed",
   "artifacts": [
-    {
-      "delete": [
-        "$(brew --prefix)/bin/prince",
-        "$(brew --prefix)/lib/prince"
-      ],
-      "signal": {
+    "preflight (Preflight Block)",
+    [
+      "$(brew --prefix)/Caskroom/prince/12.5/prince-12.5-macosx/prince.wrapper.sh",
+      {
+        "target": "prince"
       }
-    },
-    {
-      "path": "prince-12.5-macosx/install.sh",
-      "args": {
-        "must_succeed": "true",
-        "sudo": "false",
-        "print_stdout": "true"
-      }
-    }
+    ]
   ],
-  "caveats": "Cask prince installs files under $(brew --prefix). The presence of such\nfiles can cause warnings when running `brew doctor`, which is considered\nto be a bug in Homebrew Cask.\n",
+  "caveats": null,
   "depends_on": {
   },
   "conflicts_with": null,
