@@ -86,6 +86,7 @@ def generate_analytics_files(os)
     FileUtils.mkdir_p "#{analytics_data_path}/#{category_name}"
     %w[30 90 365].each do |days|
       next if days != "30" && category_name == "build-error/#{core_tap_name}"
+      next if os == "linux" && category_name == "cask-install"
 
       sh "brew formula-analytics #{formula_analytics_os_arg} --days-ago=#{days} --json --#{category} " \
         "> #{analytics_data_path}/#{category_name}/#{days}d.json"
