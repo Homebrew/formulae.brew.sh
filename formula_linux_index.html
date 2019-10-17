@@ -12,7 +12,8 @@ permalink: /formula-linux/
 
     <tr>
         {%- assign formula = f[1] -%}
-        {%- include formula-linux.html formula=formula -%}
+        {%- assign formula_path = "formula-linux" -%}
+        {%- include formula.html formula_path=formula_path formula=formula -%}
     </tr>
     {%- endfor -%}
 </table>
