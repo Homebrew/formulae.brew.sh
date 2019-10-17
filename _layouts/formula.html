@@ -3,6 +3,7 @@ layout: default
 permalink: :title
 ---
 {%- assign full_name = page.title -%}
+{%- assign formula_path = page.dir | remove: "/" -%}
 {%- assign name = full_name | remove: "@" | remove: "." | replace: "+", "_" -%}
 {%- assign f = site.data.formula[name] -%}
 <h2>{{ f.name }}</h2>
@@ -20,8 +21,12 @@ permalink: :title
     <a href="{{ f.homepage }}">{{ f.homepage }}</a>
 </p>
 
-<p><a href="{{ site.baseurl }}/api/formula/{{ f.name }}.json"><code>/api/formula/{{ f.name }}.json</code> (JSON API)</a></p>
+<p><a href="{{ site.baseurl }}/api/{{ formula_path }}/{{ f.name }}.json"><code>/api/{{ formula_path }}/{{ f.name }}.json</code> (JSON API)</a></p>
+{%- if formula_path == "formula-linux" -%}
+<p><a target="_blank" href="https://github.com/Homebrew/linuxbrew-core/blob/master/Formula/{{ f.name }}.rb">Linux formula code</a> on GitHub</p>
+{%- else -%}
 <p><a target="_blank" href="https://github.com/Homebrew/homebrew-core/blob/master/Formula/{{ f.name }}.rb">Formula code</a> on GitHub</p>
+{%- endif -%}
 
 <p>Current versions:</p>
 <table>
@@ -58,7 +63,7 @@ permalink: :title
     {%- endif -%}
 </table>
 
-{%- include formulae.html formulae=f.versioned_formulae description="Other versions" -%}
+{%- include formulae.html formula_path=formula_path formulae=f.versioned_formulae description="Other versions" -%}
 
 {%- if f.revision > 0 -%}
 <p>Revision: <strong>{{ f.revision }}</strong></p>
@@ -80,10 +85,10 @@ permalink: :title
 </table>
 {%- endif -%}
 
-{%- include formulae.html formulae=f.dependencies description="Depends on" -%}
-{%- include formulae.html formulae=f.recommended_dependencies description="Depends on recommended" -%}
-{%- include formulae.html formulae=f.optional_dependencies description="Depends on optionally" -%}
-{%- include formulae.html formulae=f.build_dependencies description="Depends on when building from source" -%}
+{%- include formulae.html formula_path=formula_path formulae=f.dependencies description="Depends on" -%}
+{%- include formulae.html formula_path=formula_path formulae=f.recommended_dependencies description="Depends on recommended" -%}
+{%- include formulae.html formula_path=formula_path formulae=f.optional_dependencies description="Depends on optionally" -%}
+{%- include formulae.html formula_path=formula_path formulae=f.build_dependencies description="Depends on when building from source" -%}
 
 {%- if f.requirements.size > 0 -%}
 <p>
@@ -114,14 +119,20 @@ permalink: :title
 </table>
 {%- endif -%}
 
-{%- if site.data.analytics.install.homebrew-core["30d"].formulae[full_name].size > 0 -%}
+{%- if formula_path == "formula-linux" -%}
+{%- assign analytics_data_source = "linuxbrew-core" -%}
+{%- else -%}
+{%- assign analytics_data_source = "homebrew-core" -%}
+{%- endif -%}
+
+{%- if site.data.analytics.install[analytics_data_source]["30d"].formulae[full_name].size > 0 -%}
 <p>Analytics:</p>
 <table>
     <tr>
         <th colspan="2">Installs (30 days)</th>
     </tr>
 
-    {%- for fa in site.data.analytics.install.homebrew-core["30d"].formulae[full_name] -%}
+    {%- for fa in site.data.analytics.install[analytics_data_source]["30d"].formulae[full_name] -%}
     <tr>
         <td><code>{{ fa.formula }}</code></td>
         <td class="number-data">{{ fa.count }}</td>
@@ -132,7 +143,7 @@ permalink: :title
         <th colspan="2">Installs on Request (30 days)</th>
     </tr>
 
-    {%- for fa in site.data.analytics.install-on-request.homebrew-core["30d"].formulae[full_name] -%}
+    {%- for fa in site.data.analytics.install-on-request[analytics_data_source]["30d"].formulae[full_name] -%}
     <tr>
         <td><code>{{ fa.formula }}</code></td>
         <td class="number-data">{{ fa.count }}</td>
@@ -143,8 +154,8 @@ permalink: :title
         <th colspan="2">Build Errors (30 days)</th>
     </tr>
 
-    {%- if site.data.analytics.build-error.homebrew-core["30d"].formulae[full_name].size > 0 -%}
-    {%- for fa in site.data.analytics.build-error.homebrew-core["30d"].formulae[full_name] -%}
+    {%- if site.data.analytics.build-error[analytics_data_source]["30d"].formulae[full_name].size > 0 -%}
+    {%- for fa in site.data.analytics.build-error[analytics_data_source]["30d"].formulae[full_name] -%}
     <tr>
         <td><code>{{ fa.formula }}</code></td>
         <td class="number-data">{{ fa.count }}</td>
@@ -162,7 +173,7 @@ permalink: :title
         <th colspan="2">Installs (90 days)</th>
     </tr>
 
-    {%- for fa in site.data.analytics.install.homebrew-core["90d"].formulae[full_name] -%}
+    {%- for fa in site.data.analytics.install[analytics_data_source]["90d"].formulae[full_name] -%}
     <tr>
         <td><code>{{ fa.formula }}</code></td>
         <td class="number-data">{{ fa.count }}</td>
@@ -173,7 +184,7 @@ permalink: :title
         <th colspan="2">Installs on Request (90 days)</th>
     </tr>
 
-    {%- for fa in site.data.analytics.install-on-request.homebrew-core["90d"].formulae[full_name] -%}
+    {%- for fa in site.data.analytics.install-on-request[analytics_data_source]["90d"].formulae[full_name] -%}
     <tr>
         <td><code>{{ fa.formula }}</code></td>
         <td class="number-data">{{ fa.count }}</td>
@@ -184,7 +195,7 @@ permalink: :title
         <th colspan="2">Installs (365 days)</th>
     </tr>
 
-    {%- for fa in site.data.analytics.install.homebrew-core["365d"].formulae[full_name] -%}
+    {%- for fa in site.data.analytics.install[analytics_data_source]["365d"].formulae[full_name] -%}
     <tr>
         <td><code>{{ fa.formula }}</code></td>
         <td class="number-data">{{ fa.count }}</td>
@@ -195,7 +206,7 @@ permalink: :title
         <th colspan="2">Installs on Request (365 days)</th>
     </tr>
 
-    {%- for fa in site.data.analytics.install-on-request.homebrew-core["365d"].formulae[full_name] -%}
+    {%- for fa in site.data.analytics.install-on-request[analytics_data_source]["365d"].formulae[full_name] -%}
     <tr>
         <td><code>{{ fa.formula }}</code></td>
         <td class="number-data">{{ fa.count }}</td>

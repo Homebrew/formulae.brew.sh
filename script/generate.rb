@@ -1,19 +1,14 @@
 #!/usr/bin/env brew ruby
 os = ARGV.first
 
-if os == "mac"
-  formula_dir = formula_filename = "formula"
-elsif os == "linux"
-  formula_dir = "formula-linux"
-  formula_filename = "formula_linux"
-end
+formula_dir = os == "mac" ? "formula" : "formula-linux"
 
 directories = ["_data/#{formula_dir}", "api/#{formula_dir}", "#{formula_dir}"]
 FileUtils.rm_rf directories
 FileUtils.mkdir_p directories
 
-json_template = IO.read "_api_#{formula_filename}.json.in"
-html_template = IO.read "_#{formula_filename}.html.in"
+json_template = IO.read "_api_formula.json.in"
+html_template = IO.read "_formula.html.in"
 
 CoreTap.instance.formula_names.each do |n|
   f = Formulary.factory(n)
