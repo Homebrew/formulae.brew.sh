@@ -9,11 +9,25 @@
   "version": "3.9",
   "sha256": "d185503d1c6cbbc6f770517853bd9ef08dc620f4e7ce3de913251a57e4d450d9",
   "artifacts": [
+    {
+      "quit": "net.freemacsoft.LiteIcon",
+      "delete": [
+        "/Library/PrivilegedHelperTools/net.freemacsoft.LiteIcon.LIHelperTool",
+        "~/Library/Application Support/LiteIcon"
+      ],
+      "launchctl": "net.freemacsoft.LiteIcon.LIHelperTool",
+      "signal": {
+      }
+    },
     [
       "LiteIcon.app"
     ],
     {
-      "trash": "~/Library/Preferences/net.freemacsoft.LiteIcon.plist",
+      "trash": [
+        "~/Library/Preferences/net.freemacsoft.LiteIcon.plist",
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.freemacsoft.liteicon.sfl*",
+        "~/Library/Application Support/CrashReporter/LiteIcon_*.plist"
+      ],
       "signal": {
       }
     }
