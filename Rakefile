@@ -5,11 +5,13 @@ require "date"
 
 task default: :formula_and_analytics
 
-desc "Dump formulae data"
-task :formulae do
-  ENV["HOMEBREW_FORCE_HOMEBREW_ON_LINUX"] = "1"
+desc "Dump macOS formulae data"
+task :formulae, [:os] do |task, args|
+  args.with_defaults(:os => "mac")
+
+  ENV["HOMEBREW_FORCE_HOMEBREW_ON_LINUX"] = "1" if args.os == "mac"
   ENV["HOMEBREW_NO_COLOR"] = "1"
-  sh "brew", "ruby", "script/generate.rb"
+  sh "brew", "ruby", "script/generate.rb", args.os
 end
 
 desc "Dump cask data"
@@ -19,10 +21,10 @@ task :cask do
   sh "brew", "ruby", "script/generate-cask.rb"
 end
 
-def generate_analytics?
+def generate_analytics?(os)
   return false if ENV["HOMEBREW_NO_ANALYTICS"]
 
-  json_file = "_data/analytics/build-error/30d.json"
+  json_file = "_data/analytics#{"-linux" if os == "linux"}/build-error/30d.json"
   return true unless File.exist?(json_file)
 
   json = JSON.parse(IO.read(json_file))
@@ -54,42 +56,66 @@ def setup_analytics
   setup_formula_analytics_cmd
 end
 
-desc "Dump analytics data"
-task :analytics do
-  next unless generate_analytics?
+def generate_analytics_files(os)
+  analytics_data_path = "_data/analytics"
+  core_tap_name = "homebrew-core"
+  formula_analytics_os_arg = nil
 
-  setup_analytics
+  if os == "linux"
+    analytics_data_path = "_data/analytics-linux"
+    core_tap_name = "linuxbrew-core"
+    formula_analytics_os_arg = "--linux"
+  end
 
   %w[build-error install cask-install install-on-request os-version
      core-build-error core-install core-install-on-request].each do |category|
     case category
     when "core-build-error"
       category = "all-core-formulae-json --build-error"
-      category_name = "build-error/homebrew-core"
+      category_name = "build-error/#{core_tap_name}"
     when "core-install"
       category = "all-core-formulae-json --install"
-      category_name = "install/homebrew-core"
+      category_name = "install/#{core_tap_name}"
     when "core-install-on-request"
       category = "all-core-formulae-json --install-on-request"
-      category_name = "install-on-request/homebrew-core"
+      category_name = "install-on-request/#{core_tap_name}"
     else
       category_name = category
     end
-    FileUtils.mkdir_p "_data/analytics/#{category_name}"
-    %w[30 90 365].each do |days|
-      next if days != "30" && category_name == "build-error/homebrew-core"
 
-      sh "brew formula-analytics --days-ago=#{days} --json --#{category} " \
-        "> _data/analytics/#{category_name}/#{days}d.json"
+    FileUtils.mkdir_p "#{analytics_data_path}/#{category_name}"
+    %w[30 90 365].each do |days|
+      next if days != "30" && category_name == "build-error/#{core_tap_name}"
+      next if os == "linux" && %w[cask-install os-version].include?(category_name)
+
+      sh "brew formula-analytics #{formula_analytics_os_arg} --days-ago=#{days} --json --#{category} " \
+        "> #{analytics_data_path}/#{category_name}/#{days}d.json"
     end
   end
 end
 
-desc "Dump formulae and analytics data"
+desc "Dump analytics data"
+task :analytics, [:os] do |task, args|
+  args.with_defaults(:os => "mac")
+
+  next unless generate_analytics?(args.os)
+
+  setup_analytics
+
+  generate_analytics_files(args.os)
+end
+
+desc "Dump macOS formulae and analytics data"
 task formula_and_analytics: %i[formulae analytics]
 
+desc "Dump Linux formulae and analytics data"
+task :linux_formula_and_analytics do
+  Rake::Task["formulae"].invoke("linux")
+  Rake::Task["analytics"].invoke("linux")
+end
+
 desc "Build the site"
-task build: [:formula_and_analytics, :cask] do
+task build: [:formula_and_analytics, :cask, :linux_formula_and_analytics] do
   sh "bundle", "exec", "jekyll", "build"
 end
 

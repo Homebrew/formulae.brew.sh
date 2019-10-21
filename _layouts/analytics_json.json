@@ -1,10 +1,16 @@
 ---
 ---
-{%- assign days = page.name | remove: ".json" -%}
+{%- assign analytics_path = page.dir | split: "/" -%}
+{%- assign analytics_path = analytics_path[2] -%}
 {%- if page.homebrew-core -%}
-    {%- assign json =
-        site.data.analytics[page.category].homebrew-core[days] -%}
+{%- assign analytics_data_source = "homebrew-core" -%}
+{%- elsif page.linuxbrew-core -%}
+{%- assign analytics_data_source = "linuxbrew-core" -%}
+{%- endif -%}
+{%- assign days = page.name | remove: ".json" -%}
+{%- if analytics_data_source -%}
+    {%- assign json = site.data[analytics_path][page.category][analytics_data_source][days] -%}
 {%- else -%}
-    {%- assign json = site.data.analytics[page.category][days] -%}
+    {%- assign json = site.data[analytics_path][page.category][days] -%}
 {%- endif -%}
 {{ json | jsonify }}

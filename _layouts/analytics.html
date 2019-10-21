@@ -1,10 +1,17 @@
 ---
 layout: base
 ---
-{%- assign json = site.data.analytics[page.category][page.days] -%}
+{%- assign analytics_path = page.dir | split: "/" -%}
+{%- assign analytics_path = analytics_path[1] -%}
+{%- if analytics_path == "analytics-linux" -%}
+{%- assign formula_path = "formula-linux" -%}
+{%- else -%}
+{%- assign formula_path = "formula" -%}
+{%- endif -%}
+{%- assign json = site.data[analytics_path][page.category][page.days] -%}
 <h2>{{ page.category_pretty }} Events</h2>
 
-<h3><a href="{{ site.baseurl }}/api/analytics/{{ page.category }}/{{ page.days}}.json"><code>/api/analytics/{{ page.category }}/{{ page.days}}.json</code> (JSON API)</a></h3>
+<h3><a href="{{ site.baseurl }}/api/{{ analytics_path }}/{{ page.category }}/{{ page.days}}.json"><code>/api/{{ analytics_path }}/{{ page.category }}/{{ page.days}}.json</code> (JSON API)</a></h3>
 
 <table class="full-width">
   <tr>
@@ -30,9 +37,9 @@ layout: base
     {%- else -%}
       {%- assign name = item.formula | split: " " | first -%}
       {%- assign data_name = name | remove: "@" | remove: "." | replace: "+", "_" -%}
-      {%- assign formula_data = site.data.formula[data_name] -%}
+      {%- assign formula_data = site.data[formula_path][data_name] -%}
       {%- if name == formula_data.name -%}
-        <a href="{{ site.baseurl }}/formula/{{ name }}">
+        <a href="{{ site.baseurl }}/{{ formula_path }}/{{ name }}">
           <code>{{ item.formula }}</code>
         </a>
       {%- else -%}
