@@ -5,7 +5,7 @@ permalink: :title
 {%- assign full_name = page.title -%}
 {%- assign formula_path = page.dir | remove: "/" -%}
 {%- assign name = full_name | remove: "@" | remove: "." | replace: "+", "_" -%}
-{%- assign f = site.data.formula[name] -%}
+{%- assign f = site.data[formula_path][name] -%}
 <h2>{{ f.name }}</h2>
 {%- if f.aliases.size > 0 -%}
 <p>
