@@ -1,0 +1,88 @@
+{
+  "name": "isc-dhcp",
+  "full_name": "isc-dhcp",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Production-grade DHCP solution",
+  "homepage": "https://www.isc.org/software/dhcp",
+  "versions": {
+    "stable": "4.4.1",
+    "devel": null,
+    "head": null,
+    "bottle": true
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+      "prefix": "/home/linuxbrew/.linuxbrew",
+      "root_url": "https://linuxbrew.bintray.com/bottles",
+      "files": {
+        "catalina": {
+          "url": "https://linuxbrew.bintray.com/bottles/isc-dhcp-4.4.1.catalina.bottle.tar.gz",
+          "sha256": "d210dbeb3f76fbad9f2023b80f18090e513a41f62b14ce4e60017cc3209c5193"
+        },
+        "mojave": {
+          "url": "https://linuxbrew.bintray.com/bottles/isc-dhcp-4.4.1.mojave.bottle.tar.gz",
+          "sha256": "d9961821503dd2dbd1e81001cdc58125e92d1c33ecd1d46d834a64ebc59e27d2"
+        },
+        "high_sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/isc-dhcp-4.4.1.high_sierra.bottle.tar.gz",
+          "sha256": "eea8d134e6003550ee99f8e7d81d2869fa0eb73f1986e06073561c630ed2966c"
+        },
+        "sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/isc-dhcp-4.4.1.sierra.bottle.tar.gz",
+          "sha256": "461dd0ba33e5d16684db8a65f757cd3e0a1c6e9a5d5ba657a20819ab6acc3ff4"
+        },
+        "el_capitan": {
+          "url": "https://linuxbrew.bintray.com/bottles/isc-dhcp-4.4.1.el_capitan.bottle.tar.gz",
+          "sha256": "ae9ef8eb1f904486ec7267b381d9703608fb7d7420b5e9c05bbae1c9e725085f"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/isc-dhcp-4.4.1.x86_64_linux.bottle.tar.gz",
+          "sha256": "c18196be18b963c6bcbf82004f919bc17ffc87b8e53811546c094c1127c80a37"
+        }
+      }
+    }
+  },
+  "keg_only": false,
+  "bottle_disabled": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+
+  ],
+  "dependencies": [
+
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "This install of dhcpd expects config files to be in $(brew --prefix)/etc.\nAll state files (leases and pids) are stored in $(brew --prefix)/var/dhcpd.\n\nDhcpd needs to run as root since it listens on privileged ports.\n\nThere are two plists because a single dhcpd process may do either\nDHCPv4 or DHCPv6 but not both. Use one or both as needed.\n\nNote that you must create the appropriate config files before starting\nthe services or dhcpd will refuse to run.\n  DHCPv4: $(brew --prefix)/etc/dhcpd.conf\n  DHCPv6: $(brew --prefix)/etc/dhcpd6.conf\n\nSample config files may be found in $(brew --prefix)/etc.\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
+}

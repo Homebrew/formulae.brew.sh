@@ -1,0 +1,89 @@
+{
+  "name": "docker-machine-driver-hyperkit",
+  "full_name": "docker-machine-driver-hyperkit",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Docker Machine driver for hyperkit",
+  "homepage": "https://github.com/machine-drivers/docker-machine-driver-hyperkit",
+  "versions": {
+    "stable": "1.0.0",
+    "devel": null,
+    "head": null,
+    "bottle": true
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any_skip_relocation",
+      "prefix": "/home/linuxbrew/.linuxbrew",
+      "root_url": "https://linuxbrew.bintray.com/bottles",
+      "files": {
+        "catalina": {
+          "url": "https://linuxbrew.bintray.com/bottles/docker-machine-driver-hyperkit-1.0.0.catalina.bottle.tar.gz",
+          "sha256": "970f9a0f226f1dde7d60e0878a05cef43b503e79f669e2f69fa6e2fd48cfb7f5"
+        },
+        "mojave": {
+          "url": "https://linuxbrew.bintray.com/bottles/docker-machine-driver-hyperkit-1.0.0.mojave.bottle.tar.gz",
+          "sha256": "1b3ba8ce6ae05b27463ef2b8ebfbdeec911a0b6f1ba20188279b79dac81b4754"
+        },
+        "high_sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/docker-machine-driver-hyperkit-1.0.0.high_sierra.bottle.tar.gz",
+          "sha256": "41aecb9ebaf6d8b45780cef4acd16a3b40b4e6be0020d1aae8a68d4d314adeda"
+        },
+        "sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/docker-machine-driver-hyperkit-1.0.0.sierra.bottle.tar.gz",
+          "sha256": "4cdd1e0ed1b3d36dc19b31ad22d1f03578221504ce4c731ba30c0179f2c1ee00"
+        },
+        "el_capitan": {
+          "url": "https://linuxbrew.bintray.com/bottles/docker-machine-driver-hyperkit-1.0.0.el_capitan.bottle.tar.gz",
+          "sha256": "92bef33ec9ad5fbdfb887fcabe550603c886065c8ec3c677732a55f84a4c7520"
+        }
+      }
+    }
+  },
+  "keg_only": false,
+  "bottle_disabled": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+    "dep",
+    "go"
+  ],
+  "dependencies": [
+    "docker-machine"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+    {
+      "name": "macos",
+      "cask": null,
+      "download": null
+    }
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "This driver requires superuser privileges to access the hypervisor. To\nenable, execute:\n  sudo chown root:wheel $(brew --prefix)/opt/docker-machine-driver-hyperkit/bin/docker-machine-driver-hyperkit\n  sudo chmod u+s $(brew --prefix)/opt/docker-machine-driver-hyperkit/bin/docker-machine-driver-hyperkit\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
+}

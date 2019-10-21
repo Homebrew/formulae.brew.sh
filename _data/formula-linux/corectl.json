@@ -1,0 +1,88 @@
+{
+  "name": "corectl",
+  "full_name": "corectl",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "CoreOS over macOS made very simple",
+  "homepage": "https://github.com/TheNewNormal/corectl",
+  "versions": {
+    "stable": "0.7.18",
+    "devel": null,
+    "head": "HEAD",
+    "bottle": true
+  },
+  "revision": 2,
+  "version_scheme": 0,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any",
+      "prefix": "/home/linuxbrew/.linuxbrew",
+      "root_url": "https://linuxbrew.bintray.com/bottles",
+      "files": {
+        "mojave": {
+          "url": "https://linuxbrew.bintray.com/bottles/corectl-0.7.18_2.mojave.bottle.tar.gz",
+          "sha256": "b3d030cf97c738ef427b24cd492a7b746b738be84f234f5904eedbff14661570"
+        },
+        "high_sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/corectl-0.7.18_2.high_sierra.bottle.tar.gz",
+          "sha256": "74527235d27b207a4b4331f16cfbb4f5b72b1dac36f9c9a4470626c32e882d5f"
+        },
+        "sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/corectl-0.7.18_2.sierra.bottle.tar.gz",
+          "sha256": "89e963f61102d26d5fe756b06f50aa73bf9f827f81f92cefa2da6c195b7865da"
+        }
+      }
+    }
+  },
+  "keg_only": false,
+  "bottle_disabled": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+    "aspcud",
+    "go",
+    "ocaml",
+    "opam"
+  ],
+  "dependencies": [
+    "libev"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+    {
+      "name": "x11",
+      "cask": "xquartz",
+      "download": "https://xquartz.macosforge.org"
+    },
+    {
+      "name": "macos",
+      "cask": null,
+      "download": null
+    }
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "Starting with 0.7 \"corectl\" has a client/server architecture. So before you\ncan use the \"corectl\" cli, you have to start the server daemon:\n\n$ corectld start\n\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
+}

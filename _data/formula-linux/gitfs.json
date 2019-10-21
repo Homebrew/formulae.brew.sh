@@ -1,0 +1,85 @@
+{
+  "name": "gitfs",
+  "full_name": "gitfs",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Version controlled file system",
+  "homepage": "https://www.presslabs.com/gitfs",
+  "versions": {
+    "stable": "0.4.5.1",
+    "devel": null,
+    "head": "HEAD",
+    "bottle": true
+  },
+  "revision": 4,
+  "version_scheme": 0,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any",
+      "prefix": "/home/linuxbrew/.linuxbrew",
+      "root_url": "https://linuxbrew.bintray.com/bottles",
+      "files": {
+        "catalina": {
+          "url": "https://linuxbrew.bintray.com/bottles/gitfs-0.4.5.1_4.catalina.bottle.tar.gz",
+          "sha256": "36de66468f7f3faee62783a65c87ebfd5e0cf3a78a20bcc6c4bb7a6bf753f98b"
+        },
+        "mojave": {
+          "url": "https://linuxbrew.bintray.com/bottles/gitfs-0.4.5.1_4.mojave.bottle.tar.gz",
+          "sha256": "7859077b249dd271735ef57f6472aefec42708ed8efafc472f81ff31e77d0726"
+        },
+        "high_sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/gitfs-0.4.5.1_4.high_sierra.bottle.tar.gz",
+          "sha256": "9f70c9b930752bc09c7f141b7a77990ed96b9dd995c087f6b861831e249830a2"
+        },
+        "sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/gitfs-0.4.5.1_4.sierra.bottle.tar.gz",
+          "sha256": "5a85dbfb02e93e66495b512a10348242f7e6380d690af2aebc8bd4b48d2e0f22"
+        }
+      }
+    }
+  },
+  "keg_only": false,
+  "bottle_disabled": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+
+  ],
+  "dependencies": [
+    "libgit2",
+    "python"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+    {
+      "name": "osxfuse",
+      "cask": "osxfuse",
+      "download": "https://github.com/libfuse/libfuse"
+    }
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "gitfs clones repos in /var/lib/gitfs. You can either create it with\nsudo mkdir -m 1777 /var/lib/gitfs or use another folder with the\nrepo_path argument.\n\nAlso make sure OSXFUSE is properly installed by running brew info osxfuse.\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
+}

@@ -1,0 +1,84 @@
+{
+  "name": "pdnsd",
+  "full_name": "pdnsd",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Proxy DNS server with permanent caching",
+  "homepage": "http://members.home.nl/p.a.rombouts/pdnsd/",
+  "versions": {
+    "stable": "1.2.9a-par",
+    "devel": null,
+    "head": null,
+    "bottle": true
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "bottle": {
+    "stable": {
+      "rebuild": 2,
+      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+      "prefix": "/home/linuxbrew/.linuxbrew",
+      "root_url": "https://linuxbrew.bintray.com/bottles",
+      "files": {
+        "catalina": {
+          "url": "https://linuxbrew.bintray.com/bottles/pdnsd-1.2.9a-par.catalina.bottle.2.tar.gz",
+          "sha256": "125b690bbac734558cd9a4510c1336e2a92c3fd4748ba2ed216af9a5041c5d60"
+        },
+        "mojave": {
+          "url": "https://linuxbrew.bintray.com/bottles/pdnsd-1.2.9a-par.mojave.bottle.2.tar.gz",
+          "sha256": "822ab7ede7c626ab8cb0c5e7340f3896cdef7cc112c8d9843e55d601f5847297"
+        },
+        "high_sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/pdnsd-1.2.9a-par.high_sierra.bottle.2.tar.gz",
+          "sha256": "be218973e8fe1d807e7d9ec2762cab2a9968ce302fb46fb89974a686c1afcc43"
+        },
+        "sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/pdnsd-1.2.9a-par.sierra.bottle.2.tar.gz",
+          "sha256": "81c4852b1093820909afc140f052f732cbd94e428d9aff261b90d74cb4935b09"
+        },
+        "el_capitan": {
+          "url": "https://linuxbrew.bintray.com/bottles/pdnsd-1.2.9a-par.el_capitan.bottle.2.tar.gz",
+          "sha256": "1fa2f1f6ba9fc4fe710c1dc1d5bfb2b9663c557f5cdddf3a2fff8394f138a08f"
+        }
+      }
+    }
+  },
+  "keg_only": false,
+  "bottle_disabled": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+
+  ],
+  "dependencies": [
+
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "This install of \"pdnsd\" expects config files to be in $(brew --prefix)/etc\nAll state files (status and cache) are stored in $(brew --prefix)/var/cache/pdnsd.\n\npdnsd needs to run as root since it listens on privileged ports.\n\nSample config file can be found at $(brew --prefix)/etc/pdnsd.conf.sample.\n\nNote that you must create the config file before starting the service,\nand change ownership to \"root\" or pdnsd will refuse to run:\n  sudo chown root $(brew --prefix)/etc/pdnsd.conf\n\nFor other related utilities, e.g. pdnsd-ctl, to run, change the ownership\nto the user (default: nobody) running the service:\n  sudo chown -R nobody $(brew --prefix)/var/log/pdnsd.log $(brew --prefix)/var/cache/pdnsd\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
+}

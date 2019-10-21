@@ -1,0 +1,80 @@
+{
+  "name": "siege",
+  "full_name": "siege",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "HTTP regression testing and benchmarking utility",
+  "homepage": "https://www.joedog.org/siege-home/",
+  "versions": {
+    "stable": "4.0.4",
+    "devel": null,
+    "head": null,
+    "bottle": true
+  },
+  "revision": 2,
+  "version_scheme": 0,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+      "prefix": "/home/linuxbrew/.linuxbrew",
+      "root_url": "https://linuxbrew.bintray.com/bottles",
+      "files": {
+        "catalina": {
+          "url": "https://linuxbrew.bintray.com/bottles/siege-4.0.4_2.catalina.bottle.tar.gz",
+          "sha256": "6072653be5dfab7b9f5b2154f060daababdf65ebc3cb0a5bdb1cf9ff2b95e1b2"
+        },
+        "mojave": {
+          "url": "https://linuxbrew.bintray.com/bottles/siege-4.0.4_2.mojave.bottle.tar.gz",
+          "sha256": "8a057346938d661b2a4b2cf6523da41a76bdc9a26b76953b3e301763f1b1c804"
+        },
+        "high_sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/siege-4.0.4_2.high_sierra.bottle.tar.gz",
+          "sha256": "2313774da1f8716dd225cfe13b12808ad23af54ffa2d477dd90bdd7bef16380c"
+        },
+        "sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/siege-4.0.4_2.sierra.bottle.tar.gz",
+          "sha256": "3ce11d6b7f693f0f3da024c7e8a1341d57b21d532bef16f414064300998fcedb"
+        }
+      }
+    }
+  },
+  "keg_only": false,
+  "bottle_disabled": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+
+  ],
+  "dependencies": [
+    "openssl@1.1"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "macOS has only 16K ports available that won't be released until socket\nTIME_WAIT is passed. The default timeout for TIME_WAIT is 15 seconds.\nConsider reducing in case of available port bottleneck.\n\nYou can check whether this is a problem with netstat:\n\n    # sysctl net.inet.tcp.msl\n    net.inet.tcp.msl: 15000\n\n    # sudo sysctl -w net.inet.tcp.msl=1000\n    net.inet.tcp.msl: 15000 -> 1000\n\nRun siege.config to create the ~/.siegerc config file.\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
+}

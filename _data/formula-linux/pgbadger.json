@@ -1,0 +1,80 @@
+{
+  "name": "pgbadger",
+  "full_name": "pgbadger",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Log analyzer for PostgreSQL",
+  "homepage": "https://pgbadger.darold.net/",
+  "versions": {
+    "stable": "11.1",
+    "devel": null,
+    "head": "HEAD",
+    "bottle": true
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any_skip_relocation",
+      "prefix": "/home/linuxbrew/.linuxbrew",
+      "root_url": "https://linuxbrew.bintray.com/bottles",
+      "files": {
+        "catalina": {
+          "url": "https://linuxbrew.bintray.com/bottles/pgbadger-11.1.catalina.bottle.tar.gz",
+          "sha256": "3738113af92e8830126eb376b23650e6da86de99f1d475cbb468f4d976be1483"
+        },
+        "mojave": {
+          "url": "https://linuxbrew.bintray.com/bottles/pgbadger-11.1.mojave.bottle.tar.gz",
+          "sha256": "3738113af92e8830126eb376b23650e6da86de99f1d475cbb468f4d976be1483"
+        },
+        "high_sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/pgbadger-11.1.high_sierra.bottle.tar.gz",
+          "sha256": "50dd1d8fce4933490a489f2a5a94cd4a25900dea447a2e415897d703ae82a4a7"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/pgbadger-11.1.x86_64_linux.bottle.tar.gz",
+          "sha256": "6fb3d4495f066c6a6e2c0b8752901201a11c6d8fc8ed958903a792ae5675e3e5"
+        }
+      }
+    }
+  },
+  "keg_only": false,
+  "bottle_disabled": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+
+  ],
+  "dependencies": [
+
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "You must configure your PostgreSQL server before using pgBadger.\nEdit postgresql.conf (in $(brew --prefix)/var/postgres if you use Homebrew's\nPostgreSQL), set the following parameters, and restart PostgreSQL:\n\n  log_destination = 'stderr'\n  log_line_prefix = '%t [%p]: [%l-1] user=%u,db=%d '\n  log_statement = 'none'\n  log_duration = off\n  log_min_duration_statement = 0\n  log_checkpoints = on\n  log_connections = on\n  log_disconnections = on\n  log_lock_waits = on\n  log_temp_files = 0\n  lc_messages = 'C'\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
+}

@@ -1,0 +1,80 @@
+{
+  "name": "dnscrypt-proxy",
+  "full_name": "dnscrypt-proxy",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Secure communications between a client and a DNS resolver",
+  "homepage": "https://github.com/jedisct1/dnscrypt-proxy",
+  "versions": {
+    "stable": "2.0.28",
+    "devel": null,
+    "head": "HEAD",
+    "bottle": true
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any_skip_relocation",
+      "prefix": "/home/linuxbrew/.linuxbrew",
+      "root_url": "https://linuxbrew.bintray.com/bottles",
+      "files": {
+        "catalina": {
+          "url": "https://linuxbrew.bintray.com/bottles/dnscrypt-proxy-2.0.28.catalina.bottle.tar.gz",
+          "sha256": "9f3a2d3d62c02b5e000ce7edbb058a3874fdd64ece753c79a34857a8f9cfe0cd"
+        },
+        "mojave": {
+          "url": "https://linuxbrew.bintray.com/bottles/dnscrypt-proxy-2.0.28.mojave.bottle.tar.gz",
+          "sha256": "37f1e8504ba851197bfe68952fd915ff0822b69e40ae5d4b9dff32eb28695d46"
+        },
+        "high_sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/dnscrypt-proxy-2.0.28.high_sierra.bottle.tar.gz",
+          "sha256": "43e41deee38f383fbb3931269243dd27e3618b416356b9c1a83fb3dc209bdc52"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/dnscrypt-proxy-2.0.28.x86_64_linux.bottle.tar.gz",
+          "sha256": "1de1435ca5947b1898565c528cfd7bc2acfcb538dfaac7fcf107231e6acaf55e"
+        }
+      }
+    }
+  },
+  "keg_only": false,
+  "bottle_disabled": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+    "go"
+  ],
+  "dependencies": [
+
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "After starting dnscrypt-proxy, you will need to point your\nlocal DNS server to 127.0.0.1. You can do this by going to\nSystem Preferences > \"Network\" and clicking the \"Advanced...\"\nbutton for your interface. You will see a \"DNS\" tab where you\ncan click \"+\" and enter 127.0.0.1 in the \"DNS Servers\" section.\n\nBy default, dnscrypt-proxy runs on localhost (127.0.0.1), port 53,\nbalancing traffic across a set of resolvers. If you would like to\nchange these settings, you will have to edit the configuration file:\n  $(brew --prefix)/etc/dnscrypt-proxy.toml\n\nTo check that dnscrypt-proxy is working correctly, open Terminal and enter the\nfollowing command. Replace en1 with whatever network interface you're using:\n\n  sudo tcpdump -i en1 -vvv 'port 443'\n\nYou should see a line in the result that looks like this:\n\n resolver.dnscrypt.info\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
+}

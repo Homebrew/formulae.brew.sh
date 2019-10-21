@@ -1,0 +1,76 @@
+{
+  "name": "runit",
+  "full_name": "runit",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Collection of tools for managing UNIX services",
+  "homepage": "http://smarden.org/runit",
+  "versions": {
+    "stable": "2.1.2",
+    "devel": null,
+    "head": null,
+    "bottle": true
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "bottle": {
+    "stable": {
+      "rebuild": 1,
+      "cellar": ":any_skip_relocation",
+      "prefix": "/home/linuxbrew/.linuxbrew",
+      "root_url": "https://linuxbrew.bintray.com/bottles",
+      "files": {
+        "catalina": {
+          "url": "https://linuxbrew.bintray.com/bottles/runit-2.1.2.catalina.bottle.1.tar.gz",
+          "sha256": "c6e5b49ab3601824db1969967c5ba4a0d35fa65841cfa2ec1d50fcca968fcf05"
+        },
+        "mojave": {
+          "url": "https://linuxbrew.bintray.com/bottles/runit-2.1.2.mojave.bottle.1.tar.gz",
+          "sha256": "3c684c031305f98a2d24e904b6fc3301a71f0089e84e814028bad8ab05658cae"
+        },
+        "high_sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/runit-2.1.2.high_sierra.bottle.1.tar.gz",
+          "sha256": "a66fbfb0258db267c5a3a3d7790fe4b5224478e7ecc1377a9a877118d5e27be5"
+        }
+      }
+    }
+  },
+  "keg_only": false,
+  "bottle_disabled": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+
+  ],
+  "dependencies": [
+
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "This formula does not install runit as a replacement for init.\nThe service directory is $(brew --prefix)/var/service instead of /service.\n\nA system service that runs runsvdir with the default service directory is\nprovided. Alternatively you can run runsvdir manually:\n\n     runsvdir -P $(brew --prefix)/var/service\n\nDepending on the services managed by runit, this may need to start as root.\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
+}

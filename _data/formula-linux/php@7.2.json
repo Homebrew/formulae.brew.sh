@@ -1,0 +1,109 @@
+{
+  "name": "php@7.2",
+  "full_name": "php@7.2",
+  "oldname": "php72",
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "General-purpose scripting language",
+  "homepage": "https://www.php.net/",
+  "versions": {
+    "stable": "7.2.23",
+    "devel": null,
+    "head": null,
+    "bottle": true
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+      "prefix": "/home/linuxbrew/.linuxbrew",
+      "root_url": "https://linuxbrew.bintray.com/bottles",
+      "files": {
+        "catalina": {
+          "url": "https://linuxbrew.bintray.com/bottles/php@7.2-7.2.23.catalina.bottle.tar.gz",
+          "sha256": "41a7fcfa4f3b1f127d920e8c19d099d1933e2881f496621092f1ed28c74c7982"
+        },
+        "mojave": {
+          "url": "https://linuxbrew.bintray.com/bottles/php@7.2-7.2.23.mojave.bottle.tar.gz",
+          "sha256": "b326850a31a4819aea906491947bc9184e2c32750144b909c16969961268e84c"
+        },
+        "high_sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/php@7.2-7.2.23.high_sierra.bottle.tar.gz",
+          "sha256": "c520fa257132cc96057f7bac4c966ed0e1b8f78b32189c96bc6a41ddf561624c"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/php@7.2-7.2.23.x86_64_linux.bottle.tar.gz",
+          "sha256": "9e3081df9ac83aa7380339614ee2fda8f5a244cf0d47958f5d31152687726871"
+        }
+      }
+    }
+  },
+  "keg_only": true,
+  "bottle_disabled": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+    "httpd",
+    "pkg-config",
+    "xz"
+  ],
+  "dependencies": [
+    "apr",
+    "apr-util",
+    "argon2",
+    "aspell",
+    "autoconf",
+    "curl",
+    "freetds",
+    "freetype",
+    "gettext",
+    "glib",
+    "gmp",
+    "icu4c",
+    "jpeg",
+    "libpng",
+    "libpq",
+    "libsodium",
+    "libzip",
+    "openldap",
+    "openssl@1.1",
+    "sqlite",
+    "tidy-html5",
+    "unixodbc",
+    "webp",
+    "bzip2",
+    "libedit",
+    "libxml2",
+    "libxslt",
+    "zlib"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "To enable PHP in Apache add the following to httpd.conf and restart Apache:\n    LoadModule php7_module $(brew --prefix)/opt/php@7.2/lib/httpd/modules/libphp7.so\n\n    <FilesMatch \\.php$>\n        SetHandler application/x-httpd-php\n    </FilesMatch>\n\nFinally, check DirectoryIndex includes index.php\n    DirectoryIndex index.php index.html\n\nThe php.ini and php-fpm.ini file can be found in:\n    $(brew --prefix)/etc/php/7.2/\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
+}

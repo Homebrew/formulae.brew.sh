@@ -1,0 +1,81 @@
+{
+  "name": "passenger",
+  "full_name": "passenger",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Server for Ruby, Python, and Node.js apps via Apache/NGINX",
+  "homepage": "https://www.phusionpassenger.com/",
+  "versions": {
+    "stable": "6.0.4",
+    "devel": null,
+    "head": "HEAD",
+    "bottle": true
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any",
+      "prefix": "/home/linuxbrew/.linuxbrew",
+      "root_url": "https://linuxbrew.bintray.com/bottles",
+      "files": {
+        "catalina": {
+          "url": "https://linuxbrew.bintray.com/bottles/passenger-6.0.4.catalina.bottle.tar.gz",
+          "sha256": "1666c82a84620312ec62cfb77002ed6e179e2b1293660ba894b54d7233790794"
+        },
+        "mojave": {
+          "url": "https://linuxbrew.bintray.com/bottles/passenger-6.0.4.mojave.bottle.tar.gz",
+          "sha256": "24321dbcff81680db700a4db7b51ec3e0f3ac0b529da65472dc31d16cb2274ec"
+        },
+        "high_sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/passenger-6.0.4.high_sierra.bottle.tar.gz",
+          "sha256": "ed377d83606fa170504a5eef8616e565a3bd13a9df2039ad6b512aa11356ef65"
+        },
+        "sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/passenger-6.0.4.sierra.bottle.tar.gz",
+          "sha256": "0953ddc8a300558ce56392181435f98760afa469fd12bbe4664ddaa471c7e8ff"
+        }
+      }
+    }
+  },
+  "keg_only": false,
+  "bottle_disabled": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+    "nginx"
+  ],
+  "dependencies": [
+    "openssl@1.1",
+    "pcre"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "To activate Phusion Passenger for Nginx, run:\n  brew install nginx\nAnd add the following to $(brew --prefix)/etc/nginx/nginx.conf at the top scope (outside http{}):\n  load_module $(brew --prefix)/opt/passenger/libexec/modules/ngx_http_passenger_module.so;\nAnd add the following to $(brew --prefix)/etc/nginx/nginx.conf in the http scope:\n  passenger_root $(brew --prefix)/opt/passenger/libexec/src/ruby_supportlib/phusion_passenger/locations.ini;\n  passenger_ruby /usr/bin/ruby;\n\nTo activate Phusion Passenger for Apache, create /etc/apache2/other/passenger.conf:\n  LoadModule passenger_module $(brew --prefix)/opt/passenger/libexec/buildout/apache2/mod_passenger.so\n  PassengerRoot $(brew --prefix)/opt/passenger/libexec/src/ruby_supportlib/phusion_passenger/locations.ini\n  PassengerDefaultRuby /usr/bin/ruby\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
+}

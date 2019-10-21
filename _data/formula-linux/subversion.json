@@ -1,0 +1,104 @@
+{
+  "name": "subversion",
+  "full_name": "subversion",
+  "oldname": null,
+  "aliases": [
+    "subversion@1.12",
+    "svn"
+  ],
+  "versioned_formulae": [
+    "subversion@1.8"
+  ],
+  "desc": "Version control system designed to be a better CVS",
+  "homepage": "https://subversion.apache.org/",
+  "versions": {
+    "stable": "1.12.2",
+    "devel": null,
+    "head": "HEAD",
+    "bottle": true
+  },
+  "revision": 1,
+  "version_scheme": 0,
+  "bottle": {
+    "stable": {
+      "rebuild": 1,
+      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+      "prefix": "/home/linuxbrew/.linuxbrew",
+      "root_url": "https://linuxbrew.bintray.com/bottles",
+      "files": {
+        "catalina": {
+          "url": "https://linuxbrew.bintray.com/bottles/subversion-1.12.2_1.catalina.bottle.1.tar.gz",
+          "sha256": "8b6f9a588d09d642d8384fa3d331c8d6d1951af7c07dd98af2f6c1bc413ba80d"
+        },
+        "mojave": {
+          "url": "https://linuxbrew.bintray.com/bottles/subversion-1.12.2_1.mojave.bottle.1.tar.gz",
+          "sha256": "645a3295fda5daaa6e640180e3a14bd67ae995623b2b217111aa7e9f01359382"
+        },
+        "high_sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/subversion-1.12.2_1.high_sierra.bottle.1.tar.gz",
+          "sha256": "d84a139907231b750f9defd9e6e4e08357e6892ae99f93297eedc318059efca6"
+        },
+        "sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/subversion-1.12.2_1.sierra.bottle.1.tar.gz",
+          "sha256": "682ed0a48848860718baed5b975ef985628431765f5fef53d9ac4f39bb8e5320"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/subversion-1.12.2_1.x86_64_linux.bottle.1.tar.gz",
+          "sha256": "8128e02cd44fe0c3edbb4af589a72852f45e128f100c4070b449576d451205a0"
+        }
+      }
+    }
+  },
+  "keg_only": false,
+  "bottle_disabled": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+    "adoptopenjdk",
+    "pkg-config",
+    "scons",
+    "swig@3",
+    "libtool"
+  ],
+  "dependencies": [
+    "apr",
+    "apr-util",
+    "gettext",
+    "lz4",
+    "openssl@1.1",
+    "perl",
+    "sqlite",
+    "utf8proc",
+    "expat",
+    "krb5",
+    "libmagic",
+    "adoptopenjdk",
+    "python@2",
+    "ruby",
+    "util-linux",
+    "zlib"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "svntools have been installed to:\n  $(brew --prefix)/opt/subversion/libexec\n\nThe perl bindings are located in various subdirectories of:\n  $(brew --prefix)/opt/subversion/lib/perl5\n\nIf you wish to use the Ruby bindings you may need to add:\n  $(brew --prefix)/lib/ruby\nto your RUBYLIB.\n\nYou may need to link the Java bindings into the Java Extensions folder:\n  sudo mkdir -p /Library/Java/Extensions\n  sudo ln -s $(brew --prefix)/lib/libsvnjavahl-1.dylib /Library/Java/Extensions/libsvnjavahl-1.dylib\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
+}

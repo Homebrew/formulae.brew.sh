@@ -1,0 +1,82 @@
+{
+  "name": "nagios",
+  "full_name": "nagios",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Network monitoring and management system",
+  "homepage": "https://www.nagios.org/",
+  "versions": {
+    "stable": "4.4.5",
+    "devel": null,
+    "head": null,
+    "bottle": true
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+      "prefix": "/home/linuxbrew/.linuxbrew",
+      "root_url": "https://linuxbrew.bintray.com/bottles",
+      "files": {
+        "catalina": {
+          "url": "https://linuxbrew.bintray.com/bottles/nagios-4.4.5.catalina.bottle.tar.gz",
+          "sha256": "770e8375ed603f8d1053503707e34be55a69e3cf34645c95957d5f233c7fd32c"
+        },
+        "mojave": {
+          "url": "https://linuxbrew.bintray.com/bottles/nagios-4.4.5.mojave.bottle.tar.gz",
+          "sha256": "676bab09790305f664681fcca95f430ac73cce4ef64f4aa8589da623288f93cb"
+        },
+        "high_sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/nagios-4.4.5.high_sierra.bottle.tar.gz",
+          "sha256": "86f5e4b1a684a663e5ad8ef29a733e69c9a71a54aaadf4ea3e6abcc21100c89c"
+        },
+        "sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/nagios-4.4.5.sierra.bottle.tar.gz",
+          "sha256": "721ea7aef1cd9d18fdf804a4af417822133acf2fb464c58d006049f9f4c37e9b"
+        }
+      }
+    }
+  },
+  "keg_only": false,
+  "bottle_disabled": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+
+  ],
+  "dependencies": [
+    "gd",
+    "libpng",
+    "nagios-plugins"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "First we need to create a command dir using superhuman powers:\n\n  mkdir -p $(brew --prefix)/var/lib/nagios/rw\n  sudo chgrp _www $(brew --prefix)/var/lib/nagios/rw\n  sudo chmod 2775 $(brew --prefix)/var/lib/nagios/rw\n\nThen install the Nagios web frontend into Apple's build-in Apache:\n\n  1) Turn on Personal Web Sharing.\n\n  2) Load the cgi and php modules by patching /etc/apache2/httpd.conf:\n\n    -#LoadModule php5_module        libexec/apache2/libphp5.so\n    +LoadModule php5_module        libexec/apache2/libphp5.so\n\n    -#LoadModule cgi_module libexec/apache2/mod_cgi.so\n    +LoadModule cgi_module libexec/apache2/mod_cgi.so\n\n  3) Symlink the sample config and create your web account:\n\n    sudo ln -sf $(brew --prefix)/Cellar/nagios/4.4.5/share/nagios.conf /etc/apache2/other/\n    htpasswd -cs $(brew --prefix)/etc/nagios/htpasswd.users nagiosadmin\n    sudo apachectl restart\n\nLog in with your web account (and don't forget to RTFM :-)\n\n  open http://localhost/nagios\n\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
+}

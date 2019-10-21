@@ -1,0 +1,91 @@
+{
+  "name": "fourstore",
+  "full_name": "fourstore",
+  "oldname": null,
+  "aliases": [
+    "4store"
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Efficient, stable RDF database",
+  "homepage": "https://github.com/4store/4store",
+  "versions": {
+    "stable": "1.1.6",
+    "devel": null,
+    "head": null,
+    "bottle": true
+  },
+  "revision": 1,
+  "version_scheme": 0,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+      "prefix": "/home/linuxbrew/.linuxbrew",
+      "root_url": "https://linuxbrew.bintray.com/bottles",
+      "files": {
+        "catalina": {
+          "url": "https://linuxbrew.bintray.com/bottles/fourstore-1.1.6_1.catalina.bottle.tar.gz",
+          "sha256": "e8414af069796d108f66d9676366de2cb6f82d4dbb694a7cbc8ede58e5c646ff"
+        },
+        "mojave": {
+          "url": "https://linuxbrew.bintray.com/bottles/fourstore-1.1.6_1.mojave.bottle.tar.gz",
+          "sha256": "9743086b58984f5b97820b6c591edcbf551f60ae49c9f655c577f7ca50e3de23"
+        },
+        "high_sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/fourstore-1.1.6_1.high_sierra.bottle.tar.gz",
+          "sha256": "abfb1051513308bda54e9e7a6c3e62dad74feafa46e6b739fb33405efb0153e4"
+        },
+        "sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/fourstore-1.1.6_1.sierra.bottle.tar.gz",
+          "sha256": "7a89fcec9a355a501880289ab072d95219e760aad3102f9332a2e7310346155f"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/fourstore-1.1.6_1.x86_64_linux.bottle.tar.gz",
+          "sha256": "9ccb65b284e0b3c48492686ee1fc200296c80a08aaa0fa57f5199fce9723cdb8"
+        }
+      }
+    }
+  },
+  "keg_only": false,
+  "bottle_disabled": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+    "autoconf",
+    "automake",
+    "libtool",
+    "pkg-config"
+  ],
+  "dependencies": [
+    "gettext",
+    "glib",
+    "pcre",
+    "raptor",
+    "rasqal"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "Databases will be created at $(brew --prefix)/var/fourstore.\n\nCreate and start up a database:\n    4s-backend-setup mydb\n    4s-backend mydb\n\nLoad RDF data:\n    4s-import mydb datafile.rdf\n\nStart up HTTP SPARQL server without daemonizing:\n    4s-httpd -p 8000 -D mydb\n\nSee https://4store.danielknoell.de/trac/wiki/Documentation/ for more information.\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
+}

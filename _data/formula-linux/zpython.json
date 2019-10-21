@@ -1,0 +1,81 @@
+{
+  "name": "zpython",
+  "full_name": "zpython",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Embeds a Python interpreter into zsh",
+  "homepage": "https://bitbucket.org/ZyX_I/zsh",
+  "versions": {
+    "stable": "00-5.0.5",
+    "devel": null,
+    "head": "HEAD",
+    "bottle": true
+  },
+  "revision": 1,
+  "version_scheme": 0,
+  "bottle": {
+    "stable": {
+      "rebuild": 1,
+      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+      "prefix": "/home/linuxbrew/.linuxbrew",
+      "root_url": "https://linuxbrew.bintray.com/bottles",
+      "files": {
+        "catalina": {
+          "url": "https://linuxbrew.bintray.com/bottles/zpython-00-5.0.5_1.catalina.bottle.1.tar.gz",
+          "sha256": "96e60fde74aced3f604a886899bc6ae81a428626d7b98f27c38b15eada389a0e"
+        },
+        "mojave": {
+          "url": "https://linuxbrew.bintray.com/bottles/zpython-00-5.0.5_1.mojave.bottle.1.tar.gz",
+          "sha256": "0e46595052e37148376385290c0f0f9be7c6ee14bb958632fc264f830a9c8d74"
+        },
+        "high_sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/zpython-00-5.0.5_1.high_sierra.bottle.1.tar.gz",
+          "sha256": "28224b9114bfc72a79f739a3ca62327a25c22f78d68b8bd6faa46960d21640a0"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/zpython-00-5.0.5_1.x86_64_linux.bottle.1.tar.gz",
+          "sha256": "0b46e4d77bcdc7041a9aab66fb1d8efafb433d142e0c2c15709ac934a73c4970"
+        }
+      }
+    }
+  },
+  "keg_only": false,
+  "bottle_disabled": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+    "autoconf"
+  ],
+  "dependencies": [
+    "python@2",
+    "zsh"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "To use the zpython module in zsh you need to\nadd the following line to your .zshrc:\n\n  module_path=($module_path $(brew --prefix)/lib/zpython)\n\nIf you want to use this with powerline, make sure you set\nit early in .zshrc, before your prompt gets initialized.\n\nAfter reloading your shell you can test with:\n  zmodload zsh/zpython && zpython 'print \"hello world\"'\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
+}

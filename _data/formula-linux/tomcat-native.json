@@ -1,0 +1,83 @@
+{
+  "name": "tomcat-native",
+  "full_name": "tomcat-native",
+  "oldname": null,
+  "aliases": [
+    "libtcnative"
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Lets Tomcat use some native resources for performance",
+  "homepage": "https://tomcat.apache.org/native-doc/",
+  "versions": {
+    "stable": "1.2.23",
+    "devel": null,
+    "head": null,
+    "bottle": true
+  },
+  "revision": 1,
+  "version_scheme": 0,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any",
+      "prefix": "/home/linuxbrew/.linuxbrew",
+      "root_url": "https://linuxbrew.bintray.com/bottles",
+      "files": {
+        "catalina": {
+          "url": "https://linuxbrew.bintray.com/bottles/tomcat-native-1.2.23_1.catalina.bottle.tar.gz",
+          "sha256": "499d10e958763721cb39297d1dbf5a7e6d7ed6f6bdda0c08ee1159af2f4fe974"
+        },
+        "mojave": {
+          "url": "https://linuxbrew.bintray.com/bottles/tomcat-native-1.2.23_1.mojave.bottle.tar.gz",
+          "sha256": "945488a79003f860822a2848a68b69f4443697db9bcee063be5cbf27df7d2424"
+        },
+        "high_sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/tomcat-native-1.2.23_1.high_sierra.bottle.tar.gz",
+          "sha256": "e14b2958741b69ca96218c7a942a35277c6657ef978597ac17ea1a3fd21dfa62"
+        },
+        "sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/tomcat-native-1.2.23_1.sierra.bottle.tar.gz",
+          "sha256": "771ea402f8194159234038dc462bdc3442ed3af9f4a6d1ff5eb3d7babafe8de0"
+        }
+      }
+    }
+  },
+  "keg_only": false,
+  "bottle_disabled": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+    "libtool"
+  ],
+  "dependencies": [
+    "apr",
+    "adoptopenjdk",
+    "openssl@1.1",
+    "tomcat"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "In order for tomcat's APR lifecycle listener to find this library, you'll\nneed to add it to java.library.path. This can be done by adding this line\nto $CATALINA_HOME/bin/setenv.sh\n\n  CATALINA_OPTS=\"$CATALINA_OPTS -Djava.library.path=$(brew --prefix)/opt/tomcat-native/lib\"\n\nIf $CATALINA_HOME/bin/setenv.sh doesn't exist, create it and make it executable.\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
+}

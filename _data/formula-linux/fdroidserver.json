@@ -1,0 +1,86 @@
+{
+  "name": "fdroidserver",
+  "full_name": "fdroidserver",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Create and manage Android app repositories for F-Droid",
+  "homepage": "https://f-droid.org",
+  "versions": {
+    "stable": "1.1.5",
+    "devel": null,
+    "head": null,
+    "bottle": true
+  },
+  "revision": 1,
+  "version_scheme": 0,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any",
+      "prefix": "/home/linuxbrew/.linuxbrew",
+      "root_url": "https://linuxbrew.bintray.com/bottles",
+      "files": {
+        "catalina": {
+          "url": "https://linuxbrew.bintray.com/bottles/fdroidserver-1.1.5_1.catalina.bottle.tar.gz",
+          "sha256": "1499c1250def2fbb425b3bf228a2bc0a88944e912e4311fbeb9eb2a0e603bd34"
+        },
+        "mojave": {
+          "url": "https://linuxbrew.bintray.com/bottles/fdroidserver-1.1.5_1.mojave.bottle.tar.gz",
+          "sha256": "ad45cfa9f6e48be44bc6de975db7bb9fd1b1f7f63d1b003106903f1f6706d4de"
+        },
+        "high_sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/fdroidserver-1.1.5_1.high_sierra.bottle.tar.gz",
+          "sha256": "8dc42cea3f8b3ac0d5af85a6e8eaffdd175088db58ff1989ab254e132fca6214"
+        },
+        "sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/fdroidserver-1.1.5_1.sierra.bottle.tar.gz",
+          "sha256": "1c03c755b24210f97b851a676ab58dfc52fd39a47d934f5ba5b47baffd4dacd5"
+        }
+      }
+    }
+  },
+  "keg_only": false,
+  "bottle_disabled": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+    "pkg-config"
+  ],
+  "dependencies": [
+    "freetype",
+    "jpeg",
+    "libtiff",
+    "openssl@1.1",
+    "python",
+    "s3cmd",
+    "webp"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "In order to function, fdroidserver requires that the Android SDK's\n\"Build-tools\" and \"Platform-tools\" are installed.  Also, it is best if the\nbase path of the Android SDK is set in the standard environment variable\nANDROID_HOME.  To install them from the command line, run:\nandroid update sdk --no-ui --all --filter tools,platform-tools,build-tools-25.0.0\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
+}

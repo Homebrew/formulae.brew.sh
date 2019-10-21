@@ -1,0 +1,76 @@
+{
+  "name": "llvm@6",
+  "full_name": "llvm@6",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Next-gen compiler infrastructure",
+  "homepage": "https://llvm.org/",
+  "versions": {
+    "stable": "6.0.1",
+    "devel": null,
+    "head": null,
+    "bottle": true
+  },
+  "revision": 1,
+  "version_scheme": 0,
+  "bottle": {
+    "stable": {
+      "rebuild": 1,
+      "cellar": ":any",
+      "prefix": "/home/linuxbrew/.linuxbrew",
+      "root_url": "https://linuxbrew.bintray.com/bottles",
+      "files": {
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/llvm@6-6.0.1_1.x86_64_linux.bottle.1.tar.gz",
+          "sha256": "fa82b34b02759b52cf6d6eab0e41602a1c2b902b8eb94624d30ff0652697c16e"
+        }
+      }
+    }
+  },
+  "keg_only": true,
+  "bottle_disabled": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+    "cmake"
+  ],
+  "dependencies": [
+    "libffi",
+    "gcc",
+    "binutils",
+    "libedit",
+    "libelf",
+    "ncurses",
+    "libxml2",
+    "zlib",
+    "python@2"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "To use the bundled libc++ please add the following LDFLAGS:\n  LDFLAGS=\"-L$(brew --prefix)/opt/llvm@6/lib -Wl,-rpath,$(brew --prefix)/opt/llvm@6/lib\"\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
+}

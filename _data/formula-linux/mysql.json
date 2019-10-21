@@ -1,0 +1,82 @@
+{
+  "name": "mysql",
+  "full_name": "mysql",
+  "oldname": null,
+  "aliases": [
+    "mysql@8.0"
+  ],
+  "versioned_formulae": [
+    "mysql@5.5",
+    "mysql@5.6",
+    "mysql@5.7"
+  ],
+  "desc": "Open source relational database management system",
+  "homepage": "https://dev.mysql.com/doc/refman/8.0/en/",
+  "versions": {
+    "stable": "8.0.18",
+    "devel": null,
+    "head": null,
+    "bottle": true
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+      "prefix": "/home/linuxbrew/.linuxbrew",
+      "root_url": "https://linuxbrew.bintray.com/bottles",
+      "files": {
+        "catalina": {
+          "url": "https://linuxbrew.bintray.com/bottles/mysql-8.0.18.catalina.bottle.tar.gz",
+          "sha256": "e8aa0830817cd49a2155c7764650bc6bf46ee54d536af09f3b814d9b960065b2"
+        },
+        "mojave": {
+          "url": "https://linuxbrew.bintray.com/bottles/mysql-8.0.18.mojave.bottle.tar.gz",
+          "sha256": "0bddb035ea8098a4eb0a9d76afae97a077f517bdb0592a4edae828a566470236"
+        },
+        "high_sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/mysql-8.0.18.high_sierra.bottle.tar.gz",
+          "sha256": "85a4e9fedd5fa606eff74a72d0e8b9f2ce4dcbd7976e42deb6611eccc1db24ef"
+        }
+      }
+    }
+  },
+  "keg_only": false,
+  "bottle_disabled": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+    "cmake"
+  ],
+  "dependencies": [
+    "openssl@1.1",
+    "libedit"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+    "mariadb",
+    "percona-server",
+    "mysql-connector-c",
+    "mariadb-connector-c"
+  ],
+  "caveats": "We've installed your MySQL database without a root password. To secure it run:\n    mysql_secure_installation\n\nMySQL is configured to only allow connections from localhost by default\n\nTo connect run:\n    mysql -uroot\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
+}

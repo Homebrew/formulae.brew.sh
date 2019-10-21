@@ -1,0 +1,81 @@
+{
+  "name": "fail2ban",
+  "full_name": "fail2ban",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Scan log files and ban IPs showing malicious signs",
+  "homepage": "https://www.fail2ban.org/",
+  "versions": {
+    "stable": "0.10.4",
+    "devel": null,
+    "head": null,
+    "bottle": true
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+      "prefix": "/home/linuxbrew/.linuxbrew",
+      "root_url": "https://linuxbrew.bintray.com/bottles",
+      "files": {
+        "mojave": {
+          "url": "https://linuxbrew.bintray.com/bottles/fail2ban-0.10.4.mojave.bottle.tar.gz",
+          "sha256": "8a94f2acb50779d21bf5f419ef4ab65692d03e827d1d618a878b14b5174fba59"
+        },
+        "high_sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/fail2ban-0.10.4.high_sierra.bottle.tar.gz",
+          "sha256": "96f7b39c78cab991ea75e7c68e65b764fe1ce0299ce82281e25800a255662bb9"
+        },
+        "sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/fail2ban-0.10.4.sierra.bottle.tar.gz",
+          "sha256": "96f7b39c78cab991ea75e7c68e65b764fe1ce0299ce82281e25800a255662bb9"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/fail2ban-0.10.4.x86_64_linux.bottle.tar.gz",
+          "sha256": "7f26a20f7bab29e0602e2ce26046c501efd704e6c79c4c67015dbbf64b1c226e"
+        }
+      }
+    }
+  },
+  "keg_only": false,
+  "bottle_disabled": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+    "help2man",
+    "sphinx-doc"
+  ],
+  "dependencies": [
+    "python@2"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "Before using Fail2Ban for the first time you should edit the jail\nconfiguration and enable the jails that you want to use, for instance\nssh-ipfw. Also, make sure that they point to the correct configuration\npath. I.e. on Mountain Lion the sshd logfile should point to\n/var/log/system.log.\n\n  * $(brew --prefix)/etc/fail2ban/jail.conf\n\nThe Fail2Ban wiki has two pages with instructions for macOS Server that\ndescribes how to set up the Jails for the standard macOS Server\nservices for the respective releases.\n\n  10.4: https://www.fail2ban.org/wiki/index.php/HOWTO_Mac_OS_X_Server_(10.4)\n  10.5: https://www.fail2ban.org/wiki/index.php/HOWTO_Mac_OS_X_Server_(10.5)\n\nPlease do not forget to update your configuration files.\nThey are in $(brew --prefix)/etc/fail2ban.\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
+}

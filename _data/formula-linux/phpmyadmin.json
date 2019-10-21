@@ -1,0 +1,56 @@
+{
+  "name": "phpmyadmin",
+  "full_name": "phpmyadmin",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Web interface for MySQL and MariaDB",
+  "homepage": "https://www.phpmyadmin.net",
+  "versions": {
+    "stable": "4.9.1",
+    "devel": null,
+    "head": null,
+    "bottle": false
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "bottle": {
+  },
+  "keg_only": false,
+  "bottle_disabled": true,
+  "options": [
+
+  ],
+  "build_dependencies": [
+
+  ],
+  "dependencies": [
+    "php"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "To enable phpMyAdmin in Apache, add the following to httpd.conf and\nrestart Apache:\n    Alias /phpmyadmin $(brew --prefix)/share/phpmyadmin\n    <Directory $(brew --prefix)/share/phpmyadmin/>\n        Options Indexes FollowSymLinks MultiViews\n        AllowOverride All\n        <IfModule mod_authz_core.c>\n            Require all granted\n        </IfModule>\n        <IfModule !mod_authz_core.c>\n            Order allow,deny\n            Allow from all\n        </IfModule>\n    </Directory>\nThen open http://localhost/phpmyadmin\nThe configuration file is $(brew --prefix)/etc/phpmyadmin.config.inc.php\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
+}

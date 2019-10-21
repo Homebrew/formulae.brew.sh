@@ -1,0 +1,85 @@
+{
+  "name": "cockroach",
+  "full_name": "cockroach",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Distributed SQL database",
+  "homepage": "https://www.cockroachlabs.com",
+  "versions": {
+    "stable": "19.1.5",
+    "devel": null,
+    "head": "HEAD",
+    "bottle": true
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+      "prefix": "/home/linuxbrew/.linuxbrew",
+      "root_url": "https://linuxbrew.bintray.com/bottles",
+      "files": {
+        "catalina": {
+          "url": "https://linuxbrew.bintray.com/bottles/cockroach-19.1.5.catalina.bottle.tar.gz",
+          "sha256": "28fe948b12b6d92f968c4186ff0d07c708c86fca39088d31d2671c04c02aba77"
+        },
+        "mojave": {
+          "url": "https://linuxbrew.bintray.com/bottles/cockroach-19.1.5.mojave.bottle.tar.gz",
+          "sha256": "70d8f59b43661582cb1e7dc2d69c376436ddde87806edfbe431a60fdf6a7efcc"
+        },
+        "high_sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/cockroach-19.1.5.high_sierra.bottle.tar.gz",
+          "sha256": "895adf66dbeb3838f3655f37f35d80db67f79ad388b6448939740ab09c31d5f5"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/cockroach-19.1.5.x86_64_linux.bottle.tar.gz",
+          "sha256": "35d7e744ac58fe166704c7f8360dda3f5a382220f9b61babe2774ee4f3f4267a"
+        }
+      }
+    }
+  },
+  "keg_only": false,
+  "bottle_disabled": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+    "autoconf",
+    "cmake",
+    "go",
+    "make",
+    "xz",
+    "bison"
+  ],
+  "dependencies": [
+    "ncurses"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "For local development only, this formula ships a launchd configuration to\nstart a single-node cluster that stores its data under:\n  $(brew --prefix)/var/cockroach/\nInstead of the default port of 8080, the node serves its admin UI at:\n  http://localhost:26256\n\nDo NOT use this cluster to store data you care about; it runs in insecure\nmode and may expose data publicly in e.g. a DNS rebinding attack. To run\nCockroachDB securely, please see:\n  https://www.cockroachlabs.com/docs/secure-a-cluster.html\n\nDue to a license change, the cockroach package in homebrew-core will no\nlonger be updated when CockroachDB 19.2 is released. Please switch to\nhttps://github.com/cockroachdb/homebrew-tap instead.\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
+}

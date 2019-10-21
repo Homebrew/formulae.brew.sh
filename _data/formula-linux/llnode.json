@@ -1,0 +1,85 @@
+{
+  "name": "llnode",
+  "full_name": "llnode",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "LLDB plugin for live/post-mortem debugging of node.js apps",
+  "homepage": "https://github.com/nodejs/llnode",
+  "versions": {
+    "stable": "2.2.0",
+    "devel": null,
+    "head": null,
+    "bottle": true
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any",
+      "prefix": "/home/linuxbrew/.linuxbrew",
+      "root_url": "https://linuxbrew.bintray.com/bottles",
+      "files": {
+        "catalina": {
+          "url": "https://linuxbrew.bintray.com/bottles/llnode-2.2.0.catalina.bottle.tar.gz",
+          "sha256": "9b46a438bd683a821468b2ebe7f579af4a318b131ca853516dba98a5e4d66d93"
+        },
+        "mojave": {
+          "url": "https://linuxbrew.bintray.com/bottles/llnode-2.2.0.mojave.bottle.tar.gz",
+          "sha256": "bd25f25283d4da121c4b64a34ffa060f46e20efbdd463b8af088ed1568cf64ca"
+        },
+        "high_sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/llnode-2.2.0.high_sierra.bottle.tar.gz",
+          "sha256": "5e3d8bfdcafce47c4f36da32a4820b0970020459e8a22d0d28eb3d38fd1c89f3"
+        },
+        "sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/llnode-2.2.0.sierra.bottle.tar.gz",
+          "sha256": "fc975b5e0cb5ee39039100a8da42db92e3359e3e5e3b6c2465e4e969dbee0e7d"
+        }
+      }
+    }
+  },
+  "keg_only": false,
+  "bottle_disabled": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+    "node",
+    "python@2"
+  ],
+  "dependencies": [
+
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+    {
+      "name": "macos",
+      "cask": null,
+      "download": null
+    }
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "`brew install llnode` does not link the plugin to LLDB PlugIns dir.\n\nTo load this plugin in LLDB, one will need to either\n\n* Type `plugin load $(brew --prefix)/opt/llnode/llnode.dylib` on each run of lldb\n* Install plugin into PlugIns dir manually:\n\n    mkdir -p ~/Library/Application\\ Support/LLDB/PlugIns\n    ln -sf $(brew --prefix)/opt/llnode/llnode.dylib \\\n        ~/Library/Application\\ Support/LLDB/PlugIns/\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
+}

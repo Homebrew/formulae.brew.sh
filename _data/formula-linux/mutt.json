@@ -1,0 +1,91 @@
+{
+  "name": "mutt",
+  "full_name": "mutt",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Mongrel of mail user agents (part elm, pine, mush, mh, etc.)",
+  "homepage": "http://www.mutt.org/",
+  "versions": {
+    "stable": "1.12.2",
+    "devel": null,
+    "head": "HEAD",
+    "bottle": true
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+      "prefix": "/home/linuxbrew/.linuxbrew",
+      "root_url": "https://linuxbrew.bintray.com/bottles",
+      "files": {
+        "catalina": {
+          "url": "https://linuxbrew.bintray.com/bottles/mutt-1.12.2.catalina.bottle.tar.gz",
+          "sha256": "ce41f9c9b42f18f888a94fe25c0b4dc55350bc7c8af7941ecf69521594c8957c"
+        },
+        "mojave": {
+          "url": "https://linuxbrew.bintray.com/bottles/mutt-1.12.2.mojave.bottle.tar.gz",
+          "sha256": "e7e7590aa65ca7718e331b44ab06bea2309c1e8da9e5825952e66423fea28f08"
+        },
+        "high_sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/mutt-1.12.2.high_sierra.bottle.tar.gz",
+          "sha256": "268e9971eed04727f535635dcc1824dc4450df5b743510e0a12cdfb5b1c5eedf"
+        },
+        "sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/mutt-1.12.2.sierra.bottle.tar.gz",
+          "sha256": "96d708c0619c85131740d94dcd70cb21701c16d7e78e44a538aef233e72ef4ef"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/mutt-1.12.2.x86_64_linux.bottle.tar.gz",
+          "sha256": "c8d33d32a6fd52e24b87cb17414b0d6bc6f382ff41e070ff8369e7e575bc8cb5"
+        }
+      }
+    }
+  },
+  "keg_only": false,
+  "bottle_disabled": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+    "autoconf",
+    "automake"
+  ],
+  "dependencies": [
+    "gpgme",
+    "openssl@1.1",
+    "tokyo-cabinet",
+    "bzip2",
+    "zlib",
+    "krb5",
+    "ncurses"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+    "tin"
+  ],
+  "caveats": "mutt_dotlock(1) has been installed, but does not have the permissions lock\nspool files in /var/mail. To grant the necessary permissions, run\n\n  sudo chgrp mail $(brew --prefix)/Cellar/mutt/1.12.2/bin/mutt_dotlock\n  sudo chmod g+s $(brew --prefix)/Cellar/mutt/1.12.2/bin/mutt_dotlock\n\nAlternatively, you may configure `spoolfile` in your .muttrc to a file inside\nyour home directory.\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
+}

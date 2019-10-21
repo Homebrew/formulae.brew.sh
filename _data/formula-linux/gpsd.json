@@ -1,0 +1,80 @@
+{
+  "name": "gpsd",
+  "full_name": "gpsd",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Global Positioning System (GPS) daemon",
+  "homepage": "http://catb.org/gpsd/",
+  "versions": {
+    "stable": "3.17",
+    "devel": null,
+    "head": null,
+    "bottle": true
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "bottle": {
+    "stable": {
+      "rebuild": 1,
+      "cellar": ":any",
+      "prefix": "/home/linuxbrew/.linuxbrew",
+      "root_url": "https://linuxbrew.bintray.com/bottles",
+      "files": {
+        "catalina": {
+          "url": "https://linuxbrew.bintray.com/bottles/gpsd-3.17.catalina.bottle.1.tar.gz",
+          "sha256": "22814a24acec9db78a5a0a13aa2d73773e15c648f3dd008bcbd4f088515c28ac"
+        },
+        "mojave": {
+          "url": "https://linuxbrew.bintray.com/bottles/gpsd-3.17.mojave.bottle.1.tar.gz",
+          "sha256": "000a6985fc4a8f295c2729a04cf0662f68370401afb573c62b051a1b2495da7f"
+        },
+        "high_sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/gpsd-3.17.high_sierra.bottle.1.tar.gz",
+          "sha256": "8259d06ad29227d59f70b9c4d84d20c764486fd7e6217bbf023fd003d3afe897"
+        },
+        "sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/gpsd-3.17.sierra.bottle.1.tar.gz",
+          "sha256": "a1840e937a0abdcd847abb9a3c9d735650fcb77088c97189c72abb2470dacdad"
+        }
+      }
+    }
+  },
+  "keg_only": false,
+  "bottle_disabled": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+    "scons"
+  ],
+  "dependencies": [
+
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "gpsd does not automatically detect GPS device addresses. Once started, you\nneed to force it to connect to your GPS:\n\n  GPSD_SOCKET=\"$(brew --prefix)/var/gpsd.sock\" $(brew --prefix)/Cellar/gpsd/3.17/sbin/gpsdctl add /dev/tty.usbserial-XYZ\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
+}

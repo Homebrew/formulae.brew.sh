@@ -1,0 +1,99 @@
+{
+  "name": "audacious",
+  "full_name": "audacious",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Free and advanced audio player based on GTK+",
+  "homepage": "https://audacious-media-player.org/",
+  "versions": {
+    "stable": "3.9",
+    "devel": null,
+    "head": "HEAD",
+    "bottle": true
+  },
+  "revision": 4,
+  "version_scheme": 0,
+  "bottle": {
+    "stable": {
+      "rebuild": 1,
+      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+      "prefix": "/home/linuxbrew/.linuxbrew",
+      "root_url": "https://linuxbrew.bintray.com/bottles",
+      "files": {
+        "catalina": {
+          "url": "https://linuxbrew.bintray.com/bottles/audacious-3.9_4.catalina.bottle.1.tar.gz",
+          "sha256": "9dbef45b266c5978d4b5ef08eaf5ab48d91b927cf6e25976ff67de031b0b76aa"
+        },
+        "mojave": {
+          "url": "https://linuxbrew.bintray.com/bottles/audacious-3.9_4.mojave.bottle.1.tar.gz",
+          "sha256": "a3cc36beec2b0456f1cc2e5640bf127867820ae574a7a4b3a417bbc8cd5ce1d8"
+        },
+        "high_sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/audacious-3.9_4.high_sierra.bottle.1.tar.gz",
+          "sha256": "4cc10fd5a8a28cf497c637a90ee4af7f835aa7d8e46cab02de1073a49d143699"
+        },
+        "sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/audacious-3.9_4.sierra.bottle.1.tar.gz",
+          "sha256": "effe340c0314c54baf2aab58ce010e16e720f75fe199bac6acbf895ceb4fc28e"
+        }
+      }
+    }
+  },
+  "keg_only": false,
+  "bottle_disabled": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+    "gettext",
+    "make",
+    "pkg-config"
+  ],
+  "dependencies": [
+    "faad2",
+    "ffmpeg",
+    "flac",
+    "fluid-synth",
+    "glib",
+    "lame",
+    "libbs2b",
+    "libcue",
+    "libnotify",
+    "libsamplerate",
+    "libsoxr",
+    "libvorbis",
+    "mpg123",
+    "neon",
+    "python@2",
+    "qt",
+    "sdl2",
+    "wavpack"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "audtool does not work due to a broken dbus implementation on macOS, so is not built\ncoreaudio output has been disabled as it does not work (Fails to set audio unit input property.)\nGTK+ gui is not built by default as the QT gui has better integration with macOS, and when built, the gtk gui takes precedence\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
+}

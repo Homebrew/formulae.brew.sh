@@ -1,0 +1,82 @@
+{
+  "name": "snort",
+  "full_name": "snort",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Flexible Network Intrusion Detection System",
+  "homepage": "https://www.snort.org",
+  "versions": {
+    "stable": "2.9.12",
+    "devel": null,
+    "head": null,
+    "bottle": true
+  },
+  "revision": 1,
+  "version_scheme": 0,
+  "bottle": {
+    "stable": {
+      "rebuild": 1,
+      "cellar": ":any",
+      "prefix": "/home/linuxbrew/.linuxbrew",
+      "root_url": "https://linuxbrew.bintray.com/bottles",
+      "files": {
+        "mojave": {
+          "url": "https://linuxbrew.bintray.com/bottles/snort-2.9.12_1.mojave.bottle.1.tar.gz",
+          "sha256": "f755ac48a5486cc165a8522d29cfc0e477f925fd9e7706934e1a77853f7da073"
+        },
+        "high_sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/snort-2.9.12_1.high_sierra.bottle.1.tar.gz",
+          "sha256": "adebfe9523e2e1dbb0afdaabf08b4c8d69263560a1078d971d70902476c6a60f"
+        },
+        "sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/snort-2.9.12_1.sierra.bottle.1.tar.gz",
+          "sha256": "9db4b27cf980477aa4ff50259846554f4eb1c932e600d9edb9653e76f346c3f1"
+        }
+      }
+    }
+  },
+  "keg_only": false,
+  "bottle_disabled": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+    "pkg-config"
+  ],
+  "dependencies": [
+    "daq",
+    "libdnet",
+    "libpcap",
+    "luajit",
+    "nghttp2",
+    "openssl@1.1",
+    "pcre"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "For snort to be functional, you need to update the permissions for /dev/bpf*\nso that they can be read by non-root users.  This can be done manually using:\n    sudo chmod o+r /dev/bpf*\nor you could create a startup item to do this for you.\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
+}

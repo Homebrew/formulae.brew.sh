@@ -1,0 +1,85 @@
+{
+  "name": "apcupsd",
+  "full_name": "apcupsd",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Daemon for controlling APC UPSes",
+  "homepage": "http://www.apcupsd.org",
+  "versions": {
+    "stable": "3.14.14",
+    "devel": null,
+    "head": null,
+    "bottle": true
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "bottle": {
+    "stable": {
+      "rebuild": 1,
+      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+      "prefix": "/home/linuxbrew/.linuxbrew",
+      "root_url": "https://linuxbrew.bintray.com/bottles",
+      "files": {
+        "catalina": {
+          "url": "https://linuxbrew.bintray.com/bottles/apcupsd-3.14.14.catalina.bottle.1.tar.gz",
+          "sha256": "d81a4973871bd62f3c638f4710c375fedd96ee92e57448d28247368705ae2576"
+        },
+        "mojave": {
+          "url": "https://linuxbrew.bintray.com/bottles/apcupsd-3.14.14.mojave.bottle.1.tar.gz",
+          "sha256": "2308c0cbde96d244e535e9fae11c501a49dc4aafa33fc1475b9285a3246e581e"
+        },
+        "high_sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/apcupsd-3.14.14.high_sierra.bottle.1.tar.gz",
+          "sha256": "beee3be60fc8aafbd2a8fdb215ec8f0d531cc6750d00fd176039a0e5d8ee0d1e"
+        },
+        "sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/apcupsd-3.14.14.sierra.bottle.1.tar.gz",
+          "sha256": "8cf3f4840ec564f859fa0b02eda9aec274180de519b512e28e19a31b6eab583c"
+        },
+        "el_capitan": {
+          "url": "https://linuxbrew.bintray.com/bottles/apcupsd-3.14.14.el_capitan.bottle.1.tar.gz",
+          "sha256": "d000cc771fde79714b634a49b31afd207d6a26b76924c586e0af9fa80f539db5"
+        }
+      }
+    }
+  },
+  "keg_only": false,
+  "bottle_disabled": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+
+  ],
+  "dependencies": [
+    "gd",
+    "libusb-compat"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "For apcupsd to be able to communicate with UPSes connected via USB,\nthe kernel extension must be installed by the root user:\n\n  sudo cp -pR $(brew --prefix)/Cellar/apcupsd/3.14.14/Library/Extensions/ApcupsdDummy.kext /System/Library/Extensions/\n  sudo chown -R root:wheel /System/Library/Extensions/ApcupsdDummy.kext\n  sudo touch /System/Library/Extensions/\n\nTo load apcupsd at startup, activate the included Launch Daemon:\n\n  sudo cp $(brew --prefix)/Cellar/apcupsd/3.14.14/Library/LaunchDaemons/org.apcupsd.apcupsd.plist /Library/LaunchDaemons\n  sudo chmod 644 /Library/LaunchDaemons/org.apcupsd.apcupsd.plist\n  sudo launchctl load -w /Library/LaunchDaemons/org.apcupsd.apcupsd.plist\n\nIf this is an upgrade and you already have the Launch Daemon loaded, you\nhave to unload the Launch Daemon before reinstalling it:\n\n  sudo launchctl unload -w /Library/LaunchDaemons/org.apcupsd.apcupsd.plist\n  sudo rm /Library/LaunchDaemons/org.apcupsd.apcupsd.plist\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
+}

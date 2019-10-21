@@ -1,0 +1,84 @@
+{
+  "name": "sshguard",
+  "full_name": "sshguard",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Protect from brute force attacks against SSH",
+  "homepage": "https://www.sshguard.net/",
+  "versions": {
+    "stable": "2.4.0",
+    "devel": null,
+    "head": "HEAD",
+    "bottle": true
+  },
+  "revision": 0,
+  "version_scheme": 1,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any_skip_relocation",
+      "prefix": "/home/linuxbrew/.linuxbrew",
+      "root_url": "https://linuxbrew.bintray.com/bottles",
+      "files": {
+        "catalina": {
+          "url": "https://linuxbrew.bintray.com/bottles/sshguard-2.4.0.catalina.bottle.tar.gz",
+          "sha256": "033c09dbb290b68e8b33ce6709fba3b8764342af4b1ddac8d91b4e63973caea0"
+        },
+        "mojave": {
+          "url": "https://linuxbrew.bintray.com/bottles/sshguard-2.4.0.mojave.bottle.tar.gz",
+          "sha256": "63af5b9fe223253a1798e8500475af1675c8a36d987628b9e195a5da33bad252"
+        },
+        "high_sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/sshguard-2.4.0.high_sierra.bottle.tar.gz",
+          "sha256": "54bb8831aaf7de0a2ba0ee3780e34a76dd67e90d3db8bcf5e3496ec78e4d5b56"
+        },
+        "sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/sshguard-2.4.0.sierra.bottle.tar.gz",
+          "sha256": "94c8ecf69111d23d51cc2e61ecfc0438dd9006236340e659ed094b8d7e3fd699"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/sshguard-2.4.0.x86_64_linux.bottle.tar.gz",
+          "sha256": "6e1c2d15ad2a53a7a144ade502ed6862d8113ecc1919f087f86f5769c66a78af"
+        }
+      }
+    }
+  },
+  "keg_only": false,
+  "bottle_disabled": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+
+  ],
+  "dependencies": [
+
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "Add the following lines to /etc/pf.conf to block entries in the sshguard\ntable (replace $ext_if with your WAN interface):\n\n  table <sshguard> persist\n  block in quick on $ext_if proto tcp from <sshguard> to any port 22 label \"ssh bruteforce\"\n\nThen run sudo pfctl -f /etc/pf.conf to reload the rules.\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
+}

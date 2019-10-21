@@ -1,0 +1,85 @@
+{
+  "name": "percona-server",
+  "full_name": "percona-server",
+  "oldname": null,
+  "aliases": [
+    "percona-server@8.0"
+  ],
+  "versioned_formulae": [
+    "percona-server@5.6"
+  ],
+  "desc": "Drop-in MySQL replacement",
+  "homepage": "https://www.percona.com",
+  "versions": {
+    "stable": "8.0.16-7",
+    "devel": null,
+    "head": null,
+    "bottle": true
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+      "prefix": "/home/linuxbrew/.linuxbrew",
+      "root_url": "https://linuxbrew.bintray.com/bottles",
+      "files": {
+        "catalina": {
+          "url": "https://linuxbrew.bintray.com/bottles/percona-server-8.0.16-7.catalina.bottle.tar.gz",
+          "sha256": "052ee98be920cb88cc9ce2bcd7b25caeca0ae13203d16197f5e25126c20bf1df"
+        },
+        "mojave": {
+          "url": "https://linuxbrew.bintray.com/bottles/percona-server-8.0.16-7.mojave.bottle.tar.gz",
+          "sha256": "f7075505bd318f9738a4963652eb5dbeca7afd035b4c9dcfab06bb331229b8eb"
+        },
+        "high_sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/percona-server-8.0.16-7.high_sierra.bottle.tar.gz",
+          "sha256": "6a4565db4a704989ac67120325ff9b9a6ece44af4b8ec20866f9fd0b1003a483"
+        }
+      }
+    }
+  },
+  "keg_only": false,
+  "bottle_disabled": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+    "cmake"
+  ],
+  "dependencies": [
+    "readline",
+    "libedit",
+    "openssl@1.1"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+    {
+      "name": "macos",
+      "cask": null,
+      "download": null
+    }
+  ],
+  "conflicts_with": [
+    "mariadb",
+    "mysql",
+    "mysql-connector-c",
+    "mariadb-connector-c"
+  ],
+  "caveats": "We've installed your MySQL database without a root password. To secure it run:\n    mysql_secure_installation\nMySQL is configured to only allow connections from localhost by default\nTo connect run:\n    mysql -uroot\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
+}

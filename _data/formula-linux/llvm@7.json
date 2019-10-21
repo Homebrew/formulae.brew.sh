@@ -1,0 +1,91 @@
+{
+  "name": "llvm@7",
+  "full_name": "llvm@7",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Next-gen compiler infrastructure",
+  "homepage": "https://llvm.org/",
+  "versions": {
+    "stable": "7.1.0",
+    "devel": null,
+    "head": null,
+    "bottle": true
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any",
+      "prefix": "/home/linuxbrew/.linuxbrew",
+      "root_url": "https://linuxbrew.bintray.com/bottles",
+      "files": {
+        "mojave": {
+          "url": "https://linuxbrew.bintray.com/bottles/llvm@7-7.1.0.mojave.bottle.tar.gz",
+          "sha256": "5140804e0811f7fd438e4f71f482b1009e59626704ed4c203180ddeeec4679de"
+        },
+        "high_sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/llvm@7-7.1.0.high_sierra.bottle.tar.gz",
+          "sha256": "b5ea5a124052b61ae6209346ab7626c2042c0c697d67f4d3a1d2350abd72d24b"
+        },
+        "sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/llvm@7-7.1.0.sierra.bottle.tar.gz",
+          "sha256": "7cf4cfc283d47db73b00b73a3ad50c058cc9abf897829db25bf1f83726f15e2d"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/llvm@7-7.1.0.x86_64_linux.bottle.tar.gz",
+          "sha256": "63e907ea67d341eb2bbb4f7ee5a7266f158f4347769615e2365fb8da21d3127f"
+        }
+      }
+    }
+  },
+  "keg_only": true,
+  "bottle_disabled": false,
+  "options": [
+    {
+      "option": "--with-glibc",
+      "description": "Build with glibc support"
+    }
+  ],
+  "build_dependencies": [
+    "cmake"
+  ],
+  "dependencies": [
+    "libffi",
+    "gcc",
+    "binutils",
+    "libedit",
+    "libelf",
+    "ncurses",
+    "libxml2",
+    "python@2",
+    "zlib"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+    "glibc"
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "To use the bundled libc++ please add the following LDFLAGS:\n  LDFLAGS=\"-L$(brew --prefix)/opt/llvm@7/lib -Wl,-rpath,$(brew --prefix)/opt/llvm@7/lib\"\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
+}
