@@ -21,7 +21,7 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
@@ -36,6 +36,10 @@
         "high_sierra": {
           "url": "https://linuxbrew.bintray.com/bottles/stormssh-0.7.0_2.high_sierra.bottle.tar.gz",
           "sha256": "bb917e99b7f5e775f71e1c2bd0eea10a0c8e4c189d4effe6a41a72db52401ffd"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/stormssh-0.7.0_2.x86_64_linux.bottle.tar.gz",
+          "sha256": "0f15d8fbb9b697b89b12604332a8bc699911e706529aecd714554c689f6b56e2"
         }
       }
     }
@@ -46,10 +50,11 @@
 
   ],
   "build_dependencies": [
-
+    "pkg-config"
   ],
   "dependencies": [
-    "python"
+    "python",
+    "libffi"
   ],
   "recommended_dependencies": [
 
