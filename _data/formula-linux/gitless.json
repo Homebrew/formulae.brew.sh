@@ -36,6 +36,10 @@
         "high_sierra": {
           "url": "https://linuxbrew.bintray.com/bottles/gitless-0.8.8_1.high_sierra.bottle.tar.gz",
           "sha256": "4c1ff8fd310933d86ae14dc513001c20de0db7465e351574f7babc6b0ba7ad84"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/gitless-0.8.8_1.x86_64_linux.bottle.tar.gz",
+          "sha256": "5beb23714b4813eceb616a5f033f738dbc022050936be7a1bf0f6b7e476f8386"
         }
       }
     }
@@ -46,11 +50,12 @@
 
   ],
   "build_dependencies": [
-
+    "pkg-config"
   ],
   "dependencies": [
     "libgit2",
-    "python"
+    "python",
+    "libffi"
   ],
   "recommended_dependencies": [
 
