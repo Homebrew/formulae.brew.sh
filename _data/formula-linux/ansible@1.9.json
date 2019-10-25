@@ -36,6 +36,10 @@
         "high_sierra": {
           "url": "https://linuxbrew.bintray.com/bottles/ansible@1.9-1.9.6_3.high_sierra.bottle.tar.gz",
           "sha256": "746b5dfb2d7bc4fbce00fe3de44f072905981161f79ce27437176fed92161ac4"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/ansible@1.9-1.9.6_3.x86_64_linux.bottle.tar.gz",
+          "sha256": "820f3386d1afda772e23006e306cf8021c80d0982ddce1a5d562f2b8a6ed6843"
         }
       }
     }
@@ -46,12 +50,15 @@
 
   ],
   "build_dependencies": [
-
+    "pkg-config"
   ],
   "dependencies": [
     "libyaml",
     "openssl@1.1",
-    "python@2"
+    "python@2",
+    "libffi",
+    "libxslt",
+    "krb5"
   ],
   "recommended_dependencies": [
 
