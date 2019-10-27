@@ -1,6 +1,6 @@
 {
-  "name": "minikube",
-  "full_name": "minikube",
+  "name": "awsume",
+  "full_name": "awsume",
   "oldname": null,
   "aliases": [
 
@@ -8,10 +8,10 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Run a Kubernetes cluster locally",
-  "homepage": "https://minikube.sigs.k8s.io/",
+  "desc": "Utility for easily assuming AWS IAM roles from the command-line",
+  "homepage": "https://www.trek10.com/blog/awsume-aws-assume-made-awesome",
   "versions": {
-    "stable": "1.5.0",
+    "stable": "4.0.0",
     "devel": null,
     "head": "HEAD",
     "bottle": true
@@ -26,16 +26,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/minikube-1.5.0.catalina.bottle.tar.gz",
-          "sha256": "4a338e3dd7b93c305fb58976db59b4b9549d264da078352c5afd3c525dafa172"
+          "url": "https://linuxbrew.bintray.com/bottles/awsume-4.0.0.catalina.bottle.tar.gz",
+          "sha256": "d7627407c05644c59ee3ba36d592e92c8dcec7d663c5eb53ddd52062fa0c61c3"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/minikube-1.5.0.mojave.bottle.tar.gz",
-          "sha256": "157d59038a69e69178185216cf9bc0f06f7d029ed31ee8598da72f98f367b86c"
+          "url": "https://linuxbrew.bintray.com/bottles/awsume-4.0.0.mojave.bottle.tar.gz",
+          "sha256": "a26e73a7ad4e464d9dd2bdd027dee7a729f6f28a36800fc22701b1dd729e29d1"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/minikube-1.5.0.high_sierra.bottle.tar.gz",
-          "sha256": "1e7bcf26eda3e43d0632932f090c1d58c3250b5266b1e2f770ef289b00e4e649"
+          "url": "https://linuxbrew.bintray.com/bottles/awsume-4.0.0.high_sierra.bottle.tar.gz",
+          "sha256": "0eba67450540e7d925d166a50dc2051fc4d867cba692a3f2a8d6a7c612065cf5"
         }
       }
     }
@@ -46,11 +46,12 @@
 
   ],
   "build_dependencies": [
-    "go",
-    "go-bindata"
+
   ],
   "dependencies": [
-    "kubernetes-cli"
+    "openssl",
+    "python",
+    "sqlite"
   ],
   "recommended_dependencies": [
 

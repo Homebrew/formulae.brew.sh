@@ -1,6 +1,6 @@
 {
-  "name": "minikube",
-  "full_name": "minikube",
+  "name": "ngt",
+  "full_name": "ngt",
   "oldname": null,
   "aliases": [
 
@@ -8,12 +8,12 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Run a Kubernetes cluster locally",
-  "homepage": "https://minikube.sigs.k8s.io/",
+  "desc": "Neighborhood graph and tree for indexing high-dimensional data",
+  "homepage": "https://github.com/yahoojapan/NGT",
   "versions": {
-    "stable": "1.5.0",
+    "stable": "1.7.10",
     "devel": null,
-    "head": "HEAD",
+    "head": null,
     "bottle": true
   },
   "revision": 0,
@@ -21,21 +21,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any_skip_relocation",
+      "cellar": ":any",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/minikube-1.5.0.catalina.bottle.tar.gz",
-          "sha256": "4a338e3dd7b93c305fb58976db59b4b9549d264da078352c5afd3c525dafa172"
+          "url": "https://linuxbrew.bintray.com/bottles/ngt-1.7.10.catalina.bottle.tar.gz",
+          "sha256": "011722beeedc82f93752810dc50c30d0ab10e66f51d5c63cd1be2f1369a3d053"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/minikube-1.5.0.mojave.bottle.tar.gz",
-          "sha256": "157d59038a69e69178185216cf9bc0f06f7d029ed31ee8598da72f98f367b86c"
+          "url": "https://linuxbrew.bintray.com/bottles/ngt-1.7.10.mojave.bottle.tar.gz",
+          "sha256": "111fcf226924b96000d9dd223266b6aae21cf21b4a832d0e142e3c5709c326eb"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/minikube-1.5.0.high_sierra.bottle.tar.gz",
-          "sha256": "1e7bcf26eda3e43d0632932f090c1d58c3250b5266b1e2f770ef289b00e4e649"
+          "url": "https://linuxbrew.bintray.com/bottles/ngt-1.7.10.high_sierra.bottle.tar.gz",
+          "sha256": "19dc1fb5b7b265f8f1c4bd34c8dd9fb9571ed8b119aea91571590e9fdf784593"
         }
       }
     }
@@ -46,11 +46,10 @@
 
   ],
   "build_dependencies": [
-    "go",
-    "go-bindata"
+    "cmake"
   ],
   "dependencies": [
-    "kubernetes-cli"
+    "libomp"
   ],
   "recommended_dependencies": [
 
