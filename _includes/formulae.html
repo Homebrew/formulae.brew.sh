@@ -4,7 +4,7 @@
     {%- for f in include.formulae -%}
     {%- assign formula_name = f | remove: "@" | remove: "." | replace: "+", "_" -%}
     <tr>
-        {%- assign formula = site.data.formula[formula_name] -%}
+        {%- assign formula = site.data[formula_path][formula_name] -%}
         {%- include formula.html formula=formula -%}
     </tr>
     {%- endfor -%}
