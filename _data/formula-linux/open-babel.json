@@ -11,39 +11,31 @@
   "desc": "Chemical toolbox",
   "homepage": "https://openbabel.org",
   "versions": {
-    "stable": "2.4.1",
+    "stable": "3.0.0",
     "devel": null,
     "head": "HEAD",
     "bottle": true
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any_skip_relocation",
+      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/open-babel-2.4.1_1.catalina.bottle.tar.gz",
-          "sha256": "4ab9e67beff60ffa0f90c8f35b3fc729ecbf44387deca6d42a57feb6b399d6ca"
+          "url": "https://linuxbrew.bintray.com/bottles/open-babel-3.0.0.catalina.bottle.tar.gz",
+          "sha256": "6ec66d0aaa1e1e16bd551a6a2f9e147a207770f800ff15938a6c9547299bb4c9"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/open-babel-2.4.1_1.mojave.bottle.tar.gz",
-          "sha256": "61c3b83067ef6ecff739ad64af1f7dee20c66459838f2584b5ace1077261cbef"
+          "url": "https://linuxbrew.bintray.com/bottles/open-babel-3.0.0.mojave.bottle.tar.gz",
+          "sha256": "a3c4902398ed67b093d5f88b03872a0fa07eba615a6d51fc998644d09f748486"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/open-babel-2.4.1_1.high_sierra.bottle.tar.gz",
-          "sha256": "0383df12c965d3e2b0087812186992b32ed6d02fc7bcfef397b071db2b96e568"
-        },
-        "sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/open-babel-2.4.1_1.sierra.bottle.tar.gz",
-          "sha256": "fac962fa1127ac9476e5dd1c44ba593c6184bb49444eac28804e45609243e8f9"
-        },
-        "x86_64_linux": {
-          "url": "https://linuxbrew.bintray.com/bottles/open-babel-2.4.1_1.x86_64_linux.bottle.tar.gz",
-          "sha256": "98c3032953a47edab4774faac9e8a2506cd58a79003f355c217bbad61a3d99e4"
+          "url": "https://linuxbrew.bintray.com/bottles/open-babel-3.0.0.high_sierra.bottle.tar.gz",
+          "sha256": "f3c05baedaa87da66362fb942d248973728e1336277f885b6aa513e7a8c20b53"
         }
       }
     }
@@ -55,10 +47,14 @@
   ],
   "build_dependencies": [
     "cmake",
-    "pkg-config"
+    "pkg-config",
+    "rapidjson",
+    "swig"
   ],
   "dependencies": [
-    "eigen"
+    "cairo",
+    "eigen",
+    "python"
   ],
   "recommended_dependencies": [
 
