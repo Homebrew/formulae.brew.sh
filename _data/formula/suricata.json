@@ -11,12 +11,12 @@
   "desc": "Network IDS, IPS, and security monitoring engine",
   "homepage": "https://suricata-ids.org/",
   "versions": {
-    "stable": "4.0.5",
+    "stable": "5.0.0",
     "devel": null,
     "head": null,
     "bottle": true
   },
-  "revision": 2,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -26,20 +26,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/suricata-4.0.5_2.catalina.bottle.tar.gz",
-          "sha256": "0dc1eeaa07fa33c2072685ca3cae9ba4b1611598187519bed4fb14446c7f1653"
+          "url": "https://homebrew.bintray.com/bottles/suricata-5.0.0.catalina.bottle.tar.gz",
+          "sha256": "bb6b21d3beb37cfa2ceaf5f524daf6bd5a8f48c8a2f3203f2bab9a203424aa0f"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/suricata-4.0.5_2.mojave.bottle.tar.gz",
-          "sha256": "1d351c09ec06f585958ddd226260888ad8c8cdc30f64f1205c0df0fbfac57668"
+          "url": "https://homebrew.bintray.com/bottles/suricata-5.0.0.mojave.bottle.tar.gz",
+          "sha256": "2d5a85985c0bba470ab19fcb85516983c455f6515966b7f2320d4e75dd7e89cc"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/suricata-4.0.5_2.high_sierra.bottle.tar.gz",
-          "sha256": "f6a8662692fa102a6c82cb09226ce79119228679dab0811d6c343c3f5c87fa87"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/suricata-4.0.5_2.sierra.bottle.tar.gz",
-          "sha256": "0c7de04f5caac5d4147ac2b510344dfa9c9c1bdd510dcc698164e943fb8256ae"
+          "url": "https://homebrew.bintray.com/bottles/suricata-5.0.0.high_sierra.bottle.tar.gz",
+          "sha256": "a5251c6b0ac12117237d04252339ef60886bc5e038052310bb4b917e8864d778"
         }
       }
     }
@@ -50,13 +46,15 @@
 
   ],
   "build_dependencies": [
-    "pkg-config"
+    "pkg-config",
+    "rust"
   ],
   "dependencies": [
     "jansson",
     "libmagic",
     "libnet",
     "libyaml",
+    "lz4",
     "nspr",
     "nss",
     "pcre",
