@@ -1,6 +1,6 @@
 {
-  "name": "minikube",
-  "full_name": "minikube",
+  "name": "grin",
+  "full_name": "grin",
   "oldname": null,
   "aliases": [
 
@@ -8,12 +8,12 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Run a Kubernetes cluster locally",
-  "homepage": "https://minikube.sigs.k8s.io/",
+  "desc": "Minimal implementation of the Mimblewimble protocol",
+  "homepage": "https://grin.mw/",
   "versions": {
-    "stable": "1.5.1",
+    "stable": "2.1.1",
     "devel": null,
-    "head": "HEAD",
+    "head": null,
     "bottle": true
   },
   "revision": 0,
@@ -26,16 +26,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/minikube-1.5.1.catalina.bottle.tar.gz",
-          "sha256": "2dfc990444ca996045d1e8838cb040e2c92fc8860c680c7425812f0391e3f179"
+          "url": "https://homebrew.bintray.com/bottles/grin-2.1.1.catalina.bottle.tar.gz",
+          "sha256": "5e47755a4c84467215c30717440af6de9e7dde7f303e4096966f9220769eb0dd"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/minikube-1.5.1.mojave.bottle.tar.gz",
-          "sha256": "150aacbaa94da711d2307c1093d0194172bb152695c55ec793d7fbada66a474f"
+          "url": "https://homebrew.bintray.com/bottles/grin-2.1.1.mojave.bottle.tar.gz",
+          "sha256": "c4f5424a3554bbdc6ee95761a58c18b16cbb8d8a8601d516d12d9ba5439e366a"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/minikube-1.5.1.high_sierra.bottle.tar.gz",
-          "sha256": "758464faac202b91cdef60c301ea90e4e3fb62df3476d276269dde554df13717"
+          "url": "https://homebrew.bintray.com/bottles/grin-2.1.1.high_sierra.bottle.tar.gz",
+          "sha256": "86a2b05e7b3a45b695d0556a50c18bcbe0cbd4197cbebc094280053f7a5dd28d"
         }
       }
     }
@@ -46,11 +46,10 @@
 
   ],
   "build_dependencies": [
-    "go",
-    "go-bindata"
+    "rust"
   ],
   "dependencies": [
-    "kubernetes-cli"
+
   ],
   "recommended_dependencies": [
 
