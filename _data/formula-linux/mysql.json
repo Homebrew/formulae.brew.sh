@@ -38,6 +38,10 @@
         "high_sierra": {
           "url": "https://linuxbrew.bintray.com/bottles/mysql-8.0.18.high_sierra.bottle.tar.gz",
           "sha256": "85a4e9fedd5fa606eff74a72d0e8b9f2ce4dcbd7976e42deb6611eccc1db24ef"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/mysql-8.0.18.x86_64_linux.bottle.tar.gz",
+          "sha256": "47d8ede56b46ee191fadc6945814ba156331feede9a04fe72a7a1f504a5140e8"
         }
       }
     }
@@ -48,11 +52,13 @@
 
   ],
   "build_dependencies": [
-    "cmake"
+    "cmake",
+    "pkg-config"
   ],
   "dependencies": [
     "openssl@1.1",
-    "libedit"
+    "libedit",
+    "gcc@7"
   ],
   "recommended_dependencies": [
 
