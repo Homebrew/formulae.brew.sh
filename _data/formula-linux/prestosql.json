@@ -1,6 +1,6 @@
 {
-  "name": "tfenv",
-  "full_name": "tfenv",
+  "name": "prestosql",
+  "full_name": "prestosql",
   "oldname": null,
   "aliases": [
 
@@ -8,12 +8,12 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Terraform version manager inspired by rbenv",
-  "homepage": "https://github.com/tfutils/tfenv",
+  "desc": "Distributed SQL query engine for big data",
+  "homepage": "https://prestosql.io",
   "versions": {
-    "stable": "1.0.2",
+    "stable": "323",
     "devel": null,
-    "head": "HEAD",
+    "head": null,
     "bottle": false
   },
   "revision": 0,
@@ -29,7 +29,7 @@
 
   ],
   "dependencies": [
-
+    "adoptopenjdk"
   ],
   "recommended_dependencies": [
 
@@ -44,9 +44,9 @@
 
   ],
   "conflicts_with": [
-    "terraform"
+    "prestodb"
   ],
-  "caveats": null,
+  "caveats": "Add connectors to $(brew --prefix)/opt/prestosql/libexec/etc/catalog/. See:\nhttps://prestosql.io/docs/current/connector.html\n",
   "installed": [
 
   ],

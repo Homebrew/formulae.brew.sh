@@ -11,12 +11,12 @@
   "desc": "The Multi-Model NoSQL Database",
   "homepage": "https://www.arangodb.com/",
   "versions": {
-    "stable": "3.5.0",
+    "stable": "3.5.1",
     "devel": null,
     "head": "HEAD",
     "bottle": true
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -25,17 +25,13 @@
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
+        "catalina": {
+          "url": "https://linuxbrew.bintray.com/bottles/arangodb-3.5.1.catalina.bottle.tar.gz",
+          "sha256": "d6b4899f5e62ae8b392545e29744367887ad977e8a89482d44ced7c6dff332ee"
+        },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/arangodb-3.5.0_1.mojave.bottle.tar.gz",
-          "sha256": "c5f3e3fbe5d695597bf20a95e8c2ffdb6e8b74bee6ef3fd7989555ac8f9d718b"
-        },
-        "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/arangodb-3.5.0_1.high_sierra.bottle.tar.gz",
-          "sha256": "e8053c9157efe620fe7d2660993ac7f929a9a914e2a5bc758f52d5c80de9fe84"
-        },
-        "sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/arangodb-3.5.0_1.sierra.bottle.tar.gz",
-          "sha256": "431fb46ca96833c6c097b3e132a3210afb8bc954d2106a823099731733bcc220"
+          "url": "https://linuxbrew.bintray.com/bottles/arangodb-3.5.1.mojave.bottle.tar.gz",
+          "sha256": "a59a94102316348d44e457b00d3548161434732b57cdc98b6cbaea72a9471b2a"
         }
       }
     }
@@ -46,6 +42,7 @@
 
   ],
   "build_dependencies": [
+    "ccache",
     "cmake",
     "go"
   ],
