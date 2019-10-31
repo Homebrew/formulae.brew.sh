@@ -11,12 +11,12 @@
   "desc": "UNIX client for connecting to Windows Remote Desktop Services",
   "homepage": "https://www.rdesktop.org/",
   "versions": {
-    "stable": "1.8.6",
+    "stable": "1.9.0",
     "devel": null,
     "head": null,
     "bottle": true
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -26,20 +26,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/rdesktop-1.8.6_1.catalina.bottle.tar.gz",
-          "sha256": "748c0fe4a854917a3403b084c9ce0843515f7ac9e522619d6f880f3a55c01908"
+          "url": "https://homebrew.bintray.com/bottles/rdesktop-1.9.0.catalina.bottle.tar.gz",
+          "sha256": "7c9514c2ed77ff7d2289b1f464ce187b3882cff9c7a0f3fbeb3473d085f7525c"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/rdesktop-1.8.6_1.mojave.bottle.tar.gz",
-          "sha256": "c319fc2fceca931b83d5b05f6e2d9c1ae4687a277b1c71e4e5cb73e424759ef8"
+          "url": "https://homebrew.bintray.com/bottles/rdesktop-1.9.0.mojave.bottle.tar.gz",
+          "sha256": "38d60f4a835c4090ba1528f19cc7b47122ff22f1f85b1be69ae00bedb18da03b"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/rdesktop-1.8.6_1.high_sierra.bottle.tar.gz",
-          "sha256": "92a663dd356df68f0b86ec58e1f3f07d242aa6c66fda7c90dc41330b793f2c4d"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/rdesktop-1.8.6_1.sierra.bottle.tar.gz",
-          "sha256": "c3514986d81f0b8c9e4e37e2dc6648ce4978d814dff3c5e187a9ead35fdadf0d"
+          "url": "https://homebrew.bintray.com/bottles/rdesktop-1.9.0.high_sierra.bottle.tar.gz",
+          "sha256": "4f20968750adad4b1d743ff3ee96262a0cb834b8a6ff9c41486479f71542b2e7"
         }
       }
     }
@@ -50,10 +46,13 @@
 
   ],
   "build_dependencies": [
-
+    "pkg-config"
   ],
   "dependencies": [
-    "openssl@1.1"
+    "gnutls",
+    "libao",
+    "libtasn1",
+    "nettle"
   ],
   "recommended_dependencies": [
 
