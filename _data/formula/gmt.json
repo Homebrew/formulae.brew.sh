@@ -3,20 +3,20 @@
   "full_name": "gmt",
   "oldname": null,
   "aliases": [
-    "gmt@5"
+    "gmt@6"
   ],
   "versioned_formulae": [
-    "gmt@4"
+    "gmt@5"
   ],
-  "desc": "Tools for processing and displaying xy and xyz datasets",
-  "homepage": "https://gmt.soest.hawaii.edu/",
+  "desc": "Tools for manipulating and plotting geographic and Cartesian data",
+  "homepage": "https://www.generic-mapping-tools.org",
   "versions": {
-    "stable": "5.4.5",
+    "stable": "6.0.0",
     "devel": null,
     "head": null,
     "bottle": true
   },
-  "revision": 5,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -26,20 +26,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/gmt-5.4.5_5.catalina.bottle.tar.gz",
-          "sha256": "868d98dc2e20a1cff4fde9fefa4875c1fc521a00a98e160d42a710941de9d1e3"
+          "url": "https://homebrew.bintray.com/bottles/gmt-6.0.0.catalina.bottle.tar.gz",
+          "sha256": "8de07ab7df9b5bdcc3761e614fc1a9ff6b56a171d1c1f6d47591ed9646901bcd"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/gmt-5.4.5_5.mojave.bottle.tar.gz",
-          "sha256": "99e92bb21df067317f94b494ae24b6b847d657cd37955694e1a7933dfd5361c4"
+          "url": "https://homebrew.bintray.com/bottles/gmt-6.0.0.mojave.bottle.tar.gz",
+          "sha256": "ec1f5a04352d0e85bb1ee65c4f790585e162d78a5443a5cefffe2eec3ff7c452"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gmt-5.4.5_5.high_sierra.bottle.tar.gz",
-          "sha256": "6c86abd905154e30481eb65755c58ac3533cf82aacfe01484eb43a1351d3c5a4"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gmt-5.4.5_5.sierra.bottle.tar.gz",
-          "sha256": "f6a4c9643a16ae3bae398371f34c684f25d03bfba36c21ad312fb7446b4c83d1"
+          "url": "https://homebrew.bintray.com/bottles/gmt-6.0.0.high_sierra.bottle.tar.gz",
+          "sha256": "590480794689fa5ce5a748693b1aa678fec1a7579df86ce85bd35d372f1543c6"
         }
       }
     }
@@ -73,7 +69,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": null,
+  "caveats": "GMT needs Ghostscript for the 'psconvert' command to convert PostScript files\nto other formats. To use 'psconvert', please 'brew install ghostscript'.\n\nGMT needs FFmpeg for the 'movie' command to make movies in MP4 or WebM format.\nIf you need this feature, please 'brew install ffmpeg'.\n\nGMT needs GraphicsMagick for the 'movie' command to make animated GIFs.\nIf you need this feature, please 'brew install graphicsmagick'.\n",
   "installed": [
 
   ],
