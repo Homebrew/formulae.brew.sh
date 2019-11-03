@@ -4,16 +4,26 @@
     "MenuMeters for El Capitan (and later)"
   ],
   "homepage": "https://member.ipmu.jp/yuji.tachikawa/MenuMetersElCapitan/",
-  "url": "https://github.com/yujitach/MenuMeters/releases/download/1.9.8/MenuMeters_1.9.8.zip",
-  "appcast": "https://github.com/yujitach/MenuMeters/releases.atom",
-  "version": "1.9.8",
-  "sha256": "7e034975be0d7eac033f0d4fcaf8725d435280411358d50a9828ce62f8bc1cca",
+  "url": "https://member.ipmu.jp/yuji.tachikawa/MenuMetersElCapitan/zips/MenuMeters_2.0.0.zip",
+  "appcast": "https://member.ipmu.jp/yuji.tachikawa/MenuMetersElCapitan/MenuMeters-Update.xml",
+  "version": "2.0.0",
+  "sha256": "6bbc68c215e70e686378d031aed7f3c35c98f68daf50a5ada53b0d7edf9158eb",
   "artifacts": [
+    {
+      "quit": "com.yujitach.MenuMeters",
+      "signal": {
+      }
+    },
     [
-      "MenuMeters.prefPane"
+      "MenuMeters.app"
     ],
     {
-      "trash": "~/Library/Preferences/com.ragingmenace.MenuMeters.plist",
+      "trash": [
+        "~/Library/Caches/com.yujitach.MenuMeters",
+        "~/Library/PreferencesPanes/MenuMeters.prefPane",
+        "~/Library/Preferences/com.ragingmenace.MenuMeters.plist",
+        "~/Library/Preferences/com.yujitach.MenuMeters.plist"
+      ],
       "signal": {
       }
     }
@@ -28,5 +38,5 @@
   },
   "conflicts_with": null,
   "container": null,
-  "auto_updates": null
+  "auto_updates": true
 }
