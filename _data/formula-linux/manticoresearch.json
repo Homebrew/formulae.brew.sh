@@ -1,6 +1,6 @@
 {
-  "name": "git",
-  "full_name": "git",
+  "name": "manticoresearch",
+  "full_name": "manticoresearch",
   "oldname": null,
   "aliases": [
 
@@ -8,10 +8,10 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Distributed revision control system",
-  "homepage": "https://git-scm.com",
+  "desc": "Open source text search engine",
+  "homepage": "https://www.manticoresearch.com",
   "versions": {
-    "stable": "2.24.0",
+    "stable": "3.2.0",
     "devel": null,
     "head": "HEAD",
     "bottle": true
@@ -26,16 +26,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/git-2.24.0.catalina.bottle.tar.gz",
-          "sha256": "fa754c684673a191b999528995c1dc4b0d597a95ed6a2b1dd213c8e7018885ab"
+          "url": "https://linuxbrew.bintray.com/bottles/manticoresearch-3.2.0.catalina.bottle.tar.gz",
+          "sha256": "fd744cbff75ab0e153d9c4a0eb1e49fec7222daa49b481363be448ab0fc506c0"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/git-2.24.0.mojave.bottle.tar.gz",
-          "sha256": "36d3b48999a9252ea1a25fa54cd5305259c713d78d14be8161ea206357c1e120"
+          "url": "https://linuxbrew.bintray.com/bottles/manticoresearch-3.2.0.mojave.bottle.tar.gz",
+          "sha256": "ae594e5ef0c1f5c73b6f08b90249081f0df69879453fa379f3f3b5ae935ed17e"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/git-2.24.0.high_sierra.bottle.tar.gz",
-          "sha256": "014ffddf6866f5c8c4177d06629b040949e4dfbb730e3dbe13a26a6a54e260df"
+          "url": "https://linuxbrew.bintray.com/bottles/manticoresearch-3.2.0.high_sierra.bottle.tar.gz",
+          "sha256": "fad052312cbbe75b5a0a6ca4e2184d9531f8c8bfa606597f0487c75a2339b09c"
         }
       }
     }
@@ -46,15 +46,14 @@
 
   ],
   "build_dependencies": [
-
+    "cmake",
+    "icu4c",
+    "libpq",
+    "mysql",
+    "unixodbc"
   ],
   "dependencies": [
-    "gettext",
-    "pcre2",
-    "openssl@1.1",
-    "curl",
-    "expat",
-    "zlib"
+    "openssl"
   ],
   "recommended_dependencies": [
 
@@ -69,7 +68,7 @@
 
   ],
   "conflicts_with": [
-
+    "sphinx"
   ],
   "caveats": null,
   "installed": [
