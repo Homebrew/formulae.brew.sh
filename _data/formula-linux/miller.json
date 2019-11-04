@@ -20,26 +20,22 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 0,
+      "rebuild": 1,
       "cellar": ":any_skip_relocation",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
+        "catalina": {
+          "url": "https://linuxbrew.bintray.com/bottles/miller-5.6.0.catalina.bottle.1.tar.gz",
+          "sha256": "1b66317a06c90c4727dbb51796ac0b2b79690dcef5c19f703da41d43dae7a173"
+        },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/miller-5.6.0.mojave.bottle.tar.gz",
-          "sha256": "a16659cfdc72dfde05634aa03155535ba8b5ae720864838606df5d47bb59a8bc"
+          "url": "https://linuxbrew.bintray.com/bottles/miller-5.6.0.mojave.bottle.1.tar.gz",
+          "sha256": "39fad1f8eaee23cb0135469b016b01dc6f1117f05f197df2e483e4661ebe2710"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/miller-5.6.0.high_sierra.bottle.tar.gz",
-          "sha256": "39ff0c316f56bed553a9da632c3f791c2651550ffa8d27d57d3b0ce1cd9f4481"
-        },
-        "sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/miller-5.6.0.sierra.bottle.tar.gz",
-          "sha256": "79155a7c2dd70813d51c99df37719ea29013ee4814e887eeced45f437c342369"
-        },
-        "x86_64_linux": {
-          "url": "https://linuxbrew.bintray.com/bottles/miller-5.6.0.x86_64_linux.bottle.tar.gz",
-          "sha256": "c432c0253cf703dc3740b16133524c9e0d071c2fe73dcc3b20fe55f1cf5de174"
+          "url": "https://linuxbrew.bintray.com/bottles/miller-5.6.0.high_sierra.bottle.1.tar.gz",
+          "sha256": "a3c4e36c09ecf0d8335527e8261d9a4caa9277f6510b35daae4bd758e7b43dbf"
         }
       }
     }
@@ -50,6 +46,9 @@
 
   ],
   "build_dependencies": [
+    "autoconf",
+    "automake",
+    "libtool",
     "flex"
   ],
   "dependencies": [

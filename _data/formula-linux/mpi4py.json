@@ -1,6 +1,6 @@
 {
-  "name": "gmic",
-  "full_name": "gmic",
+  "name": "mpi4py",
+  "full_name": "mpi4py",
   "oldname": null,
   "aliases": [
 
@@ -8,12 +8,12 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Full-Featured Open-Source Framework for Image Processing",
-  "homepage": "https://gmic.eu/",
+  "desc": "Python bindings for MPI",
+  "homepage": "https://mpi4py.readthedocs.io",
   "versions": {
-    "stable": "2.7.5",
+    "stable": "3.0.2",
     "devel": null,
-    "head": "HEAD",
+    "head": null,
     "bottle": true
   },
   "revision": 0,
@@ -26,16 +26,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/gmic-2.7.5.catalina.bottle.tar.gz",
-          "sha256": "1e0649a3f5aed96511f7cc72ec341777bd64f5318ac8ae0947d83b0b8f7bd3f1"
+          "url": "https://linuxbrew.bintray.com/bottles/mpi4py-3.0.2.catalina.bottle.tar.gz",
+          "sha256": "e4b9bf0d251aa9c6a23e39eee7fdc476e985734a84ff6228aaddea4e87a10f34"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/gmic-2.7.5.mojave.bottle.tar.gz",
-          "sha256": "bde0782b9e07ebe1f5b2cb5de94d17c12c74f75dff141049e727a1c9f7b26e92"
+          "url": "https://linuxbrew.bintray.com/bottles/mpi4py-3.0.2.mojave.bottle.tar.gz",
+          "sha256": "aab2b09949a0f4984c1ea8969d98f33cada88f23a02e8b6661d616cd641579c9"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/gmic-2.7.5.high_sierra.bottle.tar.gz",
-          "sha256": "0ff7708a4498fb204924d8a5c925b92e724c21ef409f29d9f3427d980d2ac7e2"
+          "url": "https://linuxbrew.bintray.com/bottles/mpi4py-3.0.2.high_sierra.bottle.tar.gz",
+          "sha256": "c4386874ab89d58514fcabbdf2dd912f7a3f1d5d1d4b3a23487f60b03ee6489d"
         }
       }
     }
@@ -46,13 +46,11 @@
 
   ],
   "build_dependencies": [
-    "cmake"
+    "cython"
   ],
   "dependencies": [
-    "fftw",
-    "jpeg",
-    "libpng",
-    "libtiff"
+    "open-mpi",
+    "python"
   ],
   "recommended_dependencies": [
 
