@@ -1,6 +1,6 @@
 {
-  "name": "conan",
-  "full_name": "conan",
+  "name": "oauth2l",
+  "full_name": "oauth2l",
   "oldname": null,
   "aliases": [
 
@@ -8,10 +8,10 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Distributed, open source, package manager for C/C++",
-  "homepage": "https://github.com/conan-io/conan",
+  "desc": "Simple CLI for interacting with Google oauth tokens",
+  "homepage": "https://github.com/google/oauth2l",
   "versions": {
-    "stable": "1.20.1",
+    "stable": "1.0.1",
     "devel": null,
     "head": "HEAD",
     "bottle": true
@@ -21,21 +21,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": ":any_skip_relocation",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/conan-1.20.1.catalina.bottle.tar.gz",
-          "sha256": "03fe6223dfa4d156419ae7820bbb77bd813e86951456c84ca8831218ffab2336"
+          "url": "https://linuxbrew.bintray.com/bottles/oauth2l-1.0.1.catalina.bottle.tar.gz",
+          "sha256": "36b8c454a7d8934b7fa5ba65ee4132859ffd07452628c5869ae51beedf010f8c"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/conan-1.20.1.mojave.bottle.tar.gz",
-          "sha256": "359d90b40ee8f84ee97b1c0c1e67229f48c657729c87d318d5f5f75c3fc5d62d"
+          "url": "https://linuxbrew.bintray.com/bottles/oauth2l-1.0.1.mojave.bottle.tar.gz",
+          "sha256": "7983a17ea03db453152e87d1bf517aff15f4f3bced0bd483405e6e31dd6fd070"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/conan-1.20.1.high_sierra.bottle.tar.gz",
-          "sha256": "c0e3f2850eddaba19092c093273ddbb966e31ba3168cd35fc2e4f8da869e225f"
+          "url": "https://linuxbrew.bintray.com/bottles/oauth2l-1.0.1.high_sierra.bottle.tar.gz",
+          "sha256": "d7d65ee29295d7740068d32b552327a8f3ceed0b3eb378f3d06afcfc03fcf796"
         }
       }
     }
@@ -46,12 +46,10 @@
 
   ],
   "build_dependencies": [
-    "pkg-config"
+    "go"
   ],
   "dependencies": [
-    "libffi",
-    "openssl@1.1",
-    "python"
+
   ],
   "recommended_dependencies": [
 
