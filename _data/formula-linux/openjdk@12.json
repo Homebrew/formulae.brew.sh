@@ -1,21 +1,17 @@
 {
-  "name": "openjdk",
-  "full_name": "openjdk",
+  "name": "openjdk@12",
+  "full_name": "openjdk@12",
   "oldname": null,
   "aliases": [
-    "openjdk@13",
-    "openjdk@8"
+
   ],
   "versioned_formulae": [
-    "openjdk@10",
-    "openjdk@11",
-    "openjdk@12",
-    "openjdk@9"
+
   ],
   "desc": "Development kit for the Java programming language",
   "homepage": "https://openjdk.java.net/",
   "versions": {
-    "stable": "13.0.1+9",
+    "stable": "12.0.2+10",
     "devel": null,
     "head": null,
     "bottle": true
@@ -30,21 +26,21 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/openjdk-13.0.1+9.catalina.bottle.tar.gz",
-          "sha256": "cac85fcc79d435eff83fdb616cebe07ff10d3cbdd525fc61f9e5297072f346fb"
+          "url": "https://linuxbrew.bintray.com/bottles/openjdk@12-12.0.2+10.catalina.bottle.tar.gz",
+          "sha256": "3892b99f99b2074c70bbae87b6d17cb26253b4021ea9ca7e032fe7be12b9b972"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/openjdk-13.0.1+9.mojave.bottle.tar.gz",
-          "sha256": "f34c615559bfb80d00c8cc706d2d212e4b61217acf5dd7225946c6708d84a8ea"
+          "url": "https://linuxbrew.bintray.com/bottles/openjdk@12-12.0.2+10.mojave.bottle.tar.gz",
+          "sha256": "846447341bfe7c51ce60db6b3e56b88934ef4266e96386c975cf7e2f50e84ba6"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/openjdk-13.0.1+9.high_sierra.bottle.tar.gz",
-          "sha256": "7b62e237d3b90fbce0b136e0ddc54224ded9cac74021fa7a7de3a4b39729b833"
+          "url": "https://linuxbrew.bintray.com/bottles/openjdk@12-12.0.2+10.high_sierra.bottle.tar.gz",
+          "sha256": "8967f8909149bc48637dc06da8670380224b1ca3e41c654688d82c1dfd41a77a"
         }
       }
     }
   },
-  "keg_only": false,
+  "keg_only": true,
   "bottle_disabled": false,
   "options": [
 
@@ -70,7 +66,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "For the system Java wrappers to find this JDK, symlink it with\n  sudo ln -sfn $(brew --prefix)/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk\n",
+  "caveats": "For the system Java wrappers to find this JDK, symlink it with\n  sudo ln -sfn $(brew --prefix)/opt/openjdk@12/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-12.jdk\n",
   "installed": [
 
   ],
