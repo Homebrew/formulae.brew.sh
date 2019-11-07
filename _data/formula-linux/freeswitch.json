@@ -11,7 +11,7 @@
   "desc": "Telephony platform to route various communication protocols",
   "homepage": "https://freeswitch.org",
   "versions": {
-    "stable": "1.6.20",
+    "stable": "1.10.1",
     "devel": null,
     "head": "HEAD",
     "bottle": true
@@ -20,22 +20,22 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
+        "catalina": {
+          "url": "https://linuxbrew.bintray.com/bottles/freeswitch-1.10.1.catalina.bottle.tar.gz",
+          "sha256": "1cef1a9bd8b435f518ec4af7389601db9d949219f6a1a4aeaeec289b79549381"
+        },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/freeswitch-1.6.20.mojave.bottle.1.tar.gz",
-          "sha256": "58a7bdb234edccfcd4d6ec0058d4170aec5051e3540b5b3047ae3e90fdd26f47"
+          "url": "https://linuxbrew.bintray.com/bottles/freeswitch-1.10.1.mojave.bottle.tar.gz",
+          "sha256": "511e4742167654d7c137b1a07b9f46d791cd34005014e33af51babfdda817d3f"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/freeswitch-1.6.20.high_sierra.bottle.1.tar.gz",
-          "sha256": "01903ecd5069961415c1493a1bf09b3bce19bb9fe7155883fc34d0cbb146384f"
-        },
-        "sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/freeswitch-1.6.20.sierra.bottle.1.tar.gz",
-          "sha256": "e9c57548ee83a2dd1e48611395c3b9d0b7e07d3389c80bfe7ed795f8b11138c6"
+          "url": "https://linuxbrew.bintray.com/bottles/freeswitch-1.10.1.high_sierra.bottle.tar.gz",
+          "sha256": "0648bc8ab93313a423d66fab93953a254740f949fc31ccf816bf1f49e8e1d7e6"
         }
       }
     }
@@ -54,10 +54,14 @@
     "yasm"
   ],
   "dependencies": [
+    "ffmpeg",
     "jpeg",
+    "ldns",
+    "libpq",
     "libsndfile",
+    "libtiff",
     "lua",
-    "openssl",
+    "openssl@1.1",
     "opus",
     "pcre",
     "speex",
