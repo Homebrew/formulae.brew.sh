@@ -16,30 +16,26 @@
     "head": null,
     "bottle": true
   },
-  "revision": 2,
+  "revision": 3,
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 2,
+      "rebuild": 0,
       "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/bulk_extractor-1.5.5_2.catalina.bottle.2.tar.gz",
-          "sha256": "29c9314307ce220c48c414cb27ce3db0e327372ff37cf093afd198ad6ffb702b"
+          "url": "https://linuxbrew.bintray.com/bottles/bulk_extractor-1.5.5_3.catalina.bottle.tar.gz",
+          "sha256": "6acada1995761f484993f407f33014260f8c16596381172b405fe84eef206e06"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/bulk_extractor-1.5.5_2.mojave.bottle.2.tar.gz",
-          "sha256": "d9a23deb7c19b4efba7c4079ff8cf3f7bc56f2d13e4d10fa74a28ee1e08ddd86"
+          "url": "https://linuxbrew.bintray.com/bottles/bulk_extractor-1.5.5_3.mojave.bottle.tar.gz",
+          "sha256": "da01b2d5208c362fa10baa1a3b1d7fd018f4886eddb068107b9786c36bbff480"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/bulk_extractor-1.5.5_2.high_sierra.bottle.2.tar.gz",
-          "sha256": "110583d688900e06f1607469145eba60fe807bb1c41020b8ba9decf379685a9e"
-        },
-        "sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/bulk_extractor-1.5.5_2.sierra.bottle.2.tar.gz",
-          "sha256": "712520309fa42fb430631cf8d5746e0ae71a87c07760e2f8b3532c04bac8d171"
+          "url": "https://linuxbrew.bintray.com/bottles/bulk_extractor-1.5.5_3.high_sierra.bottle.tar.gz",
+          "sha256": "621af8efc0671cd2905f4f077c9cfef8ac2493cf65421fb2973228c2b651c24e"
         }
       }
     }
@@ -50,11 +46,13 @@
 
   ],
   "build_dependencies": [
-
+    "autoconf",
+    "automake",
+    "libtool"
   ],
   "dependencies": [
     "boost",
-    "openssl"
+    "openssl@1.1"
   ],
   "recommended_dependencies": [
 
