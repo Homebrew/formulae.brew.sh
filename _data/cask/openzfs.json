@@ -4,32 +4,32 @@
     "OpenZFS on OS X"
   ],
   "homepage": "https://openzfsonosx.org/",
-  "url": "https://openzfsonosx.org/w/images/1/18/OpenZFS_on_OS_X_1.9.0.dmg",
+  "url": "https://openzfsonosx.org/w/images/8/88/OpenZFS_on_OS_X_1.9.3.dmg",
   "appcast": null,
-  "version": "1.9.0,18",
-  "sha256": "a6b05d29e9ae1f313e642109d18da6d930b1991bcd24c5f91ecc6a64bdc130fc",
+  "version": "1.9.3,88",
+  "sha256": "926e7c17d9b798dc176d4927083c921a8b7ef32952f90a40d26391c1ecdcb6bd",
   "artifacts": [
     "uninstall_preflight (Preflight Block)",
     {
       "delete": "~/zfsuninstaller.*",
+      "launchctl": "org.openzfsonosx.zed",
       "script": {
-        "executable": "$(brew --prefix)/Caskroom/openzfs/1.9.0,18/Docs & Scripts/uninstall-openzfsonosx.sh",
+        "executable": "$(brew --prefix)/Caskroom/openzfs/1.9.3,88/Docs & Scripts/uninstall-openzfsonosx.sh",
         "sudo": "true"
       },
       "signal": {
       }
-    }
+    },
+    "OpenZFS on OS X 1.9.3 Catalina.pkg (Pkg)"
   ],
   "caveats": "To install and/or use openzfs you may need to enable its kernel extension in:\n  System Preferences → Security & Privacy → General\nFor more information refer to vendor documentation or this Apple Technical Note:\n  https://developer.apple.com/library/content/technotes/tn2459/_index.html\n",
   "depends_on": {
     "macos": {
       "==": [
-        "10.9",
-        "10.10",
-        "10.11",
         "10.12",
         "10.13",
-        "10.14"
+        "10.14",
+        "10.15"
       ]
     }
   },
