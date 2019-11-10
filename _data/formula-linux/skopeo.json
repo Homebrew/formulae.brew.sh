@@ -36,6 +36,10 @@
         "high_sierra": {
           "url": "https://linuxbrew.bintray.com/bottles/skopeo-0.1.40_1.high_sierra.bottle.1.tar.gz",
           "sha256": "ae5437d6ba74269a0b82a85b365bbbdd0cf187107a44bf7119753d33e644947f"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/skopeo-0.1.40_1.x86_64_linux.bottle.1.tar.gz",
+          "sha256": "720c24a373f5d5499b2ec30063f1e8ade7970fcfe883090f48aafc9a2f7be0d4"
         }
       }
     }
@@ -46,10 +50,12 @@
 
   ],
   "build_dependencies": [
-    "go"
+    "go",
+    "pkg-config"
   ],
   "dependencies": [
-    "gpgme"
+    "gpgme",
+    "device-mapper"
   ],
   "recommended_dependencies": [
 
