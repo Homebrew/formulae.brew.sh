@@ -21,7 +21,7 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any_skip_relocation",
+      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
@@ -36,6 +36,10 @@
         "high_sierra": {
           "url": "https://linuxbrew.bintray.com/bottles/sratoolkit-2.10.0.high_sierra.bottle.tar.gz",
           "sha256": "3dc2db39ac207dc8ba786ba808105cba4128cc9cb5573a02c28e9a71208886c9"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/sratoolkit-2.10.0.x86_64_linux.bottle.tar.gz",
+          "sha256": "a197279f37e61683a000e951b0ec25a8fa5b95e7fe29b394dddf2c3387663b1f"
         }
       }
     }
@@ -46,11 +50,13 @@
 
   ],
   "build_dependencies": [
-
+    "pkg-config"
   ],
   "dependencies": [
     "hdf5",
-    "libmagic"
+    "libmagic",
+    "perl",
+    "libxml2"
   ],
   "recommended_dependencies": [
 

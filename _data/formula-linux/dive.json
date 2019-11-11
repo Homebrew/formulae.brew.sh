@@ -36,6 +36,10 @@
         "high_sierra": {
           "url": "https://linuxbrew.bintray.com/bottles/dive-0.9.1.high_sierra.bottle.tar.gz",
           "sha256": "4c2b212f5447326dc667753c289fe3192719515bed98102ec4061f8be5631005"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/dive-0.9.1.x86_64_linux.bottle.tar.gz",
+          "sha256": "c6923b1b7a5bffc2ffe323a8ae1de9d75450cabca735c34c5f4f64ee71b2f984"
         }
       }
     }
@@ -46,10 +50,12 @@
 
   ],
   "build_dependencies": [
-    "go"
+    "go",
+    "gpgme",
+    "pkg-config"
   ],
   "dependencies": [
-
+    "device-mapper"
   ],
   "recommended_dependencies": [
 
