@@ -36,6 +36,10 @@
         "high_sierra": {
           "url": "https://linuxbrew.bintray.com/bottles/aws-google-auth-0.0.33.high_sierra.bottle.tar.gz",
           "sha256": "fb7cf1b3aa3897922c22f78e14b3ee98a830ad8f71652740c50c9775511fb8d8"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/aws-google-auth-0.0.33.x86_64_linux.bottle.tar.gz",
+          "sha256": "4151db65c6bb6e0cb721ecd451b04af50610a3b321f89959cd0defef111dc31d"
         }
       }
     }
@@ -46,12 +50,15 @@
 
   ],
   "build_dependencies": [
-
+    "pkg-config"
   ],
   "dependencies": [
     "freetype",
     "jpeg",
-    "python"
+    "python",
+    "libffi",
+    "libxml2",
+    "libxslt"
   ],
   "recommended_dependencies": [
 
