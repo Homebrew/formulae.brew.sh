@@ -16,7 +16,7 @@
     "head": null,
     "bottle": true
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -26,16 +26,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/mariadb@10.2-10.2.29.catalina.bottle.tar.gz",
-          "sha256": "3f720f09ed941691f9e97ef007aa95c5810cea739dc55e63ff8de18b10776e8e"
+          "url": "https://homebrew.bintray.com/bottles/mariadb@10.2-10.2.29_1.catalina.bottle.tar.gz",
+          "sha256": "3c2e59fed86a40bce097e8aff0c7d48a685f0653e3e462f0eca1ecff9974f601"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/mariadb@10.2-10.2.29.mojave.bottle.tar.gz",
-          "sha256": "5365b832abe72858bdf3932ce798d748dcce805eaf192af3489bcc07336dbc72"
+          "url": "https://homebrew.bintray.com/bottles/mariadb@10.2-10.2.29_1.mojave.bottle.tar.gz",
+          "sha256": "ccd1f190344ae1aa8d2fa299d645a6d8fa7742905587c10b72251a8b628403ff"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/mariadb@10.2-10.2.29.high_sierra.bottle.tar.gz",
-          "sha256": "08cb9f3ab1a63d5e64b06632d92370ce44570a87c2bc49aa59f34ec9179dbb90"
+          "url": "https://homebrew.bintray.com/bottles/mariadb@10.2-10.2.29_1.high_sierra.bottle.tar.gz",
+          "sha256": "38905d2c6aa7e69368300f9bf9d5e74bc521dd10521b987399540fc045cecb1f"
         }
       }
     }
@@ -46,9 +46,11 @@
 
   ],
   "build_dependencies": [
-    "cmake"
+    "cmake",
+    "pkg-config"
   ],
   "dependencies": [
+    "groonga",
     "openssl@1.1"
   ],
   "recommended_dependencies": [
