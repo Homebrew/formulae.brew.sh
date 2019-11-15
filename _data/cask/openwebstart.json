@@ -1,0 +1,52 @@
+{
+  "token": "openwebstart",
+  "name": [
+    "OpenWebStart"
+  ],
+  "homepage": "https://openwebstart.com/",
+  "url": "https://github.com/karakun/OpenWebStart/releases/download/v0.5.1/OpenWebStart_macos_0_5_1.dmg",
+  "appcast": "https://github.com/karakun/OpenWebStart/releases.atom",
+  "version": "0.5.1",
+  "sha256": "96285f6592cae0093af2acb9a4f5865338edad292dcdd4e565e34bc5485e3f40",
+  "artifacts": [
+    "uninstall_preflight (Preflight Block)",
+    {
+      "script": {
+        "executable": "/Applications/OpenWebStart/OpenWebStart Uninstaller.app/Contents/MacOS/JavaApplicationStub",
+        "args": [
+          "-c"
+        ],
+        "sudo": "true"
+      },
+      "signal": {
+      }
+    },
+    {
+      "path": "$(brew --prefix)/Caskroom/openwebstart/0.5.1/OpenWebStart Installer.app/Contents/MacOS/JavaApplicationStub",
+      "args": {
+        "must_succeed": "true",
+        "sudo": "true",
+        "args": [
+          "-q"
+        ],
+        "print_stderr": "false",
+        "print_stdout": "true"
+      }
+    },
+    {
+      "trash": [
+        "~/.config/icedtea-web",
+        "~/.cache/icedtea-web",
+        "/Applications/OpenWebStart"
+      ],
+      "signal": {
+      }
+    }
+  ],
+  "caveats": null,
+  "depends_on": {
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": null
+}
