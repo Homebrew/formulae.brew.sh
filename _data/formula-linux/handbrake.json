@@ -11,7 +11,7 @@
   "desc": "Open-source video transcoder available for Linux, Mac, and Windows",
   "homepage": "https://handbrake.fr/",
   "versions": {
-    "stable": "1.2.2",
+    "stable": "1.3.0",
     "devel": null,
     "head": "HEAD",
     "bottle": true
@@ -26,20 +26,12 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/handbrake-1.2.2.catalina.bottle.tar.gz",
-          "sha256": "d355b648d84c7438e4abc411e491c3a49a0558f24fa16f8f9fa48822c75bc242"
+          "url": "https://linuxbrew.bintray.com/bottles/handbrake-1.3.0.catalina.bottle.tar.gz",
+          "sha256": "cd30221643e98ef2bb7fd47a698fe3206bea7ffbb920dcf7cca1551aaa61c488"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/handbrake-1.2.2.mojave.bottle.tar.gz",
-          "sha256": "62a2eb518d2058921f467312c37214a6b9cabd0e5d7e0efe95015a5dd38c9425"
-        },
-        "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/handbrake-1.2.2.high_sierra.bottle.tar.gz",
-          "sha256": "c5b58b1d1cd02b23975833e737ec09568e9f36e622e7137aa6c0939ef764b03e"
-        },
-        "sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/handbrake-1.2.2.sierra.bottle.tar.gz",
-          "sha256": "0f92e1d55b7d537313e3c2b01e7a780c58956f044a3f3968f84a13ae00050dd9"
+          "url": "https://linuxbrew.bintray.com/bottles/handbrake-1.3.0.mojave.bottle.tar.gz",
+          "sha256": "a8d970465d2fd15f53b109a5efdfa19be785da8f71f9193f73cc9134817fad14"
         }
       }
     }
@@ -54,9 +46,11 @@
     "automake",
     "cmake",
     "libtool",
+    "meson",
     "nasm",
+    "ninja",
     "pkg-config",
-    "python@2",
+    "python",
     "yasm"
   ],
   "dependencies": [
@@ -72,7 +66,11 @@
 
   ],
   "requirements": [
-
+    {
+      "name": "xcode",
+      "cask": null,
+      "download": null
+    }
   ],
   "conflicts_with": [
 
