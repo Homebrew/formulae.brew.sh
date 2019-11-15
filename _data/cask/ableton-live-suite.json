@@ -9,18 +9,38 @@
   "version": "10.1.4",
   "sha256": "8962eab69f8600501d5002b051668ea1ddde3c3febb44d02253da5064364a62b",
   "artifacts": [
+    {
+      "quit": "com.ableton.live",
+      "signal": {
+      }
+    },
     [
       "Ableton Live 10 Suite.app"
     ],
     {
-      "trash": "~/Library/*/*[Aa]bleton*",
-      "rmdir": "~/Music/Ableton/Factory Packs",
+      "trash": [
+        "~/Library/Application Support/CrashReporter/Ableton *_*.plist",
+        "~/Library/Application Support/Ableton",
+        "~/Library/Application Support/Cycling '74",
+        "~/Library/Caches/Ableton",
+        "~/Library/Preferences/Ableton",
+        "~/Library/Preferences/com.ableton.live.plist*",
+        "~/Library/Preferences/com.cycling74.Max*.plist*",
+        "~/Music/Ableton",
+        "~/Documents/Max [0-9]",
+        "/Users/Shared/Max [0-9]"
+      ],
       "signal": {
       }
     }
   ],
   "caveats": null,
   "depends_on": {
+    "macos": {
+      ">=": [
+        "10.11"
+      ]
+    }
   },
   "conflicts_with": null,
   "container": null,

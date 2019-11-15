@@ -9,18 +9,34 @@
   "version": "10.1.4",
   "sha256": "78cb697c8025cdabe08c261d09b63ad468a7f0bc19c864ea076f9fc4259d5db4",
   "artifacts": [
+    {
+      "quit": "com.ableton.live",
+      "signal": {
+      }
+    },
     [
       "Ableton Live 10 Intro.app"
     ],
     {
-      "trash": "~/Library/*/*[Aa]bleton*",
-      "rmdir": "~/Music/Ableton/Factory Packs",
+      "trash": [
+        "~/Library/Application Support/CrashReporter/Ableton *_*.plist",
+        "~/Library/Application Support/Ableton",
+        "~/Library/Caches/Ableton",
+        "~/Library/Preferences/Ableton",
+        "~/Library/Preferences/com.ableton.live.plist*",
+        "~/Music/Ableton"
+      ],
       "signal": {
       }
     }
   ],
   "caveats": null,
   "depends_on": {
+    "macos": {
+      ">=": [
+        "10.11"
+      ]
+    }
   },
   "conflicts_with": null,
   "container": null,
