@@ -1,6 +1,6 @@
 {
-  "name": "um",
-  "full_name": "um",
+  "name": "node@12",
+  "full_name": "node@12",
   "oldname": null,
   "aliases": [
 
@@ -8,10 +8,10 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Command-line utility for creating and maintaining personal man pages",
-  "homepage": "https://github.com/sinclairtarget/um",
+  "desc": "Platform built on V8 to build network applications",
+  "homepage": "https://nodejs.org/",
   "versions": {
-    "stable": "4.2.0",
+    "stable": "12.13.0",
     "devel": null,
     "head": null,
     "bottle": true
@@ -21,35 +21,36 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any_skip_relocation",
+      "cellar": ":any",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/um-4.2.0.catalina.bottle.tar.gz",
-          "sha256": "266b397cd3e24060e7926f438279325aed89643070618add3db64175e348c04b"
+          "url": "https://homebrew.bintray.com/bottles/node@12-12.13.0.catalina.bottle.tar.gz",
+          "sha256": "7f109b9c0aaab24570ffa2d65d091f918a66698cb0a92486e9bdbf91f0e4f769"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/um-4.2.0.mojave.bottle.tar.gz",
-          "sha256": "a4d8c9ddc2b46076eaccf3e3d4eaa43918f3d156e8abd16ad1415ea85f2da8f5"
+          "url": "https://homebrew.bintray.com/bottles/node@12-12.13.0.mojave.bottle.tar.gz",
+          "sha256": "29a7ed3f00bfbccaf32e07b274330d3a63fe963582393a01eb5abb6073c180cc"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/um-4.2.0.high_sierra.bottle.tar.gz",
-          "sha256": "a479ed6f535f228d1bfa15a7292e58d06a4f07d1238c4fa83f1b99c80564a24e"
+          "url": "https://homebrew.bintray.com/bottles/node@12-12.13.0.high_sierra.bottle.tar.gz",
+          "sha256": "f83c6c3d0bdeddf642de5983ceaebbbec2df69976b7f4fc04ecd233285a56ed4"
         }
       }
     }
   },
-  "keg_only": false,
+  "keg_only": true,
   "bottle_disabled": false,
   "options": [
 
   ],
   "build_dependencies": [
-
+    "pkg-config",
+    "python@2"
   ],
   "dependencies": [
-
+    "icu4c"
   ],
   "recommended_dependencies": [
 
