@@ -36,6 +36,10 @@
         "high_sierra": {
           "url": "https://linuxbrew.bintray.com/bottles/libming-0.4.8_1.high_sierra.bottle.tar.gz",
           "sha256": "50d6199171c5d8bc5b7cfb24e6befe9f2c7aefc12d8ee7127202fcf1ea646ae4"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/libming-0.4.8_1.x86_64_linux.bottle.tar.gz",
+          "sha256": "044092c7e26caf5808fcc10a34743289e2d87a406407cd8075ffb37029ab8964"
         }
       }
     }
@@ -48,12 +52,16 @@
   "build_dependencies": [
     "autoconf",
     "automake",
-    "libtool"
+    "libtool",
+    "bison",
+    "flex"
   ],
   "dependencies": [
     "freetype",
     "giflib",
-    "libpng"
+    "libpng",
+    "perl",
+    "python@2"
   ],
   "recommended_dependencies": [
 
