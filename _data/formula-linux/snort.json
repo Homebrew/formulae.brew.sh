@@ -36,6 +36,10 @@
         "high_sierra": {
           "url": "https://linuxbrew.bintray.com/bottles/snort-2.9.12_1.high_sierra.bottle.2.tar.gz",
           "sha256": "a69f95c8452769835680ea5410db5c853749539758ebdb7aa38ed5ec1dde2a02"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/snort-2.9.12_1.x86_64_linux.bottle.2.tar.gz",
+          "sha256": "efda5ee2de3d08e52772c5d37d1bdd6e2f17a56afa5c21ede2770c2f03cc0dd9"
         }
       }
     }
@@ -46,7 +50,9 @@
 
   ],
   "build_dependencies": [
-    "pkg-config"
+    "pkg-config",
+    "flex",
+    "bison"
   ],
   "dependencies": [
     "daq",
