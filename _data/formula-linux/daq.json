@@ -52,6 +52,10 @@
         "mavericks": {
           "url": "https://linuxbrew.bintray.com/bottles/daq-2.0.6.mavericks.bottle.tar.gz",
           "sha256": "8ce4fbbbb9f6189f6ee51d3223a81ebc7ea76069353bd284822989d6ccc364a5"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/daq-2.0.6.x86_64_linux.bottle.tar.gz",
+          "sha256": "000e70a6f6090cb10df172ccfc5699c80d05d79bd3da120f0d4daf48a0c6cd25"
         }
       }
     }
@@ -62,10 +66,11 @@
 
   ],
   "build_dependencies": [
-
+    "bison",
+    "flex"
   ],
   "dependencies": [
-
+    "libpcap"
   ],
   "recommended_dependencies": [
 

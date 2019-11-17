@@ -36,6 +36,10 @@
         "high_sierra": {
           "url": "https://linuxbrew.bintray.com/bottles/gitfs-0.5.2.high_sierra.bottle.tar.gz",
           "sha256": "e15109dbbfebea22a1f90b35ad2a93769cf581eda07d29c7cc7eb8c8b6982b43"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/gitfs-0.5.2.x86_64_linux.bottle.tar.gz",
+          "sha256": "49e9e19065718f66fb76abb04c7e1de48ddbfa4a0e41362d8b7463fe4eea363d"
         }
       }
     }
@@ -46,11 +50,13 @@
 
   ],
   "build_dependencies": [
-
+    "pkg-config"
   ],
   "dependencies": [
     "libgit2",
-    "python"
+    "libfuse",
+    "python",
+    "libffi"
   ],
   "recommended_dependencies": [
 
@@ -62,11 +68,7 @@
 
   ],
   "requirements": [
-    {
-      "name": "osxfuse",
-      "cask": "osxfuse",
-      "download": "https://github.com/libfuse/libfuse"
-    }
+
   ],
   "conflicts_with": [
 
