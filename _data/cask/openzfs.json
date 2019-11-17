@@ -4,17 +4,17 @@
     "OpenZFS on OS X"
   ],
   "homepage": "https://openzfsonosx.org/",
-  "url": "https://openzfsonosx.org/w/images/8/88/OpenZFS_on_OS_X_1.9.3.dmg",
+  "url": "https://openzfsonosx.org/w/images/6/64/OpenZFS_on_OS_X_1.9.3.1.dmg",
   "appcast": null,
-  "version": "1.9.3,88",
-  "sha256": "926e7c17d9b798dc176d4927083c921a8b7ef32952f90a40d26391c1ecdcb6bd",
+  "version": "1.9.3.1,64",
+  "sha256": "8ba738c90445194dc8c8cdb69af8dce8e54b62a1068c7d3c08ccc37ab6722d5e",
   "artifacts": [
     "uninstall_preflight (Preflight Block)",
     {
       "delete": "~/zfsuninstaller.*",
       "launchctl": "org.openzfsonosx.zed",
       "script": {
-        "executable": "$(brew --prefix)/Caskroom/openzfs/1.9.3,88/Docs & Scripts/uninstall-openzfsonosx.sh",
+        "executable": "$(brew --prefix)/Caskroom/openzfs/1.9.3.1,64/Docs & Scripts/uninstall-openzfsonosx.sh",
         "sudo": "true"
       },
       "signal": {
@@ -26,6 +26,7 @@
   "depends_on": {
     "macos": {
       "==": [
+        "10.11",
         "10.12",
         "10.13",
         "10.14",
