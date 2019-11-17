@@ -1,6 +1,6 @@
 {
-  "name": "goreleaser",
-  "full_name": "goreleaser",
+  "name": "node@12",
+  "full_name": "node@12",
   "oldname": null,
   "aliases": [
 
@@ -8,10 +8,10 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Deliver Go binaries as fast and easily as possible",
-  "homepage": "https://goreleaser.com/",
+  "desc": "Platform built on V8 to build network applications",
+  "homepage": "https://nodejs.org/",
   "versions": {
-    "stable": "0.122.0",
+    "stable": "12.13.0",
     "devel": null,
     "head": null,
     "bottle": true
@@ -21,35 +21,36 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any_skip_relocation",
+      "cellar": ":any",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/goreleaser-0.122.0.catalina.bottle.tar.gz",
-          "sha256": "90e861be77b310b0254729a9e0498305d28abea9de0b5b482c846c264b7f9c90"
+          "url": "https://linuxbrew.bintray.com/bottles/node@12-12.13.0.catalina.bottle.tar.gz",
+          "sha256": "7f109b9c0aaab24570ffa2d65d091f918a66698cb0a92486e9bdbf91f0e4f769"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/goreleaser-0.122.0.mojave.bottle.tar.gz",
-          "sha256": "cbc613aab5481dfb61c57f514e48937ccdb336d645288a7f59f54947eb7683fd"
+          "url": "https://linuxbrew.bintray.com/bottles/node@12-12.13.0.mojave.bottle.tar.gz",
+          "sha256": "29a7ed3f00bfbccaf32e07b274330d3a63fe963582393a01eb5abb6073c180cc"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/goreleaser-0.122.0.high_sierra.bottle.tar.gz",
-          "sha256": "78a306541094747d00b7aa2ebe63111a767b0611c173dc9491b4409ea4d87efa"
+          "url": "https://linuxbrew.bintray.com/bottles/node@12-12.13.0.high_sierra.bottle.tar.gz",
+          "sha256": "f83c6c3d0bdeddf642de5983ceaebbbec2df69976b7f4fc04ecd233285a56ed4"
         }
       }
     }
   },
-  "keg_only": false,
+  "keg_only": true,
   "bottle_disabled": false,
   "options": [
 
   ],
   "build_dependencies": [
-    "go"
+    "pkg-config",
+    "python@2"
   ],
   "dependencies": [
-
+    "icu4c"
   ],
   "recommended_dependencies": [
 
