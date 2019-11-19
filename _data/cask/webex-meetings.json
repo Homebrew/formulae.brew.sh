@@ -1,0 +1,50 @@
+{
+  "token": "webex-meetings",
+  "name": [
+    "Webex Meetings"
+  ],
+  "homepage": "https://www.webex.com/",
+  "url": "https://akamaicdn.webex.com/client/webexapp.dmg",
+  "appcast": null,
+  "version": "latest",
+  "sha256": "no_check",
+  "artifacts": [
+    {
+      "quit": [
+        "com.cisco.webexmeetingsapp",
+        "com.cisco.webex.webexmta"
+      ],
+      "delete": [
+        "/Applications/Cisco Webex Meetings.app",
+        "/Applications/Webex",
+        "~/Library/Internet Plug-Ins/WebEx64.plugin",
+        "~/Library/Application Support/WebEx Folder/atgpcext64.bundle",
+        "~/Library/Application Support/WebEx Folder/Add-ons/Cisco WebEx Start.app",
+        "~/Library/Application Support/WebEx Folder/T33_64UMC*/Meeting Center.app",
+        "~/Library/Application Support/WebEx Folder/T33_64UMC*/WebexAppLauncher.app"
+      ],
+      "launchctl": "com.webex.pluginagent",
+      "pkgutil": "mc.mac.webex.com",
+      "rmdir": "~/Library/Application Support/WebEx Folder/T33_64UMC*",
+      "signal": {
+      }
+    },
+    "Cisco Webex Meetings.pkg (Pkg)",
+    {
+      "trash": [
+        "~/Library/Application Support/WebEx Folder",
+        "~/Library/Caches/com.cisco.webexmeetingsapp",
+        "~/Library/Caches/com.cisco.webexmta",
+        "~/Library/Caches/com.cisco.webex.Cisco-WebEx-Start"
+      ],
+      "signal": {
+      }
+    }
+  ],
+  "caveats": null,
+  "depends_on": {
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": null
+}
