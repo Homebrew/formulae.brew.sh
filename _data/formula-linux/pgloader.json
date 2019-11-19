@@ -16,7 +16,7 @@
     "head": "HEAD",
     "bottle": true
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -25,21 +25,17 @@
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
+        "catalina": {
+          "url": "https://linuxbrew.bintray.com/bottles/pgloader-3.6.1_1.catalina.bottle.tar.gz",
+          "sha256": "51a494f1f8730502568e3cecb0182c479ccf7a56276d073245a905eea877844d"
+        },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/pgloader-3.6.1.mojave.bottle.tar.gz",
-          "sha256": "38db7f6a7695e08463a32172d9b31a14766fbfe8c7aaa4c552c9336537be6d5d"
+          "url": "https://linuxbrew.bintray.com/bottles/pgloader-3.6.1_1.mojave.bottle.tar.gz",
+          "sha256": "f6fae178dc49b4151102a2132a62ee24191b3090a6854a1fcd1d3e78425fd72e"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/pgloader-3.6.1.high_sierra.bottle.tar.gz",
-          "sha256": "3d569cdcdc3a27a6a0401582dd09b21aecf2032ec13e6df29d7f92c087857e84"
-        },
-        "sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/pgloader-3.6.1.sierra.bottle.tar.gz",
-          "sha256": "d4f9b42c3ec8d2794b887d659e7da03390f799cbfcbca0defa6c5387a6dbe00a"
-        },
-        "x86_64_linux": {
-          "url": "https://linuxbrew.bintray.com/bottles/pgloader-3.6.1.x86_64_linux.bottle.tar.gz",
-          "sha256": "032d4c0f1b7b27997648babcca35e1eaf823736497b2fc5c60b78718203fc275"
+          "url": "https://linuxbrew.bintray.com/bottles/pgloader-3.6.1_1.high_sierra.bottle.tar.gz",
+          "sha256": "46b847486646d3ab813a4624fe2868670757ea2315a04e090a42e3bb71693fd2"
         }
       }
     }
@@ -55,6 +51,7 @@
   ],
   "dependencies": [
     "freetds",
+    "openssl@1.1",
     "postgresql",
     "sbcl"
   ],
