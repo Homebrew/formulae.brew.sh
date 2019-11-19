@@ -13,33 +13,29 @@
   "versions": {
     "stable": "7.2.5.1",
     "devel": null,
-    "head": "HEAD",
+    "head": null,
     "bottle": true
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "cellar": ":any",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/virtuoso-7.2.5.1.catalina.bottle.1.tar.gz",
-          "sha256": "533bdc295f3a0d962fb068a8b85090b532c5ca6417786cbbc6872a2f7e993c7b"
+          "url": "https://homebrew.bintray.com/bottles/virtuoso-7.2.5.1_1.catalina.bottle.tar.gz",
+          "sha256": "c4904ae739141d51638c3f33064c85498c20d32169053daa61203ff6706c1fa8"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/virtuoso-7.2.5.1.mojave.bottle.1.tar.gz",
-          "sha256": "fb4d826c3209738d2398cd471fa6dff632c10c0b64fb667eb948717c8cfbdf19"
+          "url": "https://homebrew.bintray.com/bottles/virtuoso-7.2.5.1_1.mojave.bottle.tar.gz",
+          "sha256": "3a2375ce75d34e6fa2568aeb4bc3ac0239a4052c811eb3afeb7536166b05e67b"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/virtuoso-7.2.5.1.high_sierra.bottle.1.tar.gz",
-          "sha256": "d2d89c1cd64a84dec3728c691f1efbd3f0771dfe2fe931fe73bbbbd174343fd6"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/virtuoso-7.2.5.1.sierra.bottle.1.tar.gz",
-          "sha256": "bb86d15d36d1affafc57ff612ea0a6c88425882bbf5e1bd4cabe5bc1f434a31e"
+          "url": "https://homebrew.bintray.com/bottles/virtuoso-7.2.5.1_1.high_sierra.bottle.tar.gz",
+          "sha256": "3abcc2f1444324d675af9014ac20555124c875d7e9a4ba9b021fd1ad7c570845"
         }
       }
     }
@@ -50,10 +46,13 @@
 
   ],
   "build_dependencies": [
-    "gawk"
+    "autoconf",
+    "automake",
+    "gawk",
+    "libtool"
   ],
   "dependencies": [
-    "openssl"
+    "openssl@1.1"
   ],
   "recommended_dependencies": [
 
