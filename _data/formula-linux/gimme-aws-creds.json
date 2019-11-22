@@ -36,6 +36,10 @@
         "high_sierra": {
           "url": "https://linuxbrew.bintray.com/bottles/gimme-aws-creds-2.1.1.high_sierra.bottle.tar.gz",
           "sha256": "316cff81933b118665b1bda8ec13b8c3f30f344aea5c3956c96d31a34732090c"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/gimme-aws-creds-2.1.1.x86_64_linux.bottle.tar.gz",
+          "sha256": "46d2322c355091c87c8f82d147656bb73c9bfdfd2d9658c95370d29b92aed00a"
         }
       }
     }
@@ -46,10 +50,11 @@
 
   ],
   "build_dependencies": [
-
+    "pkg-config"
   ],
   "dependencies": [
-    "python"
+    "python",
+    "libffi"
   ],
   "recommended_dependencies": [
 
