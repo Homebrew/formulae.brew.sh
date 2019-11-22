@@ -36,6 +36,10 @@
         "high_sierra": {
           "url": "https://linuxbrew.bintray.com/bottles/tealdeer-1.2.0.high_sierra.bottle.1.tar.gz",
           "sha256": "b9c9181ba84b47b2dadaf49bfc9e8726273a071615e8229ed646181d4cbe5a49"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/tealdeer-1.2.0.x86_64_linux.bottle.1.tar.gz",
+          "sha256": "63547f5bd7281a03955992c9a34f14dd8bd6ad34a733a13c47c7219766278692"
         }
       }
     }
@@ -46,10 +50,11 @@
 
   ],
   "build_dependencies": [
-    "rust"
+    "rust",
+    "pkg-config"
   ],
   "dependencies": [
-
+    "openssl@1.1"
   ],
   "recommended_dependencies": [
 
