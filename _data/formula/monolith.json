@@ -1,6 +1,6 @@
 {
-  "name": "eslint",
-  "full_name": "eslint",
+  "name": "monolith",
+  "full_name": "monolith",
   "oldname": null,
   "aliases": [
 
@@ -8,10 +8,10 @@
   "versioned_formulae": [
 
   ],
-  "desc": "AST-based pattern checker for JavaScript",
-  "homepage": "https://eslint.org",
+  "desc": "CLI tool for saving complete web pages as a single HTML file",
+  "homepage": "https://github.com/Y2Z/monolith",
   "versions": {
-    "stable": "6.7.0",
+    "stable": "2.0.16",
     "devel": null,
     "head": null,
     "bottle": true
@@ -26,16 +26,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/eslint-6.7.0.catalina.bottle.tar.gz",
-          "sha256": "c79db1898766d7ba09ad4a45ed47675334f0a9c90f42b7914d33a8fd094559be"
+          "url": "https://homebrew.bintray.com/bottles/monolith-2.0.16.catalina.bottle.tar.gz",
+          "sha256": "e999c699c71652b99e8b9815c465979f762f8c73a76331130551ebf92e4f658c"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/eslint-6.7.0.mojave.bottle.tar.gz",
-          "sha256": "5ed6e2843965cd8a6bb8f7350191c9ccca6ef303c84a3c1e46d9082f41d02a0c"
+          "url": "https://homebrew.bintray.com/bottles/monolith-2.0.16.mojave.bottle.tar.gz",
+          "sha256": "8a5fb488b300e28d29691bffb530c29d2a45c12dd44c228d24d86d3d7d473b5a"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/eslint-6.7.0.high_sierra.bottle.tar.gz",
-          "sha256": "e6ba6134231e586148fecbaf19dca1a341e3faf79c5904839d570805f8a8cd27"
+          "url": "https://homebrew.bintray.com/bottles/monolith-2.0.16.high_sierra.bottle.tar.gz",
+          "sha256": "589877c03351b3dd89555cc3463c0f5e4339732d0ab7fbe8fb8d346826256326"
         }
       }
     }
@@ -46,10 +46,11 @@
 
   ],
   "build_dependencies": [
-
+    "pkg-config",
+    "rust"
   ],
   "dependencies": [
-    "node"
+    "openssl@1.1"
   ],
   "recommended_dependencies": [
 
