@@ -16,7 +16,7 @@
     "head": null,
     "bottle": true
   },
-  "revision": 1,
+  "revision": 2,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -25,21 +25,17 @@
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
+        "catalina": {
+          "url": "https://linuxbrew.bintray.com/bottles/dnsviz-0.8.2_2.catalina.bottle.tar.gz",
+          "sha256": "cde386e003eb2d8112ef2e8e947b2c9919c275a3cc193315df1a7e0043a3402c"
+        },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/dnsviz-0.8.2_1.mojave.bottle.tar.gz",
-          "sha256": "9afe5ee751dcc69d8a75f35a54b72c872851d72ab3a6b1156a4dba16b502c4c5"
+          "url": "https://linuxbrew.bintray.com/bottles/dnsviz-0.8.2_2.mojave.bottle.tar.gz",
+          "sha256": "4eca36bda18ba3969581ddc2cac1c15e33177afded24f12e8b46c89cfc5df2b2"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/dnsviz-0.8.2_1.high_sierra.bottle.tar.gz",
-          "sha256": "91addf642665b5301d585d372ba924d8ba24b41d73ce7a32c049490bc8b98b44"
-        },
-        "sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/dnsviz-0.8.2_1.sierra.bottle.tar.gz",
-          "sha256": "65fedd8f6979802ffcc356688e52abc01b39704cfe76e3c344e8b04e0a0990d5"
-        },
-        "x86_64_linux": {
-          "url": "https://linuxbrew.bintray.com/bottles/dnsviz-0.8.2_1.x86_64_linux.bottle.tar.gz",
-          "sha256": "d63a808e7843a969bb2eeeb45ce55bab610a0df4558f2253947d3cf09675f600"
+          "url": "https://linuxbrew.bintray.com/bottles/dnsviz-0.8.2_2.high_sierra.bottle.tar.gz",
+          "sha256": "8ecd24e5b812a8945a182c255de5c50fcba01adfc23ec0dcb8ad2d3e166101f1"
         }
       }
     }
@@ -50,14 +46,15 @@
 
   ],
   "build_dependencies": [
-    "pkg-config"
+    "pkg-config",
+    "swig"
   ],
   "dependencies": [
     "bind",
     "graphviz",
     "libsodium",
     "openssl@1.1",
-    "python@2",
+    "python",
     "swig"
   ],
   "recommended_dependencies": [
