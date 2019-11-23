@@ -10,13 +10,29 @@
   "sha256": "ca2aab668a40ec77deb2a0f6704cb42bac3f23ea0ce785460e9f529f78b4515b",
   "artifacts": [
     {
+      "quit": "com.kairos.duetMac",
       "kext": "com.karios.driver.DuetDisplay",
       "signal": {
       }
     },
     [
       "duet.app"
-    ]
+    ],
+    {
+      "trash": [
+        "~/Library/Preferences/com.kairos.duet*.plist",
+        "~/Library/Application Support/com.kairos.duet*",
+        "~/Library/Caches/com.crashlytics.data/com.kairos.duet*",
+        "~/Library/Caches/io.fabric.sdk.mac.data/com.kairos.duet*",
+        "~/Library/Caches/com.kairos.duet*"
+      ],
+      "rmdir": [
+        "~/Library/Caches/com.crashlytics.data",
+        "~/Library/Caches/io.fabric.sdk.mac.data"
+      ],
+      "signal": {
+      }
+    }
   ],
   "caveats": "To install and/or use duet you may need to enable its kernel extension in:\n  System Preferences → Security & Privacy → General\nFor more information refer to vendor documentation or this Apple Technical Note:\n  https://developer.apple.com/library/content/technotes/tn2459/_index.html\n",
   "depends_on": {
