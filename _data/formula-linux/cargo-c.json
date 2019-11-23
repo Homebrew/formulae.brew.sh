@@ -1,6 +1,6 @@
 {
-  "name": "pgroonga",
-  "full_name": "pgroonga",
+  "name": "cargo-c",
+  "full_name": "cargo-c",
   "oldname": null,
   "aliases": [
 
@@ -8,10 +8,10 @@
   "versioned_formulae": [
 
   ],
-  "desc": "PostgreSQL plugin to use Groonga as index",
-  "homepage": "https://pgroonga.github.io/",
+  "desc": "Helper program to build and install c-like libraries",
+  "homepage": "https://github.com/lu-zero/cargo-c",
   "versions": {
-    "stable": "2.2.2",
+    "stable": "0.3.1",
     "devel": null,
     "head": null,
     "bottle": true
@@ -21,21 +21,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": ":any_skip_relocation",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/pgroonga-2.2.2.catalina.bottle.tar.gz",
-          "sha256": "b44a4ace1580f94346ef0e14a2194ebe47246e023c42e5a7f2571b52ec2b156b"
+          "url": "https://linuxbrew.bintray.com/bottles/cargo-c-0.3.1.catalina.bottle.tar.gz",
+          "sha256": "60ab4670d7d8954c1ebd134ed756f0e0746985f5dddff5fed384692695f337dc"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/pgroonga-2.2.2.mojave.bottle.tar.gz",
-          "sha256": "53a14b9e8754907ebce4b69b3906f49186bebd8c61f1b875ce62e0c5ef987e5b"
+          "url": "https://linuxbrew.bintray.com/bottles/cargo-c-0.3.1.mojave.bottle.tar.gz",
+          "sha256": "3de8001d223896ab8f6cb77a7ad0b831ae89cf110358b3d035e7ee931899369c"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/pgroonga-2.2.2.high_sierra.bottle.tar.gz",
-          "sha256": "4f1bd67d861b575979c957edeb9dc2cbd4a310cdfc9be4cfdf4019737a01cdf9"
+          "url": "https://linuxbrew.bintray.com/bottles/cargo-c-0.3.1.high_sierra.bottle.tar.gz",
+          "sha256": "03c13c18e514d066e9d959500325130d4d66f4d5c5997e7fed44117df4b3028b"
         }
       }
     }
@@ -46,11 +46,10 @@
 
   ],
   "build_dependencies": [
-    "pkg-config"
+    "rust"
   ],
   "dependencies": [
-    "groonga",
-    "postgresql"
+
   ],
   "recommended_dependencies": [
 

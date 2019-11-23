@@ -1,6 +1,6 @@
 {
-  "name": "pgroonga",
-  "full_name": "pgroonga",
+  "name": "monolith",
+  "full_name": "monolith",
   "oldname": null,
   "aliases": [
 
@@ -8,10 +8,10 @@
   "versioned_formulae": [
 
   ],
-  "desc": "PostgreSQL plugin to use Groonga as index",
-  "homepage": "https://pgroonga.github.io/",
+  "desc": "CLI tool for saving complete web pages as a single HTML file",
+  "homepage": "https://github.com/Y2Z/monolith",
   "versions": {
-    "stable": "2.2.2",
+    "stable": "2.0.16",
     "devel": null,
     "head": null,
     "bottle": true
@@ -21,21 +21,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": ":any_skip_relocation",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/pgroonga-2.2.2.catalina.bottle.tar.gz",
-          "sha256": "b44a4ace1580f94346ef0e14a2194ebe47246e023c42e5a7f2571b52ec2b156b"
+          "url": "https://linuxbrew.bintray.com/bottles/monolith-2.0.16.catalina.bottle.tar.gz",
+          "sha256": "e999c699c71652b99e8b9815c465979f762f8c73a76331130551ebf92e4f658c"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/pgroonga-2.2.2.mojave.bottle.tar.gz",
-          "sha256": "53a14b9e8754907ebce4b69b3906f49186bebd8c61f1b875ce62e0c5ef987e5b"
+          "url": "https://linuxbrew.bintray.com/bottles/monolith-2.0.16.mojave.bottle.tar.gz",
+          "sha256": "8a5fb488b300e28d29691bffb530c29d2a45c12dd44c228d24d86d3d7d473b5a"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/pgroonga-2.2.2.high_sierra.bottle.tar.gz",
-          "sha256": "4f1bd67d861b575979c957edeb9dc2cbd4a310cdfc9be4cfdf4019737a01cdf9"
+          "url": "https://linuxbrew.bintray.com/bottles/monolith-2.0.16.high_sierra.bottle.tar.gz",
+          "sha256": "589877c03351b3dd89555cc3463c0f5e4339732d0ab7fbe8fb8d346826256326"
         }
       }
     }
@@ -46,11 +46,11 @@
 
   ],
   "build_dependencies": [
-    "pkg-config"
+    "pkg-config",
+    "rust"
   ],
   "dependencies": [
-    "groonga",
-    "postgresql"
+    "openssl@1.1"
   ],
   "recommended_dependencies": [
 
