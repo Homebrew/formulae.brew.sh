@@ -36,6 +36,10 @@
         "sierra": {
           "url": "https://linuxbrew.bintray.com/bottles/hledger-1.15.2.sierra.bottle.tar.gz",
           "sha256": "c9e3cf75046e98b65e04055b7f2b96eb3c441d031e4f9d28b01485275886a618"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/hledger-1.15.2.x86_64_linux.bottle.tar.gz",
+          "sha256": "5e68e6c07cc93740c4cc61b47f502488dd8c8fa29e993d56b51f2bd1af4995f0"
         }
       }
     }
@@ -47,10 +51,11 @@
   ],
   "build_dependencies": [
     "cabal-install",
-    "ghc"
+    "ghc@8.6"
   ],
   "dependencies": [
-    "ncurses"
+    "ncurses",
+    "zlib"
   ],
   "recommended_dependencies": [
 
