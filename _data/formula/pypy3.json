@@ -11,12 +11,12 @@
   "desc": "Implementation of Python 3 in Python",
   "homepage": "https://pypy.org/",
   "versions": {
-    "stable": "7.1.1",
+    "stable": "7.2.0",
     "devel": null,
     "head": null,
     "bottle": true
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -26,20 +26,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/pypy3-7.1.1_1.catalina.bottle.tar.gz",
-          "sha256": "8814a893b19a253dd6011aeb32cd43e59cbe5544dc9148b125a30771c6949c49"
+          "url": "https://homebrew.bintray.com/bottles/pypy3-7.2.0.catalina.bottle.tar.gz",
+          "sha256": "6d7e5373e600fed6b6bd01818f0106355a8b6ae5692b15e871a17d66dfab16f7"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/pypy3-7.1.1_1.mojave.bottle.tar.gz",
-          "sha256": "dbd52537433f8b6d404cf00833c8cef781c1b0cedf796f947a6a25a4fb903202"
+          "url": "https://homebrew.bintray.com/bottles/pypy3-7.2.0.mojave.bottle.tar.gz",
+          "sha256": "2e93847b5c7af6b6ae1171720b8cd95f6cd939f6ae19c19948d4092c165d37d7"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/pypy3-7.1.1_1.high_sierra.bottle.tar.gz",
-          "sha256": "098b9db01196378f0e715954667eff767f043e0382312887b59d8364c2d55bd7"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/pypy3-7.1.1_1.sierra.bottle.tar.gz",
-          "sha256": "d34911b42981909f71a7b0cbe2fe50bc4896e7b3cb1a00b8be01da600b2f1ab3"
+          "url": "https://homebrew.bintray.com/bottles/pypy3-7.2.0.high_sierra.bottle.tar.gz",
+          "sha256": "e4b8e6116658c07a07311e9fc1e40c080de529a8f34b49473b52f1dbc9836fce"
         }
       }
     }
@@ -58,6 +54,7 @@
     "libffi",
     "openssl@1.1",
     "sqlite",
+    "tcl-tk",
     "xz"
   ],
   "recommended_dependencies": [
@@ -79,7 +76,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "A \"distutils.cfg\" has been written to:\n  $(brew --prefix)/Cellar/pypy3/7.1.1_1/libexec/lib-python/3/distutils\nspecifying the install-scripts folder as:\n  $(brew --prefix)/share/pypy3\n\nIf you install Python packages via \"pypy3 setup.py install\", easy_install_pypy3,\nor pip_pypy3, any provided scripts will go into the install-scripts folder\nabove, so you may want to add it to your PATH *after* $(brew --prefix)/bin\nso you don't overwrite tools from CPython.\n\nSetuptools and pip have been installed, so you can use easy_install_pypy3 and\npip_pypy3.\nTo update pip and setuptools between pypy3 releases, run:\n    pip_pypy3 install --upgrade pip setuptools\n\nSee: https://docs.brew.sh/Homebrew-and-Python\n",
+  "caveats": "A \"distutils.cfg\" has been written to:\n  $(brew --prefix)/Cellar/pypy3/7.2.0/libexec/lib-python/3/distutils\nspecifying the install-scripts folder as:\n  $(brew --prefix)/share/pypy3\n\nIf you install Python packages via \"pypy3 setup.py install\", easy_install_pypy3,\nor pip_pypy3, any provided scripts will go into the install-scripts folder\nabove, so you may want to add it to your PATH *after* $(brew --prefix)/bin\nso you don't overwrite tools from CPython.\n\nSetuptools and pip have been installed, so you can use easy_install_pypy3 and\npip_pypy3.\nTo update pip and setuptools between pypy3 releases, run:\n    pip_pypy3 install --upgrade pip setuptools\n\nSee: https://docs.brew.sh/Homebrew-and-Python\n",
   "installed": [
 
   ],
