@@ -14,19 +14,39 @@
     "stable": "2.3.4",
     "devel": null,
     "head": null,
-    "bottle": false
+    "bottle": true
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any_skip_relocation",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "catalina": {
+          "url": "https://homebrew.bintray.com/bottles/smali-2.3.4_1.catalina.bottle.tar.gz",
+          "sha256": "0e9ddb33964040e89a7f044064b21ccdb30d47ed4901ac6d00ee963352ee48d4"
+        },
+        "mojave": {
+          "url": "https://homebrew.bintray.com/bottles/smali-2.3.4_1.mojave.bottle.tar.gz",
+          "sha256": "9883912d849479221c68ba6cba6a25f4fd89c20e80b44ac67e5e7341265cdf49"
+        },
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/smali-2.3.4_1.high_sierra.bottle.tar.gz",
+          "sha256": "7989f3aadb1f980d2c40addf62418ff03a0abd1e1e55262d3d2b96ad4e366cb6"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
   "build_dependencies": [
-
+    "gradle"
   ],
   "dependencies": [
 
@@ -41,7 +61,11 @@
 
   ],
   "requirements": [
-
+    {
+      "name": "java",
+      "cask": "adoptopenjdk",
+      "download": null
+    }
   ],
   "conflicts_with": [
 
