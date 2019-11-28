@@ -13,37 +13,29 @@
   "versions": {
     "stable": "6.9.3",
     "devel": null,
-    "head": null,
+    "head": "HEAD",
     "bottle": true
   },
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 0,
+      "rebuild": 1,
       "cellar": ":any",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/oniguruma-6.9.3.catalina.bottle.tar.gz",
-          "sha256": "6fbdebd83b61021a0614e81e7b767e1660ba0a8d7e2f5a1e36b8db204b88c5ca"
+          "url": "https://linuxbrew.bintray.com/bottles/oniguruma-6.9.3.catalina.bottle.1.tar.gz",
+          "sha256": "06193af02210587ee2b6d63fcf5f18fda46ba84cb21143b5f5b12abb456ff3ec"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/oniguruma-6.9.3.mojave.bottle.tar.gz",
-          "sha256": "f00f8c6f8afd8875fed685a9190cb0c5e9b5ceef58ef1e489fb17a42bddc9672"
+          "url": "https://linuxbrew.bintray.com/bottles/oniguruma-6.9.3.mojave.bottle.1.tar.gz",
+          "sha256": "ed28f2729bacc662f624254a442a90219ee885a8ef1c9241542c4a8ec55c15b9"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/oniguruma-6.9.3.high_sierra.bottle.tar.gz",
-          "sha256": "42f48f03fc7030dcdcd15b920e863c107982cabfc063e3ccb60032e31b01562c"
-        },
-        "sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/oniguruma-6.9.3.sierra.bottle.tar.gz",
-          "sha256": "67a2105211f270ed618fdb3d29946ad89e2cb6e7bbb5cbb7dc7f48bc4e94e6db"
-        },
-        "x86_64_linux": {
-          "url": "https://linuxbrew.bintray.com/bottles/oniguruma-6.9.3.x86_64_linux.bottle.tar.gz",
-          "sha256": "d7bb2aeb46d7a939650d1fb9165fd0e33b6954b02d9298087dd860d9838fad06"
+          "url": "https://linuxbrew.bintray.com/bottles/oniguruma-6.9.3.high_sierra.bottle.1.tar.gz",
+          "sha256": "4dc26cf4626173982cca426a550d1554416d099505537666da01fba148aa8f13"
         }
       }
     }
@@ -54,7 +46,9 @@
 
   ],
   "build_dependencies": [
-
+    "autoconf",
+    "automake",
+    "libtool"
   ],
   "dependencies": [
 
@@ -81,8 +75,8 @@
       "used_options": [
 
       ],
-      "built_as_bottle": true,
-      "poured_from_bottle": true,
+      "built_as_bottle": false,
+      "poured_from_bottle": false,
       "runtime_dependencies": [
 
       ],
