@@ -36,6 +36,10 @@
         "high_sierra": {
           "url": "https://linuxbrew.bintray.com/bottles/vsts-cli-0.1.4.high_sierra.bottle.1.tar.gz",
           "sha256": "ca77ac87f904bb3e88fb958f5d088d4740d93ea134a41c5bab3fb1218ef7c54d"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/vsts-cli-0.1.4.x86_64_linux.bottle.1.tar.gz",
+          "sha256": "8c18b30bd6e21e34adf6b19a2dfa17f91af8256c4a8af99f4e3295f1c223e3f7"
         }
       }
     }
@@ -46,10 +50,11 @@
 
   ],
   "build_dependencies": [
-
+    "pkg-config"
   ],
   "dependencies": [
-    "python"
+    "python",
+    "libffi"
   ],
   "recommended_dependencies": [
 
