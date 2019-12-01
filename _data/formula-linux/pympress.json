@@ -1,6 +1,6 @@
 {
-  "name": "elm",
-  "full_name": "elm",
+  "name": "pympress",
+  "full_name": "pympress",
   "oldname": null,
   "aliases": [
 
@@ -8,12 +8,12 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Functional programming language for building browser-based GUIs",
-  "homepage": "https://elm-lang.org",
+  "desc": "Simple and powerful dual-screen PDF reader designed for presentations",
+  "homepage": "https://github.com/Cimbali/pympress/",
   "versions": {
-    "stable": "0.19.1",
+    "stable": "1.5.1",
     "devel": null,
-    "head": null,
+    "head": "HEAD",
     "bottle": true
   },
   "revision": 0,
@@ -26,16 +26,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/elm-0.19.1.catalina.bottle.tar.gz",
-          "sha256": "e1bbfe4ff7deba3ed60eb55b81b86b6d3346325bea584802ca1212369f0fa0bb"
+          "url": "https://linuxbrew.bintray.com/bottles/pympress-1.5.1.catalina.bottle.tar.gz",
+          "sha256": "5f192402254be05dd85c5037153a3444854b429f2ec0118efac6eff445d3a175"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/elm-0.19.1.mojave.bottle.tar.gz",
-          "sha256": "288eeb47caccfaa9bae220492cee8de7206d40b7760e1e309a139a2398f9710d"
+          "url": "https://linuxbrew.bintray.com/bottles/pympress-1.5.1.mojave.bottle.tar.gz",
+          "sha256": "dad94bfa749bfeceb9b3bece78cb176fec098c9bbe5513e9e1772f6d9463a82f"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/elm-0.19.1.high_sierra.bottle.tar.gz",
-          "sha256": "7fb65ff925701c39bbc7d9a5099cd88f10a56949ae019bc8817035ed1d56edbd"
+          "url": "https://linuxbrew.bintray.com/bottles/pympress-1.5.1.high_sierra.bottle.tar.gz",
+          "sha256": "d7f9cbeaa860b3a40bd69688b7e4ec1ddd707c10cc3ea5c74423d79aed6431c1"
         }
       }
     }
@@ -46,12 +46,14 @@
 
   ],
   "build_dependencies": [
-    "cabal-install",
-    "ghc@8.6"
+
   ],
   "dependencies": [
-    "ncurses",
-    "zlib"
+    "gobject-introspection",
+    "gtk+3",
+    "poppler",
+    "pygobject3",
+    "python"
   ],
   "recommended_dependencies": [
 
