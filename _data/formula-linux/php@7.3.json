@@ -36,6 +36,10 @@
         "high_sierra": {
           "url": "https://linuxbrew.bintray.com/bottles/php@7.3-7.3.12.high_sierra.bottle.tar.gz",
           "sha256": "a665d6c234b80cf6c9792a3d41b504d2e529f1b091e7d38bb936449b76b9340c"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/php@7.3-7.3.12.x86_64_linux.bottle.tar.gz",
+          "sha256": "9260aefb157096e5fc1a92b63a203345a97bd42ce8b7fcedca45003ff2b96210"
         }
       }
     }
@@ -47,7 +51,8 @@
   ],
   "build_dependencies": [
     "httpd",
-    "pkg-config"
+    "pkg-config",
+    "xz"
   ],
   "dependencies": [
     "apr",
@@ -72,7 +77,12 @@
     "sqlite",
     "tidy-html5",
     "unixodbc",
-    "webp"
+    "webp",
+    "bzip2",
+    "libedit",
+    "libxml2",
+    "libxslt",
+    "zlib"
   ],
   "recommended_dependencies": [
 
