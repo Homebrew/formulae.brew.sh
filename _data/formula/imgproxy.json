@@ -1,6 +1,6 @@
 {
-  "name": "gimme-aws-creds",
-  "full_name": "gimme-aws-creds",
+  "name": "imgproxy",
+  "full_name": "imgproxy",
   "oldname": null,
   "aliases": [
 
@@ -8,12 +8,12 @@
   "versioned_formulae": [
 
   ],
-  "desc": "CLI to retrieve AWS credentials from Okta",
-  "homepage": "https://github.com/Nike-Inc/gimme-aws-creds",
+  "desc": "Fast and secure server for resizing and converting remote images",
+  "homepage": "https://imgproxy.net",
   "versions": {
-    "stable": "2.2.0",
+    "stable": "2.7.0",
     "devel": null,
-    "head": null,
+    "head": "HEAD",
     "bottle": true
   },
   "revision": 0,
@@ -26,16 +26,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/gimme-aws-creds-2.2.0.catalina.bottle.tar.gz",
-          "sha256": "016589b6320a71cb2dd9b1b1a0db93593b52e809982d93743ba08eda5781fef5"
+          "url": "https://homebrew.bintray.com/bottles/imgproxy-2.7.0.catalina.bottle.tar.gz",
+          "sha256": "e8a745e2febcc0e27306dbd4c1d9b1215c744cbc0900cf75c9c83dda41fa0a95"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/gimme-aws-creds-2.2.0.mojave.bottle.tar.gz",
-          "sha256": "9818c0212ed7544b223c27d9a8a9dba09c8760ecebf4acc3e9c29e884049eb98"
+          "url": "https://homebrew.bintray.com/bottles/imgproxy-2.7.0.mojave.bottle.tar.gz",
+          "sha256": "d987ba0ad66e8927fce68f881f4a3d6415ec92a2718716eaac35926a0011a735"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gimme-aws-creds-2.2.0.high_sierra.bottle.tar.gz",
-          "sha256": "5860b4d70155504c94c4881c566b63eee754ed63131abe130826f112bf4d512e"
+          "url": "https://homebrew.bintray.com/bottles/imgproxy-2.7.0.high_sierra.bottle.tar.gz",
+          "sha256": "e1cd7887d771e625d128d120e90c8a2d5b14877668d712a18e56839c3fe692eb"
         }
       }
     }
@@ -46,10 +46,11 @@
 
   ],
   "build_dependencies": [
-
+    "go",
+    "pkg-config"
   ],
   "dependencies": [
-    "python"
+    "vips"
   ],
   "recommended_dependencies": [
 
