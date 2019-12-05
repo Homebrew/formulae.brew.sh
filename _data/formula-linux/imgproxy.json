@@ -1,6 +1,6 @@
 {
-  "name": "netlify-cli",
-  "full_name": "netlify-cli",
+  "name": "imgproxy",
+  "full_name": "imgproxy",
   "oldname": null,
   "aliases": [
 
@@ -8,10 +8,10 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Netlify command-line tool",
-  "homepage": "https://www.netlify.com/docs/cli",
+  "desc": "Fast and secure server for resizing and converting remote images",
+  "homepage": "https://imgproxy.net",
   "versions": {
-    "stable": "2.23.0",
+    "stable": "2.7.0",
     "devel": null,
     "head": "HEAD",
     "bottle": true
@@ -21,21 +21,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any_skip_relocation",
+      "cellar": ":any",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/netlify-cli-2.23.0.catalina.bottle.tar.gz",
-          "sha256": "e866cfb6dde44f235ffffb1714b10ccb6c2dc55e63918572ca286a5c57353da0"
+          "url": "https://linuxbrew.bintray.com/bottles/imgproxy-2.7.0.catalina.bottle.tar.gz",
+          "sha256": "e8a745e2febcc0e27306dbd4c1d9b1215c744cbc0900cf75c9c83dda41fa0a95"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/netlify-cli-2.23.0.mojave.bottle.tar.gz",
-          "sha256": "896d5e2393beca25887bfae12d17a3cbab4a8138c88a4a043ba9bd26d155eaac"
+          "url": "https://linuxbrew.bintray.com/bottles/imgproxy-2.7.0.mojave.bottle.tar.gz",
+          "sha256": "d987ba0ad66e8927fce68f881f4a3d6415ec92a2718716eaac35926a0011a735"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/netlify-cli-2.23.0.high_sierra.bottle.tar.gz",
-          "sha256": "ce6132533e9f373d28ccbeed602576a708a444dc13c994da1fa5b0a07605cea4"
+          "url": "https://linuxbrew.bintray.com/bottles/imgproxy-2.7.0.high_sierra.bottle.tar.gz",
+          "sha256": "e1cd7887d771e625d128d120e90c8a2d5b14877668d712a18e56839c3fe692eb"
         }
       }
     }
@@ -46,10 +46,11 @@
 
   ],
   "build_dependencies": [
-
+    "go",
+    "pkg-config"
   ],
   "dependencies": [
-    "node"
+    "vips"
   ],
   "recommended_dependencies": [
 
