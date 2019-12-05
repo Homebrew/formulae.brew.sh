@@ -1,6 +1,6 @@
 {
-  "name": "firebase-cli",
-  "full_name": "firebase-cli",
+  "name": "diesel",
+  "full_name": "diesel",
   "oldname": null,
   "aliases": [
 
@@ -8,10 +8,10 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Firebase command-line tools",
-  "homepage": "https://firebase.google.com/docs/cli/",
+  "desc": "Command-line tool for Rust ORM Diesel",
+  "homepage": "https://diesel.rs",
   "versions": {
-    "stable": "7.9.0",
+    "stable": "1.4.3",
     "devel": null,
     "head": "HEAD",
     "bottle": true
@@ -21,21 +21,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any_skip_relocation",
+      "cellar": ":any",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/firebase-cli-7.9.0.catalina.bottle.tar.gz",
-          "sha256": "cd270cd930992d77be077cef0a02c5dbb676f64d2a45e9d10834a76b0af641d8"
+          "url": "https://linuxbrew.bintray.com/bottles/diesel-1.4.3.catalina.bottle.tar.gz",
+          "sha256": "214ec8bbdbb80d992a10cab12223b7c288c629b0d6683fd096a3dcb8d7097832"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/firebase-cli-7.9.0.mojave.bottle.tar.gz",
-          "sha256": "67baa21abdfd785b0024df7fb5051fad40a26016abb93e78b06fa704e661b6b0"
+          "url": "https://linuxbrew.bintray.com/bottles/diesel-1.4.3.mojave.bottle.tar.gz",
+          "sha256": "e505f21815ff044a269f377dd79a79f2f1a11390637ae45cc6561625fc575c57"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/firebase-cli-7.9.0.high_sierra.bottle.tar.gz",
-          "sha256": "973116803d42f7ab827bbd2a30fbfd2a5bdf3fe8d2a5f851206a81847fb91372"
+          "url": "https://linuxbrew.bintray.com/bottles/diesel-1.4.3.high_sierra.bottle.tar.gz",
+          "sha256": "c4d113930238a802a007a767068766b388b987374b79a188619a2b36f9f4ca13"
         }
       }
     }
@@ -46,10 +46,12 @@
 
   ],
   "build_dependencies": [
-
+    "rust"
   ],
   "dependencies": [
-    "node"
+    "libpq",
+    "mysql-client",
+    "sqlite"
   ],
   "recommended_dependencies": [
 
