@@ -40,6 +40,10 @@
         "high_sierra": {
           "url": "https://linuxbrew.bintray.com/bottles/openjdk-13.0.1+9.high_sierra.bottle.tar.gz",
           "sha256": "7b62e237d3b90fbce0b136e0ddc54224ded9cac74021fa7a7de3a4b39729b833"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/openjdk-13.0.1+9.x86_64_linux.bottle.tar.gz",
+          "sha256": "118793a9592d2d0b7d1322f47523ee2c0f065265d7c5c1bc1ae3d3d080658db4"
         }
       }
     }
@@ -50,10 +54,21 @@
 
   ],
   "build_dependencies": [
-    "autoconf"
+    "autoconf",
+    "pkg-config"
   ],
   "dependencies": [
-
+    "alsa-lib",
+    "cups",
+    "fontconfig",
+    "unzip",
+    "zip",
+    "linuxbrew/xorg/libx11",
+    "linuxbrew/xorg/libxext",
+    "linuxbrew/xorg/libxrandr",
+    "linuxbrew/xorg/libxrender",
+    "linuxbrew/xorg/libxt",
+    "linuxbrew/xorg/libxtst"
   ],
   "recommended_dependencies": [
 
