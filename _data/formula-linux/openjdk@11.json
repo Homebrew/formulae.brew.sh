@@ -36,6 +36,10 @@
         "high_sierra": {
           "url": "https://linuxbrew.bintray.com/bottles/openjdk@11-11.0.5+10.high_sierra.bottle.tar.gz",
           "sha256": "12f9a799d3087f88dd3ba060b00e92152e7556d7ee03004502a1e6dff2968bfa"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/openjdk@11-11.0.5+10.x86_64_linux.bottle.tar.gz",
+          "sha256": "56b74b9dd4ae248e533f16c03941e31425c8a0a9461b2f6bf82752897168dc2a"
         }
       }
     }
@@ -46,10 +50,21 @@
 
   ],
   "build_dependencies": [
-    "autoconf"
+    "autoconf",
+    "pkg-config"
   ],
   "dependencies": [
-
+    "alsa-lib",
+    "cups",
+    "fontconfig",
+    "unzip",
+    "zip",
+    "linuxbrew/xorg/libx11",
+    "linuxbrew/xorg/libxext",
+    "linuxbrew/xorg/libxrandr",
+    "linuxbrew/xorg/libxrender",
+    "linuxbrew/xorg/libxt",
+    "linuxbrew/xorg/libxtst"
   ],
   "recommended_dependencies": [
 
