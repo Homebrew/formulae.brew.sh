@@ -21,7 +21,7 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
@@ -36,6 +36,10 @@
         "high_sierra": {
           "url": "https://linuxbrew.bintray.com/bottles/ncmpc-0.36.high_sierra.bottle.tar.gz",
           "sha256": "a16f92c342b7189b5c6b934a532a7fae6e48f4cd7486cc14b868a3a58434c191"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/ncmpc-0.36.x86_64_linux.bottle.tar.gz",
+          "sha256": "63442a47bf490133fd450efa2bf04518b0eb60d9e736b56edffce24c830159c3"
         }
       }
     }
@@ -49,10 +53,10 @@
     "boost",
     "meson",
     "ninja",
-    "pkg-config"
+    "pkg-config",
+    "gcc@6"
   ],
   "dependencies": [
-    "gcc",
     "gettext",
     "libmpdclient",
     "pcre"
