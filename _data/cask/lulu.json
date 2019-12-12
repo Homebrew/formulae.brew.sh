@@ -4,14 +4,14 @@
     "LuLu"
   ],
   "homepage": "https://objective-see.com/products/lulu.html",
-  "url": "https://bitbucket.org/objective-see/deploy/downloads/LuLu_1.2.2.zip",
+  "url": "https://bitbucket.org/objective-see/deploy/downloads/LuLu_1.2.3.zip",
   "appcast": "https://objective-see.com/products/changelogs/LuLu.txt",
-  "version": "1.2.2",
-  "sha256": "3c443bc2e847d7ff3ab12b3869b89ac6e87603496583e51e351ef68c4d123b78",
+  "version": "1.2.3",
+  "sha256": "9c7bf4333af8dc7330614f2c9a389feac27334bc07f4b6039107b97eb476a3df",
   "artifacts": [
     {
       "script": {
-        "executable": "$(brew --prefix)/Caskroom/lulu/1.2.2/Lulu.app/Contents/MacOS/LuLu Installer",
+        "executable": "$(brew --prefix)/Caskroom/lulu/1.2.3/Lulu Installer.app/Contents/MacOS/LuLu Installer",
         "args": [
           "-uninstall"
         ],
@@ -21,7 +21,7 @@
       }
     },
     {
-      "path": "$(brew --prefix)/Caskroom/lulu/1.2.2/Lulu.app/Contents/MacOS/LuLu Installer",
+      "path": "$(brew --prefix)/Caskroom/lulu/1.2.3/Lulu Installer.app/Contents/MacOS/LuLu Installer",
       "args": {
         "must_succeed": "true",
         "sudo": "true",
@@ -38,6 +38,7 @@
         "~/Library/Preferences/com.objective-see.lulu.plist",
         "~/Library/Preferences/com.objective-see.lulu.helper.plist",
         "/Library/LaunchDaemons/com.objective-see.lulu.plist",
+        "/Library/LaunchDaemons/com.objective-see.lulu.configHelper.plist",
         "/Library/Logs/LuLu.log"
       ],
       "signal": {
