@@ -70,7 +70,7 @@
   "conflicts_with": [
     "bash-completion"
   ],
-  "caveats": "Add the following to your ~/.bash_profile:\n  [[ -r \"$(brew --prefix)/etc/profile.d/bash_completion.sh\" ]] && . \"$(brew --prefix)/etc/profile.d/bash_completion.sh\"\n\nIf you'd like to use existing homebrew v1 completions, add the following before the previous line:\n  export BASH_COMPLETION_COMPAT_DIR=\"/usr/local/etc/bash_completion.d\"\n",
+  "caveats": "Add the following to your ~/.bash_profile:\n  [[ -r \"$(brew --prefix)/etc/profile.d/bash_completion.sh\" ]] && . \"$(brew --prefix)/etc/profile.d/bash_completion.sh\"\n\nIf you'd like to use existing homebrew v1 completions, add the following before the previous line:\n  export BASH_COMPLETION_COMPAT_DIR=\"$(brew --prefix)/etc/bash_completion.d\"\n",
   "installed": [
 
   ],
