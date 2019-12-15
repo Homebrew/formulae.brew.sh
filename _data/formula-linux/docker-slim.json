@@ -1,6 +1,6 @@
 {
-  "name": "qpid-proton",
-  "full_name": "qpid-proton",
+  "name": "docker-slim",
+  "full_name": "docker-slim",
   "oldname": null,
   "aliases": [
 
@@ -8,12 +8,12 @@
   "versioned_formulae": [
 
   ],
-  "desc": "High-performance, lightweight AMQP 1.0 messaging library",
-  "homepage": "https://qpid.apache.org/proton/",
+  "desc": "Minify and secure Docker images",
+  "homepage": "https://dockersl.im",
   "versions": {
-    "stable": "0.30.0",
+    "stable": "1.26.1",
     "devel": null,
-    "head": "HEAD",
+    "head": null,
     "bottle": true
   },
   "revision": 0,
@@ -21,21 +21,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": ":any_skip_relocation",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/qpid-proton-0.30.0.catalina.bottle.tar.gz",
-          "sha256": "d469e523daa8394adaf7d45e877fc287914a33aa33164c89361a390b5e48b9ab"
+          "url": "https://linuxbrew.bintray.com/bottles/docker-slim-1.26.1.catalina.bottle.tar.gz",
+          "sha256": "5c3287964ff0aa01af0b14d6474fd3bc087972d29c587402314b267a2c9b2512"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/qpid-proton-0.30.0.mojave.bottle.tar.gz",
-          "sha256": "608f3141669345fe847bea58a150f6959cb9fd2d5f26c235540dda29d0aec779"
+          "url": "https://linuxbrew.bintray.com/bottles/docker-slim-1.26.1.mojave.bottle.tar.gz",
+          "sha256": "5c3287964ff0aa01af0b14d6474fd3bc087972d29c587402314b267a2c9b2512"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/qpid-proton-0.30.0.high_sierra.bottle.tar.gz",
-          "sha256": "3ba386ace69b0795b5e1b1dc65e9bd089564aea03d20bc98271cd559abe906ea"
+          "url": "https://linuxbrew.bintray.com/bottles/docker-slim-1.26.1.high_sierra.bottle.tar.gz",
+          "sha256": "5c3287964ff0aa01af0b14d6474fd3bc087972d29c587402314b267a2c9b2512"
         }
       }
     }
@@ -46,11 +46,10 @@
 
   ],
   "build_dependencies": [
-    "cmake"
+    "go"
   ],
   "dependencies": [
-    "libuv",
-    "openssl@1.1"
+
   ],
   "recommended_dependencies": [
 
