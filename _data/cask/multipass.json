@@ -4,15 +4,16 @@
     "Multipass"
   ],
   "homepage": "https://github.com/CanonicalLtd/multipass/",
-  "url": "https://github.com/CanonicalLtd/multipass/releases/download/v0.9.0/multipass-0.9.0+mac-Darwin.pkg",
+  "url": "https://github.com/CanonicalLtd/multipass/releases/download/v0.10.0/multipass-0.10.0+mac-Darwin.pkg",
   "appcast": "https://github.com/CanonicalLtd/multipass/releases.atom",
-  "version": "0.9.0",
-  "sha256": "930fd314e0de48cc9ef61cd822013531554ea363843f89138e5b77db305db19f",
+  "version": "0.10.0",
+  "sha256": "1359cffaaefe44044659f0101fcf4f0f96f1d1ba30d2756c4c56cf4e6c6f3275",
   "artifacts": [
     {
       "launchctl": "com.canonical.multipassd",
       "pkgutil": "com.canonical.multipass.*",
       "delete": [
+        "/Applications/Multipass.app",
         "$(brew --prefix)/bin/multipass",
         "$(brew --prefix)/etc/bash_completion.d/multipass",
         "/var/root/Library/Caches/multipassd",
@@ -21,7 +22,7 @@
       "signal": {
       }
     },
-    "multipass-0.9.0 mac-Darwin.pkg (Pkg)",
+    "multipass-0.10.0 mac-Darwin.pkg (Pkg)",
     {
       "trash": [
         "/var/root/Library/Application Support/multipassd",
