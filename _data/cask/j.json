@@ -4,66 +4,76 @@
     "J"
   ],
   "homepage": "https://www.jsoftware.com/",
-  "url": "https://www.jsoftware.com/download/j807/install/j807_mac64.zip",
+  "url": "https://www.jsoftware.com/download/j901/install/j901_mac64.zip",
   "appcast": null,
-  "version": "807",
-  "sha256": "3c78500eded82cd70dfff522ae61c54c0b7b8e746e43535e47f8e4c9df0987bd",
+  "version": "901",
+  "sha256": "2d38088504f900075334c549d487769aa899e628aa7c0384092fddd2a1614678",
   "artifacts": [
     {
-      "delete": "$(brew --prefix)/Caskroom/j/807/j",
+      "delete": "$(brew --prefix)/Caskroom/j/901/j",
       "signal": {
       }
     },
     {
-      "path": "j64-807/bin/jconsole",
+      "path": "j901/macos-fix.command",
+      "args": {
+        "must_succeed": "true",
+        "sudo": "false",
+        "print_stdout": "true"
+      }
+    },
+    {
+      "path": "j901/bin/jconsole",
       "args": {
         "must_succeed": "true",
         "sudo": "false",
         "args": [
           "-js",
-          "exit install'qtide'"
+          "load 'pacman'",
+          "'install' jpkg '*'",
+          "exit 0"
         ],
         "print_stdout": "true"
       }
     },
     [
-      "j64-807/jhs.app"
+      "j901/jqt.app"
     ],
     [
-      "j64-807/jqt.app"
+      "j901/jbrk.app"
     ],
     [
-      "j64-807/jbrk.app"
+      "j901/jcon.app"
     ],
     [
-      "j64-807/jcon.app"
+      "j901/jhs.app"
     ],
     [
-      "j64-807/bin/jconsole",
+      "j901/bin/jconsole",
       {
         "target": "jconsole"
       }
     ],
     [
-      "j64-807/bin/jbrk.command",
+      "j901/bin/jbrk.command",
       {
         "target": "jbrk"
       }
     ],
     [
-      "j64-807/bin/jhs.command",
+      "j901/bin/jhs.command",
       {
         "target": "jhs"
       }
     ],
     [
-      "j64-807/bin/jqt.command",
+      "j901/bin/jqt.command",
       {
         "target": "jqt"
       }
     ],
     [
-      "j64-807/bin/jconsole",
+      "j901/bin/jconsole",
       {
         "target": "jcon"
       }
