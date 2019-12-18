@@ -11,35 +11,31 @@
   "desc": "Monero (XMR) CPU miner",
   "homepage": "https://github.com/xmrig/xmrig",
   "versions": {
-    "stable": "2.14.4",
+    "stable": "5.3.0",
     "devel": null,
     "head": "HEAD",
     "bottle": true
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": "/usr/local/Cellar",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/xmrig-2.14.4_1.catalina.bottle.tar.gz",
-          "sha256": "593c36810c6bdb62a1e5b792ad5329ef6bbb83ce930512375c3a96641a93f099"
+          "url": "https://homebrew.bintray.com/bottles/xmrig-5.3.0.catalina.bottle.tar.gz",
+          "sha256": "73d679c72ce2f7e7600646dcd866b80c4cc556189c0ef233fe6e90a880d59a18"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/xmrig-2.14.4_1.mojave.bottle.tar.gz",
-          "sha256": "9cfd4cdb1593f0e90867dfce64e82f0979558ddeb89492edb4ef8fb04e865af3"
+          "url": "https://homebrew.bintray.com/bottles/xmrig-5.3.0.mojave.bottle.tar.gz",
+          "sha256": "98b5cca6ce442d52aa27d04fade3ca3e3767f2a05f31a336939f4d3c1fc9d112"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/xmrig-2.14.4_1.high_sierra.bottle.tar.gz",
-          "sha256": "578b70e67019678acc15d0d936a948b7905dab827efbdac4c0e235dc8e00db36"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/xmrig-2.14.4_1.sierra.bottle.tar.gz",
-          "sha256": "b798556ea6f2315521d08d4a9d209191b4b9f64bf26ff9104dca8df07f7561c4"
+          "url": "https://homebrew.bintray.com/bottles/xmrig-5.3.0.high_sierra.bottle.tar.gz",
+          "sha256": "a6d0574f089803e91f3c3a5c00dceb68ed428992bf629561575a1e7eefb5b519"
         }
       }
     }
@@ -53,6 +49,7 @@
     "cmake"
   ],
   "dependencies": [
+    "hwloc",
     "libmicrohttpd",
     "libuv",
     "openssl@1.1"
