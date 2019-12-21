@@ -1,6 +1,6 @@
 {
-  "name": "starship",
-  "full_name": "starship",
+  "name": "flint",
+  "full_name": "flint",
   "oldname": null,
   "aliases": [
 
@@ -8,10 +8,10 @@
   "versioned_formulae": [
 
   ],
-  "desc": "The cross-shell prompt for astronauts",
-  "homepage": "https://starship.rs",
+  "desc": "C library for number theory",
+  "homepage": "http://flintlib.org",
   "versions": {
-    "stable": "0.32.1",
+    "stable": "2.5.2",
     "devel": null,
     "head": "HEAD",
     "bottle": true
@@ -21,21 +21,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any_skip_relocation",
+      "cellar": ":any",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/starship-0.32.1.catalina.bottle.tar.gz",
-          "sha256": "b1a720c62ddc724ec1907541c883e19001f00ef3df3ee90636698f2e333573a6"
+          "url": "https://linuxbrew.bintray.com/bottles/flint-2.5.2.catalina.bottle.tar.gz",
+          "sha256": "f6df4b3a018320efc58b97580af06979ade00007812c6deb83ba150911f1bff9"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/starship-0.32.1.mojave.bottle.tar.gz",
-          "sha256": "f4fd53fc452556ffc9fb31dc159948e3777912396c7d34a1797896b705351a3a"
+          "url": "https://linuxbrew.bintray.com/bottles/flint-2.5.2.mojave.bottle.tar.gz",
+          "sha256": "464d909acc9801c865e85023ab33db1abea9e9a28f81808979d7650370d67417"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/starship-0.32.1.high_sierra.bottle.tar.gz",
-          "sha256": "8e0807cb1feb61d73c6519d44b95c4839d03d316d246b721a76d674130f97d76"
+          "url": "https://linuxbrew.bintray.com/bottles/flint-2.5.2.high_sierra.bottle.tar.gz",
+          "sha256": "952ffcbee931dc8554a69b2828b6ac0293e3981223762eeff0dabab42e365d0a"
         }
       }
     }
@@ -46,10 +46,11 @@
 
   ],
   "build_dependencies": [
-    "rust"
+
   ],
   "dependencies": [
-    "zlib"
+    "gmp",
+    "mpfr"
   ],
   "recommended_dependencies": [
 
