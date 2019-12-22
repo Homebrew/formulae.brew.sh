@@ -1,6 +1,6 @@
 {
-  "name": "sdb",
-  "full_name": "sdb",
+  "name": "corral",
+  "full_name": "corral",
   "oldname": null,
   "aliases": [
 
@@ -8,10 +8,10 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Ondisk/memory hashtable based on CDB",
-  "homepage": "https://github.com/radare/sdb",
+  "desc": "Dependency manager for the Pony language",
+  "homepage": "https://github.com/ponylang/corral",
   "versions": {
-    "stable": "1.4.1",
+    "stable": "0.3.0",
     "devel": null,
     "head": "HEAD",
     "bottle": true
@@ -21,21 +21,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": ":any_skip_relocation",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/sdb-1.4.1.catalina.bottle.tar.gz",
-          "sha256": "1f661b4f93a7161a941cb3db5477d95453f7a6b789d4eb8c8d20b5a1a86b91ee"
+          "url": "https://linuxbrew.bintray.com/bottles/corral-0.3.0.catalina.bottle.tar.gz",
+          "sha256": "3fe16cd9f427551d22028457f9571f666053c4b39a528543e68a917643427a41"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/sdb-1.4.1.mojave.bottle.tar.gz",
-          "sha256": "5e36426a73fca9c8b127af893a9d50bc571ecc2b4dd38517260e0555bdea49b3"
+          "url": "https://linuxbrew.bintray.com/bottles/corral-0.3.0.mojave.bottle.tar.gz",
+          "sha256": "3fe16cd9f427551d22028457f9571f666053c4b39a528543e68a917643427a41"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/sdb-1.4.1.high_sierra.bottle.tar.gz",
-          "sha256": "aeb8d25f8c7552334e9dbb33a4bcb250b9b867fc1af0864a2e805a63b412ba8f"
+          "url": "https://linuxbrew.bintray.com/bottles/corral-0.3.0.high_sierra.bottle.tar.gz",
+          "sha256": "449fd9454d9e5272a30d9ea909e506638c5e7d633c1c7d683f2592ce7e9fc487"
         }
       }
     }
@@ -46,11 +46,10 @@
 
   ],
   "build_dependencies": [
-    "pkg-config",
-    "vala"
+
   ],
   "dependencies": [
-    "glib"
+    "ponyc"
   ],
   "recommended_dependencies": [
 
