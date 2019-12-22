@@ -38,6 +38,10 @@
         "high_sierra": {
           "url": "https://linuxbrew.bintray.com/bottles/mariadb-10.4.10_1.high_sierra.bottle.1.tar.gz",
           "sha256": "bf7d36b6e56a9d44991abb5f249ccaa0dcebae715262b7560fc46a5f17011cbf"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/mariadb-10.4.10_1.x86_64_linux.bottle.1.tar.gz",
+          "sha256": "958942697b1e237990c8c85164d2e02acc5707b7dd309dd73abcb0b696e82dba"
         }
       }
     }
@@ -50,13 +54,16 @@
   "build_dependencies": [
     "cmake",
     "pkg-config",
-    "bison"
+    "bison",
+    "gcc@7"
   ],
   "dependencies": [
     "groonga",
     "openssl@1.1",
     "bzip2",
     "ncurses",
+    "libcsv",
+    "linux-pam",
     "zlib"
   ],
   "recommended_dependencies": [
