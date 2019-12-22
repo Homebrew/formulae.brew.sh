@@ -40,6 +40,10 @@
         "el_capitan": {
           "url": "https://linuxbrew.bintray.com/bottles/unpaper-6.1_2.el_capitan.bottle.tar.gz",
           "sha256": "743399859c237fb673ee9dec339d660215d92db2383f31c3208f726116adeb1d"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/unpaper-6.1_2.x86_64_linux.bottle.tar.gz",
+          "sha256": "ab715a00ec675ca3431c0fb71283b7abc11fd2a16b6a7bca74a0a97bc2a0d2b1"
         }
       }
     }
@@ -50,7 +54,10 @@
 
   ],
   "build_dependencies": [
-    "pkg-config"
+    "pkg-config",
+    "autoconf",
+    "automake",
+    "libxslt"
   ],
   "dependencies": [
     "ffmpeg"
