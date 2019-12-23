@@ -1,6 +1,6 @@
 {
-  "name": "libical",
-  "full_name": "libical",
+  "name": "nebula",
+  "full_name": "nebula",
   "oldname": null,
   "aliases": [
 
@@ -8,10 +8,10 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Implementation of iCalendar protocols and data formats",
-  "homepage": "https://libical.github.io/libical/",
+  "desc": "Scalable overlay networking tool for connecting computers anywhere",
+  "homepage": "https://github.com/slackhq/nebula",
   "versions": {
-    "stable": "3.0.7",
+    "stable": "1.0.0",
     "devel": null,
     "head": null,
     "bottle": true
@@ -21,21 +21,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": ":any_skip_relocation",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/libical-3.0.7.catalina.bottle.tar.gz",
-          "sha256": "07655cf921ae272e80acde10ad0d0669ed445954ead4804be29edaaa11a04706"
+          "url": "https://homebrew.bintray.com/bottles/nebula-1.0.0.catalina.bottle.tar.gz",
+          "sha256": "fafd51b5bd0609e3f8e3b6e92a9e85f309b1ed6cea2e3342b0ffc4e691cb3823"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/libical-3.0.7.mojave.bottle.tar.gz",
-          "sha256": "2e2bc2c5ba396ca27aed526c8463ef3078cb5d238b1a0165de977468dd2d6467"
+          "url": "https://homebrew.bintray.com/bottles/nebula-1.0.0.mojave.bottle.tar.gz",
+          "sha256": "e7a4dc91c7c1b8798468dfe977c6d365eea4a57b794aa94ab592edb005c5353d"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/libical-3.0.7.high_sierra.bottle.tar.gz",
-          "sha256": "7a3afd92474988902635c2c69c86c46e4273c000e6ac34f62b74a6c77a576332"
+          "url": "https://homebrew.bintray.com/bottles/nebula-1.0.0.high_sierra.bottle.tar.gz",
+          "sha256": "99d660db7cd0f718b8bc9e876eb0a8e012c8c841f9b59b8d2b0fbe04374f47a7"
         }
       }
     }
@@ -46,12 +46,10 @@
 
   ],
   "build_dependencies": [
-    "cmake",
-    "pkg-config"
+    "go"
   ],
   "dependencies": [
-    "glib",
-    "icu4c"
+
   ],
   "recommended_dependencies": [
 
@@ -60,7 +58,7 @@
 
   ],
   "uses_from_macos": [
-    "libxml2"
+
   ],
   "requirements": [
 
