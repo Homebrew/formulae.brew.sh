@@ -36,6 +36,10 @@
         "high_sierra": {
           "url": "https://linuxbrew.bintray.com/bottles/python@3.8-3.8.0.high_sierra.bottle.tar.gz",
           "sha256": "b5e18adb673fce8cc5261f7614c723369bc74188169c6801344166911a7fb0cd"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/python@3.8-3.8.0.x86_64_linux.bottle.tar.gz",
+          "sha256": "5c91c0845a829b889f4126cd900149ecf39b27f738ea896d41a9002a2d438040"
         }
       }
     }
@@ -53,7 +57,12 @@
     "openssl@1.1",
     "readline",
     "sqlite",
-    "xz"
+    "xz",
+    "bzip2",
+    "libffi",
+    "ncurses",
+    "unzip",
+    "zlib"
   ],
   "recommended_dependencies": [
 
@@ -70,7 +79,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "Python has been installed as\n  $(brew --prefix)/opt/python@3.8/bin/python3\n\nYou can install Python packages with\n  $(brew --prefix)/opt/python@3.8/bin/pip3 install <package>\nThey will install into the site-package directory\n  $(brew --prefix)/Cellar/python@3.8/3.8.0/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages\n\nSee: https://docs.brew.sh/Homebrew-and-Python\n",
+  "caveats": "Python has been installed as\n  $(brew --prefix)/opt/python@3.8/bin/python3\n\nYou can install Python packages with\n  $(brew --prefix)/opt/python@3.8/bin/pip3 install <package>\nThey will install into the site-package directory\n  $(brew --prefix)/Cellar/python@3.8/3.8.0/lib/python3.8/site-packages\n\nSee: https://docs.brew.sh/Homebrew-and-Python\n",
   "installed": [
 
   ],
