@@ -1,4 +1,4 @@
-# Homebrew Formulae
+# Homebrew Formulae 
 
 [Homebrew Formulae](https://formulae.brew.sh) is an online package browser for [Homebrew](https://brew.sh).
 
