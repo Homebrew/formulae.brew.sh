@@ -20,26 +20,22 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 0,
+      "rebuild": 1,
       "cellar": ":any",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
+        "catalina": {
+          "url": "https://linuxbrew.bintray.com/bottles/libxc-4.3.4.catalina.bottle.1.tar.gz",
+          "sha256": "072df8c5f3e00bf045f4e062993ecb08e324872daf3503b8f2bacef866a3de14"
+        },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/libxc-4.3.4.mojave.bottle.tar.gz",
-          "sha256": "f8b5f2dff116944721e2a0f3d9b8de233dd7ed5672a7a5e049be46d479be364f"
+          "url": "https://linuxbrew.bintray.com/bottles/libxc-4.3.4.mojave.bottle.1.tar.gz",
+          "sha256": "7727321091982306464ad87e055074b2675d83ee3c8416cf6b0681a4db31bc85"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/libxc-4.3.4.high_sierra.bottle.tar.gz",
-          "sha256": "c3e5f9d0fc66335ce0d246d2ed308b0d1ece555db9a2c877bcbb493813cff9ff"
-        },
-        "sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/libxc-4.3.4.sierra.bottle.tar.gz",
-          "sha256": "0022f8f1f5d6f4fb7a842b1aef84660c2cf39b081d0003c5a21c365f8e6a35d8"
-        },
-        "x86_64_linux": {
-          "url": "https://linuxbrew.bintray.com/bottles/libxc-4.3.4.x86_64_linux.bottle.tar.gz",
-          "sha256": "2610d890e6307cda51cab0e5f1399bf9490606a933219ec2e4e80fa4cc1f266c"
+          "url": "https://linuxbrew.bintray.com/bottles/libxc-4.3.4.high_sierra.bottle.1.tar.gz",
+          "sha256": "c8f820ca8dce64220c8c1e60002a13c4ed21d5decfd6b1189b6d286ca5c47ab4"
         }
       }
     }
@@ -50,7 +46,9 @@
 
   ],
   "build_dependencies": [
-
+    "autoconf",
+    "automake",
+    "libtool"
   ],
   "dependencies": [
     "gcc"
