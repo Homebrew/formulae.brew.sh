@@ -1,6 +1,6 @@
 {
-  "name": "pwntools",
-  "full_name": "pwntools",
+  "name": "mlpack",
+  "full_name": "mlpack",
   "oldname": null,
   "aliases": [
 
@@ -8,15 +8,15 @@
   "versioned_formulae": [
 
   ],
-  "desc": "CTF framework used by Gallopsled in every CTF",
-  "homepage": "https://github.com/Gallopsled/pwntools",
+  "desc": "Scalable C++ machine learning library",
+  "homepage": "https://www.mlpack.org",
   "versions": {
-    "stable": "3.12.2",
+    "stable": "3.2.2",
     "devel": null,
     "head": null,
     "bottle": true
   },
-  "revision": 2,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -26,16 +26,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/pwntools-3.12.2_2.catalina.bottle.tar.gz",
-          "sha256": "4451b3af23f57558456b208bafeb26c3edbd37dfe11d4de9d4a815233822759e"
+          "url": "https://linuxbrew.bintray.com/bottles/mlpack-3.2.2.catalina.bottle.tar.gz",
+          "sha256": "2201fc32de0214fc53c86c33e8bb63636039851d739641d2fc6ca8d73ead0156"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/pwntools-3.12.2_2.mojave.bottle.tar.gz",
-          "sha256": "c2fdfe2c99004b7800ff8d0768b7804f17b30b81b544864b2735b33a4308b741"
+          "url": "https://linuxbrew.bintray.com/bottles/mlpack-3.2.2.mojave.bottle.tar.gz",
+          "sha256": "dcbc5b2581a049a323c36dc606e1176bf8a911ca923ba7becaff0414b09241d6"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/pwntools-3.12.2_2.high_sierra.bottle.tar.gz",
-          "sha256": "17c21c2430aa0e95baccc3f0d25a202682c8133daf61e032da6668506ee79561"
+          "url": "https://linuxbrew.bintray.com/bottles/mlpack-3.2.2.high_sierra.bottle.tar.gz",
+          "sha256": "3ff451d07eba97aeaa2846deef445a63816d867b32933925ad0d49638475a97d"
         }
       }
     }
@@ -46,11 +46,15 @@
 
   ],
   "build_dependencies": [
-
+    "cmake",
+    "doxygen",
+    "pkg-config"
   ],
   "dependencies": [
-    "openssl@1.1",
-    "python@2"
+    "armadillo",
+    "boost",
+    "ensmallen",
+    "graphviz"
   ],
   "recommended_dependencies": [
 
@@ -65,7 +69,7 @@
 
   ],
   "conflicts_with": [
-    "moreutils"
+
   ],
   "caveats": null,
   "installed": [
