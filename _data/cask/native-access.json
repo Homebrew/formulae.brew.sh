@@ -3,18 +3,55 @@
   "name": [
     "Native Access"
   ],
-  "homepage": "https://www.native-instruments.com/en/specials/native-access/",
-  "url": "https://www.native-instruments.com/fileadmin/downloads/Native_Access_Installer.dmg",
-  "appcast": null,
-  "version": "latest",
-  "sha256": "no_check",
+  "homepage": "https://native-instruments.com/specials/native-access",
+  "url": "https://native-instruments.com/fileadmin/downloads/Native_Access_Installer.dmg",
+  "appcast": "https://native-instruments.com/forum/threads/official-update-status-native-access-current-version-1-12-1.313999",
+  "version": "1.12.1.129",
+  "sha256": "21d7f6cde1a173c12392e323bf8d23e51460f389e38552c367bb8ab41d61f20e",
   "artifacts": [
+    {
+      "quit": "com.native-instruments.Native Access",
+      "launchctl": "com.native-instruments.NativeAccess.Helper2",
+      "delete": [
+        "/Library/PrivilegedHelperTools/com.native-instruments.NativeAccess.Helper2",
+        "/Library/Application Support/Native Instruments/Helper/NIHelperAuth"
+      ],
+      "rmdir": [
+        "/Library/Application Support/Native Instruments/*",
+        "/Library/Application Support/Native Instruments"
+      ],
+      "signal": {
+      }
+    },
     [
       "Native Access.app"
-    ]
+    ],
+    {
+      "trash": [
+        "/Library/Application Support/Native Instruments/Service Center/NativeAccess.xml",
+        "~/Library/Application Support/Native Instruments/Native Access*",
+        "~/Library/Application Support/Native Instruments/Service Center",
+        "~/Library/Application Support/CrashReporter/Native Access_*.plist",
+        "~/Library/Caches/Native Instruments/Native Access*",
+        "~/Library/Preferences/com.native-instruments.Native Access.plist",
+        "~/Library/Preferences/com.native-instruments.Shared.plist"
+      ],
+      "rmdir": [
+        "/Library/Application Support/Native Instruments/*",
+        "/Library/Application Support/Native Instruments",
+        "~/Library/Application Support/Native Instruments"
+      ],
+      "signal": {
+      }
+    }
   ],
   "caveats": null,
   "depends_on": {
+    "macos": {
+      ">=": [
+        "10.12"
+      ]
+    }
   },
   "conflicts_with": null,
   "container": null,
