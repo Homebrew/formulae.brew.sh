@@ -1,0 +1,36 @@
+{
+  "token": "twonkyserver",
+  "name": [
+    "Twonky Server"
+  ],
+  "homepage": "https://twonky.com/",
+  "url": "http://download.twonky.com/8.5.1/TwonkyServerInstaller-8.5.1.pkg",
+  "appcast": "https://twonky.com/downloads/index.html",
+  "version": "8.5.1",
+  "sha256": "19694b1d7cad69eb14921a6ce234edd71e1d1f4edd671193330b61e042f1d66c",
+  "artifacts": [
+    {
+      "pkgutil": "com.twonky.server.Twonky",
+      "launchctl": [
+        "com.twonky.server.Twonky",
+        "com.twonky.server.tsuninstall"
+      ],
+      "signal": {
+        "TERM": "com.twonky.server.Twonky"
+      },
+      "delete": "/Applications/Twonky.app"
+    },
+    "TwonkyServerInstaller-8.5.1.pkg (Pkg)",
+    {
+      "trash": "~/Twonky Library.twonky",
+      "signal": {
+      }
+    }
+  ],
+  "caveats": null,
+  "depends_on": {
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": null
+}
