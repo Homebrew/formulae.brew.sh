@@ -21,7 +21,7 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
@@ -36,6 +36,10 @@
         "high_sierra": {
           "url": "https://linuxbrew.bintray.com/bottles/infer-0.17.0.high_sierra.bottle.tar.gz",
           "sha256": "c7bb9d37a9d77fbc2019ffd6f80ce7e7a3992c4ac0a95235c335ce61f43993e9"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/infer-0.17.0.x86_64_linux.bottle.tar.gz",
+          "sha256": "bd11c69b3a2500c89d678ce36e42cfa4f887ae13f98bd07ce56ddbe3b327b117"
         }
       }
     }
@@ -55,15 +59,17 @@
     "opam",
     "pkg-config",
     "m4",
-    "unzip"
+    "unzip",
+    "patchelf"
   ],
   "dependencies": [
     "gmp",
     "mpfr",
     "sqlite",
     "ncurses",
-    "zlib",
-    "adoptopenjdk"
+    "python@2",
+    "xz",
+    "zlib"
   ],
   "recommended_dependencies": [
 
