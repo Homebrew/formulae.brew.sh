@@ -1,17 +1,17 @@
 {
-  "name": "rustup-init",
-  "full_name": "rustup-init",
+  "name": "ansible@2.8",
+  "full_name": "ansible@2.8",
   "oldname": null,
   "aliases": [
-    "rustup"
+
   ],
   "versioned_formulae": [
 
   ],
-  "desc": "The Rust toolchain installer",
-  "homepage": "https://github.com/rust-lang/rustup.rs",
+  "desc": "Automate deployment, configuration, and upgrading",
+  "homepage": "https://www.ansible.com/",
   "versions": {
-    "stable": "1.21.1",
+    "stable": "2.8.7",
     "devel": null,
     "head": null,
     "bottle": true
@@ -21,37 +21,37 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any_skip_relocation",
+      "cellar": ":any",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/rustup-init-1.21.1.catalina.bottle.tar.gz",
-          "sha256": "a97694534834b8c87660c7d3ecf0cad6f030c39c50cd365c6a28ac167aaa4464"
+          "url": "https://linuxbrew.bintray.com/bottles/ansible@2.8-2.8.7.catalina.bottle.tar.gz",
+          "sha256": "53971b1f36c0b422556da7ecb5644a7c56966bc3c4803101f197a3e77c358bf8"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/rustup-init-1.21.1.mojave.bottle.tar.gz",
-          "sha256": "fad5c12bfcd7223aa445718df1427315fcc466df93c4c33f0629ecdf146191c8"
+          "url": "https://linuxbrew.bintray.com/bottles/ansible@2.8-2.8.7.mojave.bottle.tar.gz",
+          "sha256": "0a1240c8db82128c8fd059b28b6ca82362441ed669e1a6bc24de35b8924c239c"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/rustup-init-1.21.1.high_sierra.bottle.tar.gz",
-          "sha256": "6b52ab63b32993cfbcc9f5a2329b62c22501fbf9c4cb3b797b34d20d9641204d"
+          "url": "https://linuxbrew.bintray.com/bottles/ansible@2.8-2.8.7.high_sierra.bottle.tar.gz",
+          "sha256": "1fbb770b0477bbe39def41503f2d791a8dea6e508012a48325a53c3cb1d29b48"
         }
       }
     }
   },
-  "keg_only": false,
+  "keg_only": true,
   "bottle_disabled": false,
   "options": [
 
   ],
   "build_dependencies": [
-    "rust",
     "pkg-config"
   ],
   "dependencies": [
-    "curl",
-    "openssl@1.1"
+    "libyaml",
+    "openssl@1.1",
+    "python"
   ],
   "recommended_dependencies": [
 
