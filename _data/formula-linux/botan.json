@@ -36,6 +36,10 @@
         "high_sierra": {
           "url": "https://linuxbrew.bintray.com/bottles/botan-2.13.0.high_sierra.bottle.tar.gz",
           "sha256": "a21833781daf9b3c2f227dd71975b787e6e4047756d24adbe897360a40dc3c87"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/botan-2.13.0.x86_64_linux.bottle.tar.gz",
+          "sha256": "49d6f4b6fadc9529190352b7e6b7b72dfe5b3d4a677d29978835c65c360aad11"
         }
       }
     }
@@ -46,10 +50,13 @@
 
   ],
   "build_dependencies": [
-    "pkg-config"
+    "pkg-config",
+    "python@2"
   ],
   "dependencies": [
-    "openssl@1.1"
+    "openssl@1.1",
+    "bzip2",
+    "zlib"
   ],
   "recommended_dependencies": [
 
