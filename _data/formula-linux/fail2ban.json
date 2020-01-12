@@ -11,7 +11,7 @@
   "desc": "Scan log files and ban IPs showing malicious signs",
   "homepage": "https://www.fail2ban.org/",
   "versions": {
-    "stable": "0.10.4",
+    "stable": "0.10.5",
     "devel": null,
     "head": null,
     "bottle": true
@@ -21,25 +21,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+      "cellar": ":any_skip_relocation",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
+        "catalina": {
+          "url": "https://linuxbrew.bintray.com/bottles/fail2ban-0.10.5.catalina.bottle.tar.gz",
+          "sha256": "f2605d6a90684a723f5ac164483846d5a97e9b17ec5a8e3e39c34fe7e544275a"
+        },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/fail2ban-0.10.4.mojave.bottle.tar.gz",
-          "sha256": "8a94f2acb50779d21bf5f419ef4ab65692d03e827d1d618a878b14b5174fba59"
+          "url": "https://linuxbrew.bintray.com/bottles/fail2ban-0.10.5.mojave.bottle.tar.gz",
+          "sha256": "bde88951f2011891000bfb6cba6035d1ec65e021633baf2296c3aaa00260a943"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/fail2ban-0.10.4.high_sierra.bottle.tar.gz",
-          "sha256": "96f7b39c78cab991ea75e7c68e65b764fe1ce0299ce82281e25800a255662bb9"
-        },
-        "sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/fail2ban-0.10.4.sierra.bottle.tar.gz",
-          "sha256": "96f7b39c78cab991ea75e7c68e65b764fe1ce0299ce82281e25800a255662bb9"
-        },
-        "x86_64_linux": {
-          "url": "https://linuxbrew.bintray.com/bottles/fail2ban-0.10.4.x86_64_linux.bottle.tar.gz",
-          "sha256": "7f26a20f7bab29e0602e2ce26046c501efd704e6c79c4c67015dbbf64b1c226e"
+          "url": "https://linuxbrew.bintray.com/bottles/fail2ban-0.10.5.high_sierra.bottle.tar.gz",
+          "sha256": "e80aa92198a8c6144bfda9a286a54a20b5b5c377e6f082120da33d0f9cf9bb35"
         }
       }
     }
@@ -54,7 +50,7 @@
     "sphinx-doc"
   ],
   "dependencies": [
-    "python@2"
+    "python@3.8"
   ],
   "recommended_dependencies": [
 
