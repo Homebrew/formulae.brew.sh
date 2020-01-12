@@ -11,7 +11,7 @@
   "desc": "Keyboard handling library",
   "homepage": "https://xkbcommon.org/",
   "versions": {
-    "stable": "0.8.4",
+    "stable": "0.9.1",
     "devel": null,
     "head": "HEAD",
     "bottle": true
@@ -21,29 +21,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any_skip_relocation",
+      "cellar": ":any",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/libxkbcommon-0.8.4.catalina.bottle.tar.gz",
-          "sha256": "b092312f682e9cbd6f2b1918dfdc57e3ba18038945bdd0d98558ca5605a852e0"
+          "url": "https://linuxbrew.bintray.com/bottles/libxkbcommon-0.9.1.catalina.bottle.tar.gz",
+          "sha256": "3bb1cdd87e14a36a47ee65bab56c9182f772cdf1b9f4147bc2fe95f7a916a6d1"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/libxkbcommon-0.8.4.mojave.bottle.tar.gz",
-          "sha256": "d11930a50f52bee01e250ae80e1972a12f10a422bb885df42befdb4784f3a983"
+          "url": "https://linuxbrew.bintray.com/bottles/libxkbcommon-0.9.1.mojave.bottle.tar.gz",
+          "sha256": "d6ed444a792d3752ffa009f5211001be4689e6d8d1990597037143b8704f6d7d"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/libxkbcommon-0.8.4.high_sierra.bottle.tar.gz",
-          "sha256": "da3a6ad4c591da868a4aeb245b9311181a03d4392e82cc5159d24740c8695b86"
-        },
-        "sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/libxkbcommon-0.8.4.sierra.bottle.tar.gz",
-          "sha256": "6b78ab52d77c4c1c81485d4071298a38a78ec1d74e55e57786d833ea8ecc58af"
-        },
-        "x86_64_linux": {
-          "url": "https://linuxbrew.bintray.com/bottles/libxkbcommon-0.8.4.x86_64_linux.bottle.tar.gz",
-          "sha256": "0bb5124a1cf6a6e1213a091c14d9605473bbe4baec950655a141e39a705eedf4"
+          "url": "https://linuxbrew.bintray.com/bottles/libxkbcommon-0.9.1.high_sierra.bottle.tar.gz",
+          "sha256": "999abf2655e5bc7ec209937b02e8377e626f940e9f506c57e3d0e78436696cde"
         }
       }
     }
@@ -55,6 +47,8 @@
   ],
   "build_dependencies": [
     "bison",
+    "meson",
+    "ninja",
     "pkg-config"
   ],
   "dependencies": [
