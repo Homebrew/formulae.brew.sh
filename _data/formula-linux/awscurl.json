@@ -36,6 +36,10 @@
         "high_sierra": {
           "url": "https://linuxbrew.bintray.com/bottles/awscurl-0.20.high_sierra.bottle.tar.gz",
           "sha256": "b79f8ec8705abe4dd8d55d55bf4f4c7d297b7635ddecc7da591797c3e0c295c4"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/awscurl-0.20.x86_64_linux.bottle.tar.gz",
+          "sha256": "4de282d4cab79376c9e4a9de25e3f9ca21cd1c3ec1bfa7bfdce32bdd88150a54"
         }
       }
     }
@@ -46,10 +50,11 @@
 
   ],
   "build_dependencies": [
-
+    "pkg-config"
   ],
   "dependencies": [
-    "python@3.8"
+    "python@3.8",
+    "libffi"
   ],
   "recommended_dependencies": [
 
