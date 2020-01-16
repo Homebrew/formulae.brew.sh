@@ -1,0 +1,41 @@
+{
+  "token": "microsoft-edge",
+  "name": [
+    "Microsoft Edge"
+  ],
+  "homepage": "https://www.microsoft.com/edge",
+  "url": "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/MicrosoftEdge-79.0.309.65.pkg",
+  "appcast": "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/0409EDGE01-chk.xml",
+  "version": "79.0.309.65",
+  "sha256": "67b1e8e036c575782b1c9188dd48fa94d9eabcb81947c8632fd4acac7b01644b",
+  "artifacts": [
+    {
+      "pkgutil": "com.microsoft.edgemac",
+      "rmdir": "/Library/Application Support/Microsoft",
+      "signal": {
+      }
+    },
+    "MicrosoftEdge-79.0.309.65.pkg (Pkg)",
+    {
+      "launchctl": [
+        "com.microsoft.autoupdate.helper",
+        "com.microsoft.update.agent"
+      ],
+      "pkgutil": "com.microsoft.package.Microsoft_AutoUpdate.app",
+      "delete": "/Library/PrivilegedHelperTools/com.microsoft.autoupdate.helper",
+      "trash": [
+        "~/Library/Preferences/com.microsoft.edgemac.plist",
+        "/Library/Application Support/Microsoft",
+        "~/Library/Application Support/Microsoft Edge"
+      ],
+      "signal": {
+      }
+    }
+  ],
+  "caveats": null,
+  "depends_on": {
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": true
+}
