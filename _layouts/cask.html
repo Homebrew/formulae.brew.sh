@@ -3,6 +3,7 @@ layout: default
 permalink: :title
 ---
 {%- assign token = page.title -%}
+{%- assign formula_path = "formula" -%}
 {%- assign c = site.data.cask[token] -%}
 <h2>{{ token }}</h2>
 <p>
@@ -23,7 +24,7 @@ permalink: :title
 
 {%- include casks.html casks=c.depends_on.cask description="Depends on casks" -%}
 {%- assign depends_on_formula = c.depends_on.formula | where_exp: "f", "site.data.formula[f]" -%}
-{%- include formulae.html formulae=depends_on_formula description="Depends on" -%}
+{%- include formulae.html formula_path=formula_path formulae=depends_on_formula description="Depends on" -%}
 
 {%- if c.depends_on.size > 0 -%}
     {%- assign requirements = "" -%}
@@ -46,7 +47,7 @@ permalink: :title
 
 {%- include casks.html casks=c.conflicts_with.cask description="Conflicts with casks" -%}
 {%- assign conflicts_with_formula = c.conflicts_with.formula | where_exp: "f", "site.data.formula[f]" -%}
-{%- include formulae.html formulae=conflicts_with_formula description="Conflicts with" -%}
+{%- include formulae.html formula_path=formula_path formulae=conflicts_with_formula description="Conflicts with" -%}
 
 {%- if c.caveats -%}
 {%- capture soft_indent %}
