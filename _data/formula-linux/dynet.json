@@ -1,6 +1,6 @@
 {
-  "name": "alpine",
-  "full_name": "alpine",
+  "name": "dynet",
+  "full_name": "dynet",
   "oldname": null,
   "aliases": [
 
@@ -8,12 +8,12 @@
   "versioned_formulae": [
 
   ],
-  "desc": "News and email agent",
-  "homepage": "http://alpine.x10host.com/alpine/release/",
+  "desc": "Dynamic Neural Network Toolkit",
+  "homepage": "https://github.com/clab/dynet",
   "versions": {
-    "stable": "2.22",
+    "stable": "2.1",
     "devel": null,
-    "head": "HEAD",
+    "head": null,
     "bottle": true
   },
   "revision": 0,
@@ -21,21 +21,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+      "cellar": ":any",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/alpine-2.22.catalina.bottle.tar.gz",
-          "sha256": "d9f2c103746223a50f9bd17cc113e33b058a801a9c69f0cde9613f0120b6dc68"
+          "url": "https://linuxbrew.bintray.com/bottles/dynet-2.1.catalina.bottle.tar.gz",
+          "sha256": "2e0c6026d6a047f6c1885779da5e72f2503568b711fc1f7c0c00322814cb1213"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/alpine-2.22.mojave.bottle.tar.gz",
-          "sha256": "3061917e8f114d875869a3beb88da6c091a774dd657841052b97d054f10298f9"
+          "url": "https://linuxbrew.bintray.com/bottles/dynet-2.1.mojave.bottle.tar.gz",
+          "sha256": "06482cc7dee2e337482c31e935e9384cbec243a6c407e9e35aeb02f08361e450"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/alpine-2.22.high_sierra.bottle.tar.gz",
-          "sha256": "8d4a1d7a99103583a2b8e01639e2204b2d6c1c7e028c8d78ce39f82465ab3799"
+          "url": "https://linuxbrew.bintray.com/bottles/dynet-2.1.high_sierra.bottle.tar.gz",
+          "sha256": "f6603f28e5bf6209808e58ffbe27b7c8841a3bc00be1bc98d9aff6b4f8bf4f37"
         }
       }
     }
@@ -46,10 +46,10 @@
 
   ],
   "build_dependencies": [
-
+    "cmake"
   ],
   "dependencies": [
-    "openssl@1.1"
+    "eigen"
   ],
   "recommended_dependencies": [
 
