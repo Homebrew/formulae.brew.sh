@@ -11,12 +11,12 @@
   "desc": "System and service manager",
   "homepage": "https://wiki.freedesktop.org/www/Software/systemd/",
   "versions": {
-    "stable": "234",
+    "stable": "244",
     "devel": null,
     "head": "HEAD",
     "bottle": true
   },
-  "revision": 3,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -26,8 +26,8 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "x86_64_linux": {
-          "url": "https://linuxbrew.bintray.com/bottles/systemd-234_3.x86_64_linux.bottle.tar.gz",
-          "sha256": "25ef6f91c22aee4651c7d74d67f5ed298b77744605508e0361311fc56337034a"
+          "url": "https://linuxbrew.bintray.com/bottles/systemd-244.x86_64_linux.bottle.tar.gz",
+          "sha256": "cf69549f3a8cefabebbb0deeddf2441353c099d54604733be3e046712a2f0eea"
         }
       }
     }
@@ -38,23 +38,24 @@
 
   ],
   "build_dependencies": [
-    "autoconf",
-    "automake",
     "coreutils",
     "docbook-xsl",
     "gettext",
     "gperf",
     "intltool",
+    "libgpg-error",
     "libtool",
     "libxslt",
     "m4",
-    "pkg-config",
-    "libgpg-error"
+    "meson",
+    "ninja",
+    "pkg-config"
   ],
   "dependencies": [
     "expat",
     "libcap",
-    "util-linux"
+    "util-linux",
+    "xz"
   ],
   "recommended_dependencies": [
 
