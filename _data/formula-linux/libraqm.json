@@ -1,6 +1,6 @@
 {
-  "name": "urdfdom",
-  "full_name": "urdfdom",
+  "name": "libraqm",
+  "full_name": "libraqm",
   "oldname": null,
   "aliases": [
 
@@ -8,10 +8,10 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Unified Robot Description Format (URDF) parser",
-  "homepage": "https://wiki.ros.org/urdf/",
+  "desc": "Library for complex text layout",
+  "homepage": "https://github.com/HOST-Oman/libraqm",
   "versions": {
-    "stable": "1.0.4",
+    "stable": "0.7.0",
     "devel": null,
     "head": null,
     "bottle": true
@@ -26,16 +26,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/urdfdom-1.0.4.catalina.bottle.tar.gz",
-          "sha256": "63a07e52b44a13128d93ce7d124f1d6731dfab1a746535b37df7ea2be24e83fe"
+          "url": "https://linuxbrew.bintray.com/bottles/libraqm-0.7.0.catalina.bottle.tar.gz",
+          "sha256": "61857a8c4e5ffada95438c4b98d042c129ebf485b5141fc8cc1bbbb13052d2fc"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/urdfdom-1.0.4.mojave.bottle.tar.gz",
-          "sha256": "b8efb5f82f50ce484f370e705bd9e1fc4d0d99e6e611a756d3b6c6d1a4b69ee0"
+          "url": "https://linuxbrew.bintray.com/bottles/libraqm-0.7.0.mojave.bottle.tar.gz",
+          "sha256": "b46d537983abc24546765d3d37f7a77330f82371a2c8899ada29e96324fee760"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/urdfdom-1.0.4.high_sierra.bottle.tar.gz",
-          "sha256": "f3ff98a1d51ffe041808c3d5f4a67edded6ae41bc65124d041e42c2284b2b7dd"
+          "url": "https://linuxbrew.bintray.com/bottles/libraqm-0.7.0.high_sierra.bottle.tar.gz",
+          "sha256": "5599586ba85c892e36cfb5da6eb0bae54d8632b0c569bdcaa71b38b3ecab947f"
         }
       }
     }
@@ -46,12 +46,16 @@
 
   ],
   "build_dependencies": [
-    "cmake"
+    "autoconf",
+    "automake",
+    "gtk-doc",
+    "libtool",
+    "pkg-config"
   ],
   "dependencies": [
-    "console_bridge",
-    "tinyxml",
-    "urdfdom_headers"
+    "freetype",
+    "fribidi",
+    "harfbuzz"
   ],
   "recommended_dependencies": [
 
