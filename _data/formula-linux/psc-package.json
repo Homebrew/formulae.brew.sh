@@ -1,6 +1,6 @@
 {
-  "name": "binutils",
-  "full_name": "binutils",
+  "name": "psc-package",
+  "full_name": "psc-package",
   "oldname": null,
   "aliases": [
 
@@ -8,10 +8,10 @@
   "versioned_formulae": [
 
   ],
-  "desc": "GNU binary tools for native development",
-  "homepage": "https://www.gnu.org/software/binutils/binutils.html",
+  "desc": "Package manager for PureScript based on package sets",
+  "homepage": "https://psc-package.readthedocs.io",
   "versions": {
-    "stable": "2.34",
+    "stable": "0.6.0",
     "devel": null,
     "head": null,
     "bottle": true
@@ -21,21 +21,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+      "cellar": ":any_skip_relocation",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/binutils-2.34.catalina.bottle.tar.gz",
-          "sha256": "1e21593a927df65e405f9d3bdc8f86fe83b1236c5c945641a2de775c99327953"
+          "url": "https://linuxbrew.bintray.com/bottles/psc-package-0.6.0.catalina.bottle.tar.gz",
+          "sha256": "9a75a27be86752582bcac4e48106c988a58eb3646c19c5d23f5263953fb2a0e4"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/binutils-2.34.mojave.bottle.tar.gz",
-          "sha256": "142e380448ac77bc0f7974ff9b9ddae6a90c4ef5f182cac0c2b029baa8460173"
+          "url": "https://linuxbrew.bintray.com/bottles/psc-package-0.6.0.mojave.bottle.tar.gz",
+          "sha256": "d079267dd53b3d701017cca093a79a21bd4dd1bc10ea8c99bd470e98dbcae85e"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/binutils-2.34.high_sierra.bottle.tar.gz",
-          "sha256": "87bda0c909a5bd2043d35b073f2268cac7aed074a89d903973e4909d68dfdf46"
+          "url": "https://linuxbrew.bintray.com/bottles/psc-package-0.6.0.high_sierra.bottle.tar.gz",
+          "sha256": "18f98b6491efe2dde9bfd15fad74f6c04f247202e090f99efa7eb8a04fc1bc7f"
         }
       }
     }
@@ -46,10 +46,11 @@
 
   ],
   "build_dependencies": [
-
+    "cabal-install",
+    "ghc@8.6"
   ],
   "dependencies": [
-    "zlib"
+    "purescript"
   ],
   "recommended_dependencies": [
 
