@@ -88,7 +88,7 @@ def generate_analytics_files(os)
       next if days != "30" && category_name == "build-error/#{core_tap_name}"
       next if os == "linux" && %w[cask-install os-version].include?(category_name)
 
-      sh "brew formula-analytics #{formula_analytics_os_arg} --days-ago=#{days} --json --#{category} " \
+      sh "brew formula-analytics #{formula_analytics_os_arg} --days-ago=#{days} --#{category} " \
         "> #{analytics_data_path}/#{category_name}/#{days}d.json"
     end
   end
