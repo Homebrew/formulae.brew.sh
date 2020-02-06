@@ -88,7 +88,13 @@ def generate_analytics_files(os)
       next if days != "30" && category_name == "build-error/#{core_tap_name}"
       next if os == "linux" && %w[cask-install os-version].include?(category_name)
 
-      sh "brew formula-analytics #{formula_analytics_os_arg} --days-ago=#{days} --#{category} " \
+      # The `--json` and `--all-core-formulae-json` flags are mutually
+      # exclusive, but we need to explicitly set `--json` sometimes,
+      # so only set it if we've not already set
+      # `--all-core-formulae-json`.
+      category_flags = category.include?("all-core-formulae-json") ? category : "json #{category}"
+
+      sh "brew formula-analytics #{formula_analytics_os_arg} --days-ago=#{days} --#{category_flags}" \
         "> #{analytics_data_path}/#{category_name}/#{days}d.json"
     end
   end
