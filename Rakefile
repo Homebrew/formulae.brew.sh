@@ -92,7 +92,7 @@ def generate_analytics_files(os)
       # exclusive, but we need to explicitly set `--json` sometimes,
       # so only set it if we've not already set
       # `--all-core-formulae-json`.
-      category_flags = category.include?("all-core-formulae-json") ? category : "json #{category}"
+      category_flags = category.include?("all-core-formulae-json") ? category : "json --#{category}"
 
       sh "brew formula-analytics #{formula_analytics_os_arg} --days-ago=#{days} --#{category_flags}" \
         "> #{analytics_data_path}/#{category_name}/#{days}d.json"
