@@ -1,6 +1,6 @@
 {
-  "name": "conan",
-  "full_name": "conan",
+  "name": "kcptun",
+  "full_name": "kcptun",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Distributed, open source, package manager for C/C++",
-  "homepage": "https://github.com/conan-io/conan",
+  "desc": "Stable & Secure Tunnel based on KCP with N:M multiplexing and FEC",
+  "homepage": "https://github.com/xtaci/kcptun",
   "versions": {
-    "stable": "1.22.0",
+    "stable": "20200201",
     "devel": null,
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/conan-io/conan/archive/1.22.0.tar.gz",
+      "url": "https://github.com/xtaci/kcptun/archive/v20200201.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,21 +28,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": ":any_skip_relocation",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/conan-1.22.0.catalina.bottle.tar.gz",
-          "sha256": "cf1e72e91bf92a1c836e10ab97461bbcba812a16c18e8e57ccdc4d3d77905473"
+          "url": "https://homebrew.bintray.com/bottles/kcptun-20200201.catalina.bottle.tar.gz",
+          "sha256": "f969d199437cdcb1db7aecdbf499a4f6af83439635fde44ed38ef0e01f68c0a4"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/conan-1.22.0.mojave.bottle.tar.gz",
-          "sha256": "31d333877ed85ebe729fa2e56bbe7355b22c29e9481564e024690ad7eacb69ff"
+          "url": "https://homebrew.bintray.com/bottles/kcptun-20200201.mojave.bottle.tar.gz",
+          "sha256": "e66a96b36b684bebb5afaae793a9d523a942a465a787e3a211e4f4cead581b2b"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/conan-1.22.0.high_sierra.bottle.tar.gz",
-          "sha256": "b36545c5f7c4261ebdc148362ed59a6cfed2a3d2d70d859ae6d87cfad71a26c0"
+          "url": "https://homebrew.bintray.com/bottles/kcptun-20200201.high_sierra.bottle.tar.gz",
+          "sha256": "11e93789f6dafc2748f3b666c85e9224e2c12ba791f26c288e7097e965ca3de4"
         }
       }
     }
@@ -53,12 +53,10 @@
 
   ],
   "build_dependencies": [
-    "pkg-config"
+    "go"
   ],
   "dependencies": [
-    "libffi",
-    "openssl@1.1",
-    "python@3.8"
+
   ],
   "recommended_dependencies": [
 
