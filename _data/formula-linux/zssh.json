@@ -59,6 +59,10 @@
         "mavericks": {
           "url": "https://linuxbrew.bintray.com/bottles/zssh-1.5c.mavericks.bottle.tar.gz",
           "sha256": "94b16bb29616a839134527fd869ac40a8fb5fa88b0048d1a93a828e306c2a270"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/zssh-1.5c.x86_64_linux.bottle.tar.gz",
+          "sha256": "4a4148c0f7cd9a073155ccc89dd34914d8dc2d0901d3dbe0b889dba2ec9be725"
         }
       }
     }
@@ -69,10 +73,11 @@
 
   ],
   "build_dependencies": [
-
+    "pkg-config"
   ],
   "dependencies": [
-    "lrzsz"
+    "lrzsz",
+    "readline"
   ],
   "recommended_dependencies": [
 
