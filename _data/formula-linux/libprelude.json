@@ -11,19 +11,19 @@
   "desc": "Universal Security Information & Event Management (SIEM) system",
   "homepage": "https://www.prelude-siem.org/",
   "versions": {
-    "stable": "3.1.0",
+    "stable": "5.1.0",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://www.prelude-siem.org/attachments/download/721/libprelude-3.1.0.tar.gz",
+      "url": "https://www.prelude-siem.org/attachments/download/1172/libprelude-5.1.0.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 3,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,8 +33,8 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "x86_64_linux": {
-          "url": "https://linuxbrew.bintray.com/bottles/libprelude-3.1.0_3.x86_64_linux.bottle.tar.gz",
-          "sha256": "3062c5bc227c0febbc753b1fc33b11ee17e03de9a887d066044d2878952c43ea"
+          "url": "https://linuxbrew.bintray.com/bottles/libprelude-5.1.0.x86_64_linux.bottle.tar.gz",
+          "sha256": "1ba7de08e4e1bae22f2df8dac21cb6d6966e6f9f32962940c70655582fcd3f6b"
         }
       }
     }
@@ -42,41 +42,14 @@
   "keg_only": false,
   "bottle_disabled": false,
   "options": [
-    {
-      "option": "--without-ruby",
-      "description": "Build without Ruby bindings"
-    },
-    {
-      "option": "--with-lua",
-      "description": "Build with lua support"
-    },
-    {
-      "option": "--with-perl",
-      "description": "Build with perl support"
-    },
-    {
-      "option": "--without-python@2",
-      "description": "Build without python@2 support"
-    },
-    {
-      "option": "--without-swig",
-      "description": "Build without swig support"
-    },
-    {
-      "option": "--without-valgrind",
-      "description": "Build without valgrind support"
-    },
-    {
-      "option": "--without-python",
-      "description": "Build without python support"
-    }
+
   ],
   "build_dependencies": [
     "libtool",
-    "lua",
     "perl",
     "pkg-config",
-    "python@2",
+    "python",
+    "ruby",
     "swig",
     "valgrind"
   ],
@@ -84,24 +57,20 @@
     "gnutls",
     "libgcrypt",
     "libgpg-error",
-    "ruby"
+    "lua"
   ],
   "recommended_dependencies": [
-    "python@2",
-    "swig",
-    "valgrind",
-    "python"
+
   ],
   "optional_dependencies": [
-    "lua",
-    "perl"
+
   ],
   "uses_from_macos": [
 
   ],
   "requirements": [
     {
-      "name": "macos",
+      "name": "linux",
       "cask": null,
       "download": null
     }
