@@ -1,6 +1,6 @@
 {
-  "name": "starship",
-  "full_name": "starship",
+  "name": "katago",
+  "full_name": "katago",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "The cross-shell prompt for astronauts",
-  "homepage": "https://starship.rs",
+  "desc": "Neural Network Go engine with no human-provided knowledge",
+  "homepage": "https://github.com/lightvector/KataGo",
   "versions": {
-    "stable": "0.36.0",
+    "stable": "1.3.2",
     "devel": null,
-    "head": "HEAD",
+    "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/starship/starship/archive/v0.36.0.tar.gz",
+      "url": "https://github.com/lightvector/KataGo/archive/v1.3.2.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,21 +28,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any_skip_relocation",
+      "cellar": ":any",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/starship-0.36.0.catalina.bottle.tar.gz",
-          "sha256": "4bb6f827c6f789e27f80ab3c01c22eeb4cf499cb463631d046afbe6650e5b46a"
+          "url": "https://linuxbrew.bintray.com/bottles/katago-1.3.2.catalina.bottle.tar.gz",
+          "sha256": "c17f6107f9ea75ccb2f329e8e6a230d58bfe1d20f3ef931b7c5a5449b30df170"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/starship-0.36.0.mojave.bottle.tar.gz",
-          "sha256": "42abe5b068bc465f04762b751d6462f83da06cdecfcbc6c985b88757148ace55"
+          "url": "https://linuxbrew.bintray.com/bottles/katago-1.3.2.mojave.bottle.tar.gz",
+          "sha256": "5c24c0330a7f341024359f23ecc0c82c7efddae75b4ad9478c7615af34a5363f"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/starship-0.36.0.high_sierra.bottle.tar.gz",
-          "sha256": "624e74405148da356aa26439b73b46df5e34562fdc7989fe19fec8c12675d2ee"
+          "url": "https://linuxbrew.bintray.com/bottles/katago-1.3.2.high_sierra.bottle.tar.gz",
+          "sha256": "adeba8185fd536f7394e94686e5721209df8140a6e6784ad71171bc26221e3da"
         }
       }
     }
@@ -53,10 +53,11 @@
 
   ],
   "build_dependencies": [
-    "rust"
+    "cmake"
   ],
   "dependencies": [
-    "zlib"
+    "boost",
+    "libzip"
   ],
   "recommended_dependencies": [
 
