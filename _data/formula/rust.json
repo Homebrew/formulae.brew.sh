@@ -23,7 +23,7 @@
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,16 +33,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/rust-1.41.0.catalina.bottle.tar.gz",
-          "sha256": "206d1b304dadc906bfb71f207dd4b14c192704fe8f7ec9801798e019590430a5"
+          "url": "https://homebrew.bintray.com/bottles/rust-1.41.0_1.catalina.bottle.tar.gz",
+          "sha256": "e5aafa87b134aff16659a2b2fb2898cc2ac6b88d1bab32590aa1ab9ed1c8ca8f"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/rust-1.41.0.mojave.bottle.tar.gz",
-          "sha256": "639c844e8c1cb8ee7c48e75b70747de4ef5f0ae7831c7d386bd772dc04db7cd4"
+          "url": "https://homebrew.bintray.com/bottles/rust-1.41.0_1.mojave.bottle.tar.gz",
+          "sha256": "f98f829754ade2e0b17cd8ae339c2a5fdf63699ed5f5e8bb92647c152d658312"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/rust-1.41.0.high_sierra.bottle.tar.gz",
-          "sha256": "b231b69125b33abfd92e8e83b6fa1800868c9d476372fa480fd690dddb447443"
+          "url": "https://homebrew.bintray.com/bottles/rust-1.41.0_1.high_sierra.bottle.tar.gz",
+          "sha256": "f8ff3fd81fffd4b2e79f8d5af414f88091d7403cacc91224efaeea68af39c440"
         }
       }
     }
@@ -53,7 +53,8 @@
 
   ],
   "build_dependencies": [
-    "cmake"
+    "cmake",
+    "python@3.8"
   ],
   "dependencies": [
     "libssh2",
@@ -67,7 +68,9 @@
 
   ],
   "uses_from_macos": [
-
+    "binutils",
+    "curl",
+    "zlib"
   ],
   "requirements": [
 
