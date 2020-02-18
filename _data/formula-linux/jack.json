@@ -13,48 +13,40 @@
   "versions": {
     "stable": "0.125.0",
     "devel": null,
-    "head": null,
+    "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://jackaudio.org/downloads/jack-audio-connection-kit-0.125.0.tar.gz",
-      "tag": null,
-      "revision": null
+      "url": "https://github.com/jackaudio/jack1.git",
+      "tag": "0.125.0",
+      "revision": "f5e00e485e7aa4c5baa20355b27e3b84a6912790"
     }
   },
-  "revision": 3,
+  "revision": 4,
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/jack-0.125.0_3.catalina.bottle.1.tar.gz",
-          "sha256": "ea3f34608e62df9bbafcbed6f4e3dd150370b6d987a344e9999cf0b215edc64e"
+          "url": "https://linuxbrew.bintray.com/bottles/jack-0.125.0_4.catalina.bottle.tar.gz",
+          "sha256": "69f9c5215e993b4b6eee2b31b3585d4df92160ec162a433df76a4a66e9f72b71"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/jack-0.125.0_3.mojave.bottle.1.tar.gz",
-          "sha256": "0df230c0f3646fb29ed5ff3041c810f92220d6ce012ace2e5c001f3d7eb05298"
+          "url": "https://linuxbrew.bintray.com/bottles/jack-0.125.0_4.mojave.bottle.tar.gz",
+          "sha256": "fc489e40c89bfe3315b7d9f6dc1f243aeb03e57741faeb7b4b8f8adfc769c0a7"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/jack-0.125.0_3.high_sierra.bottle.1.tar.gz",
-          "sha256": "fd05eff6fde13c465c68d03bdd1f66f25e6e4b630348ed19cb2966f71a724601"
-        },
-        "sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/jack-0.125.0_3.sierra.bottle.1.tar.gz",
-          "sha256": "651fef8ee2b8b844006b41c23c89a787664a76fb2614f9c6b47a8827adee091d"
-        },
-        "el_capitan": {
-          "url": "https://linuxbrew.bintray.com/bottles/jack-0.125.0_3.el_capitan.bottle.1.tar.gz",
-          "sha256": "ee93da9885f06dde0f305fca2d5af6d6213c2133466ca93857a87ffb731ce43f"
+          "url": "https://linuxbrew.bintray.com/bottles/jack-0.125.0_4.high_sierra.bottle.tar.gz",
+          "sha256": "169ce5413c397a9cea4d346fd33d5120f1411d92105f39722b2ae8c9ebd881df"
         },
         "x86_64_linux": {
-          "url": "https://linuxbrew.bintray.com/bottles/jack-0.125.0_3.x86_64_linux.bottle.1.tar.gz",
-          "sha256": "66d27cab541400e22b39979f017149cfa14f5db5ff03db4cec704c63fe337f18"
+          "url": "https://linuxbrew.bintray.com/bottles/jack-0.125.0_4.x86_64_linux.bottle.tar.gz",
+          "sha256": "c61ba8802f6e100c7562987842bb4a0912e46ab2d4a6bf0ac09053d39493ac41"
         }
       }
     }
@@ -65,13 +57,16 @@
 
   ],
   "build_dependencies": [
+    "autoconf",
+    "automake",
+    "libtool",
     "pkg-config"
   ],
   "dependencies": [
-    "util-linux",
     "berkeley-db",
     "libsamplerate",
-    "libsndfile"
+    "libsndfile",
+    "util-linux"
   ],
   "recommended_dependencies": [
 
