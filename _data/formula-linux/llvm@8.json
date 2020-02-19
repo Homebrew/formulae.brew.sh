@@ -23,7 +23,7 @@
       "revision": null
     }
   },
-  "revision": 1,
+  "revision": 2,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,16 +33,20 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/llvm@8-8.0.1_1.catalina.bottle.tar.gz",
+          "url": "https://linuxbrew.bintray.com/bottles/llvm@8-8.0.1_2.catalina.bottle.tar.gz",
           "sha256": "0180eb097783edfefe0670935facf912b9044934cd2c8a087bdcc1229130a4ee"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/llvm@8-8.0.1_1.mojave.bottle.tar.gz",
+          "url": "https://linuxbrew.bintray.com/bottles/llvm@8-8.0.1_2.mojave.bottle.tar.gz",
           "sha256": "92105eeabbeafff55733385ea82b8e1e5dae89e8a8050a0de31a8e30367164c6"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/llvm@8-8.0.1_1.high_sierra.bottle.tar.gz",
+          "url": "https://linuxbrew.bintray.com/bottles/llvm@8-8.0.1_2.high_sierra.bottle.tar.gz",
           "sha256": "30efcbdc61cd36e3fbd03c7f2ff411be5638c8540de9d491ed77a30d5ab2e3c9"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/llvm@8-8.0.1_2.x86_64_linux.bottle.tar.gz",
+          "sha256": "7f2f2db70b20e532c5a330ae538a16caa6804fcb9e28468b9132b3a44bd32b3a"
         }
       }
     }
@@ -50,10 +54,7 @@
   "keg_only": true,
   "bottle_disabled": false,
   "options": [
-    {
-      "option": "--with-glibc",
-      "description": "Build with glibc support"
-    }
+
   ],
   "build_dependencies": [
     "cmake"
@@ -68,13 +69,13 @@
     "ncurses",
     "libxml2",
     "zlib",
-    "python@2"
+    "python@3.8"
   ],
   "recommended_dependencies": [
 
   ],
   "optional_dependencies": [
-    "glibc"
+
   ],
   "uses_from_macos": [
 
