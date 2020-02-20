@@ -43,6 +43,10 @@
         "high_sierra": {
           "url": "https://linuxbrew.bintray.com/bottles/nushell-0.10.0.high_sierra.bottle.tar.gz",
           "sha256": "0996afd276eaaba984c77531d29009999c66351f507d7e47e5bf1eea3952f923"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/nushell-0.10.0.x86_64_linux.bottle.tar.gz",
+          "sha256": "2faf4a4e2ec25840460f7cc5c2d64fe25a9036f2195b1092fd34c671400d8cbd"
         }
       }
     }
@@ -53,12 +57,14 @@
 
   ],
   "build_dependencies": [
-    "rust"
+    "rust",
+    "pkg-config"
   ],
   "dependencies": [
     "openssl@1.1",
     "zlib",
-    "linuxbrew/xorg/libxcb"
+    "linuxbrew/xorg/libxcb",
+    "linuxbrew/xorg/libx11"
   ],
   "recommended_dependencies": [
 

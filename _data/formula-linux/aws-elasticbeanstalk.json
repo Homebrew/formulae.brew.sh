@@ -43,6 +43,10 @@
         "high_sierra": {
           "url": "https://linuxbrew.bintray.com/bottles/aws-elasticbeanstalk-3.17.1.high_sierra.bottle.tar.gz",
           "sha256": "bc252ae6e9fbecda68f82429b3a5f1c5729b31cdbe7b23f7aa28dfc238aa293d"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/aws-elasticbeanstalk-3.17.1.x86_64_linux.bottle.tar.gz",
+          "sha256": "da282dff24834ab97a2451566390c6bd872f936e61e1af1673d3dbe8d96fc4a1"
         }
       }
     }
@@ -53,10 +57,11 @@
 
   ],
   "build_dependencies": [
-
+    "pkg-config"
   ],
   "dependencies": [
-    "python@3.8"
+    "python@3.8",
+    "libffi"
   ],
   "recommended_dependencies": [
 
