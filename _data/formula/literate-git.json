@@ -1,6 +1,6 @@
 {
-  "name": "vale",
-  "full_name": "vale",
+  "name": "literate-git",
+  "full_name": "literate-git",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Syntax-aware linter for prose",
-  "homepage": "https://errata-ai.github.io/vale/",
+  "desc": "Render hierarchical git repositories into HTML",
+  "homepage": "https://github.com/bennorth/literate-git",
   "versions": {
-    "stable": "2.0.0",
+    "stable": "0.3.1",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/errata-ai/vale/archive/v2.0.0.tar.gz",
+      "url": "https://github.com/bennorth/literate-git/archive/v0.3.1.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,21 +28,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any_skip_relocation",
+      "cellar": ":any",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/vale-2.0.0.catalina.bottle.tar.gz",
-          "sha256": "a61faf7c4db351846e5bb61814edf1d8e07b74feb9796f84a79f54bbd02975ef"
+          "url": "https://homebrew.bintray.com/bottles/literate-git-0.3.1.catalina.bottle.tar.gz",
+          "sha256": "fbf303ecbea9942380695ec4fc385ee6cd61713b88da4681f61b2aeca8f4ed6f"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/vale-2.0.0.mojave.bottle.tar.gz",
-          "sha256": "6a08b8a8cfef48698c8ddb55cdfe4a0fc49dac862d8f8c5a3a804f4e31c92ec4"
+          "url": "https://homebrew.bintray.com/bottles/literate-git-0.3.1.mojave.bottle.tar.gz",
+          "sha256": "4b2b1cc91d729459c5effdb9a9b5e425589208bbd68764c9e2dd241747e91aed"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/vale-2.0.0.high_sierra.bottle.tar.gz",
-          "sha256": "a095991ed253b7aa1206927783e66bd3d91b0b284e883c30a49f74949f6677fc"
+          "url": "https://homebrew.bintray.com/bottles/literate-git-0.3.1.high_sierra.bottle.tar.gz",
+          "sha256": "8b3458f7e5337f396d85cb00f9cbb5a0be6fe89943f5175b52e0a80f4d37e672"
         }
       }
     }
@@ -53,10 +53,11 @@
 
   ],
   "build_dependencies": [
-    "go"
+
   ],
   "dependencies": [
-
+    "libgit2",
+    "python@3.8"
   ],
   "recommended_dependencies": [
 
