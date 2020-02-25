@@ -43,6 +43,10 @@
         "high_sierra": {
           "url": "https://linuxbrew.bintray.com/bottles/ldc-1.20.0.high_sierra.bottle.tar.gz",
           "sha256": "e5b83310430be855384c6d8a37d83d03f1bcae500836f796f8c54c38c80db603"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/ldc-1.20.0.x86_64_linux.bottle.tar.gz",
+          "sha256": "4df578191c8a34aad9751683fe1477f059aad27572afd1f05e2860c12e14d50b"
         }
       }
     }
@@ -54,7 +58,8 @@
   ],
   "build_dependencies": [
     "cmake",
-    "libconfig"
+    "pkg-config",
+    "libxml2"
   ],
   "dependencies": [
     "llvm"
