@@ -11,16 +11,16 @@
   "desc": "Zero Install is a decentralised software installation system",
   "homepage": "https://0install.net/",
   "versions": {
-    "stable": "2.13",
+    "stable": "2.15.1",
     "devel": null,
-    "head": null,
+    "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://downloads.sourceforge.net/project/zero-install/0install/2.13/0install-2.13.tar.bz2",
-      "tag": null,
-      "revision": null
+      "url": "https://github.com/0install/0install.git",
+      "tag": "v2.15.1",
+      "revision": "e67df8585bbe75654a1d5aec60d8e46a4688b5e6"
     }
   },
   "revision": 0,
@@ -32,21 +32,17 @@
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
+        "catalina": {
+          "url": "https://homebrew.bintray.com/bottles/zero-install-2.15.1.catalina.bottle.tar.gz",
+          "sha256": "670a096307222ef611ea885ac9c1389ffe34c69a220def618e22f14941113737"
+        },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/zero-install-2.13.mojave.bottle.tar.gz",
-          "sha256": "12d16e6e7c193b0525bf783a931e178a43cb2357a6821de8628d5b1945e5b8c0"
+          "url": "https://homebrew.bintray.com/bottles/zero-install-2.15.1.mojave.bottle.tar.gz",
+          "sha256": "a77fcd995618cefc919fd89e38b644be27618c89120f2296555be21674776ec4"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/zero-install-2.13.high_sierra.bottle.tar.gz",
-          "sha256": "29434cfb80b552cb133e47b6a0a8e4d9929656de096c6fb383ab53dae9d6af5a"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/zero-install-2.13.sierra.bottle.tar.gz",
-          "sha256": "5e6a18d83dc1503a71545506b25de4b0c97efbdf0a4ce6632a30369bc96e0cc2"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/zero-install-2.13.el_capitan.bottle.tar.gz",
-          "sha256": "0fa494c5e2852f8ebcadadc9c441302145444da6f580efce516263f9c1b33e4f"
+          "url": "https://homebrew.bintray.com/bottles/zero-install-2.15.1.high_sierra.bottle.tar.gz",
+          "sha256": "a699dbf8f06b7f392c8dd5cb28c8e24ed6ca6f7aff51226d3abf72afdcc53e53"
         }
       }
     }
@@ -57,7 +53,6 @@
 
   ],
   "build_dependencies": [
-    "camlp4",
     "ocaml",
     "ocamlbuild",
     "opam",
