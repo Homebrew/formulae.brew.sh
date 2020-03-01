@@ -1,0 +1,35 @@
+{
+  "token": "prosys-opc-ua-browser",
+  "name": [
+    "Prosys OPC UA Browser"
+  ],
+  "homepage": "https://www.prosysopc.com/products/opc-ua-client/",
+  "url": "https://www.prosysopc.com/opcua/apps/UaBrowser/dist/4.0.2-231/prosys-opc-ua-browser-macos-4.0.2-231.dmg",
+  "appcast": "https://downloads.prosysopc.com/opc-ua-browser-downloads.php",
+  "version": "4.0.2-231",
+  "sha256": "5886f887a282f2bd45066f8c6a85a9431457e26281e598bc35f1f44b9e58056a",
+  "artifacts": [
+    {
+      "delete": "/Applications/Prosys OPC UA Browser.app",
+      "signal": {
+      }
+    },
+    {
+      "path": "Prosys OPC UA Browser Installer.app/Contents/MacOS/JavaApplicationStub",
+      "args": {
+        "must_succeed": "true",
+        "sudo": "false",
+        "args": [
+          "-q"
+        ],
+        "print_stdout": "true"
+      }
+    }
+  ],
+  "caveats": null,
+  "depends_on": {
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": null
+}
