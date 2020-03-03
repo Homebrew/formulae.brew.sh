@@ -23,7 +23,7 @@
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,20 +33,20 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/qt-5.14.1.catalina.bottle.tar.gz",
+          "url": "https://linuxbrew.bintray.com/bottles/qt-5.14.1_1.catalina.bottle.tar.gz",
           "sha256": "e40589965586f2c1132da117aca2e0cf12f3ea4bb1029d26b4b0819d8aae3bd5"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/qt-5.14.1.mojave.bottle.tar.gz",
+          "url": "https://linuxbrew.bintray.com/bottles/qt-5.14.1_1.mojave.bottle.tar.gz",
           "sha256": "149a1c2d2af7afda9910e1d4e3956c27ffa31ea511a8320930abf7a9079d0330"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/qt-5.14.1.high_sierra.bottle.tar.gz",
+          "url": "https://linuxbrew.bintray.com/bottles/qt-5.14.1_1.high_sierra.bottle.tar.gz",
           "sha256": "69a7f1ad615f78735b6635da1b1fab5e4eea57dd9be560c695f82b796457870a"
         },
         "x86_64_linux": {
-          "url": "https://linuxbrew.bintray.com/bottles/qt-5.14.1.x86_64_linux.bottle.tar.gz",
-          "sha256": "d5150abde791998b5b802ccdd0f020a987d00aa995114663d143dad9aef8f029"
+          "url": "https://linuxbrew.bintray.com/bottles/qt-5.14.1_1.x86_64_linux.bottle.tar.gz",
+          "sha256": "87b08a67060b503ceca6ad5f933148c85d9dbd4931a9d9d1ab45f2c12e399ef6"
         }
       }
     }
@@ -62,20 +62,28 @@
   "dependencies": [
     "fontconfig",
     "glib",
+    "gperf",
     "icu4c",
     "libproxy",
-    "pulseaudio",
-    "python@2",
-    "sqlite",
-    "systemd",
     "libxkbcommon",
+    "linuxbrew/xorg/libdrm",
+    "linuxbrew/xorg/libice",
+    "linuxbrew/xorg/libsm",
+    "linuxbrew/xorg/libxcomposite",
     "linuxbrew/xorg/mesa",
+    "linuxbrew/xorg/wayland",
+    "linuxbrew/xorg/xcb-util",
     "linuxbrew/xorg/xcb-util-image",
     "linuxbrew/xorg/xcb-util-keysyms",
     "linuxbrew/xorg/xcb-util-renderutil",
-    "linuxbrew/xorg/xcb-util",
     "linuxbrew/xorg/xcb-util-wm",
-    "linuxbrew/xorg/xorg"
+    "pulseaudio",
+    "python",
+    "systemd",
+    "zstd",
+    "sqlite",
+    "bison",
+    "flex"
   ],
   "recommended_dependencies": [
 
@@ -87,11 +95,7 @@
 
   ],
   "requirements": [
-    {
-      "name": "macos",
-      "cask": null,
-      "download": null
-    }
+
   ],
   "conflicts_with": [
 
