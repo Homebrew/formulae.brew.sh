@@ -11,44 +11,19 @@
   "desc": "Quickly rewrite git repository history",
   "homepage": "https://github.com/newren/git-filter-repo",
   "versions": {
-    "stable": "2.24.0",
+    "stable": "2.25.0",
     "devel": null,
     "head": null,
-    "bottle": true
+    "bottle": false
   },
   "urls": {
-    "stable": {
-      "url": "https://github.com/newren/git-filter-repo/releases/download/v2.24.0/git-filter-repo-2.24.0.tar.xz",
-      "tag": null,
-      "revision": null
-    }
   },
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
-    "stable": {
-      "rebuild": 0,
-      "cellar": ":any_skip_relocation",
-      "prefix": "/usr/local",
-      "root_url": "https://homebrew.bintray.com/bottles",
-      "files": {
-        "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/git-filter-repo-2.24.0.catalina.bottle.tar.gz",
-          "sha256": "c47ad881f6c545f5ef1ba71b0c847f5a3575a8ff626b76412362813c0fc503a5"
-        },
-        "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/git-filter-repo-2.24.0.mojave.bottle.tar.gz",
-          "sha256": "336c9a9cf76ad1f46f47f74ad4015a905f8690612e2e02072db2300790e89895"
-        },
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/git-filter-repo-2.24.0.high_sierra.bottle.tar.gz",
-          "sha256": "336c9a9cf76ad1f46f47f74ad4015a905f8690612e2e02072db2300790e89895"
-        }
-      }
-    }
   },
   "keg_only": false,
-  "bottle_disabled": false,
+  "bottle_disabled": true,
   "options": [
 
   ],
@@ -56,7 +31,8 @@
 
   ],
   "dependencies": [
-    "git"
+    "git",
+    "python@3.8"
   ],
   "recommended_dependencies": [
 
@@ -65,7 +41,7 @@
 
   ],
   "uses_from_macos": [
-    "python3"
+
   ],
   "requirements": [
 
