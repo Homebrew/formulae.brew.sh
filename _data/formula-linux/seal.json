@@ -1,6 +1,6 @@
 {
-  "name": "arx",
-  "full_name": "arx",
+  "name": "seal",
+  "full_name": "seal",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Bundles files and programs for easy transfer and repeatable execution",
-  "homepage": "https://github.com/solidsnack/arx",
+  "desc": "Easy-to-use homomorphic encryption library",
+  "homepage": "https://github.com/microsoft/SEAL",
   "versions": {
-    "stable": "0.3.2",
+    "stable": "3.4.5",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/solidsnack/arx/archive/0.3.2.tar.gz",
+      "url": "https://github.com/microsoft/SEAL/archive/v3.4.5.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -32,17 +32,17 @@
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
+        "catalina": {
+          "url": "https://linuxbrew.bintray.com/bottles/seal-3.4.5.catalina.bottle.tar.gz",
+          "sha256": "b5c7b9610572b1abce840e9cf88e5232771ea76559fb49776c87f3176f3c8815"
+        },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/arx-0.3.2.mojave.bottle.tar.gz",
-          "sha256": "b8fc00cd6d272e33046cd7fad782c4d3f5fccd61d1aaf2ddca92db58acf79247"
+          "url": "https://linuxbrew.bintray.com/bottles/seal-3.4.5.mojave.bottle.tar.gz",
+          "sha256": "9ab6a02da1750fb8deeefdadcab791017aea85b5921747af01c607c4e44e7eca"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/arx-0.3.2.high_sierra.bottle.tar.gz",
-          "sha256": "ff5ed85033e8e8e32cb86bc17ff3fcf61ee3ca4789663a7df73d72b6e538d560"
-        },
-        "sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/arx-0.3.2.sierra.bottle.tar.gz",
-          "sha256": "e9784c07ce08e7dcc11d779a8357a65d1e2f338349c8466b2262f8695fb9b2d2"
+          "url": "https://linuxbrew.bintray.com/bottles/seal-3.4.5.high_sierra.bottle.tar.gz",
+          "sha256": "ac9e81e17df37c76f9f0db9218235b614a71d52442c961049f727062ace7c5fa"
         }
       }
     }
@@ -53,8 +53,7 @@
 
   ],
   "build_dependencies": [
-    "cabal-install",
-    "ghc"
+    "cmake"
   ],
   "dependencies": [
 
@@ -72,8 +71,7 @@
 
   ],
   "conflicts_with": [
-    "arx-libertatis",
-    "rnv"
+
   ],
   "caveats": null,
   "installed": [
