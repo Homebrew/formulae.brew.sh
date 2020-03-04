@@ -93,9 +93,33 @@ permalink: :title
 {%- if f.requirements.size > 0 -%}
 <p>
     Requires:
-    {% for r in f.requirements %}
-        <strong>:{{ r.name }}</strong>
-        {%- unless forloop.last -%}, {% endunless %}
+    {% for r in f.requirements -%}
+        <strong>
+        {%- if r.name contains "macos" -%}
+            macOS
+        {%- elsif r.name == "xcode" -%}
+            Xcode
+        {%- elsif r.cask -%}
+            {%- unless r.cask contains "/" -%}
+                <a href="{{ site.baseurl }}/cask/{{ r.cask }}">{{ r.name }}</a>
+            {%- else -%}
+                {{ r.name }}
+            {%- endunless -%}
+        {%- else -%}
+            {{ r.name }}
+        {%- endif -%}
+        </strong>
+        {%- if r.version -%}
+            {%- if r.name contains "maximum" %} &lt;= {% else %} &gt;= {% endif -%}
+            {{ r.version }}
+        {%- endif -%}
+        {%- for c in r.contexts -%}
+            {%- if forloop.first %} ( {%- endif -%}
+            {{ c }}
+            {%- unless forloop.last -%}, {% endunless -%}
+            {%- if forloop.last -%} ) {%- endif -%}
+        {%- endfor -%}
+        {%- unless forloop.last -%}, {% endunless -%}
     {%- endfor -%}
 </p>
 {%- endif -%}
