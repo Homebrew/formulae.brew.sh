@@ -11,42 +11,38 @@
   "desc": "Library that sends desktop notifications to a notification daemon",
   "homepage": "https://developer.gnome.org/libnotify",
   "versions": {
-    "stable": "0.7.8",
+    "stable": "0.7.9",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://download.gnome.org/sources/libnotify/0.7/libnotify-0.7.8.tar.xz",
+      "url": "https://download.gnome.org/sources/libnotify/0.7/libnotify-0.7.9.tar.xz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+      "cellar": ":any",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/libnotify-0.7.8_1.catalina.bottle.tar.gz",
-          "sha256": "b3d67293db66122b210e6ce6dcac62c2e71dbb881ab87a5e8bac3d4b16b4111f"
+          "url": "https://linuxbrew.bintray.com/bottles/libnotify-0.7.9.catalina.bottle.tar.gz",
+          "sha256": "367a8d51cb565452392b9bc92c753ca641c23f91fc4ff93fb6166b63f2beafda"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/libnotify-0.7.8_1.mojave.bottle.tar.gz",
-          "sha256": "49a2299522d7c86e46ac6c6a2e2dbeab7b20c2e18f84b61c9d4370fc38c0511a"
+          "url": "https://linuxbrew.bintray.com/bottles/libnotify-0.7.9.mojave.bottle.tar.gz",
+          "sha256": "e6d5a6a87f885bf421e6a70c9cef1c6aaf89db46a98216af6c06754246a8f896"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/libnotify-0.7.8_1.high_sierra.bottle.tar.gz",
-          "sha256": "d467b8388a30fe7bd2a327e0422c5316183ac161f45754b8709447cd74c35bb1"
-        },
-        "sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/libnotify-0.7.8_1.sierra.bottle.tar.gz",
-          "sha256": "54dd14c50b6979b7924580431bad1cf61b81940a873fe7390974de9a7cb1cd24"
+          "url": "https://linuxbrew.bintray.com/bottles/libnotify-0.7.9.high_sierra.bottle.tar.gz",
+          "sha256": "0560e601843a3e42a4823904dd5534212efd823292444a9588f1cf99ea8bc8f5"
         }
       }
     }
@@ -57,11 +53,11 @@
 
   ],
   "build_dependencies": [
-    "autoconf",
-    "automake",
+    "docbook-xsl",
     "gobject-introspection",
     "gtk-doc",
-    "libtool",
+    "meson",
+    "ninja",
     "pkg-config"
   ],
   "dependencies": [
