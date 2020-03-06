@@ -56,6 +56,7 @@
     "cmake"
   ],
   "dependencies": [
+    "binaryen",
     "node",
     "python",
     "yuicompressor"
@@ -75,7 +76,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "Manually set LLVM_ROOT to\n  $(brew --prefix)/opt/emscripten/libexec/llvm/bin\nand comment out BINARYEN_ROOT\nin ~/.emscripten after running `emcc` for the first time.\n",
+  "caveats": "Manually set LLVM_ROOT to\n  $(brew --prefix)/opt/emscripten/libexec/llvm/bin\nand BINARYEN_ROOT to\n  $(brew --prefix)/opt/binaryen\nin ~/.emscripten after running `emcc` for the first time.\n",
   "installed": [
 
   ],
