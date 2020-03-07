@@ -11,14 +11,14 @@
   "desc": "Semi-automatic OSINT framework and package manager",
   "homepage": "https://github.com/kpcyrd/sn0int",
   "versions": {
-    "stable": "0.17.1",
+    "stable": "0.18.0",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/kpcyrd/sn0int/archive/v0.17.1.tar.gz",
+      "url": "https://github.com/kpcyrd/sn0int/archive/v0.18.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,21 +28,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any_skip_relocation",
+      "cellar": ":any",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/sn0int-0.17.1.catalina.bottle.tar.gz",
-          "sha256": "f1c6fee55547c0776a5979f97de99c1da8ac48c36ed842b033914f936eae465f"
+          "url": "https://homebrew.bintray.com/bottles/sn0int-0.18.0.catalina.bottle.tar.gz",
+          "sha256": "893af4c7e2bad62e59bfc8ecad812baf7c5630d6b2f9470c620417a9dad8cd06"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/sn0int-0.17.1.mojave.bottle.tar.gz",
-          "sha256": "b2b0812e1d2c66f8f5f101b2690f424ff9bb3dac5f822d215ba62330392a6e83"
+          "url": "https://homebrew.bintray.com/bottles/sn0int-0.18.0.mojave.bottle.tar.gz",
+          "sha256": "57bd8645954f7cc0b391820870cd94d69ecd43d28bae19bcbd8fa7229fefd0a3"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/sn0int-0.17.1.high_sierra.bottle.tar.gz",
-          "sha256": "b648960d804ed3f06b6e0f711608ecdd361dc84e867b193d9a30aecb2f294484"
+          "url": "https://homebrew.bintray.com/bottles/sn0int-0.18.0.high_sierra.bottle.tar.gz",
+          "sha256": "ffab33f71178f5537604f5b1be6fbed0d522d91414ac839e9c63907199d7d979"
         }
       }
     }
@@ -53,11 +53,12 @@
 
   ],
   "build_dependencies": [
+    "pkg-config",
     "rust",
     "sphinx-doc"
   ],
   "dependencies": [
-
+    "libsodium"
   ],
   "recommended_dependencies": [
 
