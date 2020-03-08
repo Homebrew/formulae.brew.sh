@@ -1,6 +1,6 @@
 {
-  "name": "sn0int",
-  "full_name": "sn0int",
+  "name": "git-trim",
+  "full_name": "git-trim",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Semi-automatic OSINT framework and package manager",
-  "homepage": "https://github.com/kpcyrd/sn0int",
+  "desc": "Trim your git remote tracking branches that are merged or gone",
+  "homepage": "https://github.com/foriequal0/git-trim",
   "versions": {
-    "stable": "0.18.0",
+    "stable": "0.2.3",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/kpcyrd/sn0int/archive/v0.18.0.tar.gz",
+      "url": "https://github.com/foriequal0/git-trim/archive/v0.2.3.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,21 +28,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any_skip_relocation",
+      "cellar": ":any",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/sn0int-0.18.0.catalina.bottle.tar.gz",
-          "sha256": "893af4c7e2bad62e59bfc8ecad812baf7c5630d6b2f9470c620417a9dad8cd06"
+          "url": "https://linuxbrew.bintray.com/bottles/git-trim-0.2.3.catalina.bottle.tar.gz",
+          "sha256": "3b432c06e89d248aba054cefe6b6472fa524642bed36c95d5a2c4c3c048ddd2b"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/sn0int-0.18.0.mojave.bottle.tar.gz",
-          "sha256": "57bd8645954f7cc0b391820870cd94d69ecd43d28bae19bcbd8fa7229fefd0a3"
+          "url": "https://linuxbrew.bintray.com/bottles/git-trim-0.2.3.mojave.bottle.tar.gz",
+          "sha256": "6410b2132e6be08bcfcbd12d9f4baf918ebd51bfd1d7c7acc18836522df15eaf"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/sn0int-0.18.0.high_sierra.bottle.tar.gz",
-          "sha256": "ffab33f71178f5537604f5b1be6fbed0d522d91414ac839e9c63907199d7d979"
+          "url": "https://linuxbrew.bintray.com/bottles/git-trim-0.2.3.high_sierra.bottle.tar.gz",
+          "sha256": "3ca739e92e5eee4b1420b16d4d4f6d034a1181357f7105c4997bc2a16b552fd9"
         }
       }
     }
@@ -53,14 +53,11 @@
 
   ],
   "build_dependencies": [
-    "pkg-config",
-    "rust",
-    "sphinx-doc"
+    "rust"
   ],
   "dependencies": [
-    "libsodium",
-    "libseccomp",
-    "sqlite"
+    "openssl@1.1",
+    "zlib"
   ],
   "recommended_dependencies": [
 
