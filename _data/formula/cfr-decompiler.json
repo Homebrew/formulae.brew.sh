@@ -11,24 +11,49 @@
   "desc": "Yet Another Java Decompiler",
   "homepage": "https://www.benf.org/other/cfr/",
   "versions": {
-    "stable": "0.148",
+    "stable": "0.149",
     "devel": null,
-    "head": null,
-    "bottle": false
+    "head": "HEAD",
+    "bottle": true
   },
   "urls": {
+    "stable": {
+      "url": "https://github.com/leibnitz27/cfr/archive/0.149.tar.gz",
+      "tag": null,
+      "revision": null
+    }
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any_skip_relocation",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "catalina": {
+          "url": "https://homebrew.bintray.com/bottles/cfr-decompiler-0.149.catalina.bottle.tar.gz",
+          "sha256": "35b88d41ddbd0229f956d06a3b98e05dd6ab679bf54de808a9df272a8c2d133b"
+        },
+        "mojave": {
+          "url": "https://homebrew.bintray.com/bottles/cfr-decompiler-0.149.mojave.bottle.tar.gz",
+          "sha256": "f8fb1fa876f5fe62e99cd86d9adbfd618640ff6e1a7018bce7098669f6869802"
+        },
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/cfr-decompiler-0.149.high_sierra.bottle.tar.gz",
+          "sha256": "74d5486e47c43e6e58c007f6f2f7144b50ece8da29dd259645e9bc021fb433cb"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
   "build_dependencies": [
-
+    "maven"
   ],
   "dependencies": [
     "openjdk"
