@@ -1,6 +1,6 @@
 {
-  "name": "libexosip",
-  "full_name": "libexosip",
+  "name": "hdf5@1.10",
+  "full_name": "hdf5@1.10",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Toolkit for eXosip2",
-  "homepage": "https://savannah.nongnu.org/projects/exosip",
+  "desc": "File format designed to store large amounts of data",
+  "homepage": "https://www.hdfgroup.org/HDF5",
   "versions": {
-    "stable": "5.1.1",
+    "stable": "1.10.6",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://download.savannah.gnu.org/releases/exosip/libexosip2-5.1.1.tar.gz",
+      "url": "https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.10/hdf5-1.10.6/src/hdf5-1.10.6.tar.bz2",
       "tag": null,
       "revision": null
     }
@@ -33,32 +33,34 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/libexosip-5.1.1.catalina.bottle.tar.gz",
-          "sha256": "d36a54b2dec4b1c27ff20a78a9fc3660b304741434d5e9201937da2b4e75526c"
+          "url": "https://linuxbrew.bintray.com/bottles/hdf5@1.10-1.10.6.catalina.bottle.tar.gz",
+          "sha256": "6ae8172b9bf10571a56b56c6571d794cc286df091aad63f2df9d744783cea303"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/libexosip-5.1.1.mojave.bottle.tar.gz",
-          "sha256": "55556d9e457e708dab5e72fc36bab281bab85ddc25d190e729d13fae1757efbf"
+          "url": "https://linuxbrew.bintray.com/bottles/hdf5@1.10-1.10.6.mojave.bottle.tar.gz",
+          "sha256": "98ebeaaa440bb42e7fa423e1acb8ed445629010cf1d984fd7d19463b40906235"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/libexosip-5.1.1.high_sierra.bottle.tar.gz",
-          "sha256": "8e2ec203c859fff616fb073b8f644285b4adfb202331749b0f073928eb03ee2a"
+          "url": "https://linuxbrew.bintray.com/bottles/hdf5@1.10-1.10.6.high_sierra.bottle.tar.gz",
+          "sha256": "41b387396f39f4153a6620cec626b8a5282d18d8bd102985158adf5ba23cdf73"
         }
       }
     }
   },
-  "keg_only": false,
+  "keg_only": true,
   "bottle_disabled": false,
   "options": [
 
   ],
   "build_dependencies": [
-    "pkg-config"
+    "autoconf",
+    "automake",
+    "libtool"
   ],
   "dependencies": [
-    "c-ares",
-    "libosip",
-    "openssl@1.1"
+    "gcc",
+    "szip",
+    "zlib"
   ],
   "recommended_dependencies": [
 
