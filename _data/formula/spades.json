@@ -11,14 +11,14 @@
   "desc": "De novo genome sequence assembly",
   "homepage": "http://cab.spbu.ru/software/spades/",
   "versions": {
-    "stable": "3.13.1",
+    "stable": "3.14.0",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "http://cab.spbu.ru/files/release3.13.1/SPAdes-3.13.1.tar.gz",
+      "url": "https://github.com/ablab/spades/releases/download/v3.14.0/SPAdes-3.14.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,17 +28,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": ":any_skip_relocation",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/spades-3.13.1.catalina.bottle.tar.gz",
-          "sha256": "4761b8cfbaca36fdc4fac08b8122f5519415d86668355224a67c52a5191ae7c5"
+          "url": "https://homebrew.bintray.com/bottles/spades-3.14.0.catalina.bottle.tar.gz",
+          "sha256": "57d10f39e017dda291cdcdc3e6b2b3ea41cbfd745c802c2833e4c6e606cc5854"
+        },
+        "mojave": {
+          "url": "https://homebrew.bintray.com/bottles/spades-3.14.0.mojave.bottle.tar.gz",
+          "sha256": "5ba1f271f5489004b1a2758259164e7cd9319e291893a1aebc68fdba5ab0ba41"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/spades-3.13.1.high_sierra.bottle.tar.gz",
-          "sha256": "f3e29120ab665892ba68d2d7c7522b1fea866a2d405f59547071d8c6c31318c8"
+          "url": "https://homebrew.bintray.com/bottles/spades-3.14.0.high_sierra.bottle.tar.gz",
+          "sha256": "9bec40cdba00c2c4798770cdce92091c209db9e7d4ea97ee1ad167a2cdafb04f"
         }
       }
     }
@@ -52,7 +56,7 @@
     "cmake"
   ],
   "dependencies": [
-    "gcc"
+    "libomp"
   ],
   "recommended_dependencies": [
 
@@ -61,7 +65,11 @@
 
   ],
   "uses_from_macos": [
-    "bzip2"
+    "bzip2",
+    "ncurses",
+    "python@2",
+    "readline",
+    "zlib"
   ],
   "requirements": [
 
