@@ -1,0 +1,39 @@
+{
+  "token": "auristor-client",
+  "name": [
+    "AuriStor File System Client"
+  ],
+  "homepage": "https://www.auristor.com/",
+  "url": "https://www.auristor.com/downloads/auristor/osx/macos-10.15/Auristor-client-0.192-Catalina.dmg",
+  "appcast": null,
+  "version": "0.192",
+  "sha256": "a399d4815bfda945ecbde924feef758ec20768fd252bf9f19fcc00f9174fcf86",
+  "artifacts": [
+    {
+      "pkgutil": "com.auristor.yfs-*",
+      "launchctl": [
+        "com.auristor.XPCHelper",
+        "com.auristor.yfs-client"
+      ],
+      "kext": "com.auristor.filesystems.yfs",
+      "signal": {
+      }
+    },
+    "Auristor-Lite.pkg (Pkg)"
+  ],
+  "caveats": "To install and/or use auristor-client you may need to enable its kernel extension in:\n  System Preferences → Security & Privacy → General\nFor more information refer to vendor documentation or this Apple Technical Note:\n  https://developer.apple.com/library/content/technotes/tn2459/_index.html\n",
+  "depends_on": {
+    "macos": {
+      "==": [
+        "10.11",
+        "10.12",
+        "10.13",
+        "10.14",
+        "10.15"
+      ]
+    }
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": null
+}
