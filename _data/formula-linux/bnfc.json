@@ -1,6 +1,6 @@
 {
-  "name": "spades",
-  "full_name": "spades",
+  "name": "bnfc",
+  "full_name": "bnfc",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "De novo genome sequence assembly",
-  "homepage": "http://cab.spbu.ru/software/spades/",
+  "desc": "BNF Converter",
+  "homepage": "https://bnfc.digitalgrammars.com/",
   "versions": {
-    "stable": "3.14.0",
+    "stable": "2.8.3",
     "devel": null,
-    "head": null,
+    "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/ablab/spades/releases/download/v3.14.0/SPAdes-3.14.0.tar.gz",
+      "url": "https://github.com/BNFC/bnfc/archive/v2.8.3.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,16 +33,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/spades-3.14.0.catalina.bottle.tar.gz",
-          "sha256": "57d10f39e017dda291cdcdc3e6b2b3ea41cbfd745c802c2833e4c6e606cc5854"
+          "url": "https://linuxbrew.bintray.com/bottles/bnfc-2.8.3.catalina.bottle.tar.gz",
+          "sha256": "d08ae18737b1354477b232c833f64e2538d5b27f1c5abfa3166cabb8c5e7790f"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/spades-3.14.0.mojave.bottle.tar.gz",
-          "sha256": "5ba1f271f5489004b1a2758259164e7cd9319e291893a1aebc68fdba5ab0ba41"
+          "url": "https://linuxbrew.bintray.com/bottles/bnfc-2.8.3.mojave.bottle.tar.gz",
+          "sha256": "99468b0d324898ded21ffc6d7605009e0735f5d0b3be2804299916c038c3fa8f"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/spades-3.14.0.high_sierra.bottle.tar.gz",
-          "sha256": "9bec40cdba00c2c4798770cdce92091c209db9e7d4ea97ee1ad167a2cdafb04f"
+          "url": "https://linuxbrew.bintray.com/bottles/bnfc-2.8.3.high_sierra.bottle.tar.gz",
+          "sha256": "b52608ab271231b3c1ca2aa537793f9988fa4b5a051d5026775a29c1070701d1"
         }
       }
     }
@@ -53,16 +53,16 @@
 
   ],
   "build_dependencies": [
-    "cmake"
+    "cabal-install",
+    "ghc",
+    "sphinx-doc",
+    "make"
   ],
   "dependencies": [
-    "libomp",
-    "python@3.8",
-    "bzip2",
-    "ncurses",
-    "python@2",
-    "readline",
-    "zlib"
+    "antlr",
+    "openjdk",
+    "bison",
+    "flex"
   ],
   "recommended_dependencies": [
 
