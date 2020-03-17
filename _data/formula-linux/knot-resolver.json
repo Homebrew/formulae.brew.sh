@@ -11,38 +11,38 @@
   "desc": "Minimalistic, caching, DNSSEC-validating DNS resolver",
   "homepage": "https://www.knot-resolver.cz",
   "versions": {
-    "stable": "3.2.1",
+    "stable": "5.0.1",
     "devel": null,
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://secure.nic.cz/files/knot-resolver/knot-resolver-3.2.1.tar.xz",
+      "url": "https://secure.nic.cz/files/knot-resolver/knot-resolver-5.0.1.tar.xz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/knot-resolver-3.2.1_1.catalina.bottle.1.tar.gz",
-          "sha256": "f5f6c40bd0aca777361059a501fc30a1d8485bd9e9735acdb6ab0f5ee056860b"
+          "url": "https://linuxbrew.bintray.com/bottles/knot-resolver-5.0.1.catalina.bottle.tar.gz",
+          "sha256": "1e2851bf1b4e68ebaf899d5480a8b8bd3607dea5a8fed6c3dd22e00a46893fa5"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/knot-resolver-3.2.1_1.mojave.bottle.1.tar.gz",
-          "sha256": "ce9df928898820cb0e9af1115d1064307fc2a41a39029b924ee063e0cbd5945b"
+          "url": "https://linuxbrew.bintray.com/bottles/knot-resolver-5.0.1.mojave.bottle.tar.gz",
+          "sha256": "3755a6c5acbbeebcea53daaa8c8a1f0fcf32dd4a06e66f2ac863419465070037"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/knot-resolver-3.2.1_1.high_sierra.bottle.1.tar.gz",
-          "sha256": "7160763c1178ddcb9d44a4c062d75c816e7607abaf2569915757afcc7b8d8d7a"
+          "url": "https://linuxbrew.bintray.com/bottles/knot-resolver-5.0.1.high_sierra.bottle.tar.gz",
+          "sha256": "b210aeaab6b74d3058474d53151a8b97a24facfa5fb8a86192fc7be518026198"
         }
       }
     }
@@ -53,7 +53,8 @@
 
   ],
   "build_dependencies": [
-    "cmocka",
+    "meson",
+    "ninja",
     "pkg-config"
   ],
   "dependencies": [
@@ -61,8 +62,7 @@
     "knot",
     "libuv",
     "lmdb",
-    "luajit",
-    "nettle"
+    "luajit"
   ],
   "recommended_dependencies": [
 
