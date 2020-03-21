@@ -43,6 +43,10 @@
         "high_sierra": {
           "url": "https://linuxbrew.bintray.com/bottles/starship-0.38.0.high_sierra.bottle.tar.gz",
           "sha256": "be35870540bb139c2cc72ac2feccd6d30d0258ac5150440c21d8186da6cc5b81"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/starship-0.38.0.x86_64_linux.bottle.tar.gz",
+          "sha256": "5ceabaa23fb410ba5e242e665a661a9fba6f8466581307b5f1b4b86f1dd4e3f5"
         }
       }
     }
@@ -53,9 +57,11 @@
 
   ],
   "build_dependencies": [
-    "rust"
+    "rust",
+    "pkg-config"
   ],
   "dependencies": [
+    "openssl@1.1",
     "zlib"
   ],
   "recommended_dependencies": [
