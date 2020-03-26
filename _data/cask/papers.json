@@ -4,23 +4,29 @@
     "ReadCube Papers"
   ],
   "homepage": "https://www.readcube.com/home",
-  "url": "https://download.readcube.com/app/Install%20Papers.pkg",
-  "appcast": "https://s3.amazonaws.com/update.readcube.com/desktop/updates/latest-mac.yml",
-  "version": "4.0.0",
-  "sha256": "8c63a193ced25c92db168e415b3a537efb828c86bd62b7615bc95508d3532801",
+  "url": "https://download.readcube.com/app/Install%20Papers.zip",
+  "appcast": null,
+  "version": "latest",
+  "sha256": "no_check",
   "artifacts": [
     {
-      "pkgutil": "com.papersapp.PapersInstaller",
+      "quit": "com.ReadCube.Papers",
+      "delete": "/Applications/Papers.app",
       "signal": {
       }
     },
-    "Install Papers.pkg (Pkg)",
+    {
+      "path": "Papers Installer.app"
+    },
     {
       "trash": [
-        "~/Library/Preferences/com.ReadCube.Papers.plist",
+        "~/Library/Application Support/Papers",
+        "~/Library/Caches/com.ReadCube.Papers",
         "~/Library/Caches/com.ReadCube.Papers.ShipIt",
-        "~/Library/Saved Application State/com.ReadCube.Papers.savedState",
-        "~/Library/Caches/com.ReadCube.Papers"
+        "~/Library/Cookies/com.ReadCube.Papers-Installer.binarycookies",
+        "~/Library/Logs/Papers",
+        "~/Library/Preferences/com.ReadCube.Papers.plist",
+        "~/Library/Saved Application State/com.ReadCube.Papers.savedState"
       ],
       "signal": {
       }
