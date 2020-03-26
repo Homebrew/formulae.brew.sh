@@ -1,6 +1,6 @@
 {
-  "name": "neomutt",
-  "full_name": "neomutt",
+  "name": "hsd",
+  "full_name": "hsd",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "E-mail reader with support for Notmuch, NNTP and much more",
-  "homepage": "https://neomutt.org/",
+  "desc": "Handshake Daemon & Full Node",
+  "homepage": "https://handshake.org",
   "versions": {
-    "stable": "20200320",
+    "stable": "2.1.3",
     "devel": null,
-    "head": "HEAD",
+    "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/neomutt/neomutt/archive/20200320.tar.gz",
+      "url": "https://github.com/handshake-org/hsd/archive/v2.1.3.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,16 +33,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/neomutt-20200320.catalina.bottle.tar.gz",
-          "sha256": "d94a815731036b63fbafd703c9db76e16d242e0217fad9ba4483ee65d37c3dd6"
+          "url": "https://linuxbrew.bintray.com/bottles/hsd-2.1.3.catalina.bottle.tar.gz",
+          "sha256": "729378224e1496929dd73b03b7bd9d0365a1132a8702ca4e22555be908de63af"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/neomutt-20200320.mojave.bottle.tar.gz",
-          "sha256": "e0b0f137b739258e461e27956866eb37ae787d942f6b82685da5b9f01e880a2b"
+          "url": "https://linuxbrew.bintray.com/bottles/hsd-2.1.3.mojave.bottle.tar.gz",
+          "sha256": "3fcfa8452139754cab058e8c3c2c5df240fc4379bd6b42989725d4219e872856"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/neomutt-20200320.high_sierra.bottle.tar.gz",
-          "sha256": "3423fe201ef33bb8d77644aa40773c9d5d7c93cd4c228a4b52b772d2fcbc5aae"
+          "url": "https://linuxbrew.bintray.com/bottles/hsd-2.1.3.high_sierra.bottle.tar.gz",
+          "sha256": "f9f7ce700f51d306e863cd4558ba60ceff775aef4994f83ec8c9ed7476522e12"
         }
       }
     }
@@ -53,18 +53,11 @@
 
   ],
   "build_dependencies": [
-
+    "python"
   ],
   "dependencies": [
-    "gettext",
-    "gpgme",
-    "libidn",
-    "lmdb",
-    "notmuch",
-    "openssl@1.1",
-    "tokyo-cabinet",
-    "krb5",
-    "libsasl2"
+    "node@10",
+    "unbound"
   ],
   "recommended_dependencies": [
 
