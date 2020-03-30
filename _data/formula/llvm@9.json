@@ -1,0 +1,92 @@
+{
+  "name": "llvm@9",
+  "full_name": "llvm@9",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Next-gen compiler infrastructure",
+  "homepage": "https://llvm.org/",
+  "versions": {
+    "stable": "9.0.1",
+    "devel": null,
+    "head": null,
+    "bottle": true
+  },
+  "urls": {
+    "stable": {
+      "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-9.0.1/llvm-9.0.1.src.tar.xz",
+      "tag": null,
+      "revision": null
+    }
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "catalina": {
+          "url": "https://homebrew.bintray.com/bottles/llvm@9-9.0.1.catalina.bottle.tar.gz",
+          "sha256": "590473c4e13bf8fe104bd04ca14b0ddd1057867c17491b85c33299c89dea0fba"
+        },
+        "mojave": {
+          "url": "https://homebrew.bintray.com/bottles/llvm@9-9.0.1.mojave.bottle.tar.gz",
+          "sha256": "2e3934fcf9da3b6ade580d482ce1f2128e47b59a4784c664914778dfc1c4e93e"
+        },
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/llvm@9-9.0.1.high_sierra.bottle.tar.gz",
+          "sha256": "f00037536bb600617572a49b95ea3816addf0e2010f0e2e99cc00f53c6f3d6f7"
+        }
+      }
+    }
+  },
+  "keg_only": true,
+  "bottle_disabled": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+    "cmake"
+  ],
+  "dependencies": [
+    "libffi",
+    "swig"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+    {
+      "name": "xcode",
+      "cask": null,
+      "download": null,
+      "version": null,
+      "contexts": [
+        "build"
+      ]
+    }
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "To use the bundled libc++ please add the following LDFLAGS:\n  LDFLAGS=\"-L$(brew --prefix)/opt/llvm@9/lib -Wl,-rpath,$(brew --prefix)/opt/llvm@9/lib\"\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
+}
