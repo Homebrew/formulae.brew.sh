@@ -1,6 +1,6 @@
 {
-  "name": "imapsync",
-  "full_name": "imapsync",
+  "name": "vroom",
+  "full_name": "vroom",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Migrate or backup IMAP mail accounts",
-  "homepage": "https://imapsync.lamiral.info/",
+  "desc": "Vehicle Routing Open-Source Optimization Machine",
+  "homepage": "http://vroom-project.org/",
   "versions": {
-    "stable": "1.977",
+    "stable": "1.6.0",
     "devel": null,
-    "head": "HEAD",
+    "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://imapsync.lamiral.info/dist2/imapsync-1.977.tgz",
+      "url": "https://github.com/VROOM-Project/vroom/archive/v1.6.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,21 +28,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any_skip_relocation",
+      "cellar": ":any",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/imapsync-1.977.catalina.bottle.tar.gz",
-          "sha256": "6c1a1bed4c3ad926f34a5efe6b6bfe5d2776ed4ee0d000679b21679c47ff81cb"
+          "url": "https://linuxbrew.bintray.com/bottles/vroom-1.6.0.catalina.bottle.tar.gz",
+          "sha256": "d456cedbd8a14b0bf4a522c1e982761487b8b93baa8db7198875c48ac84bca68"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/imapsync-1.977.mojave.bottle.tar.gz",
-          "sha256": "5b259d1a7096a887af61eef5a379122c8e94e71f912b2670a35031e6c159351c"
+          "url": "https://linuxbrew.bintray.com/bottles/vroom-1.6.0.mojave.bottle.tar.gz",
+          "sha256": "678a00e9b7f1971bd55832bff3a73503e40d453a2c39e6c7499256ca7638937d"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/imapsync-1.977.high_sierra.bottle.tar.gz",
-          "sha256": "fa0a19bf66b24d332f6e0f4f827b2abdff2b904b483c4927f2ed7d6d944ab261"
+          "url": "https://linuxbrew.bintray.com/bottles/vroom-1.6.0.high_sierra.bottle.tar.gz",
+          "sha256": "aa74496ac296cf599254f6869e13ec0fc6ffb72d1d6e787f0ed302754bfcd44e"
         }
       }
     }
@@ -53,10 +53,11 @@
 
   ],
   "build_dependencies": [
-
+    "pkg-config"
   ],
   "dependencies": [
-    "perl"
+    "boost",
+    "openssl@1.1"
   ],
   "recommended_dependencies": [
 
