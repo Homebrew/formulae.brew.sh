@@ -1,7 +1,9 @@
 #!/usr/bin/env brew ruby
 os = ARGV.first
+tap_name = (ARGV.second || "").split("/")
 
 formula_dir = os == "mac" ? "formula" : "formula-linux"
+tap = tap_name.empty? ? CoreTap.instance : Tap.new(*tap_name)
 
 directories = ["_data/#{formula_dir}", "api/#{formula_dir}", "#{formula_dir}"]
 FileUtils.rm_rf directories
@@ -10,7 +12,7 @@ FileUtils.mkdir_p directories
 json_template = IO.read "_api_formula.json.in"
 html_template = IO.read "_formula.html.in"
 
-CoreTap.instance.formula_names.each do |n|
+tap.formula_names.each do |n|
   f = Formulary.factory(n)
   IO.write("_data/#{formula_dir}/#{f.name.tr("+", "_")}.json", "#{JSON.pretty_generate(f.to_hash)}\n")
   IO.write("api/#{formula_dir}/#{f.name}.json", json_template)
