@@ -15,10 +15,12 @@ task :formulae, [:os,:tap] do |task, args|
 end
 
 desc "Dump cask data"
-task :cask do
+task :cask, [:tap] do |task, args|
+  args.with_defaults(:tap => "")
+
   ENV["HOMEBREW_FORCE_HOMEBREW_ON_LINUX"] = "1"
   ENV["HOMEBREW_NO_COLOR"] = "1"
-  sh "brew", "ruby", "script/generate-cask.rb"
+  sh "brew", "ruby", "script/generate-cask.rb", args[:tap]
 end
 
 def generate_analytics?(os)
