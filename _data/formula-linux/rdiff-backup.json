@@ -8,57 +8,41 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Backs up one directory to another--also works over networks",
-  "homepage": "https://www.nongnu.org/rdiff-backup/",
+  "desc": "Reverse differential backup tool, over a network or locally",
+  "homepage": "https://rdiff-backup.net/",
   "versions": {
-    "stable": "1.2.8",
+    "stable": "2.0.0",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://savannah.nongnu.org/download/rdiff-backup/rdiff-backup-1.2.8.tar.gz",
+      "url": "https://github.com/rdiff-backup/rdiff-backup/releases/download/v2.0.0/rdiff-backup-2.0.0.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "cellar": ":any",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/rdiff-backup-1.2.8_1.catalina.bottle.1.tar.gz",
-          "sha256": "935ffcd8c7ba9579aaf0c640c30ff6b877ae862e5ca5083619c51200ab6847cc"
+          "url": "https://linuxbrew.bintray.com/bottles/rdiff-backup-2.0.0.catalina.bottle.tar.gz",
+          "sha256": "227cf94d42d42ef7750368f1571608e4c3bdab841ee22d850bdd1dfa0378a90a"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/rdiff-backup-1.2.8_1.mojave.bottle.1.tar.gz",
-          "sha256": "76ac2c10776a2dcb230f07b95704c65522cae20865a9bf4e4772c86b94673bda"
+          "url": "https://linuxbrew.bintray.com/bottles/rdiff-backup-2.0.0.mojave.bottle.tar.gz",
+          "sha256": "576744615d68954e2389f3e7aaa36b83e6ded022d8ba57fc955b5e239fd029a4"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/rdiff-backup-1.2.8_1.high_sierra.bottle.1.tar.gz",
-          "sha256": "899687c88770af610d76f66f02da736a2a62ac4676f0f80796dbbae1d92bc47f"
-        },
-        "sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/rdiff-backup-1.2.8_1.sierra.bottle.1.tar.gz",
-          "sha256": "7dcf4c878ccafc113e5742c83214f946dd3a55b472e086a944e918bcee1cf2bd"
-        },
-        "el_capitan": {
-          "url": "https://linuxbrew.bintray.com/bottles/rdiff-backup-1.2.8_1.el_capitan.bottle.1.tar.gz",
-          "sha256": "f06f79bc1536dbaa990e6005565f18de05e9dc12deb09701a504ab6bfc8b8f11"
-        },
-        "yosemite": {
-          "url": "https://linuxbrew.bintray.com/bottles/rdiff-backup-1.2.8_1.yosemite.bottle.1.tar.gz",
-          "sha256": "35f6a0f726a680d639f7a1c83af8e27d046d5a68a334bf19d47eaa363748767c"
-        },
-        "mavericks": {
-          "url": "https://linuxbrew.bintray.com/bottles/rdiff-backup-1.2.8_1.mavericks.bottle.1.tar.gz",
-          "sha256": "5b0eab2335afe2d298cd51737c744d052536cb0bdbee780819496e1000a3b179"
+          "url": "https://linuxbrew.bintray.com/bottles/rdiff-backup-2.0.0.high_sierra.bottle.tar.gz",
+          "sha256": "dfa0b44633e5aab9797c1c71ee8cf36715178b3607cff0c914145743c402aa82"
         }
       }
     }
@@ -72,7 +56,8 @@
 
   ],
   "dependencies": [
-    "librsync"
+    "librsync",
+    "python@3.8"
   ],
   "recommended_dependencies": [
 
