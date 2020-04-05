@@ -6,7 +6,7 @@ require "date"
 task default: :formula_and_analytics
 
 desc "Dump macOS formulae data"
-task :formulae, [:os,:tap] do |task, args|
+task :formulae, [:os, :tap] do |task, args|
   args.with_defaults(:os => "mac", :tap => "")
 
   ENV["HOMEBREW_FORCE_HOMEBREW_ON_LINUX"] = "1" if args[:os] == "mac"
