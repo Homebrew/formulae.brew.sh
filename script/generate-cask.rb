@@ -2,8 +2,7 @@
 require "cask/cask"
 
 tap_name = ARGV.first
-tap = Tap.new(tap_name.split("/")) if tap_name
-tap ||= Tap.default_cask_tap
+tap = Tap.fetch(tap_name)
 
 directories = ["_data/cask", "api/cask", "cask"]
 FileUtils.rm_rf directories
