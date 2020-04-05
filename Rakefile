@@ -7,7 +7,7 @@ task default: :formula_and_analytics
 
 desc "Dump macOS formulae data"
 task :formulae, [:os, :tap] do |task, args|
-  args.with_defaults(:os => "mac", :tap => "")
+  args.with_defaults(:os => "mac", :tap => "homebrew/core")
 
   ENV["HOMEBREW_FORCE_HOMEBREW_ON_LINUX"] = "1" if args[:os] == "mac"
   ENV["HOMEBREW_NO_COLOR"] = "1"
@@ -16,7 +16,7 @@ end
 
 desc "Dump cask data"
 task :cask, [:tap] do |task, args|
-  args.with_defaults(:tap => "")
+  args.with_defaults(:tap => "homebrew/cask")
 
   ENV["HOMEBREW_FORCE_HOMEBREW_ON_LINUX"] = "1"
   ENV["HOMEBREW_NO_COLOR"] = "1"
@@ -106,11 +106,11 @@ desc "Dump analytics data"
 task :analytics, [:os] do |task, args|
   args.with_defaults(:os => "mac")
 
-  next unless generate_analytics?(args.os)
+  next unless generate_analytics?(args[:os])
 
   setup_analytics
 
-  generate_analytics_files(args.os)
+  generate_analytics_files(args[:os])
 end
 
 desc "Dump macOS formulae and analytics data"
