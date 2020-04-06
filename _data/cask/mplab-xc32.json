@@ -1,0 +1,123 @@
+{
+  "token": "mplab-xc32",
+  "name": [
+    "MPLab XC32 Compiler"
+  ],
+  "homepage": "https://www.microchip.com/mplab/compilers",
+  "url": "https://ww1.microchip.com/downloads/en/DeviceDoc/xc32-v2.40-full-install-osx-installer.dmg",
+  "appcast": "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.microchip.com/mplabxc32osx",
+  "version": "2.40",
+  "sha256": "98eb7107ed13cd08efd5ea1329a1778913ce692225590d7909ec2d62dfccd1be",
+  "artifacts": [
+    {
+      "script": {
+        "executable": "Uninstall-xc32-v2.40.app/Contents/MacOS/installbuilder.sh",
+        "args": [
+          "--mode",
+          "unattended"
+        ],
+        "sudo": "true"
+      },
+      "signal": {
+      }
+    },
+    {
+      "path": "xc32-v2.40-osx-installer.app/Contents/MacOS/installbuilder.sh",
+      "args": {
+        "must_succeed": "true",
+        "sudo": "true",
+        "args": [
+          "--mode",
+          "unattended",
+          "--unattendedmodeui",
+          "none",
+          "--ModifyAll",
+          "0",
+          "--netservername",
+          "\"\"",
+          "--LicenseType",
+          "FreeMode",
+          "--prefix",
+          "$(brew --prefix)/Caskroom/mplab-xc32/2.40"
+        ],
+        "input": [
+          "y"
+        ],
+        "print_stdout": "true"
+      }
+    },
+    [
+      "$(brew --prefix)/Caskroom/mplab-xc32/2.40/bin/xc32-ar"
+    ],
+    [
+      "$(brew --prefix)/Caskroom/mplab-xc32/2.40/bin/xc32-bin2hex"
+    ],
+    [
+      "$(brew --prefix)/Caskroom/mplab-xc32/2.40/bin/xc32-c++"
+    ],
+    [
+      "$(brew --prefix)/Caskroom/mplab-xc32/2.40/bin/xc32-c++filt"
+    ],
+    [
+      "$(brew --prefix)/Caskroom/mplab-xc32/2.40/bin/xc32-cc1"
+    ],
+    [
+      "$(brew --prefix)/Caskroom/mplab-xc32/2.40/bin/xc32-cc1plus"
+    ],
+    [
+      "$(brew --prefix)/Caskroom/mplab-xc32/2.40/bin/xc32-collect2"
+    ],
+    [
+      "$(brew --prefix)/Caskroom/mplab-xc32/2.40/bin/xc32-conv"
+    ],
+    [
+      "$(brew --prefix)/Caskroom/mplab-xc32/2.40/bin/xc32-cpp"
+    ],
+    [
+      "$(brew --prefix)/Caskroom/mplab-xc32/2.40/bin/xc32-elfedit"
+    ],
+    [
+      "$(brew --prefix)/Caskroom/mplab-xc32/2.40/bin/xc32-g++"
+    ],
+    [
+      "$(brew --prefix)/Caskroom/mplab-xc32/2.40/bin/xc32-gcc"
+    ],
+    [
+      "$(brew --prefix)/Caskroom/mplab-xc32/2.40/bin/xc32-ld"
+    ],
+    [
+      "$(brew --prefix)/Caskroom/mplab-xc32/2.40/bin/xc32-nm"
+    ],
+    [
+      "$(brew --prefix)/Caskroom/mplab-xc32/2.40/bin/xc32-objcopy"
+    ],
+    [
+      "$(brew --prefix)/Caskroom/mplab-xc32/2.40/bin/xc32-objdump"
+    ],
+    [
+      "$(brew --prefix)/Caskroom/mplab-xc32/2.40/bin/xc32-ranlib"
+    ],
+    [
+      "$(brew --prefix)/Caskroom/mplab-xc32/2.40/bin/xc32-readelf"
+    ],
+    [
+      "$(brew --prefix)/Caskroom/mplab-xc32/2.40/bin/xc32-size"
+    ],
+    [
+      "$(brew --prefix)/Caskroom/mplab-xc32/2.40/bin/xc32-strings"
+    ],
+    [
+      "$(brew --prefix)/Caskroom/mplab-xc32/2.40/bin/xc32-strip"
+    ],
+    [
+      "$(brew --prefix)/Caskroom/mplab-xc32/2.40/bin/xc32-as"
+    ],
+    "postflight (Postflight Block)"
+  ],
+  "caveats": null,
+  "depends_on": {
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": null
+}
