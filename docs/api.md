@@ -4,8 +4,8 @@ layout: page
 permalink: /docs/api/
 ---
 ## Formulae
-### List formulae metadata for all homebrew-core formulae
-List the `brew info --json=v1` output for all current Homebrew/homebrew-core formulae.
+### List formulae metadata for all {{ site.taps.core.repo }} formulae
+List the `brew info --json=v1` output for all current {{ site.taps.core.fullname }} formulae.
 
 ```
 GET https://formulae.brew.sh/api/formula.json
@@ -98,8 +98,8 @@ GET https://formulae.brew.sh/api/formula.json
 ]
 ```
 
-### Get formula metadata for a homebrew-core formula
-Get the `brew info --json=v1` output for a single, current Homebrew/homebrew-core formula with an extra `analytics` key with analytics data.
+### Get formula metadata for a {{ site.taps.core.repo }} formula
+Get the `brew info --json=v1` output for a single, current {{ site.taps.core.fullname }} formula with an extra `analytics` key with analytics data.
 
 ```
 GET https://formulae.brew.sh/api/formula/${FORMULA}.json
@@ -348,8 +348,8 @@ GET https://formulae.brew.sh/api/analytics/${CATEGORY}/${DAYS}.json
 }
 ```
 
-### List analytics events for all homebrew-core formulae
-List all the Homebrew/homebrew-core formulae's analytics events for a specified category and number of days (grouped by formula name).
+### List analytics events for all {{ site.taps.core.repo }} formulae
+List all the {{ site.taps.core.fullname }} formulae's analytics events for a specified category and number of days (grouped by formula name).
 
 ```
 GET https://formulae.brew.sh/api/analytics/${CATEGORY}/homebrew-core/${DAYS}.json
@@ -357,9 +357,9 @@ GET https://formulae.brew.sh/api/analytics/${CATEGORY}/homebrew-core/${DAYS}.jso
 
 #### Variables
 - `${CATEGORY}`: the category of the analytics events, i.e.
-  - `install`: the installation of all homebrew-core formulae
-  - `install-on-request`: the requested installation of all homebrew-core formulae (i.e. not as a dependency of other formulae)
-  - `build-error`: the installation failure of all homebrew-core formulae. Only `${DAYS}: 30d` (30 days) is available.
+  - `install`: the installation of all {{ site.taps.core.repo }} formulae
+  - `install-on-request`: the requested installation of all {{ site.taps.core.repo }} formulae (i.e. not as a dependency of other formulae)
+  - `build-error`: the installation failure of all {{ site.taps.core.repo }} formulae. Only `${DAYS}: 30d` (30 days) is available.
 - `${DAYS}`: the number of days of analytics events, i.e.
   - `30d`: 30 days
   - `90d`: 90 days

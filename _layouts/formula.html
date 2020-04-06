@@ -23,9 +23,9 @@ permalink: :title
 
 <p><a href="{{ site.baseurl }}/api/{{ formula_path }}/{{ f.name }}.json"><code>/api/{{ formula_path }}/{{ f.name }}.json</code> (JSON API)</a></p>
 {%- if formula_path == "formula-linux" -%}
-<p><a target="_blank" href="https://github.com/Homebrew/linuxbrew-core/blob/master/Formula/{{ f.name }}.rb">Linux formula code</a> on GitHub</p>
+<p><a target="_blank" href="{{ site.taps.linux.remote }}/blob/master/Formula/{{ f.name }}.rb">Linux formula code</a> on GitHub</p>
 {%- else -%}
-<p><a target="_blank" href="https://github.com/Homebrew/homebrew-core/blob/master/Formula/{{ f.name }}.rb">Formula code</a> on GitHub</p>
+<p><a target="_blank" href="{{ site.taps.core.remote }}/blob/master/Formula/{{ f.name }}.rb">Formula code</a> on GitHub</p>
 {%- endif -%}
 
 <p>Current versions:</p>
