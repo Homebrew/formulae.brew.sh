@@ -123,8 +123,9 @@ task :linux_formula_and_analytics do
 end
 
 desc "Build the site"
-task build: [:formula_and_analytics, :cask, :linux_formula_and_analytics] do
-  sh "bundle", "exec", "jekyll", "build"
+task build: %i[formula_and_analytics cask linux_formula_and_analytics] do
+  require 'jekyll'
+  Jekyll::Commands::Build.process({})
 end
 
 desc "Run html proofer to validate the HTML output."
