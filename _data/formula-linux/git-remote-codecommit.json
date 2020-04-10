@@ -1,6 +1,6 @@
 {
-  "name": "ortp",
-  "full_name": "ortp",
+  "name": "git-remote-codecommit",
+  "full_name": "git-remote-codecommit",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Real-time transport protocol (RTP, RFC3550) library",
-  "homepage": "https://www.linphone.org/technical-corner/ortp",
+  "desc": "Git Remote Helper to interact with AWS CodeCommit",
+  "homepage": "https://github.com/aws/git-remote-codecommit",
   "versions": {
-    "stable": "4.3.2",
+    "stable": "1.13",
     "devel": null,
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://gitlab.linphone.org/BC/public/ortp/-/archive/4.3.2/ortp-4.3.2.tar.bz2",
+      "url": "https://github.com/aws/git-remote-codecommit/archive/1.13.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,21 +28,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+      "cellar": ":any_skip_relocation",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/ortp-4.3.2.catalina.bottle.tar.gz",
-          "sha256": "942d93781ca52a133ae19952fb044a6b02060cff30177a8525ab2a5e4a0991d4"
+          "url": "https://linuxbrew.bintray.com/bottles/git-remote-codecommit-1.13.catalina.bottle.tar.gz",
+          "sha256": "42de381b31d9a0a18bf1f2f34428f1a57c90c7c04a0653cbfe7991970a501b69"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/ortp-4.3.2.mojave.bottle.tar.gz",
-          "sha256": "231dc8ca885b103e360e347498277f41c2fc0d446420b8c1324e00e301a8eedd"
+          "url": "https://linuxbrew.bintray.com/bottles/git-remote-codecommit-1.13.mojave.bottle.tar.gz",
+          "sha256": "28aa72c9c720d190a3efae09cffa2ea79372b60c9952bd223d064139bf7acd0c"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/ortp-4.3.2.high_sierra.bottle.tar.gz",
-          "sha256": "ea6fc0e9626908e8a62b22cc86a2f87d513716c2091cfa52bac39c5c9c7a5d79"
+          "url": "https://linuxbrew.bintray.com/bottles/git-remote-codecommit-1.13.high_sierra.bottle.tar.gz",
+          "sha256": "b8172e7b8a01359fdf3992e2de30b95a3a52890da4a985bc44b217490cc8d725"
         }
       }
     }
@@ -53,11 +53,10 @@
 
   ],
   "build_dependencies": [
-    "cmake",
-    "pkg-config"
+
   ],
   "dependencies": [
-    "mbedtls"
+    "python@3.8"
   ],
   "recommended_dependencies": [
 
