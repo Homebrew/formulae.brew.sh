@@ -11,14 +11,14 @@
   "desc": "Global Positioning System (GPS) daemon",
   "homepage": "http://catb.org/gpsd/",
   "versions": {
-    "stable": "3.17",
+    "stable": "3.20",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://download.savannah.gnu.org/releases/gpsd/gpsd-3.17.tar.gz",
+      "url": "https://download.savannah.gnu.org/releases/gpsd/gpsd-3.20.tar.xz",
       "tag": null,
       "revision": null
     }
@@ -27,26 +27,22 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "cellar": ":any",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/gpsd-3.17.catalina.bottle.1.tar.gz",
-          "sha256": "22814a24acec9db78a5a0a13aa2d73773e15c648f3dd008bcbd4f088515c28ac"
+          "url": "https://homebrew.bintray.com/bottles/gpsd-3.20.catalina.bottle.tar.gz",
+          "sha256": "e73790ec49d1c4f079e0584596d2126447422c3f569281eb092afc77ece1bc3a"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/gpsd-3.17.mojave.bottle.1.tar.gz",
-          "sha256": "000a6985fc4a8f295c2729a04cf0662f68370401afb573c62b051a1b2495da7f"
+          "url": "https://homebrew.bintray.com/bottles/gpsd-3.20.mojave.bottle.tar.gz",
+          "sha256": "cf9997d1456a9ec3fa49fee4cbc189af1a60cbeb0afb1abfb59c75ede967864c"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gpsd-3.17.high_sierra.bottle.1.tar.gz",
-          "sha256": "8259d06ad29227d59f70b9c4d84d20c764486fd7e6217bbf023fd003d3afe897"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gpsd-3.17.sierra.bottle.1.tar.gz",
-          "sha256": "a1840e937a0abdcd847abb9a3c9d735650fcb77088c97189c72abb2470dacdad"
+          "url": "https://homebrew.bintray.com/bottles/gpsd-3.20.high_sierra.bottle.tar.gz",
+          "sha256": "0e4110bedb2dd77d37e116fc32f1c45775f387df1a3eb21fc870f0a86ce04262"
         }
       }
     }
@@ -77,7 +73,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "gpsd does not automatically detect GPS device addresses. Once started, you\nneed to force it to connect to your GPS:\n\n  GPSD_SOCKET=\"$(brew --prefix)/var/gpsd.sock\" $(brew --prefix)/Cellar/gpsd/3.17/sbin/gpsdctl add /dev/tty.usbserial-XYZ\n",
+  "caveats": "gpsd does not automatically detect GPS device addresses. Once started, you\nneed to force it to connect to your GPS:\n\n  GPSD_SOCKET=\"$(brew --prefix)/var/gpsd.sock\" $(brew --prefix)/Cellar/gpsd/3.20/sbin/gpsdctl add /dev/tty.usbserial-XYZ\n",
   "installed": [
 
   ],
