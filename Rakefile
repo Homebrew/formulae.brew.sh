@@ -133,7 +133,7 @@ task build: [:formula_and_analytics, :cask, :linux_formula_and_analytics] do
 end
 CLEAN.include FileList["_site"]
 
-desc "Serve the site (jekyll serve)"
+desc "Serve the site"
 task :serve do
   Jekyll::Commands::Serve.process({})
 end
