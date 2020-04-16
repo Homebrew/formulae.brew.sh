@@ -1,5 +1,6 @@
 require "rake"
 require "rake/clean"
+require 'jekyll'
 require "json"
 require "date"
 
@@ -7,7 +8,7 @@ task default: :formula_and_analytics
 
 desc "Dump macOS formulae data"
 task :formulae, [:os, :tap] do |task, args|
-  args.with_defaults(:os => "mac", :tap => "homebrew/core")
+  args.with_defaults(:os => "mac", :tap => Jekyll.configuration.dig("taps", "core", "name"))
 
   ENV["HOMEBREW_FORCE_HOMEBREW_ON_LINUX"] = "1" if args[:os] == "mac"
   ENV["HOMEBREW_NO_COLOR"] = "1"
@@ -16,7 +17,7 @@ end
 
 desc "Dump cask data"
 task :cask, [:tap] do |task, args|
-  args.with_defaults(:tap => "homebrew/cask")
+  args.with_defaults(:tap => Jekyll.configuration.dig("taps", "cask", "name"))
 
   ENV["HOMEBREW_FORCE_HOMEBREW_ON_LINUX"] = "1"
   ENV["HOMEBREW_NO_COLOR"] = "1"
