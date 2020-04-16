@@ -18,12 +18,12 @@
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/csound/csound/archive/6.14.0.tar.gz",
-      "tag": null,
-      "revision": null
+      "url": "https://github.com/csound/csound.git",
+      "tag": "6.14.0",
+      "revision": "1073b4d1bc2304a1e06defd266781a9c441a5be0"
     }
   },
-  "revision": 3,
+  "revision": 4,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,16 +33,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/csound-6.14.0_3.catalina.bottle.tar.gz",
-          "sha256": "e7676522ad079ed6f2a36e3348dff4bef5125bcb34b1ad95ac302c54ef4142e7"
+          "url": "https://linuxbrew.bintray.com/bottles/csound-6.14.0_4.catalina.bottle.tar.gz",
+          "sha256": "72303bfd7ccca776399b59232718ad8d19babb8f55295095193ee14cdf965b5d"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/csound-6.14.0_3.mojave.bottle.tar.gz",
-          "sha256": "23fee5a545ccb58310c687ef8305579e7b3e23ce8434b6b38561c963eae871a5"
+          "url": "https://linuxbrew.bintray.com/bottles/csound-6.14.0_4.mojave.bottle.tar.gz",
+          "sha256": "bc0efd5a8683c775a83048f7132beb6976f86b4592183b6898e76167aa264906"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/csound-6.14.0_3.high_sierra.bottle.tar.gz",
-          "sha256": "1f974ec9ac366acd8ac44edd213e675cca45cd1a2f1b19d1c6f4a792e391b2dd"
+          "url": "https://linuxbrew.bintray.com/bottles/csound-6.14.0_4.high_sierra.bottle.tar.gz",
+          "sha256": "88ad8f044cd3b08ad2632fe09ae8c29e248d98898c6fd2b700ad3e70d3acaddd"
         }
       }
     }
@@ -78,7 +78,6 @@
     "stk",
     "wiiuse",
     "curl",
-    "python@2",
     "zlib"
   ],
   "recommended_dependencies": [
@@ -105,7 +104,7 @@
     "libextractor",
     "pkcrack"
   ],
-  "caveats": "To use the Python bindings, you may need to add to ~/.bash_profile:\n  export DYLD_FRAMEWORK_PATH=\"$DYLD_FRAMEWORK_PATH:$(brew --prefix)/opt/csound/Frameworks\"\n\nTo use the Java bindings, you may need to add to ~/.bash_profile:\n  export CLASSPATH='$(brew --prefix)/opt/csound/libexec/csnd6.jar:.'\nand link the native shared library into your Java Extensions folder:\n  mkdir -p ~/Library/Java/Extensions\n  ln -s '$(brew --prefix)/opt/csound/libexec/lib_jcsound6.jnilib' ~/Library/Java/Extensions\n",
+  "caveats": "To use the Python bindings, you may need to add to ~/.bash_profile:\n  export DYLD_FRAMEWORK_PATH=\"$DYLD_FRAMEWORK_PATH:$(brew --prefix)/opt/csound/Frameworks\"\n\nTo use the Java bindings, you may need to add to ~/.bash_profile:\n  export CLASSPATH=\"$(brew --prefix)/opt/csound/libexec/csnd6.jar:.\"\nand link the native shared library into your Java Extensions folder:\n  mkdir -p ~/Library/Java/Extensions\n  ln -s \"$(brew --prefix)/opt/csound/libexec/lib_jcsound6.jnilib\" ~/Library/Java/Extensions\n",
   "installed": [
 
   ],

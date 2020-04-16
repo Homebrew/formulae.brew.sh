@@ -43,6 +43,10 @@
         "high_sierra": {
           "url": "https://linuxbrew.bintray.com/bottles/llvm@9-9.0.1.high_sierra.bottle.tar.gz",
           "sha256": "f00037536bb600617572a49b95ea3816addf0e2010f0e2e99cc00f53c6f3d6f7"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/llvm@9-9.0.1.x86_64_linux.bottle.tar.gz",
+          "sha256": "424eaa4a7640e74db91125104e9e69a4076fbfdf7ef04de1dc46f2287b4c325f"
         }
       }
     }
@@ -57,7 +61,15 @@
   ],
   "dependencies": [
     "libffi",
-    "swig"
+    "swig",
+    "gcc",
+    "binutils",
+    "libedit",
+    "libelf",
+    "ncurses",
+    "libxml2",
+    "zlib",
+    "python@3.8"
   ],
   "recommended_dependencies": [
 
@@ -69,18 +81,10 @@
 
   ],
   "requirements": [
-    {
-      "name": "xcode",
-      "cask": null,
-      "download": null,
-      "version": null,
-      "contexts": [
-        "build"
-      ]
-    }
+
   ],
   "conflicts_with": [
-
+    "clang-format"
   ],
   "caveats": "To use the bundled libc++ please add the following LDFLAGS:\n  LDFLAGS=\"-L$(brew --prefix)/opt/llvm@9/lib -Wl,-rpath,$(brew --prefix)/opt/llvm@9/lib\"\n",
   "installed": [

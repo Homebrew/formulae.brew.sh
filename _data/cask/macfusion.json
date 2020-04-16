@@ -9,18 +9,43 @@
   "version": "2.0.4",
   "sha256": "6693241fd54d686013864adb86a6ea7eef6c1291546573b628b3ddf7889ef71c",
   "artifacts": [
+    {
+      "launchctl": "org.mgorbach.macfusion2.macfusionAgent",
+      "signal": {
+      }
+    },
     [
       "Macfusion.app"
     ],
-    "postflight (Postflight Block)"
+    "postflight (Postflight Block)",
+    {
+      "trash": [
+        "~/Library/Application Support/Macfusion",
+        "~/Library/Caches/org.mgorbach.macfusion2",
+        "~/Library/Logs/MacFusion2.log",
+        "~/Library/Preferences/org.mgorbach.macfusion2.plist",
+        "~/Library/Saved Application State/org.mgorbach.macfusion2.savedState"
+      ],
+      "signal": {
+      }
+    }
   ],
   "caveats": null,
   "depends_on": {
     "formula": [
       "sshfs"
+    ],
+    "macos": {
+      "<=": [
+        "10.14"
+      ]
+    }
+  },
+  "conflicts_with": {
+    "cask": [
+      "macfusion-ng"
     ]
   },
-  "conflicts_with": null,
   "container": null,
   "auto_updates": null
 }
