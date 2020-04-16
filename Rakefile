@@ -125,7 +125,12 @@ end
 
 desc "Build the site"
 task build: [:formula_and_analytics, :cask, :linux_formula_and_analytics] do
-  sh "bundle", "exec", "jekyll", "build"
+  Jekyll::Commands::Build.process({})
+end
+
+desc "Serve the site (jekyll serve)"
+task :serve do
+  Jekyll::Commands::Serve.process({})
 end
 
 desc "Run html proofer to validate the HTML output."

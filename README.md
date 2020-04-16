@@ -24,7 +24,7 @@ To instead run Homebrew Formulae locally, run:
 git clone https://github.com/Homebrew/formulae.brew.sh
 cd formulae.brew.sh
 bundle install
-bundle exec jekyll serve
+bundle exec rake serve
 ```
 
 ## License
