@@ -14,6 +14,8 @@ task :formulae, [:os, :tap] do |task, args|
   ENV["HOMEBREW_NO_COLOR"] = "1"
   sh "brew", "ruby", "script/generate.rb", args[:os], args[:tap]
 end
+CLOBBER.include FileList[%w[_data/formula api/formula formula
+                         _data/formula-linux api/formula-linux formula-linux]]
 
 desc "Dump cask data"
 task :cask, [:tap] do |task, args|
@@ -23,6 +25,7 @@ task :cask, [:tap] do |task, args|
   ENV["HOMEBREW_NO_COLOR"] = "1"
   sh "brew", "ruby", "script/generate-cask.rb", args[:tap]
 end
+CLOBBER.include FileList[%w[_data/cask api/cask cask]]
 
 def generate_analytics?(os)
   return false if ENV["HOMEBREW_NO_ANALYTICS"]
@@ -113,6 +116,7 @@ task :analytics, [:os] do |task, args|
 
   generate_analytics_files(args[:os])
 end
+CLOBBER.include FileList[%w[_data/analytics _data/analytics-linux]]
 
 desc "Dump macOS formulae and analytics data"
 task formula_and_analytics: %i[formulae analytics]
