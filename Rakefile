@@ -1,5 +1,6 @@
 require "rake"
 require "rake/clean"
+require 'jekyll'
 require "json"
 require "date"
 
@@ -7,21 +8,24 @@ task default: :formula_and_analytics
 
 desc "Dump macOS formulae data"
 task :formulae, [:os, :tap] do |task, args|
-  args.with_defaults(:os => "mac", :tap => "homebrew/core")
+  args.with_defaults(:os => "mac", :tap => Jekyll.configuration.dig("taps", "core", "name"))
 
   ENV["HOMEBREW_FORCE_HOMEBREW_ON_LINUX"] = "1" if args[:os] == "mac"
   ENV["HOMEBREW_NO_COLOR"] = "1"
   sh "brew", "ruby", "script/generate.rb", args[:os], args[:tap]
 end
+CLOBBER.include FileList[%w[_data/formula api/formula formula
+                         _data/formula-linux api/formula-linux formula-linux]]
 
 desc "Dump cask data"
 task :cask, [:tap] do |task, args|
-  args.with_defaults(:tap => "homebrew/cask")
+  args.with_defaults(:tap => Jekyll.configuration.dig("taps", "cask", "name"))
 
   ENV["HOMEBREW_FORCE_HOMEBREW_ON_LINUX"] = "1"
   ENV["HOMEBREW_NO_COLOR"] = "1"
   sh "brew", "ruby", "script/generate-cask.rb", args[:tap]
 end
+CLOBBER.include FileList[%w[_data/cask api/cask cask]]
 
 def generate_analytics?(os)
   return false if ENV["HOMEBREW_NO_ANALYTICS"]
@@ -112,6 +116,7 @@ task :analytics, [:os] do |task, args|
 
   generate_analytics_files(args[:os])
 end
+CLOBBER.include FileList[%w[_data/analytics _data/analytics-linux]]
 
 desc "Dump macOS formulae and analytics data"
 task formula_and_analytics: %i[formulae analytics]
@@ -124,7 +129,13 @@ end
 
 desc "Build the site"
 task build: [:formula_and_analytics, :cask, :linux_formula_and_analytics] do
-  sh "bundle", "exec", "jekyll", "build"
+  Jekyll::Commands::Build.process({})
+end
+CLEAN.include FileList["_site"]
+
+desc "Serve the site"
+task :serve do
+  Jekyll::Commands::Serve.process({})
 end
 
 desc "Run html proofer to validate the HTML output."
@@ -148,7 +159,7 @@ end
 desc "Run JSON Lint to validate the JSON output."
 task jsonlint: :build do
   require "jsonlint"
-  files_to_check = Rake::FileList.new(["./_site/**/*.json"])
+  files_to_check = FileList["_site/**/*.json"]
   puts "Running JSON Lint on #{files_to_check.flatten.length} files..."
 
   linter = JsonLint::Linter.new
@@ -163,5 +174,3 @@ task jsonlint: :build do
 end
 
 task test: %i[html_proofer jsonlint]
-
-CLEAN.include FileList["_site"]
