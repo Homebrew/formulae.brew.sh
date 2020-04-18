@@ -1,14 +1,19 @@
+require "date"
+require "json"
 require "rake"
 require "rake/clean"
-require 'jekyll'
-require "json"
-require "date"
+require "yaml"
+
+def jekyll_config(*props)
+  @config ||= YAML.load_file('_config.yml')
+  props.empty? ? @config : @config.dig(*props)
+end
 
 task default: :formula_and_analytics
 
 desc "Dump macOS formulae data"
 task :formulae, [:os, :tap] do |task, args|
-  args.with_defaults(:os => "mac", :tap => Jekyll.configuration.dig("taps", "core", "name"))
+  args.with_defaults(:os => "mac", :tap => jekyll_config("taps", "core", "name"))
 
   ENV["HOMEBREW_FORCE_HOMEBREW_ON_LINUX"] = "1" if args[:os] == "mac"
   ENV["HOMEBREW_NO_COLOR"] = "1"
@@ -19,7 +24,7 @@ CLOBBER.include FileList[%w[_data/formula api/formula formula
 
 desc "Dump cask data"
 task :cask, [:tap] do |task, args|
-  args.with_defaults(:tap => Jekyll.configuration.dig("taps", "cask", "name"))
+  args.with_defaults(:tap => jekyll_config("taps", "cask", "name"))
 
   ENV["HOMEBREW_FORCE_HOMEBREW_ON_LINUX"] = "1"
   ENV["HOMEBREW_NO_COLOR"] = "1"
@@ -139,12 +144,14 @@ end
 
 desc "Build the site"
 task build: %i[all_formulae all_analytics cask] do
+  require 'jekyll'
   Jekyll::Commands::Build.process({})
 end
 CLEAN.include FileList["_site"]
 
 desc "Serve the site"
 task :serve do
+  require 'jekyll'
   Jekyll::Commands::Serve.process({})
 end
 
