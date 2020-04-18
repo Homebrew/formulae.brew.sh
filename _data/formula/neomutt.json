@@ -11,14 +11,14 @@
   "desc": "E-mail reader with support for Notmuch, NNTP and much more",
   "homepage": "https://neomutt.org/",
   "versions": {
-    "stable": "20200320",
+    "stable": "20200417",
     "devel": null,
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/neomutt/neomutt/archive/20200320.tar.gz",
+      "url": "https://github.com/neomutt/neomutt/archive/20200417.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -27,22 +27,22 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 0,
+      "rebuild": 1,
       "cellar": "/usr/local/Cellar",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/neomutt-20200320.catalina.bottle.tar.gz",
-          "sha256": "d94a815731036b63fbafd703c9db76e16d242e0217fad9ba4483ee65d37c3dd6"
+          "url": "https://homebrew.bintray.com/bottles/neomutt-20200417.catalina.bottle.1.tar.gz",
+          "sha256": "d1eeee164ecbaf38af7d38592417498f12e13bdf8c0e300f6c4dea0caa58fcdf"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/neomutt-20200320.mojave.bottle.tar.gz",
-          "sha256": "e0b0f137b739258e461e27956866eb37ae787d942f6b82685da5b9f01e880a2b"
+          "url": "https://homebrew.bintray.com/bottles/neomutt-20200417.mojave.bottle.1.tar.gz",
+          "sha256": "d9d1e5fee63f622664cc5fc7f863d3beed9bbf9aa38f259d5448609025acf202"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/neomutt-20200320.high_sierra.bottle.tar.gz",
-          "sha256": "3423fe201ef33bb8d77644aa40773c9d5d7c93cd4c228a4b52b772d2fcbc5aae"
+          "url": "https://homebrew.bintray.com/bottles/neomutt-20200417.high_sierra.bottle.1.tar.gz",
+          "sha256": "16cd4e655bf901f83cfdf5c91119ffdabaac87e105c41412141b55c56b943dab"
         }
       }
     }
@@ -53,13 +53,14 @@
 
   ],
   "build_dependencies": [
-
+    "docbook-xsl"
   ],
   "dependencies": [
     "gettext",
     "gpgme",
     "libidn",
     "lmdb",
+    "lua",
     "notmuch",
     "openssl@1.1",
     "tokyo-cabinet"
