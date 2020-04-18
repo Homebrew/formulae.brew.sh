@@ -23,7 +23,7 @@
       "revision": null
     }
   },
-  "revision": 3,
+  "revision": 4,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,16 +33,12 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/gcc@5-5.5.0_3.high_sierra.bottle.tar.gz",
-          "sha256": "112039ed5d8e890730c62c275fcab77f65ab9ac9be324dad3f4b0eada4b39434"
-        },
-        "sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/gcc@5-5.5.0_3.sierra.bottle.tar.gz",
-          "sha256": "726ec47a02e3d92c1d031a26b7578e8ed019cd7f748359c8232332f1f0cf5e45"
+          "url": "https://linuxbrew.bintray.com/bottles/gcc@5-5.5.0_4.high_sierra.bottle.tar.gz",
+          "sha256": "7fc31bed73398ba401db3107151a3b0ae301ddc60e017a45bd3d69ac1b400235"
         },
         "x86_64_linux": {
-          "url": "https://linuxbrew.bintray.com/bottles/gcc@5-5.5.0_3.x86_64_linux.bottle.tar.gz",
-          "sha256": "97bce0daec95df10eed7c749b7ea178ca7c03aae81227131d5a833d4a05bd7c1"
+          "url": "https://linuxbrew.bintray.com/bottles/gcc@5-5.5.0_4.x86_64_linux.bottle.tar.gz",
+          "sha256": "c2083636a45129a71c8ba9aba51f7536e976aa8a031eb899ec396c310dc6ec43"
         }
       }
     }
@@ -50,10 +46,7 @@
   "keg_only": false,
   "bottle_disabled": false,
   "options": [
-    {
-      "option": "--with-glibc",
-      "description": "Build with glibc support"
-    }
+
   ],
   "build_dependencies": [
 
@@ -63,13 +56,14 @@
     "libmpc",
     "mpfr",
     "isl@0.18",
-    "zlib"
+    "zlib",
+    "binutils"
   ],
   "recommended_dependencies": [
 
   ],
   "optional_dependencies": [
-    "glibc"
+
   ],
   "uses_from_macos": [
 
