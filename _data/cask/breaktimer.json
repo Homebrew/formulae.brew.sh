@@ -4,18 +4,35 @@
     "BreakTimer"
   ],
   "homepage": "https://breaktimer.app/",
-  "url": "https://github.com/tom-james-watson/breaktimer-app/releases/download/v0.7.2/BreakTimer.dmg",
+  "url": "https://github.com/tom-james-watson/breaktimer-app/releases/download/v0.7.3/BreakTimer.dmg",
   "appcast": "https://github.com/tom-james-watson/breaktimer-app/releases.atom",
-  "version": "0.7.2",
-  "sha256": "0ce13c043622e9d5e60b531adf2cd3eb13d07a7227d9e7e804723ea47c0dd8b4",
+  "version": "0.7.3",
+  "sha256": "07f2ce6e31304dabd0b35a0b4897d08d4ac462e814d3c4ffbd8bc765d8ccbaea",
   "artifacts": [
+    {
+      "quit": "com.tomjwatson.breaktimer",
+      "launchctl": "com.tomjwatson.breaktimer.ShipIt",
+      "signal": {
+      }
+    },
     [
       "BreakTimer.app"
+    ],
+    [
+      "/Applications/BreakTimer.app/Contents/MacOS/BreakTimer",
+      {
+        "target": "breaktimer"
+      }
     ],
     {
       "trash": [
         "~/Library/Application Support/BreakTimer",
-        "~/Library/Preferences/com.tomjwatson.breaktimer.plist"
+        "~/Library/Caches/com.tomjwatson.breaktimer",
+        "~/Library/Caches/com.tomjwatson.breaktimer.ShipIt",
+        "~/Library/Logs/BreakTimer",
+        "~/Library/Preferences/ByHost/com.tomjwatson.breaktimer.ShipIt.*.plist",
+        "~/Library/Preferences/com.tomjwatson.breaktimer.plist",
+        "~/Library/Saved Application State/com.tomjwatson.breaktimer.savedState"
       ],
       "signal": {
       }
@@ -26,5 +43,5 @@
   },
   "conflicts_with": null,
   "container": null,
-  "auto_updates": null
+  "auto_updates": true
 }
