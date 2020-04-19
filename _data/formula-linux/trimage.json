@@ -1,6 +1,6 @@
 {
-  "name": "clojure-lsp",
-  "full_name": "clojure-lsp",
+  "name": "trimage",
+  "full_name": "trimage",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Language Server (LSP) for Clojure",
-  "homepage": "https://github.com/snoe/clojure-lsp",
+  "desc": "Cross-platform tool for optimizing PNG and JPG files",
+  "homepage": "https://trimage.org",
   "versions": {
-    "stable": "20200413T141742",
+    "stable": "1.0.6",
     "devel": null,
-    "head": "HEAD",
+    "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/snoe/clojure-lsp/archive/release-20200413T141742.tar.gz",
+      "url": "https://github.com/Kilian/Trimage/archive/1.0.6.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,16 +33,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/clojure-lsp-20200413T141742.catalina.bottle.tar.gz",
-          "sha256": "d4a9a63a1256ed2ab2e327294c817db6f56004025a4c0bf0c64fb0228c239c90"
+          "url": "https://linuxbrew.bintray.com/bottles/trimage-1.0.6.catalina.bottle.tar.gz",
+          "sha256": "34db72d3e2bbec742fd9d8286919e6dfda53ad2d552c80c1285240b9338ff384"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/clojure-lsp-20200413T141742.mojave.bottle.tar.gz",
-          "sha256": "dc1b3cf1a7c579a2f55d2428877182f568aa879ca9dfe8cf0270bdae71be074f"
+          "url": "https://linuxbrew.bintray.com/bottles/trimage-1.0.6.mojave.bottle.tar.gz",
+          "sha256": "34db72d3e2bbec742fd9d8286919e6dfda53ad2d552c80c1285240b9338ff384"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/clojure-lsp-20200413T141742.high_sierra.bottle.tar.gz",
-          "sha256": "2a671898228b5434fcdd888a0503cb68e53d140029faf687590238e10a908404"
+          "url": "https://linuxbrew.bintray.com/bottles/trimage-1.0.6.high_sierra.bottle.tar.gz",
+          "sha256": "34db72d3e2bbec742fd9d8286919e6dfda53ad2d552c80c1285240b9338ff384"
         }
       }
     }
@@ -53,10 +53,15 @@
 
   ],
   "build_dependencies": [
-    "leiningen"
+
   ],
   "dependencies": [
-
+    "advancecomp",
+    "jpegoptim",
+    "optipng",
+    "pngcrush",
+    "pyqt",
+    "python@3.8"
   ],
   "recommended_dependencies": [
 
