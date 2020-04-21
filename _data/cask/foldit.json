@@ -3,7 +3,7 @@
   "name": [
     "Foldit"
   ],
-  "homepage": "https://fold.it/portal/",
+  "homepage": "https://fold.it/",
   "url": "https://fold.it/portal/files/app/Foldit-macos_x64.dmg",
   "appcast": null,
   "version": "latest",
@@ -11,10 +11,20 @@
   "artifacts": [
     [
       "Foldit.app"
-    ]
+    ],
+    {
+      "trash": "~/Library/Saved Application State/edu.washington.foldit.savedState",
+      "signal": {
+      }
+    }
   ],
   "caveats": null,
   "depends_on": {
+    "macos": {
+      ">=": [
+        "10.12"
+      ]
+    }
   },
   "conflicts_with": null,
   "container": null,
