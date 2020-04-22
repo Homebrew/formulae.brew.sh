@@ -1,6 +1,6 @@
 {
-  "name": "fastlane",
-  "full_name": "fastlane",
+  "name": "gdbgui",
+  "full_name": "gdbgui",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Easiest way to build and release mobile apps",
-  "homepage": "https://fastlane.tools",
+  "desc": "Modern, browser-based frontend to gdb (gnu debugger)",
+  "homepage": "https://www.gdbgui.com/",
   "versions": {
-    "stable": "2.146.0",
+    "stable": "0.13.2.0",
     "devel": null,
-    "head": "HEAD",
+    "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/fastlane/fastlane/archive/2.146.0.tar.gz",
+      "url": "https://github.com/cs01/gdbgui/archive/0.13.2.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,21 +28,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": ":any_skip_relocation",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/fastlane-2.146.0.catalina.bottle.tar.gz",
-          "sha256": "9eac24b6639f51fa19a3226404a239de984f9517a5a5ecc1159107a70b658154"
+          "url": "https://homebrew.bintray.com/bottles/gdbgui-0.13.2.0.catalina.bottle.tar.gz",
+          "sha256": "6b4dc81ae5aa3bb3d8758d38b3ab9cd89d14f85c8ada1229b8381dfef87f2777"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/fastlane-2.146.0.mojave.bottle.tar.gz",
-          "sha256": "95170a0457029c960844750a222878d56191da3e18f0744debbcf636b764e910"
+          "url": "https://homebrew.bintray.com/bottles/gdbgui-0.13.2.0.mojave.bottle.tar.gz",
+          "sha256": "d4b788d85f71166160b4e302a751dc78fba34c613b6440a55415b60def0b1fc4"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/fastlane-2.146.0.high_sierra.bottle.tar.gz",
-          "sha256": "e14d2883a8a3385b28e9b6f5d88c5762aa9ddd19ffe3239b11455a9fcf600eb8"
+          "url": "https://homebrew.bintray.com/bottles/gdbgui-0.13.2.0.high_sierra.bottle.tar.gz",
+          "sha256": "c8b67848de98e9d29eda6cef4e493afdc40afa4b4301c34b1545add045677c68"
         }
       }
     }
@@ -56,7 +56,8 @@
 
   ],
   "dependencies": [
-    "ruby@2.5"
+    "gdb",
+    "python@3.8"
   ],
   "recommended_dependencies": [
 
