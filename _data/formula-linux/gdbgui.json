@@ -1,6 +1,6 @@
 {
-  "name": "freeling",
-  "full_name": "freeling",
+  "name": "gdbgui",
+  "full_name": "gdbgui",
   "oldname": null,
   "aliases": [
 
@@ -8,41 +8,41 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Suite of language analyzers",
-  "homepage": "http://nlp.lsi.upc.edu/freeling/",
+  "desc": "Modern, browser-based frontend to gdb (gnu debugger)",
+  "homepage": "https://www.gdbgui.com/",
   "versions": {
-    "stable": "4.1",
+    "stable": "0.13.2.0",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/TALP-UPC/FreeLing/releases/download/4.1/FreeLing-4.1.tar.gz",
+      "url": "https://github.com/cs01/gdbgui/archive/0.13.2.0.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 4,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+      "cellar": ":any_skip_relocation",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/freeling-4.1_4.catalina.bottle.tar.gz",
-          "sha256": "7777a7ca0c3a4cb72e9125d6413ee53b09800ef8a93c8cdcf4f24648ef7e2496"
+          "url": "https://linuxbrew.bintray.com/bottles/gdbgui-0.13.2.0.catalina.bottle.tar.gz",
+          "sha256": "6b4dc81ae5aa3bb3d8758d38b3ab9cd89d14f85c8ada1229b8381dfef87f2777"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/freeling-4.1_4.mojave.bottle.tar.gz",
-          "sha256": "6de02b3f2b1cf9cc28ec450cb10cba002d6e5075e066f877e3e9caac44058941"
+          "url": "https://linuxbrew.bintray.com/bottles/gdbgui-0.13.2.0.mojave.bottle.tar.gz",
+          "sha256": "d4b788d85f71166160b4e302a751dc78fba34c613b6440a55415b60def0b1fc4"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/freeling-4.1_4.high_sierra.bottle.tar.gz",
-          "sha256": "c14f035f0f7297091d06a7523cab35aba5d1203ae6dc70793ed5c94692ba42bb"
+          "url": "https://linuxbrew.bintray.com/bottles/gdbgui-0.13.2.0.high_sierra.bottle.tar.gz",
+          "sha256": "c8b67848de98e9d29eda6cef4e493afdc40afa4b4301c34b1545add045677c68"
         }
       }
     }
@@ -53,11 +53,11 @@
 
   ],
   "build_dependencies": [
-    "cmake"
+
   ],
   "dependencies": [
-    "boost",
-    "icu4c"
+    "gdb",
+    "python@3.8"
   ],
   "recommended_dependencies": [
 
@@ -72,7 +72,7 @@
 
   ],
   "conflicts_with": [
-    "hunspell"
+
   ],
   "caveats": null,
   "installed": [
