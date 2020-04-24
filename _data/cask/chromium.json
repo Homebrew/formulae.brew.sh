@@ -4,25 +4,26 @@
     "Chromium"
   ],
   "homepage": "https://www.chromium.org/Home",
-  "url": "https://commondatastorage.googleapis.com/chromium-browser-snapshots/Mac/761197/chrome-mac.zip",
+  "url": "https://commondatastorage.googleapis.com/chromium-browser-snapshots/Mac/762311/chrome-mac.zip",
   "appcast": "https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Mac%2FLAST_CHANGE?alt=media",
-  "version": "761197",
-  "sha256": "eaa769e827fe839c75cf28adbe8411bfece7a8258179a9daa1a01238fee263d6",
+  "version": "762311",
+  "sha256": "1ceb7992244fc0eced6abe79415e24c20e497674b215f7ff2b1e00ca7b1e616e",
   "artifacts": [
+    "preflight (Preflight Block)",
     [
       "chrome-mac/Chromium.app"
     ],
     [
-      "/Applications/Chromium.app/Contents/MacOS/Chromium",
+      "$(brew --prefix)/Caskroom/chromium/762311/chromium.wrapper.sh",
       {
         "target": "chromium"
       }
     ],
     {
       "trash": [
-        "~/Library/Preferences/org.chromium.Chromium.plist",
-        "~/Library/Caches/Chromium",
         "~/Library/Application Support/Chromium",
+        "~/Library/Caches/Chromium",
+        "~/Library/Preferences/org.chromium.Chromium.plist",
         "~/Library/Saved Application State/org.chromium.Chromium.savedState"
       ],
       "signal": {
@@ -32,7 +33,12 @@
   "caveats": null,
   "depends_on": {
   },
-  "conflicts_with": null,
+  "conflicts_with": {
+    "cask": [
+      "eloston-chromium",
+      "freesmug-chromium"
+    ]
+  },
   "container": null,
   "auto_updates": null
 }
