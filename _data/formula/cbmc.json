@@ -1,6 +1,6 @@
 {
-  "name": "elixir",
-  "full_name": "elixir",
+  "name": "cbmc",
+  "full_name": "cbmc",
   "oldname": null,
   "aliases": [
 
@@ -8,19 +8,19 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Functional metaprogramming aware language built on Erlang VM",
-  "homepage": "https://elixir-lang.org/",
+  "desc": "CBMC: The C Bounded Model Checker",
+  "homepage": "https://www.cprover.org/cbmc/",
   "versions": {
-    "stable": "1.10.3",
+    "stable": "5.12",
     "devel": null,
-    "head": "HEAD",
+    "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/elixir-lang/elixir/archive/v1.10.3.tar.gz",
-      "tag": null,
-      "revision": null
+      "url": "https://github.com/diffblue/cbmc.git",
+      "tag": "cbmc-5.12",
+      "revision": "d51243d346350127ecb269f1e546cbd850ef6955"
     }
   },
   "revision": 0,
@@ -33,16 +33,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/elixir-1.10.3.catalina.bottle.tar.gz",
-          "sha256": "d02f86bae935461933e8dbde1052e954351d6adb39575df31b974ba97c5cb98c"
+          "url": "https://homebrew.bintray.com/bottles/cbmc-5.12.catalina.bottle.tar.gz",
+          "sha256": "83da818079f4398b8e00d9c0daabf3673e2c1c26a7ecdabd2093fe919605c3df"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/elixir-1.10.3.mojave.bottle.tar.gz",
-          "sha256": "267c46f18891050670a9c0872f155a646394ae311bf87491681540004dbba0ea"
+          "url": "https://homebrew.bintray.com/bottles/cbmc-5.12.mojave.bottle.tar.gz",
+          "sha256": "5a19ff3395da6fcc3b5d21afd817d6938c3c4d0b3be864bedebc5ca4c843eafc"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/elixir-1.10.3.high_sierra.bottle.tar.gz",
-          "sha256": "0d3ef8c94f9def9cb7dba9236ca215a0a6b0da34974393b771015c83bb81aed0"
+          "url": "https://homebrew.bintray.com/bottles/cbmc-5.12.high_sierra.bottle.tar.gz",
+          "sha256": "fbd3cf7a7bacb069cf93bc8e7c5185a9b96a0bc468ad3c9b65c2f2e4dec8d741"
         }
       }
     }
@@ -53,10 +53,12 @@
 
   ],
   "build_dependencies": [
-
+    "cmake",
+    "maven",
+    "openjdk"
   ],
   "dependencies": [
-    "erlang"
+
   ],
   "recommended_dependencies": [
 
