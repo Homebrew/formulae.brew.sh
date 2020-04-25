@@ -1,6 +1,6 @@
 {
-  "name": "geph2",
-  "full_name": "geph2",
+  "name": "cbmc",
+  "full_name": "cbmc",
   "oldname": null,
   "aliases": [
 
@@ -8,19 +8,19 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Modular Internet censorship circumvention system",
-  "homepage": "https://geph.io",
+  "desc": "CBMC: The C Bounded Model Checker",
+  "homepage": "https://www.cprover.org/cbmc/",
   "versions": {
-    "stable": "0.21.4",
+    "stable": "5.12",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/geph-official/geph2/archive/v0.21.4.tar.gz",
-      "tag": null,
-      "revision": null
+      "url": "https://github.com/diffblue/cbmc.git",
+      "tag": "cbmc-5.12",
+      "revision": "d51243d346350127ecb269f1e546cbd850ef6955"
     }
   },
   "revision": 0,
@@ -33,16 +33,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/geph2-0.21.4.catalina.bottle.tar.gz",
-          "sha256": "fe0f104deaa52d7ec13cf00a8154bb3e9cf9032441bda59c1b27a1c0bc310d76"
+          "url": "https://linuxbrew.bintray.com/bottles/cbmc-5.12.catalina.bottle.tar.gz",
+          "sha256": "83da818079f4398b8e00d9c0daabf3673e2c1c26a7ecdabd2093fe919605c3df"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/geph2-0.21.4.mojave.bottle.tar.gz",
-          "sha256": "fe0f104deaa52d7ec13cf00a8154bb3e9cf9032441bda59c1b27a1c0bc310d76"
+          "url": "https://linuxbrew.bintray.com/bottles/cbmc-5.12.mojave.bottle.tar.gz",
+          "sha256": "5a19ff3395da6fcc3b5d21afd817d6938c3c4d0b3be864bedebc5ca4c843eafc"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/geph2-0.21.4.high_sierra.bottle.tar.gz",
-          "sha256": "fe0f104deaa52d7ec13cf00a8154bb3e9cf9032441bda59c1b27a1c0bc310d76"
+          "url": "https://linuxbrew.bintray.com/bottles/cbmc-5.12.high_sierra.bottle.tar.gz",
+          "sha256": "fbd3cf7a7bacb069cf93bc8e7c5185a9b96a0bc468ad3c9b65c2f2e4dec8d741"
         }
       }
     }
@@ -53,7 +53,9 @@
 
   ],
   "build_dependencies": [
-    "go"
+    "cmake",
+    "maven",
+    "openjdk"
   ],
   "dependencies": [
 

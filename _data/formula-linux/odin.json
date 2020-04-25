@@ -1,6 +1,6 @@
 {
-  "name": "inspircd",
-  "full_name": "inspircd",
+  "name": "odin",
+  "full_name": "odin",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Modular C++ Internet Relay Chat daemon",
-  "homepage": "https://www.inspircd.org/",
+  "desc": "The Odin Programming Language",
+  "homepage": "https://odin-lang.org/",
   "versions": {
-    "stable": "3.6.0",
+    "stable": "0.12.0",
     "devel": null,
-    "head": null,
+    "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/inspircd/inspircd/archive/v3.6.0.tar.gz",
+      "url": "https://github.com/odin-lang/Odin/archive/v0.12.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,21 +28,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+      "cellar": ":any",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/inspircd-3.6.0.catalina.bottle.tar.gz",
-          "sha256": "5ffffc7ee1d4a804d3bea62c0daacbc37113504cd540b107c7845c001613ea91"
+          "url": "https://linuxbrew.bintray.com/bottles/odin-0.12.0.catalina.bottle.tar.gz",
+          "sha256": "742f1adfd7a9ff880ad2fb80759e3a239530f6774bcf77ca5b5f650e88b3ee31"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/inspircd-3.6.0.mojave.bottle.tar.gz",
-          "sha256": "72807c0b16c0a71fc272a67dc0ab0678f8978443e37d2492bf758263d1a29526"
+          "url": "https://linuxbrew.bintray.com/bottles/odin-0.12.0.mojave.bottle.tar.gz",
+          "sha256": "80b0b0d73769b90551a5e759d82b41e16af6993540936dc2e94363e46ac1b0c1"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/inspircd-3.6.0.high_sierra.bottle.tar.gz",
-          "sha256": "10773bb68411503c25a83bf09b6ba3bbdb7ba0f40ff10bc5afe4b07c9b0e81e3"
+          "url": "https://linuxbrew.bintray.com/bottles/odin-0.12.0.high_sierra.bottle.tar.gz",
+          "sha256": "579b027ea67fcb8d0095f2a49e96a6660c903474bb145f930406caea8cc15ae7"
         }
       }
     }
@@ -53,10 +53,11 @@
 
   ],
   "build_dependencies": [
-    "pkg-config"
+
   ],
   "dependencies": [
-
+    "llvm",
+    "libiconv"
   ],
   "recommended_dependencies": [
 
