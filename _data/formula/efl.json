@@ -11,14 +11,14 @@
   "desc": "Enlightenment Foundation Libraries",
   "homepage": "https://www.enlightenment.org",
   "versions": {
-    "stable": "1.22.4",
+    "stable": "1.23.3",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://download.enlightenment.org/rel/libs/efl/efl-1.22.4.tar.xz",
+      "url": "https://download.enlightenment.org/rel/libs/efl/efl-1.23.3.tar.xz",
       "tag": null,
       "revision": null
     }
@@ -32,17 +32,17 @@
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
+        "catalina": {
+          "url": "https://homebrew.bintray.com/bottles/efl-1.23.3.catalina.bottle.tar.gz",
+          "sha256": "2c082d87bea8bebf30e2511def1f7df9f4755f970b6f9dd8f93042e4ca1866ac"
+        },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/efl-1.22.4.mojave.bottle.tar.gz",
-          "sha256": "d04b2c44f519e791014658b0994f49eee9940ca684ea2de402923bea23db4adc"
+          "url": "https://homebrew.bintray.com/bottles/efl-1.23.3.mojave.bottle.tar.gz",
+          "sha256": "c7050d67ef3d2c9b34e918df811e711cc614253ea704e0667791ce313cfcba3a"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/efl-1.22.4.high_sierra.bottle.tar.gz",
-          "sha256": "6d222b36c6172b11ad731ca15481c31a46ad38544ffed22d0d0a778861e63e85"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/efl-1.22.4.sierra.bottle.tar.gz",
-          "sha256": "5e303d498b339b5c248e9167efd68c362013d9198fdf5dbed98138721688a8db"
+          "url": "https://homebrew.bintray.com/bottles/efl-1.23.3.high_sierra.bottle.tar.gz",
+          "sha256": "a5632b3e41124f7a97147656ad5a296eae6e346d8ce7de0ac6fb51f8bca7d889"
         }
       }
     }
@@ -53,7 +53,8 @@
 
   ],
   "build_dependencies": [
-    "gettext",
+    "meson",
+    "ninja",
     "pkg-config"
   ],
   "dependencies": [
@@ -62,7 +63,9 @@
     "fontconfig",
     "freetype",
     "fribidi",
+    "gettext",
     "giflib",
+    "glib",
     "gst-plugins-good",
     "gstreamer",
     "jpeg",
@@ -73,6 +76,7 @@
     "libspectre",
     "libtiff",
     "luajit",
+    "lz4",
     "openssl@1.1",
     "poppler",
     "pulseaudio",
@@ -85,7 +89,7 @@
 
   ],
   "uses_from_macos": [
-
+    "zlib"
   ],
   "requirements": [
 
