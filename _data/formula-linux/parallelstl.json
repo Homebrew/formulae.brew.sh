@@ -14,21 +14,46 @@
     "stable": "20200330",
     "devel": null,
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
+    "stable": {
+      "url": "https://github.com/intel/parallelstl/archive/20200330.tar.gz",
+      "tag": null,
+      "revision": null
+    }
   },
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any_skip_relocation",
+      "prefix": "/home/linuxbrew/.linuxbrew",
+      "root_url": "https://linuxbrew.bintray.com/bottles",
+      "files": {
+        "catalina": {
+          "url": "https://linuxbrew.bintray.com/bottles/parallelstl-20200330.catalina.bottle.tar.gz",
+          "sha256": "5b3837f32d57d6d5398da1127eb4bba489a85821ae32e125fc486edb3abbca11"
+        },
+        "mojave": {
+          "url": "https://linuxbrew.bintray.com/bottles/parallelstl-20200330.mojave.bottle.tar.gz",
+          "sha256": "5b3837f32d57d6d5398da1127eb4bba489a85821ae32e125fc486edb3abbca11"
+        },
+        "high_sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/parallelstl-20200330.high_sierra.bottle.tar.gz",
+          "sha256": "5b3837f32d57d6d5398da1127eb4bba489a85821ae32e125fc486edb3abbca11"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
   "build_dependencies": [
-
+    "cmake"
   ],
   "dependencies": [
     "tbb"
