@@ -1,6 +1,6 @@
 {
-  "name": "grin",
-  "full_name": "grin",
+  "name": "autodiff",
+  "full_name": "autodiff",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Minimal implementation of the Mimblewimble protocol",
-  "homepage": "https://grin.mw/",
+  "desc": "Automatic differentiation made easier for C++",
+  "homepage": "https://autodiff.github.io",
   "versions": {
-    "stable": "3.1.1",
+    "stable": "0.5.10",
     "devel": null,
-    "head": null,
+    "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/mimblewimble/grin/archive/v3.1.1.tar.gz",
+      "url": "https://github.com/autodiff/autodiff/archive/v0.5.10.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -27,22 +27,22 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "cellar": ":any_skip_relocation",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/grin-3.1.1.catalina.bottle.1.tar.gz",
-          "sha256": "4d4dbea6ca09df962c0d5773631d0c9ca2eea33968a453b7743e40cc8d16fbff"
+          "url": "https://linuxbrew.bintray.com/bottles/autodiff-0.5.10.catalina.bottle.tar.gz",
+          "sha256": "0be7da5b5c8cb88296037137126dc4530f23559509b6a93d33485db8ae74446c"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/grin-3.1.1.mojave.bottle.1.tar.gz",
-          "sha256": "e7454e67d40ec10672c036a51d86affc67812d801597233d242d4893b41ea121"
+          "url": "https://linuxbrew.bintray.com/bottles/autodiff-0.5.10.mojave.bottle.tar.gz",
+          "sha256": "a8a8c129b51be0a90a7f683b52010d42a56439c869beeac44ed77e16a8d406b0"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/grin-3.1.1.high_sierra.bottle.1.tar.gz",
-          "sha256": "b9aa14bd8c6f7bdb5e5189888bf563f1c3d64be4944ac1fe843ed84c5ed99ebf"
+          "url": "https://linuxbrew.bintray.com/bottles/autodiff-0.5.10.high_sierra.bottle.tar.gz",
+          "sha256": "464905e7e857c916c85a3c60757ae1ab21834e0187161185043fd52c29fa7fb7"
         }
       }
     }
@@ -53,11 +53,10 @@
 
   ],
   "build_dependencies": [
-    "llvm",
-    "rust"
+    "cmake"
   ],
   "dependencies": [
-
+    "eigen"
   ],
   "recommended_dependencies": [
 

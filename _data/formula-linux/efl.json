@@ -11,19 +11,19 @@
   "desc": "Enlightenment Foundation Libraries",
   "homepage": "https://www.enlightenment.org",
   "versions": {
-    "stable": "1.22.4",
+    "stable": "1.23.3",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://download.enlightenment.org/rel/libs/efl/efl-1.22.4.tar.xz",
+      "url": "https://download.enlightenment.org/rel/libs/efl/efl-1.23.3.tar.xz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -32,17 +32,17 @@
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
+        "catalina": {
+          "url": "https://linuxbrew.bintray.com/bottles/efl-1.23.3_1.catalina.bottle.tar.gz",
+          "sha256": "457fb34df5c78927bd93080ecc39a823d6a227b5d650324658751de482b6e460"
+        },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/efl-1.22.4.mojave.bottle.tar.gz",
-          "sha256": "d04b2c44f519e791014658b0994f49eee9940ca684ea2de402923bea23db4adc"
+          "url": "https://linuxbrew.bintray.com/bottles/efl-1.23.3_1.mojave.bottle.tar.gz",
+          "sha256": "fcb4cb15113062b4b7c36e8b14d1574d367393d4793ea4704ae2e24cf593ae2c"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/efl-1.22.4.high_sierra.bottle.tar.gz",
-          "sha256": "6d222b36c6172b11ad731ca15481c31a46ad38544ffed22d0d0a778861e63e85"
-        },
-        "sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/efl-1.22.4.sierra.bottle.tar.gz",
-          "sha256": "5e303d498b339b5c248e9167efd68c362013d9198fdf5dbed98138721688a8db"
+          "url": "https://linuxbrew.bintray.com/bottles/efl-1.23.3_1.high_sierra.bottle.tar.gz",
+          "sha256": "d0d2577a41f2799591a861ec4f5c53db2745c5553d12d34adb85b1776ea710e4"
         }
       }
     }
@@ -53,7 +53,8 @@
 
   ],
   "build_dependencies": [
-    "gettext",
+    "meson",
+    "ninja",
     "pkg-config"
   ],
   "dependencies": [
@@ -62,7 +63,9 @@
     "fontconfig",
     "freetype",
     "fribidi",
+    "gettext",
     "giflib",
+    "glib",
     "gst-plugins-good",
     "gstreamer",
     "jpeg",
@@ -73,10 +76,12 @@
     "libspectre",
     "libtiff",
     "luajit",
+    "lz4",
     "openssl@1.1",
     "poppler",
     "pulseaudio",
-    "shared-mime-info"
+    "shared-mime-info",
+    "zlib"
   ],
   "recommended_dependencies": [
 

@@ -1,6 +1,6 @@
 {
-  "name": "xmake",
-  "full_name": "xmake",
+  "name": "libcpuid",
+  "full_name": "libcpuid",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Cross-platform build utility based on Lua",
-  "homepage": "https://xmake.io/",
+  "desc": "Small C library for x86 CPU detection and feature extraction",
+  "homepage": "https://github.com/anrieff/libcpuid",
   "versions": {
-    "stable": "2.3.3",
+    "stable": "0.4.1",
     "devel": null,
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/xmake-io/xmake/releases/download/v2.3.3/xmake-v2.3.3.tar.gz",
+      "url": "https://github.com/anrieff/libcpuid/archive/v0.4.1.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,21 +28,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any_skip_relocation",
+      "cellar": ":any",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/xmake-2.3.3.catalina.bottle.tar.gz",
-          "sha256": "64730570a22a08c43182c2f78c10072079df6b3c2bad5b77e8a6f4b480fd231b"
+          "url": "https://linuxbrew.bintray.com/bottles/libcpuid-0.4.1.catalina.bottle.tar.gz",
+          "sha256": "c0f18e27d65429a6c3056a703e6d3566c1faf83414940b01117710ce9405d702"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/xmake-2.3.3.mojave.bottle.tar.gz",
-          "sha256": "bb2637686962b81df84cd9e4e12b6bfc33b536a883494ec4cc60839234bb4fce"
+          "url": "https://linuxbrew.bintray.com/bottles/libcpuid-0.4.1.mojave.bottle.tar.gz",
+          "sha256": "dcb237738485dcccca47e2dc95fbf6f55a58e53aac697bcb7ee760453a56477a"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/xmake-2.3.3.high_sierra.bottle.tar.gz",
-          "sha256": "b5d31f8c33b2bdd3631122774b81bd0ac1997336aa170ff6b49014f8e237f41a"
+          "url": "https://linuxbrew.bintray.com/bottles/libcpuid-0.4.1.high_sierra.bottle.tar.gz",
+          "sha256": "0bc3018fe6b7ff39517cfc630a699d81857c6c667ed6d1a88290c9c2c28504a8"
         }
       }
     }
@@ -53,10 +53,12 @@
 
   ],
   "build_dependencies": [
-
+    "autoconf",
+    "automake",
+    "libtool"
   ],
   "dependencies": [
-    "readline"
+
   ],
   "recommended_dependencies": [
 
