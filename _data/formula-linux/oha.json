@@ -1,6 +1,6 @@
 {
-  "name": "luaradio",
-  "full_name": "luaradio",
+  "name": "oha",
+  "full_name": "oha",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Lightweight, embeddable flow graph signal processing framework for SDR",
-  "homepage": "https://luaradio.io/",
+  "desc": "HTTP load generator, inspired by rakyll/hey with tui animation",
+  "homepage": "https://github.com/hatoo/oha/",
   "versions": {
-    "stable": "0.7.0",
+    "stable": "0.2.3",
     "devel": null,
-    "head": "HEAD",
+    "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/vsergeev/luaradio/archive/v0.7.0.tar.gz",
+      "url": "https://github.com/hatoo/oha/archive/v0.2.3.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,21 +28,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": ":any_skip_relocation",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/luaradio-0.7.0.catalina.bottle.tar.gz",
-          "sha256": "df3f0b9ba19651e37c5b7c8e6bbe04658f852bd909fcebc14d9c08c9926e1061"
+          "url": "https://linuxbrew.bintray.com/bottles/oha-0.2.3.catalina.bottle.tar.gz",
+          "sha256": "85a0f4985360b43b39463a14095092fb59e7301c9f6e9c2c2a3016f59e88ebe0"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/luaradio-0.7.0.mojave.bottle.tar.gz",
-          "sha256": "909850451f26146b3c9e65129177afd31a715e463223c2713b414d345929376d"
+          "url": "https://linuxbrew.bintray.com/bottles/oha-0.2.3.mojave.bottle.tar.gz",
+          "sha256": "7d75f4966c217216899834adc162cd4820c457ba211402c2f97100c1040d368f"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/luaradio-0.7.0.high_sierra.bottle.tar.gz",
-          "sha256": "6d16f13182248aac79fcda6cbc11284ddbfa0e660cb9ba38a4b5e76262113e26"
+          "url": "https://linuxbrew.bintray.com/bottles/oha-0.2.3.high_sierra.bottle.tar.gz",
+          "sha256": "3c06fe21b4b14862896a1648d05145275a79cb62ce7a4716b634262c85aefcc2"
         }
       }
     }
@@ -53,12 +53,10 @@
 
   ],
   "build_dependencies": [
-    "pkg-config"
+    "rust"
   ],
   "dependencies": [
-    "fftw",
-    "liquid-dsp",
-    "luajit"
+
   ],
   "recommended_dependencies": [
 

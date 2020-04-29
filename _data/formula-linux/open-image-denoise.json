@@ -11,14 +11,14 @@
   "desc": "High-performance denoising library for ray tracing",
   "homepage": "https://openimagedenoise.github.io",
   "versions": {
-    "stable": "1.1.0",
+    "stable": "1.2.0",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/OpenImageDenoise/oidn/releases/download/v1.1.0/oidn-1.1.0.src.tar.gz",
+      "url": "https://github.com/OpenImageDenoise/oidn/releases/download/v1.2.0/oidn-1.2.0.src.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,20 +33,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/open-image-denoise-1.1.0.catalina.bottle.tar.gz",
-          "sha256": "b7f6f3c03baed6abdb8ce8940013c100f8a08fed919b283a6b46d038f8656eed"
+          "url": "https://linuxbrew.bintray.com/bottles/open-image-denoise-1.2.0.catalina.bottle.tar.gz",
+          "sha256": "dd30425462d2fc4c19e8ab4c3fd0b3b2b6d27fe47dab7c5d50b342d58e721abe"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/open-image-denoise-1.1.0.mojave.bottle.tar.gz",
-          "sha256": "c59673b0dd7f810cf1d7114f9f8b17849fa61cd6311b2ba17e6ccd6442723f8d"
+          "url": "https://linuxbrew.bintray.com/bottles/open-image-denoise-1.2.0.mojave.bottle.tar.gz",
+          "sha256": "e8c5f77201fe5321915bbed725d88e3cab4cd44ed13d3a80a2243b35f0e83b73"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/open-image-denoise-1.1.0.high_sierra.bottle.tar.gz",
-          "sha256": "ae4f4112755a30e5350e6546616b1ca6ee25eb9d832158a2e21d0419c0a13f1b"
-        },
-        "x86_64_linux": {
-          "url": "https://linuxbrew.bintray.com/bottles/open-image-denoise-1.1.0.x86_64_linux.bottle.tar.gz",
-          "sha256": "82bb4e589c7a27f25ffadddf7f2b1df7c38d087418324c3240d9e9b7d7cb3b69"
+          "url": "https://linuxbrew.bintray.com/bottles/open-image-denoise-1.2.0.high_sierra.bottle.tar.gz",
+          "sha256": "21c0dafc5a87978537a55dda39e62c056e498db093cc5ff0e2a7e2a5b486bcc8"
         }
       }
     }
@@ -57,7 +53,8 @@
 
   ],
   "build_dependencies": [
-    "cmake"
+    "cmake",
+    "ispc"
   ],
   "dependencies": [
     "tbb"
