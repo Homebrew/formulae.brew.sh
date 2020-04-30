@@ -14,13 +14,30 @@
     "stable": "244",
     "devel": null,
     "head": "HEAD",
-    "bottle": false
+    "bottle": true
   },
   "urls": {
+    "stable": {
+      "url": "https://github.com/systemd/systemd/archive/v244.tar.gz",
+      "tag": null,
+      "revision": null
+    }
   },
-  "revision": 2,
+  "revision": 3,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+      "prefix": "/home/linuxbrew/.linuxbrew",
+      "root_url": "https://linuxbrew.bintray.com/bottles",
+      "files": {
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/systemd-244_3.x86_64_linux.bottle.tar.gz",
+          "sha256": "ae26fdbe001f77a7b3c5f764bd7ad1571073ab5b0ba6743596e2438d92348f57"
+        }
+      }
+    }
   },
   "keg_only": false,
   "bottle_disabled": false,
@@ -44,6 +61,7 @@
   "dependencies": [
     "libcap",
     "lz4",
+    "openssl@1.1",
     "util-linux",
     "xz",
     "expat"
