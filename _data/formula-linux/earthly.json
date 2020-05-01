@@ -1,6 +1,6 @@
 {
-  "name": "nef",
-  "full_name": "nef",
+  "name": "earthly",
+  "full_name": "earthly",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "💊 steroids for Xcode Playgrounds",
-  "homepage": "https://nef.bow-swift.io",
+  "desc": "Build automation tool for the container era",
+  "homepage": "https://docs.earthly.dev/",
   "versions": {
-    "stable": "0.6.1",
+    "stable": "0.1.1",
     "devel": null,
-    "head": null,
+    "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/bow-swift/nef/archive/0.6.1.tar.gz",
+      "url": "https://github.com/earthly/earthly/archive/v0.1.1.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,8 +33,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/nef-0.6.1.catalina.bottle.tar.gz",
-          "sha256": "db1f3b419794b096f913f805f08b56e0f51cb01cfa20d4a8bfd77cc6ae1f236c"
+          "url": "https://linuxbrew.bintray.com/bottles/earthly-0.1.1.catalina.bottle.tar.gz",
+          "sha256": "1216bfa70f61b610cc891e0eecfd0f4eeaa07198717972be7aa373e5dd157611"
+        },
+        "mojave": {
+          "url": "https://linuxbrew.bintray.com/bottles/earthly-0.1.1.mojave.bottle.tar.gz",
+          "sha256": "b2ba9cdbedf9b576ad57ccd9626d38e64deac683450a48ee8356ec2fc73647b5"
+        },
+        "high_sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/earthly-0.1.1.high_sierra.bottle.tar.gz",
+          "sha256": "449c3fc3b698b7fa8d728ddd630f1b84382d2b84a060029f885f7441148c1b42"
         }
       }
     }
@@ -45,7 +53,7 @@
 
   ],
   "build_dependencies": [
-
+    "go"
   ],
   "dependencies": [
 
@@ -60,15 +68,7 @@
 
   ],
   "requirements": [
-    {
-      "name": "xcode",
-      "cask": null,
-      "download": null,
-      "version": "11.4",
-      "contexts": [
 
-      ]
-    }
   ],
   "conflicts_with": [
 
