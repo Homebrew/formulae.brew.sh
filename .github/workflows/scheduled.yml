@@ -1,0 +1,123 @@
+name: Scheduled regeneration
+
+on:
+  schedule:
+    # Once every other hour
+    - cron:  '55 */2 * * * *'
+
+jobs:
+  generate:
+    if: startsWith( github.repository, 'Homebrew/' )
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macOS-latest, ubuntu-latest]
+    env:
+      CI: 1
+      HOMEBREW_COLOR: 1
+      HOMEBREW_NO_ANALYTICS: 1
+      HOMEBREW_NO_AUTO_UPDATE: 1
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      - name: Set up Ruby
+        if: matrix.os == 'ubuntu-latest'
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: '2.6'
+
+      - name: Set up Homebrew
+        run: |
+          if which brew &>/dev/null; then
+            HOMEBREW_REPOSITORY="$(brew --repository)"
+            brew update-reset "$HOMEBREW_REPOSITORY"
+          else
+            HOMEBREW_PREFIX=/home/linuxbrew/.linuxbrew
+            HOMEBREW_REPOSITORY="$HOMEBREW_PREFIX/Homebrew"
+            sudo mkdir -p "$HOMEBREW_PREFIX"
+            sudo git clone --depth=1 https://github.com/Homebrew/brew "$HOMEBREW_REPOSITORY"
+
+            cd "$HOMEBREW_PREFIX"
+            sudo mkdir -p bin etc include lib opt sbin share var/homebrew/linked Cellar
+            sudo ln -sf ../Homebrew/bin/brew "$HOMEBREW_PREFIX/bin/"
+            cd -
+
+            eval $($HOMEBREW_PREFIX/bin/brew shellenv)
+            echo "::add-path::$HOMEBREW_PREFIX/bin"
+          fi
+
+          if [ "$RUNNER_OS" = "Linux" ]; then
+            sudo chown -R "$USER" "$HOMEBREW_PREFIX"
+
+            # create stubs so build dependencies aren't incorrectly flagged as missing
+            for i in python svn unzip xz
+            do
+              sudo touch /usr/bin/$i
+              sudo chmod +x /usr/bin/$i
+            done
+          fi
+
+          git config --global user.name "BrewTestBot"
+          git config --global user.email "homebrew-test-bot@lists.sfconservancy.org"
+
+          # set up analytics
+          if [ "$RUNNER_OS" = "Linux" ]; then
+            brew tap Homebrew/linuxbrew-core
+            echo ${{ secrets.LINUX_ANALYTICS_JSON_KEY }} > ~/.homebrew_analytics.json
+          else
+            brew tap homebrew/core
+            brew tap homebrew/cask
+            echo ${{ secrets.ANALYTICS_JSON_KEY }} > ~/.homebrew_analytics.json
+          fi
+
+      - name: Update data for homebrew/core
+        if: matrix.os == 'macOS-latest'
+        run: |
+          brew update-reset $(brew --repository homebrew/core)
+
+          # run Rakefile
+          /usr/bin/rake
+
+          # commit and push generated files
+          git add _data/formula api/formula formula
+
+          if ! git diff --no-patch --exit-code HEAD -- _data/analytics _data/formula api/formula formula cask; then
+            git commit -m "formula: updates from homebrew/core" _data/analytics _data/formula api/formula formula
+            git pull --rebase origin master
+            git push
+          fi
+
+      - name: Update data for homebrew/cask
+        if: matrix.os == 'macOS-latest'
+        run: |
+          brew update-reset $(brew --repository homebrew/cask)
+
+          # run Rakefile
+          /usr/bin/rake cask
+
+          # commit and push generated files
+          git add _data/cask api/cask cask
+
+          if ! git diff --no-patch --exit-code HEAD -- _data/cask api/cask cask; then
+            git commit -m "cask: updates from homebrew/cask" _data/cask api/cask cask
+            git pull --rebase origin master
+            git push
+          fi
+
+      - name: Update data for Homebrew/linuxbrew-core
+        if: matrix.os == 'ubuntu-latest'
+        run: |
+          brew update-reset $(brew --repository Homebrew/linuxbrew-core)
+
+          # run Rakefile
+          rake linux_formula_and_analytics
+
+          # commit and push generated files
+          git add _data/analytics-linux _data/formula-linux api/formula-linux formula-linux
+
+          if ! git diff --no-patch --exit-code HEAD -- _data/analytics-linux _data/formula-linux api/formula-linux formula-linux; then
+            git commit -m "formula-linux: updates from Homebrew/linuxbrew-core" _data/analytics-linux _data/formula-linux api/formula-linux formula-linux
+            git pull --rebase origin master
+            git push
+          fi
