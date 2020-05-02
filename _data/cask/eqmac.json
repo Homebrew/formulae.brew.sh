@@ -3,23 +3,26 @@
   "name": [
     "eqMac"
   ],
-  "homepage": "https://github.com/bitgapp/eqMac/releases/",
-  "url": "https://github.com/bitgapp/eqMac/releases/download/V2.2/eqMac2.dmg",
+  "homepage": "https://eqmac.app/",
+  "url": "https://github.com/bitgapp/eqMac/releases/download/v0.1.0/eqMac.dmg",
   "appcast": "https://github.com/bitgapp/eqMac/releases.atom",
-  "version": "2.2",
-  "sha256": "ff60579197b52571d9686bbfaec695dfa75797b8a9314fbf69a673bbeb12e1fc",
+  "version": "0.1.0",
+  "sha256": "3a001ad91913f90c9bfb3096f07171b6b0c130b4fca1c3c2e3b95414a6781578",
   "artifacts": [
     {
-      "quit": "com.bitgapp.eqMac2",
+      "quit": [
+        "com.bitgapp.eqmac",
+        "com.bitgapp.eqmac-LaunchAtLoginHelper"
+      ],
       "script": {
-        "executable": "/Applications/eqMac2.app/Contents/Resources/uninstall_driver.sh",
+        "executable": "/Applications/eqMac.app/Contents/Resources/uninstall_driver.sh",
         "sudo": "true"
       },
       "signal": {
       }
     },
     {
-      "path": "$(brew --prefix)/Caskroom/eqmac/2.2/eqMac2.app/Contents/Resources/install_driver.sh",
+      "path": "$(brew --prefix)/Caskroom/eqmac/0.1.0/eqMac.app/Contents/Resources/install_driver.sh",
       "args": {
         "must_succeed": "true",
         "sudo": "true",
@@ -27,12 +30,12 @@
       }
     },
     [
-      "eqMac2.app"
+      "eqMac.app"
     ],
     {
       "trash": [
-        "~/Library/Caches/com.bitgapp.eqMac2",
-        "~/Library/Cookies/com.bitgapp.eqMac2.binarycookies"
+        "~/Library/Caches/com.bitgapp.eqmac",
+        "~/Library/Cookies/com.bitgapp.eqmac.binarycookies"
       ],
       "signal": {
       }
