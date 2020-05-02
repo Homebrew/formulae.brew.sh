@@ -1,0 +1,51 @@
+{
+  "token": "fme-desktop",
+  "name": [
+    "FME Desktop"
+  ],
+  "homepage": "https://www.safe.com/",
+  "url": "https://downloads.safe.com/fme/2020/fme-desktop-2020.0.1-b20218-macosx.dmg",
+  "appcast": "https://www.safe.com/support/downloads/",
+  "version": "2020.0.1-b20218",
+  "sha256": "7662db9172aa732c5b2ee144167914d07f0de18fc608d133ac15f112785dd582",
+  "artifacts": [
+    {
+      "quit": [
+        "com.safe.fmeworkbench",
+        "com.safe.datainspector",
+        "com.safe.fmequicktranslator",
+        "com.safe.fmehelp"
+      ],
+      "delete": [
+        "/Applications/FME 2020.0",
+        "/Library/FME/2020.0"
+      ],
+      "signal": {
+      }
+    },
+    {
+      "path": "FME Desktop Installer.app/Contents/MacOS/applet",
+      "args": {
+        "must_succeed": "true",
+        "sudo": "true",
+        "print_stdout": "true"
+      }
+    },
+    {
+      "trash": [
+        "~/Library/Application Support/FME",
+        "~/Library/Application Support/FME Desktop Help",
+        "~/Library/Application Support/FME Help",
+        "~/Library/Application Support/FME Workbench"
+      ],
+      "signal": {
+      }
+    }
+  ],
+  "caveats": null,
+  "depends_on": {
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": null
+}
