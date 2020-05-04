@@ -99,7 +99,7 @@ permalink: :title
             macOS
         {%- elsif r.name == "xcode" -%}
             Xcode
-        {%- elsif r.cask -%}
+        {%- elsif r.cask and formula_path == "formula" -%}
             {%- unless r.cask contains "/" -%}
                 <a href="{{ site.baseurl }}/cask/{{ r.cask }}">{{ r.name }}</a>
             {%- else -%}
