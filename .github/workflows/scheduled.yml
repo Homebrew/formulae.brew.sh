@@ -3,7 +3,7 @@ name: Scheduled regeneration
 on:
   schedule:
     # Once every other hour
-    - cron:  '55 */2 * * *'
+    - cron:  '30 */2 * * *'
 
 jobs:
   generate:
@@ -28,6 +28,9 @@ jobs:
           ruby-version: '2.6'
 
       - name: Set up Homebrew
+        env:
+          ANALYTICS_JSON_KEY: ${{ secrets.ANALYTICS_JSON_KEY }}
+          LINUX_ANALYTICS_JSON_KEY: ${{ secrets.LINUX_ANALYTICS_JSON_KEY }}
         run: |
           if which brew &>/dev/null; then
             HOMEBREW_REPOSITORY="$(brew --repository)"
@@ -64,11 +67,11 @@ jobs:
           # set up analytics
           if [ "$RUNNER_OS" = "Linux" ]; then
             brew tap Homebrew/linuxbrew-core
-            echo ${{ secrets.LINUX_ANALYTICS_JSON_KEY }} > ~/.homebrew_analytics.json
+            echo "$LINUX_ANALYTICS_JSON_KEY" > ~/.homebrew_analytics.json
           else
             brew tap homebrew/core
             brew tap homebrew/cask
-            echo ${{ secrets.ANALYTICS_JSON_KEY }} > ~/.homebrew_analytics.json
+            echo "$ANALYTICS_JSON_KEY" > ~/.homebrew_analytics.json
           fi
 
       - name: Update data for homebrew/core
