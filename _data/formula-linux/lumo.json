@@ -54,7 +54,6 @@
   ],
   "build_dependencies": [
     "boot-clj",
-    "adoptopenjdk",
     "node",
     "yarn"
   ],
@@ -71,7 +70,15 @@
 
   ],
   "requirements": [
-
+    {
+      "name": "java",
+      "cask": "homebrew/cask-versions/adoptopenjdk8",
+      "download": null,
+      "version": "1.8",
+      "contexts": [
+        "build"
+      ]
+    }
   ],
   "conflicts_with": [
 

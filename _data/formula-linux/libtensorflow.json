@@ -55,7 +55,6 @@
   ],
   "build_dependencies": [
     "bazel",
-    "adoptopenjdk",
     "python@3.8"
   ],
   "dependencies": [
@@ -71,7 +70,15 @@
 
   ],
   "requirements": [
-
+    {
+      "name": "java",
+      "cask": "homebrew/cask-versions/adoptopenjdk8",
+      "download": null,
+      "version": "1.8",
+      "contexts": [
+        "build"
+      ]
+    }
   ],
   "conflicts_with": [
 

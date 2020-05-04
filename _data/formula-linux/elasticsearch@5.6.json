@@ -31,7 +31,7 @@
 
   ],
   "dependencies": [
-    "adoptopenjdk"
+
   ],
   "recommended_dependencies": [
 
@@ -43,12 +43,20 @@
 
   ],
   "requirements": [
+    {
+      "name": "java",
+      "cask": "homebrew/cask-versions/adoptopenjdk8",
+      "download": null,
+      "version": "1.8",
+      "contexts": [
 
+      ]
+    }
   ],
   "conflicts_with": [
 
   ],
-  "caveats": "Data:    $(brew --prefix)/var/elasticsearch/elasticsearch_root/\nLogs:    $(brew --prefix)/var/log/elasticsearch/elasticsearch_root.log\nPlugins: $(brew --prefix)/Cellar/elasticsearch@5.6/5.6.16/libexec/plugins/\nConfig:  $(brew --prefix)/etc/elasticsearch/\nplugin script: $(brew --prefix)/Cellar/elasticsearch@5.6/5.6.16/libexec/bin/elasticsearch-plugin\n",
+  "caveats": "Data:    $(brew --prefix)/var/elasticsearch/elasticsearch_runner/\nLogs:    $(brew --prefix)/var/log/elasticsearch/elasticsearch_runner.log\nPlugins: $(brew --prefix)/Cellar/elasticsearch@5.6/5.6.16/libexec/plugins/\nConfig:  $(brew --prefix)/etc/elasticsearch/\nplugin script: $(brew --prefix)/Cellar/elasticsearch@5.6/5.6.16/libexec/bin/elasticsearch-plugin\n",
   "installed": [
 
   ],

@@ -11,19 +11,19 @@
   "desc": "Graph based image processing framework",
   "homepage": "http://www.gegl.org/",
   "versions": {
-    "stable": "0.4.16",
+    "stable": "0.4.22",
     "devel": null,
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://download.gimp.org/pub/gegl/0.4/gegl-0.4.16.tar.bz2",
+      "url": "https://download.gimp.org/pub/gegl/0.4/gegl-0.4.22.tar.xz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 3,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,20 +33,20 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/gegl-0.4.16_3.catalina.bottle.tar.gz",
-          "sha256": "d41ef22ba4c1dd583d3b18c305d8d132fa3db3d51da3a83df1824aff4db589ca"
+          "url": "https://linuxbrew.bintray.com/bottles/gegl-0.4.22.catalina.bottle.tar.gz",
+          "sha256": "256271397bf3361b9d6700db806ac989d72a0e936b730ee7f65116a995655102"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/gegl-0.4.16_3.mojave.bottle.tar.gz",
-          "sha256": "3d0ff52bcb2583817c2c37d052e693e6f3477e18ae3f11d92655d56f19a7c8b9"
+          "url": "https://linuxbrew.bintray.com/bottles/gegl-0.4.22.mojave.bottle.tar.gz",
+          "sha256": "5386766e969cc2d9f0bddfb367e63ff79f0e007ef195cdb9eff6e88f733b7dd3"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/gegl-0.4.16_3.high_sierra.bottle.tar.gz",
-          "sha256": "0c8cdd38e69be4850198711e93a99d6b524fd04ef1efc577b1f55c687e406834"
+          "url": "https://linuxbrew.bintray.com/bottles/gegl-0.4.22.high_sierra.bottle.tar.gz",
+          "sha256": "67c6c2b29d62360587e24e2569f39155cd58843f65da1ce4514fd94126d139df"
         },
         "x86_64_linux": {
-          "url": "https://linuxbrew.bintray.com/bottles/gegl-0.4.16_3.x86_64_linux.bottle.tar.gz",
-          "sha256": "fa12dd04006f0248600e3c98f9a72a227a425dcf536040cb57fb2e2772329533"
+          "url": "https://linuxbrew.bintray.com/bottles/gegl-0.4.22.x86_64_linux.bottle.tar.gz",
+          "sha256": "a5403686c6f884c43290c5bca64f1cb0a0501991475da4abe182442365067377"
         }
       }
     }
@@ -57,7 +57,10 @@
 
   ],
   "build_dependencies": [
-    "intltool",
+    "glib",
+    "gobject-introspection",
+    "meson",
+    "ninja",
     "pkg-config"
   ],
   "dependencies": [
@@ -66,7 +69,8 @@
     "glib",
     "jpeg",
     "json-glib",
-    "libpng"
+    "libpng",
+    "cairo"
   ],
   "recommended_dependencies": [
 
