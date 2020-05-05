@@ -1,6 +1,6 @@
 {
-  "name": "mdk",
-  "full_name": "mdk",
+  "name": "guile@2",
+  "full_name": "guile@2",
   "oldname": null,
   "aliases": [
 
@@ -8,22 +8,22 @@
   "versioned_formulae": [
 
   ],
-  "desc": "GNU MIX development kit",
-  "homepage": "https://www.gnu.org/software/mdk/mdk.html",
+  "desc": "GNU Ubiquitous Intelligent Language for Extensions",
+  "homepage": "https://www.gnu.org/software/guile/",
   "versions": {
-    "stable": "1.2.10",
+    "stable": "2.2.7",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://ftp.gnu.org/gnu/mdk/v1.2.10/mdk-1.2.10.tar.gz",
+      "url": "https://ftp.gnu.org/gnu/guile/guile-2.2.7.tar.xz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 2,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,35 +33,35 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/mdk-1.2.10_2.catalina.bottle.tar.gz",
-          "sha256": "11d143b7ea88fb34427d08f9755bc62fb5129b577a7a2fcc813c3cacf4c7c644"
+          "url": "https://homebrew.bintray.com/bottles/guile@2-2.2.7.catalina.bottle.tar.gz",
+          "sha256": "2821f055df7815abc7467a42f1bd90a09672261a9aad4ce994111a59a2ce6dbe"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/mdk-1.2.10_2.mojave.bottle.tar.gz",
-          "sha256": "344482a184e612e63d0839e0e254c1c27b44971dcf62dc4cba96fb45a5db4aaf"
+          "url": "https://homebrew.bintray.com/bottles/guile@2-2.2.7.mojave.bottle.tar.gz",
+          "sha256": "78e5fd69581a54b8d7c701e1fc03d96660b80a2699d7dad701cdd2865a5f2442"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/mdk-1.2.10_2.high_sierra.bottle.tar.gz",
-          "sha256": "261bdee4241a6db4a361aca51bd4b052fc4686bd9f2ece6b24391c569c1c1558"
+          "url": "https://homebrew.bintray.com/bottles/guile@2-2.2.7.high_sierra.bottle.tar.gz",
+          "sha256": "2832668210b0ef94ae0596c7e27aca846f76453719df6a9103e34af9e885d031"
         }
       }
     }
   },
-  "keg_only": false,
+  "keg_only": true,
   "bottle_disabled": false,
   "options": [
 
   ],
   "build_dependencies": [
-    "intltool",
-    "pkg-config"
+    "gnu-sed"
   ],
   "dependencies": [
-    "flex",
-    "glib",
-    "gtk+",
-    "guile",
-    "libglade",
+    "bdw-gc",
+    "gmp",
+    "libffi",
+    "libtool",
+    "libunistring",
+    "pkg-config",
     "readline"
   ],
   "recommended_dependencies": [
