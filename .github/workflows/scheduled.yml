@@ -13,7 +13,6 @@ jobs:
     env:
       CI: 1
       HOMEBREW_COLOR: 1
-      HOMEBREW_NO_ANALYTICS: 1
       HOMEBREW_NO_AUTO_UPDATE: 1
     steps:
       - name: Check out repository
@@ -29,6 +28,7 @@ jobs:
         env:
           ANALYTICS_JSON_KEY: ${{ secrets.ANALYTICS_JSON_KEY }}
           LINUX_ANALYTICS_JSON_KEY: ${{ secrets.LINUX_ANALYTICS_JSON_KEY }}
+          HOMEBREW_NO_ANALYTICS: 1
         run: |
           if which brew &>/dev/null; then
             HOMEBREW_REPOSITORY="$(brew --repository)"
