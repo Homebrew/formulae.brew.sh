@@ -60,3 +60,41 @@ permalink: :title
     </tr>
 </table>
 {%- endif -%}
+
+{%- if site.data.analytics.cask-install["homebrew-cask"]["30d"].formulae[token].size > 0 -%}
+<p>Analytics:</p>
+<table>
+    <tr>
+        <th colspan="2">Installs (30 days)</th>
+    </tr>
+
+    {%- for fa in site.data.analytics.cask-install["homebrew-cask"]["30d"].formulae[token] -%}
+    <tr>
+        <td><code>{{ fa.cask }}</code></td>
+        <td class="number-data">{{ fa.count }}</td>
+    </tr>
+    {%- endfor -%}
+
+    <tr>
+        <th colspan="2">Installs (90 days)</th>
+    </tr>
+
+    {%- for fa in site.data.analytics.cask-install["homebrew-cask"]["90d"].formulae[token] -%}
+    <tr>
+        <td><code>{{ fa.cask }}</code></td>
+        <td class="number-data">{{ fa.count }}</td>
+    </tr>
+    {%- endfor -%}
+
+    <tr>
+        <th colspan="2">Installs (365 days)</th>
+    </tr>
+
+    {%- for fa in site.data.analytics.cask-install["homebrew-cask"]["365d"].formulae[token] -%}
+    <tr>
+        <td><code>{{ fa.cask }}</code></td>
+        <td class="number-data">{{ fa.count }}</td>
+    </tr>
+    {%- endfor -%}
+</table>
+{%- endif -%}
