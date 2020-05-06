@@ -78,8 +78,13 @@ def generate_analytics_files(os)
     formula_analytics_os_arg = "--linux"
   end
 
-  %w[build-error install cask-install install-on-request os-version
-     core-build-error core-install core-install-on-request core-cask-install].each do |category|
+  categories = %w[
+    build-error install install-on-request
+    core-build-error core-install core-install-on-request
+  ]
+  categories << %w[cask-install core-cask-install os-version] if os == "mac"
+
+  categories.each do |category|
     case category
     when "core-build-error"
       category = "all-core-formulae-json --build-error"
@@ -100,7 +105,6 @@ def generate_analytics_files(os)
     FileUtils.mkdir_p "#{analytics_data_path}/#{category_name}"
     %w[30 90 365].each do |days|
       next if days != "30" && category_name == "build-error/#{core_tap_name}"
-      next if os == "linux" && %w[cask-install os-version].include?(category_name)
 
       # The `--json` and `--all-core-formulae-json` flags are mutually
       # exclusive, but we need to explicitly set `--json` sometimes,
