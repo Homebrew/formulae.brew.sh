@@ -1,0 +1,41 @@
+{
+  "token": "chef-workstation",
+  "name": [
+    "Chef Workstation"
+  ],
+  "homepage": "https://docs.chef.io/workstation/",
+  "url": "https://packages.chef.io/files/stable/chef-workstation/0.17.5/mac_os_x/10.13/chef-workstation-0.17.5-1.dmg",
+  "appcast": "https://omnitruck.chef.io/stable/chef-workstation/metadata?p=mac_os_x&pv=10.14&m=x86_64&v=latest",
+  "version": "0.17.5",
+  "sha256": "e9b9165a80222900a1e421f7ad72d2f8252bc0f46175162e43b8cf271b2d2207",
+  "artifacts": [
+    {
+      "quit": "sh.chef.chef-workstation",
+      "pkgutil": "com.getchef.pkg.chef-workstation",
+      "launchctl": "io.chef.chef-workstation.app",
+      "script": {
+        "executable": "/opt/chef-workstation/bin/uninstall_chef_workstation",
+        "sudo": "true"
+      },
+      "signal": {
+      }
+    },
+    "chef-workstation-0.17.5-1.pkg (Pkg)",
+    {
+      "trash": "~/.chef-workstation/",
+      "signal": {
+      }
+    }
+  ],
+  "caveats": null,
+  "depends_on": {
+    "macos": {
+      ">=": [
+        "10.13"
+      ]
+    }
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": null
+}
