@@ -79,7 +79,7 @@ def generate_analytics_files(os)
   end
 
   %w[build-error install cask-install install-on-request os-version
-     core-build-error core-install core-install-on-request].each do |category|
+     core-build-error core-install core-install-on-request core-cask-install].each do |category|
     case category
     when "core-build-error"
       category = "all-core-formulae-json --build-error"
@@ -90,6 +90,9 @@ def generate_analytics_files(os)
     when "core-install-on-request"
       category = "all-core-formulae-json --install-on-request"
       category_name = "install-on-request/#{core_tap_name}"
+    when "core-cask-install"
+      category = "all-core-formulae-json --cask-install"
+      category_name = "cask-install/homebrew-cask"
     else
       category_name = category
     end
@@ -105,7 +108,7 @@ def generate_analytics_files(os)
       # `--all-core-formulae-json`.
       category_flags = category.include?("all-core-formulae-json") ? category : "json --#{category}"
 
-      sh "brew formula-analytics #{formula_analytics_os_arg} --days-ago=#{days} --#{category_flags}" \
+      sh "brew formula-analytics #{formula_analytics_os_arg} --days-ago=#{days} --#{category_flags} " \
         "> #{analytics_data_path}/#{category_name}/#{days}d.json"
     end
   end
@@ -125,6 +128,9 @@ CLOBBER.include FileList[%w[_data/analytics _data/analytics-linux]]
 
 desc "Dump macOS formulae and analytics data"
 task formula_and_analytics: %i[formulae analytics]
+
+desc "Dump macOS casks and analytics data"
+task cask_and_analytics: %i[cask analytics]
 
 desc "Dump Linux formulae and analytics data"
 task :linux_formula_and_analytics do
