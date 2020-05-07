@@ -9,9 +9,25 @@
   "version": "0.23.1",
   "sha256": "a9e6f4cf655d8afc192c7566b187d0a754715b2e1445eb4eb23be1e5370529c6",
   "artifacts": [
+    {
+      "delete": "$(brew --prefix)/bin/nteract",
+      "signal": {
+      }
+    },
     [
       "nteract.app"
-    ]
+    ],
+    {
+      "trash": [
+        "~/Library/Application Support/Caches/nteract-updater",
+        "~/Library/Application Support/nteract",
+        "~/Library/Logs/nteract",
+        "~/Library/Preferences/io.nteract.nteract.plist",
+        "~/Library/Saved Application State/io.nteract.nteract.savedState"
+      ],
+      "signal": {
+      }
+    }
   ],
   "caveats": null,
   "depends_on": {
