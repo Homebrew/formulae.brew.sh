@@ -1,6 +1,6 @@
 {
-  "name": "gleam",
-  "full_name": "gleam",
+  "name": "lc0",
+  "full_name": "lc0",
   "oldname": null,
   "aliases": [
 
@@ -8,19 +8,19 @@
   "versioned_formulae": [
 
   ],
-  "desc": "✨ A statically typed language for the Erlang VM",
-  "homepage": "https://gleam.run",
+  "desc": "Open source neural network based chess engine",
+  "homepage": "https://lczero.org/",
   "versions": {
-    "stable": "0.8.0",
+    "stable": "0.25.1",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/lpil/gleam/archive/v0.8.0.tar.gz",
-      "tag": null,
-      "revision": null
+      "url": "https://github.com/LeelaChessZero/lc0.git",
+      "tag": "v0.25.1",
+      "revision": "69105b4eb0a3cf4fbc76960d18d519a0bdd19838"
     }
   },
   "revision": 0,
@@ -33,16 +33,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/gleam-0.8.0.catalina.bottle.tar.gz",
-          "sha256": "bea290f7e96ca2d9d538e8f77f28d9f07a987339de440034ec10f49ca578fe18"
+          "url": "https://homebrew.bintray.com/bottles/lc0-0.25.1.catalina.bottle.tar.gz",
+          "sha256": "54ea227ae5e072cd33580ad6294ae9e5a1a8ee34bc8322f7d376ddff287e9633"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/gleam-0.8.0.mojave.bottle.tar.gz",
-          "sha256": "26023458b342bed6644cd74cbb0e0f96ecd0aec108d07a033b4455260ee42487"
+          "url": "https://homebrew.bintray.com/bottles/lc0-0.25.1.mojave.bottle.tar.gz",
+          "sha256": "ef181a97aed047dcf7e2dbb06415e74ef5ce7bf4ca4eb24e96f4a8c5fefb59e8"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gleam-0.8.0.high_sierra.bottle.tar.gz",
-          "sha256": "1af691eb2a1a0789a54ec66e8ae935ce6609076f59d94ba0993bee99cc3e5690"
+          "url": "https://homebrew.bintray.com/bottles/lc0-0.25.1.high_sierra.bottle.tar.gz",
+          "sha256": "151e62a4290105fde099a552d27fae4328bcf65d6617c1e85be24162289c9c2e"
         }
       }
     }
@@ -53,11 +53,12 @@
 
   ],
   "build_dependencies": [
-    "rust"
+    "meson",
+    "ninja",
+    "python"
   ],
   "dependencies": [
-    "erlang",
-    "rebar3"
+
   ],
   "recommended_dependencies": [
 
