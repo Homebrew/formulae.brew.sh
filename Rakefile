@@ -82,7 +82,7 @@ def generate_analytics_files(os)
     build-error install install-on-request
     core-build-error core-install core-install-on-request
   ]
-  categories << %w[cask-install core-cask-install os-version] if os == "mac"
+  categories += %w[cask-install core-cask-install os-version] if os == "mac"
 
   categories.each do |category|
     case category
