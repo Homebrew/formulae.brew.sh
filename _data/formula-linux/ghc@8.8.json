@@ -1,6 +1,6 @@
 {
-  "name": "hlint",
-  "full_name": "hlint",
+  "name": "ghc@8.8",
+  "full_name": "ghc@8.8",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Haskell source code suggestions",
-  "homepage": "https://github.com/ndmitchell/hlint",
+  "desc": "Glorious Glasgow Haskell Compilation System",
+  "homepage": "https://haskell.org/ghc/",
   "versions": {
-    "stable": "3.0.4",
+    "stable": "8.8.3",
     "devel": null,
-    "head": "HEAD",
+    "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://hackage.haskell.org/package/hlint-3.0.4/hlint-3.0.4.tar.gz",
+      "url": "https://downloads.haskell.org/~ghc/8.8.3/ghc-8.8.3-src.tar.xz",
       "tag": null,
       "revision": null
     }
@@ -27,37 +27,37 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/hlint-3.0.4.catalina.bottle.1.tar.gz",
-          "sha256": "0c505b487cdfa727de7b67d6cb6098d4e04a7d0902e837223b68ccdfaf3826e4"
+          "url": "https://linuxbrew.bintray.com/bottles/ghc@8.8-8.8.3.catalina.bottle.tar.gz",
+          "sha256": "7968d8e75b49c4b4177aeec21bc09dc62dd039d973cfe5be6432ad54bd44ee38"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/hlint-3.0.4.mojave.bottle.1.tar.gz",
-          "sha256": "e2daa3b2d8a1dcef315c303bf72bc8a444f2dd1ca6633f65ddda28fb96a65456"
+          "url": "https://linuxbrew.bintray.com/bottles/ghc@8.8-8.8.3.mojave.bottle.tar.gz",
+          "sha256": "25ea38aa4d2e3089518f52af08083f7715843fdfda2637f92f478e3b4cc5540d"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/hlint-3.0.4.high_sierra.bottle.1.tar.gz",
-          "sha256": "4cfe06ff802e64a1fefe948748879d240b1b2f1338afa5214ccbdcf391826092"
+          "url": "https://linuxbrew.bintray.com/bottles/ghc@8.8-8.8.3.high_sierra.bottle.tar.gz",
+          "sha256": "de3fad18e3656100e3e57411281bedd903d1aae583b046c6b2916b2d29800acc"
         }
       }
     }
   },
-  "keg_only": false,
+  "keg_only": true,
   "bottle_disabled": false,
   "options": [
 
   ],
   "build_dependencies": [
-    "cabal-install",
-    "ghc@8.8"
+    "python",
+    "sphinx-doc"
   ],
   "dependencies": [
-    "ncurses"
+
   ],
   "recommended_dependencies": [
 
