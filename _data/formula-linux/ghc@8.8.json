@@ -43,6 +43,10 @@
         "high_sierra": {
           "url": "https://linuxbrew.bintray.com/bottles/ghc@8.8-8.8.3.high_sierra.bottle.tar.gz",
           "sha256": "de3fad18e3656100e3e57411281bedd903d1aae583b046c6b2916b2d29800acc"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/ghc@8.8-8.8.3.x86_64_linux.bottle.tar.gz",
+          "sha256": "6a7c493e0d9df4e43c8623a3b10bd32613bc7baaa27af03520c89d6f5149e4a6"
         }
       }
     }
@@ -54,10 +58,12 @@
   ],
   "build_dependencies": [
     "python",
-    "sphinx-doc"
+    "sphinx-doc",
+    "m4",
+    "gmp"
   ],
   "dependencies": [
-
+    "ncurses"
   ],
   "recommended_dependencies": [
 
