@@ -1,6 +1,6 @@
 {
-  "name": "helmfile",
-  "full_name": "helmfile",
+  "name": "sollya",
+  "full_name": "sollya",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Deploy Kubernetes Helm Charts",
-  "homepage": "https://github.com/roboll/helmfile",
+  "desc": "Library for safe floating-point code development",
+  "homepage": "https://sollya.gforge.inria.fr/",
   "versions": {
-    "stable": "0.115.0",
+    "stable": "7.0",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/roboll/helmfile/archive/v0.115.0.tar.gz",
+      "url": "https://gforge.inria.fr/frs/download.php/file/37749/sollya-7.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,21 +28,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any_skip_relocation",
+      "cellar": ":any",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/helmfile-0.115.0.catalina.bottle.tar.gz",
-          "sha256": "a8453cf450c677b6f3ad60a87f6ed58c833e4e85421098ba3de086c373dd34c2"
+          "url": "https://homebrew.bintray.com/bottles/sollya-7.0.catalina.bottle.tar.gz",
+          "sha256": "ff549e2fff8c593449a7bf92d2d2d7ff423c6a40885838d5be4d7852308a4b28"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/helmfile-0.115.0.mojave.bottle.tar.gz",
-          "sha256": "3a64b52d6131bfe853d17a66d0f0e7750dcee099472d3ff8f757d3d96edef693"
+          "url": "https://homebrew.bintray.com/bottles/sollya-7.0.mojave.bottle.tar.gz",
+          "sha256": "5a3569111ea2936599668fc075a146ebfd01f471613b7c695a6a3d031ea6a309"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/helmfile-0.115.0.high_sierra.bottle.tar.gz",
-          "sha256": "876a82f73e214f6fd2f90a70c41458a57cc76365f1e3a4fba425036a33375e86"
+          "url": "https://homebrew.bintray.com/bottles/sollya-7.0.high_sierra.bottle.tar.gz",
+          "sha256": "5b5b3762879216a04a4fbcea2fa5407dddb331510a9e01f768d684ebdcd99c66"
         }
       }
     }
@@ -53,10 +53,14 @@
 
   ],
   "build_dependencies": [
-    "go"
+    "automake"
   ],
   "dependencies": [
-    "helm"
+    "pkg-config",
+    "fplll",
+    "gmp",
+    "mpfi",
+    "mpfr"
   ],
   "recommended_dependencies": [
 
@@ -65,7 +69,7 @@
 
   ],
   "uses_from_macos": [
-
+    "libxml2"
   ],
   "requirements": [
 
