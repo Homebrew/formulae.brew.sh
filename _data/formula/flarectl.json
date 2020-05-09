@@ -1,6 +1,6 @@
 {
-  "name": "dhall-json",
-  "full_name": "dhall-json",
+  "name": "flarectl",
+  "full_name": "flarectl",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Dhall to JSON compiler and a Dhall to YAML compiler",
-  "homepage": "https://github.com/dhall-lang/dhall-haskell/tree/master/dhall-json",
+  "desc": "CLI application for interacting with a Cloudflare account",
+  "homepage": "https://github.com/cloudflare/cloudflare-go/tree/master/cmd/flarectl",
   "versions": {
-    "stable": "1.6.4",
+    "stable": "0.11.7",
     "devel": null,
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://hackage.haskell.org/package/dhall-json-1.6.4/dhall-json-1.6.4.tar.gz",
+      "url": "https://github.com/cloudflare/cloudflare-go/archive/v0.11.7.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,16 +33,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/dhall-json-1.6.4.catalina.bottle.tar.gz",
-          "sha256": "72db44b7eea65e15d46136da6b6b7d82cccb3072273f47b915c96ce287ccf36a"
+          "url": "https://homebrew.bintray.com/bottles/flarectl-0.11.7.catalina.bottle.tar.gz",
+          "sha256": "263f404a08fc223ebb4c540ef788674760072c92fb6297f20572681ba8306a31"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/dhall-json-1.6.4.mojave.bottle.tar.gz",
-          "sha256": "7152d5da04a8064eeeab62bb6a7c908d0968c700e3202160b49851de2f45643e"
+          "url": "https://homebrew.bintray.com/bottles/flarectl-0.11.7.mojave.bottle.tar.gz",
+          "sha256": "72823f606afafa9c37ba7499dca4c1167e50411f46a51d60f97574e894bc0894"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/dhall-json-1.6.4.high_sierra.bottle.tar.gz",
-          "sha256": "7d60dd99e46d3693fbdbc1107fa571c45357b7f853279c1340c2b147748b1ff3"
+          "url": "https://homebrew.bintray.com/bottles/flarectl-0.11.7.high_sierra.bottle.tar.gz",
+          "sha256": "3e41c3f80638f768b61f0d9447851ca3231cd2a1ae93d7afa5f205ca64c41db3"
         }
       }
     }
@@ -53,8 +53,7 @@
 
   ],
   "build_dependencies": [
-    "cabal-install",
-    "ghc@8.6"
+    "go"
   ],
   "dependencies": [
 
@@ -66,8 +65,7 @@
 
   ],
   "uses_from_macos": [
-    "ncurses",
-    "zlib"
+
   ],
   "requirements": [
 

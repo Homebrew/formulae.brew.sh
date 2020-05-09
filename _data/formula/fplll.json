@@ -1,6 +1,6 @@
 {
-  "name": "eslint",
-  "full_name": "eslint",
+  "name": "fplll",
+  "full_name": "fplll",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "AST-based pattern checker for JavaScript",
-  "homepage": "https://eslint.org",
+  "desc": "Lattice algorithms using floating-point arithmetic",
+  "homepage": "https://github.com/fplll/fplll",
   "versions": {
-    "stable": "7.0.0",
+    "stable": "5.3.2",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://registry.npmjs.org/eslint/-/eslint-7.0.0.tgz",
+      "url": "https://github.com/fplll/fplll/releases/download/5.3.2/fplll-5.3.2.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,21 +28,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any_skip_relocation",
+      "cellar": "/usr/local/Cellar",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/eslint-7.0.0.catalina.bottle.tar.gz",
-          "sha256": "c4bff2e3ed52e5922bc116f88465683afcfcbdaaaf2aff07a3e2e18cf61655d6"
+          "url": "https://homebrew.bintray.com/bottles/fplll-5.3.2.catalina.bottle.tar.gz",
+          "sha256": "3d239ac3aa368ab40decdebaf887ce602bf7bce3c02703a07b4e8cd79e0936b2"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/eslint-7.0.0.mojave.bottle.tar.gz",
-          "sha256": "d9bd75aaf19a7cccb707319fdda730bdaccaff0464fa68282426e732df98351c"
+          "url": "https://homebrew.bintray.com/bottles/fplll-5.3.2.mojave.bottle.tar.gz",
+          "sha256": "37f5d88700570f7436f14534985f56ee310c381a54ce23bb430ec5c282d1aded"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/eslint-7.0.0.high_sierra.bottle.tar.gz",
-          "sha256": "7f1734076e1f3e070a0d3a527ce4e99ff8bfa5593ea92a16dd6bd3398898d4e7"
+          "url": "https://homebrew.bintray.com/bottles/fplll-5.3.2.high_sierra.bottle.tar.gz",
+          "sha256": "c585d11326473552873aa819b67c7aad6465d71000df0400d3453789c6e96984"
         }
       }
     }
@@ -53,10 +53,12 @@
 
   ],
   "build_dependencies": [
-
+    "automake"
   ],
   "dependencies": [
-    "node"
+    "pkg-config",
+    "gmp",
+    "mpfr"
   ],
   "recommended_dependencies": [
 
