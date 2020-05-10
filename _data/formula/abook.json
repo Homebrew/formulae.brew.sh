@@ -11,19 +11,19 @@
   "desc": "Address book with mutt support",
   "homepage": "https://abook.sourceforge.io/",
   "versions": {
-    "stable": "0.5.6",
+    "stable": "0.6.1",
     "devel": null,
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://downloads.sourceforge.net/project/abook/abook/0.5.6/abook-0.5.6.tar.gz",
+      "url": "http://abook.sourceforge.net/devel/abook-0.6.1.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 2,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,20 +33,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/abook-0.5.6_2.catalina.bottle.tar.gz",
-          "sha256": "8bd83f518b01cdb21cabd04bb9fd28351d571c3bc3dfb44911a2d39532756967"
+          "url": "https://homebrew.bintray.com/bottles/abook-0.6.1.catalina.bottle.tar.gz",
+          "sha256": "09e77aa3db2cf8a702effbebbbf83f7a2f860b0d5db6bcf37549edb7db5438a7"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/abook-0.5.6_2.mojave.bottle.tar.gz",
-          "sha256": "c1b909e5047e584971993e46ac28956479f1aca7edd28822df6de649fdb17bce"
+          "url": "https://homebrew.bintray.com/bottles/abook-0.6.1.mojave.bottle.tar.gz",
+          "sha256": "a6ab99c751a03e11e2ace660ad9325a9fe4262598f284c0fb87626778383e29d"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/abook-0.5.6_2.high_sierra.bottle.tar.gz",
-          "sha256": "6dd4fd8e2f57239376ccbe02bc606829d0b976b18f94ae6e5204a7d546ae9a04"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/abook-0.5.6_2.sierra.bottle.tar.gz",
-          "sha256": "b078b7af5c5fca8c97e693b70a0700ab91d9bed44bdccbf037ed5eb800c32d7b"
+          "url": "https://homebrew.bintray.com/bottles/abook-0.6.1.high_sierra.bottle.tar.gz",
+          "sha256": "a0461ecc678e5cb65a901bd39dbd7f0f8015a29ed605e6cf28f1315d5c347ecb"
         }
       }
     }
@@ -57,9 +53,11 @@
 
   ],
   "build_dependencies": [
-
+    "autoconf",
+    "automake"
   ],
   "dependencies": [
+    "gettext",
     "readline"
   ],
   "recommended_dependencies": [

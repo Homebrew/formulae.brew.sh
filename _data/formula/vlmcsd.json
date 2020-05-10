@@ -1,0 +1,85 @@
+{
+  "name": "vlmcsd",
+  "full_name": "vlmcsd",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "KMS Emulator in C",
+  "homepage": "https://github.com/Wind4/vlmcsd",
+  "versions": {
+    "stable": "svn1113",
+    "devel": null,
+    "head": "HEAD",
+    "bottle": true
+  },
+  "urls": {
+    "stable": {
+      "url": "https://github.com/Wind4/vlmcsd/archive/svn1113.tar.gz",
+      "tag": null,
+      "revision": null
+    }
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any_skip_relocation",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "catalina": {
+          "url": "https://homebrew.bintray.com/bottles/vlmcsd-svn1113.catalina.bottle.tar.gz",
+          "sha256": "3f3cc34de780b15b2c5eb32660f79a95bd28674c7cebb78452f9f8888d9d8b38"
+        },
+        "mojave": {
+          "url": "https://homebrew.bintray.com/bottles/vlmcsd-svn1113.mojave.bottle.tar.gz",
+          "sha256": "512da18ff22fe4dbc539aa31020acad022fdf6b19c6b14d49a361e1615af58fb"
+        },
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/vlmcsd-svn1113.high_sierra.bottle.tar.gz",
+          "sha256": "0cb2abe0a85b0ca14602d565b6ef3c69afa1f466123b37503936dfe064581b54"
+        }
+      }
+    }
+  },
+  "keg_only": false,
+  "bottle_disabled": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+    "make"
+  ],
+  "dependencies": [
+
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "uses_from_macos": [
+    {
+      "llvm": "build"
+    }
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "The default port is 1688\n\nTo configure vlmcsd, edit\n  $(brew --prefix)/etc/vlmcsd/vlmcsd.ini\nAfter changing the configuration, please restart vlmcsd\n  launchctl unload $(brew --prefix)/Cellar/vlmcsd/svn1113/homebrew.mxcl.vlmcsd.plist\n  launchctl load $(brew --prefix)/Cellar/vlmcsd/svn1113/homebrew.mxcl.vlmcsd.plist\nOr, if you don't want/need launchctl, you can just run:\n  brew services restart vlmcsd\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false
+}

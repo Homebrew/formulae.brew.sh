@@ -23,7 +23,7 @@
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 2,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,16 +33,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/clamav-0.102.2.catalina.bottle.tar.gz",
-          "sha256": "544f511ddd1c68b88a93f017617c968a4e5d34fc6a010af15e047a76c5b16a9f"
+          "url": "https://homebrew.bintray.com/bottles/clamav-0.102.2_2.catalina.bottle.tar.gz",
+          "sha256": "03315a351ef099050af0c00a8989dd6d9ce522729f648faacb9960e0436d65aa"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/clamav-0.102.2.mojave.bottle.tar.gz",
-          "sha256": "a92959f8a348642739db5e023e4302809c8272da1bea75336635267e449aacdf"
+          "url": "https://homebrew.bintray.com/bottles/clamav-0.102.2_2.mojave.bottle.tar.gz",
+          "sha256": "7d00d36a11a8edbc643c92757a7206598db4e629d9cd379be8fdaad106da61d7"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/clamav-0.102.2.high_sierra.bottle.tar.gz",
-          "sha256": "252446ee2509c9653fc9ab160811232d228f9995fcd7d4e9378c128bccd5ecaa"
+          "url": "https://homebrew.bintray.com/bottles/clamav-0.102.2_2.high_sierra.bottle.tar.gz",
+          "sha256": "0bdd0b6b44fedbb2e1bea8fdccc49b5e5d5b6c00d6dcd6c7440eb10537c648d1"
         }
       }
     }
@@ -57,8 +57,9 @@
   ],
   "dependencies": [
     "json-c",
+    "libiconv",
     "openssl@1.1",
-    "pcre",
+    "pcre2",
     "yara"
   ],
   "recommended_dependencies": [
@@ -68,7 +69,9 @@
 
   ],
   "uses_from_macos": [
+    "bzip2",
     "curl",
+    "libxml2",
     "zlib"
   ],
   "requirements": [

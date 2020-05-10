@@ -11,14 +11,14 @@
   "desc": "Service monitoring system and time series database",
   "homepage": "https://prometheus.io/",
   "versions": {
-    "stable": "2.17.2",
+    "stable": "2.18.1",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/prometheus/prometheus/archive/v2.17.2.tar.gz",
+      "url": "https://github.com/prometheus/prometheus/archive/v2.18.1.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,16 +33,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/prometheus-2.17.2.catalina.bottle.tar.gz",
-          "sha256": "f7d2c54e560ad73b1824c9277702f174f4aaa61c7999433f3320a86ff8a18442"
+          "url": "https://homebrew.bintray.com/bottles/prometheus-2.18.1.catalina.bottle.tar.gz",
+          "sha256": "5610fa21f66cdd3b4dcc5f033b5d7901b40bb9595440fa00c3a5adbb7dc20a95"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/prometheus-2.17.2.mojave.bottle.tar.gz",
-          "sha256": "1a4f6d320a926f2ab481f6999f69ab4c62f0c3215c8df7c016d74e017e5e43fd"
+          "url": "https://homebrew.bintray.com/bottles/prometheus-2.18.1.mojave.bottle.tar.gz",
+          "sha256": "24b913bad385759bd3db593ce2bb260089acab92f92433f3e6ca853b0653642a"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/prometheus-2.17.2.high_sierra.bottle.tar.gz",
-          "sha256": "e3cf440c9e38ed1e35aba7fa6491e479eaa103410c6671fd1d60a6233f5e053f"
+          "url": "https://homebrew.bintray.com/bottles/prometheus-2.18.1.high_sierra.bottle.tar.gz",
+          "sha256": "3ed2210c442f43f7c4c4c8ec1ccc075c66be94847bc4f6ae11467d997c22c2c6"
         }
       }
     }
@@ -75,7 +75,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "When used with `brew services`, prometheus' configuration is stored as command line flags in:\n  $(brew --prefix)/etc/prometheus.args\n\nConfiguration for prometheus is located in the $(brew --prefix)/etc/prometheus.yml file.\n\n",
+  "caveats": "When run from `brew services`, `prometheus` is run from\n`prometheus_brew_services` and uses the flags in:\n   $(brew --prefix)/etc/prometheus.args\n",
   "installed": [
 
   ],
