@@ -1,6 +1,6 @@
 {
-  "name": "gitleaks",
-  "full_name": "gitleaks",
+  "name": "semgrep",
+  "full_name": "semgrep",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Audit git repos for secrets",
-  "homepage": "https://github.com/zricethezav/gitleaks",
+  "desc": "Easily detect and prevent bugs and anti-patterns in your codebase”",
+  "homepage": "https://semgrep.live",
   "versions": {
-    "stable": "4.2.0",
+    "stable": "0.6.1",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/zricethezav/gitleaks/archive/v4.2.0.tar.gz",
+      "url": "https://github.com/returntocorp/semgrep/archive/v0.6.1.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,16 +33,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/gitleaks-4.2.0.catalina.bottle.tar.gz",
-          "sha256": "f9dd70573ef1633c771884181de84fa9980b788014ad89b735a933286e59efa1"
+          "url": "https://homebrew.bintray.com/bottles/semgrep-0.6.1.catalina.bottle.tar.gz",
+          "sha256": "a556ded32fe45a7fc6e34450440419378503b1c12f2a5d249100dce2586d7ecb"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/gitleaks-4.2.0.mojave.bottle.tar.gz",
-          "sha256": "11ae2c2ed927193a115cb3a55f20f7ba60474f58b5b43034ce142b02d792b755"
+          "url": "https://homebrew.bintray.com/bottles/semgrep-0.6.1.mojave.bottle.tar.gz",
+          "sha256": "651f10dfd128aa7db8498a9b2a7873851a4556b70bef489bd49e090d847c84d1"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gitleaks-4.2.0.high_sierra.bottle.tar.gz",
-          "sha256": "7d92cf5cdcced520e59995289d072f8e3ba5722f9a922a56025b5d5fe2fc2048"
+          "url": "https://homebrew.bintray.com/bottles/semgrep-0.6.1.high_sierra.bottle.tar.gz",
+          "sha256": "aa5d2832fc560404305823491734bb6892a198f429a12d4df45aa50034277fda"
         }
       }
     }
@@ -53,10 +53,14 @@
 
   ],
   "build_dependencies": [
-    "go"
+    "cmake",
+    "coreutils",
+    "ocaml",
+    "opam",
+    "pkg-config"
   ],
   "dependencies": [
-
+    "python@3.8"
   ],
   "recommended_dependencies": [
 
