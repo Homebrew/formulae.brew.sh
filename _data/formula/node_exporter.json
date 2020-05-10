@@ -27,22 +27,22 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 2,
+      "rebuild": 1,
       "cellar": ":any_skip_relocation",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/node_exporter-0.18.1_1.catalina.bottle.2.tar.gz",
-          "sha256": "fffc1654bce9eb90d4c9e22ad028a2d1ee5537611ed50302f71020613802c838"
+          "url": "https://homebrew.bintray.com/bottles/node_exporter-0.18.1_1.catalina.bottle.1.tar.gz",
+          "sha256": "ff1a0c237371d710a60ae7692eb08fa96259840e7565f6345ed50821db2d27aa"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/node_exporter-0.18.1_1.mojave.bottle.2.tar.gz",
-          "sha256": "5e77f96bb6056febf980328256e9f19417a1fb1b98ab2c23acf27428e28decc3"
+          "url": "https://homebrew.bintray.com/bottles/node_exporter-0.18.1_1.mojave.bottle.1.tar.gz",
+          "sha256": "9ab6e123c1862749886247564ea64dede482a6cb9efb19c611e2a5a5b4595237"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/node_exporter-0.18.1_1.high_sierra.bottle.2.tar.gz",
-          "sha256": "757687a8705c921ea02ea53714f4707bf5b09c479e96a1ca33756241d9c9b848"
+          "url": "https://homebrew.bintray.com/bottles/node_exporter-0.18.1_1.high_sierra.bottle.1.tar.gz",
+          "sha256": "5de4df63394055e449580b4b583f4411237f84096042eef63d3423b39f75ff2e"
         }
       }
     }
@@ -73,7 +73,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "When run from `brew services`, `node_exporter` is run from\n`node_exporter_brew_services` and uses the flags in:\n  $(brew --prefix)/etc/node_exporter.args\n",
+  "caveats": "When used with `brew services`, node_exporter's configuration is stored as command line flags in\n  $(brew --prefix)/etc/node_exporter.args\n\nExample configuration:\n  echo --web.listen-address :9101 > $(brew --prefix)/etc/node_exporter.args\n\nFor the full list of options, execute\n  node_exporter -h\n",
   "installed": [
 
   ],
