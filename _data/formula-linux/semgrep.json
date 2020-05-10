@@ -1,6 +1,6 @@
 {
-  "name": "gopass",
-  "full_name": "gopass",
+  "name": "semgrep",
+  "full_name": "semgrep",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "The slightly more awesome Standard Unix Password Manager for Teams",
-  "homepage": "https://github.com/gopasspw/gopass",
+  "desc": "Easily detect and prevent bugs and anti-patterns in your codebase”",
+  "homepage": "https://semgrep.live",
   "versions": {
-    "stable": "1.9.1",
+    "stable": "0.6.1",
     "devel": null,
-    "head": "HEAD",
+    "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/gopasspw/gopass/releases/download/v1.9.1/gopass-1.9.1.tar.gz",
+      "url": "https://github.com/returntocorp/semgrep/archive/v0.6.1.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,16 +33,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/gopass-1.9.1.catalina.bottle.tar.gz",
-          "sha256": "8c92ac3a7054b95a90d082513acfb6907ec3f94fbd06f069d0ca3cf6d45e75d2"
+          "url": "https://linuxbrew.bintray.com/bottles/semgrep-0.6.1.catalina.bottle.tar.gz",
+          "sha256": "a556ded32fe45a7fc6e34450440419378503b1c12f2a5d249100dce2586d7ecb"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/gopass-1.9.1.mojave.bottle.tar.gz",
-          "sha256": "3e51441d06b0dc3c07598696290dfed30d22a1a9c03104ee8530c71410ce2086"
+          "url": "https://linuxbrew.bintray.com/bottles/semgrep-0.6.1.mojave.bottle.tar.gz",
+          "sha256": "651f10dfd128aa7db8498a9b2a7873851a4556b70bef489bd49e090d847c84d1"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/gopass-1.9.1.high_sierra.bottle.tar.gz",
-          "sha256": "ec013a9f9a9f39856246cc16e235cac544fb88f7780f8ba52d9dd51c3f31b127"
+          "url": "https://linuxbrew.bintray.com/bottles/semgrep-0.6.1.high_sierra.bottle.tar.gz",
+          "sha256": "aa5d2832fc560404305823491734bb6892a198f429a12d4df45aa50034277fda"
         }
       }
     }
@@ -53,10 +53,14 @@
 
   ],
   "build_dependencies": [
-    "go"
+    "cmake",
+    "coreutils",
+    "ocaml",
+    "opam",
+    "pkg-config"
   ],
   "dependencies": [
-    "gnupg"
+    "python@3.8"
   ],
   "recommended_dependencies": [
 
