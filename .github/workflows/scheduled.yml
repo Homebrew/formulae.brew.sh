@@ -31,7 +31,8 @@ jobs:
           HOMEBREW_NO_ANALYTICS: 1
         run: |
           if which brew &>/dev/null; then
-            HOMEBREW_REPOSITORY="$(brew --repository)"
+            HOMEBREW_PREFIX="$(brew --prefix)"
+            HOMEBREW_REPOSITORY="$HOMEBREW_PREFIX/Homebrew"
             brew update-reset "$HOMEBREW_REPOSITORY"
           else
             HOMEBREW_PREFIX=/home/linuxbrew/.linuxbrew
@@ -43,10 +44,10 @@ jobs:
             sudo mkdir -p bin etc include lib opt sbin share var/homebrew/linked Cellar
             sudo ln -sf ../Homebrew/bin/brew "$HOMEBREW_PREFIX/bin/"
             cd -
-
-            eval $($HOMEBREW_PREFIX/bin/brew shellenv)
-            echo "::add-path::$HOMEBREW_PREFIX/bin"
           fi
+
+          eval $($HOMEBREW_PREFIX/bin/brew shellenv)
+          echo "::add-path::$HOMEBREW_PREFIX/bin"
 
           if [ "$RUNNER_OS" = "Linux" ]; then
             sudo chown -R "$USER" "$HOMEBREW_PREFIX"
