@@ -11,14 +11,14 @@
   "desc": "Database of common MIME types",
   "homepage": "https://wiki.freedesktop.org/www/Software/shared-mime-info",
   "versions": {
-    "stable": "1.15",
+    "stable": "2.0",
     "devel": null,
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://gitlab.freedesktop.org/xdg/shared-mime-info/uploads/b27eb88e4155d8fccb8bb3cd12025d5b/shared-mime-info-1.15.tar.xz",
+      "url": "https://gitlab.freedesktop.org/xdg/shared-mime-info/uploads/0440063a2e6823a4b1a6fb2f2af8350f/shared-mime-info-2.0.tar.xz",
       "tag": null,
       "revision": null
     }
@@ -33,16 +33,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/shared-mime-info-1.15.catalina.bottle.tar.gz",
-          "sha256": "137dfd734f5e7fe9b9ee80d1efa135f95a3ade95ceab83b2f79cd7ca1fd4d313"
+          "url": "https://homebrew.bintray.com/bottles/shared-mime-info-2.0.catalina.bottle.tar.gz",
+          "sha256": "5aefdc7964e569188cb67a49f4a428c64130f7c048ffd55106c656eb0c6caa25"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/shared-mime-info-1.15.mojave.bottle.tar.gz",
-          "sha256": "1be57687d8aef14d6bc95be0a02a5dfdbce4bf859ea057c93e3ff8545c700fcd"
+          "url": "https://homebrew.bintray.com/bottles/shared-mime-info-2.0.mojave.bottle.tar.gz",
+          "sha256": "26629464888f464e3aacfec50d6b5c28ecd91c9c56ae74a418eac49b07abc3a3"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/shared-mime-info-1.15.high_sierra.bottle.tar.gz",
-          "sha256": "87ec03b8d25d6c3c455c98dbc8d9ac3569df6abaae0c07ad9444a1cfa462cd06"
+          "url": "https://homebrew.bintray.com/bottles/shared-mime-info-2.0.high_sierra.bottle.tar.gz",
+          "sha256": "c548f5a23851ce6d807fd9e152c57e65ad99c3d0cf2cd40a473b55346935ec61"
         }
       }
     }
@@ -55,11 +55,14 @@
   "build_dependencies": [
     "intltool",
     "itstool",
+    "meson",
+    "ninja",
     "pkg-config"
   ],
   "dependencies": [
     "gettext",
-    "glib"
+    "glib",
+    "xmlto"
   ],
   "recommended_dependencies": [
 
