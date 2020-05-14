@@ -2,7 +2,7 @@
 layout: page
 permalink: /docs/api/
 ---
-# JSON API documentation
+# JSON API Documentation
 
 ## Metadata
 
