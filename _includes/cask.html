@@ -1,9 +1,10 @@
-<td>
+
+        <td>
 {%- if site.data.cask[include.token] != nil -%}
-    <a href="{{ site.baseurl }}/cask/{{ include.token }}">{{ include.token }}</a>
+            <a href="{{ site.baseurl }}/cask/{{ include.token }}">{{ include.token }}</a>
 {%- else -%}
-    {{ include.token }}
+            {{ include.token }}
 {%- endif -%}
-</td>
-<td>{{ include.cask.name.first }}</td>
-<td>{{ include.cask.version | truncate: 25 }}</td>
+        </td>
+        <td>{{ include.cask.name.first }}</td>
+        <td>{{ include.cask.version | truncate: 25 }}</td>

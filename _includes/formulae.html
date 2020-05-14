@@ -1,10 +1,10 @@
-{%- if include.formulae.size > 0 -%}
+{%- if include.formulae.size > 0 %}
 <p>{{ include.description }}:</p>
-{%- assign formula_path = include.formula_path %}
 <table>
+    {%- assign formula_path = include.formula_path -%}
     {%- for full_name in include.formulae -%}
-    {%- assign data_name = full_name | remove: "@" | remove: "." | replace: "+", "_" -%}
     <tr>
+        {%- assign data_name = full_name | remove: "@" | remove: "." | replace: "+", "_" -%}
         {%- assign formula = site.data[formula_path][data_name] -%}
         {%- include formula.html formula_path=formula_path formula=formula -%}
     </tr>
