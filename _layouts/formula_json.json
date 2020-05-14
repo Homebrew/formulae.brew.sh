@@ -3,11 +3,11 @@
 {%- assign formula_path = page.dir | split: "/" -%}
 {%- assign formula_path = formula_path[2] -%}
 {%- if formula_path == "formula-linux" -%}
-{%- assign analytics_path = "analytics-linux" -%}
-{%- assign analytics_data_source = "linuxbrew-core" -%}
+  {%- assign analytics_path = "analytics-linux" -%}
+  {%- assign analytics_data_source = "linuxbrew-core" -%}
 {%- else -%}
-{%- assign analytics_path = "analytics" -%}
-{%- assign analytics_data_source = "homebrew-core" -%}
+  {%- assign analytics_path = "analytics" -%}
+  {%- assign analytics_data_source = "homebrew-core" -%}
 {%- endif -%}
 {%- assign full_name = page.name | remove: ".json" -%}
 {%- assign name = full_name | remove: "@" | remove: "." | replace: "+", "_" -%}
