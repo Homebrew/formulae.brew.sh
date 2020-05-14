@@ -12,9 +12,9 @@
 {%- if site.data.analytics.cask-install["homebrew-cask"]["30d"].formulae[token].size > 0 -%}
   {%- for fa in site.data.analytics.cask-install["homebrew-cask"]["30d"].formulae[token] -%}
     {{ fa.cask | jsonify }}:{{ fa.count | remove: "," | plus: 0 }}
-    {%- if forloop.last == false -%}
+    {%- unless forloop.last -%}
     ,
-    {%- endif -%}
+    {%- endunless -%}
   {%- endfor -%}
 {%- else -%}
   {{ token | jsonify }}:0
@@ -24,9 +24,9 @@
 {%- if site.data.analytics.cask-install["homebrew-cask"]["90d"].formulae[token].size > 0 -%}
   {%- for fa in site.data.analytics.cask-install["homebrew-cask"]["90d"].formulae[token] -%}
     {{ fa.cask | jsonify }}:{{ fa.count | remove: "," | plus: 0 }}
-    {%- if forloop.last == false -%}
+    {%- unless forloop.last -%}
     ,
-    {%- endif -%}
+    {%- endunless -%}
   {%- endfor -%}
 {%- else -%}
   {{ token | jsonify }}:0
@@ -36,9 +36,9 @@
 {%- if site.data.analytics.cask-install["homebrew-cask"]["365d"].formulae[token].size > 0 -%}
   {%- for fa in site.data.analytics.cask-install["homebrew-cask"]["365d"].formulae[token] -%}
     {{ fa.cask | jsonify }}:{{ fa.count | remove: "," | plus: 0 }}
-    {%- if forloop.last == false -%}
+    {%- unless forloop.last -%}
     ,
-    {%- endif -%}
+    {%- endunless -%}
   {%- endfor -%}
 {%- else -%}
   {{ token | jsonify }}:0
