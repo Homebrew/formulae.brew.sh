@@ -10,7 +10,6 @@ permalink: /formula/
 <table>
     {%- assign sorted_formulae = site.data.formula | sort -%}
     {%- for f in sorted_formulae -%}
-
     <tr>
         {%- assign formula = f[1] -%}
         {%- include formula.html formula=formula -%}
