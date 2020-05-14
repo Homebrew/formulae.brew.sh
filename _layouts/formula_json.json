@@ -22,9 +22,9 @@
 {%- if site.data[analytics_path].install[analytics_data_source]["30d"].formulae[full_name].size > 0 -%}
   {%- for fa in site.data[analytics_path].install[analytics_data_source]["30d"].formulae[full_name] -%}
     {{ fa.formula | jsonify }}:{{ fa.count | remove: "," | plus: 0 }}
-    {%- if forloop.last == false -%}
+    {%- unless forloop.last -%}
     ,
-    {%- endif -%}
+    {%- endunless -%}
   {%- endfor -%}
 {%- else -%}
   {{ full_name | jsonify }}:0
@@ -34,9 +34,9 @@
 {%- if site.data[analytics_path].install[analytics_data_source]["90d"].formulae[full_name].size > 0 -%}
   {%- for fa in site.data[analytics_path].install[analytics_data_source]["90d"].formulae[full_name] -%}
     {{ fa.formula | jsonify }}:{{ fa.count | remove: "," | plus: 0 }}
-    {%- if forloop.last == false -%}
+    {%- unless forloop.last -%}
     ,
-    {%- endif -%}
+    {%- endunless -%}
   {%- endfor -%}
 {%- else -%}
   {{ full_name | jsonify }}:0
@@ -46,9 +46,9 @@
 {%- if site.data[analytics_path].install[analytics_data_source]["365d"].formulae[full_name].size > 0 -%}
   {%- for fa in site.data[analytics_path].install[analytics_data_source]["365d"].formulae[full_name] -%}
     {{ fa.formula | jsonify }}:{{ fa.count | remove: "," | plus: 0 }}
-    {%- if forloop.last == false -%}
+    {%- unless forloop.last -%}
     ,
-    {%- endif -%}
+    {%- endunless -%}
   {%- endfor -%}
 {%- else -%}
   {{ full_name | jsonify }}:0
@@ -58,9 +58,9 @@
 {%- if site.data[analytics_path].install-on-request[analytics_data_source]["30d"].formulae[full_name].size > 0 -%}
   {%- for fa in site.data[analytics_path].install-on-request[analytics_data_source]["30d"].formulae[full_name] -%}
     {{ fa.formula | jsonify }}:{{ fa.count | remove: "," | plus: 0 }}
-    {%- if forloop.last == false -%}
+    {%- unless forloop.last -%}
     ,
-    {%- endif -%}
+    {%- endunless -%}
   {%- endfor -%}
 {%- else -%}
   {{ full_name | jsonify }}:0
@@ -70,9 +70,9 @@
 {%- if site.data[analytics_path].install-on-request[analytics_data_source]["90d"].formulae[full_name].size > 0 -%}
   {%- for fa in site.data[analytics_path].install-on-request[analytics_data_source]["90d"].formulae[full_name] -%}
     {{ fa.formula | jsonify }}:{{ fa.count | remove: "," | plus: 0 }}
-    {%- if forloop.last == false -%}
+    {%- unless forloop.last -%}
     ,
-    {%- endif -%}
+    {%- endunless -%}
   {%- endfor -%}
 {%- else -%}
   {{ full_name | jsonify }}:0
@@ -82,9 +82,9 @@
 {%- if site.data[analytics_path].install-on-request[analytics_data_source]["365d"].formulae[full_name].size > 0 -%}
   {%- for fa in site.data[analytics_path].install-on-request[analytics_data_source]["365d"].formulae[full_name] -%}
     {{ fa.formula | jsonify }}:{{ fa.count | remove: "," | plus: 0 }}
-    {%- if forloop.last == false -%}
+    {%- unless forloop.last -%}
     ,
-    {%- endif -%}
+    {%- endunless -%}
   {%- endfor -%}
 {%- else -%}
   {{ full_name | jsonify }}:0
@@ -94,9 +94,9 @@
 {%- if site.data[analytics_path].build-error[analytics_data_source]["30d"].formulae[full_full_name].size > 0 -%}
   {%- for fa in site.data[analytics_path].build-error[analytics_data_source]["30d"].formulae[full_full_name] -%}
     {{ fa.formula | jsonify }}:{{ fa.count | remove: "," | plus: 0 }}
-    {%- if forloop.last == false -%}
+    {%- unless forloop.last -%}
     ,
-    {%- endif -%}
+    {%- endunless -%}
   {%- endfor -%}
 {%- else -%}
   {{ full_name | jsonify }}:0
