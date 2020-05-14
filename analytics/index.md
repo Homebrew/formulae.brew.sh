@@ -1,8 +1,9 @@
 ---
-title: Homebrew Analytics Data
 layout: page
 ---
-<h2>macOS</h2>
+# Analytics Data
+
+## macOS
 
 <table>
     <tr>
@@ -61,7 +62,7 @@ layout: page
     </tr>
 </table>
 
-<h2>Linux</h2>
+## Linux
 
 <table>
     <tr>
