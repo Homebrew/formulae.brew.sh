@@ -138,7 +138,7 @@ permalink: :title
 &nbsp;&nbsp;&nbsp;&nbsp;{% endcapture -%}
 <table class="full-width">
     <tr>
-        <td>{{ f.caveats | xml_escape | replace: soft_indent, hard_indent | newline_to_br }}</td>
+        <td>{{ f.caveats | xml_escape | replace: soft_indent, hard_indent | strip | newline_to_br }}</td>
     </tr>
 </table>
 {%- endif %}
