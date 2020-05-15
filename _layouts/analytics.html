@@ -35,11 +35,11 @@ layout: base
         <code>{{ item.cask }}</code>
       {%- endif -%}
     {%- else -%}
-      {%- assign name = item.formula | split: " " | first -%}
-      {%- assign data_name = name | remove: "@" | remove: "." | replace: "+", "_" -%}
-      {%- assign formula_data = site.data[formula_path][data_name] -%}
-      {%- if name == formula_data.name -%}
-        <a href="{{ site.baseurl }}/{{ formula_path }}/{{ name }}">
+      {%- assign full_name = item.formula | split: " " | first -%}
+      {%- assign data_name = full_name | remove: "@" | remove: "." | replace: "+", "_" -%}
+      {%- assign formula = site.data[formula_path][data_name] -%}
+      {%- if full_name == formula.name -%}
+        <a href="{{ site.baseurl }}/{{ formula_path }}/{{ full_name }}">
           <code>{{ item.formula }}</code>
         </a>
       {%- else -%}
