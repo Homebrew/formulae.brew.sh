@@ -1,6 +1,6 @@
 {
-  "name": "hlint",
-  "full_name": "hlint",
+  "name": "libolm",
+  "full_name": "libolm",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Haskell source code suggestions",
-  "homepage": "https://github.com/ndmitchell/hlint",
+  "desc": "Implementation of the Double Ratchet cryptographic ratchet",
+  "homepage": "https://gitlab.matrix.org/matrix-org/olm",
   "versions": {
-    "stable": "3.1.1",
+    "stable": "3.1.4",
     "devel": null,
-    "head": "HEAD",
+    "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://hackage.haskell.org/package/hlint-3.1.1/hlint-3.1.1.tar.gz",
+      "url": "https://gitlab.matrix.org/matrix-org/olm/-/archive/3.1.4/olm-3.1.4.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,21 +28,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": "/usr/local/Cellar",
+      "cellar": ":any",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/hlint-3.1.1.catalina.bottle.tar.gz",
-          "sha256": "91511a4ac9487c937e0fd32ee5c0a57037c9a247c82f02f4c7c1f059af1df513"
+          "url": "https://homebrew.bintray.com/bottles/libolm-3.1.4.catalina.bottle.tar.gz",
+          "sha256": "87dc2b50b798509939fe13070a430ce9b272cde84a31dea24096893360cc8742"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/hlint-3.1.1.mojave.bottle.tar.gz",
-          "sha256": "396493aa99fdf6da60fba21c068e4fb1d3664f0cda8cf695161ada8d6b22ae38"
+          "url": "https://homebrew.bintray.com/bottles/libolm-3.1.4.mojave.bottle.tar.gz",
+          "sha256": "58d57753b78ee0a0689251f7db57d941e082bee89016a1eae8491eb7426596f2"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/hlint-3.1.1.high_sierra.bottle.tar.gz",
-          "sha256": "348918091d040bd38e829ed00c0b9be2fa58257e5554704c7c2bf7979a095f5b"
+          "url": "https://homebrew.bintray.com/bottles/libolm-3.1.4.high_sierra.bottle.tar.gz",
+          "sha256": "691c24a47f7a376d1e5e6db1e3981561c07d1b82531de4fd7796a0577112def9"
         }
       }
     }
@@ -53,8 +53,7 @@
 
   ],
   "build_dependencies": [
-    "cabal-install",
-    "ghc@8.8"
+    "cmake"
   ],
   "dependencies": [
 
@@ -66,7 +65,7 @@
 
   ],
   "uses_from_macos": [
-    "ncurses"
+
   ],
   "requirements": [
 
