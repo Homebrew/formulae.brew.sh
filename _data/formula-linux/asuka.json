@@ -43,6 +43,10 @@
         "high_sierra": {
           "url": "https://linuxbrew.bintray.com/bottles/asuka-0.8.0.high_sierra.bottle.tar.gz",
           "sha256": "422e2efe84c94e78b3f1ab4bf9928d594c83e09b8ad1e32aabf04b17c2b8bb8a"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/asuka-0.8.0.x86_64_linux.bottle.tar.gz",
+          "sha256": "f206b7b5d50c3d84d69162b708465dd945a5e48e2cb577469aa605c42f937d7b"
         }
       }
     }
@@ -53,9 +57,11 @@
 
   ],
   "build_dependencies": [
-    "rust"
+    "rust",
+    "pkg-config"
   ],
   "dependencies": [
+    "openssl@1.1",
     "ncurses"
   ],
   "recommended_dependencies": [
