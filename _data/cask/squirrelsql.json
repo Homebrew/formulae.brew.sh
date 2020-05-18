@@ -4,14 +4,19 @@
     "SQuirrel SQL"
   ],
   "homepage": "http://www.squirrelsql.org/",
-  "url": "https://downloads.sourceforge.net/squirrel-sql/1-stable/4.0.0/squirrel-sql-4.0.0-MACOSX-install.jar",
+  "url": "https://downloads.sourceforge.net/squirrel-sql/1-stable/4.1.0/squirrel-sql-4.1.0-MACOSX-install.jar",
   "appcast": "https://sourceforge.net/projects/squirrel-sql/rss?path=/1-stable",
-  "version": "4.0.0",
-  "sha256": "c15829260abb45f47e6927492e45c6b696f8edec41d10e96b36f214146bd0f38",
+  "version": "4.1.0",
+  "sha256": "ab49aeb1f57ef857202972102e3d7cebe5f52d531a0198c193c4ecc782d9c2e8",
   "artifacts": [
     "preflight (Preflight Block)",
+    "uninstall_preflight (Preflight Block)",
+    {
+      "delete": "/Applications/SQuirreLSQL.app",
+      "signal": {
+      }
+    },
     "postflight (Postflight Block)",
-    "uninstall_postflight (Postflight Block)",
     {
       "trash": "~/.squirrel-sql",
       "signal": {
