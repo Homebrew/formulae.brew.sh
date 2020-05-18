@@ -43,6 +43,10 @@
         "high_sierra": {
           "url": "https://linuxbrew.bintray.com/bottles/ffsend-0.2.62.high_sierra.bottle.tar.gz",
           "sha256": "67e7f03d9d883ac5fa217309cd9fa1ebf08f836e4f6009987e110ef60b6bce4d"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/ffsend-0.2.62.x86_64_linux.bottle.tar.gz",
+          "sha256": "0f99dee627add60ade34c9267cad079a074c89ec2abc5203d06050a6d5be381d"
         }
       }
     }
@@ -53,10 +57,11 @@
 
   ],
   "build_dependencies": [
-    "rust"
+    "rust",
+    "pkg-config"
   ],
   "dependencies": [
-
+    "openssl@1.1"
   ],
   "recommended_dependencies": [
 
