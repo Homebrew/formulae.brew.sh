@@ -29,10 +29,12 @@ permalink: :title
 {%- if c.depends_on.size > 0 -%}
     {%- assign requirements = "" -%}
     {%- if c.depends_on.macos -%}
-        {%- capture requirements -%}macOS <strong>{{ c.depends_on.macos.first | join: " " }}</strong>{%- endcapture -%}
-        {%- if c.depends_on.macos.size > 1 -%}
-            {%- capture requirements -%}{{ requirements }} and <strong>{{ c.depends_on.macos[1] | join: " " }}</strong>{%- endcapture -%}
-        {%- endif -%}
+        {%- capture requirements -%}
+            macOS {% for x in c.depends_on.macos -%}
+                {{ x.first | xml_escape }} <strong>{{ c.depends_on.macos[x.first] | join: "</strong> / <strong>" }}</strong>
+                {%- unless forloop.last %} and {% endunless -%}
+            {%- endfor -%}
+        {%- endcapture -%}
     {%- endif -%}
     {%- if c.depends_on.x11 -%}
         {%- if requirements.size > 0 -%}
