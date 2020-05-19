@@ -1,6 +1,6 @@
 {
-  "name": "nushell",
-  "full_name": "nushell",
+  "name": "field3d",
+  "full_name": "field3d",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Modern shell for the GitHub era",
-  "homepage": "https://www.nushell.sh",
+  "desc": "Library for storing voxel data on disk and in memory",
+  "homepage": "https://sites.google.com/site/field3d/",
   "versions": {
-    "stable": "0.14.0",
+    "stable": "1.7.3",
     "devel": null,
-    "head": "HEAD",
+    "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/nushell/nushell/archive/0.14.0.tar.gz",
+      "url": "https://github.com/imageworks/Field3D/archive/v1.7.3.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,21 +28,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any_skip_relocation",
+      "cellar": ":any",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/nushell-0.14.0.catalina.bottle.tar.gz",
-          "sha256": "b1bda110933fb1c80b1b092fa49b09154ceefb3a47e99d97044a22cdc3451b10"
+          "url": "https://homebrew.bintray.com/bottles/field3d-1.7.3.catalina.bottle.tar.gz",
+          "sha256": "62cd1be576caec00c1d4369e08d226a94f88056588b3b34047e137a012ac6eda"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/nushell-0.14.0.mojave.bottle.tar.gz",
-          "sha256": "9160faa62890e36a81c9cb98165ddc4e289df7778c75a2edc208a141831f5a5a"
+          "url": "https://homebrew.bintray.com/bottles/field3d-1.7.3.mojave.bottle.tar.gz",
+          "sha256": "3c295ee04d92a9a1e0a87e6af3cf8dc53fcb7679b9518ba18d21c5667a17d458"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/nushell-0.14.0.high_sierra.bottle.tar.gz",
-          "sha256": "73705ace10cba1e6cfc60a784020eefe1a28baab0b08f21306c85b23567cac65"
+          "url": "https://homebrew.bintray.com/bottles/field3d-1.7.3.high_sierra.bottle.tar.gz",
+          "sha256": "e71612d2b6260538c6a283c1d68e5cfe4fa86325feab85d885e28ea4ddb1aed9"
         }
       }
     }
@@ -53,10 +53,12 @@
 
   ],
   "build_dependencies": [
-    "rust"
+    "cmake"
   ],
   "dependencies": [
-    "openssl@1.1"
+    "boost",
+    "hdf5",
+    "ilmbase"
   ],
   "recommended_dependencies": [
 
@@ -65,7 +67,7 @@
 
   ],
   "uses_from_macos": [
-    "zlib"
+
   ],
   "requirements": [
 
