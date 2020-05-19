@@ -141,101 +141,65 @@ permalink: :title
         <td>{{ f.caveats | xml_escape | replace: soft_indent, hard_indent | newline_to_br }}</td>
     </tr>
 </table>
-{%- endif -%}
+{%- endif %}
 
-{%- if formula_path == "formula-linux" -%}
-	{%- assign analytics_path = "analytics-linux" -%}
-	{%- assign analytics_data_source = "linuxbrew-core" -%}
-{%- else -%}
-	{%- assign analytics_path = "analytics" -%}
-	{%- assign analytics_data_source = "homebrew-core" -%}
-{%- endif -%}
-
-{%- if site.data[analytics_path].install[analytics_data_source]["30d"].formulae[full_name].size > 0 -%}
 <p>Analytics:</p>
 <table>
+{%- if formula_path == "formula-linux" -%}
+    {%- assign analytics_path = "analytics-linux" -%}
+    {%- assign analytics_data_source = "linuxbrew-core" -%}
+{%- else -%}
+    {%- assign analytics_path = "analytics" -%}
+    {%- assign analytics_data_source = "homebrew-core" -%}
+{%- endif -%}
+{%- assign intervals = "30d, 90d, 365d" | split: ", " -%}
+{%- for interval in intervals -%}
+    {%- assign interval_days = interval | replace: "d", " days" -%}
     <tr>
-        <th colspan="2">Installs (30 days)</th>
+        <th colspan="2">Installs ({{ interval_days }})</th>
     </tr>
-
-    {%- for fa in site.data[analytics_path].install[analytics_data_source]["30d"].formulae[full_name] -%}
-    <tr>
-        <td><code>{{ fa.formula }}</code></td>
-        <td class="number-data">{{ fa.count }}</td>
-    </tr>
-    {%- endfor -%}
-
-    <tr>
-        <th colspan="2">Installs on Request (30 days)</th>
-    </tr>
-
-    {%- for fa in site.data[analytics_path].install-on-request[analytics_data_source]["30d"].formulae[full_name] -%}
+    {%- for fa in site.data[analytics_path].install[analytics_data_source][interval].formulae[full_name] -%}
     <tr>
         <td><code>{{ fa.formula }}</code></td>
         <td class="number-data">{{ fa.count }}</td>
     </tr>
-    {%- endfor -%}
-
-    <tr>
-        <th colspan="2">Build Errors (30 days)</th>
-    </tr>
-
-    {%- if site.data[analytics_path].build-error[analytics_data_source]["30d"].formulae[full_name].size > 0 -%}
-    {%- for fa in site.data[analytics_path].build-error[analytics_data_source]["30d"].formulae[full_name] -%}
-    <tr>
-        <td><code>{{ fa.formula }}</code></td>
-        <td class="number-data">{{ fa.count }}</td>
-    </tr>
-    {%- endfor -%}
     {%- else -%}
     <tr>
         <td><code>{{ full_name }}</code></td>
         <td class="number-data">0</td>
     </tr>
+    {%- endfor -%}
+
+    <tr>
+        <th colspan="2">Installs on Request ({{ interval_days }})</th>
+    </tr>
+    {%- for fa in site.data[analytics_path].install-on-request[analytics_data_source][interval].formulae[full_name] -%}
+    <tr>
+        <td><code>{{ fa.formula }}</code></td>
+        <td class="number-data">{{ fa.count }}</td>
+    </tr>
+    {%- else -%}
+    <tr>
+        <td><code>{{ full_name }}</code></td>
+        <td class="number-data">0</td>
+    </tr>
+    {%- endfor -%}
+
+    {%- if forloop.first -%}
+    <tr>
+        <th colspan="2">Build Errors ({{ interval_days }})</th>
+    </tr>
+        {%- for fa in site.data[analytics_path].build-error[analytics_data_source][interval].formulae[full_name] -%}
+    <tr>
+        <td><code>{{ fa.formula }}</code></td>
+        <td class="number-data">{{ fa.count }}</td>
+    </tr>
+        {%- else -%}
+    <tr>
+        <td><code>{{ full_name }}</code></td>
+        <td class="number-data">0</td>
+    </tr>
+        {%- endfor -%}
     {%- endif -%}
-
-    <tr>
-        <th colspan="2">Installs (90 days)</th>
-    </tr>
-
-    {%- for fa in site.data[analytics_path].install[analytics_data_source]["90d"].formulae[full_name] -%}
-    <tr>
-        <td><code>{{ fa.formula }}</code></td>
-        <td class="number-data">{{ fa.count }}</td>
-    </tr>
-    {%- endfor -%}
-
-    <tr>
-        <th colspan="2">Installs on Request (90 days)</th>
-    </tr>
-
-    {%- for fa in site.data[analytics_path].install-on-request[analytics_data_source]["90d"].formulae[full_name] -%}
-    <tr>
-        <td><code>{{ fa.formula }}</code></td>
-        <td class="number-data">{{ fa.count }}</td>
-    </tr>
-    {%- endfor -%}
-
-    <tr>
-        <th colspan="2">Installs (365 days)</th>
-    </tr>
-
-    {%- for fa in site.data[analytics_path].install[analytics_data_source]["365d"].formulae[full_name] -%}
-    <tr>
-        <td><code>{{ fa.formula }}</code></td>
-        <td class="number-data">{{ fa.count }}</td>
-    </tr>
-    {%- endfor -%}
-
-    <tr>
-        <th colspan="2">Installs on Request (365 days)</th>
-    </tr>
-
-    {%- for fa in site.data[analytics_path].install-on-request[analytics_data_source]["365d"].formulae[full_name] -%}
-    <tr>
-        <td><code>{{ fa.formula }}</code></td>
-        <td class="number-data">{{ fa.count }}</td>
-    </tr>
-    {%- endfor -%}
+{%- endfor %}
 </table>
-{%- endif -%}
