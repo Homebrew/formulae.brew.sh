@@ -43,6 +43,10 @@
         "high_sierra": {
           "url": "https://linuxbrew.bintray.com/bottles/code-server-3.3.1.high_sierra.bottle.tar.gz",
           "sha256": "ea8feb22ef6521c511562e693a8f4779b581ea2930fdb927bbf41b3260959467"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/code-server-3.3.1.x86_64_linux.bottle.tar.gz",
+          "sha256": "e0bc071acdc79d2f4112daa4c7e624d19f3dcafc56b6ecb6fc11c4b75454ef4d"
         }
       }
     }
@@ -54,10 +58,14 @@
   ],
   "build_dependencies": [
     "python@3.8",
-    "yarn"
+    "yarn",
+    "pkg-config"
   ],
   "dependencies": [
-    "node"
+    "node",
+    "libsecret",
+    "linuxbrew/xorg/libxkbfile",
+    "linuxbrew/xorg/libx11"
   ],
   "recommended_dependencies": [
 
