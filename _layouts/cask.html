@@ -40,7 +40,7 @@ permalink: :title
         {%- if requirements.size > 0 -%}
             {%- assign requirements = requirements | append: ", " -%}
         {%- endif -%}
-        {%- capture requirements -%}{{ requirements }}<strong>X11</strong>{%- endcapture -%}
+        {%- capture requirements -%}{{ requirements }}<strong><a href="{{ site.baseurl }}/cask/xquartz">x11</a></strong>{%- endcapture -%}
     {%- endif -%}
     {%- if requirements.size > 0 -%}
 <p>Requires: {{ requirements }}</p>
