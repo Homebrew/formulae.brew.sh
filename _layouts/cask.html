@@ -61,42 +61,26 @@ permalink: :title
         <td>{{ c.caveats | xml_escape | replace: soft_indent, hard_indent | newline_to_br }}</td>
     </tr>
 </table>
-{%- endif -%}
+{%- endif %}
 
-{%- if site.data.analytics.cask-install["homebrew-cask"]["30d"].formulae[token].size > 0 -%}
 <p>Analytics:</p>
 <table>
+{%- assign intervals = "30d, 90d, 365d" | split: ", " -%}
+{%- for interval in intervals -%}
+    {%- assign interval_days = interval | replace: "d", " days" -%}
     <tr>
-        <th colspan="2">Installs (30 days)</th>
+        <th colspan="2">Installs ({{ interval_days }})</th>
     </tr>
-
-    {%- for fa in site.data.analytics.cask-install["homebrew-cask"]["30d"].formulae[token] -%}
-    <tr>
-        <td><code>{{ fa.cask }}</code></td>
-        <td class="number-data">{{ fa.count }}</td>
-    </tr>
-    {%- endfor -%}
-
-    <tr>
-        <th colspan="2">Installs (90 days)</th>
-    </tr>
-
-    {%- for fa in site.data.analytics.cask-install["homebrew-cask"]["90d"].formulae[token] -%}
+    {%- for fa in site.data.analytics.cask-install.homebrew-cask[interval].formulae[token] -%}
     <tr>
         <td><code>{{ fa.cask }}</code></td>
         <td class="number-data">{{ fa.count }}</td>
     </tr>
-    {%- endfor -%}
-
+    {%- else -%}
     <tr>
-        <th colspan="2">Installs (365 days)</th>
-    </tr>
-
-    {%- for fa in site.data.analytics.cask-install["homebrew-cask"]["365d"].formulae[token] -%}
-    <tr>
-        <td><code>{{ fa.cask }}</code></td>
-        <td class="number-data">{{ fa.count }}</td>
+        <td><code>{{ token }}</code></td>
+        <td class="number-data">0</td>
     </tr>
     {%- endfor -%}
+{%- endfor %}
 </table>
-{%- endif -%}
