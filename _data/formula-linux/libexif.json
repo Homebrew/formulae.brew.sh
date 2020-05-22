@@ -11,14 +11,14 @@
   "desc": "EXIF parsing library",
   "homepage": "https://libexif.github.io/",
   "versions": {
-    "stable": "0.6.21",
+    "stable": "0.6.22",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://downloads.sourceforge.net/project/libexif/libexif/0.6.21/libexif-0.6.21.tar.gz",
+      "url": "https://github.com/libexif/libexif/releases/download/libexif-0_6_22-release/libexif-0.6.22.tar.xz",
       "tag": null,
       "revision": null
     }
@@ -27,42 +27,26 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
-      "cellar": ":any",
+      "rebuild": 0,
+      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/libexif-0.6.21.catalina.bottle.1.tar.gz",
-          "sha256": "a7d7a67f11d7ef89666e589ec589cae59bfe7aa6502f5e4449ee518b124fcf47"
+          "url": "https://linuxbrew.bintray.com/bottles/libexif-0.6.22.catalina.bottle.tar.gz",
+          "sha256": "7379f6990018006122bba69098864e8877e8e6e7be3af535f7e301d8ff097e98"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/libexif-0.6.21.mojave.bottle.1.tar.gz",
-          "sha256": "f2825b7f043b7e1128a8a234132622041669d6fd0b537c22dc0d06284a96c095"
+          "url": "https://linuxbrew.bintray.com/bottles/libexif-0.6.22.mojave.bottle.tar.gz",
+          "sha256": "c20d311fbd1846ce2603950ec9ad9b3b6e8202bf2f97e9aab328c05dc568fcfe"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/libexif-0.6.21.high_sierra.bottle.1.tar.gz",
-          "sha256": "c12c945c59d694f82b43e82a62eebec5e968d57746de8d017f251a2e857db750"
-        },
-        "sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/libexif-0.6.21.sierra.bottle.1.tar.gz",
-          "sha256": "2d8c0924448d966dcbb963ab8e67ee0c24bfaa1ff45d77a2e7f6a705e547ee4f"
-        },
-        "el_capitan": {
-          "url": "https://linuxbrew.bintray.com/bottles/libexif-0.6.21.el_capitan.bottle.1.tar.gz",
-          "sha256": "5990278735f835e2ab004ceac83616a3a71f6ae96c6f5eb0c0f1aa2af0452fb6"
-        },
-        "yosemite": {
-          "url": "https://linuxbrew.bintray.com/bottles/libexif-0.6.21.yosemite.bottle.1.tar.gz",
-          "sha256": "cebb385c6f48fafa10b8731daec8ce38d8ee34ff7d3afc131edd553a2249662f"
-        },
-        "mavericks": {
-          "url": "https://linuxbrew.bintray.com/bottles/libexif-0.6.21.mavericks.bottle.1.tar.gz",
-          "sha256": "791e4c2073051f5e93fee0f30d1888f39b2873eacbfadbc4b3dd6328b80dfb51"
+          "url": "https://linuxbrew.bintray.com/bottles/libexif-0.6.22.high_sierra.bottle.tar.gz",
+          "sha256": "8b1c7cf6ec777090ce22ccf5c426867948a54da9378e0c9b91d85175eaea4f81"
         },
         "x86_64_linux": {
-          "url": "https://linuxbrew.bintray.com/bottles/libexif-0.6.21.x86_64_linux.bottle.1.tar.gz",
-          "sha256": "a399c93b4ad22de52cb4bc731011924ec4b00fbf509c3ca4893fc8c8cfae6d02"
+          "url": "https://linuxbrew.bintray.com/bottles/libexif-0.6.22.x86_64_linux.bottle.tar.gz",
+          "sha256": "977cbb7665b67f6ee2232bda8158f33c48774dfc60f56b8ddce476e05234cea8"
         }
       }
     }
@@ -73,10 +57,12 @@
 
   ],
   "build_dependencies": [
-
+    "autoconf",
+    "automake",
+    "libtool"
   ],
   "dependencies": [
-
+    "gettext"
   ],
   "recommended_dependencies": [
 
