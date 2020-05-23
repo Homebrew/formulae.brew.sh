@@ -1,6 +1,6 @@
 {
-  "name": "deno",
-  "full_name": "deno",
+  "name": "gau",
+  "full_name": "gau",
   "oldname": null,
   "aliases": [
 
@@ -8,8 +8,8 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Secure runtime for JavaScript and TypeScript",
-  "homepage": "https://deno.land/",
+  "desc": "Open Threat Exchange, Wayback Machine, and Common Crawl URL fetcher",
+  "homepage": "https://github.com/lc/gau",
   "versions": {
     "stable": "1.0.2",
     "devel": null,
@@ -18,7 +18,7 @@
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/denoland/deno/releases/download/v1.0.2/deno_src.tar.gz",
+      "url": "https://github.com/lc/gau/archive/v1.0.2.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,16 +33,20 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/deno-1.0.2.catalina.bottle.tar.gz",
-          "sha256": "af2ebe919ba90c3e4bf68f9b33045b31d94ec26e83c157d289b3c8b7cb85eda2"
+          "url": "https://linuxbrew.bintray.com/bottles/gau-1.0.2.catalina.bottle.tar.gz",
+          "sha256": "8fbfdf238dd7408adf09c159338c48e67ee9030f80f129a3b20683a960ab4531"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/deno-1.0.2.mojave.bottle.tar.gz",
-          "sha256": "170b16e596fc66feb1529a6b458763ba05c8059f65d1f736dc605debbaf8aae4"
+          "url": "https://linuxbrew.bintray.com/bottles/gau-1.0.2.mojave.bottle.tar.gz",
+          "sha256": "d24c1d256af7be9370ec0d12d5deddabde47885d8d2b387ce5bfb6eb0a36e05c"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/deno-1.0.2.high_sierra.bottle.tar.gz",
-          "sha256": "854da518700f685f6479aa15fedc6b52ba15f0741c7e343e9233c2f0cf6c6a11"
+          "url": "https://linuxbrew.bintray.com/bottles/gau-1.0.2.high_sierra.bottle.tar.gz",
+          "sha256": "67ece09c592ad7cdab9ec296e8fbff86fb23410a149aa9bb8f7a295d55661ab7"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/gau-1.0.2.x86_64_linux.bottle.tar.gz",
+          "sha256": "306ecf62ff965e5091dd7992d9f94b2021443f17925d422feb212568b5d4e82e"
         }
       }
     }
@@ -53,12 +57,10 @@
 
   ],
   "build_dependencies": [
-    "llvm",
-    "ninja",
-    "rust"
+    "go"
   ],
   "dependencies": [
-    "xz"
+
   ],
   "recommended_dependencies": [
 
@@ -70,15 +72,7 @@
 
   ],
   "requirements": [
-    {
-      "name": "macos",
-      "cask": null,
-      "download": null,
-      "version": null,
-      "contexts": [
 
-      ]
-    }
   ],
   "conflicts_with": [
 
