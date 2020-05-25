@@ -1,0 +1,102 @@
+{
+  "token": "mplab-xc16",
+  "name": [
+    "MPLab XC16 Compiler"
+  ],
+  "homepage": "https://www.microchip.com/mplab/compilers",
+  "url": "https://ww1.microchip.com/downloads/en/DeviceDoc/xc16-v1.50-full-install-osx64-installer.dmg",
+  "appcast": "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.microchip.com/mplabxc16osx",
+  "version": "1.50",
+  "sha256": "395442506f36622c19498ce901dcbc287fc77f3a9fb145c3883e4ff9641ec8df",
+  "artifacts": [
+    {
+      "script": {
+        "executable": "Uninstall-xc16-v1.50.app/Contents/MacOS/installbuilder.sh",
+        "args": [
+          "--mode",
+          "unattended"
+        ],
+        "sudo": "true"
+      },
+      "signal": {
+      }
+    },
+    {
+      "path": "xc16-v1.50-osx-installer.app/Contents/MacOS/installbuilder.sh",
+      "args": {
+        "must_succeed": "true",
+        "sudo": "true",
+        "args": [
+          "--mode",
+          "unattended",
+          "--unattendedmodeui",
+          "none",
+          "--ModifyAll",
+          "0",
+          "--netservername",
+          "\"\"",
+          "--LicenseType",
+          "FreeMode",
+          "--prefix",
+          "$(brew --prefix)/Caskroom/mplab-xc16/1.50"
+        ],
+        "input": [
+          "y"
+        ],
+        "print_stdout": "true"
+      }
+    },
+    [
+      "$(brew --prefix)/Caskroom/mplab-xc16/1.50/bin/sim30"
+    ],
+    [
+      "$(brew --prefix)/Caskroom/mplab-xc16/1.50/bin/xc16-as"
+    ],
+    [
+      "$(brew --prefix)/Caskroom/mplab-xc16/1.50/bin/xc16-bin2hex"
+    ],
+    [
+      "$(brew --prefix)/Caskroom/mplab-xc16/1.50/bin/xc16-cc1"
+    ],
+    [
+      "$(brew --prefix)/Caskroom/mplab-xc16/1.50/bin/xc16-gcc"
+    ],
+    [
+      "$(brew --prefix)/Caskroom/mplab-xc16/1.50/bin/xc16-ld"
+    ],
+    [
+      "$(brew --prefix)/Caskroom/mplab-xc16/1.50/bin/xc16-nm"
+    ],
+    [
+      "$(brew --prefix)/Caskroom/mplab-xc16/1.50/bin/xc16-objcopy"
+    ],
+    [
+      "$(brew --prefix)/Caskroom/mplab-xc16/1.50/bin/xc16-objdump"
+    ],
+    [
+      "$(brew --prefix)/Caskroom/mplab-xc16/1.50/bin/xc16-pa"
+    ],
+    [
+      "$(brew --prefix)/Caskroom/mplab-xc16/1.50/bin/xc16-ranlib"
+    ],
+    [
+      "$(brew --prefix)/Caskroom/mplab-xc16/1.50/bin/xc16-readelf"
+    ],
+    [
+      "$(brew --prefix)/Caskroom/mplab-xc16/1.50/bin/xc16-strings"
+    ],
+    [
+      "$(brew --prefix)/Caskroom/mplab-xc16/1.50/bin/xc16-strip"
+    ],
+    [
+      "$(brew --prefix)/Caskroom/mplab-xc16/1.50/bin/xc16-ar"
+    ],
+    "postflight (Postflight Block)"
+  ],
+  "caveats": null,
+  "depends_on": {
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": null
+}

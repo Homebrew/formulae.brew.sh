@@ -1,0 +1,78 @@
+{
+  "token": "mplabx-ide",
+  "name": [
+    "MPLab X IDE"
+  ],
+  "homepage": "https://www.microchip.com/mplab/mplab-x-ide",
+  "url": "https://ww1.microchip.com/downloads/en/DeviceDoc/MPLABX-v5.40-osx-installer.dmg",
+  "appcast": "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.microchip.com/mplabx-ide-osx-installer",
+  "version": "5.40",
+  "sha256": "00f582ff074845260c7d2474c92a99b0f0f1cb4e16a7e6d173c5cabd27da0fa3",
+  "artifacts": [
+    {
+      "script": {
+        "executable": "Uninstall_MPLAB_X_IDE_v5.40.app/Contents/MacOS/installbuilder.sh",
+        "args": [
+          "--mode",
+          "unattended"
+        ],
+        "input": [
+          "y",
+          "3"
+        ],
+        "sudo": "true"
+      },
+      "delete": "/Applications/microchip",
+      "signal": {
+      }
+    },
+    {
+      "path": "MPLABX-v5.40-osx-installer.app/Contents/MacOS/installbuilder.sh",
+      "args": {
+        "must_succeed": "true",
+        "sudo": "true",
+        "args": [
+          "--mode",
+          "unattended",
+          "--unattendedmodeui",
+          "none",
+          "--ide",
+          "1",
+          "--ipe",
+          "1",
+          "--othermcu",
+          "0",
+          "--exepermission",
+          "no",
+          "--collectInfo",
+          "0",
+          "--installdir",
+          "$(brew --prefix)/Caskroom/mplabx-ide/5.40"
+        ],
+        "input": [
+          "y"
+        ],
+        "print_stdout": "true"
+      }
+    },
+    [
+      "mplab_ide.app",
+      {
+        "target": "microchip/mplab_ide.app"
+      }
+    ],
+    [
+      "mplab_ipe.app",
+      {
+        "target": "microchip/mplab_ipe.app"
+      }
+    ],
+    "postflight (Postflight Block)"
+  ],
+  "caveats": null,
+  "depends_on": {
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": null
+}
