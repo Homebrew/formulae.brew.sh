@@ -1,6 +1,6 @@
 {
-  "name": "xxh",
-  "full_name": "xxh",
+  "name": "cdo",
+  "full_name": "cdo",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Bring your favorite shell wherever you go through the ssh",
-  "homepage": "https://github.com/xxh/xxh",
+  "desc": "Climate Data Operators",
+  "homepage": "https://code.mpimet.mpg.de/projects/cdo",
   "versions": {
-    "stable": "0.8.3",
+    "stable": "1.9.8",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://files.pythonhosted.org/packages/c6/fb/76429ae5970e334996276075338533043bfbef6f96d7e9340ef433662834/xxh-xxh-0.8.3.tar.gz",
+      "url": "https://code.mpimet.mpg.de/attachments/download/20826/cdo-1.9.8.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,21 +28,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any_skip_relocation",
+      "cellar": ":any",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/xxh-0.8.3.catalina.bottle.tar.gz",
-          "sha256": "34a321ac28c031fdb427f866d04a3e5d8aa074e2050afb330edc1718147fa3d9"
+          "url": "https://linuxbrew.bintray.com/bottles/cdo-1.9.8.catalina.bottle.tar.gz",
+          "sha256": "7642f67bf1e8b5eb28faa6b31b9c5c8800d971d584a2b8ef5c218fd39f3929c4"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/xxh-0.8.3.mojave.bottle.tar.gz",
-          "sha256": "525eb4703597ec79fcc04f52058b0df50151ce375a72186e8b062fefc955e20f"
+          "url": "https://linuxbrew.bintray.com/bottles/cdo-1.9.8.mojave.bottle.tar.gz",
+          "sha256": "6bee75bcd2637789145bcfb627c6faf7f4eb2a156ada667ddcfa9c97ad374666"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/xxh-0.8.3.high_sierra.bottle.tar.gz",
-          "sha256": "029ad00049f267959b390fda46ce1889a0fc7c3d3fdea68844ce477e2cb86e91"
+          "url": "https://linuxbrew.bintray.com/bottles/cdo-1.9.8.high_sierra.bottle.tar.gz",
+          "sha256": "1f7aef8ac91a7f368b6e571537a59d8a83220657b8a051d7a85ac820a67cb853"
         }
       }
     }
@@ -56,7 +56,11 @@
 
   ],
   "dependencies": [
-    "python@3.8"
+    "eccodes",
+    "hdf5",
+    "netcdf",
+    "proj",
+    "szip"
   ],
   "recommended_dependencies": [
 
