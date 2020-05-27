@@ -28,7 +28,7 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
@@ -43,6 +43,10 @@
         "high_sierra": {
           "url": "https://linuxbrew.bintray.com/bottles/mesa-20.0.7.high_sierra.bottle.tar.gz",
           "sha256": "7d72059dda9e4d6b2f9166b8edee0e9696283f1377d114baff9200a6977622f1"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/mesa-20.0.7.x86_64_linux.bottle.tar.gz",
+          "sha256": "1973aabe5fabe55183063d6cd6264c085c6cb1d45000078f2be029c320083a63"
         }
       }
     }
@@ -56,12 +60,34 @@
     "meson-internal",
     "ninja",
     "pkg-config",
-    "python@3.8"
+    "python@3.8",
+    "bison",
+    "flex"
   ],
   "dependencies": [
-    "freeglut",
     "expat",
-    "gettext"
+    "gettext",
+    "ncurses",
+    "zlib",
+    "llvm",
+    "libelf",
+    "linuxbrew/xorg/libdrm",
+    "linuxbrew/xorg/libomxil-bellagio",
+    "linuxbrew/xorg/libva-internal",
+    "linuxbrew/xorg/libvdpau",
+    "linuxbrew/xorg/libx11",
+    "linuxbrew/xorg/libxcb",
+    "linuxbrew/xorg/libxdamage",
+    "linuxbrew/xorg/libxext",
+    "linuxbrew/xorg/libxfixes",
+    "linuxbrew/xorg/libxrandr",
+    "linuxbrew/xorg/libxshmfence",
+    "linuxbrew/xorg/libxv",
+    "linuxbrew/xorg/libxvmc",
+    "linuxbrew/xorg/libxxf86vm",
+    "linuxbrew/xorg/wayland",
+    "linuxbrew/xorg/wayland-protocols",
+    "lm-sensors"
   ],
   "recommended_dependencies": [
 
