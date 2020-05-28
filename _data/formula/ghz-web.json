@@ -1,6 +1,6 @@
 {
-  "name": "cpputest",
-  "full_name": "cpputest",
+  "name": "ghz-web",
+  "full_name": "ghz-web",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "C /C++ based unit xUnit test framework",
-  "homepage": "https://www.cpputest.org/",
+  "desc": "Web interface for ghz",
+  "homepage": "https://ghz.sh",
   "versions": {
-    "stable": "4.0",
+    "stable": "0.52.0",
     "devel": null,
-    "head": "HEAD",
+    "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/cpputest/cpputest/releases/download/v4.0/cpputest-4.0.tar.gz",
+      "url": "https://github.com/bojand/ghz/archive/v0.52.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,16 +33,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/cpputest-4.0.catalina.bottle.tar.gz",
-          "sha256": "5f5a93b357ee53253a4611aeb9bc8291c8b0ddaac784a9ccd566f04d97dcba5a"
+          "url": "https://homebrew.bintray.com/bottles/ghz-web-0.52.0.catalina.bottle.tar.gz",
+          "sha256": "1eb234719176dae9c96c548031cf0b9620f64d98468bba2506140257af822b59"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/cpputest-4.0.mojave.bottle.tar.gz",
-          "sha256": "7039bee956ef7c571cea010678eceb5a2804e782438b9dd5c08e05ea17440a98"
+          "url": "https://homebrew.bintray.com/bottles/ghz-web-0.52.0.mojave.bottle.tar.gz",
+          "sha256": "2f885d0487a6e27ce932f9020b1d3df50f5ba2ea105402f6539cf94eb225cf81"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/cpputest-4.0.high_sierra.bottle.tar.gz",
-          "sha256": "3ad1b1d195d4e276877831e4030817de35c1e92c878f035c47124c49118968b9"
+          "url": "https://homebrew.bintray.com/bottles/ghz-web-0.52.0.high_sierra.bottle.tar.gz",
+          "sha256": "80931f9681d55d88b0b011077c8d228bcb27497df1e3e080485b969e730b812a"
         }
       }
     }
@@ -53,7 +53,7 @@
 
   ],
   "build_dependencies": [
-    "cmake"
+    "go"
   ],
   "dependencies": [
 
@@ -68,7 +68,15 @@
 
   ],
   "requirements": [
-
+    {
+      "name": "xcode",
+      "cask": null,
+      "download": null,
+      "version": null,
+      "contexts": [
+        "build"
+      ]
+    }
   ],
   "conflicts_with": [
 
