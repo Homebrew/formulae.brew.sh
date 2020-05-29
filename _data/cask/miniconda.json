@@ -4,32 +4,23 @@
     "Continuum Analytics Miniconda"
   ],
   "homepage": "https://conda.io/miniconda.html",
-  "url": "https://repo.anaconda.com/miniconda/Miniconda3-4.7.12-MacOSX-x86_64.sh",
+  "url": "https://repo.anaconda.com/miniconda/Miniconda3-py37_4.8.2-MacOSX-x86_64.pkg",
   "appcast": null,
-  "version": "4.7.12",
-  "sha256": "a879d93f42bdc796a4b975a11d109dfacc11a7ba6c4106aedf657d5e1fd79410",
+  "version": "py37_4.8.2",
+  "sha256": "f3ede3a58d82fb5dcbca52d291a9edb5cd962d84d823a20693dd4bb27506cdd0",
   "artifacts": [
     {
-      "delete": "$(brew --prefix)/Caskroom/miniconda/base",
+      "pkgutil": [
+        "io.continuum.pkg.apreinstall",
+        "io.continuum.pkg.conda.exe",
+        "io.continuum.pkg.pathupdate",
+        "io.continuum.pkg.postextract",
+        "io.continuum.pkg.preconda"
+      ],
       "signal": {
       }
     },
-    {
-      "path": "Miniconda3-4.7.12-MacOSX-x86_64.sh",
-      "args": {
-        "must_succeed": "true",
-        "sudo": "false",
-        "args": [
-          "-b",
-          "-p",
-          "$(brew --prefix)/Caskroom/miniconda/base"
-        ],
-        "print_stdout": "true"
-      }
-    },
-    [
-      "$(brew --prefix)/Caskroom/miniconda/base/condabin/conda"
-    ],
+    "Miniconda3-py37_4.8.2-MacOSX-x86_64.pkg (Pkg)",
     {
       "trash": [
         "~/.condarc",
@@ -40,10 +31,10 @@
       }
     }
   ],
-  "caveats": "Please run the following to setup your shell:\n\n  conda init \"$(basename \"${SHELL}\")\"\n",
+  "caveats": null,
   "depends_on": {
   },
   "conflicts_with": null,
-  "container": "{:type=>:naked}",
+  "container": null,
   "auto_updates": true
 }
