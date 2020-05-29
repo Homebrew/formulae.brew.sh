@@ -1,6 +1,6 @@
 {
-  "name": "gatsby-cli",
-  "full_name": "gatsby-cli",
+  "name": "wasm-pack",
+  "full_name": "wasm-pack",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Gatsby command-line interface",
-  "homepage": "https://www.gatsbyjs.org/docs/gatsby-cli/",
+  "desc": "Your favorite rust -> wasm workflow tool!",
+  "homepage": "https://rustwasm.github.io/wasm-pack/",
   "versions": {
-    "stable": "2.12.36",
+    "stable": "0.9.1",
     "devel": null,
-    "head": null,
+    "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://registry.npmjs.org/gatsby-cli/-/gatsby-cli-2.12.36.tgz",
+      "url": "https://github.com/rustwasm/wasm-pack/archive/v0.9.1.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,16 +33,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/gatsby-cli-2.12.36.catalina.bottle.tar.gz",
-          "sha256": "26a84da0a831b79b4725c7d468510c7740d3edef9910f0bd7b321caccf962ef7"
+          "url": "https://linuxbrew.bintray.com/bottles/wasm-pack-0.9.1.catalina.bottle.tar.gz",
+          "sha256": "349d47601c15c1639f9a2c303544addd05b6178a0ae9c3dff15ce53f74d2dfc6"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/gatsby-cli-2.12.36.mojave.bottle.tar.gz",
-          "sha256": "8812e72ef14b683a58f1160ae7d9673e5515446af88678c345d7513a8b668252"
+          "url": "https://linuxbrew.bintray.com/bottles/wasm-pack-0.9.1.mojave.bottle.tar.gz",
+          "sha256": "3fa2dd4e71144a07b14323486a31ef12065d31b90e30c30394f2833b205781db"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/gatsby-cli-2.12.36.high_sierra.bottle.tar.gz",
-          "sha256": "a3043c14376866799a7619bb3404c1a2601f5d4738c5de5ff4f4494f07202d9c"
+          "url": "https://linuxbrew.bintray.com/bottles/wasm-pack-0.9.1.high_sierra.bottle.tar.gz",
+          "sha256": "f6bc091f507521b82e308a1f1aabdaa1e6afdae80e3beaa0c097bf5702e55c1e"
         }
       }
     }
@@ -53,11 +53,10 @@
 
   ],
   "build_dependencies": [
-
+    "rust"
   ],
   "dependencies": [
-    "node",
-    "linuxbrew/xorg/xorg"
+    "rustup-init"
   ],
   "recommended_dependencies": [
 
