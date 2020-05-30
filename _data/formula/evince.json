@@ -11,14 +11,14 @@
   "desc": "GNOME document viewer",
   "homepage": "https://wiki.gnome.org/Apps/Evince",
   "versions": {
-    "stable": "3.36.1",
+    "stable": "3.36.2",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://download.gnome.org/sources/evince/3.36/evince-3.36.1.tar.xz",
+      "url": "https://download.gnome.org/sources/evince/3.36/evince-3.36.2.tar.xz",
       "tag": null,
       "revision": null
     }
@@ -33,16 +33,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/evince-3.36.1.catalina.bottle.tar.gz",
-          "sha256": "37631b73c322e2301e5bb851b7845843244e5aedd62e7eb69734d568fce42e9a"
+          "url": "https://homebrew.bintray.com/bottles/evince-3.36.2.catalina.bottle.tar.gz",
+          "sha256": "4e5e551699ebe6edf399a9d6e0a54cabbe9484cdaa39f7e7f96409099af2abfc"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/evince-3.36.1.mojave.bottle.tar.gz",
-          "sha256": "bb4355df7df850fdff3540267050c95b9c078ac04363d47e853fcd8fcbc33b3a"
+          "url": "https://homebrew.bintray.com/bottles/evince-3.36.2.mojave.bottle.tar.gz",
+          "sha256": "c3715dfbd8e02f0e94a08768815cd65516b245e5bbf1be02d08fce57497bc365"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/evince-3.36.1.high_sierra.bottle.tar.gz",
-          "sha256": "76b38830fcf331cab2f471b69a8c7a4602c4267193fd6bce7885a238abb36c3a"
+          "url": "https://homebrew.bintray.com/bottles/evince-3.36.2.high_sierra.bottle.tar.gz",
+          "sha256": "19df80d484b25909c0ff6c71c7cf19fcf27b1ed681746e6ac041e46ad30f5171"
         }
       }
     }
@@ -53,10 +53,10 @@
 
   ],
   "build_dependencies": [
-    "appstream-glib",
     "gobject-introspection",
-    "intltool",
     "itstool",
+    "meson",
+    "ninja",
     "pkg-config"
   ],
   "dependencies": [
@@ -66,9 +66,9 @@
     "gtk+3",
     "hicolor-icon-theme",
     "libarchive",
+    "libgxps",
     "libsecret",
     "libspectre",
-    "libxml2",
     "poppler",
     "python@3.8"
   ],
