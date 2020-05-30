@@ -3,7 +3,7 @@
   "full_name": "subversion",
   "oldname": null,
   "aliases": [
-    "subversion@1.13",
+    "subversion@1.14",
     "svn"
   ],
   "versioned_formulae": [
@@ -12,19 +12,19 @@
   "desc": "Version control system designed to be a better CVS",
   "homepage": "https://subversion.apache.org/",
   "versions": {
-    "stable": "1.13.0",
+    "stable": "1.14.0",
     "devel": null,
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://www.apache.org/dyn/closer.lua?path=subversion/subversion-1.13.0.tar.bz2",
+      "url": "https://www.apache.org/dyn/closer.lua?path=subversion/subversion-1.14.0.tar.bz2",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 5,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -34,20 +34,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/subversion-1.13.0_5.catalina.bottle.tar.gz",
-          "sha256": "0c131c339c9d452563aeda9dffc0acbe2f75be6d4ab3f8eda3ffdab7b0e06a67"
+          "url": "https://linuxbrew.bintray.com/bottles/subversion-1.14.0.catalina.bottle.tar.gz",
+          "sha256": "e9eff2a2edfbf1a2434fb4435819c3a05642c2f89fdfda65ef3722c91eab7db9"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/subversion-1.13.0_5.mojave.bottle.tar.gz",
-          "sha256": "a19ac8763a4d06dd030d6f41cb5b64e15bae68f33b95ebb677040e58d4a1f9f1"
+          "url": "https://linuxbrew.bintray.com/bottles/subversion-1.14.0.mojave.bottle.tar.gz",
+          "sha256": "03b0c8f9e31ba6bd81b3565578b71862600877a87faea1c1f0363c89d6bbe3e4"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/subversion-1.13.0_5.high_sierra.bottle.tar.gz",
-          "sha256": "a901ee429676a52297443213f234d4b30e21a7c25a660fed21d767bc2fd0a5e1"
-        },
-        "x86_64_linux": {
-          "url": "https://linuxbrew.bintray.com/bottles/subversion-1.13.0_5.x86_64_linux.bottle.tar.gz",
-          "sha256": "2898a45955cc9120b9b82ad4906bb09f4ac1545dde6c78918e35108a0e3eeb01"
+          "url": "https://linuxbrew.bintray.com/bottles/subversion-1.14.0.high_sierra.bottle.tar.gz",
+          "sha256": "6ef21764ae411bc699bc7593670eed6780db6b0f72b0e533f01c5d1fda2bdf7b"
         }
       }
     }
@@ -60,8 +56,9 @@
   "build_dependencies": [
     "openjdk",
     "pkg-config",
+    "python@3.8",
     "scons",
-    "swig@3"
+    "swig"
   ],
   "dependencies": [
     "apr",
