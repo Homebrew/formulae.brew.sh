@@ -11,14 +11,14 @@
   "desc": "Cucumber for Ruby",
   "homepage": "https://cucumber.io",
   "versions": {
-    "stable": "3.1.2",
+    "stable": "4.0.0",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/cucumber/cucumber-ruby/archive/v3.1.2.tar.gz",
+      "url": "https://github.com/cucumber/cucumber-ruby/archive/v4.0.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,21 +28,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any_skip_relocation",
+      "cellar": "/usr/local/Cellar",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/cucumber-ruby-3.1.2.catalina.bottle.tar.gz",
-          "sha256": "4dae16a128b3647f45cae985f994092c7455a3ea0de285a2a8a5f6bb2558f614"
+          "url": "https://homebrew.bintray.com/bottles/cucumber-ruby-4.0.0.catalina.bottle.tar.gz",
+          "sha256": "1bbd39ef420f725cd23b38f43993a1fd34b1c8d72b20895b57d5a3f7505435dc"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/cucumber-ruby-3.1.2.mojave.bottle.tar.gz",
-          "sha256": "2ba7581d65bb36c8417f25a9275db93b52f03f57552f6cb7abd11b7cde88bb1d"
+          "url": "https://homebrew.bintray.com/bottles/cucumber-ruby-4.0.0.mojave.bottle.tar.gz",
+          "sha256": "9cfc5742cad48dc3c4d469600dc42b90778c82e89f41a2aecc8b6a4d7832ad6e"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/cucumber-ruby-3.1.2.high_sierra.bottle.tar.gz",
-          "sha256": "290a326dfcdae9a4cb61765761814ba070729a8d0076e4110e6bc536905b6976"
+          "url": "https://homebrew.bintray.com/bottles/cucumber-ruby-4.0.0.high_sierra.bottle.tar.gz",
+          "sha256": "5a675b87cce18a91a495077d37c7d57afc645e6b973fb09720d18756fef223b3"
         }
       }
     }
@@ -53,7 +53,7 @@
 
   ],
   "build_dependencies": [
-
+    "pkg-config"
   ],
   "dependencies": [
 
@@ -65,6 +65,7 @@
 
   ],
   "uses_from_macos": [
+    "libffi",
     "ruby"
   ],
   "requirements": [
