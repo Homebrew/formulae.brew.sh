@@ -13,7 +13,7 @@
   "versions": {
     "stable": "3.0.3",
     "devel": null,
-    "head": null,
+    "head": "HEAD",
     "bottle": true
   },
   "urls": {
@@ -23,7 +23,7 @@
       "revision": null
     }
   },
-  "revision": 4,
+  "revision": 5,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,16 +33,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/ponysay-3.0.3_4.catalina.bottle.tar.gz",
-          "sha256": "1a6657b674719935d9ff4114119e2521ff967eb1ae13f72185d20e760949ee5b"
+          "url": "https://homebrew.bintray.com/bottles/ponysay-3.0.3_5.catalina.bottle.tar.gz",
+          "sha256": "77e5eb82496f017ceec2250b454b536964aff0609e3ab2a4a785b9d9b62c5393"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/ponysay-3.0.3_4.mojave.bottle.tar.gz",
-          "sha256": "f0a79ed95066b8ee79f4e117ae4344ac516c32a73e30e8f036abca646e7f3c56"
+          "url": "https://homebrew.bintray.com/bottles/ponysay-3.0.3_5.mojave.bottle.tar.gz",
+          "sha256": "30dbf5ef6f9aed9feaf26557e8c954eef25102e79c4c8c020d98d25bbb737bab"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/ponysay-3.0.3_4.high_sierra.bottle.tar.gz",
-          "sha256": "a502ed3340bc2c7591788c8747c8175e0ac7902bfbfdf73454aef09d39a0db16"
+          "url": "https://homebrew.bintray.com/bottles/ponysay-3.0.3_5.high_sierra.bottle.tar.gz",
+          "sha256": "78743696032607c87bd59c95f765d6e10f2758be4b152728ae3b9ddbfb16e5cd"
         }
       }
     }
@@ -53,7 +53,7 @@
 
   ],
   "build_dependencies": [
-
+    "gzip"
   ],
   "dependencies": [
     "coreutils",
@@ -66,7 +66,9 @@
 
   ],
   "uses_from_macos": [
-
+    {
+      "texinfo": "build"
+    }
   ],
   "requirements": [
 
