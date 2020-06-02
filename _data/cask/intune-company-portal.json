@@ -1,0 +1,44 @@
+{
+  "token": "intune-company-portal",
+  "name": [
+    "Company Portal"
+  ],
+  "homepage": "https://docs.microsoft.com/en-us/mem/intune/user-help/enroll-your-device-in-intune-macos-cp",
+  "url": "https://officecdn.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/CompanyPortal_2.5.200500-Installer.pkg",
+  "appcast": "https://docs.microsoft.com/en-us/officeupdates/update-history-office-for-mac",
+  "version": "2.5.200500",
+  "sha256": "bbed1fdaaad2d47d39177ef38b14c99382f575e48f6d52e68647bb56bbb5e25c",
+  "artifacts": [
+    {
+      "pkgutil": [
+        "com.microsoft.package.Microsoft_AutoUpdate.app",
+        "com.microsoft.CompanyPortal"
+      ],
+      "delete": [
+        "/Applications/Company Portal.app",
+        "/Library/PrivilegedHelperTools/com.microsoft.autoupdate.helper"
+      ],
+      "launchctl": [
+        "com.microsoft.autoupdate.helper",
+        "com.microsoft.update.agent"
+      ],
+      "quit": [
+        "com.microsoft.autoupdate.fba"
+      ],
+      "signal": {
+      }
+    },
+    "CompanyPortal_2.5.200500-Installer.pkg (Pkg)"
+  ],
+  "caveats": null,
+  "depends_on": {
+    "macos": {
+      ">=": [
+        "10.14"
+      ]
+    }
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": true
+}
