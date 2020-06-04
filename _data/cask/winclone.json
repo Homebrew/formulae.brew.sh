@@ -1,0 +1,41 @@
+{
+  "token": "winclone",
+  "name": [
+    "Winclone"
+  ],
+  "homepage": "https://twocanoes.com/products/mac/winclone",
+  "url": "https://twocanoes-software-updates.s3.amazonaws.com/Winclone8.dmg",
+  "appcast": "https://twocanoes.com/winclone/updates/winclone8-software-updates.xml",
+  "version": "8.2",
+  "sha256": "34843ec91ea246055018d7d60ae4b2baa1297e1c4ef5e1c41f2d77b1a9d18bc5",
+  "artifacts": [
+    "uninstall_preflight (Preflight Block)",
+    {
+      "signal": {
+        "TERM": "com.twocanoes.Winclone8"
+      },
+      "pkgutil": "com.twocanoes.pkg.Winclone*"
+    },
+    "Winclone.pkg (Pkg)",
+    {
+      "trash": [
+        "~/Library/Application Support/Winclone",
+        "~/Library/Caches/com.twocanoes.Winclone8",
+        "~/Library/Logs/Winclone"
+      ],
+      "signal": {
+      }
+    }
+  ],
+  "caveats": null,
+  "depends_on": {
+    "macos": {
+      ">=": [
+        "10.14"
+      ]
+    }
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": null
+}
