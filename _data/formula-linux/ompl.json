@@ -11,14 +11,14 @@
   "desc": "Open Motion Planning Library consists of many motion planning algorithms",
   "homepage": "https://ompl.kavrakilab.org/",
   "versions": {
-    "stable": "1.4.2",
+    "stable": "1.5.0",
     "devel": null,
-    "head": null,
+    "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://bitbucket.org/ompl/ompl/downloads/ompl-1.4.2-Source.tar.gz",
+      "url": "https://github.com/ompl/ompl/archive/1.5.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -27,26 +27,26 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/ompl-1.4.2.catalina.bottle.1.tar.gz",
-          "sha256": "9402582e9dba3b47fb91bd36dec50086fd36effaf4cf5734c44c4d71362729eb"
+          "url": "https://linuxbrew.bintray.com/bottles/ompl-1.5.0.catalina.bottle.tar.gz",
+          "sha256": "f58fc1ff49aeac3a38aa2629385019ad854e9624b4c6e3a3f9051456494984f9"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/ompl-1.4.2.mojave.bottle.1.tar.gz",
-          "sha256": "14033d9549ebd3086e84cd058ab2df19e90acfc6c1e3c1b4d62f4a6b8c8058d6"
+          "url": "https://linuxbrew.bintray.com/bottles/ompl-1.5.0.mojave.bottle.tar.gz",
+          "sha256": "9d66bb50880af5db4f3fc3a1d85140170643518fc72e78ccc6b7b7814261d198"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/ompl-1.4.2.high_sierra.bottle.1.tar.gz",
-          "sha256": "961b2a574fdf47d8fd0e74e9755bfb3009147807a316869fa2444d61f9b4123f"
+          "url": "https://linuxbrew.bintray.com/bottles/ompl-1.5.0.high_sierra.bottle.tar.gz",
+          "sha256": "b11650509f65bcf45ea04acdd7fe4bebaff22f829c512d73c308e75476f0a94a"
         },
         "x86_64_linux": {
-          "url": "https://linuxbrew.bintray.com/bottles/ompl-1.4.2.x86_64_linux.bottle.1.tar.gz",
-          "sha256": "498e6e22c5401995f0a06eb600dbbe1b0911220d18cb00dda8aedd4605640337"
+          "url": "https://linuxbrew.bintray.com/bottles/ompl-1.5.0.x86_64_linux.bottle.tar.gz",
+          "sha256": "5b833df1f9b5ec36c24c634b3daf63eae92e578d4e39f79d36dd9e34d45b5fce"
         }
       }
     }
@@ -57,11 +57,14 @@
 
   ],
   "build_dependencies": [
-    "cmake"
+    "cmake",
+    "pkg-config"
   ],
   "dependencies": [
     "boost",
-    "eigen"
+    "eigen",
+    "flann",
+    "ode"
   ],
   "recommended_dependencies": [
 
