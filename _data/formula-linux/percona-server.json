@@ -43,6 +43,10 @@
         "high_sierra": {
           "url": "https://linuxbrew.bintray.com/bottles/percona-server-8.0.19-10.high_sierra.bottle.tar.gz",
           "sha256": "30719045c2ee376f8cf269e12fcd307f7d0313338b59b6e1c24861207177b287"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/percona-server-8.0.19-10.x86_64_linux.bottle.tar.gz",
+          "sha256": "01688c524edd4d9449141e73c9eee00c27e5ed8075281c70b3bc2e7ad04307ea"
         }
       }
     }
@@ -53,12 +57,14 @@
 
   ],
   "build_dependencies": [
-    "cmake"
+    "cmake",
+    "pkg-config"
   ],
   "dependencies": [
     "openssl@1.1",
+    "libedit",
     "readline",
-    "libedit"
+    "curl"
   ],
   "recommended_dependencies": [
 
