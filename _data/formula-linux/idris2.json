@@ -1,6 +1,6 @@
 {
-  "name": "bacula-fd",
-  "full_name": "bacula-fd",
+  "name": "idris2",
+  "full_name": "idris2",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Network backup solution",
-  "homepage": "https://www.bacula.org/",
+  "desc": "Pure functional programming language with dependent types",
+  "homepage": "https://www.idris-lang.org/",
   "versions": {
-    "stable": "9.6.5",
+    "stable": "0.2.0",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://downloads.sourceforge.net/project/bacula/bacula/9.6.5/bacula-9.6.5.tar.gz",
+      "url": "https://github.com/idris-lang/Idris2/archive/v0.2.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,21 +28,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any_skip_relocation",
+      "cellar": ":any",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/bacula-fd-9.6.5.catalina.bottle.tar.gz",
-          "sha256": "9f60d58bc6f3709d3ed3fabb03a82d9197a76a4f8bea6f0b4d5cef24bec5e5ea"
+          "url": "https://linuxbrew.bintray.com/bottles/idris2-0.2.0.catalina.bottle.tar.gz",
+          "sha256": "23d5a50ddc93380262ba3a921ccb6b41fcf83647158d8b4a4042fd76a7fe2496"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/bacula-fd-9.6.5.mojave.bottle.tar.gz",
-          "sha256": "af55545e264e8fb2b7b0ce417194d7d27ddb17d41d28e9664c8e9371164958d0"
+          "url": "https://linuxbrew.bintray.com/bottles/idris2-0.2.0.mojave.bottle.tar.gz",
+          "sha256": "67548c580e290130ae9dfb5188fcda51417ff9e94e52ca331daa63252288fd5c"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/bacula-fd-9.6.5.high_sierra.bottle.tar.gz",
-          "sha256": "a615488f494959d4d19cee5d863c4c306a2180ceab548742c93cef68fe8b688c"
+          "url": "https://linuxbrew.bintray.com/bottles/idris2-0.2.0.high_sierra.bottle.tar.gz",
+          "sha256": "c91f5057e6803de074590918078092f3dcb2dbf0ed07fb97db5633b03b8405fc"
         }
       }
     }
@@ -53,12 +53,10 @@
 
   ],
   "build_dependencies": [
-
+    "coreutils"
   ],
   "dependencies": [
-    "openssl@1.1",
-    "readline",
-    "zlib"
+    "chezscheme"
   ],
   "recommended_dependencies": [
 
@@ -73,7 +71,7 @@
 
   ],
   "conflicts_with": [
-    "bareos-client"
+
   ],
   "caveats": null,
   "installed": [

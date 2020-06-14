@@ -1,6 +1,6 @@
 {
-  "name": "bacula-fd",
-  "full_name": "bacula-fd",
+  "name": "vcpkg",
+  "full_name": "vcpkg",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Network backup solution",
-  "homepage": "https://www.bacula.org/",
+  "desc": "C++ Library Manager",
+  "homepage": "https://github.com/microsoft/vcpkg",
   "versions": {
-    "stable": "9.6.5",
+    "stable": "2020.04",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://downloads.sourceforge.net/project/bacula/bacula/9.6.5/bacula-9.6.5.tar.gz",
+      "url": "https://github.com/microsoft/vcpkg/archive/2020.04.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,16 +33,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/bacula-fd-9.6.5.catalina.bottle.tar.gz",
-          "sha256": "9f60d58bc6f3709d3ed3fabb03a82d9197a76a4f8bea6f0b4d5cef24bec5e5ea"
+          "url": "https://linuxbrew.bintray.com/bottles/vcpkg-2020.04.catalina.bottle.tar.gz",
+          "sha256": "7ba22eee80d89ba5518d0bdd0e38e6e0a2d7656d986467b26177a7cba4e15fe3"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/bacula-fd-9.6.5.mojave.bottle.tar.gz",
-          "sha256": "af55545e264e8fb2b7b0ce417194d7d27ddb17d41d28e9664c8e9371164958d0"
+          "url": "https://linuxbrew.bintray.com/bottles/vcpkg-2020.04.mojave.bottle.tar.gz",
+          "sha256": "b6648b679288130524034783cc3dada6dc21eba7f850b3fa331eecaa3fc3a7a2"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/bacula-fd-9.6.5.high_sierra.bottle.tar.gz",
-          "sha256": "a615488f494959d4d19cee5d863c4c306a2180ceab548742c93cef68fe8b688c"
+          "url": "https://linuxbrew.bintray.com/bottles/vcpkg-2020.04.high_sierra.bottle.tar.gz",
+          "sha256": "aa6e77116fbf6aa56f450eaea187639d485a7e91640b87013403bef1411993a0"
         }
       }
     }
@@ -53,12 +53,11 @@
 
   ],
   "build_dependencies": [
-
+    "cmake",
+    "ninja"
   ],
   "dependencies": [
-    "openssl@1.1",
-    "readline",
-    "zlib"
+
   ],
   "recommended_dependencies": [
 
@@ -73,7 +72,7 @@
 
   ],
   "conflicts_with": [
-    "bareos-client"
+
   ],
   "caveats": null,
   "installed": [

@@ -1,6 +1,6 @@
 {
-  "name": "bacula-fd",
-  "full_name": "bacula-fd",
+  "name": "liboqs",
+  "full_name": "liboqs",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Network backup solution",
-  "homepage": "https://www.bacula.org/",
+  "desc": "Library for quantum-safe cryptography",
+  "homepage": "https://openquantumsafe.org/",
   "versions": {
-    "stable": "9.6.5",
+    "stable": "0.3.0",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://downloads.sourceforge.net/project/bacula/bacula/9.6.5/bacula-9.6.5.tar.gz",
+      "url": "https://github.com/open-quantum-safe/liboqs/archive/0.3.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,21 +28,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any_skip_relocation",
+      "cellar": ":any",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/bacula-fd-9.6.5.catalina.bottle.tar.gz",
-          "sha256": "9f60d58bc6f3709d3ed3fabb03a82d9197a76a4f8bea6f0b4d5cef24bec5e5ea"
+          "url": "https://linuxbrew.bintray.com/bottles/liboqs-0.3.0.catalina.bottle.tar.gz",
+          "sha256": "f08fb2aefced27d1cc26680e50a1f0df0d87182f923135cd57900a5e3fc0beb8"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/bacula-fd-9.6.5.mojave.bottle.tar.gz",
-          "sha256": "af55545e264e8fb2b7b0ce417194d7d27ddb17d41d28e9664c8e9371164958d0"
+          "url": "https://linuxbrew.bintray.com/bottles/liboqs-0.3.0.mojave.bottle.tar.gz",
+          "sha256": "6a58d68654065e151ca045a81eb0c1e3e786696a84453b6c75aea4b2d449f66e"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/bacula-fd-9.6.5.high_sierra.bottle.tar.gz",
-          "sha256": "a615488f494959d4d19cee5d863c4c306a2180ceab548742c93cef68fe8b688c"
+          "url": "https://linuxbrew.bintray.com/bottles/liboqs-0.3.0.high_sierra.bottle.tar.gz",
+          "sha256": "47d203b377f2702041634aabe030ba786f466afb78b83bbe27a79b3aabcd9d49"
         }
       }
     }
@@ -53,12 +53,12 @@
 
   ],
   "build_dependencies": [
-
+    "cmake",
+    "doxygen",
+    "ninja"
   ],
   "dependencies": [
-    "openssl@1.1",
-    "readline",
-    "zlib"
+    "openssl@1.1"
   ],
   "recommended_dependencies": [
 
@@ -73,7 +73,7 @@
 
   ],
   "conflicts_with": [
-    "bareos-client"
+
   ],
   "caveats": null,
   "installed": [
