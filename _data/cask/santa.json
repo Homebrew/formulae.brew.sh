@@ -4,23 +4,24 @@
     "Santa"
   ],
   "homepage": "https://github.com/google/santa",
-  "url": "https://github.com/google/santa/releases/download/0.9.33/santa-0.9.33.dmg",
+  "url": "https://github.com/google/santa/releases/download/1.13/santa-1.13.dmg",
   "appcast": "https://github.com/google/santa/releases.atom",
-  "version": "0.9.33",
-  "sha256": "9a2bd94f751b26576a8bfea5f7fc616af2b7c9a6e642db6e93d84d21f29f0930",
+  "version": "1.13",
+  "sha256": "37b3f9acfd02b4e1b23bf9e3288f9b14f350bbdbb54694fc8b07ee4e81b23057",
   "artifacts": [
     {
       "delete": "$(brew --prefix)/bin/santactl",
       "kext": "com.google.santa-driver",
       "launchctl": [
-        "com.google.santad",
-        "com.google.santagui"
+        "com.google.santa",
+        "com.google.santa.bundleservice",
+        "com.google.santad"
       ],
       "pkgutil": "com.google.santa",
       "signal": {
       }
     },
-    "santa-0.9.33.pkg (Pkg)"
+    "santa-1.13.pkg (Pkg)"
   ],
   "caveats": "santa requires a kernel extension to work.\nIf the installation fails, retry after you enable it in:\n  System Preferences → Security & Privacy → General\n\nFor more information, refer to vendor documentation or this Apple Technical Note:\n  https://developer.apple.com/library/content/technotes/tn2459/_index.html\n",
   "depends_on": {
