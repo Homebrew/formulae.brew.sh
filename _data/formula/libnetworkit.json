@@ -1,6 +1,6 @@
 {
-  "name": "omega",
-  "full_name": "omega",
+  "name": "libnetworkit",
+  "full_name": "libnetworkit",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Packaged search engine for websites, built on top of Xapian",
-  "homepage": "https://xapian.org/",
+  "desc": "NetworKit is an OS-toolkit for large-scale network analysis",
+  "homepage": "https://networkit.github.io",
   "versions": {
-    "stable": "1.4.16",
+    "stable": "7.0",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://oligarchy.co.uk/xapian/1.4.16/xapian-omega-1.4.16.tar.xz",
+      "url": "https://github.com/networkit/networkit/archive/7.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,21 +28,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": "/usr/local/Cellar",
+      "cellar": ":any",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/omega-1.4.16.catalina.bottle.tar.gz",
-          "sha256": "21def29541640883bd956e842a3370d9ac7dde45bd166add19ca83013f86189f"
+          "url": "https://homebrew.bintray.com/bottles/libnetworkit-7.0.catalina.bottle.tar.gz",
+          "sha256": "86915bb4086ab367364d03ae45b1228aa0b788facda6daf18e0a0adaff9b140e"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/omega-1.4.16.mojave.bottle.tar.gz",
-          "sha256": "5625e477813a8c7bd720e17416b6dd80faf959f5d7210c3262031ba30c3e1f6e"
+          "url": "https://homebrew.bintray.com/bottles/libnetworkit-7.0.mojave.bottle.tar.gz",
+          "sha256": "9b9d3a3e7aa1a6f948a474b14aa251813d96e703eddf2bbc65e1c815e83be564"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/omega-1.4.16.high_sierra.bottle.tar.gz",
-          "sha256": "ff44c076ce6ad71238f2293e35ad7c8fed610dfeb5eb15e8a52c0e68d9a0b62d"
+          "url": "https://homebrew.bintray.com/bottles/libnetworkit-7.0.high_sierra.bottle.tar.gz",
+          "sha256": "2b2ae31876287265a67d737efa586d66e839e9fbf648354c53a3222a0c679ae1"
         }
       }
     }
@@ -53,12 +53,11 @@
 
   ],
   "build_dependencies": [
-    "pkg-config"
+    "cmake"
   ],
   "dependencies": [
-    "libmagic",
-    "pcre",
-    "xapian"
+    "libomp",
+    "tlx"
   ],
   "recommended_dependencies": [
 

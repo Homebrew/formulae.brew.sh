@@ -11,7 +11,7 @@
   "desc": "Lightweight Shipper for Audit Data",
   "homepage": "https://www.elastic.co/products/beats/auditbeat",
   "versions": {
-    "stable": "6.8.7",
+    "stable": "7.7.1",
     "devel": null,
     "head": "HEAD",
     "bottle": true
@@ -19,8 +19,8 @@
   "urls": {
     "stable": {
       "url": "https://github.com/elastic/beats.git",
-      "tag": "v6.8.7",
-      "revision": "c3db7425739e1c0d1eeefe77f4c0b735a90a3254"
+      "tag": "v7.7.1",
+      "revision": "932b273e8940575e15f10390882be205bad29e1f"
     }
   },
   "revision": 0,
@@ -33,16 +33,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/auditbeat-6.8.7.catalina.bottle.tar.gz",
-          "sha256": "7bda17ae93e5afa4aec267a1451baed2b7f843195f3d73d04686c976c65fe4d3"
+          "url": "https://homebrew.bintray.com/bottles/auditbeat-7.7.1.catalina.bottle.tar.gz",
+          "sha256": "f975bd4005bfd60cf4909d7b3bd6a75e505b3192631e4274cfdbc0fb8632a120"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/auditbeat-6.8.7.mojave.bottle.tar.gz",
-          "sha256": "36b8adf700d6701436249a14beae242cdc7e2bd9e5ef958ca2d1297a18e78f64"
+          "url": "https://homebrew.bintray.com/bottles/auditbeat-7.7.1.mojave.bottle.tar.gz",
+          "sha256": "33dbdb9fa0d9ee09be3df1ebf8e0b72b5a597e481f645ee0e91cddbe892a63de"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/auditbeat-6.8.7.high_sierra.bottle.tar.gz",
-          "sha256": "47b0654038e92daf765ddc8ce4c1b26052a04b8959e5e1e8def2a7f3d0f84b15"
+          "url": "https://homebrew.bintray.com/bottles/auditbeat-7.7.1.high_sierra.bottle.tar.gz",
+          "sha256": "3d9388ada939936cdb5c1fabe7e9f49a9e43d2838168cf8ebbbf214acf1124cf"
         }
       }
     }
@@ -53,7 +53,8 @@
 
   ],
   "build_dependencies": [
-    "go"
+    "go",
+    "python@3.8"
   ],
   "dependencies": [
 
@@ -68,15 +69,7 @@
 
   ],
   "requirements": [
-    {
-      "name": "macos",
-      "cask": null,
-      "download": null,
-      "version": null,
-      "contexts": [
 
-      ]
-    }
   ],
   "conflicts_with": [
 

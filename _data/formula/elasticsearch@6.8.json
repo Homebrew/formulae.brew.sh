@@ -1,26 +1,24 @@
 {
-  "name": "elasticsearch",
-  "full_name": "elasticsearch",
+  "name": "elasticsearch@6.8",
+  "full_name": "elasticsearch@6.8",
   "oldname": null,
   "aliases": [
-    "elasticsearch@7.6"
+
   ],
   "versioned_formulae": [
-    "elasticsearch@6.8",
-    "elasticsearch@5.6",
-    "elasticsearch@2.4"
+
   ],
   "desc": "Distributed search & analytics engine",
   "homepage": "https://www.elastic.co/products/elasticsearch",
   "versions": {
-    "stable": "7.6.2",
+    "stable": "6.8.8",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/elastic/elasticsearch/archive/v7.6.2.tar.gz",
+      "url": "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-oss-6.8.8.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -35,21 +33,21 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/elasticsearch-7.6.2.catalina.bottle.tar.gz",
-          "sha256": "52c9b1cd71e07cc9fe341175128832f1f721a8fd49ea63cca59ab54e1bad3f62"
+          "url": "https://homebrew.bintray.com/bottles/elasticsearch%406.8-6.8.8.catalina.bottle.tar.gz",
+          "sha256": "151ca735f37ec4456a1dd03e0280d940278d8543c98226f561386b169e7c03ee"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/elasticsearch-7.6.2.mojave.bottle.tar.gz",
-          "sha256": "50843eb82cd4f93392a09ad979d97618f2d8144cf8639c85c47ef69cd29d5e34"
+          "url": "https://homebrew.bintray.com/bottles/elasticsearch%406.8-6.8.8.mojave.bottle.tar.gz",
+          "sha256": "151ca735f37ec4456a1dd03e0280d940278d8543c98226f561386b169e7c03ee"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/elasticsearch-7.6.2.high_sierra.bottle.tar.gz",
-          "sha256": "6de2a2724524563fa9c9e01a189c19ec16586c712c7c1519c5f80e60410649da"
+          "url": "https://homebrew.bintray.com/bottles/elasticsearch%406.8-6.8.8.high_sierra.bottle.tar.gz",
+          "sha256": "151ca735f37ec4456a1dd03e0280d940278d8543c98226f561386b169e7c03ee"
         }
       }
     }
   },
-  "keg_only": false,
+  "keg_only": true,
   "bottle_disabled": false,
   "options": [
 
@@ -58,7 +56,7 @@
 
   ],
   "dependencies": [
-    "openjdk"
+
   ],
   "recommended_dependencies": [
 
@@ -70,7 +68,15 @@
 
   ],
   "requirements": [
+    {
+      "name": "java",
+      "cask": "homebrew/cask-versions/adoptopenjdk8",
+      "download": null,
+      "version": "1.8",
+      "contexts": [
 
+      ]
+    }
   ],
   "conflicts_with": [
 

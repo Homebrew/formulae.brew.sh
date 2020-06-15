@@ -11,7 +11,7 @@
   "desc": "Collect metrics from your systems and services",
   "homepage": "https://www.elastic.co/products/beats/metricbeat",
   "versions": {
-    "stable": "6.8.7",
+    "stable": "7.7.1",
     "devel": null,
     "head": "HEAD",
     "bottle": true
@@ -19,8 +19,8 @@
   "urls": {
     "stable": {
       "url": "https://github.com/elastic/beats.git",
-      "tag": "v6.8.7",
-      "revision": "c3db7425739e1c0d1eeefe77f4c0b735a90a3254"
+      "tag": "v7.7.1",
+      "revision": "932b273e8940575e15f10390882be205bad29e1f"
     }
   },
   "revision": 0,
@@ -33,16 +33,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/metricbeat-6.8.7.catalina.bottle.tar.gz",
-          "sha256": "b4e7c0e95058592120a43af6694010da1404dae21a1ca293479f9fce5b3e4245"
+          "url": "https://homebrew.bintray.com/bottles/metricbeat-7.7.1.catalina.bottle.tar.gz",
+          "sha256": "e8ec151c5c738fa0d33dc00508260d1ca84b1e36d14af579df0f9f19cbd70b9b"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/metricbeat-6.8.7.mojave.bottle.tar.gz",
-          "sha256": "ff4a8486277ebcdeedaad9c6cb560c4ce15ed02fb94f559830ca60ce51de1783"
+          "url": "https://homebrew.bintray.com/bottles/metricbeat-7.7.1.mojave.bottle.tar.gz",
+          "sha256": "8384088135d6efbc8a0a4fff0fa24a9429c181243dd474945c099b0fa24e6434"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/metricbeat-6.8.7.high_sierra.bottle.tar.gz",
-          "sha256": "e314082a533f6edc1982532add619e7d464b69f876f75cf9bf1d690f5b62729c"
+          "url": "https://homebrew.bintray.com/bottles/metricbeat-7.7.1.high_sierra.bottle.tar.gz",
+          "sha256": "e195e8ed706f851413b415213d41c5c52bf84aa031d06ad8b6469bdcc2ccc7fc"
         }
       }
     }
@@ -53,7 +53,8 @@
 
   ],
   "build_dependencies": [
-    "go"
+    "go",
+    "python@3.8"
   ],
   "dependencies": [
 
@@ -68,15 +69,7 @@
 
   ],
   "requirements": [
-    {
-      "name": "macos",
-      "cask": null,
-      "download": null,
-      "version": null,
-      "contexts": [
 
-      ]
-    }
   ],
   "conflicts_with": [
 
