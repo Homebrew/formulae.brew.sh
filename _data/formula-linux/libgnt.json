@@ -1,6 +1,6 @@
 {
-  "name": "jc",
-  "full_name": "jc",
+  "name": "libgnt",
+  "full_name": "libgnt",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Serializes the output of command-line tools to structured JSON output",
-  "homepage": "https://github.com/kellyjonbrazil/jc",
+  "desc": "NCurses toolkit for creating text-mode graphical user interfaces",
+  "homepage": "https://keep.imfreedom.org/libgnt/libgnt",
   "versions": {
-    "stable": "1.11.6",
+    "stable": "2.14.0",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://files.pythonhosted.org/packages/8e/02/b338c2628676957da938aa5e62c5b085bca31ad2723c8c1f80b47cf85593/jc-1.11.6.tar.gz",
+      "url": "https://downloads.sourceforge.net/project/pidgin/libgnt/2.14.0/libgnt-2.14.0.tar.xz",
       "tag": null,
       "revision": null
     }
@@ -28,21 +28,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any_skip_relocation",
+      "cellar": ":any",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/jc-1.11.6.catalina.bottle.tar.gz",
-          "sha256": "53993da8e14582c39e5a33d20a4ccc5e453f97f2a9b9c4f8400723c279e261f2"
+          "url": "https://linuxbrew.bintray.com/bottles/libgnt-2.14.0.catalina.bottle.tar.gz",
+          "sha256": "0ddf1b6ebd64e3989ee3e2c1482d3f852a3f44f6c196586d1d9c4e839927087a"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/jc-1.11.6.mojave.bottle.tar.gz",
-          "sha256": "90dfd8f8d1cedea5bd539dd2b87f80f0e58e73aca4164039ccc13a5aa556fb20"
+          "url": "https://linuxbrew.bintray.com/bottles/libgnt-2.14.0.mojave.bottle.tar.gz",
+          "sha256": "3d0291b16678836908fddc885fa613512e6f3ffbb2d11241a5320dfd48086822"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/jc-1.11.6.high_sierra.bottle.tar.gz",
-          "sha256": "4dedfe925ba44fe92e0c6b51b577db2fda3f290c30672e4da5403701208affff"
+          "url": "https://linuxbrew.bintray.com/bottles/libgnt-2.14.0.high_sierra.bottle.tar.gz",
+          "sha256": "0b710c423d8895b711d3f658fa6abdffe2b351c2256a429f49363eece64b8928"
         }
       }
     }
@@ -53,10 +53,13 @@
 
   ],
   "build_dependencies": [
-
+    "gtk-doc",
+    "meson",
+    "ninja",
+    "pkg-config"
   ],
   "dependencies": [
-    "python@3.8"
+    "glib"
   ],
   "recommended_dependencies": [
 
