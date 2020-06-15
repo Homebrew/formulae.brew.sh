@@ -1,6 +1,6 @@
 {
-  "name": "bnfc",
-  "full_name": "bnfc",
+  "name": "packetbeat",
+  "full_name": "packetbeat",
   "oldname": null,
   "aliases": [
 
@@ -8,22 +8,22 @@
   "versioned_formulae": [
 
   ],
-  "desc": "BNF Converter",
-  "homepage": "https://bnfc.digitalgrammars.com/",
+  "desc": "Lightweight Shipper for Network Data",
+  "homepage": "https://www.elastic.co/products/beats/packetbeat",
   "versions": {
-    "stable": "2.8.3",
+    "stable": "7.7.1",
     "devel": null,
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/BNFC/bnfc/archive/v2.8.3.tar.gz",
-      "tag": null,
-      "revision": null
+      "url": "https://github.com/elastic/beats.git",
+      "tag": "v7.7.1",
+      "revision": "932b273e8940575e15f10390882be205bad29e1f"
     }
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,16 +33,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/bnfc-2.8.3_1.catalina.bottle.tar.gz",
-          "sha256": "a56684b9fecdf25ef5c77f9124c8c8c3cdbf5f21405a6135eaf47680c387d231"
+          "url": "https://linuxbrew.bintray.com/bottles/packetbeat-7.7.1.catalina.bottle.tar.gz",
+          "sha256": "fefdfc48ef6739a9b8737aa552c3db2fd833b17b00bc9cac2bfa1920848a3d63"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/bnfc-2.8.3_1.mojave.bottle.tar.gz",
-          "sha256": "47cbd943179d46b54c4ff614d613662a4db766ed6f80ec980060acdf6a1c0812"
+          "url": "https://linuxbrew.bintray.com/bottles/packetbeat-7.7.1.mojave.bottle.tar.gz",
+          "sha256": "dbc37ca6a9a0f0112774fb4583bb8ba6f2231d80994648bc1cd839024cc5b314"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/bnfc-2.8.3_1.high_sierra.bottle.tar.gz",
-          "sha256": "a92f1907cedabddf2a10a994de224cb15221786742beeb1cde87ac47dc17ff76"
+          "url": "https://linuxbrew.bintray.com/bottles/packetbeat-7.7.1.high_sierra.bottle.tar.gz",
+          "sha256": "d30a36e215429d8a225e8369d235d2b11362004451ef155dbf9c17628b2d14c7"
         }
       }
     }
@@ -53,16 +53,11 @@
 
   ],
   "build_dependencies": [
-    "cabal-install",
-    "ghc",
-    "sphinx-doc",
-    "make"
+    "go",
+    "python@3.8"
   ],
   "dependencies": [
-    "antlr",
-    "openjdk",
-    "bison",
-    "flex"
+
   ],
   "recommended_dependencies": [
 

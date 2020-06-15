@@ -1,6 +1,6 @@
 {
-  "name": "tcpreplay",
-  "full_name": "tcpreplay",
+  "name": "libnetworkit",
+  "full_name": "libnetworkit",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Replay saved tcpdump files at arbitrary speeds",
-  "homepage": "https://tcpreplay.appneta.com/",
+  "desc": "NetworKit is an OS-toolkit for large-scale network analysis",
+  "homepage": "https://networkit.github.io",
   "versions": {
-    "stable": "4.3.3",
+    "stable": "7.0",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/appneta/tcpreplay/releases/download/v4.3.3/tcpreplay-4.3.3.tar.gz",
+      "url": "https://github.com/networkit/networkit/archive/7.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,16 +33,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/tcpreplay-4.3.3.catalina.bottle.tar.gz",
-          "sha256": "a4b41c27929bfd52016d1cc576089a9cb42dfd0e595c3078a40b26bd39fbd65f"
+          "url": "https://linuxbrew.bintray.com/bottles/libnetworkit-7.0.catalina.bottle.tar.gz",
+          "sha256": "86915bb4086ab367364d03ae45b1228aa0b788facda6daf18e0a0adaff9b140e"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/tcpreplay-4.3.3.mojave.bottle.tar.gz",
-          "sha256": "0ec1b2260c108d103d4d594a8fff9482656833e5308690b90c5ef0a05a155546"
+          "url": "https://linuxbrew.bintray.com/bottles/libnetworkit-7.0.mojave.bottle.tar.gz",
+          "sha256": "9b9d3a3e7aa1a6f948a474b14aa251813d96e703eddf2bbc65e1c815e83be564"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/tcpreplay-4.3.3.high_sierra.bottle.tar.gz",
-          "sha256": "439ed368cf28fb710cefec00f88de8d32e0d039abed0f8761f1a1ae4731dac53"
+          "url": "https://linuxbrew.bintray.com/bottles/libnetworkit-7.0.high_sierra.bottle.tar.gz",
+          "sha256": "2b2ae31876287265a67d737efa586d66e839e9fbf648354c53a3222a0c679ae1"
         }
       }
     }
@@ -53,10 +53,11 @@
 
   ],
   "build_dependencies": [
-
+    "cmake"
   ],
   "dependencies": [
-    "libdnet"
+    "libomp",
+    "tlx"
   ],
   "recommended_dependencies": [
 
