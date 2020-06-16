@@ -1,6 +1,6 @@
 {
-  "name": "dropbear",
-  "full_name": "dropbear",
+  "name": "inko",
+  "full_name": "inko",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Small SSH server/client for POSIX-based system",
-  "homepage": "https://matt.ucc.asn.au/dropbear/dropbear.html",
+  "desc": "The Inko programming language",
+  "homepage": "https://inko-lang.org/",
   "versions": {
-    "stable": "2020.79",
+    "stable": "0.6.0",
     "devel": null,
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://matt.ucc.asn.au/dropbear/releases/dropbear-2020.79.tar.bz2",
+      "url": "https://gitlab.com/inko-lang/inko/-/archive/v0.6.0/inko-v0.6.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,16 +33,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/dropbear-2020.79.catalina.bottle.tar.gz",
-          "sha256": "4d01e165cf0ae95e4cbab848383505099d9170c724572516186415b662e0a0a0"
+          "url": "https://homebrew.bintray.com/bottles/inko-0.6.0.catalina.bottle.tar.gz",
+          "sha256": "f3191304d3390550d8c47e063ca84e204d571f398c6034fda2395487f8aa81ea"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/dropbear-2020.79.mojave.bottle.tar.gz",
-          "sha256": "9722249d984de8c41078036eed5b3b82a4d30a0f232ba5d38c44a535340b45c7"
+          "url": "https://homebrew.bintray.com/bottles/inko-0.6.0.mojave.bottle.tar.gz",
+          "sha256": "be14d156158816f1389f2b18e04f06f8a6bc9310c9ff6286e1045d9a98f27f18"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/dropbear-2020.79.high_sierra.bottle.tar.gz",
-          "sha256": "bcdab71d6cf8b8d9e0ca4d4c09e9468311edb7ae52455909f094ea6e8beebada"
+          "url": "https://homebrew.bintray.com/bottles/inko-0.6.0.high_sierra.bottle.tar.gz",
+          "sha256": "751dd81d09fcbd7aff9fe9580997d04f8c96ea45c064a18b94455c7508a3ba7e"
         }
       }
     }
@@ -53,7 +53,12 @@
 
   ],
   "build_dependencies": [
-
+    "autoconf",
+    "automake",
+    "coreutils",
+    "libtool",
+    "make",
+    "rust"
   ],
   "dependencies": [
 
@@ -65,7 +70,7 @@
 
   ],
   "uses_from_macos": [
-
+    "ruby"
   ],
   "requirements": [
 
