@@ -1,24 +1,24 @@
 {
-  "name": "stone-soup",
-  "full_name": "stone-soup",
+  "name": "kde-ki18n",
+  "full_name": "kde-ki18n",
   "oldname": null,
   "aliases": [
-
+    "ki18n"
   ],
   "versioned_formulae": [
 
   ],
-  "desc": "Dungeon Crawl Stone Soup: a roguelike game",
-  "homepage": "https://crawl.develz.org/",
+  "desc": "KDE Gettext-based UI text internationalization",
+  "homepage": "https://api.kde.org/frameworks/ki18n/html/index.html",
   "versions": {
-    "stable": "0.25.0",
+    "stable": "5.71.0",
     "devel": null,
-    "head": null,
+    "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/crawl/crawl/archive/0.25.0.tar.gz",
+      "url": "https://download.kde.org/stable/frameworks/5.71/ki18n-5.71.0.tar.xz",
       "tag": null,
       "revision": null
     }
@@ -33,16 +33,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/stone-soup-0.25.0.catalina.bottle.tar.gz",
-          "sha256": "7c668b8d8a862c7ca37be32002b2b10689c4b8ebd53cc75c9d2236eecb0185dc"
+          "url": "https://linuxbrew.bintray.com/bottles/kde-ki18n-5.71.0.catalina.bottle.tar.gz",
+          "sha256": "16899d7c7150e4a75c32651410c54b27fe94fcdbcbf36d4158e64f8e5fc522ff"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/stone-soup-0.25.0.mojave.bottle.tar.gz",
-          "sha256": "2a71971d6bdee93844c05089b6c4d0fe91b2c11792409550ff7629546104722a"
+          "url": "https://linuxbrew.bintray.com/bottles/kde-ki18n-5.71.0.mojave.bottle.tar.gz",
+          "sha256": "9d232a966808e5bebddc00819eece8f8e779aec8419589acb48c636eba56ca2c"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/stone-soup-0.25.0.high_sierra.bottle.tar.gz",
-          "sha256": "76db4783ef4ec3373e3f0fd074e6183526de42718fe9dec051d0afc9802ec22e"
+          "url": "https://linuxbrew.bintray.com/bottles/kde-ki18n-5.71.0.high_sierra.bottle.tar.gz",
+          "sha256": "939d483a02fd119a3baa75e2218f96f539aacc6c620aa1870282255ca22677f0"
         }
       }
     }
@@ -53,13 +53,14 @@
 
   ],
   "build_dependencies": [
-    "pkg-config",
-    "python@3.8"
+    "cmake",
+    "doxygen",
+    "graphviz",
+    "kde-extra-cmake-modules"
   ],
   "dependencies": [
-    "lua@5.1",
-    "pcre",
-    "sqlite"
+    "gettext",
+    "qt"
   ],
   "recommended_dependencies": [
 

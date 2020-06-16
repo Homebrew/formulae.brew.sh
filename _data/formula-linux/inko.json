@@ -1,6 +1,6 @@
 {
-  "name": "redo",
-  "full_name": "redo",
+  "name": "inko",
+  "full_name": "inko",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Implements djb's redo: an alternative to make",
-  "homepage": "https://redo.rtfd.io/",
+  "desc": "The Inko programming language",
+  "homepage": "https://inko-lang.org/",
   "versions": {
-    "stable": "0.42c",
+    "stable": "0.6.0",
     "devel": null,
-    "head": null,
+    "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/apenwarr/redo/archive/redo-0.42c.tar.gz",
+      "url": "https://gitlab.com/inko-lang/inko/-/archive/v0.6.0/inko-v0.6.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,16 +33,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/redo-0.42c.catalina.bottle.tar.gz",
-          "sha256": "a1198ba3e8feb77e588367d6c829fccd07a89baa0eb85a0dddbd27d75d926fa6"
+          "url": "https://linuxbrew.bintray.com/bottles/inko-0.6.0.catalina.bottle.tar.gz",
+          "sha256": "f3191304d3390550d8c47e063ca84e204d571f398c6034fda2395487f8aa81ea"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/redo-0.42c.mojave.bottle.tar.gz",
-          "sha256": "801a8288a70e024e715b8fdfdcf6b2eca37d51ddb5f3b64d0809bf929c46e180"
+          "url": "https://linuxbrew.bintray.com/bottles/inko-0.6.0.mojave.bottle.tar.gz",
+          "sha256": "be14d156158816f1389f2b18e04f06f8a6bc9310c9ff6286e1045d9a98f27f18"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/redo-0.42c.high_sierra.bottle.tar.gz",
-          "sha256": "78615055158a19503f04f1ef8698b4dc9cf7f61753b9f5bc59bd3fe99c2c11d9"
+          "url": "https://linuxbrew.bintray.com/bottles/inko-0.6.0.high_sierra.bottle.tar.gz",
+          "sha256": "751dd81d09fcbd7aff9fe9580997d04f8c96ea45c064a18b94455c7508a3ba7e"
         }
       }
     }
@@ -53,10 +53,15 @@
 
   ],
   "build_dependencies": [
-
+    "autoconf",
+    "automake",
+    "coreutils",
+    "libtool",
+    "make",
+    "rust"
   ],
   "dependencies": [
-    "python@3.8"
+    "ruby"
   ],
   "recommended_dependencies": [
 
