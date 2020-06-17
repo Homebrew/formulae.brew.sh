@@ -1,5 +1,8 @@
 name: Scheduled regeneration
 on:
+  pull_request:
+    paths:
+      - .github/workflows/scheduled.yml
   schedule:
     # Once every other hour
     - cron:  '30 */2 * * *'
