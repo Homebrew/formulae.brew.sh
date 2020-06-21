@@ -1,6 +1,6 @@
 {
-  "name": "idris2",
-  "full_name": "idris2",
+  "name": "amp",
+  "full_name": "amp",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Pure functional programming language with dependent types",
-  "homepage": "https://www.idris-lang.org/",
+  "desc": "Text editor for your terminal",
+  "homepage": "https://amp.rs",
   "versions": {
-    "stable": "0.2.0",
+    "stable": "0.6.2",
     "devel": null,
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/idris-lang/Idris2/archive/v0.2.0.tar.gz",
+      "url": "https://github.com/jmacdonald/amp/archive/0.6.2.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -27,22 +27,22 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
-      "cellar": ":any",
+      "rebuild": 0,
+      "cellar": ":any_skip_relocation",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/idris2-0.2.0.catalina.bottle.1.tar.gz",
-          "sha256": "3dd1bbee7fae182553f34b89bf5c3049a8b8bfcd4206c7c7b904ad6b0672259b"
+          "url": "https://linuxbrew.bintray.com/bottles/amp-0.6.2.catalina.bottle.tar.gz",
+          "sha256": "6d91e4902ead60e50e7dd5b7faed62a4f41999433b321e2b48682d8e8f057f2c"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/idris2-0.2.0.mojave.bottle.1.tar.gz",
-          "sha256": "48268ef2985009712a46469b3ec7f849ba91f640d17e8f0b86b24f9e0477c267"
+          "url": "https://linuxbrew.bintray.com/bottles/amp-0.6.2.mojave.bottle.tar.gz",
+          "sha256": "59f96770d9e4e166c6eabfb359ada98c41edece8b2fbb877b4e855977445aaa2"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/idris2-0.2.0.high_sierra.bottle.1.tar.gz",
-          "sha256": "4f0a8f3c3ef289309fe2b02ff6f5b395e3b71fee94de1dbc0b9a70589788b1bd"
+          "url": "https://linuxbrew.bintray.com/bottles/amp-0.6.2.high_sierra.bottle.tar.gz",
+          "sha256": "96ed5e0a0ba3d05358c840ee0ca157d75ca5f4613fc0e152465806d9950bfa9e"
         }
       }
     }
@@ -53,10 +53,11 @@
 
   ],
   "build_dependencies": [
-    "coreutils"
+    "cmake",
+    "rust"
   ],
   "dependencies": [
-    "chezscheme"
+    "libiconv"
   ],
   "recommended_dependencies": [
 
