@@ -11,42 +11,42 @@
   "desc": "Utility that provides fast incremental file transfer",
   "homepage": "https://rsync.samba.org/",
   "versions": {
-    "stable": "3.1.3",
+    "stable": "3.2.0",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://rsync.samba.org/ftp/rsync/rsync-3.1.3.tar.gz",
+      "url": "https://rsync.samba.org/ftp/rsync/rsync-3.2.0.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "cellar": ":any_skip_relocation",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/rsync-3.1.3_1.catalina.bottle.1.tar.gz",
-          "sha256": "3e390c696ea20bad8bff15a1df7abc895e3fa2f2e4a11a055982799c21f8f19c"
+          "url": "https://linuxbrew.bintray.com/bottles/rsync-3.2.0.catalina.bottle.tar.gz",
+          "sha256": "0fe5b44bca80ba7fa3add41a736725a7f86fc60791157de5ec89dc93597dff09"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/rsync-3.1.3_1.mojave.bottle.1.tar.gz",
-          "sha256": "3eec6f49103c3d69ea6d6e85131f35814af318d11db02d04272ba4a842a52a55"
+          "url": "https://linuxbrew.bintray.com/bottles/rsync-3.2.0.mojave.bottle.tar.gz",
+          "sha256": "bba164a8807192941ff3e67e9c85edbe55359a482daa6841d5071dadf353448d"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/rsync-3.1.3_1.high_sierra.bottle.1.tar.gz",
-          "sha256": "cc355e9492df6bab4952e835dd8575de86fa169f6451218c5d2c777c4d9462a5"
+          "url": "https://linuxbrew.bintray.com/bottles/rsync-3.2.0.high_sierra.bottle.tar.gz",
+          "sha256": "457f95da0f300bfa4e18727afa6aa5d8487b699aabed8caa73e82c9bdf19e293"
         },
         "x86_64_linux": {
-          "url": "https://linuxbrew.bintray.com/bottles/rsync-3.1.3_1.x86_64_linux.bottle.1.tar.gz",
-          "sha256": "b78ad6b2caac7c8474b015d455964454392b04d07a2839137b755d424a0ddc84"
+          "url": "https://linuxbrew.bintray.com/bottles/rsync-3.2.0.x86_64_linux.bottle.tar.gz",
+          "sha256": "a14bd2ca03ce1d2484914edd9551e5312ce7000e4d1bce6792288a33576c3540"
         }
       }
     }
@@ -57,10 +57,15 @@
 
   ],
   "build_dependencies": [
-    "autoconf"
+
   ],
   "dependencies": [
-
+    "lz4",
+    "openssl@1.1",
+    "popt",
+    "xxhash",
+    "zstd",
+    "zlib"
   ],
   "recommended_dependencies": [
 
