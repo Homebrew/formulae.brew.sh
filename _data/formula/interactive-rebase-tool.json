@@ -1,6 +1,6 @@
 {
-  "name": "amp",
-  "full_name": "amp",
+  "name": "interactive-rebase-tool",
+  "full_name": "interactive-rebase-tool",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Text editor for your terminal",
-  "homepage": "https://amp.rs",
+  "desc": "Native sequence editor for Git interactive rebase",
+  "homepage": "https://gitrebasetool.mitmaro.ca/",
   "versions": {
-    "stable": "0.6.2",
+    "stable": "1.2.1",
     "devel": null,
-    "head": "HEAD",
+    "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/jmacdonald/amp/archive/0.6.2.tar.gz",
+      "url": "https://github.com/MitMaro/git-interactive-rebase-tool/archive/1.2.1.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,16 +33,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/amp-0.6.2.catalina.bottle.tar.gz",
-          "sha256": "6d91e4902ead60e50e7dd5b7faed62a4f41999433b321e2b48682d8e8f057f2c"
+          "url": "https://homebrew.bintray.com/bottles/interactive-rebase-tool-1.2.1.catalina.bottle.tar.gz",
+          "sha256": "2a8d8d62c2b236884b25b0c43bfda93365501a80f807cabb071c7a682a2ea86b"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/amp-0.6.2.mojave.bottle.tar.gz",
-          "sha256": "59f96770d9e4e166c6eabfb359ada98c41edece8b2fbb877b4e855977445aaa2"
+          "url": "https://homebrew.bintray.com/bottles/interactive-rebase-tool-1.2.1.mojave.bottle.tar.gz",
+          "sha256": "5be78d2011eb211939a6d4632f279477315c0bffd321c1aa303910756e966a48"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/amp-0.6.2.high_sierra.bottle.tar.gz",
-          "sha256": "96ed5e0a0ba3d05358c840ee0ca157d75ca5f4613fc0e152465806d9950bfa9e"
+          "url": "https://homebrew.bintray.com/bottles/interactive-rebase-tool-1.2.1.high_sierra.bottle.tar.gz",
+          "sha256": "d28ef2f9af69ce2374eae1ad39591a575b5bc743e208b2cb023b8b432a4a231c"
         }
       }
     }
@@ -53,7 +53,6 @@
 
   ],
   "build_dependencies": [
-    "cmake",
     "rust"
   ],
   "dependencies": [
@@ -66,7 +65,8 @@
 
   ],
   "uses_from_macos": [
-    "libiconv"
+    "ncurses",
+    "zlib"
   ],
   "requirements": [
 

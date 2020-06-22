@@ -3,24 +3,23 @@
   "full_name": "elasticsearch",
   "oldname": null,
   "aliases": [
-    "elasticsearch@7.6"
+    "elasticsearch@6.8"
   ],
   "versioned_formulae": [
-    "elasticsearch@6.8",
     "elasticsearch@5.6",
     "elasticsearch@2.4"
   ],
   "desc": "Distributed search & analytics engine",
   "homepage": "https://www.elastic.co/products/elasticsearch",
   "versions": {
-    "stable": "7.6.2",
+    "stable": "6.8.8",
     "devel": null,
-    "head": null,
-    "bottle": true
+    "head": "HEAD",
+    "bottle": false
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/elastic/elasticsearch/archive/v7.6.2.tar.gz",
+      "url": "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-oss-6.8.8.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,29 +27,9 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
-    "stable": {
-      "rebuild": 0,
-      "cellar": ":any_skip_relocation",
-      "prefix": "/usr/local",
-      "root_url": "https://homebrew.bintray.com/bottles",
-      "files": {
-        "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/elasticsearch-7.6.2.catalina.bottle.tar.gz",
-          "sha256": "52c9b1cd71e07cc9fe341175128832f1f721a8fd49ea63cca59ab54e1bad3f62"
-        },
-        "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/elasticsearch-7.6.2.mojave.bottle.tar.gz",
-          "sha256": "50843eb82cd4f93392a09ad979d97618f2d8144cf8639c85c47ef69cd29d5e34"
-        },
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/elasticsearch-7.6.2.high_sierra.bottle.tar.gz",
-          "sha256": "6de2a2724524563fa9c9e01a189c19ec16586c712c7c1519c5f80e60410649da"
-        }
-      }
-    }
   },
   "keg_only": false,
-  "bottle_disabled": false,
+  "bottle_disabled": true,
   "options": [
 
   ],
@@ -58,7 +37,7 @@
 
   ],
   "dependencies": [
-    "openjdk"
+
   ],
   "recommended_dependencies": [
 
@@ -70,7 +49,15 @@
 
   ],
   "requirements": [
+    {
+      "name": "java",
+      "cask": "homebrew/cask-versions/adoptopenjdk8",
+      "download": null,
+      "version": "1.8",
+      "contexts": [
 
+      ]
+    }
   ],
   "conflicts_with": [
 
