@@ -11,19 +11,19 @@
   "desc": "Object oriented framework for large scale data analysis",
   "homepage": "https://root.cern.ch/",
   "versions": {
-    "stable": "6.20.04",
+    "stable": "6.22.00",
     "devel": null,
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://root.cern.ch/download/root_v6.20.04.source.tar.gz",
+      "url": "https://root.cern.ch/download/root_v6.22.00.source.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 2,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,20 +33,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/root-6.20.04_2.catalina.bottle.tar.gz",
-          "sha256": "dce89a31a8c994c04dc8d69def13c07a4cc7ba42bd082d6906bb7e6549514359"
+          "url": "https://linuxbrew.bintray.com/bottles/root-6.22.00.catalina.bottle.tar.gz",
+          "sha256": "89875687bce5d216d8e76104702150031d7b71339513966e359f2961cd18721a"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/root-6.20.04_2.mojave.bottle.tar.gz",
-          "sha256": "bc7e065853c36bba96625dd49e97739aa3a5f58cf804c65e5d31601c01e64161"
+          "url": "https://linuxbrew.bintray.com/bottles/root-6.22.00.mojave.bottle.tar.gz",
+          "sha256": "2774ff7cdba2727959afb169c22e9a55bd42640a31c5ebf222a3a25d8f47a6d9"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/root-6.20.04_2.high_sierra.bottle.tar.gz",
-          "sha256": "24ff2cdc7881b36c7b3d4653b6ce6da6c4b2747d2b3a4adc32493b4ccc5fef8e"
-        },
-        "x86_64_linux": {
-          "url": "https://linuxbrew.bintray.com/bottles/root-6.20.04_2.x86_64_linux.bottle.tar.gz",
-          "sha256": "6b2091d72ab94c5c4098fef5ffe53f97c1c929870c5b8ba0f4fd755161a007ae"
+          "url": "https://linuxbrew.bintray.com/bottles/root-6.22.00.high_sierra.bottle.tar.gz",
+          "sha256": "b34628d0657c3378870cedc065f72d9243249ec68c581ccae9eed7560adab795"
         }
       }
     }
@@ -96,7 +92,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "Because ROOT depends on several installation-dependent\nenvironment variables to function properly, you should\nadd the following commands to your shell initialization\nscript (.bashrc/.profile/etc.), or call them directly\nbefore using ROOT.\n\nFor bash users:\n  . $(brew --prefix)/bin/thisroot.sh\nFor zsh users:\n  pushd $(brew --prefix) >/dev/null; . bin/thisroot.sh; popd >/dev/null\nFor csh/tcsh users:\n  source $(brew --prefix)/bin/thisroot.csh\nFor fish users:\n  . $(brew --prefix)/bin/thisroot.fish\n",
+  "caveats": "As of ROOT 6.22, you should not need the thisroot scripts; but if you\ndepend on the custom variables set by them, you can still run them:\n\nFor bash users:\n  . $(brew --prefix)/bin/thisroot.sh\nFor zsh users:\n  pushd $(brew --prefix) >/dev/null; . bin/thisroot.sh; popd >/dev/null\nFor csh/tcsh users:\n  source $(brew --prefix)/bin/thisroot.csh\nFor fish users:\n  . $(brew --prefix)/bin/thisroot.fish\n",
   "installed": [
 
   ],
