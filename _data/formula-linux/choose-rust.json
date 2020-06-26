@@ -1,6 +1,6 @@
 {
-  "name": "ntp",
-  "full_name": "ntp",
+  "name": "choose-rust",
+  "full_name": "choose-rust",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "The Network Time Protocol (NTP) Distribution",
-  "homepage": "https://www.eecis.udel.edu/~mills/ntp/html/",
+  "desc": "Human-friendly and fast alternative to cut and (sometimes) awk",
+  "homepage": "https://github.com/theryangeary/choose",
   "versions": {
-    "stable": "4.2.8p15",
+    "stable": "1.2.0",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/ntp-4.2/ntp-4.2.8p15.tar.gz",
+      "url": "https://github.com/theryangeary/choose/archive/v1.2.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,21 +28,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": ":any_skip_relocation",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/ntp-4.2.8p15.catalina.bottle.tar.gz",
-          "sha256": "3c6a8893b0e76b8af1a4fd19ab664279b5409c1129062bf1feee4643318236b3"
+          "url": "https://linuxbrew.bintray.com/bottles/choose-rust-1.2.0.catalina.bottle.tar.gz",
+          "sha256": "8fa22384529ff492abd9859f57b7b771e0f96f911ef0a56845154c8eff73fc4d"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/ntp-4.2.8p15.mojave.bottle.tar.gz",
-          "sha256": "b69ded37b2c8304157c3f46e4484af9099b4fd1e077929c35bb630903d059856"
+          "url": "https://linuxbrew.bintray.com/bottles/choose-rust-1.2.0.mojave.bottle.tar.gz",
+          "sha256": "8753e0f24b129a4417ca550665517946aeec068d94dfe1cc129685bc8f74aafc"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/ntp-4.2.8p15.high_sierra.bottle.tar.gz",
-          "sha256": "9f7ce9c3ff545ff738fcf4049445923c968ec807cf1ecde451be76412442e6f1"
+          "url": "https://linuxbrew.bintray.com/bottles/choose-rust-1.2.0.high_sierra.bottle.tar.gz",
+          "sha256": "fa2a955907368022bd282626b6043d1ed6647d357eff05cdd634ae809ea33b9a"
         }
       }
     }
@@ -53,10 +53,10 @@
 
   ],
   "build_dependencies": [
-
+    "rust"
   ],
   "dependencies": [
-    "openssl@1.1"
+
   ],
   "recommended_dependencies": [
 
@@ -71,7 +71,8 @@
 
   ],
   "conflicts_with": [
-
+    "choose",
+    "choose-gui"
   ],
   "caveats": null,
   "installed": [
