@@ -1,6 +1,6 @@
 {
-  "name": "sbcl",
-  "full_name": "sbcl",
+  "name": "skylighting",
+  "full_name": "skylighting",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Steel Bank Common Lisp system",
-  "homepage": "http://www.sbcl.org/",
+  "desc": "Flexible syntax highlighter using KDE XML syntax descriptions",
+  "homepage": "https://github.com/jgm/skylighting",
   "versions": {
-    "stable": "2.0.6",
+    "stable": "0.8.5",
     "devel": null,
-    "head": null,
+    "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://downloads.sourceforge.net/project/sbcl/sbcl/2.0.6/sbcl-2.0.6-source.tar.bz2",
+      "url": "https://github.com/jgm/skylighting/archive/0.8.5.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,16 +33,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/sbcl-2.0.6.catalina.bottle.tar.gz",
-          "sha256": "a1a0712251e374d34d8b6a8c456ed45f24f94b1b7d5f90d237e4a54ea92f350b"
+          "url": "https://homebrew.bintray.com/bottles/skylighting-0.8.5.catalina.bottle.tar.gz",
+          "sha256": "ad47fed610330a0acdb8c452bae67188e7d6fe7c480bf77d009134767cdda8d2"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/sbcl-2.0.6.mojave.bottle.tar.gz",
-          "sha256": "2dfda3f01b4c7adb5c0ea65af79bbf164d8008bae56345242fee1be2b65c7556"
+          "url": "https://homebrew.bintray.com/bottles/skylighting-0.8.5.mojave.bottle.tar.gz",
+          "sha256": "5e42120c8f8a483d79f874f34d75173b94589bf202d694551af4ab3579f31524"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/sbcl-2.0.6.high_sierra.bottle.tar.gz",
-          "sha256": "e487ad7b1a86d025dd11bda24f780768c448012bae30199978ddd2ed2f2535e3"
+          "url": "https://homebrew.bintray.com/bottles/skylighting-0.8.5.high_sierra.bottle.tar.gz",
+          "sha256": "d2d99c49b0aaea3c3d4cbfc672bb2ea9de65336b6eb696f59e6edc03cb962184"
         }
       }
     }
@@ -53,7 +53,8 @@
 
   ],
   "build_dependencies": [
-
+    "cabal-install",
+    "ghc@8.8"
   ],
   "dependencies": [
 
@@ -65,7 +66,7 @@
 
   ],
   "uses_from_macos": [
-    "zlib"
+
   ],
   "requirements": [
 
