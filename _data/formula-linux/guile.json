@@ -28,26 +28,26 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 0,
+      "rebuild": 1,
       "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/guile-3.0.4.catalina.bottle.tar.gz",
-          "sha256": "ebc624a09a10ff033ac3027a44e39b6794f5c45fd3098dc7d1d7e991392474db"
+          "url": "https://linuxbrew.bintray.com/bottles/guile-3.0.4.catalina.bottle.1.tar.gz",
+          "sha256": "82d5ae8de3a1c8bf11e35b53487d6dbd14536376d04b9939df052f2eac66f0f0"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/guile-3.0.4.mojave.bottle.tar.gz",
-          "sha256": "ee6ba8b247f3db6e463da22a828a599adacefe987cac32377e279c508418be83"
+          "url": "https://linuxbrew.bintray.com/bottles/guile-3.0.4.mojave.bottle.1.tar.gz",
+          "sha256": "ed3f5ae6d9331860184d93c8e4d3e230c4b1558a330a9a23042115aef17c7ed5"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/guile-3.0.4.high_sierra.bottle.tar.gz",
-          "sha256": "b60e3ffe45ac702a4d02edcf85a878ec88ead3a059e0db9c56cbd7e07152a550"
+          "url": "https://linuxbrew.bintray.com/bottles/guile-3.0.4.high_sierra.bottle.1.tar.gz",
+          "sha256": "1e02fde47f568f75a58911b9c14ba60169c77ed09bdddb9038a4b89adc153b9d"
         },
         "x86_64_linux": {
-          "url": "https://linuxbrew.bintray.com/bottles/guile-3.0.4.x86_64_linux.bottle.tar.gz",
-          "sha256": "24bc3cb9ed41d083204818f81dca14172bb23710e4585a9b3cf7985114c36e11"
+          "url": "https://linuxbrew.bintray.com/bottles/guile-3.0.4.x86_64_linux.bottle.1.tar.gz",
+          "sha256": "fac6ec8e9c85c353a290b702f78c4f8ed74deb442bc329d5fec1c8d2dd43ac17"
         }
       }
     }
@@ -85,7 +85,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "Guile libraries can now be installed here:\n    Source files: $(brew --prefix)/share/guile/site/3.0\n  Compiled files: $(brew --prefix)/lib/guile/3.0/site-ccache\n\nAdd the following to your .bashrc or equivalent:\n  export GUILE_LOAD_PATH=\"$(brew --prefix)/share/guile/site/3.0\"\n  export GUILE_LOAD_COMPILED_PATH=\"$(brew --prefix)/lib/guile/3.0/site-ccache\"\n",
+  "caveats": "Guile libraries can now be installed here:\n    Source files: $(brew --prefix)/share/guile/site/3.0\n  Compiled files: $(brew --prefix)/lib/guile/3.0/site-ccache\n      Extensions: $(brew --prefix)/lib/guile/3.0/extensions\n\nAdd the following to your .bashrc or equivalent:\n  export GUILE_LOAD_PATH=\"$(brew --prefix)/share/guile/site/3.0\"\n  export GUILE_LOAD_COMPILED_PATH=\"$(brew --prefix)/lib/guile/3.0/site-ccache\"\n  export GUILE_SYSTEM_EXTENSIONS_PATH=\"$(brew --prefix)/lib/guile/3.0/extensions\"\n",
   "installed": [
 
   ],
