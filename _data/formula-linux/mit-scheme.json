@@ -44,6 +44,10 @@
         "high_sierra": {
           "url": "https://linuxbrew.bintray.com/bottles/mit-scheme-10.1.11.high_sierra.bottle.tar.gz",
           "sha256": "cf0d2bf18da0dd0454f53f125bcb4d85632619cd8a79f3dd30ddb16a19c0d470"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/mit-scheme-10.1.11.x86_64_linux.bottle.tar.gz",
+          "sha256": "91f09c9fbc4731da8933b9bbfb2f089ac4e7ec9a61298468903159b4eea3fdc8"
         }
       }
     }
@@ -54,10 +58,12 @@
 
   ],
   "build_dependencies": [
-
+    "m4",
+    "texinfo"
   ],
   "dependencies": [
-    "openssl@1.1"
+    "openssl@1.1",
+    "ncurses"
   ],
   "recommended_dependencies": [
 
