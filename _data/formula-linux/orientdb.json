@@ -12,29 +12,49 @@
   "license": null,
   "homepage": "https://orientdb.com/",
   "versions": {
-    "stable": "2.2.29",
+    "stable": "3.1.0",
     "devel": null,
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://orientdb.com/download.php?file=orientdb-community-importers-2.2.29.tar.gz",
+      "url": "https://s3.us-east-2.amazonaws.com/orientdb3/releases/3.1.0/orientdb-3.1.0.zip",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any_skip_relocation",
+      "prefix": "/home/linuxbrew/.linuxbrew",
+      "root_url": "https://linuxbrew.bintray.com/bottles",
+      "files": {
+        "catalina": {
+          "url": "https://linuxbrew.bintray.com/bottles/orientdb-3.1.0.catalina.bottle.tar.gz",
+          "sha256": "9855e1f9406b889701a242cbf7a5fc9dcc6d93e1fe7d5d043af591661997d037"
+        },
+        "mojave": {
+          "url": "https://linuxbrew.bintray.com/bottles/orientdb-3.1.0.mojave.bottle.tar.gz",
+          "sha256": "9855e1f9406b889701a242cbf7a5fc9dcc6d93e1fe7d5d043af591661997d037"
+        },
+        "high_sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/orientdb-3.1.0.high_sierra.bottle.tar.gz",
+          "sha256": "9855e1f9406b889701a242cbf7a5fc9dcc6d93e1fe7d5d043af591661997d037"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
   "build_dependencies": [
-
+    "maven"
   ],
   "dependencies": [
     "openjdk"
@@ -54,7 +74,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "The OrientDB root password was set to 'orientdb'. To reset it:\n  https://orientdb.com/docs/2.2/Server-Security.html#restoring-the-servers-user-root\n",
+  "caveats": "The OrientDB root password was set to 'orientdb'. To reset it:\n  https://orientdb.com/docs/last/security/Server-Security.html#restoring-the-servers-user-root\n",
   "installed": [
 
   ],

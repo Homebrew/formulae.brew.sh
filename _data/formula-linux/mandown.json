@@ -1,6 +1,6 @@
 {
-  "name": "aws-sdk-cpp",
-  "full_name": "aws-sdk-cpp",
+  "name": "mandown",
+  "full_name": "mandown",
   "oldname": null,
   "aliases": [
 
@@ -8,18 +8,18 @@
   "versioned_formulae": [
 
   ],
-  "desc": "AWS SDK for C++",
+  "desc": "Man-page inspired Markdown viewer",
   "license": null,
-  "homepage": "https://github.com/aws/aws-sdk-cpp",
+  "homepage": "https://github.com/Titor8115/mandown",
   "versions": {
-    "stable": "1.8.1",
+    "stable": "1.0.1",
     "devel": null,
-    "head": "HEAD",
+    "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/aws/aws-sdk-cpp/archive/1.8.1.tar.gz",
+      "url": "https://github.com/Titor8115/mandown/archive/v1.0.1.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -29,21 +29,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+      "cellar": ":any_skip_relocation",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/aws-sdk-cpp-1.8.1.catalina.bottle.tar.gz",
-          "sha256": "c03d8fc638156a10d777e83b0ef58541faacc135d7621991a91139c90b6fc9a2"
+          "url": "https://linuxbrew.bintray.com/bottles/mandown-1.0.1.catalina.bottle.tar.gz",
+          "sha256": "09ad2e54a3b54c9687580b4499f4c5247dfd2e18fb64230b3c255fbc7df1c5be"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/aws-sdk-cpp-1.8.1.mojave.bottle.tar.gz",
-          "sha256": "f8c1a4774c442183976bac5527cac22de93c110704ee76f03d96670fe2fb4e2d"
+          "url": "https://linuxbrew.bintray.com/bottles/mandown-1.0.1.mojave.bottle.tar.gz",
+          "sha256": "9186b868866dd17f080343297e145161f3fe6303701a12bd0a47f8ef246f6630"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/aws-sdk-cpp-1.8.1.high_sierra.bottle.tar.gz",
-          "sha256": "090a8cbf6763256bdad2c7f79bee8de6239312630d1a8d644ffb75d80bc2daee"
+          "url": "https://linuxbrew.bintray.com/bottles/mandown-1.0.1.high_sierra.bottle.tar.gz",
+          "sha256": "acf617ed0300f38b429ed05504c47bb9e403441316d335ae83bf28c18baa63a6"
         }
       }
     }
@@ -54,10 +54,11 @@
 
   ],
   "build_dependencies": [
-    "cmake"
+
   ],
   "dependencies": [
-    "curl"
+    "libxml2",
+    "ncurses"
   ],
   "recommended_dependencies": [
 

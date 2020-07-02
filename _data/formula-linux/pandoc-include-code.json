@@ -1,6 +1,6 @@
 {
-  "name": "swiftformat",
-  "full_name": "swiftformat",
+  "name": "pandoc-include-code",
+  "full_name": "pandoc-include-code",
   "oldname": null,
   "aliases": [
 
@@ -8,18 +8,18 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Formatting tool for reformatting Swift code",
+  "desc": "Pandoc filter for including code from source files",
   "license": null,
-  "homepage": "https://github.com/nicklockwood/SwiftFormat",
+  "homepage": "https://github.com/owickstrom/pandoc-include-code",
   "versions": {
-    "stable": "0.44.15",
+    "stable": "1.5.0.0",
     "devel": null,
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/nicklockwood/SwiftFormat/archive/0.44.15.tar.gz",
+      "url": "https://hackage.haskell.org/package/pandoc-include-code-1.5.0.0/pandoc-include-code-1.5.0.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -34,16 +34,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/swiftformat-0.44.15.catalina.bottle.tar.gz",
-          "sha256": "6dcbcb2fe8b38daff70d10e45f547df32b185a34ac63a380a88bb53e5007f1f8"
+          "url": "https://linuxbrew.bintray.com/bottles/pandoc-include-code-1.5.0.0.catalina.bottle.tar.gz",
+          "sha256": "00437f205875a67ba6131e7e6643c0d947d5fe7bcbfa5cdd0c8640e863f827ac"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/swiftformat-0.44.15.mojave.bottle.tar.gz",
-          "sha256": "3a6c988d69a1b7d386d6999a6777b900c7f640bc15e1814ccd8b9cc4cc5abd93"
+          "url": "https://linuxbrew.bintray.com/bottles/pandoc-include-code-1.5.0.0.mojave.bottle.tar.gz",
+          "sha256": "901fd1495a596e376ba96e744333726f80eeef0a0c97571c1ab871167822894d"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/swiftformat-0.44.15.high_sierra.bottle.tar.gz",
-          "sha256": "7717d97fdd2fe2f0ec87f8f26a8562dff83d5128a4794def66ae660deadc5bae"
+          "url": "https://linuxbrew.bintray.com/bottles/pandoc-include-code-1.5.0.0.high_sierra.bottle.tar.gz",
+          "sha256": "86aaeb61035401d0288d5352ee6613e688c3d22ff26f785e76ef5065cf13f993"
         }
       }
     }
@@ -54,10 +54,11 @@
 
   ],
   "build_dependencies": [
-
+    "cabal-install",
+    "ghc"
   ],
   "dependencies": [
-
+    "pandoc"
   ],
   "recommended_dependencies": [
 
@@ -69,15 +70,7 @@
 
   ],
   "requirements": [
-    {
-      "name": "macos",
-      "cask": null,
-      "download": null,
-      "version": null,
-      "contexts": [
 
-      ]
-    }
   ],
   "conflicts_with": [
 
