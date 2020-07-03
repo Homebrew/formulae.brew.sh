@@ -1,6 +1,6 @@
 {
-  "name": "grin-wallet",
-  "full_name": "grin-wallet",
+  "name": "buildozer",
+  "full_name": "buildozer",
   "oldname": null,
   "aliases": [
 
@@ -8,20 +8,20 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Official wallet for the cryptocurrency Grin",
+  "desc": "Rewrite bazel BUILD files using standard commands",
   "license": null,
-  "homepage": "https://grin.mw",
+  "homepage": "https://github.com/bazelbuild/buildtools",
   "versions": {
-    "stable": "4.0.0",
+    "stable": "3.3.0",
     "devel": null,
-    "head": null,
+    "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/mimblewimble/grin-wallet/archive/v4.0.0.tar.gz",
-      "tag": null,
-      "revision": null
+      "url": "https://github.com/bazelbuild/buildtools.git",
+      "tag": "3.3.0",
+      "revision": "ce0cf814cb03dddf546ea92b3d6bafddb0b9eaf8"
     }
   },
   "revision": 0,
@@ -34,16 +34,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/grin-wallet-4.0.0.catalina.bottle.tar.gz",
-          "sha256": "99c3c710cca324b279b9f53db6687c5f35dceb1a7fab99e6da08734f1f14fb64"
+          "url": "https://linuxbrew.bintray.com/bottles/buildozer-3.3.0.catalina.bottle.tar.gz",
+          "sha256": "394ee9a737ae1961fc4a9b64077b34ebbf62ed61466b0445a859e3277b9d3b43"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/grin-wallet-4.0.0.mojave.bottle.tar.gz",
-          "sha256": "9527840eae34a19dc485a2f13fe0d0422429f08e2352267a637a41b5bf31bf1d"
+          "url": "https://linuxbrew.bintray.com/bottles/buildozer-3.3.0.mojave.bottle.tar.gz",
+          "sha256": "394ee9a737ae1961fc4a9b64077b34ebbf62ed61466b0445a859e3277b9d3b43"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/grin-wallet-4.0.0.high_sierra.bottle.tar.gz",
-          "sha256": "c9f755928079e4d3073e5f80071b2d7a860b3f0daaf44abd0e0d5c1c1c106cab"
+          "url": "https://linuxbrew.bintray.com/bottles/buildozer-3.3.0.high_sierra.bottle.tar.gz",
+          "sha256": "394ee9a737ae1961fc4a9b64077b34ebbf62ed61466b0445a859e3277b9d3b43"
         }
       }
     }
@@ -54,8 +54,7 @@
 
   ],
   "build_dependencies": [
-    "llvm",
-    "rust"
+    "bazelisk"
   ],
   "dependencies": [
 
