@@ -1,6 +1,6 @@
 {
-  "name": "freeling",
-  "full_name": "freeling",
+  "name": "vgrep",
+  "full_name": "vgrep",
   "oldname": null,
   "aliases": [
 
@@ -8,18 +8,18 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Suite of language analyzers",
-  "license": null,
-  "homepage": "http://nlp.lsi.upc.edu/freeling/",
+  "desc": "User-friendly pager for grep",
+  "license": "GPL-3.0",
+  "homepage": "https://github.com/vrothberg/vgrep",
   "versions": {
-    "stable": "4.1.1",
+    "stable": "2.3.3",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/TALP-UPC/FreeLing/archive/4.1.1.tar.gz",
+      "url": "https://github.com/vrothberg/vgrep/archive/v2.3.3.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -29,21 +29,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": "/usr/local/Cellar",
+      "cellar": ":any_skip_relocation",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/freeling-4.1.1.catalina.bottle.tar.gz",
-          "sha256": "5dd469d40bae3f742009896fa79d140730ebabcb2a3be596ac7f43eb223586c0"
+          "url": "https://homebrew.bintray.com/bottles/vgrep-2.3.3.catalina.bottle.tar.gz",
+          "sha256": "5006d83eb22993f4cedcfce32b20b59e74526431bc44ea129b11f112f181c9a9"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/freeling-4.1.1.mojave.bottle.tar.gz",
-          "sha256": "440b48a5861925c697ea0612ebbb5c62e6b7ac4ce86dc9e0c4beac2849e72a76"
+          "url": "https://homebrew.bintray.com/bottles/vgrep-2.3.3.mojave.bottle.tar.gz",
+          "sha256": "d9fe404e03ea5f5a7cd2709d0d064e4f41fae3f65d66263d242847af25040613"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/freeling-4.1.1.high_sierra.bottle.tar.gz",
-          "sha256": "70f42b87f7684ca80c8c10d357225d2ae079c169255b79eec78c5757c2935475"
+          "url": "https://homebrew.bintray.com/bottles/vgrep-2.3.3.high_sierra.bottle.tar.gz",
+          "sha256": "ab0e2c15aa3814e4e6f24c7d86a901fda915e6aa9ccbc7bbaf9d79df73ef91a4"
         }
       }
     }
@@ -54,11 +54,10 @@
 
   ],
   "build_dependencies": [
-    "cmake"
+    "go"
   ],
   "dependencies": [
-    "boost",
-    "icu4c"
+
   ],
   "recommended_dependencies": [
 
@@ -73,7 +72,7 @@
 
   ],
   "conflicts_with": [
-    "hunspell"
+
   ],
   "caveats": null,
   "installed": [
