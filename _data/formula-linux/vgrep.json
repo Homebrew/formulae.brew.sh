@@ -1,6 +1,6 @@
 {
-  "name": "seexpr",
-  "full_name": "seexpr",
+  "name": "vgrep",
+  "full_name": "vgrep",
   "oldname": null,
   "aliases": [
 
@@ -8,18 +8,18 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Embeddable expression evaluation engine",
-  "license": null,
-  "homepage": "https://www.disneyanimation.com/technology/seexpr.html",
+  "desc": "User-friendly pager for grep",
+  "license": "GPL-3.0",
+  "homepage": "https://github.com/vrothberg/vgrep",
   "versions": {
-    "stable": "3.0.1",
+    "stable": "2.3.3",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/wdas/SeExpr/archive/v3.0.1.tar.gz",
+      "url": "https://github.com/vrothberg/vgrep/archive/v2.3.3.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -29,21 +29,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": ":any_skip_relocation",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/seexpr-3.0.1.catalina.bottle.tar.gz",
-          "sha256": "2a55400ad86255b300843f7cde1dbed4130d0ba26ffc4c8725fec83b50e7f9e3"
+          "url": "https://linuxbrew.bintray.com/bottles/vgrep-2.3.3.catalina.bottle.tar.gz",
+          "sha256": "5006d83eb22993f4cedcfce32b20b59e74526431bc44ea129b11f112f181c9a9"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/seexpr-3.0.1.mojave.bottle.tar.gz",
-          "sha256": "e5ba2fcca24837fc43d11524fdeff04d9f4429f6c66421dec6c1925b60893f82"
+          "url": "https://linuxbrew.bintray.com/bottles/vgrep-2.3.3.mojave.bottle.tar.gz",
+          "sha256": "d9fe404e03ea5f5a7cd2709d0d064e4f41fae3f65d66263d242847af25040613"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/seexpr-3.0.1.high_sierra.bottle.tar.gz",
-          "sha256": "b5a3d64c08f692d25d3eb12dd9409c414939303b0b9f19396c95a13d07b46fa9"
+          "url": "https://linuxbrew.bintray.com/bottles/vgrep-2.3.3.high_sierra.bottle.tar.gz",
+          "sha256": "ab0e2c15aa3814e4e6f24c7d86a901fda915e6aa9ccbc7bbaf9d79df73ef91a4"
         }
       }
     }
@@ -54,11 +54,10 @@
 
   ],
   "build_dependencies": [
-    "cmake",
-    "doxygen"
+    "go"
   ],
   "dependencies": [
-    "libpng"
+
   ],
   "recommended_dependencies": [
 
