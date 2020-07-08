@@ -12,14 +12,14 @@
   "license": "BSD-2-Clause",
   "homepage": "https://developers.yubico.com/yubico-piv-tool/",
   "versions": {
-    "stable": "2.0.0",
+    "stable": "2.1.0",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://developers.yubico.com/yubico-piv-tool/Releases/yubico-piv-tool-2.0.0.tar.gz",
+      "url": "https://developers.yubico.com/yubico-piv-tool/Releases/yubico-piv-tool-2.1.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -29,21 +29,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": "/usr/local/Cellar",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/yubico-piv-tool-2.0.0.catalina.bottle.tar.gz",
-          "sha256": "f85cee9151108f2ca5e6e067d846123c1d55044d26ec8c7c3a29a3b7ba4e81f8"
+          "url": "https://homebrew.bintray.com/bottles/yubico-piv-tool-2.1.0.catalina.bottle.tar.gz",
+          "sha256": "11cdcfe2fe335c75e79d00b3b47e0e7970f491b5b6021dc1e53b99cb799359e9"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/yubico-piv-tool-2.0.0.mojave.bottle.tar.gz",
-          "sha256": "b4d327cc5524b7cbbbb4bf241b59f5d19556484bd5c3109964d070a7586578a2"
+          "url": "https://homebrew.bintray.com/bottles/yubico-piv-tool-2.1.0.mojave.bottle.tar.gz",
+          "sha256": "aec7c7f3cca7e869700ebc5b9a175b0ee48c76079e1f6d29c81431b4b2f9c17e"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/yubico-piv-tool-2.0.0.high_sierra.bottle.tar.gz",
-          "sha256": "1e5c8cc9a64bdfbae6d16b27029e24d9290d2f449f7ef6e90b7c47ea29cf2b3f"
+          "url": "https://homebrew.bintray.com/bottles/yubico-piv-tool-2.1.0.high_sierra.bottle.tar.gz",
+          "sha256": "87938ef20245216c4b5abef4142fc160e6ef52551406c39c01e533b6be07ca1d"
         }
       }
     }
@@ -55,10 +55,16 @@
   ],
   "build_dependencies": [
     "check",
+    "cmake",
+    "gengetopt",
+    "help2man",
+    "libtool",
     "pkg-config"
   ],
   "dependencies": [
-    "openssl@1.1"
+    "check",
+    "openssl@1.1",
+    "pcsc-lite"
   ],
   "recommended_dependencies": [
 
