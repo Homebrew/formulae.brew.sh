@@ -26,7 +26,7 @@
       "revision": null
     }
   },
-  "revision": 1,
+  "revision": 2,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -36,16 +36,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/python%403.8-3.8.3_1.catalina.bottle.tar.gz",
-          "sha256": "142f7ace3f1d12472569e89eaab40526604ea4011dcfc02ecc362e7e9f1cafba"
+          "url": "https://homebrew.bintray.com/bottles/python%403.8-3.8.3_2.catalina.bottle.tar.gz",
+          "sha256": "307604a075d3df682ba45afae0894df8c4952536bc75ddcc43e3bfa4a571f0ba"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/python%403.8-3.8.3_1.mojave.bottle.tar.gz",
-          "sha256": "f82b79eabc6546155997cecc9c62a8bebba6bc8b138952235b894ea5141ec7ce"
+          "url": "https://homebrew.bintray.com/bottles/python%403.8-3.8.3_2.mojave.bottle.tar.gz",
+          "sha256": "8ef8c06b1e6a586ae860c628c8dba7d6dd24a2d18ecfda3521a665c770ba698e"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/python%403.8-3.8.3_1.high_sierra.bottle.tar.gz",
-          "sha256": "39812747f7248f24f3c061f9b9206bd0418341d95fcefad648d3ee5e938c9e58"
+          "url": "https://homebrew.bintray.com/bottles/python%403.8-3.8.3_2.high_sierra.bottle.tar.gz",
+          "sha256": "daca18eaff445a9a1ed6923a0ee7bf6053b42e911308335af231aa4e97381fc7"
         }
       }
     }
@@ -84,7 +84,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "Python has been installed as\n  $(brew --prefix)/opt/python@3.8/bin/python3\n\nYou can install Python packages with\n  $(brew --prefix)/opt/python@3.8/bin/pip3 install <package>\nThey will install into the site-package directory\n  $(brew --prefix)/Cellar/python@3.8/3.8.3_1/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages\n\nSee: https://docs.brew.sh/Homebrew-and-Python\n",
+  "caveats": "Python has been installed as\n  $(brew --prefix)/bin/python3\n\nUnversioned symlinks `python`, `python-config`, `pip` etc. pointing to\n`python3`, `python3-config`, `pip3` etc., respectively, have been installed into\n  $(brew --prefix)/opt/python@3.8/libexec/bin\n\nYou can install Python packages with\n  pip3 install <package>\nThey will install into the site-package directory\n  $(brew --prefix)/lib/python3.8/site-packages\n\nSee: https://docs.brew.sh/Homebrew-and-Python\n",
   "installed": [
     {
       "version": "3.7.7",
