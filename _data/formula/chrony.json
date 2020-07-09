@@ -1,6 +1,6 @@
 {
-  "name": "snakemake",
-  "full_name": "snakemake",
+  "name": "chrony",
+  "full_name": "chrony",
   "oldname": null,
   "aliases": [
 
@@ -8,18 +8,18 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Pythonic workflow system",
-  "license": "MIT",
-  "homepage": "https://snakemake.readthedocs.io/",
+  "desc": "Versatile implementation of the Network Time Protocol (NTP)",
+  "license": "GPL-2.0",
+  "homepage": "https://chrony.tuxfamily.org",
   "versions": {
-    "stable": "5.20.0",
+    "stable": "3.5",
     "devel": null,
-    "head": "HEAD",
+    "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://files.pythonhosted.org/packages/35/12/cbfa658606844ba73417aefc6fa40bb3e55e13b5a6727c79fa3fc0d494ca/snakemake-5.20.0.tar.gz",
+      "url": "https://download.tuxfamily.org/chrony/chrony-3.5.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -34,16 +34,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/snakemake-5.20.0.catalina.bottle.tar.gz",
-          "sha256": "4d5e4dbd8fdf1ce17e9c5f2f3eee462786ab468aa105eac22ff93f0a2070fa8d"
+          "url": "https://homebrew.bintray.com/bottles/chrony-3.5.catalina.bottle.tar.gz",
+          "sha256": "c9dcac360bb8b69012e963df7dcf34fa50b944bd419ce4d9c28d729cc6787ce4"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/snakemake-5.20.0.mojave.bottle.tar.gz",
-          "sha256": "2e90e7ab4c185b6b92b5c9076de050efc2c7246f301c3d8a8193bbd1bd4d5735"
+          "url": "https://homebrew.bintray.com/bottles/chrony-3.5.mojave.bottle.tar.gz",
+          "sha256": "946bc4e955230a22006204b3bea76ae4f5b3bd186f94fad91e3fc4d5c10b7a02"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/snakemake-5.20.0.high_sierra.bottle.tar.gz",
-          "sha256": "f15b2c56a8574629f49c503a63bc7cecaca504eaee2353bd957521f3bf15cfd1"
+          "url": "https://homebrew.bintray.com/bottles/chrony-3.5.high_sierra.bottle.tar.gz",
+          "sha256": "856b8ccc137b877687e7054b28e160b0ecd7b5b94a76b6d4a6978258dbf619e4"
         }
       }
     }
@@ -57,7 +57,7 @@
 
   ],
   "dependencies": [
-    "python@3.8"
+    "nettle"
   ],
   "recommended_dependencies": [
 
@@ -66,7 +66,7 @@
 
   ],
   "uses_from_macos": [
-
+    "libedit"
   ],
   "requirements": [
 
