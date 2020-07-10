@@ -3,17 +3,22 @@
   "name": [
     "podman"
   ],
-  "homepage": "https://github.com/containers/libpod/",
-  "url": "https://github.com/containers/libpod/releases/download/v2.0.2/podman-remote-release-darwin.zip",
-  "appcast": "https://github.com/containers/libpod/releases.atom",
+  "homepage": "https://github.com/containers/podman/",
+  "url": "https://github.com/containers/podman/releases/download/v2.0.2/podman-remote-release-darwin.zip",
+  "appcast": "https://github.com/containers/podman/releases.atom",
   "version": "2.0.2",
-  "sha256": "90e6fc832880323b9069617f9e5b384708be007dbafe50b3270b46923f454209",
+  "sha256": "5ae54572d791b1a0f22090c5873ba288c777564d0ea4c23c0a32e3708819c0dc",
   "artifacts": [
     [
       "podman"
     ],
     "postflight (Postflight Block)",
-    "uninstall_postflight (Postflight Block)"
+    "uninstall_postflight (Postflight Block)",
+    {
+      "trash": "~/.config/containers",
+      "signal": {
+      }
+    }
   ],
   "caveats": null,
   "depends_on": {
