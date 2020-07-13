@@ -1,6 +1,6 @@
 {
-  "name": "dhall-yaml",
-  "full_name": "dhall-yaml",
+  "name": "arrayfire",
+  "full_name": "arrayfire",
   "oldname": null,
   "aliases": [
 
@@ -8,18 +8,18 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Convert between Dhall and YAML",
+  "desc": "General purpose GPU library",
   "license": "BSD-3-Clause",
-  "homepage": "https://github.com/dhall-lang/dhall-haskell/tree/master/dhall-yaml",
+  "homepage": "https://arrayfire.com",
   "versions": {
-    "stable": "1.2.0",
+    "stable": "3.7.2",
     "devel": null,
-    "head": "HEAD",
+    "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://hackage.haskell.org/package/dhall-yaml-1.2.0/dhall-yaml-1.2.0.tar.gz",
+      "url": "https://github.com/arrayfire/arrayfire/releases/download/v3.7.2/arrayfire-full-3.7.2.tar.bz2",
       "tag": null,
       "revision": null
     }
@@ -29,21 +29,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any_skip_relocation",
+      "cellar": ":any",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/dhall-yaml-1.2.0.catalina.bottle.tar.gz",
-          "sha256": "6e267f158c3fcb8f5442ab893aae92e2e7051023085b5f207271b4b846e26e4e"
+          "url": "https://homebrew.bintray.com/bottles/arrayfire-3.7.2.catalina.bottle.tar.gz",
+          "sha256": "ee4a83613f9c2515a0b59a19bf83913c6f8f81646e5e0d024d2850508cc6925c"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/dhall-yaml-1.2.0.mojave.bottle.tar.gz",
-          "sha256": "54c3ca079dee8bbabffe6247f55ec30591f0a3facc8a76aeeec841423da63926"
+          "url": "https://homebrew.bintray.com/bottles/arrayfire-3.7.2.mojave.bottle.tar.gz",
+          "sha256": "20ffb2185bdca09c2797186c17c7e89146b367c9c5c95f0602dfc02e4f14bb16"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/dhall-yaml-1.2.0.high_sierra.bottle.tar.gz",
-          "sha256": "f82cd5dc0c3b8bca94dedfe0a709ea5dab38f7e5ab110df504ead04b8ec7d278"
+          "url": "https://homebrew.bintray.com/bottles/arrayfire-3.7.2.high_sierra.bottle.tar.gz",
+          "sha256": "e0b0931974ffa870ec3e48f712aa0eaaaead6880214ba158f94215f70a2f2241"
         }
       }
     }
@@ -54,11 +54,14 @@
 
   ],
   "build_dependencies": [
-    "cabal-install",
-    "ghc"
+    "boost",
+    "cmake",
+    "doxygen"
   ],
   "dependencies": [
-
+    "fftw",
+    "freeimage",
+    "openblas"
   ],
   "recommended_dependencies": [
 
