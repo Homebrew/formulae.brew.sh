@@ -1,6 +1,6 @@
 {
-  "name": "pandoc",
-  "full_name": "pandoc",
+  "name": "subfinder",
+  "full_name": "subfinder",
   "oldname": null,
   "aliases": [
 
@@ -8,18 +8,18 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Swiss-army knife of markup format conversion",
-  "license": null,
-  "homepage": "https://pandoc.org/",
+  "desc": "Subdomain discovery tool",
+  "license": "MIT",
+  "homepage": "https://github.com/projectdiscovery/subfinder",
   "versions": {
-    "stable": "2.10",
+    "stable": "2.3.6",
     "devel": null,
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://hackage.haskell.org/package/pandoc-2.10/pandoc-2.10.tar.gz",
+      "url": "https://github.com/projectdiscovery/subfinder/archive/v2.3.6.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,22 +28,22 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "cellar": ":any_skip_relocation",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/pandoc-2.10.catalina.bottle.1.tar.gz",
-          "sha256": "ce29d83ef5cf103c34a3a2339239f9ee1e7f566cd88c218a5cfde0558b237240"
+          "url": "https://homebrew.bintray.com/bottles/subfinder-2.3.6.catalina.bottle.tar.gz",
+          "sha256": "09dc0347f7b7cc454903abcea0e962289d4dd11c5a4bb067c8c454855d9db25d"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/pandoc-2.10.mojave.bottle.1.tar.gz",
-          "sha256": "10dedb8ffcffce1410ab12998e2c47b251b442e860afbfb9766c1be6b22a94f8"
+          "url": "https://homebrew.bintray.com/bottles/subfinder-2.3.6.mojave.bottle.tar.gz",
+          "sha256": "0820be0f2658e42671c63d223c780c61eb49bbf246455d382d89de7c615b0bea"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/pandoc-2.10.high_sierra.bottle.1.tar.gz",
-          "sha256": "3e39b1ce08f07ac89200da2abef10fc5812a8898ba6daee3e5d6c871ff0d9f6b"
+          "url": "https://homebrew.bintray.com/bottles/subfinder-2.3.6.high_sierra.bottle.tar.gz",
+          "sha256": "b18f4004c01b54e5c0f0c07ec5efbfe581cdef10e8fe72ffe8968284579e5052"
         }
       }
     }
@@ -54,8 +54,7 @@
 
   ],
   "build_dependencies": [
-    "cabal-install",
-    "ghc"
+    "go"
   ],
   "dependencies": [
 
@@ -67,10 +66,7 @@
 
   ],
   "uses_from_macos": [
-    {
-      "unzip": "build"
-    },
-    "zlib"
+
   ],
   "requirements": [
 

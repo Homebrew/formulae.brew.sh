@@ -1,6 +1,6 @@
 {
-  "name": "pandoc",
-  "full_name": "pandoc",
+  "name": "naabu",
+  "full_name": "naabu",
   "oldname": null,
   "aliases": [
 
@@ -8,18 +8,18 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Swiss-army knife of markup format conversion",
-  "license": null,
-  "homepage": "https://pandoc.org/",
+  "desc": "Fast port scanner",
+  "license": "GPL-3.0",
+  "homepage": "https://github.com/projectdiscovery/naabu",
   "versions": {
-    "stable": "2.10",
+    "stable": "1.1.4",
     "devel": null,
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://hackage.haskell.org/package/pandoc-2.10/pandoc-2.10.tar.gz",
+      "url": "https://github.com/projectdiscovery/naabu/archive/v1.1.4.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,22 +28,22 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "cellar": ":any_skip_relocation",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/pandoc-2.10.catalina.bottle.1.tar.gz",
-          "sha256": "ce29d83ef5cf103c34a3a2339239f9ee1e7f566cd88c218a5cfde0558b237240"
+          "url": "https://homebrew.bintray.com/bottles/naabu-1.1.4.catalina.bottle.tar.gz",
+          "sha256": "e1e9c6b69d6b8c8c325fb351e26f0820802fcb6bbdb35359a88845a69ffb2df1"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/pandoc-2.10.mojave.bottle.1.tar.gz",
-          "sha256": "10dedb8ffcffce1410ab12998e2c47b251b442e860afbfb9766c1be6b22a94f8"
+          "url": "https://homebrew.bintray.com/bottles/naabu-1.1.4.mojave.bottle.tar.gz",
+          "sha256": "e300d1ecc613eea764fd9826cf7c46b2c98f1e92cc9a49463aa7e20f5d068e35"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/pandoc-2.10.high_sierra.bottle.1.tar.gz",
-          "sha256": "3e39b1ce08f07ac89200da2abef10fc5812a8898ba6daee3e5d6c871ff0d9f6b"
+          "url": "https://homebrew.bintray.com/bottles/naabu-1.1.4.high_sierra.bottle.tar.gz",
+          "sha256": "a12a9444acb90e7f1b790f5f4535de9f7889a3beedd89b03d8dc56d3c4954be9"
         }
       }
     }
@@ -54,8 +54,7 @@
 
   ],
   "build_dependencies": [
-    "cabal-install",
-    "ghc"
+    "go"
   ],
   "dependencies": [
 
@@ -67,10 +66,7 @@
 
   ],
   "uses_from_macos": [
-    {
-      "unzip": "build"
-    },
-    "zlib"
+
   ],
   "requirements": [
 
