@@ -1,6 +1,6 @@
 {
-  "name": "serverless",
-  "full_name": "serverless",
+  "name": "croaring",
+  "full_name": "croaring",
   "oldname": null,
   "aliases": [
 
@@ -8,18 +8,18 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Build applications with serverless architectures",
-  "license": "MIT",
-  "homepage": "https://serverless.com",
+  "desc": "Roaring bitmaps in C (and C++)",
+  "license": "Apache-2.0",
+  "homepage": "https://roaringbitmap.org",
   "versions": {
-    "stable": "1.75.1",
+    "stable": "0.2.66",
     "devel": null,
-    "head": null,
+    "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/serverless/serverless/archive/v1.75.1.tar.gz",
+      "url": "https://github.com/RoaringBitmap/CRoaring/archive/v0.2.66.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -29,21 +29,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any_skip_relocation",
+      "cellar": ":any",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/serverless-1.75.1.catalina.bottle.tar.gz",
-          "sha256": "5d07c2de6b02992ae0d6529ee92d8caca549d998ce49b1a39cf364dfbbecdfd5"
+          "url": "https://linuxbrew.bintray.com/bottles/croaring-0.2.66.catalina.bottle.tar.gz",
+          "sha256": "755fadb67394a7b031626671412623348a561e290d379592b8c2925aa4e1f671"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/serverless-1.75.1.mojave.bottle.tar.gz",
-          "sha256": "2132ae3310cfc3dfcabaafb44218b8ff9cb6bf05e982362e2a11e82e4d124816"
+          "url": "https://linuxbrew.bintray.com/bottles/croaring-0.2.66.mojave.bottle.tar.gz",
+          "sha256": "b70622cb9515f3702faa0cf8f60a26c5e7481399d1a244a5217bffdf1ab269d3"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/serverless-1.75.1.high_sierra.bottle.tar.gz",
-          "sha256": "269bec22d0a3442859504618974580190293f94df0cafac64e5108c215a9c284"
+          "url": "https://linuxbrew.bintray.com/bottles/croaring-0.2.66.high_sierra.bottle.tar.gz",
+          "sha256": "aee7d4e0440e29a2a27694bac0326758590bd36d86254de1888e4044b0de576e"
         }
       }
     }
@@ -54,11 +54,10 @@
 
   ],
   "build_dependencies": [
-
+    "cmake"
   ],
   "dependencies": [
-    "node",
-    "python"
+
   ],
   "recommended_dependencies": [
 
