@@ -1,6 +1,6 @@
 {
-  "name": "opa",
-  "full_name": "opa",
+  "name": "kubie",
+  "full_name": "kubie",
   "oldname": null,
   "aliases": [
 
@@ -8,18 +8,18 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Open source, general-purpose policy engine",
-  "license": "Apache-2.0",
-  "homepage": "https://www.openpolicyagent.org",
+  "desc": "Much more powerful alternative to kubectx and kubens",
+  "license": "Zlib",
+  "homepage": "https://blog.sbstp.ca/introducing-kubie/",
   "versions": {
-    "stable": "0.22.0",
+    "stable": "0.9.1",
     "devel": null,
-    "head": "HEAD",
+    "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/open-policy-agent/opa/archive/v0.22.0.tar.gz",
+      "url": "https://github.com/sbstp/kubie/archive/v0.9.1.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -34,16 +34,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/opa-0.22.0.catalina.bottle.tar.gz",
-          "sha256": "faf8db7b543fa2aa963634b17173b3971c538da824ec088685ad1b05964b708b"
+          "url": "https://homebrew.bintray.com/bottles/kubie-0.9.1.catalina.bottle.tar.gz",
+          "sha256": "955b6ae1436406d41e9ef9ffe6df4ac571d8259becf59b51c71d938367c826a4"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/opa-0.22.0.mojave.bottle.tar.gz",
-          "sha256": "f52b6b64dc7b83f26c0cfdf3f4da90459f3fdf041540938ef91b1b760845e2d8"
+          "url": "https://homebrew.bintray.com/bottles/kubie-0.9.1.mojave.bottle.tar.gz",
+          "sha256": "3f000617f7175dbc8df85d68b8720863fec9c1f2bae2a49d5d636feb856a3a0c"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/opa-0.22.0.high_sierra.bottle.tar.gz",
-          "sha256": "5eb1507bcdc402758bc043ad63654a9cc466fb7ecb24242003dd40bd07a5ea06"
+          "url": "https://homebrew.bintray.com/bottles/kubie-0.9.1.high_sierra.bottle.tar.gz",
+          "sha256": "43e175dfd87c5f3b1dad37d2588b4063d8e1f57c16d11d84ed5d901dd948f94f"
         }
       }
     }
@@ -54,10 +54,10 @@
 
   ],
   "build_dependencies": [
-    "go"
+    "rust"
   ],
   "dependencies": [
-
+    "kubernetes-cli"
   ],
   "recommended_dependencies": [
 
