@@ -12,14 +12,14 @@
   "license": null,
   "homepage": "https://www.tug.org/texlive/",
   "versions": {
-    "stable": "20190406",
+    "stable": "20200715",
     "devel": null,
-    "head": null,
+    "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz",
+      "url": "https://www.texlive.info/tlnet-archive/2020/07/15/tlnet/install-tl-unx.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -34,8 +34,8 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "x86_64_linux": {
-          "url": "https://linuxbrew.bintray.com/bottles/texlive-20190406.x86_64_linux.bottle.tar.gz",
-          "sha256": "4e24715e406a78243cc4391aabc6dc7776390b43fd57d21315a002776ea8994a"
+          "url": "https://linuxbrew.bintray.com/bottles/texlive-20200715.x86_64_linux.bottle.tar.gz",
+          "sha256": "53d58aaace0a687dee16f6ab6966299514e1d30c3a79e7470dcab169a96d59b7"
         }
       }
     }
@@ -83,7 +83,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "The small (~500 MB) distribution (scheme-small) is installed by default.\nYou may install a larger (medium or full) scheme using one of:\n\n    tlmgr install scheme-medium # 1.5 GB\n    tlmgr install scheme-full # 6 GB\n\nFor additional information use command:\n\n    tlmgr info schemes\n",
+  "caveats": "      The small (~500 MB) distribution (scheme-small) by default.\n\n      You may install a larger (medium or full) scheme using one of:\n\n          > tlmgr install scheme-medium # 1.5 GB\n          > tlmgr install scheme-full # 6 GB\n\n      After any additional package installation, if you would like to update\n      the symlinks do:\n\n          > tlmgr path add\n          > brew unlink texlive && brew link texlive\n\n      For additional information on how to manage texlive packages:\n\n          > tlmgr --help\n\n",
   "installed": [
 
   ],
