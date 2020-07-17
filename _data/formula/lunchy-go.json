@@ -1,6 +1,6 @@
 {
-  "name": "gpgme",
-  "full_name": "gpgme",
+  "name": "lunchy-go",
+  "full_name": "lunchy-go",
   "oldname": null,
   "aliases": [
 
@@ -8,18 +8,18 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Library access to GnuPG",
-  "license": null,
-  "homepage": "https://www.gnupg.org/related_software/gpgme/",
+  "desc": "Friendly wrapper for launchctl",
+  "license": "MIT",
+  "homepage": "https://github.com/sosedoff/lunchy-go",
   "versions": {
-    "stable": "1.14.0",
+    "stable": "0.2.1",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://www.gnupg.org/ftp/gcrypt/gpgme/gpgme-1.14.0.tar.bz2",
+      "url": "https://github.com/sosedoff/lunchy-go/archive/v0.2.1.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -29,21 +29,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": ":any_skip_relocation",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/gpgme-1.14.0.catalina.bottle.tar.gz",
-          "sha256": "9adeee9e826faf7e4955cf5e7da6a3c17b6c31a8c96b27eb486201db01fae024"
+          "url": "https://homebrew.bintray.com/bottles/lunchy-go-0.2.1.catalina.bottle.tar.gz",
+          "sha256": "3a3db921e9e82d0b87f24c5763980b6fec6e332fbb6ce4833b57e58aa8402f71"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/gpgme-1.14.0.mojave.bottle.tar.gz",
-          "sha256": "8d5d6da3d5161f149e2b1b724b058f46c98c444af366a11165fb3cb2afd7cdf6"
+          "url": "https://homebrew.bintray.com/bottles/lunchy-go-0.2.1.mojave.bottle.tar.gz",
+          "sha256": "e372d1c35dbb73f11c6a826bd3bc5385f3376ebaa809972b8799a3c8483bcd09"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gpgme-1.14.0.high_sierra.bottle.tar.gz",
-          "sha256": "370890e7494a7be13e88493520715c48d2d45217daf0419594c1e78d06c6d8ac"
+          "url": "https://homebrew.bintray.com/bottles/lunchy-go-0.2.1.high_sierra.bottle.tar.gz",
+          "sha256": "7c2f3349ecf308bb53264577a1061714731126210996d17c2f7578c3bfc56056"
         }
       }
     }
@@ -54,13 +54,10 @@
 
   ],
   "build_dependencies": [
-    "python@3.8",
-    "swig"
+    "go"
   ],
   "dependencies": [
-    "gnupg",
-    "libassuan",
-    "libgpg-error"
+
   ],
   "recommended_dependencies": [
 
@@ -75,7 +72,7 @@
 
   ],
   "conflicts_with": [
-
+    "lunchy"
   ],
   "caveats": null,
   "installed": [
