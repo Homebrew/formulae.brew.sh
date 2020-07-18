@@ -1,6 +1,6 @@
 {
-  "name": "dwdiff",
-  "full_name": "dwdiff",
+  "name": "notmuch-mutt",
+  "full_name": "notmuch-mutt",
   "oldname": null,
   "aliases": [
 
@@ -8,18 +8,18 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Diff that operates at the word level",
-  "license": null,
-  "homepage": "https://os.ghalkes.nl/dwdiff.html",
+  "desc": "Notmuch integration for Mutt",
+  "license": "GPL-3.0",
+  "homepage": "https://notmuchmail.org/",
   "versions": {
-    "stable": "2.1.3",
+    "stable": "0.30",
     "devel": null,
-    "head": null,
+    "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://os.ghalkes.nl/dist/dwdiff-2.1.3.tar.bz2",
+      "url": "https://notmuchmail.org/releases/notmuch-0.30.tar.xz",
       "tag": null,
       "revision": null
     }
@@ -29,21 +29,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+      "cellar": ":any",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/dwdiff-2.1.3.catalina.bottle.tar.gz",
-          "sha256": "d46e1fc2de0e1f8cf9b1a807f8ec52e7c68ca1a12f9dad1be38cde7b925a206a"
+          "url": "https://linuxbrew.bintray.com/bottles/notmuch-mutt-0.30.catalina.bottle.tar.gz",
+          "sha256": "a3f8a11f72c219bcc2f6eb0c6e8a5a1b5656e3364257e45c1716a8bf685fa412"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/dwdiff-2.1.3.mojave.bottle.tar.gz",
-          "sha256": "4b154cbac63ac35e11b0d16a4e6a4b59c514c1ed795c4efe63a084d06f718e4b"
+          "url": "https://linuxbrew.bintray.com/bottles/notmuch-mutt-0.30.mojave.bottle.tar.gz",
+          "sha256": "a31991d286a3d3aaf904c49100c7379ca44c0802fbaa62e222d897a157576ff0"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/dwdiff-2.1.3.high_sierra.bottle.tar.gz",
-          "sha256": "0e607121b31851d64aab5e82110ebfec5e052130b0002fad11234f25029b4db3"
+          "url": "https://linuxbrew.bintray.com/bottles/notmuch-mutt-0.30.high_sierra.bottle.tar.gz",
+          "sha256": "7774d94c0fae96c5dd3d0ea1a71c0f3f9d230b507f4759756bbb9ddebd25dfa9"
         }
       }
     }
@@ -54,11 +54,12 @@
 
   ],
   "build_dependencies": [
-    "pkg-config"
+
   ],
   "dependencies": [
-    "gettext",
-    "icu4c"
+    "readline",
+    "perl",
+    "pod2man"
   ],
   "recommended_dependencies": [
 
