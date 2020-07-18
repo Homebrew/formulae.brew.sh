@@ -1,6 +1,6 @@
 {
-  "name": "imgproxy",
-  "full_name": "imgproxy",
+  "name": "notmuch-mutt",
+  "full_name": "notmuch-mutt",
   "oldname": null,
   "aliases": [
 
@@ -8,18 +8,18 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Fast and secure server for resizing and converting remote images",
-  "license": "MIT",
-  "homepage": "https://imgproxy.net",
+  "desc": "Notmuch integration for Mutt",
+  "license": "GPL-3.0",
+  "homepage": "https://notmuchmail.org/",
   "versions": {
-    "stable": "2.14.0",
+    "stable": "0.30",
     "devel": null,
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/imgproxy/imgproxy/archive/v2.14.0.tar.gz",
+      "url": "https://notmuchmail.org/releases/notmuch-0.30.tar.xz",
       "tag": null,
       "revision": null
     }
@@ -34,16 +34,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/imgproxy-2.14.0.catalina.bottle.tar.gz",
-          "sha256": "d88b0bc9aad0a48faa87645fbb82cf06a5d30266e640ac4e0f92db648c633797"
+          "url": "https://homebrew.bintray.com/bottles/notmuch-mutt-0.30.catalina.bottle.tar.gz",
+          "sha256": "a3f8a11f72c219bcc2f6eb0c6e8a5a1b5656e3364257e45c1716a8bf685fa412"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/imgproxy-2.14.0.mojave.bottle.tar.gz",
-          "sha256": "d90d9149fc9cdfc5d4f5ae884ebd3f5d3655bd29a2b795ffa2d1db77cb72e339"
+          "url": "https://homebrew.bintray.com/bottles/notmuch-mutt-0.30.mojave.bottle.tar.gz",
+          "sha256": "a31991d286a3d3aaf904c49100c7379ca44c0802fbaa62e222d897a157576ff0"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/imgproxy-2.14.0.high_sierra.bottle.tar.gz",
-          "sha256": "a1dcf45aa078d1659f216dba2c1b13db4afcb4f61026114aae924554ce98c592"
+          "url": "https://homebrew.bintray.com/bottles/notmuch-mutt-0.30.high_sierra.bottle.tar.gz",
+          "sha256": "7774d94c0fae96c5dd3d0ea1a71c0f3f9d230b507f4759756bbb9ddebd25dfa9"
         }
       }
     }
@@ -54,11 +54,10 @@
 
   ],
   "build_dependencies": [
-    "go",
-    "pkg-config"
+
   ],
   "dependencies": [
-    "vips"
+    "readline"
   ],
   "recommended_dependencies": [
 
@@ -67,7 +66,8 @@
 
   ],
   "uses_from_macos": [
-
+    "perl",
+    "pod2man"
   ],
   "requirements": [
 
