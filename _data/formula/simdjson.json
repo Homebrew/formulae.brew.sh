@@ -1,6 +1,6 @@
 {
-  "name": "k3d",
-  "full_name": "k3d",
+  "name": "simdjson",
+  "full_name": "simdjson",
   "oldname": null,
   "aliases": [
 
@@ -8,18 +8,18 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Little helper to run Rancher Lab's k3s in Docker",
-  "license": "MIT",
-  "homepage": "https://github.com/rancher/k3d",
+  "desc": "SIMD-accelerated C++ JSON parser",
+  "license": "Apache-2.0",
+  "homepage": "https://simdjson.org",
   "versions": {
-    "stable": "3.0.0",
+    "stable": "0.4.7",
     "devel": null,
-    "head": null,
+    "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/rancher/k3d/archive/v3.0.0.tar.gz",
+      "url": "https://github.com/simdjson/simdjson/archive/v0.4.7.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -29,21 +29,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any_skip_relocation",
+      "cellar": ":any",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/k3d-3.0.0.catalina.bottle.tar.gz",
-          "sha256": "1363893ef0fefaa579ea21f1dd546d2d88b44316e2df7746e31a0732aa1beb81"
+          "url": "https://homebrew.bintray.com/bottles/simdjson-0.4.7.catalina.bottle.tar.gz",
+          "sha256": "11da8bfcaa21343a51eff42f2c9f7e87f5387bbbf0e12fd1e36dbad4c8eb040c"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/k3d-3.0.0.mojave.bottle.tar.gz",
-          "sha256": "51e0a32d8d8ddba6386c5243e3a3a22a730020769d30962e2778c586da8088da"
+          "url": "https://homebrew.bintray.com/bottles/simdjson-0.4.7.mojave.bottle.tar.gz",
+          "sha256": "06cd4d16ce496a7f5f3c1ec7e293c0cfa565c80442838248eaadcb9e3da42116"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/k3d-3.0.0.high_sierra.bottle.tar.gz",
-          "sha256": "2958a2c668ebe0d064610e680898e895ede437775b2f7fa225a30ee5c9aa3ae5"
+          "url": "https://homebrew.bintray.com/bottles/simdjson-0.4.7.high_sierra.bottle.tar.gz",
+          "sha256": "017145ef48f08c85b7f25a29dac104c48078a070c346397d88a1b472e8db61a8"
         }
       }
     }
@@ -54,7 +54,7 @@
 
   ],
   "build_dependencies": [
-    "go"
+    "cmake"
   ],
   "dependencies": [
 
