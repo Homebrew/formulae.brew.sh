@@ -1,25 +1,25 @@
 {
-  "name": "scw",
-  "full_name": "scw",
+  "name": "arb",
+  "full_name": "arb",
   "oldname": null,
   "aliases": [
-    "scw@2"
+
   ],
   "versioned_formulae": [
-    "scw@1"
+
   ],
-  "desc": "Command-line Interface for Scaleway",
-  "license": "Apache-2.0",
-  "homepage": "https://github.com/scaleway/scaleway-cli",
+  "desc": "C library for arbitrary-precision interval arithmetic",
+  "license": "LGPL-2.1",
+  "homepage": "http://arblib.org",
   "versions": {
-    "stable": "2.0.0",
+    "stable": "2.18.1",
     "devel": null,
-    "head": null,
+    "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/scaleway/scaleway-cli/archive/v2.0.0.tar.gz",
+      "url": "https://github.com/fredrik-johansson/arb/archive/2.18.1.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -29,21 +29,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any_skip_relocation",
+      "cellar": ":any",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/scw-2.0.0.catalina.bottle.tar.gz",
-          "sha256": "fa19569accc1ca1932d378b8992d92006f9d316668b46648d1129d1189b9ec5c"
+          "url": "https://homebrew.bintray.com/bottles/arb-2.18.1.catalina.bottle.tar.gz",
+          "sha256": "9315171ee0802ba4fc1e1e8b799f387126c2c2a9adbc8501d659acd3781ad042"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/scw-2.0.0.mojave.bottle.tar.gz",
-          "sha256": "a7314e226c796068b8e2c5d483ce0ff309f0fffbb82539a7e8070af57bef7580"
+          "url": "https://homebrew.bintray.com/bottles/arb-2.18.1.mojave.bottle.tar.gz",
+          "sha256": "2674198ab1752ca366e40c6a0b46b62ea85c6035f28c49239658082d6054b3b1"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/scw-2.0.0.high_sierra.bottle.tar.gz",
-          "sha256": "12e03cb964ccde5f40f801479ab51ee89d512e539eda72e66352079d75c91768"
+          "url": "https://homebrew.bintray.com/bottles/arb-2.18.1.high_sierra.bottle.tar.gz",
+          "sha256": "0560ad466e4bcbe318c00619c86366f13d1265c178bbcdaea034c4064ee0d55e"
         }
       }
     }
@@ -54,10 +54,12 @@
 
   ],
   "build_dependencies": [
-    "go"
+    "cmake"
   ],
   "dependencies": [
-
+    "flint",
+    "gmp",
+    "mpfr"
   ],
   "recommended_dependencies": [
 
