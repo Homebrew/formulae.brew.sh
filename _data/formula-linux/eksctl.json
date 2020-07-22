@@ -1,6 +1,6 @@
 {
-  "name": "copilot",
-  "full_name": "copilot",
+  "name": "eksctl",
+  "full_name": "eksctl",
   "oldname": null,
   "aliases": [
 
@@ -8,20 +8,20 @@
   "versioned_formulae": [
 
   ],
-  "desc": "CLI tool for Amazon ECS and AWS Fargate",
+  "desc": "The official CLI for Amazon EKS",
   "license": "Apache-2.0",
-  "homepage": "https://github.com/aws/copilot-cli/wiki",
+  "homepage": "https://eksctl.io",
   "versions": {
-    "stable": "0.2.0",
+    "stable": "0.24.0",
     "devel": null,
-    "head": "HEAD",
+    "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/aws/copilot-cli.git",
-      "tag": "v0.2.0",
-      "revision": "5f61174c563b5f32496544fd234fa3b9efb0bdf4"
+      "url": "https://github.com/weaveworks/eksctl.git",
+      "tag": "0.24.0",
+      "revision": "f23f8d7d75943d1a62c87ce2f3d455da7af741fa"
     }
   },
   "revision": 0,
@@ -34,16 +34,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/copilot-0.2.0.catalina.bottle.tar.gz",
-          "sha256": "8fb903f7a115976ef0ff3e343d9dfa1a656c87947429fee8c34bf959b6e41d44"
+          "url": "https://linuxbrew.bintray.com/bottles/eksctl-0.24.0.catalina.bottle.tar.gz",
+          "sha256": "03d5850e67d21734234cc1f3f941fa4eae5b854c422e4b11b75f4ccc1a5c8c5d"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/copilot-0.2.0.mojave.bottle.tar.gz",
-          "sha256": "d21323111fa73bf5c7c084b80fe7882f8169f379639079bbd532fb4fee19a1cd"
+          "url": "https://linuxbrew.bintray.com/bottles/eksctl-0.24.0.mojave.bottle.tar.gz",
+          "sha256": "ae9a36b5d032c9a96ee0db0f3d977aaf9164561c5601aa6d0842099be20e1d01"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/copilot-0.2.0.high_sierra.bottle.tar.gz",
-          "sha256": "03e761aea46c4029245848caae9188507f5b0a8c403cde2395387a0d0b4e1055"
+          "url": "https://linuxbrew.bintray.com/bottles/eksctl-0.24.0.high_sierra.bottle.tar.gz",
+          "sha256": "526a06e893de8455abd22ce63556a2866b1ea572bb6e6a33954f3b60cdff52a7"
         }
       }
     }
@@ -55,10 +55,10 @@
   ],
   "build_dependencies": [
     "go",
-    "node"
+    "go-bindata"
   ],
   "dependencies": [
-
+    "aws-iam-authenticator"
   ],
   "recommended_dependencies": [
 

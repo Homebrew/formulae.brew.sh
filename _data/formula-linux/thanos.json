@@ -1,6 +1,6 @@
 {
-  "name": "citus",
-  "full_name": "citus",
+  "name": "thanos",
+  "full_name": "thanos",
   "oldname": null,
   "aliases": [
 
@@ -8,18 +8,18 @@
   "versioned_formulae": [
 
   ],
-  "desc": "PostgreSQL-based distributed RDBMS",
-  "license": "AGPL-3.0",
-  "homepage": "https://www.citusdata.com",
+  "desc": "Highly available Prometheus setup with long term storage capabilities",
+  "license": "Apache-2.0",
+  "homepage": "https://thanos.io",
   "versions": {
-    "stable": "9.3.4",
+    "stable": "0.14.0",
     "devel": null,
-    "head": "HEAD",
+    "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/citusdata/citus/archive/v9.3.4.tar.gz",
+      "url": "https://github.com/thanos-io/thanos/archive/v0.14.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -29,21 +29,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": ":any_skip_relocation",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/citus-9.3.4.catalina.bottle.tar.gz",
-          "sha256": "bb9cb13e4d8661d4ae98d36c862be76cc953e7893f554892877227a06859a032"
+          "url": "https://linuxbrew.bintray.com/bottles/thanos-0.14.0.catalina.bottle.tar.gz",
+          "sha256": "06732f3355bdbcb985641bf05fc25b6c00e8cc3eec3577b4ec144770412b23ff"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/citus-9.3.4.mojave.bottle.tar.gz",
-          "sha256": "7119f88d563d76283f7e0855d89b92078c5bb1a3541583ceca1d26dd321e57aa"
+          "url": "https://linuxbrew.bintray.com/bottles/thanos-0.14.0.mojave.bottle.tar.gz",
+          "sha256": "2c091e795f8cd556188dfb64ff989b57fb727b8c7fd27adff832b9f6899a5d71"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/citus-9.3.4.high_sierra.bottle.tar.gz",
-          "sha256": "31fbbb96ca5a9e56d49999c19d3f2b9f2b25e7be62f8138c831dae75effc2aea"
+          "url": "https://linuxbrew.bintray.com/bottles/thanos-0.14.0.high_sierra.bottle.tar.gz",
+          "sha256": "9c0abdf3859ed78918d98a67eab5cf49a4dff8ea42d3788e1f8cbc5cda04c54a"
         }
       }
     }
@@ -54,11 +54,10 @@
 
   ],
   "build_dependencies": [
-
+    "go"
   ],
   "dependencies": [
-    "postgresql",
-    "readline"
+
   ],
   "recommended_dependencies": [
 
