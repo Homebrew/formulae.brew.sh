@@ -1,6 +1,6 @@
 {
-  "name": "ospray",
-  "full_name": "ospray",
+  "name": "promtail",
+  "full_name": "promtail",
   "oldname": null,
   "aliases": [
 
@@ -8,18 +8,18 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Ray-tracing-based rendering engine for high-fidelity visualization",
+  "desc": "Log agent for Loki",
   "license": "Apache-2.0",
-  "homepage": "https://www.ospray.org/",
+  "homepage": "https://grafana.com/loki",
   "versions": {
-    "stable": "2.2.0",
+    "stable": "1.5.0",
     "devel": null,
-    "head": "HEAD",
+    "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/ospray/ospray/archive/v2.2.0.tar.gz",
+      "url": "https://github.com/grafana/loki/archive/v1.5.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -29,17 +29,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": ":any_skip_relocation",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/ospray-2.2.0.catalina.bottle.tar.gz",
-          "sha256": "f6b816e4ce29195586af8305a27bcb49f366bf08cc761ee85deb8eb69165f897"
+          "url": "https://linuxbrew.bintray.com/bottles/promtail-1.5.0.catalina.bottle.tar.gz",
+          "sha256": "70470c14896c1ed892a274541431b88938532a80982559c698f6e1a932017edf"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/ospray-2.2.0.mojave.bottle.tar.gz",
-          "sha256": "044aa16b8c07c9188a242d12f1ca809844bfaf2606777427dfd761d611135642"
+          "url": "https://linuxbrew.bintray.com/bottles/promtail-1.5.0.mojave.bottle.tar.gz",
+          "sha256": "47495ee7998dc8f9e6ccd2c8d601153d9e7f4d2ac70afadb44835bbef11ba5f5"
+        },
+        "high_sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/promtail-1.5.0.high_sierra.bottle.tar.gz",
+          "sha256": "62fa78cc81525e0141bc8dc3d1c3d0f0fead0e9ab0722ccb6566405d9a0abe82"
         }
       }
     }
@@ -50,12 +54,10 @@
 
   ],
   "build_dependencies": [
-    "cmake",
-    "ispc"
+    "go"
   ],
   "dependencies": [
-    "embree",
-    "tbb"
+
   ],
   "recommended_dependencies": [
 
@@ -67,15 +69,7 @@
 
   ],
   "requirements": [
-    {
-      "name": "macos",
-      "cask": null,
-      "download": null,
-      "version": "10.14",
-      "contexts": [
 
-      ]
-    }
   ],
   "conflicts_with": [
 
