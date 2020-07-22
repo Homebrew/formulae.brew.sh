@@ -1,6 +1,6 @@
 {
-  "name": "nqp",
-  "full_name": "nqp",
+  "name": "cortex",
+  "full_name": "cortex",
   "oldname": null,
   "aliases": [
 
@@ -8,18 +8,18 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Lightweight Perl 6-like environment for virtual machines",
-  "license": null,
-  "homepage": "https://github.com/perl6/nqp",
+  "desc": "Long term storage for Prometheus",
+  "license": "Apache-2.0",
+  "homepage": "https://cortexmetrics.io/",
   "versions": {
-    "stable": "2020.07",
+    "stable": "1.2.0",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/perl6/nqp/releases/download/2020.07/nqp-2020.07.tar.gz",
+      "url": "https://github.com/cortexproject/cortex/archive/v1.2.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -29,21 +29,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": "/usr/local/Cellar",
+      "cellar": ":any_skip_relocation",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/nqp-2020.07.catalina.bottle.tar.gz",
-          "sha256": "282148386404a0eb1de8748d4f1cfc860159d43deefbd9d3b88dbe029b63fe0f"
+          "url": "https://homebrew.bintray.com/bottles/cortex-1.2.0.catalina.bottle.tar.gz",
+          "sha256": "6b6d80666cd557e6c3141d7027c699f65a973e15b7459af7f0559518cb4a91f1"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/nqp-2020.07.mojave.bottle.tar.gz",
-          "sha256": "939d2184962c136540863db15733209cfeec4299ac24191903a4209f222bae8b"
+          "url": "https://homebrew.bintray.com/bottles/cortex-1.2.0.mojave.bottle.tar.gz",
+          "sha256": "3d0e004c2a9770cbc59f1a5e44bed0b85a33e85130c885f96a9670d1cb8559d2"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/nqp-2020.07.high_sierra.bottle.tar.gz",
-          "sha256": "c8505229a909e9bc16855141b2350f99cfd67f0564e1816eebe0a55a50774c39"
+          "url": "https://homebrew.bintray.com/bottles/cortex-1.2.0.high_sierra.bottle.tar.gz",
+          "sha256": "9d8061e80d99528c5bb371a2538d3f863ef2fdba5066fe215e551aebc99b6332"
         }
       }
     }
@@ -54,10 +54,10 @@
 
   ],
   "build_dependencies": [
-
+    "go"
   ],
   "dependencies": [
-    "moarvm"
+
   ],
   "recommended_dependencies": [
 
@@ -72,7 +72,7 @@
 
   ],
   "conflicts_with": [
-    "rakudo-star"
+
   ],
   "caveats": null,
   "installed": [

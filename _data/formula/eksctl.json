@@ -1,6 +1,6 @@
 {
-  "name": "vulkan-headers",
-  "full_name": "vulkan-headers",
+  "name": "eksctl",
+  "full_name": "eksctl",
   "oldname": null,
   "aliases": [
 
@@ -8,20 +8,20 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Vulkan Header files and API registry",
+  "desc": "The official CLI for Amazon EKS",
   "license": "Apache-2.0",
-  "homepage": "https://github.com/KhronosGroup/Vulkan-Headers",
+  "homepage": "https://eksctl.io",
   "versions": {
-    "stable": "1.2.148",
+    "stable": "0.24.0",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/KhronosGroup/Vulkan-Headers/archive/v1.2.148.tar.gz",
-      "tag": null,
-      "revision": null
+      "url": "https://github.com/weaveworks/eksctl.git",
+      "tag": "0.24.0",
+      "revision": "f23f8d7d75943d1a62c87ce2f3d455da7af741fa"
     }
   },
   "revision": 0,
@@ -34,16 +34,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/vulkan-headers-1.2.148.catalina.bottle.tar.gz",
-          "sha256": "c370cba4d9d06d7d99cb7bf966e5e05c198a490e66584e06d98949f5715b9b0e"
+          "url": "https://homebrew.bintray.com/bottles/eksctl-0.24.0.catalina.bottle.tar.gz",
+          "sha256": "03d5850e67d21734234cc1f3f941fa4eae5b854c422e4b11b75f4ccc1a5c8c5d"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/vulkan-headers-1.2.148.mojave.bottle.tar.gz",
-          "sha256": "c370cba4d9d06d7d99cb7bf966e5e05c198a490e66584e06d98949f5715b9b0e"
+          "url": "https://homebrew.bintray.com/bottles/eksctl-0.24.0.mojave.bottle.tar.gz",
+          "sha256": "ae9a36b5d032c9a96ee0db0f3d977aaf9164561c5601aa6d0842099be20e1d01"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/vulkan-headers-1.2.148.high_sierra.bottle.tar.gz",
-          "sha256": "c370cba4d9d06d7d99cb7bf966e5e05c198a490e66584e06d98949f5715b9b0e"
+          "url": "https://homebrew.bintray.com/bottles/eksctl-0.24.0.high_sierra.bottle.tar.gz",
+          "sha256": "526a06e893de8455abd22ce63556a2866b1ea572bb6e6a33954f3b60cdff52a7"
         }
       }
     }
@@ -54,10 +54,11 @@
 
   ],
   "build_dependencies": [
-    "cmake"
+    "go",
+    "go-bindata"
   ],
   "dependencies": [
-
+    "aws-iam-authenticator"
   ],
   "recommended_dependencies": [
 

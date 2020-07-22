@@ -1,6 +1,6 @@
 {
-  "name": "nqp",
-  "full_name": "nqp",
+  "name": "thanos",
+  "full_name": "thanos",
   "oldname": null,
   "aliases": [
 
@@ -8,18 +8,18 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Lightweight Perl 6-like environment for virtual machines",
-  "license": null,
-  "homepage": "https://github.com/perl6/nqp",
+  "desc": "Highly available Prometheus setup with long term storage capabilities",
+  "license": "Apache-2.0",
+  "homepage": "https://thanos.io",
   "versions": {
-    "stable": "2020.07",
+    "stable": "0.14.0",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/perl6/nqp/releases/download/2020.07/nqp-2020.07.tar.gz",
+      "url": "https://github.com/thanos-io/thanos/archive/v0.14.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -29,21 +29,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": "/usr/local/Cellar",
+      "cellar": ":any_skip_relocation",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/nqp-2020.07.catalina.bottle.tar.gz",
-          "sha256": "282148386404a0eb1de8748d4f1cfc860159d43deefbd9d3b88dbe029b63fe0f"
+          "url": "https://homebrew.bintray.com/bottles/thanos-0.14.0.catalina.bottle.tar.gz",
+          "sha256": "06732f3355bdbcb985641bf05fc25b6c00e8cc3eec3577b4ec144770412b23ff"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/nqp-2020.07.mojave.bottle.tar.gz",
-          "sha256": "939d2184962c136540863db15733209cfeec4299ac24191903a4209f222bae8b"
+          "url": "https://homebrew.bintray.com/bottles/thanos-0.14.0.mojave.bottle.tar.gz",
+          "sha256": "2c091e795f8cd556188dfb64ff989b57fb727b8c7fd27adff832b9f6899a5d71"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/nqp-2020.07.high_sierra.bottle.tar.gz",
-          "sha256": "c8505229a909e9bc16855141b2350f99cfd67f0564e1816eebe0a55a50774c39"
+          "url": "https://homebrew.bintray.com/bottles/thanos-0.14.0.high_sierra.bottle.tar.gz",
+          "sha256": "9c0abdf3859ed78918d98a67eab5cf49a4dff8ea42d3788e1f8cbc5cda04c54a"
         }
       }
     }
@@ -54,10 +54,10 @@
 
   ],
   "build_dependencies": [
-
+    "go"
   ],
   "dependencies": [
-    "moarvm"
+
   ],
   "recommended_dependencies": [
 
@@ -72,7 +72,7 @@
 
   ],
   "conflicts_with": [
-    "rakudo-star"
+
   ],
   "caveats": null,
   "installed": [
