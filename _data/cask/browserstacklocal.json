@@ -4,14 +4,30 @@
     "BrowserStack Local"
   ],
   "homepage": "https://www.browserstack.com/",
-  "url": "https://www.browserstack.com/browserstack-local/BrowserStackLocal-darwin-x64.zip",
+  "url": "https://www.browserstack.com/BrowserStackLocal.dmg",
   "appcast": null,
   "version": "latest",
   "sha256": "no_check",
   "artifacts": [
+    {
+      "launchctl": "com.browserstack.local",
+      "signal": {
+      }
+    },
     [
-      "BrowserStackLocal"
-    ]
+      "BrowserStackLocal.app"
+    ],
+    [
+      "BrowserStackLocal.app/Contents/Resources/public/BrowserStackLocal"
+    ],
+    {
+      "trash": [
+        "~/.bstack",
+        "~/Library/Caches/com.browserstack.Local"
+      ],
+      "signal": {
+      }
+    }
   ],
   "caveats": null,
   "depends_on": {
