@@ -1,6 +1,6 @@
 {
-  "name": "hadolint",
-  "full_name": "hadolint",
+  "name": "logcli",
+  "full_name": "logcli",
   "oldname": null,
   "aliases": [
 
@@ -8,18 +8,18 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Smarter Dockerfile linter to validate best practices",
-  "license": "GPL-3.0",
-  "homepage": "https://github.com/hadolint/hadolint",
+  "desc": "Run LogQL queries against a Loki server",
+  "license": "Apache-2.0",
+  "homepage": "https://grafana.com/loki",
   "versions": {
-    "stable": "1.18.0",
+    "stable": "1.5.0",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/hadolint/hadolint/archive/v1.18.0.tar.gz",
+      "url": "https://github.com/grafana/loki/archive/v1.5.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,22 +28,22 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "cellar": ":any_skip_relocation",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/hadolint-1.18.0.catalina.bottle.1.tar.gz",
-          "sha256": "ae5b6cfc174f50b883fd7907774d5d43250a18a2774b3f80d806122ed8da9c5a"
+          "url": "https://homebrew.bintray.com/bottles/logcli-1.5.0.catalina.bottle.tar.gz",
+          "sha256": "e54c343b3d2f59c89074932d84d860a63c2f554cea4d318788168e92ed359d4d"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/hadolint-1.18.0.mojave.bottle.1.tar.gz",
-          "sha256": "ce882dfa51e5ca6025362a499ff280af2c676fad485ca5157ad4c9ceca8934e0"
+          "url": "https://homebrew.bintray.com/bottles/logcli-1.5.0.mojave.bottle.tar.gz",
+          "sha256": "895cd722c06b619fc35dc8cf34b43f0c500ebbb35ed658e53faf20b7f5f85ad3"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/hadolint-1.18.0.high_sierra.bottle.1.tar.gz",
-          "sha256": "9c8ea84c521ab94e4f78d73b67593738760cb437e6e050e0e6f81be62c944440"
+          "url": "https://homebrew.bintray.com/bottles/logcli-1.5.0.high_sierra.bottle.tar.gz",
+          "sha256": "f82e423546fe2428c2491410f6497a6b132390ef54e5f1cdc92be6fa748a2f62"
         }
       }
     }
@@ -54,10 +54,10 @@
 
   ],
   "build_dependencies": [
-    "haskell-stack"
+    "go"
   ],
   "dependencies": [
-
+    "loki"
   ],
   "recommended_dependencies": [
 
@@ -66,7 +66,7 @@
 
   ],
   "uses_from_macos": [
-    "xz"
+
   ],
   "requirements": [
 
