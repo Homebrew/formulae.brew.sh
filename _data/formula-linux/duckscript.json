@@ -10,7 +10,7 @@
   ],
   "desc": "Simple, extendable and embeddable scripting language",
   "license": "Apache-2.0",
-  "homepage": "https://sagiegurari.github.io/duckscript",
+  "homepage": "https://sagiegurari.github.io/duckscript/",
   "versions": {
     "stable": "0.6.1",
     "devel": null,
@@ -44,6 +44,10 @@
         "high_sierra": {
           "url": "https://linuxbrew.bintray.com/bottles/duckscript-0.6.1.high_sierra.bottle.tar.gz",
           "sha256": "e6884ffb81b869777754e7737e2db7bbfa033a6c8c5c35afec6a739611651a1e"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/duckscript-0.6.1.x86_64_linux.bottle.tar.gz",
+          "sha256": "ca5db67be7f327065a2f068de4ae4f4859321fbcb13c686f275697dedd478020"
         }
       }
     }
@@ -54,10 +58,11 @@
 
   ],
   "build_dependencies": [
-    "rust"
+    "rust",
+    "pkg-config"
   ],
   "dependencies": [
-
+    "openssl@1.1"
   ],
   "recommended_dependencies": [
 
