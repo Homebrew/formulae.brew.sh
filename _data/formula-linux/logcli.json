@@ -1,6 +1,6 @@
 {
-  "name": "futhark",
-  "full_name": "futhark",
+  "name": "logcli",
+  "full_name": "logcli",
   "oldname": null,
   "aliases": [
 
@@ -8,18 +8,18 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Data-parallel functional programming language",
-  "license": "ISC",
-  "homepage": "https://futhark-lang.org/",
+  "desc": "Run LogQL queries against a Loki server",
+  "license": "Apache-2.0",
+  "homepage": "https://grafana.com/loki",
   "versions": {
-    "stable": "0.16.2",
+    "stable": "1.5.0",
     "devel": null,
-    "head": "HEAD",
+    "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/diku-dk/futhark/archive/v0.16.2.tar.gz",
+      "url": "https://github.com/grafana/loki/archive/v1.5.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,22 +28,22 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "cellar": ":any_skip_relocation",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/futhark-0.16.2.catalina.bottle.1.tar.gz",
-          "sha256": "1c504ad71048442e75a65f77eb468b3e1435ff338ba684d2a1d7901b9a87df9b"
+          "url": "https://linuxbrew.bintray.com/bottles/logcli-1.5.0.catalina.bottle.tar.gz",
+          "sha256": "e54c343b3d2f59c89074932d84d860a63c2f554cea4d318788168e92ed359d4d"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/futhark-0.16.2.mojave.bottle.1.tar.gz",
-          "sha256": "9d31eb9c3146794fe12d6b7dfe906758f5d04f3d5fde852e2421e56e09ae9c38"
+          "url": "https://linuxbrew.bintray.com/bottles/logcli-1.5.0.mojave.bottle.tar.gz",
+          "sha256": "895cd722c06b619fc35dc8cf34b43f0c500ebbb35ed658e53faf20b7f5f85ad3"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/futhark-0.16.2.high_sierra.bottle.1.tar.gz",
-          "sha256": "500a598d2ddac21cbc64063e25c320b23825d46006931bc3cce602424bf7b56e"
+          "url": "https://linuxbrew.bintray.com/bottles/logcli-1.5.0.high_sierra.bottle.tar.gz",
+          "sha256": "f82e423546fe2428c2491410f6497a6b132390ef54e5f1cdc92be6fa748a2f62"
         }
       }
     }
@@ -54,13 +54,10 @@
 
   ],
   "build_dependencies": [
-    "cabal-install",
-    "ghc",
-    "sphinx-doc"
+    "go"
   ],
   "dependencies": [
-    "ncurses",
-    "zlib"
+    "loki"
   ],
   "recommended_dependencies": [
 
