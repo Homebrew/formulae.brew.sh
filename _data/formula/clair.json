@@ -1,6 +1,6 @@
 {
-  "name": "json-c",
-  "full_name": "json-c",
+  "name": "clair",
+  "full_name": "clair",
   "oldname": null,
   "aliases": [
 
@@ -8,18 +8,18 @@
   "versioned_formulae": [
 
   ],
-  "desc": "JSON parser for C",
-  "license": "MIT",
-  "homepage": "https://github.com/json-c/json-c/wiki",
+  "desc": "Vulnerability Static Analysis for Containers",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/quay/clair",
   "versions": {
-    "stable": "0.15",
+    "stable": "2.1.4",
     "devel": null,
-    "head": "HEAD",
+    "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/json-c/json-c/archive/json-c-0.15-20200726.tar.gz",
+      "url": "https://github.com/quay/clair/archive/v2.1.4.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -29,21 +29,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": ":any_skip_relocation",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/json-c-0.15.catalina.bottle.tar.gz",
-          "sha256": "60d15ece3fb1fdc8722785de8243c2261222f674e998509375522a1de75497ea"
+          "url": "https://homebrew.bintray.com/bottles/clair-2.1.4.catalina.bottle.tar.gz",
+          "sha256": "d310d5c7a3596a17612fd5b56d6c321129ecfae40d4fa7dc5032056c863b4dc3"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/json-c-0.15.mojave.bottle.tar.gz",
-          "sha256": "6ab7f776315184769ed74115f614996401eae4577c36144ba4cdd1d41427d0cf"
+          "url": "https://homebrew.bintray.com/bottles/clair-2.1.4.mojave.bottle.tar.gz",
+          "sha256": "8b48f7520edfa1b74124b848de69802f127d476968a7c5471bd6174a43fc9899"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/json-c-0.15.high_sierra.bottle.tar.gz",
-          "sha256": "a211a34a52b452386cf6e23f8f27cc9d088e64d2793bae7a4b3a7a069d31a88a"
+          "url": "https://homebrew.bintray.com/bottles/clair-2.1.4.high_sierra.bottle.tar.gz",
+          "sha256": "6ea27e3eed1bbf53401a81d55d138e1f808a9cfb52ca857316b1c371258b9c34"
         }
       }
     }
@@ -54,10 +54,11 @@
 
   ],
   "build_dependencies": [
-    "cmake"
+    "go"
   ],
   "dependencies": [
-
+    "rpm",
+    "xz"
   ],
   "recommended_dependencies": [
 

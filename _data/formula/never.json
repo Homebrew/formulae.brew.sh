@@ -1,6 +1,6 @@
 {
-  "name": "json-c",
-  "full_name": "json-c",
+  "name": "never",
+  "full_name": "never",
   "oldname": null,
   "aliases": [
 
@@ -8,18 +8,18 @@
   "versioned_formulae": [
 
   ],
-  "desc": "JSON parser for C",
+  "desc": "Statically typed, embedded functional programming language",
   "license": "MIT",
-  "homepage": "https://github.com/json-c/json-c/wiki",
+  "homepage": "https://never-lang.readthedocs.io/",
   "versions": {
-    "stable": "0.15",
+    "stable": "2.0.3",
     "devel": null,
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/json-c/json-c/archive/json-c-0.15-20200726.tar.gz",
+      "url": "https://github.com/never-lang/never/archive/v2.0.3.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -29,21 +29,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": ":any_skip_relocation",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/json-c-0.15.catalina.bottle.tar.gz",
-          "sha256": "60d15ece3fb1fdc8722785de8243c2261222f674e998509375522a1de75497ea"
+          "url": "https://homebrew.bintray.com/bottles/never-2.0.3.catalina.bottle.tar.gz",
+          "sha256": "27edab01757524441aafd95606dd1bea9d75e3e59e45b5ddbed4887eb15f0e60"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/json-c-0.15.mojave.bottle.tar.gz",
-          "sha256": "6ab7f776315184769ed74115f614996401eae4577c36144ba4cdd1d41427d0cf"
+          "url": "https://homebrew.bintray.com/bottles/never-2.0.3.mojave.bottle.tar.gz",
+          "sha256": "5daef4a51095d73edd0e2a4b4fbf3b26abb3f038c0da41aa9cba4d77d7c1fd4b"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/json-c-0.15.high_sierra.bottle.tar.gz",
-          "sha256": "a211a34a52b452386cf6e23f8f27cc9d088e64d2793bae7a4b3a7a069d31a88a"
+          "url": "https://homebrew.bintray.com/bottles/never-2.0.3.high_sierra.bottle.tar.gz",
+          "sha256": "a4aae9a3453fd5b3a0014e071c9ccb5be132a442d9d5ae54e810289a21b4215d"
         }
       }
     }
@@ -66,7 +66,13 @@
 
   ],
   "uses_from_macos": [
-
+    {
+      "bison": "build"
+    },
+    {
+      "flex": "build"
+    },
+    "libffi"
   ],
   "requirements": [
 
