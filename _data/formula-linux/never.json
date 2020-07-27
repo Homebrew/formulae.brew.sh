@@ -1,6 +1,6 @@
 {
-  "name": "ghz-web",
-  "full_name": "ghz-web",
+  "name": "never",
+  "full_name": "never",
   "oldname": null,
   "aliases": [
 
@@ -8,18 +8,18 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Web interface for ghz",
-  "license": "Apache-2.0",
-  "homepage": "https://ghz.sh",
+  "desc": "Statically typed, embedded functional programming language",
+  "license": "MIT",
+  "homepage": "https://never-lang.readthedocs.io/",
   "versions": {
-    "stable": "0.56.0",
+    "stable": "2.0.3",
     "devel": null,
-    "head": null,
+    "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/bojand/ghz/archive/v0.56.0.tar.gz",
+      "url": "https://github.com/never-lang/never/archive/v2.0.3.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -34,16 +34,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/ghz-web-0.56.0.catalina.bottle.tar.gz",
-          "sha256": "79b278cea4fdcc1766adf3d906163e0af63ab058e1374689ccc564f88dd67c62"
+          "url": "https://linuxbrew.bintray.com/bottles/never-2.0.3.catalina.bottle.tar.gz",
+          "sha256": "27edab01757524441aafd95606dd1bea9d75e3e59e45b5ddbed4887eb15f0e60"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/ghz-web-0.56.0.mojave.bottle.tar.gz",
-          "sha256": "45e3db2a88ca849787daf019cca037452460f785fd1259e51fb27635196717ee"
+          "url": "https://linuxbrew.bintray.com/bottles/never-2.0.3.mojave.bottle.tar.gz",
+          "sha256": "5daef4a51095d73edd0e2a4b4fbf3b26abb3f038c0da41aa9cba4d77d7c1fd4b"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/ghz-web-0.56.0.high_sierra.bottle.tar.gz",
-          "sha256": "c9deaee43a4682467f6ef2525272af7866f08dba16bcd7a3833f2f6495173d89"
+          "url": "https://linuxbrew.bintray.com/bottles/never-2.0.3.high_sierra.bottle.tar.gz",
+          "sha256": "a4aae9a3453fd5b3a0014e071c9ccb5be132a442d9d5ae54e810289a21b4215d"
         }
       }
     }
@@ -54,10 +54,12 @@
 
   ],
   "build_dependencies": [
-    "go"
+    "cmake",
+    "bison",
+    "flex"
   ],
   "dependencies": [
-
+    "libffi"
   ],
   "recommended_dependencies": [
 
@@ -69,15 +71,7 @@
 
   ],
   "requirements": [
-    {
-      "name": "xcode",
-      "cask": null,
-      "download": null,
-      "version": null,
-      "contexts": [
-        "build"
-      ]
-    }
+
   ],
   "conflicts_with": [
 

@@ -1,6 +1,6 @@
 {
-  "name": "ghz-web",
-  "full_name": "ghz-web",
+  "name": "clair",
+  "full_name": "clair",
   "oldname": null,
   "aliases": [
 
@@ -8,18 +8,18 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Web interface for ghz",
+  "desc": "Vulnerability Static Analysis for Containers",
   "license": "Apache-2.0",
-  "homepage": "https://ghz.sh",
+  "homepage": "https://github.com/quay/clair",
   "versions": {
-    "stable": "0.56.0",
+    "stable": "2.1.4",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/bojand/ghz/archive/v0.56.0.tar.gz",
+      "url": "https://github.com/quay/clair/archive/v2.1.4.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -34,16 +34,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/ghz-web-0.56.0.catalina.bottle.tar.gz",
-          "sha256": "79b278cea4fdcc1766adf3d906163e0af63ab058e1374689ccc564f88dd67c62"
+          "url": "https://linuxbrew.bintray.com/bottles/clair-2.1.4.catalina.bottle.tar.gz",
+          "sha256": "d310d5c7a3596a17612fd5b56d6c321129ecfae40d4fa7dc5032056c863b4dc3"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/ghz-web-0.56.0.mojave.bottle.tar.gz",
-          "sha256": "45e3db2a88ca849787daf019cca037452460f785fd1259e51fb27635196717ee"
+          "url": "https://linuxbrew.bintray.com/bottles/clair-2.1.4.mojave.bottle.tar.gz",
+          "sha256": "8b48f7520edfa1b74124b848de69802f127d476968a7c5471bd6174a43fc9899"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/ghz-web-0.56.0.high_sierra.bottle.tar.gz",
-          "sha256": "c9deaee43a4682467f6ef2525272af7866f08dba16bcd7a3833f2f6495173d89"
+          "url": "https://linuxbrew.bintray.com/bottles/clair-2.1.4.high_sierra.bottle.tar.gz",
+          "sha256": "6ea27e3eed1bbf53401a81d55d138e1f808a9cfb52ca857316b1c371258b9c34"
         }
       }
     }
@@ -57,7 +57,8 @@
     "go"
   ],
   "dependencies": [
-
+    "rpm",
+    "xz"
   ],
   "recommended_dependencies": [
 
@@ -69,15 +70,7 @@
 
   ],
   "requirements": [
-    {
-      "name": "xcode",
-      "cask": null,
-      "download": null,
-      "version": null,
-      "contexts": [
-        "build"
-      ]
-    }
+
   ],
   "conflicts_with": [
 
