@@ -1,6 +1,6 @@
 {
-  "name": "monetdb",
-  "full_name": "monetdb",
+  "name": "ngs",
+  "full_name": "ngs",
   "oldname": null,
   "aliases": [
 
@@ -8,18 +8,18 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Column-store database",
-  "license": null,
-  "homepage": "https://www.monetdb.org/",
+  "desc": "Powerful programming language and shell designed specifically for Ops",
+  "license": "GPL-3.0",
+  "homepage": "https://ngs-lang.org/",
   "versions": {
-    "stable": "11.37.11",
+    "stable": "0.2.8",
     "devel": null,
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://www.monetdb.org/downloads/sources/Jun2020-SP1/MonetDB-11.37.11.tar.xz",
+      "url": "https://github.com/ngs-lang/ngs/archive/v0.2.8.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -29,21 +29,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+      "cellar": ":any",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/monetdb-11.37.11.catalina.bottle.tar.gz",
-          "sha256": "21b3726ec5e83c3ebd0089c0ffba9b612bf282569e46b4b8006d5c1d7da04ca5"
+          "url": "https://linuxbrew.bintray.com/bottles/ngs-0.2.8.catalina.bottle.tar.gz",
+          "sha256": "39660e7b8a4a88b41ab30ec43a832feb487c1813e57f713a3100af05fa8a762e"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/monetdb-11.37.11.mojave.bottle.tar.gz",
-          "sha256": "e7271dc72a2fbc95257db4d770bd6f2b764a60120d39137cdd0580183f97d2ea"
+          "url": "https://linuxbrew.bintray.com/bottles/ngs-0.2.8.mojave.bottle.tar.gz",
+          "sha256": "a4a4fd7ddcfc2d51851a733c117dd3e6076e2ee9b8334fa852c4890a547fe0d4"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/monetdb-11.37.11.high_sierra.bottle.tar.gz",
-          "sha256": "b2b72d85df319b66f74bbfefd3d47ca81ce0a76cd085344a0f9732ece2004451"
+          "url": "https://linuxbrew.bintray.com/bottles/ngs-0.2.8.high_sierra.bottle.tar.gz",
+          "sha256": "8a9b038543f6a2fb7f7cd065942c75e76ae971cde8ca448c2aff0bbef9fa59f1"
         }
       }
     }
@@ -54,13 +54,17 @@
 
   ],
   "build_dependencies": [
-    "libatomic_ops",
+    "cmake",
+    "pandoc",
     "pkg-config"
   ],
   "dependencies": [
-    "openssl@1.1",
+    "bdw-gc",
+    "gnu-sed",
+    "json-c",
     "pcre",
-    "readline"
+    "peg",
+    "libffi"
   ],
   "recommended_dependencies": [
 
