@@ -29,19 +29,15 @@
         "/Applications/Microsoft Outlook.app",
         "/Applications/Microsoft PowerPoint.app",
         "/Applications/Microsoft Word.app",
-        "/Applications/OneDrive.app",
-        "/Library/PrivilegedHelperTools/com.microsoft.autoupdate.helper"
+        "/Applications/OneDrive.app"
       ],
       "launchctl": [
         "com.microsoft.office.licensing.helper",
         "com.microsoft.office.licensingV2.helper",
         "com.microsoft.OneDriveStandaloneUpdater",
         "com.microsoft.OneDriveStandaloneUpdaterDaemon",
-        "com.microsoft.OneDriveUpdaterDaemon",
-        "com.microsoft.autoupdate.helper",
-        "com.microsoft.update.agent"
+        "com.microsoft.OneDriveUpdaterDaemon"
       ],
-      "quit": "com.microsoft.autoupdate2",
       "signal": {
       }
     },
@@ -59,12 +55,7 @@
         "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.powerpoint.sfl*",
         "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.word.sfl*",
         "~/Library/Application Support/CrashReporter/Microsoft Error Reporting_*.plist",
-        "~/Library/Application Support/Microsoft AutoUpdate",
         "~/Library/Application Support/Microsoft Update Assistant",
-        "~/Library/Caches/Microsoft/uls/com.microsoft.autoupdate.fba",
-        "~/Library/Caches/Microsoft/uls/com.microsoft.autoupdate2",
-        "~/Library/Caches/com.microsoft.autoupdate.fba",
-        "~/Library/Caches/com.microsoft.autoupdate2",
         "~/Library/Caches/com.microsoft.OneDriveStandaloneUpdater",
         "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.microsoft.OneDriveStandaloneUpdater",
         "~/Library/Containers/com.microsoft.Excel",
@@ -76,8 +67,6 @@
         "~/Library/Containers/com.microsoft.errorreporting",
         "~/Library/Containers/com.microsoft.netlib.shipassertprocess",
         "~/Library/Containers/com.microsoft.onenote.mac",
-        "~/Library/Cookies/com.microsoft.autoupdate.fba.binarycookies",
-        "~/Library/Cookies/com.microsoft.autoupdate2.binarycookies",
         "~/Library/Group Containers/UBF8T346G9.Office",
         "~/Library/Group Containers/UBF8T346G9.OfficeOneDriveSyncIntegration",
         "~/Library/Group Containers/UBF8T346G9.OfficeOsfWebHost",
@@ -86,22 +75,7 @@
         "~/Library/Preferences/com.microsoft.Outlook.plist",
         "~/Library/Preferences/com.microsoft.Powerpoint.plist",
         "~/Library/Preferences/com.microsoft.Word.plist",
-        "~/Library/Preferences/com.microsoft.autoupdate.fba.plist",
-        "~/Library/Preferences/com.microsoft.autoupdate2.plist",
-        "~/Library/Saved Application State/com.microsoft.autoupdate2.savedState",
         "~/Library/Saved Application State/com.microsoft.office.setupassistant.savedState"
-      ],
-      "rmdir": [
-        "~/Library/Caches/Microsoft/uls",
-        "~/Library/Caches/Microsoft"
-      ],
-      "launchctl": [
-        "com.microsoft.autoupdate.helpertool",
-        "com.microsoft.autoupdate.helper",
-        "com.microsoft.update.agent"
-      ],
-      "pkgutil": [
-        "com.microsoft.package.Microsoft_AutoUpdate.app"
       ],
       "signal": {
       }
@@ -109,6 +83,9 @@
   ],
   "caveats": null,
   "depends_on": {
+    "cask": [
+      "microsoft-auto-update"
+    ],
     "macos": {
       ">=": [
         "10.12"

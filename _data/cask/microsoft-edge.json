@@ -10,33 +10,28 @@
   "sha256": "fb495ae9f6db14ec66b858ec552809d26395d500977de3ff82823cd42502ef4c",
   "artifacts": [
     {
-      "quit": "com.microsoft.autoupdate.fba",
       "pkgutil": "com.microsoft.edgemac",
-      "rmdir": "/Library/Application Support/Microsoft",
       "signal": {
       }
     },
     "MicrosoftEdge-84.0.522.49.pkg (Pkg)",
     {
-      "launchctl": [
-        "com.microsoft.autoupdate.helper",
-        "com.microsoft.update.agent"
-      ],
-      "pkgutil": "com.microsoft.package.Microsoft_AutoUpdate.app",
-      "delete": "/Library/PrivilegedHelperTools/com.microsoft.autoupdate.helper",
       "trash": [
-        "/Library/Application Support/Microsoft",
         "~/Library/Application Support/Microsoft Edge",
         "~/Library/Caches/Microsoft Edge",
         "~/Library/Preferences/com.microsoft.edgemac.plist",
         "~/Library/Saved Application State/com.microsoft.edgemac.savedState"
       ],
+      "rmdir": "/Library/Application Support/Microsoft",
       "signal": {
       }
     }
   ],
   "caveats": null,
   "depends_on": {
+    "cask": [
+      "microsoft-auto-update"
+    ]
   },
   "conflicts_with": null,
   "container": null,

@@ -11,20 +11,11 @@
   "artifacts": [
     {
       "pkgutil": [
-        "com.microsoft.package.Microsoft_AutoUpdate.app",
         "com.microsoft.CompanyPortalMac",
         "com.microsoft.CompanyPortal"
       ],
       "delete": [
-        "/Applications/Company Portal.app",
-        "/Library/PrivilegedHelperTools/com.microsoft.autoupdate.helper"
-      ],
-      "launchctl": [
-        "com.microsoft.autoupdate.helper",
-        "com.microsoft.update.agent"
-      ],
-      "quit": [
-        "com.microsoft.autoupdate.fba"
+        "/Applications/Company Portal.app"
       ],
       "signal": {
       }
@@ -33,6 +24,9 @@
   ],
   "caveats": null,
   "depends_on": {
+    "cask": [
+      "microsoft-auto-update"
+    ],
     "macos": {
       ">=": [
         "10.14"

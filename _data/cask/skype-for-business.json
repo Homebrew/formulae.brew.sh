@@ -23,26 +23,21 @@
     {
       "trash": [
         "/Library/Internet Plug-Ins/MeetingJoinPlugin.plugin",
-        "~/Library/Preferences/com.microsoft.SkypeForBusinessTAP.plist",
-        "~/Library/Preferences/com.microsoft.SkypeForBusinessTAP.debuglogging.plist",
         "~/Library/Application Support/com.microsoft.SkypeForBusinessTAP",
-        "~/Library/Application Support/Skype for Business"
-      ],
-      "launchctl": [
-        "com.microsoft.autoupdate.helper",
-        "com.microsoft.update.agent"
+        "~/Library/Application Support/Skype for Business",
+        "~/Library/Preferences/com.microsoft.SkypeForBusinessTAP.plist",
+        "~/Library/Preferences/com.microsoft.SkypeForBusinessTAP.debuglogging.plist"
       ],
       "rmdir": "/Library/Application Support/Microsoft",
-      "pkgutil": [
-        "com.microsoft.package.Microsoft_AU_Bootstrapper.app",
-        "com.microsoft.package.Microsoft_AutoUpdate.app"
-      ],
       "signal": {
       }
     }
   ],
   "caveats": null,
   "depends_on": {
+    "cask": [
+      "microsoft-auto-update"
+    ],
     "macos": {
       ">=": [
         "10.11"
