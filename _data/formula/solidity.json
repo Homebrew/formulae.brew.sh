@@ -1,6 +1,6 @@
 {
-  "name": "b3sum",
-  "full_name": "b3sum",
+  "name": "solidity",
+  "full_name": "solidity",
   "oldname": null,
   "aliases": [
 
@@ -8,20 +8,20 @@
   "versioned_formulae": [
 
   ],
-  "desc": "The BLAKE3 cryptographic hash function",
+  "desc": "Contract-oriented programming language",
   "license": [
-    "CC0-1.0"
+    "GPL-3.0"
   ],
-  "homepage": "https://github.com/BLAKE3-team/BLAKE3",
+  "homepage": "https://solidity.readthedocs.io",
   "versions": {
-    "stable": "0.3.6",
+    "stable": "0.6.12",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/BLAKE3-team/BLAKE3/archive/0.3.6.tar.gz",
+      "url": "https://github.com/ethereum/solidity/releases/download/v0.6.12/solidity_0.6.12.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -36,16 +36,12 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/b3sum-0.3.6.catalina.bottle.tar.gz",
-          "sha256": "0cc18e90088f9793243355b4d5e65b7d471f98f5bcabd7aa79e58d4693d970de"
+          "url": "https://homebrew.bintray.com/bottles/solidity-0.6.12.catalina.bottle.tar.gz",
+          "sha256": "fdc25fe91c43bdfe39cf0c49f7729bf5968bcf8bda5613fed5c0c7a49d3019d7"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/b3sum-0.3.6.mojave.bottle.tar.gz",
-          "sha256": "24b9ed3dff88348367288b54b7152e7c0bb7337269288157e5cde194db5baba6"
-        },
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/b3sum-0.3.6.high_sierra.bottle.tar.gz",
-          "sha256": "bf6c7fbbe0ae41f885ab8d38f47987d5157a0e3853ba88510cfe868e60723664"
+          "url": "https://homebrew.bintray.com/bottles/solidity-0.6.12.mojave.bottle.tar.gz",
+          "sha256": "feec8ba23058fe088ac1cfcebadc0151a519382921d5b65514193e8421bef61b"
         }
       }
     }
@@ -56,10 +52,10 @@
 
   ],
   "build_dependencies": [
-    "rust"
+    "cmake"
   ],
   "dependencies": [
-
+    "boost"
   ],
   "recommended_dependencies": [
 
@@ -71,7 +67,15 @@
 
   ],
   "requirements": [
-
+    {
+      "name": "xcode",
+      "cask": null,
+      "download": null,
+      "version": "11.0",
+      "contexts": [
+        "build"
+      ]
+    }
   ],
   "conflicts_with": [
 
