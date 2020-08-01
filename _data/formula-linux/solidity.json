@@ -1,6 +1,6 @@
 {
-  "name": "dgraph",
-  "full_name": "dgraph",
+  "name": "solidity",
+  "full_name": "solidity",
   "oldname": null,
   "aliases": [
 
@@ -8,20 +8,20 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Fast, Distributed Graph DB",
+  "desc": "Contract-oriented programming language",
   "license": [
-    "Apache-2.0"
+    "GPL-3.0"
   ],
-  "homepage": "https://dgraph.io",
+  "homepage": "https://solidity.readthedocs.io",
   "versions": {
-    "stable": "20.07.0",
+    "stable": "0.6.12",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/dgraph-io/dgraph/archive/v20.07.0.tar.gz",
+      "url": "https://github.com/ethereum/solidity/releases/download/v0.6.12/solidity_0.6.12.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -36,16 +36,12 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/dgraph-20.07.0.catalina.bottle.tar.gz",
-          "sha256": "eb57d3ff53372468f23d277e0bf0a39d147a2c7a1b0882d32f53c9200d8721f5"
+          "url": "https://linuxbrew.bintray.com/bottles/solidity-0.6.12.catalina.bottle.tar.gz",
+          "sha256": "fdc25fe91c43bdfe39cf0c49f7729bf5968bcf8bda5613fed5c0c7a49d3019d7"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/dgraph-20.07.0.mojave.bottle.tar.gz",
-          "sha256": "0358f83ea5a545ef452ced5cb123c34d6880bc848ad2006e042801c19e2f0770"
-        },
-        "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/dgraph-20.07.0.high_sierra.bottle.tar.gz",
-          "sha256": "290e72cb04f180ed4a11850d2aff0a42d5cde1c780191f0a920ae7578ef64e5a"
+          "url": "https://linuxbrew.bintray.com/bottles/solidity-0.6.12.mojave.bottle.tar.gz",
+          "sha256": "feec8ba23058fe088ac1cfcebadc0151a519382921d5b65514193e8421bef61b"
         }
       }
     }
@@ -56,10 +52,10 @@
 
   ],
   "build_dependencies": [
-    "go"
+    "cmake"
   ],
   "dependencies": [
-
+    "boost"
   ],
   "recommended_dependencies": [
 
@@ -71,7 +67,15 @@
 
   ],
   "requirements": [
-
+    {
+      "name": "xcode",
+      "cask": null,
+      "download": null,
+      "version": "11.0",
+      "contexts": [
+        "build"
+      ]
+    }
   ],
   "conflicts_with": [
 

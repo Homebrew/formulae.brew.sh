@@ -14,29 +14,49 @@
   ],
   "homepage": "https://project.carrot2.org",
   "versions": {
-    "stable": "3.16.3",
+    "stable": "4.0.0",
     "devel": null,
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/carrot2/carrot2/releases/download/release%2F3.16.3/carrot2-dcs-3.16.3.zip",
-      "tag": null,
-      "revision": null
+      "url": "https://github.com/carrot2/carrot2.git",
+      "tag": "release/4.0.0",
+      "revision": "6a5e2ff984b3ec60375fd475c7cdcd25f7403beb"
     }
   },
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any_skip_relocation",
+      "prefix": "/home/linuxbrew/.linuxbrew",
+      "root_url": "https://linuxbrew.bintray.com/bottles",
+      "files": {
+        "catalina": {
+          "url": "https://linuxbrew.bintray.com/bottles/carrot2-4.0.0.catalina.bottle.tar.gz",
+          "sha256": "a194d103ec94747cc1ff6b1c3d1dff55cb1881cd2abef6bd136d9e051d8318a9"
+        },
+        "mojave": {
+          "url": "https://linuxbrew.bintray.com/bottles/carrot2-4.0.0.mojave.bottle.tar.gz",
+          "sha256": "a10345d4b2edbecaedf57600101130e74d61c0bea18a9a8fb3eb5d07de32b5ee"
+        },
+        "high_sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/carrot2-4.0.0.high_sierra.bottle.tar.gz",
+          "sha256": "2e91d4f0ad08292b172485246c853214d930f32ff3980fbaf5021522efa4493b"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
   "build_dependencies": [
-
+    "gradle"
   ],
   "dependencies": [
     "openjdk"
