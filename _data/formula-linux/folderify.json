@@ -1,6 +1,6 @@
 {
-  "name": "liquidctl",
-  "full_name": "liquidctl",
+  "name": "folderify",
+  "full_name": "folderify",
   "oldname": null,
   "aliases": [
 
@@ -8,20 +8,20 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Cross-platform tool and drivers for liquid coolers and other devices",
+  "desc": "Generate pretty, beveled macOS folder icons",
   "license": [
-    "GPL-3.0"
+    "MIT"
   ],
-  "homepage": "https://github.com/jonasmalacofilho/liquidctl",
+  "homepage": "https://github.com/lgarron/folderify",
   "versions": {
-    "stable": "1.4.0",
+    "stable": "1.2.3",
     "devel": null,
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://files.pythonhosted.org/packages/43/37/7d30f2ba5eade8715c8981d552bcc6b67a039426fc32aa2722b5af321e67/liquidctl-1.4.0.tar.gz",
+      "url": "https://github.com/lgarron/folderify/archive/v1.2.3.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -36,16 +36,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/liquidctl-1.4.0.catalina.bottle.tar.gz",
-          "sha256": "cb1825861905de403f759203b015a7e3fca7ba814e0a364b93426f21ff28553b"
+          "url": "https://linuxbrew.bintray.com/bottles/folderify-1.2.3.catalina.bottle.tar.gz",
+          "sha256": "062b16879ed2d131b59c248742e264c5a0408cf2920726e7a8e5748e8f26311e"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/liquidctl-1.4.0.mojave.bottle.tar.gz",
-          "sha256": "89f6b2caa75d40bb321783eea887c1298a6467cdd517cbe2f9ad14c4b6acfd15"
+          "url": "https://linuxbrew.bintray.com/bottles/folderify-1.2.3.mojave.bottle.tar.gz",
+          "sha256": "53fe9712af93934f58d7240be8352a1bba5af825c125ed299a436b652c5c9f8a"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/liquidctl-1.4.0.high_sierra.bottle.tar.gz",
-          "sha256": "af6b3aa6900598d9524a42dc572ad0c28bc6a05f10e67b5459ec67c560c42d88"
+          "url": "https://linuxbrew.bintray.com/bottles/folderify-1.2.3.high_sierra.bottle.tar.gz",
+          "sha256": "73e6e1481a6be47c97ffb05bfde6721e48096c9ad574a29917f680599acc9bff"
         }
       }
     }
@@ -59,7 +59,7 @@
 
   ],
   "dependencies": [
-    "libusb",
+    "imagemagick",
     "python@3.8"
   ],
   "recommended_dependencies": [
@@ -72,7 +72,15 @@
 
   ],
   "requirements": [
+    {
+      "name": "macos",
+      "cask": null,
+      "download": null,
+      "version": null,
+      "contexts": [
 
+      ]
+    }
   ],
   "conflicts_with": [
 
