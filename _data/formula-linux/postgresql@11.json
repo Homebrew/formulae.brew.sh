@@ -30,26 +30,22 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 0,
+      "rebuild": 1,
       "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/postgresql%4011-11.8_4.catalina.bottle.tar.gz",
-          "sha256": "420e0588a9c7d13bd60dbd14cd825e3ab94e8190aceae83a326469c2069eccff"
+          "url": "https://linuxbrew.bintray.com/bottles/postgresql%4011-11.8_4.catalina.bottle.1.tar.gz",
+          "sha256": "b66a90091a0cecd407bc21f076787177edde684b82cd0a161a1eb88116d8d65f"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/postgresql%4011-11.8_4.mojave.bottle.tar.gz",
-          "sha256": "0f53a997e555a3dd79d58494b0b5d5e11d0d01bb20db2084d544cc750125ab2b"
+          "url": "https://linuxbrew.bintray.com/bottles/postgresql%4011-11.8_4.mojave.bottle.1.tar.gz",
+          "sha256": "fc3cf767f3674b578778105c3aea1d39fb955f9f7d68991a6ffe6c58a67f64b2"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/postgresql%4011-11.8_4.high_sierra.bottle.tar.gz",
-          "sha256": "2e37db63328194a9445083afbbd2e6ef22535bd6b15ba4514ee231b75e5a74f0"
-        },
-        "x86_64_linux": {
-          "url": "https://linuxbrew.bintray.com/bottles/postgresql%4011-11.8_4.x86_64_linux.bottle.tar.gz",
-          "sha256": "34dc0ba65a0c87f119ab808b07b3def560ed917c18d0c10e240b124c0347acf0"
+          "url": "https://linuxbrew.bintray.com/bottles/postgresql%4011-11.8_4.high_sierra.bottle.1.tar.gz",
+          "sha256": "61b646d16f93dc954f81225a2362486249d098c1a39e2be919393a8b144b8290"
         }
       }
     }
@@ -86,7 +82,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "To migrate existing data from a previous major version of PostgreSQL run:\n  brew postgresql-upgrade-database\n",
+  "caveats": "To migrate existing data from a previous major version of PostgreSQL run:\n  brew postgresql-upgrade-database\n\nThis formula has created a default database cluster with:\n  initdb --locale=C -E UTF-8 $(brew --prefix)/var/postgres\nFor more details, read:\n  https://www.postgresql.org/docs/11/app-initdb.html\n",
   "installed": [
 
   ],
