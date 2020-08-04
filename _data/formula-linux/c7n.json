@@ -1,6 +1,6 @@
 {
-  "name": "bond",
-  "full_name": "bond",
+  "name": "c7n",
+  "full_name": "c7n",
   "oldname": null,
   "aliases": [
 
@@ -8,20 +8,20 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Cross-platform framework for working with schematized data",
+  "desc": "Rules engine for cloud security, cost optimization, and governance",
   "license": [
-    "MIT"
+    "Apache-2.0"
   ],
-  "homepage": "https://github.com/microsoft/bond",
+  "homepage": "https://github.com/cloud-custodian/cloud-custodian",
   "versions": {
-    "stable": "9.0.2",
+    "stable": "0.9.2.0",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/microsoft/bond/archive/9.0.2.tar.gz",
+      "url": "https://github.com/cloud-custodian/cloud-custodian/archive/0.9.2.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,21 +31,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": ":any_skip_relocation",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/bond-9.0.2.catalina.bottle.tar.gz",
-          "sha256": "5535b65ad5e7ba72b0e671e43c915f051603ad58f3f876892ceb655ac610fba2"
+          "url": "https://linuxbrew.bintray.com/bottles/c7n-0.9.2.0.catalina.bottle.tar.gz",
+          "sha256": "6698261956745c6e0adb0898034df995b74bd3180ba6278bc4a005c11cc8c3bb"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/bond-9.0.2.mojave.bottle.tar.gz",
-          "sha256": "f0b6dbc5afaf0b4a49dd240cdcafb08254632b1894737d2d2ad6faef8c13054d"
+          "url": "https://linuxbrew.bintray.com/bottles/c7n-0.9.2.0.mojave.bottle.tar.gz",
+          "sha256": "0fdfcd5e2699fdea31e8d4428b78842c9c3d9840d9b8040973263b762e0e915e"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/bond-9.0.2.high_sierra.bottle.tar.gz",
-          "sha256": "6bd7cd9569089318223d6897fb3232aca500988a351aa674bb4e71de87b0b662"
+          "url": "https://linuxbrew.bintray.com/bottles/c7n-0.9.2.0.high_sierra.bottle.tar.gz",
+          "sha256": "b4cff70481e7eddb4de4d077f655bc8b0229bcfae3e8c70e65a089af5a961b09"
         }
       }
     }
@@ -56,12 +56,10 @@
 
   ],
   "build_dependencies": [
-    "cmake",
-    "haskell-stack"
+
   ],
   "dependencies": [
-    "boost",
-    "rapidjson"
+    "python@3.8"
   ],
   "recommended_dependencies": [
 

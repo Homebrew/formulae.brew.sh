@@ -1,6 +1,6 @@
 {
-  "name": "bond",
-  "full_name": "bond",
+  "name": "athenacli",
+  "full_name": "athenacli",
   "oldname": null,
   "aliases": [
 
@@ -8,20 +8,20 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Cross-platform framework for working with schematized data",
+  "desc": "CLI tool for AWS Athena service",
   "license": [
-    "MIT"
+    "BSD-3-Clause"
   ],
-  "homepage": "https://github.com/microsoft/bond",
+  "homepage": "https://athenacli.readthedocs.io/en/latest/",
   "versions": {
-    "stable": "9.0.2",
+    "stable": "1.4.1",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/microsoft/bond/archive/9.0.2.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/7b/d8/8e3525213c209cb6de70ef9074fe356bada9e8871b6b85fcd860d571071b/athenacli-1.4.1.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,21 +31,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": ":any_skip_relocation",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/bond-9.0.2.catalina.bottle.tar.gz",
-          "sha256": "5535b65ad5e7ba72b0e671e43c915f051603ad58f3f876892ceb655ac610fba2"
+          "url": "https://linuxbrew.bintray.com/bottles/athenacli-1.4.1.catalina.bottle.tar.gz",
+          "sha256": "bef4c8f60d21b74351a51909440105eb23b60955f1d5169863402a80b270fd03"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/bond-9.0.2.mojave.bottle.tar.gz",
-          "sha256": "f0b6dbc5afaf0b4a49dd240cdcafb08254632b1894737d2d2ad6faef8c13054d"
+          "url": "https://linuxbrew.bintray.com/bottles/athenacli-1.4.1.mojave.bottle.tar.gz",
+          "sha256": "2374a54e8769fc27cd7122f125ffab859c32d300784a6f75e0ada7b2cd9e7538"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/bond-9.0.2.high_sierra.bottle.tar.gz",
-          "sha256": "6bd7cd9569089318223d6897fb3232aca500988a351aa674bb4e71de87b0b662"
+          "url": "https://linuxbrew.bintray.com/bottles/athenacli-1.4.1.high_sierra.bottle.tar.gz",
+          "sha256": "84e5bc3b21424252d7d04f95392b525d7e1bc314c7218b140e49fe3f247850f2"
         }
       }
     }
@@ -56,12 +56,10 @@
 
   ],
   "build_dependencies": [
-    "cmake",
-    "haskell-stack"
+
   ],
   "dependencies": [
-    "boost",
-    "rapidjson"
+    "python@3.8"
   ],
   "recommended_dependencies": [
 
