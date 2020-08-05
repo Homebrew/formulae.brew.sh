@@ -15,6 +15,9 @@ permalink: :title
 {%- endif %}
 <p>{{ f.desc | xml_escape }}</p>
 <p><a href="{{ f.homepage }}">{{ f.homepage }}</a></p>
+{%- if f.license.size > 0 %}
+<p>License: <strong>{{ f.license | join: "</strong>, <strong>" }}</strong></p>
+{%- endif -%}
 
 <p><a href="{{ site.baseurl }}/api/{{ formula_path }}/{{ f.name }}.json"><code>/api/{{ formula_path }}/{{ f.name }}.json</code> (JSON API)</a></p>
 {%- if formula_path == "formula-linux" %}
