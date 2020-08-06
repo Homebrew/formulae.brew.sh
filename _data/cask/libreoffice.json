@@ -4,9 +4,9 @@
     "LibreOffice"
   ],
   "homepage": "https://www.libreoffice.org/",
-  "url": "https://download.documentfoundation.org/libreoffice/stable/7.0.0/mac/x86_64/LibreOffice_7.0.0.3_MacOS_x86-64.dmg",
+  "url": "https://download.documentfoundation.org/libreoffice/stable/7.0.0/mac/x86_64/LibreOffice_7.0.0_MacOS_x86-64.dmg",
   "appcast": "https://download.documentfoundation.org/libreoffice/stable/",
-  "version": "7.0.0.3",
+  "version": "7.0.0",
   "sha256": "74700ce918278b78464a4cd0e16d929e4af7b0447c42b400f61a2555818584e9",
   "artifacts": [
     "preflight (Preflight Block)",
@@ -38,7 +38,7 @@
       "/Applications/LibreOffice.app/Contents/MacOS/xpdfimport"
     ],
     [
-      "$(brew --prefix)/Caskroom/libreoffice/7.0.0.3/soffice.wrapper.sh",
+      "$(brew --prefix)/Caskroom/libreoffice/7.0.0/soffice.wrapper.sh",
       {
         "target": "soffice"
       }
@@ -62,6 +62,11 @@
   ],
   "caveats": null,
   "depends_on": {
+    "macos": {
+      ">=": [
+        "10.12"
+      ]
+    }
   },
   "conflicts_with": {
     "cask": [
