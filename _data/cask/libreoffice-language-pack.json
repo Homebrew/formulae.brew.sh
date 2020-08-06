@@ -4,13 +4,13 @@
     "LibreOffice Language Pack"
   ],
   "homepage": "https://www.libreoffice.org/",
-  "url": "https://download.documentfoundation.org/libreoffice/stable/6.4.5/mac/x86_64/LibreOffice_6.4.5_MacOS_x86-64_langpack_en-GB.dmg",
+  "url": "https://download.documentfoundation.org/libreoffice/stable/7.0.0/mac/x86_64/LibreOffice_7.0.0_MacOS_x86-64_langpack_en-GB.dmg",
   "appcast": "https://download.documentfoundation.org/libreoffice/stable/",
-  "version": "6.4.5",
-  "sha256": "9a1ddeba04b8a2a87ca94e1566edf4427466fcb3b3024d8ed9e22773e050a094",
+  "version": "7.0.0",
+  "sha256": "5fa2c8f625e3cf8faa9cb7e05139aea88a269e56f6abef849b468b09d969c783",
   "artifacts": [
     {
-      "delete": "$(brew --prefix)/Caskroom/libreoffice-language-pack/6.4.5/libreoffice-language-pack",
+      "delete": "$(brew --prefix)/Caskroom/libreoffice-language-pack/7.0.0/libreoffice-language-pack",
       "signal": {
       }
     },
@@ -22,7 +22,12 @@
   "depends_on": {
     "cask": [
       "libreoffice"
-    ]
+    ],
+    "macos": {
+      ">=": [
+        "10.12"
+      ]
+    }
   },
   "conflicts_with": null,
   "container": null,
