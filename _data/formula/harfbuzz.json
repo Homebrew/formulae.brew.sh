@@ -14,14 +14,14 @@
   ],
   "homepage": "https://github.com/harfbuzz/harfbuzz",
   "versions": {
-    "stable": "2.6.8",
+    "stable": "2.7.0",
     "devel": null,
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/harfbuzz/harfbuzz/releases/download/2.6.8/harfbuzz-2.6.8.tar.xz",
+      "url": "https://github.com/harfbuzz/harfbuzz/archive/2.7.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -36,16 +36,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/harfbuzz-2.6.8.catalina.bottle.tar.gz",
-          "sha256": "895c050d4c7cf989e3fd212e88ab904db5d91900b3e7455ff2f026574923042b"
+          "url": "https://homebrew.bintray.com/bottles/harfbuzz-2.7.0.catalina.bottle.tar.gz",
+          "sha256": "298feb4c557de8daca542b5cf41c12256c594c09d5de0d68624bd6b1f7f3c8f1"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/harfbuzz-2.6.8.mojave.bottle.tar.gz",
-          "sha256": "2e8462507d2501793c335f4c7aff91dd8d2e38beb060fc416af7d9bf577158a9"
+          "url": "https://homebrew.bintray.com/bottles/harfbuzz-2.7.0.mojave.bottle.tar.gz",
+          "sha256": "f8b9aed2377e3861e670c6da69c62f974f1f1550b0fb873a213f429aef10806b"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/harfbuzz-2.6.8.high_sierra.bottle.tar.gz",
-          "sha256": "9ca4eaac80b2db11439e865f977d6b7b330b2bd5ca8f558e23be49acda67b23e"
+          "url": "https://homebrew.bintray.com/bottles/harfbuzz-2.7.0.high_sierra.bottle.tar.gz",
+          "sha256": "ae608cdcfccd5be5d27f105daecdbce3fdb9c4d93f046a5783a96f2c74ba011c"
         }
       }
     }
@@ -56,13 +56,14 @@
 
   ],
   "build_dependencies": [
-    "gobject-introspection",
-    "pkg-config"
+    "meson",
+    "ninja"
   ],
   "dependencies": [
     "cairo",
     "freetype",
     "glib",
+    "gobject-introspection",
     "graphite2",
     "icu4c"
   ],

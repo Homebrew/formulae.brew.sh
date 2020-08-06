@@ -14,19 +14,19 @@
   ],
   "homepage": "https://gnuradio.org/",
   "versions": {
-    "stable": "3.7.13.4",
+    "stable": "3.8.1.0",
     "devel": null,
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://gnuradio.org/releases/gnuradio/gnuradio-3.7.13.4.tar.gz",
+      "url": "https://github.com/gnuradio/gnuradio/releases/download/v3.8.1.0/gnuradio-3.8.1.0.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 14,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -36,16 +36,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/gnuradio-3.7.13.4_14.catalina.bottle.tar.gz",
-          "sha256": "74aa8a8d8c32be557ea8a8864cb8617e82a939e667b73e11c45da13d72b52a3a"
+          "url": "https://homebrew.bintray.com/bottles/gnuradio-3.8.1.0_1.catalina.bottle.tar.gz",
+          "sha256": "ddf80e05855d4a9e72a77a45f15cc6af8a7eb995f7a8df8cc2ba973f5fb6e615"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/gnuradio-3.7.13.4_14.mojave.bottle.tar.gz",
-          "sha256": "ee2e794d854ab87e00ca35805d4f57232d49e688df5e71a7e9e448883402f540"
+          "url": "https://homebrew.bintray.com/bottles/gnuradio-3.8.1.0_1.mojave.bottle.tar.gz",
+          "sha256": "832b4a1ebe9a237250d03e55fb831d1b2635f6586756c0b84f780fd3dd6af24a"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gnuradio-3.7.13.4_14.high_sierra.bottle.tar.gz",
-          "sha256": "ae53bf0abbdda23f25a45829483a6d1e03f096447289f2df72a6855be7af1619"
+          "url": "https://homebrew.bintray.com/bottles/gnuradio-3.8.1.0_1.high_sierra.bottle.tar.gz",
+          "sha256": "61a383441ba10b50780c8f4fb7500e9971ee65c63a43f0a87071925e5dd66461"
         }
       }
     }
@@ -59,15 +59,22 @@
     "cmake",
     "doxygen",
     "pkg-config",
-    "sphinx-doc",
     "swig"
   ],
   "dependencies": [
     "boost",
     "fftw",
+    "gmp",
     "gsl",
-    "numpy@1.16",
+    "gtk+3",
+    "log4cpp",
+    "numpy",
     "portaudio",
+    "pygobject3",
+    "pyqt",
+    "python@3.8",
+    "qt",
+    "qwt",
     "uhd",
     "zeromq"
   ],
@@ -81,15 +88,7 @@
 
   ],
   "requirements": [
-    {
-      "name": "macos",
-      "cask": null,
-      "download": null,
-      "version": null,
-      "contexts": [
 
-      ]
-    }
   ],
   "conflicts_with": [
 

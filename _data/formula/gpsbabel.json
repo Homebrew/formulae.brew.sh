@@ -14,14 +14,14 @@
   ],
   "homepage": "https://www.gpsbabel.org/",
   "versions": {
-    "stable": "1.6.0",
+    "stable": "1.7.0",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/gpsbabel/gpsbabel/archive/gpsbabel_1_6_0.tar.gz",
+      "url": "https://github.com/gpsbabel/gpsbabel/archive/gpsbabel_1_7_0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -36,20 +36,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/gpsbabel-1.6.0.catalina.bottle.tar.gz",
-          "sha256": "685947e84880f27a16a442c10456990f9ede1efa8adf723fa217ba7ac5123ff7"
+          "url": "https://homebrew.bintray.com/bottles/gpsbabel-1.7.0.catalina.bottle.tar.gz",
+          "sha256": "ef08f246d1d7321d1bb605591194f2d207fc0cd2465755dbbe86afc640cb41db"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/gpsbabel-1.6.0.mojave.bottle.tar.gz",
-          "sha256": "0d5fa17f760e4ff0ebf88bf4b461c1fba6498278edd57ab77caee7576f5c4609"
+          "url": "https://homebrew.bintray.com/bottles/gpsbabel-1.7.0.mojave.bottle.tar.gz",
+          "sha256": "7a622c1a689d239e3a98185220428127cffee6f3d060519d509106a8a37fdbc1"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gpsbabel-1.6.0.high_sierra.bottle.tar.gz",
-          "sha256": "e147b5217a57fdf32a8073f53718e6423f227e967f9d495cb3a0bc38b5e2ad3a"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gpsbabel-1.6.0.sierra.bottle.tar.gz",
-          "sha256": "e982a298816049c9094762699799f238cfc8d7804cf5d72f6816ebd0e8aa414e"
+          "url": "https://homebrew.bintray.com/bottles/gpsbabel-1.7.0.high_sierra.bottle.tar.gz",
+          "sha256": "d8a8ecec7300d96476fbba89a2343d87712628cfd2f4325df19aed2dabec4b17"
         }
       }
     }
@@ -60,11 +56,12 @@
 
   ],
   "build_dependencies": [
-
+    "pkg-config"
   ],
   "dependencies": [
     "libusb",
-    "qt"
+    "qt",
+    "shapelib"
   ],
   "recommended_dependencies": [
 
@@ -73,7 +70,7 @@
 
   ],
   "uses_from_macos": [
-
+    "zlib"
   ],
   "requirements": [
 

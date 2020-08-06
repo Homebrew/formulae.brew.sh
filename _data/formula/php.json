@@ -27,7 +27,7 @@
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -37,16 +37,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/php-7.4.8.catalina.bottle.tar.gz",
-          "sha256": "da81ec7dbe2ab2d9cbfcb5fcfa5f8e4fa0258f1947c52a13967c52dc6bab7f8f"
+          "url": "https://homebrew.bintray.com/bottles/php-7.4.8_1.catalina.bottle.tar.gz",
+          "sha256": "ec3af8e7bcfda01b5b0370cd33e97b12ce0988c2743e2437be4efc7d15a15f74"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/php-7.4.8.mojave.bottle.tar.gz",
-          "sha256": "c5dab2822c4d18b48379a1351854020dc81a52c94e400a7129f68220daa59fca"
+          "url": "https://homebrew.bintray.com/bottles/php-7.4.8_1.mojave.bottle.tar.gz",
+          "sha256": "fb211d4a9cf8fddb20c0c40b0934c09db7c0d5514bd5cb4d7692b115fec4b9e2"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/php-7.4.8.high_sierra.bottle.tar.gz",
-          "sha256": "d6525030277bf523c2e80a8ae5d8a5b3f0ce84a7679ec79c1fb89f4109c0f2f7"
+          "url": "https://homebrew.bintray.com/bottles/php-7.4.8_1.high_sierra.bottle.tar.gz",
+          "sha256": "d3c4639e3b5d8ba7e33c73a5e52cf3e3825fd0c7e3a647af6364e8ddeb25d90d"
         }
       }
     }
@@ -68,24 +68,23 @@
     "autoconf",
     "curl-openssl",
     "freetds",
-    "freetype",
+    "gd",
     "gettext",
     "glib",
     "gmp",
     "icu4c",
-    "jpeg",
+    "krb5",
     "libffi",
-    "libpng",
     "libpq",
     "libsodium",
     "libzip",
     "oniguruma",
     "openldap",
     "openssl@1.1",
+    "pcre2",
     "sqlite",
     "tidy-html5",
-    "unixodbc",
-    "webp"
+    "unixodbc"
   ],
   "recommended_dependencies": [
 
@@ -98,7 +97,6 @@
       "xz": "build"
     },
     "bzip2",
-    "krb5",
     "libedit",
     "libxml2",
     "libxslt",
@@ -113,7 +111,7 @@
   "caveats": "To enable PHP in Apache add the following to httpd.conf and restart Apache:\n    LoadModule php7_module $(brew --prefix)/opt/php/lib/httpd/modules/libphp7.so\n\n    <FilesMatch \\.php$>\n        SetHandler application/x-httpd-php\n    </FilesMatch>\n\nFinally, check DirectoryIndex includes index.php\n    DirectoryIndex index.php index.html\n\nThe php.ini and php-fpm.ini file can be found in:\n    $(brew --prefix)/etc/php/7.4/\n",
   "installed": [
     {
-      "version": "7.4.8",
+      "version": "7.4.8_1",
       "used_options": [
 
       ],
@@ -217,8 +215,28 @@
           "version": "2.10.2"
         },
         {
+          "full_name": "fontconfig",
+          "version": "2.13.1"
+        },
+        {
+          "full_name": "jpeg",
+          "version": "9d"
+        },
+        {
+          "full_name": "libtiff",
+          "version": "4.1.0"
+        },
+        {
+          "full_name": "webp",
+          "version": "1.1.0"
+        },
+        {
+          "full_name": "gd",
+          "version": "2.3.0"
+        },
+        {
           "full_name": "gettext",
-          "version": "0.20.2"
+          "version": "0.21"
         },
         {
           "full_name": "libffi",
@@ -261,10 +279,6 @@
           "version": "67.1"
         },
         {
-          "full_name": "jpeg",
-          "version": "9d"
-        },
-        {
           "full_name": "krb5",
           "version": "1.18.2"
         },
@@ -285,23 +299,19 @@
           "version": "6.9.5-rev1"
         },
         {
+          "full_name": "pcre2",
+          "version": "10.35"
+        },
+        {
           "full_name": "tidy-html5",
           "version": "5.6.0"
-        },
-        {
-          "full_name": "libtiff",
-          "version": "4.1.0"
-        },
-        {
-          "full_name": "webp",
-          "version": "1.1.0"
         }
       ],
       "installed_as_dependency": false,
       "installed_on_request": true
     }
   ],
-  "linked_keg": "7.4.8",
+  "linked_keg": "7.4.8_1",
   "pinned": false,
   "outdated": false,
   "deprecated": false,
