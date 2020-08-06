@@ -1,27 +1,27 @@
 {
-  "name": "caf",
-  "full_name": "caf",
-  "oldname": "libcppa",
+  "name": "torchvision",
+  "full_name": "torchvision",
+  "oldname": null,
   "aliases": [
-    "actor-framework"
+
   ],
   "versioned_formulae": [
 
   ],
-  "desc": "Implementation of the Actor Model for C++",
+  "desc": "Datasets, transforms, and models for computer vision",
   "license": [
     "BSD-3-Clause"
   ],
-  "homepage": "https://actor-framework.org/",
+  "homepage": "https://github.com/pytorch/vision",
   "versions": {
-    "stable": "0.17.6",
+    "stable": "0.7.0",
     "devel": null,
-    "head": "HEAD",
+    "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/actor-framework/actor-framework/archive/0.17.6.tar.gz",
+      "url": "https://github.com/pytorch/vision/archive/v0.7.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -30,22 +30,22 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "cellar": ":any",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/caf-0.17.6.catalina.bottle.1.tar.gz",
-          "sha256": "131af3b3422867d6cb4c9e46d773e7b102e2dd9209be5d844cbbe99a1a7c6883"
+          "url": "https://homebrew.bintray.com/bottles/torchvision-0.7.0.catalina.bottle.tar.gz",
+          "sha256": "49d97796750224bad8b8b736baf55559ea5d14e213f64ed9f694a3e7af5b0436"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/caf-0.17.6.mojave.bottle.1.tar.gz",
-          "sha256": "20b60e3ee9f2953ac5453aeb1c5d724b1141f5b90be8b2b2d611f9f0938ff913"
+          "url": "https://homebrew.bintray.com/bottles/torchvision-0.7.0.mojave.bottle.tar.gz",
+          "sha256": "24c96d72711af9ed8b2164ba2ffee46ebacc2c0423482a1afde2426c5343b81b"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/caf-0.17.6.high_sierra.bottle.1.tar.gz",
-          "sha256": "be54ecedb3968591490e165d7260b0b8c19745e44d125fde2a5cd209fa71fc16"
+          "url": "https://homebrew.bintray.com/bottles/torchvision-0.7.0.high_sierra.bottle.tar.gz",
+          "sha256": "f555a780fe0a5c1f6685ddf17248efb97459ff3ad1c4b15b1d07d56088eda5f4"
         }
       }
     }
@@ -56,10 +56,11 @@
 
   ],
   "build_dependencies": [
-    "cmake"
+    "cmake",
+    "python@3.8"
   ],
   "dependencies": [
-    "openssl@1.1"
+    "libtorch"
   ],
   "recommended_dependencies": [
 
