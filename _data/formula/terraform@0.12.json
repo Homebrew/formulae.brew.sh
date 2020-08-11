@@ -1,6 +1,6 @@
 {
-  "name": "swift-sh",
-  "full_name": "swift-sh",
+  "name": "terraform@0.12",
+  "full_name": "terraform@0.12",
   "oldname": null,
   "aliases": [
 
@@ -8,20 +8,20 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Scripting with easy zero-conf dependency imports",
+  "desc": "Tool to build, change, and version infrastructure",
   "license": [
-    "Unlicense"
+    "MPL-2.0"
   ],
-  "homepage": "https://github.com/mxcl/swift-sh",
+  "homepage": "https://www.terraform.io/",
   "versions": {
-    "stable": "2.0.1",
+    "stable": "0.12.29",
     "devel": null,
-    "head": "HEAD",
+    "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/mxcl/swift-sh/archive/2.0.1.tar.gz",
+      "url": "https://github.com/hashicorp/terraform/archive/v0.12.29.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -36,23 +36,27 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/swift-sh-2.0.1.catalina.bottle.tar.gz",
-          "sha256": "aeab9b696171e5a0e10896be70317618f096ef5024c2ab73b286a9a958466251"
+          "url": "https://homebrew.bintray.com/bottles/terraform%400.12-0.12.29.catalina.bottle.tar.gz",
+          "sha256": "6dd856617186380d96a3b277e6df15f9df0a929c44c1567e70cc1cff8fcc58e3"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/swift-sh-2.0.1.mojave.bottle.tar.gz",
-          "sha256": "7568e6bb0d39e6ec5582f5e135507fce1cecc3b0ea0706aaa94a8e866a992367"
+          "url": "https://homebrew.bintray.com/bottles/terraform%400.12-0.12.29.mojave.bottle.tar.gz",
+          "sha256": "6dd856617186380d96a3b277e6df15f9df0a929c44c1567e70cc1cff8fcc58e3"
+        },
+        "high_sierra": {
+          "url": "https://homebrew.bintray.com/bottles/terraform%400.12-0.12.29.high_sierra.bottle.tar.gz",
+          "sha256": "6dd856617186380d96a3b277e6df15f9df0a929c44c1567e70cc1cff8fcc58e3"
         }
       }
     }
   },
-  "keg_only": false,
+  "keg_only": true,
   "bottle_disabled": false,
   "options": [
 
   ],
   "build_dependencies": [
-
+    "go@1.13"
   ],
   "dependencies": [
 
@@ -67,15 +71,7 @@
 
   ],
   "requirements": [
-    {
-      "name": "xcode",
-      "cask": null,
-      "download": null,
-      "version": "11.0",
-      "contexts": [
-        "build"
-      ]
-    }
+
   ],
   "conflicts_with": [
 
