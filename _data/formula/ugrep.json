@@ -1,6 +1,6 @@
 {
-  "name": "kubeaudit",
-  "full_name": "kubeaudit",
+  "name": "ugrep",
+  "full_name": "ugrep",
   "oldname": null,
   "aliases": [
 
@@ -8,20 +8,20 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Helps audit your Kubernetes clusters against common security controls",
+  "desc": "Ultra fast grep with query UI, fuzzy search, archive search, and more",
   "license": [
-    "MIT"
+    "BSD-3-Clause"
   ],
-  "homepage": "https://github.com/Shopify/kubeaudit",
+  "homepage": "https://github.com/Genivia/ugrep",
   "versions": {
-    "stable": "0.10.0",
+    "stable": "2.5.0",
     "devel": null,
-    "head": "HEAD",
+    "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/Shopify/kubeaudit/archive/v0.10.0.tar.gz",
+      "url": "https://github.com/Genivia/ugrep/archive/v2.5.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,21 +31,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any_skip_relocation",
+      "cellar": "/usr/local/Cellar",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/kubeaudit-0.10.0.catalina.bottle.tar.gz",
-          "sha256": "34075925ebaf9e93a37f7a069bdfbd0f29a0c6939974c40a7b0135b76190bac7"
+          "url": "https://homebrew.bintray.com/bottles/ugrep-2.5.0.catalina.bottle.tar.gz",
+          "sha256": "fe7ed295538c51459e4dd89bdf47cf5bef13d8707f1ba74c5b563134c48e6811"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/kubeaudit-0.10.0.mojave.bottle.tar.gz",
-          "sha256": "633e6efd570dfff2361bd4f17f7d5aedc484acadaae84e327a5ee3ba9e195f97"
+          "url": "https://homebrew.bintray.com/bottles/ugrep-2.5.0.mojave.bottle.tar.gz",
+          "sha256": "5188397bf07fc26fabb0cb417cc4f017b08693164c81d4345f5830a3a814767a"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/kubeaudit-0.10.0.high_sierra.bottle.tar.gz",
-          "sha256": "c6d2d0ae2e3150111d88469bc5ee0cd341be55c62389ba8eb11a24d46a437ee4"
+          "url": "https://homebrew.bintray.com/bottles/ugrep-2.5.0.high_sierra.bottle.tar.gz",
+          "sha256": "d701f4a1b01d3eafd8d44f2a468c975d47cf6ede9c0afb82f5303b55187453eb"
         }
       }
     }
@@ -56,10 +56,11 @@
 
   ],
   "build_dependencies": [
-    "go"
+
   ],
   "dependencies": [
-
+    "pcre2",
+    "xz"
   ],
   "recommended_dependencies": [
 
