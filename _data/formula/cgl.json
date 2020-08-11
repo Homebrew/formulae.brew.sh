@@ -1,6 +1,6 @@
 {
-  "name": "nativefier",
-  "full_name": "nativefier",
+  "name": "cgl",
+  "full_name": "cgl",
   "oldname": null,
   "aliases": [
 
@@ -8,20 +8,20 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Wrap web apps natively",
+  "desc": "Cut Generation Library",
   "license": [
-    "MIT"
+    "EPL-1.0"
   ],
-  "homepage": "https://github.com/jiahaog/nativefier",
+  "homepage": "https://github.com/coin-or/Cgl",
   "versions": {
-    "stable": "9.2.0",
+    "stable": "0.60.3",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://registry.npmjs.org/nativefier/-/nativefier-9.2.0.tgz",
+      "url": "https://github.com/coin-or/Cgl/archive/releases/0.60.3.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,21 +31,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any_skip_relocation",
+      "cellar": ":any",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/nativefier-9.2.0.catalina.bottle.tar.gz",
-          "sha256": "9af138aa796efacc377de35b1020091e48a7c3c1ffca3ca32b7ed603dba00a93"
+          "url": "https://homebrew.bintray.com/bottles/cgl-0.60.3.catalina.bottle.tar.gz",
+          "sha256": "6eb179515b4cf06ad8bb484e6384f6cdae99297f523372b082ef079ed84cafd4"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/nativefier-9.2.0.mojave.bottle.tar.gz",
-          "sha256": "95e4333fe5aa40f5fa0bfc004b902454547e4ddadceb16903fb310fbba28e537"
+          "url": "https://homebrew.bintray.com/bottles/cgl-0.60.3.mojave.bottle.tar.gz",
+          "sha256": "acdb179fb8b29973e75a674a12fa24f164b753300c625f1a4dc3ca8f3cd9dcf4"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/nativefier-9.2.0.high_sierra.bottle.tar.gz",
-          "sha256": "3de61007eb5af8c64c52362fa540d098c169c8433fc689edfa0a7075e5b03756"
+          "url": "https://homebrew.bintray.com/bottles/cgl-0.60.3.high_sierra.bottle.tar.gz",
+          "sha256": "2cc6712792b9b5fec15ec479492f4da50f371ce37af53fece6bce474f93cf336"
         }
       }
     }
@@ -56,10 +56,12 @@
 
   ],
   "build_dependencies": [
-
+    "pkg-config"
   ],
   "dependencies": [
-    "node"
+    "clp",
+    "coinutils",
+    "osi"
   ],
   "recommended_dependencies": [
 
