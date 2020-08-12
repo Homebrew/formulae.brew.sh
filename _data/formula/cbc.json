@@ -1,6 +1,6 @@
 {
-  "name": "pango",
-  "full_name": "pango",
+  "name": "cbc",
+  "full_name": "cbc",
   "oldname": null,
   "aliases": [
 
@@ -8,20 +8,20 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Framework for layout and rendering of i18n text",
+  "desc": "Mixed integer linear programming solver",
   "license": [
-    "LGPL-2.0-or-later"
+    "EPL-1.0"
   ],
-  "homepage": "https://www.pango.org/",
+  "homepage": "https://github.com/coin-or/Cbc",
   "versions": {
-    "stable": "1.46.0",
+    "stable": "2.10.5",
     "devel": null,
-    "head": "HEAD",
+    "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://download.gnome.org/sources/pango/1.46/pango-1.46.0.tar.xz",
+      "url": "https://github.com/coin-or/Cbc/archive/releases/2.10.5.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -36,16 +36,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/pango-1.46.0.catalina.bottle.tar.gz",
-          "sha256": "56e6c57459d6c984905aa61a7d585b6e48c52e787a365bfb52e962337a96e1f0"
+          "url": "https://homebrew.bintray.com/bottles/cbc-2.10.5.catalina.bottle.tar.gz",
+          "sha256": "56fee588e216483d5b63e6e6f61dc824325da64f61fcaa7af3c3f6692c0a004d"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/pango-1.46.0.mojave.bottle.tar.gz",
-          "sha256": "ba5b72bea65bbf6b81aa010b7090c644c9a0ecf4e76720829bd1adf510de3d26"
+          "url": "https://homebrew.bintray.com/bottles/cbc-2.10.5.mojave.bottle.tar.gz",
+          "sha256": "d415cd6ac5c7afdda6e54d74e1acf76282ad81170333690bcd2ae3c08babdff5"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/pango-1.46.0.high_sierra.bottle.tar.gz",
-          "sha256": "b32c45c7c62c11153070ff91c226430a4b3341fced4d8b1ef4db687366ce4bc4"
+          "url": "https://homebrew.bintray.com/bottles/cbc-2.10.5.high_sierra.bottle.tar.gz",
+          "sha256": "e1c7da5d2d650279cbc41a2dd6fe36d39f6298de743b59a27fbde6645f8f748b"
         }
       }
     }
@@ -56,17 +56,13 @@
 
   ],
   "build_dependencies": [
-    "gobject-introspection",
-    "meson",
-    "ninja",
     "pkg-config"
   ],
   "dependencies": [
-    "cairo",
-    "fontconfig",
-    "fribidi",
-    "glib",
-    "harfbuzz"
+    "cgl",
+    "clp",
+    "coinutils",
+    "osi"
   ],
   "recommended_dependencies": [
 
