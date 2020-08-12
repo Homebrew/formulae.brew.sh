@@ -1,6 +1,6 @@
 {
-  "name": "gxml",
-  "full_name": "gxml",
+  "name": "cbc",
+  "full_name": "cbc",
   "oldname": null,
   "aliases": [
 
@@ -8,20 +8,20 @@
   "versioned_formulae": [
 
   ],
-  "desc": "GObject-based XML DOM API",
+  "desc": "Mixed integer linear programming solver",
   "license": [
-    "LGPL-2.1-or-later"
+    "EPL-1.0"
   ],
-  "homepage": "https://wiki.gnome.org/GXml",
+  "homepage": "https://github.com/coin-or/Cbc",
   "versions": {
-    "stable": "0.20.0",
+    "stable": "2.10.5",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://download.gnome.org/sources/gxml/0.20/gxml-0.20.0.tar.xz",
+      "url": "https://github.com/coin-or/Cbc/archive/releases/2.10.5.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,21 +31,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+      "cellar": ":any",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/gxml-0.20.0.catalina.bottle.tar.gz",
-          "sha256": "7ac6b48935cda53013a788e02cb0169fd609589beac7b1af2ad6b3b64e3045a2"
+          "url": "https://linuxbrew.bintray.com/bottles/cbc-2.10.5.catalina.bottle.tar.gz",
+          "sha256": "56fee588e216483d5b63e6e6f61dc824325da64f61fcaa7af3c3f6692c0a004d"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/gxml-0.20.0.mojave.bottle.tar.gz",
-          "sha256": "656bfa0f89deba237c40af306b141291c548befeadd268d7aaca198db78afe91"
+          "url": "https://linuxbrew.bintray.com/bottles/cbc-2.10.5.mojave.bottle.tar.gz",
+          "sha256": "d415cd6ac5c7afdda6e54d74e1acf76282ad81170333690bcd2ae3c08babdff5"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/gxml-0.20.0.high_sierra.bottle.tar.gz",
-          "sha256": "c206e3ea69e32dce78804db3d9e0ab2d10a441a4677614324fd46e1e53bdb5e7"
+          "url": "https://linuxbrew.bintray.com/bottles/cbc-2.10.5.high_sierra.bottle.tar.gz",
+          "sha256": "e1c7da5d2d650279cbc41a2dd6fe36d39f6298de743b59a27fbde6645f8f748b"
         }
       }
     }
@@ -56,16 +56,13 @@
 
   ],
   "build_dependencies": [
-    "gobject-introspection",
-    "meson",
-    "ninja",
-    "pkg-config",
-    "vala"
+    "pkg-config"
   ],
   "dependencies": [
-    "glib",
-    "libgee",
-    "libxml2"
+    "cgl",
+    "clp",
+    "coinutils",
+    "osi"
   ],
   "recommended_dependencies": [
 
