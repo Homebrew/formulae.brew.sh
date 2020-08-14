@@ -1,6 +1,6 @@
 {
-  "name": "harfbuzz",
-  "full_name": "harfbuzz",
+  "name": "staticcheck",
+  "full_name": "staticcheck",
   "oldname": null,
   "aliases": [
 
@@ -8,20 +8,20 @@
   "versioned_formulae": [
 
   ],
-  "desc": "OpenType text shaping engine",
+  "desc": "State of the art linter for the Go programming language",
   "license": [
     "MIT"
   ],
-  "homepage": "https://github.com/harfbuzz/harfbuzz",
+  "homepage": "https://staticcheck.io/",
   "versions": {
-    "stable": "2.7.1",
+    "stable": "2020.1.5",
     "devel": null,
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/harfbuzz/harfbuzz/archive/2.7.1.tar.gz",
+      "url": "https://github.com/dominikh/go-tools/archive/2020.1.5.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,21 +31,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": ":any_skip_relocation",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/harfbuzz-2.7.1.catalina.bottle.tar.gz",
-          "sha256": "609a069e4df10c731674b5c8494ae0bc176918140d4d85d15069fe04e83ee353"
+          "url": "https://homebrew.bintray.com/bottles/staticcheck-2020.1.5.catalina.bottle.tar.gz",
+          "sha256": "f5022d10d89057b3485965e66a3288db9551099ce63fa58d1db510e88837bc0f"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/harfbuzz-2.7.1.mojave.bottle.tar.gz",
-          "sha256": "b2c38364d0e14f08b7a32d0a770a158cc4ea296cd4b3ace1bf8a18262679e3b6"
+          "url": "https://homebrew.bintray.com/bottles/staticcheck-2020.1.5.mojave.bottle.tar.gz",
+          "sha256": "5a350b5e8a17c65e98604d0dea95f1be801fef84c470bba0de4b923be9d6152d"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/harfbuzz-2.7.1.high_sierra.bottle.tar.gz",
-          "sha256": "1f7404a4330f486bb2287aba4d8a4cd47bc7440b8df25a955ceb869287869f41"
+          "url": "https://homebrew.bintray.com/bottles/staticcheck-2020.1.5.high_sierra.bottle.tar.gz",
+          "sha256": "999afeae7e6ecd76aeb294a6e0592997b8bd8529afecfb3298a51562e0257627"
         }
       }
     }
@@ -56,16 +56,10 @@
 
   ],
   "build_dependencies": [
-    "meson",
-    "ninja"
+
   ],
   "dependencies": [
-    "cairo",
-    "freetype",
-    "glib",
-    "gobject-introspection",
-    "graphite2",
-    "icu4c"
+    "go"
   ],
   "recommended_dependencies": [
 
