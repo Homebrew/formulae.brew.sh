@@ -6,7 +6,11 @@ permalink: :title
 {%- assign formula_path = page.dir | remove: "/" -%}
 {%- assign data_name = full_name | remove: "@" | remove: "." | replace: "+", "_" -%}
 {%- assign f = site.data[formula_path][data_name] -%}
-<h2>{{ f.name }}</h2>
+<h2
+    {%- if f.disabled %} class="disabled" title="This formula has been disabled"
+    {%- elsif f.deprecated %} class="deprecated" title="This formula has been deprecated"
+    {%- endif -%}
+    >{{ f.name }}</h2>
 {%- if f.aliases.size > 0 %}
 <p>Also known as: <strong>{{ f.aliases | join: "</strong>, <strong>" }}</strong></p>
 {%- endif -%}
