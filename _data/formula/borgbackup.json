@@ -1,6 +1,6 @@
 {
-  "name": "macvim",
-  "full_name": "macvim",
+  "name": "borgbackup",
+  "full_name": "borgbackup",
   "oldname": null,
   "aliases": [
 
@@ -8,20 +8,20 @@
   "versioned_formulae": [
 
   ],
-  "desc": "GUI for vim, made for macOS",
+  "desc": "Deduplicating archiver with compression and authenticated encryption",
   "license": [
-    "Vim"
+    "BSD-3-Clause"
   ],
-  "homepage": "https://github.com/macvim-dev/macvim",
+  "homepage": "https://borgbackup.org/",
   "versions": {
-    "stable": "8.2-165",
+    "stable": "1.1.13",
     "devel": null,
-    "head": "HEAD",
+    "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/macvim-dev/macvim/archive/snapshot-165.tar.gz",
+      "url": "https://github.com/borgbackup/borg/releases/download/1.1.13/borgbackup-1.1.13.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -36,16 +36,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/macvim-8.2-165.catalina.bottle.tar.gz",
-          "sha256": "906e8fa7138b942afbe1204386d04aeb98c0bfbe86d93240c25a1d2e6f4ab5d5"
+          "url": "https://homebrew.bintray.com/bottles/borgbackup-1.1.13.catalina.bottle.tar.gz",
+          "sha256": "dd71d53fa665ec83d2f68a1b353ffcabaf499c83681ad0ce3a78eef3f3c79c18"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/macvim-8.2-165.mojave.bottle.tar.gz",
-          "sha256": "0f0d81187005c94bc985920e127cbec3a58d885f78763a56d05574ae1ffcd98b"
+          "url": "https://homebrew.bintray.com/bottles/borgbackup-1.1.13.mojave.bottle.tar.gz",
+          "sha256": "f903ca24436d27d5f218b7bcdaf757a99a600c45bfbb63c9ab235ced12d8f2cc"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/macvim-8.2-165.high_sierra.bottle.tar.gz",
-          "sha256": "14a35cf3c417e81569caaec2e95ca40c2abfe26c4b5a2a96e9bced49167723b2"
+          "url": "https://homebrew.bintray.com/bottles/borgbackup-1.1.13.high_sierra.bottle.tar.gz",
+          "sha256": "6bc8fd5091f705e9843a77d3f87cd7b722b84243a68e99d8d15d8f8ae20d0b03"
         }
       }
     }
@@ -56,13 +56,14 @@
 
   ],
   "build_dependencies": [
-
+    "pkg-config"
   ],
   "dependencies": [
-    "cscope",
-    "lua",
+    "libb2",
+    "lz4",
+    "openssl@1.1",
     "python@3.8",
-    "ruby"
+    "zstd"
   ],
   "recommended_dependencies": [
 
@@ -75,17 +76,17 @@
   ],
   "requirements": [
     {
-      "name": "xcode",
-      "cask": null,
-      "download": null,
+      "name": "osxfuse",
+      "cask": "osxfuse",
+      "download": "https://osxfuse.github.io/",
       "version": null,
       "contexts": [
-        "build"
+
       ]
     }
   ],
   "conflicts_with": [
-    "vim"
+
   ],
   "caveats": null,
   "installed": [
