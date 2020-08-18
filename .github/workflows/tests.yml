@@ -2,7 +2,7 @@ name: GitHub Actions CI
 on:
   push:
     branches: master
-  pull_request: []
+  pull_request:
 jobs:
   tests:
     runs-on: ubuntu-latest
@@ -11,21 +11,11 @@ jobs:
       uses: actions/checkout@master
 
     - name: Set up Homebrew
-      run: |
-        HOMEBREW_REPOSITORY="$HOME/Homebrew"
-        export PATH="$HOMEBREW_REPOSITORY/bin:$PATH"
-        rm -rf $HOMEBREW_REPOSITORY
-        git clone --depth=1 https://github.com/Homebrew/brew "$HOMEBREW_REPOSITORY"
-        HOMEBREW_CORE_TAP_DIR="$HOMEBREW_REPOSITORY/Library/Taps/homebrew/homebrew-core"
-        mkdir -p "$HOMEBREW_CORE_TAP_DIR"
-        rm -rf "$HOMEBREW_CORE_TAP_DIR"
-        git clone --depth=1 https://github.com/Homebrew/homebrew-core "$HOMEBREW_CORE_TAP_DIR"
-        export HOMEBREW_NO_ANALYTICS=1
-        # trigger vendored ruby installation
-        brew help
+      id: set-up-homebrew
+      uses: Homebrew/actions/setup-homebrew@master
 
     - name: Set up Ruby
-      uses: actions/setup-ruby@v1
+      uses: actions/setup-ruby@main
       with:
         ruby-version: '2.6'
 
@@ -35,7 +25,4 @@ jobs:
         bundle install --jobs 4 --retry 3
 
     - name: Generate site
-      run: |
-        HOMEBREW_REPOSITORY="$HOME/Homebrew"
-        export PATH="$HOMEBREW_REPOSITORY/bin:$PATH"
-        bundle exec rake all_formulae cask
+      run: bundle exec rake all_formulae cask
