@@ -6,7 +6,11 @@ permalink: :title
 {%- assign formula_path = page.dir | remove: "/" -%}
 {%- assign data_name = full_name | remove: "@" | remove: "." | replace: "+", "_" -%}
 {%- assign f = site.data[formula_path][data_name] -%}
-<h2>{{ f.name }}</h2>
+<h2
+    {%- if f.disabled %} class="disabled" title="This formula has been disabled"
+    {%- elsif f.deprecated %} class="deprecated" title="This formula has been deprecated"
+    {%- endif -%}
+    >{{ f.name }}</h2>
 {%- if f.aliases.size > 0 %}
 <p>Also known as: <strong>{{ f.aliases | join: "</strong>, <strong>" }}</strong></p>
 {%- endif -%}
@@ -16,8 +20,8 @@ permalink: :title
 <p>{{ f.desc | xml_escape }}</p>
 <p><a href="{{ f.homepage }}">{{ f.homepage }}</a></p>
 {%- if f.license.size > 0 %}
-<p>License: <strong>{{ f.license | join: "</strong>, <strong>" }}</strong></p>
-{%- endif -%}
+<p>License: <strong>{{ f.license | join: "</strong>, <strong>" | replace: "_", " " }}</strong></p>
+{%- endif %}
 
 <p><a href="{{ site.baseurl }}/api/{{ formula_path }}/{{ f.name }}.json"><code>/api/{{ formula_path }}/{{ f.name }}.json</code> (JSON API)</a></p>
 {%- if formula_path == "formula-linux" %}
