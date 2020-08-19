@@ -12,6 +12,9 @@ permalink: :title
     {%- unless forloop.last -%}, {% endunless %}
 {%- endfor -%}
 </p>
+{%- if c.desc %}
+<p>{{ c.desc }}</p>
+{%- endif %}
 <p><a href="{{ c.homepage }}">{{ c.homepage }}</a></p>
 
 <p><a href="{{ site.baseurl }}/api/cask/{{ token }}.json"><code>/api/cask/{{ token }}.json</code> (JSON API)</a></p>
