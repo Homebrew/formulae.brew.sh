@@ -1,15 +1,12 @@
 {
-  "name": "mariadb",
-  "full_name": "mariadb",
+  "name": "mariadb@10.4",
+  "full_name": "mariadb@10.4",
   "oldname": null,
   "aliases": [
-    "mariadb@10.5"
+
   ],
   "versioned_formulae": [
-    "mariadb@10.4",
-    "mariadb@10.3",
-    "mariadb@10.2",
-    "mariadb@10.1"
+
   ],
   "desc": "Drop-in replacement for MySQL",
   "license": [
@@ -17,14 +14,14 @@
   ],
   "homepage": "https://mariadb.org/",
   "versions": {
-    "stable": "10.5.5",
+    "stable": "10.4.14",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://downloads.mariadb.com/MariaDB/mariadb-10.5.5/source/mariadb-10.5.5.tar.gz",
+      "url": "https://downloads.mariadb.com/MariaDB/mariadb-10.4.14/source/mariadb-10.4.14.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -39,21 +36,21 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/mariadb-10.5.5.catalina.bottle.tar.gz",
-          "sha256": "df8622183262cb4871480d909e3144fa767a0dba995929e5ddb72d310d1f6ffa"
+          "url": "https://homebrew.bintray.com/bottles/mariadb%4010.4-10.4.14.catalina.bottle.tar.gz",
+          "sha256": "14e0d9c1e4030cf055a7f7024c2fe7597847540f562a6e12b96aac3ee2d47de8"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/mariadb-10.5.5.mojave.bottle.tar.gz",
-          "sha256": "ba7afe3313015e58b9ca9c9b17178ebbbb6b804239b31957cfaead678e31aa86"
+          "url": "https://homebrew.bintray.com/bottles/mariadb%4010.4-10.4.14.mojave.bottle.tar.gz",
+          "sha256": "9e063debd5075f2b8be0fae7eb5ed0ceeec93cba8fb416cb7d7a62bbd3e33e95"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/mariadb-10.5.5.high_sierra.bottle.tar.gz",
-          "sha256": "66dfcb470c80d0b7d0b56985e84ee36af5bb4c0c488fe02327f560cdb713785e"
+          "url": "https://homebrew.bintray.com/bottles/mariadb%4010.4-10.4.14.high_sierra.bottle.tar.gz",
+          "sha256": "29535b17add7f6f3e2f18f597b97ca138fa6ef65066ee7afce0f9331d839c061"
         }
       }
     }
   },
-  "keg_only": false,
+  "keg_only": true,
   "bottle_disabled": false,
   "options": [
 
@@ -84,10 +81,7 @@
 
   ],
   "conflicts_with": [
-    "mysql",
-    "percona-server",
-    "mytop",
-    "mariadb-connector-c"
+
   ],
   "caveats": "A \"/etc/my.cnf\" from another install may interfere with a Homebrew-built\nserver starting up correctly.\n\nMySQL is configured to only allow connections from localhost by default\n",
   "installed": [
