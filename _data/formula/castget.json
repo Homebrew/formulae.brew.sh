@@ -1,6 +1,6 @@
 {
-  "name": "x265",
-  "full_name": "x265",
+  "name": "castget",
+  "full_name": "castget",
   "oldname": null,
   "aliases": [
 
@@ -8,18 +8,18 @@
   "versioned_formulae": [
 
   ],
-  "desc": "H.265/HEVC encoder",
-  "license": "GPL-2.0-only",
-  "homepage": "https://bitbucket.org/multicoreware/x265_git",
+  "desc": "Command-line podcast and RSS enclosure downloader",
+  "license": "LGPL-2.1-only",
+  "homepage": "https://castget.johndal.com/",
   "versions": {
-    "stable": "3.4",
+    "stable": "2.0.1",
     "devel": null,
-    "head": "HEAD",
+    "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://bitbucket.org/multicoreware/x265_git/get/3.4.tar.gz",
+      "url": "http://savannah.nongnu.org/download/castget/castget-2.0.1.tar.bz2",
       "tag": null,
       "revision": null
     }
@@ -28,22 +28,22 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "cellar": ":any",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/x265-3.4.catalina.bottle.1.tar.gz",
-          "sha256": "a24f202256e98285ed39c80277b2aa5d9eba2b5f37ee7f05993b269b3033684e"
+          "url": "https://homebrew.bintray.com/bottles/castget-2.0.1.catalina.bottle.tar.gz",
+          "sha256": "83d589037e4418829134060be140fce4b4b9883b9b68376f20257df68d9fff9a"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/x265-3.4.mojave.bottle.1.tar.gz",
-          "sha256": "5a0033bb9c6b2cf12f5836a1ad3f887f61df55eceecedc2d3414665282e576f2"
+          "url": "https://homebrew.bintray.com/bottles/castget-2.0.1.mojave.bottle.tar.gz",
+          "sha256": "fedc8c680b948b9f87cfd3f63f90bd6cb02143120a9c74d5b1bc5a04e84290d9"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/x265-3.4.high_sierra.bottle.1.tar.gz",
-          "sha256": "fc09819e3bba1189d57b7708ad0fcccc359b160ea380574796d7eb4a71e139ac"
+          "url": "https://homebrew.bintray.com/bottles/castget-2.0.1.high_sierra.bottle.tar.gz",
+          "sha256": "4d1f21bb31abc39d28110a76608493423f96a1f19c4b67c1cb651887f3848675"
         }
       }
     }
@@ -54,11 +54,11 @@
 
   ],
   "build_dependencies": [
-    "cmake",
-    "nasm"
+    "pkg-config"
   ],
   "dependencies": [
-
+    "glib",
+    "id3lib"
   ],
   "recommended_dependencies": [
 
