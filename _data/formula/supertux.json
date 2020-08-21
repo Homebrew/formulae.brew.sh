@@ -9,49 +9,41 @@
 
   ],
   "desc": "Classic 2D jump'n run sidescroller game",
-  "license": "GPL-3.0",
+  "license": "GPL-3.0-or-later",
   "homepage": "https://www.supertux.org/",
   "versions": {
-    "stable": "0.5.1",
+    "stable": "0.6.2",
     "devel": null,
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/SuperTux/supertux/releases/download/v0.5.1/SuperTux-v0.5.1-Source.tar.gz",
+      "url": "https://github.com/SuperTux/supertux/releases/download/v0.6.2/SuperTux-v0.6.2-Source.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 3,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "cellar": ":any",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/supertux-0.5.1_3.catalina.bottle.1.tar.gz",
-          "sha256": "a3d50acf760264c99f3f2bb9e02bca8dbbadc2d4f2c3a7e9b9995316a22cfa3d"
+          "url": "https://homebrew.bintray.com/bottles/supertux-0.6.2.catalina.bottle.tar.gz",
+          "sha256": "671a6a888ace25b1cd8adfafea895a7bb259bee92be354e7ed4b4fbd63841f92"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/supertux-0.5.1_3.mojave.bottle.1.tar.gz",
-          "sha256": "006225504f80952487eb62f66359ac5976248ec4de46f266915f41f543e4742a"
+          "url": "https://homebrew.bintray.com/bottles/supertux-0.6.2.mojave.bottle.tar.gz",
+          "sha256": "e96d518a12e5cd571345abd4d778a6983062daebe845ab1a0404ee1f4ae11212"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/supertux-0.5.1_3.high_sierra.bottle.1.tar.gz",
-          "sha256": "66385b85ba64e6ce35f5d74e9c2304e73795b977b75f814ff4eeb55cbfccba0b"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/supertux-0.5.1_3.sierra.bottle.1.tar.gz",
-          "sha256": "fbde2e2249a89401fd9893b095857b283c4a7a3a4ab9dec47b8c30d2030d0268"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/supertux-0.5.1_3.el_capitan.bottle.1.tar.gz",
-          "sha256": "c66b6e14fc23160f5024ad7790286ec0bcb7f8ed262ce6c400dc8757c1c16ba8"
+          "url": "https://homebrew.bintray.com/bottles/supertux-0.6.2.high_sierra.bottle.tar.gz",
+          "sha256": "3427130b27e209085a062bec0f853f765a34c6bf5d4fe6bedba4c7c5e408c400"
         }
       }
     }
@@ -62,11 +54,12 @@
 
   ],
   "build_dependencies": [
-    "boost",
     "cmake",
     "pkg-config"
   ],
   "dependencies": [
+    "boost",
+    "freetype",
     "glew",
     "libogg",
     "libvorbis",
