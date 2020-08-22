@@ -1,6 +1,6 @@
 {
-  "name": "chezmoi",
-  "full_name": "chezmoi",
+  "name": "inja",
+  "full_name": "inja",
   "oldname": null,
   "aliases": [
 
@@ -8,20 +8,20 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Manage your dotfiles across multiple machines, securely",
+  "desc": "Template engine for modern C++",
   "license": "MIT",
-  "homepage": "https://chezmoi.io/",
+  "homepage": "https://pantor.github.io/inja/",
   "versions": {
-    "stable": "1.8.5",
+    "stable": "3.0.0",
     "devel": null,
-    "head": null,
+    "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/twpayne/chezmoi.git",
-      "tag": "v1.8.5",
-      "revision": "c5dbedcf0256d6da92f774eb57e8d1d198f6e6c5"
+      "url": "https://github.com/pantor/inja/archive/v3.0.0.tar.gz",
+      "tag": null,
+      "revision": null
     }
   },
   "revision": 0,
@@ -34,16 +34,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/chezmoi-1.8.5.catalina.bottle.tar.gz",
-          "sha256": "d2a219e5e7f459ad41bf562461108687942e513888a72663b5557ca849dcf1f0"
+          "url": "https://homebrew.bintray.com/bottles/inja-3.0.0.catalina.bottle.tar.gz",
+          "sha256": "2d2e56f3daecf8306ebb2df948024c6ce7115e26cc160496538ca05900c6d8a5"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/chezmoi-1.8.5.mojave.bottle.tar.gz",
-          "sha256": "ea6bb2de05ac3add80c4f116474137a268dbfa86a51db35a6a5f02e0183bb6d3"
+          "url": "https://homebrew.bintray.com/bottles/inja-3.0.0.mojave.bottle.tar.gz",
+          "sha256": "22ea5918d1033829ab77202e877ce6f79d0bcb965feee60081004654a3ea60b4"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/chezmoi-1.8.5.high_sierra.bottle.tar.gz",
-          "sha256": "ab4b776fcf2c27e3042cd7f04f324730f4b620240e970696fc90b287fc816d68"
+          "url": "https://homebrew.bintray.com/bottles/inja-3.0.0.high_sierra.bottle.tar.gz",
+          "sha256": "9a67ee6245a22e809dd4c7fc29227b42bbc443f58bb24fdc7258929a99c7d0f3"
         }
       }
     }
@@ -54,10 +54,10 @@
 
   ],
   "build_dependencies": [
-    "go"
+    "cmake"
   ],
   "dependencies": [
-
+    "nlohmann-json"
   ],
   "recommended_dependencies": [
 
