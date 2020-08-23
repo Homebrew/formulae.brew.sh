@@ -1,6 +1,6 @@
 {
-  "name": "gr-osmosdr",
-  "full_name": "gr-osmosdr",
+  "name": "volk",
+  "full_name": "volk",
   "oldname": null,
   "aliases": [
 
@@ -8,23 +8,23 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Osmocom GNU Radio Blocks",
+  "desc": "Vector Optimized Library of Kernels",
   "license": "GPL-3.0-or-later",
-  "homepage": "https://osmocom.org/projects/sdr/wiki/GrOsmoSDR",
+  "homepage": "https://libvolk.org",
   "versions": {
-    "stable": "0.2.0",
+    "stable": "2.3.0",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/osmocom/gr-osmosdr/archive/v0.2.0.tar.gz",
+      "url": "https://github.com/gnuradio/volk/releases/download/v2.3.0/volk-2.3.0.tar.xz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -34,16 +34,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/gr-osmosdr-0.2.0_1.catalina.bottle.tar.gz",
-          "sha256": "bc0e94a1514d228e6eb6868abc8aeaa56c1bb8c65c3e3afe68cdc2055381e65f"
+          "url": "https://linuxbrew.bintray.com/bottles/volk-2.3.0.catalina.bottle.tar.gz",
+          "sha256": "7b05c83dbd7c17a7cff668ca91e19f12ffe0815a0af792a1da61a4fc0ab5e624"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/gr-osmosdr-0.2.0_1.mojave.bottle.tar.gz",
-          "sha256": "da85067073251ba9bcb88d0047cc77b898e31762f9b3d423cbc2686e9bb5f9d7"
+          "url": "https://linuxbrew.bintray.com/bottles/volk-2.3.0.mojave.bottle.tar.gz",
+          "sha256": "0f3183e0a4852bff180bf659ada1107006a09dea4e5e21c56cfc0cc4db382edb"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/gr-osmosdr-0.2.0_1.high_sierra.bottle.tar.gz",
-          "sha256": "f973fe7465ea4931cb31096a1b26fdef355403b38dd01dfd236aa2eb4e18b182"
+          "url": "https://linuxbrew.bintray.com/bottles/volk-2.3.0.high_sierra.bottle.tar.gz",
+          "sha256": "d8de98a69594e20f41e3ccb0dbd68d1eab7f7c4bcbe71208c7cd770f5b8d5ab8"
         }
       }
     }
@@ -55,15 +55,12 @@
   ],
   "build_dependencies": [
     "cmake",
-    "swig"
+    "pkg-config"
   ],
   "dependencies": [
-    "airspy",
     "boost",
-    "gnuradio",
-    "hackrf",
-    "librtlsdr",
-    "uhd"
+    "orc",
+    "python@3.8"
   ],
   "recommended_dependencies": [
 
