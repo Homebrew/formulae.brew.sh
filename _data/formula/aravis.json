@@ -9,17 +9,17 @@
 
   ],
   "desc": "Vision library for genicam based cameras",
-  "license": null,
+  "license": "LGPL-2.1-or-later",
   "homepage": "https://wiki.gnome.org/Projects/Aravis",
   "versions": {
-    "stable": "0.6.4",
+    "stable": "0.8.0",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://download.gnome.org/sources/aravis/0.6/aravis-0.6.4.tar.xz",
+      "url": "https://download.gnome.org/sources/aravis/0.8/aravis-0.8.0.tar.xz",
       "tag": null,
       "revision": null
     }
@@ -34,20 +34,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/aravis-0.6.4.catalina.bottle.tar.gz",
-          "sha256": "1bd9c1847561b56ca3f5298e9a48f2347548387d6a677e31905df4c455cddd5a"
+          "url": "https://homebrew.bintray.com/bottles/aravis-0.8.0.catalina.bottle.tar.gz",
+          "sha256": "604d55cc8bf4d12d598d6a306e75d38e3986202e6971838b42ec1e770a0cd8ed"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/aravis-0.6.4.mojave.bottle.tar.gz",
-          "sha256": "b851c3d06486230de2a79a57d82455029cb07890749e4525dc929a075cce1c70"
+          "url": "https://homebrew.bintray.com/bottles/aravis-0.8.0.mojave.bottle.tar.gz",
+          "sha256": "083b7c5f1b7a4b7e068119ebd37858c891ada5148f5a8a41884cca286d8f8cdf"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/aravis-0.6.4.high_sierra.bottle.tar.gz",
-          "sha256": "948909cbf756dc510beff0d8bb88d31f49b8d335d637b260592dff29608939f6"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/aravis-0.6.4.sierra.bottle.tar.gz",
-          "sha256": "b97fa0af26f27a4a7ff3f56b6e24b300199ad7f208343a431e8ea90a806a9d9c"
+          "url": "https://homebrew.bintray.com/bottles/aravis-0.8.0.high_sierra.bottle.tar.gz",
+          "sha256": "6bae8a3e91bc83a8f331da4ec5dabddaf3c877a835445f2ba92b2f80bd758fd5"
         }
       }
     }
@@ -58,11 +54,10 @@
 
   ],
   "build_dependencies": [
-    "autoconf",
-    "automake",
     "gobject-introspection",
     "gtk-doc",
-    "libtool",
+    "meson",
+    "ninja",
     "pkg-config"
   ],
   "dependencies": [
