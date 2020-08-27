@@ -1,6 +1,6 @@
 {
-  "name": "libvmaf",
-  "full_name": "libvmaf",
+  "name": "podman",
+  "full_name": "podman",
   "oldname": null,
   "aliases": [
 
@@ -8,18 +8,18 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Perceptual video quality assessment based on multi-method fusion",
-  "license": "BSD-2-Clause-Patent",
-  "homepage": "https://github.com/Netflix/vmaf",
+  "desc": "Tool for managing OCI containers and pods",
+  "license": "Apache-2.0",
+  "homepage": "https://podman.io/",
   "versions": {
-    "stable": "1.5.3",
+    "stable": "2.0.5",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/Netflix/vmaf/archive/v1.5.3.tar.gz",
+      "url": "https://github.com/containers/podman/archive/v2.0.5.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -29,21 +29,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": ":any_skip_relocation",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/libvmaf-1.5.3.catalina.bottle.tar.gz",
-          "sha256": "3ff54681fdedd65aa05925a0a5deb941e2b48ecdc946bb83358013e4a53f46f3"
+          "url": "https://homebrew.bintray.com/bottles/podman-2.0.5.catalina.bottle.tar.gz",
+          "sha256": "647147b88c45819b1cf5ce05d398ed0b189dd62ce7f11d21c5ac9e6eec8b2b1e"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/libvmaf-1.5.3.mojave.bottle.tar.gz",
-          "sha256": "fe3f8995fa8ce2c13af693e40581dc93e63e22821fa3fe007430a2acd3bca6da"
+          "url": "https://homebrew.bintray.com/bottles/podman-2.0.5.mojave.bottle.tar.gz",
+          "sha256": "bbfe435b888c28d2c1ca47cdc625b1179c25275bfcdf252cb4175791f3de59f5"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/libvmaf-1.5.3.high_sierra.bottle.tar.gz",
-          "sha256": "c701af393db9948a5d804607237678b232a32d7501de39c482095353c5f7d3b6"
+          "url": "https://homebrew.bintray.com/bottles/podman-2.0.5.high_sierra.bottle.tar.gz",
+          "sha256": "332ccb7dfb25d245b6f86c68cab73b33b97631d9d738b0b2310d6e1351bfd880"
         }
       }
     }
@@ -54,9 +54,8 @@
 
   ],
   "build_dependencies": [
-    "meson",
-    "nasm",
-    "ninja"
+    "go",
+    "go-md2man"
   ],
   "dependencies": [
 

@@ -1,6 +1,6 @@
 {
-  "name": "logcli",
-  "full_name": "logcli",
+  "name": "localstack",
+  "full_name": "localstack",
   "oldname": null,
   "aliases": [
 
@@ -8,18 +8,18 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Run LogQL queries against a Loki server",
+  "desc": "Fully functional local AWS cloud stack",
   "license": "Apache-2.0",
-  "homepage": "https://grafana.com/loki",
+  "homepage": "https://github.com/localstack/localstack",
   "versions": {
-    "stable": "1.6.1",
+    "stable": "0.11.3.3",
     "devel": null,
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/grafana/loki/archive/v1.6.1.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/2a/60/a35903a0699d95741b62838f80d79c2561545e092b81447cc0cb191e139e/localstack-0.11.3.3.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -34,16 +34,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/logcli-1.6.1.catalina.bottle.tar.gz",
-          "sha256": "130981f7347099308a00b999953d7233fb4f793607e06253a8d310d0bd1e77f4"
+          "url": "https://homebrew.bintray.com/bottles/localstack-0.11.3.3.catalina.bottle.tar.gz",
+          "sha256": "e81480911b97af6298cdb1aca67da39042f3cb5846c5a9a7de3162e7a89cacb3"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/logcli-1.6.1.mojave.bottle.tar.gz",
-          "sha256": "707888b346c37ba3deee914f1c44551c055ec4de7fba4d6a72803ea1a1d05a24"
+          "url": "https://homebrew.bintray.com/bottles/localstack-0.11.3.3.mojave.bottle.tar.gz",
+          "sha256": "cc817b71e0dc15514dc48cf02c2b4478caca9119f4bf88fa7c1802e5762351f9"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/logcli-1.6.1.high_sierra.bottle.tar.gz",
-          "sha256": "16e78a76040d4da26f3e88accc19893bb33b5b84c0ce0a2b10ceaab9e807d1e5"
+          "url": "https://homebrew.bintray.com/bottles/localstack-0.11.3.3.high_sierra.bottle.tar.gz",
+          "sha256": "a3284f136a19a0588fa34defc3e807147275a92579d04a92c31904968ed77456"
         }
       }
     }
@@ -54,10 +54,11 @@
 
   ],
   "build_dependencies": [
-    "go"
+
   ],
   "dependencies": [
-    "loki"
+    "docker",
+    "python@3.8"
   ],
   "recommended_dependencies": [
 
