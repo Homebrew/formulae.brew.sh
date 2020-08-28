@@ -12,14 +12,14 @@
   "license": "BSD-3-Clause",
   "homepage": "https://wiki.dlang.org/LDC",
   "versions": {
-    "stable": "1.20.1",
+    "stable": "1.23.0",
     "devel": null,
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/ldc-developers/ldc/releases/download/v1.20.1/ldc-1.20.1-src.tar.gz",
+      "url": "https://github.com/ldc-developers/ldc/releases/download/v1.23.0/ldc-1.23.0-src.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -34,20 +34,20 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/ldc-1.20.1.catalina.bottle.tar.gz",
-          "sha256": "122d9a37cccbd671d223a2ce683ad141489633d2f11fa8f662635f6ba4a49027"
+          "url": "https://linuxbrew.bintray.com/bottles/ldc-1.23.0.catalina.bottle.tar.gz",
+          "sha256": "1c3b260fe74079e4da13db6bfbc7be9e87708b2a671677ec74528e4f79593e14"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/ldc-1.20.1.mojave.bottle.tar.gz",
-          "sha256": "67f9bdd412e9ee9e6864f52ae5b52358a01b93de359fe8aad4b9d7bed73a572a"
+          "url": "https://linuxbrew.bintray.com/bottles/ldc-1.23.0.mojave.bottle.tar.gz",
+          "sha256": "1375459c29bd65dac8dd45c474bfda0eb6a28b5ce1d4c331b99ce9322afe3988"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/ldc-1.20.1.high_sierra.bottle.tar.gz",
-          "sha256": "7945dba30bfac0ced442b69a46a477593ee04e3b3f28cc6fdb56b94f58e94706"
+          "url": "https://linuxbrew.bintray.com/bottles/ldc-1.23.0.high_sierra.bottle.tar.gz",
+          "sha256": "3ca0713b249bb1a1401485b54f22784386e350c5a13727c492dbe2b0fa42779c"
         },
         "x86_64_linux": {
-          "url": "https://linuxbrew.bintray.com/bottles/ldc-1.20.1.x86_64_linux.bottle.tar.gz",
-          "sha256": "f422d9aeb3a6be820e49e55a342372a8bc2b08c43798331df374309ecb7774e7"
+          "url": "https://linuxbrew.bintray.com/bottles/ldc-1.23.0.x86_64_linux.bottle.tar.gz",
+          "sha256": "28c19945139f8c13ed1caebc2b037eb78ac95fbc1edc653766057d5f92bb2d82"
         }
       }
     }
@@ -59,11 +59,12 @@
   ],
   "build_dependencies": [
     "cmake",
+    "libconfig",
     "libxml2",
     "pkg-config"
   ],
   "dependencies": [
-    "llvm"
+    "llvm@9"
   ],
   "recommended_dependencies": [
 
