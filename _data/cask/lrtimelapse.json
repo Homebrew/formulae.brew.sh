@@ -7,11 +7,15 @@
   "homepage": "https://lrtimelapse.com/",
   "url": "https://lrtimelapse.com/files/lrtimelapse-5-mac/",
   "appcast": "https://lrtimelapse.com/download/",
-  "version": "5.4.0",
-  "sha256": "a243f75a8b1d1e897fda58fcd82d01f35ba7fb26ed6152b6c911b7c5e76a6396",
+  "version": "5.5.0",
+  "sha256": "d01f583fc899b2a80575050a59503a655d3745210858d658ef9fcaa1bbac6794",
   "artifacts": [
     {
-      "script": "Uninstall LRTimelapse.command",
+      "script": {
+        "executable": "$(brew --prefix)/LRTimelapse/uninstall.sh",
+        "input": "\n",
+        "sudo": "true"
+      },
       "pkgutil": [
         "com.lrtimelapse.LRAddons",
         "com.lrtimelapse.LRTimelapse5",
@@ -20,9 +24,9 @@
       "signal": {
       }
     },
-    "LRTimelapse 5.4.0 Installer.pkg (Pkg)"
+    "LRTimelapse 5.5.0 Installer.pkg (Pkg)"
   ],
-  "caveats": null,
+  "caveats": "Cask lrtimelapse installs files under $(brew --prefix). The presence of such\nfiles can cause warnings when running `brew doctor`, which is considered\nto be a bug in Homebrew Cask.\n",
   "depends_on": {
   },
   "conflicts_with": null,
