@@ -9,18 +9,28 @@
 
   ],
   "desc": "Collection of tools that nobody wrote when UNIX was young",
-  "license": null,
+  "license": {
+    "all_of": [
+      "GPL-2.0-or-later",
+      {
+        "any_of": [
+          "GPL-2.0-only",
+          "Artistic-2.0"
+        ]
+      }
+    ]
+  },
   "homepage": "https://joeyh.name/code/moreutils/",
   "versions": {
-    "stable": "0.63",
+    "stable": "0.64",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
       "url": "https://git.joeyh.name/git/moreutils.git",
-      "tag": "0.63",
-      "revision": "aeddd0f4caa9d10aaa691040773fa4764e12ff46"
+      "tag": "0.64",
+      "revision": "859c6e47b53410dbdcdc714385516bcb81710075"
     }
   },
   "revision": 0,
@@ -33,24 +43,20 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/moreutils-0.63.catalina.bottle.tar.gz",
-          "sha256": "0277b44f53cc7e581c338a28fa330e4d436cd05757d99cfc9baa1f5ca095af4c"
+          "url": "https://linuxbrew.bintray.com/bottles/moreutils-0.64.catalina.bottle.tar.gz",
+          "sha256": "2acce86bfb602b3da4577cf429080a138b7a2e587e394b175889c4d190ef3bae"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/moreutils-0.63.mojave.bottle.tar.gz",
-          "sha256": "a3d5a342bf079998b52d172f0f5e8b066b256145e2eb3ded393a0e6e2680b573"
+          "url": "https://linuxbrew.bintray.com/bottles/moreutils-0.64.mojave.bottle.tar.gz",
+          "sha256": "e4d2496b670b5f4c8fcac0baaaa41afeced3b04ac962ce4963752cc233d68273"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/moreutils-0.63.high_sierra.bottle.tar.gz",
-          "sha256": "3731c1304a72a7a0486891bf592cd82b7422d0c37cadeb00b6f633e62f20aa35"
-        },
-        "sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/moreutils-0.63.sierra.bottle.tar.gz",
-          "sha256": "fac2ba67a62889ff07edb8257e0d13aa96143a7421521ffdf3e0cf685a1cdc1e"
+          "url": "https://linuxbrew.bintray.com/bottles/moreutils-0.64.high_sierra.bottle.tar.gz",
+          "sha256": "80057e9363725a85da1200dfe87fe669a5dab3980375ad83330ce4b61cbac13c"
         },
         "x86_64_linux": {
-          "url": "https://linuxbrew.bintray.com/bottles/moreutils-0.63.x86_64_linux.bottle.tar.gz",
-          "sha256": "9cc1de6127a38360c91c8e4e940f7a405a54494abc9d54769e81b92a583ac31f"
+          "url": "https://linuxbrew.bintray.com/bottles/moreutils-0.64.x86_64_linux.bottle.tar.gz",
+          "sha256": "b45c1a5df01081985d4ff84130e301d9344f0142d304ef78c68b2bd77bb0666e"
         }
       }
     }
@@ -83,6 +89,7 @@
   "conflicts_with": [
     "parallel",
     "pwntools",
+    "sponge",
     "task-spooler"
   ],
   "caveats": null,
