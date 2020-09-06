@@ -9,7 +9,12 @@
 
   ],
   "desc": "C virtualization API",
-  "license": "LGPL-2.1",
+  "license": {
+    "all_of": [
+      "LGPL-2.1-or-later",
+      "GPL-2.0-or-later"
+    ]
+  },
   "homepage": "https://www.libvirt.org",
   "versions": {
     "stable": "6.6.0",
@@ -23,7 +28,7 @@
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,16 +38,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/libvirt-6.6.0.catalina.bottle.tar.gz",
-          "sha256": "48241043ff81ccd226d4303b11034ccdc636fd72aec2c5ba56398ef0191667d3"
+          "url": "https://linuxbrew.bintray.com/bottles/libvirt-6.6.0_1.catalina.bottle.tar.gz",
+          "sha256": "26fddc5e2e3e40b10188b22b4bffb8e0eca7c8365dca5c1497246d7a0faf315b"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/libvirt-6.6.0.mojave.bottle.tar.gz",
-          "sha256": "e76fd3f6fb11397c8963d6d92f8f6b56d19dc86ffcfdffb45663b50239f89a93"
+          "url": "https://linuxbrew.bintray.com/bottles/libvirt-6.6.0_1.mojave.bottle.tar.gz",
+          "sha256": "d782a2efbe666ccaf3ae902c9ff7b854cee213e9199c23e7c90f29c098de4a01"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/libvirt-6.6.0.high_sierra.bottle.tar.gz",
-          "sha256": "466948b3ed952a7ed22a41284ada218b5c007013670c799a54c23eff9ab15482"
+          "url": "https://linuxbrew.bintray.com/bottles/libvirt-6.6.0_1.high_sierra.bottle.tar.gz",
+          "sha256": "da27d51e3bf4d3c0232881aa9adb18ce24d0306e9c3daad3475b36ba54c4324d"
         }
       }
     }
@@ -53,10 +58,17 @@
 
   ],
   "build_dependencies": [
+    "autoconf",
+    "automake",
     "docutils",
-    "pkg-config"
+    "libtool",
+    "perl",
+    "pkg-config",
+    "python@3.8",
+    "rpcgen"
   ],
   "dependencies": [
+    "gettext",
     "glib",
     "gnutls",
     "libgcrypt",
