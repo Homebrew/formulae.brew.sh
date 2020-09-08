@@ -1,6 +1,6 @@
 {
-  "name": "fetchmail",
-  "full_name": "fetchmail",
+  "name": "croc",
+  "full_name": "croc",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Client for fetching mail from POP, IMAP, ETRN or ODMR-capable servers",
-  "license": null,
-  "homepage": "https://www.fetchmail.info/",
+  "desc": "Securely send things from one computer to another",
+  "license": "MIT",
+  "homepage": "https://github.com/schollz/croc",
   "versions": {
-    "stable": "6.4.12",
-    "head": null,
+    "stable": "8.3.1",
+    "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://downloads.sourceforge.net/project/fetchmail/branch_6.4/fetchmail-6.4.12.tar.xz",
+      "url": "https://github.com/schollz/croc/archive/v8.3.1.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,21 +28,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": ":any_skip_relocation",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/fetchmail-6.4.12.catalina.bottle.tar.gz",
-          "sha256": "ddfe9fb2f887e126a342d328f15e1e605dc4e3a010de8ecd2f8c87c6ec9f41c6"
+          "url": "https://linuxbrew.bintray.com/bottles/croc-8.3.1.catalina.bottle.tar.gz",
+          "sha256": "3934c4ebae77c48c8e81382b97d744680432fee5b4eaaffb2f57f2a45df5ef39"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/fetchmail-6.4.12.mojave.bottle.tar.gz",
-          "sha256": "acf99e4e026b233c26d45d0b6eb902aaf2fd94fef8ad88681dabb14531bd9391"
+          "url": "https://linuxbrew.bintray.com/bottles/croc-8.3.1.mojave.bottle.tar.gz",
+          "sha256": "e746dc794607003225810bf4ea74d59e285311eb17169a5da876710a5cb0c5ea"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/fetchmail-6.4.12.high_sierra.bottle.tar.gz",
-          "sha256": "c934824791e311a5a18f442a41822338d6a1ef5446d4bc52bbf9b7319991a1b2"
+          "url": "https://linuxbrew.bintray.com/bottles/croc-8.3.1.high_sierra.bottle.tar.gz",
+          "sha256": "3a9f7d2c3618437c616a35b16a20b232c690a7129d4f0ce43f6fa729d5ec6df4"
         }
       }
     }
@@ -53,10 +53,10 @@
 
   ],
   "build_dependencies": [
-
+    "go"
   ],
   "dependencies": [
-    "openssl@1.1"
+
   ],
   "recommended_dependencies": [
 
