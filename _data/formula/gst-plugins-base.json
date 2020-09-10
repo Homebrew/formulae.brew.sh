@@ -9,16 +9,16 @@
 
   ],
   "desc": "GStreamer plugins (well-supported, basic set)",
-  "license": null,
+  "license": "LGPL-2.0-or-later",
   "homepage": "https://gstreamer.freedesktop.org/",
   "versions": {
-    "stable": "1.16.2",
+    "stable": "1.18.0",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://gstreamer.freedesktop.org/src/gst-plugins-base/gst-plugins-base-1.16.2.tar.xz",
+      "url": "https://gstreamer.freedesktop.org/src/gst-plugins-base/gst-plugins-base-1.18.0.tar.xz",
       "tag": null,
       "revision": null
     }
@@ -33,16 +33,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/gst-plugins-base-1.16.2.catalina.bottle.tar.gz",
-          "sha256": "64e4395ec1d40677cfc8b21eaf6815296f44660aab0b4a125735f266552dad95"
+          "url": "https://homebrew.bintray.com/bottles/gst-plugins-base-1.18.0.catalina.bottle.tar.gz",
+          "sha256": "6a4bc0eb83b7da19c9bdf7dd90c5a6ac0b48893042a43bac03dcbfeef340e592"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/gst-plugins-base-1.16.2.mojave.bottle.tar.gz",
-          "sha256": "5a4245b5251ec3c8ef12a8278101c84c4db8a8892114a53e6a3304569571caba"
+          "url": "https://homebrew.bintray.com/bottles/gst-plugins-base-1.18.0.mojave.bottle.tar.gz",
+          "sha256": "f07de5c70880b4c54bf89a1dc60c4ce69330314fb90fea344c2b5f3b6025d8de"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/gst-plugins-base-1.16.2.high_sierra.bottle.tar.gz",
-          "sha256": "d9144e2a0c20e479c341167a8aa9ecc87e65a9c7c9515a62a855785cb1d42252"
+          "url": "https://homebrew.bintray.com/bottles/gst-plugins-base-1.18.0.high_sierra.bottle.tar.gz",
+          "sha256": "f25b8273bc5fd5d921dde74831b9ccb6bb3fc123c7565027017a459176732a1d"
         }
       }
     }
@@ -54,10 +54,13 @@
   ],
   "build_dependencies": [
     "gobject-introspection",
+    "meson",
+    "ninja",
     "pkg-config"
   ],
   "dependencies": [
     "gettext",
+    "graphene",
     "gstreamer",
     "libogg",
     "libvorbis",
