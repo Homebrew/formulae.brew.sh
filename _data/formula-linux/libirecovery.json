@@ -43,6 +43,10 @@
         "high_sierra": {
           "url": "https://linuxbrew.bintray.com/bottles/libirecovery-1.0.0.high_sierra.bottle.tar.gz",
           "sha256": "04679d947675817c497d74a4a36714ef89a865425c05bc2b936b9bbb9806fe18"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/libirecovery-1.0.0.x86_64_linux.bottle.tar.gz",
+          "sha256": "b8f2ed7155ce512630c5c90fee516200edb01ca3463d44c4e9f6edbcd0cc826f"
         }
       }
     }
@@ -53,10 +57,11 @@
 
   ],
   "build_dependencies": [
-
+    "pkg-config"
   ],
   "dependencies": [
-
+    "libusb",
+    "readline"
   ],
   "recommended_dependencies": [
 
