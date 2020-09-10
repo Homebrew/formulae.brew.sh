@@ -1,6 +1,6 @@
 {
-  "name": "go@1.14",
-  "full_name": "go@1.14",
+  "name": "vtk@8.2",
+  "full_name": "vtk@8.2",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Go programming environment (1.14)",
+  "desc": "Toolkit for 3D computer graphics, image processing, and visualization",
   "license": "BSD-3-Clause",
-  "homepage": "https://golang.org",
+  "homepage": "https://www.vtk.org/",
   "versions": {
-    "stable": "1.14.9",
+    "stable": "8.2.0",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://golang.org/dl/go1.14.9.src.tar.gz",
+      "url": "https://www.vtk.org/files/release/8.2/VTK-8.2.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,20 +33,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/go%401.14-1.14.9.catalina.bottle.tar.gz",
-          "sha256": "522d18382ba1bf41be30c3479269907f953a7117d145f8206ddff3f1db1ad50f"
+          "url": "https://linuxbrew.bintray.com/bottles/vtk%408.2-8.2.0.catalina.bottle.tar.gz",
+          "sha256": "37d86d6f6021aece7811709f2efddaf1146b49b46e4ce35fe831561f2465f462"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/go%401.14-1.14.9.mojave.bottle.tar.gz",
-          "sha256": "faaebc33afb3b43f060cfa611da9a4f53d61bea9761f8b0ebd61a7f84ca7e8be"
+          "url": "https://linuxbrew.bintray.com/bottles/vtk%408.2-8.2.0.mojave.bottle.tar.gz",
+          "sha256": "0c08fc45e6b7b0ed70ced6511cb65e04bb2dadbdac45fae431fcd02e36010748"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/go%401.14-1.14.9.high_sierra.bottle.tar.gz",
-          "sha256": "9edb9fc0b04b1b79a3848522e2335bd067b41e075b5b5cf68f528dbd8c4dd975"
-        },
-        "x86_64_linux": {
-          "url": "https://linuxbrew.bintray.com/bottles/go%401.14-1.14.9.x86_64_linux.bottle.tar.gz",
-          "sha256": "a9188b4be9bde0048f96553a0f24fb2ba816345044717f4b32ac44384760988f"
+          "url": "https://linuxbrew.bintray.com/bottles/vtk%408.2-8.2.0.high_sierra.bottle.tar.gz",
+          "sha256": "60920bd860d41f69e6988ac8a94008fa2c16d5c2a9c13b21915c89828519c83c"
         }
       }
     }
@@ -57,10 +53,19 @@
 
   ],
   "build_dependencies": [
-
+    "cmake"
   ],
   "dependencies": [
-
+    "boost",
+    "fontconfig",
+    "hdf5",
+    "jpeg",
+    "libpng",
+    "libtiff",
+    "netcdf",
+    "pyqt",
+    "python@3.8",
+    "qt"
   ],
   "recommended_dependencies": [
 
@@ -84,6 +89,6 @@
   "linked_keg": null,
   "pinned": false,
   "outdated": false,
-  "deprecated": false,
+  "deprecated": true,
   "disabled": false
 }

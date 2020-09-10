@@ -9,40 +9,40 @@
 
   ],
   "desc": "Python overrides for gobject-introspection-based pygst bindings",
-  "license": null,
+  "license": "LGPL-2.1-or-later",
   "homepage": "https://gstreamer.freedesktop.org/modules/gst-python.html",
   "versions": {
-    "stable": "1.16.2",
+    "stable": "1.18.0",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://gstreamer.freedesktop.org/src/gst-python/gst-python-1.16.2.tar.xz",
+      "url": "https://gstreamer.freedesktop.org/src/gst-python/gst-python-1.18.0.tar.xz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/gst-python-1.16.2_1.catalina.bottle.tar.gz",
-          "sha256": "c81ba537e1ffcf118f451c9bfd14316130b6fef8c4783200cab52a6b5eb494f9"
+          "url": "https://linuxbrew.bintray.com/bottles/gst-python-1.18.0.catalina.bottle.tar.gz",
+          "sha256": "610decb902b40054564e797d73a470946baaa973b516f1b9ff983416a99c5564"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/gst-python-1.16.2_1.mojave.bottle.tar.gz",
-          "sha256": "baccf8cd73d36aba4ce9418639c70c15c48b1675a3bf4b8629cc6814f4014678"
+          "url": "https://linuxbrew.bintray.com/bottles/gst-python-1.18.0.mojave.bottle.tar.gz",
+          "sha256": "d23d7f107b550e85d0f87a43c2053a2f8f6039604c8f4bc249d539f7fb5a406e"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/gst-python-1.16.2_1.high_sierra.bottle.tar.gz",
-          "sha256": "4f97f255287bcefc62d520f4c29111c3ec1012a582cc5251c00779c29b8a4a02"
+          "url": "https://linuxbrew.bintray.com/bottles/gst-python-1.18.0.high_sierra.bottle.tar.gz",
+          "sha256": "8d96ba5f03d17b0dc8dd6cf46f4534693de368e504f2eab732dfa1be7478e98a"
         }
       }
     }
@@ -53,7 +53,8 @@
 
   ],
   "build_dependencies": [
-
+    "meson",
+    "ninja"
   ],
   "dependencies": [
     "gst-plugins-base",

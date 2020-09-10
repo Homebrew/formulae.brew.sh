@@ -1,6 +1,6 @@
 {
-  "name": "netlify-cli",
-  "full_name": "netlify-cli",
+  "name": "infracost",
+  "full_name": "infracost",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Netlify command-line tool",
-  "license": "MIT",
-  "homepage": "https://www.netlify.com/docs/cli",
+  "desc": "Cost estimates for Terraform",
+  "license": "Apache-2.0",
+  "homepage": "https://www.infracost.io/docs/",
   "versions": {
-    "stable": "2.61.3",
+    "stable": "0.5.1",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://registry.npmjs.org/netlify-cli/-/netlify-cli-2.61.3.tgz",
+      "url": "https://github.com/infracost/infracost/archive/v0.5.1.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,20 +33,20 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/netlify-cli-2.61.3.catalina.bottle.tar.gz",
-          "sha256": "4307f4d515052896a2d139851165c01accf6784148787d09d0c2c87ed8e8023b"
+          "url": "https://linuxbrew.bintray.com/bottles/infracost-0.5.1.catalina.bottle.tar.gz",
+          "sha256": "73ae87a10144e1917cc00da5ecbc98bd35e7b9199634c68a4c9402e7c2da2832"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/netlify-cli-2.61.3.mojave.bottle.tar.gz",
-          "sha256": "7287d8c8243fc7166bb024d34407221336cb95d0d7f861a7eac24fc6f76fab91"
+          "url": "https://linuxbrew.bintray.com/bottles/infracost-0.5.1.mojave.bottle.tar.gz",
+          "sha256": "38deed810d34abfdb2cd7940b399ce392b6ff971480b25179400e4b58e3bb4a7"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/netlify-cli-2.61.3.high_sierra.bottle.tar.gz",
-          "sha256": "5412f6c7a24641ad2e86290faa3fe40cbf0eeaafe7a4dbbe14f73646ba618cd6"
+          "url": "https://linuxbrew.bintray.com/bottles/infracost-0.5.1.high_sierra.bottle.tar.gz",
+          "sha256": "4b52b8111ab72c54b7677f851ad0d4c120b09dfdd55ca269e03b33c75620600c"
         },
         "x86_64_linux": {
-          "url": "https://linuxbrew.bintray.com/bottles/netlify-cli-2.61.3.x86_64_linux.bottle.tar.gz",
-          "sha256": "891e7e7987825c830d6813b72a6ab1c6d327fae63be65f908cd3cdc21c354e1d"
+          "url": "https://linuxbrew.bintray.com/bottles/infracost-0.5.1.x86_64_linux.bottle.tar.gz",
+          "sha256": "969fdacdf10678e6c864949240032893376678bbc0668f0e1f14a6d9adbd9bbd"
         }
       }
     }
@@ -57,11 +57,10 @@
 
   ],
   "build_dependencies": [
-
+    "go"
   ],
   "dependencies": [
-    "node",
-    "expect"
+    "terraform"
   ],
   "recommended_dependencies": [
 

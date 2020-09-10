@@ -9,21 +9,21 @@
 
   ],
   "desc": "GStreamer plugins less supported, not fully tested",
-  "license": null,
+  "license": "LGPL-2.0-or-later",
   "homepage": "https://gstreamer.freedesktop.org/",
   "versions": {
-    "stable": "1.16.2",
+    "stable": "1.18.0",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.16.2.tar.xz",
+      "url": "https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.18.0.tar.xz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 3,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,16 +33,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/gst-plugins-bad-1.16.2_3.catalina.bottle.tar.gz",
-          "sha256": "c1031cef7c790bbdf27ffe3eee51ccd128cd28c7309e9da6814ec8cf87682c9d"
+          "url": "https://linuxbrew.bintray.com/bottles/gst-plugins-bad-1.18.0.catalina.bottle.tar.gz",
+          "sha256": "f12df9ec7b12b106ab72ae58d2955bae9e4a4d65223e2df4837613bf519b0c73"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/gst-plugins-bad-1.16.2_3.mojave.bottle.tar.gz",
-          "sha256": "d390095d1b6cd82eec7c6133fe11c5d944cf63ffe783ce65e7cf0900aedb1100"
+          "url": "https://linuxbrew.bintray.com/bottles/gst-plugins-bad-1.18.0.mojave.bottle.tar.gz",
+          "sha256": "7fc1ad19c1c314ae6ea745d899463c5055ed6ebab6cc5fdb715a37b107ecefc5"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/gst-plugins-bad-1.16.2_3.high_sierra.bottle.tar.gz",
-          "sha256": "76524f6b5d72948656e52c06d9dc20b0bb534fe016ee33086aac12ea8d1bbfae"
+          "url": "https://linuxbrew.bintray.com/bottles/gst-plugins-bad-1.18.0.high_sierra.bottle.tar.gz",
+          "sha256": "0854322c4f59be22497fa315490e13e84b12a3c7203e36d572f1458db788e225"
         }
       }
     }
@@ -54,7 +54,8 @@
   ],
   "build_dependencies": [
     "gobject-introspection",
-    "libtool",
+    "meson",
+    "ninja",
     "pkg-config"
   ],
   "dependencies": [
