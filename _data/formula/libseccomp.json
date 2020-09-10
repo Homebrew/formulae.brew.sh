@@ -1,6 +1,6 @@
 {
-  "name": "osmosis",
-  "full_name": "osmosis",
+  "name": "libseccomp",
+  "full_name": "libseccomp",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Command-line OpenStreetMap data processor",
-  "license": "LGPL-3.0",
-  "homepage": "https://wiki.openstreetmap.org/wiki/Osmosis",
+  "desc": "Interface to the Linux Kernel's syscall filtering mechanism",
+  "license": "LGPL-2.1-only",
+  "homepage": "https://github.com/seccomp/libseccomp",
   "versions": {
-    "stable": "0.48.3",
+    "stable": "2.4.2",
     "head": null,
     "bottle": false
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/openstreetmap/osmosis/releases/download/0.48.3/osmosis-0.48.3.tgz",
+      "url": "https://github.com/seccomp/libseccomp/releases/download/v2.4.2/libseccomp-2.4.2.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,12 +28,14 @@
   "bottle": {
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
   "build_dependencies": [
-
+    "autoconf",
+    "automake",
+    "libtool"
   ],
   "dependencies": [
 
@@ -48,7 +50,15 @@
 
   ],
   "requirements": [
+    {
+      "name": "linux",
+      "cask": null,
+      "download": null,
+      "version": null,
+      "contexts": [
 
+      ]
+    }
   ],
   "conflicts_with": [
 
