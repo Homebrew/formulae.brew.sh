@@ -4,8 +4,8 @@ on:
     paths:
       - .github/workflows/scheduled.yml
   schedule:
-    # Once every other hour
-    - cron:  '30 */2 * * *'
+    # Once every hour
+    - cron:  '0 * * * *'
 jobs:
   generate:
     if: startsWith( github.repository, 'Homebrew/' )
