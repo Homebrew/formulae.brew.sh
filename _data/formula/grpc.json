@@ -12,37 +12,37 @@
   "license": "Apache-2.0",
   "homepage": "https://grpc.io/",
   "versions": {
-    "stable": "1.30.2",
+    "stable": "1.32.0",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
       "url": "https://github.com/grpc/grpc.git",
-      "tag": "v1.30.2",
-      "revision": "de6defa6fff08de20e36f9168f5b277e292daf46"
+      "tag": "v1.32.0",
+      "revision": "414bb8322de2411eee1f4e841ff29d887bec7884"
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": "/usr/local/Cellar",
+      "cellar": ":any",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/grpc-1.30.2.catalina.bottle.tar.gz",
-          "sha256": "19bbcb825bfd65ec65bfb7a2750f5ad828bf74c1287c5684bbf13a1c188e7cc4"
+          "url": "https://homebrew.bintray.com/bottles/grpc-1.32.0_1.catalina.bottle.tar.gz",
+          "sha256": "019d535bea0a4fbe724cd67e0e5fc73ac9cdf0ad3c585038f8fc270e91a9dcef"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/grpc-1.30.2.mojave.bottle.tar.gz",
-          "sha256": "92f88af6c076c6511938565ed7ab786da4417027ff12936f82de327d7a66d671"
+          "url": "https://homebrew.bintray.com/bottles/grpc-1.32.0_1.mojave.bottle.tar.gz",
+          "sha256": "3f688e56a52f6397fac95656a833d713b209e3bee3b0d7840457bf442e7bf297"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/grpc-1.30.2.high_sierra.bottle.tar.gz",
-          "sha256": "77551361ecc61e5aa21839413a27a298ee849cfd12c7d90a20048f8c1c58c637"
+          "url": "https://homebrew.bintray.com/bottles/grpc-1.32.0_1.high_sierra.bottle.tar.gz",
+          "sha256": "ece61f9de25a374b3ba7c45db0ee79bd3d9d4888281ab635da97dea86e9cb222"
         }
       }
     }
@@ -55,9 +55,11 @@
   "build_dependencies": [
     "autoconf",
     "automake",
+    "cmake",
     "libtool"
   ],
   "dependencies": [
+    "abseil",
     "c-ares",
     "gflags",
     "openssl@1.1",

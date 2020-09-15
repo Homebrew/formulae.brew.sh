@@ -12,18 +12,18 @@
   "license": "LGPL-2.1-or-later and GPL-2.0-or-later",
   "homepage": "https://www.libvirt.org",
   "versions": {
-    "stable": "6.6.0",
+    "stable": "6.7.0",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://libvirt.org/sources/libvirt-6.6.0.tar.xz",
+      "url": "https://libvirt.org/sources/libvirt-6.7.0.tar.xz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,16 +33,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/libvirt-6.6.0_1.catalina.bottle.tar.gz",
-          "sha256": "26fddc5e2e3e40b10188b22b4bffb8e0eca7c8365dca5c1497246d7a0faf315b"
+          "url": "https://homebrew.bintray.com/bottles/libvirt-6.7.0.catalina.bottle.tar.gz",
+          "sha256": "4663b7bd349c9ef7ca8893a4e8b39032f0778957d2a4c452a85d875c51480b27"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/libvirt-6.6.0_1.mojave.bottle.tar.gz",
-          "sha256": "d782a2efbe666ccaf3ae902c9ff7b854cee213e9199c23e7c90f29c098de4a01"
+          "url": "https://homebrew.bintray.com/bottles/libvirt-6.7.0.mojave.bottle.tar.gz",
+          "sha256": "4bbf546eed48b2d066e94c4a7b43c6ca12abb35748e33308a72f8d461a08f106"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/libvirt-6.6.0_1.high_sierra.bottle.tar.gz",
-          "sha256": "da27d51e3bf4d3c0232881aa9adb18ce24d0306e9c3daad3475b36ba54c4324d"
+          "url": "https://homebrew.bintray.com/bottles/libvirt-6.7.0.high_sierra.bottle.tar.gz",
+          "sha256": "12288e6ed862ab0d0424cac465ef705a82b7ed103f33412ee3d3c86a7966639b"
         }
       }
     }
@@ -53,10 +53,9 @@
 
   ],
   "build_dependencies": [
-    "autoconf",
-    "automake",
     "docutils",
-    "libtool",
+    "meson",
+    "ninja",
     "perl",
     "pkg-config",
     "python@3.8",
@@ -67,6 +66,8 @@
     "glib",
     "gnutls",
     "libgcrypt",
+    "libiscsi",
+    "libssh2",
     "yajl"
   ],
   "recommended_dependencies": [
