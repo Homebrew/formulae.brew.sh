@@ -80,7 +80,7 @@
   "conflicts_with": [
     "ejabberd"
   ],
-  "caveats": "If your upgrade from version 1.7.2_1 then your old database path is \"/usr/local/var/lib/couchdb\".\n\nThe database path of this installation: $(brew --prefix)/var/couchdb/data\".\n\nIf you want to migrate your data from 1.x to 2.x then follow this guide:\nhttps://docs.couchdb.org/en/stable/install/upgrading.html\n\n",
+  "caveats": "CouchDB 3.x requires a set admin password set before startup.\nAdd one to your $(brew --prefix)/etc/local.ini before starting CouchDB e.g.:\n  [admins]\n  admin = youradminpassword\n",
   "installed": [
 
   ],
