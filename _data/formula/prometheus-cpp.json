@@ -1,6 +1,6 @@
 {
-  "name": "yaegi",
-  "full_name": "yaegi",
+  "name": "prometheus-cpp",
+  "full_name": "prometheus-cpp",
   "oldname": null,
   "aliases": [
 
@@ -8,9 +8,9 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Yet another elegant Go interpreter",
-  "license": "Apache-2.0",
-  "homepage": "https://github.com/containous/yaegi",
+  "desc": "Prometheus Client Library for Modern C++",
+  "license": "MIT",
+  "homepage": "https://github.com/jupp0r/prometheus-cpp",
   "versions": {
     "stable": "0.9.0",
     "head": "HEAD",
@@ -18,9 +18,9 @@
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/containous/yaegi/archive/v0.9.0.tar.gz",
-      "tag": null,
-      "revision": null
+      "url": "https://github.com/jupp0r/prometheus-cpp.git",
+      "tag": "v0.9.0",
+      "revision": "023c93e4e504d0954b01cdde13bd293865880388"
     }
   },
   "revision": 0,
@@ -33,16 +33,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/yaegi-0.9.0.catalina.bottle.tar.gz",
-          "sha256": "709800220736bd8569a3b4522cb40cbf5902e076be932b3fe2e656572b070435"
+          "url": "https://homebrew.bintray.com/bottles/prometheus-cpp-0.9.0.catalina.bottle.tar.gz",
+          "sha256": "8a7554ae3fc4618f5b405aa365f2c48192304406a5aba72611110cb909e1669f"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/yaegi-0.9.0.mojave.bottle.tar.gz",
-          "sha256": "e65df0b95cd19be6fd6fb7731ee8e78a3d31b1898f8f2344287ddd5bf6305ef4"
+          "url": "https://homebrew.bintray.com/bottles/prometheus-cpp-0.9.0.mojave.bottle.tar.gz",
+          "sha256": "c843326804e9e84640a31254e793e15b7956aa69be769d8bd0d6888bf7933a0f"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/yaegi-0.9.0.high_sierra.bottle.tar.gz",
-          "sha256": "f92a7e36b0aea6837632b3a098248fdfe17b794cd71a19c48e0afb1919ccc9c7"
+          "url": "https://homebrew.bintray.com/bottles/prometheus-cpp-0.9.0.high_sierra.bottle.tar.gz",
+          "sha256": "3b9b31ccd9421f6777605f7c0b1921b0dca02a3be8c143b5468e32ccf7b36536"
         }
       }
     }
@@ -53,7 +53,7 @@
 
   ],
   "build_dependencies": [
-    "go"
+    "cmake"
   ],
   "dependencies": [
 
@@ -65,7 +65,8 @@
 
   ],
   "uses_from_macos": [
-
+    "curl",
+    "zlib"
   ],
   "requirements": [
 
