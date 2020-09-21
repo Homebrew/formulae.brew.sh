@@ -11,6 +11,13 @@ permalink: :title
     {%- elsif f.deprecated %} class="deprecated" title="This formula has been deprecated"
     {%- endif -%}
     >{{ f.name }}</h2>
+
+{%- capture code -%}
+brew install {{ f.name }}
+{%- endcapture -%}
+
+{% include code_snippet.html code=code language='bash' %}
+
 {%- if f.aliases.size > 0 %}
 <p>Also known as: <strong>{{ f.aliases | join: "</strong>, <strong>" }}</strong></p>
 {%- endif -%}
