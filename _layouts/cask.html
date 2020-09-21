@@ -6,6 +6,13 @@ permalink: :title
 {%- assign formula_path = "formula" -%}
 {%- assign c = site.data.cask[token] -%}
 <h2>{{ token }}</h2>
+
+{%- capture code -%}
+brew install cask {{ token }}
+{%- endcapture -%}
+
+{% include code_snippet.html code=code language='bash' %}
+
 <p>Name{%- if c.name.size > 1 -%}s{%- endif -%}:
 {%- for name in c.name %}
     <strong>{{ name }}</strong>
