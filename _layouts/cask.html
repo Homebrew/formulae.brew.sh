@@ -8,7 +8,7 @@ permalink: :title
 <h2>{{ token }}</h2>
 
 {%- capture code -%}
-brew install cask {{ token }}
+brew cask install {{ token }}
 {%- endcapture -%}
 
 {% include code_snippet.html code=code language='bash' %}
