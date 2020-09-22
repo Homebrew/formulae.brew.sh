@@ -1,17 +1,20 @@
 {% assign code = include.code %}
 <style>
-.copyButton {
-	background: transparent;
-    border: none;
-}
+    .copyButton {
+        background: transparent;
+        border: none;
+    }
 </style>
-<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
 
-<code id="code">{{code}}</code>
-<button class="copyButton" data-clipboard-target="#code" aria-label="Copy to clipboard">
+<code>{{code}}</code>
+<button
+    id="copyButton"
+    aria-label="Copy to clipboard"
+>
     📋
 </button>
 
 <script>
-    new ClipboardJS('.copyButton');
+    document.querySelector("#copyButton")
+    .addEventListener("click", () => navigator.clipboard.writeText("{{code}}"));
 </script>
