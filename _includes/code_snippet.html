@@ -10,11 +10,8 @@
 <button
     id="copyButton"
     aria-label="Copy to clipboard"
+    onclick="navigator.clipboard.writeText('{{code}}')"
 >
     📋
 </button>
 
-<script>
-    document.querySelector("#copyButton")
-    .addEventListener("click", () => navigator.clipboard.writeText("{{code}}"));
-</script>
