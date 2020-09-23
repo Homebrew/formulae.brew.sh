@@ -3,6 +3,7 @@
     #copyButton {
         background: transparent;
         border: none;
+        visibility: hidden;
     }
 </style>
 
@@ -16,8 +17,9 @@
 </button>
 
 <script>
-    if(!navigator.clipboard) {
-        document.getElementById("copyButton").remove();
+    if (navigator.clipboard) {
+        document
+            .getElementById("copyButton")
+            .style.removeProperty("visibility");
     }
 </script>
-
