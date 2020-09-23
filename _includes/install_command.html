@@ -1,4 +1,7 @@
-{% assign code = include.code %}
+{%- capture code -%}
+brew {{include.modifier}} install {{include.item}}
+{%- endcapture -%}
+
 <style>
     #copyButton {
         background: transparent;

@@ -12,11 +12,7 @@ permalink: :title
     {%- endif -%}
     >{{ f.name }}</h2>
 
-{%- capture code -%}
-brew install {{ f.name }}
-{%- endcapture -%}
-
-{% include code_snippet.html code=code language='bash' %}
+{% include install_command.html item=f.name %}
 
 {%- if f.aliases.size > 0 %}
 <p>Also known as: <strong>{{ f.aliases | join: "</strong>, <strong>" }}</strong></p>
