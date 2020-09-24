@@ -153,7 +153,7 @@ task all_analytics: :analytics do
 end
 
 desc "Build the site"
-task build: %i[all_formulae all_analytics cask] do
+task :build do
   require 'jekyll'
   Jekyll::Commands::Build.process({})
 end
