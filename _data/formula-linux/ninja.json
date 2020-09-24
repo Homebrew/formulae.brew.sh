@@ -28,7 +28,7 @@
   "bottle": {
     "stable": {
       "rebuild": 1,
-      "cellar": ":any_skip_relocation",
+      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
@@ -43,6 +43,10 @@
         "high_sierra": {
           "url": "https://linuxbrew.bintray.com/bottles/ninja-1.10.1_1.high_sierra.bottle.1.tar.gz",
           "sha256": "d7ea07c919779729613eba445b34aaa0425d505af17ea5bda70dada8ac473ddb"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/ninja-1.10.1_1.x86_64_linux.bottle.1.tar.gz",
+          "sha256": "c54ea1761bfd0aed73b3386a9a746244683f0fa352049c99843b94eb90388566"
         }
       }
     }
@@ -56,7 +60,8 @@
     "cmake"
   ],
   "dependencies": [
-
+    "python@3.8",
+    "re2c"
   ],
   "recommended_dependencies": [
 
