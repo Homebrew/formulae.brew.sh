@@ -3,17 +3,24 @@ brew {{include.modifier}} install {{include.item}}
 {%- endcapture -%}
 
 <style>
+    .inline {
+        display: inline-flex;
+    }
+
     #copyButton {
         background: transparent;
         border: none;
-        visibility: hidden;
     }
 </style>
 
-<code>{{code}}</code>
+Install command:
+<pre class="inline">
+    <code>{{code}}</code>
+</pre>
 <button
     id="copyButton"
     aria-label="Copy to clipboard"
+    style="visibility: hidden"
     onclick="navigator.clipboard.writeText('{{code}}')"
 >
     📋
