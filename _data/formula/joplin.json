@@ -1,6 +1,6 @@
 {
-  "name": "vivid",
-  "full_name": "vivid",
+  "name": "joplin",
+  "full_name": "joplin",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Generator for LS_COLORS with support for multiple color themes",
-  "license": "MIT or Apache-2.0",
-  "homepage": "https://github.com/sharkdp/vivid",
+  "desc": "Note taking and to-do application with synchronisation capabilities",
+  "license": "MIT",
+  "homepage": "https://joplin.cozic.net/",
   "versions": {
-    "stable": "0.6.0",
+    "stable": "1.0.164",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/sharkdp/vivid/archive/v0.6.0.tar.gz",
+      "url": "https://registry.npmjs.org/joplin/-/joplin-1.0.164.tgz",
       "tag": null,
       "revision": null
     }
@@ -28,21 +28,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any_skip_relocation",
+      "cellar": "/usr/local/Cellar",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/vivid-0.6.0.catalina.bottle.tar.gz",
-          "sha256": "7c4f801eab9c3f5b07aa4585766ce4cd9cf6d55a06f6889ef72a3a044559d834"
+          "url": "https://homebrew.bintray.com/bottles/joplin-1.0.164.catalina.bottle.tar.gz",
+          "sha256": "b1db2009b91e989c0fef249e97cd6510061bc76d7deb4156c5b0ff48cf1b25f6"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/vivid-0.6.0.mojave.bottle.tar.gz",
-          "sha256": "e8766b975c81c7bac8992e8d09b106e3bf2f73b6357a3d3fbc86a2d5c846b06b"
+          "url": "https://homebrew.bintray.com/bottles/joplin-1.0.164.mojave.bottle.tar.gz",
+          "sha256": "db19b4eaf3006ab2d5854cfe40385f5786f67038f593fa8f250ad62af9326c0d"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/vivid-0.6.0.high_sierra.bottle.tar.gz",
-          "sha256": "a2fe201c45df0fc3aa4c9a5985d7feeed8f7fca6817b54658e6299da4e604fc9"
+          "url": "https://homebrew.bintray.com/bottles/joplin-1.0.164.high_sierra.bottle.tar.gz",
+          "sha256": "20a106fc8277d35fbc9fab011d62e3c3184249c9c87a30282094717294145bf8"
         }
       }
     }
@@ -53,10 +53,12 @@
 
   ],
   "build_dependencies": [
-    "rust"
+    "pkg-config"
   ],
   "dependencies": [
-
+    "node",
+    "sqlite",
+    "vips"
   ],
   "recommended_dependencies": [
 
