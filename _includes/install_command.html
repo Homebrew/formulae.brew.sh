@@ -1,49 +1,10 @@
-{%- capture code -%}
-brew {{include.modifier}} install {{include.item}}
-{%- endcapture -%}
-<style>
-    .inline {
-        display: inline-flex;
-        background: rgba(0, 0, 0, 0.3);
-        border-radius: 0.4em;
-        padding-right: 8px;
-    }
-
-    .inline .highlight {
-        margin: 0;
-    }
-    
-    .inline .highlight pre {
-        margin: 0;
-    }
-    
-    #copyButton {
-        background: transparent;
-        border: none;
-        border-left: 1px solid #aaa;
-    }
-</style>
+{%- capture code -%} 
+brew {{include.modifier}}install {{include.item}} 
+{%- endcapture -%} 
 
 Install command:
-<div class="inline">
-    {% highlight bash %}
-    $ {{- code -}}
-    {% endhighlight %}
-
-    <button
-        id="copyButton"
-        aria-label="Copy to clipboard"
-        style="visibility: hidden"
-        onclick="navigator.clipboard.writeText('{{code}}')"
-    >
-    📋
-    </button>
+<div class="copyable">
+    {% highlight bash %} $ {{ code }} {% endhighlight %}
 </div>
 
-<script>
-    if (navigator.clipboard) {
-        document
-            .getElementById("copyButton")
-            .style.removeProperty("visibility");
-    }
-</script>
+<script src="//brew.sh/assets/js/copy.js"></script>
