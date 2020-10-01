@@ -1,6 +1,6 @@
 {
-  "name": "acl2",
-  "full_name": "acl2",
+  "name": "halide",
+  "full_name": "halide",
   "oldname": null,
   "aliases": [
 
@@ -8,41 +8,41 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Logic and programming language in which you can model computer systems",
-  "license": "BSD-3-Clause",
-  "homepage": "https://www.cs.utexas.edu/users/moore/acl2/index.html",
+  "desc": "Language for fast, portable data-parallel computation",
+  "license": "MIT",
+  "homepage": "https://halide-lang.org",
   "versions": {
-    "stable": "8.3",
+    "stable": "10.0.0",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/acl2/acl2/archive/8.3.tar.gz",
+      "url": "https://github.com/halide/Halide/archive/v10.0.0.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 2,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+      "cellar": ":any",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/acl2-8.3_2.catalina.bottle.tar.gz",
-          "sha256": "7b4c53998f16e79cedd99c3d24437b2b4ae18c7fa6ce12460cf63fd166b01081"
+          "url": "https://linuxbrew.bintray.com/bottles/halide-10.0.0.catalina.bottle.tar.gz",
+          "sha256": "93c86ba497d66ddd04bb5fc29ed122f9388f6911fcbc5d5b9972869a9cdd1bc6"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/acl2-8.3_2.mojave.bottle.tar.gz",
-          "sha256": "5febb99db86d0cb55326491b95d0709aba81ffa65589625a6a1a6b7f0cf964a4"
+          "url": "https://linuxbrew.bintray.com/bottles/halide-10.0.0.mojave.bottle.tar.gz",
+          "sha256": "d9db4f376d1aec822e9302540670c7853b8163caf0b824afb6beb33d53549740"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/acl2-8.3_2.high_sierra.bottle.tar.gz",
-          "sha256": "673a5518af39651e257754ffbe4a5d3d4dc733a5073b75f8a8b82ca29a6a0d9f"
+          "url": "https://linuxbrew.bintray.com/bottles/halide-10.0.0.high_sierra.bottle.tar.gz",
+          "sha256": "34f379eb801990b3c43011befab88deb8507df0d8d9c4b015e5c84c04394f64e"
         }
       }
     }
@@ -53,10 +53,14 @@
 
   ],
   "build_dependencies": [
-
+    "cmake"
   ],
   "dependencies": [
-    "sbcl"
+    "jpeg",
+    "libomp",
+    "libpng",
+    "llvm",
+    "python@3.8"
   ],
   "recommended_dependencies": [
 
