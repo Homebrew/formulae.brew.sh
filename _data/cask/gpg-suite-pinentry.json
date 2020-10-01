@@ -3,7 +3,7 @@
   "name": [
     "GPG Suite Pinentry"
   ],
-  "desc": null,
+  "desc": "Pinentry GUI for GPG Suite",
   "homepage": "https://gpgtools.org/",
   "url": "https://releases.gpgtools.org/GPG_Suite-2020.1.dmg",
   "appcast": "https://gpgtools.org/releases/gka/appcast.xml",
@@ -24,7 +24,7 @@
       }
     }
   ],
-  "caveats": "Cask gpg-suite-pinentry installs files under $(brew --prefix). The presence of such\nfiles can cause warnings when running `brew doctor`, which is considered\nto be a bug in Homebrew Cask.\n",
+  "caveats": "You may need to set \"pinentry-program\" in `~/.gnupg/gpg-agent.conf` as follows:\n\n  pinentry-program $(brew --prefix)/MacGPG2/libexec/pinentry-mac.app/Contents/MacOS/pinentry-mac\n\nCask gpg-suite-pinentry installs files under $(brew --prefix). The presence of such\nfiles can cause warnings when running `brew doctor`, which is considered\nto be a bug in Homebrew Cask.\n",
   "depends_on": {
     "macos": {
       ">=": [

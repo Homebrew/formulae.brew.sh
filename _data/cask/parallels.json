@@ -20,17 +20,15 @@
         "$(brew --prefix)/bin/prlcore2dmp",
         "$(brew --prefix)/bin/prlctl",
         "$(brew --prefix)/bin/prlexec",
-        "$(brew --prefix)/bin/prlsrvctl",
-        "/Applications/Parallels Desktop.app",
-        "/Applications/Parallels Desktop.app/Contents/Applications/Parallels Link.app",
-        "/Applications/Parallels Desktop.app/Contents/Applications/Parallels Mounter.app",
-        "/Applications/Parallels Desktop.app/Contents/Applications/Parallels Technical Data Reporter.app",
-        "/Applications/Parallels Desktop.app/Contents/MacOS/Parallels Service.app",
-        "/Applications/Parallels Desktop.app/Contents/MacOS/Parallels VM.app"
+        "$(brew --prefix)/bin/prlsrvctl"
       ],
       "signal": {
       }
     },
+    [
+      "Parallels Desktop.app"
+    ],
+    "postflight (Postflight Block)",
     {
       "trash": [
         "~/.parallels_settings",
@@ -60,6 +58,6 @@
     }
   },
   "conflicts_with": null,
-  "container": "{:type=>:naked}",
+  "container": null,
   "auto_updates": true
 }
