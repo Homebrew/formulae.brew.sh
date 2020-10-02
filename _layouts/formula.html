@@ -11,6 +11,9 @@ permalink: :title
     {%- elsif f.deprecated %} class="deprecated" title="This formula has been deprecated"
     {%- endif -%}
     >{{ f.name }}</h2>
+
+{% include install_command.html item=f.name %}
+
 {%- if f.aliases.size > 0 %}
 <p>Also known as: <strong>{{ f.aliases | join: "</strong>, <strong>" }}</strong></p>
 {%- endif -%}

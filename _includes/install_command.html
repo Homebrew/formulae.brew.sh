@@ -1,0 +1,8 @@
+{%- capture code -%} 
+brew {{include.modifier}}install {{include.item}} 
+{%- endcapture -%} 
+
+Install command:
+<div class="copyable">
+    {% highlight bash %} $ {{ code }} {% endhighlight %}
+</div>
