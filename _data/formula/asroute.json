@@ -1,6 +1,6 @@
 {
-  "name": "hwloc",
-  "full_name": "hwloc",
+  "name": "asroute",
+  "full_name": "asroute",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Portable abstraction of the hierarchical topology of modern architectures",
-  "license": "BSD-3-Clause",
-  "homepage": "https://www.open-mpi.org/projects/hwloc/",
+  "desc": "CLI to interpret traceroute -a output to show AS names traversed",
+  "license": "MIT",
+  "homepage": "https://github.com/stevenpack/asroute",
   "versions": {
-    "stable": "2.3.0",
+    "stable": "0.1.0",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://www.open-mpi.org/software/hwloc/v2.3/downloads/hwloc-2.3.0.tar.bz2",
+      "url": "https://github.com/stevenpack/asroute/archive/v0.1.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,21 +28,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": ":any_skip_relocation",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/hwloc-2.3.0.catalina.bottle.tar.gz",
-          "sha256": "b98423329f95c10ee12f079edcdeae64b33f4639cd666d83e498805879d0cb4d"
+          "url": "https://homebrew.bintray.com/bottles/asroute-0.1.0.catalina.bottle.tar.gz",
+          "sha256": "873d80ef73a84598637218e467a0887477e113a9f26d8dd1f1a4b6a4571b11b8"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/hwloc-2.3.0.mojave.bottle.tar.gz",
-          "sha256": "7ac08b2c072844864427cc80ec8906ea188ec3682a75578c149ade8148be3e66"
+          "url": "https://homebrew.bintray.com/bottles/asroute-0.1.0.mojave.bottle.tar.gz",
+          "sha256": "6dbd83956cb0d73b74fd8fa6706206c7d9701eeb6a44f0e6eebcaebd9b96fbc2"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/hwloc-2.3.0.high_sierra.bottle.tar.gz",
-          "sha256": "72be3d1ae086a215fe867e34ffdf6da3e39b7571ceb6c8c5606035db24491d81"
+          "url": "https://homebrew.bintray.com/bottles/asroute-0.1.0.high_sierra.bottle.tar.gz",
+          "sha256": "77fd60fff4aa4abf7e9fd7bb7e14961b3eaab1aae0f074a318d874ecd869d32b"
         }
       }
     }
@@ -53,7 +53,7 @@
 
   ],
   "build_dependencies": [
-    "pkg-config"
+    "rust"
   ],
   "dependencies": [
 
@@ -65,7 +65,7 @@
 
   ],
   "uses_from_macos": [
-    "libxml2"
+
   ],
   "requirements": [
 
