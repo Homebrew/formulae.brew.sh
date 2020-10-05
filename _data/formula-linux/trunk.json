@@ -43,6 +43,10 @@
         "high_sierra": {
           "url": "https://linuxbrew.bintray.com/bottles/trunk-0.6.0.high_sierra.bottle.tar.gz",
           "sha256": "1951420ea7503d12523b1497deea5655737c7b1b95ca0b70696fec6457b715df"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/trunk-0.6.0.x86_64_linux.bottle.tar.gz",
+          "sha256": "caed041b63f3e513ad6e2205996e3ae5eabb9bc887747140bc70d3ff81db7b23"
         }
       }
     }
@@ -53,10 +57,12 @@
 
   ],
   "build_dependencies": [
-    "rust"
+    "rust",
+    "pkg-config"
   ],
   "dependencies": [
-
+    "zlib",
+    "openssl@1.1"
   ],
   "recommended_dependencies": [
 
