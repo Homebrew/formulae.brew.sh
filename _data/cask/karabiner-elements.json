@@ -5,29 +5,45 @@
   ],
   "desc": "Keyboard customizer",
   "homepage": "https://pqrs.org/osx/karabiner/",
-  "url": "https://github.com/pqrs-org/Karabiner-Elements/releases/download/v12.10.0/Karabiner-Elements-12.10.0.dmg",
+  "url": "https://github.com/pqrs-org/Karabiner-Elements/releases/download/v13.0.0/Karabiner-Elements-13.0.0.dmg",
   "appcast": "https://pqrs.org/osx/karabiner/files/karabiner-elements-appcast.xml",
-  "version": "12.10.0",
-  "sha256": "53252f7d07e44f04972afea2a16ac595552c28715aa65ff4a481a1c18c8be2f4",
+  "version": "13.0.0",
+  "sha256": "18e3f255fd479046f36e57f2c2e0319568aad48784d6deb84c6ae40e9c92db2b",
   "artifacts": [
     {
-      "signal": {
-        "TERM": "karabiner_console_user_server"
+      "early_script": {
+        "executable": "/Library/Application Support/org.pqrs/Karabiner-DriverKit-VirtualHIDDevice/scripts/uninstall/remove_files.sh",
+        "sudo": "true"
       },
-      "pkgutil": "org.pqrs.Karabiner-Elements",
+      "signal": {
+        "TERM": "org.pqrs.Karabiner-NotificationWindow"
+      },
+      "pkgutil": [
+        "org.pqrs.Karabiner-DriverKit-VirtualHIDDevice",
+        "org.pqrs.Karabiner-Elements"
+      ],
+      "launchctl": [
+        "org.pqrs.karabiner.agent.karabiner_grabber",
+        "org.pqrs.karabiner.agent.karabiner_observer",
+        "org.pqrs.karabiner.karabiner_console_user_server",
+        "org.pqrs.karabiner.karabiner_session_monitor"
+      ],
       "script": {
         "executable": "/Library/Application Support/org.pqrs/Karabiner-Elements/uninstall_core.sh",
         "sudo": "true"
-      }
+      },
+      "delete": "/Library/Application Support/org.pqrs/"
     },
-    "Karabiner-Elements.sparkle_guided.pkg (Pkg)",
+    "Karabiner-Elements.pkg (Pkg)",
     {
       "trash": [
-        "~/Library/Application Support/Karabiner-Elements",
-        "~/.karabiner.d",
         "~/.config/karabiner",
-        "~/Library/Preferences/org.pqrs.Karabiner-Elements-Updater.plist",
-        "~/Library/Caches/org.pqrs.Karabiner-Elements-Updater"
+        "~/.local/share/karabiner",
+        "~/Library/Application Scripts/org.pqrs.Karabiner-VirtualHIDDevice-Manager",
+        "~/Library/Application Support/Karabiner-Elements",
+        "~/Library/Caches/org.pqrs.Karabiner-Elements.Updater",
+        "~/Library/Containers/org.pqrs.Karabiner-VirtualHIDDevice-Manager",
+        "~/Library/Preferences/org.pqrs.Karabiner-Elements.Updater.plist"
       ],
       "signal": {
       }
