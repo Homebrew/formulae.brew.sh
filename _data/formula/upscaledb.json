@@ -12,18 +12,18 @@
   "license": "Apache-2.0",
   "homepage": "https://upscaledb.com/",
   "versions": {
-    "stable": "2.2.0",
+    "stable": "2.2.1",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "http://files.upscaledb.com/dl/upscaledb-2.2.0.tar.gz",
-      "tag": null,
-      "revision": null
+      "url": "https://github.com/cruppstahl/upscaledb.git",
+      "tag": "release-2.2.1",
+      "revision": "60d39fc19888fbc5d8b713d30373095a41bf9ced"
     }
   },
-  "revision": 14,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,16 +33,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/upscaledb-2.2.0_14.catalina.bottle.tar.gz",
-          "sha256": "16803511bcf21348ddd6c71d76367fef5961188d2b0f467a3ec05b044db5b3f7"
+          "url": "https://homebrew.bintray.com/bottles/upscaledb-2.2.1.catalina.bottle.tar.gz",
+          "sha256": "b507da019b3c2491594d7ad127e980d098f80f78f044e00b4f07a3f3cdd9b795"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/upscaledb-2.2.0_14.mojave.bottle.tar.gz",
-          "sha256": "b07269e80731ac5700a84b05f1725a49d59e40191bbab4661750b204f14ba9b3"
+          "url": "https://homebrew.bintray.com/bottles/upscaledb-2.2.1.mojave.bottle.tar.gz",
+          "sha256": "85e1468d77fa72b7cfc4e039877018648b79e8eb7006e63263fbdd44978f043a"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/upscaledb-2.2.0_14.high_sierra.bottle.tar.gz",
-          "sha256": "003ac2a786a136acf66f8de4a25a0d72950c21dbb4e4b70afad486bba01319d7"
+          "url": "https://homebrew.bintray.com/bottles/upscaledb-2.2.1.high_sierra.bottle.tar.gz",
+          "sha256": "9e15c86df38e916f08ba95254fe675e60b250b7e8e72e9dd9e07a6ff226dd092"
         }
       }
     }
@@ -53,14 +53,15 @@
 
   ],
   "build_dependencies": [
-
+    "autoconf",
+    "automake",
+    "libtool"
   ],
   "dependencies": [
     "boost",
     "gnutls",
     "openjdk",
-    "openssl@1.1",
-    "protobuf"
+    "openssl@1.1"
   ],
   "recommended_dependencies": [
 
