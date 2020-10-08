@@ -3,8 +3,8 @@
   "name": [
     "MiniZincIDE"
   ],
-  "desc": null,
-  "homepage": "https://www.minizinc.org/ide/index.html",
+  "desc": "Open-source constraint modeling language and IDE",
+  "homepage": "https://www.minizinc.org/index.html",
   "url": "https://github.com/MiniZinc/MiniZincIDE/releases/download/2.5.0/MiniZincIDE-2.5.0-bundled.dmg",
   "appcast": "https://github.com/MiniZinc/MiniZincIDE/releases.atom",
   "version": "2.5.0",
@@ -12,12 +12,27 @@
   "artifacts": [
     [
       "MiniZincIDE.app"
+    ],
+    [
+      "/Applications/MiniZincIDE.app/Contents/Resources/minizinc"
+    ],
+    [
+      "/Applications/MiniZincIDE.app/Contents/Resources/mzn2doc"
     ]
   ],
   "caveats": null,
   "depends_on": {
+    "macos": {
+      ">=": [
+        "10.12"
+      ]
+    }
   },
-  "conflicts_with": null,
+  "conflicts_with": {
+    "formula": [
+      "minizinc"
+    ]
+  },
   "container": null,
   "auto_updates": null
 }
