@@ -1,6 +1,6 @@
 {
-  "name": "futhark",
-  "full_name": "futhark",
+  "name": "fleet-cli",
+  "full_name": "fleet-cli",
   "oldname": null,
   "aliases": [
 
@@ -8,19 +8,19 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Data-parallel functional programming language",
-  "license": "ISC",
-  "homepage": "https://futhark-lang.org/",
+  "desc": "Manage large fleets of Kubernetes clusters",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/rancher/fleet",
   "versions": {
-    "stable": "0.18.1",
-    "head": "HEAD",
+    "stable": "0.3.0",
+    "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/diku-dk/futhark/archive/v0.18.1.tar.gz",
-      "tag": null,
-      "revision": null
+      "url": "https://github.com/rancher/fleet.git",
+      "tag": "v0.3.0",
+      "revision": "55cda24b980e8539f827af521ed59771ac681d86"
     }
   },
   "revision": 0,
@@ -33,16 +33,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/futhark-0.18.1.catalina.bottle.tar.gz",
-          "sha256": "f118ffa2a1850d2cc4b913b730d643028b524bf7e0680a142c0150f04da70ba6"
+          "url": "https://linuxbrew.bintray.com/bottles/fleet-cli-0.3.0.catalina.bottle.tar.gz",
+          "sha256": "f35d0d4376ac67b6c354c8bb7111ae261275d65b95cff65295dffcfddca778c8"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/futhark-0.18.1.mojave.bottle.tar.gz",
-          "sha256": "26298e76327b8504f57fc2b0762f1b0680519184881678161b299fd904f4b168"
+          "url": "https://linuxbrew.bintray.com/bottles/fleet-cli-0.3.0.mojave.bottle.tar.gz",
+          "sha256": "e1739f6e06c70942ceff7f1182e81076feb810314f04ae9d9ac2cd21c0df7626"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/futhark-0.18.1.high_sierra.bottle.tar.gz",
-          "sha256": "9272b36bd8044cb7521c17bc777a50734223a50f5460a33b96fcf997777863d7"
+          "url": "https://linuxbrew.bintray.com/bottles/fleet-cli-0.3.0.high_sierra.bottle.tar.gz",
+          "sha256": "4eed32c7c3371071608b2a7f0a044fc61165c537ef637dde6cc79cc79b85c35b"
         }
       }
     }
@@ -53,13 +53,10 @@
 
   ],
   "build_dependencies": [
-    "cabal-install",
-    "ghc",
-    "sphinx-doc"
+    "go"
   ],
   "dependencies": [
-    "ncurses",
-    "zlib"
+
   ],
   "recommended_dependencies": [
 
