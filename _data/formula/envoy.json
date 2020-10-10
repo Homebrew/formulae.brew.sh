@@ -1,6 +1,6 @@
 {
-  "name": "cubejs-cli",
-  "full_name": "cubejs-cli",
+  "name": "envoy",
+  "full_name": "envoy",
   "oldname": null,
   "aliases": [
 
@@ -8,19 +8,19 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Cube.js command-line interface",
+  "desc": "Cloud-native high-performance edge/middle/service proxy",
   "license": "Apache-2.0",
-  "homepage": "https://cube.dev/",
+  "homepage": "https://www.envoyproxy.io",
   "versions": {
-    "stable": "0.21.0",
+    "stable": "1.16.0",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://registry.npmjs.org/cubejs-cli/-/cubejs-cli-0.21.0.tgz",
-      "tag": null,
-      "revision": null
+      "url": "https://github.com/envoyproxy/envoy.git",
+      "tag": "v1.16.0",
+      "revision": "8fb3cb86082b17144a80402f5367ae65f06083bd"
     }
   },
   "revision": 0,
@@ -33,16 +33,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/cubejs-cli-0.21.0.catalina.bottle.tar.gz",
-          "sha256": "66c05a8518d45e54babd18c3b972af61b4ffe487eb4186b9310aa4efd5eada0d"
+          "url": "https://homebrew.bintray.com/bottles/envoy-1.16.0.catalina.bottle.tar.gz",
+          "sha256": "537b7a21bbf0d1afb2287e7417f2a0a044207be845ef91778d40c0e1a2898a9d"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/cubejs-cli-0.21.0.mojave.bottle.tar.gz",
-          "sha256": "08fb6420a682983379de714fbb9d276d8dd660a80e9c8ddcb681d159588a8451"
+          "url": "https://homebrew.bintray.com/bottles/envoy-1.16.0.mojave.bottle.tar.gz",
+          "sha256": "80eaea1fece13477a5f5c57412bafabab64e13edab9bf261147fead8b08e8f6d"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/cubejs-cli-0.21.0.high_sierra.bottle.tar.gz",
-          "sha256": "3a8313fa8d5d0d81d67f7350b182a99c0e9deed6c23f7eb2914a7b0dc94bc73b"
+          "url": "https://homebrew.bintray.com/bottles/envoy-1.16.0.high_sierra.bottle.tar.gz",
+          "sha256": "a66395e2f2aa616f930356904b866b0a0c28b6cb57ed3c151a2e257a4758b276"
         }
       }
     }
@@ -53,10 +53,16 @@
 
   ],
   "build_dependencies": [
-
+    "automake",
+    "bazelisk",
+    "cmake",
+    "coreutils",
+    "go",
+    "libtool",
+    "ninja"
   ],
   "dependencies": [
-    "node"
+
   ],
   "recommended_dependencies": [
 
