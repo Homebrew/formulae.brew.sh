@@ -5,8 +5,8 @@
   ],
   "desc": "Desktop sync client for Nextcloud software products",
   "homepage": "https://nextcloud.com/",
-  "url": "https://download.nextcloud.com/desktop/releases/Mac/Installer/Nextcloud-3.0.2.pkg",
-  "appcast": "https://download.nextcloud.com/desktop/releases/Mac/Installer/",
+  "url": "https://github.com/nextcloud/desktop/releases/download/v3.0.2/Nextcloud-3.0.2.pkg",
+  "appcast": "https://github.com/nextcloud/desktop/releases.atom",
   "version": "3.0.2",
   "sha256": "69103a648bf59220a1dd09030ea2e7ba39fdf910ac456769701eadaea27682fb",
   "artifacts": [
@@ -18,7 +18,20 @@
     "Nextcloud-3.0.2.pkg (Pkg)",
     [
       "/Applications/nextcloud.app/Contents/MacOS/nextcloudcmd"
-    ]
+    ],
+    {
+      "trash": [
+        "~/Library/Application Scripts/com.nextcloud.desktopclient.FinderSyncExt",
+        "~/Library/Application Support/Nextcloud",
+        "~/Library/Caches/Nextcloud",
+        "~/Library/Containers/com.nextcloud.desktopclient.FinderSyncExt",
+        "~/Library/Group Containers/com.nextcloud.desktopclient",
+        "~/Library/Preferences/com.nextcloud.desktopclient.plist",
+        "~/Library/Preferences/Nextcloud"
+      ],
+      "signal": {
+      }
+    }
   ],
   "caveats": null,
   "depends_on": {
