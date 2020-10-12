@@ -1,6 +1,6 @@
 {
-  "name": "openmsx",
-  "full_name": "openmsx",
+  "name": "box2d",
+  "full_name": "box2d",
   "oldname": null,
   "aliases": [
 
@@ -8,41 +8,41 @@
   "versioned_formulae": [
 
   ],
-  "desc": "MSX emulator",
-  "license": "GPL-2.0",
-  "homepage": "https://openmsx.org/",
+  "desc": "2D physics engine for games",
+  "license": "MIT",
+  "homepage": "https://box2d.org",
   "versions": {
-    "stable": "0.15.0",
+    "stable": "2.4.0",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/openMSX/openMSX/releases/download/RELEASE_0_15_0/openmsx-0.15.0.tar.gz",
+      "url": "https://github.com/erincatto/box2d/archive/v2.4.0.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": ":any_skip_relocation",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/openmsx-0.15.0_1.catalina.bottle.tar.gz",
-          "sha256": "10c3e39c22efbd11e11b352f8fabfcea03633088cb16fe24611ed631325ed05c"
+          "url": "https://linuxbrew.bintray.com/bottles/box2d-2.4.0.catalina.bottle.tar.gz",
+          "sha256": "1007faf13049c1f129e114fb0a2d55d2b5e35b47370cf2d7926fd391605fb341"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/openmsx-0.15.0_1.mojave.bottle.tar.gz",
-          "sha256": "ed24d06d8f8913236fa619f0d92396e2a2a8d2f40afb5e56c609ecdf332b4ca4"
+          "url": "https://linuxbrew.bintray.com/bottles/box2d-2.4.0.mojave.bottle.tar.gz",
+          "sha256": "4b0ae6666eaa0276c7e90b860cf7e705d9123893c729b126114603b318615b79"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/openmsx-0.15.0_1.high_sierra.bottle.tar.gz",
-          "sha256": "86fff1a90fff96cb0398184ef7ebdeb804edda4c9d34ee5e7278159df64b10e3"
+          "url": "https://linuxbrew.bintray.com/bottles/box2d-2.4.0.high_sierra.bottle.tar.gz",
+          "sha256": "304c665585267303ba601d6efe71dbc1dcf435622ecb08180d59237c02313fdf"
         }
       }
     }
@@ -53,14 +53,10 @@
 
   ],
   "build_dependencies": [
-
+    "cmake"
   ],
   "dependencies": [
-    "freetype",
-    "glew",
-    "libpng",
-    "sdl",
-    "sdl_ttf"
+
   ],
   "recommended_dependencies": [
 
