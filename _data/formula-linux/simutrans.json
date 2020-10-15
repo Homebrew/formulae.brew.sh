@@ -12,15 +12,15 @@
   "license": "Artistic-1.0",
   "homepage": "https://www.simutrans.com/",
   "versions": {
-    "stable": "121.0",
+    "stable": "122.0",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://downloads.sourceforge.net/project/simutrans/simutrans/121-0/simutrans-src-121-0.zip",
+      "url": "svn://servers.simutrans.org/simutrans/trunk/",
       "tag": null,
-      "revision": null
+      "revision": "9274"
     }
   },
   "revision": 0,
@@ -33,16 +33,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/simutrans-121.0.catalina.bottle.tar.gz",
-          "sha256": "c2c9d281769baf57a160d47af3a8e0575912f8823f11e305e0f42c380759c7d6"
+          "url": "https://linuxbrew.bintray.com/bottles/simutrans-122.0.catalina.bottle.tar.gz",
+          "sha256": "50aa64655688d3768238ac9878307d252fbaafd5c8dd6af3bfaa5f9874b53a97"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/simutrans-121.0.mojave.bottle.tar.gz",
-          "sha256": "227e7f7ac0becc49570846825ed6fb3a484c85741a2289216842066e225dd8c0"
+          "url": "https://linuxbrew.bintray.com/bottles/simutrans-122.0.mojave.bottle.tar.gz",
+          "sha256": "3dbf340c91f3e97998b2b0b9e2c064c21a2e9fc656d73ccb25e558175350ada6"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/simutrans-121.0.high_sierra.bottle.tar.gz",
-          "sha256": "25efa70edc3b5b9270e4f6cc1bc40010ed5a427e081ed6810dc69151b47d9dac"
+          "url": "https://linuxbrew.bintray.com/bottles/simutrans-122.0.high_sierra.bottle.tar.gz",
+          "sha256": "fea3c9fde01b95445d1eb02749f8ed3621e9e5a59f70c5a2f962e9360696a797"
         }
       }
     }
@@ -53,9 +53,12 @@
 
   ],
   "build_dependencies": [
-
+    "autoconf",
+    "automake",
+    "pkg-config"
   ],
   "dependencies": [
+    "freetype",
     "libpng",
     "sdl2"
   ],

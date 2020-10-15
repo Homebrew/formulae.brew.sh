@@ -9,18 +9,18 @@
 
   ],
   "desc": "Library for playing streamed audio formats from video games",
-  "license": null,
+  "license": "ISC",
   "homepage": "https://hcs64.com/vgmstream.html",
   "versions": {
-    "stable": "r1050-3264-g86fbfffd",
+    "stable": "405509",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/losnoco/vgmstream/archive/r1050-3264-g86fbfffd.tar.gz",
-      "tag": null,
-      "revision": null
+      "url": "https://github.com/losnoco/vgmstream.git",
+      "tag": "r1050-3280-gba405509",
+      "revision": "ba405509cc3bb9fe1a6389d6d268475e2d567545"
     }
   },
   "revision": 0,
@@ -33,20 +33,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/vgmstream-r1050-3264-g86fbfffd.catalina.bottle.tar.gz",
-          "sha256": "235ded9d960b2a99ceb17630c5cc0aa352b2afbadc90a01439a7ff481f7062bd"
+          "url": "https://linuxbrew.bintray.com/bottles/vgmstream-405509.catalina.bottle.tar.gz",
+          "sha256": "74b726aca9e8a085ff1d5f4afe6f892f3620d2cb229c86276451fcb25e993a11"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/vgmstream-r1050-3264-g86fbfffd.mojave.bottle.tar.gz",
-          "sha256": "584faaf779e7adcd1b8d2243641b80f277314588372f9bd8a137e9c4110b3a9e"
+          "url": "https://linuxbrew.bintray.com/bottles/vgmstream-405509.mojave.bottle.tar.gz",
+          "sha256": "b233a6c088526b989be281b44ff467aec792ff8cfc69afed7329f60f82b51eb5"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/vgmstream-r1050-3264-g86fbfffd.high_sierra.bottle.tar.gz",
-          "sha256": "c70ca3ae85b5138dbb8d97cadaf459e77633e0b022c2f8c210be05cd2881544b"
-        },
-        "x86_64_linux": {
-          "url": "https://linuxbrew.bintray.com/bottles/vgmstream-r1050-3264-g86fbfffd.x86_64_linux.bottle.tar.gz",
-          "sha256": "b06f492fc9e48f60b1ff012e012bc2b7ee9e399efc1a8026ab41e2f10c6daa98"
+          "url": "https://linuxbrew.bintray.com/bottles/vgmstream-405509.high_sierra.bottle.tar.gz",
+          "sha256": "ffa46eab45d850eaa18f0f0e280a9e387d0332b89935e4a6cdc5f1e5455fd228"
         }
       }
     }
@@ -57,9 +53,10 @@
 
   ],
   "build_dependencies": [
-
+    "cmake"
   ],
   "dependencies": [
+    "ffmpeg",
     "libao",
     "libvorbis",
     "mpg123"
