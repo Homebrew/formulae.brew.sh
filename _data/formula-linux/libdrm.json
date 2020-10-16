@@ -1,6 +1,6 @@
 {
-  "name": "phpstan",
-  "full_name": "phpstan",
+  "name": "libdrm",
+  "full_name": "libdrm",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "PHP Static Analysis Tool",
+  "desc": "Library for accessing the direct rendering manager",
   "license": "MIT",
-  "homepage": "https://github.com/phpstan/phpstan",
+  "homepage": "https://dri.freedesktop.org",
   "versions": {
-    "stable": "0.12.50",
+    "stable": "2.4.102",
     "head": null,
     "bottle": false
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/phpstan/phpstan/releases/download/0.12.50/phpstan.phar",
+      "url": "https://dri.freedesktop.org/libdrm/libdrm-2.4.102.tar.xz",
       "tag": null,
       "revision": null
     }
@@ -28,15 +28,20 @@
   "bottle": {
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
   "build_dependencies": [
-
+    "docbook",
+    "docbook-xsl",
+    "libxslt",
+    "meson",
+    "ninja",
+    "pkg-config"
   ],
   "dependencies": [
-    "php"
+    "libpciaccess"
   ],
   "recommended_dependencies": [
 
@@ -48,7 +53,15 @@
 
   ],
   "requirements": [
+    {
+      "name": "linux",
+      "cask": null,
+      "download": null,
+      "version": null,
+      "contexts": [
 
+      ]
+    }
   ],
   "conflicts_with": [
 
