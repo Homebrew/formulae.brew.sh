@@ -3,15 +3,18 @@
   "name": [
     "OpenVPN Connect client"
   ],
-  "desc": null,
+  "desc": "Client program for the OpenVPN Access Server",
   "homepage": "https://openvpn.net/client-connect-vpn-for-mac-os/",
-  "url": "https://swupdate.openvpn.net/downloads/connect/openvpn-connect-3.2.2.1899_signed.dmg",
+  "url": "https://swupdate.openvpn.net/downloads/connect/openvpn-connect-3.2.3.2325_signed.dmg",
   "appcast": "https://openvpn.net/client-connect-vpn-for-mac-os/",
-  "version": "3.2.2,1899",
-  "sha256": "0fcab3724cc71d1b2fc1cf645982fb7b70a5d860f5a8eadf03bf9d01ca973ca2",
+  "version": "3.2.3,2325",
+  "sha256": "14f0de0f0de852f35301f30f0688a0445b1b338d4935904be678f8f3a156c27b",
   "artifacts": [
     {
-      "launchctl": "org.openvpn.client",
+      "launchctl": [
+        "org.openvpn.client",
+        "org.openvpn.helper"
+      ],
       "script": {
         "executable": "/Applications/OpenVPN Connect/Uninstall OpenVPN Connect.app/Contents/Resources/remove.sh",
         "sudo": "true"
@@ -20,12 +23,14 @@
         "org.openvpn.client.pkg",
         "org.openvpn.client_framework.pkg",
         "org.openvpn.client_launch.pkg",
-        "org.openvpn.client_uninstall.pkg"
+        "org.openvpn.client_uninstall.pkg",
+        "org.openvpn.helper_framework.pkg",
+        "org.openvpn.helper_launch.pkg"
       ],
       "signal": {
       }
     },
-    "OpenVPN_Connect_3_2_2(1899)_Installer_signed.pkg (Pkg)"
+    "OpenVPN_Connect_3_2_3(2325)_Installer_signed.pkg (Pkg)"
   ],
   "caveats": null,
   "depends_on": {
