@@ -1,6 +1,6 @@
 {
-  "name": "sratom",
-  "full_name": "sratom",
+  "name": "blaze",
+  "full_name": "blaze",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Library for serializing LV2 atoms to/from RDF",
-  "license": "ISC",
-  "homepage": "https://drobilla.net/software/sratom/",
+  "desc": "High-performance C++ math library for dense and sparse arithmetic",
+  "license": "BSD-3-Clause",
+  "homepage": "https://bitbucket.org/blaze-lib/blaze",
   "versions": {
-    "stable": "0.6.6",
-    "head": null,
+    "stable": "3.8",
+    "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://download.drobilla.net/sratom-0.6.6.tar.bz2",
+      "url": "https://bitbucket.org/blaze-lib/blaze/downloads/blaze-3.8.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,21 +28,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": ":any_skip_relocation",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/sratom-0.6.6.catalina.bottle.tar.gz",
-          "sha256": "eb959c7930bef09a0d25e5213b387c28d0bcfe5567fe97327699c36ae966d7a9"
+          "url": "https://linuxbrew.bintray.com/bottles/blaze-3.8.catalina.bottle.tar.gz",
+          "sha256": "0b6eea6a400363549d96c9093a8987653c966580c39c2e96b223a9139974636b"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/sratom-0.6.6.mojave.bottle.tar.gz",
-          "sha256": "9a1ae4be9fbf3643fd782aef40928125d257244c368fa7e748df04b5ceb31a1d"
+          "url": "https://linuxbrew.bintray.com/bottles/blaze-3.8.mojave.bottle.tar.gz",
+          "sha256": "5dd4f2b4876abb2b483c3a8a529e0019cef7e6ee62631d10d041ca6d377f5ca9"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/sratom-0.6.6.high_sierra.bottle.tar.gz",
-          "sha256": "acbfea6ae53d91a461eedfe7ad0467be9fe2fe18ae34bb45896efa936b3684ce"
+          "url": "https://linuxbrew.bintray.com/bottles/blaze-3.8.high_sierra.bottle.tar.gz",
+          "sha256": "99d8e68c81380e11226786f2843b476d782e305fc0a78dbf0fc095b659a9fe50"
         }
       }
     }
@@ -53,12 +53,10 @@
 
   ],
   "build_dependencies": [
-    "pkg-config"
+    "cmake"
   ],
   "dependencies": [
-    "lv2",
-    "serd",
-    "sord"
+
   ],
   "recommended_dependencies": [
 

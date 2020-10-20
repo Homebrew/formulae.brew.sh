@@ -13,27 +13,47 @@
   "homepage": "https://www.languagetool.org/",
   "versions": {
     "stable": "5.1.3",
-    "head": null,
-    "bottle": false
+    "head": "HEAD",
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://languagetool.org/download/LanguageTool-5.1.3.oxt",
-      "tag": null,
-      "revision": null
+      "url": "https://github.com/languagetool-org/languagetool.git",
+      "tag": "v5.1.3",
+      "revision": "9ef0a18d77cfb39143cf99619e26d374ede7fb7b"
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any_skip_relocation",
+      "prefix": "/home/linuxbrew/.linuxbrew",
+      "root_url": "https://linuxbrew.bintray.com/bottles",
+      "files": {
+        "catalina": {
+          "url": "https://linuxbrew.bintray.com/bottles/languagetool-5.1.3_1.catalina.bottle.tar.gz",
+          "sha256": "abc34aa15417a0b27c29d991e467d2bf039e856755c771026ddc25aa28768055"
+        },
+        "mojave": {
+          "url": "https://linuxbrew.bintray.com/bottles/languagetool-5.1.3_1.mojave.bottle.tar.gz",
+          "sha256": "a8e667a790fb2c339006f0ab9e191dcf7f61929e2936bf8a17ef0928d797b4ea"
+        },
+        "high_sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/languagetool-5.1.3_1.high_sierra.bottle.tar.gz",
+          "sha256": "0574176bcd107ae1933decbdabc6d71d1060c391bd7740436883b96a8059eb02"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
   "build_dependencies": [
-
+    "maven"
   ],
   "dependencies": [
     "openjdk"
