@@ -9,16 +9,16 @@
 
   ],
   "desc": "Column-store database",
-  "license": null,
+  "license": "MPL-2.0",
   "homepage": "https://www.monetdb.org/",
   "versions": {
-    "stable": "11.37.11",
+    "stable": "11.39.5",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://www.monetdb.org/downloads/sources/Jun2020-SP1/MonetDB-11.37.11.tar.xz",
+      "url": "https://www.monetdb.org/downloads/sources/Oct2020/MonetDB-11.39.5.tar.xz",
       "tag": null,
       "revision": null
     }
@@ -33,16 +33,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/monetdb-11.37.11.catalina.bottle.tar.gz",
-          "sha256": "21b3726ec5e83c3ebd0089c0ffba9b612bf282569e46b4b8006d5c1d7da04ca5"
+          "url": "https://homebrew.bintray.com/bottles/monetdb-11.39.5.catalina.bottle.tar.gz",
+          "sha256": "811aaf2c50777d27500bdd26efe3b71e55a3d908b88c5c12c8675ac1de03330a"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/monetdb-11.37.11.mojave.bottle.tar.gz",
-          "sha256": "e7271dc72a2fbc95257db4d770bd6f2b764a60120d39137cdd0580183f97d2ea"
+          "url": "https://homebrew.bintray.com/bottles/monetdb-11.39.5.mojave.bottle.tar.gz",
+          "sha256": "c98f4faa1d30c5db9ccc243ac454480a22e4ed468f5ca9df5483cdf07725fb1b"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/monetdb-11.37.11.high_sierra.bottle.tar.gz",
-          "sha256": "b2b72d85df319b66f74bbfefd3d47ca81ce0a76cd085344a0f9732ece2004451"
+          "url": "https://homebrew.bintray.com/bottles/monetdb-11.39.5.high_sierra.bottle.tar.gz",
+          "sha256": "dcbffc22befc8541737611e6243f2fb2e6434ccc23564f2b82b6538a44ad351b"
         }
       }
     }
@@ -53,13 +53,17 @@
 
   ],
   "build_dependencies": [
-    "libatomic_ops",
-    "pkg-config"
+    "bison",
+    "cmake",
+    "pkg-config",
+    "python@3.9"
   ],
   "dependencies": [
+    "lz4",
     "openssl@1.1",
     "pcre",
-    "readline"
+    "readline",
+    "xz"
   ],
   "recommended_dependencies": [
 
