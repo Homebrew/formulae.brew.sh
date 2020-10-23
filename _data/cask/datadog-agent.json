@@ -3,27 +3,33 @@
   "name": [
     "Datadog Agent"
   ],
-  "desc": null,
+  "desc": "Monitoring and security across systems, apps, and services",
   "homepage": "https://www.datadoghq.com/",
-  "url": "https://dd-agent.s3.amazonaws.com/datadog-agent-7.22.0-1.dmg",
-  "appcast": "https://github.com/DataDog/datadog-agent/releases.atom",
+  "url": "https://s3.amazonaws.com/dd-agent/datadog-agent-7.22.0-1.dmg",
+  "appcast": "https://s3.amazonaws.com/dd-agent/",
   "version": "7.22.0-1",
   "sha256": "ceb52c36924959c6dc88c75f7f403361937ced94efaf9bbf70fbdd895bb81e21",
   "artifacts": [
-    "preflight (Preflight Block)",
     {
+      "quit": "com.datadoghq.agent",
       "launchctl": "com.datadoghq.agent",
+      "pkgutil": "com.datadoghq.agent",
       "delete": [
         "/Applications/Datadog Agent.app",
-        "/opt/datadog-agent/",
-        "/private/var/db/receipts/com.datadoghq.agent.*"
+        "/opt/datadog-agent",
+        "$(brew --prefix)/bin/datadog-agent"
       ],
       "signal": {
       }
     },
-    "datadog-agent-7.22.0-1.pkg (Pkg)",
     {
-      "trash": "/opt/datadog-agent",
+      "path": "datadog-agent-7.22.0-1.pkg"
+    },
+    {
+      "trash": [
+        "~/.datadog-agent",
+        "~/Library/LaunchAgents/com.datadoghq.agent.plist"
+      ],
       "signal": {
       }
     }
