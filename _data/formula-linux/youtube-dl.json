@@ -10,15 +10,15 @@
   ],
   "desc": "Download YouTube videos from the command-line",
   "license": "Unlicense",
-  "homepage": "https://ytdl-org.github.io/youtube-dl/",
+  "homepage": "https://yt-dl.org",
   "versions": {
-    "stable": "2020.09.20",
-    "head": "HEAD",
-    "bottle": false
+    "stable": "2020.9.20",
+    "head": null,
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/ytdl-org/youtube-dl/releases/download/2020.09.20/youtube-dl-2020.09.20.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/12/8b/51cae2929739d637fdfbc706b2d5f8925b5710d8f408b5319a07ea45fe99/youtube_dl-2020.9.20.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -26,9 +26,33 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any_skip_relocation",
+      "prefix": "/home/linuxbrew/.linuxbrew",
+      "root_url": "https://linuxbrew.bintray.com/bottles",
+      "files": {
+        "catalina": {
+          "url": "https://linuxbrew.bintray.com/bottles/youtube-dl-2020.9.20.catalina.bottle.tar.gz",
+          "sha256": "6553843d76f95feeb9a488b2a14cb8374b313f02bd72b18d75cbbd2270fe11ee"
+        },
+        "mojave": {
+          "url": "https://linuxbrew.bintray.com/bottles/youtube-dl-2020.9.20.mojave.bottle.tar.gz",
+          "sha256": "8a6f47c7bf197a9cb40e08d130ce6ac9530d2c77f4ecd92f838e19abe23f2c5a"
+        },
+        "high_sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/youtube-dl-2020.9.20.high_sierra.bottle.tar.gz",
+          "sha256": "7b797964bed458c4271ad917373155a9be574afc174bfdda14b73a77fb16cbc5"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/youtube-dl-2020.9.20.x86_64_linux.bottle.tar.gz",
+          "sha256": "427d7c5adef20de7020cde4dc816280d68986609e294ae632c50397e28428756"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
@@ -36,7 +60,7 @@
 
   ],
   "dependencies": [
-
+    "python@3.9"
   ],
   "recommended_dependencies": [
 
