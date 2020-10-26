@@ -1,0 +1,46 @@
+{
+  "token": "amazon-workdocs-drive",
+  "name": [
+    "Amazon WorkDocs Drive"
+  ],
+  "desc": "Fully managed, secure enterprise storage and sharing service",
+  "homepage": "https://aws.amazon.com/workdocs/",
+  "url": "https://d3f2hupz96ggz3.cloudfront.net/mac/AmazonWorkDocsDrive.pkg",
+  "appcast": null,
+  "version": "latest",
+  "sha256": "no_check",
+  "artifacts": [
+    {
+      "signal": {
+        "TERM": "com.Amazon.WorkDocs.Drive"
+      },
+      "pkgutil": [
+        "com.Amazon.WorkDocs.Drive",
+        "com.Amazon.WorkDocs.Drive.pkg.Core"
+      ],
+      "launchctl": "com.Amazon.WorkDocs.DriveUpdater"
+    },
+    "AmazonWorkDocsDrive.pkg (Pkg)",
+    {
+      "trash": [
+        "~/Library/Application Scripts/com.Amazon.WorkDocs.DriveFinderExtension",
+        "~/Library/Containers/com.Amazon.WorkDocs.DriveFinderExtension",
+        "~/Library/LaunchAgents/com.amazon.workdocs.workdocsclient.plist",
+        "~/Library/Preferences/com.amazon.workdocs.workdocsclient.plist"
+      ],
+      "signal": {
+      }
+    }
+  ],
+  "caveats": null,
+  "depends_on": {
+    "macos": {
+      ">=": [
+        "10.11"
+      ]
+    }
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": null
+}
