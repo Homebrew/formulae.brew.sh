@@ -23,7 +23,7 @@
       "revision": null
     }
   },
-  "revision": 1,
+  "revision": 2,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,16 +33,20 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/gdb-9.2_1.catalina.bottle.tar.gz",
-          "sha256": "fbfb5bb6a5f8d7edb33937ebd505fbfe5074db3d49a0403803edafcbcbde297f"
+          "url": "https://linuxbrew.bintray.com/bottles/gdb-9.2_2.catalina.bottle.tar.gz",
+          "sha256": "1423f4be295c421835b9da9af107b24eb898ad9a109d7386d46ca3d75765992b"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/gdb-9.2_1.mojave.bottle.tar.gz",
-          "sha256": "64fdeef2403ae8dad106d4933dc6b5c555d560249a18dccc0a518c53f8ea26b1"
+          "url": "https://linuxbrew.bintray.com/bottles/gdb-9.2_2.mojave.bottle.tar.gz",
+          "sha256": "628a0639add17870b589dd586aa683c85c8090ba8d4abcb954d04e0051444181"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/gdb-9.2_1.high_sierra.bottle.tar.gz",
-          "sha256": "cbf828704099f07e8c863c962ef8deb60b932e3d75146a16b20967e3ddca7cbe"
+          "url": "https://linuxbrew.bintray.com/bottles/gdb-9.2_2.high_sierra.bottle.tar.gz",
+          "sha256": "f159ff299b9bd7fc5aec573b5bbf4bb13036decf2eb9a16db1096f9073838828"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/gdb-9.2_2.x86_64_linux.bottle.tar.gz",
+          "sha256": "fa9b9b90111b0e4f0296f40e9542b81175f464c4378ff31f84a974166c93f155"
         }
       }
     }
@@ -57,7 +61,7 @@
     "pkg-config"
   ],
   "dependencies": [
-    "python@3.8",
+    "python@3.9",
     "xz",
     "expat",
     "ncurses",
@@ -76,7 +80,8 @@
 
   ],
   "conflicts_with": [
-    "i386-elf-gdb"
+    "i386-elf-gdb",
+    "x86_64-elf-gdb"
   ],
   "caveats": "gdb requires special privileges to access Mach ports.\nYou will need to codesign the binary. For instructions, see:\n\n  https://sourceware.org/gdb/wiki/BuildingOnDarwin\n\nOn 10.12 (Sierra) or later with SIP, you need to run this:\n\n  echo \"set startup-with-shell off\" >> ~/.gdbinit\n",
   "installed": [
