@@ -1,25 +1,24 @@
 {
-  "name": "redis",
-  "full_name": "redis",
+  "name": "bit-git",
+  "full_name": "bit-git",
   "oldname": null,
   "aliases": [
-    "redis@6.0"
+
   ],
   "versioned_formulae": [
-    "redis@4.0",
-    "redis@3.2"
+
   ],
-  "desc": "Persistent key-value database, with built-in net interface",
-  "license": "BSD-3-Clause",
-  "homepage": "https://redis.io/",
+  "desc": "Bit is a modern Git CLI",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/chriswalz/bit",
   "versions": {
-    "stable": "6.0.9",
-    "head": "HEAD",
+    "stable": "0.8.1",
+    "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "http://download.redis.io/releases/redis-6.0.9.tar.gz",
+      "url": "https://github.com/chriswalz/bit/archive/v0.8.1.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -29,21 +28,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": ":any_skip_relocation",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/redis-6.0.9.catalina.bottle.tar.gz",
-          "sha256": "673b1485f012e3c9a509c913d175e18451ddab50eca0c140cac84828f6610411"
+          "url": "https://linuxbrew.bintray.com/bottles/bit-git-0.8.1.catalina.bottle.tar.gz",
+          "sha256": "85b8409f9012bfda02a17d27605063b4aa8eabe2a38522ae56325b8f4c423f15"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/redis-6.0.9.mojave.bottle.tar.gz",
-          "sha256": "c1056ac747681a9a5f230810d54e0515d6cfec08d2dc3f6d0d417df3119b96a4"
+          "url": "https://linuxbrew.bintray.com/bottles/bit-git-0.8.1.mojave.bottle.tar.gz",
+          "sha256": "d4c25d968475239933582206f9733164286f60b1c1d6a6229da15c954080077b"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/redis-6.0.9.high_sierra.bottle.tar.gz",
-          "sha256": "fa5411300a46f463f98474efdbdbb1d717b3fb7e1c18d452cbf2ee34d973f1b3"
+          "url": "https://linuxbrew.bintray.com/bottles/bit-git-0.8.1.high_sierra.bottle.tar.gz",
+          "sha256": "494b39c9402126019107c13b8e31a61b7354be7d42b58bb91e45574bb7c9d213"
         }
       }
     }
@@ -54,10 +53,10 @@
 
   ],
   "build_dependencies": [
-
+    "go"
   ],
   "dependencies": [
-    "openssl@1.1"
+
   ],
   "recommended_dependencies": [
 
@@ -72,7 +71,7 @@
 
   ],
   "conflicts_with": [
-
+    "bit"
   ],
   "caveats": null,
   "installed": [
