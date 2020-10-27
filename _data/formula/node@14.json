@@ -1,6 +1,6 @@
 {
-  "name": "mkcert",
-  "full_name": "mkcert",
+  "name": "node@14",
+  "full_name": "node@14",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Simple tool to make locally trusted development certificates",
-  "license": "BSD-3-Clause",
-  "homepage": "https://github.com/FiloSottile/mkcert",
+  "desc": "Platform built on V8 to build network applications",
+  "license": "MIT",
+  "homepage": "https://nodejs.org/",
   "versions": {
-    "stable": "1.4.2",
+    "stable": "14.15.0",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/FiloSottile/mkcert/archive/v1.4.2.tar.gz",
+      "url": "https://nodejs.org/dist/v14.15.0/node-v14.15.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,35 +28,36 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any_skip_relocation",
+      "cellar": ":any",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/mkcert-1.4.2.catalina.bottle.tar.gz",
-          "sha256": "5dc54c06caf0211bc7819f2bcfeb845413e1ef0ddab54df5eed93fc0be27212e"
+          "url": "https://homebrew.bintray.com/bottles/node%4014-14.15.0.catalina.bottle.tar.gz",
+          "sha256": "da655dedd31abf94afea894fb4709d7a72a042941f81d45e8da61622d53a9660"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/mkcert-1.4.2.mojave.bottle.tar.gz",
-          "sha256": "2c6ad2f96bdd13b45a69c4fe204bcec5c7194d2dc3a48b88654164cafc47ec67"
+          "url": "https://homebrew.bintray.com/bottles/node%4014-14.15.0.mojave.bottle.tar.gz",
+          "sha256": "0fd9f21ff2e14c1a5f400f91d1b90495d716eed9d4e5989559aeff28b9b53a77"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/mkcert-1.4.2.high_sierra.bottle.tar.gz",
-          "sha256": "041291da4a29bd7a44cd1c727079efa5af699d6e90f088cdd11abfe347a86d2f"
+          "url": "https://homebrew.bintray.com/bottles/node%4014-14.15.0.high_sierra.bottle.tar.gz",
+          "sha256": "f6f9535332519532087dfb5593d81e32b574ee485e2f6daa0af3bdf9d01d6835"
         }
       }
     }
   },
-  "keg_only": false,
+  "keg_only": true,
   "bottle_disabled": false,
   "options": [
 
   ],
   "build_dependencies": [
-    "go"
+    "pkg-config",
+    "python@3.9"
   ],
   "dependencies": [
-
+    "icu4c"
   ],
   "recommended_dependencies": [
 
