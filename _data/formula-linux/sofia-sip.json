@@ -9,21 +9,21 @@
 
   ],
   "desc": "SIP User-Agent library",
-  "license": null,
+  "license": "LGPL-2.1-or-later",
   "homepage": "https://sofia-sip.sourceforge.io/",
   "versions": {
-    "stable": "1.12.11",
+    "stable": "1.13.2",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://downloads.sourceforge.net/project/sofia-sip/sofia-sip/1.12.11/sofia-sip-1.12.11.tar.gz",
+      "url": "https://github.com/freeswitch/sofia-sip/archive/v1.13.2.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 4,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,24 +33,20 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/sofia-sip-1.12.11_4.catalina.bottle.tar.gz",
-          "sha256": "2f00e1e117d44b4cea76f7d6434e80e77884b3cee8f31f1fd3e8c203911d1497"
+          "url": "https://linuxbrew.bintray.com/bottles/sofia-sip-1.13.2.catalina.bottle.tar.gz",
+          "sha256": "ab14de67ceb92a79d8095b94d3e76680765185088773fe4c5b014574ef32a892"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/sofia-sip-1.12.11_4.mojave.bottle.tar.gz",
-          "sha256": "a7d98db04406b64b6c84fbee215cccb8f44b3342318d22c8adef65865096df22"
+          "url": "https://linuxbrew.bintray.com/bottles/sofia-sip-1.13.2.mojave.bottle.tar.gz",
+          "sha256": "5f9a402b196aa592405fb10ddca2bd8f3736d62cfd8f2709d52fb18d9402af8f"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/sofia-sip-1.12.11_4.high_sierra.bottle.tar.gz",
-          "sha256": "52d32ecd60bcc55d2e4569be650e9b11fd1c75e1b14d44145773717bb6693a6c"
-        },
-        "sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/sofia-sip-1.12.11_4.sierra.bottle.tar.gz",
-          "sha256": "95a892ab2ae71eb09d5aa22c6e30a2336376d34321c54032b6d03106a96dc631"
+          "url": "https://linuxbrew.bintray.com/bottles/sofia-sip-1.13.2.high_sierra.bottle.tar.gz",
+          "sha256": "7729020836b875104c6044afd0a72cf8755619978216430d89a585cf9783c8b0"
         },
         "x86_64_linux": {
-          "url": "https://linuxbrew.bintray.com/bottles/sofia-sip-1.12.11_4.x86_64_linux.bottle.tar.gz",
-          "sha256": "8ae168f4209d3b0b7e20781424c7dd2c6c0711a6a7bee7945088ad92e1006e3a"
+          "url": "https://linuxbrew.bintray.com/bottles/sofia-sip-1.13.2.x86_64_linux.bottle.tar.gz",
+          "sha256": "cfc3c2d133044ad53deef0c2b84b44bdae05badb1557a72dbb79cd7acb49ceb9"
         }
       }
     }
@@ -61,10 +57,12 @@
 
   ],
   "build_dependencies": [
+    "autoconf",
+    "automake",
+    "libtool",
     "pkg-config"
   ],
   "dependencies": [
-    "gettext",
     "glib",
     "openssl@1.1"
   ],

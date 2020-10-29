@@ -3,9 +3,7 @@
   "full_name": "python@3.8",
   "oldname": null,
   "aliases": [
-    "python",
-    "python3",
-    "python@3"
+
   ],
   "versioned_formulae": [
 
@@ -25,7 +23,7 @@
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -35,25 +33,25 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/python%403.8-3.8.6.catalina.bottle.tar.gz",
-          "sha256": "96e123a1befbb1a2f98577d728a52df126441de118e75edba0c1a3a1ca1380f3"
+          "url": "https://linuxbrew.bintray.com/bottles/python%403.8-3.8.6_1.catalina.bottle.tar.gz",
+          "sha256": "123ddd272ba0670d72578b36c4801b59449ac21e9d5a7e47c34c9e489330600a"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/python%403.8-3.8.6.mojave.bottle.tar.gz",
-          "sha256": "89bded8572c9b24f4075e258520352655338812fc7f28d8e34b4802452c77ab5"
+          "url": "https://linuxbrew.bintray.com/bottles/python%403.8-3.8.6_1.mojave.bottle.tar.gz",
+          "sha256": "6367896e90735c0f1476d297d608ee08cd5f7fccf7c794c45589093fa86f4faa"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/python%403.8-3.8.6.high_sierra.bottle.tar.gz",
-          "sha256": "0f1e7747bdbb87ef304f02bafc522a77132beb08de7081b2eb2662e1050df914"
+          "url": "https://linuxbrew.bintray.com/bottles/python%403.8-3.8.6_1.high_sierra.bottle.tar.gz",
+          "sha256": "8714bfcc84ab6486cc7c757028298478fc28609f148ef27497940cd5cd7292e7"
         },
         "x86_64_linux": {
-          "url": "https://linuxbrew.bintray.com/bottles/python%403.8-3.8.6.x86_64_linux.bottle.tar.gz",
-          "sha256": "92944878ce148a4c168bb499d89174ed6be9ad4cf60fc1e42ecfcc4596298215"
+          "url": "https://linuxbrew.bintray.com/bottles/python%403.8-3.8.6_1.x86_64_linux.bottle.tar.gz",
+          "sha256": "5ee32a98b1b9a45c0999f7655a1b5d0ad6336b236ae40bdbc0ff7234387e7f70"
         }
       }
     }
   },
-  "keg_only": false,
+  "keg_only": true,
   "bottle_disabled": false,
   "options": [
 
@@ -88,7 +86,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "Python has been installed as\n  $(brew --prefix)/bin/python3\n\nUnversioned symlinks `python`, `python-config`, `pip` etc. pointing to\n`python3`, `python3-config`, `pip3` etc., respectively, have been installed into\n  $(brew --prefix)/opt/python@3.8/libexec/bin\n\nYou can install Python packages with\n  pip3 install <package>\nThey will install into the site-package directory\n  $(brew --prefix)/lib/python3.8/site-packages\n\nSee: https://docs.brew.sh/Homebrew-and-Python\n",
+  "caveats": "Python has been installed as\n  $(brew --prefix)/opt/python@3.8/bin/python3\n\nUnversioned symlinks `python`, `python-config`, `pip` etc. pointing to\n`python3`, `python3-config`, `pip3` etc., respectively, have been installed into\n  $(brew --prefix)/opt/python@3.8/libexec/bin\n\nYou can install Python packages with\n  $(brew --prefix)/opt/python@3.8/bin/pip3 install <package>\nThey will install into the site-package directory\n  $(brew --prefix)/lib/python3.8/site-packages\n\nSee: https://docs.brew.sh/Homebrew-and-Python\n",
   "installed": [
 
   ],
