@@ -9,16 +9,16 @@
 
   ],
   "desc": "Fast Mercurial to Git converter",
-  "license": "GPL-2.0",
+  "license": "GPL-2.0-or-later",
   "homepage": "https://repo.or.cz/fast-export.git",
   "versions": {
-    "stable": "200213",
+    "stable": "201029",
     "head": null,
-    "bottle": true
+    "bottle": false
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/frej/fast-export/archive/v200213.tar.gz",
+      "url": "https://github.com/frej/fast-export/archive/v201029.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -26,29 +26,9 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
-    "stable": {
-      "rebuild": 0,
-      "cellar": ":any_skip_relocation",
-      "prefix": "/usr/local",
-      "root_url": "https://homebrew.bintray.com/bottles",
-      "files": {
-        "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/hg-fast-export-200213.catalina.bottle.tar.gz",
-          "sha256": "88cbf330f7c043f1e36f00e8bded4624ec510ca5d825e0be1f1805520f893238"
-        },
-        "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/hg-fast-export-200213.mojave.bottle.tar.gz",
-          "sha256": "b308363b65517f560f935ba4a2ffcbba80f69d42d79788b83935518552b95138"
-        },
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/hg-fast-export-200213.high_sierra.bottle.tar.gz",
-          "sha256": "1da8e73f749516b112815209ab914d1929820004db9d91170d99666f993e15a8"
-        }
-      }
-    }
   },
   "keg_only": false,
-  "bottle_disabled": false,
+  "bottle_disabled": true,
   "options": [
 
   ],
@@ -56,7 +36,8 @@
 
   ],
   "dependencies": [
-
+    "mercurial",
+    "python@3.9"
   ],
   "recommended_dependencies": [
 
@@ -68,15 +49,7 @@
 
   ],
   "requirements": [
-    {
-      "name": "macos",
-      "cask": null,
-      "download": null,
-      "version": null,
-      "contexts": [
 
-      ]
-    }
   ],
   "conflicts_with": [
 
