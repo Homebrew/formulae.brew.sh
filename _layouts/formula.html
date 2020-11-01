@@ -99,23 +99,33 @@ permalink: :title
 <p>Requires:
     {%- for r in f.requirements %}
     <strong>
-        {%- if r.name contains "macos" -%}
-            macOS
-        {%- elsif r.name == "xcode" -%}
-            Xcode
-        {%- elsif r.cask and formula_path == "formula" -%}
+        {%- capture requirement -%}
+            {%- case r.name -%}
+                {%- when "arch" -%}
+                    {{ r.version }}
+                {%- when "macos" or "maximum_macos" -%}
+                    macOS
+                {%- when "osxfuse" -%}
+                    FUSE
+                {%- else -%}
+                    {{ r.name | capitalize }}
+            {%- endcase -%}
+        {%- endcapture -%}
+        {%- if r.cask and formula_path == "formula" -%}
             {%- unless r.cask contains "/" -%}
-                <a href="{{ site.baseurl }}/cask/{{ r.cask }}">{{ r.name }}</a>
+                <a href="{{ site.baseurl }}/cask/{{ r.cask }}">{{ requirement }}</a>
             {%- else -%}
-                {{ r.name }}
+                {{ requirement }}
             {%- endunless -%}
         {%- else -%}
-            {{ r.name }}
+            {{ requirement }}
         {%- endif -%}
     </strong>
         {%- if r.version -%}
-            {%- if r.name contains "maximum" %} &lt;= {% else %} &gt;= {% endif -%}
-            {{ r.version }}
+            {%- if r.name == "arch" %} architecture
+            {%- elsif r.name contains "maximum" %} &lt;= {{ r.version }}
+            {%- else %} &gt;= {{ r.version }}
+            {%- endif -%}
         {%- endif -%}
         {%- for c in r.contexts -%}
             {%- if forloop.first %} ( {%- endif -%}
