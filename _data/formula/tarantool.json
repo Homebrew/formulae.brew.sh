@@ -12,13 +12,13 @@
   "license": "BSD-2-Clause",
   "homepage": "https://tarantool.org/",
   "versions": {
-    "stable": "2.3.2.81",
+    "stable": "2.5.2.0",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://hb.bizmrg.com/tarantool.2.3.src/tarantool-2.3.2.81.tar.gz",
+      "url": "https://download.tarantool.org/tarantool/2.5/src/tarantool-2.5.2.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,16 +33,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/tarantool-2.3.2.81.catalina.bottle.tar.gz",
-          "sha256": "e013978027f78ed680b09fd07ddc19045852ea6eb158a98af580826dd363cbb9"
+          "url": "https://homebrew.bintray.com/bottles/tarantool-2.5.2.0.catalina.bottle.tar.gz",
+          "sha256": "10240e8f72bc8c9a2463e22fbc6ea4033b6b775b50419040f6f1491ae91ef0ff"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/tarantool-2.3.2.81.mojave.bottle.tar.gz",
-          "sha256": "8cd34bf1c2129621a127a59406037a18a2ebe2c3d11d08d8397766568d2057a4"
+          "url": "https://homebrew.bintray.com/bottles/tarantool-2.5.2.0.mojave.bottle.tar.gz",
+          "sha256": "76d89fbaa6d7a4265051ee2acf5bea261b829041b312335047466f4a8c85723c"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/tarantool-2.3.2.81.high_sierra.bottle.tar.gz",
-          "sha256": "a66ae22addde4398e8d5300799c839ce404bae2925f2f94a0b95a0b40af7ac81"
+          "url": "https://homebrew.bintray.com/bottles/tarantool-2.5.2.0.high_sierra.bottle.tar.gz",
+          "sha256": "35f468f277d8b6d4889199c05462d675bc37f09794ef11a8b657ab13db648c95"
         }
       }
     }
@@ -53,10 +53,7 @@
 
   ],
   "build_dependencies": [
-    "autoconf",
-    "automake",
-    "cmake",
-    "libtool"
+    "cmake"
   ],
   "dependencies": [
     "icu4c",
@@ -70,7 +67,8 @@
 
   ],
   "uses_from_macos": [
-
+    "curl",
+    "ncurses"
   ],
   "requirements": [
 
