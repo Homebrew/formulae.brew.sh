@@ -3,55 +3,28 @@
   "name": [
     "Google Cloud SDK"
   ],
-  "desc": null,
+  "desc": "Set of tools to manage resources and applications hosted on Google Cloud",
   "homepage": "https://cloud.google.com/sdk/",
   "url": "https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.tar.gz",
   "appcast": null,
   "version": "latest",
   "sha256": "no_check",
   "artifacts": [
+    [
+      "true"
+    ],
     {
       "delete": "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk",
       "signal": {
       }
     },
-    {
-      "path": "google-cloud-sdk/install.sh",
-      "args": {
-        "must_succeed": "true",
-        "sudo": "false",
-        "args": [
-          "--usage-reporting",
-          "false",
-          "--bash-completion",
-          "false",
-          "--path-update",
-          "false",
-          "--rc-path",
-          "false",
-          "--quiet"
-        ],
-        "print_stdout": "true"
-      }
-    },
-    [
-      "google-cloud-sdk/bin/bq"
-    ],
-    [
-      "google-cloud-sdk/bin/docker-credential-gcloud"
-    ],
-    [
-      "google-cloud-sdk/bin/gcloud"
-    ],
-    [
-      "google-cloud-sdk/bin/git-credential-gcloud.sh"
-    ],
-    [
-      "google-cloud-sdk/bin/gsutil"
-    ]
+    "postflight (Postflight Block)"
   ],
-  "caveats": "google-cloud-sdk is installed at $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk. Add your profile:\n\n  for bash users\n    source \"$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc\"\n    source \"$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc\"\n\n  for zsh users\n    source \"$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc\"\n    source \"$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc\"\n\n  for fish users\n    set -g fish_user_paths \"$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc\" $fish_user_paths\n",
+  "caveats": "google-cloud-sdk is installed at $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk. Add your profile:\n\n  for bash users\n    export CLOUDSDK_PYTHON=\"$(brew --prefix)/opt/python@3.8/libexec/bin/python\"\n    source \"$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc\"\n    source \"$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc\"\n\n  for zsh users\n    export CLOUDSDK_PYTHON=\"$(brew --prefix)/opt/python@3.8/libexec/bin/python\"\n    source \"$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc\"\n    source \"$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc\"\n\n  for fish users\n    set -g -x \"CLOUDSDK_PYTHON\" \"$(brew --prefix)/opt/python@3.8/libexec/bin/python\"\n    set -g fish_user_paths \"$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc\" $fish_user_paths\n",
   "depends_on": {
+    "formula": [
+      "python@3.8"
+    ]
   },
   "conflicts_with": null,
   "container": null,
