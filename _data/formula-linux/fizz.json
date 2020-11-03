@@ -1,6 +1,6 @@
 {
-  "name": "tarantool",
-  "full_name": "tarantool",
+  "name": "fizz",
+  "full_name": "fizz",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "In-memory database and Lua application server",
+  "desc": "C++14 implementation of the TLS-1.3 standard",
   "license": "BSD-2-Clause",
-  "homepage": "https://tarantool.org/",
+  "homepage": "https://github.com/facebookincubator/fizz",
   "versions": {
-    "stable": "2.5.2.0",
+    "stable": "2020.10.26.00",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://download.tarantool.org/tarantool/2.5/src/tarantool-2.5.2.0.tar.gz",
+      "url": "https://github.com/facebookincubator/fizz/releases/download/v2020.10.26.00/fizz-v2020.10.26.00.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,16 +33,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/tarantool-2.5.2.0.catalina.bottle.tar.gz",
-          "sha256": "10240e8f72bc8c9a2463e22fbc6ea4033b6b775b50419040f6f1491ae91ef0ff"
+          "url": "https://linuxbrew.bintray.com/bottles/fizz-2020.10.26.00.catalina.bottle.tar.gz",
+          "sha256": "f08634303bebfa2de1eb06164d067f7f304efd2ca5768a6f462b59ecff01d315"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/tarantool-2.5.2.0.mojave.bottle.tar.gz",
-          "sha256": "76d89fbaa6d7a4265051ee2acf5bea261b829041b312335047466f4a8c85723c"
+          "url": "https://linuxbrew.bintray.com/bottles/fizz-2020.10.26.00.mojave.bottle.tar.gz",
+          "sha256": "dddf074503b463890d489e5ec054f1250b0ffcdc1d8b33facd918f5a967d5006"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/tarantool-2.5.2.0.high_sierra.bottle.tar.gz",
-          "sha256": "35f468f277d8b6d4889199c05462d675bc37f09794ef11a8b657ab13db648c95"
+          "url": "https://linuxbrew.bintray.com/bottles/fizz-2020.10.26.00.high_sierra.bottle.tar.gz",
+          "sha256": "64b036ca36821ae5f22184213cb2bb4e2f7e090d525740461b7d50053793c027"
         }
       }
     }
@@ -56,11 +56,18 @@
     "cmake"
   ],
   "dependencies": [
-    "icu4c",
+    "boost",
+    "double-conversion",
+    "fmt",
+    "folly",
+    "gflags",
+    "glog",
+    "libevent",
+    "libsodium",
+    "lz4",
     "openssl@1.1",
-    "readline",
-    "curl",
-    "ncurses"
+    "snappy",
+    "zstd"
   ],
   "recommended_dependencies": [
 
