@@ -1,6 +1,6 @@
 {
-  "name": "vcpkg",
-  "full_name": "vcpkg",
+  "name": "yh",
+  "full_name": "yh",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "C++ Library Manager",
-  "license": "MIT",
-  "homepage": "https://github.com/microsoft/vcpkg",
+  "desc": "YAML syntax highlighter to bring colours where only jq could",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/andreazorzetto/yh",
   "versions": {
-    "stable": "2020.11-1",
+    "stable": "0.4.0",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/microsoft/vcpkg/archive/2020.11-1.tar.gz",
+      "url": "https://github.com/andreazorzetto/yh/archive/v0.4.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,21 +28,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": ":any_skip_relocation",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/vcpkg-2020.11-1.catalina.bottle.tar.gz",
-          "sha256": "585cc3fd22497deca02ec61dd63b14653fcb59258f14f3313110d323f240102d"
+          "url": "https://homebrew.bintray.com/bottles/yh-0.4.0.catalina.bottle.tar.gz",
+          "sha256": "1a2425d399a63df18758dfabf9d50da2559fb489c32bfb4462d7437f64fc0817"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/vcpkg-2020.11-1.mojave.bottle.tar.gz",
-          "sha256": "0e5f3a484461879e358301f2b3e26d26fbd726d5d0495e57c934ecab99e189a7"
+          "url": "https://homebrew.bintray.com/bottles/yh-0.4.0.mojave.bottle.tar.gz",
+          "sha256": "69f1ab9c740906f04924c780cb512ea26fa0c51bdf66be85c71c4cbaa9dc6ca1"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/vcpkg-2020.11-1.high_sierra.bottle.tar.gz",
-          "sha256": "79a09d5626c2dc3230e03d412b27762531ae7d7a223653a29666a93d30acdd43"
+          "url": "https://homebrew.bintray.com/bottles/yh-0.4.0.high_sierra.bottle.tar.gz",
+          "sha256": "184eb9a41954f7a3d11f3065dfab42085a724c617ec635681e05784eeebe6329"
         }
       }
     }
@@ -53,8 +53,7 @@
 
   ],
   "build_dependencies": [
-    "cmake",
-    "ninja"
+    "go"
   ],
   "dependencies": [
 
