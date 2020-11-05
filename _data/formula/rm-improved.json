@@ -1,24 +1,24 @@
 {
-  "name": "ansible",
-  "full_name": "ansible",
+  "name": "rm-improved",
+  "full_name": "rm-improved",
   "oldname": null,
   "aliases": [
-    "ansible@2.9"
+
   ],
   "versioned_formulae": [
-    "ansible@2.8"
+
   ],
-  "desc": "Automate deployment, configuration, and upgrading",
+  "desc": "Command-line deletion tool focused on safety, ergonomics, and performance",
   "license": "GPL-3.0-or-later",
-  "homepage": "https://www.ansible.com/",
+  "homepage": "https://github.com/nivekuil/rip",
   "versions": {
-    "stable": "2.9.15",
+    "stable": "0.13.1",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://releases.ansible.com/ansible/ansible-2.9.15.tar.gz",
+      "url": "https://github.com/nivekuil/rip/archive/0.13.1.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,21 +28,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": ":any_skip_relocation",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/ansible-2.9.15.catalina.bottle.tar.gz",
-          "sha256": "61bac44c5ad225f9d507016517904b29f67cc7e62adcb2148c14da1013acf471"
+          "url": "https://homebrew.bintray.com/bottles/rm-improved-0.13.1.catalina.bottle.tar.gz",
+          "sha256": "6b404b0fe096447d90c21c15140ee9295fdea4060771723e818625e8dcde8e2f"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/ansible-2.9.15.mojave.bottle.tar.gz",
-          "sha256": "fe8b051d6d82169978464be3c91449906895c3d88a9e7dc0be6f37aef7df99c1"
+          "url": "https://homebrew.bintray.com/bottles/rm-improved-0.13.1.mojave.bottle.tar.gz",
+          "sha256": "cd164204efca72560dcb8d39db760d7e9efbeab5e9bfd0718c6cccd5b022a7f3"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/ansible-2.9.15.high_sierra.bottle.tar.gz",
-          "sha256": "047026725fd12c752b2572f5f22755983da0839ebf8261ba221984e428b7b48a"
+          "url": "https://homebrew.bintray.com/bottles/rm-improved-0.13.1.high_sierra.bottle.tar.gz",
+          "sha256": "27fa7c0976c9361fae1638f05a0c756603a509a16459db688d2e787ceb123de2"
         }
       }
     }
@@ -53,12 +53,10 @@
 
   ],
   "build_dependencies": [
-    "pkg-config"
+    "rust"
   ],
   "dependencies": [
-    "libyaml",
-    "openssl@1.1",
-    "python@3.9"
+
   ],
   "recommended_dependencies": [
 
@@ -67,8 +65,7 @@
 
   ],
   "uses_from_macos": [
-    "libffi",
-    "libxslt"
+
   ],
   "requirements": [
 
