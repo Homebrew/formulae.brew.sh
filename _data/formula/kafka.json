@@ -23,7 +23,7 @@
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,16 +33,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/kafka-2.6.0.catalina.bottle.tar.gz",
-          "sha256": "a00316528e00fe0a5ff2771d1883f25f186481d77de8a79dfaf491be076de3ee"
+          "url": "https://homebrew.bintray.com/bottles/kafka-2.6.0_1.catalina.bottle.tar.gz",
+          "sha256": "83589fb8053e087bb0c667c491f1d688e186864fdb1ae40ea9c4c910c4b8cc02"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/kafka-2.6.0.mojave.bottle.tar.gz",
-          "sha256": "027a1d06325c8b98cca97cc2922fdbf7d980fb52917d1791861032cd501e5428"
+          "url": "https://homebrew.bintray.com/bottles/kafka-2.6.0_1.mojave.bottle.tar.gz",
+          "sha256": "8d3b3d4db0bbf7f8e6e9a606099570bfeabfd3ebe5c965203f884b6bfc900c7a"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/kafka-2.6.0.high_sierra.bottle.tar.gz",
-          "sha256": "027a1d06325c8b98cca97cc2922fdbf7d980fb52917d1791861032cd501e5428"
+          "url": "https://homebrew.bintray.com/bottles/kafka-2.6.0_1.high_sierra.bottle.tar.gz",
+          "sha256": "d6b2a8e37b0c682c49a3b9c6b47c5587b6a9e2f14505de84d56c26f3bd5777a4"
         }
       }
     }
@@ -56,6 +56,7 @@
 
   ],
   "dependencies": [
+    "openjdk",
     "zookeeper"
   ],
   "recommended_dependencies": [
@@ -68,15 +69,7 @@
 
   ],
   "requirements": [
-    {
-      "name": "java",
-      "cask": "homebrew/cask-versions/adoptopenjdk8",
-      "download": null,
-      "version": "1.8",
-      "contexts": [
 
-      ]
-    }
   ],
   "conflicts_with": [
     "confluent-platform"
