@@ -9,7 +9,7 @@
 
   ],
   "desc": "Go-related services",
-  "license": "GPL-2.0",
+  "license": "GPL-2.0-or-later",
   "homepage": "https://cgoban1.sourceforge.io/",
   "versions": {
     "stable": "1.9.14",
@@ -23,26 +23,26 @@
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any_skip_relocation",
+      "cellar": ":any",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/cgoban-1.9.14.catalina.bottle.tar.gz",
-          "sha256": "6b8613fe9566746c60a0ec45830b5c687d54cbaa6107179906248fa6094e856d"
+          "url": "https://homebrew.bintray.com/bottles/cgoban-1.9.14_1.catalina.bottle.tar.gz",
+          "sha256": "e61d461ae44716ab681151657ff73af5b438f306419142a247543b14de951ab4"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/cgoban-1.9.14.mojave.bottle.tar.gz",
-          "sha256": "fd7177595494fb367982e080af14fb7a249d6651a73a1b33f63394f9546fc837"
+          "url": "https://homebrew.bintray.com/bottles/cgoban-1.9.14_1.mojave.bottle.tar.gz",
+          "sha256": "65a58482e8da31098a71ed49467b069bff5a6172df8304bb1bccd579301abca2"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/cgoban-1.9.14.high_sierra.bottle.tar.gz",
-          "sha256": "38bb87533d7c54253a2836af87c326651dda87c046f3803189308b155651e825"
+          "url": "https://homebrew.bintray.com/bottles/cgoban-1.9.14_1.high_sierra.bottle.tar.gz",
+          "sha256": "4fc05de2c69a98f7c1dbd55303a508ac50e6bb3a3b6297ebd43ec4bf5a79c14d"
         }
       }
     }
@@ -56,7 +56,9 @@
 
   ],
   "dependencies": [
-
+    "libice",
+    "libsm",
+    "libx11"
   ],
   "recommended_dependencies": [
 
@@ -68,15 +70,7 @@
 
   ],
   "requirements": [
-    {
-      "name": "x11",
-      "cask": "xquartz",
-      "download": "https://xquartz.macosforge.org",
-      "version": null,
-      "contexts": [
 
-      ]
-    }
   ],
   "conflicts_with": [
 
