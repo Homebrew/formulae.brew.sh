@@ -1,6 +1,6 @@
 {
-  "name": "botan",
-  "full_name": "botan",
+  "name": "chars",
+  "full_name": "chars",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Cryptographic algorithms and formats library in C++",
-  "license": "BSD-2-Clause",
-  "homepage": "https://botan.randombit.net/",
+  "desc": "Command-line tool to display information about unicode characters",
+  "license": "MIT",
+  "homepage": "https://github.com/antifuchs/chars/",
   "versions": {
-    "stable": "2.17.0",
+    "stable": "0.5.0",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://botan.randombit.net/releases/Botan-2.17.0.tar.xz",
+      "url": "https://github.com/antifuchs/chars/archive/v0.5.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,21 +28,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+      "cellar": ":any_skip_relocation",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/botan-2.17.0.catalina.bottle.tar.gz",
-          "sha256": "14546ba08d9ec11890a98119b558da02a138348a9fed0776d8cc3ea5f9c0edc6"
+          "url": "https://linuxbrew.bintray.com/bottles/chars-0.5.0.catalina.bottle.tar.gz",
+          "sha256": "4d56b107586689744485ede26f55a0916fe09bfa2e9ec27a250c9da3764f5e42"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/botan-2.17.0.mojave.bottle.tar.gz",
-          "sha256": "115eb65b2d60568912c666cd277322c70c5421e0162dc2b331b7062a4d8023b1"
+          "url": "https://linuxbrew.bintray.com/bottles/chars-0.5.0.mojave.bottle.tar.gz",
+          "sha256": "d4bd08669fb838fb8773e4131fd71b972662299ac3c03ff6d83802c6e3d14efc"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/botan-2.17.0.high_sierra.bottle.tar.gz",
-          "sha256": "865bd45f6c8e089f74826319eb6fd974b56e3dbcda38dc54fe7518e7e18239be"
+          "url": "https://linuxbrew.bintray.com/bottles/chars-0.5.0.high_sierra.bottle.tar.gz",
+          "sha256": "2dbec73c5adcc494e0932921f015e69b7b7bd8b1d1b29f7ea08bc56da029c9a0"
         }
       }
     }
@@ -53,13 +53,10 @@
 
   ],
   "build_dependencies": [
-    "pkg-config"
+    "rust"
   ],
   "dependencies": [
-    "python@3.9",
-    "sqlite",
-    "bzip2",
-    "zlib"
+
   ],
   "recommended_dependencies": [
 
