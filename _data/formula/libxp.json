@@ -1,6 +1,6 @@
 {
-  "name": "libxcb",
-  "full_name": "libxcb",
+  "name": "libxp",
+  "full_name": "libxp",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "X.Org: Interface to the X Window System protocol",
+  "desc": "X Print Client Library",
   "license": "MIT",
-  "homepage": "https://www.x.org/",
+  "homepage": "https://gitlab.freedesktop.org/xorg/lib/libxp",
   "versions": {
-    "stable": "1.14",
+    "stable": "1.0.3",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://xcb.freedesktop.org/dist/libxcb-1.14.tar.gz",
+      "url": "https://gitlab.freedesktop.org/xorg/lib/libxp/-/archive/libXp-1.0.3/libxp-libXp-1.0.3.tar.bz2",
       "tag": null,
       "revision": null
     }
@@ -33,16 +33,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/libxcb-1.14.catalina.bottle.tar.gz",
-          "sha256": "8775b3a19f927b57ca4077211b25898c6481318ff1cddb3098c61903ae832b1f"
+          "url": "https://homebrew.bintray.com/bottles/libxp-1.0.3.catalina.bottle.tar.gz",
+          "sha256": "e70342d93c5cf690582f559318b05b26da9175fc7620493fa15a224a847ec1da"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/libxcb-1.14.mojave.bottle.tar.gz",
-          "sha256": "8a13efa25000a0695280f5465186f7511e9083685a49560d0dc5d7cc837a1cfa"
+          "url": "https://homebrew.bintray.com/bottles/libxp-1.0.3.mojave.bottle.tar.gz",
+          "sha256": "1cc823e7fe3acb64e58b554e5e956302959f28cb5737eea5c6d15655128aee15"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/libxcb-1.14.high_sierra.bottle.tar.gz",
-          "sha256": "e56b657f223ac78f4f600fe057dd8ab12303be5f4f0f5b61eb94443d10fb4cf4"
+          "url": "https://homebrew.bintray.com/bottles/libxp-1.0.3.high_sierra.bottle.tar.gz",
+          "sha256": "8e904b533b4c4264232ae6391e7d4bc37dade77d5d20539ed3d42900ab3950ce"
         }
       }
     }
@@ -53,14 +53,14 @@
 
   ],
   "build_dependencies": [
-    "pkg-config",
-    "python@3.9",
-    "xcb-proto"
+    "autoconf",
+    "automake",
+    "libtool",
+    "util-macros"
   ],
   "dependencies": [
-    "libpthread-stubs",
-    "libxau",
-    "libxdmcp"
+    "libx11",
+    "libxext"
   ],
   "recommended_dependencies": [
 
