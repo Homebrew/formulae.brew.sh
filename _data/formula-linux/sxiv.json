@@ -9,7 +9,7 @@
 
   ],
   "desc": "Simple X Image Viewer",
-  "license": "GPL-2.0",
+  "license": "GPL-2.0-or-later",
   "homepage": "https://github.com/muennich/sxiv",
   "versions": {
     "stable": "26",
@@ -23,7 +23,7 @@
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,16 +33,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/sxiv-26.catalina.bottle.tar.gz",
-          "sha256": "76166fe7a568a675abf485137b4df514f4f0c187edc0502f298d0f482aa7ac80"
+          "url": "https://linuxbrew.bintray.com/bottles/sxiv-26_1.catalina.bottle.tar.gz",
+          "sha256": "caafa51424cd97f030b9156aeba0ba64f6ab5821197453136a240c7ca38869d9"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/sxiv-26.mojave.bottle.tar.gz",
-          "sha256": "1dc370bc45941faf5aeb36014160748df67446f4b51010c73a1ecc3851aed811"
+          "url": "https://linuxbrew.bintray.com/bottles/sxiv-26_1.mojave.bottle.tar.gz",
+          "sha256": "14b4f8a7137ea1ff12dde1d0a8cda063227e48d77ba75d93ecbde6193584d2cf"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/sxiv-26.high_sierra.bottle.tar.gz",
-          "sha256": "544f9660a23d0370a6cd3b5fe6ff207bf21a12dcac6aaea5dc35735b09fc258c"
+          "url": "https://linuxbrew.bintray.com/bottles/sxiv-26_1.high_sierra.bottle.tar.gz",
+          "sha256": "b8f60f5b9bb6987f0042ac485eb0d4c5c5c3cdc4ea4c32fc13def537e51d39dc"
         }
       }
     }
@@ -58,7 +58,9 @@
   "dependencies": [
     "giflib",
     "imlib2",
-    "libexif"
+    "libexif",
+    "libx11",
+    "libxft"
   ],
   "recommended_dependencies": [
 
@@ -70,15 +72,7 @@
 
   ],
   "requirements": [
-    {
-      "name": "x11",
-      "cask": "xquartz",
-      "download": "https://xquartz.macosforge.org",
-      "version": null,
-      "contexts": [
 
-      ]
-    }
   ],
   "conflicts_with": [
 
