@@ -1,6 +1,6 @@
 {
-  "name": "openal-soft",
-  "full_name": "openal-soft",
+  "name": "condure",
+  "full_name": "condure",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Implementation of the OpenAL 3D audio API",
-  "license": "LGPL-2.0-or-later",
-  "homepage": "https://openal-soft.org/",
+  "desc": "HTTP/WebSocket connection manager",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/fanout/condure",
   "versions": {
-    "stable": "1.21.0",
-    "head": "HEAD",
+    "stable": "1.1.0",
+    "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://openal-soft.org/openal-releases/openal-soft-1.21.0.tar.bz2",
+      "url": "https://github.com/fanout/condure/archive/1.1.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,31 +33,32 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/openal-soft-1.21.0.catalina.bottle.tar.gz",
-          "sha256": "2f288bddf5b23b868e7ee2773877eeeab70dce4bc3ba7e95fd106753be7e361d"
+          "url": "https://homebrew.bintray.com/bottles/condure-1.1.0.catalina.bottle.tar.gz",
+          "sha256": "6ed502304ea5516ac043e8476767b9b3780aabafb49aa9e3d2907c2e46ef870b"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/openal-soft-1.21.0.mojave.bottle.tar.gz",
-          "sha256": "a6fac3b7778cba045106631a61b7f9cf58c189cc27ca210983b3f7c73c48301e"
+          "url": "https://homebrew.bintray.com/bottles/condure-1.1.0.mojave.bottle.tar.gz",
+          "sha256": "d56f9ccffe8d8e0c6fc4f8ae80ffdf15be032be7e8ebb5a68d821ba377e692fc"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/openal-soft-1.21.0.high_sierra.bottle.tar.gz",
-          "sha256": "c1f4cf0e42e75b583ff7a78dad6850b6ed8874bb6aeb7734b8116366a5b6697e"
+          "url": "https://homebrew.bintray.com/bottles/condure-1.1.0.high_sierra.bottle.tar.gz",
+          "sha256": "474f9b3e9832107903a4e0e2af1ce23da4d8edb714fcd36e628e5dba7781b366"
         }
       }
     }
   },
-  "keg_only": true,
+  "keg_only": false,
   "bottle_disabled": false,
   "options": [
 
   ],
   "build_dependencies": [
-    "cmake",
-    "pkg-config"
+    "pkg-config",
+    "rust"
   ],
   "dependencies": [
-
+    "python@3.8",
+    "zeromq"
   ],
   "recommended_dependencies": [
 
