@@ -43,6 +43,10 @@
         "high_sierra": {
           "url": "https://linuxbrew.bintray.com/bottles/eureka-1.8.1.high_sierra.bottle.tar.gz",
           "sha256": "060f76e2626e9b30184f1cfe0a61f8b4ddf545c8f8a5d59c6a8d1b54f9548c4a"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/eureka-1.8.1.x86_64_linux.bottle.tar.gz",
+          "sha256": "5ff126111dca00f92352482d6c8a13e4530925449a04107b8aa05cf72d9ebb46"
         }
       }
     }
@@ -53,10 +57,12 @@
 
   ],
   "build_dependencies": [
-    "rust"
+    "rust",
+    "pkg-config"
   ],
   "dependencies": [
-    "openssl@1.1"
+    "openssl@1.1",
+    "zlib"
   ],
   "recommended_dependencies": [
 
