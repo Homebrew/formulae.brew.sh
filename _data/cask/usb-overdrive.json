@@ -3,7 +3,7 @@
   "name": [
     "USB Overdrive"
   ],
-  "desc": null,
+  "desc": "USB and Bluetooth device driver",
   "homepage": "https://www.usboverdrive.com/",
   "url": "https://www.usboverdrive.com/download/USB-Overdrive-401.dmg",
   "appcast": null,
@@ -12,12 +12,17 @@
   "artifacts": [
     {
       "pkgutil": "com.usboverdrive.installer",
+      "kext": "/Library/Extensions/USBOverdrive.kext",
+      "delete": [
+        "/Library/PreferencePanes/USB Overdrive.prefPane",
+        "/Applications/Utilities/Uninstall USB Overdrive.app"
+      ],
       "signal": {
       }
     },
     "Install USB Overdrive.pkg (Pkg)"
   ],
-  "caveats": null,
+  "caveats": "usb-overdrive requires a kernel extension to work.\nIf the installation fails, retry after you enable it in:\n  System Preferences → Security & Privacy → General\n\nFor more information, refer to vendor documentation or this Apple Technical Note:\n  https://developer.apple.com/library/content/technotes/tn2459/_index.html\n",
   "depends_on": {
   },
   "conflicts_with": null,
