@@ -1,6 +1,6 @@
 {
-  "name": "act",
-  "full_name": "act",
+  "name": "condure",
+  "full_name": "condure",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Run your GitHub Actions locally 🚀",
-  "license": "MIT",
-  "homepage": "https://github.com/nektos/act",
+  "desc": "HTTP/WebSocket connection manager",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/fanout/condure",
   "versions": {
-    "stable": "0.2.17",
+    "stable": "1.1.0",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/nektos/act/archive/v0.2.17.tar.gz",
+      "url": "https://github.com/fanout/condure/archive/1.1.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,21 +28,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any_skip_relocation",
+      "cellar": ":any",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/act-0.2.17.catalina.bottle.tar.gz",
-          "sha256": "e91282fdbe17e8e559f99ac0e0d704ea541197587277428a21b9927cb30b009c"
+          "url": "https://linuxbrew.bintray.com/bottles/condure-1.1.0.catalina.bottle.tar.gz",
+          "sha256": "6ed502304ea5516ac043e8476767b9b3780aabafb49aa9e3d2907c2e46ef870b"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/act-0.2.17.mojave.bottle.tar.gz",
-          "sha256": "37e68207cd6dd80222e79501a2fc6870e0093b257c8b2700a428f91e4cefc834"
+          "url": "https://linuxbrew.bintray.com/bottles/condure-1.1.0.mojave.bottle.tar.gz",
+          "sha256": "d56f9ccffe8d8e0c6fc4f8ae80ffdf15be032be7e8ebb5a68d821ba377e692fc"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/act-0.2.17.high_sierra.bottle.tar.gz",
-          "sha256": "259e716e51ba28f1b73f203acd3af2cd368789d41f83b000e7a8cf6b98c6e1ac"
+          "url": "https://linuxbrew.bintray.com/bottles/condure-1.1.0.high_sierra.bottle.tar.gz",
+          "sha256": "474f9b3e9832107903a4e0e2af1ce23da4d8edb714fcd36e628e5dba7781b366"
         }
       }
     }
@@ -53,10 +53,12 @@
 
   ],
   "build_dependencies": [
-    "go"
+    "pkg-config",
+    "rust"
   ],
   "dependencies": [
-
+    "python@3.8",
+    "zeromq"
   ],
   "recommended_dependencies": [
 
