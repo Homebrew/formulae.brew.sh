@@ -9,7 +9,7 @@
 
   ],
   "desc": "Fast, compact Motif/X11 plain text editor",
-  "license": "GPL-2.0",
+  "license": "GPL-2.0-or-later",
   "homepage": "https://sourceforge.net/projects/nedit/",
   "versions": {
     "stable": "5.7",
@@ -23,26 +23,26 @@
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "cellar": ":any",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/nedit-5.7.catalina.bottle.1.tar.gz",
-          "sha256": "94f8ffca9fa3ac5376460da0b2b74bd835f8fecd6bbfaf009925492902f9fa29"
+          "url": "https://linuxbrew.bintray.com/bottles/nedit-5.7_1.catalina.bottle.tar.gz",
+          "sha256": "c726811764a5d12465d4c11b273229482af935921df472f6d083a27e34b39b3f"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/nedit-5.7.mojave.bottle.1.tar.gz",
-          "sha256": "c4f3db1d3a4772caf72caeba2f4dbdcd063d8983d5252f763870dcea70eaf59e"
+          "url": "https://linuxbrew.bintray.com/bottles/nedit-5.7_1.mojave.bottle.tar.gz",
+          "sha256": "7e3760fcb4d5a78393094c94b0c97a4e9b73487eeca6510963f098ebaeddf281"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/nedit-5.7.high_sierra.bottle.1.tar.gz",
-          "sha256": "74a4e728ef503642b5ad4dc4466f26a2d6f241e7d495099c8b14defd4e12f350"
+          "url": "https://linuxbrew.bintray.com/bottles/nedit-5.7_1.high_sierra.bottle.tar.gz",
+          "sha256": "0f1ea26247cf5abe89ecc7038820b937ee20046fa44b504363604af4a7bbb093"
         }
       }
     }
@@ -56,6 +56,13 @@
 
   ],
   "dependencies": [
+    "libice",
+    "libsm",
+    "libx11",
+    "libxext",
+    "libxp",
+    "libxpm",
+    "libxt",
     "openmotif"
   ],
   "recommended_dependencies": [
@@ -68,15 +75,7 @@
 
   ],
   "requirements": [
-    {
-      "name": "x11",
-      "cask": "xquartz",
-      "download": "https://xquartz.macosforge.org",
-      "version": null,
-      "contexts": [
 
-      ]
-    }
   ],
   "conflicts_with": [
 

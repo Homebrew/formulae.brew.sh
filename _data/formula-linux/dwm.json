@@ -9,7 +9,7 @@
 
   ],
   "desc": "Dynamic window manager",
-  "license": null,
+  "license": "MIT",
   "homepage": "https://dwm.suckless.org/",
   "versions": {
     "stable": "6.2",
@@ -23,30 +23,26 @@
       "revision": null
     }
   },
-  "revision": 1,
+  "revision": 2,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any_skip_relocation",
+      "cellar": ":any",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/dwm-6.2_1.catalina.bottle.tar.gz",
-          "sha256": "e418a6853e7a7c270ccf6eb2d80c46986404acbd1b0d5a7fca008f111b6aab42"
+          "url": "https://linuxbrew.bintray.com/bottles/dwm-6.2_2.catalina.bottle.tar.gz",
+          "sha256": "d872be09d1f5c11c9fb4d34002cc5f4622fbc259691800e1742354573b9effb0"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/dwm-6.2_1.mojave.bottle.tar.gz",
-          "sha256": "a749a913684983c05a9998ca73d55bd8f05197fcf6d7573336eacf7e168a5120"
+          "url": "https://linuxbrew.bintray.com/bottles/dwm-6.2_2.mojave.bottle.tar.gz",
+          "sha256": "e4ec85368754c0594847dad5272770a36e69876ed433fdd390d73a7d05c43263"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/dwm-6.2_1.high_sierra.bottle.tar.gz",
-          "sha256": "0c5e0fd48f4d52ab748d5301add02b7ca39d773c604e108d2eb81705cf80c315"
-        },
-        "sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/dwm-6.2_1.sierra.bottle.tar.gz",
-          "sha256": "20707f7d694eef615c63c98c055db728a6922e68ccf287ca63933715781311e6"
+          "url": "https://linuxbrew.bintray.com/bottles/dwm-6.2_2.high_sierra.bottle.tar.gz",
+          "sha256": "b22ec01678edc39f1b82837087bb69ac311bce937eb10cb096fc8b1002f97701"
         }
       }
     }
@@ -60,7 +56,10 @@
 
   ],
   "dependencies": [
-    "dmenu"
+    "dmenu",
+    "libx11",
+    "libxft",
+    "libxinerama"
   ],
   "recommended_dependencies": [
 
@@ -72,15 +71,7 @@
 
   ],
   "requirements": [
-    {
-      "name": "x11",
-      "cask": "xquartz",
-      "download": "https://xquartz.macosforge.org",
-      "version": null,
-      "contexts": [
 
-      ]
-    }
   ],
   "conflicts_with": [
 
