@@ -1,6 +1,6 @@
 {
-  "name": "seexpr",
-  "full_name": "seexpr",
+  "name": "gosec",
+  "full_name": "gosec",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Embeddable expression evaluation engine",
+  "desc": "Golang security checker",
   "license": "Apache-2.0",
-  "homepage": "https://wdas.github.io/SeExpr/",
+  "homepage": "https://securego.io/",
   "versions": {
-    "stable": "3.0.1",
-    "head": null,
+    "stable": "2.5.0",
+    "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/wdas/SeExpr/archive/v3.0.1.tar.gz",
+      "url": "https://github.com/securego/gosec/archive/v2.5.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,21 +28,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": ":any_skip_relocation",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/seexpr-3.0.1.catalina.bottle.tar.gz",
-          "sha256": "2a55400ad86255b300843f7cde1dbed4130d0ba26ffc4c8725fec83b50e7f9e3"
+          "url": "https://linuxbrew.bintray.com/bottles/gosec-2.5.0.catalina.bottle.tar.gz",
+          "sha256": "f2ab2597115da15b5310c5456a4fe363e591432bc283dd2666f1f587b8f2cde3"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/seexpr-3.0.1.mojave.bottle.tar.gz",
-          "sha256": "e5ba2fcca24837fc43d11524fdeff04d9f4429f6c66421dec6c1925b60893f82"
+          "url": "https://linuxbrew.bintray.com/bottles/gosec-2.5.0.mojave.bottle.tar.gz",
+          "sha256": "c0217676973c37182efc63f728471659f7c5129f413df6923b73b1e91ea744db"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/seexpr-3.0.1.high_sierra.bottle.tar.gz",
-          "sha256": "b5a3d64c08f692d25d3eb12dd9409c414939303b0b9f19396c95a13d07b46fa9"
+          "url": "https://linuxbrew.bintray.com/bottles/gosec-2.5.0.high_sierra.bottle.tar.gz",
+          "sha256": "8b70996fcd2624ac7bec3602a5f2002935924ad6cf8bbd90a670b9764540759c"
         }
       }
     }
@@ -53,11 +53,10 @@
 
   ],
   "build_dependencies": [
-    "cmake",
-    "doxygen"
+
   ],
   "dependencies": [
-    "libpng"
+    "go"
   ],
   "recommended_dependencies": [
 
