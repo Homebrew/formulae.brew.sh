@@ -25,12 +25,9 @@ permalink: :title
 
 <p>Current version: <a href="{{ c.url }}">{{ c.version }}</a></p>
 
-{%- include casks.html casks=c.depends_on.cask description="Depends on casks" -%}
-
-{%- assign depends_on_formula = c.depends_on.formula | where_exp: "f", "site.data.formula[f]" -%}
-{%- include formulae.html formula_path=formula_path formulae=depends_on_formula description="Depends on" -%}
-
 {%- if c.depends_on.size > 0 -%}
+    {%- include casks.html casks=c.depends_on.cask description="Depends on casks" -%}
+    {%- include formulae.html formula_path=formula_path formulae=c.depends_on.formula description="Depends on" -%}
     {%- assign requirements = "" -%}
     {%- if c.depends_on.macos -%}
         {%- capture requirements -%}
@@ -55,7 +52,7 @@ permalink: :title
         {%- if requirements.size > 0 -%}
             {%- assign requirements = requirements | append: ", " -%}
         {%- endif -%}
-        {%- capture requirements -%}{{ requirements }}<strong><a href="{{ site.baseurl }}/cask/xquartz">x11</a></strong>{%- endcapture -%}
+        {%- capture requirements -%}{{ requirements }}<strong><a href="{{ site.baseurl }}/cask/xquartz">X11</a></strong>{%- endcapture -%}
     {%- endif -%}
     {%- if requirements.size > 0 %}
 <p>Requires: {{ requirements }}</p>
