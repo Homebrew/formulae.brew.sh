@@ -40,6 +40,17 @@ permalink: :title
             {%- endfor -%}
         {%- endcapture -%}
     {%- endif -%}
+    {%- if c.depends_on.arch -%}
+        {%- if requirements.size > 0 -%}
+            {%- assign requirements = requirements | append: ", " -%}
+        {%- endif -%}
+        {%- capture requirements -%}
+            {{ requirements }}{% for a in c.depends_on.arch -%}
+                <strong>{{ a.type | capitalize }} {{ a.bits }}-bit</strong>
+                {%- unless forloop.last %} or {% endunless -%}
+            {%- endfor %} architecture
+        {%- endcapture -%}
+    {%- endif -%}
     {%- if c.depends_on.x11 -%}
         {%- if requirements.size > 0 -%}
             {%- assign requirements = requirements | append: ", " -%}
