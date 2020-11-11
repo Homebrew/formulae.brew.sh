@@ -6,6 +6,11 @@
     <tr>
         {%- assign data_name = full_name | remove: "@" | remove: "." | replace: "+", "_" -%}
         {%- assign formula = site.data[formula_path][data_name] -%}
+        {%- unless formula -%}
+            {%- assign canonical_map = formula_path | append: "_canonical" -%}
+            {%- assign data_name = site.data[canonical_map][full_name] | remove: "@" | remove: "." | replace: "+", "_" -%}
+            {%- assign formula = site.data[formula_path][data_name] -%}
+        {%- endunless -%}
         {%- include formula.html formula_path=formula_path formula=formula -%}
     </tr>
     {%- endfor -%}
