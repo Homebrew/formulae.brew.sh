@@ -9,7 +9,7 @@
 
   ],
   "desc": "Xlib-based interactive 2D drawing tool",
-  "license": null,
+  "license": "QPL-1.0",
   "homepage": "http://bourbon.usc.edu/tgif/",
   "versions": {
     "stable": "4.2.5",
@@ -23,7 +23,7 @@
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,28 +33,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/tgif-4.2.5.catalina.bottle.tar.gz",
-          "sha256": "057f91cf9ac5c38a46b158878f82ca57a5a1caa6589448ff90021fa80c0c6d00"
+          "url": "https://linuxbrew.bintray.com/bottles/tgif-4.2.5_1.catalina.bottle.tar.gz",
+          "sha256": "ce5a689942aed9986f74150bddebb09a129aba97810658fc67a6060519eacd86"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/tgif-4.2.5.mojave.bottle.tar.gz",
-          "sha256": "4067b1468cc15d199a88629b19a677bd1d97462478a48d6a751aca6c1802e738"
+          "url": "https://linuxbrew.bintray.com/bottles/tgif-4.2.5_1.mojave.bottle.tar.gz",
+          "sha256": "3ab28b39b5a4b0c5cea21b096c0e8b2317725f8b6da6455ab365e8d13ac644a4"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/tgif-4.2.5.high_sierra.bottle.tar.gz",
-          "sha256": "4023a1df9a1b9ee248891d2d54ce00127407ce80f89d2b1edef05fe2e4c8cf1f"
-        },
-        "sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/tgif-4.2.5.sierra.bottle.tar.gz",
-          "sha256": "d96d0bafe9c364642e354a6d80ffce48d532a8ed161372cf549c213b9a0a8a30"
-        },
-        "el_capitan": {
-          "url": "https://linuxbrew.bintray.com/bottles/tgif-4.2.5.el_capitan.bottle.tar.gz",
-          "sha256": "9912995702f73e3add877e329b9bd894e9a7f5fe2024161b27b6d81462aeda9d"
-        },
-        "yosemite": {
-          "url": "https://linuxbrew.bintray.com/bottles/tgif-4.2.5.yosemite.bottle.tar.gz",
-          "sha256": "df95673872cdb34ca9cccfaa456bdc4a35e29d720b8ffa4875501cf864d399bd"
+          "url": "https://linuxbrew.bintray.com/bottles/tgif-4.2.5_1.high_sierra.bottle.tar.gz",
+          "sha256": "9c35ee5713a7efcdedb42d4602213dd94e84385bb8c5b0f9331706d6e897d08c"
         }
       }
     }
@@ -68,7 +56,13 @@
 
   ],
   "dependencies": [
-
+    "libice",
+    "libidn",
+    "libsm",
+    "libx11",
+    "libxext",
+    "libxmu",
+    "libxt"
   ],
   "recommended_dependencies": [
 
@@ -80,15 +74,7 @@
 
   ],
   "requirements": [
-    {
-      "name": "x11",
-      "cask": "xquartz",
-      "download": "https://xquartz.macosforge.org",
-      "version": null,
-      "contexts": [
 
-      ]
-    }
   ],
   "conflicts_with": [
 
