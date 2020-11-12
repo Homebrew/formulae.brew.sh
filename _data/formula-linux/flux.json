@@ -43,6 +43,10 @@
         "high_sierra": {
           "url": "https://linuxbrew.bintray.com/bottles/flux-0.94.0.high_sierra.bottle.tar.gz",
           "sha256": "94d271d3a87ae8086197e5945488be7b8684a3fefc57a3ead34e26253b05fede"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/flux-0.94.0.x86_64_linux.bottle.tar.gz",
+          "sha256": "a9713b830c66f194a5eba838fa3d34651cf163cd2e0a286ec4101a16a8ba9202"
         }
       }
     }
@@ -54,7 +58,10 @@
   ],
   "build_dependencies": [
     "go",
-    "rust"
+    "rust",
+    "llvm",
+    "pkg-config",
+    "ragel"
   ],
   "dependencies": [
 
