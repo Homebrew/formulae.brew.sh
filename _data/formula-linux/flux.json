@@ -1,6 +1,6 @@
 {
-  "name": "citus",
-  "full_name": "citus",
+  "name": "flux",
+  "full_name": "flux",
   "oldname": null,
   "aliases": [
 
@@ -8,19 +8,19 @@
   "versioned_formulae": [
 
   ],
-  "desc": "PostgreSQL-based distributed RDBMS",
-  "license": "AGPL-3.0",
-  "homepage": "https://www.citusdata.com",
+  "desc": "Lightweight scripting language for querying databases",
+  "license": "MIT",
+  "homepage": "https://www.influxdata.com/products/flux/",
   "versions": {
-    "stable": "9.5.0",
+    "stable": "0.94.0",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/citusdata/citus/archive/v9.5.0.tar.gz",
-      "tag": null,
-      "revision": null
+      "url": "https://github.com/influxdata/flux.git",
+      "tag": "v0.94.0",
+      "revision": "7e1ea554877ceb5b424293508aa63c0d644aaf39"
     }
   },
   "revision": 0,
@@ -33,16 +33,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/citus-9.5.0.catalina.bottle.tar.gz",
-          "sha256": "e9b1f84cec8b7eff5521e47f69c60f42b8d3e5defbfff093709eb00f09c29cf7"
+          "url": "https://linuxbrew.bintray.com/bottles/flux-0.94.0.catalina.bottle.tar.gz",
+          "sha256": "b1b981c9c6d0189d3c4fc93795077dfb04ee8349b33b19929f76c79993f373c0"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/citus-9.5.0.mojave.bottle.tar.gz",
-          "sha256": "b1aa5ef3e09509e5bd22b51bf3f918e94b71a450f885fd5600bd879c32daf9d3"
+          "url": "https://linuxbrew.bintray.com/bottles/flux-0.94.0.mojave.bottle.tar.gz",
+          "sha256": "bad9cd01d1a588e2a8de1ddbdb85b152d98645232781f3bfcf718c6b2282f48d"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/citus-9.5.0.high_sierra.bottle.tar.gz",
-          "sha256": "c4245e89ece1955fb1cef98bc4ab8fbe44c7a83382c4cd49c543b5c604e1c9a5"
+          "url": "https://linuxbrew.bintray.com/bottles/flux-0.94.0.high_sierra.bottle.tar.gz",
+          "sha256": "94d271d3a87ae8086197e5945488be7b8684a3fefc57a3ead34e26253b05fede"
         }
       }
     }
@@ -53,11 +53,11 @@
 
   ],
   "build_dependencies": [
-
+    "go",
+    "rust"
   ],
   "dependencies": [
-    "postgresql",
-    "readline"
+
   ],
   "recommended_dependencies": [
 

@@ -9,8 +9,8 @@
 
   ],
   "desc": "UNIX client for connecting to Windows Remote Desktop Services",
-  "license": "GPL-3.0",
-  "homepage": "https://www.rdesktop.org/",
+  "license": "GPL-3.0-or-later",
+  "homepage": "https://github.com/rdesktop/rdesktop",
   "versions": {
     "stable": "1.9.0",
     "head": null,
@@ -23,7 +23,7 @@
       "revision": null
     }
   },
-  "revision": 1,
+  "revision": 2,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,16 +33,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/rdesktop-1.9.0_1.catalina.bottle.tar.gz",
-          "sha256": "4b504df078255fec4d85c94f9a815eb26e55cec1cd38ebf2755ead4d0bcda3be"
+          "url": "https://linuxbrew.bintray.com/bottles/rdesktop-1.9.0_2.catalina.bottle.tar.gz",
+          "sha256": "8b22a2d1f52ff40334a16fc4614bc2f2c9e50386f0732e8e4478f68c7008f961"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/rdesktop-1.9.0_1.mojave.bottle.tar.gz",
-          "sha256": "12d99aa6dd32ee04b5c0030def99ec91ec9de695d11bd7e062429e760a5ece94"
+          "url": "https://linuxbrew.bintray.com/bottles/rdesktop-1.9.0_2.mojave.bottle.tar.gz",
+          "sha256": "91b95a137be4361dee7d8bf2e442fa75eaf159469c09e238a127aa1186534638"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/rdesktop-1.9.0_1.high_sierra.bottle.tar.gz",
-          "sha256": "16afb599f321df0271f1b7b10eb93884b111feefc4cfb7b116ccf7b90dfede46"
+          "url": "https://linuxbrew.bintray.com/bottles/rdesktop-1.9.0_2.high_sierra.bottle.tar.gz",
+          "sha256": "84ca9f1d74ad63108e320f2cae63a2afdfafd3995aa2d37837d551cc5dda8688"
         }
       }
     }
@@ -59,6 +59,9 @@
     "gnutls",
     "libao",
     "libtasn1",
+    "libx11",
+    "libxcursor",
+    "libxrandr",
     "nettle"
   ],
   "recommended_dependencies": [
@@ -71,15 +74,7 @@
 
   ],
   "requirements": [
-    {
-      "name": "x11",
-      "cask": "xquartz",
-      "download": "https://xquartz.macosforge.org",
-      "version": null,
-      "contexts": [
 
-      ]
-    }
   ],
   "conflicts_with": [
 
@@ -91,6 +86,6 @@
   "linked_keg": null,
   "pinned": false,
   "outdated": false,
-  "deprecated": false,
+  "deprecated": true,
   "disabled": false
 }

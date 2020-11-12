@@ -9,7 +9,7 @@
 
   ],
   "desc": "UNIX/Linux command-line tool to interact with an EWMH/NetWM",
-  "license": null,
+  "license": "GPL-2.0-or-later",
   "homepage": "https://sites.google.com/site/tstyblo/wmctrl",
   "versions": {
     "stable": "1.07",
@@ -23,7 +23,7 @@
       "revision": null
     }
   },
-  "revision": 1,
+  "revision": 2,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,20 +33,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/wmctrl-1.07_1.catalina.bottle.tar.gz",
-          "sha256": "7fffdc3399b2af15b638dfb642e44e0c148df088828f307c1f9440e38049cd5a"
+          "url": "https://linuxbrew.bintray.com/bottles/wmctrl-1.07_2.catalina.bottle.tar.gz",
+          "sha256": "d585a38070e3343da1be66819f7d3f840140acee8dde1d3912542d682466ee48"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/wmctrl-1.07_1.mojave.bottle.tar.gz",
-          "sha256": "2223922cda28d81580d85d01fa697284102d10226df76d57660bd92093fd46c5"
+          "url": "https://linuxbrew.bintray.com/bottles/wmctrl-1.07_2.mojave.bottle.tar.gz",
+          "sha256": "49f4d10d0e8d8b4cfa2e5ba4240f5c623f01b66d4e466eace255c1496c627da5"
         },
         "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/wmctrl-1.07_1.high_sierra.bottle.tar.gz",
-          "sha256": "59b55236fd42a64f6ccc8587a5580a25afd330a137b62e7258568042e8b1b525"
-        },
-        "sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/wmctrl-1.07_1.sierra.bottle.tar.gz",
-          "sha256": "cbdb379f9b1264847f74c0ea01e0a5412645b442d3c069708bfbe209b845b873"
+          "url": "https://linuxbrew.bintray.com/bottles/wmctrl-1.07_2.high_sierra.bottle.tar.gz",
+          "sha256": "10200373a514341920fd453d769c07040eae2ba01a691c418d10b6a1d44ec70b"
         }
       }
     }
@@ -61,7 +57,11 @@
   ],
   "dependencies": [
     "gettext",
-    "glib"
+    "glib",
+    "libice",
+    "libsm",
+    "libx11",
+    "libxmu"
   ],
   "recommended_dependencies": [
 
@@ -73,15 +73,7 @@
 
   ],
   "requirements": [
-    {
-      "name": "x11",
-      "cask": "xquartz",
-      "download": "https://xquartz.macosforge.org",
-      "version": null,
-      "contexts": [
 
-      ]
-    }
   ],
   "conflicts_with": [
 
