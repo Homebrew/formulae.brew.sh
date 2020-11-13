@@ -5,23 +5,14 @@
   ],
   "desc": "Host-based application firewall",
   "homepage": "https://www.obdev.at/products/littlesnitch/index.html",
-  "url": "https://www.obdev.at/downloads/littlesnitch/LittleSnitch-4.6.dmg",
-  "appcast": "https://www.obdev.at/products/littlesnitch/releasenotes4.html",
-  "version": "4.6",
-  "sha256": "47475aae4ba506f01b0399552c0d3362cb2ecbf0df95cf27aded5d685a4f875d",
+  "url": "https://www.obdev.at/downloads/littlesnitch/LittleSnitch-5.0.2.dmg",
+  "appcast": "https://sw-update.obdev.at/update-feeds/littlesnitch5.plist",
+  "version": "5.0.2",
+  "sha256": "bc6bc6463f69267423276cb41338b72181c850d5a092393f23f8c256ccc0d2cf",
   "artifacts": [
-    {
-      "launchctl": [
-        "at.obdev.LittleSnitchUIAgent",
-        "at.obdev.LittleSnitchHelper",
-        "at.obdev.littlesnitchd"
-      ],
-      "signal": {
-      }
-    },
-    {
-      "path": "LittleSnitch-4.6.dmg"
-    },
+    [
+      "Little Snitch.app"
+    ],
     {
       "trash": [
         "/Library/Application Support/Objective Development/Little Snitch",
@@ -54,15 +45,15 @@
       }
     }
   ],
-  "caveats": "little-snitch requires a kernel extension to work.\nIf the installation fails, retry after you enable it in:\n  System Preferences → Security & Privacy → General\n\nFor more information, refer to vendor documentation or this Apple Technical Note:\n  https://developer.apple.com/library/content/technotes/tn2459/_index.html\n\nYou must reboot for the installation of little-snitch to take effect.\n",
+  "caveats": null,
   "depends_on": {
     "macos": {
       ">=": [
-        "10.11"
+        "11.0"
       ]
     }
   },
   "conflicts_with": null,
-  "container": "{:type=>:naked}",
+  "container": null,
   "auto_updates": true
 }
