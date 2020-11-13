@@ -9,7 +9,7 @@
 
   ],
   "desc": "Open-source implementation of the OpenGL specification",
-  "license": null,
+  "license": "Cannot Represent",
   "homepage": "https://www.mesa3d.org",
   "versions": {
     "stable": "8.0.0",
@@ -23,7 +23,7 @@
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,24 +33,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/mesalib-glw-8.0.0.catalina.bottle.tar.gz",
-          "sha256": "53d9e0afd006865c0030300392ec85eb24f55ce2457e6a44c3b83582a1227649"
+          "url": "https://homebrew.bintray.com/bottles/mesalib-glw-8.0.0_1.catalina.bottle.tar.gz",
+          "sha256": "1a1690918045f775ea6d71216a5b674b5762556aeaf0285e70533150aa7f14b6"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/mesalib-glw-8.0.0.mojave.bottle.tar.gz",
-          "sha256": "2792091234f355f3649eb59dafbcff48abda8cc68ffd78e87ca69621b3d6bf61"
+          "url": "https://homebrew.bintray.com/bottles/mesalib-glw-8.0.0_1.mojave.bottle.tar.gz",
+          "sha256": "39c625451d18574ed9b9fcd6383c3a3e3b0ac7633f85d28df97a3594ea02e37a"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/mesalib-glw-8.0.0.high_sierra.bottle.tar.gz",
-          "sha256": "56a6531c8cc2bdb9dced7a17c0875b13cc774f591d5b4ea64e16fa17b09d8d72"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/mesalib-glw-8.0.0.sierra.bottle.tar.gz",
-          "sha256": "c0f19ff9584a9450f0f06bfc6013e1ff7e8cefd520c9d4f0fba1cf3c1b5ce7fc"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/mesalib-glw-8.0.0.el_capitan.bottle.tar.gz",
-          "sha256": "340b10f7e65eea02edd9853ff14e5458107c1fb3af99f9bf84b8913e3d96918e"
+          "url": "https://homebrew.bintray.com/bottles/mesalib-glw-8.0.0_1.high_sierra.bottle.tar.gz",
+          "sha256": "fdd89421a230f4b3ea4c2b73cae82cd37d3b44bc61afd5b9e7274dc23491dc8b"
         }
       }
     }
@@ -64,7 +56,9 @@
     "pkg-config"
   ],
   "dependencies": [
-
+    "libx11",
+    "libxt",
+    "mesa"
   ],
   "recommended_dependencies": [
 
@@ -76,15 +70,7 @@
 
   ],
   "requirements": [
-    {
-      "name": "x11",
-      "cask": "xquartz",
-      "download": "https://xquartz.macosforge.org",
-      "version": null,
-      "contexts": [
 
-      ]
-    }
   ],
   "conflicts_with": [
 
