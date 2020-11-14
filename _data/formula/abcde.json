@@ -9,7 +9,7 @@
 
   ],
   "desc": "Better CD Encoder",
-  "license": "GPL-2.0",
+  "license": "GPL-2.0-or-later",
   "homepage": "https://abcde.einval.com",
   "versions": {
     "stable": "2.9.3",
@@ -23,26 +23,26 @@
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any_skip_relocation",
+      "cellar": ":any",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
+        "catalina": {
+          "url": "https://homebrew.bintray.com/bottles/abcde-2.9.3_1.catalina.bottle.tar.gz",
+          "sha256": "fa00c7fc4b6b4ab794439f619ba00961358a4e5684a0ae2412fbd78ba2497df1"
+        },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/abcde-2.9.3.mojave.bottle.tar.gz",
-          "sha256": "6994f8e32417a1630b2680c96bcae3de5c430976de0dc66056e5687070473f19"
+          "url": "https://homebrew.bintray.com/bottles/abcde-2.9.3_1.mojave.bottle.tar.gz",
+          "sha256": "c2ef29d1b906767727d858047ddab9516f14c70073b30174a6222b1300446432"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/abcde-2.9.3.high_sierra.bottle.tar.gz",
-          "sha256": "6994f8e32417a1630b2680c96bcae3de5c430976de0dc66056e5687070473f19"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/abcde-2.9.3.sierra.bottle.tar.gz",
-          "sha256": "7fbfff0c184bef38f29580ec587d5edb473699eaad29bb15e686d2634c070737"
+          "url": "https://homebrew.bintray.com/bottles/abcde-2.9.3_1.high_sierra.bottle.tar.gz",
+          "sha256": "2a81af2921befb14f0a96e66ebc3884bd33f8bab156f7dc27e2816a956d033cb"
         }
       }
     }
@@ -53,16 +53,17 @@
 
   ],
   "build_dependencies": [
-
+    "pkg-config"
   ],
   "dependencies": [
-    "cd-discid",
     "cdrtools",
+    "eye-d3",
     "flac",
     "glyr",
-    "id3v2",
     "lame",
+    "libdiscid",
     "mkcue",
+    "perl",
     "vorbis-tools"
   ],
   "recommended_dependencies": [
