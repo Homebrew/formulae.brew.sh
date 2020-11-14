@@ -65,9 +65,9 @@ jobs:
           /usr/bin/rake cask
 
           git reset origin/master
-          git add _data/formula api/formula formula
-          if ! git diff --no-patch --exit-code HEAD -- _data/analytics _data/formula api/formula formula cask; then
-            git commit -m "formula: updates from homebrew/core" _data/analytics _data/formula api/formula formula
+          git add _data/formula{,_canonical.json} api/formula formula
+          if ! git diff --no-patch --exit-code HEAD -- _data/analytics _data/formula{,_canonical.json} api/formula formula cask; then
+            git commit -m "formula: updates from homebrew/core" _data/analytics _data/formula{,_canonical.json} api/formula formula
           fi
 
           git add _data/cask api/cask cask
@@ -81,9 +81,9 @@ jobs:
           rake linux_formula_and_analytics
 
           git reset origin/master
-          git add _data/analytics-linux _data/formula-linux api/formula-linux formula-linux
-          if ! git diff --no-patch --exit-code HEAD -- _data/analytics-linux _data/formula-linux api/formula-linux formula-linux; then
-            git commit -m "formula-linux: updates from Homebrew/linuxbrew-core" _data/analytics-linux _data/formula-linux api/formula-linux formula-linux
+          git add _data/analytics-linux _data/formula-linux{,_canonical.json} api/formula-linux formula-linux
+          if ! git diff --no-patch --exit-code HEAD -- _data/analytics-linux _data/formula-linux{,_canonical.json} api/formula-linux formula-linux; then
+            git commit -m "formula-linux: updates from Homebrew/linuxbrew-core" _data/analytics-linux _data/formula-linux{,_canonical.json} api/formula-linux formula-linux
           fi
 
       - name: Push commits
