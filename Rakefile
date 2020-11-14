@@ -19,7 +19,7 @@ task :formulae, [:os, :tap] do |task, args|
   ENV["HOMEBREW_NO_COLOR"] = "1"
   sh "brew", "ruby", "script/generate.rb", args[:os], args[:tap]
 end
-CLOBBER.include FileList[%w[_data/formula api/formula formula
+CLOBBER.include FileList[%w[_data/formula _data/*_canonical.json api/formula formula
                          _data/formula-linux api/formula-linux formula-linux]]
 
 desc "Dump cask data"
