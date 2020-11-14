@@ -9,7 +9,7 @@
 
   ],
   "desc": "Visual browser for netCDF format files",
-  "license": null,
+  "license": "GPL-3.0-only",
   "homepage": "https://cirrus.ucsd.edu/ncview/",
   "versions": {
     "stable": "2.1.8",
@@ -23,7 +23,7 @@
       "revision": null
     }
   },
-  "revision": 3,
+  "revision": 4,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,16 +33,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/ncview-2.1.8_3.catalina.bottle.tar.gz",
-          "sha256": "0a1594bb793189d1359cbd800e44d830cc9cf39b713d71128d41323b284e687a"
+          "url": "https://homebrew.bintray.com/bottles/ncview-2.1.8_4.catalina.bottle.tar.gz",
+          "sha256": "b416e10f8aa1674f1c0323d5f1ecbadf930069520d0c093e18d71a3d07957c19"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/ncview-2.1.8_3.mojave.bottle.tar.gz",
-          "sha256": "d0b8e9fb871edf26633325c7309269689d0b4bd858f16a45527230dc16533abf"
+          "url": "https://homebrew.bintray.com/bottles/ncview-2.1.8_4.mojave.bottle.tar.gz",
+          "sha256": "386218ffad288810cb9447f3b666cbbea50be2517c1a6a36105980e8682be949"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/ncview-2.1.8_3.high_sierra.bottle.tar.gz",
-          "sha256": "5511d243f73fd1a7867bb4dd0263afe215dd0e4e29ef77199efee5db08c2d207"
+          "url": "https://homebrew.bintray.com/bottles/ncview-2.1.8_4.high_sierra.bottle.tar.gz",
+          "sha256": "37672fc5cea8e4a1178b2e0a91e2277099b900045617d01c1070cccad407fd1c"
         }
       }
     }
@@ -56,7 +56,12 @@
 
   ],
   "dependencies": [
+    "libice",
     "libpng",
+    "libsm",
+    "libx11",
+    "libxaw",
+    "libxt",
     "netcdf",
     "udunits"
   ],
@@ -70,15 +75,7 @@
 
   ],
   "requirements": [
-    {
-      "name": "x11",
-      "cask": "xquartz",
-      "download": "https://xquartz.macosforge.org",
-      "version": null,
-      "contexts": [
 
-      ]
-    }
   ],
   "conflicts_with": [
 
