@@ -23,26 +23,26 @@
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "cellar": ":any_skip_relocation",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/couchdb-lucene-2.1.0.catalina.bottle.1.tar.gz",
-          "sha256": "56e618fa1e535e061171d52dde83b617f4793b17654c4cc9adf1fc125607e096"
+          "url": "https://homebrew.bintray.com/bottles/couchdb-lucene-2.1.0_1.catalina.bottle.tar.gz",
+          "sha256": "714f23364619652be6321a45982688acf42be2a6b58aebbe654625b5ca6c69a3"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/couchdb-lucene-2.1.0.mojave.bottle.1.tar.gz",
-          "sha256": "03b37461aeb2eb4172ee4ff18a44c9074d9b486bec0d3192a37bb22262e078c6"
+          "url": "https://homebrew.bintray.com/bottles/couchdb-lucene-2.1.0_1.mojave.bottle.tar.gz",
+          "sha256": "7df53cd760b08390dcf985ef6d033e4540e6759cbe6975add36ce0888f48b544"
         },
         "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/couchdb-lucene-2.1.0.high_sierra.bottle.1.tar.gz",
-          "sha256": "2081b4665600643fd02deaac5b2177622d91729b6aec56197087b81412ecae35"
+          "url": "https://homebrew.bintray.com/bottles/couchdb-lucene-2.1.0_1.high_sierra.bottle.tar.gz",
+          "sha256": "087475d3e5852700d5d5a96f802072657fa623e1ed23d0b57707d1ef9eeb98c2"
         }
       }
     }
@@ -56,7 +56,8 @@
     "maven"
   ],
   "dependencies": [
-    "couchdb"
+    "couchdb",
+    "openjdk@8"
   ],
   "recommended_dependencies": [
 
@@ -68,15 +69,7 @@
 
   ],
   "requirements": [
-    {
-      "name": "java",
-      "cask": "homebrew/cask-versions/adoptopenjdk8",
-      "download": null,
-      "version": "1.8",
-      "contexts": [
 
-      ]
-    }
   ],
   "conflicts_with": [
 
