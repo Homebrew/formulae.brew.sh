@@ -9,7 +9,7 @@
 
   ],
   "desc": "ELF object file access library",
-  "license": "LGPL-2.0",
+  "license": "LGPL-2.0-or-later",
   "homepage": "https://web.archive.org/web/20181111033959/www.mr511.de/software/english.html",
   "versions": {
     "stable": "0.8.13",
@@ -32,6 +32,10 @@
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
+        "big_sur": {
+          "url": "https://linuxbrew.bintray.com/bottles/libelf-0.8.13_1.big_sur.bottle.tar.gz",
+          "sha256": "8b69f55ccec2aa1bfa85bef3fe071077fe281e2bc63dc33cc4344a1cc02e1e26"
+        },
         "catalina": {
           "url": "https://linuxbrew.bintray.com/bottles/libelf-0.8.13_1.catalina.bottle.tar.gz",
           "sha256": "b7635245b64cc7d857c92191c40877cba96871d07f4749f620bc96c63cd2635e"
@@ -73,7 +77,9 @@
 
   ],
   "build_dependencies": [
-
+    "autoconf",
+    "automake",
+    "libtool"
   ],
   "dependencies": [
 
