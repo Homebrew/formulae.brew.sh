@@ -1,6 +1,6 @@
 {
-  "name": "gmic",
-  "full_name": "gmic",
+  "name": "gping",
+  "full_name": "gping",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Full-Featured Open-Source Framework for Image Processing",
-  "license": "CECILL-2.1",
-  "homepage": "https://gmic.eu/",
+  "desc": "Ping, but with a graph",
+  "license": "MIT",
+  "homepage": "https://github.com/orf/gping",
   "versions": {
-    "stable": "2.9.3",
+    "stable": "0.1.6",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://gmic.eu/files/source/gmic_2.9.3.tar.gz",
+      "url": "https://github.com/orf/gping/archive/v0.1.6.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,21 +28,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": ":any_skip_relocation",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://homebrew.bintray.com/bottles/gmic-2.9.3.big_sur.bottle.tar.gz",
-          "sha256": "212cfa59e5e565b2895d8d7fe0969644de6a1f51a5396e86a18ae3ef1166a756"
+          "url": "https://homebrew.bintray.com/bottles/gping-0.1.6.big_sur.bottle.tar.gz",
+          "sha256": "23b1fc9ef364feeca2c3a9101358a2b30d19b88f75fb376ee9705e59895670df"
         },
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/gmic-2.9.3.catalina.bottle.tar.gz",
-          "sha256": "b45430d5008003d4068a6e5f1cf57588daa2c63ed41a550f5e7617abe0d83414"
+          "url": "https://homebrew.bintray.com/bottles/gping-0.1.6.catalina.bottle.tar.gz",
+          "sha256": "3620b468fb75ab8fccd2bab0bae02adedc8c240214dd7ea0989b6eb066e84ad6"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/gmic-2.9.3.mojave.bottle.tar.gz",
-          "sha256": "f075afe5e1dbbed37dfd6cf1262301a927a0add9cab5942bce4458a2718e65ac"
+          "url": "https://homebrew.bintray.com/bottles/gping-0.1.6.mojave.bottle.tar.gz",
+          "sha256": "c996f5ffcdc3fb78d77f3db30c789162b805b8e4d63600a99ca1bf60850d17c2"
         }
       }
     }
@@ -53,13 +53,10 @@
 
   ],
   "build_dependencies": [
-    "cmake"
+    "rust"
   ],
   "dependencies": [
-    "fftw",
-    "jpeg",
-    "libpng",
-    "libtiff"
+
   ],
   "recommended_dependencies": [
 

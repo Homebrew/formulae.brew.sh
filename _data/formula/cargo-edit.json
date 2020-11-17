@@ -1,6 +1,6 @@
 {
-  "name": "dxpy",
-  "full_name": "dxpy",
+  "name": "cargo-edit",
+  "full_name": "cargo-edit",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "DNAnexus toolkit utilities and platform API bindings for Python",
-  "license": "Apache-2.0",
-  "homepage": "https://github.com/dnanexus/dx-toolkit",
+  "desc": "Utility for managing cargo dependencies from the command-line",
+  "license": "MIT",
+  "homepage": "https://killercup.github.io/cargo-edit/",
   "versions": {
-    "stable": "0.303.1",
+    "stable": "0.7.0",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://files.pythonhosted.org/packages/1c/bc/268976aa00e5decccdf767aff1a36624c90bf4fcc3edbc6619efd933ce6a/dxpy-0.303.1.tar.gz",
+      "url": "https://github.com/killercup/cargo-edit/archive/v0.7.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,16 +33,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://homebrew.bintray.com/bottles/dxpy-0.303.1.big_sur.bottle.tar.gz",
-          "sha256": "b09506eb6e0e753145aaee91948d2c4d9b863953c68e9f9043c63972a9c67ffe"
+          "url": "https://homebrew.bintray.com/bottles/cargo-edit-0.7.0.big_sur.bottle.tar.gz",
+          "sha256": "02962a1a65b5259647e87a4b065e2ca7fee5da04de585e579b6a08772064ad73"
         },
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/dxpy-0.303.1.catalina.bottle.tar.gz",
-          "sha256": "382e77df6d62f9e53afe2ff915aab858e538f7640dcf66ac3643fa9a7987adfd"
+          "url": "https://homebrew.bintray.com/bottles/cargo-edit-0.7.0.catalina.bottle.tar.gz",
+          "sha256": "0a90a56248feeb9a2371ab94a82ddc111688d9323bb4deb92c9863d96fd36f1b"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/dxpy-0.303.1.mojave.bottle.tar.gz",
-          "sha256": "c16e3935d8b5d7e797558442a9920b17ebe7bcaf479942ea18625e1cf196817f"
+          "url": "https://homebrew.bintray.com/bottles/cargo-edit-0.7.0.mojave.bottle.tar.gz",
+          "sha256": "b26248fef6c09401f36f5d4c30c5cfa10b9944817c84f6b55b384fc7106ef31d"
         }
       }
     }
@@ -53,11 +53,11 @@
 
   ],
   "build_dependencies": [
-
+    "rust"
   ],
   "dependencies": [
-    "python@3.9",
-    "readline"
+    "libgit2",
+    "openssl@1.1"
   ],
   "recommended_dependencies": [
 
