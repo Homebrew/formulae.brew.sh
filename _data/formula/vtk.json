@@ -23,7 +23,7 @@
       "revision": null
     }
   },
-  "revision": 1,
+  "revision": 2,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,20 +33,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://homebrew.bintray.com/bottles/vtk-9.0.1_1.big_sur.bottle.tar.gz",
-          "sha256": "dcc3fa7f78f1aab1488e0a40bc2e6edc860ef21b20fd9154f2652ebf21311fa0"
+          "url": "https://homebrew.bintray.com/bottles/vtk-9.0.1_2.big_sur.bottle.tar.gz",
+          "sha256": "1b4105c1a17805f629696925202fc53bccc804fcecdfc3d2630eefdf7c398141"
         },
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/vtk-9.0.1_1.catalina.bottle.tar.gz",
-          "sha256": "8ccd05b41f1fefbde39dcf16b8bcbad70c826b7bd85a2348cc859ca68535cadc"
+          "url": "https://homebrew.bintray.com/bottles/vtk-9.0.1_2.catalina.bottle.tar.gz",
+          "sha256": "aad0825f376a9a8ff97ab25a81a5b84a5b31f222bf367f07976df1eb8af06025"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/vtk-9.0.1_1.mojave.bottle.tar.gz",
-          "sha256": "6444f12da98f4234afc2b1a096bd6e7c880a71f1d4f0521fc91e21c90feb7366"
-        },
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/vtk-9.0.1_1.high_sierra.bottle.tar.gz",
-          "sha256": "e0d7a74bbd039760bd71f95e33c4bb255d1c9769ce17898ca7f58179c811a263"
+          "url": "https://homebrew.bintray.com/bottles/vtk-9.0.1_2.mojave.bottle.tar.gz",
+          "sha256": "4b873bfd637368b14ef91d1c7607fc8308c0185d0519a8531cc38eacaa3bb5b2"
         }
       }
     }
@@ -61,15 +57,26 @@
   ],
   "dependencies": [
     "boost",
+    "double-conversion",
+    "eigen",
     "fontconfig",
+    "gl2ps",
+    "glew",
     "hdf5",
     "jpeg",
+    "jsoncpp",
+    "libogg",
     "libpng",
     "libtiff",
+    "lz4",
     "netcdf",
+    "pugixml",
     "pyqt",
     "python@3.9",
-    "qt"
+    "qt",
+    "sqlite",
+    "theora",
+    "xz"
   ],
   "recommended_dependencies": [
 
@@ -78,7 +85,9 @@
 
   ],
   "uses_from_macos": [
-
+    "expat",
+    "libxml2",
+    "zlib"
   ],
   "requirements": [
 
