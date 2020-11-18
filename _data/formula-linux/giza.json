@@ -1,6 +1,6 @@
 {
-  "name": "duplicity",
-  "full_name": "duplicity",
+  "name": "giza",
+  "full_name": "giza",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Bandwidth-efficient encrypted backup",
+  "desc": "Scientific plotting library for C/Fortran built on cairo",
   "license": "GPL-2.0-or-later",
-  "homepage": "https://launchpad.net/duplicity",
+  "homepage": "https://danieljprice.github.io/giza/",
   "versions": {
-    "stable": "0.8.17",
+    "stable": "1.1.0",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://code.launchpad.net/duplicity/0.8-series/0.8.17/+download/duplicity-0.8.17.tar.gz",
+      "url": "https://downloads.sourceforge.net/project/giza/v1.1.0/giza-1.1.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,16 +33,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/duplicity-0.8.17.big_sur.bottle.tar.gz",
-          "sha256": "ddfbe44715944cb8f2fb43ba69a06c3da6ca26a7c58dba3a576e9fde2beb62dd"
+          "url": "https://linuxbrew.bintray.com/bottles/giza-1.1.0.big_sur.bottle.tar.gz",
+          "sha256": "7a485d9f66a4b57eadf001fe38219c52b95ddd097830a02cdc3356b2e435765d"
         },
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/duplicity-0.8.17.catalina.bottle.tar.gz",
-          "sha256": "d075247edc004244cf742b17fbf2f356b728d1def18e69baad277b2e277831ac"
+          "url": "https://linuxbrew.bintray.com/bottles/giza-1.1.0.catalina.bottle.tar.gz",
+          "sha256": "4651e890ce15036cb2e8862a5c72d56201be4cfc345f7f66d95aa3fd452b6615"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/duplicity-0.8.17.mojave.bottle.tar.gz",
-          "sha256": "23b6cd01c61d5ef5c44e178a7915eab6665302fe72cf1a876d7987ab126c5525"
+          "url": "https://linuxbrew.bintray.com/bottles/giza-1.1.0.mojave.bottle.tar.gz",
+          "sha256": "3bfd5ff70ee646773ac6d799c3bd5865a9ab689833ca1f484a6402fa9443b105"
         }
       }
     }
@@ -53,14 +53,12 @@
 
   ],
   "build_dependencies": [
-
+    "pkg-config"
   ],
   "dependencies": [
-    "gnupg",
-    "librsync",
-    "libyaml",
-    "openssl@1.1",
-    "python@3.9"
+    "cairo",
+    "gcc",
+    "libx11"
   ],
   "recommended_dependencies": [
 
@@ -77,7 +75,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": null,
+  "caveats": "Test suite has been installed at:\n  $(brew --prefix)/opt/giza/test\n",
   "installed": [
 
   ],
