@@ -9,7 +9,7 @@
 
   ],
   "desc": "GNU troff text-formatting system",
-  "license": "GPL-3.0",
+  "license": "GPL-3.0-or-later",
   "homepage": "https://www.gnu.org/software/groff/",
   "versions": {
     "stable": "1.22.4",
@@ -23,7 +23,7 @@
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -32,25 +32,17 @@
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
+        "big_sur": {
+          "url": "https://linuxbrew.bintray.com/bottles/groff-1.22.4_1.big_sur.bottle.tar.gz",
+          "sha256": "1e46ef402875ec8cc1bc1fc05b748607822ed6c2a58508dc83d3f0c8cf7f5c4e"
+        },
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/groff-1.22.4.catalina.bottle.tar.gz",
-          "sha256": "a7c425eec2e56f10e06978b393c0cf53269d27f20e801856fd6d2ba91df81136"
+          "url": "https://linuxbrew.bintray.com/bottles/groff-1.22.4_1.catalina.bottle.tar.gz",
+          "sha256": "623edd28279abd071901f92502fd3a388aaf4357113f26b37ee715a9d11d05ab"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/groff-1.22.4.mojave.bottle.tar.gz",
-          "sha256": "1ee2ce419f4d59f098f0804e1dea42524ef72a88b69ce891c42f13d5f19be5f9"
-        },
-        "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/groff-1.22.4.high_sierra.bottle.tar.gz",
-          "sha256": "24fac4b672946970b70c6e308311e87a6686fed50d4d0909228afb252531065d"
-        },
-        "sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/groff-1.22.4.sierra.bottle.tar.gz",
-          "sha256": "2966f4b562c30eb6679d6940b43f4b99b2b625433e6a218489f160eb76c7c360"
-        },
-        "x86_64_linux": {
-          "url": "https://linuxbrew.bintray.com/bottles/groff-1.22.4.x86_64_linux.bottle.tar.gz",
-          "sha256": "d31274339f07f31fa1a710f04120927f11c8ad03d780ddd3e39363ca3a5d5fe3"
+          "url": "https://linuxbrew.bintray.com/bottles/groff-1.22.4_1.mojave.bottle.tar.gz",
+          "sha256": "4fed5ee8032eb7957bd964b0eb873f8954a4d427f0c602284992daca52e7cb6d"
         }
       }
     }
@@ -61,10 +53,16 @@
 
   ],
   "build_dependencies": [
+    "pkg-config",
     "texinfo"
   ],
   "dependencies": [
-
+    "ghostscript",
+    "netpbm",
+    "psutils",
+    "uchardet",
+    "libiconv",
+    "perl"
   ],
   "recommended_dependencies": [
 

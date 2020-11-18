@@ -1,6 +1,6 @@
 {
-  "name": "sngrep",
-  "full_name": "sngrep",
+  "name": "aerc",
+  "full_name": "aerc",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Command-line tool for displaying SIP calls message flows",
-  "license": "GPL-3.0-or-later",
-  "homepage": "https://github.com/irontec/sngrep",
+  "desc": "Email client that runs in your terminal",
+  "license": "MIT",
+  "homepage": "https://aerc-mail.org/",
   "versions": {
-    "stable": "1.4.8",
+    "stable": "0.5.1",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/irontec/sngrep/archive/v1.4.8.tar.gz",
+      "url": "https://git.sr.ht/~sircmpwn/aerc/archive/0.5.1.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,16 +33,20 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/sngrep-1.4.8.big_sur.bottle.tar.gz",
-          "sha256": "9f4802e1906e6177e83aff155174187fafdac32401d38c22af472035801c01c2"
+          "url": "https://linuxbrew.bintray.com/bottles/aerc-0.5.1.big_sur.bottle.tar.gz",
+          "sha256": "ed878a3c9bbb1b4a1aa3fff0fa6dbef6304660e535ad4648ef07775ec7dab270"
         },
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/sngrep-1.4.8.catalina.bottle.tar.gz",
-          "sha256": "489e6591c8008cbec241633ef0697c609aef20b02b9d97e7249c35d88af15d70"
+          "url": "https://linuxbrew.bintray.com/bottles/aerc-0.5.1.catalina.bottle.tar.gz",
+          "sha256": "7515182013440803e6c4326493c627a97e78c15d3dfebfe7f8775d995b6fb2cb"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/sngrep-1.4.8.mojave.bottle.tar.gz",
-          "sha256": "d645f96ed390b34ce5e4fe9b01a687722b4046db196c0933546a7bb7a964d55a"
+          "url": "https://linuxbrew.bintray.com/bottles/aerc-0.5.1.mojave.bottle.tar.gz",
+          "sha256": "175a1dab5a7ecd2638f62dcfd260d6d50d39b069518ca968f5e19cbfff57ace4"
+        },
+        "high_sierra": {
+          "url": "https://linuxbrew.bintray.com/bottles/aerc-0.5.1.high_sierra.bottle.tar.gz",
+          "sha256": "6c092fe0c10a3a6e6b5b4b17d33d07e8b90abd4c7c0014b22b16707c8d1836cc"
         }
       }
     }
@@ -53,11 +57,11 @@
 
   ],
   "build_dependencies": [
-    "autoconf",
-    "automake"
+    "go",
+    "scdoc"
   ],
   "dependencies": [
-    "openssl@1.1"
+
   ],
   "recommended_dependencies": [
 
