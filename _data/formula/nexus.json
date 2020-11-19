@@ -12,13 +12,13 @@
   "license": "EPL-1.0",
   "homepage": "https://www.sonatype.org/",
   "versions": {
-    "stable": "2.14.19-01",
+    "stable": "3.28.1-01",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://sonatype-download.global.ssl.fastly.net/repository/downloads-prod-group/oss/nexus-2.14.19-01-bundle.tar.gz",
+      "url": "https://github.com/sonatype/nexus-public/archive/release-3.28.1-01.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -26,17 +26,37 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any_skip_relocation",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "big_sur": {
+          "url": "https://homebrew.bintray.com/bottles/nexus-3.28.1-01.big_sur.bottle.tar.gz",
+          "sha256": "de3a5e6934087a0d7a52ddfcd5bf9c2b547ee19812cff2316afaca91f638fb82"
+        },
+        "catalina": {
+          "url": "https://homebrew.bintray.com/bottles/nexus-3.28.1-01.catalina.bottle.tar.gz",
+          "sha256": "3eb3a774ba71339596c7a255a03e7dd88a003cf9326d51c6e6f32d99bff0bd8a"
+        },
+        "mojave": {
+          "url": "https://homebrew.bintray.com/bottles/nexus-3.28.1-01.mojave.bottle.tar.gz",
+          "sha256": "aa2dde0621bc26d80d87a2b325b9ba37b0a9c36dcdd57b66c30a95320be19cae"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
   "build_dependencies": [
-
+    "maven"
   ],
   "dependencies": [
-
+    "openjdk@8"
   ],
   "recommended_dependencies": [
 
@@ -45,7 +65,9 @@
 
   ],
   "uses_from_macos": [
-
+    {
+      "unzip": "build"
+    }
   ],
   "requirements": [
 
