@@ -9,16 +9,16 @@
 
   ],
   "desc": "C++ interface to glib",
-  "license": "LGPL-2.1",
+  "license": "LGPL-2.1-or-later",
   "homepage": "https://www.gtkmm.org/",
   "versions": {
-    "stable": "2.64.2",
+    "stable": "2.64.4",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://download.gnome.org/sources/glibmm/2.64/glibmm-2.64.2.tar.xz",
+      "url": "https://download.gnome.org/sources/glibmm/2.64/glibmm-2.64.4.tar.xz",
       "tag": null,
       "revision": null
     }
@@ -33,20 +33,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://homebrew.bintray.com/bottles/glibmm-2.64.2.big_sur.bottle.tar.gz",
-          "sha256": "aaff9671885e0337aeeee7bf5c3b18a87c88fd79323bbce01f79c648a0531c87"
+          "url": "https://homebrew.bintray.com/bottles/glibmm-2.64.4.big_sur.bottle.tar.gz",
+          "sha256": "567122ba26a6bd7858ecc9f756db191de80f2f4a717807054f8df4b80cd81abb"
         },
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/glibmm-2.64.2.catalina.bottle.tar.gz",
-          "sha256": "8b39f15570f8ec9281554ec8db93e4011ad2e13a1248047c18c7f8570a548d53"
+          "url": "https://homebrew.bintray.com/bottles/glibmm-2.64.4.catalina.bottle.tar.gz",
+          "sha256": "436cb5e606614dcafe54f5792ab8c8e1ad9f20ca9f7c3c9dbc926199019f7d4e"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/glibmm-2.64.2.mojave.bottle.tar.gz",
-          "sha256": "316a5f0f84491a62cf1c48a12cd4f8d9b7f7de9aa8092f72256f5114aa8730d3"
-        },
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/glibmm-2.64.2.high_sierra.bottle.tar.gz",
-          "sha256": "7d224a2283e08715a1f7f286fcdc3e1c5cc277101bb3e2cc4bce488ec776cc02"
+          "url": "https://homebrew.bintray.com/bottles/glibmm-2.64.4.mojave.bottle.tar.gz",
+          "sha256": "b6c578734d7d68e3696305398cd43ddcc1a97aa51577ac87e57dce709d63575a"
         }
       }
     }
@@ -57,6 +53,8 @@
 
   ],
   "build_dependencies": [
+    "meson",
+    "ninja",
     "pkg-config"
   ],
   "dependencies": [
