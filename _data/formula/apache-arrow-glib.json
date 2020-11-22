@@ -27,22 +27,22 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 0,
-      "cellar": "/usr/local/Cellar",
+      "rebuild": 1,
+      "cellar": ":any",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
+        "big_sur": {
+          "url": "https://homebrew.bintray.com/bottles/apache-arrow-glib-2.0.0.big_sur.bottle.1.tar.gz",
+          "sha256": "915a5ef975e06d79c541d24e5106ecdb8740b8365ad5cf270dfc11b75d16e529"
+        },
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/apache-arrow-glib-2.0.0.catalina.bottle.tar.gz",
-          "sha256": "eb11280934a5993d540769ec49debb1779659b0ca66dd74638db6f910c97d6d2"
+          "url": "https://homebrew.bintray.com/bottles/apache-arrow-glib-2.0.0.catalina.bottle.1.tar.gz",
+          "sha256": "b51bf431c664c55d949ae469e69575aa170b6adf878a0692497c5b9556943a4e"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/apache-arrow-glib-2.0.0.mojave.bottle.tar.gz",
-          "sha256": "fde6a7e909ff674db119a7ce39dedbf12f2e7ac1020612a1e7473ab5803c9abf"
-        },
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/apache-arrow-glib-2.0.0.high_sierra.bottle.tar.gz",
-          "sha256": "c59ea0b6202bf885f4c4605fa1b0b5ef6bcf11b92a49236ddaf0ed5a32e7eb83"
+          "url": "https://homebrew.bintray.com/bottles/apache-arrow-glib-2.0.0.mojave.bottle.1.tar.gz",
+          "sha256": "3e04b577e546fdcf67ab353f52091044658efc633ad69a2c08f748db5c483718"
         }
       }
     }
@@ -54,6 +54,8 @@
   ],
   "build_dependencies": [
     "gobject-introspection",
+    "meson",
+    "ninja",
     "pkg-config"
   ],
   "dependencies": [
