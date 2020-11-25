@@ -9,7 +9,7 @@
 
   ],
   "desc": "Library to decode mpeg-2 and mpeg-1 video streams",
-  "license": "GPL-2.0",
+  "license": "GPL-2.0-or-later",
   "homepage": "https://libmpeg2.sourceforge.io/",
   "versions": {
     "stable": "0.5.1",
@@ -27,42 +27,22 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 2,
       "cellar": ":any",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://homebrew.bintray.com/bottles/libmpeg2-0.5.1.big_sur.bottle.1.tar.gz",
-          "sha256": "6330060737ed552d7800b1e88b63d3e31e5c2f3515e4406f1fe00370fcb0a4f0"
+          "url": "https://homebrew.bintray.com/bottles/libmpeg2-0.5.1.big_sur.bottle.2.tar.gz",
+          "sha256": "9f2cfd80d47e975333747fdea41d336071282ae359e9a345835a70611467bd43"
         },
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/libmpeg2-0.5.1.catalina.bottle.1.tar.gz",
-          "sha256": "248128226f4e6649a0aabec67dfb20f5b105a58b194c0e5830b5e13caf3b9421"
+          "url": "https://homebrew.bintray.com/bottles/libmpeg2-0.5.1.catalina.bottle.2.tar.gz",
+          "sha256": "9a8c812495f38eb0d46bff246c632c5dfd97413b2bc949defd9c5d318b9da439"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/libmpeg2-0.5.1.mojave.bottle.1.tar.gz",
-          "sha256": "5b6d4bf134cee2877da39a05a5c918f870c9742fe5823d9ad8b61b013fc7a7f2"
-        },
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/libmpeg2-0.5.1.high_sierra.bottle.1.tar.gz",
-          "sha256": "bdd9339459f1a039f480f3c31730265457bf6736ab625359482eb4e3796e455c"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/libmpeg2-0.5.1.sierra.bottle.1.tar.gz",
-          "sha256": "4454cdb2561326d53d7680fb004a13a54674b9cabd619cc9a5fede2742c9da9e"
-        },
-        "el_capitan": {
-          "url": "https://homebrew.bintray.com/bottles/libmpeg2-0.5.1.el_capitan.bottle.1.tar.gz",
-          "sha256": "841e93dd99b97b96b475aedff29b58f5be5c4156869b1c0212e5d7ed8dd7f481"
-        },
-        "yosemite": {
-          "url": "https://homebrew.bintray.com/bottles/libmpeg2-0.5.1.yosemite.bottle.1.tar.gz",
-          "sha256": "3d07c45554ff34036b9eae5a31dc5417c15109ba134d414035b1bf6f9dda7c79"
-        },
-        "mavericks": {
-          "url": "https://homebrew.bintray.com/bottles/libmpeg2-0.5.1.mavericks.bottle.1.tar.gz",
-          "sha256": "f6a868beb10fbf84d3eb1af556478ecbfb238d28608a53b99e607c02910e5e49"
+          "url": "https://homebrew.bintray.com/bottles/libmpeg2-0.5.1.mojave.bottle.2.tar.gz",
+          "sha256": "81161223100cfa38704d3194519be5651f4fcb47765b7e99f1d53ce05e433142"
         }
       }
     }
@@ -73,7 +53,9 @@
 
   ],
   "build_dependencies": [
-
+    "autoconf",
+    "automake",
+    "libtool"
   ],
   "dependencies": [
     "sdl"
