@@ -79,7 +79,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "If builds of PostgreSQL 9 are failing and you have version 8.x installed,\nyou may need to remove the previous version first. See:\n  https://github.com/Homebrew/legacy-homebrew/issues/2510\n\nTo migrate existing data from a previous major version (pre-9.0) of PostgreSQL, see:\n  https://www.postgresql.org/docs/9.6/static/upgrading.html\n\nTo migrate existing data from a previous minor version (9.0-9.5) of PostgreSQL, see:\n  https://www.postgresql.org/docs/9.6/static/pgupgrade.html\n\n  You will need your previous PostgreSQL installation from brew to perform `pg_upgrade`.\n    Do not run `brew cleanup postgresql@9.6` until you have performed the migration.\n\nThis formula has created a default database cluster with:\n  initdb $(brew --prefix)/var/postgres\nFor more details, read:\n  https://www.postgresql.org/docs/9/app-initdb.html\n",
+  "caveats": "If builds of PostgreSQL 9 are failing and you have version 8.x installed,\nyou may need to remove the previous version first. See:\n  https://github.com/Homebrew/legacy-homebrew/issues/2510\n\nThis formula has created a default database cluster with:\n  initdb $(brew --prefix)/var/postgresql@9.6\nFor more details, read:\n  https://www.postgresql.org/docs/9/app-initdb.html\n",
   "installed": [
 
   ],
