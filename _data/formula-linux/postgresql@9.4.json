@@ -85,7 +85,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "If builds of PostgreSQL 9 are failing and you have version 8.x installed,\nyou may need to remove the previous version first. See:\n  https://github.com/Homebrew/legacy-homebrew/issues/2510\n\nTo migrate existing data from a previous major version (pre-9.3) of PostgreSQL, see:\n  https://www.postgresql.org/docs/9.3/static/upgrading.html\n\nWhen installing the postgres gem, including ARCHFLAGS is recommended:\n  ARCHFLAGS=\"-arch x86_64\" gem install pg\n\nTo install gems without sudo, see the Homebrew documentation:\n  https://docs.brew.sh/Gems,-Eggs-and-Perl-Modules\n\nThis formula has created a default database cluster with:\n  initdb $(brew --prefix)/var/postgres\nFor more details, read:\n  https://www.postgresql.org/docs/9/app-initdb.html\n",
+  "caveats": "If builds of PostgreSQL 9 are failing and you have version 8.x installed,\nyou may need to remove the previous version first. See:\n  https://github.com/Homebrew/legacy-homebrew/issues/2510\n\nWhen installing the postgres gem, including ARCHFLAGS is recommended:\n  ARCHFLAGS=\"-arch x86_64\" gem install pg\n\nTo install gems without sudo, see the Homebrew documentation:\n  https://docs.brew.sh/Gems,-Eggs-and-Perl-Modules\n\nThis formula has created a default database cluster with:\n  initdb $(brew --prefix)/var/postgresql@9.4\nFor more details, read:\n  https://www.postgresql.org/docs/9/app-initdb.html\n",
   "installed": [
 
   ],
