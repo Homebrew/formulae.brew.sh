@@ -1,10 +1,7 @@
-{%- capture code -%}
-brew {{include.modifier}}install {{include.item}}
-{%- endcapture -%}
 
 <div class="install">
     <span class="label">Install command: </span>
     <div class="copyable">
-        {%- highlight bash -%} {{ code }} {%- endhighlight -%}
+        {%- highlight bash -%} brew install{{include.modifier}} {{include.item}} {%- endhighlight -%}
     </div>
 </div>
