@@ -1,6 +1,9 @@
 ---
 layout: page
 permalink: /docs/api/
+redirect_from:
+  - /api/
+  - /docs/
 ---
 # JSON API Documentation
 
