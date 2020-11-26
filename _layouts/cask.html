@@ -7,8 +7,7 @@ permalink: :title
 {%- assign c = site.data.cask[token] -%}
 <h2>{{ token }}</h2>
 
-{% include install_command.html item=token modifier='cask ' %}
-
+{%- include install_command.html item=token modifier=" --cask" %}
 <p>Name{%- if c.name.size > 1 -%}s{%- endif -%}:
 {%- for name in c.name %}
     <strong>{{ name }}</strong>
