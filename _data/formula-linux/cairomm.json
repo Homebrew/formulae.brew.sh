@@ -3,27 +3,27 @@
   "full_name": "cairomm",
   "oldname": null,
   "aliases": [
-
+    "cairomm@1.16"
   ],
   "versioned_formulae": [
-
+    "cairomm@1.14"
   ],
   "desc": "Vector graphics library with cross-device output support",
-  "license": "LGPL-2.0",
+  "license": "LGPL-2.0-or-later",
   "homepage": "https://cairographics.org/cairomm/",
   "versions": {
-    "stable": "1.12.2",
+    "stable": "1.16.0",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://cairographics.org/releases/cairomm-1.12.2.tar.gz",
+      "url": "https://cairographics.org/releases/cairomm-1.16.0.tar.xz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,28 +33,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/cairomm-1.12.2_1.big_sur.bottle.tar.gz",
-          "sha256": "a7e5e1838390320a4894316c4e4e1e714dc3d7c65efffb5d58b6772fd6774578"
+          "url": "https://linuxbrew.bintray.com/bottles/cairomm-1.16.0.big_sur.bottle.tar.gz",
+          "sha256": "6177df22ea052d3e7ccd44d621d24837478340ea0d1385ef401a069414f893f1"
         },
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/cairomm-1.12.2_1.catalina.bottle.tar.gz",
-          "sha256": "58ce00547bc4f0210b0236b3e3df344b372e801bc129ba32091a5396334af7f8"
+          "url": "https://linuxbrew.bintray.com/bottles/cairomm-1.16.0.catalina.bottle.tar.gz",
+          "sha256": "cad19588b9a033b690cd2f1b73cb75282e017e1d32dfd39e29f7a35e2e8d3d91"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/cairomm-1.12.2_1.mojave.bottle.tar.gz",
-          "sha256": "2a77a830256c2da441f636fddbdc2bd4ad390e920fc223b4ea33821ec1265195"
-        },
-        "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/cairomm-1.12.2_1.high_sierra.bottle.tar.gz",
-          "sha256": "08a29b621ee8173cb17452f2e7a62adb83a60a65f0758cab545ddc0c53ecf681"
-        },
-        "sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/cairomm-1.12.2_1.sierra.bottle.tar.gz",
-          "sha256": "1845ba3e5dd9364551980e16b446620e4088f1fe90517b5af7cd81435b60cc08"
-        },
-        "x86_64_linux": {
-          "url": "https://linuxbrew.bintray.com/bottles/cairomm-1.12.2_1.x86_64_linux.bottle.tar.gz",
-          "sha256": "008e269d93b7195ae23ad74ba46c4ade2370e758c2adf06b01ae1bcc6ef5c8b3"
+          "url": "https://linuxbrew.bintray.com/bottles/cairomm-1.16.0.mojave.bottle.tar.gz",
+          "sha256": "b90f4177caced79c28888be8b38150c22d9a147eaa96493810ddbdf3fee87bf4"
         }
       }
     }
@@ -65,12 +53,14 @@
 
   ],
   "build_dependencies": [
+    "meson",
+    "ninja",
     "pkg-config"
   ],
   "dependencies": [
     "cairo",
     "libpng",
-    "libsigc++@2"
+    "libsigc++"
   ],
   "recommended_dependencies": [
 

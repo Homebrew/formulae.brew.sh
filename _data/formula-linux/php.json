@@ -3,7 +3,7 @@
   "full_name": "php",
   "oldname": null,
   "aliases": [
-    "php@7.4"
+    "php@8.0"
   ],
   "versioned_formulae": [
     "php@7.3",
@@ -13,13 +13,13 @@
   "license": "PHP-3.01",
   "homepage": "https://www.php.net/",
   "versions": {
-    "stable": "7.4.13",
+    "stable": "8.0.0",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://www.php.net/distributions/php-7.4.13.tar.xz",
+      "url": "https://www.php.net/distributions/php-8.0.0.tar.xz",
       "tag": null,
       "revision": null
     }
@@ -34,20 +34,20 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/php-7.4.13.big_sur.bottle.tar.gz",
-          "sha256": "38d2273cc27903564dc848ebc44a97c1d896f3a14d2cdaf4af207a0972f12206"
+          "url": "https://linuxbrew.bintray.com/bottles/php-8.0.0.big_sur.bottle.tar.gz",
+          "sha256": "8e57a207d9919851d606ea18e9362d8cfd983666e52bd76ef4f8d663ea68e7f9"
         },
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/php-7.4.13.catalina.bottle.tar.gz",
-          "sha256": "0a0dfe81f00955ecbaf00db3207182bbdb6e6718fca4049f8cfd780a86013494"
+          "url": "https://linuxbrew.bintray.com/bottles/php-8.0.0.catalina.bottle.tar.gz",
+          "sha256": "87985a4db279167a37f418a5cf8da255a33be910a4e7f181ad4ed7acdb8b3acb"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/php-7.4.13.mojave.bottle.tar.gz",
-          "sha256": "3a255c83522169aa287769d59e156abd585f3033cf6641cd6486863fe8c19dc3"
+          "url": "https://linuxbrew.bintray.com/bottles/php-8.0.0.mojave.bottle.tar.gz",
+          "sha256": "5660a4dbac0a2b258ff2283614fb14e4edd66a9c4253fd240db35781e1642c0f"
         },
         "x86_64_linux": {
-          "url": "https://linuxbrew.bintray.com/bottles/php-7.4.13.x86_64_linux.bottle.tar.gz",
-          "sha256": "abce786fb475e83d4717509190af27b31277ebe9ada44e6255cc54459f8048c4"
+          "url": "https://linuxbrew.bintray.com/bottles/php-8.0.0.x86_64_linux.bottle.tar.gz",
+          "sha256": "1f7be2ad66ddddb61fce755a136d3cad6ecd399ac6b8ef88cc2b995bc07316f4"
         }
       }
     }
@@ -108,7 +108,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "To enable PHP in Apache add the following to httpd.conf and restart Apache:\n    LoadModule php7_module $(brew --prefix)/opt/php/lib/httpd/modules/libphp7.so\n\n    <FilesMatch \\.php$>\n        SetHandler application/x-httpd-php\n    </FilesMatch>\n\nFinally, check DirectoryIndex includes index.php\n    DirectoryIndex index.php index.html\n\nThe php.ini and php-fpm.ini file can be found in:\n    $(brew --prefix)/etc/php/7.4/\n",
+  "caveats": "To enable PHP in Apache add the following to httpd.conf and restart Apache:\n    LoadModule php_module $(brew --prefix)/opt/php/lib/httpd/modules/libphp.so\n\n    <FilesMatch \\.php$>\n        SetHandler application/x-httpd-php\n    </FilesMatch>\n\nFinally, check DirectoryIndex includes index.php\n    DirectoryIndex index.php index.html\n\nThe php.ini and php-fpm.ini file can be found in:\n    $(brew --prefix)/etc/php/8.0/\n",
   "installed": [
 
   ],
