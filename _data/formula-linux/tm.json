@@ -1,24 +1,24 @@
 {
-  "name": "rustup-init",
-  "full_name": "rustup-init",
+  "name": "tm",
+  "full_name": "tm",
   "oldname": null,
   "aliases": [
-    "rustup"
+
   ],
   "versioned_formulae": [
 
   ],
-  "desc": "Rust toolchain installer",
+  "desc": "TriggerMesh CLI to work with knative objects",
   "license": "Apache-2.0",
-  "homepage": "https://github.com/rust-lang/rustup.rs",
+  "homepage": "https://triggermesh.com",
   "versions": {
-    "stable": "1.23.0",
-    "head": null,
+    "stable": "1.0.0",
+    "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/rust-lang/rustup.rs/archive/1.23.0.tar.gz",
+      "url": "https://github.com/triggermesh/tm/archive/v1.0.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,16 +33,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/rustup-init-1.23.0.big_sur.bottle.tar.gz",
-          "sha256": "aa448a74f8b43d8ae9c5efaca38dcdc2a52424d08997efc84b2687578edb94f8"
+          "url": "https://linuxbrew.bintray.com/bottles/tm-1.0.0.big_sur.bottle.tar.gz",
+          "sha256": "5f37b9116247e25c34b6888bbecb20f3e3998f293a16ac69502579cf44d33954"
         },
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/rustup-init-1.23.0.catalina.bottle.tar.gz",
-          "sha256": "38058277d2a6f4c96b6162a17423cb24efcffe60ca8f6a7eb714d0063526e9e7"
+          "url": "https://linuxbrew.bintray.com/bottles/tm-1.0.0.catalina.bottle.tar.gz",
+          "sha256": "557c1d43923c836f9428f43a48fd385856524a72e30e7bd8e66cdf2dcc3e5e67"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/rustup-init-1.23.0.mojave.bottle.tar.gz",
-          "sha256": "7f5ce27fbe561ab4536dd0414918ae66c8adf67fbf49f8d36ce757ea296ff3a5"
+          "url": "https://linuxbrew.bintray.com/bottles/tm-1.0.0.mojave.bottle.tar.gz",
+          "sha256": "e2345f38c556f7dd62a3a19cef806ea1a7c24266cc200964e22c8341425ecf0e"
         }
       }
     }
@@ -53,12 +53,10 @@
 
   ],
   "build_dependencies": [
-    "rust",
-    "pkg-config"
+    "go"
   ],
   "dependencies": [
-    "curl",
-    "openssl@1.1"
+
   ],
   "recommended_dependencies": [
 
