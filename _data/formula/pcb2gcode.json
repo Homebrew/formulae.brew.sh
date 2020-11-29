@@ -9,7 +9,7 @@
 
   ],
   "desc": "Command-line tool for isolation, routing and drilling of PCBs",
-  "license": "GPL-3.0",
+  "license": "GPL-3.0-or-later",
   "homepage": "https://github.com/pcb2gcode/pcb2gcode",
   "versions": {
     "stable": "2.1.0",
@@ -23,7 +23,7 @@
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,20 +33,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://homebrew.bintray.com/bottles/pcb2gcode-2.1.0.big_sur.bottle.tar.gz",
-          "sha256": "1a34f6b2445d00940199c779d02978c1524758205b5430135f9ab57693933b9f"
+          "url": "https://homebrew.bintray.com/bottles/pcb2gcode-2.1.0_1.big_sur.bottle.tar.gz",
+          "sha256": "ebeae69a3b6c8ce423c361efbf21914582de1953dd1435829249d1179dc8d59c"
         },
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/pcb2gcode-2.1.0.catalina.bottle.tar.gz",
-          "sha256": "f061b44896db47c40e3ff5d58434aa701c7ba974b22a82f82b0206338181a200"
+          "url": "https://homebrew.bintray.com/bottles/pcb2gcode-2.1.0_1.catalina.bottle.tar.gz",
+          "sha256": "25c1b52ff023dd2137810355ba205d3be3e065ccf90851b2f49329f665ff54a5"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/pcb2gcode-2.1.0.mojave.bottle.tar.gz",
-          "sha256": "dae5016ae6634dda64d1ddc9ead1cd1dba55d8ef23f74dd2b9e848248bfdfee6"
-        },
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/pcb2gcode-2.1.0.high_sierra.bottle.tar.gz",
-          "sha256": "bc556eccf6a7eb74ffaf14ce4396c5d311f8961cc035638692193009dda195f5"
+          "url": "https://homebrew.bintray.com/bottles/pcb2gcode-2.1.0_1.mojave.bottle.tar.gz",
+          "sha256": "cc6d2180685fa076d25a24db6ccd39b7346f28ad52f90a1d72cc3d22bfe840df"
         }
       }
     }
@@ -57,15 +53,20 @@
 
   ],
   "build_dependencies": [
+    "atkmm",
     "autoconf",
     "automake",
+    "cairomm@1.14",
+    "glibmm",
+    "gtkmm",
+    "librsvg",
+    "libsigc++@2",
     "libtool",
+    "pangomm",
     "pkg-config"
   ],
   "dependencies": [
-    "gerbv",
-    "gtkmm",
-    "librsvg"
+    "gerbv"
   ],
   "recommended_dependencies": [
 
