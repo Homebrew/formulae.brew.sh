@@ -12,13 +12,13 @@
   "license": "GPL-3.0-or-later",
   "homepage": "https://launchpad.net/safe-rm",
   "versions": {
-    "stable": "0.13",
+    "stable": "1.0.0",
     "head": "HEAD",
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://launchpad.net/safe-rm/trunk/0.13/+download/safe-rm-0.13.tar.gz",
+      "url": "https://launchpad.net/safe-rm/trunk/1.0.0/+download/safe-rm-1.0.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -26,14 +26,34 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any_skip_relocation",
+      "prefix": "/home/linuxbrew/.linuxbrew",
+      "root_url": "https://linuxbrew.bintray.com/bottles",
+      "files": {
+        "big_sur": {
+          "url": "https://linuxbrew.bintray.com/bottles/safe-rm-1.0.0.big_sur.bottle.tar.gz",
+          "sha256": "2196591237f36b84a8f715907743e5da00bf8f47f8867734e9a2c048361717cf"
+        },
+        "catalina": {
+          "url": "https://linuxbrew.bintray.com/bottles/safe-rm-1.0.0.catalina.bottle.tar.gz",
+          "sha256": "deccc20055e675864f7e13194eb720928b94f6e9799f1a83030db87f65dc645e"
+        },
+        "mojave": {
+          "url": "https://linuxbrew.bintray.com/bottles/safe-rm-1.0.0.mojave.bottle.tar.gz",
+          "sha256": "0c2d57ca73b19cf2fc2d29b38863ab570ac75db5678842099c032f383fad2be9"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
   "build_dependencies": [
-
+    "rust"
   ],
   "dependencies": [
 
