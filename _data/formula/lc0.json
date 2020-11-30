@@ -27,22 +27,22 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 0,
+      "rebuild": 1,
       "cellar": ":any_skip_relocation",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
+        "big_sur": {
+          "url": "https://homebrew.bintray.com/bottles/lc0-0.26.2.big_sur.bottle.1.tar.gz",
+          "sha256": "6b90a04c475d27106b6374fbf38f364f2c3f572ed5b436e5b85d20ff6e2e682d"
+        },
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/lc0-0.26.2.catalina.bottle.tar.gz",
-          "sha256": "b1cba1d650e0933b19fc8ef6f866af1d988dede7ecbd1c3d2cf97e2bb4b3db41"
+          "url": "https://homebrew.bintray.com/bottles/lc0-0.26.2.catalina.bottle.1.tar.gz",
+          "sha256": "6dc78714dcf633763a821ea0f83576e8d85020f9bad874394288c24cdcef9208"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/lc0-0.26.2.mojave.bottle.tar.gz",
-          "sha256": "bb4ae26a8b02c935e3f3e33e864223ea4d2b907df76ba3fbf07bc1f3b6b60fbd"
-        },
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/lc0-0.26.2.high_sierra.bottle.tar.gz",
-          "sha256": "a3a61d73914a71d5633b08c9a10591d2bf2e4896fcfbd463fe21fa8a97d4f445"
+          "url": "https://homebrew.bintray.com/bottles/lc0-0.26.2.mojave.bottle.1.tar.gz",
+          "sha256": "1aebbe4e8a4e4f447ca6ceddfdb8a92f70afaabb7043f40ee2c887fef1cd79c9"
         }
       }
     }
@@ -53,12 +53,14 @@
 
   ],
   "build_dependencies": [
+    "cmake",
     "meson",
     "ninja",
-    "python@3.8"
+    "pkg-config",
+    "python@3.9"
   ],
   "dependencies": [
-
+    "eigen"
   ],
   "recommended_dependencies": [
 
