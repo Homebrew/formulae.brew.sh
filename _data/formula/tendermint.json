@@ -1,6 +1,6 @@
 {
-  "name": "hatari",
-  "full_name": "hatari",
+  "name": "tendermint",
+  "full_name": "tendermint",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Atari ST/STE/TT/Falcon emulator",
-  "license": null,
-  "homepage": "https://hatari.tuxfamily.org",
+  "desc": "BFT state machine replication for applications in any programming languages",
+  "license": "Apache-2.0",
+  "homepage": "https://tendermint.com/",
   "versions": {
-    "stable": "2.3.0",
+    "stable": "0.34.0",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://download.tuxfamily.org/hatari/2.3.0/hatari-2.3.0.tar.bz2",
+      "url": "https://github.com/tendermint/tendermint/archive/v0.34.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,21 +28,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": ":any_skip_relocation",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://homebrew.bintray.com/bottles/hatari-2.3.0.big_sur.bottle.tar.gz",
-          "sha256": "0baa34a4ce8960b24721e9423b9b3cf37c221a7ccba2aee3f948ecbf453daeea"
+          "url": "https://homebrew.bintray.com/bottles/tendermint-0.34.0.big_sur.bottle.tar.gz",
+          "sha256": "ad7854f901ae4ac1ab4f7af7f02d4ee00d807789914515fd25b1c5b2c8c2ca04"
         },
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/hatari-2.3.0.catalina.bottle.tar.gz",
-          "sha256": "e6bfde29e08aa400d154cdab01046f54d585c74355dc1c81d3c42d4699df9c63"
+          "url": "https://homebrew.bintray.com/bottles/tendermint-0.34.0.catalina.bottle.tar.gz",
+          "sha256": "3901a4b32d2fd8c576929b52603c2166f08978a228f8c18491b258c72f0777e9"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/hatari-2.3.0.mojave.bottle.tar.gz",
-          "sha256": "b645bf65c98e346c1ba31d8d4b2d04ea3e51ca0f602d57382746fe820f8b860e"
+          "url": "https://homebrew.bintray.com/bottles/tendermint-0.34.0.mojave.bottle.tar.gz",
+          "sha256": "65a04941f0c97cdb98ffdf3b4e16fe4640566d35b107b634bcd789779fa58deb"
         }
       }
     }
@@ -53,13 +53,10 @@
 
   ],
   "build_dependencies": [
-    "cmake"
+    "go"
   ],
   "dependencies": [
-    "libpng",
-    "portaudio",
-    "python@3.9",
-    "sdl2"
+
   ],
   "recommended_dependencies": [
 
