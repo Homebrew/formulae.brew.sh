@@ -1,6 +1,6 @@
 {
-  "name": "silicon",
-  "full_name": "silicon",
+  "name": "youtube-dlc",
+  "full_name": "youtube-dlc",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Create beautiful image of your source code",
-  "license": "MIT",
-  "homepage": "https://github.com/Aloxaf/silicon/",
+  "desc": "Media downloader supporting various sites such as youtube",
+  "license": "Unlicense",
+  "homepage": "https://github.com/blackjack4494/yt-dlc",
   "versions": {
-    "stable": "0.4.0",
-    "head": null,
+    "stable": "3",
+    "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/Aloxaf/silicon/archive/v0.4.0.tar.gz",
+      "url": "https://github.com/blackjack4494/yt-dlc/archive/2020.11.11-3.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,16 +33,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://homebrew.bintray.com/bottles/silicon-0.4.0.big_sur.bottle.tar.gz",
-          "sha256": "3866cffa8bb1ccd6e9ce3f63fb559a2efc3a7cdb4b3dbec990cd31437dc9cd22"
+          "url": "https://homebrew.bintray.com/bottles/youtube-dlc-3.big_sur.bottle.tar.gz",
+          "sha256": "cda21c7d407f10c01c189b5dd71c14dccd2b53d60717726cb013dd9f8551c47a"
         },
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/silicon-0.4.0.catalina.bottle.tar.gz",
-          "sha256": "b133bef816d016a66e23685681d60160216731aaeed31e283c8c503995864d41"
+          "url": "https://homebrew.bintray.com/bottles/youtube-dlc-3.catalina.bottle.tar.gz",
+          "sha256": "0b7b4d68b5cbbd018a7baaca6a1cc31f123986881c926b79299e0a25bde7178f"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/silicon-0.4.0.mojave.bottle.tar.gz",
-          "sha256": "a868d65423afc011ea9504db035c169300e63bb0cd4a7271314401c8425e4071"
+          "url": "https://homebrew.bintray.com/bottles/youtube-dlc-3.mojave.bottle.tar.gz",
+          "sha256": "cd3a872ac084b1063848a0fe327b92b4000dc72fc268a1e03ca029c783caa586"
         }
       }
     }
@@ -53,10 +53,11 @@
 
   ],
   "build_dependencies": [
-    "rust"
+    "make",
+    "pandoc"
   ],
   "dependencies": [
-
+    "python@3.9"
   ],
   "recommended_dependencies": [
 
@@ -65,7 +66,9 @@
 
   ],
   "uses_from_macos": [
-
+    {
+      "zip": "build"
+    }
   ],
   "requirements": [
 

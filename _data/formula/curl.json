@@ -1,7 +1,7 @@
 {
   "name": "curl",
   "full_name": "curl",
-  "oldname": null,
+  "oldname": "curl-openssl",
   "aliases": [
 
   ],
@@ -23,30 +23,26 @@
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": "/usr/local/Cellar",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://homebrew.bintray.com/bottles/curl-7.73.0.big_sur.bottle.tar.gz",
-          "sha256": "fd9b2ae4a0d112bcef3e8e51cfce9b77fab587c50655d727b09b0f48daccb071"
+          "url": "https://homebrew.bintray.com/bottles/curl-7.73.0_1.big_sur.bottle.tar.gz",
+          "sha256": "c0b3cffe72118976aae9ab1651e1372ee6714d7e06ff5fdefc06536a2407c5ce"
         },
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/curl-7.73.0.catalina.bottle.tar.gz",
-          "sha256": "98f3bd49f4eae8638edc391afdbc57433d81e749e310a069d670e12f5941a4ce"
+          "url": "https://homebrew.bintray.com/bottles/curl-7.73.0_1.catalina.bottle.tar.gz",
+          "sha256": "b4cacbe3fc84a0cd0ce1f1d58ab10e8eee299a69f940c95e92338af0cd379e22"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/curl-7.73.0.mojave.bottle.tar.gz",
-          "sha256": "dc41d1f29bc7d8b7c89b3526a426cdab854e8d56b4c686d187e4995adbd092e3"
-        },
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/curl-7.73.0.high_sierra.bottle.tar.gz",
-          "sha256": "ec6ba585b8bbcb5c17feb51efcf8df1048318368376bd7142b6a047374c010e5"
+          "url": "https://homebrew.bintray.com/bottles/curl-7.73.0_1.mojave.bottle.tar.gz",
+          "sha256": "2e9afad916d3e93d7ca3126caf99ae84498034f92e2b9430fe84c57111ac0c18"
         }
       }
     }
@@ -60,7 +56,15 @@
     "pkg-config"
   ],
   "dependencies": [
-
+    "brotli",
+    "libidn2",
+    "libmetalink",
+    "libssh2",
+    "nghttp2",
+    "openldap",
+    "openssl@1.1",
+    "rtmpdump",
+    "zstd"
   ],
   "recommended_dependencies": [
 
@@ -91,11 +95,79 @@
       ],
       "installed_as_dependency": false,
       "installed_on_request": true
+    },
+    {
+      "version": "7.73.0",
+      "used_options": [
+
+      ],
+      "built_as_bottle": true,
+      "poured_from_bottle": true,
+      "runtime_dependencies": [
+        {
+          "full_name": "brotli",
+          "version": "1.0.9"
+        },
+        {
+          "full_name": "c-ares",
+          "version": "1.16.1"
+        },
+        {
+          "full_name": "libidn",
+          "version": "1.36"
+        },
+        {
+          "full_name": "libmetalink",
+          "version": "0.1.3"
+        },
+        {
+          "full_name": "openssl@1.1",
+          "version": "1.1.1h"
+        },
+        {
+          "full_name": "libssh2",
+          "version": "1.9.0"
+        },
+        {
+          "full_name": "jansson",
+          "version": "2.13.1"
+        },
+        {
+          "full_name": "jemalloc",
+          "version": "5.2.1"
+        },
+        {
+          "full_name": "libev",
+          "version": "4.33"
+        },
+        {
+          "full_name": "libevent",
+          "version": "2.1.12"
+        },
+        {
+          "full_name": "nghttp2",
+          "version": "1.41.0"
+        },
+        {
+          "full_name": "openldap",
+          "version": "2.4.56"
+        },
+        {
+          "full_name": "rtmpdump",
+          "version": "2.4+20151223"
+        },
+        {
+          "full_name": "zstd",
+          "version": "1.4.5"
+        }
+      ],
+      "installed_as_dependency": true,
+      "installed_on_request": false
     }
   ],
   "linked_keg": null,
   "pinned": false,
-  "outdated": false,
+  "outdated": true,
   "deprecated": false,
   "disabled": false
 }
