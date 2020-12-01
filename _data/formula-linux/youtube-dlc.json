@@ -1,6 +1,6 @@
 {
-  "name": "kubie",
-  "full_name": "kubie",
+  "name": "youtube-dlc",
+  "full_name": "youtube-dlc",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Much more powerful alternative to kubectx and kubens",
-  "license": "Zlib",
-  "homepage": "https://blog.sbstp.ca/introducing-kubie/",
+  "desc": "Media downloader supporting various sites such as youtube",
+  "license": "Unlicense",
+  "homepage": "https://github.com/blackjack4494/yt-dlc",
   "versions": {
-    "stable": "0.11.1",
-    "head": null,
+    "stable": "3",
+    "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/sbstp/kubie/archive/v0.11.1.tar.gz",
+      "url": "https://github.com/blackjack4494/yt-dlc/archive/2020.11.11-3.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,16 +33,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/kubie-0.11.1.big_sur.bottle.tar.gz",
-          "sha256": "354930a57e38874a9642179711b2adb3579d5efb0abddf9703ee00ef6dc8980b"
+          "url": "https://linuxbrew.bintray.com/bottles/youtube-dlc-3.big_sur.bottle.tar.gz",
+          "sha256": "cda21c7d407f10c01c189b5dd71c14dccd2b53d60717726cb013dd9f8551c47a"
         },
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/kubie-0.11.1.catalina.bottle.tar.gz",
-          "sha256": "d405cf8c7345fdfdac5fe31773a66c0102adac7b9e86d9f0011cbae48e8b0f9f"
+          "url": "https://linuxbrew.bintray.com/bottles/youtube-dlc-3.catalina.bottle.tar.gz",
+          "sha256": "0b7b4d68b5cbbd018a7baaca6a1cc31f123986881c926b79299e0a25bde7178f"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/kubie-0.11.1.mojave.bottle.tar.gz",
-          "sha256": "f32943f40d0473be59df67805040039368942f56525a0f6071b4a8ce818b2f4a"
+          "url": "https://linuxbrew.bintray.com/bottles/youtube-dlc-3.mojave.bottle.tar.gz",
+          "sha256": "cd3a872ac084b1063848a0fe327b92b4000dc72fc268a1e03ca029c783caa586"
         }
       }
     }
@@ -53,10 +53,12 @@
 
   ],
   "build_dependencies": [
-    "rust"
+    "make",
+    "pandoc",
+    "zip"
   ],
   "dependencies": [
-    "kubernetes-cli"
+    "python@3.9"
   ],
   "recommended_dependencies": [
 

@@ -1,7 +1,7 @@
 {
   "name": "curl",
   "full_name": "curl",
-  "oldname": null,
+  "oldname": "curl-openssl",
   "aliases": [
 
   ],
@@ -23,7 +23,7 @@
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,24 +33,20 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/curl-7.73.0.big_sur.bottle.tar.gz",
-          "sha256": "fd9b2ae4a0d112bcef3e8e51cfce9b77fab587c50655d727b09b0f48daccb071"
+          "url": "https://linuxbrew.bintray.com/bottles/curl-7.73.0_1.big_sur.bottle.tar.gz",
+          "sha256": "c0b3cffe72118976aae9ab1651e1372ee6714d7e06ff5fdefc06536a2407c5ce"
         },
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/curl-7.73.0.catalina.bottle.tar.gz",
-          "sha256": "98f3bd49f4eae8638edc391afdbc57433d81e749e310a069d670e12f5941a4ce"
+          "url": "https://linuxbrew.bintray.com/bottles/curl-7.73.0_1.catalina.bottle.tar.gz",
+          "sha256": "b4cacbe3fc84a0cd0ce1f1d58ab10e8eee299a69f940c95e92338af0cd379e22"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/curl-7.73.0.mojave.bottle.tar.gz",
-          "sha256": "dc41d1f29bc7d8b7c89b3526a426cdab854e8d56b4c686d187e4995adbd092e3"
-        },
-        "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/curl-7.73.0.high_sierra.bottle.tar.gz",
-          "sha256": "ec6ba585b8bbcb5c17feb51efcf8df1048318368376bd7142b6a047374c010e5"
+          "url": "https://linuxbrew.bintray.com/bottles/curl-7.73.0_1.mojave.bottle.tar.gz",
+          "sha256": "2e9afad916d3e93d7ca3126caf99ae84498034f92e2b9430fe84c57111ac0c18"
         },
         "x86_64_linux": {
-          "url": "https://linuxbrew.bintray.com/bottles/curl-7.73.0.x86_64_linux.bottle.tar.gz",
-          "sha256": "ba1042f6ee12e284d40edacb19187dea5a8b0397ec903f0597729ca4207827f4"
+          "url": "https://linuxbrew.bintray.com/bottles/curl-7.73.0_1.x86_64_linux.bottle.tar.gz",
+          "sha256": "126e292f628b6c71e0d225a90d9a43c77608970ce2b2fe89d5663fbb3b33ce3f"
         }
       }
     }
@@ -64,8 +60,16 @@
     "pkg-config"
   ],
   "dependencies": [
-    "zlib",
-    "openssl@1.1"
+    "brotli",
+    "libidn2",
+    "libmetalink",
+    "libssh2",
+    "nghttp2",
+    "openldap",
+    "openssl@1.1",
+    "rtmpdump",
+    "zstd",
+    "zlib"
   ],
   "recommended_dependencies": [
 
