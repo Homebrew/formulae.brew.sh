@@ -9,7 +9,7 @@
 
   ],
   "desc": "Database server with interface to Kyoto Cabinet",
-  "license": null,
+  "license": "GPL-3.0-or-later",
   "homepage": "https://fallabs.com/kyototycoon/",
   "versions": {
     "stable": "0.9.56",
@@ -23,7 +23,7 @@
       "revision": null
     }
   },
-  "revision": 3,
+  "revision": 4,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -32,21 +32,17 @@
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
+        "big_sur": {
+          "url": "https://homebrew.bintray.com/bottles/kyoto-tycoon-0.9.56_4.big_sur.bottle.tar.gz",
+          "sha256": "6718c70e1a6f9095077180661a2fb9649e3c7f36847738ef900bd5565cefb4af"
+        },
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/kyoto-tycoon-0.9.56_3.catalina.bottle.tar.gz",
-          "sha256": "2f430dc00ac505a7098596c769cc1c03d6d7a3fdc35ba7bc55fcd707576ac9a2"
+          "url": "https://homebrew.bintray.com/bottles/kyoto-tycoon-0.9.56_4.catalina.bottle.tar.gz",
+          "sha256": "fb28428ef7f62c2ac86f78e00101ca58940fe875d4c4a0df5cada4cca8dce7a6"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/kyoto-tycoon-0.9.56_3.mojave.bottle.tar.gz",
-          "sha256": "04d72b5c55be3c26c688eda6c0cc9f88c85855ba6fe81aa36e210fc29afe7572"
-        },
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/kyoto-tycoon-0.9.56_3.high_sierra.bottle.tar.gz",
-          "sha256": "ce7db5082c632bef982d5463f3a8507d786fd3bcae7f7cccf8663ab36c3571bd"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/kyoto-tycoon-0.9.56_3.sierra.bottle.tar.gz",
-          "sha256": "e75c60a4417bc00d04e1f24241320329f01b0d3076de2585e92375b12c4ef31d"
+          "url": "https://homebrew.bintray.com/bottles/kyoto-tycoon-0.9.56_4.mojave.bottle.tar.gz",
+          "sha256": "2272eabbc069a844c838aaa501285b475037ebe8a76e1bf1f41ab36974bc035d"
         }
       }
     }
@@ -57,11 +53,12 @@
 
   ],
   "build_dependencies": [
-
+    "lua",
+    "pkg-config"
   ],
   "dependencies": [
     "kyoto-cabinet",
-    "lua"
+    "zlib"
   ],
   "recommended_dependencies": [
 
