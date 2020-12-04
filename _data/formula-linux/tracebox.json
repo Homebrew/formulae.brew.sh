@@ -9,8 +9,8 @@
 
   ],
   "desc": "Middlebox detection tool",
-  "license": "GPL-2.0",
-  "homepage": "https://www.tracebox.org/",
+  "license": "GPL-2.0-only",
+  "homepage": "https://www.github.com/tracebox/tracebox",
   "versions": {
     "stable": "0.4.4",
     "head": "HEAD",
@@ -23,18 +23,26 @@
       "revision": "4fc12b2e330e52d340ecd64b3a33dbc34c160390"
     }
   },
-  "revision": 2,
+  "revision": 3,
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 0,
+      "rebuild": 1,
       "cellar": ":any",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
-        "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/tracebox-0.4.4_2.high_sierra.bottle.tar.gz",
-          "sha256": "427833bcd91fe0ab0b0e05b68bd2a34043020687a57509fc034dc29088942faf"
+        "big_sur": {
+          "url": "https://linuxbrew.bintray.com/bottles/tracebox-0.4.4_3.big_sur.bottle.1.tar.gz",
+          "sha256": "b972c4ea4a3c130bb45f8b9a97441ea3e9b7aae20de0c1c33d5e1a19596825c1"
+        },
+        "catalina": {
+          "url": "https://linuxbrew.bintray.com/bottles/tracebox-0.4.4_3.catalina.bottle.1.tar.gz",
+          "sha256": "cf183ba6385036080157a7dc032453e4c28bde55a2ebf4830e8b990b3c83e1c8"
+        },
+        "mojave": {
+          "url": "https://linuxbrew.bintray.com/bottles/tracebox-0.4.4_3.mojave.bottle.1.tar.gz",
+          "sha256": "ba193e6a2a415a8fefd90890daaa21a19c3bdabeb14504699a558207affdc216"
         }
       }
     }
@@ -51,6 +59,7 @@
   ],
   "dependencies": [
     "json-c",
+    "libpcap",
     "lua"
   ],
   "recommended_dependencies": [

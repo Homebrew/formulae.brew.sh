@@ -1,24 +1,24 @@
 {
-  "name": "serverless",
-  "full_name": "serverless",
+  "name": "lua@5.3",
+  "full_name": "lua@5.3",
   "oldname": null,
   "aliases": [
 
   ],
   "versioned_formulae": [
-
+    "lua@5.1"
   ],
-  "desc": "Build applications with serverless architectures",
+  "desc": "Powerful, lightweight programming language",
   "license": "MIT",
-  "homepage": "https://www.serverless.com/",
+  "homepage": "https://www.lua.org/",
   "versions": {
-    "stable": "2.14.0",
+    "stable": "5.3.6",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/serverless/serverless/archive/v2.14.0.tar.gz",
+      "url": "https://www.lua.org/ftp/lua-5.3.6.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,36 +28,35 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+      "cellar": ":any",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/serverless-2.14.0.big_sur.bottle.tar.gz",
-          "sha256": "6927209faeda1bb6eb6acbd64a2addbd2413512605be0b57c83dde766f377452"
+          "url": "https://linuxbrew.bintray.com/bottles/lua%405.3-5.3.6.big_sur.bottle.tar.gz",
+          "sha256": "c5b136ccbb51ce4150c5c8b86d8bd93f773cffcffd58afcbc7ee89f03c7e6341"
         },
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/serverless-2.14.0.catalina.bottle.tar.gz",
-          "sha256": "29540876851d057de651054b007669062407665393899ca2aae7780c5f26104d"
+          "url": "https://linuxbrew.bintray.com/bottles/lua%405.3-5.3.6.catalina.bottle.tar.gz",
+          "sha256": "8be5939dba6e18dd559463f60b9fdff5d3c5fcd49f244c5fb2c1c37745149557"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/serverless-2.14.0.mojave.bottle.tar.gz",
-          "sha256": "5ec9a81c989a45a73bb93301953f80bd0ff73a4b778397cd313238f56dc233c8"
+          "url": "https://linuxbrew.bintray.com/bottles/lua%405.3-5.3.6.mojave.bottle.tar.gz",
+          "sha256": "d16178dce1c0afc10bbdf80cb233c4a69f3cebcc6f3eec699381170a65b81bdd"
         }
       }
     }
   },
-  "keg_only": false,
+  "keg_only": true,
   "bottle_disabled": false,
   "options": [
 
   ],
   "build_dependencies": [
-
+    "unzip"
   ],
   "dependencies": [
-    "node",
-    "python"
+    "readline"
   ],
   "recommended_dependencies": [
 
@@ -74,7 +73,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": null,
+  "caveats": "You may also want luarocks:\n  brew install luarocks\n",
   "installed": [
 
   ],
