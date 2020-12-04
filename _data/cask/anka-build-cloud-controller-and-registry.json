@@ -1,0 +1,43 @@
+{
+  "token": "anka-build-cloud-controller-and-registry",
+  "name": [
+    "Anka Build Cloud Controller & Registry"
+  ],
+  "desc": "Virtual machine management GUI/API and registry",
+  "homepage": "https://veertu.com/",
+  "url": "https://d1efqjhnhbvc57.cloudfront.net/AnkaControllerRegistry-1.12.0-65cba643.pkg",
+  "appcast": "https://ankadocs.veertu.com/docs/release-notes/",
+  "version": "1.12.0-65cba643",
+  "sha256": "dbd9cc5ca0559cf151db33a9bcb8963d32e964ecc4295d4abd51bdab76dc4634",
+  "artifacts": [
+    {
+      "script": {
+        "executable": "/Library/Application Support/Veertu/Anka/tools/controller/uninstall.sh",
+        "args": [
+          "-f"
+        ],
+        "sudo": "true"
+      },
+      "signal": {
+      }
+    },
+    "AnkaControllerRegistry-1.12.0-65cba643.pkg (Pkg)",
+    {
+      "trash": "/Library/Logs/Veertu/AnkaController",
+      "rmdir": "/Library/Application Support/Veertu/Anka/registry",
+      "signal": {
+      }
+    }
+  ],
+  "caveats": "Installing anka-build-cloud-controller-and-registry means you have AGREED to the license at:\n  https://veertu.com/terms-and-conditions/\n",
+  "depends_on": {
+    "macos": {
+      ">=": [
+        "10.10"
+      ]
+    }
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": null
+}
