@@ -47,6 +47,10 @@
         "high_sierra": {
           "url": "https://linuxbrew.bintray.com/bottles/dog-0.1.0.high_sierra.bottle.tar.gz",
           "sha256": "fef7ea4d925e230ba9e75cb051a888263c2bc10fcf26a96899cea2cc8891a302"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/dog-0.1.0.x86_64_linux.bottle.tar.gz",
+          "sha256": "be1886badafae20525508c36536fa9926d673506f45e8943469008a2311240a2"
         }
       }
     }
@@ -59,10 +63,11 @@
   "build_dependencies": [
     "just",
     "pandoc",
-    "rust"
+    "rust",
+    "pkg-config"
   ],
   "dependencies": [
-
+    "openssl@1.1"
   ],
   "recommended_dependencies": [
 
