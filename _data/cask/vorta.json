@@ -19,16 +19,13 @@
       }
     }
   ],
-  "caveats": null,
+  "caveats": "vorta requires BorgBackup to run. If you do not need mount support, use the official formula:\n\n  brew install borgbackup\n\nIf you plan on mounting archives using macFUSE, consider using the Tap maintained by the Borg team:\n\n  brew install --cask osxfuse\n  brew install borgbackup/tap/borgbackup-fuse\n",
   "depends_on": {
     "macos": {
       ">=": [
         "10.14"
       ]
-    },
-    "formula": [
-      "borgbackup"
-    ]
+    }
   },
   "conflicts_with": null,
   "container": null,
