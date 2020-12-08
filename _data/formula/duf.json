@@ -1,6 +1,6 @@
 {
-  "name": "termius",
-  "full_name": "termius",
+  "name": "duf",
+  "full_name": "duf",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "CLI tool for termius.com (aka serverauditor.com)",
-  "license": "BSD-3-Clause",
-  "homepage": "https://termius.com",
+  "desc": "Disk Usage/Free Utility - a better 'df' alternative",
+  "license": "MIT",
+  "homepage": "https://github.com/muesli/duf",
   "versions": {
-    "stable": "1.2.15",
+    "stable": "0.5.0",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/termius/termius-cli/archive/v1.2.15.tar.gz",
+      "url": "https://github.com/muesli/duf/archive/v0.5.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,21 +28,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": ":any_skip_relocation",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://homebrew.bintray.com/bottles/termius-1.2.15.big_sur.bottle.tar.gz",
-          "sha256": "cd74bf3ba3fddf669d965fb5e0f8a07a07727792885024b5aa312c6eb83180eb"
+          "url": "https://homebrew.bintray.com/bottles/duf-0.5.0.big_sur.bottle.tar.gz",
+          "sha256": "d6f7af02fd6422feeb24fdd9babb145c3f98323e064c5f46dd494d1edf706e38"
         },
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/termius-1.2.15.catalina.bottle.tar.gz",
-          "sha256": "cb60f507f3051501376244fcc55a3f4f241486c59a0af2000c41e0f48d30224b"
+          "url": "https://homebrew.bintray.com/bottles/duf-0.5.0.catalina.bottle.tar.gz",
+          "sha256": "6b0501d446ed33d86614bf447b4a653aec11bc002dfb1fc5f50e9efb6b83b831"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/termius-1.2.15.mojave.bottle.tar.gz",
-          "sha256": "32e846c6ef58534581fcbc895435ca2fa935e3a9c55a005e9ddbb41c33a4a956"
+          "url": "https://homebrew.bintray.com/bottles/duf-0.5.0.mojave.bottle.tar.gz",
+          "sha256": "3e7b9439d31b8f2486b7812dd741b62c6ff3eed2c691b4c0e87d9a2276fa1b49"
         }
       }
     }
@@ -53,12 +53,10 @@
 
   ],
   "build_dependencies": [
-
+    "go"
   ],
   "dependencies": [
-    "libyaml",
-    "openssl@1.1",
-    "python@3.9"
+
   ],
   "recommended_dependencies": [
 
@@ -67,7 +65,7 @@
 
   ],
   "uses_from_macos": [
-    "libffi"
+
   ],
   "requirements": [
 
