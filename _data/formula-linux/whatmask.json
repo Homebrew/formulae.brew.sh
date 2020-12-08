@@ -9,7 +9,7 @@
 
   ],
   "desc": "Network settings helper",
-  "license": "GPL-2.0",
+  "license": "GPL-2.0-or-later",
   "homepage": "http://www.laffeycomputer.com/whatmask.html",
   "versions": {
     "stable": "1.2",
@@ -27,42 +27,26 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 0,
+      "rebuild": 1,
       "cellar": ":any_skip_relocation",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
+        "big_sur": {
+          "url": "https://linuxbrew.bintray.com/bottles/whatmask-1.2.big_sur.bottle.1.tar.gz",
+          "sha256": "55789adc6a9326b814965c6c0fcf41f912638f2e7d55d4167cbe404ec1a6938d"
+        },
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/whatmask-1.2.catalina.bottle.tar.gz",
-          "sha256": "61c0c22cf55881e970a1e2cd239eb805b0e32733abbcba959f8540fc4fb6c1b5"
+          "url": "https://linuxbrew.bintray.com/bottles/whatmask-1.2.catalina.bottle.1.tar.gz",
+          "sha256": "89a44972f8d27003b4c91f04a294f0be9a0d00628fb8db21faf46a55a0720cb2"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/whatmask-1.2.mojave.bottle.tar.gz",
-          "sha256": "acfac14343f3a746de062b9cbe300bcfb6287df43fd2c4ec5395f7c49e51e7ad"
-        },
-        "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/whatmask-1.2.high_sierra.bottle.tar.gz",
-          "sha256": "a46f984a59776d23efc00fbae9841026547f5c4f3884c31007c06acae51d4881"
-        },
-        "sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/whatmask-1.2.sierra.bottle.tar.gz",
-          "sha256": "7d9c8318c69271c9b7774a4f84cd315f28986bd7dacc1f1c9a5451880a415a8b"
-        },
-        "el_capitan": {
-          "url": "https://linuxbrew.bintray.com/bottles/whatmask-1.2.el_capitan.bottle.tar.gz",
-          "sha256": "acf751e4893268ccbee1e48e9f7a147cc38f64a9d178fc50c810d65c0466a648"
-        },
-        "yosemite": {
-          "url": "https://linuxbrew.bintray.com/bottles/whatmask-1.2.yosemite.bottle.tar.gz",
-          "sha256": "428a92b2ba5a3f6f39009a7d3a7fc503b4308fadaeddc287b39fd6b5bdddef74"
-        },
-        "mavericks": {
-          "url": "https://linuxbrew.bintray.com/bottles/whatmask-1.2.mavericks.bottle.tar.gz",
-          "sha256": "c07eb39e586dbc2b78b4c8cf8173c701ac654e4db0fd5fe12b3c7f80ee3ef577"
+          "url": "https://linuxbrew.bintray.com/bottles/whatmask-1.2.mojave.bottle.1.tar.gz",
+          "sha256": "a3a5a8887d1c7d43f83bf99c2f81f8900af0d83091978f5aac28447d0f093785"
         },
         "x86_64_linux": {
-          "url": "https://linuxbrew.bintray.com/bottles/whatmask-1.2.x86_64_linux.bottle.tar.gz",
-          "sha256": "5e7c57cac58aea707bc90397257724caa74349e0f3eceb6082a90d369cfaae19"
+          "url": "https://linuxbrew.bintray.com/bottles/whatmask-1.2.x86_64_linux.bottle.1.tar.gz",
+          "sha256": "da6511a9314804d3cc1a5cf2ca14efd2bbba85ab9e6d916e4faefd3eb6a6f9bd"
         }
       }
     }
@@ -73,7 +57,8 @@
 
   ],
   "build_dependencies": [
-
+    "autoconf",
+    "automake"
   ],
   "dependencies": [
 
