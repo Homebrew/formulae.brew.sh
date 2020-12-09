@@ -12,15 +12,15 @@
   "license": "Apache-2.0",
   "homepage": "https://xgboost.ai/",
   "versions": {
-    "stable": "1.2.1",
+    "stable": "1.3.0",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
       "url": "https://github.com/dmlc/xgboost.git",
-      "tag": "v1.2.1",
-      "revision": "bcb15a980f611ac0b7540ddcb55091d0ab9655aa"
+      "tag": "v1.3.0",
+      "revision": "1bf389998383f333490155dba4608bff9ca63b42"
     }
   },
   "revision": 0,
@@ -33,20 +33,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://homebrew.bintray.com/bottles/xgboost-1.2.1.big_sur.bottle.tar.gz",
-          "sha256": "51634738fabc05059dadc938b602bbd5c627e135eed4466c543f59b03c69ad86"
+          "url": "https://homebrew.bintray.com/bottles/xgboost-1.3.0.big_sur.bottle.tar.gz",
+          "sha256": "56c88f363161fcf695d5e3fa235256ef22465d405d401aa6d4322c0b79bfb02e"
         },
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/xgboost-1.2.1.catalina.bottle.tar.gz",
-          "sha256": "6458d02e2907e74a9cc7b4d6ae22d132a7dc83f37a13e79a87f409567d46bd68"
+          "url": "https://homebrew.bintray.com/bottles/xgboost-1.3.0.catalina.bottle.tar.gz",
+          "sha256": "5c14b128cbe2c89a944df2cfb50543d9ea6d5890ab4bc3c834d83d42c2485800"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/xgboost-1.2.1.mojave.bottle.tar.gz",
-          "sha256": "bd6bdd967e100e38130b834f93b01a82c3cfa1ea6581533ffa0d897d611656c1"
-        },
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/xgboost-1.2.1.high_sierra.bottle.tar.gz",
-          "sha256": "5ea7f8b48ded860e69166b8f7f5adedc34c7007fab4154f5d802ee126d09bc3f"
+          "url": "https://homebrew.bintray.com/bottles/xgboost-1.3.0.mojave.bottle.tar.gz",
+          "sha256": "6a91a20f6d716f5a85e7ffd1ce5e6d957b43a414dde7a38fc4d735350dd1556b"
         }
       }
     }
@@ -60,7 +56,9 @@
     "cmake"
   ],
   "dependencies": [
-    "libomp"
+    "libomp",
+    "numpy",
+    "scipy"
   ],
   "recommended_dependencies": [
 
