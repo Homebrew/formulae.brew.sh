@@ -9,16 +9,16 @@
 
   ],
   "desc": "UNIX port of the Open Cubic Player",
-  "license": "GPL-2.0",
+  "license": "GPL-2.0-or-later",
   "homepage": "https://stian.cubic.org/project-ocp.php",
   "versions": {
-    "stable": "0.2.1",
-    "head": null,
+    "stable": "0.2.2",
+    "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://stian.cubic.org/ocp/ocp-0.2.1.tar.bz2",
+      "url": "https://stian.cubic.org/ocp/ocp-0.2.2.tar.xz",
       "tag": null,
       "revision": null
     }
@@ -32,17 +32,17 @@
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
+        "big_sur": {
+          "url": "https://linuxbrew.bintray.com/bottles/ocp-0.2.2.big_sur.bottle.tar.gz",
+          "sha256": "3aa881d279e6b72656bd08b9394b3ca5eeddc78b91529735ebbc59a3fad91c33"
+        },
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/ocp-0.2.1.catalina.bottle.tar.gz",
-          "sha256": "d9c557bc2f3161818fcf4701e7cc123bd6d2f85ff9e80df5976392de9102a737"
+          "url": "https://linuxbrew.bintray.com/bottles/ocp-0.2.2.catalina.bottle.tar.gz",
+          "sha256": "ea5ae27e76002683c28eefae03de9d5867d88eb8b6491e4d28b736937fc871a5"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/ocp-0.2.1.mojave.bottle.tar.gz",
-          "sha256": "e23ff51d2b5b9adaa44f5d851da94c836f68886bacc2cd739b30166a2ec04312"
-        },
-        "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/ocp-0.2.1.high_sierra.bottle.tar.gz",
-          "sha256": "6b40bde3ba007a8b18451502bcf49841d8a3f75ec06a7d6a8e748f508e7dc1f9"
+          "url": "https://linuxbrew.bintray.com/bottles/ocp-0.2.2.mojave.bottle.tar.gz",
+          "sha256": "f7ea663318cf0f5a221b53bbc080094fe5931760d3cde229f44dc95f3aa8eba9"
         }
       }
     }
@@ -53,12 +53,17 @@
 
   ],
   "build_dependencies": [
-
+    "pkg-config",
+    "xa"
   ],
   "dependencies": [
     "flac",
+    "jpeg-turbo",
+    "libpng",
     "libvorbis",
-    "mad"
+    "mad",
+    "ncurses",
+    "zlib"
   ],
   "recommended_dependencies": [
 
