@@ -1,6 +1,6 @@
 {
-  "name": "ortp",
-  "full_name": "ortp",
+  "name": "oakc",
+  "full_name": "oakc",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Real-time transport protocol (RTP, RFC3550) library",
-  "license": "GPL-3.0-or-later",
-  "homepage": "https://www.linphone.org/technical-corner/ortp",
+  "desc": "Portable programming language with a compact intermediate representation",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/adam-mcdaniel/oakc",
   "versions": {
-    "stable": "4.4.13",
+    "stable": "0.6.1",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://gitlab.linphone.org/BC/public/ortp/-/archive/4.4.13/ortp-4.4.13.tar.bz2",
+      "url": "https://static.crates.io/crates/oakc/oakc-0.6.1.crate",
       "tag": null,
       "revision": null
     }
@@ -28,21 +28,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": "/usr/local/Cellar",
+      "cellar": ":any_skip_relocation",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://homebrew.bintray.com/bottles/ortp-4.4.13.big_sur.bottle.tar.gz",
-          "sha256": "1012fc0fdf6fe9e8513ce2658c70cc94fef01756e4f69b46a173e0b356bcbf03"
+          "url": "https://homebrew.bintray.com/bottles/oakc-0.6.1.big_sur.bottle.tar.gz",
+          "sha256": "5eb1751a2156b8fce16bbc88f23f36748bc74422276aab43a8272e71d0d92a34"
         },
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/ortp-4.4.13.catalina.bottle.tar.gz",
-          "sha256": "0397140067f87e820f4481949fd47f8b9904b7d55fa099c6ff38a08a8ae3f414"
+          "url": "https://homebrew.bintray.com/bottles/oakc-0.6.1.catalina.bottle.tar.gz",
+          "sha256": "6b79624346a62c0e249e801857fd301f3ce0a72b9557da2dc5e4a56cab12d345"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/ortp-4.4.13.mojave.bottle.tar.gz",
-          "sha256": "58d839f8e2e518226d3cab556fcc8eadc97ba9e6b0a1c165aeb4ae38b103d057"
+          "url": "https://homebrew.bintray.com/bottles/oakc-0.6.1.mojave.bottle.tar.gz",
+          "sha256": "80c5b0d77def05e95b5b786a5dc1a16e757fcf772a32b1ee5976fc09583f3312"
         }
       }
     }
@@ -53,11 +53,10 @@
 
   ],
   "build_dependencies": [
-    "cmake",
-    "pkg-config"
+    "rust"
   ],
   "dependencies": [
-    "mbedtls"
+
   ],
   "recommended_dependencies": [
 
