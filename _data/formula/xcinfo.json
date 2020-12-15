@@ -1,6 +1,6 @@
 {
-  "name": "vale",
-  "full_name": "vale",
+  "name": "xcinfo",
+  "full_name": "xcinfo",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Syntax-aware linter for prose",
+  "desc": "Tool to get information about and install available Xcode versions",
   "license": "MIT",
-  "homepage": "https://errata-ai.github.io/vale/",
+  "homepage": "https://github.com/xcodereleases/xcinfo",
   "versions": {
-    "stable": "2.6.7",
+    "stable": "0.5.0",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/errata-ai/vale/archive/v2.6.7.tar.gz",
+      "url": "https://github.com/xcodereleases/xcinfo/archive/0.5.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,16 +33,12 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://homebrew.bintray.com/bottles/vale-2.6.7.big_sur.bottle.tar.gz",
-          "sha256": "c851336b346759fdd8443e8dfa80cd724fca3158c24b0d887943dc2936f7b54d"
+          "url": "https://homebrew.bintray.com/bottles/xcinfo-0.5.0.big_sur.bottle.tar.gz",
+          "sha256": "2e9234ff445d2673f391f0e58d7858e475d5cfb7a674fa1a2f36830b0f1d5606"
         },
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/vale-2.6.7.catalina.bottle.tar.gz",
-          "sha256": "041626949061c7d96e372f5a31c464b3cf5cfd156923dc1602af55af711b59a6"
-        },
-        "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/vale-2.6.7.mojave.bottle.tar.gz",
-          "sha256": "31d4fa32a4f88160199cf57ac6edfecc2cfb2faf42f32b0c71821693d84b2330"
+          "url": "https://homebrew.bintray.com/bottles/xcinfo-0.5.0.catalina.bottle.tar.gz",
+          "sha256": "ec7dbfffbb4b2358dce4aee2961d083eae644408226bf2391fa8b736db6b0cd6"
         }
       }
     }
@@ -53,7 +49,7 @@
 
   ],
   "build_dependencies": [
-    "go"
+
   ],
   "dependencies": [
 
@@ -68,7 +64,24 @@
 
   ],
   "requirements": [
+    {
+      "name": "xcode",
+      "cask": null,
+      "download": null,
+      "version": "12.0",
+      "contexts": [
+        "build"
+      ]
+    },
+    {
+      "name": "macos",
+      "cask": null,
+      "download": null,
+      "version": "10.15",
+      "contexts": [
 
+      ]
+    }
   ],
   "conflicts_with": [
 
