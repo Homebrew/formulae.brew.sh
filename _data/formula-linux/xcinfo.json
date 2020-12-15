@@ -1,6 +1,6 @@
 {
-  "name": "silicon",
-  "full_name": "silicon",
+  "name": "xcinfo",
+  "full_name": "xcinfo",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Create beautiful image of your source code",
+  "desc": "Tool to get information about and install available Xcode versions",
   "license": "MIT",
-  "homepage": "https://github.com/Aloxaf/silicon/",
+  "homepage": "https://github.com/xcodereleases/xcinfo",
   "versions": {
-    "stable": "0.4.0",
+    "stable": "0.5.0",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/Aloxaf/silicon/archive/v0.4.0.tar.gz",
+      "url": "https://github.com/xcodereleases/xcinfo/archive/0.5.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -27,22 +27,18 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "cellar": ":any_skip_relocation",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/silicon-0.4.0.big_sur.bottle.1.tar.gz",
-          "sha256": "52f4652a0e234859610c0fe2ff510c6360548af5b275182fe42d1db55434d3ee"
+          "url": "https://linuxbrew.bintray.com/bottles/xcinfo-0.5.0.big_sur.bottle.tar.gz",
+          "sha256": "2e9234ff445d2673f391f0e58d7858e475d5cfb7a674fa1a2f36830b0f1d5606"
         },
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/silicon-0.4.0.catalina.bottle.1.tar.gz",
-          "sha256": "3ed95061624448f3cdb724c2ba8e195fabfcbee846fd66dfab08167bc748b562"
-        },
-        "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/silicon-0.4.0.mojave.bottle.1.tar.gz",
-          "sha256": "05a64aecf5f99a0e195aee75422356f0246381df8c11c31b891b223dab487ab7"
+          "url": "https://linuxbrew.bintray.com/bottles/xcinfo-0.5.0.catalina.bottle.tar.gz",
+          "sha256": "ec7dbfffbb4b2358dce4aee2961d083eae644408226bf2391fa8b736db6b0cd6"
         }
       }
     }
@@ -53,7 +49,7 @@
 
   ],
   "build_dependencies": [
-    "rust"
+
   ],
   "dependencies": [
 
@@ -68,7 +64,24 @@
 
   ],
   "requirements": [
+    {
+      "name": "xcode",
+      "cask": null,
+      "download": null,
+      "version": "12.0",
+      "contexts": [
+        "build"
+      ]
+    },
+    {
+      "name": "macos",
+      "cask": null,
+      "download": null,
+      "version": "10.15",
+      "contexts": [
 
+      ]
+    }
   ],
   "conflicts_with": [
 
