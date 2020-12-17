@@ -12,23 +12,43 @@
   "license": "Apache-2.0",
   "homepage": "https://www.elastic.co/products/logstash",
   "versions": {
-    "stable": "86.64",
+    "stable": "7.10.1",
     "head": "HEAD",
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://artifacts.elastic.co/downloads/logstash/logstash-oss-7.10.1-darwin-x86_64.tar.gz",
+      "url": "https://github.com/elastic/logstash/archive/v7.10.1.tar.gz",
       "tag": null,
       "revision": null
     }
   },
   "revision": 0,
-  "version_scheme": 0,
+  "version_scheme": 1,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any",
+      "prefix": "/usr/local",
+      "root_url": "https://homebrew.bintray.com/bottles",
+      "files": {
+        "big_sur": {
+          "url": "https://homebrew.bintray.com/bottles/logstash-7.10.1.big_sur.bottle.tar.gz",
+          "sha256": "d6fbe6e8a77fa79920b2de60bc5b4c3da86180f92fbbf24ccd3c0d77ba01a434"
+        },
+        "catalina": {
+          "url": "https://homebrew.bintray.com/bottles/logstash-7.10.1.catalina.bottle.tar.gz",
+          "sha256": "0593e2f125b9861cfc8fb0cdf44d374f99c7dbca2b28cee3fda8cc46c0728b52"
+        },
+        "mojave": {
+          "url": "https://homebrew.bintray.com/bottles/logstash-7.10.1.mojave.bottle.tar.gz",
+          "sha256": "4df0a2a9ab93fe344cfd42f5765ea4abf850aa50a57489f15864a93afecd4de0"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
@@ -36,7 +56,7 @@
 
   ],
   "dependencies": [
-    "openjdk@11"
+    "openjdk@8"
   ],
   "recommended_dependencies": [
 
