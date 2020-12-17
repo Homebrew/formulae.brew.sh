@@ -1,6 +1,6 @@
 {
-  "name": "ompl",
-  "full_name": "ompl",
+  "name": "libvnc",
+  "full_name": "libvnc",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Open Motion Planning Library consists of many motion planning algorithms",
-  "license": "BSD-3-Clause",
-  "homepage": "https://ompl.kavrakilab.org/",
+  "desc": "Cross-platform C libraries for easy implementation of VNC server or client",
+  "license": "GPL-2.0-only",
+  "homepage": "https://libvnc.github.io/",
   "versions": {
-    "stable": "1.5.1",
+    "stable": "0.9.13",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/ompl/ompl/archive/1.5.1.tar.gz",
+      "url": "https://github.com/LibVNC/libvncserver/archive/LibVNCServer-0.9.13.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,21 +28,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+      "cellar": ":any",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/ompl-1.5.1.big_sur.bottle.tar.gz",
-          "sha256": "add9016ffe798af205fe201607e84dac67a9c8ae01fcaad5efefb1a75344eae7"
+          "url": "https://linuxbrew.bintray.com/bottles/libvnc-0.9.13.big_sur.bottle.tar.gz",
+          "sha256": "ea5e78dfaf457a33519debdc579dfd868f6503ef93b526d0f57fcab73997f298"
         },
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/ompl-1.5.1.catalina.bottle.tar.gz",
-          "sha256": "54e88cc082f922ad904f81021a53c455c9eb389d4ee6e2bfaa9596d09c589f1c"
+          "url": "https://linuxbrew.bintray.com/bottles/libvnc-0.9.13.catalina.bottle.tar.gz",
+          "sha256": "908c0d7fa104abe781cc67b0a9ebff7e2208cf3cbfb4b7acd770d3d92bb14c9d"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/ompl-1.5.1.mojave.bottle.tar.gz",
-          "sha256": "22bd9dcbe10888f3f599f03fe43092ac8dedbb5ba4c167961ea75aef84383763"
+          "url": "https://linuxbrew.bintray.com/bottles/libvnc-0.9.13.mojave.bottle.tar.gz",
+          "sha256": "4744d5940eb9095e9d7ec8a731c8f611a252e5548237d3d338a2334766b38825"
         }
       }
     }
@@ -53,14 +53,14 @@
 
   ],
   "build_dependencies": [
-    "cmake",
-    "pkg-config"
+    "cmake"
   ],
   "dependencies": [
-    "boost",
-    "eigen",
-    "flann",
-    "ode"
+    "jpeg-turbo",
+    "libpng",
+    "lzo",
+    "openssl@1.1",
+    "sdl2"
   ],
   "recommended_dependencies": [
 
