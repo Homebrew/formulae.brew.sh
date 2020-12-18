@@ -1,6 +1,6 @@
 {
-  "name": "exploitdb",
-  "full_name": "exploitdb",
+  "name": "wayland-protocols",
+  "full_name": "wayland-protocols",
   "oldname": null,
   "aliases": [
 
@@ -8,19 +8,19 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Database of public exploits and corresponding vulnerable software",
-  "license": "GPL-2.0-or-later",
-  "homepage": "https://www.exploit-db.com/",
+  "desc": "Additional Wayland protocols",
+  "license": "MIT",
+  "homepage": "https://wayland.freedesktop.org",
   "versions": {
-    "stable": "2020-12-17",
-    "head": "HEAD",
+    "stable": "1.20",
+    "head": null,
     "bottle": false
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/offensive-security/exploitdb.git",
-      "tag": "2020-12-17",
-      "revision": "58ad270f640ef1e9de2f9d320e3133690ffb81ae"
+      "url": "https://wayland.freedesktop.org/releases/wayland-protocols-1.20.tar.xz",
+      "tag": null,
+      "revision": null
     }
   },
   "revision": 0,
@@ -28,12 +28,13 @@
   "bottle": {
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
   "build_dependencies": [
-
+    "pkg-config",
+    "wayland"
   ],
   "dependencies": [
 
@@ -48,7 +49,15 @@
 
   ],
   "requirements": [
+    {
+      "name": "linux",
+      "cask": null,
+      "download": null,
+      "version": null,
+      "contexts": [
 
+      ]
+    }
   ],
   "conflicts_with": [
 
