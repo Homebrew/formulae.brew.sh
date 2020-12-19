@@ -1,6 +1,6 @@
 {
-  "name": "prefixsuffix",
-  "full_name": "prefixsuffix",
+  "name": "glibmm@2.64",
+  "full_name": "glibmm@2.64",
   "oldname": null,
   "aliases": [
 
@@ -8,41 +8,41 @@
   "versioned_formulae": [
 
   ],
-  "desc": "GUI batch renaming utility",
-  "license": "GPL-2.0-or-later",
-  "homepage": "https://github.com/murraycu/prefixsuffix",
+  "desc": "C++ interface to glib",
+  "license": "LGPL-2.1-or-later",
+  "homepage": "https://www.gtkmm.org/",
   "versions": {
-    "stable": "0.6.9",
+    "stable": "2.64.5",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://download.gnome.org/sources/prefixsuffix/0.6/prefixsuffix-0.6.9.tar.xz",
+      "url": "https://download.gnome.org/sources/glibmm/2.64/glibmm-2.64.5.tar.xz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 7,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+      "cellar": ":any",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/prefixsuffix-0.6.9_7.big_sur.bottle.tar.gz",
-          "sha256": "15de04984c558fc657406c078463e50010b995b55faa28797d5b751c1c61fe69"
+          "url": "https://linuxbrew.bintray.com/bottles/glibmm%402.64-2.64.5.big_sur.bottle.tar.gz",
+          "sha256": "59179b822c27f1c01e10ae59e44562dabc44f5f00f04c0951644f7d2465146eb"
         },
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/prefixsuffix-0.6.9_7.catalina.bottle.tar.gz",
-          "sha256": "8de52a170c24c34d11d3dfdeeacc3274c9365aa3988cd448acbcdba86b0f30bd"
+          "url": "https://linuxbrew.bintray.com/bottles/glibmm%402.64-2.64.5.catalina.bottle.tar.gz",
+          "sha256": "d8e9d38b8a4a3945777ccacc703363e1c036efa1aa2b49ee857a08e7938f7c5e"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/prefixsuffix-0.6.9_7.mojave.bottle.tar.gz",
-          "sha256": "849354e6d09e1d57965b32056c49c067712c2775c8391de9ab7330d4e6801ba1"
+          "url": "https://linuxbrew.bintray.com/bottles/glibmm%402.64-2.64.5.mojave.bottle.tar.gz",
+          "sha256": "838331b973d6d0498c16a28330e1354d63fa7dda297a32093eaf37660a0227c0"
         }
       }
     }
@@ -53,11 +53,13 @@
 
   ],
   "build_dependencies": [
-    "intltool",
+    "meson",
+    "ninja",
     "pkg-config"
   ],
   "dependencies": [
-    "gtkmm3"
+    "glib",
+    "libsigc++@2"
   ],
   "recommended_dependencies": [
 
