@@ -1,6 +1,6 @@
 {
-  "name": "yq",
-  "full_name": "yq",
+  "name": "xcb-util-keysyms",
+  "full_name": "xcb-util-keysyms",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Process YAML documents from the CLI",
-  "license": "MIT",
-  "homepage": "https://github.com/mikefarah/yq",
+  "desc": "Standard X constants and conversion to/from keycodes",
+  "license": "X11",
+  "homepage": "https://xcb.freedesktop.org",
   "versions": {
-    "stable": "4.0.0",
+    "stable": "0.4.0",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/mikefarah/yq/archive/4.0.0.tar.gz",
+      "url": "https://xcb.freedesktop.org/dist/xcb-util-keysyms-0.4.0.tar.bz2",
       "tag": null,
       "revision": null
     }
@@ -28,21 +28,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any_skip_relocation",
+      "cellar": ":any",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://homebrew.bintray.com/bottles/yq-4.0.0.big_sur.bottle.tar.gz",
-          "sha256": "353f4fa85c7c86a96b642c18cb775476d627d970d896cc2577930a680bc9f99f"
+          "url": "https://homebrew.bintray.com/bottles/xcb-util-keysyms-0.4.0.big_sur.bottle.tar.gz",
+          "sha256": "702425d6d222f48788f38ab247dd84664f5a4d349484634a9f775b64045cbaca"
         },
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/yq-4.0.0.catalina.bottle.tar.gz",
-          "sha256": "e85c3418aee0e15ef8e011c9983f70433fc6411aeb41ed79a84d5e71508b1045"
+          "url": "https://homebrew.bintray.com/bottles/xcb-util-keysyms-0.4.0.catalina.bottle.tar.gz",
+          "sha256": "6ad4d1328c04a6ef44033161542d0f27f94160cb326af4572c86473e8d0cba09"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/yq-4.0.0.mojave.bottle.tar.gz",
-          "sha256": "59c8b2da89654f8ecd6b6718151835b2cf43b9c64c7d6f31790a27ded4f681fb"
+          "url": "https://homebrew.bintray.com/bottles/xcb-util-keysyms-0.4.0.mojave.bottle.tar.gz",
+          "sha256": "a6abcd84a8ded46e939d3551642e08a87fddb9fd8a2744071351086ddd35170c"
         }
       }
     }
@@ -53,10 +53,11 @@
 
   ],
   "build_dependencies": [
-    "go"
+    "pkg-config",
+    "util-macros"
   ],
   "dependencies": [
-
+    "libxcb"
   ],
   "recommended_dependencies": [
 
@@ -71,7 +72,7 @@
 
   ],
   "conflicts_with": [
-    "python-yq"
+
   ],
   "caveats": null,
   "installed": [
