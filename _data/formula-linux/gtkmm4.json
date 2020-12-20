@@ -1,6 +1,6 @@
 {
-  "name": "mpack",
-  "full_name": "mpack",
+  "name": "gtkmm4",
+  "full_name": "gtkmm4",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "MIME mail packing and unpacking",
-  "license": "BSD-3-Clause",
-  "homepage": "https://web.archive.org/web/20190220145801/ftp.andrew.cmu.edu/pub/mpack/",
+  "desc": "C++ interfaces for GTK+ and GNOME",
+  "license": "LGPL-2.1-or-later",
+  "homepage": "https://www.gtkmm.org/",
   "versions": {
-    "stable": "1.6",
+    "stable": "4.0.0",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://ftp.gwdg.de/pub/misc/mpack/mpack-1.6.tar.gz",
+      "url": "https://download.gnome.org/sources/gtkmm/4.0/gtkmm-4.0.0.tar.xz",
       "tag": null,
       "revision": null
     }
@@ -27,22 +27,22 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
-      "cellar": ":any_skip_relocation",
+      "rebuild": 0,
+      "cellar": ":any",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/mpack-1.6.big_sur.bottle.1.tar.gz",
-          "sha256": "b3ac3a2ad7ba9481bdbd6ce2c2a3e1d0e59128f4cf8cd846be7a75fc6f27d6b5"
+          "url": "https://linuxbrew.bintray.com/bottles/gtkmm4-4.0.0.big_sur.bottle.tar.gz",
+          "sha256": "ef80d29cee5c8dc89f1c67286578a5ba4184c89f25e812156dc635a9949ba92f"
         },
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/mpack-1.6.catalina.bottle.1.tar.gz",
-          "sha256": "561bc78b36f0b0cb8b67ff4c59407439fcb70d7f0b0ed23313cbe7579ad6a00f"
+          "url": "https://linuxbrew.bintray.com/bottles/gtkmm4-4.0.0.catalina.bottle.tar.gz",
+          "sha256": "167c1777a12807a3d6beb77c8eea5a2905402d3eb80f4e1a1799ac2284ac34f3"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/mpack-1.6.mojave.bottle.1.tar.gz",
-          "sha256": "3da5fac96c17669d27049ec2b5eebc0b711258ece13dad09c609792b45498bbc"
+          "url": "https://linuxbrew.bintray.com/bottles/gtkmm4-4.0.0.mojave.bottle.tar.gz",
+          "sha256": "9d9efaba8f60440d68c910bb2a4770fa41f7872e1cef3579c3491c2f5194c1fb"
         }
       }
     }
@@ -53,10 +53,14 @@
 
   ],
   "build_dependencies": [
-
+    "meson",
+    "ninja",
+    "pkg-config"
   ],
   "dependencies": [
-
+    "cairomm",
+    "gtk+4",
+    "pangomm"
   ],
   "recommended_dependencies": [
 
