@@ -1,6 +1,6 @@
 {
-  "name": "xrick",
-  "full_name": "xrick",
+  "name": "libvdpau",
+  "full_name": "libvdpau",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Clone of Rick Dangerous",
-  "license": null,
-  "homepage": "http://www.bigorno.net/xrick/",
+  "desc": "Open source Video Decode and Presentation API library",
+  "license": "MIT",
+  "homepage": "https://www.freedesktop.org/wiki/Software/VDPAU/",
   "versions": {
-    "stable": "021212",
+    "stable": "1.2",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "http://www.bigorno.net/xrick/xrick-021212.tgz",
+      "url": "https://gitlab.freedesktop.org/vdpau/libvdpau/uploads/14b620084c027d546fa0b3f083b800c6/libvdpau-1.2.tar.bz2",
       "tag": null,
       "revision": null
     }
@@ -27,22 +27,22 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "cellar": "/usr/local/Cellar",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://homebrew.bintray.com/bottles/xrick-021212.big_sur.bottle.1.tar.gz",
-          "sha256": "301f75c04e2c98c81b58868d7357e817b7dec1bc8a29747b27f088a10c1863ec"
+          "url": "https://homebrew.bintray.com/bottles/libvdpau-1.2.big_sur.bottle.tar.gz",
+          "sha256": "74a3ea48e33530a014162fab0c6502f7a6be8aff25b05bd5fe971dd9d39e1371"
         },
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/xrick-021212.catalina.bottle.1.tar.gz",
-          "sha256": "b391e62a9cf0a3537ec68c03d215370d875a70a90fb7a8cb48cac8cc7281e2c2"
+          "url": "https://homebrew.bintray.com/bottles/libvdpau-1.2.catalina.bottle.tar.gz",
+          "sha256": "9b57bf4d53024c75f4a431fd814fa0b6f54163d13dfbb63607d41c1a43b7117d"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/xrick-021212.mojave.bottle.1.tar.gz",
-          "sha256": "cf85542617f6e39a8fec0239a57d1bc1707f50289e5c91bee89e84664603f43c"
+          "url": "https://homebrew.bintray.com/bottles/libvdpau-1.2.mojave.bottle.tar.gz",
+          "sha256": "59980ec6bf90b676354ddda5e3c93a6240c4564d1c01aa35b1f1aa804d7b949a"
         }
       }
     }
@@ -53,10 +53,12 @@
 
   ],
   "build_dependencies": [
-
+    "pkg-config"
   ],
   "dependencies": [
-    "sdl"
+    "libx11",
+    "libxext",
+    "xorgproto"
   ],
   "recommended_dependencies": [
 
