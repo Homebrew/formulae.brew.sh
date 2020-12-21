@@ -1,6 +1,6 @@
 {
-  "name": "xcb-util-keysyms",
-  "full_name": "xcb-util-keysyms",
+  "name": "xcb-util-image",
+  "full_name": "xcb-util-image",
   "oldname": null,
   "aliases": [
 
@@ -8,7 +8,7 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Standard X constants and conversion to/from keycodes",
+  "desc": "XCB port of Xlib's XImage and XShmImage",
   "license": "X11",
   "homepage": "https://xcb.freedesktop.org",
   "versions": {
@@ -18,7 +18,7 @@
   },
   "urls": {
     "stable": {
-      "url": "https://xcb.freedesktop.org/dist/xcb-util-keysyms-0.4.0.tar.bz2",
+      "url": "https://xcb.freedesktop.org/dist/xcb-util-image-0.4.0.tar.bz2",
       "tag": null,
       "revision": null
     }
@@ -33,20 +33,20 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/xcb-util-keysyms-0.4.0.big_sur.bottle.tar.gz",
-          "sha256": "702425d6d222f48788f38ab247dd84664f5a4d349484634a9f775b64045cbaca"
+          "url": "https://linuxbrew.bintray.com/bottles/xcb-util-image-0.4.0.big_sur.bottle.tar.gz",
+          "sha256": "be6e0bdd4cd0ddde48bca0e424da9661ca5ecfa6f64f8184e88f1df4e44186f2"
         },
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/xcb-util-keysyms-0.4.0.catalina.bottle.tar.gz",
-          "sha256": "6ad4d1328c04a6ef44033161542d0f27f94160cb326af4572c86473e8d0cba09"
+          "url": "https://linuxbrew.bintray.com/bottles/xcb-util-image-0.4.0.catalina.bottle.tar.gz",
+          "sha256": "556a8960b5ee6b2290eb223df2dda18054b113b3284b91c4d10cdc3f905ef75c"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/xcb-util-keysyms-0.4.0.mojave.bottle.tar.gz",
-          "sha256": "a6abcd84a8ded46e939d3551642e08a87fddb9fd8a2744071351086ddd35170c"
+          "url": "https://linuxbrew.bintray.com/bottles/xcb-util-image-0.4.0.mojave.bottle.tar.gz",
+          "sha256": "3aeb055928e61fddb3473ea17005774aa6f0b0f32af8323f3da8963d836c7baf"
         },
         "x86_64_linux": {
-          "url": "https://linuxbrew.bintray.com/bottles/xcb-util-keysyms-0.4.0.x86_64_linux.bottle.tar.gz",
-          "sha256": "2a86550481e0c4f0d53883c27463d10d069bc6d97649a8a026108703896d2407"
+          "url": "https://linuxbrew.bintray.com/bottles/xcb-util-image-0.4.0.x86_64_linux.bottle.tar.gz",
+          "sha256": "b4ef0a8fa018eed55552337f05ee3c7f2796508a2bef8ac98c843d75bce3c558"
         }
       }
     }
@@ -60,7 +60,8 @@
     "pkg-config"
   ],
   "dependencies": [
-    "libxcb"
+    "libxcb",
+    "xcb-util"
   ],
   "recommended_dependencies": [
 
