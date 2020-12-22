@@ -7,7 +7,7 @@
   "homepage": "https://www.avast.com/",
   "url": "http://download.ff.avast.com/mac/avast_security_online.dmg",
   "appcast": null,
-  "version": "latest",
+  "version": "4.0,2.0",
   "sha256": "no_check",
   "artifacts": [
     {
@@ -16,7 +16,15 @@
         "must_succeed": "false",
         "sudo": "true"
       },
-      "pkgutil": "com.avast.AAFM",
+      "launchctl": [
+        "com.avast.hub",
+        "com.avast.hub.schedule",
+        "com.avast.hub.xpc"
+      ],
+      "pkgutil": [
+        "com.avast.AAFM",
+        "com.avast.pkg.hub"
+      ],
       "signal": {
       }
     },
