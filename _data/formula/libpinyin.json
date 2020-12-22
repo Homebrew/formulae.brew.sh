@@ -1,6 +1,6 @@
 {
-  "name": "mydumper",
-  "full_name": "mydumper",
+  "name": "libpinyin",
+  "full_name": "libpinyin",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "How MySQL DBA & support engineer would imagine 'mysqldump' ;-)",
+  "desc": "Library to deal with pinyin",
   "license": "GPL-3.0-or-later",
-  "homepage": "https://launchpad.net/mydumper",
+  "homepage": "https://github.com/libpinyin/libpinyin",
   "versions": {
-    "stable": "0.9.5",
+    "stable": "2.6.0",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/maxbube/mydumper/archive/v0.9.5.tar.gz",
+      "url": "https://github.com/libpinyin/libpinyin/archive/2.6.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -27,22 +27,22 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "cellar": ":any",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://homebrew.bintray.com/bottles/mydumper-0.9.5.big_sur.bottle.1.tar.gz",
-          "sha256": "fb43610eb7d7f45268ab926341a55822ec02774a8887e7ecc811a11d18108cfc"
+          "url": "https://homebrew.bintray.com/bottles/libpinyin-2.6.0.big_sur.bottle.tar.gz",
+          "sha256": "e4ffe7193d01eb5e040da9f4a9f8b53f214a989b0f07553cce636e31325032a2"
         },
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/mydumper-0.9.5.catalina.bottle.1.tar.gz",
-          "sha256": "c87396db1270975e11f320c0437a0b002715a23c9400713fa40f8fc71e4e2d39"
+          "url": "https://homebrew.bintray.com/bottles/libpinyin-2.6.0.catalina.bottle.tar.gz",
+          "sha256": "134f8fe1749c65e65c222f14dbd0d2b758e82df5dc5193d31e6fda2b43056773"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/mydumper-0.9.5.mojave.bottle.1.tar.gz",
-          "sha256": "22d6196c9f25dce4e190e528009ead061e395a07a5aa1eb2c61247572bf1ee82"
+          "url": "https://homebrew.bintray.com/bottles/libpinyin-2.6.0.mojave.bottle.tar.gz",
+          "sha256": "b9a8e06f0534bb5e9c15f27be8d4bd78be2082e3ea241d2d3500c9357e5a786b"
         }
       }
     }
@@ -53,15 +53,15 @@
 
   ],
   "build_dependencies": [
-    "cmake",
-    "pkg-config",
-    "sphinx-doc"
+    "autoconf",
+    "automake",
+    "gnome-common",
+    "libtool",
+    "pkg-config"
   ],
   "dependencies": [
-    "glib",
-    "mysql-client",
-    "openssl@1.1",
-    "pcre"
+    "berkeley-db",
+    "glib"
   ],
   "recommended_dependencies": [
 
@@ -70,7 +70,7 @@
 
   ],
   "uses_from_macos": [
-    "zlib"
+
   ],
   "requirements": [
 
