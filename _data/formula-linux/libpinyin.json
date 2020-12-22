@@ -1,6 +1,6 @@
 {
-  "name": "serd",
-  "full_name": "serd",
+  "name": "libpinyin",
+  "full_name": "libpinyin",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "C library for RDF syntax",
-  "license": "ISC",
-  "homepage": "https://drobilla.net/software/serd/",
+  "desc": "Library to deal with pinyin",
+  "license": "GPL-3.0-or-later",
+  "homepage": "https://github.com/libpinyin/libpinyin",
   "versions": {
-    "stable": "0.30.6",
+    "stable": "2.6.0",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://download.drobilla.net/serd-0.30.6.tar.bz2",
+      "url": "https://github.com/libpinyin/libpinyin/archive/2.6.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,20 +33,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/serd-0.30.6.big_sur.bottle.tar.gz",
-          "sha256": "c53043a419c1409b8c1df9a3ab3b304525a69392933ffd421fa6fa3c22df4ab9"
-        },
-        "arm64_big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/serd-0.30.6.arm64_big_sur.bottle.tar.gz",
-          "sha256": "e5b28b3af541976f1bb6a3e5642ae7cc51ee82d0be992d28a0f533417f0afb69"
+          "url": "https://linuxbrew.bintray.com/bottles/libpinyin-2.6.0.big_sur.bottle.tar.gz",
+          "sha256": "e4ffe7193d01eb5e040da9f4a9f8b53f214a989b0f07553cce636e31325032a2"
         },
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/serd-0.30.6.catalina.bottle.tar.gz",
-          "sha256": "6ab4aae5b944f5fdcbd08d54b9fa55275e5a4cea89e1711b1288353ec75f6f4b"
+          "url": "https://linuxbrew.bintray.com/bottles/libpinyin-2.6.0.catalina.bottle.tar.gz",
+          "sha256": "134f8fe1749c65e65c222f14dbd0d2b758e82df5dc5193d31e6fda2b43056773"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/serd-0.30.6.mojave.bottle.tar.gz",
-          "sha256": "c579e8246255757af42717d1b93989c6422e8fba8459e5446963ab95bd78f383"
+          "url": "https://linuxbrew.bintray.com/bottles/libpinyin-2.6.0.mojave.bottle.tar.gz",
+          "sha256": "b9a8e06f0534bb5e9c15f27be8d4bd78be2082e3ea241d2d3500c9357e5a786b"
         }
       }
     }
@@ -57,10 +53,15 @@
 
   ],
   "build_dependencies": [
+    "autoconf",
+    "automake",
+    "gnome-common",
+    "libtool",
     "pkg-config"
   ],
   "dependencies": [
-
+    "berkeley-db",
+    "glib"
   ],
   "recommended_dependencies": [
 
