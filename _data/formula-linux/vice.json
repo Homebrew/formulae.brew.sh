@@ -9,44 +9,40 @@
 
   ],
   "desc": "Versatile Commodore Emulator",
-  "license": null,
+  "license": "GPL-2.0-or-later",
   "homepage": "https://sourceforge.net/projects/vice-emu/",
   "versions": {
-    "stable": "3.4",
+    "stable": "3.5",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://downloads.sourceforge.net/project/vice-emu/releases/vice-3.4.tar.gz",
+      "url": "https://downloads.sourceforge.net/project/vice-emu/releases/vice-3.5.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/vice-3.4_1.big_sur.bottle.tar.gz",
-          "sha256": "1a0bc0f49e3f16b32f678547fef6acf1aad720e20e033651f4516b280c86a6d6"
+          "url": "https://linuxbrew.bintray.com/bottles/vice-3.5.big_sur.bottle.tar.gz",
+          "sha256": "54469e98b53d284cd45667fcaa90c97288c5b086e9fd3d389a6057caf94c8caa"
         },
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/vice-3.4_1.catalina.bottle.tar.gz",
-          "sha256": "b65fbef8066263ccd42679a2b9ed9f3d438ff75a5d8c097dcf04ffb5fa1b1e43"
+          "url": "https://linuxbrew.bintray.com/bottles/vice-3.5.catalina.bottle.tar.gz",
+          "sha256": "00d02729c640d211d25f84a47606c99464fe6c649936566fbfffe1ac7436c7a3"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/vice-3.4_1.mojave.bottle.tar.gz",
-          "sha256": "65380e5bdb80143cfbd668fe45c385b7715faa6baa8f109707003be3fb410efb"
-        },
-        "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/vice-3.4_1.high_sierra.bottle.tar.gz",
-          "sha256": "d2532e0ccc1a84a9896a611c9ac7eac15342f7ebbaedba7c0b29f36c178a0c27"
+          "url": "https://linuxbrew.bintray.com/bottles/vice-3.5.mojave.bottle.tar.gz",
+          "sha256": "7bbc703b670c5b5555c562fa9e52eabfd0cfdc0b379e9559e9d9c5c95499fe8b"
         }
       }
     }
@@ -57,14 +53,15 @@
 
   ],
   "build_dependencies": [
+    "autoconf",
+    "automake",
     "pkg-config",
     "texinfo",
     "xa",
     "yasm"
   ],
   "dependencies": [
-    "autoconf",
-    "automake",
+    "dos2unix",
     "ffmpeg",
     "flac",
     "giflib",
@@ -77,6 +74,7 @@
     "mpg123",
     "portaudio",
     "sdl2",
+    "sdl2_image",
     "xz"
   ],
   "recommended_dependencies": [
