@@ -23,7 +23,7 @@
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,16 +33,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/vice-3.5.big_sur.bottle.tar.gz",
-          "sha256": "54469e98b53d284cd45667fcaa90c97288c5b086e9fd3d389a6057caf94c8caa"
+          "url": "https://linuxbrew.bintray.com/bottles/vice-3.5_1.big_sur.bottle.tar.gz",
+          "sha256": "c07d71cebd01929ae44bb80611d761c10c5f8ae53b2ac8e855d2a77bb9ce2270"
         },
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/vice-3.5.catalina.bottle.tar.gz",
-          "sha256": "00d02729c640d211d25f84a47606c99464fe6c649936566fbfffe1ac7436c7a3"
+          "url": "https://linuxbrew.bintray.com/bottles/vice-3.5_1.catalina.bottle.tar.gz",
+          "sha256": "32421c80ed1f4fd835143587ec1d666941aadaefa2ea5facd2bbd2355cc078c4"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/vice-3.5.mojave.bottle.tar.gz",
-          "sha256": "7bbc703b670c5b5555c562fa9e52eabfd0cfdc0b379e9559e9d9c5c95499fe8b"
+          "url": "https://linuxbrew.bintray.com/bottles/vice-3.5_1.mojave.bottle.tar.gz",
+          "sha256": "04964db736a6895edf14f3e0d1cd8dce585c18b56dd123f6376bb2743a1d9953"
         }
       }
     }
@@ -55,27 +55,25 @@
   "build_dependencies": [
     "autoconf",
     "automake",
+    "dos2unix",
     "pkg-config",
     "texinfo",
     "xa",
     "yasm"
   ],
   "dependencies": [
-    "dos2unix",
+    "adwaita-icon-theme",
     "ffmpeg",
     "flac",
     "giflib",
+    "glew",
+    "gtk+3",
     "jpeg",
     "lame",
-    "libnet",
     "libogg",
     "libpng",
-    "libvorbis",
-    "mpg123",
-    "portaudio",
-    "sdl2",
-    "sdl2_image",
-    "xz"
+    "librsvg",
+    "libvorbis"
   ],
   "recommended_dependencies": [
 
@@ -92,7 +90,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "App bundles are no longer built for each emulator. The binaries are\navailable in $(brew --prefix)/bin directly instead.\n",
+  "caveats": null,
   "installed": [
 
   ],
