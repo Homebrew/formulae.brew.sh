@@ -1,0 +1,33 @@
+{
+  "token": "epoccam",
+  "name": [
+    "EpocCam"
+  ],
+  "desc": "Turn your phone into a webcam",
+  "homepage": "https://www.elgato.com/epoccam",
+  "url": "https://edge.elgato.com/egc/macos/epoccam/EpocCam%20Installer_3_0.pkg",
+  "appcast": null,
+  "version": "3.0",
+  "sha256": "302ca7ac266dad1cc7bbc306613bfd71ffe02519f7f8428756fb4d40968bd10d",
+  "artifacts": [
+    "uninstall_preflight (Preflight Block)",
+    {
+      "launchctl": "com.kinoni.epoccam.daemon",
+      "pkgutil": "com.kinoni.pkg.epoccam-installer",
+      "trash": [
+        "/Library/LaunchAgents/com.kinoni.epoccam.daemon.plist",
+        "/Library/Audio/Plug-Ins/HAL/VirtualMic.driver",
+        "/Library/CoreMediaIO/Plug-Ins/DAL/EpocCamPlugin.plugin"
+      ],
+      "signal": {
+      }
+    },
+    "EpocCam Installer_3_0.pkg (Pkg)"
+  ],
+  "caveats": null,
+  "depends_on": {
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": null
+}
