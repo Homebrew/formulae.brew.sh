@@ -9,16 +9,16 @@
 
   ],
   "desc": "Notmuch integration for Mutt",
-  "license": "GPL-3.0",
+  "license": "GPL-3.0-or-later",
   "homepage": "https://notmuchmail.org/",
   "versions": {
-    "stable": "0.30",
+    "stable": "0.31.3",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://notmuchmail.org/releases/notmuch-0.30.tar.xz",
+      "url": "https://notmuchmail.org/releases/notmuch-0.31.3.tar.xz",
       "tag": null,
       "revision": null
     }
@@ -32,17 +32,17 @@
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
+        "big_sur": {
+          "url": "https://homebrew.bintray.com/bottles/notmuch-mutt-0.31.3.big_sur.bottle.tar.gz",
+          "sha256": "a52c995dbe47709f3255c201a170036097fb7d97abb2be895da431a203e83158"
+        },
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/notmuch-mutt-0.30.catalina.bottle.tar.gz",
-          "sha256": "a3f8a11f72c219bcc2f6eb0c6e8a5a1b5656e3364257e45c1716a8bf685fa412"
+          "url": "https://homebrew.bintray.com/bottles/notmuch-mutt-0.31.3.catalina.bottle.tar.gz",
+          "sha256": "13105777242c90e0c612f2042f472c08acaafaf85a9bdf78a5726730c9f605a6"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/notmuch-mutt-0.30.mojave.bottle.tar.gz",
-          "sha256": "a31991d286a3d3aaf904c49100c7379ca44c0802fbaa62e222d897a157576ff0"
-        },
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/notmuch-mutt-0.30.high_sierra.bottle.tar.gz",
-          "sha256": "7774d94c0fae96c5dd3d0ea1a71c0f3f9d230b507f4759756bbb9ddebd25dfa9"
+          "url": "https://homebrew.bintray.com/bottles/notmuch-mutt-0.31.3.mojave.bottle.tar.gz",
+          "sha256": "edb9c664706a7a139df2ad602b97a8cf67bb57751997cbcb5f940495754a7c9c"
         }
       }
     }
@@ -56,6 +56,7 @@
 
   ],
   "dependencies": [
+    "notmuch",
     "readline"
   ],
   "recommended_dependencies": [
