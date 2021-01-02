@@ -12,15 +12,15 @@
   "license": "MIT",
   "homepage": "https://github.com/Microsoft/cpprestsdk",
   "versions": {
-    "stable": "2.10.16",
+    "stable": "2.10.17",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
       "url": "https://github.com/Microsoft/cpprestsdk.git",
-      "tag": "v2.10.16",
-      "revision": "18212a2a7967e12d740bfb957e500892b3463c88"
+      "tag": "2.10.17",
+      "revision": "41e7d0074b6cb5b22c89f835b4531d848ab66987"
     }
   },
   "revision": 0,
@@ -33,20 +33,20 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/cpprestsdk-2.10.16.big_sur.bottle.tar.gz",
-          "sha256": "52968d001e986fdda32098fdb58cddb750f974e3472fd23c16424c1e3f6e5ff3"
+          "url": "https://linuxbrew.bintray.com/bottles/cpprestsdk-2.10.17.big_sur.bottle.tar.gz",
+          "sha256": "c309b77276176ea9fea0378fe707b234d5710292a064648d7572cd6e9859fb14"
+        },
+        "arm64_big_sur": {
+          "url": "https://linuxbrew.bintray.com/bottles/cpprestsdk-2.10.17.arm64_big_sur.bottle.tar.gz",
+          "sha256": "7072462b2649c97ab3cea7ffa5506588d6f5099ad916c431bb096842a1ef7a32"
         },
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/cpprestsdk-2.10.16.catalina.bottle.tar.gz",
-          "sha256": "0b7d717716ebc8393007599ed02f9a4f8b36eef1f3dd3d54d11b0966751a4f87"
+          "url": "https://linuxbrew.bintray.com/bottles/cpprestsdk-2.10.17.catalina.bottle.tar.gz",
+          "sha256": "804a90dd19fd6cadc63830629cab9dff350219022b127303801920a9a76103d8"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/cpprestsdk-2.10.16.mojave.bottle.tar.gz",
-          "sha256": "feeabdfce6c4a065961f37c38578d626a50f8e7a3939343a6ed037f535418a02"
-        },
-        "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/cpprestsdk-2.10.16.high_sierra.bottle.tar.gz",
-          "sha256": "f98e8ff4c5b371ffe541eb1fefc13a178b02c07e6fab906fd206e6c833827dfa"
+          "url": "https://linuxbrew.bintray.com/bottles/cpprestsdk-2.10.17.mojave.bottle.tar.gz",
+          "sha256": "aee49d4c1082f6ab0d2297b6e6066f1b0c53b2bd970b2ce3e68262ad5327a7a2"
         }
       }
     }
@@ -57,7 +57,8 @@
 
   ],
   "build_dependencies": [
-    "cmake"
+    "cmake",
+    "pkg-config"
   ],
   "dependencies": [
     "boost",
