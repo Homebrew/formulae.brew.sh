@@ -1,25 +1,24 @@
 {
-  "name": "node@10",
-  "full_name": "node@10",
+  "name": "hblock",
+  "full_name": "hblock",
   "oldname": null,
   "aliases": [
 
   ],
   "versioned_formulae": [
-    "node@14",
-    "node@12"
+
   ],
-  "desc": "Platform built on V8 to build network applications",
+  "desc": "Adblocker that creates a hosts file from multiple sources",
   "license": "MIT",
-  "homepage": "https://nodejs.org/",
+  "homepage": "https://hblock.molinero.dev/",
   "versions": {
-    "stable": "10.23.1",
+    "stable": "3.1.3",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://nodejs.org/dist/v10.23.1/node-v10.23.1.tar.xz",
+      "url": "https://github.com/hectorm/hblock/archive/v3.1.3.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -29,35 +28,35 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": ":any_skip_relocation",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://homebrew.bintray.com/bottles/node%4010-10.23.1.big_sur.bottle.tar.gz",
-          "sha256": "9b559405ec7fd06d27ccf42e32d701584f5b9bbc82daa0b326dd3b8106a1be0e"
+          "url": "https://homebrew.bintray.com/bottles/hblock-3.1.3.big_sur.bottle.tar.gz",
+          "sha256": "e983c78b4e45ffcef65cea8dbd253d0c7893670dd2edebfd489c234598122b0c"
         },
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/node%4010-10.23.1.catalina.bottle.tar.gz",
-          "sha256": "4cdacb85745a621f6c9a5c68a3f85cd2120948ce7422b5040e35a7cb1ddc64a1"
+          "url": "https://homebrew.bintray.com/bottles/hblock-3.1.3.catalina.bottle.tar.gz",
+          "sha256": "400142a4275501a8ea5630260a41169e4b2bd9ab711cd4053bb716ac14510c52"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/node%4010-10.23.1.mojave.bottle.tar.gz",
-          "sha256": "da429b4bd778eae04b4bdbe1a9cca7bb53183bef25d4c4ffa63840646fcaf008"
+          "url": "https://homebrew.bintray.com/bottles/hblock-3.1.3.mojave.bottle.tar.gz",
+          "sha256": "631a6da27cd7728a9c87caed412ccfa1236a8023385bbd623b482609a18cc30f"
         }
       }
     }
   },
-  "keg_only": true,
+  "keg_only": false,
   "bottle_disabled": false,
   "options": [
 
   ],
   "build_dependencies": [
-    "pkg-config"
+
   ],
   "dependencies": [
-    "icu4c"
+
   ],
   "recommended_dependencies": [
 
@@ -66,18 +65,10 @@
 
   ],
   "uses_from_macos": [
-
+    "curl"
   ],
   "requirements": [
-    {
-      "name": "macos",
-      "cask": null,
-      "download": null,
-      "version": null,
-      "contexts": [
 
-      ]
-    }
   ],
   "conflicts_with": [
 
