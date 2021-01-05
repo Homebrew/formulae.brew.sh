@@ -1,6 +1,6 @@
 {
-  "name": "argo",
-  "full_name": "argo",
+  "name": "logswan",
+  "full_name": "logswan",
   "oldname": null,
   "aliases": [
 
@@ -8,19 +8,19 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Get stuff done with container-native workflows for Kubernetes",
-  "license": "Apache-2.0",
-  "homepage": "https://argoproj.io",
+  "desc": "Fast Web log analyzer using probabilistic data structures",
+  "license": "BSD-2-Clause",
+  "homepage": "https://www.logswan.org",
   "versions": {
-    "stable": "2.12.3",
+    "stable": "2.1.8",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/argoproj/argo.git",
-      "tag": "v2.12.3",
-      "revision": "93ee530126cc1fc154ada84d5656ca82d491dc7f"
+      "url": "https://github.com/fcambus/logswan/archive/2.1.8.tar.gz",
+      "tag": null,
+      "revision": null
     }
   },
   "revision": 0,
@@ -28,21 +28,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any_skip_relocation",
+      "cellar": ":any",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://homebrew.bintray.com/bottles/argo-2.12.3.big_sur.bottle.tar.gz",
-          "sha256": "a5bff14f5f843c0358e9cfe4a7dfb082001e1ad504ff8496656b46ceffd5b9e2"
+          "url": "https://homebrew.bintray.com/bottles/logswan-2.1.8.big_sur.bottle.tar.gz",
+          "sha256": "dea1726c54eb9acaf4745a9cf67e46992ce6d8d7651b1f47faa76df225d831f4"
         },
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/argo-2.12.3.catalina.bottle.tar.gz",
-          "sha256": "934bd45bd10fd081aa2b04a086ff8302a391a9415bc47b3eb69c19b0068267a7"
+          "url": "https://homebrew.bintray.com/bottles/logswan-2.1.8.catalina.bottle.tar.gz",
+          "sha256": "844574a208157568c6e3b320a6be97f48fe1138340bed1eb465d223ae4dd50de"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/argo-2.12.3.mojave.bottle.tar.gz",
-          "sha256": "88858af5b9516d07a86bbaf9e9409be2778da77c24c1e448432d876c623df685"
+          "url": "https://homebrew.bintray.com/bottles/logswan-2.1.8.mojave.bottle.tar.gz",
+          "sha256": "bb06c502e3d6ecb4dba59130e58465e1b91f5848eb5d42b04ba609877e34ba91"
         }
       }
     }
@@ -53,12 +53,11 @@
 
   ],
   "build_dependencies": [
-    "go",
-    "node@14",
-    "yarn"
+    "cmake"
   ],
   "dependencies": [
-
+    "jansson",
+    "libmaxminddb"
   ],
   "recommended_dependencies": [
 
