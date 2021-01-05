@@ -9,21 +9,21 @@
 
   ],
   "desc": "All-in-one NES/Famicom Emulator",
-  "license": null,
+  "license": "GPL-2.0-only",
   "homepage": "https://fceux.com/",
   "versions": {
-    "stable": "2.2.3",
-    "head": null,
+    "stable": "2.3.0",
+    "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://downloads.sourceforge.net/project/fceultra/Source%20Code/2.2.3%20src/fceux-2.2.3.src.tar.gz",
-      "tag": null,
-      "revision": null
+      "url": "https://github.com/TASVideos/fceux.git",
+      "tag": "fceux-2.3.0",
+      "revision": "65c5b0d2a1c08db75bb41340bfa5534578926944"
     }
   },
-  "revision": 4,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -32,17 +32,17 @@
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
+        "big_sur": {
+          "url": "https://homebrew.bintray.com/bottles/fceux-2.3.0.big_sur.bottle.tar.gz",
+          "sha256": "ebc63da5d126fd47a5df151fabb90a711b4da9859465d42bd8654c55ade77c62"
+        },
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/fceux-2.2.3_4.catalina.bottle.tar.gz",
-          "sha256": "7c7550b97011321d5d48f8f689c7158223aee5054698a6c707a185404e469e35"
+          "url": "https://homebrew.bintray.com/bottles/fceux-2.3.0.catalina.bottle.tar.gz",
+          "sha256": "cfec571f34128f228777843a9089a6c48f0799a2c0d873b65f5ebfde2357a849"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/fceux-2.2.3_4.mojave.bottle.tar.gz",
-          "sha256": "800e46a45f554876ad2a63ea6a62f6d672e5aefd2c9cca8f58fe615b82eb9ea7"
-        },
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/fceux-2.2.3_4.high_sierra.bottle.tar.gz",
-          "sha256": "3f587de213706a92fb02b14676514f6cba079e3c3b7ded2e57a8e718ebf9cf20"
+          "url": "https://homebrew.bintray.com/bottles/fceux-2.3.0.mojave.bottle.tar.gz",
+          "sha256": "ea023c53472bdb9ed928f31bdd9e149c28376b45e9f419c799efc77f70b76110"
         }
       }
     }
@@ -53,13 +53,13 @@
 
   ],
   "build_dependencies": [
-    "pkg-config",
-    "scons"
+    "cmake",
+    "pkg-config"
   ],
   "dependencies": [
-    "gd",
-    "gtk+3",
-    "sdl"
+    "minizip",
+    "qt",
+    "sdl2"
   ],
   "recommended_dependencies": [
 
@@ -86,7 +86,7 @@
   "deprecated": false,
   "deprecation_date": null,
   "deprecation_reason": null,
-  "disabled": true,
-  "disable_date": "2020-06-30",
-  "disable_reason": "does_not_build"
+  "disabled": false,
+  "disable_date": null,
+  "disable_reason": null
 }
