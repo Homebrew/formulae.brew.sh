@@ -1,6 +1,6 @@
 {
-  "name": "cbmc",
-  "full_name": "cbmc",
+  "name": "ykdl",
+  "full_name": "ykdl",
   "oldname": null,
   "aliases": [
 
@@ -8,19 +8,19 @@
   "versioned_formulae": [
 
   ],
-  "desc": "C Bounded Model Checker",
-  "license": "BSD-4-Clause",
-  "homepage": "https://www.cprover.org/cbmc/",
+  "desc": "Video downloader that focus on China mainland video sites",
+  "license": "MIT",
+  "homepage": "https://github.com/zhangn1985/ykdl",
   "versions": {
-    "stable": "5.21.0",
+    "stable": "1.7.0",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/diffblue/cbmc.git",
-      "tag": "cbmc-5.21.0",
-      "revision": "c7e3c5d7e81adf11b9456a0bea9ce14584304bf8"
+      "url": "https://github.com/zhangn1985/ykdl/archive/v1.7.0.tar.gz",
+      "tag": null,
+      "revision": null
     }
   },
   "revision": 0,
@@ -33,16 +33,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://homebrew.bintray.com/bottles/cbmc-5.21.0.big_sur.bottle.tar.gz",
-          "sha256": "4217aaaac48c136812d950c747dc06e85a865a4c369067199eb7f3517abb9ee2"
+          "url": "https://homebrew.bintray.com/bottles/ykdl-1.7.0.big_sur.bottle.tar.gz",
+          "sha256": "39f6e7ed8a11ec0a6eab3cb3e3236d261aa2490fc9e5697c75ecfc37ae33bead"
         },
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/cbmc-5.21.0.catalina.bottle.tar.gz",
-          "sha256": "c8bc5ae68b0702aa5efa2c1861285d95bf15d96eeca92966b45cd776d39f7dff"
+          "url": "https://homebrew.bintray.com/bottles/ykdl-1.7.0.catalina.bottle.tar.gz",
+          "sha256": "797ce1b9f6002a6153019355f957013c078fbe3a36a709293b32a717ff78c30d"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/cbmc-5.21.0.mojave.bottle.tar.gz",
-          "sha256": "3ba91c12f36d1498792c91900d12fe19f62ecdab762ef437a0aa2da280f50fa8"
+          "url": "https://homebrew.bintray.com/bottles/ykdl-1.7.0.mojave.bottle.tar.gz",
+          "sha256": "163c3593145fc6f85b00be215f20c5393219147af348c4c90dc34c942e5966f4"
         }
       }
     }
@@ -53,12 +53,10 @@
 
   ],
   "build_dependencies": [
-    "cmake",
-    "maven",
-    "openjdk"
+
   ],
   "dependencies": [
-
+    "python@3.9"
   ],
   "recommended_dependencies": [
 
@@ -75,7 +73,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": null,
+  "caveats": "To merge video slides, run `brew install ffmpeg`.",
   "installed": [
 
   ],
