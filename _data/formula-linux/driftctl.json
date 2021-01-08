@@ -1,6 +1,6 @@
 {
-  "name": "nexus",
-  "full_name": "nexus",
+  "name": "driftctl",
+  "full_name": "driftctl",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Repository manager for binary software components",
-  "license": "EPL-1.0",
-  "homepage": "https://www.sonatype.org/",
+  "desc": "Detect, track and alert on infrastructure drift",
+  "license": "Apache-2.0",
+  "homepage": "https://driftctl.com",
   "versions": {
-    "stable": "3.29.2-02",
+    "stable": "0.2.3",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/sonatype/nexus-public/archive/release-3.29.2-02.tar.gz",
+      "url": "https://github.com/cloudskiff/driftctl/archive/v0.2.3.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,20 +33,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/nexus-3.29.2-02.big_sur.bottle.tar.gz",
-          "sha256": "cd13d68133030d4655ff771181bd3aec295cde2387a737b8108b4faf75c6a41a"
+          "url": "https://linuxbrew.bintray.com/bottles/driftctl-0.2.3.big_sur.bottle.tar.gz",
+          "sha256": "64501e027324a4f0a6320bccf181b820eb6107532db7333a4f4f0fca99757fdd"
         },
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/nexus-3.29.2-02.catalina.bottle.tar.gz",
-          "sha256": "bd5e62dd0de4dbd52222713aa1746f0dbe24f3097c2a8aaa842937daa9a76a10"
+          "url": "https://linuxbrew.bintray.com/bottles/driftctl-0.2.3.catalina.bottle.tar.gz",
+          "sha256": "f5f2d59d4a85c138bc94c4a26eb6be20c905b7d62f09387e80d3dbd85754ded9"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/nexus-3.29.2-02.mojave.bottle.tar.gz",
-          "sha256": "5bf2ad4ac00b92e8e6577fa09c181b7a40e5251d82c7dce42f1c4657abfc35d0"
-        },
-        "x86_64_linux": {
-          "url": "https://linuxbrew.bintray.com/bottles/nexus-3.29.2-02.x86_64_linux.bottle.tar.gz",
-          "sha256": "954fdef50ee75558ff6bd928dc1a619a83e5d221ce1a297ddab2a5459971bdf9"
+          "url": "https://linuxbrew.bintray.com/bottles/driftctl-0.2.3.mojave.bottle.tar.gz",
+          "sha256": "f1e41724bff659405576e7b52b7bf37cce0bff432643e768d16ad221b7d4d938"
         }
       }
     }
@@ -57,11 +53,10 @@
 
   ],
   "build_dependencies": [
-    "maven",
-    "unzip"
+    "go"
   ],
   "dependencies": [
-    "openjdk@8"
+
   ],
   "recommended_dependencies": [
 
