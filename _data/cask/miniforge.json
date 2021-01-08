@@ -1,0 +1,53 @@
+{
+  "token": "miniforge",
+  "name": [
+    "miniforge"
+  ],
+  "desc": "Minimal installer for conda specific to conda-forge",
+  "homepage": "https://github.com/conda-forge/miniforge",
+  "url": "https://github.com/conda-forge/miniforge/releases/download/4.9.2-5/Miniforge3-4.9.2-5-MacOSX-x86_64.sh",
+  "appcast": "https://github.com/conda-forge/miniforge/releases.atom",
+  "version": "4.9.2-5",
+  "sha256": "a33aca4dd6686b1dba790b224c9e686d7e08c86e6074379194f3bde478d883ed",
+  "artifacts": [
+    {
+      "delete": "$(brew --prefix)/Caskroom/miniforge/base",
+      "signal": {
+      }
+    },
+    {
+      "path": "Miniforge3-4.9.2-5-MacOSX-x86_64.sh",
+      "args": {
+        "must_succeed": "true",
+        "sudo": "false",
+        "args": [
+          "-b",
+          "-p",
+          "$(brew --prefix)/Caskroom/miniforge/base"
+        ],
+        "print_stdout": "true"
+      }
+    },
+    [
+      "$(brew --prefix)/Caskroom/miniforge/base/condabin/conda"
+    ],
+    {
+      "trash": [
+        "~/.condarc",
+        "~/.conda"
+      ],
+      "signal": {
+      }
+    }
+  ],
+  "caveats": "Please run the following to setup your shell:\n  conda init \"$(basename \"${SHELL}\")\"\n",
+  "depends_on": {
+  },
+  "conflicts_with": {
+    "cask": [
+      "miniconda"
+    ]
+  },
+  "container": "{:type=>:naked}",
+  "auto_updates": true
+}
