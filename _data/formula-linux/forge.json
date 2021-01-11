@@ -1,6 +1,6 @@
 {
-  "name": "mda-lv2",
-  "full_name": "mda-lv2",
+  "name": "forge",
+  "full_name": "forge",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "LV2 port of the MDA plugins",
-  "license": "GPL-3.0-or-later",
-  "homepage": "https://drobilla.net/software/mda-lv2/",
+  "desc": "High Performance Visualization",
+  "license": "BSD-3-Clause",
+  "homepage": "https://github.com/arrayfire/forge",
   "versions": {
-    "stable": "1.2.6",
+    "stable": "1.0.5",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://download.drobilla.net/mda-lv2-1.2.6.tar.bz2",
+      "url": "https://github.com/arrayfire/forge/archive/v1.0.5.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,20 +33,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/mda-lv2-1.2.6.big_sur.bottle.tar.gz",
-          "sha256": "11305c6dd1065f380811fc8fa2058d2885360eabc95592a926e583fe43c0d6a7"
-        },
-        "arm64_big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/mda-lv2-1.2.6.arm64_big_sur.bottle.tar.gz",
-          "sha256": "70a7e6c2ec6687191da96a243d428d3a36f39f2eafbbea149fd2518dc70001af"
+          "url": "https://linuxbrew.bintray.com/bottles/forge-1.0.5.big_sur.bottle.tar.gz",
+          "sha256": "af25416dba5b9b0ea4fd3cc26270a9ee9cd955d5f265e3b2e325dc89628be568"
         },
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/mda-lv2-1.2.6.catalina.bottle.tar.gz",
-          "sha256": "479125c63a6736dbe110711d9978764f1b44bb2520aa9646c2ca2fb7aa914f4a"
+          "url": "https://linuxbrew.bintray.com/bottles/forge-1.0.5.catalina.bottle.tar.gz",
+          "sha256": "d97b409d7830196f87123ef062672df3ccbea3363d6dce0e74c98e2e192b0c0a"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/mda-lv2-1.2.6.mojave.bottle.tar.gz",
-          "sha256": "d10c751b2b276f037f4ee8b4cbe00871fc390c47661957ba96713161b1f6411a"
+          "url": "https://linuxbrew.bintray.com/bottles/forge-1.0.5.mojave.bottle.tar.gz",
+          "sha256": "239cd658c7042ab7591e1575ee80b09a6e74279276b7227ed2ad8a47907e6a84"
         }
       }
     }
@@ -57,10 +53,18 @@
 
   ],
   "build_dependencies": [
+    "boost",
+    "cmake",
+    "doxygen",
     "pkg-config"
   ],
   "dependencies": [
-    "lv2"
+    "fontconfig",
+    "freeimage",
+    "freetype",
+    "glfw",
+    "glm",
+    "libx11"
   ],
   "recommended_dependencies": [
 
