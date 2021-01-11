@@ -1,6 +1,6 @@
 {
-  "name": "openimageio",
-  "full_name": "openimageio",
+  "name": "forge",
+  "full_name": "forge",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Library for reading, processing and writing images",
+  "desc": "High Performance Visualization",
   "license": "BSD-3-Clause",
-  "homepage": "https://openimageio.org/",
+  "homepage": "https://github.com/arrayfire/forge",
   "versions": {
-    "stable": "2.2.10.1",
-    "head": "HEAD",
+    "stable": "1.0.5",
+    "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/OpenImageIO/oiio/archive/Release-2.2.10.1.tar.gz",
+      "url": "https://github.com/arrayfire/forge/archive/v1.0.5.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,21 +28,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": "/usr/local/Cellar",
+      "cellar": ":any",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://homebrew.bintray.com/bottles/openimageio-2.2.10.1.big_sur.bottle.tar.gz",
-          "sha256": "dbf0227c735a171d07aba6af381bb93671f61c79d6976163ffad13e0ce51e6eb"
+          "url": "https://homebrew.bintray.com/bottles/forge-1.0.5.big_sur.bottle.tar.gz",
+          "sha256": "af25416dba5b9b0ea4fd3cc26270a9ee9cd955d5f265e3b2e325dc89628be568"
         },
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/openimageio-2.2.10.1.catalina.bottle.tar.gz",
-          "sha256": "2ec25e439836298b38c6f8107c788c877af223dfd02d76e39d9c18f814735ff7"
+          "url": "https://homebrew.bintray.com/bottles/forge-1.0.5.catalina.bottle.tar.gz",
+          "sha256": "d97b409d7830196f87123ef062672df3ccbea3363d6dce0e74c98e2e192b0c0a"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/openimageio-2.2.10.1.mojave.bottle.tar.gz",
-          "sha256": "bfe208f44fca47f8ed2d591f2752d7bd815c88084d6905cbb2ffdbbfd9cac909"
+          "url": "https://homebrew.bintray.com/bottles/forge-1.0.5.mojave.bottle.tar.gz",
+          "sha256": "239cd658c7042ab7591e1575ee80b09a6e74279276b7227ed2ad8a47907e6a84"
         }
       }
     }
@@ -53,26 +53,18 @@
 
   ],
   "build_dependencies": [
+    "boost",
     "cmake",
+    "doxygen",
     "pkg-config"
   ],
   "dependencies": [
-    "boost",
-    "boost-python3",
-    "ffmpeg",
+    "fontconfig",
+    "freeimage",
     "freetype",
-    "giflib",
-    "ilmbase",
-    "jpeg",
-    "libheif",
-    "libpng",
-    "libraw",
-    "libtiff",
-    "opencolorio",
-    "openexr",
-    "pybind11",
-    "python@3.9",
-    "webp"
+    "glfw",
+    "glm",
+    "libx11"
   ],
   "recommended_dependencies": [
 
