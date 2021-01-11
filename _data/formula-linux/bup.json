@@ -9,16 +9,16 @@
 
   ],
   "desc": "Backup tool",
-  "license": "LGPL-2.1",
+  "license": "BSD-2-Clause and LGPL-2.0-only",
   "homepage": "https://bup.github.io/",
   "versions": {
-    "stable": "0.31",
+    "stable": "0.32",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/bup/bup/archive/0.31.tar.gz",
+      "url": "https://github.com/bup/bup/archive/0.32.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,20 +33,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/bup-0.31.big_sur.bottle.tar.gz",
-          "sha256": "e4bb08d55b8df8f0679f6c41f08211e2ab8ac0a684583122adbee9746d29191f"
+          "url": "https://linuxbrew.bintray.com/bottles/bup-0.32.big_sur.bottle.tar.gz",
+          "sha256": "96005e9af68eb9bc01c01025b693bf25a0fe2aeb2318adaadc643c91f824ea3a"
         },
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/bup-0.31.catalina.bottle.tar.gz",
-          "sha256": "3bf19221bf74b4df029c16bc0d2c329ffa8c15299bd8d1ec3bf2fb5b33ef71d6"
+          "url": "https://linuxbrew.bintray.com/bottles/bup-0.32.catalina.bottle.tar.gz",
+          "sha256": "0509e26be582f806e50a47b36e3656d0031e852dbac6a9a15f500365860111c5"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/bup-0.31.mojave.bottle.tar.gz",
-          "sha256": "9c0ece72b212d56a83ebe5540c68851e9fd759dabe05db787cc438aedce022de"
-        },
-        "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/bup-0.31.high_sierra.bottle.tar.gz",
-          "sha256": "9c9515da16e8ba9ed333922a486a042da64e4f7d0986298a8c82420c83b06a7f"
+          "url": "https://linuxbrew.bintray.com/bottles/bup-0.32.mojave.bottle.tar.gz",
+          "sha256": "d88b558267b83a82fd2dcec7a400558224afaf9a2dd30c910766ee62556e0dbd"
         }
       }
     }
@@ -57,10 +53,11 @@
 
   ],
   "build_dependencies": [
-    "pandoc"
+    "pandoc",
+    "pkg-config"
   ],
   "dependencies": [
-
+    "python@3.9"
   ],
   "recommended_dependencies": [
 
@@ -72,15 +69,7 @@
 
   ],
   "requirements": [
-    {
-      "name": "macos",
-      "cask": null,
-      "download": null,
-      "version": null,
-      "contexts": [
 
-      ]
-    }
   ],
   "conflicts_with": [
 
