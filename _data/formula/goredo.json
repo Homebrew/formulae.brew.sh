@@ -1,6 +1,6 @@
 {
-  "name": "meilisearch",
-  "full_name": "meilisearch",
+  "name": "goredo",
+  "full_name": "goredo",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Ultra relevant, instant and typo-tolerant full-text search API",
-  "license": "MIT",
-  "homepage": "https://docs.meilisearch.com/",
+  "desc": "Go implementation of djb's redo, a Makefile replacement that sucks less",
+  "license": "GPL-3.0-only",
+  "homepage": "http://www.goredo.cypherpunks.ru/",
   "versions": {
-    "stable": "0.18.1",
+    "stable": "0.12.3",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/meilisearch/MeiliSearch/archive/v0.18.1.tar.gz",
+      "url": "http://www.goredo.cypherpunks.ru/download/goredo-0.12.3.tar.zst",
       "tag": null,
       "revision": null
     }
@@ -33,20 +33,20 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://homebrew.bintray.com/bottles/meilisearch-0.18.1.big_sur.bottle.tar.gz",
-          "sha256": "4408d5fb3e13c4bb4d0dfd3c50bab7d9f0147be15932b41eff51e0948a61dfe5"
+          "url": "https://homebrew.bintray.com/bottles/goredo-0.12.3.big_sur.bottle.tar.gz",
+          "sha256": "c03721823a2849b78cc5ccf20e52a0ae0469e1795f9b2c36110b949b1bc5168e"
         },
         "arm64_big_sur": {
-          "url": "https://homebrew.bintray.com/bottles/meilisearch-0.18.1.arm64_big_sur.bottle.tar.gz",
-          "sha256": "5a9a62b3064aec6ad5935a5e4f319c610b814e6017919df4b63159dd061659bc"
+          "url": "https://homebrew.bintray.com/bottles/goredo-0.12.3.arm64_big_sur.bottle.tar.gz",
+          "sha256": "ec16c45979431a557b937df2a5e657bc85b576a2ebf9f9b089895e7f2ded917c"
         },
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/meilisearch-0.18.1.catalina.bottle.tar.gz",
-          "sha256": "c92ee78d6c4bf1073a4c3b3f505ac8c0f5f075b34b827b4702be72403f954a4a"
+          "url": "https://homebrew.bintray.com/bottles/goredo-0.12.3.catalina.bottle.tar.gz",
+          "sha256": "6037d2404387e19dea95837cec3ac12883e073033bcdad792d9e9556e72864fb"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/meilisearch-0.18.1.mojave.bottle.tar.gz",
-          "sha256": "55f63c3c266ddb189d419ed9fc7919d658b93d96871e5358107daa473c441fb2"
+          "url": "https://homebrew.bintray.com/bottles/goredo-0.12.3.mojave.bottle.tar.gz",
+          "sha256": "a2c78dcbcd336c13c8a2e5dd224d44e924187abc6062b99ac0ff02d0084593ad"
         }
       }
     }
@@ -57,7 +57,8 @@
 
   ],
   "build_dependencies": [
-    "rust"
+    "go",
+    "zstd"
   ],
   "dependencies": [
 
