@@ -8,27 +8,47 @@
   "versioned_formulae": [
 
   ],
-  "desc": "ASF is a C# application that allows you to farm steam cards",
+  "desc": "Application for idling Steam cards from multiple accounts simultaneously",
   "license": "Apache-2.0",
-  "homepage": "https://github.com/JustArchi/ArchiSteamFarm",
+  "homepage": "https://github.com/JustArchiNET/ArchiSteamFarm",
   "versions": {
-    "stable": "2.3.2.0",
-    "head": null,
+    "stable": "5.0.2.4",
+    "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/JustArchi/ArchiSteamFarm/releases/download/2.3.2.0/ASF.zip",
-      "tag": null,
-      "revision": null
+      "url": "https://github.com/JustArchiNET/ArchiSteamFarm.git",
+      "tag": "5.0.2.4",
+      "revision": "08f35dd6e36a4d847a555405fd7a0242cd56fe4c"
     }
   },
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "cellar": ":any_skip_relocation",
+      "prefix": "/home/linuxbrew/.linuxbrew",
+      "root_url": "https://linuxbrew.bintray.com/bottles",
+      "files": {
+        "big_sur": {
+          "url": "https://linuxbrew.bintray.com/bottles/archi-steam-farm-5.0.2.4.big_sur.bottle.tar.gz",
+          "sha256": "96264a2bcb5494cbb9cacfb2a7ee46e70f75a594699938bb6a762fd7be92dd74"
+        },
+        "catalina": {
+          "url": "https://linuxbrew.bintray.com/bottles/archi-steam-farm-5.0.2.4.catalina.bottle.tar.gz",
+          "sha256": "774eb7f137b45fce2daf728d5a0dab6de159a9bf99c1e3dc48735045ff481f0c"
+        },
+        "mojave": {
+          "url": "https://linuxbrew.bintray.com/bottles/archi-steam-farm-5.0.2.4.mojave.bottle.tar.gz",
+          "sha256": "9126e87d0afe22979e67471b5b786309979160e0759a907a0801ec7b5f3f9b01"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
@@ -36,7 +56,7 @@
 
   ],
   "dependencies": [
-    "mono"
+    "dotnet"
   ],
   "recommended_dependencies": [
 
