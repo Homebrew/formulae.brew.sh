@@ -12,13 +12,13 @@
   "license": "GPL-2.0-or-later",
   "homepage": "https://mamedev.org/",
   "versions": {
-    "stable": "0.226",
+    "stable": "0.227",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/mamedev/mame/archive/mame0226.tar.gz",
+      "url": "https://github.com/mamedev/mame/archive/mame0227.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -27,22 +27,26 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "cellar": ":any",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://homebrew.bintray.com/bottles/mame-0.226.big_sur.bottle.1.tar.gz",
-          "sha256": "df514e97b41c36a65fb3d0729f8e927887cd9d1f7b3f23a189e4430a1e48bb76"
+          "url": "https://homebrew.bintray.com/bottles/mame-0.227.big_sur.bottle.tar.gz",
+          "sha256": "a9928dea0decc1809066fac18fb53e103ee00bc590344835b63aa4a70855a769"
+        },
+        "arm64_big_sur": {
+          "url": "https://homebrew.bintray.com/bottles/mame-0.227.arm64_big_sur.bottle.tar.gz",
+          "sha256": "4aa1aec5b30ddf102e83c08422c946f031cdb1a73c1d9744963adf7d4b793b48"
         },
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/mame-0.226.catalina.bottle.1.tar.gz",
-          "sha256": "9bc14fa247f653226bcdc771ad60ba70d2dc5e19b3386b547cf9b02c6f760615"
+          "url": "https://homebrew.bintray.com/bottles/mame-0.227.catalina.bottle.tar.gz",
+          "sha256": "219af6c0bed8c13a4535fff691d779ffc71c425e8e55b82bf739547de45b759b"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/mame-0.226.mojave.bottle.1.tar.gz",
-          "sha256": "ca698bbefa83ddc6be99d0a471fe7f6303b35a6c757bb5b6b73a70acf8281c3f"
+          "url": "https://homebrew.bintray.com/bottles/mame-0.227.mojave.bottle.tar.gz",
+          "sha256": "4b23b592f444fdfaad894633c74959161dcfdeb5a35dadb7e6032259f02b87aa"
         }
       }
     }
@@ -55,7 +59,6 @@
   "build_dependencies": [
     "glm",
     "pkg-config",
-    "pugixml",
     "python@3.9",
     "rapidjson",
     "sphinx-doc"
@@ -65,6 +68,7 @@
     "jpeg",
     "portaudio",
     "portmidi",
+    "pugixml",
     "sdl2",
     "sqlite",
     "utf8proc"
