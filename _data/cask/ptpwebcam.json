@@ -1,0 +1,40 @@
+{
+  "token": "ptpwebcam",
+  "name": [
+    "ptpwebcam"
+  ],
+  "desc": "DSLR live view video plugin",
+  "homepage": "https://ptpwebcam.org/",
+  "url": "https://github.com/dognotdog/ptpwebcam/releases/download/v1.2.6/PTP_Webcam-v1.2.6.pkg",
+  "appcast": null,
+  "version": "1.2.6",
+  "sha256": "6d77dbb9d6052397f953b49e4a218cb809ec864a9cf3dfc83318f788c71e88c4",
+  "artifacts": [
+    {
+      "pkgutil": [
+        "org.ptpwebcam.pkg.EnableChrome",
+        "org.ptpwebcam.pkg.EnableSkype",
+        "org.ptpwebcam.pkg.EnableZoom",
+        "org.ptpwebcam.pkg.PTPWebcam",
+        "org.ptpwebcam.pkg.RemoveEOSWebcam"
+      ],
+      "launchctl": [
+        "org.ptpwebcam.PtpWebcamAgent",
+        "org.ptpwebcam.PtpWebcamAssistant"
+      ],
+      "delete": [
+        "/Library/CoreMediaIO/Plug-ins/DAL/PTPWebcamDALPlugin.plugin",
+        "/Library/LaunchDaemons/org.ptpwebcam.PtpWebcamAssistant.plist"
+      ],
+      "signal": {
+      }
+    },
+    "PTP_Webcam-v1.2.6.pkg (Pkg)"
+  ],
+  "caveats": null,
+  "depends_on": {
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": null
+}
