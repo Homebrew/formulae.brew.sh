@@ -32,37 +32,56 @@ permalink: :title
 <p><a target="_blank" href="{{ site.taps.core.remote }}/blob/HEAD/Formula/{{ f.name }}.rb">Formula code</a> on GitHub</p>
 {%- endif %}
 
+<p>Bottle (binary package) installation
+    {%- if f.bottle_disabled %} not required
+    {%- elsif formula_path == "formula-linux" %} support provided for Linux platforms:
+    {%- else %} support provided for macOS releases:
+    {%- endif -%}</p>
+{%- if f.bottle.stable %}
+<table>
+    <tr>
+        <td><strong>Intel x86_64</strong></td>
+        <td style="text-transform:capitalize;">
+            {%- assign subsequent = false -%}
+            {%- for b in f.bottle.stable.files -%}
+                {%- unless b[0] contains "arm64_" or formula_path == "formula-linux" and b[0] != "x86_64_linux" -%}
+                    {%- if subsequent -%}, {% endif -%}
+                    {{ b[0] | replace: "x86_64", "64-bit" | replace: "_", "&nbsp;" }}
+                    {%- assign subsequent = true -%}
+                {%- endunless -%}
+            {%- endfor -%}
+        </td>
+    </tr>
+    {%- unless formula_path == "formula-linux" %}
+    <tr>
+        <td><strong>Apple Silicon</strong></td>
+        <td style="text-transform:capitalize;">
+            {%- assign subsequent = false -%}
+            {%- for b in f.bottle.stable.files -%}
+                {%- if b[0] contains "arm64_" -%}
+                    {%- if subsequent -%}, {% endif -%}
+                    {{ b[0] | remove_first: "arm64_" | replace: "_", "&nbsp;" }}
+                    {%- assign subsequent = true -%}
+                {%- endif -%}
+            {%- endfor -%}
+        </td>
+    </tr>
+    {%- endunless %}
+</table>
+{%- endif %}
+
 <p>Current versions:</p>
 <table>
     <tr>
-        <td>stable</td>
+        <td><strong>stable</strong></td>
         <td>✅</td>
         <td>{{ f.versions.stable }}</td>
     </tr>
-{%- if f.versions.devel %}
-    <tr>
-        <td>devel</td>
-        <td>🛠</td>
-        <td>{{ f.versions.stable }}</td>
-    </tr>
-{%- endif -%}
 {%- if f.versions.head %}
     <tr>
-        <td>head</td>
+        <td><strong>head</strong></td>
         <td>⚡️</td>
         <td>{{ f.versions.head }}</td>
-    </tr>
-{%- endif -%}
-{%- if f.versions.bottle %}
-    <tr>
-        <td>bottle</td>
-        <td>🍾</td>
-        <td>
-            {%- for b in f.bottle.stable.files -%}
-            {{ b[0] }}
-            {%- unless forloop.last -%}, {% endunless %}
-            {%- endfor -%}
-        </td>
     </tr>
 {%- endif %}
 </table>
