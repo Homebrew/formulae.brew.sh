@@ -1,6 +1,6 @@
 {
-  "name": "webpack",
-  "full_name": "webpack",
+  "name": "luv",
+  "full_name": "luv",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Bundler for JavaScript and friends",
-  "license": "MIT",
-  "homepage": "https://webpack.js.org/",
+  "desc": "Bare libuv bindings for lua",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/luvit/luv",
   "versions": {
-    "stable": "5.16.0",
-    "head": "HEAD",
+    "stable": "1.36.0-0",
+    "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://registry.npmjs.org/webpack/-/webpack-5.16.0.tgz",
+      "url": "https://github.com/luvit/luv/archive/1.36.0-0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,25 +28,25 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any_skip_relocation",
+      "cellar": ":any",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://homebrew.bintray.com/bottles/webpack-5.16.0.big_sur.bottle.tar.gz",
-          "sha256": "05c73b5ab958f9ec6e2f6c2a63d51394475cc04df54cf8db79b5b3408ae7ae3e"
+          "url": "https://homebrew.bintray.com/bottles/luv-1.36.0-0.big_sur.bottle.tar.gz",
+          "sha256": "7c8d417a89cd453f5a10beedf86a79a48280289fea2992677c6cf299f62dff5c"
         },
         "arm64_big_sur": {
-          "url": "https://homebrew.bintray.com/bottles/webpack-5.16.0.arm64_big_sur.bottle.tar.gz",
-          "sha256": "aaed1d41752ea14fbf9edfc9a08f8e34df4f873c0648cfe211f37330605e257b"
+          "url": "https://homebrew.bintray.com/bottles/luv-1.36.0-0.arm64_big_sur.bottle.tar.gz",
+          "sha256": "f6206cb6d576a9d76340207c9bb0ea606fa436396e8e6f47c8f112cb5ff30b9a"
         },
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/webpack-5.16.0.catalina.bottle.tar.gz",
-          "sha256": "c4e9f3cd306bade84b73aa49bf05e60ae04eaff1511e52b35096d505efb8f37b"
+          "url": "https://homebrew.bintray.com/bottles/luv-1.36.0-0.catalina.bottle.tar.gz",
+          "sha256": "8916140ae938a0094f5633e9d2822824f94463c70d8b9c7212b61d8813c48021"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/webpack-5.16.0.mojave.bottle.tar.gz",
-          "sha256": "aa8449741d5f6d802aa84f47a3f38d5dd09c2c8af5baae3183ad22dbaa40ec32"
+          "url": "https://homebrew.bintray.com/bottles/luv-1.36.0-0.mojave.bottle.tar.gz",
+          "sha256": "5fad043a019896b644261362348caf757e256890c46fc4e268ad79710d45b57b"
         }
       }
     }
@@ -57,10 +57,11 @@
 
   ],
   "build_dependencies": [
-
+    "cmake",
+    "luajit-openresty"
   ],
   "dependencies": [
-    "node"
+    "libuv"
   ],
   "recommended_dependencies": [
 
