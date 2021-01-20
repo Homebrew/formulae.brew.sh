@@ -1,6 +1,6 @@
 {
-  "name": "flow-cli",
-  "full_name": "flow-cli",
+  "name": "luv",
+  "full_name": "luv",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Command-line interface that provides utilities for building Flow applications",
+  "desc": "Bare libuv bindings for lua",
   "license": "Apache-2.0",
-  "homepage": "https://onflow.org",
+  "homepage": "https://github.com/luvit/luv",
   "versions": {
-    "stable": "0.13.1",
-    "head": "HEAD",
+    "stable": "1.36.0-0",
+    "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/onflow/flow-cli/archive/v0.13.1.tar.gz",
+      "url": "https://github.com/luvit/luv/archive/1.36.0-0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,25 +28,25 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any_skip_relocation",
+      "cellar": ":any",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/flow-cli-0.13.1.big_sur.bottle.tar.gz",
-          "sha256": "d0efaa85dadbb105dbeaf6d56ec0c3eef4e3fa3743d843723c72b066dd7678a4"
+          "url": "https://linuxbrew.bintray.com/bottles/luv-1.36.0-0.big_sur.bottle.tar.gz",
+          "sha256": "7c8d417a89cd453f5a10beedf86a79a48280289fea2992677c6cf299f62dff5c"
         },
         "arm64_big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/flow-cli-0.13.1.arm64_big_sur.bottle.tar.gz",
-          "sha256": "d2336ea4c8453b551ca63f1fc32f5bb21a885444a46abc146d2c0d53f4bdb992"
+          "url": "https://linuxbrew.bintray.com/bottles/luv-1.36.0-0.arm64_big_sur.bottle.tar.gz",
+          "sha256": "f6206cb6d576a9d76340207c9bb0ea606fa436396e8e6f47c8f112cb5ff30b9a"
         },
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/flow-cli-0.13.1.catalina.bottle.tar.gz",
-          "sha256": "fe0c5e3b0ae07655e0dd78ac52ce71654a8e68492a7bf7e342e5739f823a0613"
+          "url": "https://linuxbrew.bintray.com/bottles/luv-1.36.0-0.catalina.bottle.tar.gz",
+          "sha256": "8916140ae938a0094f5633e9d2822824f94463c70d8b9c7212b61d8813c48021"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/flow-cli-0.13.1.mojave.bottle.tar.gz",
-          "sha256": "673e17bec4a299423fc52d59ceeeffd126f9f5ee4c134002bfeb7ddf29e317ff"
+          "url": "https://linuxbrew.bintray.com/bottles/luv-1.36.0-0.mojave.bottle.tar.gz",
+          "sha256": "5fad043a019896b644261362348caf757e256890c46fc4e268ad79710d45b57b"
         }
       }
     }
@@ -57,10 +57,11 @@
 
   ],
   "build_dependencies": [
-    "go"
+    "cmake",
+    "luajit-openresty"
   ],
   "dependencies": [
-
+    "libuv"
   ],
   "recommended_dependencies": [
 
