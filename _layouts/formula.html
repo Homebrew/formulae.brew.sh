@@ -32,10 +32,10 @@ permalink: :title
 <p><a target="_blank" href="{{ site.taps.core.remote }}/blob/HEAD/Formula/{{ f.name }}.rb">Formula code</a> on GitHub</p>
 {%- endif %}
 
-<p>Bottle (binary package) installation
-    {%- if f.bottle_disabled %} not required
-    {%- elsif formula_path == "formula-linux" %} support provided for Linux platforms:
-    {%- else %} support provided for macOS releases:
+<p>Bottle (binary package)
+    {%- if f.bottle_disabled %} not required, support provided for all supported Homebrew platforms.
+    {%- elsif formula_path == "formula-linux" %} installation support provided for Linux platforms:
+    {%- else %} installation support provided for macOS releases:
     {%- endif -%}</p>
 {%- if f.bottle.stable %}
 <table>
