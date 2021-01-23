@@ -1,6 +1,6 @@
 {
-  "name": "lemon",
-  "full_name": "lemon",
+  "name": "osmcoastline",
+  "full_name": "osmcoastline",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "LALR(1) parser generator like yacc or bison",
-  "license": "blessing",
-  "homepage": "https://www.hwaci.com/sw/lemon/",
+  "desc": "Extracts coastline data from OpenStreetMap planet file",
+  "license": "GPL-3.0-or-later",
+  "homepage": "https://osmcode.org/osmcoastline/",
   "versions": {
-    "stable": "3.34.1",
+    "stable": "2.3.0",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://sqlite.org/2021/sqlite-src-3340100.zip",
+      "url": "https://github.com/osmcode/osmcoastline/archive/v2.3.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,25 +28,21 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any_skip_relocation",
+      "cellar": ":any",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/lemon-3.34.1.big_sur.bottle.tar.gz",
-          "sha256": "d93678613765dacef1f52234e82bcd1dd60f9acd55000d44a9cff8f571572b5b"
-        },
-        "arm64_big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/lemon-3.34.1.arm64_big_sur.bottle.tar.gz",
-          "sha256": "33b7865addc98907551329c54d597a648495a8a737402870b6835dc83ffa5e98"
+          "url": "https://linuxbrew.bintray.com/bottles/osmcoastline-2.3.0.big_sur.bottle.tar.gz",
+          "sha256": "484435d2e38ed650ac0244a4de44a1ab857db1f25f2270fa2e4809fb8873d24a"
         },
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/lemon-3.34.1.catalina.bottle.tar.gz",
-          "sha256": "d6bb8a9909be8ce608481df23023b89c618b6c61508bde8d70df26d2ab781df2"
+          "url": "https://linuxbrew.bintray.com/bottles/osmcoastline-2.3.0.catalina.bottle.tar.gz",
+          "sha256": "c3777d42b345383e5a4949bc00b388d71a6b5e20695cc959bfd958d4b07885a1"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/lemon-3.34.1.mojave.bottle.tar.gz",
-          "sha256": "8f834c886dcf821b8381bb40a085a8730368e78680a4d40a34d81badf31cd5ba"
+          "url": "https://linuxbrew.bintray.com/bottles/osmcoastline-2.3.0.mojave.bottle.tar.gz",
+          "sha256": "6830542a881dd0b7aedd8af1a9c9d62b882d4f4e3eff66929a31e5592e23ea8a"
         }
       }
     }
@@ -57,10 +53,15 @@
 
   ],
   "build_dependencies": [
-
+    "cmake",
+    "libosmium"
   ],
   "dependencies": [
-
+    "gdal",
+    "geos",
+    "libspatialite",
+    "sqlite",
+    "zlib"
   ],
   "recommended_dependencies": [
 
