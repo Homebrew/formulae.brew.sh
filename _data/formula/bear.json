@@ -12,45 +12,37 @@
   "license": "GPL-3.0-or-later",
   "homepage": "https://github.com/rizsotto/Bear",
   "versions": {
-    "stable": "2.4.4",
+    "stable": "3.0.7",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/rizsotto/Bear/archive/2.4.4.tar.gz",
+      "url": "https://github.com/rizsotto/Bear/archive/3.0.7.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": "/usr/local/Cellar",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://homebrew.bintray.com/bottles/bear-2.4.4_1.big_sur.bottle.tar.gz",
-          "sha256": "9862a97801676dcc319cbc7a41c5a8bc25dcf1605699c151ddaa31a152b73763"
+          "url": "https://homebrew.bintray.com/bottles/bear-3.0.7.big_sur.bottle.tar.gz",
+          "sha256": "b2cb1d2a69961eb48dfe78b1a904e5e062121a36bc833b32750d5d2e9e4b1303"
         },
         "arm64_big_sur": {
-          "url": "https://homebrew.bintray.com/bottles/bear-2.4.4_1.arm64_big_sur.bottle.tar.gz",
-          "sha256": "5461a907f535dc454ee4e02b720542ca7e6557ba2356919d6bcded0b619cb230"
+          "url": "https://homebrew.bintray.com/bottles/bear-3.0.7.arm64_big_sur.bottle.tar.gz",
+          "sha256": "3400e1dd8f85207ca25fa696bf9888e0ed1474246713ded9d1263407b72e5465"
         },
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/bear-2.4.4_1.catalina.bottle.tar.gz",
-          "sha256": "84cf802302f75a97d460d81b34388f1b426739251a0a1ef693798974de8b20bb"
-        },
-        "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/bear-2.4.4_1.mojave.bottle.tar.gz",
-          "sha256": "cf53da69c793f2eebdfe625ffd6776d4f3a7a36a440eeb027ec75bc27865acad"
-        },
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/bear-2.4.4_1.high_sierra.bottle.tar.gz",
-          "sha256": "9e0070f18b84c96e10c0305c016e75129d51b9d480424b12563a1979b2a7e297"
+          "url": "https://homebrew.bintray.com/bottles/bear-3.0.7.catalina.bottle.tar.gz",
+          "sha256": "97abc44083299426ade4bf4fa96cf9bd91741214beb7ffb1fa3c03739ca9a123"
         }
       }
     }
@@ -61,10 +53,16 @@
 
   ],
   "build_dependencies": [
-    "cmake"
+    "cmake",
+    "pkg-config"
   ],
   "dependencies": [
-    "python@3.9"
+    "fmt",
+    "grpc",
+    "nlohmann-json",
+    "python@3.9",
+    "spdlog",
+    "sqlite"
   ],
   "recommended_dependencies": [
 
@@ -76,7 +74,15 @@
 
   ],
   "requirements": [
+    {
+      "name": "macos",
+      "cask": null,
+      "download": null,
+      "version": "10.15",
+      "contexts": [
 
+      ]
+    }
   ],
   "conflicts_with": [
 
