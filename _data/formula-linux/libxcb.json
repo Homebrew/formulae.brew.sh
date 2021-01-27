@@ -28,7 +28,7 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": ":any_skip_relocation",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
@@ -43,6 +43,10 @@
         "catalina": {
           "url": "https://linuxbrew.bintray.com/bottles/libxcb-1.14_1.catalina.bottle.tar.gz",
           "sha256": "b631a2c2ab299af91f482ab2897089cf10386b3ed99ba0939e80fe2d72074fc2"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/libxcb-1.14_1.x86_64_linux.bottle.tar.gz",
+          "sha256": "df3a352fb0212ba57317ade0f2c68bd5ad2dcad999cbfb990d35a0e09c3770b9"
         }
       }
     }
@@ -54,7 +58,6 @@
   ],
   "build_dependencies": [
     "pkg-config",
-    "python@3.9",
     "xcb-proto"
   ],
   "dependencies": [
@@ -72,7 +75,15 @@
 
   ],
   "requirements": [
-
+    {
+      "name": "python3",
+      "cask": null,
+      "download": null,
+      "version": null,
+      "contexts": [
+        "build"
+      ]
+    }
   ],
   "conflicts_with": [
 
