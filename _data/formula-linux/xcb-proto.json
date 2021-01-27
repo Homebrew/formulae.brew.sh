@@ -43,6 +43,10 @@
         "catalina": {
           "url": "https://linuxbrew.bintray.com/bottles/xcb-proto-1.14_5.catalina.bottle.tar.gz",
           "sha256": "eed4f1429bd7e504075db32c1ca1c93bc9623efc8a5ca624047fba7d866e99f8"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/xcb-proto-1.14_5.x86_64_linux.bottle.tar.gz",
+          "sha256": "5ebb42d57c95c12448e53231b050c5cbeba53b3b089f07a45116b8a944d0f757"
         }
       }
     }
@@ -53,7 +57,8 @@
 
   ],
   "build_dependencies": [
-    "pkg-config"
+    "pkg-config",
+    "python@3.9"
   ],
   "dependencies": [
 
@@ -68,15 +73,7 @@
 
   ],
   "requirements": [
-    {
-      "name": "python3",
-      "cask": null,
-      "download": null,
-      "version": null,
-      "contexts": [
-        "build"
-      ]
-    }
+
   ],
   "conflicts_with": [
 
