@@ -9,16 +9,16 @@
 
   ],
   "desc": "Tools to create, check and label file systems of the FAT family",
-  "license": "GPL-3.0",
+  "license": "GPL-3.0-or-later",
   "homepage": "https://github.com/dosfstools",
   "versions": {
-    "stable": "4.1",
+    "stable": "4.2",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/dosfstools/dosfstools/releases/download/v4.1/dosfstools-4.1.tar.gz",
+      "url": "https://github.com/dosfstools/dosfstools/releases/download/v4.2/dosfstools-4.2.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -27,38 +27,30 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "cellar": ":any_skip_relocation",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/dosfstools-4.1.big_sur.bottle.1.tar.gz",
-          "sha256": "6a2413a2efbaf76112cb88e3531b4e57c826423c276eeb5ed055a4ece39d9426"
+          "url": "https://linuxbrew.bintray.com/bottles/dosfstools-4.2.big_sur.bottle.tar.gz",
+          "sha256": "c4f450bef47449fa57d911e1c3610cd65bf8d7fd661e3efc8a0a44c7d45510f5"
         },
         "arm64_big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/dosfstools-4.1.arm64_big_sur.bottle.1.tar.gz",
-          "sha256": "df48192564cfabe5d9682029032fcc32a62871a7f9f3200503be6b2710073a2a"
+          "url": "https://linuxbrew.bintray.com/bottles/dosfstools-4.2.arm64_big_sur.bottle.tar.gz",
+          "sha256": "3d8437b8921385c7675d2502c0c7b746f060e6b1656923e061173d568927f34d"
         },
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/dosfstools-4.1.catalina.bottle.1.tar.gz",
-          "sha256": "c537f560096a325d904edb80218af9c113ad365ae3c39c9b1b3393aa38418885"
+          "url": "https://linuxbrew.bintray.com/bottles/dosfstools-4.2.catalina.bottle.tar.gz",
+          "sha256": "df9afee3d6ec3da028a6fdd487b98800099f8aa248261c35ed2821e984b91a70"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/dosfstools-4.1.mojave.bottle.1.tar.gz",
-          "sha256": "a12605487c15e462c7ae652bb3f1587d254fc0001bfbae9261903c9f85542c2e"
-        },
-        "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/dosfstools-4.1.high_sierra.bottle.1.tar.gz",
-          "sha256": "44d8a1baa92d553ec9c24c1152c875b0f7d3730146d3decf4cdfa8f7b1516434"
-        },
-        "sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/dosfstools-4.1.sierra.bottle.1.tar.gz",
-          "sha256": "b14dc5d79955f0ee586a33c7e265df2def55b1c64b7eb123539fce827cdeb6ec"
+          "url": "https://linuxbrew.bintray.com/bottles/dosfstools-4.2.mojave.bottle.tar.gz",
+          "sha256": "4d910d3f83352692379e5ead97f3c52ab845cc187a1d791f655ed02ef7b7b9e6"
         },
         "x86_64_linux": {
-          "url": "https://linuxbrew.bintray.com/bottles/dosfstools-4.1.x86_64_linux.bottle.1.tar.gz",
-          "sha256": "66d79cb2d7855f2005f138e92b15d5120ae057379afce31fb889e27251ae4006"
+          "url": "https://linuxbrew.bintray.com/bottles/dosfstools-4.2.x86_64_linux.bottle.tar.gz",
+          "sha256": "ae69f175b1e6d1fde2345f3f0cc42a78831e38f7847cce79147072d263e8e3c1"
         }
       }
     }
@@ -71,6 +63,7 @@
   "build_dependencies": [
     "autoconf",
     "automake",
+    "gettext",
     "pkg-config"
   ],
   "dependencies": [
