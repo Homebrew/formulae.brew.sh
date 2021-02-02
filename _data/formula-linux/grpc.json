@@ -28,7 +28,7 @@
   "bottle": {
     "stable": {
       "rebuild": 1,
-      "cellar": ":any",
+      "cellar": ":any_skip_relocation",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
@@ -47,6 +47,10 @@
         "mojave": {
           "url": "https://linuxbrew.bintray.com/bottles/grpc-1.35.0.mojave.bottle.1.tar.gz",
           "sha256": "6680b665c9decbbd6f5fc1f9757421c947ce75c8275244ccaa87e1128ef507ff"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/grpc-1.35.0.x86_64_linux.bottle.1.tar.gz",
+          "sha256": "7f2693f86a903abd6a914eeb6db8b15af9e9048a150549a7595bd77c86e2fe25"
         }
       }
     }
@@ -61,7 +65,7 @@
     "automake",
     "cmake",
     "libtool",
-    "gcc@6"
+    "gcc@7"
   ],
   "dependencies": [
     "pkg-config",
