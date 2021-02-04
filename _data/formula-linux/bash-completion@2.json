@@ -32,13 +32,13 @@
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
-        "big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/bash-completion%402-2.11.big_sur.bottle.tar.gz",
-          "sha256": "27ccf1267d18fcd3e6018ec80363d003d07f750182bdef61150371532100bfc9"
-        },
         "arm64_big_sur": {
           "url": "https://linuxbrew.bintray.com/bottles/bash-completion%402-2.11.arm64_big_sur.bottle.tar.gz",
           "sha256": "336f04248a6da8c65291ef74c35430f843ae10b5c29d092ab463803fa14b2014"
+        },
+        "big_sur": {
+          "url": "https://linuxbrew.bintray.com/bottles/bash-completion%402-2.11.big_sur.bottle.tar.gz",
+          "sha256": "27ccf1267d18fcd3e6018ec80363d003d07f750182bdef61150371532100bfc9"
         },
         "catalina": {
           "url": "https://linuxbrew.bintray.com/bottles/bash-completion%402-2.11.catalina.bottle.tar.gz",
@@ -59,7 +59,7 @@
       }
     }
   },
-  "keg_only": false,
+  "keg_only": true,
   "bottle_disabled": false,
   "options": [
 
@@ -83,7 +83,7 @@
 
   ],
   "conflicts_with": [
-    "bash-completion"
+
   ],
   "caveats": "Add the following line to your ~/.bash_profile:\n  [[ -r \"$(brew --prefix)/etc/profile.d/bash_completion.sh\" ]] && . \"$(brew --prefix)/etc/profile.d/bash_completion.sh\"\n",
   "installed": [
