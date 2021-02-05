@@ -9,7 +9,7 @@
 
   ],
   "desc": "Universal Security Information & Event Management (SIEM) system",
-  "license": null,
+  "license": "GPL-2.0-or-later",
   "homepage": "https://www.prelude-siem.org/",
   "versions": {
     "stable": "5.2.0",
@@ -32,9 +32,21 @@
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
-        "x86_64_linux": {
-          "url": "https://linuxbrew.bintray.com/bottles/libprelude-5.2.0.x86_64_linux.bottle.tar.gz",
-          "sha256": "cb1b9bfee9be1ab5512a2c6fa8b67726c36b851ea713a265b35376b68c6e6e87"
+        "arm64_big_sur": {
+          "url": "https://linuxbrew.bintray.com/bottles/libprelude-5.2.0.arm64_big_sur.bottle.tar.gz",
+          "sha256": "7b7bd68152744ba511e577cbba513e86155f0b9734ed54591a462482d94c5679"
+        },
+        "big_sur": {
+          "url": "https://linuxbrew.bintray.com/bottles/libprelude-5.2.0.big_sur.bottle.tar.gz",
+          "sha256": "6917b8d5d3ff58f90327fb818d920de6aea2b5ae78043f00368e3b927fd6ddcd"
+        },
+        "catalina": {
+          "url": "https://linuxbrew.bintray.com/bottles/libprelude-5.2.0.catalina.bottle.tar.gz",
+          "sha256": "6e8f95a1d163f021c7f6a7e09b92b9f695edd8de41e787dcbcafc87781380980"
+        },
+        "mojave": {
+          "url": "https://linuxbrew.bintray.com/bottles/libprelude-5.2.0.mojave.bottle.tar.gz",
+          "sha256": "0bb4d2090cb2f2aa0acb868402232a725e1ad51ead0786988bf1628a94491dde"
         }
       }
     }
@@ -46,18 +58,12 @@
   ],
   "build_dependencies": [
     "libtool",
-    "perl",
-    "pkg-config",
-    "python@3.9",
-    "ruby@2.6",
-    "swig",
-    "valgrind"
+    "pkg-config"
   ],
   "dependencies": [
     "gnutls",
-    "libgcrypt",
     "libgpg-error",
-    "lua"
+    "python@3.8"
   ],
   "recommended_dependencies": [
 
@@ -69,15 +75,7 @@
 
   ],
   "requirements": [
-    {
-      "name": "linux",
-      "cask": null,
-      "download": null,
-      "version": null,
-      "contexts": [
 
-      ]
-    }
   ],
   "conflicts_with": [
 

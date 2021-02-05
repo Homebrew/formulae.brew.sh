@@ -1,6 +1,6 @@
 {
-  "name": "flow-cli",
-  "full_name": "flow-cli",
+  "name": "coin3d",
+  "full_name": "coin3d",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Command-line interface that provides utilities for building Flow applications",
-  "license": "Apache-2.0",
-  "homepage": "https://onflow.org",
+  "desc": "Open Inventor 2.1 API implementation (Coin) with Python bindings (Pivy)",
+  "license": "BSD-3-Clause and ISC",
+  "homepage": "https://coin3d.github.io/",
   "versions": {
-    "stable": "0.13.4",
+    "stable": "4.0.0",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/onflow/flow-cli/archive/v0.13.4.tar.gz",
+      "url": "https://github.com/coin3d/coin/archive/Coin-4.0.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,20 +33,20 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "arm64_big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/flow-cli-0.13.4.arm64_big_sur.bottle.tar.gz",
-          "sha256": "e8f039b06734c3ea3e6e083d71956333ab62f8e9c75b826006442136e83800d7"
+          "url": "https://linuxbrew.bintray.com/bottles/coin3d-4.0.0.arm64_big_sur.bottle.tar.gz",
+          "sha256": "df8e2e369aad234bc940bfc8e64d3956ba9a0e1896ab68214a7fff82c14e05d7"
         },
         "big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/flow-cli-0.13.4.big_sur.bottle.tar.gz",
-          "sha256": "26f2ff6a2154d71d2268bd9a232aa9ecc3081c671c57ae7cefad8d800ee930d0"
+          "url": "https://linuxbrew.bintray.com/bottles/coin3d-4.0.0.big_sur.bottle.tar.gz",
+          "sha256": "509b6d290e63f31756b1040b46366e8c0cafe173b098544caf7e8c61cd8a9b7e"
         },
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/flow-cli-0.13.4.catalina.bottle.tar.gz",
-          "sha256": "d99a2857dca3ef9095b0fd7fbfeafedf8675475d8bbfdb9b9afb372e59b23591"
+          "url": "https://linuxbrew.bintray.com/bottles/coin3d-4.0.0.catalina.bottle.tar.gz",
+          "sha256": "7ff9151841889454aea31e68576541e0f8b2e2021fd7133abf3e596ac2ae9de8"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/flow-cli-0.13.4.mojave.bottle.tar.gz",
-          "sha256": "48b8177bca20f2504c20389f2c15031e4e0ab2d675545710c199ef36ff618916"
+          "url": "https://linuxbrew.bintray.com/bottles/coin3d-4.0.0.mojave.bottle.tar.gz",
+          "sha256": "a791ec37b8aa81bd249cdb2837753ca4419c38957f60c60e249e6c8274976ab6"
         }
       }
     }
@@ -57,10 +57,15 @@
 
   ],
   "build_dependencies": [
-    "go"
+    "cmake",
+    "doxygen",
+    "ninja",
+    "swig"
   ],
   "dependencies": [
-
+    "boost",
+    "pyside",
+    "python@3.9"
   ],
   "recommended_dependencies": [
 
