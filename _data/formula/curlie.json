@@ -1,6 +1,6 @@
 {
-  "name": "awk",
-  "full_name": "awk",
+  "name": "curlie",
+  "full_name": "curlie",
   "oldname": null,
   "aliases": [
 
@@ -8,17 +8,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Text processing scripting language",
+  "desc": "Power of curl, ease of use of httpie",
   "license": "MIT",
-  "homepage": "https://www.cs.princeton.edu/~bwk/btl.mirror/",
+  "homepage": "https://curlie.io",
   "versions": {
-    "stable": "20180827",
-    "head": "HEAD",
+    "stable": "1.6.0",
+    "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/onetrueawk/awk/archive/20180827.tar.gz",
+      "url": "https://github.com/rs/curlie/archive/v1.6.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -27,26 +27,26 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "cellar": ":any_skip_relocation",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "arm64_big_sur": {
-          "url": "https://homebrew.bintray.com/bottles/awk-20180827.arm64_big_sur.bottle.1.tar.gz",
-          "sha256": "09cf1fe371a924c163732e19310f635953ae3f4909a9c3baa9db4ea4d850d905"
+          "url": "https://homebrew.bintray.com/bottles/curlie-1.6.0.arm64_big_sur.bottle.tar.gz",
+          "sha256": "254e5ce1014c934dc1a458a19ffa295ed88c5eb9ad876de204e4355a045152e9"
         },
         "big_sur": {
-          "url": "https://homebrew.bintray.com/bottles/awk-20180827.big_sur.bottle.1.tar.gz",
-          "sha256": "a73059712fb0cc9a57389f72596ca5c52978ad54bf9dce04baedbf653b154022"
+          "url": "https://homebrew.bintray.com/bottles/curlie-1.6.0.big_sur.bottle.tar.gz",
+          "sha256": "ebca81b1aa110727edbf76008a810986242980f0ce2dd11e63f2da110fc94991"
         },
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/awk-20180827.catalina.bottle.1.tar.gz",
-          "sha256": "681acac2c4bac4b8f275f640abf46e5391216d800ff34ad8c57c8d116674fae6"
+          "url": "https://homebrew.bintray.com/bottles/curlie-1.6.0.catalina.bottle.tar.gz",
+          "sha256": "8ee0a1f1762e51172f840f467df41b25db0087b5a97712e862388674e075ec89"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/awk-20180827.mojave.bottle.1.tar.gz",
-          "sha256": "202e81f1562d8b46d4b932f91c64ab58fc6017f6cdd2cc3f2a636038abc76fc0"
+          "url": "https://homebrew.bintray.com/bottles/curlie-1.6.0.mojave.bottle.tar.gz",
+          "sha256": "070bfb679705896f2b60fb44a8f94b18be862b654a394d254f2795a225173807"
         }
       }
     }
@@ -57,7 +57,7 @@
 
   ],
   "build_dependencies": [
-
+    "go"
   ],
   "dependencies": [
 
@@ -69,13 +69,13 @@
 
   ],
   "uses_from_macos": [
-
+    "curl"
   ],
   "requirements": [
 
   ],
   "conflicts_with": [
-    "gawk"
+
   ],
   "caveats": null,
   "installed": [
