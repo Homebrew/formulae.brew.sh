@@ -1,6 +1,6 @@
 {
-  "name": "gostatic",
-  "full_name": "gostatic",
+  "name": "xcprojectlint",
+  "full_name": "xcprojectlint",
   "tap": "homebrew/core",
   "oldname": null,
   "aliases": [
@@ -9,19 +9,19 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Fast static site generator",
-  "license": "ISC",
-  "homepage": "https://github.com/piranha/gostatic",
+  "desc": "Xcode project linter",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/americanexpress/xcprojectlint",
   "versions": {
-    "stable": "2.27",
+    "stable": "0.0.6",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/piranha/gostatic/archive/2.27.tar.gz",
-      "tag": null,
-      "revision": null
+      "url": "https://github.com/americanexpress/xcprojectlint.git",
+      "tag": "0.0.6",
+      "revision": "d9dad85847f5ee9b2143565a17d9066bb44b4b29"
     }
   },
   "revision": 0,
@@ -34,20 +34,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "arm64_big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/gostatic-2.27.arm64_big_sur.bottle.tar.gz",
-          "sha256": "14c946076f648bda53f61d4729137d7a809e0df290917c06aa3b730dceb8d8db"
+          "url": "https://linuxbrew.bintray.com/bottles/xcprojectlint-0.0.6.arm64_big_sur.bottle.tar.gz",
+          "sha256": "c5233bd7427141a2a3aaac3979661ececab9babacc18b4b4af258f45a87f5ef6"
         },
         "big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/gostatic-2.27.big_sur.bottle.tar.gz",
-          "sha256": "aa20108a4a32b0ac18f7105cfbea9a664a92defd35cd44a0748d65bd4febadb6"
+          "url": "https://linuxbrew.bintray.com/bottles/xcprojectlint-0.0.6.big_sur.bottle.tar.gz",
+          "sha256": "82e41371144c071dc8cb360cc434d2e692ced87a38f90d41e8422f64425263af"
         },
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/gostatic-2.27.catalina.bottle.tar.gz",
-          "sha256": "2a470262e1520d72d081fbdf434d465c6caddb4fae994cf52c492ebfdc358c89"
-        },
-        "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/gostatic-2.27.mojave.bottle.tar.gz",
-          "sha256": "53b86628c74221befb9173a3dd949bcaaac7ebe11d4552c385efcf7501871e99"
+          "url": "https://linuxbrew.bintray.com/bottles/xcprojectlint-0.0.6.catalina.bottle.tar.gz",
+          "sha256": "e573329068894a330ee859bdc2968001d42b2d06005824ca7a099d52e2dda543"
         }
       }
     }
@@ -58,7 +54,7 @@
 
   ],
   "build_dependencies": [
-    "go"
+
   ],
   "dependencies": [
 
@@ -73,7 +69,15 @@
 
   ],
   "requirements": [
-
+    {
+      "name": "xcode",
+      "cask": null,
+      "download": null,
+      "version": "12.0",
+      "contexts": [
+        "build"
+      ]
+    }
   ],
   "conflicts_with": [
 
