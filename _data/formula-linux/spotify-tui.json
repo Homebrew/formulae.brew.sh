@@ -29,7 +29,7 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+      "cellar": ":any_skip_relocation",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
@@ -48,6 +48,10 @@
         "mojave": {
           "url": "https://linuxbrew.bintray.com/bottles/spotify-tui-0.23.0.mojave.bottle.tar.gz",
           "sha256": "544761e6ad0758c70e7e24e4b89b319776c973d2aac0bbdbedaa4fd677a2ed59"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/spotify-tui-0.23.0.x86_64_linux.bottle.tar.gz",
+          "sha256": "7fd63c8216d0e276fceae4112df5089fa93cf39e6041e2f63067f3cda8c5a450"
         }
       }
     }
@@ -58,10 +62,12 @@
 
   ],
   "build_dependencies": [
-    "rust"
+    "rust",
+    "pkg-config"
   ],
   "dependencies": [
-
+    "libxcb",
+    "openssl@1.1"
   ],
   "recommended_dependencies": [
 
