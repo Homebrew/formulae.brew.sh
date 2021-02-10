@@ -24,34 +24,34 @@
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
+        "arm64_big_sur": {
+          "url": "https://linuxbrew.bintray.com/bottles/neovim-0.4.4_1.arm64_big_sur.bottle.tar.gz",
+          "sha256": "d682127e937b5ff1007cd18ad464d22e7029e6e22060fb9730383e6972365879"
+        },
         "big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/neovim-0.4.4.big_sur.bottle.1.tar.gz",
-          "sha256": "83957460b7c664b65f7339c6e37a6b468274ca747ba8f8746616c4cebf97caa9"
+          "url": "https://linuxbrew.bintray.com/bottles/neovim-0.4.4_1.big_sur.bottle.tar.gz",
+          "sha256": "21b9ac9c864d4b0e875abd6908bab3db288cecd125d331cc24546b9091ccb815"
         },
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/neovim-0.4.4.catalina.bottle.1.tar.gz",
-          "sha256": "736260e14d50d9a42562fb0fe2215d5154a9cef3e3227469a961d030b45358fd"
+          "url": "https://linuxbrew.bintray.com/bottles/neovim-0.4.4_1.catalina.bottle.tar.gz",
+          "sha256": "1cb46ac248f131738b8e1e4abc42778f1e6f351dd2e8307b08bf5c8589bb9f17"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/neovim-0.4.4.mojave.bottle.1.tar.gz",
-          "sha256": "9f8a7cb52a0060c524d4d4f96b2590d034257cc4f255a8f05dfbf464bef29cf1"
-        },
-        "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/neovim-0.4.4.high_sierra.bottle.1.tar.gz",
-          "sha256": "7286d497b92cf31f5839af325a1fc7760fb3006fa4a0dad7e547ab9c966cb491"
+          "url": "https://linuxbrew.bintray.com/bottles/neovim-0.4.4_1.mojave.bottle.tar.gz",
+          "sha256": "7137b569204e1250e113b495f912417e8c4a4b68c47592ce6be7ef0332a834ae"
         },
         "x86_64_linux": {
-          "url": "https://linuxbrew.bintray.com/bottles/neovim-0.4.4.x86_64_linux.bottle.1.tar.gz",
-          "sha256": "0750c1ab62e856d74db1136d03723862978275f3f19d3a73eaa5065d6833cc24"
+          "url": "https://linuxbrew.bintray.com/bottles/neovim-0.4.4_1.x86_64_linux.bottle.tar.gz",
+          "sha256": "7e87874e3f228f564d71e60ab8e738158f337ff443c43c22f8f821615d38368d"
         }
       }
     }
@@ -64,6 +64,7 @@
   "build_dependencies": [
     "cmake",
     "luarocks",
+    "luv",
     "pkg-config",
     "gperf",
     "unzip"
@@ -73,7 +74,7 @@
     "libtermkey",
     "libuv",
     "libvterm",
-    "luajit",
+    "luajit-openresty",
     "msgpack",
     "unibilium",
     "libnsl"
