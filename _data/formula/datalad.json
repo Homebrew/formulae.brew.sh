@@ -1,6 +1,6 @@
 {
-  "name": "mingw-w64",
-  "full_name": "mingw-w64",
+  "name": "datalad",
+  "full_name": "datalad",
   "tap": "homebrew/core",
   "oldname": null,
   "aliases": [
@@ -9,41 +9,41 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Minimalist GNU for Windows and GCC cross-compilers",
-  "license": "ZPL-2.1",
-  "homepage": "https://sourceforge.net/projects/mingw-w64/",
+  "desc": "Data distribution geared toward scientific datasets",
+  "license": "MIT",
+  "homepage": "https://www.datalad.org",
   "versions": {
-    "stable": "8.0.0",
+    "stable": "0.14.0",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://downloads.sourceforge.net/project/mingw-w64/mingw-w64/mingw-w64-release/mingw-w64-v8.0.0.tar.bz2",
+      "url": "https://files.pythonhosted.org/packages/a6/0a/e1c2c56600b966dbe3acc3d58d47582b073bbc8835c4fcd9d5c7262d18f7/datalad-0.14.0.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 3,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": "/usr/local/Cellar",
+      "cellar": ":any_skip_relocation",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://homebrew.bintray.com/bottles/mingw-w64-8.0.0_3.big_sur.bottle.tar.gz",
-          "sha256": "cf32456b5f1f3e16079a9ef8767d48fc1ec3423c7f447bb6744c0fe4777e1751"
+          "url": "https://homebrew.bintray.com/bottles/datalad-0.14.0.big_sur.bottle.tar.gz",
+          "sha256": "c1c1c3b3142635a3b57733d01aac12e869d4200acb9495245a5a0bd71699ac53"
         },
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/mingw-w64-8.0.0_3.catalina.bottle.tar.gz",
-          "sha256": "15aa7c6ff216ed6c48da13a37ab6aa865e1d9af86ad75cf0445bf8624bd4e382"
+          "url": "https://homebrew.bintray.com/bottles/datalad-0.14.0.catalina.bottle.tar.gz",
+          "sha256": "4d0541da79e801a39b4dd35f2d2b5f9c887974f81aa8392d788bf07c7fa4c566"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/mingw-w64-8.0.0_3.mojave.bottle.tar.gz",
-          "sha256": "cd3990827011083e2c8decd8f33f409f010bd42257b5d3b67ac1df0686d18d73"
+          "url": "https://homebrew.bintray.com/bottles/datalad-0.14.0.mojave.bottle.tar.gz",
+          "sha256": "3d265668a09af405985817852c4e7d18b6753d73b4c2b6626487427fbffe2fb0"
         }
       }
     }
@@ -54,13 +54,11 @@
 
   ],
   "build_dependencies": [
-    "texinfo"
+
   ],
   "dependencies": [
-    "gmp",
-    "isl",
-    "libmpc",
-    "mpfr"
+    "git-annex",
+    "python@3.9"
   ],
   "recommended_dependencies": [
 
