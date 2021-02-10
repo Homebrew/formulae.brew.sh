@@ -33,11 +33,18 @@ permalink: :title
 {%- endif %}
 
 <p>Bottle (binary package)
+    {%- assign bottles = false -%}
     {%- if f.bottle_disabled %} not required, support provided for all supported Homebrew platforms.
-    {%- elsif formula_path == "formula-linux" %} installation support provided for Linux platforms:
-    {%- else %} installation support provided for macOS releases:
+    {%- elsif formula_path == "formula-linux" -%}
+        {%- if f.bottle.stable.files.x86_64_linux %} installation support provided for Linux platforms:
+            {%- assign bottles = true -%}
+        {%- else %} not available on this platform.
+        {%- endif -%}
+    {%- elsif f.bottle.stable %} installation support provided for macOS releases:
+        {%- assign bottles = true -%}
+    {%- else %} not available on this platform.
     {%- endif -%}</p>
-{%- if f.bottle.stable %}
+{%- if bottles %}
 <table>
     <tr>
         <td><strong>Intel x86_64</strong></td>
