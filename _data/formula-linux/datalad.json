@@ -1,6 +1,6 @@
 {
-  "name": "logstash",
-  "full_name": "logstash",
+  "name": "datalad",
+  "full_name": "datalad",
   "tap": "homebrew/core",
   "oldname": null,
   "aliases": [
@@ -9,23 +9,23 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Tool for managing events and logs",
-  "license": "Apache-2.0",
-  "homepage": "https://www.elastic.co/products/logstash",
+  "desc": "Data distribution geared toward scientific datasets",
+  "license": "MIT",
+  "homepage": "https://www.datalad.org",
   "versions": {
-    "stable": "7.11.0",
-    "head": "HEAD",
+    "stable": "0.14.0",
+    "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/elastic/logstash/archive/v7.11.0.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/a6/0a/e1c2c56600b966dbe3acc3d58d47582b073bbc8835c4fcd9d5c7262d18f7/datalad-0.14.0.tar.gz",
       "tag": null,
       "revision": null
     }
   },
   "revision": 0,
-  "version_scheme": 1,
+  "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -34,16 +34,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/logstash-7.11.0.big_sur.bottle.tar.gz",
-          "sha256": "b40a2ed827138cf8e946160902dd2ad55784d986592f710a7f2ad43dcd2cba08"
+          "url": "https://linuxbrew.bintray.com/bottles/datalad-0.14.0.big_sur.bottle.tar.gz",
+          "sha256": "c1c1c3b3142635a3b57733d01aac12e869d4200acb9495245a5a0bd71699ac53"
         },
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/logstash-7.11.0.catalina.bottle.tar.gz",
-          "sha256": "1ddfd0890f2af0368ee98aedd3c35a38310c67079dec2b57a7ae07b0a540d26f"
+          "url": "https://linuxbrew.bintray.com/bottles/datalad-0.14.0.catalina.bottle.tar.gz",
+          "sha256": "4d0541da79e801a39b4dd35f2d2b5f9c887974f81aa8392d788bf07c7fa4c566"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/logstash-7.11.0.mojave.bottle.tar.gz",
-          "sha256": "81c5d3b11c9f329e9673d7e0f5e32e2b94d09b5654bbd0f79d73752e35dd5140"
+          "url": "https://linuxbrew.bintray.com/bottles/datalad-0.14.0.mojave.bottle.tar.gz",
+          "sha256": "3d265668a09af405985817852c4e7d18b6753d73b4c2b6626487427fbffe2fb0"
         }
       }
     }
@@ -54,10 +54,11 @@
 
   ],
   "build_dependencies": [
-    "ruby"
+
   ],
   "dependencies": [
-    "openjdk@8"
+    "git-annex",
+    "python@3.9"
   ],
   "recommended_dependencies": [
 
@@ -74,7 +75,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "Configuration files are located in $(brew --prefix)/etc/logstash/\n",
+  "caveats": null,
   "installed": [
 
   ],
