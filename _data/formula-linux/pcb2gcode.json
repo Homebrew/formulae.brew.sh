@@ -13,18 +13,18 @@
   "license": "GPL-3.0-or-later",
   "homepage": "https://github.com/pcb2gcode/pcb2gcode",
   "versions": {
-    "stable": "2.1.0",
+    "stable": "2.2.3",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/pcb2gcode/pcb2gcode/archive/v2.1.0.tar.gz",
+      "url": "https://github.com/pcb2gcode/pcb2gcode/archive/v2.2.3.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -34,16 +34,16 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/pcb2gcode-2.1.0_1.big_sur.bottle.tar.gz",
-          "sha256": "ebeae69a3b6c8ce423c361efbf21914582de1953dd1435829249d1179dc8d59c"
+          "url": "https://linuxbrew.bintray.com/bottles/pcb2gcode-2.2.3.big_sur.bottle.tar.gz",
+          "sha256": "28aaa8d461c0c1736e80025af7676468a782457157b79a64b1f5e6b8aa75999b"
         },
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/pcb2gcode-2.1.0_1.catalina.bottle.tar.gz",
-          "sha256": "25c1b52ff023dd2137810355ba205d3be3e065ccf90851b2f49329f665ff54a5"
+          "url": "https://linuxbrew.bintray.com/bottles/pcb2gcode-2.2.3.catalina.bottle.tar.gz",
+          "sha256": "5980b526dae830404d14f715f2d37cb5c4564df900a7f678102fd373f0eca04c"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/pcb2gcode-2.1.0_1.mojave.bottle.tar.gz",
-          "sha256": "cc6d2180685fa076d25a24db6ccd39b7346f28ad52f90a1d72cc3d22bfe840df"
+          "url": "https://linuxbrew.bintray.com/bottles/pcb2gcode-2.2.3.mojave.bottle.tar.gz",
+          "sha256": "168ee156d7a6165493bb6b1b1033ebb2d58805aea3c3530975c68ba79eded7c8"
         }
       }
     }
@@ -54,19 +54,20 @@
 
   ],
   "build_dependencies": [
-    "atkmm",
+    "atkmm@2.28",
     "autoconf",
     "automake",
     "cairomm@1.14",
-    "glibmm",
+    "glibmm@2.66",
     "gtkmm",
     "librsvg",
     "libsigc++@2",
     "libtool",
-    "pangomm",
+    "pangomm@2.46",
     "pkg-config"
   ],
   "dependencies": [
+    "boost",
     "gerbv"
   ],
   "recommended_dependencies": [
