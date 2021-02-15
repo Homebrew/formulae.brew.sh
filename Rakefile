@@ -139,10 +139,7 @@ task cask_and_analytics: %i[cask analytics]
 desc "Dump Linux formulae and analytics data"
 task :linux_formula_and_analytics do
   Rake::Task["formulae"].tap(&:reenable).invoke("linux")
-  # TODO: re-enable when
-  # https://github.com/Homebrew/formulae.brew.sh/runs/1903832906?check_suite_focus=true#step:9:69
-  # is fixed
-  # Rake::Task["analytics"].tap(&:reenable).invoke("linux")
+  Rake::Task["analytics"].tap(&:reenable).invoke("linux")
 end
 
 desc "Dump all formulae (macOS and Linux)"
