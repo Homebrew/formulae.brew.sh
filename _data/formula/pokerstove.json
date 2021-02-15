@@ -24,7 +24,7 @@
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,21 +33,17 @@
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
+        "big_sur": {
+          "url": "https://homebrew.bintray.com/bottles/pokerstove-1.0_1.big_sur.bottle.tar.gz",
+          "sha256": "2417f672e669862eeb6a2529e3ace1bbaa78ee8f55b7ba555ed2d503d5f6a485"
+        },
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/pokerstove-1.0.catalina.bottle.tar.gz",
-          "sha256": "db03f71aebe4fd46061765ae3659629ee42a5166f2dbb8b225f53b5baf7fbe62"
+          "url": "https://homebrew.bintray.com/bottles/pokerstove-1.0_1.catalina.bottle.tar.gz",
+          "sha256": "cad8646a452226baa12e3f8de7a2b0edc8c7df8a33af36c2983e9105d60537fd"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/pokerstove-1.0.mojave.bottle.tar.gz",
-          "sha256": "60f469d6ec2b39eac5d801c7968f56b21ddd0464ebc074964f6dacb4cd151b74"
-        },
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/pokerstove-1.0.high_sierra.bottle.tar.gz",
-          "sha256": "49b7d8bcd4c54b42dbd311f94dcfb71ff04d3a1e273ecda213baaa562ad9b02b"
-        },
-        "sierra": {
-          "url": "https://homebrew.bintray.com/bottles/pokerstove-1.0.sierra.bottle.tar.gz",
-          "sha256": "c78b16c6cfd9981df7ba66dd367f3b25181350d317e0ec00704a3b837383a8e8"
+          "url": "https://homebrew.bintray.com/bottles/pokerstove-1.0_1.mojave.bottle.tar.gz",
+          "sha256": "6e8fededfc09e60dd3b3180360c257ede7cd8fcc3c2bfe83b68d82fcb2bfcab8"
         }
       }
     }
@@ -58,7 +54,8 @@
 
   ],
   "build_dependencies": [
-    "cmake"
+    "cmake",
+    "googletest"
   ],
   "dependencies": [
     "boost"
