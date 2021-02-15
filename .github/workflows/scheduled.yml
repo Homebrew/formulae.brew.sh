@@ -48,13 +48,7 @@ jobs:
       - name: Set up analytics
         env:
           ANALYTICS_JSON_KEY: ${{ secrets.ANALYTICS_JSON_KEY }}
-          LINUX_ANALYTICS_JSON_KEY: ${{ secrets.LINUX_ANALYTICS_JSON_KEY }}
-        run: |
-          if [ "$RUNNER_OS" = "Linux" ]; then
-            echo "$LINUX_ANALYTICS_JSON_KEY" > ~/.homebrew_analytics.json
-          else
-            echo "$ANALYTICS_JSON_KEY" > ~/.homebrew_analytics.json
-          fi
+        run: echo "$ANALYTICS_JSON_KEY" > ~/.homebrew_analytics.json
 
       - name: Update data for homebrew/core and homebrew/cask
         if: matrix.os == 'macOS-latest'
