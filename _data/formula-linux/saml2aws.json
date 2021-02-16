@@ -1,6 +1,6 @@
 {
-  "name": "lammps",
-  "full_name": "lammps",
+  "name": "saml2aws",
+  "full_name": "saml2aws",
   "tap": "homebrew/core",
   "oldname": null,
   "aliases": [
@@ -9,19 +9,19 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Molecular Dynamics Simulator",
-  "license": "GPL-2.0-only",
-  "homepage": "https://lammps.sandia.gov/",
+  "desc": "Login and retrieve AWS temporary credentials using a SAML IDP",
+  "license": "MIT",
+  "homepage": "https://github.com/Versent/saml2aws",
   "versions": {
-    "stable": "2020-10-29",
+    "stable": "2.28.0",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/lammps/lammps/archive/stable_29Oct2020.tar.gz",
-      "tag": null,
-      "revision": null
+      "url": "https://github.com/Versent/saml2aws.git",
+      "tag": "v2.28.0",
+      "revision": "5199bd35d3cffbfed3683b728828f55c64501c21"
     }
   },
   "revision": 0,
@@ -34,20 +34,20 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "arm64_big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/lammps-2020-10-29.arm64_big_sur.bottle.tar.gz",
-          "sha256": "cd8e88f101776028e6859211611d5f581f7020b3e806f53e98b831ab3d0eb9f5"
+          "url": "https://linuxbrew.bintray.com/bottles/saml2aws-2.28.0.arm64_big_sur.bottle.tar.gz",
+          "sha256": "fdd949819602c09ed3533d0b284070c8efa5d1176690128685d41b8cb8ccfa79"
         },
         "big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/lammps-2020-10-29.big_sur.bottle.tar.gz",
-          "sha256": "9bd87a2b72f291229de3d436f8fc7b0706ab5fc245587936943284287457d1c0"
+          "url": "https://linuxbrew.bintray.com/bottles/saml2aws-2.28.0.big_sur.bottle.tar.gz",
+          "sha256": "64dfca55124c588a0550085c9bba5048e3747df684c66248f63b522879cdf23e"
         },
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/lammps-2020-10-29.catalina.bottle.tar.gz",
-          "sha256": "4cb389466954f5fdafc8a05a06eff9c8a17886b69e2ea6cc38c55cf3912980d0"
+          "url": "https://linuxbrew.bintray.com/bottles/saml2aws-2.28.0.catalina.bottle.tar.gz",
+          "sha256": "43b5b26c143c42ab2093cb5a6a3511b7417ec681a6130f73d22b64f9ff7b90ff"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/lammps-2020-10-29.mojave.bottle.tar.gz",
-          "sha256": "e1ef047d6c3155e5a8bb704a5f141beb7427194c61e6d16885610bdfd20ecf5c"
+          "url": "https://linuxbrew.bintray.com/bottles/saml2aws-2.28.0.mojave.bottle.tar.gz",
+          "sha256": "e4ca2bac31ead962d44e9769fd04e8d322c53a5f6e169a1d04e942eeb6bdd35e"
         }
       }
     }
@@ -58,15 +58,10 @@
 
   ],
   "build_dependencies": [
-    "pkg-config"
+    "go"
   ],
   "dependencies": [
-    "fftw",
-    "gcc",
-    "jpeg",
-    "kim-api",
-    "libpng",
-    "open-mpi"
+
   ],
   "recommended_dependencies": [
 
