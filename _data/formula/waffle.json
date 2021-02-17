@@ -1,6 +1,6 @@
 {
-  "name": "tree-sitter",
-  "full_name": "tree-sitter",
+  "name": "waffle",
+  "full_name": "waffle",
   "tap": "homebrew/core",
   "oldname": null,
   "aliases": [
@@ -9,17 +9,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Parser generator tool and incremental parsing library",
-  "license": "MIT",
-  "homepage": "https://tree-sitter.github.io/",
+  "desc": "C library for selecting an OpenGL API and window system at runtime",
+  "license": "BSD-2-Clause",
+  "homepage": "http://www.waffle-gl.org/",
   "versions": {
-    "stable": "0.18.1",
+    "stable": "1.6.2",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/tree-sitter/tree-sitter/archive/v0.18.1.tar.gz",
+      "url": "https://gitlab.freedesktop.org/mesa/waffle/-/raw/website/files/release/waffle-1.6.2/waffle-1.6.2.tar.xz",
       "tag": null,
       "revision": null
     }
@@ -34,20 +34,20 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "arm64_big_sur": {
-          "url": "https://homebrew.bintray.com/bottles/tree-sitter-0.18.1.arm64_big_sur.bottle.tar.gz",
-          "sha256": "09ccaf41f94622f3e76cc955b020dde931701655df0f69984127fb241db54c6c"
+          "url": "https://homebrew.bintray.com/bottles/waffle-1.6.2.arm64_big_sur.bottle.tar.gz",
+          "sha256": "133071fd7e8f381261162a14a33a31ed13d8b743b4da92c9749e37bcabf5261c"
         },
         "big_sur": {
-          "url": "https://homebrew.bintray.com/bottles/tree-sitter-0.18.1.big_sur.bottle.tar.gz",
-          "sha256": "56771272b9191a093cf87383289115cedf0377556292367e647b6da536ac2e63"
+          "url": "https://homebrew.bintray.com/bottles/waffle-1.6.2.big_sur.bottle.tar.gz",
+          "sha256": "2484b49e0b524c05c045caab09533473397905b6bcda35ce0336bcd5bb81bb17"
         },
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/tree-sitter-0.18.1.catalina.bottle.tar.gz",
-          "sha256": "7dedbbe44434bcff54d9a4a1733833ab8a1a5cdf2f9e2de36f3ab941b7d5c590"
+          "url": "https://homebrew.bintray.com/bottles/waffle-1.6.2.catalina.bottle.tar.gz",
+          "sha256": "1c640687e4194aea3ee1654a484ee55c3a26c57955b883e7fb9d32151db3ccf9"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/tree-sitter-0.18.1.mojave.bottle.tar.gz",
-          "sha256": "67b1d17c842134054119843e0c931bc99d68ba7af94235755c6df7c64adff400"
+          "url": "https://homebrew.bintray.com/bottles/waffle-1.6.2.mojave.bottle.tar.gz",
+          "sha256": "547df7826af57e6dfb59389e4dde24ec0c504a5a9fca13a3adf06caab07cfa81"
         }
       }
     }
@@ -58,12 +58,11 @@
 
   ],
   "build_dependencies": [
-    "emscripten",
-    "node",
-    "rust"
+    "cmake",
+    "docbook-xsl"
   ],
   "dependencies": [
-
+    "pkg-config"
   ],
   "recommended_dependencies": [
 
