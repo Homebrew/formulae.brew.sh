@@ -1,6 +1,6 @@
 {
-  "name": "charm-tools",
-  "full_name": "charm-tools",
+  "name": "kubergrunt",
+  "full_name": "kubergrunt",
   "tap": "homebrew/core",
   "oldname": null,
   "aliases": [
@@ -9,17 +9,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Tools for authoring and maintaining juju charms",
-  "license": "GPL-3.0-only",
-  "homepage": "https://github.com/juju/charm-tools",
+  "desc": "Collection of commands to fill in the gaps between Terraform, Helm, and Kubectl",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/gruntwork-io/kubergrunt",
   "versions": {
-    "stable": "2.8.3",
+    "stable": "0.6.9",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://files.pythonhosted.org/packages/24/05/211a1656f72908afa84635c9a0b73aebf4edfcc1a3c5c0d71ec96bf20068/charm-tools-2.8.3.tar.gz",
+      "url": "https://github.com/gruntwork-io/kubergrunt/archive/v0.6.9.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,17 +33,21 @@
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
+        "arm64_big_sur": {
+          "url": "https://linuxbrew.bintray.com/bottles/kubergrunt-0.6.9.arm64_big_sur.bottle.tar.gz",
+          "sha256": "b0a5c7ec786c7a37af82c6e9521a9598812756d54e9a3a4028e4514a65420873"
+        },
         "big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/charm-tools-2.8.3.big_sur.bottle.tar.gz",
-          "sha256": "b174a401458fb0574b263bd51ee4f055f0595a0a380d28ddebb6de0e201a8702"
+          "url": "https://linuxbrew.bintray.com/bottles/kubergrunt-0.6.9.big_sur.bottle.tar.gz",
+          "sha256": "5046f1e8636865644e19bcfb7e6b6f38eeedb263552e8090800a606599eea0f7"
         },
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/charm-tools-2.8.3.catalina.bottle.tar.gz",
-          "sha256": "ec4c42bd27b33958b2fe10a0dc000147a099a72dde3a313e77d88640ca1b1a32"
+          "url": "https://linuxbrew.bintray.com/bottles/kubergrunt-0.6.9.catalina.bottle.tar.gz",
+          "sha256": "b1812f486a8df8dd78768c438b33e977cbb404d302f3b4d9242115e51ae8c6e3"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/charm-tools-2.8.3.mojave.bottle.tar.gz",
-          "sha256": "95ca45689f0233c756a6979e5e19404d14d705a2fd69b74c6b1cda6d3fe157c4"
+          "url": "https://linuxbrew.bintray.com/bottles/kubergrunt-0.6.9.mojave.bottle.tar.gz",
+          "sha256": "294a992d8ee089a9db658d3fc4eaa78638bc4516aee65e944727a447622e509d"
         }
       }
     }
@@ -54,16 +58,10 @@
 
   ],
   "build_dependencies": [
-    "rust",
-    "pkg-config"
+    "go"
   ],
   "dependencies": [
-    "charm",
-    "libyaml",
-    "openssl@1.1",
-    "python@3.8",
-    "libffi",
-    "gmp"
+
   ],
   "recommended_dependencies": [
 

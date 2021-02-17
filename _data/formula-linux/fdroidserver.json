@@ -13,45 +13,41 @@
   "license": "AGPL-3.0-or-later",
   "homepage": "https://f-droid.org",
   "versions": {
-    "stable": "1.1.10",
+    "stable": "2.0",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://files.pythonhosted.org/packages/84/d6/d6230250054ea642b963592a4ecdc5b28e404778e8247ad9a649c3c82eb2/fdroidserver-1.1.10.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/b5/a3/541602b282058e18f53172db508aec78c5b1e8eed25d21f6c5dd6083431d/fdroidserver-2.0.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any",
+      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "arm64_big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/fdroidserver-1.1.10_1.arm64_big_sur.bottle.tar.gz",
-          "sha256": "898c9e4f8ff6e2ed572ec636481e9a039dedfa9ed50dd54c71a3e84c682d5616"
+          "url": "https://linuxbrew.bintray.com/bottles/fdroidserver-2.0.arm64_big_sur.bottle.tar.gz",
+          "sha256": "b4f6e9f4c94f73fb217c003ed9b90ccde17db1088aa0eeb77d07a83859ef68e6"
         },
         "big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/fdroidserver-1.1.10_1.big_sur.bottle.tar.gz",
-          "sha256": "5233e1568fc8ce34001f22bd614e1e40d1df6e94ebbf5c3104a408f39cf78c73"
+          "url": "https://linuxbrew.bintray.com/bottles/fdroidserver-2.0.big_sur.bottle.tar.gz",
+          "sha256": "7b2da13337f50e02bb30b78d0f76125780c042749905a9b12c065d723c929ca0"
         },
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/fdroidserver-1.1.10_1.catalina.bottle.tar.gz",
-          "sha256": "544c63dac2c15bd0461aef67dce43515e75dbf632662ffc20dcfb2c5701529cd"
+          "url": "https://linuxbrew.bintray.com/bottles/fdroidserver-2.0.catalina.bottle.tar.gz",
+          "sha256": "1aa9917cea66c0da4a8e47fb3b7415a26036e060dfd0930e097c770e6dede7d0"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/fdroidserver-1.1.10_1.mojave.bottle.tar.gz",
-          "sha256": "666af7192baa19ae11874d22c2a2e8ada60a99db1273724599b42ca32b333289"
-        },
-        "x86_64_linux": {
-          "url": "https://linuxbrew.bintray.com/bottles/fdroidserver-1.1.10_1.x86_64_linux.bottle.tar.gz",
-          "sha256": "cc6da435e90c5fea89675ae7d1013796469496e00289281edebdc14a96f1d67f"
+          "url": "https://linuxbrew.bintray.com/bottles/fdroidserver-2.0.mojave.bottle.tar.gz",
+          "sha256": "1a0e8c69b616406f21c329755e4ecc9807b4a80284255adb6e1faaed3601f910"
         }
       }
     }
@@ -62,7 +58,8 @@
 
   ],
   "build_dependencies": [
-    "pkg-config"
+    "pkg-config",
+    "rust"
   ],
   "dependencies": [
     "freetype",
