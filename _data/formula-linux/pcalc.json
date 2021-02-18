@@ -1,6 +1,6 @@
 {
-  "name": "points2grid",
-  "full_name": "points2grid",
+  "name": "pcalc",
+  "full_name": "pcalc",
   "tap": "homebrew/core",
   "oldname": null,
   "aliases": [
@@ -9,22 +9,22 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Generate digital elevation models using local griding",
-  "license": "BSD-4-Clause",
-  "homepage": "https://github.com/CRREL/points2grid",
+  "desc": "Calculator for those working with multiple bases, sizes, and close to the bits",
+  "license": "GPL-3.0-or-later",
+  "homepage": "https://github.com/alt-romes/programmer-calculator",
   "versions": {
-    "stable": "1.3.1",
+    "stable": "2.0.1",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/CRREL/points2grid/archive/1.3.1.tar.gz",
+      "url": "https://github.com/alt-romes/programmer-calculator/archive/v2.0.1.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 11,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,17 +33,21 @@
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
+        "arm64_big_sur": {
+          "url": "https://linuxbrew.bintray.com/bottles/pcalc-2.0.1.arm64_big_sur.bottle.tar.gz",
+          "sha256": "8d7268ccb14450e15d1615919272edc4e365670c54daf7fb6b9de272c6eddf6b"
+        },
         "big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/points2grid-1.3.1_11.big_sur.bottle.tar.gz",
-          "sha256": "20a3a688d66d5bdad77ee08abaced2afa047e147b5096d6b24530faa21936a1e"
+          "url": "https://linuxbrew.bintray.com/bottles/pcalc-2.0.1.big_sur.bottle.tar.gz",
+          "sha256": "b81ac1f8cc3d7ab174d2cd4873571da42988259af0ec6eaf21a277c5dcf08842"
         },
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/points2grid-1.3.1_11.catalina.bottle.tar.gz",
-          "sha256": "48645a46886d20460d53df48c0ea777ce788e600cd4cab0a5994b89fe253e43c"
+          "url": "https://linuxbrew.bintray.com/bottles/pcalc-2.0.1.catalina.bottle.tar.gz",
+          "sha256": "cb6c78a7399eaeeee80f0d23863bbe60dd011171b0251e512d6c581b3947c4ea"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/points2grid-1.3.1_11.mojave.bottle.tar.gz",
-          "sha256": "6f7cf1d33b5c66044ecdb7afddf198b96959eb0b7ab6281b9fbcd9dad7f995aa"
+          "url": "https://linuxbrew.bintray.com/bottles/pcalc-2.0.1.mojave.bottle.tar.gz",
+          "sha256": "a66a10045261aece457eba2a4d7ef8bdd4af4e3218877a94c48797d34d54d137"
         }
       }
     }
@@ -54,11 +58,10 @@
 
   ],
   "build_dependencies": [
-    "cmake"
+
   ],
   "dependencies": [
-    "boost",
-    "gdal"
+    "ncurses"
   ],
   "recommended_dependencies": [
 
