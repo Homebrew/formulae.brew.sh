@@ -13,13 +13,13 @@
   "license": "AGPL-3.0",
   "homepage": "https://www.citusdata.com",
   "versions": {
-    "stable": "9.5.2",
+    "stable": "10.0.1",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/citusdata/citus/archive/v9.5.2.tar.gz",
+      "url": "https://github.com/citusdata/citus/archive/v10.0.1.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -34,20 +34,20 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "arm64_big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/citus-9.5.2.arm64_big_sur.bottle.tar.gz",
-          "sha256": "f29032feb2bd0477a38021454c484c9952494f55075b185adae841b7918d73ea"
+          "url": "https://linuxbrew.bintray.com/bottles/citus-10.0.1.arm64_big_sur.bottle.tar.gz",
+          "sha256": "d1a40bc5b6cad0ddc3c665b4d59a095f27ad653b0e5cf236bf48fde1e4ddec26"
         },
         "big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/citus-9.5.2.big_sur.bottle.tar.gz",
-          "sha256": "88a89bc1f6b996f5b2aa2901fab714d1f556bff92ba8a6efe3ca17fa069082aa"
+          "url": "https://linuxbrew.bintray.com/bottles/citus-10.0.1.big_sur.bottle.tar.gz",
+          "sha256": "53d87358b30badc7bcc3f897cd64967c2a39f48a821a151c221da4e9559ce5ef"
         },
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/citus-9.5.2.catalina.bottle.tar.gz",
-          "sha256": "262a38ac5a1a1b6933b1262894380193647879d1dcff4f27717e1514487cc15e"
+          "url": "https://linuxbrew.bintray.com/bottles/citus-10.0.1.catalina.bottle.tar.gz",
+          "sha256": "86fcf354388d050a9186a9c68007125112faea90ec573cfaff2cdc0388c9bdbc"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/citus-9.5.2.mojave.bottle.tar.gz",
-          "sha256": "fa880201b2c78ed4884ba2188933b2acd1baa304f78ee7b4e8bcaebc6a44dea1"
+          "url": "https://linuxbrew.bintray.com/bottles/citus-10.0.1.mojave.bottle.tar.gz",
+          "sha256": "ab5ab6d6fa67b9b738a93be967ec935992ea66e1f2eea4b540f43e56eb31e76b"
         }
       }
     }
@@ -61,8 +61,10 @@
 
   ],
   "dependencies": [
+    "lz4",
     "postgresql",
-    "readline"
+    "readline",
+    "zstd"
   ],
   "recommended_dependencies": [
 
