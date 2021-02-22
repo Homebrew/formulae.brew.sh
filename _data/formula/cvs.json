@@ -10,7 +10,7 @@
 
   ],
   "desc": "Version control system",
-  "license": null,
+  "license": "GPL-2.0-or-later and LGPL-2.0-or-later",
   "homepage": "https://www.nongnu.org/cvs/",
   "versions": {
     "stable": "1.12.13",
@@ -24,26 +24,30 @@
       "revision": null
     }
   },
-  "revision": 2,
+  "revision": 3,
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
-      "cellar": ":any_skip_relocation",
+      "rebuild": 0,
+      "cellar": ":any",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
+        "arm64_big_sur": {
+          "url": "https://homebrew.bintray.com/bottles/cvs-1.12.13_3.arm64_big_sur.bottle.tar.gz",
+          "sha256": "d254eab8b61ddab83920f40ee1981b0f63ea9fd7bc02e570837bc61551dfdd32"
+        },
         "big_sur": {
-          "url": "https://homebrew.bintray.com/bottles/cvs-1.12.13_2.big_sur.bottle.1.tar.gz",
-          "sha256": "0cf65c20d4220d636cfd9c9b4f4e6f3ab011fe01136e5677f9da56cb67c0c208"
+          "url": "https://homebrew.bintray.com/bottles/cvs-1.12.13_3.big_sur.bottle.tar.gz",
+          "sha256": "6d6120ae3bf1d373e769370cd6ef8621cb462fb592cb337ad4057e10c4ee07ec"
         },
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/cvs-1.12.13_2.catalina.bottle.1.tar.gz",
-          "sha256": "2d6d9ac2f96edfbd55f9f13c215ba6aec3960c1c3f91e99294a512618b159bb9"
+          "url": "https://homebrew.bintray.com/bottles/cvs-1.12.13_3.catalina.bottle.tar.gz",
+          "sha256": "4844c8cc28ae86ca8adc34d149f9d78c94195b8ccb88af24a85a3112e53246f0"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/cvs-1.12.13_2.mojave.bottle.1.tar.gz",
-          "sha256": "c564cc0e316461844b51f36f9d13e357184af89c325edfe8c565fd1f74d6d2da"
+          "url": "https://homebrew.bintray.com/bottles/cvs-1.12.13_3.mojave.bottle.tar.gz",
+          "sha256": "735fd1cc0b3e954123e93bb3565622e57a833863aaa95475c719d908a74fa1df"
         }
       }
     }
@@ -54,10 +58,11 @@
 
   ],
   "build_dependencies": [
-
+    "autoconf",
+    "automake"
   ],
   "dependencies": [
-
+    "gettext"
   ],
   "recommended_dependencies": [
 
