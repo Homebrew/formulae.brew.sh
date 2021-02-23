@@ -5,18 +5,37 @@
   "name": [
     "Camo Studio"
   ],
-  "desc": null,
+  "desc": "Use your phone as a high-quality webcam with image tuning controls",
   "homepage": "https://reincubate.com/camo/",
-  "url": "https://reincubate.com/res/labs/camo/Camo%20Studio%201.2.3%20%28139%29%20%5BRelease%5D.app.zip",
-  "appcast": "https://uds.reincubate.com/release-notes/camo/?format=sparkle",
-  "version": "1.2.3,139",
+  "url": "https://reincubate.com/res/labs/camo/Camo%20Studio%201.2.4%20%28144%29%20%5BRelease%5D.app.zip",
+  "appcast": null,
+  "version": "1.2.4,144",
   "installed": null,
   "outdated": false,
-  "sha256": "dc5983b84f2a0b5500fa44e59acf744228cf03d3e10497b05ba09944d6acfa08",
+  "sha256": "37aea984109f4c8bf6f007a8bd8cb55de2e745773684c8cca3d736b421023ce0",
   "artifacts": [
     {
-      "delete": "/Library/CoreMediaIO/Plug-Ins/DAL/ReincubateCamoDAL.plugin",
+      "quit": "com.reincubate.macos.cam",
+      "script": {
+        "executable": "/Applications/Camo Studio.app/Contents/MacOS/Camo Studio",
+        "args": [
+          "-uninstall"
+        ],
+        "sudo": "true",
+        "must_succeed": "false"
+      },
       "signal": {
+      }
+    },
+    {
+      "path": "$(brew --prefix)/Caskroom/camo-studio/1.2.4,144/Camo Studio.app/Contents/MacOS/Camo Studio",
+      "args": {
+        "must_succeed": "false",
+        "sudo": "true",
+        "args": [
+          "-install"
+        ],
+        "print_stdout": "true"
       }
     },
     [
