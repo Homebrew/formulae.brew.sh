@@ -1,6 +1,6 @@
 {
-  "name": "topgrade",
-  "full_name": "topgrade",
+  "name": "open-adventure",
+  "full_name": "open-adventure",
   "tap": "homebrew/core",
   "oldname": null,
   "aliases": [
@@ -9,17 +9,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Upgrade all the things",
-  "license": "GPL-3.0-or-later",
-  "homepage": "https://github.com/r-darwish/topgrade",
+  "desc": "Colossal Cave Adventure, the 1995 430-point version",
+  "license": "BSD-2-Clause",
+  "homepage": "http://www.catb.org/~esr/open-adventure/",
   "versions": {
-    "stable": "6.6.0",
-    "head": null,
+    "stable": "1.9",
+    "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/r-darwish/topgrade/archive/v6.6.0.tar.gz",
+      "url": "http://www.catb.org/~esr/open-adventure/advent-1.9.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -34,20 +34,20 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "arm64_big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/topgrade-6.6.0.arm64_big_sur.bottle.tar.gz",
-          "sha256": "f97bc73b40311abb767ef55b9b3ea6e4684a7f989d10c3327899a64a03c36149"
+          "url": "https://linuxbrew.bintray.com/bottles/open-adventure-1.9.arm64_big_sur.bottle.tar.gz",
+          "sha256": "3e6e5fe49a6e152e07666b01ef6ce83063f1de437e65970079656e8ae4c2e357"
         },
         "big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/topgrade-6.6.0.big_sur.bottle.tar.gz",
-          "sha256": "9560fbb9ecc27da1bae9d0c018ee32baa2ff39b8ca30f55fcf464ffc2cf06b60"
+          "url": "https://linuxbrew.bintray.com/bottles/open-adventure-1.9.big_sur.bottle.tar.gz",
+          "sha256": "a3ec563817f679d2ed97360b1d32e3fef297eaa3fcaf582044213532a338d217"
         },
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/topgrade-6.6.0.catalina.bottle.tar.gz",
-          "sha256": "66f56476b59ad564bc9ac6598864654abd6eb631f6eb1c9a8d0e3c980033ccce"
+          "url": "https://linuxbrew.bintray.com/bottles/open-adventure-1.9.catalina.bottle.tar.gz",
+          "sha256": "19315161a1ca025476f7bff681bbed32d52e0c462ad8de013ae2442f5cf37d08"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/topgrade-6.6.0.mojave.bottle.tar.gz",
-          "sha256": "4c034f504f21e3de4833f6010d2b2461d5657b465a3c048685677595b9ca1a0b"
+          "url": "https://linuxbrew.bintray.com/bottles/open-adventure-1.9.mojave.bottle.tar.gz",
+          "sha256": "950ef945af942573058ad712f85547fff68d282caa403ae8645ccf4a90ae3d30"
         }
       }
     }
@@ -58,7 +58,10 @@
 
   ],
   "build_dependencies": [
-    "rust"
+    "asciidoc",
+    "python@3.9",
+    "libedit",
+    "libxml2"
   ],
   "dependencies": [
 
