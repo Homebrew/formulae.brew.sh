@@ -10,7 +10,7 @@
 
   ],
   "desc": "Version control system",
-  "license": null,
+  "license": "GPL-2.0-or-later and LGPL-2.0-or-later",
   "homepage": "https://www.nongnu.org/cvs/",
   "versions": {
     "stable": "1.12.13",
@@ -24,30 +24,34 @@
       "revision": null
     }
   },
-  "revision": 3,
+  "revision": 4,
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "cellar": ":any_skip_relocation",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
+        "arm64_big_sur": {
+          "url": "https://linuxbrew.bintray.com/bottles/cvs-1.12.13_4.arm64_big_sur.bottle.tar.gz",
+          "sha256": "d254eab8b61ddab83920f40ee1981b0f63ea9fd7bc02e570837bc61551dfdd32"
+        },
         "big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/cvs-1.12.13_3.big_sur.bottle.1.tar.gz",
-          "sha256": "0cf65c20d4220d636cfd9c9b4f4e6f3ab011fe01136e5677f9da56cb67c0c208"
+          "url": "https://linuxbrew.bintray.com/bottles/cvs-1.12.13_4.big_sur.bottle.tar.gz",
+          "sha256": "6d6120ae3bf1d373e769370cd6ef8621cb462fb592cb337ad4057e10c4ee07ec"
         },
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/cvs-1.12.13_3.catalina.bottle.1.tar.gz",
-          "sha256": "2d6d9ac2f96edfbd55f9f13c215ba6aec3960c1c3f91e99294a512618b159bb9"
+          "url": "https://linuxbrew.bintray.com/bottles/cvs-1.12.13_4.catalina.bottle.tar.gz",
+          "sha256": "4844c8cc28ae86ca8adc34d149f9d78c94195b8ccb88af24a85a3112e53246f0"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/cvs-1.12.13_3.mojave.bottle.1.tar.gz",
-          "sha256": "c564cc0e316461844b51f36f9d13e357184af89c325edfe8c565fd1f74d6d2da"
+          "url": "https://linuxbrew.bintray.com/bottles/cvs-1.12.13_4.mojave.bottle.tar.gz",
+          "sha256": "735fd1cc0b3e954123e93bb3565622e57a833863aaa95475c719d908a74fa1df"
         },
         "x86_64_linux": {
-          "url": "https://linuxbrew.bintray.com/bottles/cvs-1.12.13_3.x86_64_linux.bottle.1.tar.gz",
-          "sha256": "e58c2bda5a61e91c4c5bde62b2f1be6bd33ecbca1e88599c10247e1cd1cba8e8"
+          "url": "https://linuxbrew.bintray.com/bottles/cvs-1.12.13_4.x86_64_linux.bottle.tar.gz",
+          "sha256": "4c1997c20b9ba268688aa085c98ae95f1bc04f5b81a5326014aaa45ee8baa010"
         }
       }
     }
@@ -58,9 +62,11 @@
 
   ],
   "build_dependencies": [
-
+    "autoconf",
+    "automake"
   ],
   "dependencies": [
+    "gettext",
     "linux-pam",
     "zlib"
   ],
