@@ -44,38 +44,58 @@ permalink: :title
         {%- assign bottles = true -%}
     {%- else %} not available on this platform.
     {%- endif -%}</p>
-{%- if bottles %}
+
+{%- if bottles -%}
+{%- assign arm64_bottle_count = 0 -%}
+{%- assign intel_bottle_count = 0 -%}
+{%- for b in f.bottle.stable.files -%}
+    {%- if b[0] contains "arm64_" -%}
+        {%- assign arm64_bottle_count = arm64_bottle_count | plus: 1 -%}
+    {%- else -%}
+        {%- assign intel_bottle_count = intel_bottle_count | plus: 1 -%}
+    {%- endif -%}
+{%- endfor -%}
+
 <table>
-    <tr>
-        <td><strong>Intel x86_64</strong></td>
-        <td style="text-transform:capitalize;">
-            {%- assign subsequent = false -%}
-            {%- for b in f.bottle.stable.files -%}
-                {%- unless b[0] contains "arm64_" or formula_path == "formula-linux" and b[0] != "x86_64_linux" -%}
-                    {%- if subsequent -%}, {% endif -%}
-                    {{ b[0] | replace: "x86_64", "64-bit" | replace: "_", "&nbsp;" }}
-                    {%- assign subsequent = true -%}
-                {%- endunless -%}
-            {%- endfor -%}
-        </td>
-    </tr>
-    {%- unless formula_path == "formula-linux" %}
-    <tr>
-        <td><strong>Apple Silicon</strong></td>
-        <td style="text-transform:capitalize;">
-            {%- assign subsequent = false -%}
-            {%- for b in f.bottle.stable.files -%}
-                {%- if b[0] contains "arm64_" -%}
-                    {%- if subsequent -%}, {% endif -%}
-                    {{ b[0] | remove_first: "arm64_" | replace: "_", "&nbsp;" }}
-                    {%- assign subsequent = true -%}
+    {%- assign subsequent = false -%}
+    {%- for b in f.bottle.stable.files -%}
+        {%- unless b[0] contains "arm64_" -%}
+        <tr>
+            {%- unless subsequent -%}
+                <th rowspan="{{ intel_bottle_count }}" scope="rowgroup">Intel</th>
+            {%- endunless -%}
+            <th scope="row" style="text-transform:capitalize;">
+                {{ b[0] | replace: "x86_64", "64-bit" | replace: "_", "&nbsp;" }}
+                {%- assign subsequent = true -%}
+            </th>
+            <td>✅</td>
+        </tr>
+        {%- endunless -%}
+    {%- endfor -%}
+
+    {%- assign subsequent = false -%}
+    {%- for b in f.bottle.stable.files -%}
+        {%- if b[0] contains "arm64_" -%}
+        <tr>
+            {%- unless subsequent -%}
+            <th rowspan="{{ arm64_bottle_count }}" scope="rowgroup">
+                {%- if formula_path == "formula-linux" -%}
+                    ARM64
+                {%- else -%}
+                    Apple Silicon
                 {%- endif -%}
-            {%- endfor -%}
-        </td>
-    </tr>
-    {%- endunless %}
+            </th>
+            {%- endunless -%}
+            <th scope="row" style="text-transform:capitalize;">
+                {{ b[0] | remove_first: "arm64_" | replace: "_", "&nbsp;" }}
+                {%- assign subsequent = true -%}
+            </th>
+            <td>✅</td>
+        </tr>
+        {%- endif -%}
+    {%- endfor -%}
 </table>
-{%- endif %}
+{%- endif -%}
 
 <p>Current versions:</p>
 <table>
