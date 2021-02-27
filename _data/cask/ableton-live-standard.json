@@ -5,27 +5,44 @@
   "name": [
     "Ableton Live Standard"
   ],
-  "desc": null,
+  "desc": "Sound and music editor",
   "homepage": "https://www.ableton.com/en/live/",
-  "url": "https://cdn-downloads.ableton.com/channels/10.1.30/ableton_live_standard_10.1.30_64.dmg",
-  "appcast": "https://www.ableton.com/en/release-notes/live-10/",
-  "version": "10.1.30",
+  "url": "https://cdn-downloads.ableton.com/channels/11.0/ableton_live_standard_11.0_64.dmg",
+  "appcast": "https://www.ableton.com/en/release-notes/live-11/",
+  "version": "11.0",
   "installed": null,
   "outdated": false,
-  "sha256": "736b80d967db98dda5c4a897157f0e96c6d23a9879cae0348e13cab789016a37",
+  "sha256": "3940df631b7f117ea5677e79438f9de79302880f43dca5b093702843376dd2f0",
   "artifacts": [
+    {
+      "quit": "com.ableton.Live",
+      "signal": {
+      }
+    },
     [
-      "Ableton Live 10 Standard.app"
+      "Ableton Live 11 Standard.app"
     ],
     {
-      "trash": "~/Library/*/*[Aa]bleton*",
-      "rmdir": "~/Music/Ableton/Factory Packs",
+      "trash": [
+        "~/Library/Application Support/CrashReporter/Ableton *_*.plist",
+        "~/Library/Application Support/CrashReporter/Live_*.plist",
+        "~/Library/Application Support/Ableton",
+        "~/Library/Caches/Ableton",
+        "~/Library/Preferences/Ableton",
+        "~/Library/Preferences/com.ableton.live.plist*",
+        "~/Music/Ableton"
+      ],
       "signal": {
       }
     }
   ],
   "caveats": null,
   "depends_on": {
+    "macos": {
+      ">=": [
+        "10.13"
+      ]
+    }
   },
   "conflicts_with": null,
   "container": null,
