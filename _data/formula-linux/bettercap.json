@@ -14,7 +14,7 @@
   "homepage": "https://www.bettercap.org/",
   "versions": {
     "stable": "2.29",
-    "head": null,
+    "head": "HEAD",
     "bottle": true
   },
   "urls": {
@@ -29,10 +29,14 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any_skip_relocation",
+      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
+        "arm64_big_sur": {
+          "url": "https://linuxbrew.bintray.com/bottles/bettercap-2.29.arm64_big_sur.bottle.tar.gz",
+          "sha256": "38484bdccaad4736811059665dd5bca170daaf2572ed2d512c6062eb9d31bb90"
+        },
         "big_sur": {
           "url": "https://linuxbrew.bintray.com/bottles/bettercap-2.29.big_sur.bottle.tar.gz",
           "sha256": "6de77638b77e9b826cd2085147a5c312156d578f3376f2e0cc3397be9a48e7bd"
@@ -44,10 +48,6 @@
         "mojave": {
           "url": "https://linuxbrew.bintray.com/bottles/bettercap-2.29.mojave.bottle.tar.gz",
           "sha256": "4b59d7b9b41bcd5ee77ca8dc5ecb00c4ba158910dc30c2083c5e4dee6b994e1d"
-        },
-        "x86_64_linux": {
-          "url": "https://linuxbrew.bintray.com/bottles/bettercap-2.29.x86_64_linux.bottle.tar.gz",
-          "sha256": "235e22d8f385a0128754e73e7c9ceaceb5895f8311168e51c57d1ad3fd7e8792"
         }
       }
     }
@@ -58,7 +58,6 @@
 
   ],
   "build_dependencies": [
-    "dep",
     "go",
     "pkg-config"
   ],
