@@ -14,7 +14,7 @@
   "homepage": "https://www.bettercap.org/",
   "versions": {
     "stable": "2.29",
-    "head": null,
+    "head": "HEAD",
     "bottle": true
   },
   "urls": {
@@ -33,6 +33,10 @@
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
+        "arm64_big_sur": {
+          "url": "https://homebrew.bintray.com/bottles/bettercap-2.29.arm64_big_sur.bottle.tar.gz",
+          "sha256": "38484bdccaad4736811059665dd5bca170daaf2572ed2d512c6062eb9d31bb90"
+        },
         "big_sur": {
           "url": "https://homebrew.bintray.com/bottles/bettercap-2.29.big_sur.bottle.tar.gz",
           "sha256": "6de77638b77e9b826cd2085147a5c312156d578f3376f2e0cc3397be9a48e7bd"
@@ -54,7 +58,6 @@
 
   ],
   "build_dependencies": [
-    "dep",
     "go",
     "pkg-config"
   ],
