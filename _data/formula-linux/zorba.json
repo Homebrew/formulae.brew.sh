@@ -24,7 +24,7 @@
       "revision": null
     }
   },
-  "revision": 12,
+  "revision": 13,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,17 +33,21 @@
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
+        "arm64_big_sur": {
+          "url": "https://linuxbrew.bintray.com/bottles/zorba-3.1_13.arm64_big_sur.bottle.tar.gz",
+          "sha256": "405903292b2d77ddbeae81e4ff1fbd3607b13d63151e3323b6e27d6e846933c0"
+        },
+        "big_sur": {
+          "url": "https://linuxbrew.bintray.com/bottles/zorba-3.1_13.big_sur.bottle.tar.gz",
+          "sha256": "fdb93db4639dbbf62e667e9c410f71f16f6a04cc0939735be21ed07ed25ace05"
+        },
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/zorba-3.1_12.catalina.bottle.tar.gz",
-          "sha256": "01bbd1e2348d5e758950374e10d629801e51ee2860ff1682f9e9e40610e60d33"
+          "url": "https://linuxbrew.bintray.com/bottles/zorba-3.1_13.catalina.bottle.tar.gz",
+          "sha256": "4fee87469b0b2d87613b182ea0fe44d1ab12e391546e27a29c5a58ea6e89b757"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/zorba-3.1_12.mojave.bottle.tar.gz",
-          "sha256": "c7d863356378a2053794453b70602151cb190ddd3de322ff0b0b47818d77a68f"
-        },
-        "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/zorba-3.1_12.high_sierra.bottle.tar.gz",
-          "sha256": "ac62c2bdc67c3283f3ad442f5b707d439dab065d50b4b9ccb1044a3ca6a81249"
+          "url": "https://linuxbrew.bintray.com/bottles/zorba-3.1_13.mojave.bottle.tar.gz",
+          "sha256": "7d5d0823314c789842615b6b8339a1c7b14521cdf45b8a682f3b796660dc0f5e"
         }
       }
     }
@@ -54,7 +58,8 @@
 
   ],
   "build_dependencies": [
-    "cmake"
+    "cmake",
+    "openjdk"
   ],
   "dependencies": [
     "flex",
