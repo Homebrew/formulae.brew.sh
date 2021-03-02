@@ -25,25 +25,26 @@ GET https://formulae.brew.sh/api/cask.json
   {
     "name": "wget",
     "full_name": "wget",
+    "tap": "homebrew/core",
     "oldname": null,
     "aliases": [],
     "versioned_formulae": [],
     "desc": "Internet file retriever",
+    "license": "GPL-3.0-or-later",
     "homepage": "https://www.gnu.org/software/wget/",
     "versions": {
-      "stable": "1.20.3",
-      "devel": null,
+      "stable": "1.21.1",
       "head": "HEAD",
       "bottle": true
     },
     "urls": {
       "stable": {
-        "url": "https://ftp.gnu.org/gnu/wget/wget-1.20.3.tar.gz",
+        "url": "https://ftp.gnu.org/gnu/wget/wget-1.21.1.tar.gz",
         "tag": null,
         "revision": null
       }
     },
-    "revision": 2,
+    "revision": 0,
     "version_scheme": 0,
     "bottle": {
       "stable": {
@@ -52,17 +53,21 @@ GET https://formulae.brew.sh/api/cask.json
         "prefix": "/usr/local",
         "root_url": "https://homebrew.bintray.com/bottles",
         "files": {
+          "arm64_big_sur": {
+            "url": "https://homebrew.bintray.com/bottles/wget-1.21.1.arm64_big_sur.bottle.tar.gz",
+            "sha256": "e9034fc9062d5d28972135be031876672aff18fa945ce37e9c2ee1e2c4287f3a"
+          },
+          "big_sur": {
+            "url": "https://homebrew.bintray.com/bottles/wget-1.21.1.big_sur.bottle.tar.gz",
+            "sha256": "e6ea2a50b8196206f7072360e713535bb16fb786c8b5fe23cab05757e0f67b13"
+          },
           "catalina": {
-            "url": "https://homebrew.bintray.com/bottles/wget-1.20.3_2.catalina.bottle.tar.gz",
-            "sha256": "ef65c759c5097a36323fa9c77756468649e8d1980a3a4e05695c05e39568967c"
+            "url": "https://homebrew.bintray.com/bottles/wget-1.21.1.catalina.bottle.tar.gz",
+            "sha256": "88116cb28d6b85e441d1bb9df0a1454b84f8b9d0e8817a5bee0f228acc59e75a"
           },
           "mojave": {
-            "url": "https://homebrew.bintray.com/bottles/wget-1.20.3_2.mojave.bottle.tar.gz",
-            "sha256": "28f4090610946a4eb207df102d841de23ced0d06ba31cb79e040d883906dcd4f"
-          },
-          "high_sierra": {
-            "url": "https://homebrew.bintray.com/bottles/wget-1.20.3_2.high_sierra.bottle.tar.gz",
-            "sha256": "91dd0caca9bd3f38c439d5a7b6f68440c4274945615fae035ff0a369264b8a2f"
+            "url": "https://homebrew.bintray.com/bottles/wget-1.21.1.mojave.bottle.tar.gz",
+            "sha256": "ae4e6f1dc4ecaf2bbed7700e8d64cdc671bf9d6c085ba335f119861fd15956fe"
           }
         }
       }
@@ -85,14 +90,14 @@ GET https://formulae.brew.sh/api/cask.json
     "caveats": null,
     "installed": [
       {
-        "version": "1.20.3_2",
+        "version": "1.21.1",
         "used_options": [],
         "built_as_bottle": true,
         "poured_from_bottle": true,
         "runtime_dependencies": [
           {
             "full_name": "gettext",
-            "version": "0.20.2"
+            "version": "0.21"
           },
           {
             "full_name": "libunistring",
@@ -104,23 +109,29 @@ GET https://formulae.brew.sh/api/cask.json
           },
           {
             "full_name": "openssl@1.1",
-            "version": "1.1.1g"
+            "version": "1.1.1j"
           }
         ],
         "installed_as_dependency": false,
         "installed_on_request": true
       }
     ],
-    "linked_keg": "1.20.3_2",
+    "linked_keg": "1.21.1",
     "pinned": false,
-    "outdated": false
+    "outdated": false,
+    "deprecated": false,
+    "deprecation_date": null,
+    "deprecation_reason": null,
+    "disabled": false,
+    "disable_date": null,
+    "disable_reason": null
   },
   ...
 ]
 ```
 
 ### Get formula metadata for a {{ site.taps.core.repo }} formula
-Get the `brew info --json <formula>` output for a single, current {{ site.taps.core.fullname }} or {{ site.taps.linux.fullname }} formula with an extra `analytics` key containing analytics data.
+Get the `brew info --json --formula <formula>` output for a single, current {{ site.taps.core.fullname }} or {{ site.taps.linux.fullname }} formula with extra keys containing analytics data and generation date.
 
 ```
 GET https://formulae.brew.sh/api/formula/${FORMULA}.json
@@ -135,25 +146,26 @@ GET https://formulae.brew.sh/api/formula-linux/${FORMULA}.json
 {
   "name": "wget",
   "full_name": "wget",
+  "tap": "homebrew/core",
   "oldname": null,
   "aliases": [],
   "versioned_formulae": [],
   "desc": "Internet file retriever",
+  "license": "GPL-3.0-or-later",
   "homepage": "https://www.gnu.org/software/wget/",
   "versions": {
-    "stable": "1.20.3",
-    "devel": null,
+    "stable": "1.21.1",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://ftp.gnu.org/gnu/wget/wget-1.20.3.tar.gz",
+      "url": "https://ftp.gnu.org/gnu/wget/wget-1.21.1.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 2,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -162,17 +174,21 @@ GET https://formulae.brew.sh/api/formula-linux/${FORMULA}.json
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
+        "arm64_big_sur": {
+          "url": "https://homebrew.bintray.com/bottles/wget-1.21.1.arm64_big_sur.bottle.tar.gz",
+          "sha256": "e9034fc9062d5d28972135be031876672aff18fa945ce37e9c2ee1e2c4287f3a"
+        },
+        "big_sur": {
+          "url": "https://homebrew.bintray.com/bottles/wget-1.21.1.big_sur.bottle.tar.gz",
+          "sha256": "e6ea2a50b8196206f7072360e713535bb16fb786c8b5fe23cab05757e0f67b13"
+        },
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/wget-1.20.3_2.catalina.bottle.tar.gz",
-          "sha256": "ef65c759c5097a36323fa9c77756468649e8d1980a3a4e05695c05e39568967c"
+          "url": "https://homebrew.bintray.com/bottles/wget-1.21.1.catalina.bottle.tar.gz",
+          "sha256": "88116cb28d6b85e441d1bb9df0a1454b84f8b9d0e8817a5bee0f228acc59e75a"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/wget-1.20.3_2.mojave.bottle.tar.gz",
-          "sha256": "28f4090610946a4eb207df102d841de23ced0d06ba31cb79e040d883906dcd4f"
-        },
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/wget-1.20.3_2.high_sierra.bottle.tar.gz",
-          "sha256": "91dd0caca9bd3f38c439d5a7b6f68440c4274945615fae035ff0a369264b8a2f"
+          "url": "https://homebrew.bintray.com/bottles/wget-1.21.1.mojave.bottle.tar.gz",
+          "sha256": "ae4e6f1dc4ecaf2bbed7700e8d64cdc671bf9d6c085ba335f119861fd15956fe"
         }
       }
     }
@@ -195,14 +211,14 @@ GET https://formulae.brew.sh/api/formula-linux/${FORMULA}.json
   "caveats": null,
   "installed": [
     {
-      "version": "1.20.3_2",
+      "version": "1.21.1",
       "used_options": [],
       "built_as_bottle": true,
       "poured_from_bottle": true,
       "runtime_dependencies": [
         {
           "full_name": "gettext",
-          "version": "0.20.2"
+          "version": "0.21"
         },
         {
           "full_name": "libunistring",
@@ -214,45 +230,49 @@ GET https://formulae.brew.sh/api/formula-linux/${FORMULA}.json
         },
         {
           "full_name": "openssl@1.1",
-          "version": "1.1.1g"
+          "version": "1.1.1j"
         }
       ],
       "installed_as_dependency": false,
       "installed_on_request": true
     }
   ],
-  "linked_keg": "1.20.3_2",
+  "linked_keg": "1.21.1",
   "pinned": false,
   "outdated": false,
+  "deprecated": false,
+  "deprecation_date": null,
+  "deprecation_reason": null,
+  "disabled": false,
+  "disable_date": null,
+  "disable_reason": null,
   "analytics": {
     "install": {
       "30d": {
-        "wget": 103008,
-        "wget --HEAD": 5
+        "wget": 190955,
+        "wget --HEAD": 29
       },
       "90d": {
-        "wget": 311247,
-        "wget --HEAD": 14,
-        "wget --with-libressl": 1
+        "wget": 516497,
+        "wget --HEAD": 97
       },
       "365d": {
-        "wget": 1350482,
-        "wget --HEAD": 67,
-        "wget --with-libressl": 14
+        "wget": 1414803,
+        "wget --HEAD": 141
       }
     },
     "install_on_request": {
       "30d": {
-        "wget": 100179,
-        "wget --HEAD": 5
+        "wget": 190105,
+        "wget --HEAD": 29
       },
       "90d": {
-        "wget": 301209,
-        "wget --HEAD": 13
+        "wget": 513934,
+        "wget --HEAD": 97
       },
       "365d": {
-        "wget": 1277288,
-        "wget --HEAD": 66
+        "wget": 1394159,
+        "wget --HEAD": 140
       }
     },
     "build_error": {
@@ -260,12 +280,13 @@ GET https://formulae.brew.sh/api/formula-linux/${FORMULA}.json
         "wget": 0
       }
     }
-  }
+  },
+  "generated_date": "2021-03-01"
 }
 ```
 
 ### Get formula metadata for a {{ site.taps.cask.repo }} formula
-Get the JSON output for a single, current {{ site.taps.cask.fullname }} formula with an extra `analytics` key containing analytics data.
+Get the `brew info --json=v2 --cask <cask>` JSON output for a single, current {{ site.taps.cask.fullname }} formula with extra keys containing analytics data and generation date.
 
 ```
 GET https://formulae.brew.sh/api/cask/${FORMULA}.json
@@ -278,16 +299,21 @@ GET https://formulae.brew.sh/api/cask/${FORMULA}.json
 ```json
 {
   "token": "docker",
+  "full_token": "docker",
+  "tap": "homebrew/cask",
   "name": [
     "Docker Desktop",
     "Docker Community Edition",
     "Docker CE"
   ],
-  "homepage": "https://www.docker.com/community-edition",
-  "url": "https://download.docker.com/mac/stable/45183/Docker.dmg",
-  "appcast": "https://download.docker.com/mac/stable/appcast.xml",
-  "version": "2.3.0.2,45183",
-  "sha256": "ed187365b2b9c6de0ddaa1146c86796f0f3a2f6af1cb2693211e600aad233f35",
+  "desc": "App to build and share containerized applications and microservices",
+  "homepage": "https://www.docker.com/products/docker-desktop",
+  "url": "https://desktop.docker.com/mac/stable/51484/Docker.dmg",
+  "appcast": null,
+  "version": "3.1.0,51484",
+  "installed": null,
+  "outdated": false,
+  "sha256": "9e68684d7d19de90034630ec2127a5d49138dc314857059fa75a99687be2b6b8",
   "artifacts": [
     {
       "delete": [
@@ -296,6 +322,7 @@ GET https://formulae.brew.sh/api/cask/${FORMULA}.json
         "$(brew --prefix)/bin/docker",
         "$(brew --prefix)/bin/docker-compose",
         "$(brew --prefix)/bin/docker-credential-desktop",
+        "$(brew --prefix)/bin/docker-credential-ecr-login",
         "$(brew --prefix)/bin/docker-credential-osxkeychain",
         "$(brew --prefix)/bin/hyperkit",
         "$(brew --prefix)/bin/kubectl",
@@ -317,6 +344,7 @@ GET https://formulae.brew.sh/api/cask/${FORMULA}.json
       "trash": [
         "$(brew --prefix)/bin/docker-compose.backup",
         "$(brew --prefix)/bin/docker.backup",
+        "~/Library/Application Support/Docker Desktop",
         "~/Library/Application Scripts/com.docker.helper",
         "~/Library/Caches/KSCrashReports/Docker",
         "~/Library/Caches/com.docker.docker",
@@ -324,7 +352,10 @@ GET https://formulae.brew.sh/api/cask/${FORMULA}.json
         "~/Library/Containers/com.docker.docker",
         "~/Library/Containers/com.docker.helper",
         "~/Library/Group Containers/group.com.docker",
-        "~/Library/Preferences/com.docker.docker.plist"
+        "~/Library/Preferences/com.docker.docker.plist",
+        "~/Library/Preferences/com.electron.docker-frontend.plist",
+        "~/Library/Saved Application State/com.electron.docker-frontend.savedState",
+        "~/Library/Logs/Docker Desktop"
       ],
       "rmdir": [
         "~/Library/Caches/KSCrashReports",
@@ -341,23 +372,24 @@ GET https://formulae.brew.sh/api/cask/${FORMULA}.json
   "analytics": {
     "install": {
       "30d": {
-        "docker": 16315
+        "docker": 15083
       },
       "90d": {
-        "docker": 53660
+        "docker": 50381
       },
       "365d": {
-        "docker": 239542
+        "docker": 207465
       }
     }
-  }
+  },
+  "generated_date": "2021-03-01"
 }
 ```
 
 ## Analytics
 
 ### List one category of analytics events
-List all analytics events for a specified category over a number of days, ordered by event frequency count.
+List all analytics events for a specified category over a number of days, ordered by event frequency count. This is the data source for `brew info --analytics`.
 
 ```
 GET https://formulae.brew.sh/api/analytics/${CATEGORY}/${DAYS}.json
@@ -407,7 +439,7 @@ GET https://formulae.brew.sh/api/analytics-linux/${CATEGORY}/${DAYS}.json
 ```
 
 ### List analytics events for all {{ site.taps.core.repo }} formulae
-List all the {{ site.taps.core.fullname }} or {{ site.taps.linux.fullname }} formulae's analytics events for a specified category over a number of days, grouped by formula name.
+List all the {{ site.taps.core.fullname }} or {{ site.taps.linux.fullname }} formulae's analytics events for a specified category over a number of days, grouped by formula name. This is the data source for `brew info --analytics --formula <formula>`.
 
 ```
 GET https://formulae.brew.sh/api/analytics/${CATEGORY}/homebrew-core/${DAYS}.json
@@ -452,8 +484,7 @@ GET https://formulae.brew.sh/api/analytics-linux/${CATEGORY}/linuxbrew-core/${DA
 ```
 
 ### List analytics events for all {{ site.taps.cask.repo }} formulae
-List all the {{ site.taps.cask.fullname }} formulae's analytics events for the `cask-install` category over a number of days, grouped by formula name.
-
+List all the {{ site.taps.cask.fullname }} formulae's analytics events for the `cask-install` category over a number of days, grouped by cask token.  This is the data source for `brew info --analytics --cask <cask>`.
 ```
 GET https://formulae.brew.sh/api/analytics/cask-install/homebrew-cask/${DAYS}.json
 ```
