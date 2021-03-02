@@ -29,10 +29,14 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": ":any_skip_relocation",
+      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
+        "arm64_big_sur": {
+          "url": "https://linuxbrew.bintray.com/bottles/step-0.15.7.arm64_big_sur.bottle.tar.gz",
+          "sha256": "9e8bf9e98671bc6559c2e43c9b3fb7d57cf4145f40879fe9bdef6cd09f841efb"
+        },
         "big_sur": {
           "url": "https://linuxbrew.bintray.com/bottles/step-0.15.7.big_sur.bottle.tar.gz",
           "sha256": "ad4ae912df71e37088540b236b0378c747615a5aa20beac9341b833eee7a43ce"
@@ -44,10 +48,6 @@
         "mojave": {
           "url": "https://linuxbrew.bintray.com/bottles/step-0.15.7.mojave.bottle.tar.gz",
           "sha256": "08667ef973111774657604dceecbfadc72afd5aaf18fe1295ac7068415a0d4c6"
-        },
-        "x86_64_linux": {
-          "url": "https://linuxbrew.bintray.com/bottles/step-0.15.7.x86_64_linux.bottle.tar.gz",
-          "sha256": "4ea397e32a4ff3b4d2cc536e8cee10775627fe42aa6614a21f91fc0b61dd1f9f"
         }
       }
     }
@@ -58,7 +58,6 @@
 
   ],
   "build_dependencies": [
-    "dep",
     "go"
   ],
   "dependencies": [
