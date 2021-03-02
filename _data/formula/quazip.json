@@ -10,16 +10,16 @@
 
   ],
   "desc": "C++ wrapper over Gilles Vollant's ZIP/UNZIP package",
-  "license": "LGPL-2.1",
+  "license": "LGPL-2.1-only",
   "homepage": "https://github.com/stachenov/quazip/",
   "versions": {
-    "stable": "0.9.1",
+    "stable": "1.1",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/stachenov/quazip/archive/v0.9.1.tar.gz",
+      "url": "https://github.com/stachenov/quazip/archive/v1.1.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,17 +33,17 @@
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
+        "big_sur": {
+          "url": "https://homebrew.bintray.com/bottles/quazip-1.1.big_sur.bottle.tar.gz",
+          "sha256": "343bb099db746afecb32ef268aeacf45522e67fe063975815cfb980ed1576fda"
+        },
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/quazip-0.9.1.catalina.bottle.tar.gz",
-          "sha256": "fcc3c28686a10a6e8d0e95ac978c0499400e5af3364c015f6ee128d9c0fd878e"
+          "url": "https://homebrew.bintray.com/bottles/quazip-1.1.catalina.bottle.tar.gz",
+          "sha256": "cd85589dcc4e2f401000c786a57320a4773665c11992247a1065f6e23a4f70c0"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/quazip-0.9.1.mojave.bottle.tar.gz",
-          "sha256": "b74d9a5c9d2dbc349de524bce7ae4ef45882b37e2187b065c11141d7a2056953"
-        },
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/quazip-0.9.1.high_sierra.bottle.tar.gz",
-          "sha256": "632c10f191326e2afc006c9a065f40af0f5ab8d6b562b4013ecdf77e79ed1eaf"
+          "url": "https://homebrew.bintray.com/bottles/quazip-1.1.mojave.bottle.tar.gz",
+          "sha256": "bab3b293744908346e3438f9ed49659b8be8594ab60dd1e0bc0c88864ea359d2"
         }
       }
     }
@@ -54,10 +54,10 @@
 
   ],
   "build_dependencies": [
-
+    "cmake"
   ],
   "dependencies": [
-    "qt"
+    "qt@5"
   ],
   "recommended_dependencies": [
 
