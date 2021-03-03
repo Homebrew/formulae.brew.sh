@@ -13,13 +13,13 @@
   "license": "Apache-2.0",
   "homepage": "https://comby.dev",
   "versions": {
-    "stable": "1.1.0",
+    "stable": "1.2.0",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/comby-tools/comby/archive/1.1.0.tar.gz",
+      "url": "https://github.com/comby-tools/comby/archive/1.2.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,17 +33,21 @@
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
+        "arm64_big_sur": {
+          "url": "https://homebrew.bintray.com/bottles/comby-1.2.0.arm64_big_sur.bottle.tar.gz",
+          "sha256": "e28d8399c565ecd4573c3ef7f084eba5ad6b21e0e2b6a48d9bfe9efae1789711"
+        },
         "big_sur": {
-          "url": "https://homebrew.bintray.com/bottles/comby-1.1.0.big_sur.bottle.tar.gz",
-          "sha256": "6774e08b88b128ab63b9580e40b42f62d9eacd6fa46ecde4f6f83eaecdea82ef"
+          "url": "https://homebrew.bintray.com/bottles/comby-1.2.0.big_sur.bottle.tar.gz",
+          "sha256": "fbfdc837f78e60a04c98874ca7e8dc57b1fc5f8c2d2e3286ebf2eabdbe1a2009"
         },
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/comby-1.1.0.catalina.bottle.tar.gz",
-          "sha256": "817f96bf3ebb4a3fc27a266e3bf655da0d6e2910ccee81583bb6492af3eb8e30"
+          "url": "https://homebrew.bintray.com/bottles/comby-1.2.0.catalina.bottle.tar.gz",
+          "sha256": "fe0b2f93578ba87289241d49448abce8a1eaaf174edea3ef763b25eae052b5f9"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/comby-1.1.0.mojave.bottle.tar.gz",
-          "sha256": "7ed775050f3e6178333a19e43d060f6a830c9ff89074233c77cd5cbd4c65971a"
+          "url": "https://homebrew.bintray.com/bottles/comby-1.2.0.mojave.bottle.tar.gz",
+          "sha256": "5db851248522674a39ec430a571344b27fa14aec255ec6b5d29dae16b4fa71b2"
         }
       }
     }
@@ -54,13 +58,14 @@
 
   ],
   "build_dependencies": [
+    "autoconf",
     "gmp",
     "ocaml",
-    "opam"
+    "opam",
+    "pkg-config"
   ],
   "dependencies": [
-    "pcre",
-    "pkg-config"
+    "pcre"
   ],
   "recommended_dependencies": [
 
