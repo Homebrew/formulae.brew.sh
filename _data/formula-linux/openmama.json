@@ -1,6 +1,6 @@
 {
-  "name": "crane",
-  "full_name": "crane",
+  "name": "openmama",
+  "full_name": "openmama",
   "tap": "homebrew/core",
   "oldname": null,
   "aliases": [
@@ -9,17 +9,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Tool for interacting with remote images and registries",
-  "license": "Apache-2.0",
-  "homepage": "https://github.com/google/go-containerregistry",
+  "desc": "Open source high performance messaging API for various Market Data sources",
+  "license": "LGPL-2.1-only",
+  "homepage": "https://openmama.finos.org",
   "versions": {
-    "stable": "0.4.1",
+    "stable": "6.3.1",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/google/go-containerregistry/archive/v0.4.1.tar.gz",
+      "url": "https://github.com/finos/OpenMAMA/archive/OpenMAMA-6.3.1-release.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -34,20 +34,20 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "arm64_big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/crane-0.4.1.arm64_big_sur.bottle.tar.gz",
-          "sha256": "747eb1fde14926d51fb07fed9dd7f3bf34416c39bcf2d3151a3b742f66f7b38e"
+          "url": "https://linuxbrew.bintray.com/bottles/openmama-6.3.1.arm64_big_sur.bottle.tar.gz",
+          "sha256": "ffa2cc7594c9a2f097bcbfe74884bc6675efe83ac80343bac9b46c1672555de3"
         },
         "big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/crane-0.4.1.big_sur.bottle.tar.gz",
-          "sha256": "319e61c56ca16f9ddb36264ff903c82c90f27023820f9f267d4c569f5f6cb18f"
+          "url": "https://linuxbrew.bintray.com/bottles/openmama-6.3.1.big_sur.bottle.tar.gz",
+          "sha256": "70690e4a07aadfa4c28e9149fd615119e26336903bd182192ea64440df95012a"
         },
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/crane-0.4.1.catalina.bottle.tar.gz",
-          "sha256": "2fb63e2a8355d88d83f02f39c8c088d91d184abb4ac434af43c4e54107e04bee"
+          "url": "https://linuxbrew.bintray.com/bottles/openmama-6.3.1.catalina.bottle.tar.gz",
+          "sha256": "a211e0f4ab73bd0b0d620797405b000e0bae0f043b068bac5244e389d8c38f87"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/crane-0.4.1.mojave.bottle.tar.gz",
-          "sha256": "835e2ec55f5defd87c638af9efb366385b13806aa325085c0befec5a237a1ebd"
+          "url": "https://linuxbrew.bintray.com/bottles/openmama-6.3.1.mojave.bottle.tar.gz",
+          "sha256": "76d5eaf476206348c18eb981a5ff1c4d0b42a3ecf128e26df724d374e04d100d"
         }
       }
     }
@@ -58,10 +58,15 @@
 
   ],
   "build_dependencies": [
-    "go"
+    "cmake",
+    "flex"
   ],
   "dependencies": [
-
+    "apr",
+    "apr-util",
+    "libevent",
+    "ossp-uuid",
+    "qpid-proton"
   ],
   "recommended_dependencies": [
 
