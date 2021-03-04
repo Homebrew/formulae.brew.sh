@@ -5,7 +5,7 @@
   "name": [
     "HoRNDIS"
   ],
-  "desc": null,
+  "desc": "Android USB tethering driver",
   "homepage": "https://github.com/jwise/HoRNDIS",
   "url": "https://github.com/jwise/HoRNDIS/releases/download/rel9.2/HoRNDIS-9.2.pkg",
   "appcast": "https://github.com/jwise/HoRNDIS/releases.atom",
@@ -24,6 +24,14 @@
   ],
   "caveats": "horndis requires a kernel extension to work.\nIf the installation fails, retry after you enable it in:\n  System Preferences → Security & Privacy → General\n\nFor more information, refer to vendor documentation or this Apple Technical Note:\n  https://developer.apple.com/library/content/technotes/tn2459/_index.html\n",
   "depends_on": {
+    "macos": {
+      "==": [
+        "10.11",
+        "10.12",
+        "10.13",
+        "10.14"
+      ]
+    }
   },
   "conflicts_with": null,
   "container": null,
