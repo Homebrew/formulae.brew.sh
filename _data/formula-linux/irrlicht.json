@@ -29,7 +29,7 @@
   "bottle": {
     "stable": {
       "rebuild": 1,
-      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+      "cellar": ":any_skip_relocation",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
@@ -52,6 +52,10 @@
         "sierra": {
           "url": "https://linuxbrew.bintray.com/bottles/irrlicht-1.8.4.sierra.bottle.1.tar.gz",
           "sha256": "d2236f351b11847d960909fa0e96d83ab0448228de30cd21014fea47a2c636a5"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/irrlicht-1.8.4.x86_64_linux.bottle.1.tar.gz",
+          "sha256": "0c38432288bef632472ce5ca6e9f2de80cc2e87877802b2e57c7d47476361201"
         }
       }
     }
@@ -65,7 +69,9 @@
 
   ],
   "dependencies": [
-
+    "libx11",
+    "libxxf86vm",
+    "mesa"
   ],
   "recommended_dependencies": [
 
