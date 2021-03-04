@@ -1,6 +1,6 @@
 {
-  "name": "comby",
-  "full_name": "comby",
+  "name": "kotlin-language-server",
+  "full_name": "kotlin-language-server",
   "tap": "homebrew/core",
   "oldname": null,
   "aliases": [
@@ -9,17 +9,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Tool for changing code across many languages",
-  "license": "Apache-2.0",
-  "homepage": "https://comby.dev",
+  "desc": "Intelligent Kotlin support for any editor/IDE using the Language Server Protocol",
+  "license": "MIT",
+  "homepage": "https://github.com/fwcd/kotlin-language-server",
   "versions": {
-    "stable": "1.2.2",
+    "stable": "1.1.1",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/comby-tools/comby/archive/1.2.2.tar.gz",
+      "url": "https://github.com/fwcd/kotlin-language-server/archive/1.1.1.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -34,20 +34,20 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "arm64_big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/comby-1.2.2.arm64_big_sur.bottle.tar.gz",
-          "sha256": "b3432a0972c8f0d912e68f15e824ba179358912878bbd3b3cdf677c87a65376b"
+          "url": "https://linuxbrew.bintray.com/bottles/kotlin-language-server-1.1.1.arm64_big_sur.bottle.tar.gz",
+          "sha256": "c9e6d9feaaba28afcd3e8e472f24afab703597b863fff06c4986453457b732a9"
         },
         "big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/comby-1.2.2.big_sur.bottle.tar.gz",
-          "sha256": "eeb7831191ebfd0c4baaf2fa632004b296d9fb58894982b2a49efe97c14a47e4"
+          "url": "https://linuxbrew.bintray.com/bottles/kotlin-language-server-1.1.1.big_sur.bottle.tar.gz",
+          "sha256": "2667fa432ee3189383e116565bd5d857bc996a7134991d5ff302769b4baf5b3d"
         },
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/comby-1.2.2.catalina.bottle.tar.gz",
-          "sha256": "2c65823033f2e44c172d9bf9734101087f1ebdd2f279509fda25161eb791e7b0"
+          "url": "https://linuxbrew.bintray.com/bottles/kotlin-language-server-1.1.1.catalina.bottle.tar.gz",
+          "sha256": "24343fc079a65ec189c3ea2b97f6321ca5922cbeb62015971e6c16634e746bf5"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/comby-1.2.2.mojave.bottle.tar.gz",
-          "sha256": "a5c3fbb5507a9f2bb65bff960f1a0f1c0e49fa98b11da5cd2104b92ef698d2e9"
+          "url": "https://linuxbrew.bintray.com/bottles/kotlin-language-server-1.1.1.mojave.bottle.tar.gz",
+          "sha256": "44853329fb56e71e5b6670c2e7a018738f1e258dfd44184af9fc0e883bb46662"
         }
       }
     }
@@ -58,19 +58,10 @@
 
   ],
   "build_dependencies": [
-    "autoconf",
-    "gmp",
-    "ocaml",
-    "opam",
-    "pkg-config"
+    "gradle"
   ],
   "dependencies": [
-    "libev",
-    "pcre",
-    "m4",
-    "unzip",
-    "zlib",
-    "sqlite"
+    "openjdk@11"
   ],
   "recommended_dependencies": [
 
