@@ -5,7 +5,7 @@
   "name": [
     "MyCrypto"
   ],
-  "desc": null,
+  "desc": "Ethereum wallet manager",
   "homepage": "https://mycrypto.com/",
   "url": "https://github.com/MyCryptoHQ/MyCrypto/releases/download/1.7.13/mac_1.7.13_MyCrypto.dmg",
   "appcast": null,
@@ -16,7 +16,18 @@
   "artifacts": [
     [
       "MyCrypto.app"
-    ]
+    ],
+    {
+      "trash": [
+        "~/Library/Application Support/MyCrypto",
+        "~/Library/Logs/MyCrypto",
+        "~/Library/Preferences/com.github.mycrypto.mycryptohq.helper.plist",
+        "~/Library/Preferences/com.github.mycrypto.mycryptohq.plist",
+        "~/Library/Saved Application State/com.github.mycrypto.mycryptohq.savedState"
+      ],
+      "signal": {
+      }
+    }
   ],
   "caveats": null,
   "depends_on": {

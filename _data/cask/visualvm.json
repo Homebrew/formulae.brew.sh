@@ -5,7 +5,7 @@
   "name": [
     "VisualVM"
   ],
-  "desc": null,
+  "desc": "All-in-One Java Troubleshooting Tool",
   "homepage": "https://visualvm.github.io/",
   "url": "https://github.com/oracle/visualvm/releases/download/2.0.6/VisualVM_206.dmg",
   "appcast": "https://github.com/oracle/visualvm/releases.atom",
@@ -16,7 +16,15 @@
   "artifacts": [
     [
       "VisualVM.app"
-    ]
+    ],
+    {
+      "trash": [
+        "~/Library/Application Support/VisualVM",
+        "~/Library/Caches/VisualVM"
+      ],
+      "signal": {
+      }
+    }
   ],
   "caveats": "visualvm requires Java. You can install the latest version with:\n  brew install --cask adoptopenjdk\n",
   "depends_on": {
