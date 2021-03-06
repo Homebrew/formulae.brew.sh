@@ -10,7 +10,7 @@
 
   ],
   "desc": "ANSI C compiler for Intel 8051, Maxim 80DS390, and Zilog Z80",
-  "license": "GPL-2.0",
+  "license": "GPL-2.0-only and GPL-3.0-only and Public Domain and Zlib",
   "homepage": "https://sdcc.sourceforge.io/",
   "versions": {
     "stable": "4.0.0",
@@ -24,7 +24,7 @@
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -34,24 +34,20 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "arm64_big_sur": {
-          "url": "https://homebrew.bintray.com/bottles/sdcc-4.0.0.arm64_big_sur.bottle.tar.gz",
-          "sha256": "e002b79aa971132f16eca044273a2048fca8c162a4231b69f7d90086315e3d76"
+          "url": "https://homebrew.bintray.com/bottles/sdcc-4.0.0_1.arm64_big_sur.bottle.tar.gz",
+          "sha256": "384195a1fe4a6b681b54a6a5cb93d1da698ef1f7ed4ef34b1b1ba92b52b8e406"
         },
         "big_sur": {
-          "url": "https://homebrew.bintray.com/bottles/sdcc-4.0.0.big_sur.bottle.tar.gz",
-          "sha256": "5f6504340cb02b7de8cd7562e5b91533c9ff090e620f1e458a4843ebe6460ad3"
+          "url": "https://homebrew.bintray.com/bottles/sdcc-4.0.0_1.big_sur.bottle.tar.gz",
+          "sha256": "705bf57ac5c173a893408644a2fb69fd9c6941cb44fe3ea17b5ea44ca4afc4b3"
         },
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/sdcc-4.0.0.catalina.bottle.tar.gz",
-          "sha256": "876e548b2a8c31c2d45d753b59e528c82101d193398d8c158270849fe9703ece"
+          "url": "https://homebrew.bintray.com/bottles/sdcc-4.0.0_1.catalina.bottle.tar.gz",
+          "sha256": "b99efe742281c6aa552426b782cf9c372df35e60ef01a65980d4b53071f8581e"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/sdcc-4.0.0.mojave.bottle.tar.gz",
-          "sha256": "214547215aa0b7598ecfd80cd291bbc64bd8b2d95c867fca9653e5d0aef042d6"
-        },
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/sdcc-4.0.0.high_sierra.bottle.tar.gz",
-          "sha256": "1f2423cb4c4f66c34b8a68f9c7a967c4256ca438646260dbf50e7f4c0b5f8f59"
+          "url": "https://homebrew.bintray.com/bottles/sdcc-4.0.0_1.mojave.bottle.tar.gz",
+          "sha256": "9c2bbf7462ef3b3fa92701e11c9a58b497d3814159aea69933d8ff674b4fa40f"
         }
       }
     }
@@ -67,7 +63,8 @@
   ],
   "dependencies": [
     "boost",
-    "gputils"
+    "gputils",
+    "readline"
   ],
   "recommended_dependencies": [
 
@@ -76,7 +73,18 @@
 
   ],
   "uses_from_macos": [
-
+    [
+      "bison",
+      "build"
+    ],
+    [
+      "flex",
+      "build"
+    ],
+    [
+      "texinfo",
+      "build"
+    ]
   ],
   "requirements": [
 
