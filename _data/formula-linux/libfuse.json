@@ -13,13 +13,13 @@
   "license": "LGPL-2.1-only or GPL-2.0-only",
   "homepage": "https://github.com/libfuse/libfuse",
   "versions": {
-    "stable": "2.9.8",
+    "stable": "3.10.2",
     "head": "HEAD",
-    "bottle": true
+    "bottle": false
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/libfuse/libfuse/releases/download/fuse-2.9.8/fuse-2.9.8.tar.gz",
+      "url": "https://github.com/libfuse/libfuse/releases/download/fuse-3.10.2/fuse-3.10.2.tar.xz",
       "tag": null,
       "revision": null
     }
@@ -27,18 +27,6 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
-    "stable": {
-      "rebuild": 0,
-      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
-      "prefix": "/home/linuxbrew/.linuxbrew",
-      "root_url": "https://linuxbrew.bintray.com/bottles",
-      "files": {
-        "x86_64_linux": {
-          "url": "https://linuxbrew.bintray.com/bottles/libfuse-2.9.8.x86_64_linux.bottle.tar.gz",
-          "sha256": "66e21f1df0e11d0aa6f810f821e8981247e9285d39e6579bd7376ebfc6482a58"
-        }
-      }
-    }
   },
   "keg_only": false,
   "bottle_disabled": false,
@@ -48,7 +36,9 @@
   "build_dependencies": [
     "autoconf",
     "automake",
-    "libtool"
+    "libtool",
+    "meson",
+    "ninja"
   ],
   "dependencies": [
 
