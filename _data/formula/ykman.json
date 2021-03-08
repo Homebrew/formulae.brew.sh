@@ -13,13 +13,13 @@
   "license": "BSD-2-Clause",
   "homepage": "https://developers.yubico.com/yubikey-manager/",
   "versions": {
-    "stable": "3.1.2",
+    "stable": "4.0.0",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://files.pythonhosted.org/packages/78/eb/a48c359b32ad81e6c5ea0141ef9139859ef43dc4640d5ced721bba4ae1cc/yubikey-manager-3.1.2.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/0b/41/b6f3d4c71e967c61902b58ebfc39007167ac554b88b4f3eea44b4b0f41b8/yubikey-manager-4.0.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -34,20 +34,20 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "arm64_big_sur": {
-          "url": "https://homebrew.bintray.com/bottles/ykman-3.1.2.arm64_big_sur.bottle.tar.gz",
-          "sha256": "0fc39d2fd810b8f6eb193e7f7e8104a9e8e3227c6262e15d60cbea7e1a862162"
+          "url": "https://homebrew.bintray.com/bottles/ykman-4.0.0.arm64_big_sur.bottle.tar.gz",
+          "sha256": "a19b309fc13396408f6ac9c36232adcd9243312cf96a999b4a552ffa6953a6e2"
         },
         "big_sur": {
-          "url": "https://homebrew.bintray.com/bottles/ykman-3.1.2.big_sur.bottle.tar.gz",
-          "sha256": "bdefdcfbdd17e876b92ee3405b79b094955ae2b597d1839ecbf3ef1e2cb48936"
+          "url": "https://homebrew.bintray.com/bottles/ykman-4.0.0.big_sur.bottle.tar.gz",
+          "sha256": "74a42e1fa390da95cf003bbd8a23fec3fd7c4c3aa34fd1861dc36ba47fb3ebc7"
         },
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/ykman-3.1.2.catalina.bottle.tar.gz",
-          "sha256": "d58e6fa495a5e5cd405cb651bdcdcc783c179b3817a0469ab19c88b3f0153c29"
+          "url": "https://homebrew.bintray.com/bottles/ykman-4.0.0.catalina.bottle.tar.gz",
+          "sha256": "001843648f1a67f05ac364e912d90bbfff6eda7adb421b6184a10a156b4a4357"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/ykman-3.1.2.mojave.bottle.tar.gz",
-          "sha256": "bd8606fe932c56e86dbfe1ee4c920626e807bdc3e06e2f4a579ce32d39d14c6c"
+          "url": "https://homebrew.bintray.com/bottles/ykman-4.0.0.mojave.bottle.tar.gz",
+          "sha256": "a5bade1f58997341d493602bf45c6caeb2a47f6dddcd5c381b7840e87a3624c6"
         }
       }
     }
@@ -58,13 +58,12 @@
 
   ],
   "build_dependencies": [
+    "rust",
     "swig"
   ],
   "dependencies": [
-    "libusb",
     "openssl@1.1",
-    "python@3.9",
-    "ykpers"
+    "python@3.9"
   ],
   "recommended_dependencies": [
 
