@@ -29,7 +29,7 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+      "cellar": ":any_skip_relocation",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
@@ -52,6 +52,10 @@
         "high_sierra": {
           "url": "https://linuxbrew.bintray.com/bottles/lcov-1.15.high_sierra.bottle.tar.gz",
           "sha256": "9c3a3586283d61ae1f1ce30145b613ebdc50e28a7656cf4b4f4e935408f4c147"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/lcov-1.15.x86_64_linux.bottle.tar.gz",
+          "sha256": "5c6247d64d2ea9c7974f91f9efaf06dac0fc670812d410d18b10912ba6dd79ba"
         }
       }
     }
@@ -65,8 +69,8 @@
 
   ],
   "dependencies": [
-    "gcc",
-    "perl"
+    "perl",
+    "zlib"
   ],
   "recommended_dependencies": [
 
