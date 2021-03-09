@@ -24,7 +24,7 @@
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -34,20 +34,20 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "arm64_big_sur": {
-          "url": "https://homebrew.bintray.com/bottles/gwenhywfar-5.6.0.arm64_big_sur.bottle.tar.gz",
-          "sha256": "f70cf20a97f43e19eede3af878da91f23fd44b6e60d7e14de80a7a1ffaffa10d"
+          "url": "https://homebrew.bintray.com/bottles/gwenhywfar-5.6.0_1.arm64_big_sur.bottle.tar.gz",
+          "sha256": "cf4318174789a6da02beeb0ae8b2182bc17b14fea0de4ba4ec1d4e2574fefb7d"
         },
         "big_sur": {
-          "url": "https://homebrew.bintray.com/bottles/gwenhywfar-5.6.0.big_sur.bottle.tar.gz",
-          "sha256": "baaf15c57cdcf69669b09bb5413cfdbb97232b6707d3091ec71f9f573c495a99"
+          "url": "https://homebrew.bintray.com/bottles/gwenhywfar-5.6.0_1.big_sur.bottle.tar.gz",
+          "sha256": "f172c3d2c81e2f75f851a34629baa9c90c389a42e22458dc3352a8368245ef9b"
         },
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/gwenhywfar-5.6.0.catalina.bottle.tar.gz",
-          "sha256": "b1d5dfe78e11d6e4fa221d7d4d22eab385ed4763583fe68895e3106ae5703436"
+          "url": "https://homebrew.bintray.com/bottles/gwenhywfar-5.6.0_1.catalina.bottle.tar.gz",
+          "sha256": "a04f53d938325ee504611552f46fc606118b54ffcd3b1e8edb67f5f61d3b75fe"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/gwenhywfar-5.6.0.mojave.bottle.tar.gz",
-          "sha256": "d33d0fcd0524fcdbf99150eb23dbf0f0482fa47294b24b0f2985c0d27e2a10a2"
+          "url": "https://homebrew.bintray.com/bottles/gwenhywfar-5.6.0_1.mojave.bottle.tar.gz",
+          "sha256": "4f83d9bc727e95b68c89a736cb95a7b5f5b0c4c75822cf6043b575d63420002c"
         }
       }
     }
@@ -58,14 +58,17 @@
 
   ],
   "build_dependencies": [
-
+    "autoconf",
+    "automake"
   ],
   "dependencies": [
+    "cmake",
     "gettext",
     "gnutls",
     "libgcrypt",
     "openssl@1.1",
-    "pkg-config"
+    "pkg-config",
+    "qt@5"
   ],
   "recommended_dependencies": [
 
