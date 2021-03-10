@@ -1,6 +1,6 @@
 {
-  "name": "kyoto-tycoon",
-  "full_name": "kyoto-tycoon",
+  "name": "cyrus-sasl",
+  "full_name": "cyrus-sasl",
   "tap": "homebrew/core",
   "oldname": null,
   "aliases": [
@@ -9,22 +9,22 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Database server with interface to Kyoto Cabinet",
-  "license": "GPL-3.0-or-later",
-  "homepage": "https://fallabs.com/kyototycoon/",
+  "desc": "Simple Authentication and Security Layer",
+  "license": "BSD-3-Clause-Attribution",
+  "homepage": "https://www.cyrusimap.org/sasl/",
   "versions": {
-    "stable": "0.9.56",
+    "stable": "2.1.27",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://fallabs.com/kyototycoon/pkg/kyototycoon-0.9.56.tar.gz",
+      "url": "https://github.com/cyrusimap/cyrus-sasl/releases/download/cyrus-sasl-2.1.27/cyrus-sasl-2.1.27.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 5,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -34,20 +34,20 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "arm64_big_sur": {
-          "url": "https://homebrew.bintray.com/bottles/kyoto-tycoon-0.9.56_5.arm64_big_sur.bottle.tar.gz",
-          "sha256": "244a150072e722f1ee861425fdfd1cb12a6a09ee27899b998b0794bd01cd1f12"
+          "url": "https://homebrew.bintray.com/bottles/cyrus-sasl-2.1.27.arm64_big_sur.bottle.tar.gz",
+          "sha256": "bf65079be801e9e99253d9b2329f42dcf50ce38a76fe0b9cfd0a776651764765"
         },
         "big_sur": {
-          "url": "https://homebrew.bintray.com/bottles/kyoto-tycoon-0.9.56_5.big_sur.bottle.tar.gz",
-          "sha256": "30c5a805f4e4f672814b210a28567424b23af490a8d9555286dae17ee41506c4"
+          "url": "https://homebrew.bintray.com/bottles/cyrus-sasl-2.1.27.big_sur.bottle.tar.gz",
+          "sha256": "383f79bf7d14b883c1b60a1356f3b94e1194ee90ad34b58b722f7ba06b4751d2"
         },
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/kyoto-tycoon-0.9.56_5.catalina.bottle.tar.gz",
-          "sha256": "575c025f8a4479503833b3d90c8054ed3b67e8f4a14a96978ec585a76bbf7963"
+          "url": "https://homebrew.bintray.com/bottles/cyrus-sasl-2.1.27.catalina.bottle.tar.gz",
+          "sha256": "15c3df25dde7304adaf9ab246f6387e08029c49bfe4a52726f0d3d1add0452c7"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/kyoto-tycoon-0.9.56_5.mojave.bottle.tar.gz",
-          "sha256": "aafcc936bd17bade9714e200c0e713ec4cd6ddc8f38a08d258cbf09437adec75"
+          "url": "https://homebrew.bintray.com/bottles/cyrus-sasl-2.1.27.mojave.bottle.tar.gz",
+          "sha256": "5db405a2496c27205077235e0074767ae35fab10946325f108b425332f6c5c5e"
         }
       }
     }
@@ -58,11 +58,10 @@
 
   ],
   "build_dependencies": [
-    "lua",
-    "pkg-config"
+
   ],
   "dependencies": [
-    "kyoto-cabinet"
+    "openssl@1.1"
   ],
   "recommended_dependencies": [
 
@@ -71,7 +70,7 @@
 
   ],
   "uses_from_macos": [
-    "zlib"
+
   ],
   "requirements": [
 
