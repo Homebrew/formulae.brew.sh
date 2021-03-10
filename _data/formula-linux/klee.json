@@ -1,6 +1,6 @@
 {
-  "name": "sourcery",
-  "full_name": "sourcery",
+  "name": "klee",
+  "full_name": "klee",
   "tap": "homebrew/core",
   "oldname": null,
   "aliases": [
@@ -9,17 +9,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Meta-programming for Swift, stop writing boilerplate code",
-  "license": "MIT",
-  "homepage": "https://github.com/krzysztofzablocki/Sourcery",
+  "desc": "Symbolic Execution Engine",
+  "license": "NCSA",
+  "homepage": "https://klee.github.io/",
   "versions": {
-    "stable": "1.3.3",
+    "stable": "2.2",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/krzysztofzablocki/Sourcery/archive/1.3.3.tar.gz",
+      "url": "https://github.com/klee/klee/archive/v2.2.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,17 +33,17 @@
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
-        "arm64_big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/sourcery-1.3.3.arm64_big_sur.bottle.tar.gz",
-          "sha256": "1b4480b268fc43adadefd3ee6375a43e5c3d442d5af73dbb2a039e28cf54a6a9"
-        },
         "big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/sourcery-1.3.3.big_sur.bottle.tar.gz",
-          "sha256": "5cb91900806e044b6a2a89883f31c6ce83d3e5953f98f1c759c3d9b45ce5b60e"
+          "url": "https://linuxbrew.bintray.com/bottles/klee-2.2.big_sur.bottle.tar.gz",
+          "sha256": "e618dbf37e6a3abfb015f6c9facdf15d5738b68e0d94e538a9b447321029bf92"
         },
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/sourcery-1.3.3.catalina.bottle.tar.gz",
-          "sha256": "efc96d2467b4ee2453af02be28115f64b191dcdf19351733866f76acd0685e60"
+          "url": "https://linuxbrew.bintray.com/bottles/klee-2.2.catalina.bottle.tar.gz",
+          "sha256": "924b00351eea9e380418b244de739f5660fbf9b9e1f401e5d9ff2d38af404047"
+        },
+        "mojave": {
+          "url": "https://linuxbrew.bintray.com/bottles/klee-2.2.mojave.bottle.tar.gz",
+          "sha256": "28f00222252796f611e346418e1041466a525c4acaef392a0f065be26b239e00"
         }
       }
     }
@@ -54,10 +54,17 @@
 
   ],
   "build_dependencies": [
-    "ruby"
+    "cmake"
   ],
   "dependencies": [
-
+    "gperftools",
+    "llvm",
+    "python-tabulate",
+    "python@3.9",
+    "sqlite",
+    "wllvm",
+    "z3",
+    "zlib"
   ],
   "recommended_dependencies": [
 
@@ -69,15 +76,7 @@
 
   ],
   "requirements": [
-    {
-      "name": "xcode",
-      "cask": null,
-      "download": null,
-      "version": "12.0",
-      "contexts": [
 
-      ]
-    }
   ],
   "conflicts_with": [
 
