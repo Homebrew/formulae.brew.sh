@@ -49,6 +49,10 @@
         "mojave": {
           "url": "https://linuxbrew.bintray.com/bottles/mysql-8.0.23_1.mojave.bottle.tar.gz",
           "sha256": "23452cab50b70f8a0576001853665bdfff41df3b1c61b28d778dcecc153fb4d1"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/mysql-8.0.23_1.x86_64_linux.bottle.tar.gz",
+          "sha256": "230e67a6fd33a2e8e2ea6d4816a9b2531b9ebd4b01fd5853544872e8ccbbf669"
         }
       }
     }
@@ -60,13 +64,14 @@
   ],
   "build_dependencies": [
     "cmake",
+    "patchelf",
     "pkg-config"
   ],
   "dependencies": [
     "openssl@1.1",
     "protobuf",
-    "libedit",
-    "gcc@7"
+    "cyrus-sasl",
+    "libedit"
   ],
   "recommended_dependencies": [
 
