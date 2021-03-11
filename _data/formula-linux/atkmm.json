@@ -29,7 +29,7 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+      "cellar": ":any_skip_relocation",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
@@ -48,6 +48,10 @@
         "mojave": {
           "url": "https://linuxbrew.bintray.com/bottles/atkmm-2.36.0_1.mojave.bottle.tar.gz",
           "sha256": "169e793e210a156583b3bf6126fb4f1e049f7ca0113ba2a6a4c37efb0d38a458"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/atkmm-2.36.0_1.x86_64_linux.bottle.tar.gz",
+          "sha256": "9404a9fdac60c5cf77724f440709d5c55837e7d78bdedf2fdd68b36fdad3fedf"
         }
       }
     }
@@ -60,12 +64,12 @@
   "build_dependencies": [
     "meson",
     "ninja",
-    "pkg-config"
+    "pkg-config",
+    "gcc"
   ],
   "dependencies": [
     "atk",
-    "glibmm",
-    "gcc"
+    "glibmm"
   ],
   "recommended_dependencies": [
 
