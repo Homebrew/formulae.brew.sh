@@ -1,6 +1,6 @@
 {
-  "name": "x3270",
-  "full_name": "x3270",
+  "name": "qt-postgresql",
+  "full_name": "qt-postgresql",
   "tap": "homebrew/core",
   "oldname": null,
   "aliases": [
@@ -9,17 +9,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "IBM 3270 terminal emulator for the X Window System and Windows",
-  "license": "BSD-3-Clause",
-  "homepage": "http://x3270.bgp.nu/",
+  "desc": "Qt SQL Database Driver",
+  "license": "GFDL-1.3-only and GPL-2.0-only and GPL-3.0-only and LGPL-2.1-only and LGPL-3.0-only",
+  "homepage": "https://www.qt.io/",
   "versions": {
-    "stable": "4.0ga14",
+    "stable": "6.0.2",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "http://x3270.bgp.nu/download/04.00/suite3270-4.0ga14-src.tgz",
+      "url": "https://download.qt.io/official_releases/qt/6.0/6.0.2/submodules/qtbase-everywhere-src-6.0.2.tar.xz",
       "tag": null,
       "revision": null
     }
@@ -34,20 +34,20 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "arm64_big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/x3270-4.0ga14.arm64_big_sur.bottle.tar.gz",
-          "sha256": "bf8dcba7b17bb1ebc1fdf8987badc037236e2f83c20a5621c914295355e0f545"
+          "url": "https://linuxbrew.bintray.com/bottles/qt-postgresql-6.0.2.arm64_big_sur.bottle.tar.gz",
+          "sha256": "cdb24bf5fe174d484438d265095fd6c38614e55f11dd0be543dead6b1abbbe20"
         },
         "big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/x3270-4.0ga14.big_sur.bottle.tar.gz",
-          "sha256": "0fb9e40a2f6d56e3f166d7cee9ef8eae4166e3e038c19b114ff840e33a3aad3e"
+          "url": "https://linuxbrew.bintray.com/bottles/qt-postgresql-6.0.2.big_sur.bottle.tar.gz",
+          "sha256": "d497f050cb6530bf28f409a84093bb875f8d60e8842b30ba1e465527cb5e0fb4"
         },
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/x3270-4.0ga14.catalina.bottle.tar.gz",
-          "sha256": "1e8f59bedd3fbda46cab9db08944ab21b3549f9ca9002423590015da3cf75ce6"
+          "url": "https://linuxbrew.bintray.com/bottles/qt-postgresql-6.0.2.catalina.bottle.tar.gz",
+          "sha256": "778231dc3ffc60418545ca8530550908723090b3b2ea4e6bbfeaeceae2f16e21"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/x3270-4.0ga14.mojave.bottle.tar.gz",
-          "sha256": "50108883c53cb6ef78dd63372952451db9d182d4409e340a31146397fbacaf93"
+          "url": "https://linuxbrew.bintray.com/bottles/qt-postgresql-6.0.2.mojave.bottle.tar.gz",
+          "sha256": "ae857493cde2aa599959fb887b76c502ef925b2a11fbe713b5f43393b25687d8"
         }
       }
     }
@@ -58,11 +58,11 @@
 
   ],
   "build_dependencies": [
-
+    "cmake"
   ],
   "dependencies": [
-    "readline",
-    "tcl-tk"
+    "postgresql",
+    "qt"
   ],
   "recommended_dependencies": [
 
