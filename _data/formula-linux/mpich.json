@@ -29,7 +29,7 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+      "cellar": ":any_skip_relocation",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
@@ -48,6 +48,10 @@
         "mojave": {
           "url": "https://linuxbrew.bintray.com/bottles/mpich-3.4.1.mojave.bottle.tar.gz",
           "sha256": "a441178f63a3dc94ca9a587014884b4b655e68a6a1d48601ee5841c4cfffb20f"
+        },
+        "x86_64_linux": {
+          "url": "https://linuxbrew.bintray.com/bottles/mpich-3.4.1.x86_64_linux.bottle.tar.gz",
+          "sha256": "c1b9317333320fbd8af6eff2834f19d1f75f3ccf5acbdeeff189b221e056c97c"
         }
       }
     }
@@ -61,7 +65,8 @@
 
   ],
   "dependencies": [
-    "gcc"
+    "gcc",
+    "libfabric"
   ],
   "recommended_dependencies": [
 
