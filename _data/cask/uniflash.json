@@ -1,0 +1,54 @@
+{
+  "token": "uniflash",
+  "full_token": "uniflash",
+  "tap": "homebrew/cask",
+  "name": [
+    "TI UniFlash"
+  ],
+  "desc": "Flash tool for microcontrollers",
+  "homepage": "https://www.ti.com/tool/UNIFLASH",
+  "url": "https://downloads.ti.com/ccs/esd/uniflash/uniflash_sl.6.2.0.3059.dmg",
+  "appcast": null,
+  "version": "6.2.0.3059",
+  "installed": null,
+  "outdated": false,
+  "sha256": "8c43684e3ab3e1ef1202503c3eb6dfc34139432568c6294cbc77002f3175fbc2",
+  "artifacts": [
+    "preflight (Preflight Block)",
+    {
+      "script": {
+        "executable": "/Applications/TI/UniFlash/uninstall.app/Contents/MacOS/installbuilder.sh",
+        "args": [
+          "--mode",
+          "unattended"
+        ],
+        "sudo": "true"
+      },
+      "signal": {
+      }
+    },
+    {
+      "path": "uniflash_sl.6.2.0.3059.app/Contents/MacOS/installbuilder.sh",
+      "args": {
+        "must_succeed": "true",
+        "sudo": "false",
+        "args": [
+          "--mode",
+          "unattended",
+          "--prefix",
+          "/Applications/TI/UniFlash"
+        ],
+        "print_stdout": "true"
+      }
+    },
+    [
+      "$(brew --prefix)/Caskroom/uniflash/6.2.0.3059/dslite"
+    ]
+  ],
+  "caveats": null,
+  "depends_on": {
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": null
+}
