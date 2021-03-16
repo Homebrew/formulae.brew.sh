@@ -1,6 +1,6 @@
 {
-  "name": "clojure",
-  "full_name": "clojure",
+  "name": "lttng-ust",
+  "full_name": "lttng-ust",
   "tap": "homebrew/core",
   "oldname": null,
   "aliases": [
@@ -9,27 +9,27 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Dynamic, general-purpose programming language",
-  "license": "EPL-1.0",
-  "homepage": "https://clojure.org",
+  "desc": "Linux Trace Toolkit Next Generation Userspace Tracer",
+  "license": "LGPL-2.1-only and MIT and GPL-2.0-only and BSD-3-Clause and BSD-2-Clause and GPL-3.0-or-later",
+  "homepage": "https://lttng.org/",
   "versions": {
-    "stable": "1.10.3.814",
+    "stable": "2.12.1",
     "head": null,
     "bottle": false
   },
   "urls": {
     "stable": {
-      "url": "https://download.clojure.org/install/clojure-tools-1.10.3.814.tar.gz",
+      "url": "https://lttng.org/files/lttng-ust/lttng-ust-2.12.1.tar.bz2",
       "tag": null,
       "revision": null
     }
   },
   "revision": 0,
-  "version_scheme": 1,
+  "version_scheme": 0,
   "bottle": {
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
@@ -37,8 +37,8 @@
 
   ],
   "dependencies": [
-    "openjdk",
-    "rlwrap"
+    "numactl",
+    "userspace-rcu"
   ],
   "recommended_dependencies": [
 
@@ -47,13 +47,18 @@
 
   ],
   "uses_from_macos": [
-    [
-      "ruby",
-      "build"
-    ]
+
   ],
   "requirements": [
+    {
+      "name": "linux",
+      "cask": null,
+      "download": null,
+      "version": null,
+      "contexts": [
 
+      ]
+    }
   ],
   "conflicts_with": [
 
