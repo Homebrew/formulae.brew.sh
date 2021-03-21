@@ -24,7 +24,7 @@
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -34,16 +34,16 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "big_sur": {
-          "url": "https://homebrew.bintray.com/bottles/haskell-language-server-1.0.0.big_sur.bottle.tar.gz",
-          "sha256": "ff41767b9a34b033c176518cefcae7c92beab42a2eb100c5ac98b9ffe27d8c5d"
+          "url": "https://homebrew.bintray.com/bottles/haskell-language-server-1.0.0_1.big_sur.bottle.tar.gz",
+          "sha256": "47d2d91481d71d30b47ac0128c2bf8a7c557ce5b67ee09d0db2326a0b262979b"
         },
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/haskell-language-server-1.0.0.catalina.bottle.tar.gz",
-          "sha256": "85c08c2eaa6e16de56173eb17bd3a25d5e7033268ae3215b1ee370931e30998d"
+          "url": "https://homebrew.bintray.com/bottles/haskell-language-server-1.0.0_1.catalina.bottle.tar.gz",
+          "sha256": "b17ea0a22d8cd9423fead6749ded2ee55ec046cfb53cb5d898f952591acd627d"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/haskell-language-server-1.0.0.mojave.bottle.tar.gz",
-          "sha256": "76a05d6b7ee7ef5f37a308afa8f6cb8a6c5da9f58c50e98c520e7fdae9c152df"
+          "url": "https://homebrew.bintray.com/bottles/haskell-language-server-1.0.0_1.mojave.bottle.tar.gz",
+          "sha256": "fa48dc85175a73df20c51fdd32efdf39e5e95a35e19ad1ee41ead929bc260bcf"
         }
       }
     }
@@ -55,7 +55,9 @@
   ],
   "build_dependencies": [
     "cabal-install",
-    "ghc"
+    "ghc",
+    "ghc@8.6",
+    "ghc@8.8"
   ],
   "dependencies": [
 
@@ -75,7 +77,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "haskell-language-server is built for ghc 8.10.4. You need\nto provide your own ghc 8.10.4 or install one with\n  brew install ghc\n",
+  "caveats": "haskell-language-server is built for GHC versions 8.6.5, 8.8.4, 8.10.4.\nYou need to provide your own GHC or install one with\n  brew install ghc\n",
   "installed": [
 
   ],
