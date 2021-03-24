@@ -1,25 +1,25 @@
 {
-  "name": "sqlite",
-  "full_name": "sqlite",
+  "name": "tz",
+  "full_name": "tz",
   "tap": "homebrew/core",
   "oldname": null,
   "aliases": [
-    "sqlite3"
+
   ],
   "versioned_formulae": [
 
   ],
-  "desc": "Command-line interface for SQLite",
-  "license": "blessing",
-  "homepage": "https://sqlite.org/",
+  "desc": "CLI time zone visualizer",
+  "license": "GPL-3.0-or-later",
+  "homepage": "https://github.com/oz/tz",
   "versions": {
-    "stable": "3.35.2",
-    "head": null,
+    "stable": "0.4",
+    "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://sqlite.org/2021/sqlite-autoconf-3350200.tar.gz",
+      "url": "https://github.com/oz/tz/archive/refs/tags/v0.4.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -34,20 +34,20 @@
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "arm64_big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/sqlite-3.35.2.arm64_big_sur.bottle.tar.gz",
-          "sha256": "136782a41365ead4612ed08b38ec5279600b3cc6dcad8d6ffe579165692d0353"
+          "url": "https://linuxbrew.bintray.com/bottles/tz-0.4.arm64_big_sur.bottle.tar.gz",
+          "sha256": "3b53e889b310602a755fab23839c9134c994ee02ea118df21fb81040a520d50d"
         },
         "big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/sqlite-3.35.2.big_sur.bottle.tar.gz",
-          "sha256": "db0fa1be882b6184dc9fa4ba8ca5aefbd9c6a1441b1fea810a8cd6db9b3408f8"
+          "url": "https://linuxbrew.bintray.com/bottles/tz-0.4.big_sur.bottle.tar.gz",
+          "sha256": "a882631f9882b6c00f7882f19cbfb1fbb9fead69338b00be57a99a739eb14d6e"
         },
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/sqlite-3.35.2.catalina.bottle.tar.gz",
-          "sha256": "22a446a15e11a74049d9e2b7d7ccfcc6639776cef93e0267a465bb6ec10bd5ef"
+          "url": "https://linuxbrew.bintray.com/bottles/tz-0.4.catalina.bottle.tar.gz",
+          "sha256": "9fb0b941d372b44767aa8751effeb114a05b5a77b59898a66e57cc6edf19ec1f"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/sqlite-3.35.2.mojave.bottle.tar.gz",
-          "sha256": "0d592be5f5a7e43408b7145660ea3dd62e02ac782f15e6af875717c118eb2e77"
+          "url": "https://linuxbrew.bintray.com/bottles/tz-0.4.mojave.bottle.tar.gz",
+          "sha256": "390307fc57faca9a2b4caea72fefc55d1ae5e332cc880434d67be95e0ca4b6b5"
         }
       }
     }
@@ -58,11 +58,10 @@
 
   ],
   "build_dependencies": [
-
+    "go"
   ],
   "dependencies": [
-    "readline",
-    "zlib"
+
   ],
   "recommended_dependencies": [
 
