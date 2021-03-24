@@ -13,18 +13,18 @@
   "license": "MIT",
   "homepage": "https://github.com/ReFirmLabs/binwalk",
   "versions": {
-    "stable": "2.2.0",
+    "stable": "2.3.0",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/ReFirmLabs/binwalk/archive/v2.2.0.tar.gz",
+      "url": "https://github.com/ReFirmLabs/binwalk/archive/v2.3.0.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 4,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,21 +33,25 @@
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
+        "arm64_big_sur": {
+          "url": "https://linuxbrew.bintray.com/bottles/binwalk-2.3.0.arm64_big_sur.bottle.tar.gz",
+          "sha256": "3525c10bf90ca591de19315531f94b42a1b3695f589c7e1e915a40fa40ff25e1"
+        },
         "big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/binwalk-2.2.0_4.big_sur.bottle.tar.gz",
-          "sha256": "b1e5dd1e7292c12e45849813f43a4b57e2f853096ea411f3b9f3668d210d7b18"
+          "url": "https://linuxbrew.bintray.com/bottles/binwalk-2.3.0.big_sur.bottle.tar.gz",
+          "sha256": "40d971563b20923c12f82a29d4ce0fd4cc5ccaaff4783bbc7640795431329534"
         },
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/binwalk-2.2.0_4.catalina.bottle.tar.gz",
-          "sha256": "35b8be77b69cf292e94d6acc1a84f4ff91bcee2cf5cfb98dacd3b15dea1b7a33"
+          "url": "https://linuxbrew.bintray.com/bottles/binwalk-2.3.0.catalina.bottle.tar.gz",
+          "sha256": "1178182237e14483c3107b7eee8d8997c2680c75868425a81c4364da9dab65d9"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/binwalk-2.2.0_4.mojave.bottle.tar.gz",
-          "sha256": "f1e6fbd62185d6d102752c0d4eb3f430851c1fe820cae4877c7b45b7869a4e6e"
+          "url": "https://linuxbrew.bintray.com/bottles/binwalk-2.3.0.mojave.bottle.tar.gz",
+          "sha256": "f101aef4fd465811b81fbb1f1e3015ded3309bfa293d18398fe8fa90a010c5a4"
         },
         "x86_64_linux": {
-          "url": "https://linuxbrew.bintray.com/bottles/binwalk-2.2.0_4.x86_64_linux.bottle.tar.gz",
-          "sha256": "936d8de19a3b055d445b1ca70c199a9304003bf67664017d13eefd7af1b894f4"
+          "url": "https://linuxbrew.bintray.com/bottles/binwalk-2.3.0.x86_64_linux.bottle.tar.gz",
+          "sha256": "7067bfbf8f5fe8ae7fe870a1aae24985a00149a5d4fb51c261d22a530105314e"
         }
       }
     }
@@ -64,6 +68,7 @@
   "dependencies": [
     "freetype",
     "libpng",
+    "numpy",
     "p7zip",
     "python@3.9",
     "ssdeep",
