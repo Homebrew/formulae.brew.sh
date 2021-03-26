@@ -1,6 +1,6 @@
 {
-  "name": "dvc",
-  "full_name": "dvc",
+  "name": "rosa-cli",
+  "full_name": "rosa-cli",
   "tap": "homebrew/core",
   "oldname": null,
   "aliases": [
@@ -9,17 +9,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Git for data science projects",
+  "desc": "RedHat OpenShift Service on AWS (ROSA) command-line interface",
   "license": "Apache-2.0",
-  "homepage": "https://dvc.org",
+  "homepage": "https://www.openshift.com/products/amazon-openshift",
   "versions": {
-    "stable": "2.0.10",
-    "head": null,
+    "stable": "1.0.2",
+    "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://files.pythonhosted.org/packages/98/d0/db5b9644c170a4bffd1fe918e78b2ad1f9e731f180e5c4e120f5536d6b31/dvc-2.0.10.tar.gz",
+      "url": "https://github.com/openshift/rosa/archive/refs/tags/v1.0.2.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,26 +28,26 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
         "arm64_big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/dvc-2.0.10.arm64_big_sur.bottle.1.tar.gz",
-          "sha256": "98246ad338637d7ee539ecc628cc3bf6ec92fc8afee4dbab81c04d67df7f6d5d"
+          "url": "https://linuxbrew.bintray.com/bottles/rosa-cli-1.0.2.arm64_big_sur.bottle.tar.gz",
+          "sha256": "bab5a577bc86d7ed33a5fc42cbdde0e88bdf7c176a6ada455c4a1818bf23571a"
         },
         "big_sur": {
-          "url": "https://linuxbrew.bintray.com/bottles/dvc-2.0.10.big_sur.bottle.1.tar.gz",
-          "sha256": "65a6d18bf9a9290a709d5a39c05eb6a3982f82782d6eaed4e1fd0ba31e23b379"
+          "url": "https://linuxbrew.bintray.com/bottles/rosa-cli-1.0.2.big_sur.bottle.tar.gz",
+          "sha256": "b360aa16941c1adbc160e8d5e9903fed0ab0036e2c2b376d481a5228dff2ee73"
         },
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/dvc-2.0.10.catalina.bottle.1.tar.gz",
-          "sha256": "f1e026a4a284e47fcd3e4b2ecd1f36dcfd8048093f860ffff05f67c9d7ca2142"
+          "url": "https://linuxbrew.bintray.com/bottles/rosa-cli-1.0.2.catalina.bottle.tar.gz",
+          "sha256": "20c3d247cb3b6814cd31cab89d121527cea18da2f2be942064ab11125d8a6565"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/dvc-2.0.10.mojave.bottle.1.tar.gz",
-          "sha256": "20ef5612026c8575fbe9824c2676db74fbe0a9250054b952c8ffd2bba1e05982"
+          "url": "https://linuxbrew.bintray.com/bottles/rosa-cli-1.0.2.mojave.bottle.tar.gz",
+          "sha256": "3be76554945b1b40220c5e5416f8b3d23a3ab3f9ea5127e06179cbef4bbda8e9"
         }
       }
     }
@@ -58,14 +58,10 @@
 
   ],
   "build_dependencies": [
-    "pkg-config",
-    "rust"
+    "go"
   ],
   "dependencies": [
-    "apache-arrow",
-    "libgit2",
-    "openssl@1.1",
-    "python@3.9"
+    "awscli"
   ],
   "recommended_dependencies": [
 
