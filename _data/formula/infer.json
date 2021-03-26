@@ -13,37 +13,37 @@
   "license": "MIT",
   "homepage": "https://fbinfer.com/",
   "versions": {
-    "stable": "0.17.0",
-    "head": null,
+    "stable": "1.1.0",
+    "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/facebook/infer.git",
-      "tag": "v0.17.0",
-      "revision": "99464c01da5809e7159ed1a75ef10f60d34506a4"
+      "url": "https://github.com/facebook/infer/archive/v1.1.0.tar.gz",
+      "tag": null,
+      "revision": null
     }
   },
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "cellar": ":any",
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
+        "big_sur": {
+          "url": "https://homebrew.bintray.com/bottles/infer-1.1.0.big_sur.bottle.tar.gz",
+          "sha256": "e3f2d774f27d1daac2b41ed5cb2bcf1b180f9b6d6440ae5ddfb8d1c001c4413a"
+        },
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/infer-0.17.0.catalina.bottle.1.tar.gz",
-          "sha256": "1dc9c75c759611c8fe0efa8f63d7e55bbaa35d8dc2863f7a527069b11759f244"
+          "url": "https://homebrew.bintray.com/bottles/infer-1.1.0.catalina.bottle.tar.gz",
+          "sha256": "2dcd6c8c088ee88b21f3740a770fd3f73850815aa1f9270d814bfdd4095d2fc4"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/infer-0.17.0.mojave.bottle.1.tar.gz",
-          "sha256": "74b2dddff2bea362066395e28a797078d33514774511cc64771d0f89eea2466d"
-        },
-        "high_sierra": {
-          "url": "https://homebrew.bintray.com/bottles/infer-0.17.0.high_sierra.bottle.1.tar.gz",
-          "sha256": "7630571f8e391ce0ba991ffe7a5d7b2b4a1029cda1d56497800d8ae0a260d4b6"
+          "url": "https://homebrew.bintray.com/bottles/infer-1.1.0.mojave.bottle.tar.gz",
+          "sha256": "b1e1ea3fd12e96a325ca3a5618032a0f9289caae1704afcab131b87a2104ad84"
         }
       }
     }
@@ -58,12 +58,11 @@
     "automake",
     "cmake",
     "libtool",
-    "ocaml",
-    "ocaml-findlib",
-    "ocaml-num",
+    "ninja",
     "opam",
-    "openjdk@8",
-    "pkg-config"
+    "openjdk@11",
+    "pkg-config",
+    "python@3.9"
   ],
   "dependencies": [
     "gmp",
@@ -90,15 +89,7 @@
     "zlib"
   ],
   "requirements": [
-    {
-      "name": "macos",
-      "cask": null,
-      "download": null,
-      "version": null,
-      "contexts": [
 
-      ]
-    }
   ],
   "conflicts_with": [
 
@@ -110,9 +101,9 @@
   "linked_keg": null,
   "pinned": false,
   "outdated": false,
-  "deprecated": true,
-  "deprecation_date": "2020-11-13",
-  "deprecation_reason": "does_not_build",
+  "deprecated": false,
+  "deprecation_date": null,
+  "deprecation_reason": null,
   "disabled": false,
   "disable_date": null,
   "disable_reason": null

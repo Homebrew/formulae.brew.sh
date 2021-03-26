@@ -1,6 +1,6 @@
 {
-  "name": "devspace",
-  "full_name": "devspace",
+  "name": "rosa-cli",
+  "full_name": "rosa-cli",
   "tap": "homebrew/core",
   "oldname": null,
   "aliases": [
@@ -9,19 +9,19 @@
   "versioned_formulae": [
 
   ],
-  "desc": "CLI helps develop/deploy/debug apps with Docker and k8s",
+  "desc": "RedHat OpenShift Service on AWS (ROSA) command-line interface",
   "license": "Apache-2.0",
-  "homepage": "https://devspace.cloud/docs",
+  "homepage": "https://www.openshift.com/products/amazon-openshift",
   "versions": {
-    "stable": "5.10.0",
+    "stable": "1.0.2",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/devspace-cloud/devspace.git",
-      "tag": "v5.10.0",
-      "revision": "c4502eb234b5ed322d7474ea2ba061a96b8366d1"
+      "url": "https://github.com/openshift/rosa/archive/refs/tags/v1.0.2.tar.gz",
+      "tag": null,
+      "revision": null
     }
   },
   "revision": 0,
@@ -34,20 +34,20 @@
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
         "arm64_big_sur": {
-          "url": "https://homebrew.bintray.com/bottles/devspace-5.10.0.arm64_big_sur.bottle.tar.gz",
-          "sha256": "1e5d8b2947c20111f0865a5769965946d1e979418e018d179e6931f3d6c22bf1"
+          "url": "https://homebrew.bintray.com/bottles/rosa-cli-1.0.2.arm64_big_sur.bottle.tar.gz",
+          "sha256": "bab5a577bc86d7ed33a5fc42cbdde0e88bdf7c176a6ada455c4a1818bf23571a"
         },
         "big_sur": {
-          "url": "https://homebrew.bintray.com/bottles/devspace-5.10.0.big_sur.bottle.tar.gz",
-          "sha256": "ec6ab21612f2db940a4515200d01d6c00359983c1b42b60eb4e795a85e955cff"
+          "url": "https://homebrew.bintray.com/bottles/rosa-cli-1.0.2.big_sur.bottle.tar.gz",
+          "sha256": "b360aa16941c1adbc160e8d5e9903fed0ab0036e2c2b376d481a5228dff2ee73"
         },
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/devspace-5.10.0.catalina.bottle.tar.gz",
-          "sha256": "849be97efbe798e55e627edf5329a932bf96d2f02f9374673047016060978f5d"
+          "url": "https://homebrew.bintray.com/bottles/rosa-cli-1.0.2.catalina.bottle.tar.gz",
+          "sha256": "20c3d247cb3b6814cd31cab89d121527cea18da2f2be942064ab11125d8a6565"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/devspace-5.10.0.mojave.bottle.tar.gz",
-          "sha256": "a620ae25b1821506cca4061bacb183156c594a800796042883a7d5192fe5e1b4"
+          "url": "https://homebrew.bintray.com/bottles/rosa-cli-1.0.2.mojave.bottle.tar.gz",
+          "sha256": "3be76554945b1b40220c5e5416f8b3d23a3ab3f9ea5127e06179cbef4bbda8e9"
         }
       }
     }
@@ -61,7 +61,7 @@
     "go"
   ],
   "dependencies": [
-    "kubernetes-cli"
+    "awscli"
   ],
   "recommended_dependencies": [
 
