@@ -1,6 +1,6 @@
 {
-  "name": "keptn",
-  "full_name": "keptn",
+  "name": "leaf-proxy",
+  "full_name": "leaf-proxy",
   "tap": "homebrew/core",
   "oldname": null,
   "aliases": [
@@ -9,17 +9,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Is the CLI for keptn.sh a message-driven control-plane for application delivery",
+  "desc": "Lightweight and fast proxy utility",
   "license": "Apache-2.0",
-  "homepage": "https://keptn.sh",
+  "homepage": "https://github.com/eycorsican/leaf",
   "versions": {
-    "stable": "0.8.1",
-    "head": null,
+    "stable": "0.2.13",
+    "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/keptn/keptn/archive/0.8.1.tar.gz",
+      "url": "https://github.com/eycorsican/leaf/archive/v0.2.13.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,17 +33,21 @@
       "prefix": "/usr/local",
       "root_url": "https://homebrew.bintray.com/bottles",
       "files": {
+        "arm64_big_sur": {
+          "url": "https://homebrew.bintray.com/bottles/leaf-proxy-0.2.13.arm64_big_sur.bottle.tar.gz",
+          "sha256": "5cf0070ceacfd72e04d6adbd77851b1c15ec01ff79f2add28407a8452f5bb2b3"
+        },
         "big_sur": {
-          "url": "https://homebrew.bintray.com/bottles/keptn-0.8.1.big_sur.bottle.tar.gz",
-          "sha256": "e1a0740fe66a3c67c1a4ba6638849cc12c6ebf0686bcfc0db71d6e785ee063a4"
+          "url": "https://homebrew.bintray.com/bottles/leaf-proxy-0.2.13.big_sur.bottle.tar.gz",
+          "sha256": "d95b88877ccd9d3a77758887f0696fffa46b23ae492960a1716005b2349e4bef"
         },
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/keptn-0.8.1.catalina.bottle.tar.gz",
-          "sha256": "91b2633183164288ac640fbdff47b8a7bf6a04c8b864cd3c92a13c9aba103da3"
+          "url": "https://homebrew.bintray.com/bottles/leaf-proxy-0.2.13.catalina.bottle.tar.gz",
+          "sha256": "a0ee193feb50ee14874647967eaca61de66b267265ee5035a24047ad8ebb30fa"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/keptn-0.8.1.mojave.bottle.tar.gz",
-          "sha256": "c2028545946baf04ed42448fb5594cef24c99b2e33d2364462a33896080a0230"
+          "url": "https://homebrew.bintray.com/bottles/leaf-proxy-0.2.13.mojave.bottle.tar.gz",
+          "sha256": "8c8694440e773387ed663a650f8609aa27ec5c454166337e3f09941803292b91"
         }
       }
     }
@@ -54,7 +58,7 @@
 
   ],
   "build_dependencies": [
-    "go"
+    "rust"
   ],
   "dependencies": [
 
@@ -72,7 +76,7 @@
 
   ],
   "conflicts_with": [
-
+    "leaf"
   ],
   "caveats": null,
   "installed": [
