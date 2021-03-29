@@ -10,21 +10,21 @@
 
   ],
   "desc": "Scheme implementation with object system, C, and Java interfaces",
-  "license": null,
+  "license": "GPL-2.0-or-later",
   "homepage": "https://www-sop.inria.fr/indes/fp/Bigloo/",
   "versions": {
-    "stable": "4.3e",
+    "stable": "4.4b",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "ftp://ftp-sop.inria.fr/indes/fp/Bigloo/bigloo4.3e.tar.gz",
+      "url": "ftp://ftp-sop.inria.fr/indes/fp/Bigloo/bigloo-4.4b.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,21 +33,17 @@
       "prefix": "/home/linuxbrew/.linuxbrew",
       "root_url": "https://linuxbrew.bintray.com/bottles",
       "files": {
+        "big_sur": {
+          "url": "https://linuxbrew.bintray.com/bottles/bigloo-4.4b.big_sur.bottle.tar.gz",
+          "sha256": "4ec0eade2fd256f4d25e4026200158b7ccc1a06b4c9554b503daaa9e7b0e8cab"
+        },
         "catalina": {
-          "url": "https://linuxbrew.bintray.com/bottles/bigloo-4.3e_1.catalina.bottle.tar.gz",
-          "sha256": "06c2d3728e778db36954a6fca8ecc8cb663d90122a884cfb0fc96ce1de36663a"
+          "url": "https://linuxbrew.bintray.com/bottles/bigloo-4.4b.catalina.bottle.tar.gz",
+          "sha256": "a64de44ab2d8674bde6500e0ac8646950f930d3296597ac6afee994ef3752096"
         },
         "mojave": {
-          "url": "https://linuxbrew.bintray.com/bottles/bigloo-4.3e_1.mojave.bottle.tar.gz",
-          "sha256": "5de69de8a1afee85a7b6af5d024c80ff3ceb7acc8e391c20fd24398122cfad9a"
-        },
-        "high_sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/bigloo-4.3e_1.high_sierra.bottle.tar.gz",
-          "sha256": "26a5f98ee71f7794ced067f64a695f040ef271413ac58b0e0cbfa883ab44ee73"
-        },
-        "sierra": {
-          "url": "https://linuxbrew.bintray.com/bottles/bigloo-4.3e_1.sierra.bottle.tar.gz",
-          "sha256": "2844e66dfeecc9cfe4ad85558f2d2be450b5aea3acad7461402e9fcb7fb5bbdd"
+          "url": "https://linuxbrew.bintray.com/bottles/bigloo-4.4b.mojave.bottle.tar.gz",
+          "sha256": "73d13d970992f108d38bfac032f9ee0d37414e7bb6a8af093e199a69fc08bee5"
         }
       }
     }
@@ -60,11 +56,17 @@
   "build_dependencies": [
     "autoconf",
     "automake",
-    "libtool"
+    "libtool",
+    "pkg-config"
   ],
   "dependencies": [
+    "bdw-gc",
     "gmp",
-    "openssl@1.1"
+    "libunistring",
+    "libuv",
+    "openjdk",
+    "openssl@1.1",
+    "pcre"
   ],
   "recommended_dependencies": [
 
