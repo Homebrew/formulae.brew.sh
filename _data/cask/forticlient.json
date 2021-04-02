@@ -7,18 +7,19 @@
   ],
   "desc": "Fabric agent with endpoint protection and cloud sandbox",
   "homepage": "https://forticlient.com/",
-  "url": "https://d3gpjj9d20n0p3.cloudfront.net/forticlient/downloads/FortiClient_6.4.2.1305_macosx.dmg",
+  "url": "https://fortinetweb.s3.amazonaws.com/forticlient/downloads/FortiClient_6.4.3.1325_macosx.dmg",
   "appcast": null,
-  "version": "6.4.2.1305",
+  "version": "6.4.3.1325",
   "installed": null,
   "outdated": false,
-  "sha256": "660901a65c72f06c1c4b93a01cd46e562a684c59e83c0cdfa75b254c506939cc",
+  "sha256": "469baae00c624421492c2c0adc0715642bec0f9fcf6cadd18b1ddecdd6e724c9",
   "artifacts": [
+    "uninstall_preflight (Preflight Block)",
     {
       "quit": [
+        "com.fortinet.FortiClient",
         "com.fortinet.FortiClientAgent",
         "com.fortinet.FortiClient.helper",
-        "com.fortinet.FortiClient",
         "com.fortinet.FctMiscAgent"
       ],
       "pkgutil": [
@@ -50,7 +51,7 @@
         "com.fortinet.fct_launcher",
         "com.fortinet.fssoagent_launchagent",
         "com.fortinet.forticlient.vpn.vpn_control",
-        "com.fortinet.fctappfw",
+        "com.fortinet.fctappfw2",
         "com.fortinet.config",
         "com.fortinet.epctrl",
         "com.fortinet.fmon2",
@@ -61,7 +62,9 @@
         "com.fortinet.fctwf"
       ],
       "delete": [
-        "/Applications/FortiClient*"
+        "/Applications/FortiClient.app",
+        "/Applications/FortiClientUninstaller.app",
+        "/Library/Application Support/Fortinet"
       ],
       "signal": {
       }
@@ -69,7 +72,6 @@
     "Install.mpkg (Pkg)",
     {
       "trash": [
-        "/Library/Application Support/Fortinet",
         "~/Library/Application Support/Fortinet",
         "~/Library/Application Support/FortiClient",
         "~/Library/Logs/Fortinet",
