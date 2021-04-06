@@ -14,13 +14,13 @@ permalink: :title
 
 {%- include install_command.html item=f.name %}
 {%- if f.aliases.size > 0 %}
-<p>Also known as: <strong>{{ f.aliases | join: "</strong>, <strong>" }}</strong></p>
+<p class="aliases">Also known as: <strong>{{ f.aliases | join: "</strong>, <strong>" }}</strong></p>
 {%- endif -%}
 {%- if f.oldname %}
-<p>Formerly known as: <strong>{{ f.oldname }}</strong></p>
+<p class="oldname">Formerly known as: <strong>{{ f.oldname }}</strong></p>
 {%- endif %}
-<p>{{ f.desc | xml_escape }}</p>
-<p><a href="{{ f.homepage }}">{{ f.homepage }}</a></p>
+<p class="desc">{{ f.desc | xml_escape }}</p>
+<p class="homepage"><a href="{{ f.homepage }}">{{ f.homepage }}</a></p>
 {%- if f.license.size > 0 %}
 <p>License: <strong>{{ f.license | join: "</strong>, <strong>" | replace: "_", " " }}</strong></p>
 {%- endif %}
