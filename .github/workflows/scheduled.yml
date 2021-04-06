@@ -5,7 +5,7 @@ on:
       - .github/workflows/scheduled.yml
   schedule:
     # Once every hour
-    - cron:  '0 * * * *'
+    - cron: "0 * * * *"
 jobs:
   generate:
     if: startsWith( github.repository, 'Homebrew/' )
@@ -43,11 +43,11 @@ jobs:
         if: matrix.os == 'ubuntu-latest'
         uses: actions/setup-ruby@main
         with:
-          ruby-version: '2.6'
+          ruby-version: "2.6"
 
       - name: Set up analytics
         env:
-          ANALYTICS_JSON_KEY: ${{ secrets.ANALYTICS_JSON_KEY }}
+          ANALYTICS_JSON_KEY: ${{ secrets.HOMEBREW_FORMULAE_BREW_SH_ANALYTICS_JSON_KEY }}
         run: echo "$ANALYTICS_JSON_KEY" > ~/.homebrew_analytics.json
 
       - name: Update data for homebrew/core and homebrew/cask
