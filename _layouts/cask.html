@@ -8,16 +8,16 @@ permalink: :title
 <h2>{{ token }}</h2>
 
 {%- include install_command.html item=token modifier=" --cask" %}
-<p>Name{%- if c.name.size > 1 -%}s{%- endif -%}:
+<p class="names">Name{%- if c.name.size > 1 -%}s{%- endif -%}:
 {%- for name in c.name %}
     <strong>{{ name }}</strong>
     {%- unless forloop.last -%}, {% endunless %}
 {%- endfor -%}
 </p>
 {%- if c.desc %}
-<p>{{ c.desc }}</p>
+<p class="desc">{{ c.desc }}</p>
 {%- endif %}
-<p><a href="{{ c.homepage }}">{{ c.homepage }}</a></p>
+<p class="homepage"><a href="{{ c.homepage }}">{{ c.homepage }}</a></p>
 
 <p><a href="{{ site.baseurl }}/api/cask/{{ token }}.json"><code>/api/cask/{{ token }}.json</code> (JSON API)</a></p>
 <p><a target="_blank" href="{{ site.taps.cask.remote }}/blob/HEAD/Casks/{{ token }}.rb">Cask code</a> on GitHub</p>
