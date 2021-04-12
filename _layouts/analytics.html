@@ -8,7 +8,7 @@ layout: base
 {%- else -%}
     {%- assign formula_path = "formula" -%}
 {%- endif -%}
-<h2>{{ page.category_pretty }} Events ({{ page.days }})</h2>
+<h2>{{ page.category_pretty }} Events ({{ page.days | split: "d" | first }} days)</h2>
 
 <h3><a href="{{ site.baseurl }}/api/{{ analytics_path }}/{{ page.category }}/{{ page.days }}.json"><code>/api/{{ analytics_path }}/{{ page.category }}/{{ page.days }}.json</code> (JSON API)</a></h3>
 
