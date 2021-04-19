@@ -4,9 +4,10 @@
   "tap": "homebrew/core",
   "oldname": null,
   "aliases": [
-    "llvm@11"
+    "llvm@12"
   ],
   "versioned_formulae": [
+    "llvm@11",
     "llvm@9",
     "llvm@8",
     "llvm@7"
@@ -15,18 +16,18 @@
   "license": "Apache-2.0 with LLVM-exception",
   "homepage": "https://llvm.org/",
   "versions": {
-    "stable": "11.1.0",
+    "stable": "12.0.0",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-11.1.0/llvm-project-11.1.0.src.tar.xz",
+      "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-12.0.0/llvm-project-12.0.0.src.tar.xz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -35,23 +36,23 @@
       "files": {
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/llvm/blobs/sha256:89c49726e4f90bae088ee3b1e323c36cf7b74778810d35a54c99061f51e5f492",
-          "sha256": "89c49726e4f90bae088ee3b1e323c36cf7b74778810d35a54c99061f51e5f492"
+          "url": "https://ghcr.io/v2/homebrew/core/llvm/blobs/sha256:bf7e6bdeb7f9eef8113dfe5e2ef410fa37881473811b31c8fd0038f3ded22b60",
+          "sha256": "bf7e6bdeb7f9eef8113dfe5e2ef410fa37881473811b31c8fd0038f3ded22b60"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/llvm/blobs/sha256:6e6dac1f068982588f6bd2d0fe05d2bc5b664ef55489df46b20e46807ab1e049",
-          "sha256": "6e6dac1f068982588f6bd2d0fe05d2bc5b664ef55489df46b20e46807ab1e049"
+          "url": "https://ghcr.io/v2/homebrew/core/llvm/blobs/sha256:275c72f9da27d13b2b1144629d8b8c6f425b672d1e716a81d0e0d8aed6eeb6b9",
+          "sha256": "275c72f9da27d13b2b1144629d8b8c6f425b672d1e716a81d0e0d8aed6eeb6b9"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/llvm/blobs/sha256:45f145b60eab557f2079bb1f5ac4bfc4333387fad5a12330a581ea5398c74402",
-          "sha256": "45f145b60eab557f2079bb1f5ac4bfc4333387fad5a12330a581ea5398c74402"
+          "url": "https://ghcr.io/v2/homebrew/core/llvm/blobs/sha256:330381b5d4be23e5ec878ed13ba8f96f311078a8be8130fcc6f49e7ef31dc8d5",
+          "sha256": "330381b5d4be23e5ec878ed13ba8f96f311078a8be8130fcc6f49e7ef31dc8d5"
         },
         "mojave": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/llvm/blobs/sha256:f7c4af43940fb0e2f5f3964c74e3b71ed5edf45c078df9599f68b6a4a9ff2a61",
-          "sha256": "f7c4af43940fb0e2f5f3964c74e3b71ed5edf45c078df9599f68b6a4a9ff2a61"
+          "url": "https://ghcr.io/v2/homebrew/core/llvm/blobs/sha256:b7239f312db88db8f6795feac9bd2524df081408e071331bf1e4ceab8f6ba7fb",
+          "sha256": "b7239f312db88db8f6795feac9bd2524df081408e071331bf1e4ceab8f6ba7fb"
         }
       }
     }
@@ -66,7 +67,6 @@
     "swig"
   ],
   "dependencies": [
-    "libffi",
     "python@3.9"
   ],
   "recommended_dependencies": [
@@ -77,6 +77,7 @@
   ],
   "uses_from_macos": [
     "libedit",
+    "libffi",
     "libxml2",
     "ncurses",
     "zlib"
@@ -136,7 +137,7 @@
   ],
   "linked_keg": null,
   "pinned": false,
-  "outdated": false,
+  "outdated": true,
   "deprecated": false,
   "deprecation_date": null,
   "deprecation_reason": null,
