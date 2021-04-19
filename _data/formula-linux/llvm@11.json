@@ -1,13 +1,12 @@
 {
-  "name": "llvm",
-  "full_name": "llvm",
+  "name": "llvm@11",
+  "full_name": "llvm@11",
   "tap": "homebrew/core",
   "oldname": null,
   "aliases": [
-    "llvm@12"
+
   ],
   "versioned_formulae": [
-    "llvm@11",
     "llvm@9",
     "llvm@8",
     "llvm@7"
@@ -16,13 +15,13 @@
   "license": "Apache-2.0 with LLVM-exception",
   "homepage": "https://llvm.org/",
   "versions": {
-    "stable": "12.0.0",
-    "head": "HEAD",
+    "stable": "11.1.0",
+    "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-12.0.0/llvm-project-12.0.0.src.tar.xz",
+      "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-11.1.0/llvm-project-11.1.0.src.tar.xz",
       "tag": null,
       "revision": null
     }
@@ -36,28 +35,28 @@
       "files": {
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/linuxbrew/core/llvm/blobs/sha256:bf7e6bdeb7f9eef8113dfe5e2ef410fa37881473811b31c8fd0038f3ded22b60",
-          "sha256": "bf7e6bdeb7f9eef8113dfe5e2ef410fa37881473811b31c8fd0038f3ded22b60"
+          "url": "https://ghcr.io/v2/linuxbrew/core/llvm/11/blobs/sha256:5871a473293bde42baf9abf89169189e3abaa7f781fd77636adb84360e28a7e6",
+          "sha256": "5871a473293bde42baf9abf89169189e3abaa7f781fd77636adb84360e28a7e6"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/linuxbrew/core/llvm/blobs/sha256:275c72f9da27d13b2b1144629d8b8c6f425b672d1e716a81d0e0d8aed6eeb6b9",
-          "sha256": "275c72f9da27d13b2b1144629d8b8c6f425b672d1e716a81d0e0d8aed6eeb6b9"
+          "url": "https://ghcr.io/v2/linuxbrew/core/llvm/11/blobs/sha256:faba8d2d00aeecf0f4d8898b64973f5d284568089ac7ac12db41a6c15c50befb",
+          "sha256": "faba8d2d00aeecf0f4d8898b64973f5d284568089ac7ac12db41a6c15c50befb"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/linuxbrew/core/llvm/blobs/sha256:330381b5d4be23e5ec878ed13ba8f96f311078a8be8130fcc6f49e7ef31dc8d5",
-          "sha256": "330381b5d4be23e5ec878ed13ba8f96f311078a8be8130fcc6f49e7ef31dc8d5"
+          "url": "https://ghcr.io/v2/linuxbrew/core/llvm/11/blobs/sha256:50c129d10bad4eb67d327f5409cd6d2437953a51bd86d4c7cb8870ccab3f5caf",
+          "sha256": "50c129d10bad4eb67d327f5409cd6d2437953a51bd86d4c7cb8870ccab3f5caf"
         },
         "mojave": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/linuxbrew/core/llvm/blobs/sha256:b7239f312db88db8f6795feac9bd2524df081408e071331bf1e4ceab8f6ba7fb",
-          "sha256": "b7239f312db88db8f6795feac9bd2524df081408e071331bf1e4ceab8f6ba7fb"
+          "url": "https://ghcr.io/v2/linuxbrew/core/llvm/11/blobs/sha256:501ae2d6c4030397444698ade77a596f84e0b8490ba440be243a33df2473a42a",
+          "sha256": "501ae2d6c4030397444698ade77a596f84e0b8490ba440be243a33df2473a42a"
         }
       }
     }
   },
-  "keg_only": false,
+  "keg_only": true,
   "bottle_disabled": false,
   "options": [
 
@@ -92,7 +91,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "To use the bundled libc++ please add the following LDFLAGS:\n  LDFLAGS=\"-L$(brew --prefix)/opt/llvm/lib -Wl,-rpath,$(brew --prefix)/opt/llvm/lib\"\n",
+  "caveats": "To use the bundled libc++ please add the following LDFLAGS:\n  LDFLAGS=\"-L$(brew --prefix)/opt/llvm@11/lib -Wl,-rpath,$(brew --prefix)/opt/llvm@11/lib\"\n",
   "installed": [
 
   ],
