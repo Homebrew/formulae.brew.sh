@@ -10,21 +10,21 @@
 
   ],
   "desc": "File system client based on SSH File Transfer Protocol",
-  "license": "GPL-2.0",
-  "homepage": "https://osxfuse.github.io/",
+  "license": "LGPL-2.1-only or GPL-2.0-only",
+  "homepage": "https://github.com/libfuse/sshfs",
   "versions": {
-    "stable": "2.10",
+    "stable": "3.7.1",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/libfuse/sshfs/releases/download/sshfs-2.10/sshfs-2.10.tar.gz",
+      "url": "https://github.com/libfuse/sshfs/archive/refs/tags/sshfs-3.7.1.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 3,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -60,9 +60,8 @@
 
   ],
   "build_dependencies": [
-    "autoconf",
-    "automake",
-    "libtool",
+    "meson",
+    "ninja",
     "pkg-config"
   ],
   "dependencies": [
