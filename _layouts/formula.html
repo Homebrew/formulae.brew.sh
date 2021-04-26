@@ -183,11 +183,11 @@ permalink: :title
 {%- endif -%}
 
 {%- if f.conflicts_with.size > 0 %}
-<p>Conflicts with: 
-    {%- for c in f.conflicts_with -%}
+<p>Conflicts with:
+    {%- for c in f.conflicts_with %}
         <strong><a href="{{ site.baseurl }}/formula/{{ c }}">{{ c }}</a></strong>
         {%- unless forloop.last -%}, {% endunless -%}
-    {%- endfor -%}
+    {%- endfor %}
 </p>
 {%- endif -%}
 
