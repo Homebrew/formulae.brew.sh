@@ -40,8 +40,11 @@ permalink: :title
         {%- assign bottles = true -%}
     {%- else %} not available on this platform.
     {%- endif -%}
-{%- elsif f.bottle.stable %} installation support provided for macOS releases:
-    {%- assign bottles = true -%}
+{%- elsif f.bottle.stable %} installation support provided for macOS releases
+    {%- if f.bottle.stable.files.all -%}.
+    {%- else -%}
+        {%- assign bottles = true -%}:
+    {%- endif -%}
 {%- else %} not available on this platform.
 {%- endif -%}</p>
 
