@@ -13,13 +13,13 @@
   "license": "AGPL-3.0-only",
   "homepage": "https://www.metabase.com/",
   "versions": {
-    "stable": "0.39.0.1",
+    "stable": "0.39.1",
     "head": "HEAD",
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://downloads.metabase.com/v0.39.0.1/metabase.jar",
+      "url": "https://downloads.metabase.com/v0.39.1/metabase.jar",
       "tag": null,
       "revision": null
     }
@@ -27,9 +27,20 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "all": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/metabase/blobs/sha256:c64ddb610f527a6489ffabbd0606a7303f0d971581dceffcab8747d1ce4330df",
+          "sha256": "c64ddb610f527a6489ffabbd0606a7303f0d971581dceffcab8747d1ce4330df"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],

@@ -13,13 +13,13 @@
   "license": "Apache-2.0",
   "homepage": "https://druid.apache.org/",
   "versions": {
-    "stable": "0.20.2",
+    "stable": "0.21.0",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://www.apache.org/dyn/closer.lua?path=druid/0.20.2/apache-druid-0.20.2-bin.tar.gz",
+      "url": "https://www.apache.org/dyn/closer.lua?path=druid/0.21.0/apache-druid-0.21.0-bin.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -27,9 +27,20 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "all": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/druid/blobs/sha256:5cbde4502719b8fbd2adc70388b355c560dde2921a512d507df0f7f0068ec6b7",
+          "sha256": "5cbde4502719b8fbd2adc70388b355c560dde2921a512d507df0f7f0068ec6b7"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
@@ -50,7 +61,15 @@
 
   ],
   "requirements": [
+    {
+      "name": "arch",
+      "cask": null,
+      "download": null,
+      "version": "x86_64",
+      "contexts": [
 
+      ]
+    }
   ],
   "conflicts_with": [
 
