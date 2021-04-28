@@ -1,6 +1,6 @@
 {
-  "name": "savana",
-  "full_name": "savana",
+  "name": "lm-sensors",
+  "full_name": "lm-sensors",
   "tap": "homebrew/core",
   "oldname": null,
   "aliases": [
@@ -9,17 +9,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Transactional workspaces for SVN",
-  "license": "LGPL-3.0",
-  "homepage": "https://github.com/codehaus/savana",
+  "desc": "Tools for monitoring the temperatures, voltages, and fans",
+  "license": "GPL-2.0-or-later or LGPL-2.1-or-later",
+  "homepage": "https://github.com/groeck/lm-sensors",
   "versions": {
-    "stable": "1.2",
+    "stable": "3.6.0",
     "head": null,
-    "bottle": true
+    "bottle": false
   },
   "urls": {
     "stable": {
-      "url": "https://bintray.com/artifact/download/bintray/jcenter/org/codehaus/savana/1.2/savana-1.2-install.tar.gz",
+      "url": "https://github.com/lm-sensors/lm-sensors/archive/V3-6-0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -27,17 +27,6 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
-    "stable": {
-      "rebuild": 0,
-      "root_url": "https://ghcr.io/v2/homebrew/core",
-      "files": {
-        "all": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/savana/blobs/sha256:bbc333eb6d0c02f820b36f15123a3711a548f52b2985f8a0c0f4c581f73990b0",
-          "sha256": "bbc333eb6d0c02f820b36f15123a3711a548f52b2985f8a0c0f4c581f73990b0"
-        }
-      }
-    }
   },
   "keg_only": false,
   "bottle_disabled": false,
@@ -45,10 +34,11 @@
 
   ],
   "build_dependencies": [
-
+    "bison",
+    "flex"
   ],
   "dependencies": [
-    "openjdk"
+
   ],
   "recommended_dependencies": [
 
@@ -60,7 +50,15 @@
 
   ],
   "requirements": [
+    {
+      "name": "linux",
+      "cask": null,
+      "download": null,
+      "version": null,
+      "contexts": [
 
+      ]
+    }
   ],
   "conflicts_with": [
 
