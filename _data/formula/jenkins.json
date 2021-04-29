@@ -13,13 +13,13 @@
   "license": "MIT",
   "homepage": "https://jenkins.io/",
   "versions": {
-    "stable": "2.289",
+    "stable": "2.290",
     "head": "HEAD",
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "http://mirrors.jenkins.io/war/2.289/jenkins.war",
+      "url": "http://mirrors.jenkins.io/war/2.290/jenkins.war",
       "tag": null,
       "revision": null
     }
@@ -27,9 +27,20 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "all": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/jenkins/blobs/sha256:fa1898822eeb700ec20b33f7b6e14c74c91de6d9421a7d0f6e4c78012978d4d3",
+          "sha256": "fa1898822eeb700ec20b33f7b6e14c74c91de6d9421a7d0f6e4c78012978d4d3"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
