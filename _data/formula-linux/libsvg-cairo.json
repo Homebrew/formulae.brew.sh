@@ -31,6 +31,11 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/linuxbrew/core",
       "files": {
+        "arm64_big_sur": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/linuxbrew/core/libsvg-cairo/blobs/sha256:5d4898e15f1a78df7856483ff233fbb38fcd4400c5842742968ed3e999be7171",
+          "sha256": "5d4898e15f1a78df7856483ff233fbb38fcd4400c5842742968ed3e999be7171"
+        },
         "big_sur": {
           "cellar": ":any",
           "url": "https://ghcr.io/v2/linuxbrew/core/libsvg-cairo/blobs/sha256:d2d48b901a9ac8ad056adab1f6483d6ad17afcfeac95362ca7b32d473de84d69",
@@ -65,11 +70,6 @@
           "cellar": ":any",
           "url": "https://ghcr.io/v2/linuxbrew/core/libsvg-cairo/blobs/sha256:55bd8f9bfede25e71e9731d72ace27ce7724a4cce030a4e4e6969554ee64238d",
           "sha256": "55bd8f9bfede25e71e9731d72ace27ce7724a4cce030a4e4e6969554ee64238d"
-        },
-        "x86_64_linux": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/linuxbrew/core/libsvg-cairo/blobs/sha256:071d883e83c9b3c9d5b9625d87a20ca892781dd8f20aacd07236ccbb32b51710",
-          "sha256": "071d883e83c9b3c9d5b9625d87a20ca892781dd8f20aacd07236ccbb32b51710"
         }
       }
     }
@@ -80,6 +80,9 @@
 
   ],
   "build_dependencies": [
+    "autoconf",
+    "automake",
+    "libtool",
     "pkg-config"
   ],
   "dependencies": [
