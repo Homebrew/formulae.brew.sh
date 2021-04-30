@@ -13,13 +13,13 @@
   "license": "Apache-2.0",
   "homepage": "https://www.alluxio.io/",
   "versions": {
-    "stable": "2.4.1",
+    "stable": "2.5.0-2",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://downloads.alluxio.io/downloads/files/2.4.1/alluxio-2.4.1-bin.tar.gz",
+      "url": "https://downloads.alluxio.io/downloads/files/2.5.0-2/alluxio-2.5.0-2-bin.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -27,9 +27,20 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "all": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/alluxio/blobs/sha256:83bb4aee6c68ca243839d154685f0a37c8e3c8a2eb812d0528d05cc2b32a9e2a",
+          "sha256": "83bb4aee6c68ca243839d154685f0a37c8e3c8a2eb812d0528d05cc2b32a9e2a"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
@@ -54,17 +65,17 @@
   "conflicts_with": [
 
   ],
-  "caveats": "To configure alluxio, edit\n  $(brew --prefix)/etc/alluxio/alluxio-env.sh\n  $(brew --prefix)/etc/alluxio/alluxio-site.properties\n",
+  "caveats": "To configure alluxio, edit\n  $(brew --prefix)/etc/alluxio/alluxio-env.sh\n  $(brew --prefix)/etc/alluxio/alluxio-site.properties\n\nTo use `alluxio-fuse` on macOS:\n  brew install --cask macfuse\n",
   "installed": [
 
   ],
   "linked_keg": null,
   "pinned": false,
   "outdated": false,
-  "deprecated": true,
+  "deprecated": false,
   "deprecation_date": null,
-  "deprecation_reason": "requires FUSE",
+  "deprecation_reason": null,
   "disabled": false,
-  "disable_date": "2021-10-13",
+  "disable_date": null,
   "disable_reason": null
 }
