@@ -15,7 +15,7 @@
   "versions": {
     "stable": "2.1.8",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
@@ -27,6 +27,17 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 1,
+      "root_url": "https://ghcr.io/v2/linuxbrew/core",
+      "files": {
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/linuxbrew/core/git-quick-stats/blobs/sha256:9e1d5cf81cbf31d8afbca433b1bae5de80576a6dcae2d80b14ae65cfe57b429f",
+          "sha256": "9e1d5cf81cbf31d8afbca433b1bae5de80576a6dcae2d80b14ae65cfe57b429f"
+        }
+      }
+    }
   },
   "keg_only": false,
   "bottle_disabled": false,
@@ -37,7 +48,7 @@
 
   ],
   "dependencies": [
-
+    "util-linux"
   ],
   "recommended_dependencies": [
 

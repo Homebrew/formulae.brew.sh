@@ -13,13 +13,13 @@
   "license": "Apache-2.0",
   "homepage": "https://flink.apache.org/",
   "versions": {
-    "stable": "1.12.2",
+    "stable": "1.12.3",
     "head": "HEAD",
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://www.apache.org/dyn/closer.lua?path=flink/flink-1.12.2/flink-1.12.2-bin-scala_2.12.tgz",
+      "url": "https://www.apache.org/dyn/closer.lua?path=flink/flink-1.12.3/flink-1.12.3-bin-scala_2.12.tgz",
       "tag": null,
       "revision": null
     }
@@ -27,9 +27,20 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/linuxbrew/core",
+      "files": {
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/linuxbrew/core/apache-flink/blobs/sha256:357500e8ad9f931b71faa9c8a58b6f605167094138e7ea9b1c0464a4943778df",
+          "sha256": "357500e8ad9f931b71faa9c8a58b6f605167094138e7ea9b1c0464a4943778df"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
