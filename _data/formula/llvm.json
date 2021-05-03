@@ -91,13 +91,17 @@
   "caveats": "To use the bundled libc++ please add the following LDFLAGS:\n  LDFLAGS=\"-L$(brew --prefix)/opt/llvm/lib -Wl,-rpath,$(brew --prefix)/opt/llvm/lib\"\n",
   "installed": [
     {
-      "version": "12.0.0",
+      "version": "11.1.0_1",
       "used_options": [
 
       ],
       "built_as_bottle": true,
       "poured_from_bottle": true,
       "runtime_dependencies": [
+        {
+          "full_name": "libffi",
+          "version": "3.3"
+        },
         {
           "full_name": "gdbm",
           "version": "1.19"
@@ -133,7 +137,7 @@
   ],
   "linked_keg": null,
   "pinned": false,
-  "outdated": false,
+  "outdated": true,
   "deprecated": false,
   "deprecation_date": null,
   "deprecation_reason": null,
