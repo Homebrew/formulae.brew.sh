@@ -13,13 +13,13 @@
   "license": "LGPL-3.0-or-later",
   "homepage": "https://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner",
   "versions": {
-    "stable": "4.5.0.2216",
+    "stable": "4.6.1.2450",
     "head": "HEAD",
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.5.0.2216.zip",
+      "url": "https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.6.1.2450.zip",
       "tag": null,
       "revision": null
     }
@@ -27,9 +27,20 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "all": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/sonar-scanner/blobs/sha256:2374014b95f24caab6e2df2888f4063257992a8daadab820b558cfdbeab61825",
+          "sha256": "2374014b95f24caab6e2df2888f4063257992a8daadab820b558cfdbeab61825"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
@@ -37,7 +48,7 @@
 
   ],
   "dependencies": [
-
+    "openjdk"
   ],
   "recommended_dependencies": [
 

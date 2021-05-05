@@ -13,13 +13,13 @@
   "license": "Apache-2.0",
   "homepage": "https://prestodb.io",
   "versions": {
-    "stable": "0.251",
+    "stable": "0.252",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://search.maven.org/remotecontent?filepath=com/facebook/presto/presto-server/0.251/presto-server-0.251.tar.gz",
+      "url": "https://search.maven.org/remotecontent?filepath=com/facebook/presto/presto-server/0.252/presto-server-0.252.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -27,9 +27,20 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "all": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/prestodb/blobs/sha256:f3d9c07008001b6a51cca9c12858c7c40e6bd140110785a346941d3ec2993885",
+          "sha256": "f3d9c07008001b6a51cca9c12858c7c40e6bd140110785a346941d3ec2993885"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
