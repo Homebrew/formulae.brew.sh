@@ -1,45 +1,55 @@
 {
-  "name": "gcc@5",
-  "full_name": "gcc@5",
+  "name": "gcc@10",
+  "full_name": "gcc@10",
   "tap": "homebrew/core",
-  "oldname": "gcc5",
+  "oldname": null,
   "aliases": [
 
   ],
   "versioned_formulae": [
-    "gcc@10",
     "gcc@9",
     "gcc@8",
     "gcc@7",
     "gcc@6",
+    "gcc@5",
     "gcc@4.9"
   ],
-  "desc": "GNU Compiler Collection",
-  "license": null,
+  "desc": "GNU compiler collection",
+  "license": "GPL-3.0-or-later with GCC-exception-3.1",
   "homepage": "https://gcc.gnu.org/",
   "versions": {
-    "stable": "5.5.0",
+    "stable": "10.3.0",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://ftp.gnu.org/gnu/gcc/gcc-5.5.0/gcc-5.5.0.tar.xz",
+      "url": "https://ftp.gnu.org/gnu/gcc/gcc-10.3.0/gcc-10.3.0.tar.xz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 6,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
-        "high_sierra": {
+        "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/gcc/5/blobs/sha256:dcc9059b725fd7c87842287bbedf60a28745417652d42a300dcd944e15986f36",
-          "sha256": "dcc9059b725fd7c87842287bbedf60a28745417652d42a300dcd944e15986f36"
+          "url": "https://ghcr.io/v2/homebrew/core/gcc/10/blobs/sha256:a2d5df73c659132ff4e393696a30076def85936855461701956aac62bf1a4c4f",
+          "sha256": "a2d5df73c659132ff4e393696a30076def85936855461701956aac62bf1a4c4f"
+        },
+        "catalina": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/gcc/10/blobs/sha256:42679d2d37117fd2c0243b61f1ee36d470fd293737f5f58a7b25ac816f733793",
+          "sha256": "42679d2d37117fd2c0243b61f1ee36d470fd293737f5f58a7b25ac816f733793"
+        },
+        "mojave": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/gcc/10/blobs/sha256:83af850b34188c1706d690153de1653f5289db2f6be04e1a1349d15ace86e1d9",
+          "sha256": "83af850b34188c1706d690153de1653f5289db2f6be04e1a1349d15ace86e1d9"
         }
       }
     }
@@ -54,7 +64,7 @@
   ],
   "dependencies": [
     "gmp",
-    "isl@0.18",
+    "isl",
     "libmpc",
     "mpfr"
   ],
@@ -69,12 +79,12 @@
   ],
   "requirements": [
     {
-      "name": "maximum_macos",
+      "name": "arch",
       "cask": null,
       "download": null,
-      "version": "10.13",
+      "version": "x86_64",
       "contexts": [
-        "build"
+
       ]
     }
   ],
