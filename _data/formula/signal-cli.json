@@ -13,13 +13,13 @@
   "license": "GPL-3.0-or-later",
   "homepage": "https://github.com/AsamK/signal-cli",
   "versions": {
-    "stable": "0.7.4",
+    "stable": "0.8.1",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/AsamK/signal-cli/releases/download/v0.7.4/signal-cli-0.7.4.tar.gz",
+      "url": "https://github.com/AsamK/signal-cli/releases/download/v0.8.1/signal-cli-0.8.1.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -27,14 +27,37 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "big_sur": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/signal-cli/blobs/sha256:a928fd093ba6d27f6ddd5da51e042ad5b0a1f800418b91a5c77ab3a65b04f24c",
+          "sha256": "a928fd093ba6d27f6ddd5da51e042ad5b0a1f800418b91a5c77ab3a65b04f24c"
+        },
+        "catalina": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/signal-cli/blobs/sha256:0a02a6afead5f5dfe2edb031ed6e213327178d17a17f33621590dd62c912e31d",
+          "sha256": "0a02a6afead5f5dfe2edb031ed6e213327178d17a17f33621590dd62c912e31d"
+        },
+        "mojave": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/signal-cli/blobs/sha256:982528ec459f9b42311e9922c983e590be8d8afe766002043ef5178475a00e3c",
+          "sha256": "982528ec459f9b42311e9922c983e590be8d8afe766002043ef5178475a00e3c"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
   "build_dependencies": [
-
+    "gradle",
+    "protobuf",
+    "rustup-init"
   ],
   "dependencies": [
     "openjdk"
