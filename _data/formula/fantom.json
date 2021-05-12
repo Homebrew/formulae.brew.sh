@@ -13,13 +13,13 @@
   "license": "AFL-3.0",
   "homepage": "https://fantom.org/",
   "versions": {
-    "stable": "1.0.75",
+    "stable": "1.0.76",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/fantom-lang/fantom/releases/download/v1.0.75/fantom-1.0.75.zip",
+      "url": "https://github.com/fantom-lang/fantom/releases/download/v1.0.76/fantom-1.0.76.zip",
       "tag": null,
       "revision": null
     }
@@ -27,9 +27,20 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "all": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/fantom/blobs/sha256:7e9e4d0966690f028f05ffdee9bc2c9f52e1337933da4fe6b4e7c4bd9ff146ff",
+          "sha256": "7e9e4d0966690f028f05ffdee9bc2c9f52e1337933da4fe6b4e7c4bd9ff146ff"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
@@ -37,7 +48,7 @@
 
   ],
   "dependencies": [
-
+    "openjdk"
   ],
   "recommended_dependencies": [
 
