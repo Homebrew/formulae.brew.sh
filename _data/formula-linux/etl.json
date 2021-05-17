@@ -13,13 +13,13 @@
   "license": "GPL-2.0-or-later",
   "homepage": "https://synfig.org",
   "versions": {
-    "stable": "1.4.0",
+    "stable": "1.4.1",
     "head": null,
-    "bottle": true
+    "bottle": false
   },
   "urls": {
     "stable": {
-      "url": "https://downloads.sourceforge.net/project/synfig/releases/1.4.0/source/ETL-1.4.0.tar.gz",
+      "url": "https://downloads.sourceforge.net/project/synfig/releases/1.4.1/ETL-1.4.1.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -27,37 +27,6 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
-    "stable": {
-      "rebuild": 0,
-      "root_url": "https://ghcr.io/v2/linuxbrew/core",
-      "files": {
-        "arm64_big_sur": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/etl/blobs/sha256:8918bb95db8660e8b30ac2d0d508fc35272e5dea1585bc1c057cfd0cfd4cceb2",
-          "sha256": "8918bb95db8660e8b30ac2d0d508fc35272e5dea1585bc1c057cfd0cfd4cceb2"
-        },
-        "big_sur": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/etl/blobs/sha256:3e50fc4f2e8a00bdb55f276839b7bebfde795c6da8a170395baa932009f1891c",
-          "sha256": "3e50fc4f2e8a00bdb55f276839b7bebfde795c6da8a170395baa932009f1891c"
-        },
-        "catalina": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/etl/blobs/sha256:36399b703008be7d253bbbd1313c22929982319d3e7e52dbeb92a1acbc554cb4",
-          "sha256": "36399b703008be7d253bbbd1313c22929982319d3e7e52dbeb92a1acbc554cb4"
-        },
-        "mojave": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/etl/blobs/sha256:3499623804687865757dec0f5df9ae2b8c70ed8d8c8c6cfa2e8bd6bf839b55db",
-          "sha256": "3499623804687865757dec0f5df9ae2b8c70ed8d8c8c6cfa2e8bd6bf839b55db"
-        },
-        "x86_64_linux": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/etl/blobs/sha256:566456969e125e92bd51ff0ab31da75cd4b36f6268f0c31c9536ac385a3e365d",
-          "sha256": "566456969e125e92bd51ff0ab31da75cd4b36f6268f0c31c9536ac385a3e365d"
-        }
-      }
-    }
   },
   "keg_only": false,
   "bottle_disabled": false,
@@ -65,10 +34,10 @@
 
   ],
   "build_dependencies": [
-
+    "pkg-config"
   ],
   "dependencies": [
-
+    "glibmm@2.66"
   ],
   "recommended_dependencies": [
 
