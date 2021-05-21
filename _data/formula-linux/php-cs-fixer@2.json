@@ -1,6 +1,6 @@
 {
-  "name": "allure",
-  "full_name": "allure",
+  "name": "php-cs-fixer@2",
+  "full_name": "php-cs-fixer@2",
   "tap": "homebrew/core",
   "oldname": null,
   "aliases": [
@@ -9,17 +9,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Flexible lightweight test report tool",
-  "license": "Apache-2.0",
-  "homepage": "https://github.com/allure-framework/allure2",
+  "desc": "Tool to automatically fix PHP coding standards issues",
+  "license": "MIT",
+  "homepage": "https://cs.symfony.com/",
   "versions": {
-    "stable": "2.14.0",
+    "stable": "2.19.0",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline/2.14.0/allure-commandline-2.14.0.zip",
+      "url": "https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/v2.19.0/php-cs-fixer.phar",
       "tag": null,
       "revision": null
     }
@@ -27,8 +27,19 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/linuxbrew/core",
+      "files": {
+        "all": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/linuxbrew/core/php-cs-fixer/2/blobs/sha256:5f80ed35e0644fa2eafc81ab81b4320187f3257c0819fd43e70e6f7cc2003b3d",
+          "sha256": "5f80ed35e0644fa2eafc81ab81b4320187f3257c0819fd43e70e6f7cc2003b3d"
+        }
+      }
+    }
   },
-  "keg_only": false,
+  "keg_only": true,
   "bottle_disabled": false,
   "options": [
 
@@ -37,7 +48,7 @@
 
   ],
   "dependencies": [
-    "openjdk"
+    "php"
   ],
   "recommended_dependencies": [
 
