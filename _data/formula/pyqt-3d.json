@@ -13,13 +13,13 @@
   "license": "GPL-3.0-only",
   "homepage": "https://www.riverbankcomputing.com/software/pyqt3d/",
   "versions": {
-    "stable": "6.0.3",
+    "stable": "6.1.0",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://files.pythonhosted.org/packages/86/a8/91f76584146250da04d9f2c33355a119279928ed8cfc04a8b1baf9c2c667/PyQt6_3D-6.0.3.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/f7/06/6a2d193f36d2f115fcfaac6375f05737270bc8c133cd259a7a3431c38152/PyQt6_3D-6.1.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -32,41 +32,41 @@
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
         "arm64_big_sur": {
-          "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/pyqt-3d/blobs/sha256:f7590022b8a3eb011743eb067338922efc5d63869304d496786f906eacf4c705",
-          "sha256": "f7590022b8a3eb011743eb067338922efc5d63869304d496786f906eacf4c705"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/pyqt-3d/blobs/sha256:1ebc992cfbe773992ac78168d35a613188f2ef568e692d73a64b92f4fe783966",
+          "sha256": "1ebc992cfbe773992ac78168d35a613188f2ef568e692d73a64b92f4fe783966"
         },
         "big_sur": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/pyqt-3d/blobs/sha256:c71968e68258d734b2167e05067342b4ce58716434a19ca26f2880726b352521",
-          "sha256": "c71968e68258d734b2167e05067342b4ce58716434a19ca26f2880726b352521"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/pyqt-3d/blobs/sha256:dbedfd03a8d1726ef7cd83d4e99134c5b4557b83f49da2fb6079c8375a2b636c",
+          "sha256": "dbedfd03a8d1726ef7cd83d4e99134c5b4557b83f49da2fb6079c8375a2b636c"
         },
         "catalina": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/pyqt-3d/blobs/sha256:6de6137c50a524ef598367c2850dd4cf05c519bbe0f98b66014ca965dd577d0f",
-          "sha256": "6de6137c50a524ef598367c2850dd4cf05c519bbe0f98b66014ca965dd577d0f"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/pyqt-3d/blobs/sha256:b20343bc989fa856da1d932f69d81b4d20b3260340b43d6bc7a8ef6d7b6be44d",
+          "sha256": "b20343bc989fa856da1d932f69d81b4d20b3260340b43d6bc7a8ef6d7b6be44d"
         },
         "mojave": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/pyqt-3d/blobs/sha256:3e937bc4e4c6f3d188f5ea8fb5eef6b8f6f39446d314e3e29e9f00fb28d6d38f",
-          "sha256": "3e937bc4e4c6f3d188f5ea8fb5eef6b8f6f39446d314e3e29e9f00fb28d6d38f"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/pyqt-3d/blobs/sha256:5d341e8e1b620672694be46288700363c543324cbc93d1f7fa4cc13b66d17874",
+          "sha256": "5d341e8e1b620672694be46288700363c543324cbc93d1f7fa4cc13b66d17874"
         }
       }
     }
   },
-  "keg_only": false,
+  "keg_only": true,
   "bottle_disabled": false,
   "options": [
 
   ],
   "build_dependencies": [
-    "pyqt-builder"
+    "pyqt-builder",
+    "sip"
   ],
   "dependencies": [
     "pyqt",
     "python@3.9",
-    "qt",
-    "sip"
+    "qt"
   ],
   "recommended_dependencies": [
 
@@ -90,10 +90,10 @@
   "linked_keg": null,
   "pinned": false,
   "outdated": false,
-  "deprecated": false,
+  "deprecated": true,
   "deprecation_date": null,
-  "deprecation_reason": null,
+  "deprecation_reason": "pyqt now contains all submodules",
   "disabled": false,
-  "disable_date": null,
+  "disable_date": "2021-06-16",
   "disable_reason": null
 }
