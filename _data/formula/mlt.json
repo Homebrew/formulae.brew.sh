@@ -13,13 +13,13 @@
   "license": "LGPL-2.1-only",
   "homepage": "https://www.mltframework.org/",
   "versions": {
-    "stable": "6.26.1",
+    "stable": "7.0.1",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/mltframework/mlt/releases/download/v6.26.1/mlt-6.26.1.tar.gz",
+      "url": "https://github.com/mltframework/mlt/releases/download/v7.0.1/mlt-7.0.1.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,20 +31,25 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_big_sur": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/mlt/blobs/sha256:d00252804029df19b594f3f50c08349fa31b1d845224b21def935e0366de99cc",
+          "sha256": "d00252804029df19b594f3f50c08349fa31b1d845224b21def935e0366de99cc"
+        },
         "big_sur": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/mlt/blobs/sha256:25813b8268445f3776c439d80edc2ef23728237978ed0823cc5b6369f45ad68b",
-          "sha256": "25813b8268445f3776c439d80edc2ef23728237978ed0823cc5b6369f45ad68b"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/mlt/blobs/sha256:e7301086e4ea074fc89d486c097a9199a4a6a5a0fb026729dd07f23a362ff134",
+          "sha256": "e7301086e4ea074fc89d486c097a9199a4a6a5a0fb026729dd07f23a362ff134"
         },
         "catalina": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/mlt/blobs/sha256:b3ee3bb7bad07c158d2cccbb5d4629489a4360a58bf0a161a1557745a43f5b57",
-          "sha256": "b3ee3bb7bad07c158d2cccbb5d4629489a4360a58bf0a161a1557745a43f5b57"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/mlt/blobs/sha256:9fee3844b1061d73a16c713abda9f598ad68b69dc9425b82e9a1ee9a2737103a",
+          "sha256": "9fee3844b1061d73a16c713abda9f598ad68b69dc9425b82e9a1ee9a2737103a"
         },
         "mojave": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/mlt/blobs/sha256:6b9b14a33bc1022aed3c57c4553bb106c0de72190ec261cba41a3ef7b62be459",
-          "sha256": "6b9b14a33bc1022aed3c57c4553bb106c0de72190ec261cba41a3ef7b62be459"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/mlt/blobs/sha256:bb5e8a1b1f218ef5bdf899ee18023014ceecf9d9b360668f9fab2f1d15c49936",
+          "sha256": "bb5e8a1b1f218ef5bdf899ee18023014ceecf9d9b360668f9fab2f1d15c49936"
         }
       }
     }
@@ -55,6 +60,7 @@
 
   ],
   "build_dependencies": [
+    "cmake",
     "pkg-config"
   ],
   "dependencies": [
@@ -66,7 +72,7 @@
     "libexif",
     "libsamplerate",
     "libvorbis",
-    "opencv@3",
+    "opencv",
     "pango",
     "qt@5",
     "sdl2",
