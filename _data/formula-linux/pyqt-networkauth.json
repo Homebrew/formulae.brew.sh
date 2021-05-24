@@ -13,13 +13,13 @@
   "license": "GPL-3.0-only",
   "homepage": "https://www.riverbankcomputing.com/software/pyqtnetworkauth",
   "versions": {
-    "stable": "6.0.3",
+    "stable": "6.1.0",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://files.pythonhosted.org/packages/21/de/a7c4ef992a66be7ee458ab25ad7cdf93483712517ba807a74c30dc7c9375/PyQt6_NetworkAuth-6.0.3.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/92/3d/3088bcf0bcba3b586c401dad60f7706224966e8861653088e5786115f66c/PyQt6_NetworkAuth-6.1.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -32,41 +32,41 @@
       "root_url": "https://ghcr.io/v2/linuxbrew/core",
       "files": {
         "arm64_big_sur": {
-          "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/linuxbrew/core/pyqt-networkauth/blobs/sha256:d198cfd91b4d84758fd496bdbd5b309c12f5f8951497faeee77d09899cb03ab4",
-          "sha256": "d198cfd91b4d84758fd496bdbd5b309c12f5f8951497faeee77d09899cb03ab4"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/linuxbrew/core/pyqt-networkauth/blobs/sha256:0d988ef8d9814b9c2b3ec956b9826eec3ed2cf4928374d99fb8b5fee9023a2fc",
+          "sha256": "0d988ef8d9814b9c2b3ec956b9826eec3ed2cf4928374d99fb8b5fee9023a2fc"
         },
         "big_sur": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/linuxbrew/core/pyqt-networkauth/blobs/sha256:9b407dccafe9653a51d1498c08b1346cc5c0287b9e53cf98f67cd8d13c5612e7",
-          "sha256": "9b407dccafe9653a51d1498c08b1346cc5c0287b9e53cf98f67cd8d13c5612e7"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/linuxbrew/core/pyqt-networkauth/blobs/sha256:73396cbd45e61c6792ec73ffac9a8fb53b5917f008368a655b0b407ebca8447b",
+          "sha256": "73396cbd45e61c6792ec73ffac9a8fb53b5917f008368a655b0b407ebca8447b"
         },
         "catalina": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/linuxbrew/core/pyqt-networkauth/blobs/sha256:b04e6105e03e14be91b363407cc7f7c882be07931c134cdac04ae537485f70b4",
-          "sha256": "b04e6105e03e14be91b363407cc7f7c882be07931c134cdac04ae537485f70b4"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/linuxbrew/core/pyqt-networkauth/blobs/sha256:de12b27c4e572f42701bae3f6914dd9175cb72bdbf96a1d79b555ad8440356d1",
+          "sha256": "de12b27c4e572f42701bae3f6914dd9175cb72bdbf96a1d79b555ad8440356d1"
         },
         "mojave": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/linuxbrew/core/pyqt-networkauth/blobs/sha256:e769cc30eab94ba9f78d1f820103b55c5060a169ec03c7f13c28b3aa51bceded",
-          "sha256": "e769cc30eab94ba9f78d1f820103b55c5060a169ec03c7f13c28b3aa51bceded"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/linuxbrew/core/pyqt-networkauth/blobs/sha256:21d8a3a2fe01a7442ae08adbbe6cc4e8cc396d7402a22932f3e751cda60926eb",
+          "sha256": "21d8a3a2fe01a7442ae08adbbe6cc4e8cc396d7402a22932f3e751cda60926eb"
         }
       }
     }
   },
-  "keg_only": false,
+  "keg_only": true,
   "bottle_disabled": false,
   "options": [
 
   ],
   "build_dependencies": [
-    "pyqt-builder"
+    "pyqt-builder",
+    "sip"
   ],
   "dependencies": [
     "pyqt",
     "python@3.9",
-    "qt",
-    "sip"
+    "qt"
   ],
   "recommended_dependencies": [
 
@@ -90,10 +90,10 @@
   "linked_keg": null,
   "pinned": false,
   "outdated": false,
-  "deprecated": false,
+  "deprecated": true,
   "deprecation_date": null,
-  "deprecation_reason": null,
+  "deprecation_reason": "pyqt now contains all submodules",
   "disabled": false,
-  "disable_date": null,
+  "disable_date": "2021-06-16",
   "disable_reason": null
 }
