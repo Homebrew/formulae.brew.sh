@@ -5,33 +5,40 @@
   "name": [
     "League of Legends"
   ],
-  "desc": null,
-  "homepage": "https://eune.leagueoflegends.com/en/",
-  "url": "https://riotgamespatcher-a.akamaihd.net/releases/Maclive/installer/deploy/League%20of%20Legends%20installer%20NA.dmg",
+  "desc": "Multiplayer online battle arena game",
+  "homepage": "https://na.leagueoflegends.com/en-us/",
+  "url": "https://lol.secure.dyn.riotcdn.net/channels/public/x/installer/current/live.na.zip",
   "appcast": null,
   "version": "1.0",
   "installed": null,
   "outdated": false,
   "sha256": "no_check",
   "artifacts": [
-    [
-      "League of Legends.app"
-    ],
+    {
+      "delete": "/Applications/League of Legends.app",
+      "signal": {
+      }
+    },
+    {
+      "path": "Install League of Legends na.app"
+    },
     {
       "trash": [
         "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.riotgames.maccontainer.sfl*",
+        "~/Library/Application Support/Riot Games/Install League of Legends",
+        "~/Library/Application Support/Riot Games/League of Legends",
+        "~/Library/Caches/com.riotgames.LeagueofLegends.LeagueClient",
+        "~/Library/Logs/Riot Games/Install League of Legends na",
+        "~/Library/Preferences/com.riotgames.LeagueofLegends.LeagueClientUxHelper.plist",
         "~/Library/Saved Application State/com.riotgames.LeagueofLegends.GameClient.savedState",
         "~/Library/Saved Application State/com.riotgames.LeagueofLegends.LeagueClientUx.savedState",
-        "~/Library/Preferences/com.riotgames.LeagueofLegends.LeagueClientUxHelper.plist",
-        "~/Library/Caches/com.riotgames.LeagueofLegends.LeagueClient",
-        "/Users/Shared/Riot Games"
+        "/Users/Shared/Riot Games/Metadata/league_of_legends.live.game_patch",
+        "/Users/Shared/Riot Games/Metadata/league_of_legends.live"
       ],
       "rmdir": [
         "~/Documents/League of Legends",
-        "/Users/Shared/Riot Games/Riot Client.app",
-        "/Users/Shared/Riot Games/Metadata",
-        "~/Library/Application Support/Riot Games/League of Legends",
-        "~/Library/Application Support/Riot Games/Install League of Legends"
+        "~/Library/Application Support/Riot Games",
+        "/Users/Shared/Riot Games"
       ],
       "signal": {
       }
@@ -42,5 +49,5 @@
   },
   "conflicts_with": null,
   "container": null,
-  "auto_updates": true
+  "auto_updates": null
 }
