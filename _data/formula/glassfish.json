@@ -13,13 +13,13 @@
   "license": "EPL-2.0",
   "homepage": "https://glassfish.org/",
   "versions": {
-    "stable": "6.0.0",
+    "stable": "6.1.0",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://download.eclipse.org/ee4j/glassfish/glassfish-6.0.0.zip",
+      "url": "https://download.eclipse.org/ee4j/glassfish/glassfish-6.1.0.zip",
       "tag": null,
       "revision": null
     }
@@ -27,9 +27,20 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "all": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/glassfish/blobs/sha256:ba10a388a3e36861aa07093603df08f5351cef76947a46e2e16b088e740e67ff",
+          "sha256": "ba10a388a3e36861aa07093603df08f5351cef76947a46e2e16b088e740e67ff"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
@@ -37,7 +48,7 @@
 
   ],
   "dependencies": [
-    "openjdk@8"
+    "openjdk@11"
   ],
   "recommended_dependencies": [
 
