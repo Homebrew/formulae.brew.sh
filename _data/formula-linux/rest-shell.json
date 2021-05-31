@@ -15,7 +15,7 @@
   "versions": {
     "stable": "1.2.1.RELEASE",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
@@ -24,9 +24,20 @@
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/linuxbrew/core",
+      "files": {
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/linuxbrew/core/rest-shell/blobs/sha256:7e51b5c4e3d3b11db444b9309f7e218474b1150dbc4042af3a40b7912055767c",
+          "sha256": "7e51b5c4e3d3b11db444b9309f7e218474b1150dbc4042af3a40b7912055767c"
+        }
+      }
+    }
   },
   "keg_only": false,
   "bottle_disabled": false,
@@ -37,7 +48,7 @@
 
   ],
   "dependencies": [
-    "openjdk"
+    "openjdk@11"
   ],
   "recommended_dependencies": [
 
