@@ -106,6 +106,7 @@ GEM
     http_parser.rb (0.6.0)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
+    io-wait (0.1.0)
     jekyll (3.9.0)
       addressable (~> 2.4)
       colorator (~> 1.0)
@@ -235,7 +236,9 @@ GEM
     net-ftp (0.1.2)
       net-protocol
       time
-    net-protocol (0.1.0)
+    net-protocol (0.1.1)
+      io-wait
+      timeout
     nokogiri (1.11.6)
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
@@ -277,6 +280,7 @@ GEM
       unicode-display_width (~> 1.1, >= 1.1.1)
     thread_safe (0.3.6)
     time (0.1.0)
+    timeout (0.1.1)
     typhoeus (1.4.0)
       ethon (>= 0.9.0)
     tzinfo (1.2.9)
