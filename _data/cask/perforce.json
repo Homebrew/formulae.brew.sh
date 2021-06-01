@@ -3,16 +3,20 @@
   "full_token": "perforce",
   "tap": "homebrew/cask",
   "name": [
-    "Perforce Helix Versioning Engine"
+    "Perforce Helix Core Server",
+    "Perforce Helix Command-Line Client (P4)",
+    "Perforce Helix Broker (P4Broker)",
+    "Perforce Helix Versioning Engine (P4D)",
+    "Perforce Helix Proxy (P4P)"
   ],
-  "desc": null,
+  "desc": "Version control",
   "homepage": "https://www.perforce.com/",
-  "url": "https://cdist2.perforce.com/perforce/r20.1/bin.macosx1010x86_64/helix-core-server.tgz",
+  "url": "https://cdist2.perforce.com/perforce/r21.1/bin.macosx1015x86_64/helix-core-server.tgz",
   "appcast": null,
-  "version": "20.1,1991450",
+  "version": "2021.1,2126753",
   "installed": null,
   "outdated": false,
-  "sha256": "e93b556b4824afa3b9c1b7e328a53c605c8953cc9facd6c12d7a3b3451434ea6",
+  "sha256": "9a1f528f92568531785b1f125e60a48e84b1a958f9e1d74dfc6e61c060e08721",
   "artifacts": [
     [
       "p4"
@@ -27,8 +31,13 @@
       "p4p"
     ]
   ],
-  "caveats": "Instructions on using the Helix Versioning Engine are available in\n\n  $(brew --prefix)/Caskroom/perforce/20.1,1991450\n",
+  "caveats": "Instructions on using the Helix Versioning Engine are available in\n\n  $(brew --prefix)/Caskroom/perforce/2021.1,2126753\n",
   "depends_on": {
+    "macos": {
+      ">=": [
+        "10.12"
+      ]
+    }
   },
   "conflicts_with": null,
   "container": null,
