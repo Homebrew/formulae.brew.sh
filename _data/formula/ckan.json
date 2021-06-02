@@ -13,13 +13,13 @@
   "license": "MIT",
   "homepage": "https://github.com/KSP-CKAN/CKAN/",
   "versions": {
-    "stable": "1.30.2",
+    "stable": "1.30.4",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/KSP-CKAN/CKAN/releases/download/v1.30.2/ckan.exe",
+      "url": "https://github.com/KSP-CKAN/CKAN/releases/download/v1.30.4/ckan.exe",
       "tag": null,
       "revision": null
     }
@@ -27,9 +27,20 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "all": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/ckan/blobs/sha256:ef445fe525dcb9ddece0844663621a439e6cf159889d00005aa86e7ab1c20583",
+          "sha256": "ef445fe525dcb9ddece0844663621a439e6cf159889d00005aa86e7ab1c20583"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
@@ -49,7 +60,15 @@
 
   ],
   "requirements": [
+    {
+      "name": "arch",
+      "cask": null,
+      "download": null,
+      "version": "x86_64",
+      "contexts": [
 
+      ]
+    }
   ],
   "conflicts_with": [
 
