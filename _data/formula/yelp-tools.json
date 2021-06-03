@@ -13,18 +13,18 @@
   "license": "GPL-2.0-or-later",
   "homepage": "https://github.com/GNOME/yelp-tools",
   "versions": {
-    "stable": "3.38.0",
+    "stable": "40.0",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://download.gnome.org/sources/yelp-tools/3.38/yelp-tools-3.38.0.tar.xz",
+      "url": "https://download.gnome.org/sources/yelp-tools/40/yelp-tools-40.0.tar.xz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -32,29 +32,24 @@
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
         "arm64_big_sur": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/yelp-tools/blobs/sha256:287755e74068f82a9dd94e60e6ae8fc0a3d38f04c2df3ee44d8f427d403d89bc",
-          "sha256": "287755e74068f82a9dd94e60e6ae8fc0a3d38f04c2df3ee44d8f427d403d89bc"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/yelp-tools/blobs/sha256:08a72b2e030951fa5100ac9da0bb00cd5b9da79ab32eec4c6ee755a3790faabd",
+          "sha256": "08a72b2e030951fa5100ac9da0bb00cd5b9da79ab32eec4c6ee755a3790faabd"
         },
         "big_sur": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/yelp-tools/blobs/sha256:9ecac26d055284b58e3b6220a719d20e3e0e5d4fd6c091bb649945b76df6ca69",
-          "sha256": "9ecac26d055284b58e3b6220a719d20e3e0e5d4fd6c091bb649945b76df6ca69"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/yelp-tools/blobs/sha256:4cbc2bd14f9fd508715bba8e1d92a624e75bb044a624c1722f56dca10962439d",
+          "sha256": "4cbc2bd14f9fd508715bba8e1d92a624e75bb044a624c1722f56dca10962439d"
         },
         "catalina": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/yelp-tools/blobs/sha256:c4dde1e77132df114dfd4b19faeae2b8604a3557ac97a0f2caf47954fcfc0def",
-          "sha256": "c4dde1e77132df114dfd4b19faeae2b8604a3557ac97a0f2caf47954fcfc0def"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/yelp-tools/blobs/sha256:a5ddc4d177f70d6e6f3eefc2562efd1be935bf541bd625c28d934b21d0b95a15",
+          "sha256": "a5ddc4d177f70d6e6f3eefc2562efd1be935bf541bd625c28d934b21d0b95a15"
         },
         "mojave": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/yelp-tools/blobs/sha256:4eec970808d0b15187fc1bfb976999b52ae0f13b6ae004f7ca9d65d15e6b07a8",
-          "sha256": "4eec970808d0b15187fc1bfb976999b52ae0f13b6ae004f7ca9d65d15e6b07a8"
-        },
-        "high_sierra": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/yelp-tools/blobs/sha256:906e221bce54f03db236aee3738c047e3d836a4f124aa3460b9d224a9d0c547b",
-          "sha256": "906e221bce54f03db236aee3738c047e3d836a4f124aa3460b9d224a9d0c547b"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/yelp-tools/blobs/sha256:016bb96482e49cdbb5431dc0dccc66b7b8a0277b32e4c335fd8fe39cd770d660",
+          "sha256": "016bb96482e49cdbb5431dc0dccc66b7b8a0277b32e4c335fd8fe39cd770d660"
         }
       }
     }
@@ -66,14 +61,15 @@
   ],
   "build_dependencies": [
     "gettext",
-    "intltool",
     "itstool",
-    "libxml2",
-    "libxslt",
+    "meson",
+    "ninja",
     "pkg-config"
   ],
   "dependencies": [
-    "gtk+3"
+    "gtk+3",
+    "libxml2",
+    "python@3.9"
   ],
   "recommended_dependencies": [
 
@@ -82,7 +78,7 @@
 
   ],
   "uses_from_macos": [
-
+    "libxslt"
   ],
   "requirements": [
 
