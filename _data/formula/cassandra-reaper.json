@@ -13,13 +13,13 @@
   "license": "Apache-2.0",
   "homepage": "https://cassandra-reaper.io/",
   "versions": {
-    "stable": "2.2.4",
+    "stable": "2.2.5",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/thelastpickle/cassandra-reaper/releases/download/2.2.4/cassandra-reaper-2.2.4-release.tar.gz",
+      "url": "https://github.com/thelastpickle/cassandra-reaper/releases/download/2.2.5/cassandra-reaper-2.2.5-release.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -27,9 +27,20 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "all": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/cassandra-reaper/blobs/sha256:37f39d8bd30b6aa47004edcffbadb32dec037271f96cfd4b4fe6f2a63f902497",
+          "sha256": "37f39d8bd30b6aa47004edcffbadb32dec037271f96cfd4b4fe6f2a63f902497"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
@@ -49,7 +60,15 @@
 
   ],
   "requirements": [
+    {
+      "name": "arch",
+      "cask": null,
+      "download": null,
+      "version": "x86_64",
+      "contexts": [
 
+      ]
+    }
   ],
   "conflicts_with": [
 
