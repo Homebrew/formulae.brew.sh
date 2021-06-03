@@ -1,6 +1,6 @@
 {
-  "name": "libosinfo",
-  "full_name": "libosinfo",
+  "name": "osinfo-db-tools",
+  "full_name": "osinfo-db-tools",
   "tap": "homebrew/core",
   "oldname": null,
   "aliases": [
@@ -9,8 +9,8 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Operating System information database",
-  "license": "LGPL-2.0-or-later",
+  "desc": "Tools for managing the libosinfo database files",
+  "license": "GPL-2.0-or-later",
   "homepage": "https://libosinfo.org/",
   "versions": {
     "stable": "1.9.0",
@@ -19,12 +19,12 @@
   },
   "urls": {
     "stable": {
-      "url": "https://releases.pagure.org/libosinfo/libosinfo-1.9.0.tar.xz",
+      "url": "https://releases.pagure.org/libosinfo/osinfo-db-tools-1.9.0.tar.xz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,23 +33,23 @@
       "files": {
         "arm64_big_sur": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/linuxbrew/core/libosinfo/blobs/sha256:1199868b862e37760d20b26afb666460dd3d3104a9f21861b8265c86085e47c3",
-          "sha256": "1199868b862e37760d20b26afb666460dd3d3104a9f21861b8265c86085e47c3"
+          "url": "https://ghcr.io/v2/linuxbrew/core/osinfo-db-tools/blobs/sha256:800f45e86f13d9b276e419c7df616033ede3dd8f4a3956c698fe0f09be436035",
+          "sha256": "800f45e86f13d9b276e419c7df616033ede3dd8f4a3956c698fe0f09be436035"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/linuxbrew/core/libosinfo/blobs/sha256:54aaddce26d9b06828248633b5e1eddfc670ec920c30fcf8bd8b2b7022e5243a",
-          "sha256": "54aaddce26d9b06828248633b5e1eddfc670ec920c30fcf8bd8b2b7022e5243a"
+          "url": "https://ghcr.io/v2/linuxbrew/core/osinfo-db-tools/blobs/sha256:460a75b81da6d76332f29596cecc9bcf543262e8d5848c7fb1bf627b5c5645ad",
+          "sha256": "460a75b81da6d76332f29596cecc9bcf543262e8d5848c7fb1bf627b5c5645ad"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/linuxbrew/core/libosinfo/blobs/sha256:dbdc6c6b8c1135795a1d160976da8d7c6f95de6cbf0533731e602472330bf92d",
-          "sha256": "dbdc6c6b8c1135795a1d160976da8d7c6f95de6cbf0533731e602472330bf92d"
+          "url": "https://ghcr.io/v2/linuxbrew/core/osinfo-db-tools/blobs/sha256:8a572a5e4559404c4ee8b293d934286a155debc374c6e9acbb19decf480e7d5e",
+          "sha256": "8a572a5e4559404c4ee8b293d934286a155debc374c6e9acbb19decf480e7d5e"
         },
         "mojave": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/linuxbrew/core/libosinfo/blobs/sha256:b482b0cd02bf75b2d528cf2d691904ce85826512a0df03aa921564034eb4d1db",
-          "sha256": "b482b0cd02bf75b2d528cf2d691904ce85826512a0df03aa921564034eb4d1db"
+          "url": "https://ghcr.io/v2/linuxbrew/core/osinfo-db-tools/blobs/sha256:784931937986f8132ca5f742ce7d966fe08eb11742d1bbf48d5253ecbcff3bfb",
+          "sha256": "784931937986f8132ca5f742ce7d966fe08eb11742d1bbf48d5253ecbcff3bfb"
         }
       }
     }
@@ -60,21 +60,19 @@
 
   ],
   "build_dependencies": [
-    "gobject-introspection",
     "meson",
     "ninja",
     "pkg-config",
-    "vala",
     "pod2man"
   ],
   "dependencies": [
     "gettext",
     "glib",
+    "json-glib",
+    "libarchive",
     "libsoup",
-    "osinfo-db",
-    "usb.ids",
-    "libxml2",
-    "libxslt"
+    "python@3.9",
+    "libxml2"
   ],
   "recommended_dependencies": [
 

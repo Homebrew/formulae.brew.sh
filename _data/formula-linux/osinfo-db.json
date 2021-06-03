@@ -1,6 +1,6 @@
 {
-  "name": "flank",
-  "full_name": "flank",
+  "name": "osinfo-db",
+  "full_name": "osinfo-db",
   "tap": "homebrew/core",
   "oldname": null,
   "aliases": [
@@ -9,17 +9,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Massively parallel Android and iOS test runner for Firebase Test Lab",
-  "license": "Apache-2.0",
-  "homepage": "https://github.com/Flank/flank",
+  "desc": "Osinfo database of operating systems for virtualization provisioning tools",
+  "license": "GPL-2.0-or-later",
+  "homepage": "https://libosinfo.org/",
   "versions": {
-    "stable": "21.06.0",
+    "stable": "20210531",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/Flank/flank/releases/download/v21.06.0/flank.jar",
+      "url": "https://releases.pagure.org/libosinfo/osinfo-db-20210531.tar.xz",
       "tag": null,
       "revision": null
     }
@@ -31,10 +31,10 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/linuxbrew/core",
       "files": {
-        "x86_64_linux": {
+        "all": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/flank/blobs/sha256:7dd199fc3964d30d1311fe47b46dd62cc98e07da892f2bf6493b19c6815d1c4d",
-          "sha256": "7dd199fc3964d30d1311fe47b46dd62cc98e07da892f2bf6493b19c6815d1c4d"
+          "url": "https://ghcr.io/v2/linuxbrew/core/osinfo-db/blobs/sha256:2959d7b71fe06406c67784c91f23d9af81ce4418a6a1e07c0c6731dc7550c8d8",
+          "sha256": "2959d7b71fe06406c67784c91f23d9af81ce4418a6a1e07c0c6731dc7550c8d8"
         }
       }
     }
@@ -45,10 +45,10 @@
 
   ],
   "build_dependencies": [
-
+    "osinfo-db-tools"
   ],
   "dependencies": [
-    "openjdk"
+
   ],
   "recommended_dependencies": [
 
