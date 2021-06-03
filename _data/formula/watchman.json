@@ -13,18 +13,18 @@
   "license": "Apache-2.0",
   "homepage": "https://github.com/facebook/watchman",
   "versions": {
-    "stable": "4.9.0",
+    "stable": "2021.05.31.00",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/facebook/watchman/archive/v4.9.0.tar.gz",
+      "url": "https://github.com/facebook/watchman/archive/v2021.05.31.00.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 5,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -32,29 +32,24 @@
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
         "arm64_big_sur": {
-          "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/watchman/blobs/sha256:4a44a39cfd719b34d146043aa5afcc6ac304ebbd2ff4ff0fb2e37e22871f38ac",
-          "sha256": "4a44a39cfd719b34d146043aa5afcc6ac304ebbd2ff4ff0fb2e37e22871f38ac"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/watchman/blobs/sha256:c3c035ef3a75a7ac946875126d2d1e1f831e30930e3aaa2c26888aa112f42ecd",
+          "sha256": "c3c035ef3a75a7ac946875126d2d1e1f831e30930e3aaa2c26888aa112f42ecd"
         },
         "big_sur": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/watchman/blobs/sha256:f03c91e17cd7595f98106ee4a27f28433ecc2fd6dde8cc1b7e279bd60b730051",
-          "sha256": "f03c91e17cd7595f98106ee4a27f28433ecc2fd6dde8cc1b7e279bd60b730051"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/watchman/blobs/sha256:2e621ce625eb92b220e5a67446ccb09b9d06d4920b34d526cfd027a35fcbd03f",
+          "sha256": "2e621ce625eb92b220e5a67446ccb09b9d06d4920b34d526cfd027a35fcbd03f"
         },
         "catalina": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/watchman/blobs/sha256:30ed7115aa2a2534f5255508915f827c2e6f3100fcd7842415db64e31eabac30",
-          "sha256": "30ed7115aa2a2534f5255508915f827c2e6f3100fcd7842415db64e31eabac30"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/watchman/blobs/sha256:fc23c7c148a217a82da6de5d7fe40125dbf033072a906a63d4e71025003c1de3",
+          "sha256": "fc23c7c148a217a82da6de5d7fe40125dbf033072a906a63d4e71025003c1de3"
         },
         "mojave": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/watchman/blobs/sha256:135eb0a8f098417a8e4d67bf8d732a19bad1932eee085497877e93982e91074f",
-          "sha256": "135eb0a8f098417a8e4d67bf8d732a19bad1932eee085497877e93982e91074f"
-        },
-        "high_sierra": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/watchman/blobs/sha256:e872c3aae64c3b78197de9f12e272bebd5d20c316a120916f59a5f1cd2fac039",
-          "sha256": "e872c3aae64c3b78197de9f12e272bebd5d20c316a120916f59a5f1cd2fac039"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/watchman/blobs/sha256:8ce6f7de265228200cc01bbf47d0f9004ec6d3e67dc71bc142d749b81d9e5114",
+          "sha256": "8ce6f7de265228200cc01bbf47d0f9004ec6d3e67dc71bc142d749b81d9e5114"
         }
       }
     }
@@ -65,12 +60,18 @@
 
   ],
   "build_dependencies": [
-    "autoconf",
-    "automake",
-    "libtool",
-    "pkg-config"
+    "cmake",
+    "googletest",
+    "pkg-config",
+    "rust"
   ],
   "dependencies": [
+    "boost",
+    "fmt",
+    "folly",
+    "gflags",
+    "glog",
+    "libevent",
     "openssl@1.1",
     "pcre",
     "python@3.9"
