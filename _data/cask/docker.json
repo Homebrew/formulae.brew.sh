@@ -42,6 +42,42 @@
     [
       "Docker.app"
     ],
+    [
+      "/Applications/Docker.app/Contents/Resources/etc/docker-compose.bash-completion",
+      {
+        "target": "$(brew --prefix)/etc/bash_completion.d/docker-compose"
+      }
+    ],
+    [
+      "/Applications/Docker.app/Contents/Resources/etc/docker.zsh-completion",
+      {
+        "target": "$(brew --prefix)/share/zsh/site-functions/_docker"
+      }
+    ],
+    [
+      "/Applications/Docker.app/Contents/Resources/etc/docker.fish-completion",
+      {
+        "target": "$(brew --prefix)/share/fish/vendor_completions.d/docker.fish"
+      }
+    ],
+    [
+      "/Applications/Docker.app/Contents/Resources/etc/docker-compose.fish-completion",
+      {
+        "target": "$(brew --prefix)/share/fish/vendor_completions.d/docker-compose.fish"
+      }
+    ],
+    [
+      "/Applications/Docker.app/Contents/Resources/etc/docker-compose.zsh-completion",
+      {
+        "target": "$(brew --prefix)/share/zsh/site-functions/_docker_compose"
+      }
+    ],
+    [
+      "/Applications/Docker.app/Contents/Resources/etc/docker.bash-completion",
+      {
+        "target": "$(brew --prefix)/etc/bash_completion.d/docker"
+      }
+    ],
     {
       "trash": [
         "$(brew --prefix)/bin/docker-compose.backup",
@@ -70,7 +106,16 @@
   "caveats": null,
   "depends_on": {
   },
-  "conflicts_with": null,
+  "conflicts_with": {
+    "formula": [
+      "docker",
+      "docker-completion",
+      "docker-compose",
+      "docker-compose-completion",
+      "hyperkit",
+      "kubernetes-cli"
+    ]
+  },
   "container": null,
   "auto_updates": true
 }
