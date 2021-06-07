@@ -25,7 +25,10 @@ permalink: :title
 <p>License: <strong>{{ f.license | join: "</strong>, <strong>" | replace: "_", " " }}</strong></p>
 {%- endif %}
 
+{%- assign bottle_path = formula_path | replace: "formula", "bottle" -%}
 <p><a href="{{ site.baseurl }}/api/{{ formula_path }}/{{ f.name }}.json"><code>/api/{{ formula_path }}/{{ f.name }}.json</code> (JSON API)</a></p>
+<p><a href="{{ site.baseurl }}/api/{{ bottle_path }}/{{ f.name }}.json"><code>/api/{{ bottle_path }}/{{ f.name }}.json</code> (Bottle JSON API)</a></p>
+
 {%- if formula_path == "formula-linux" %}
 <p><a target="_blank" href="{{ site.taps.linux.remote }}/blob/HEAD/Formula/{{ f.name }}.rb">Linux formula code</a> on GitHub</p>
 {%- else %}
