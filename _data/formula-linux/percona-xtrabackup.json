@@ -13,18 +13,18 @@
   "license": null,
   "homepage": "https://www.percona.com/software/mysql-database/percona-xtrabackup",
   "versions": {
-    "stable": "8.0.23-16",
+    "stable": "8.0.25-17",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://www.percona.com/downloads/Percona-XtraBackup-LATEST/Percona-XtraBackup-8.0.23-16/source/tarball/percona-xtrabackup-8.0.23-16.tar.gz",
+      "url": "https://www.percona.com/downloads/Percona-XtraBackup-LATEST/Percona-XtraBackup-8.0.25-17/source/tarball/percona-xtrabackup-8.0.25-17.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,23 +33,23 @@
       "files": {
         "arm64_big_sur": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/linuxbrew/core/percona-xtrabackup/blobs/sha256:f37f29f4e54c87c68809b3b21caf3764ed97180c729fa8a7e116275e8a0b492d",
-          "sha256": "f37f29f4e54c87c68809b3b21caf3764ed97180c729fa8a7e116275e8a0b492d"
+          "url": "https://ghcr.io/v2/linuxbrew/core/percona-xtrabackup/blobs/sha256:45e372cb3dbc06e4598b9730a2d966b7b5acdbf26f1cdd1fec476c9343a76264",
+          "sha256": "45e372cb3dbc06e4598b9730a2d966b7b5acdbf26f1cdd1fec476c9343a76264"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/linuxbrew/core/percona-xtrabackup/blobs/sha256:a2fde831a45845367f31dd064937839776364c9e363f729652d0e9acce70153a",
-          "sha256": "a2fde831a45845367f31dd064937839776364c9e363f729652d0e9acce70153a"
+          "url": "https://ghcr.io/v2/linuxbrew/core/percona-xtrabackup/blobs/sha256:7678afb4036a12a8a57ecc72544ad01ee8daf1987da5e6b9fd15644e13e163e0",
+          "sha256": "7678afb4036a12a8a57ecc72544ad01ee8daf1987da5e6b9fd15644e13e163e0"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/linuxbrew/core/percona-xtrabackup/blobs/sha256:a5523f5a64e0a226c255dfd1c7d94deac6612f21fe05976295225752dba3da3f",
-          "sha256": "a5523f5a64e0a226c255dfd1c7d94deac6612f21fe05976295225752dba3da3f"
+          "url": "https://ghcr.io/v2/linuxbrew/core/percona-xtrabackup/blobs/sha256:ac2777de2bced8fc020ef76f1275da999f11cb3c60481d97006f8cbac9403a97",
+          "sha256": "ac2777de2bced8fc020ef76f1275da999f11cb3c60481d97006f8cbac9403a97"
         },
         "mojave": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/linuxbrew/core/percona-xtrabackup/blobs/sha256:f233229c815dda2cc223de08a68c3932afb6ed289b1da7ceaa0262673552332e",
-          "sha256": "f233229c815dda2cc223de08a68c3932afb6ed289b1da7ceaa0262673552332e"
+          "url": "https://ghcr.io/v2/linuxbrew/core/percona-xtrabackup/blobs/sha256:880abb4be9f118120660818a079cdc4562cc7411a1a9070d3ef005c8aee23f35",
+          "sha256": "880abb4be9f118120660818a079cdc4562cc7411a1a9070d3ef005c8aee23f35"
         }
       }
     }
@@ -64,12 +64,19 @@
     "sphinx-doc"
   ],
   "dependencies": [
+    "icu4c",
     "libev",
+    "libevent",
     "libgcrypt",
+    "lz4",
     "mysql-client",
     "openssl@1.1",
     "protobuf",
-    "perl"
+    "zstd",
+    "curl",
+    "libedit",
+    "perl",
+    "zlib"
   ],
   "recommended_dependencies": [
 
