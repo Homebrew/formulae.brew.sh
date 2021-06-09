@@ -1,5 +1,7 @@
 {
   "name": "libxdmcp",
+  "pkg_version": "1.1.3",
+  "rebuild": 0,
   "bottles": {
     "arm64_big_sur": {
       "url": "https://ghcr.io/v2/linuxbrew/core/libxdmcp/blobs/sha256:6c17c65a3f5768a620bc177f6ee189573993df7337c6614050c28e400dc6320c"
@@ -22,8 +24,13 @@
   },
   "dependencies": [
     {
-      "x86_64_linux": {
-        "url": "https://ghcr.io/v2/linuxbrew/core/xorgproto/blobs/sha256:f8a7c3b5c61c48affa144576747aa93a18c49f8b861b782e45aeb643a2708363"
+      "name": "xorgproto",
+      "pkg_version": "2021.4",
+      "rebuild": 0,
+      "bottles": {
+        "x86_64_linux": {
+          "url": "https://ghcr.io/v2/linuxbrew/core/xorgproto/blobs/sha256:f8a7c3b5c61c48affa144576747aa93a18c49f8b861b782e45aeb643a2708363"
+        }
       }
     }
   ]

@@ -1,5 +1,7 @@
 {
   "name": "tup",
+  "pkg_version": "0.7.10",
+  "rebuild": 0,
   "bottles": {
     "catalina": {
       "url": "https://ghcr.io/v2/linuxbrew/core/tup/blobs/sha256:48009935b0e38be19c1d8a0afbbeef75109a970a57327dad9ecf5929b64b7bf2"
@@ -16,8 +18,13 @@
   },
   "dependencies": [
     {
-      "x86_64_linux": {
-        "url": "https://ghcr.io/v2/linuxbrew/core/libfuse/blobs/sha256:9969ed56fd264e7c9095d48e8bc85b46fb0945e9532f7b56a7cde03e921b8ffd"
+      "name": "libfuse",
+      "pkg_version": "3.10.3",
+      "rebuild": 0,
+      "bottles": {
+        "x86_64_linux": {
+          "url": "https://ghcr.io/v2/linuxbrew/core/libfuse/blobs/sha256:9969ed56fd264e7c9095d48e8bc85b46fb0945e9532f7b56a7cde03e921b8ffd"
+        }
       }
     }
   ]

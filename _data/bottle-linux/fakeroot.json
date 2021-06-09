@@ -1,5 +1,7 @@
 {
   "name": "fakeroot",
+  "pkg_version": "1.24",
+  "rebuild": 0,
   "bottles": {
     "catalina": {
       "url": "https://ghcr.io/v2/linuxbrew/core/fakeroot/blobs/sha256:c72ae187158b6cce73311fee527ba8bf8d2f0e18340bd66eef57b50b3d45c275"
@@ -13,8 +15,13 @@
   },
   "dependencies": [
     {
-      "x86_64_linux": {
-        "url": "https://ghcr.io/v2/linuxbrew/core/libcap/blobs/sha256:ceb5ceec04cc07d29ac5c2d8a37db74a491d5177ef92c4e1c172b9eb2a6dc6e4"
+      "name": "libcap",
+      "pkg_version": "2.27",
+      "rebuild": 0,
+      "bottles": {
+        "x86_64_linux": {
+          "url": "https://ghcr.io/v2/linuxbrew/core/libcap/blobs/sha256:ceb5ceec04cc07d29ac5c2d8a37db74a491d5177ef92c4e1c172b9eb2a6dc6e4"
+        }
       }
     }
   ]

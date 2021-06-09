@@ -1,5 +1,7 @@
 {
   "name": "libfs",
+  "pkg_version": "1.0.8",
+  "rebuild": 0,
   "bottles": {
     "arm64_big_sur": {
       "url": "https://ghcr.io/v2/linuxbrew/core/libfs/blobs/sha256:3509ffdca42e13e77c8b0031cef59d661f0f2213ea3367b29ebfe738f4e9a715"
@@ -22,8 +24,13 @@
   },
   "dependencies": [
     {
-      "x86_64_linux": {
-        "url": "https://ghcr.io/v2/linuxbrew/core/xorgproto/blobs/sha256:f8a7c3b5c61c48affa144576747aa93a18c49f8b861b782e45aeb643a2708363"
+      "name": "xorgproto",
+      "pkg_version": "2021.4",
+      "rebuild": 0,
+      "bottles": {
+        "x86_64_linux": {
+          "url": "https://ghcr.io/v2/linuxbrew/core/xorgproto/blobs/sha256:f8a7c3b5c61c48affa144576747aa93a18c49f8b861b782e45aeb643a2708363"
+        }
       }
     }
   ]

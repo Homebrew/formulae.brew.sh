@@ -1,5 +1,7 @@
 {
   "name": "afuse",
+  "pkg_version": "0.4.1_2",
+  "rebuild": 0,
   "bottles": {
     "catalina": {
       "url": "https://ghcr.io/v2/linuxbrew/core/afuse/blobs/sha256:cf5a7aeba0e2504ea5bf7bf691ed2d0f8245cbac069b089359588e7df04140e0"
@@ -22,8 +24,13 @@
   },
   "dependencies": [
     {
-      "x86_64_linux": {
-        "url": "https://ghcr.io/v2/linuxbrew/core/libfuse/blobs/sha256:9969ed56fd264e7c9095d48e8bc85b46fb0945e9532f7b56a7cde03e921b8ffd"
+      "name": "libfuse",
+      "pkg_version": "3.10.3",
+      "rebuild": 0,
+      "bottles": {
+        "x86_64_linux": {
+          "url": "https://ghcr.io/v2/linuxbrew/core/libfuse/blobs/sha256:9969ed56fd264e7c9095d48e8bc85b46fb0945e9532f7b56a7cde03e921b8ffd"
+        }
       }
     }
   ]

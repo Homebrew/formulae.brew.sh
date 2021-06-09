@@ -1,5 +1,7 @@
 {
   "name": "libxau",
+  "pkg_version": "1.0.9",
+  "rebuild": 0,
   "bottles": {
     "arm64_big_sur": {
       "url": "https://ghcr.io/v2/linuxbrew/core/libxau/blobs/sha256:c266397e5e2417a4dc5827a504f27153c12a3938a91b19697abf24d3cfba8ac5"
@@ -22,8 +24,13 @@
   },
   "dependencies": [
     {
-      "x86_64_linux": {
-        "url": "https://ghcr.io/v2/linuxbrew/core/xorgproto/blobs/sha256:f8a7c3b5c61c48affa144576747aa93a18c49f8b861b782e45aeb643a2708363"
+      "name": "xorgproto",
+      "pkg_version": "2021.4",
+      "rebuild": 0,
+      "bottles": {
+        "x86_64_linux": {
+          "url": "https://ghcr.io/v2/linuxbrew/core/xorgproto/blobs/sha256:f8a7c3b5c61c48affa144576747aa93a18c49f8b861b782e45aeb643a2708363"
+        }
       }
     }
   ]

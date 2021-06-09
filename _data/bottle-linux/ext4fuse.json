@@ -1,5 +1,7 @@
 {
   "name": "ext4fuse",
+  "pkg_version": "0.1.3",
+  "rebuild": 0,
   "bottles": {
     "catalina": {
       "url": "https://ghcr.io/v2/linuxbrew/core/ext4fuse/blobs/sha256:446dde5e84b058966ead0cde5e38e9411f465732527f6decfa1c0dcdbd4abbef"
@@ -22,8 +24,13 @@
   },
   "dependencies": [
     {
-      "x86_64_linux": {
-        "url": "https://ghcr.io/v2/linuxbrew/core/libfuse/blobs/sha256:9969ed56fd264e7c9095d48e8bc85b46fb0945e9532f7b56a7cde03e921b8ffd"
+      "name": "libfuse",
+      "pkg_version": "3.10.3",
+      "rebuild": 0,
+      "bottles": {
+        "x86_64_linux": {
+          "url": "https://ghcr.io/v2/linuxbrew/core/libfuse/blobs/sha256:9969ed56fd264e7c9095d48e8bc85b46fb0945e9532f7b56a7cde03e921b8ffd"
+        }
       }
     }
   ]
