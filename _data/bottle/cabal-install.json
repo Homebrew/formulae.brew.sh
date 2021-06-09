@@ -1,5 +1,7 @@
 {
   "name": "cabal-install",
+  "pkg_version": "3.4.0.0_1",
+  "rebuild": 1,
   "bottles": {
     "arm64_big_sur": {
       "url": "https://ghcr.io/v2/homebrew/core/cabal-install/blobs/sha256:2534ae2c9d1589f94aaea840b0433d6d3bd7a0bfc189c4237600f9968b3dc1e0"
@@ -16,14 +18,19 @@
   },
   "dependencies": [
     {
-      "arm64_big_sur": {
-        "url": "https://ghcr.io/v2/homebrew/core/ghc/blobs/sha256:ebbea1449d40f11b82f7acf47cca422a8c1571d0bc1db75643c39731aabbca3c"
-      },
-      "big_sur": {
-        "url": "https://ghcr.io/v2/homebrew/core/ghc/blobs/sha256:e1a675c272df603c7f874db5d12d8d72316c6af57b7674db259c4b6ec9e2ec3c"
-      },
-      "catalina": {
-        "url": "https://ghcr.io/v2/homebrew/core/ghc/blobs/sha256:b6d6080ee6cb8135e72980e07b752184fab99aba99de61299b27c704e1a1e8e7"
+      "name": "ghc",
+      "pkg_version": "8.10.5",
+      "rebuild": 0,
+      "bottles": {
+        "arm64_big_sur": {
+          "url": "https://ghcr.io/v2/homebrew/core/ghc/blobs/sha256:ebbea1449d40f11b82f7acf47cca422a8c1571d0bc1db75643c39731aabbca3c"
+        },
+        "big_sur": {
+          "url": "https://ghcr.io/v2/homebrew/core/ghc/blobs/sha256:e1a675c272df603c7f874db5d12d8d72316c6af57b7674db259c4b6ec9e2ec3c"
+        },
+        "catalina": {
+          "url": "https://ghcr.io/v2/homebrew/core/ghc/blobs/sha256:b6d6080ee6cb8135e72980e07b752184fab99aba99de61299b27c704e1a1e8e7"
+        }
       }
     }
   ]

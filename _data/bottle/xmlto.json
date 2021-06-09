@@ -1,5 +1,7 @@
 {
   "name": "xmlto",
+  "pkg_version": "0.0.28",
+  "rebuild": 2,
   "bottles": {
     "arm64_big_sur": {
       "url": "https://ghcr.io/v2/homebrew/core/xmlto/blobs/sha256:bec2a4a7797f07fc73a636a40e85cb0504da4c5e34328456c28e78c84ce95324"
@@ -19,51 +21,66 @@
   },
   "dependencies": [
     {
-      "arm64_big_sur": {
-        "url": "https://ghcr.io/v2/homebrew/core/docbook/blobs/sha256:53a9dc79db8b2d06dc75009d5d09fc797ddcd5eb4ca040d606efd35ae4fa3829"
-      },
-      "big_sur": {
-        "url": "https://ghcr.io/v2/homebrew/core/docbook/blobs/sha256:2c4e8398b5548cef2830169aadaf6221ac9ee7e6733547642ccee1ea81e07e99"
-      },
-      "catalina": {
-        "url": "https://ghcr.io/v2/homebrew/core/docbook/blobs/sha256:8152e5356c47a7b8282f3ed84ee3f29565e8ce620bddeaeaf23dfd1f5ef111a3"
-      },
-      "mojave": {
-        "url": "https://ghcr.io/v2/homebrew/core/docbook/blobs/sha256:8152e5356c47a7b8282f3ed84ee3f29565e8ce620bddeaeaf23dfd1f5ef111a3"
-      },
-      "high_sierra": {
-        "url": "https://ghcr.io/v2/homebrew/core/docbook/blobs/sha256:8152e5356c47a7b8282f3ed84ee3f29565e8ce620bddeaeaf23dfd1f5ef111a3"
+      "name": "docbook",
+      "pkg_version": "5.1_1",
+      "rebuild": 0,
+      "bottles": {
+        "arm64_big_sur": {
+          "url": "https://ghcr.io/v2/homebrew/core/docbook/blobs/sha256:53a9dc79db8b2d06dc75009d5d09fc797ddcd5eb4ca040d606efd35ae4fa3829"
+        },
+        "big_sur": {
+          "url": "https://ghcr.io/v2/homebrew/core/docbook/blobs/sha256:2c4e8398b5548cef2830169aadaf6221ac9ee7e6733547642ccee1ea81e07e99"
+        },
+        "catalina": {
+          "url": "https://ghcr.io/v2/homebrew/core/docbook/blobs/sha256:8152e5356c47a7b8282f3ed84ee3f29565e8ce620bddeaeaf23dfd1f5ef111a3"
+        },
+        "mojave": {
+          "url": "https://ghcr.io/v2/homebrew/core/docbook/blobs/sha256:8152e5356c47a7b8282f3ed84ee3f29565e8ce620bddeaeaf23dfd1f5ef111a3"
+        },
+        "high_sierra": {
+          "url": "https://ghcr.io/v2/homebrew/core/docbook/blobs/sha256:8152e5356c47a7b8282f3ed84ee3f29565e8ce620bddeaeaf23dfd1f5ef111a3"
+        }
       }
     },
     {
-      "arm64_big_sur": {
-        "url": "https://ghcr.io/v2/homebrew/core/docbook-xsl/blobs/sha256:9604b8989c3cc180c641b00f595e59d887aa85fbd410fb85bf4d459c6fb9f823"
-      },
-      "big_sur": {
-        "url": "https://ghcr.io/v2/homebrew/core/docbook-xsl/blobs/sha256:cfdfee3ff9db24a542cd8afd72cd05e67dffd88105b6af3bb1aabd9d48811dd2"
-      },
-      "catalina": {
-        "url": "https://ghcr.io/v2/homebrew/core/docbook-xsl/blobs/sha256:65a5442556a88a865ef377cb73df0b3edf9ab2240e6f4bb2d71a71eabc74fa26"
-      },
-      "mojave": {
-        "url": "https://ghcr.io/v2/homebrew/core/docbook-xsl/blobs/sha256:65a5442556a88a865ef377cb73df0b3edf9ab2240e6f4bb2d71a71eabc74fa26"
-      },
-      "high_sierra": {
-        "url": "https://ghcr.io/v2/homebrew/core/docbook-xsl/blobs/sha256:65a5442556a88a865ef377cb73df0b3edf9ab2240e6f4bb2d71a71eabc74fa26"
+      "name": "docbook-xsl",
+      "pkg_version": "1.79.2_1",
+      "rebuild": 0,
+      "bottles": {
+        "arm64_big_sur": {
+          "url": "https://ghcr.io/v2/homebrew/core/docbook-xsl/blobs/sha256:9604b8989c3cc180c641b00f595e59d887aa85fbd410fb85bf4d459c6fb9f823"
+        },
+        "big_sur": {
+          "url": "https://ghcr.io/v2/homebrew/core/docbook-xsl/blobs/sha256:cfdfee3ff9db24a542cd8afd72cd05e67dffd88105b6af3bb1aabd9d48811dd2"
+        },
+        "catalina": {
+          "url": "https://ghcr.io/v2/homebrew/core/docbook-xsl/blobs/sha256:65a5442556a88a865ef377cb73df0b3edf9ab2240e6f4bb2d71a71eabc74fa26"
+        },
+        "mojave": {
+          "url": "https://ghcr.io/v2/homebrew/core/docbook-xsl/blobs/sha256:65a5442556a88a865ef377cb73df0b3edf9ab2240e6f4bb2d71a71eabc74fa26"
+        },
+        "high_sierra": {
+          "url": "https://ghcr.io/v2/homebrew/core/docbook-xsl/blobs/sha256:65a5442556a88a865ef377cb73df0b3edf9ab2240e6f4bb2d71a71eabc74fa26"
+        }
       }
     },
     {
-      "arm64_big_sur": {
-        "url": "https://ghcr.io/v2/homebrew/core/gnu-getopt/blobs/sha256:079587e59cd2e4061082a2582c4b57a61a76945c5520ef342408445ac454aed4"
-      },
-      "big_sur": {
-        "url": "https://ghcr.io/v2/homebrew/core/gnu-getopt/blobs/sha256:e9b50df1befbbee936eda326aae7479e0a0557964eb29e5ae6ba68cd15f93a0e"
-      },
-      "catalina": {
-        "url": "https://ghcr.io/v2/homebrew/core/gnu-getopt/blobs/sha256:f496f191c9e3d5dd178255bf2baac2e9933ff7aeef4904a10539e8b98e80df4c"
-      },
-      "mojave": {
-        "url": "https://ghcr.io/v2/homebrew/core/gnu-getopt/blobs/sha256:804cd9ab8706b9aed9b2ebc7bccfbdbea97cc261bf0f0cb70ef9788070d8685a"
+      "name": "gnu-getopt",
+      "pkg_version": "2.37",
+      "rebuild": 0,
+      "bottles": {
+        "arm64_big_sur": {
+          "url": "https://ghcr.io/v2/homebrew/core/gnu-getopt/blobs/sha256:079587e59cd2e4061082a2582c4b57a61a76945c5520ef342408445ac454aed4"
+        },
+        "big_sur": {
+          "url": "https://ghcr.io/v2/homebrew/core/gnu-getopt/blobs/sha256:e9b50df1befbbee936eda326aae7479e0a0557964eb29e5ae6ba68cd15f93a0e"
+        },
+        "catalina": {
+          "url": "https://ghcr.io/v2/homebrew/core/gnu-getopt/blobs/sha256:f496f191c9e3d5dd178255bf2baac2e9933ff7aeef4904a10539e8b98e80df4c"
+        },
+        "mojave": {
+          "url": "https://ghcr.io/v2/homebrew/core/gnu-getopt/blobs/sha256:804cd9ab8706b9aed9b2ebc7bccfbdbea97cc261bf0f0cb70ef9788070d8685a"
+        }
       }
     }
   ]

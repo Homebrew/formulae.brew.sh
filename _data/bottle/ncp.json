@@ -1,5 +1,7 @@
 {
   "name": "ncp",
+  "pkg_version": "1.2.4",
+  "rebuild": 1,
   "bottles": {
     "catalina": {
       "url": "https://ghcr.io/v2/homebrew/core/ncp/blobs/sha256:26d9db0b0da97a1556e5b20afd08c82be35fd7f8530ab63110d83fb1ba542ac2"
@@ -19,17 +21,22 @@
   },
   "dependencies": [
     {
-      "arm64_big_sur": {
-        "url": "https://ghcr.io/v2/homebrew/core/libowfat/blobs/sha256:1f136abc75d88d46768041ce1e32344905a3cc66179734785011ed001acda8db"
-      },
-      "big_sur": {
-        "url": "https://ghcr.io/v2/homebrew/core/libowfat/blobs/sha256:c5fcc5eed33299becabcd1144074b6971730d7edbacea54b22f0ed5c723a09bf"
-      },
-      "catalina": {
-        "url": "https://ghcr.io/v2/homebrew/core/libowfat/blobs/sha256:9fd957c443aa34237004dbcce7254377b164262df39bb3ba7ea8a8f1d70f5f59"
-      },
-      "mojave": {
-        "url": "https://ghcr.io/v2/homebrew/core/libowfat/blobs/sha256:2b1cffc2e679e98801f576358d42fb3b7217187f2551f5fe4460f5b29ffd485c"
+      "name": "libowfat",
+      "pkg_version": "0.32_1",
+      "rebuild": 0,
+      "bottles": {
+        "arm64_big_sur": {
+          "url": "https://ghcr.io/v2/homebrew/core/libowfat/blobs/sha256:1f136abc75d88d46768041ce1e32344905a3cc66179734785011ed001acda8db"
+        },
+        "big_sur": {
+          "url": "https://ghcr.io/v2/homebrew/core/libowfat/blobs/sha256:c5fcc5eed33299becabcd1144074b6971730d7edbacea54b22f0ed5c723a09bf"
+        },
+        "catalina": {
+          "url": "https://ghcr.io/v2/homebrew/core/libowfat/blobs/sha256:9fd957c443aa34237004dbcce7254377b164262df39bb3ba7ea8a8f1d70f5f59"
+        },
+        "mojave": {
+          "url": "https://ghcr.io/v2/homebrew/core/libowfat/blobs/sha256:2b1cffc2e679e98801f576358d42fb3b7217187f2551f5fe4460f5b29ffd485c"
+        }
       }
     }
   ]

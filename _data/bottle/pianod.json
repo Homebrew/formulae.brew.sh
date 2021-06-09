@@ -1,5 +1,7 @@
 {
   "name": "pianod",
+  "pkg_version": "301_1",
+  "rebuild": 0,
   "bottles": {
     "arm64_big_sur": {
       "url": "https://ghcr.io/v2/homebrew/core/pianod/blobs/sha256:75ead4e63a967f75b1348d5f3edc024fb18b64298546ca6574aeba99c043237c"
@@ -19,65 +21,85 @@
   },
   "dependencies": [
     {
-      "arm64_big_sur": {
-        "url": "https://ghcr.io/v2/homebrew/core/json-c/blobs/sha256:cfe16365846be7c8bbbab9cf5eaea4edc861f2174b37b9cc520d6dd0023c23d8"
-      },
-      "big_sur": {
-        "url": "https://ghcr.io/v2/homebrew/core/json-c/blobs/sha256:11990ad17649041f31c96e7c383e9eb6a8e1cd7491c0ff9a8ee89ab66d2a11ba"
-      },
-      "catalina": {
-        "url": "https://ghcr.io/v2/homebrew/core/json-c/blobs/sha256:60d15ece3fb1fdc8722785de8243c2261222f674e998509375522a1de75497ea"
-      },
-      "mojave": {
-        "url": "https://ghcr.io/v2/homebrew/core/json-c/blobs/sha256:6ab7f776315184769ed74115f614996401eae4577c36144ba4cdd1d41427d0cf"
-      },
-      "high_sierra": {
-        "url": "https://ghcr.io/v2/homebrew/core/json-c/blobs/sha256:a211a34a52b452386cf6e23f8f27cc9d088e64d2793bae7a4b3a7a069d31a88a"
+      "name": "json-c",
+      "pkg_version": "0.15",
+      "rebuild": 0,
+      "bottles": {
+        "arm64_big_sur": {
+          "url": "https://ghcr.io/v2/homebrew/core/json-c/blobs/sha256:cfe16365846be7c8bbbab9cf5eaea4edc861f2174b37b9cc520d6dd0023c23d8"
+        },
+        "big_sur": {
+          "url": "https://ghcr.io/v2/homebrew/core/json-c/blobs/sha256:11990ad17649041f31c96e7c383e9eb6a8e1cd7491c0ff9a8ee89ab66d2a11ba"
+        },
+        "catalina": {
+          "url": "https://ghcr.io/v2/homebrew/core/json-c/blobs/sha256:60d15ece3fb1fdc8722785de8243c2261222f674e998509375522a1de75497ea"
+        },
+        "mojave": {
+          "url": "https://ghcr.io/v2/homebrew/core/json-c/blobs/sha256:6ab7f776315184769ed74115f614996401eae4577c36144ba4cdd1d41427d0cf"
+        },
+        "high_sierra": {
+          "url": "https://ghcr.io/v2/homebrew/core/json-c/blobs/sha256:a211a34a52b452386cf6e23f8f27cc9d088e64d2793bae7a4b3a7a069d31a88a"
+        }
       }
     },
     {
-      "arm64_big_sur": {
-        "url": "https://ghcr.io/v2/homebrew/core/libao/blobs/sha256:0af71783215ee0b302a2240954652c3f2db3f515ef4bc70b5e58a5e197778256"
-      },
-      "big_sur": {
-        "url": "https://ghcr.io/v2/homebrew/core/libao/blobs/sha256:32055ce76b17a9f7410574c27b314905f3e9c42f979cc72bbbca060194ba9d9d"
-      },
-      "catalina": {
-        "url": "https://ghcr.io/v2/homebrew/core/libao/blobs/sha256:703bfcae17a364ad0e526d5556b3583d1864c6db4c52ba85ef64dc0600039372"
-      },
-      "mojave": {
-        "url": "https://ghcr.io/v2/homebrew/core/libao/blobs/sha256:932b3a41565e678489471dae66b29fea1ca2de6013c2559f9c34cc5e9bd5a33f"
-      },
-      "high_sierra": {
-        "url": "https://ghcr.io/v2/homebrew/core/libao/blobs/sha256:d7144edd6dc64b987d9a9d584799fe20a76ed92f2b1b18c074a6846926f23169"
+      "name": "libao",
+      "pkg_version": "1.2.2",
+      "rebuild": 2,
+      "bottles": {
+        "arm64_big_sur": {
+          "url": "https://ghcr.io/v2/homebrew/core/libao/blobs/sha256:0af71783215ee0b302a2240954652c3f2db3f515ef4bc70b5e58a5e197778256"
+        },
+        "big_sur": {
+          "url": "https://ghcr.io/v2/homebrew/core/libao/blobs/sha256:32055ce76b17a9f7410574c27b314905f3e9c42f979cc72bbbca060194ba9d9d"
+        },
+        "catalina": {
+          "url": "https://ghcr.io/v2/homebrew/core/libao/blobs/sha256:703bfcae17a364ad0e526d5556b3583d1864c6db4c52ba85ef64dc0600039372"
+        },
+        "mojave": {
+          "url": "https://ghcr.io/v2/homebrew/core/libao/blobs/sha256:932b3a41565e678489471dae66b29fea1ca2de6013c2559f9c34cc5e9bd5a33f"
+        },
+        "high_sierra": {
+          "url": "https://ghcr.io/v2/homebrew/core/libao/blobs/sha256:d7144edd6dc64b987d9a9d584799fe20a76ed92f2b1b18c074a6846926f23169"
+        }
       }
     },
     {
-      "arm64_big_sur": {
-        "url": "https://ghcr.io/v2/homebrew/core/libgpg-error/blobs/sha256:72d70667728d9b1bfe4071913c800db2baa55af9fc603dbd96b2fcd477d828b0"
-      },
-      "big_sur": {
-        "url": "https://ghcr.io/v2/homebrew/core/libgpg-error/blobs/sha256:453688272ae89f5f4b5a852ec1c2c31d3c2410abb95ca5039f5a0d4edfc4b64b"
-      },
-      "catalina": {
-        "url": "https://ghcr.io/v2/homebrew/core/libgpg-error/blobs/sha256:bb8090fbf1399ed80904df570978a16b72af1b300c17f68493b602606e90d516"
-      },
-      "mojave": {
-        "url": "https://ghcr.io/v2/homebrew/core/libgpg-error/blobs/sha256:ef3446809a6b3d9da0f5d4a45b9d2c21a7bf4549d14cc785843f4f969f13ea39"
+      "name": "libgpg-error",
+      "pkg_version": "1.42",
+      "rebuild": 0,
+      "bottles": {
+        "arm64_big_sur": {
+          "url": "https://ghcr.io/v2/homebrew/core/libgpg-error/blobs/sha256:72d70667728d9b1bfe4071913c800db2baa55af9fc603dbd96b2fcd477d828b0"
+        },
+        "big_sur": {
+          "url": "https://ghcr.io/v2/homebrew/core/libgpg-error/blobs/sha256:453688272ae89f5f4b5a852ec1c2c31d3c2410abb95ca5039f5a0d4edfc4b64b"
+        },
+        "catalina": {
+          "url": "https://ghcr.io/v2/homebrew/core/libgpg-error/blobs/sha256:bb8090fbf1399ed80904df570978a16b72af1b300c17f68493b602606e90d516"
+        },
+        "mojave": {
+          "url": "https://ghcr.io/v2/homebrew/core/libgpg-error/blobs/sha256:ef3446809a6b3d9da0f5d4a45b9d2c21a7bf4549d14cc785843f4f969f13ea39"
+        }
       }
     },
     {
-      "arm64_big_sur": {
-        "url": "https://ghcr.io/v2/homebrew/core/libgcrypt/blobs/sha256:6ff63025955ee85e6ff10b955f32b1c583439860ad72da5d88acc60b1c9ecc73"
-      },
-      "big_sur": {
-        "url": "https://ghcr.io/v2/homebrew/core/libgcrypt/blobs/sha256:1848ca1e79f8c4315ba761eb4ad1022d237d6701d47a207130b09093d99f24ef"
-      },
-      "catalina": {
-        "url": "https://ghcr.io/v2/homebrew/core/libgcrypt/blobs/sha256:91ec702c7907c1ddd20998ff35299a63ac6108cb4f9a76df1c368a4c49da4a90"
-      },
-      "mojave": {
-        "url": "https://ghcr.io/v2/homebrew/core/libgcrypt/blobs/sha256:6a8fa532b2c12d89f2becc1a84e9b5d07fef25a080a607f2d7b341eea5e6081b"
+      "name": "libgcrypt",
+      "pkg_version": "1.9.3",
+      "rebuild": 1,
+      "bottles": {
+        "arm64_big_sur": {
+          "url": "https://ghcr.io/v2/homebrew/core/libgcrypt/blobs/sha256:6ff63025955ee85e6ff10b955f32b1c583439860ad72da5d88acc60b1c9ecc73"
+        },
+        "big_sur": {
+          "url": "https://ghcr.io/v2/homebrew/core/libgcrypt/blobs/sha256:1848ca1e79f8c4315ba761eb4ad1022d237d6701d47a207130b09093d99f24ef"
+        },
+        "catalina": {
+          "url": "https://ghcr.io/v2/homebrew/core/libgcrypt/blobs/sha256:91ec702c7907c1ddd20998ff35299a63ac6108cb4f9a76df1c368a4c49da4a90"
+        },
+        "mojave": {
+          "url": "https://ghcr.io/v2/homebrew/core/libgcrypt/blobs/sha256:6a8fa532b2c12d89f2becc1a84e9b5d07fef25a080a607f2d7b341eea5e6081b"
+        }
       }
     }
   ]
