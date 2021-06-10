@@ -1,6 +1,6 @@
 {
-  "name": "topgrade",
-  "full_name": "topgrade",
+  "name": "sqlbench",
+  "full_name": "sqlbench",
   "tap": "homebrew/core",
   "oldname": null,
   "aliases": [
@@ -9,17 +9,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Upgrade all the things",
-  "license": "GPL-3.0-or-later",
-  "homepage": "https://github.com/r-darwish/topgrade",
+  "desc": "Measures and compares the execution time of one or more SQL queries",
+  "license": "MIT",
+  "homepage": "https://github.com/felixge/sqlbench",
   "versions": {
-    "stable": "7.0.1",
-    "head": null,
+    "stable": "1.1.0",
+    "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/r-darwish/topgrade/archive/v7.0.1.tar.gz",
+      "url": "https://github.com/felixge/sqlbench/archive/v1.1.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,23 +33,23 @@
       "files": {
         "arm64_big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/topgrade/blobs/sha256:5fbcaf579aa1f3b26fec2fd26b4921610c97a26c787f1140a6842e9c740bebab",
-          "sha256": "5fbcaf579aa1f3b26fec2fd26b4921610c97a26c787f1140a6842e9c740bebab"
+          "url": "https://ghcr.io/v2/linuxbrew/core/sqlbench/blobs/sha256:8373986acd8ee9e32df964c5bff6b365f29afa06fa256789017112d9b07ffcf2",
+          "sha256": "8373986acd8ee9e32df964c5bff6b365f29afa06fa256789017112d9b07ffcf2"
         },
         "big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/topgrade/blobs/sha256:9a4220a5a6d3623900ec1f40c779700f85b7f64f60f261adb9e5618b8a0bf799",
-          "sha256": "9a4220a5a6d3623900ec1f40c779700f85b7f64f60f261adb9e5618b8a0bf799"
+          "url": "https://ghcr.io/v2/linuxbrew/core/sqlbench/blobs/sha256:9a74a774e1c5c5512b9230713af78f3694d38f237241817740c8f244febe8e09",
+          "sha256": "9a74a774e1c5c5512b9230713af78f3694d38f237241817740c8f244febe8e09"
         },
         "catalina": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/topgrade/blobs/sha256:e8d0ca4a5deec0f9b784dd5d448617acd1da26d02ebb91d665cb91a070c35063",
-          "sha256": "e8d0ca4a5deec0f9b784dd5d448617acd1da26d02ebb91d665cb91a070c35063"
+          "url": "https://ghcr.io/v2/linuxbrew/core/sqlbench/blobs/sha256:a138dbb8bf3fa6293e51b49e91e35078c8c2d7dc399c70a61705f047b519a8f1",
+          "sha256": "a138dbb8bf3fa6293e51b49e91e35078c8c2d7dc399c70a61705f047b519a8f1"
         },
         "mojave": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/topgrade/blobs/sha256:6eea95176cefa5c10f63d509e43c708f15ee03cda4b16fcfc59e746bf7e35b2b",
-          "sha256": "6eea95176cefa5c10f63d509e43c708f15ee03cda4b16fcfc59e746bf7e35b2b"
+          "url": "https://ghcr.io/v2/linuxbrew/core/sqlbench/blobs/sha256:382ff90c210126e6803b47d1b267761d592b1d9898f6804730beb26df80af917",
+          "sha256": "382ff90c210126e6803b47d1b267761d592b1d9898f6804730beb26df80af917"
         }
       }
     }
@@ -60,7 +60,7 @@
 
   ],
   "build_dependencies": [
-    "rust"
+    "go"
   ],
   "dependencies": [
 
