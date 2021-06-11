@@ -1,6 +1,6 @@
 {
-  "name": "docfx",
-  "full_name": "docfx",
+  "name": "elfutils",
+  "full_name": "elfutils",
   "tap": "homebrew/core",
   "oldname": null,
   "aliases": [
@@ -9,17 +9,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Tools for building and publishing API documentation for .NET projects",
-  "license": "MIT",
-  "homepage": "https://dotnet.github.io/docfx/",
+  "desc": "Libraries and utilities for handling ELF objects",
+  "license": "GPL-2.0-or-later and GPL-3.0-or-later and LGPL-2.0-only",
+  "homepage": "https://fedorahosted.org/elfutils/",
   "versions": {
-    "stable": "2.58",
+    "stable": "0.185",
     "head": null,
-    "bottle": true
+    "bottle": false
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/dotnet/docfx/releases/download/v2.58/docfx.zip",
+      "url": "https://sourceware.org/elfutils/ftp/0.185/elfutils-0.185.tar.bz2",
       "tag": null,
       "revision": null
     }
@@ -27,17 +27,6 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
-    "stable": {
-      "rebuild": 0,
-      "root_url": "https://ghcr.io/v2/homebrew/core",
-      "files": {
-        "all": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/docfx/blobs/sha256:5dc40fb94b51e7761185ce0e078120877d94286282147100373b89484aac7241",
-          "sha256": "5dc40fb94b51e7761185ce0e078120877d94286282147100373b89484aac7241"
-        }
-      }
-    }
   },
   "keg_only": false,
   "bottle_disabled": false,
@@ -45,10 +34,12 @@
 
   ],
   "build_dependencies": [
-
+    "m4"
   ],
   "dependencies": [
-    "mono"
+    "bzip2",
+    "xz",
+    "zlib"
   ],
   "recommended_dependencies": [
 
@@ -61,17 +52,17 @@
   ],
   "requirements": [
     {
-      "name": "arch",
+      "name": "linux",
       "cask": null,
       "download": null,
-      "version": "x86_64",
+      "version": null,
       "contexts": [
 
       ]
     }
   ],
   "conflicts_with": [
-
+    "libelf"
   ],
   "caveats": null,
   "installed": [
