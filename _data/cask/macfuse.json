@@ -25,7 +25,7 @@
     "Extras/macFUSE 4.1.2.pkg (Pkg)",
     "postflight (Postflight Block)"
   ],
-  "caveats": "You must reboot for the installation of macfuse to take effect.\n",
+  "caveats": "macfuse requires a kernel extension to work.\nIf the installation fails, retry after you enable it in:\n  System Preferences → Security & Privacy → General\n\nFor more information, refer to vendor documentation or this Apple Technical Note:\n  https://developer.apple.com/library/content/technotes/tn2459/_index.html\n",
   "depends_on": {
     "macos": {
       ">=": [
@@ -33,7 +33,11 @@
       ]
     }
   },
-  "conflicts_with": null,
+  "conflicts_with": {
+    "cask": [
+      "macfuse-dev"
+    ]
+  },
   "container": null,
   "auto_updates": null
 }
