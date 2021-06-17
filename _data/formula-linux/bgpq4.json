@@ -1,6 +1,6 @@
 {
-  "name": "newrelic-cli",
-  "full_name": "newrelic-cli",
+  "name": "bgpq4",
+  "full_name": "bgpq4",
   "tap": "homebrew/core",
   "oldname": null,
   "aliases": [
@@ -9,17 +9,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Command-line interface for New Relic",
-  "license": "Apache-2.0",
-  "homepage": "https://github.com/newrelic/newrelic-cli",
+  "desc": "BGP filtering automation for Cisco, Juniper, BIRD and OpenBGPD routers",
+  "license": "BSD-2-Clause",
+  "homepage": "https://github.com/bgp/bgpq4",
   "versions": {
-    "stable": "0.28.8",
+    "stable": "0.0.7",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/newrelic/newrelic-cli/archive/v0.28.8.tar.gz",
+      "url": "https://github.com/bgp/bgpq4/archive/refs/tags/0.0.7.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,23 +33,23 @@
       "files": {
         "arm64_big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/newrelic-cli/blobs/sha256:585729dcff576ddf1d6aa3b42c03e6fe7632db8a6e490d2a5310566c90ea11c6",
-          "sha256": "585729dcff576ddf1d6aa3b42c03e6fe7632db8a6e490d2a5310566c90ea11c6"
+          "url": "https://ghcr.io/v2/linuxbrew/core/bgpq4/blobs/sha256:3a5b6d4d65725eea1d40ed0192633d2265eb9011c5e7df3f3d2cfc33b2cb673c",
+          "sha256": "3a5b6d4d65725eea1d40ed0192633d2265eb9011c5e7df3f3d2cfc33b2cb673c"
         },
         "big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/newrelic-cli/blobs/sha256:b249a7be907199e4ec871d6e5e9742e6e379601c56bb8b62246414b52c98a4b6",
-          "sha256": "b249a7be907199e4ec871d6e5e9742e6e379601c56bb8b62246414b52c98a4b6"
+          "url": "https://ghcr.io/v2/linuxbrew/core/bgpq4/blobs/sha256:80d33aa9cb61cd994b2322d2709e7cdaa56887f0c92c8342f6eed501e78edd66",
+          "sha256": "80d33aa9cb61cd994b2322d2709e7cdaa56887f0c92c8342f6eed501e78edd66"
         },
         "catalina": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/newrelic-cli/blobs/sha256:b12501c1e3ba5c098b3eab86ff1cffe81fa7ca963b72302466a3b784d65bbc7f",
-          "sha256": "b12501c1e3ba5c098b3eab86ff1cffe81fa7ca963b72302466a3b784d65bbc7f"
+          "url": "https://ghcr.io/v2/linuxbrew/core/bgpq4/blobs/sha256:0e49b63edcd89b6eab9c979ae6e8da2f2ac30d0bc26242a1db2cf2d0233441ca",
+          "sha256": "0e49b63edcd89b6eab9c979ae6e8da2f2ac30d0bc26242a1db2cf2d0233441ca"
         },
         "mojave": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/newrelic-cli/blobs/sha256:40f1921fb1374a62e1e8a03fbb32e05cc53a77d53de35769302eb57cd7ac1668",
-          "sha256": "40f1921fb1374a62e1e8a03fbb32e05cc53a77d53de35769302eb57cd7ac1668"
+          "url": "https://ghcr.io/v2/linuxbrew/core/bgpq4/blobs/sha256:8644ec33178ee7e9b4b1293d77273c0ddcb11d6e4fa3aafb4e051af2dc4a5e07",
+          "sha256": "8644ec33178ee7e9b4b1293d77273c0ddcb11d6e4fa3aafb4e051af2dc4a5e07"
         }
       }
     }
@@ -60,7 +60,8 @@
 
   ],
   "build_dependencies": [
-    "go"
+    "autoconf",
+    "automake"
   ],
   "dependencies": [
 
