@@ -13,13 +13,13 @@
   "license": "LGPL-2.1-or-later",
   "homepage": "https://www.wildfly.org/",
   "versions": {
-    "stable": "23.0.2",
+    "stable": "24.0.0",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://download.jboss.org/wildfly/23.0.2.Final/wildfly-23.0.2.Final.tar.gz",
+      "url": "https://download.jboss.org/wildfly/24.0.0.Final/wildfly-24.0.0.Final.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -27,9 +27,35 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "arm64_big_sur": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/wildfly-as/blobs/sha256:325904b87bf110f9724a80bdbd90c3cc4cb838b50b7cc6fc7b4b1c6f97cc2d2e",
+          "sha256": "325904b87bf110f9724a80bdbd90c3cc4cb838b50b7cc6fc7b4b1c6f97cc2d2e"
+        },
+        "big_sur": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/wildfly-as/blobs/sha256:8229398830099182e0fc27356056d850e4f0be23722162d154be56687f8ea78c",
+          "sha256": "8229398830099182e0fc27356056d850e4f0be23722162d154be56687f8ea78c"
+        },
+        "catalina": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/wildfly-as/blobs/sha256:8229398830099182e0fc27356056d850e4f0be23722162d154be56687f8ea78c",
+          "sha256": "8229398830099182e0fc27356056d850e4f0be23722162d154be56687f8ea78c"
+        },
+        "mojave": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/wildfly-as/blobs/sha256:8229398830099182e0fc27356056d850e4f0be23722162d154be56687f8ea78c",
+          "sha256": "8229398830099182e0fc27356056d850e4f0be23722162d154be56687f8ea78c"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
@@ -54,7 +80,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "The home of WildFly Application Server 23.0.2 is:\n  $(brew --prefix)/opt/wildfly-as/libexec\nYou may want to add the following to your .bash_profile:\n  export JBOSS_HOME=$(brew --prefix)/opt/wildfly-as/libexec\n  export PATH=${PATH}:${JBOSS_HOME}/bin\n",
+  "caveats": "The home of WildFly Application Server 24.0.0 is:\n  $(brew --prefix)/opt/wildfly-as/libexec\nYou may want to add the following to your .bash_profile:\n  export JBOSS_HOME=$(brew --prefix)/opt/wildfly-as/libexec\n  export PATH=${PATH}:${JBOSS_HOME}/bin\n",
   "installed": [
 
   ],
