@@ -13,13 +13,13 @@
   "license": "GPL-3.0-or-later",
   "homepage": "https://neo4j.com/",
   "versions": {
-    "stable": "4.2.7",
+    "stable": "4.3.0",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://neo4j.com/artifact.php?name=neo4j-community-4.2.7-unix.tar.gz",
+      "url": "https://neo4j.com/artifact.php?name=neo4j-community-4.3.0-unix.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -27,9 +27,20 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "all": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/neo4j/blobs/sha256:30c352ee7c7d6e5030f7e3744ea257c9581da2f27c27c21abab7fd87fc7e5350",
+          "sha256": "30c352ee7c7d6e5030f7e3744ea257c9581da2f27c27c21abab7fd87fc7e5350"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
