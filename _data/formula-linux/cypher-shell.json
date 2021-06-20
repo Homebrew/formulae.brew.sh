@@ -13,23 +13,34 @@
   "license": "GPL-3.0",
   "homepage": "https://github.com/neo4j/cypher-shell",
   "versions": {
-    "stable": "4.1.3",
+    "stable": "4.2.2",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/neo4j/cypher-shell/releases/download/4.1.3/cypher-shell.zip",
+      "url": "https://github.com/neo4j/cypher-shell/releases/download/4.2.2/cypher-shell.zip",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 1,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/linuxbrew/core",
+      "files": {
+        "all": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/linuxbrew/core/cypher-shell/blobs/sha256:d0feb61b9ddf8a28c96f029727b1ce694fe6cfce030e9ba2be96da616c001bb9",
+          "sha256": "d0feb61b9ddf8a28c96f029727b1ce694fe6cfce030e9ba2be96da616c001bb9"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
@@ -37,7 +48,7 @@
 
   ],
   "dependencies": [
-    "openjdk@8"
+    "openjdk@11"
   ],
   "recommended_dependencies": [
 
