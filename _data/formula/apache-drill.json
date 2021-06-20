@@ -13,13 +13,13 @@
   "license": "Apache-2.0",
   "homepage": "https://drill.apache.org",
   "versions": {
-    "stable": "1.18.0",
+    "stable": "1.19.0",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://www.apache.org/dyn/closer.lua?path=drill/drill-1.18.0/apache-drill-1.18.0.tar.gz",
+      "url": "https://www.apache.org/dyn/closer.lua?path=drill/drill-1.19.0/apache-drill-1.19.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -27,9 +27,20 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "all": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/apache-drill/blobs/sha256:28861dd0b660caf226c095344b4d5bbfba86d35fb69d68ab589f968628f23c66",
+          "sha256": "28861dd0b660caf226c095344b4d5bbfba86d35fb69d68ab589f968628f23c66"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
@@ -37,7 +48,7 @@
 
   ],
   "dependencies": [
-    "openjdk@8"
+    "openjdk@11"
   ],
   "recommended_dependencies": [
 
