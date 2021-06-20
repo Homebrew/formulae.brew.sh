@@ -1,22 +1,69 @@
 {
-  "name": "sqlite-utils",
-  "pkg_version": "3.11",
+  "name": "soapyrtlsdr",
+  "pkg_version": "0.3.2",
   "rebuild": 0,
   "bottles": {
     "arm64_big_sur": {
-      "url": "https://ghcr.io/v2/homebrew/core/sqlite-utils/blobs/sha256:7e43d36183224241c126cf3b3e71814d7ba7346174d3d2bb7ef3ffdc0de11b55"
+      "url": "https://ghcr.io/v2/homebrew/core/soapyrtlsdr/blobs/sha256:b27ae49c166978a6a923ea9113f052a6c46c97bf47da4c2e19b5fb39935501f2"
     },
     "big_sur": {
-      "url": "https://ghcr.io/v2/homebrew/core/sqlite-utils/blobs/sha256:bd9357102ff7fcf07974de494e7d783e1eb4aa4839f2c7ca10a3921baba4b6b2"
+      "url": "https://ghcr.io/v2/homebrew/core/soapyrtlsdr/blobs/sha256:451a1decca95bdec28c0159088ccdb7d2d70067aebc7edc92da99967db51e2fa"
     },
     "catalina": {
-      "url": "https://ghcr.io/v2/homebrew/core/sqlite-utils/blobs/sha256:bd9357102ff7fcf07974de494e7d783e1eb4aa4839f2c7ca10a3921baba4b6b2"
+      "url": "https://ghcr.io/v2/homebrew/core/soapyrtlsdr/blobs/sha256:77e5df3c37bcda727cf6cb04dff66aa0f196dda6503b886faf4892540bfca035"
     },
     "mojave": {
-      "url": "https://ghcr.io/v2/homebrew/core/sqlite-utils/blobs/sha256:bd9357102ff7fcf07974de494e7d783e1eb4aa4839f2c7ca10a3921baba4b6b2"
+      "url": "https://ghcr.io/v2/homebrew/core/soapyrtlsdr/blobs/sha256:62c8dd85c71bc5e119f4706b0288606f1613e26adbdd88303ded2098448bae9a"
     }
   },
   "dependencies": [
+    {
+      "name": "libusb",
+      "pkg_version": "1.0.24",
+      "rebuild": 0,
+      "bottles": {
+        "arm64_big_sur": {
+          "url": "https://ghcr.io/v2/homebrew/core/libusb/blobs/sha256:1c40f64450705461a5373c3d54257e646d39914d44bffaf9d957bbe063db2129"
+        },
+        "big_sur": {
+          "url": "https://ghcr.io/v2/homebrew/core/libusb/blobs/sha256:74e0067e968ddbea31e070885ae86bc1db5c66fd157588e84576e653e62894c8"
+        },
+        "catalina": {
+          "url": "https://ghcr.io/v2/homebrew/core/libusb/blobs/sha256:034ae259f17afb5894860cdb1786fd6d391359e8d221c0f765eceed6210b60df"
+        },
+        "mojave": {
+          "url": "https://ghcr.io/v2/homebrew/core/libusb/blobs/sha256:1318e1155192bdaf7d159562849ee8f73cb0f59b0cb77c142f8be99056ba9d9e"
+        }
+      }
+    },
+    {
+      "name": "librtlsdr",
+      "pkg_version": "0.6.0",
+      "rebuild": 0,
+      "bottles": {
+        "arm64_big_sur": {
+          "url": "https://ghcr.io/v2/homebrew/core/librtlsdr/blobs/sha256:7b8ccea097dd346fcaec28c4fd3545bbffe2bf0ddcd735fa2fd5dd6920c117a0"
+        },
+        "big_sur": {
+          "url": "https://ghcr.io/v2/homebrew/core/librtlsdr/blobs/sha256:6bdf828e23854791779071bd32cd346d7cbc8d566738f63dd5c3185b91d11c73"
+        },
+        "catalina": {
+          "url": "https://ghcr.io/v2/homebrew/core/librtlsdr/blobs/sha256:8d09d3c7765995caed6f1e8fa26087e345d178c630b1ef2057fb8c34cdcddd7d"
+        },
+        "mojave": {
+          "url": "https://ghcr.io/v2/homebrew/core/librtlsdr/blobs/sha256:0e9b14804b722d9efc959940e40ebcef7bf716eb636f0bb0dc600770cb005531"
+        },
+        "high_sierra": {
+          "url": "https://ghcr.io/v2/homebrew/core/librtlsdr/blobs/sha256:71f28a8abd8e9e0245a61f841fcebcb7a179d952be786199bf21fae0edd11f6c"
+        },
+        "sierra": {
+          "url": "https://ghcr.io/v2/homebrew/core/librtlsdr/blobs/sha256:d1b83b24f32d4857205be289f7c632ee3bd77af802e3445d7565bb9ba9e4f3b1"
+        },
+        "el_capitan": {
+          "url": "https://ghcr.io/v2/homebrew/core/librtlsdr/blobs/sha256:f5196572498f20ff0ea38d4e7ceed95aea1199a558f29dd6aac5cec9db65ce33"
+        }
+      }
+    },
     {
       "name": "gdbm",
       "pkg_version": "1.19",
@@ -154,21 +201,21 @@
       }
     },
     {
-      "name": "python-tabulate",
-      "pkg_version": "0.8.9",
-      "rebuild": 1,
+      "name": "soapysdr",
+      "pkg_version": "0.8.0",
+      "rebuild": 0,
       "bottles": {
         "arm64_big_sur": {
-          "url": "https://ghcr.io/v2/homebrew/core/python-tabulate/blobs/sha256:2beca641f9753d21b695dd61d57f2557dee3231c78dad9d7e5c456554b792f44"
+          "url": "https://ghcr.io/v2/homebrew/core/soapysdr/blobs/sha256:d93fdc3756fd6036c4e429e48e29df9dae3ba201fe049814fbd56d420a8cd3db"
         },
         "big_sur": {
-          "url": "https://ghcr.io/v2/homebrew/core/python-tabulate/blobs/sha256:c6dc3b60616b7fc6d810a17471bdd2ca872224560a5283039eae5dd618b8c65d"
+          "url": "https://ghcr.io/v2/homebrew/core/soapysdr/blobs/sha256:3c548da2b3d9c65c3a57a96a7cf4c0750a897ed813b44cb3b1af9364803e38c8"
         },
         "catalina": {
-          "url": "https://ghcr.io/v2/homebrew/core/python-tabulate/blobs/sha256:9e8e0c24b82a80db0e474a1cbb4cfd4e8628513fc8d70dfe6dde0c49b197df17"
+          "url": "https://ghcr.io/v2/homebrew/core/soapysdr/blobs/sha256:87d3d2fd8d8b76cd01151395a9fa8c482db9508933c991cbdd29dcdf07ce5b68"
         },
         "mojave": {
-          "url": "https://ghcr.io/v2/homebrew/core/python-tabulate/blobs/sha256:3d9e98f92133a5c058618584b0178645eafb0230531fbef665d3ed2546f63f0f"
+          "url": "https://ghcr.io/v2/homebrew/core/soapysdr/blobs/sha256:fdb7072edfc170aa7aa5bff1411f6797701500968f318be6ea7b2bfc119198e2"
         }
       }
     }
