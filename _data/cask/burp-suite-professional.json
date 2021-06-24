@@ -1,0 +1,46 @@
+{
+  "token": "burp-suite-professional",
+  "full_token": "burp-suite-professional",
+  "tap": "homebrew/cask",
+  "name": [
+    "Burp Suite Professional"
+  ],
+  "desc": "Web security testing toolkit",
+  "homepage": "https://portswigger.net/burp/pro",
+  "url": "https://portswigger.net/burp/releases/download?product=pro&version=2021.6.2&type=MacOsx",
+  "appcast": null,
+  "version": "2021.6.2",
+  "installed": null,
+  "outdated": false,
+  "sha256": "189052fc3537a7a80bf71da1cbaf8cfb405a96f37e936f73bc6b0d8be3509362",
+  "artifacts": [
+    {
+      "delete": "/Applications/Burp Suite Professional.app",
+      "signal": {
+      }
+    },
+    {
+      "path": "Burp Suite Professional Installer.app/Contents/MacOS/JavaApplicationStub",
+      "args": {
+        "must_succeed": "true",
+        "sudo": "true",
+        "args": [
+          "-q"
+        ],
+        "print_stdout": "true"
+      }
+    },
+    "postflight (Postflight Block)",
+    {
+      "trash": "~/.BurpSuite",
+      "signal": {
+      }
+    }
+  ],
+  "caveats": null,
+  "depends_on": {
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": null
+}
