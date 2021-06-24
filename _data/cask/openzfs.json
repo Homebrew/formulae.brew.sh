@@ -5,41 +5,44 @@
   "name": [
     "OpenZFS on OS X"
   ],
-  "desc": "Open source port of OpenZFS",
+  "desc": "ZFS driver and utilities",
   "homepage": "https://openzfsonosx.org/",
-  "url": "https://openzfsonosx.org/w/images/6/6f/OpenZFS_on_OS_X_1.9.4.dmg",
+  "url": "https://openzfsonosx.org/forum/download/file.php?id=309",
   "appcast": null,
-  "version": "1.9.4,6f",
+  "version": "2.0.1,309",
   "installed": null,
   "outdated": false,
-  "sha256": "4dc027cec9cb2fcbf572c1dfe5b1a31f0e14d3f55f1b4f8787903f8332db838b",
+  "sha256": "ccdb70986d8f3786a96de0447c9cb55e3edcc455f4668af45e76fc8225810a1c",
   "artifacts": [
     "uninstall_preflight (Preflight Block)",
     {
-      "delete": "~/zfsuninstaller.*",
-      "launchctl": "org.openzfsonosx.zed",
-      "script": {
-        "executable": "$(brew --prefix)/Caskroom/openzfs/1.9.4,6f/Docs & Scripts/uninstall-openzfsonosx.sh",
-        "sudo": "true"
-      },
+      "pkgutil": "org.openzfsonosx.zfs",
+      "launchctl": [
+        "org.openzfsonosx.InvariantDisks",
+        "org.openzfsonosx.zconfigd",
+        "org.openzfsonosx.zed",
+        "org.openzfsonosx.zpool-import",
+        "org.openzfsonosx.zpool-import-all"
+      ],
       "signal": {
       }
     },
-    "OpenZFS on OS X 1.9.4 Catalina.pkg (Pkg)"
+    "OpenZFSonOsX-2.0.1-Catalina-10.15.pkg (Pkg)",
+    "postflight (Postflight Block)"
   ],
   "caveats": "openzfs requires a kernel extension to work.\nIf the installation fails, retry after you enable it in:\n  System Preferences → Security & Privacy → General\n\nFor more information, refer to vendor documentation or this Apple Technical Note:\n  https://developer.apple.com/library/content/technotes/tn2459/_index.html\n",
   "depends_on": {
     "macos": {
-      "==": [
-        "10.11",
-        "10.12",
-        "10.13",
-        "10.14",
-        "10.15"
+      ">=": [
+        "10.10"
       ]
     }
   },
-  "conflicts_with": null,
+  "conflicts_with": {
+    "cask": [
+      "openzfs-dev"
+    ]
+  },
   "container": null,
   "auto_updates": null
 }
