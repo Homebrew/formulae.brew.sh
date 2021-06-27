@@ -13,13 +13,13 @@
   "license": "BSD-3-Clause",
   "homepage": "https://www.idris-lang.org/",
   "versions": {
-    "stable": "0.3.0",
+    "stable": "0.4.0",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/idris-lang/Idris2/archive/v0.3.0.tar.gz",
+      "url": "https://github.com/idris-lang/Idris2/archive/v0.4.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,28 +28,23 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 2,
+      "rebuild": 0,
       "root_url": "https://ghcr.io/v2/linuxbrew/core",
       "files": {
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/linuxbrew/core/idris2/blobs/sha256:1e4218062d2a87d3853f8da8e599758e190f03be1d0604beab704be8c7371799",
-          "sha256": "1e4218062d2a87d3853f8da8e599758e190f03be1d0604beab704be8c7371799"
+          "url": "https://ghcr.io/v2/linuxbrew/core/idris2/blobs/sha256:e323eab293f27d82f14b3ab5e68023db2cbaca8d26b911d96a7c7d8971d44b53",
+          "sha256": "e323eab293f27d82f14b3ab5e68023db2cbaca8d26b911d96a7c7d8971d44b53"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/linuxbrew/core/idris2/blobs/sha256:5e16de326bedfd62125df1aba90c23a6dda787de249b87c7956c92723ab14e79",
-          "sha256": "5e16de326bedfd62125df1aba90c23a6dda787de249b87c7956c92723ab14e79"
+          "url": "https://ghcr.io/v2/linuxbrew/core/idris2/blobs/sha256:5919c36d63f78921d94062b46927e7dd6ae52ea6c5318b599e9522d28b1cc243",
+          "sha256": "5919c36d63f78921d94062b46927e7dd6ae52ea6c5318b599e9522d28b1cc243"
         },
         "mojave": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/linuxbrew/core/idris2/blobs/sha256:665843c6266b26615af0b5792684f53b217116c83aff310ff36f538e837f070f",
-          "sha256": "665843c6266b26615af0b5792684f53b217116c83aff310ff36f538e837f070f"
-        },
-        "x86_64_linux": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/idris2/blobs/sha256:0b915f207edf15658581b223b578d8ef45eb7d04e30f1483b0aeacea36734659",
-          "sha256": "0b915f207edf15658581b223b578d8ef45eb7d04e30f1483b0aeacea36734659"
+          "url": "https://ghcr.io/v2/linuxbrew/core/idris2/blobs/sha256:847646c54f71dea739dfb24e167c41d8a14c9c02e1f6d08fa639d5a468c6d4cf",
+          "sha256": "847646c54f71dea739dfb24e167c41d8a14c9c02e1f6d08fa639d5a468c6d4cf"
         }
       }
     }
@@ -60,7 +55,8 @@
 
   ],
   "build_dependencies": [
-
+    "gmp",
+    "zsh"
   ],
   "dependencies": [
     "chezscheme",
