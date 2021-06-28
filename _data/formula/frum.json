@@ -1,6 +1,6 @@
 {
-  "name": "newrelic-cli",
-  "full_name": "newrelic-cli",
+  "name": "frum",
+  "full_name": "frum",
   "tap": "homebrew/core",
   "oldname": null,
   "aliases": [
@@ -9,17 +9,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Command-line interface for New Relic",
-  "license": "Apache-2.0",
-  "homepage": "https://github.com/newrelic/newrelic-cli",
+  "desc": "Fast and modern Ruby version manager written in Rust",
+  "license": "MIT",
+  "homepage": "https://github.com/TaKO8Ki/frum/",
   "versions": {
-    "stable": "0.29.0",
+    "stable": "0.1.0",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/newrelic/newrelic-cli/archive/v0.29.0.tar.gz",
+      "url": "https://github.com/TaKO8Ki/frum/archive/v0.1.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,23 +33,23 @@
       "files": {
         "arm64_big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/newrelic-cli/blobs/sha256:dfa43d138b1cba98ae28d47f183fc97010a81db6aa7d69e3f4b353059aea4e56",
-          "sha256": "dfa43d138b1cba98ae28d47f183fc97010a81db6aa7d69e3f4b353059aea4e56"
+          "url": "https://ghcr.io/v2/homebrew/core/frum/blobs/sha256:6c504c4c04a3de5d20f765b7ebbb52b108a623fa4cda8a810e870dd12ee756d8",
+          "sha256": "6c504c4c04a3de5d20f765b7ebbb52b108a623fa4cda8a810e870dd12ee756d8"
         },
         "big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/newrelic-cli/blobs/sha256:cd82541eeea87b9a5ec92befc3ab4319d9f73bd79fbd4ae481f471761b23c48b",
-          "sha256": "cd82541eeea87b9a5ec92befc3ab4319d9f73bd79fbd4ae481f471761b23c48b"
+          "url": "https://ghcr.io/v2/homebrew/core/frum/blobs/sha256:96a6ceaa6e60dba09a0ab0440fb57cf9adccae016f62ad5cba90f7c885bcf38a",
+          "sha256": "96a6ceaa6e60dba09a0ab0440fb57cf9adccae016f62ad5cba90f7c885bcf38a"
         },
         "catalina": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/newrelic-cli/blobs/sha256:70a308f8a3f40f4a5fea53a848f61dc3ee32742b0d87ea0713b7e7c61d17c3a7",
-          "sha256": "70a308f8a3f40f4a5fea53a848f61dc3ee32742b0d87ea0713b7e7c61d17c3a7"
+          "url": "https://ghcr.io/v2/homebrew/core/frum/blobs/sha256:d8881e709692489994009e29f63584a45fe7a2db6f2a26655438c904db1578ce",
+          "sha256": "d8881e709692489994009e29f63584a45fe7a2db6f2a26655438c904db1578ce"
         },
         "mojave": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/newrelic-cli/blobs/sha256:70bee4afe4bb06169b4926992eba45d2dc76d84feaf66730b261439cb62b2bd1",
-          "sha256": "70bee4afe4bb06169b4926992eba45d2dc76d84feaf66730b261439cb62b2bd1"
+          "url": "https://ghcr.io/v2/homebrew/core/frum/blobs/sha256:8d0206951f833358562a04282c8bc58e1e9e5dce2783099c4b62e60dfda822fa",
+          "sha256": "8d0206951f833358562a04282c8bc58e1e9e5dce2783099c4b62e60dfda822fa"
         }
       }
     }
@@ -60,7 +60,7 @@
 
   ],
   "build_dependencies": [
-    "go"
+    "rust"
   ],
   "dependencies": [
 
@@ -72,7 +72,7 @@
 
   ],
   "uses_from_macos": [
-
+    "libiconv"
   ],
   "requirements": [
 
