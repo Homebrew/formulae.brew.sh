@@ -1,6 +1,6 @@
 {
-  "name": "hugo",
-  "full_name": "hugo",
+  "name": "s4cmd",
+  "full_name": "s4cmd",
   "tap": "homebrew/core",
   "oldname": null,
   "aliases": [
@@ -9,17 +9,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Configurable static site generator",
+  "desc": "Super S3 command-line tool",
   "license": "Apache-2.0",
-  "homepage": "https://gohugo.io/",
+  "homepage": "https://github.com/bloomreach/s4cmd",
   "versions": {
-    "stable": "0.84.4",
+    "stable": "2.1.0",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/gohugoio/hugo/archive/v0.84.4.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/42/b4/0061f4930958cd790098738659c1c39f8feaf688e698142435eedaa4ae34/s4cmd-2.1.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,23 +33,23 @@
       "files": {
         "arm64_big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/hugo/blobs/sha256:6a7d887fecf955d0eff91ef0772dbc2a0d35adb66263e8b8bd02df40206c6f6e",
-          "sha256": "6a7d887fecf955d0eff91ef0772dbc2a0d35adb66263e8b8bd02df40206c6f6e"
+          "url": "https://ghcr.io/v2/linuxbrew/core/s4cmd/blobs/sha256:f74b744af2e66f08ed24a849997fddf69f335833ae4e1491051ab2965f620677",
+          "sha256": "f74b744af2e66f08ed24a849997fddf69f335833ae4e1491051ab2965f620677"
         },
         "big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/hugo/blobs/sha256:89c2f6447bc3f38c26e02b1edc6a1cc2b1ddebd309168cd6ccd93bd3768644d3",
-          "sha256": "89c2f6447bc3f38c26e02b1edc6a1cc2b1ddebd309168cd6ccd93bd3768644d3"
+          "url": "https://ghcr.io/v2/linuxbrew/core/s4cmd/blobs/sha256:d53e697f8e5deb40ebb6bec040e02557cdc9789939fcd1bd202f6cac299aee62",
+          "sha256": "d53e697f8e5deb40ebb6bec040e02557cdc9789939fcd1bd202f6cac299aee62"
         },
         "catalina": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/hugo/blobs/sha256:55c2d8f6c49862c3483b2a971410f566ab74a0ea0d1549d70eb85b888f9bb4b8",
-          "sha256": "55c2d8f6c49862c3483b2a971410f566ab74a0ea0d1549d70eb85b888f9bb4b8"
+          "url": "https://ghcr.io/v2/linuxbrew/core/s4cmd/blobs/sha256:f381fd7d18bf02b9310987a7c6bab7e856648328764ea339700be2c5ff740a8c",
+          "sha256": "f381fd7d18bf02b9310987a7c6bab7e856648328764ea339700be2c5ff740a8c"
         },
         "mojave": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/hugo/blobs/sha256:460d4c128c8b74e8db1bbee669a44b6ab2d115094672247bae70d4eccd64d595",
-          "sha256": "460d4c128c8b74e8db1bbee669a44b6ab2d115094672247bae70d4eccd64d595"
+          "url": "https://ghcr.io/v2/linuxbrew/core/s4cmd/blobs/sha256:9bdd1cc24f552c01e5cdd0258cbfc64c7d585dcc3972efc345d127ea72a65e23",
+          "sha256": "9bdd1cc24f552c01e5cdd0258cbfc64c7d585dcc3972efc345d127ea72a65e23"
         }
       }
     }
@@ -60,10 +60,11 @@
 
   ],
   "build_dependencies": [
-    "go"
+
   ],
   "dependencies": [
-
+    "python@3.9",
+    "six"
   ],
   "recommended_dependencies": [
 
