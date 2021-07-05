@@ -50,6 +50,11 @@
           "cellar": "/usr/local/Cellar",
           "url": "https://ghcr.io/v2/homebrew/core/groff/blobs/sha256:4fed5ee8032eb7957bd964b0eb873f8954a4d427f0c602284992daca52e7cb6d",
           "sha256": "4fed5ee8032eb7957bd964b0eb873f8954a4d427f0c602284992daca52e7cb6d"
+        },
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/groff/blobs/sha256:6c0636f4e166293501c0d689d78313c1f0db97daa9655926c35075db216095d5",
+          "sha256": "6c0636f4e166293501c0d689d78313c1f0db97daa9655926c35075db216095d5"
         }
       }
     }
@@ -75,7 +80,14 @@
 
   ],
   "uses_from_macos": [
-    "libiconv",
+    [
+      "bison",
+      "build"
+    ],
+    [
+      "texinfo",
+      "build"
+    ],
     "perl"
   ],
   "requirements": [
