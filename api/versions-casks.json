@@ -1,0 +1,11 @@
+---
+---
+{
+{%- assign sorted_casks = site.data.cask | sort -%}
+{% for cask in sorted_casks %}
+  "{{ cask[1].token }}":{"version":"{{ cask[1].version }}"}
+  {%- unless forloop.last -%}
+  ,
+  {%- endunless -%}
+{% endfor %}
+}
