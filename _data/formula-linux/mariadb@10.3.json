@@ -15,13 +15,13 @@
   "license": "GPL-2.0-only",
   "homepage": "https://mariadb.org/",
   "versions": {
-    "stable": "10.3.28",
+    "stable": "10.3.30",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://downloads.mariadb.org/f/mariadb-10.3.28/source/mariadb-10.3.28.tar.gz",
+      "url": "https://downloads.mariadb.org/f/mariadb-10.3.30/source/mariadb-10.3.30.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -35,18 +35,18 @@
       "files": {
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/linuxbrew/core/mariadb/10.3/blobs/sha256:8a0c8aa99124536d89771c180d9826f6936878377f2826a08ed3a61a131c4ec8",
-          "sha256": "8a0c8aa99124536d89771c180d9826f6936878377f2826a08ed3a61a131c4ec8"
+          "url": "https://ghcr.io/v2/linuxbrew/core/mariadb/10.3/blobs/sha256:e073623a10dfffb50e08c27dbbde4af8ac1f8adf93cce25f45ed73f36c4b0530",
+          "sha256": "e073623a10dfffb50e08c27dbbde4af8ac1f8adf93cce25f45ed73f36c4b0530"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/linuxbrew/core/mariadb/10.3/blobs/sha256:26baf487ebd0277d313655907bbe344fec667540ad17b5ca9b988ae52b3bcd39",
-          "sha256": "26baf487ebd0277d313655907bbe344fec667540ad17b5ca9b988ae52b3bcd39"
+          "url": "https://ghcr.io/v2/linuxbrew/core/mariadb/10.3/blobs/sha256:da0cb25a837bc6f0b05809ff76effdd61b49732631bc157b41834ede7e582d00",
+          "sha256": "da0cb25a837bc6f0b05809ff76effdd61b49732631bc157b41834ede7e582d00"
         },
         "mojave": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/linuxbrew/core/mariadb/10.3/blobs/sha256:bec90c0b546b96a19674bdd451b09094d2d53fcaba4e7f3092b4906ee38026cf",
-          "sha256": "bec90c0b546b96a19674bdd451b09094d2d53fcaba4e7f3092b4906ee38026cf"
+          "url": "https://ghcr.io/v2/linuxbrew/core/mariadb/10.3/blobs/sha256:91a5b657a10ff09d250b8ad17c78571e25e707ee29a1f11dc298b8d30b19f659",
+          "sha256": "91a5b657a10ff09d250b8ad17c78571e25e707ee29a1f11dc298b8d30b19f659"
         }
       }
     }
@@ -57,16 +57,18 @@
 
   ],
   "build_dependencies": [
+    "bison",
     "cmake",
-    "pkg-config",
-    "bison"
+    "pkg-config"
   ],
   "dependencies": [
     "groonga",
     "openssl@1.1",
+    "pcre2",
     "bzip2",
     "ncurses",
     "zlib",
+    "gcc",
     "linux-pam"
   ],
   "recommended_dependencies": [
