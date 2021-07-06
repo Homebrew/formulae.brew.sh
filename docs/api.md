@@ -130,6 +130,35 @@ GET https://formulae.brew.sh/api/cask.json
 ]
 ```
 
+### List the latest versions for all {{ site.taps.core.repo }} or {{ site.taps.cask.repo }} formulae
+List the latest version information for each formula or cask in the given tap. The result is a single JSON object with formula/cask names as keys. The values are JSON objects containing `version` and, for formulae, `revision` keys.
+
+```
+GET https://formulae.brew.sh/api/versions-formulae.json
+GET https://formulae.brew.sh/api/versions-linux.json
+GET https://formulae.brew.sh/api/versions-casks.json
+```
+
+#### [Formulae Response](https://formulae.brew.sh/api/versions-formulae.json)
+```json
+{
+  ...
+  "wget":{"version":"1.21.1","revision":0},
+  ...
+  "zsh":{"version":"5.8","revision":1},
+  ...
+}
+```
+
+#### [Casks Response](https://formulae.brew.sh/api/versions-casks.json)
+```json
+{
+  ...
+  "docker":{"version":"3.5.1,66090"},
+  ...
+}
+```
+
 ### Get formula metadata for a {{ site.taps.core.repo }} formula
 Get the `brew info --json --formula <formula>` output for a single, current {{ site.taps.core.fullname }} or {{ site.taps.linux.fullname }} formula with extra keys containing analytics data and generation date.
 
