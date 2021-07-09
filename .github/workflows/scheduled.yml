@@ -6,6 +6,11 @@ on:
   schedule:
     # Once every hour
     - cron: "0 * * * *"
+
+concurrency:
+  group: scheduled
+  cancel-in-progress: true
+
 jobs:
   generate:
     if: startsWith( github.repository, 'Homebrew/' )
