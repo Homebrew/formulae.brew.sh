@@ -1,13 +1,12 @@
 {
-  "name": "mariadb",
-  "full_name": "mariadb",
+  "name": "mariadb@10.5",
+  "full_name": "mariadb@10.5",
   "tap": "homebrew/core",
   "oldname": null,
   "aliases": [
-    "mariadb@10.6"
+
   ],
   "versioned_formulae": [
-    "mariadb@10.5",
     "mariadb@10.4",
     "mariadb@10.3",
     "mariadb@10.2",
@@ -17,13 +16,13 @@
   "license": "GPL-2.0-only",
   "homepage": "https://mariadb.org/",
   "versions": {
-    "stable": "10.6.3",
+    "stable": "10.5.11",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://downloads.mariadb.com/MariaDB/mariadb-10.6.3/source/mariadb-10.6.3.tar.gz",
+      "url": "https://downloads.mariadb.com/MariaDB/mariadb-10.5.11/source/mariadb-10.5.11.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -37,28 +36,28 @@
       "files": {
         "arm64_big_sur": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/linuxbrew/core/mariadb/blobs/sha256:41fbb0bbd394de4750e1e9101a94f8a1827d59f0fbf27df76ccc0fd5eeab6da7",
-          "sha256": "41fbb0bbd394de4750e1e9101a94f8a1827d59f0fbf27df76ccc0fd5eeab6da7"
+          "url": "https://ghcr.io/v2/linuxbrew/core/mariadb/10.5/blobs/sha256:860b99cdb9a1c49452e98faa38edcce7c27e499c3802872cad3e701d7c2aa266",
+          "sha256": "860b99cdb9a1c49452e98faa38edcce7c27e499c3802872cad3e701d7c2aa266"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/linuxbrew/core/mariadb/blobs/sha256:84e53555d27789852d405f63f45e06afc4918c654ae996c3989c05b326cc75db",
-          "sha256": "84e53555d27789852d405f63f45e06afc4918c654ae996c3989c05b326cc75db"
+          "url": "https://ghcr.io/v2/linuxbrew/core/mariadb/10.5/blobs/sha256:331ea03fb2ba8e83003bcbd7b2bbaab58e7502b18e9780525533762f333d49a2",
+          "sha256": "331ea03fb2ba8e83003bcbd7b2bbaab58e7502b18e9780525533762f333d49a2"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/linuxbrew/core/mariadb/blobs/sha256:b9bba3532b154650e8c7e58e55c59a4cdda9918cd6b89840d0efa3f0533f2372",
-          "sha256": "b9bba3532b154650e8c7e58e55c59a4cdda9918cd6b89840d0efa3f0533f2372"
+          "url": "https://ghcr.io/v2/linuxbrew/core/mariadb/10.5/blobs/sha256:5db1bdff46cb07a979bc027edf55e9bbbb9a56f884931ffd48264c7bba2ccb46",
+          "sha256": "5db1bdff46cb07a979bc027edf55e9bbbb9a56f884931ffd48264c7bba2ccb46"
         },
         "mojave": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/linuxbrew/core/mariadb/blobs/sha256:824e0648cffd64e39f994bfd9392678d2c59c39d5f9c7b049b1deefb1cdb8166",
-          "sha256": "824e0648cffd64e39f994bfd9392678d2c59c39d5f9c7b049b1deefb1cdb8166"
+          "url": "https://ghcr.io/v2/linuxbrew/core/mariadb/10.5/blobs/sha256:c9c1cf5daec11db466928c9177bb4d661543bc2c250f046e32bfb3d9414f6da6",
+          "sha256": "c9c1cf5daec11db466928c9177bb4d661543bc2c250f046e32bfb3d9414f6da6"
         }
       }
     }
   },
-  "keg_only": false,
+  "keg_only": true,
   "bottle_disabled": false,
   "options": [
 
@@ -91,10 +90,7 @@
 
   ],
   "conflicts_with": [
-    "mysql",
-    "percona-server",
-    "mytop",
-    "mariadb-connector-c"
+
   ],
   "caveats": "A \"/etc/my.cnf\" from another install may interfere with a Homebrew-built\nserver starting up correctly.\n\nMySQL is configured to only allow connections from localhost by default\n",
   "installed": [
@@ -104,7 +100,7 @@
   "pinned": false,
   "outdated": false,
   "deprecated": false,
-  "deprecation_date": null,
+  "deprecation_date": "2025-06-01",
   "deprecation_reason": null,
   "disabled": false,
   "disable_date": null,
