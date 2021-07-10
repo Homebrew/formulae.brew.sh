@@ -13,20 +13,31 @@
   "license": "Apache-2.0",
   "homepage": "https://github.com/awslabs/djl/tree/master/serving",
   "versions": {
-    "stable": "0.11.0",
+    "stable": "0.12.0",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://djl-ai.s3.amazonaws.com/publish/djl-serving/serving-0.11.0.tar",
+      "url": "https://djl-ai.s3.amazonaws.com/publish/djl-serving/serving-0.12.0.tar",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/linuxbrew/core",
+      "files": {
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/linuxbrew/core/djl-serving/blobs/sha256:743b1ae2144c759fd91f41ee853060daff3cc7f54ea5cc8e43489ed1eb251336",
+          "sha256": "743b1ae2144c759fd91f41ee853060daff3cc7f54ea5cc8e43489ed1eb251336"
+        }
+      }
+    }
   },
   "keg_only": false,
   "bottle_disabled": false,
