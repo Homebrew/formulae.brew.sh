@@ -10,12 +10,12 @@
 
   ],
   "desc": "FUSE driver to read/write Windows' BitLocker-ed volumes",
-  "license": "GPL-2.0",
+  "license": "GPL-2.0-only",
   "homepage": "https://github.com/Aorimn/dislocker",
   "versions": {
     "stable": "0.7.1",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
@@ -27,6 +27,17 @@
   "revision": 5,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 1,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/dislocker/blobs/sha256:b1784d64cd680875fef331fcf995c64399e0bb96f7f6ab5dd721c535c235f9b6",
+          "sha256": "b1784d64cd680875fef331fcf995c64399e0bb96f7f6ab5dd721c535c235f9b6"
+        }
+      }
+    }
   },
   "keg_only": false,
   "bottle_disabled": false,
