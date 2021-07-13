@@ -10,7 +10,7 @@
 
   ],
   "desc": "Quick-growing roguelike game with easy ADOM-like UI",
-  "license": "GPL-2.0",
+  "license": "GPL-2.0-or-later",
   "homepage": "https://avanor.sourceforge.io/",
   "versions": {
     "stable": "0.5.8",
@@ -70,6 +70,11 @@
           "cellar": "/usr/local/Cellar",
           "url": "https://ghcr.io/v2/homebrew/core/avanor/blobs/sha256:1c12fd7f45993d18b481d3317594083e4bb88f0eecf100d4b5dd4a927c866200",
           "sha256": "1c12fd7f45993d18b481d3317594083e4bb88f0eecf100d4b5dd4a927c866200"
+        },
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/avanor/blobs/sha256:99ac78a20ffc5cccb1a0b5617c9977501a41edb8823663ee4656d177fad7ed09",
+          "sha256": "99ac78a20ffc5cccb1a0b5617c9977501a41edb8823663ee4656d177fad7ed09"
         }
       }
     }
@@ -92,7 +97,11 @@
 
   ],
   "uses_from_macos": [
-
+    [
+      "expect",
+      "test"
+    ],
+    "ncurses"
   ],
   "requirements": [
 
