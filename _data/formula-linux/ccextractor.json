@@ -10,7 +10,7 @@
 
   ],
   "desc": "Free, GPL licensed closed caption tool",
-  "license": "GPL-2.0",
+  "license": "GPL-2.0-only",
   "homepage": "https://www.ccextractor.org/",
   "versions": {
     "stable": "0.89",
@@ -24,27 +24,32 @@
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/linuxbrew/core",
       "files": {
+        "arm64_big_sur": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/linuxbrew/core/ccextractor/blobs/sha256:a7e9e2088a8fa3602c973e2813974815459efb7cc9a1fd9c73c750e237eeae9b",
+          "sha256": "a7e9e2088a8fa3602c973e2813974815459efb7cc9a1fd9c73c750e237eeae9b"
+        },
         "big_sur": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/ccextractor/blobs/sha256:85a8a4d0137ec1f12e98ad39156d1ee95874b037d432c9620d65f695dcbb3daa",
-          "sha256": "85a8a4d0137ec1f12e98ad39156d1ee95874b037d432c9620d65f695dcbb3daa"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/linuxbrew/core/ccextractor/blobs/sha256:1d4cd6930431fd7ce56192bb53bb46d14a01867ecdafc1cb37f6e8dbda373e2e",
+          "sha256": "1d4cd6930431fd7ce56192bb53bb46d14a01867ecdafc1cb37f6e8dbda373e2e"
         },
         "catalina": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/ccextractor/blobs/sha256:22e12e434b2a59c0ee63db41e876add7ab686d7e015c7319bf3cecd01ae2de1e",
-          "sha256": "22e12e434b2a59c0ee63db41e876add7ab686d7e015c7319bf3cecd01ae2de1e"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/linuxbrew/core/ccextractor/blobs/sha256:110a63c1f4a0ac8749418f2158aa15c4e3bbace5ee4820506d4c7b4e489e9a30",
+          "sha256": "110a63c1f4a0ac8749418f2158aa15c4e3bbace5ee4820506d4c7b4e489e9a30"
         },
         "mojave": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/ccextractor/blobs/sha256:f389af83990016793f29329e7de8ca7d58c09a25c7faff62bc61d0100d9ee425",
-          "sha256": "f389af83990016793f29329e7de8ca7d58c09a25c7faff62bc61d0100d9ee425"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/linuxbrew/core/ccextractor/blobs/sha256:0c3e69d834f8e4abfcab5f5c0069534707634ebae7d4bc356c8ac10207358762",
+          "sha256": "0c3e69d834f8e4abfcab5f5c0069534707634ebae7d4bc356c8ac10207358762"
         }
       }
     }
@@ -55,10 +60,16 @@
 
   ],
   "build_dependencies": [
-
+    "pkg-config"
   ],
   "dependencies": [
-
+    "freetype",
+    "gpac",
+    "leptonica",
+    "libpng",
+    "protobuf-c",
+    "tesseract",
+    "utf8proc"
   ],
   "recommended_dependencies": [
 
