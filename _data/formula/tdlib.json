@@ -50,6 +50,11 @@
           "cellar": ":any",
           "url": "https://ghcr.io/v2/homebrew/core/tdlib/blobs/sha256:007b08aced0aa457830daaade4299c979ee97db6b420bdfe5d0e6bdd416925c6",
           "sha256": "007b08aced0aa457830daaade4299c979ee97db6b420bdfe5d0e6bdd416925c6"
+        },
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/tdlib/blobs/sha256:b31b608f51cf0bf440570fe2eaf172a55816c378a8bfedc69e7625b55f2004b8",
+          "sha256": "b31b608f51cf0bf440570fe2eaf172a55816c378a8bfedc69e7625b55f2004b8"
         }
       }
     }
@@ -60,10 +65,10 @@
 
   ],
   "build_dependencies": [
-    "cmake"
+    "cmake",
+    "gperf"
   ],
   "dependencies": [
-    "gperf",
     "openssl@1.1",
     "readline"
   ],
@@ -74,7 +79,7 @@
 
   ],
   "uses_from_macos": [
-
+    "zlib"
   ],
   "requirements": [
 
