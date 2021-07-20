@@ -15,7 +15,7 @@
   "versions": {
     "stable": "0.7.1",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
@@ -24,9 +24,20 @@
       "revision": null
     }
   },
-  "revision": 5,
+  "revision": 6,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 1,
+      "root_url": "https://ghcr.io/v2/linuxbrew/core",
+      "files": {
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/linuxbrew/core/dislocker/blobs/sha256:a6e436226f4a3da0197b86d76779c2afee93e2e984848b5cf2e405bf7f191f7c",
+          "sha256": "a6e436226f4a3da0197b86d76779c2afee93e2e984848b5cf2e405bf7f191f7c"
+        }
+      }
+    }
   },
   "keg_only": false,
   "bottle_disabled": false,
@@ -37,7 +48,7 @@
     "cmake"
   ],
   "dependencies": [
-    "mbedtls",
+    "mbedtls@2",
     "libfuse@2"
   ],
   "recommended_dependencies": [
