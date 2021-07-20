@@ -10,7 +10,7 @@
 
   ],
   "desc": "Tools for manipulating EPROM load files",
-  "license": null,
+  "license": "GPL-3.0-or-later and LGPL-3.0-or-later",
   "homepage": "https://srecord.sourceforge.io/",
   "versions": {
     "stable": "1.64",
@@ -70,6 +70,11 @@
           "cellar": ":any",
           "url": "https://ghcr.io/v2/homebrew/core/srecord/blobs/sha256:c3c29b357c44bc3da2dbb8f23a6d83aeb637aa374fe0564eb9454e5e6b53d54c",
           "sha256": "c3c29b357c44bc3da2dbb8f23a6d83aeb637aa374fe0564eb9454e5e6b53d54c"
+        },
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/srecord/blobs/sha256:2ccca42765c5c335dd26b2be5ad0a30b95d279e59958c89950d8cdbb5321816f",
+          "sha256": "2ccca42765c5c335dd26b2be5ad0a30b95d279e59958c89950d8cdbb5321816f"
         }
       }
     }
@@ -80,10 +85,10 @@
 
   ],
   "build_dependencies": [
+    "boost",
     "libtool"
   ],
   "dependencies": [
-    "boost",
     "libgcrypt"
   ],
   "recommended_dependencies": [
@@ -93,7 +98,10 @@
 
   ],
   "uses_from_macos": [
-
+    [
+      "groff",
+      "build"
+    ]
   ],
   "requirements": [
 
