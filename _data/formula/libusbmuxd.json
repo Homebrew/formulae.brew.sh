@@ -10,7 +10,7 @@
 
   ],
   "desc": "USB multiplexor library for iOS devices",
-  "license": "LGPL-2.1",
+  "license": "GPL-2.0-or-later and LGPL-2.1-or-later",
   "homepage": "https://www.libimobiledevice.org/",
   "versions": {
     "stable": "2.0.2",
@@ -55,6 +55,11 @@
           "cellar": ":any",
           "url": "https://ghcr.io/v2/homebrew/core/libusbmuxd/blobs/sha256:67c3d43cb2a1ebfd68fba1c9b51b419288fedefc93f101adeea1b5f6bdf1ad77",
           "sha256": "67c3d43cb2a1ebfd68fba1c9b51b419288fedefc93f101adeea1b5f6bdf1ad77"
+        },
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/libusbmuxd/blobs/sha256:b1f289531042024ef7fb1f87cad05f36a1c68ece14614266cf0564e32b3565ac",
+          "sha256": "b1f289531042024ef7fb1f87cad05f36a1c68ece14614266cf0564e32b3565ac"
         }
       }
     }
@@ -81,7 +86,10 @@
 
   ],
   "uses_from_macos": [
-
+    [
+      "netcat",
+      "test"
+    ]
   ],
   "requirements": [
 
