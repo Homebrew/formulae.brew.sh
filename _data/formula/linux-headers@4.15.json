@@ -1,25 +1,25 @@
 {
-  "name": "strace",
-  "full_name": "strace",
+  "name": "linux-headers@4.15",
+  "full_name": "linux-headers@4.15",
   "tap": "homebrew/core",
   "oldname": null,
   "aliases": [
 
   ],
   "versioned_formulae": [
-
+    "linux-headers@4.4"
   ],
-  "desc": "Diagnostic, instructional, and debugging tool for the Linux kernel",
-  "license": "LGPL-2.1-or-later",
-  "homepage": "https://strace.io/",
+  "desc": "Header files of the Linux kernel",
+  "license": "GPL-2.0-only",
+  "homepage": "https://kernel.org/",
   "versions": {
-    "stable": "5.13",
-    "head": "HEAD",
-    "bottle": true
+    "stable": "4.15.18",
+    "head": null,
+    "bottle": false
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/strace/strace/releases/download/v5.13/strace-5.13.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.15.18.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -27,19 +27,8 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
-    "stable": {
-      "rebuild": 0,
-      "root_url": "https://ghcr.io/v2/homebrew/core",
-      "files": {
-        "x86_64_linux": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/strace/blobs/sha256:ba1017ec6fd537dd5575312ec8ef777bd1293dc710efd1edaaa40bb1bd0084ea",
-          "sha256": "ba1017ec6fd537dd5575312ec8ef777bd1293dc710efd1edaaa40bb1bd0084ea"
-        }
-      }
-    }
   },
-  "keg_only": false,
+  "keg_only": true,
   "bottle_disabled": false,
   "options": [
 
@@ -48,7 +37,7 @@
 
   ],
   "dependencies": [
-    "linux-headers@4.4"
+
   ],
   "recommended_dependencies": [
 
