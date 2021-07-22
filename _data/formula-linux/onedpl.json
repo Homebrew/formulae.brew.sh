@@ -1,25 +1,25 @@
 {
-  "name": "phpunit",
-  "full_name": "phpunit",
+  "name": "onedpl",
+  "full_name": "onedpl",
   "tap": "homebrew/core",
-  "oldname": null,
+  "oldname": "parallelstl",
   "aliases": [
 
   ],
   "versioned_formulae": [
 
   ],
-  "desc": "Programmer-oriented testing framework for PHP",
-  "license": "BSD-3-Clause",
-  "homepage": "https://phpunit.de",
+  "desc": "C++ standard library algorithms with support for execution policies",
+  "license": "Apache-2.0 with LLVM-exception",
+  "homepage": "https://software.intel.com/content/www/us/en/develop/tools/oneapi/components/dpc-library.html",
   "versions": {
-    "stable": "9.5.7",
+    "stable": "2021.4.0",
     "head": null,
-    "bottle": true
+    "bottle": false
   },
   "urls": {
     "stable": {
-      "url": "https://phar.phpunit.de/phpunit-9.5.7.phar",
+      "url": "https://github.com/oneapi-src/oneDPL/archive/refs/tags/oneDPL-2021.4.0-release.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -27,17 +27,6 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
-    "stable": {
-      "rebuild": 0,
-      "root_url": "https://ghcr.io/v2/linuxbrew/core",
-      "files": {
-        "x86_64_linux": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/phpunit/blobs/sha256:07dc7f44553f38589f8d00ba251c975a0ef6c67423a429d048d338ec6fc39fca",
-          "sha256": "07dc7f44553f38589f8d00ba251c975a0ef6c67423a429d048d338ec6fc39fca"
-        }
-      }
-    }
   },
   "keg_only": false,
   "bottle_disabled": false,
@@ -45,10 +34,10 @@
 
   ],
   "build_dependencies": [
-
+    "cmake"
   ],
   "dependencies": [
-    "php"
+    "tbb"
   ],
   "recommended_dependencies": [
 
