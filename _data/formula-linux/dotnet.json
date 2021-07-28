@@ -13,15 +13,15 @@
   "license": "MIT",
   "homepage": "https://dotnet.microsoft.com/",
   "versions": {
-    "stable": "5.0.204",
+    "stable": "5.0.205",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
       "url": "https://github.com/dotnet/source-build.git",
-      "tag": "v5.0.204-SDK",
-      "revision": "a002cbfb6b9d903b59bd6acdef8022957538276d"
+      "tag": "v5.0.205-SDK",
+      "revision": "42ac4d6d5a1d36cc92c89d0e810fdd2f5ed109c6"
     }
   },
   "revision": 0,
@@ -33,18 +33,18 @@
       "files": {
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/linuxbrew/core/dotnet/blobs/sha256:614cf7d93f8028b3ef76d5c7a62eb715ee1220de555cd3d03b9f1f6d92766763",
-          "sha256": "614cf7d93f8028b3ef76d5c7a62eb715ee1220de555cd3d03b9f1f6d92766763"
+          "url": "https://ghcr.io/v2/linuxbrew/core/dotnet/blobs/sha256:506a88b54fd7728c722c7824055458df93c271d87298b81979257457646dec08",
+          "sha256": "506a88b54fd7728c722c7824055458df93c271d87298b81979257457646dec08"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/linuxbrew/core/dotnet/blobs/sha256:14539181400c8e2a729a13646a8315fe2983b069509bb9e177540f3730efd7e3",
-          "sha256": "14539181400c8e2a729a13646a8315fe2983b069509bb9e177540f3730efd7e3"
+          "url": "https://ghcr.io/v2/linuxbrew/core/dotnet/blobs/sha256:01b623ce85fb1e0bcf78de25193f3778956d62f601b233509999c1d08c1a4c57",
+          "sha256": "01b623ce85fb1e0bcf78de25193f3778956d62f601b233509999c1d08c1a4c57"
         },
         "mojave": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/linuxbrew/core/dotnet/blobs/sha256:c6249aa4a3c1a7db037fda9b7d7e40085dbbd2555dd195b03f2c767bc9381d90",
-          "sha256": "c6249aa4a3c1a7db037fda9b7d7e40085dbbd2555dd195b03f2c767bc9381d90"
+          "url": "https://ghcr.io/v2/linuxbrew/core/dotnet/blobs/sha256:6bc5fad76c9f9f3523c3a77d9a03f86ffd25d34c48f54a86b12ae075ab0bca7b",
+          "sha256": "6bc5fad76c9f9f3523c3a77d9a03f86ffd25d34c48f54a86b12ae075ab0bca7b"
         }
       }
     }
@@ -56,12 +56,17 @@
   ],
   "build_dependencies": [
     "cmake",
-    "pkg-config"
+    "pkg-config",
+    "llvm"
   ],
   "dependencies": [
     "curl",
     "icu4c",
-    "openssl@1.1"
+    "openssl@1.1",
+    "krb5",
+    "zlib",
+    "libunwind",
+    "lttng-ust"
   ],
   "recommended_dependencies": [
 
