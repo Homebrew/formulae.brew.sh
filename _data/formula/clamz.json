@@ -10,7 +10,7 @@
 
   ],
   "desc": "Download MP3 files from Amazon's music store",
-  "license": null,
+  "license": "GPL-3.0-or-later",
   "homepage": "https://code.google.com/archive/p/clamz/",
   "versions": {
     "stable": "0.5",
@@ -70,6 +70,11 @@
           "cellar": ":any",
           "url": "https://ghcr.io/v2/homebrew/core/clamz/blobs/sha256:e0ba09e61f28b4d224f20b0922277b849bff48ce8c7738e8d22fe1a514d56fe2",
           "sha256": "e0ba09e61f28b4d224f20b0922277b849bff48ce8c7738e8d22fe1a514d56fe2"
+        },
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/clamz/blobs/sha256:bedccbcf92f7884cf99615ea347345f035a6693e953b6ebf90e51695e4351c95",
+          "sha256": "bedccbcf92f7884cf99615ea347345f035a6693e953b6ebf90e51695e4351c95"
         }
       }
     }
@@ -83,7 +88,8 @@
     "pkg-config"
   ],
   "dependencies": [
-    "libgcrypt"
+    "libgcrypt",
+    "libgpg-error"
   ],
   "recommended_dependencies": [
 
@@ -92,7 +98,8 @@
 
   ],
   "uses_from_macos": [
-
+    "curl",
+    "expat"
   ],
   "requirements": [
 
