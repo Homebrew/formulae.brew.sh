@@ -48,26 +48,33 @@ GET https://formulae.brew.sh/api/cask.json
     "version_scheme": 0,
     "bottle": {
       "stable": {
-        "rebuild": 0,
-        "cellar": "/usr/local/Cellar",
-        "prefix": "/usr/local",
-        "root_url": "https://homebrew.bintray.com/bottles",
+        "rebuild": 1,
+        "root_url": "https://ghcr.io/v2/homebrew/core",
         "files": {
           "arm64_big_sur": {
-            "url": "https://homebrew.bintray.com/bottles/wget-1.21.1.arm64_big_sur.bottle.tar.gz",
-            "sha256": "e9034fc9062d5d28972135be031876672aff18fa945ce37e9c2ee1e2c4287f3a"
+            "cellar": "/opt/homebrew/Cellar",
+            "url": "https://ghcr.io/v2/homebrew/core/wget/blobs/sha256:ab03f58f6d9a4018b1b0bfd53e5b797fcd90b86b1d60b20948de499ec4d4c6b4",
+            "sha256": "ab03f58f6d9a4018b1b0bfd53e5b797fcd90b86b1d60b20948de499ec4d4c6b4"
           },
           "big_sur": {
-            "url": "https://homebrew.bintray.com/bottles/wget-1.21.1.big_sur.bottle.tar.gz",
-            "sha256": "e6ea2a50b8196206f7072360e713535bb16fb786c8b5fe23cab05757e0f67b13"
+            "cellar": "/usr/local/Cellar",
+            "url": "https://ghcr.io/v2/homebrew/core/wget/blobs/sha256:277577a3a30ff9bf60d0e4b819570ca356aade39a3a5973065e89b0ad4b752f3",
+            "sha256": "277577a3a30ff9bf60d0e4b819570ca356aade39a3a5973065e89b0ad4b752f3"
           },
           "catalina": {
-            "url": "https://homebrew.bintray.com/bottles/wget-1.21.1.catalina.bottle.tar.gz",
-            "sha256": "88116cb28d6b85e441d1bb9df0a1454b84f8b9d0e8817a5bee0f228acc59e75a"
+            "cellar": "/usr/local/Cellar",
+            "url": "https://ghcr.io/v2/homebrew/core/wget/blobs/sha256:261ea49956e98d62975c1706cb839c6411473a7ec50ae8101526010275fe70c0",
+            "sha256": "261ea49956e98d62975c1706cb839c6411473a7ec50ae8101526010275fe70c0"
           },
           "mojave": {
-            "url": "https://homebrew.bintray.com/bottles/wget-1.21.1.mojave.bottle.tar.gz",
-            "sha256": "ae4e6f1dc4ecaf2bbed7700e8d64cdc671bf9d6c085ba335f119861fd15956fe"
+            "cellar": "/usr/local/Cellar",
+            "url": "https://ghcr.io/v2/homebrew/core/wget/blobs/sha256:df85a11661c551e9fe30445b6173e82c83d80a0622191a9c57f0edf6b21782d1",
+            "sha256": "df85a11661c551e9fe30445b6173e82c83d80a0622191a9c57f0edf6b21782d1"
+          },
+          "x86_64_linux": {
+            "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+            "url": "https://ghcr.io/v2/homebrew/core/wget/blobs/sha256:d867d78ce4327653990116aad3cbeeba1a3aee1530eb3cf17f5de1441849e834",
+            "sha256": "d867d78ce4327653990116aad3cbeeba1a3aee1530eb3cf17f5de1441849e834"
           }
         }
       }
@@ -97,19 +104,23 @@ GET https://formulae.brew.sh/api/cask.json
         "runtime_dependencies": [
           {
             "full_name": "gettext",
-            "version": "0.21"
+            "version": "0.21",
+            "declared_directly": false
           },
           {
             "full_name": "libunistring",
-            "version": "0.9.10"
+            "version": "0.9.10",
+            "declared_directly": false
           },
           {
             "full_name": "libidn2",
-            "version": "2.3.0"
+            "version": "2.3.2",
+            "declared_directly": true
           },
           {
             "full_name": "openssl@1.1",
-            "version": "1.1.1j"
+            "version": "1.1.1k",
+            "declared_directly": true
           }
         ],
         "installed_as_dependency": false,
@@ -169,26 +180,33 @@ GET https://formulae.brew.sh/api/formula-linux/${FORMULA}.json
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 0,
-      "cellar": "/usr/local/Cellar",
-      "prefix": "/usr/local",
-      "root_url": "https://homebrew.bintray.com/bottles",
+      "rebuild": 1,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
         "arm64_big_sur": {
-          "url": "https://homebrew.bintray.com/bottles/wget-1.21.1.arm64_big_sur.bottle.tar.gz",
-          "sha256": "e9034fc9062d5d28972135be031876672aff18fa945ce37e9c2ee1e2c4287f3a"
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/wget/blobs/sha256:ab03f58f6d9a4018b1b0bfd53e5b797fcd90b86b1d60b20948de499ec4d4c6b4",
+          "sha256": "ab03f58f6d9a4018b1b0bfd53e5b797fcd90b86b1d60b20948de499ec4d4c6b4"
         },
         "big_sur": {
-          "url": "https://homebrew.bintray.com/bottles/wget-1.21.1.big_sur.bottle.tar.gz",
-          "sha256": "e6ea2a50b8196206f7072360e713535bb16fb786c8b5fe23cab05757e0f67b13"
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/wget/blobs/sha256:277577a3a30ff9bf60d0e4b819570ca356aade39a3a5973065e89b0ad4b752f3",
+          "sha256": "277577a3a30ff9bf60d0e4b819570ca356aade39a3a5973065e89b0ad4b752f3"
         },
         "catalina": {
-          "url": "https://homebrew.bintray.com/bottles/wget-1.21.1.catalina.bottle.tar.gz",
-          "sha256": "88116cb28d6b85e441d1bb9df0a1454b84f8b9d0e8817a5bee0f228acc59e75a"
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/wget/blobs/sha256:261ea49956e98d62975c1706cb839c6411473a7ec50ae8101526010275fe70c0",
+          "sha256": "261ea49956e98d62975c1706cb839c6411473a7ec50ae8101526010275fe70c0"
         },
         "mojave": {
-          "url": "https://homebrew.bintray.com/bottles/wget-1.21.1.mojave.bottle.tar.gz",
-          "sha256": "ae4e6f1dc4ecaf2bbed7700e8d64cdc671bf9d6c085ba335f119861fd15956fe"
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/wget/blobs/sha256:df85a11661c551e9fe30445b6173e82c83d80a0622191a9c57f0edf6b21782d1",
+          "sha256": "df85a11661c551e9fe30445b6173e82c83d80a0622191a9c57f0edf6b21782d1"
+        },
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/wget/blobs/sha256:d867d78ce4327653990116aad3cbeeba1a3aee1530eb3cf17f5de1441849e834",
+          "sha256": "d867d78ce4327653990116aad3cbeeba1a3aee1530eb3cf17f5de1441849e834"
         }
       }
     }
@@ -218,19 +236,23 @@ GET https://formulae.brew.sh/api/formula-linux/${FORMULA}.json
       "runtime_dependencies": [
         {
           "full_name": "gettext",
-          "version": "0.21"
+          "version": "0.21",
+          "declared_directly": false
         },
         {
           "full_name": "libunistring",
-          "version": "0.9.10"
+          "version": "0.9.10",
+          "declared_directly": false
         },
         {
           "full_name": "libidn2",
-          "version": "2.3.0"
+          "version": "2.3.2",
+          "declared_directly": true
         },
         {
           "full_name": "openssl@1.1",
-          "version": "1.1.1j"
+          "version": "1.1.1k",
+          "declared_directly": true
         }
       ],
       "installed_as_dependency": false,
@@ -249,30 +271,30 @@ GET https://formulae.brew.sh/api/formula-linux/${FORMULA}.json
   "analytics": {
     "install": {
       "30d": {
-        "wget": 190955,
-        "wget --HEAD": 29
+        "wget": 103605,
+        "wget --HEAD": 10
       },
       "90d": {
-        "wget": 516497,
-        "wget --HEAD": 97
+        "wget": 334792,
+        "wget --HEAD": 35
       },
       "365d": {
-        "wget": 1414803,
-        "wget --HEAD": 141
+        "wget": 1562744,
+        "wget --HEAD": 170
       }
     },
     "install_on_request": {
       "30d": {
-        "wget": 190105,
-        "wget --HEAD": 29
+        "wget": 103138,
+        "wget --HEAD": 10
       },
       "90d": {
-        "wget": 513934,
-        "wget --HEAD": 97
+        "wget": 333385,
+        "wget --HEAD": 35
       },
       "365d": {
-        "wget": 1394159,
-        "wget --HEAD": 140
+        "wget": 1552590,
+        "wget --HEAD": 170
       }
     },
     "build_error": {
@@ -281,7 +303,7 @@ GET https://formulae.brew.sh/api/formula-linux/${FORMULA}.json
       }
     }
   },
-  "generated_date": "2021-03-01"
+  "generated_date": "2021-07-30"
 }
 ```
 
@@ -308,12 +330,12 @@ GET https://formulae.brew.sh/api/cask/${FORMULA}.json
   ],
   "desc": "App to build and share containerized applications and microservices",
   "homepage": "https://www.docker.com/products/docker-desktop",
-  "url": "https://desktop.docker.com/mac/stable/51484/Docker.dmg",
+  "url": "https://desktop.docker.com/mac/stable/amd64/66501/Docker.dmg",
   "appcast": null,
-  "version": "3.1.0,51484",
+  "version": "3.5.2,66501",
   "installed": null,
   "outdated": false,
-  "sha256": "9e68684d7d19de90034630ec2127a5d49138dc314857059fa75a99687be2b6b8",
+  "sha256": "841498c9b2855e357baf22af125bffa6e512c20ffa1cd30752da3bc4c3e540e4",
   "artifacts": [
     {
       "delete": [
@@ -339,6 +361,42 @@ GET https://formulae.brew.sh/api/cask/${FORMULA}.json
     },
     [
       "Docker.app"
+    ],
+    [
+      "/Applications/Docker.app/Contents/Resources/etc/docker-compose.bash-completion",
+      {
+        "target": "$(brew --prefix)/etc/bash_completion.d/docker-compose"
+      }
+    ],
+    [
+      "/Applications/Docker.app/Contents/Resources/etc/docker.zsh-completion",
+      {
+        "target": "$(brew --prefix)/share/zsh/site-functions/_docker"
+      }
+    ],
+    [
+      "/Applications/Docker.app/Contents/Resources/etc/docker.fish-completion",
+      {
+        "target": "$(brew --prefix)/share/fish/vendor_completions.d/docker.fish"
+      }
+    ],
+    [
+      "/Applications/Docker.app/Contents/Resources/etc/docker-compose.fish-completion",
+      {
+        "target": "$(brew --prefix)/share/fish/vendor_completions.d/docker-compose.fish"
+      }
+    ],
+    [
+      "/Applications/Docker.app/Contents/Resources/etc/docker-compose.zsh-completion",
+      {
+        "target": "$(brew --prefix)/share/zsh/site-functions/_docker_compose"
+      }
+    ],
+    [
+      "/Applications/Docker.app/Contents/Resources/etc/docker.bash-completion",
+      {
+        "target": "$(brew --prefix)/etc/bash_completion.d/docker"
+      }
     ],
     {
       "trash": [
@@ -366,23 +424,32 @@ GET https://formulae.brew.sh/api/cask/${FORMULA}.json
   ],
   "caveats": null,
   "depends_on": {},
-  "conflicts_with": null,
+  "conflicts_with": {
+    "formula": [
+      "docker",
+      "docker-completion",
+      "docker-compose",
+      "docker-compose-completion",
+      "hyperkit",
+      "kubernetes-cli"
+    ]
+  },
   "container": null,
   "auto_updates": true,
   "analytics": {
     "install": {
       "30d": {
-        "docker": 15083
+        "docker": 18068
       },
       "90d": {
-        "docker": 50381
+        "docker": 55388
       },
       "365d": {
-        "docker": 207465
+        "docker": 215461
       }
     }
   },
-  "generated_date": "2021-03-01"
+  "generated_date": "2021-07-30"
 }
 ```
 
