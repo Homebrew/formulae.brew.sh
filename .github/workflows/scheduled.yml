@@ -63,6 +63,8 @@ jobs:
           brew update-reset $(brew --repository homebrew/cask)
           /usr/bin/rake cask
 
+          /usr/bin/rake api_samples
+
           git reset origin/master
           git add _data/formula{,_canonical.json} _data/bottle api/formula api/bottle formula
           if ! git diff --no-patch --exit-code HEAD -- _data/analytics _data/formula{,_canonical.json} _data/bottle api/formula api/bottle formula cask; then
@@ -72,6 +74,11 @@ jobs:
           git add _data/cask api/cask cask
           if ! git diff --no-patch --exit-code HEAD -- _data/cask api/cask cask; then
             git commit -m "cask: updates from homebrew/cask" _data/cask api/cask cask
+          fi
+
+          git add _includes/api-samples
+          if ! git diff --no-patch --exit-code HEAD -- _includes/api-samples; then
+            git commit -m "docs: update API samples" _includes/api-samples
           fi
 
       - name: Update data for Homebrew/linuxbrew-core
