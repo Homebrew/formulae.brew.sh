@@ -130,6 +130,12 @@ task :analytics, [:os] do |task, args|
 end
 CLOBBER.include FileList[%w[_data/analytics _data/analytics-linux]]
 
+desc "Update API samples"
+task :api_samples do
+  sh "brew", "ruby", "script/generate-api-samples.rb"
+end
+CLOBBER.include FileList[%w[_includes/api-sample]]
+
 desc "Dump macOS formulae and analytics data"
 task formula_and_analytics: %i[formulae analytics]
 
