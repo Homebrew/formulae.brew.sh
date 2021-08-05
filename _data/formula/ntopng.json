@@ -45,6 +45,11 @@
           "cellar": "/usr/local/Cellar",
           "url": "https://ghcr.io/v2/homebrew/core/ntopng/blobs/sha256:3cb2eb698b63537009d7c94fb5a5192ac9c0645934477057d2a135842b02479e",
           "sha256": "3cb2eb698b63537009d7c94fb5a5192ac9c0645934477057d2a135842b02479e"
+        },
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/ntopng/blobs/sha256:2e7a51f458d34171c8d03ed6807d7b799189a336fae9b5362ae479a40135fcf9",
+          "sha256": "2e7a51f458d34171c8d03ed6807d7b799189a336fae9b5362ae479a40135fcf9"
         }
       }
     }
@@ -61,8 +66,7 @@
     "json-glib",
     "libtool",
     "lua",
-    "pkg-config",
-    "zeromq"
+    "pkg-config"
   ],
   "dependencies": [
     "geoip",
@@ -70,7 +74,8 @@
     "libmaxminddb",
     "mysql-client",
     "redis",
-    "rrdtool"
+    "rrdtool",
+    "zeromq"
   ],
   "recommended_dependencies": [
 
@@ -79,7 +84,9 @@
 
   ],
   "uses_from_macos": [
-
+    "curl",
+    "libpcap",
+    "sqlite"
   ],
   "requirements": [
 
