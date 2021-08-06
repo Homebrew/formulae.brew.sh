@@ -10,7 +10,7 @@
 
   ],
   "desc": "MIPS32 simulator",
-  "license": null,
+  "license": "BSD-3-Clause",
   "homepage": "https://spimsimulator.sourceforge.io/",
   "versions": {
     "stable": "9.1.22",
@@ -55,6 +55,11 @@
           "cellar": "/usr/local/Cellar",
           "url": "https://ghcr.io/v2/homebrew/core/spim/blobs/sha256:dfb4e24f378665fee30af8a3c362b1bc13e83b33196b66b4102c400fcee99b2e",
           "sha256": "dfb4e24f378665fee30af8a3c362b1bc13e83b33196b66b4102c400fcee99b2e"
+        },
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/spim/blobs/sha256:deaec14a9d199bef4831d6301a295c0c1598417ddd99ff1641c60a045827998a",
+          "sha256": "deaec14a9d199bef4831d6301a295c0c1598417ddd99ff1641c60a045827998a"
         }
       }
     }
@@ -77,7 +82,14 @@
 
   ],
   "uses_from_macos": [
-
+    [
+      "bison",
+      "build"
+    ],
+    [
+      "flex",
+      "build"
+    ]
   ],
   "requirements": [
 
