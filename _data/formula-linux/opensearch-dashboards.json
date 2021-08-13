@@ -1,27 +1,27 @@
 {
-  "name": "prestodb",
-  "full_name": "prestodb",
+  "name": "opensearch-dashboards",
+  "full_name": "opensearch-dashboards",
   "tap": "homebrew/core",
-  "oldname": "presto",
+  "oldname": null,
   "aliases": [
 
   ],
   "versioned_formulae": [
 
   ],
-  "desc": "Distributed SQL query engine for big data",
+  "desc": "Open source visualization dashboards for OpenSearch",
   "license": "Apache-2.0",
-  "homepage": "https://prestodb.io",
+  "homepage": "https://opensearch.org/docs/dashboards/index/",
   "versions": {
-    "stable": "0.259",
+    "stable": "1.0.0",
     "head": null,
     "bottle": false
   },
   "urls": {
     "stable": {
-      "url": "https://search.maven.org/remotecontent?filepath=com/facebook/presto/presto-server/0.259/presto-server-0.259.tar.gz",
-      "tag": null,
-      "revision": null
+      "url": "https://github.com/opensearch-project/OpenSearch-Dashboards.git",
+      "tag": "1.0.0",
+      "revision": "b15ad258e6960003e609a70889cda5fb39f90947"
     }
   },
   "revision": 0,
@@ -34,10 +34,11 @@
 
   ],
   "build_dependencies": [
-
+    "python@3.9",
+    "yarn"
   ],
   "dependencies": [
-    "openjdk"
+    "node@10"
   ],
   "recommended_dependencies": [
 
@@ -52,9 +53,9 @@
 
   ],
   "conflicts_with": [
-    "prestosql"
+
   ],
-  "caveats": "Add connectors to $(brew --prefix)/opt/prestodb/libexec/etc/catalog/. See:\nhttps://prestodb.io/docs/current/connector.html\n",
+  "caveats": "Data:    $(brew --prefix)/var/lib/opensearch-dashboards/\nLogs:    $(brew --prefix)/var/log/opensearch-dashboards/opensearch-dashboards.log\nPlugins: $(brew --prefix)/var/opensearch-dashboards/plugins/\nConfig:  $(brew --prefix)/etc/opensearch-dashboards/\n",
   "installed": [
 
   ],
