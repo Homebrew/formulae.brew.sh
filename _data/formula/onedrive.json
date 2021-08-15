@@ -1,25 +1,25 @@
 {
-  "name": "prestodb",
-  "full_name": "prestodb",
+  "name": "onedrive",
+  "full_name": "onedrive",
   "tap": "homebrew/core",
-  "oldname": "presto",
+  "oldname": null,
   "aliases": [
 
   ],
   "versioned_formulae": [
 
   ],
-  "desc": "Distributed SQL query engine for big data",
-  "license": "Apache-2.0",
-  "homepage": "https://prestodb.io",
+  "desc": "Folder synchronization with OneDrive",
+  "license": "GPL-3.0-only",
+  "homepage": "https://github.com/abraunegg/onedrive",
   "versions": {
-    "stable": "0.259.1",
+    "stable": "2.4.13",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://search.maven.org/remotecontent?filepath=com/facebook/presto/presto-server/0.259.1/presto-server-0.259.1.tar.gz",
+      "url": "https://github.com/abraunegg/onedrive/archive/v2.4.13.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,10 +31,10 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
-        "all": {
+        "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/prestodb/blobs/sha256:886195b94bfbff86ccbdcd570acb99e8aff52ad55f2ea3ed2817f91860fb3949",
-          "sha256": "886195b94bfbff86ccbdcd570acb99e8aff52ad55f2ea3ed2817f91860fb3949"
+          "url": "https://ghcr.io/v2/homebrew/core/onedrive/blobs/sha256:f75d1d472950cd24ba3fdaa1c59db77583888435cd2969bd268679e906d3b769",
+          "sha256": "f75d1d472950cd24ba3fdaa1c59db77583888435cd2969bd268679e906d3b769"
         }
       }
     }
@@ -45,10 +45,13 @@
 
   ],
   "build_dependencies": [
-
+    "ldc",
+    "pkg-config"
   ],
   "dependencies": [
-    "openjdk"
+    "curl",
+    "sqlite",
+    "systemd"
   ],
   "recommended_dependencies": [
 
@@ -60,12 +63,20 @@
 
   ],
   "requirements": [
+    {
+      "name": "linux",
+      "cask": null,
+      "download": null,
+      "version": null,
+      "contexts": [
 
+      ]
+    }
   ],
   "conflicts_with": [
-    "prestosql"
+
   ],
-  "caveats": "Add connectors to $(brew --prefix)/opt/prestodb/libexec/etc/catalog/. See:\nhttps://prestodb.io/docs/current/connector.html\n",
+  "caveats": null,
   "installed": [
 
   ],
