@@ -1,8 +1,8 @@
 {
-  "name": "prestodb",
-  "full_name": "prestodb",
+  "name": "trino",
+  "full_name": "trino",
   "tap": "homebrew/core",
-  "oldname": "presto",
+  "oldname": "prestosql",
   "aliases": [
 
   ],
@@ -11,15 +11,15 @@
   ],
   "desc": "Distributed SQL query engine for big data",
   "license": "Apache-2.0",
-  "homepage": "https://prestodb.io",
+  "homepage": "https://trino.io",
   "versions": {
-    "stable": "0.259.1",
+    "stable": "360",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://search.maven.org/remotecontent?filepath=com/facebook/presto/presto-server/0.259.1/presto-server-0.259.1.tar.gz",
+      "url": "https://search.maven.org/remotecontent?filepath=io/trino/trino-server/360/trino-server-360.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -27,6 +27,17 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/linuxbrew/core",
+      "files": {
+        "all": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/linuxbrew/core/trino/blobs/sha256:8dfd61e34f50f01f90c7ea51f93cfce06da99ab5008e66bb63768b293647370e",
+          "sha256": "8dfd61e34f50f01f90c7ea51f93cfce06da99ab5008e66bb63768b293647370e"
+        }
+      }
+    }
   },
   "keg_only": false,
   "bottle_disabled": false,
@@ -34,7 +45,7 @@
 
   ],
   "build_dependencies": [
-
+    "gnu-tar"
   ],
   "dependencies": [
     "openjdk"
@@ -49,12 +60,20 @@
 
   ],
   "requirements": [
+    {
+      "name": "arch",
+      "cask": null,
+      "download": null,
+      "version": "x86_64",
+      "contexts": [
 
+      ]
+    }
   ],
   "conflicts_with": [
 
   ],
-  "caveats": "Add connectors to $(brew --prefix)/opt/prestodb/libexec/etc/catalog/. See:\nhttps://prestodb.io/docs/current/connector.html\n",
+  "caveats": null,
   "installed": [
 
   ],
