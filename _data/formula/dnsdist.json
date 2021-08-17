@@ -10,7 +10,7 @@
 
   ],
   "desc": "Highly DNS-, DoS- and abuse-aware loadbalancer",
-  "license": null,
+  "license": "GPL-2.0-only",
   "homepage": "https://www.dnsdist.org/",
   "versions": {
     "stable": "1.6.0",
@@ -24,27 +24,32 @@
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_big_sur": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/dnsdist/blobs/sha256:81b870ee49e98a796ac239d1e2f3676ce38a7c5f02945102ca2a4a382d6411f3",
+          "sha256": "81b870ee49e98a796ac239d1e2f3676ce38a7c5f02945102ca2a4a382d6411f3"
+        },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/dnsdist/blobs/sha256:21a26e9d34532f445a8d74c8e72e73ae651bee6cb15334cef5c724ff480e5816",
-          "sha256": "21a26e9d34532f445a8d74c8e72e73ae651bee6cb15334cef5c724ff480e5816"
+          "url": "https://ghcr.io/v2/homebrew/core/dnsdist/blobs/sha256:48492b51a983e3b1c097d2debb98e4888fdf458543c3b19d6cdd5b62bdd0a2ff",
+          "sha256": "48492b51a983e3b1c097d2debb98e4888fdf458543c3b19d6cdd5b62bdd0a2ff"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/dnsdist/blobs/sha256:be7966bd9808586a3cd621df9bb7a0810275827e91be1baf3b282461ea5c998d",
-          "sha256": "be7966bd9808586a3cd621df9bb7a0810275827e91be1baf3b282461ea5c998d"
+          "url": "https://ghcr.io/v2/homebrew/core/dnsdist/blobs/sha256:17065d7729a4cda1d599acf95b36ca657d27728ecbc202ea9594888487ba1190",
+          "sha256": "17065d7729a4cda1d599acf95b36ca657d27728ecbc202ea9594888487ba1190"
         },
         "mojave": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/dnsdist/blobs/sha256:9baf86315d64a8f44b281af8e2eb331d0010c096e142aa30484736ac3a3fb08c",
-          "sha256": "9baf86315d64a8f44b281af8e2eb331d0010c096e142aa30484736ac3a3fb08c"
+          "url": "https://ghcr.io/v2/homebrew/core/dnsdist/blobs/sha256:cd8f596aa6e4bb0b11d0a2bea8e1129ddda3ff47d8ee8e4a0dc699e318dd3d9b",
+          "sha256": "cd8f596aa6e4bb0b11d0a2bea8e1129ddda3ff47d8ee8e4a0dc699e318dd3d9b"
         }
       }
     }
@@ -63,7 +68,7 @@
     "fstrm",
     "h2o",
     "libsodium",
-    "luajit",
+    "luajit-openresty",
     "openssl@1.1",
     "protobuf",
     "re2"
