@@ -116,29 +116,29 @@
   "analytics": {
     "install": {
       "30d": {
-        "wget": 97098,
+        "wget": 99382,
         "wget --HEAD": 9
       },
       "90d": {
-        "wget": 318421,
+        "wget": 317651,
         "wget --HEAD": 39
       },
       "365d": {
-        "wget": 1561630,
+        "wget": 1561958,
         "wget --HEAD": 175
       }
     },
     "install_on_request": {
       "30d": {
-        "wget": 96623,
+        "wget": 98905,
         "wget --HEAD": 9
       },
       "90d": {
-        "wget": 317035,
+        "wget": 316270,
         "wget --HEAD": 39
       },
       "365d": {
-        "wget": 1551922,
+        "wget": 1552298,
         "wget --HEAD": 175
       }
     },
@@ -148,6 +148,6 @@
       }
     }
   },
-  "generated_date": "2021-08-17"
+  "generated_date": "2021-08-18"
 }
 ```
