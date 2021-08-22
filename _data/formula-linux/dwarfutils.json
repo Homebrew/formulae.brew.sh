@@ -13,48 +13,48 @@
   "license": "BSD-2-Clause and LGPL-2.1-or-later and GPL-2.0-or-later",
   "homepage": "https://www.prevanders.net/dwarf.html",
   "versions": {
-    "stable": "20210528",
-    "head": null,
+    "stable": "0.1.1",
+    "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://www.prevanders.net/libdwarf-20210528.tar.gz",
+      "url": "https://www.prevanders.net/libdwarf-0.1.1.tar.xz",
       "tag": null,
       "revision": null
     }
   },
   "revision": 0,
-  "version_scheme": 0,
+  "version_scheme": 1,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/linuxbrew/core",
       "files": {
         "arm64_big_sur": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/dwarfutils/blobs/sha256:feb9ab859e76e35cf9cb542c977f7699b7611494f0a7693b292292027820305a",
-          "sha256": "feb9ab859e76e35cf9cb542c977f7699b7611494f0a7693b292292027820305a"
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/linuxbrew/core/dwarfutils/blobs/sha256:dd08048594fd7f0bfdc02ed06c6c4e44ed4c75eeb8cdcc2adb490036e07f3f4e",
+          "sha256": "dd08048594fd7f0bfdc02ed06c6c4e44ed4c75eeb8cdcc2adb490036e07f3f4e"
         },
         "big_sur": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/dwarfutils/blobs/sha256:d87d517978e102343d43762c9272b995ff0e1501d3ae692231a276445c8da55c",
-          "sha256": "d87d517978e102343d43762c9272b995ff0e1501d3ae692231a276445c8da55c"
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/linuxbrew/core/dwarfutils/blobs/sha256:84941130062830cdf8bb7e724d38704df8fa27cc90a19db76326b391d8c1049b",
+          "sha256": "84941130062830cdf8bb7e724d38704df8fa27cc90a19db76326b391d8c1049b"
         },
         "catalina": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/dwarfutils/blobs/sha256:168ffbfd98d2c026c607b1cdf4ae556e8fc0da70afc220c1d88ed2140c8592fe",
-          "sha256": "168ffbfd98d2c026c607b1cdf4ae556e8fc0da70afc220c1d88ed2140c8592fe"
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/linuxbrew/core/dwarfutils/blobs/sha256:1664a1d0bfadf1ee6fdb95229aeea41c7cddae537afa8bdaed398d99f31e8c4b",
+          "sha256": "1664a1d0bfadf1ee6fdb95229aeea41c7cddae537afa8bdaed398d99f31e8c4b"
         },
         "mojave": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/dwarfutils/blobs/sha256:f072dac053dee574c279956d1b072aeeb591a078d207d2d963a745e3553fab26",
-          "sha256": "f072dac053dee574c279956d1b072aeeb591a078d207d2d963a745e3553fab26"
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/linuxbrew/core/dwarfutils/blobs/sha256:89f93e8814b05bfa901aa11a41526d86737f742b4cb150d9df5b0f241aa995fa",
+          "sha256": "89f93e8814b05bfa901aa11a41526d86737f742b4cb150d9df5b0f241aa995fa"
         },
         "x86_64_linux": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/dwarfutils/blobs/sha256:9646e9356c7b30e464afbec046633bd985d0f3a97609ae56606321d965f7686f",
-          "sha256": "9646e9356c7b30e464afbec046633bd985d0f3a97609ae56606321d965f7686f"
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/linuxbrew/core/dwarfutils/blobs/sha256:20d0af399420474afd8c5e3fb24c592aca8d37efbf0e93e49763c9bfcf8ff6fb",
+          "sha256": "20d0af399420474afd8c5e3fb24c592aca8d37efbf0e93e49763c9bfcf8ff6fb"
         }
       }
     }
@@ -65,11 +65,10 @@
 
   ],
   "build_dependencies": [
-
+    "pkg-config"
   ],
   "dependencies": [
-    "zlib",
-    "libelf"
+    "zlib"
   ],
   "recommended_dependencies": [
 
