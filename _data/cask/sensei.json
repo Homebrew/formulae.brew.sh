@@ -17,7 +17,12 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "delete": "/Library/PrivilegedHelperTools/org.cindori.SenseiTool",
+      "delete": [
+        "/Library/LaunchDaemons/org.cindori.SenseiHelper.plist",
+        "/Library/LaunchDaemons/org.cindori.SenseiDaemon.plist",
+        "/Library/LaunchAgents/org.cindori.SenseiMonitor.plist",
+        "/Library/PrivilegedHelperTools/org.cindori.SenseiTool"
+      ],
       "launchctl": "org.cindori.SenseiTool",
       "signal": {
       }
