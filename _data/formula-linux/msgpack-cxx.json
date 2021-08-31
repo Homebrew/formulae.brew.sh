@@ -1,6 +1,6 @@
 {
-  "name": "checkstyle",
-  "full_name": "checkstyle",
+  "name": "msgpack-cxx",
+  "full_name": "msgpack-cxx",
   "tap": "homebrew/core",
   "oldname": null,
   "aliases": [
@@ -9,17 +9,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Check Java source against a coding standard",
-  "license": "LGPL-2.1-or-later",
-  "homepage": "https://checkstyle.sourceforge.io/",
+  "desc": "MessagePack implementation for C++ / msgpack.org[C++]",
+  "license": "BSL-1.0",
+  "homepage": "https://msgpack.org/",
   "versions": {
-    "stable": "9.0",
-    "head": null,
+    "stable": "4.0.1",
+    "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/checkstyle/checkstyle/releases/download/checkstyle-9.0/checkstyle-9.0-all.jar",
+      "url": "https://github.com/msgpack/msgpack-c/releases/download/cpp-4.0.1/msgpack-cxx-4.0.1.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,10 +31,10 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/linuxbrew/core",
       "files": {
-        "x86_64_linux": {
+        "all": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/checkstyle/blobs/sha256:9089a3fd6b7fd6a3face3dc4737e24a872663f36f4244f377061a4ebc2122a6f",
-          "sha256": "9089a3fd6b7fd6a3face3dc4737e24a872663f36f4244f377061a4ebc2122a6f"
+          "url": "https://ghcr.io/v2/linuxbrew/core/msgpack-cxx/blobs/sha256:b8e683caac9ea113c626f89f02d4318fb8e71a731890ffcbbea6dd7f55c66f66",
+          "sha256": "b8e683caac9ea113c626f89f02d4318fb8e71a731890ffcbbea6dd7f55c66f66"
         }
       }
     }
@@ -45,10 +45,10 @@
 
   ],
   "build_dependencies": [
-
+    "cmake"
   ],
   "dependencies": [
-    "openjdk"
+    "boost"
   ],
   "recommended_dependencies": [
 
