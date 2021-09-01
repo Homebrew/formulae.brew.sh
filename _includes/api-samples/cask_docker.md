@@ -16,7 +16,7 @@
   "versions": {},
   "installed": null,
   "outdated": false,
-  "sha256": "08c91be8f784c41b677b28f6eea2a7ec001e0b812bb0ee978d1c0b60ecea77bb",
+  "sha256": "6b1d73f4b9d3be08798a959255726fc8bf3e9ee120c9e3ab8ac8c38b42dc8675",
   "artifacts": [
     {
       "delete": [
