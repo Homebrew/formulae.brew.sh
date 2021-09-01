@@ -8,10 +8,5 @@ cask "mnemosyne" do
   desc "Flash card tool"
   homepage "https://mnemosyne-proj.org/"
 
-  livecheck do
-    url "https://mnemosyne-proj.org/download-mnemosyne.php"
-    regex(/Mnemosyne[._-]?(\d+(?:\.\d+)*)\.dmg/i)
-  end
-
   app "Mnemosyne.app"
 end

@@ -7,11 +7,6 @@ cask "abyssoft-teleport" do
   desc "Virtual KVM"
   homepage "https://github.com/abyssoft/teleport"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   app "teleport.app"
 
   zap trash: [

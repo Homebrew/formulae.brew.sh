@@ -8,11 +8,5 @@ cask "sparkleshare" do
   desc "Tool to sync with any Git repository instantly"
   homepage "https://sparkleshare.org/"
 
-  livecheck do
-    url "https://github.com/hbons/SparkleShare/releases/"
-    strategy :page_match
-    regex(/sparkleshare[._-]?mac[._-]?(\d+(?:\.\d+)*)\.zip/i)
-  end
-
   app "SparkleShare.app"
 end

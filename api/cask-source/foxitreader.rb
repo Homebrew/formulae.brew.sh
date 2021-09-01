@@ -1,24 +1,25 @@
 cask "foxitreader" do
-  version "11.0.1"
-  sha256 "b974dc36513dc6de11862c3f9d45145892e2d409701ec94568bb1ee6d089b8d4"
+  version "4.1.3"
+  sha256 "88a68e664dd60b4934683283cef1ada7b372533d0bc34bffd6b9bfdf90625def"
 
-  url "https://cdn01.foxitsoftware.com/pub/foxit/reader/desktop/mac/#{version.major}.x/#{version.major_minor}/ML/FoxitPDFReader#{version.no_dots}.L10N.Setup.pkg",
-      verified: "cdn01.foxitsoftware.com/pub/foxit/reader/desktop/mac/"
+  url "https://cdn01.foxitsoftware.com/pub/foxit/reader/desktop/mac/#{version.major}.x/#{version.major_minor}/ML/FoxitReader#{version.no_dots}.L10N.Setup.pkg"
   name "Foxit Reader"
   desc "PDF reader"
-  homepage "https://www.foxit.com/pdf-reader/"
+  homepage "https://www.foxitsoftware.com/pdf-reader/"
 
   livecheck do
-    url "https://www.foxit.com/downloads/latest.html?product=Foxit-Reader&platform=Mac-OS-X"
+    url "https://www.foxitsoftware.com/downloads/latest.html?product=Foxit-Reader&platform=Mac-OS-X"
     strategy :header_match do |headers|
-      match = headers["location"].match(%r{/(\d+(?:\.\d+)*)/ML/FoxitPDFReader(\d+)\.L10N\.Setup\.pkg}i)
+      match = headers["location"].match(%r{/(\d+(?:\.\d+)*)/ML/FoxitReader(\d+)\.L10N\.Setup\.pkg}i)
       "#{match[1]}.#{match[2].delete_prefix(match[1].delete("."))}"
     end
   end
 
-  pkg "FoxitPDFReader#{version.no_dots}.L10N.Setup.pkg"
+  pkg "FoxitReader#{version.no_dots}.L10N.Setup.pkg"
 
-  uninstall pkgutil:   "com.foxit.pkg.pdfreader",
-            delete:    "/Applications/Foxit PDF Reader.app",
-            launchctl: "com.foxit.PDFReaderUpdateService"
+  uninstall pkgutil: [
+    "com.foxitsoftware.reader.pkg",
+    "com.foxit.pkg.reader",
+  ],
+            delete:  "/Applications/Foxit Reader.app"
 end

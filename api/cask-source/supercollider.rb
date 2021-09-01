@@ -1,11 +1,10 @@
 cask "supercollider" do
-  version "3.12.0"
-  sha256 "a8a1c430ff3eaeea402dd266432cf5e825a745ab530c708d7de4a607a20955b6"
+  version "3.11.2"
+  sha256 "0c6cd9c26adfece4eccd2c76156119338603001bbd1999b037a05b154a2adb0c"
 
-  url "https://github.com/supercollider/supercollider/releases/download/Version-#{version}/SuperCollider-#{version}-macOS.dmg",
+  url "https://github.com/supercollider/supercollider/releases/download/Version-#{version}/SuperCollider-#{version}-macOS-signed.zip",
       verified: "github.com/supercollider/supercollider/"
   name "SuperCollider"
-  desc "Server, language, and IDE for sound synthesis and algorithmic composition"
   homepage "https://supercollider.github.io/"
 
   livecheck do
@@ -14,5 +13,5 @@ cask "supercollider" do
     regex(/^Version-(\d+(?:\.\d+)*)$/i)
   end
 
-  app "SuperCollider.app"
+  app "SuperCollider/SuperCollider.app"
 end

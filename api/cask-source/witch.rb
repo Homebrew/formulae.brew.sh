@@ -1,10 +1,9 @@
 cask "witch" do
-  version "4.4.2,3518"
+  version "4.4,3514"
   sha256 :no_check
 
   url "https://manytricks.com/download/witch"
   name "Witch"
-  desc "Switch apps, windows, or tabs"
   homepage "https://manytricks.com/witch/"
 
   livecheck do
@@ -13,7 +12,6 @@ cask "witch" do
   end
 
   auto_updates true
-  depends_on macos: ">= :yosemite"
 
   prefpane "Witch.prefPane"
 
@@ -21,7 +19,7 @@ cask "witch" do
             login_item: "witchdaemon"
 
   zap trash: [
-    "~/Library/Application Support/Witch",
     "~/Library/Preferences/com.manytricks.Witch.plist",
+    "~/Library/Application Support/Witch",
   ]
 end

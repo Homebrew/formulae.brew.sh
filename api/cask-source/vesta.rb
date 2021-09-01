@@ -12,6 +12,6 @@ cask "vesta" do
 
   zap trash: [
     "~/Library/Application Support/VESTA",
-    "~/Library/Preferences/VESTA.plist",
+    "~/LibraryPreferences/VESTA.plist",
   ]
 end

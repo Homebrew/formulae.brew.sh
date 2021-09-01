@@ -9,9 +9,8 @@ cask "logdna-agent" do
   homepage "https://logdna.com/"
 
   livecheck do
-    url "https://github.com/logdna/logdna-agent/releases/"
-    strategy :page_match
-    regex(/logdna[._-]?agent[._-]?(\d+(?:\.\d+)*)\.pkg/i)
+    url :url
+    strategy :github_latest
   end
 
   pkg "logdna-agent-#{version}.pkg"
