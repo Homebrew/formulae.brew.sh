@@ -1,6 +1,6 @@
 {
-  "name": "picard-tools",
-  "full_name": "picard-tools",
+  "name": "lit",
+  "full_name": "lit",
   "tap": "homebrew/core",
   "oldname": null,
   "aliases": [
@@ -9,17 +9,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Tools for manipulating HTS data and formats",
-  "license": "MIT",
-  "homepage": "https://broadinstitute.github.io/picard/",
+  "desc": "Portable tool for LLVM- and Clang-style test suites",
+  "license": "Apache-2.0 with LLVM-exception",
+  "homepage": "https://llvm.org",
   "versions": {
-    "stable": "2.26.1",
+    "stable": "12.0.1",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/broadinstitute/picard/releases/download/2.26.1/picard.jar",
+      "url": "https://files.pythonhosted.org/packages/7c/0c/2d58790cb0fa24812382289a584e05dd1df4b30ccf5e2218ee5a556a0529/lit-12.0.1.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,8 +33,8 @@
       "files": {
         "all": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/picard-tools/blobs/sha256:c32041657b699e96658e3ad9cd24cc748787f3bbdaf2da480ed39cee7d76c282",
-          "sha256": "c32041657b699e96658e3ad9cd24cc748787f3bbdaf2da480ed39cee7d76c282"
+          "url": "https://ghcr.io/v2/homebrew/core/lit/blobs/sha256:1ff38c69b421d5ac0a758b5b2c0cd24fbdbef1c13757717e8a86181c4cd05503",
+          "sha256": "1ff38c69b421d5ac0a758b5b2c0cd24fbdbef1c13757717e8a86181c4cd05503"
         }
       }
     }
@@ -48,7 +48,8 @@
 
   ],
   "dependencies": [
-    "openjdk"
+    "llvm",
+    "python@3.9"
   ],
   "recommended_dependencies": [
 
