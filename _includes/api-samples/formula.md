@@ -76,7 +76,7 @@
     "caveats": null,
     "installed": [
       {
-        "version": "1.21.1",
+        "version": "1.21.1_1",
         "used_options": [],
         "built_as_bottle": true,
         "poured_from_bottle": true,
@@ -98,7 +98,7 @@
           },
           {
             "full_name": "openssl@1.1",
-            "version": "1.1.1k",
+            "version": "1.1.1l",
             "declared_directly": true
           }
         ],
@@ -106,9 +106,9 @@
         "installed_on_request": true
       }
     ],
-    "linked_keg": "1.21.1",
+    "linked_keg": "1.21.1_1",
     "pinned": false,
-    "outdated": true,
+    "outdated": false,
     "deprecated": false,
     "deprecation_date": null,
     "deprecation_reason": null,
