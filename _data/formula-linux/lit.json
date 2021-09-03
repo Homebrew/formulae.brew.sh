@@ -1,6 +1,6 @@
 {
-  "name": "fantom",
-  "full_name": "fantom",
+  "name": "lit",
+  "full_name": "lit",
   "tap": "homebrew/core",
   "oldname": null,
   "aliases": [
@@ -9,17 +9,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Object oriented, portable programming language",
-  "license": "AFL-3.0",
-  "homepage": "https://fantom.org/",
+  "desc": "Portable tool for LLVM- and Clang-style test suites",
+  "license": "Apache-2.0 with LLVM-exception",
+  "homepage": "https://llvm.org",
   "versions": {
-    "stable": "1.0.77",
+    "stable": "12.0.1",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/fantom-lang/fantom/releases/download/v1.0.77/fantom-1.0.77.zip",
+      "url": "https://files.pythonhosted.org/packages/7c/0c/2d58790cb0fa24812382289a584e05dd1df4b30ccf5e2218ee5a556a0529/lit-12.0.1.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -27,6 +27,17 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/linuxbrew/core",
+      "files": {
+        "all": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/linuxbrew/core/lit/blobs/sha256:1ff38c69b421d5ac0a758b5b2c0cd24fbdbef1c13757717e8a86181c4cd05503",
+          "sha256": "1ff38c69b421d5ac0a758b5b2c0cd24fbdbef1c13757717e8a86181c4cd05503"
+        }
+      }
+    }
   },
   "keg_only": false,
   "bottle_disabled": false,
@@ -37,7 +48,8 @@
 
   ],
   "dependencies": [
-    "openjdk"
+    "llvm",
+    "python@3.9"
   ],
   "recommended_dependencies": [
 
