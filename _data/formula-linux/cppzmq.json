@@ -1,6 +1,6 @@
 {
-  "name": "stanford-ner",
-  "full_name": "stanford-ner",
+  "name": "cppzmq",
+  "full_name": "cppzmq",
   "tap": "homebrew/core",
   "oldname": null,
   "aliases": [
@@ -9,17 +9,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Stanford NLP Group's implementation of a Named Entity Recognizer",
-  "license": "GPL-2.0-or-later",
-  "homepage": "https://nlp.stanford.edu/software/CRF-NER.shtml",
+  "desc": "Header-only C++ binding for libzmq",
+  "license": "MIT",
+  "homepage": "https://www.zeromq.org",
   "versions": {
-    "stable": "4.2.0",
+    "stable": "4.8.0",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://nlp.stanford.edu/software/stanford-ner-4.2.0.zip",
+      "url": "https://github.com/zeromq/cppzmq/archive/v4.8.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,10 +31,10 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/linuxbrew/core",
       "files": {
-        "x86_64_linux": {
+        "all": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/stanford-ner/blobs/sha256:ff677742e4d2a82c25841c06c9df83521334df943658f129f85580f420feb0bb",
-          "sha256": "ff677742e4d2a82c25841c06c9df83521334df943658f129f85580f420feb0bb"
+          "url": "https://ghcr.io/v2/linuxbrew/core/cppzmq/blobs/sha256:e4fb3653d57894d59a77ffc48048e889ce9291e33c08d01376fd1e86b53ad656",
+          "sha256": "e4fb3653d57894d59a77ffc48048e889ce9291e33c08d01376fd1e86b53ad656"
         }
       }
     }
@@ -45,10 +45,11 @@
 
   ],
   "build_dependencies": [
-
+    "cmake",
+    "pkg-config"
   ],
   "dependencies": [
-    "openjdk"
+    "zeromq"
   ],
   "recommended_dependencies": [
 
