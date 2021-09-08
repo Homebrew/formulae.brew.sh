@@ -13,13 +13,13 @@
   "license": "GPL-2.0-or-later",
   "homepage": "https://qmmp.ylsoftware.com/",
   "versions": {
-    "stable": "1.5.1",
-    "head": "HEAD",
+    "stable": "2.0.0",
+    "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://downloads.sourceforge.net/project/qmmp-dev/qmmp/1.5/qmmp-1.5.1.tar.bz2",
+      "url": "https://qmmp.ylsoftware.com/files/qmmp/2.0/qmmp-2.0.0.tar.bz2",
       "tag": null,
       "revision": null
     }
@@ -33,18 +33,18 @@
       "files": {
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/qmmp/blobs/sha256:144bd80fb2a050a68900c40a44f00fc05fb7addc660e7807e900a129f86b8a89",
-          "sha256": "144bd80fb2a050a68900c40a44f00fc05fb7addc660e7807e900a129f86b8a89"
+          "url": "https://ghcr.io/v2/homebrew/core/qmmp/blobs/sha256:06d9a6cd5339d519d2a01549496c679a40e70cff241c2da8ebe728a5a29a5c1c",
+          "sha256": "06d9a6cd5339d519d2a01549496c679a40e70cff241c2da8ebe728a5a29a5c1c"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/qmmp/blobs/sha256:feff3c70d129d608e05e83928031134d9422cfedb52f305617a2c3af62802f19",
-          "sha256": "feff3c70d129d608e05e83928031134d9422cfedb52f305617a2c3af62802f19"
+          "url": "https://ghcr.io/v2/homebrew/core/qmmp/blobs/sha256:ab9a6e9d2613a9f27c706c969d2053f917c67e8137890ba7a370344c1c60035e",
+          "sha256": "ab9a6e9d2613a9f27c706c969d2053f917c67e8137890ba7a370344c1c60035e"
         },
         "mojave": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/qmmp/blobs/sha256:7001d36b42beb62f494c03d0e15bf5a153712ad9784af50df1e8042b52d682f6",
-          "sha256": "7001d36b42beb62f494c03d0e15bf5a153712ad9784af50df1e8042b52d682f6"
+          "url": "https://ghcr.io/v2/homebrew/core/qmmp/blobs/sha256:8bdc18b507fc1336db6cfd1d430038467b7244f6c901b52ffe765f9de7338c90",
+          "sha256": "8bdc18b507fc1336db6cfd1d430038467b7244f6c901b52ffe765f9de7338c90"
         }
       }
     }
@@ -55,26 +55,40 @@
 
   ],
   "build_dependencies": [
-    "cmake"
+    "cmake",
+    "pkg-config"
   ],
   "dependencies": [
     "faad2",
     "ffmpeg",
     "flac",
+    "game-music-emu",
+    "jack",
+    "libarchive",
     "libbs2b",
+    "libcddb",
+    "libcdio",
     "libmms",
+    "libmodplug",
     "libogg",
     "libsamplerate",
+    "libshout",
     "libsndfile",
     "libsoxr",
     "libvorbis",
+    "libxcb",
+    "libxmp",
     "mad",
     "mplayer",
     "musepack",
     "opus",
     "opusfile",
-    "qt@5",
-    "taglib"
+    "projectm",
+    "pulseaudio",
+    "qt",
+    "taglib",
+    "wavpack",
+    "wildmidi"
   ],
   "recommended_dependencies": [
 
@@ -83,7 +97,7 @@
 
   ],
   "uses_from_macos": [
-
+    "curl"
   ],
   "requirements": [
 
