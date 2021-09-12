@@ -13,13 +13,13 @@
   "license": "Public Domain and GPL-3.0-or-later and MIT",
   "homepage": "https://github.com/ncbi/sra-tools",
   "versions": {
-    "stable": "2.11.0",
+    "stable": "2.11.1",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/ncbi/sra-tools/archive/2.11.0.tar.gz",
+      "url": "https://github.com/ncbi/sra-tools/archive/2.11.1.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -32,19 +32,24 @@
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
         "big_sur": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/sratoolkit/blobs/sha256:87602a3b77c5d58a037bf2e93423e6cb925bd586fe424680035885894359aeb0",
-          "sha256": "87602a3b77c5d58a037bf2e93423e6cb925bd586fe424680035885894359aeb0"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/sratoolkit/blobs/sha256:97051e817f8d0c86278c7b7cebe076cf353e265214f65ec4671f524e2874f96a",
+          "sha256": "97051e817f8d0c86278c7b7cebe076cf353e265214f65ec4671f524e2874f96a"
         },
         "catalina": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/sratoolkit/blobs/sha256:15a8306c7a3b550ee120a0eb6ab7c87e0e53a3f33549a0a0f3c5a218c6e75d13",
-          "sha256": "15a8306c7a3b550ee120a0eb6ab7c87e0e53a3f33549a0a0f3c5a218c6e75d13"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/sratoolkit/blobs/sha256:49b626f70a185e51bea31863302ea355a7667389491a285f981483696dba4627",
+          "sha256": "49b626f70a185e51bea31863302ea355a7667389491a285f981483696dba4627"
         },
         "mojave": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/sratoolkit/blobs/sha256:b9b36c564d65e79d3726e4de473e18d892f109221f45dbb91768ecac5758df59",
-          "sha256": "b9b36c564d65e79d3726e4de473e18d892f109221f45dbb91768ecac5758df59"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/sratoolkit/blobs/sha256:70e233457d44d8f3c320014aeacda5f8f895a5374a89fcf27b0fd66bdf89f4fc",
+          "sha256": "70e233457d44d8f3c320014aeacda5f8f895a5374a89fcf27b0fd66bdf89f4fc"
+        },
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/sratoolkit/blobs/sha256:4f770684c6778372445a3c2568405e17d192f994bdf4892ee596439aeeb9715a",
+          "sha256": "4f770684c6778372445a3c2568405e17d192f994bdf4892ee596439aeeb9715a"
         }
       }
     }
@@ -55,10 +60,10 @@
 
   ],
   "build_dependencies": [
-
+    "cmake"
   ],
   "dependencies": [
-    "hdf5",
+    "hdf5@1.10",
     "libmagic"
   ],
   "recommended_dependencies": [
@@ -68,8 +73,11 @@
 
   ],
   "uses_from_macos": [
-    "libxml2",
-    "perl"
+    [
+      "perl",
+      "build"
+    ],
+    "libxml2"
   ],
   "requirements": [
 
