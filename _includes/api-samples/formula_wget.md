@@ -74,7 +74,7 @@
   "caveats": null,
   "installed": [
     {
-      "version": "1.21.1_1",
+      "version": "1.21.2",
       "used_options": [],
       "built_as_bottle": true,
       "poured_from_bottle": true,
@@ -104,9 +104,9 @@
       "installed_on_request": true
     }
   ],
-  "linked_keg": "1.21.1_1",
+  "linked_keg": "1.21.2",
   "pinned": false,
-  "outdated": true,
+  "outdated": false,
   "deprecated": false,
   "deprecation_date": null,
   "deprecation_reason": null,
