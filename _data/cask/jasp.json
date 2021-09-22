@@ -5,10 +5,10 @@
   "name": [
     "JASP"
   ],
-  "desc": null,
+  "desc": "Statistical analysis application",
   "homepage": "https://jasp-stats.org/",
   "url": "https://static.jasp-stats.org/JASP-0.15.0.0.dmg",
-  "appcast": "https://jasp-stats.org/download/",
+  "appcast": null,
   "version": "0.15.0.0",
   "versions": {
   },
@@ -18,7 +18,18 @@
   "artifacts": [
     [
       "JASP.app"
-    ]
+    ],
+    {
+      "trash": [
+        "~/.JASP",
+        "~/Library/Application Support/JASP",
+        "~/Library/Caches/JASP",
+        "~/Library/Preferences/org.jasp-stats.JASP.plist",
+        "~/Library/Saved Application State/org.jasp-stats.jasp.savedState"
+      ],
+      "signal": {
+      }
+    }
   ],
   "caveats": null,
   "depends_on": {
