@@ -10,23 +10,49 @@
 
   ],
   "desc": "Free software distribution for the TeX typesetting system",
-  "license": null,
+  "license": "Public Domain",
   "homepage": "https://www.tug.org/texlive/",
   "versions": {
-    "stable": "20200715",
+    "stable": "58837",
     "head": "HEAD",
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://www.texlive.info/tlnet-archive/2020/07/15/tlnet/install-tl-unx.tar.gz",
+      "url": "https://github.com/TeX-Live/texlive-source/archive/refs/tags/svn58837.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/linuxbrew/core",
+      "files": {
+        "arm64_big_sur": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/linuxbrew/core/texlive/blobs/sha256:f0038b8dcf103be8c0a244fe468b19453b7d87d114a407d4491d68cb0a43fd40",
+          "sha256": "f0038b8dcf103be8c0a244fe468b19453b7d87d114a407d4491d68cb0a43fd40"
+        },
+        "big_sur": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/linuxbrew/core/texlive/blobs/sha256:499d3a4288ce44171bd03c8302cfed3c82a9c8068b9bc906a561f1ceef09de6c",
+          "sha256": "499d3a4288ce44171bd03c8302cfed3c82a9c8068b9bc906a561f1ceef09de6c"
+        },
+        "catalina": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/linuxbrew/core/texlive/blobs/sha256:ff3e7293bdf2febf0320060541a9320ca31ec61dd434eeb2f537a84e4cda0f5b",
+          "sha256": "ff3e7293bdf2febf0320060541a9320ca31ec61dd434eeb2f537a84e4cda0f5b"
+        },
+        "mojave": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/linuxbrew/core/texlive/blobs/sha256:7c27168b1a8592bc78b82ec0d92a87595bce2a77f7b96d9eb69af49af5c4d9e6",
+          "sha256": "7c27168b1a8592bc78b82ec0d92a87595bce2a77f7b96d9eb69af49af5c4d9e6"
+        }
+      }
+    }
   },
   "keg_only": false,
   "bottle_disabled": false,
@@ -34,10 +60,36 @@
 
   ],
   "build_dependencies": [
-    "wget"
+    "pkg-config"
   ],
   "dependencies": [
+    "cairo",
+    "clisp",
     "fontconfig",
+    "freetype",
+    "gd",
+    "ghostscript",
+    "gmp",
+    "graphite2",
+    "harfbuzz",
+    "libpng",
+    "libxft",
+    "lua",
+    "luajit-openresty",
+    "mpfr",
+    "openjdk",
+    "openssl@1.1",
+    "perl",
+    "pixman",
+    "potrace",
+    "pstoedit",
+    "python@3.9",
+    "icu4c",
+    "ncurses",
+    "ruby",
+    "tcl-tk",
+    "zlib",
+    "gcc",
     "libice",
     "libsm",
     "libx11",
@@ -46,7 +98,7 @@
     "libxmu",
     "libxpm",
     "libxt",
-    "perl"
+    "mesa"
   ],
   "recommended_dependencies": [
 
@@ -55,23 +107,19 @@
 
   ],
   "uses_from_macos": [
-
+    "icu4c",
+    "ncurses",
+    "ruby",
+    "tcl-tk",
+    "zlib"
   ],
   "requirements": [
-    {
-      "name": "linux",
-      "cask": null,
-      "download": null,
-      "version": null,
-      "contexts": [
 
-      ]
-    }
   ],
   "conflicts_with": [
 
   ],
-  "caveats": "      The small (~500 MB) distribution (scheme-small) by default.\n\n      You may install a larger (medium or full) scheme using one of:\n\n          > tlmgr install scheme-medium # 1.5 GB\n          > tlmgr install scheme-full # 6 GB\n\n      After any additional package installation, if you would like to update\n      the symlinks do:\n\n          > tlmgr path add\n          > brew unlink texlive && brew link texlive\n\n      For additional information on how to manage texlive packages:\n\n          > tlmgr --help\n\n",
+  "caveats": null,
   "installed": [
 
   ],
