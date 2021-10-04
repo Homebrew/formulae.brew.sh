@@ -13,13 +13,13 @@
   "license": "MIT",
   "homepage": "https://wayland.freedesktop.org",
   "versions": {
-    "stable": "1.22",
+    "stable": "1.23",
     "head": null,
-    "bottle": true
+    "bottle": false
   },
   "urls": {
     "stable": {
-      "url": "https://wayland.freedesktop.org/releases/wayland-protocols-1.22.tar.xz",
+      "url": "https://wayland.freedesktop.org/releases/wayland-protocols-1.23.tar.xz",
       "tag": null,
       "revision": null
     }
@@ -27,17 +27,6 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
-    "stable": {
-      "rebuild": 0,
-      "root_url": "https://ghcr.io/v2/linuxbrew/core",
-      "files": {
-        "x86_64_linux": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/wayland-protocols/blobs/sha256:97dc1b8c59b0e36bc6a3f78863de15a5e675f6231d371f6ca98d2ee21ee6cf4e",
-          "sha256": "97dc1b8c59b0e36bc6a3f78863de15a5e675f6231d371f6ca98d2ee21ee6cf4e"
-        }
-      }
-    }
   },
   "keg_only": false,
   "bottle_disabled": false,
@@ -45,6 +34,8 @@
 
   ],
   "build_dependencies": [
+    "autoconf",
+    "automake",
     "pkg-config",
     "wayland"
   ],
