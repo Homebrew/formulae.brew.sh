@@ -1,6 +1,6 @@
 {
-  "name": "cmake",
-  "full_name": "cmake",
+  "name": "cmake-docs",
+  "full_name": "cmake-docs",
   "tap": "homebrew/core",
   "oldname": null,
   "aliases": [
@@ -9,7 +9,7 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Cross-platform make",
+  "desc": "Documentation for CMake",
   "license": "BSD-3-Clause",
   "homepage": "https://www.cmake.org/",
   "versions": {
@@ -24,7 +24,7 @@
       "revision": null
     }
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,23 +33,23 @@
       "files": {
         "arm64_big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/cmake/blobs/sha256:43dcb467effe26a5cca419080e9fded311ecc5badc8339e10fa5b11215131128",
-          "sha256": "43dcb467effe26a5cca419080e9fded311ecc5badc8339e10fa5b11215131128"
+          "url": "https://ghcr.io/v2/linuxbrew/core/cmake-docs/blobs/sha256:bb9b954ac614fa5a785ef54a98b296deff58f212194759f66cd19afa0b146999",
+          "sha256": "bb9b954ac614fa5a785ef54a98b296deff58f212194759f66cd19afa0b146999"
         },
         "big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/cmake/blobs/sha256:b9f106823e83911365f96a5f1b4cab26649840f06e1cbc541335143b7e71b237",
-          "sha256": "b9f106823e83911365f96a5f1b4cab26649840f06e1cbc541335143b7e71b237"
+          "url": "https://ghcr.io/v2/linuxbrew/core/cmake-docs/blobs/sha256:3341757894ff5a555eb030f048c0d5d2b08e366d9f3327e68672e5a0210dbf2e",
+          "sha256": "3341757894ff5a555eb030f048c0d5d2b08e366d9f3327e68672e5a0210dbf2e"
         },
         "catalina": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/cmake/blobs/sha256:1ab2ae431b90878839404643b926eb81e5b6563d2b59cb860a1ebb03d90a09b7",
-          "sha256": "1ab2ae431b90878839404643b926eb81e5b6563d2b59cb860a1ebb03d90a09b7"
+          "url": "https://ghcr.io/v2/linuxbrew/core/cmake-docs/blobs/sha256:3341757894ff5a555eb030f048c0d5d2b08e366d9f3327e68672e5a0210dbf2e",
+          "sha256": "3341757894ff5a555eb030f048c0d5d2b08e366d9f3327e68672e5a0210dbf2e"
         },
         "mojave": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/cmake/blobs/sha256:da00844fd5e38040486e1e65c415e92eeab82fcf358d5fe97deceffabc48df80",
-          "sha256": "da00844fd5e38040486e1e65c415e92eeab82fcf358d5fe97deceffabc48df80"
+          "url": "https://ghcr.io/v2/linuxbrew/core/cmake-docs/blobs/sha256:3341757894ff5a555eb030f048c0d5d2b08e366d9f3327e68672e5a0210dbf2e",
+          "sha256": "3341757894ff5a555eb030f048c0d5d2b08e366d9f3327e68672e5a0210dbf2e"
         }
       }
     }
@@ -60,11 +60,11 @@
 
   ],
   "build_dependencies": [
-
+    "cmake",
+    "sphinx-doc"
   ],
   "dependencies": [
-    "ncurses",
-    "openssl@1.1"
+
   ],
   "recommended_dependencies": [
 
@@ -73,7 +73,7 @@
 
   ],
   "uses_from_macos": [
-    "ncurses"
+
   ],
   "requirements": [
 
@@ -81,7 +81,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "To install the CMake documentation, run:\n  brew install cmake-docs\n",
+  "caveats": null,
   "installed": [
 
   ],
