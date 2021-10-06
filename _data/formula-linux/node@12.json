@@ -25,7 +25,7 @@
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -34,28 +34,23 @@
       "files": {
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/linuxbrew/core/node/12/blobs/sha256:d3010f414ec59c92041a1035bfeea9dd08cd6cc472b1fd1394f4447902eb63c6",
-          "sha256": "d3010f414ec59c92041a1035bfeea9dd08cd6cc472b1fd1394f4447902eb63c6"
+          "url": "https://ghcr.io/v2/linuxbrew/core/node/12/blobs/sha256:215d642ed997c347c3a3abc4b2913a8c813b46870b3822fe4084e1d1e4f91372",
+          "sha256": "215d642ed997c347c3a3abc4b2913a8c813b46870b3822fe4084e1d1e4f91372"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/linuxbrew/core/node/12/blobs/sha256:caf8395437c1c70c12285eac366ef5e1f03db9c0b5640242156591c45ddfeffb",
-          "sha256": "caf8395437c1c70c12285eac366ef5e1f03db9c0b5640242156591c45ddfeffb"
+          "url": "https://ghcr.io/v2/linuxbrew/core/node/12/blobs/sha256:5d6a32315fd68e3a91d2ce30ef5e26e8cca73ab89893b7f965efcbfc1ae7af6e",
+          "sha256": "5d6a32315fd68e3a91d2ce30ef5e26e8cca73ab89893b7f965efcbfc1ae7af6e"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/linuxbrew/core/node/12/blobs/sha256:b86fe87aa75996f8739e87ffe6d021ba5f9d04868dc664e353eb02c7c43a7b92",
-          "sha256": "b86fe87aa75996f8739e87ffe6d021ba5f9d04868dc664e353eb02c7c43a7b92"
+          "url": "https://ghcr.io/v2/linuxbrew/core/node/12/blobs/sha256:cee28342085656ad34b77e968aee90e2a8c02f527e2df820885e887de2ef08ee",
+          "sha256": "cee28342085656ad34b77e968aee90e2a8c02f527e2df820885e887de2ef08ee"
         },
         "mojave": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/linuxbrew/core/node/12/blobs/sha256:00b0f21bbb02df305c4536022f0ded5564eb9b783946516b9d961428ebd7b5aa",
-          "sha256": "00b0f21bbb02df305c4536022f0ded5564eb9b783946516b9d961428ebd7b5aa"
-        },
-        "x86_64_linux": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/node/12/blobs/sha256:c9c832c4269614e928143e3ab003ec2970553719eaa5bb7c2bc5b01e177aa9ee",
-          "sha256": "c9c832c4269614e928143e3ab003ec2970553719eaa5bb7c2bc5b01e177aa9ee"
+          "url": "https://ghcr.io/v2/linuxbrew/core/node/12/blobs/sha256:33b95dafb0722d184e56c06eedcb7d89f79c4261ce80139a0b2918f92b70f254",
+          "sha256": "33b95dafb0722d184e56c06eedcb7d89f79c4261ce80139a0b2918f92b70f254"
         }
       }
     }
@@ -70,7 +65,13 @@
     "python@3.9"
   ],
   "dependencies": [
-    "icu4c"
+    "brotli",
+    "c-ares",
+    "icu4c",
+    "libnghttp2",
+    "libuv",
+    "openssl@1.1",
+    "zlib"
   ],
   "recommended_dependencies": [
 
@@ -79,7 +80,7 @@
 
   ],
   "uses_from_macos": [
-
+    "zlib"
   ],
   "requirements": [
 
