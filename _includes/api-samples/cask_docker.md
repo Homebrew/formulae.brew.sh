@@ -113,6 +113,7 @@
       "docker-completion",
       "docker-compose",
       "docker-compose-completion",
+      "docker-credential-helper-ecr",
       "hyperkit",
       "kubernetes-cli"
     ]
