@@ -11,6 +11,10 @@
   "appcast": null,
   "version": "15.22.3",
   "versions": {
+    "high_sierra": "15.2.2756",
+    "sierra": "15.2.2756",
+    "el_capitan": "15.2.2756",
+    "yosemite": "15.2.2756"
   },
   "installed": null,
   "outdated": false,
@@ -43,6 +47,7 @@
         "/Library/Preferences/com.teamviewer.teamviewer.preferences.plist",
         "~/Library/Application Support/TeamViewer",
         "~/Library/Caches/com.teamviewer.TeamViewer",
+        "~/Library/Caches/TeamViewer",
         "~/Library/Cookies/com.teamviewer.TeamViewer.binarycookies",
         "~/Library/Logs/TeamViewer",
         "~/Library/Preferences/com.teamviewer.TeamViewer.plist",
@@ -56,6 +61,11 @@
   ],
   "caveats": "WARNING: teamviewer has a bug in Catalina where it doesn't deal well with being uninstalled by other utilities.\nThe recommended way to remove it is by running their uninstaller under:\n\n   Preferences → Advanced\n",
   "depends_on": {
+    "macos": {
+      ">=": [
+        "10.11"
+      ]
+    }
   },
   "conflicts_with": {
     "cask": [
