@@ -1,0 +1,112 @@
+{
+  "name": "llvm@12",
+  "full_name": "llvm@12",
+  "tap": "homebrew/core",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+    "llvm@11",
+    "llvm@9",
+    "llvm@8",
+    "llvm@7"
+  ],
+  "desc": "Next-gen compiler infrastructure",
+  "license": "Apache-2.0 with LLVM-exception",
+  "homepage": "https://llvm.org/",
+  "versions": {
+    "stable": "12.0.1",
+    "head": null,
+    "bottle": true
+  },
+  "urls": {
+    "stable": {
+      "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-12.0.1/llvm-project-12.0.1.src.tar.xz",
+      "tag": null,
+      "revision": null
+    }
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/linuxbrew/core",
+      "files": {
+        "arm64_big_sur": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/linuxbrew/core/llvm/12/blobs/sha256:81b2e6b6a28e9f64f60aaa87b326bd8fe63a2334e81ab6ca1480f421b223a39c",
+          "sha256": "81b2e6b6a28e9f64f60aaa87b326bd8fe63a2334e81ab6ca1480f421b223a39c"
+        },
+        "big_sur": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/linuxbrew/core/llvm/12/blobs/sha256:89c0163100cdb8b6a2a143c68dd8baaeb52695d315452d4e416eec942c3ca9e8",
+          "sha256": "89c0163100cdb8b6a2a143c68dd8baaeb52695d315452d4e416eec942c3ca9e8"
+        },
+        "catalina": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/linuxbrew/core/llvm/12/blobs/sha256:6f1e787991f68a7721e1845d5b2d9ad8c10fc356dee6baffc01a0ef275899e29",
+          "sha256": "6f1e787991f68a7721e1845d5b2d9ad8c10fc356dee6baffc01a0ef275899e29"
+        },
+        "mojave": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/linuxbrew/core/llvm/12/blobs/sha256:926bde78292cbd41fa065a8d8b8f49d86426f2f6d350a1df1045f15fa38424a6",
+          "sha256": "926bde78292cbd41fa065a8d8b8f49d86426f2f6d350a1df1045f15fa38424a6"
+        }
+      }
+    }
+  },
+  "keg_only": true,
+  "bottle_disabled": false,
+  "options": [
+
+  ],
+  "build_dependencies": [
+    "cmake",
+    "swig",
+    "pkg-config"
+  ],
+  "dependencies": [
+    "python@3.9",
+    "libedit",
+    "libffi",
+    "libxml2",
+    "ncurses",
+    "zlib",
+    "binutils",
+    "elfutils"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "uses_from_macos": [
+    "libedit",
+    "libffi",
+    "libxml2",
+    "ncurses",
+    "zlib"
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "To use the bundled libc++ please add the following LDFLAGS:\n  LDFLAGS=\"-L$(brew --prefix)/opt/llvm@12/lib -Wl,-rpath,$(brew --prefix)/opt/llvm@12/lib\"\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "deprecated": false,
+  "deprecation_date": null,
+  "deprecation_reason": null,
+  "disabled": false,
+  "disable_date": null,
+  "disable_reason": null
+}
