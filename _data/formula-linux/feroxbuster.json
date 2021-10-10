@@ -1,6 +1,6 @@
 {
-  "name": "lima",
-  "full_name": "lima",
+  "name": "feroxbuster",
+  "full_name": "feroxbuster",
   "tap": "homebrew/core",
   "oldname": null,
   "aliases": [
@@ -9,17 +9,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Linux virtual machines",
-  "license": "Apache-2.0",
-  "homepage": "https://github.com/lima-vm/lima",
+  "desc": "Fast, simple, recursive content discovery tool written in Rust",
+  "license": "MIT",
+  "homepage": "https://epi052.github.io/feroxbuster",
   "versions": {
-    "stable": "0.7.1",
+    "stable": "2.3.3",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/lima-vm/lima/archive/v0.7.1.tar.gz",
+      "url": "https://github.com/epi052/feroxbuster/archive/v2.3.3.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,23 +33,23 @@
       "files": {
         "arm64_big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/lima/blobs/sha256:f6a9ac0b4a82fd921bff51d6f0bf3390cfd3457a7e1857c7e861be03d605dc45",
-          "sha256": "f6a9ac0b4a82fd921bff51d6f0bf3390cfd3457a7e1857c7e861be03d605dc45"
+          "url": "https://ghcr.io/v2/linuxbrew/core/feroxbuster/blobs/sha256:25abcf60520f6a429c8f03bb787c1468e8a9171fdf50dccab787df0fa9ae6c27",
+          "sha256": "25abcf60520f6a429c8f03bb787c1468e8a9171fdf50dccab787df0fa9ae6c27"
         },
         "big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/lima/blobs/sha256:3de7bb2f85dbbafbb5f6a5536eae0a6133b053b1d1a659288e0ea6b1a82d47e7",
-          "sha256": "3de7bb2f85dbbafbb5f6a5536eae0a6133b053b1d1a659288e0ea6b1a82d47e7"
+          "url": "https://ghcr.io/v2/linuxbrew/core/feroxbuster/blobs/sha256:f8dfe94cde14ffd5ca38db282738275f871830b600017e7e626415ab2331db07",
+          "sha256": "f8dfe94cde14ffd5ca38db282738275f871830b600017e7e626415ab2331db07"
         },
         "catalina": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/lima/blobs/sha256:0effdc9c0bec1208470cbae19e18e8919ac4d06863e598bb115322f89f4fc45f",
-          "sha256": "0effdc9c0bec1208470cbae19e18e8919ac4d06863e598bb115322f89f4fc45f"
+          "url": "https://ghcr.io/v2/linuxbrew/core/feroxbuster/blobs/sha256:d383a8e59bf8e41d18975cb945eecf2700c3ee201197af8b56aa49f6dc3dc0c2",
+          "sha256": "d383a8e59bf8e41d18975cb945eecf2700c3ee201197af8b56aa49f6dc3dc0c2"
         },
         "mojave": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/lima/blobs/sha256:975078dce859460107fb12c110ad8100cf9b29578f41189ceff07bc252f795c5",
-          "sha256": "975078dce859460107fb12c110ad8100cf9b29578f41189ceff07bc252f795c5"
+          "url": "https://ghcr.io/v2/linuxbrew/core/feroxbuster/blobs/sha256:bd6cea2444b6383e0c1a88c61245974d287836c830194209620e8070616c5f78",
+          "sha256": "bd6cea2444b6383e0c1a88c61245974d287836c830194209620e8070616c5f78"
         }
       }
     }
@@ -60,10 +60,10 @@
 
   ],
   "build_dependencies": [
-    "go"
+    "rust"
   ],
   "dependencies": [
-    "qemu"
+    "miniserve"
   ],
   "recommended_dependencies": [
 
