@@ -27,7 +27,7 @@
       "revision": null
     }
   },
-  "revision": 6,
+  "revision": 7,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -48,11 +48,6 @@
           "cellar": ":any",
           "url": "https://ghcr.io/v2/linuxbrew/core/llvm/7/blobs/sha256:4170d8e522ce8aea22450c818bb68b6142671f4239262395d8f09d82621ee343",
           "sha256": "4170d8e522ce8aea22450c818bb68b6142671f4239262395d8f09d82621ee343"
-        },
-        "x86_64_linux": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/llvm/7/blobs/sha256:f4ae7bc630d993aa381d1fc029fa1d4ec47968ab5820953287f45f4100f33631",
-          "sha256": "f4ae7bc630d993aa381d1fc029fa1d4ec47968ab5820953287f45f4100f33631"
         }
       }
     }
@@ -67,13 +62,13 @@
   ],
   "dependencies": [
     "libffi",
-    "binutils",
     "libedit",
-    "libelf",
-    "ncurses",
     "libxml2",
-    "python@3.8",
-    "zlib"
+    "ncurses",
+    "zlib",
+    "binutils",
+    "libelf",
+    "python@3.8"
   ],
   "recommended_dependencies": [
 
@@ -82,7 +77,11 @@
 
   ],
   "uses_from_macos": [
-
+    "libedit",
+    "libffi",
+    "libxml2",
+    "ncurses",
+    "zlib"
   ],
   "requirements": [
     {
