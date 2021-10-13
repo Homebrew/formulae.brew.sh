@@ -13,13 +13,13 @@
   "license": "GPL-3.0-only",
   "homepage": "https://sailed.io",
   "versions": {
-    "stable": "0.9.16",
+    "stable": "0.9.17",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://files.pythonhosted.org/packages/63/f5/49ff597d1e5542115592d8530192d54abaa77a2089c21180f15dfe3e216a/sailed.io-0.9.16.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/fe/cf/e70606598fd12b22ffd830e6d6f4c0ccf0dfa4e3ec5c13482b6f74b26b25/sailed.io-0.9.17.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -32,29 +32,24 @@
       "root_url": "https://ghcr.io/v2/linuxbrew/core",
       "files": {
         "arm64_big_sur": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/sail/blobs/sha256:0839f86d368574b7416c433ca1651bc6fb6a5a595ceb06c03538d1c7c4b02dbd",
-          "sha256": "0839f86d368574b7416c433ca1651bc6fb6a5a595ceb06c03538d1c7c4b02dbd"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/linuxbrew/core/sail/blobs/sha256:e60a3a747b2544948cb8fb34d3b969a28144e2e03849c0fd37a585e4b09aae6e",
+          "sha256": "e60a3a747b2544948cb8fb34d3b969a28144e2e03849c0fd37a585e4b09aae6e"
         },
         "big_sur": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/sail/blobs/sha256:fd29c838ad725d0f9958b038cc2c29e3a8bfd078bdfc1abcfc22b0ea3e830a4d",
-          "sha256": "fd29c838ad725d0f9958b038cc2c29e3a8bfd078bdfc1abcfc22b0ea3e830a4d"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/linuxbrew/core/sail/blobs/sha256:bf27e115f5a7417b887bbc8350a5b97d4e1a7bac52f98576393db9762f428777",
+          "sha256": "bf27e115f5a7417b887bbc8350a5b97d4e1a7bac52f98576393db9762f428777"
         },
         "catalina": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/sail/blobs/sha256:ea25c5774792b89bb39542b71cc6cec8f0f809fba27af9b81a9f51e2fddeebf2",
-          "sha256": "ea25c5774792b89bb39542b71cc6cec8f0f809fba27af9b81a9f51e2fddeebf2"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/linuxbrew/core/sail/blobs/sha256:4aa5ef28530b5b28984303e3d6173bdacb402fd703d1361814236f436ce2f4c8",
+          "sha256": "4aa5ef28530b5b28984303e3d6173bdacb402fd703d1361814236f436ce2f4c8"
         },
         "mojave": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/sail/blobs/sha256:3fde749bd0c01943e03eb0eb6b6b592dd8b3eeb0bb151e9ee7a16b0acf71e29f",
-          "sha256": "3fde749bd0c01943e03eb0eb6b6b592dd8b3eeb0bb151e9ee7a16b0acf71e29f"
-        },
-        "x86_64_linux": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/sail/blobs/sha256:2e8ad4063de83de4b15680a766dcf9b04a5068bd59553c5576f54a29245e47e6",
-          "sha256": "2e8ad4063de83de4b15680a766dcf9b04a5068bd59553c5576f54a29245e47e6"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/linuxbrew/core/sail/blobs/sha256:4e33e87cb71cdce1691b253e6ce5975ed40ec11123aaaf600e092d689fb8961c",
+          "sha256": "4e33e87cb71cdce1691b253e6ce5975ed40ec11123aaaf600e092d689fb8961c"
         }
       }
     }
@@ -65,10 +60,11 @@
 
   ],
   "build_dependencies": [
-
+    "rust"
   ],
   "dependencies": [
-    "python@3.10"
+    "python@3.10",
+    "six"
   ],
   "recommended_dependencies": [
 
