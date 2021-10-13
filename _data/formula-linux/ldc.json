@@ -63,7 +63,8 @@
     "cmake",
     "libconfig",
     "pkg-config",
-    "libxml2"
+    "libxml2",
+    "llvm"
   ],
   "dependencies": [
     "llvm@12"
@@ -77,6 +78,12 @@
   "uses_from_macos": [
     {
       "libxml2": "build"
+    },
+    {
+      "llvm": [
+        "build",
+        "test"
+      ]
     }
   ],
   "requirements": [
