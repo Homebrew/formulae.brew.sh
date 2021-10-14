@@ -96,7 +96,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "Previous versions of this formula used the same data directory as\nthe regular PostgreSQL formula. This causes a conflict if you\ntry to use both at the same time.\n\nIn order to avoid this conflict, you should make sure that the\npostgresql@13 data directory is located at:\n  $(brew --prefix)/var/postgresql@13\n\nThis formula has created a default database cluster with:\n  initdb --locale=C -E UTF-8 $(brew --prefix)/var/postgresql@13\nFor more details, read:\n  https://www.postgresql.org/docs/13/app-initdb.html\n",
+  "caveats": "This formula has created a default database cluster with:\n  initdb --locale=C -E UTF-8 $(brew --prefix)/var/postgresql@13\nFor more details, read:\n  https://www.postgresql.org/docs/13/app-initdb.html\n",
   "installed": [
 
   ],

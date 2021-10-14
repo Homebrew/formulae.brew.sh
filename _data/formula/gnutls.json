@@ -98,13 +98,18 @@
   "caveats": "If you are going to use the Guile bindings you will need to add the following\nto your .bashrc or equivalent in order for Guile to find the TLS certificates\ndatabase:\n  export GUILE_TLS_CERTIFICATE_DIRECTORY=$(brew --prefix)/etc/gnutls/\n",
   "installed": [
     {
-      "version": "3.6.16",
+      "version": "3.6.16_1",
       "used_options": [
 
       ],
       "built_as_bottle": true,
       "poured_from_bottle": true,
       "runtime_dependencies": [
+        {
+          "full_name": "ca-certificates",
+          "version": "2021-09-30",
+          "declared_directly": true
+        },
         {
           "full_name": "gmp",
           "version": "6.2.1",
@@ -186,22 +191,7 @@
           "declared_directly": false
         },
         {
-          "full_name": "c-ares",
-          "version": "1.17.2",
-          "declared_directly": false
-        },
-        {
-          "full_name": "jemalloc",
-          "version": "5.2.1",
-          "declared_directly": false
-        },
-        {
-          "full_name": "libev",
-          "version": "4.33",
-          "declared_directly": false
-        },
-        {
-          "full_name": "nghttp2",
+          "full_name": "libnghttp2",
           "version": "1.45.1",
           "declared_directly": false
         },
@@ -215,9 +205,9 @@
       "installed_on_request": false
     }
   ],
-  "linked_keg": "3.6.16",
+  "linked_keg": "3.6.16_1",
   "pinned": false,
-  "outdated": true,
+  "outdated": false,
   "deprecated": false,
   "deprecation_date": null,
   "deprecation_reason": null,

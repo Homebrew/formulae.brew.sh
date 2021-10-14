@@ -95,7 +95,7 @@
   "caveats": "DocumentRoot is $(brew --prefix)/var/www.\n\nThe default ports have been set in $(brew --prefix)/etc/httpd/httpd.conf to 8080 and in\n$(brew --prefix)/etc/httpd/extra/httpd-ssl.conf to 8443 so that httpd can run without sudo.\n",
   "installed": [
     {
-      "version": "2.4.49",
+      "version": "2.4.51",
       "used_options": [
 
       ],
@@ -106,6 +106,11 @@
           "full_name": "apr",
           "version": "1.7.0",
           "declared_directly": true
+        },
+        {
+          "full_name": "ca-certificates",
+          "version": "2021-09-30",
+          "declared_directly": false
         },
         {
           "full_name": "openssl@1.1",
@@ -123,22 +128,7 @@
           "declared_directly": true
         },
         {
-          "full_name": "c-ares",
-          "version": "1.17.2",
-          "declared_directly": false
-        },
-        {
-          "full_name": "jemalloc",
-          "version": "5.2.1",
-          "declared_directly": false
-        },
-        {
-          "full_name": "libev",
-          "version": "4.33",
-          "declared_directly": false
-        },
-        {
-          "full_name": "nghttp2",
+          "full_name": "libnghttp2",
           "version": "1.45.1",
           "declared_directly": true
         },
@@ -152,9 +142,9 @@
       "installed_on_request": true
     }
   ],
-  "linked_keg": "2.4.49",
+  "linked_keg": "2.4.51",
   "pinned": false,
-  "outdated": true,
+  "outdated": false,
   "deprecated": false,
   "deprecation_date": null,
   "deprecation_reason": null,
