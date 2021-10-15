@@ -10,22 +10,22 @@
 
   ],
   "desc": "VapourSynth filters - Subtitling filter",
-  "license": "ISC",
-  "homepage": "http://www.vapoursynth.com",
+  "license": "MIT",
+  "homepage": "https://www.vapoursynth.com",
   "versions": {
-    "stable": "54",
+    "stable": "2",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/vapoursynth/vapoursynth/archive/R54.tar.gz",
+      "url": "https://github.com/vapoursynth/subtext/archive/R2.tar.gz",
       "tag": null,
       "revision": null
     }
   },
   "revision": 0,
-  "version_scheme": 0,
+  "version_scheme": 1,
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -33,23 +33,28 @@
       "files": {
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/vapoursynth-sub/blobs/sha256:e00dd437364121c4633ac304e1494bffa20a9fad1e4f4fee4de3cd16015a17f2",
-          "sha256": "e00dd437364121c4633ac304e1494bffa20a9fad1e4f4fee4de3cd16015a17f2"
+          "url": "https://ghcr.io/v2/homebrew/core/vapoursynth-sub/blobs/sha256:77ff99cf76d94fa5cbcc961e58a739c1af1fce4cd3587a8b7bb34561e7179473",
+          "sha256": "77ff99cf76d94fa5cbcc961e58a739c1af1fce4cd3587a8b7bb34561e7179473"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/vapoursynth-sub/blobs/sha256:40eda0329ae57f8deaac051521a8ee8f1fe6f5106db3ef024f2fce9ce3432f09",
-          "sha256": "40eda0329ae57f8deaac051521a8ee8f1fe6f5106db3ef024f2fce9ce3432f09"
+          "url": "https://ghcr.io/v2/homebrew/core/vapoursynth-sub/blobs/sha256:9970926b50e25df64e9c8a13e3c575d823cbf5ff93b4244257941af17932bd9b",
+          "sha256": "9970926b50e25df64e9c8a13e3c575d823cbf5ff93b4244257941af17932bd9b"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/vapoursynth-sub/blobs/sha256:29204e101abc88a961a53518abc868c67af788b1369e3fc07e8df439442859d7",
-          "sha256": "29204e101abc88a961a53518abc868c67af788b1369e3fc07e8df439442859d7"
+          "url": "https://ghcr.io/v2/homebrew/core/vapoursynth-sub/blobs/sha256:dd5762ff060f077b961b229cf4daecb93f5b3130fdcd23d6b0fed8cfbdd49e09",
+          "sha256": "dd5762ff060f077b961b229cf4daecb93f5b3130fdcd23d6b0fed8cfbdd49e09"
         },
         "mojave": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/vapoursynth-sub/blobs/sha256:291ec2fad5ccca0b0046b29a2bcb842a700e8395d106747058faf60032735cd4",
-          "sha256": "291ec2fad5ccca0b0046b29a2bcb842a700e8395d106747058faf60032735cd4"
+          "url": "https://ghcr.io/v2/homebrew/core/vapoursynth-sub/blobs/sha256:146a023ced7c207b5b1a054abc25b7587b1e3e6513034e97bf4c57fb7bbbaa22",
+          "sha256": "146a023ced7c207b5b1a054abc25b7587b1e3e6513034e97bf4c57fb7bbbaa22"
+        },
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/vapoursynth-sub/blobs/sha256:6cd479be090c286ebbe0c2e7af858d597d6581b52178748c9b629ed608b771c3",
+          "sha256": "6cd479be090c286ebbe0c2e7af858d597d6581b52178748c9b629ed608b771c3"
         }
       }
     }
@@ -60,10 +65,7 @@
 
   ],
   "build_dependencies": [
-    "autoconf",
-    "automake",
-    "libtool",
-    "nasm",
+    "cmake",
     "pkg-config"
   ],
   "dependencies": [

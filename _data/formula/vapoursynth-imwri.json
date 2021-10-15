@@ -11,21 +11,21 @@
   ],
   "desc": "VapourSynth filters - ImageMagick HDRI writer/reader",
   "license": "LGPL-2.1-or-later",
-  "homepage": "http://www.vapoursynth.com",
+  "homepage": "https://github.com/vapoursynth/vs-imwri",
   "versions": {
-    "stable": "54",
+    "stable": "1",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/vapoursynth/vapoursynth/archive/R54.tar.gz",
+      "url": "https://github.com/vapoursynth/vs-imwri/archive/R1.tar.gz",
       "tag": null,
       "revision": null
     }
   },
   "revision": 0,
-  "version_scheme": 0,
+  "version_scheme": 1,
   "bottle": {
     "stable": {
       "rebuild": 0,
@@ -33,23 +33,28 @@
       "files": {
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/vapoursynth-imwri/blobs/sha256:5836132cd53eaa1767021d26597b1cfd3108f342abe0cad7f1ce40dd3fb6511d",
-          "sha256": "5836132cd53eaa1767021d26597b1cfd3108f342abe0cad7f1ce40dd3fb6511d"
+          "url": "https://ghcr.io/v2/homebrew/core/vapoursynth-imwri/blobs/sha256:080c31181821b981cf47e913b5b91d99e36ed648c5c0bfc8a8ea7200e297f9ab",
+          "sha256": "080c31181821b981cf47e913b5b91d99e36ed648c5c0bfc8a8ea7200e297f9ab"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/vapoursynth-imwri/blobs/sha256:01ffc95970768ce9c4b3197a0f60c51083299c44e8a46e596e85c31dc98c07a9",
-          "sha256": "01ffc95970768ce9c4b3197a0f60c51083299c44e8a46e596e85c31dc98c07a9"
+          "url": "https://ghcr.io/v2/homebrew/core/vapoursynth-imwri/blobs/sha256:ef9f021e687b36a382c2f589b60c5c21fec61a25b687d555162be857a607b04e",
+          "sha256": "ef9f021e687b36a382c2f589b60c5c21fec61a25b687d555162be857a607b04e"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/vapoursynth-imwri/blobs/sha256:2b0b833b8f808b3748249dc12a94a82394b5b4cd0ab4cbf4d2b092e491bf8b9f",
-          "sha256": "2b0b833b8f808b3748249dc12a94a82394b5b4cd0ab4cbf4d2b092e491bf8b9f"
+          "url": "https://ghcr.io/v2/homebrew/core/vapoursynth-imwri/blobs/sha256:6041a275aaf72e45651a334d8cbaef9f9ecccc054b2fd32d9454c1aa82ee1fc7",
+          "sha256": "6041a275aaf72e45651a334d8cbaef9f9ecccc054b2fd32d9454c1aa82ee1fc7"
         },
         "mojave": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/vapoursynth-imwri/blobs/sha256:0bb81d8870a76270aff989d487896f0d651f7e13739c5598e9be9e9aa6cc633a",
-          "sha256": "0bb81d8870a76270aff989d487896f0d651f7e13739c5598e9be9e9aa6cc633a"
+          "url": "https://ghcr.io/v2/homebrew/core/vapoursynth-imwri/blobs/sha256:0ece8962763da6ebc44b85e22907ae218841be3b311d6062047ce59803c6ec3d",
+          "sha256": "0ece8962763da6ebc44b85e22907ae218841be3b311d6062047ce59803c6ec3d"
+        },
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/vapoursynth-imwri/blobs/sha256:dd97dc5792768f831374845c07b347de5cd09d1f1f68a72f72c01fb4872deab1",
+          "sha256": "dd97dc5792768f831374845c07b347de5cd09d1f1f68a72f72c01fb4872deab1"
         }
       }
     }
@@ -60,10 +65,8 @@
 
   ],
   "build_dependencies": [
-    "autoconf",
-    "automake",
-    "libtool",
-    "nasm",
+    "meson",
+    "ninja",
     "pkg-config"
   ],
   "dependencies": [
