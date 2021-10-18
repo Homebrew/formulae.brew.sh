@@ -18,7 +18,18 @@
   "artifacts": [
     [
       "Mumble.app"
-    ]
+    ],
+    {
+      "trash": [
+        "~/Library/Application Support/Mumble",
+        "~/Library/Logs/Mumble.log",
+        "~/Library/Preferences/net.sourceforge.mumble.Mumble.plist",
+        "~/Library/Saved Application State/net.sourceforge.mumble.Mumble.savedState",
+        "/Library/ScriptingAdditions/MumbleOverlay.osax"
+      ],
+      "signal": {
+      }
+    }
   ],
   "caveats": null,
   "depends_on": {
@@ -28,7 +39,11 @@
       ]
     }
   },
-  "conflicts_with": null,
+  "conflicts_with": {
+    "cask": [
+      "homebrew/cask-versions/mumble-snapshot"
+    ]
+  },
   "container": null,
   "auto_updates": null
 }
