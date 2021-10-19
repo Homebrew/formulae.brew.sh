@@ -11,30 +11,50 @@
   ],
   "desc": "Browser automation for testing purposes",
   "license": "Apache-2.0",
-  "homepage": "https://www.seleniumhq.org/",
+  "homepage": "https://www.selenium.dev/",
   "versions": {
-    "stable": "3.141.59",
+    "stable": "4.0.0",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://selenium-release.storage.googleapis.com/3.141/selenium-server-standalone-3.141.59.jar",
+      "url": "https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.0.0/selenium-server-4.0.0.jar",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 2,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
-      "root_url": "https://ghcr.io/v2/linuxbrew/core",
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_big_sur": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/selenium-server-standalone/blobs/sha256:4b65fc10655486a4b59a0a1f5e850b1920a360463dbd5228a859f803a0e96eea",
+          "sha256": "4b65fc10655486a4b59a0a1f5e850b1920a360463dbd5228a859f803a0e96eea"
+        },
+        "big_sur": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/selenium-server-standalone/blobs/sha256:4b65fc10655486a4b59a0a1f5e850b1920a360463dbd5228a859f803a0e96eea",
+          "sha256": "4b65fc10655486a4b59a0a1f5e850b1920a360463dbd5228a859f803a0e96eea"
+        },
+        "catalina": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/selenium-server-standalone/blobs/sha256:4b65fc10655486a4b59a0a1f5e850b1920a360463dbd5228a859f803a0e96eea",
+          "sha256": "4b65fc10655486a4b59a0a1f5e850b1920a360463dbd5228a859f803a0e96eea"
+        },
+        "mojave": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/selenium-server-standalone/blobs/sha256:4b65fc10655486a4b59a0a1f5e850b1920a360463dbd5228a859f803a0e96eea",
+          "sha256": "4b65fc10655486a4b59a0a1f5e850b1920a360463dbd5228a859f803a0e96eea"
+        },
         "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/selenium-server-standalone/blobs/sha256:8fc1e1b18186d116b44d749fbe73aeb7736cb94c51071013aad19095904f9e29",
-          "sha256": "8fc1e1b18186d116b44d749fbe73aeb7736cb94c51071013aad19095904f9e29"
+          "url": "https://ghcr.io/v2/homebrew/core/selenium-server-standalone/blobs/sha256:8fef5d9217b4be71f5856639e23b5e8dbb8ac4b36fbe883c6f53fbcd2332e872",
+          "sha256": "8fef5d9217b4be71f5856639e23b5e8dbb8ac4b36fbe883c6f53fbcd2332e872"
         }
       }
     }
@@ -48,6 +68,7 @@
 
   ],
   "dependencies": [
+    "geckodriver",
     "openjdk"
   ],
   "recommended_dependencies": [

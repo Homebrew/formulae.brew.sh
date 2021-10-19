@@ -29,27 +29,32 @@
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "root_url": "https://ghcr.io/v2/linuxbrew/core",
+      "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
         "arm64_big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/firefoxpwa/blobs/sha256:15cdc571c2e1203613ce6dcf750cf4f5ade14fa2c1b6606c147ef3a78d03707c",
+          "url": "https://ghcr.io/v2/homebrew/core/firefoxpwa/blobs/sha256:15cdc571c2e1203613ce6dcf750cf4f5ade14fa2c1b6606c147ef3a78d03707c",
           "sha256": "15cdc571c2e1203613ce6dcf750cf4f5ade14fa2c1b6606c147ef3a78d03707c"
         },
         "big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/firefoxpwa/blobs/sha256:c02e8de6687d5002f4b356f79ac2b3545924ff39ef092d120daccc2424e555c0",
+          "url": "https://ghcr.io/v2/homebrew/core/firefoxpwa/blobs/sha256:c02e8de6687d5002f4b356f79ac2b3545924ff39ef092d120daccc2424e555c0",
           "sha256": "c02e8de6687d5002f4b356f79ac2b3545924ff39ef092d120daccc2424e555c0"
         },
         "catalina": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/firefoxpwa/blobs/sha256:e582f5b8900bc7fed7fd8c76bb8dee1bea7282527057cad18f5401bdf29a04da",
+          "url": "https://ghcr.io/v2/homebrew/core/firefoxpwa/blobs/sha256:e582f5b8900bc7fed7fd8c76bb8dee1bea7282527057cad18f5401bdf29a04da",
           "sha256": "e582f5b8900bc7fed7fd8c76bb8dee1bea7282527057cad18f5401bdf29a04da"
         },
         "mojave": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/linuxbrew/core/firefoxpwa/blobs/sha256:1ee44407c99209a858f78a4a39bd322a8aff5fe3784e11836742ccd1bf89424b",
+          "url": "https://ghcr.io/v2/homebrew/core/firefoxpwa/blobs/sha256:1ee44407c99209a858f78a4a39bd322a8aff5fe3784e11836742ccd1bf89424b",
           "sha256": "1ee44407c99209a858f78a4a39bd322a8aff5fe3784e11836742ccd1bf89424b"
+        },
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/firefoxpwa/blobs/sha256:b1b3033d842f8cd1172fbb4f630128b740283b2f99d8f159c30603a05fb29547",
+          "sha256": "b1b3033d842f8cd1172fbb4f630128b740283b2f99d8f159c30603a05fb29547"
         }
       }
     }
@@ -60,10 +65,11 @@
 
   ],
   "build_dependencies": [
-    "rust"
+    "rust",
+    "pkg-config"
   ],
   "dependencies": [
-
+    "openssl@1.1"
   ],
   "recommended_dependencies": [
 

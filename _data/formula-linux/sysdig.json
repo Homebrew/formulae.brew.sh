@@ -24,32 +24,27 @@
       "revision": null
     }
   },
-  "revision": 2,
+  "revision": 3,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
-      "root_url": "https://ghcr.io/v2/linuxbrew/core",
+      "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/linuxbrew/core/sysdig/blobs/sha256:5d26c152781c472694c45d59a73e9650859be3f329023e3d55ec28aedcd3257f",
-          "sha256": "5d26c152781c472694c45d59a73e9650859be3f329023e3d55ec28aedcd3257f"
+          "url": "https://ghcr.io/v2/homebrew/core/sysdig/blobs/sha256:2d91d85c74423736815948c9ea42279167aad86e0fec43b6be5fa4f79d2d2089",
+          "sha256": "2d91d85c74423736815948c9ea42279167aad86e0fec43b6be5fa4f79d2d2089"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/linuxbrew/core/sysdig/blobs/sha256:a587a80a9969ef9a280834f08c21b90753cf33d716a0df608a5d8f97c5e81043",
-          "sha256": "a587a80a9969ef9a280834f08c21b90753cf33d716a0df608a5d8f97c5e81043"
+          "url": "https://ghcr.io/v2/homebrew/core/sysdig/blobs/sha256:7300c92bdaba65836b9455ffbe1f8d31076da2cde4677451ffa61c8135e951ad",
+          "sha256": "7300c92bdaba65836b9455ffbe1f8d31076da2cde4677451ffa61c8135e951ad"
         },
         "mojave": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/linuxbrew/core/sysdig/blobs/sha256:6bb2d53d4fa74604759a32bfd9d68acf1fca9c54b28476467a026e3c1d7275a3",
-          "sha256": "6bb2d53d4fa74604759a32bfd9d68acf1fca9c54b28476467a026e3c1d7275a3"
-        },
-        "x86_64_linux": {
-          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
-          "url": "https://ghcr.io/v2/linuxbrew/core/sysdig/blobs/sha256:e6c198beddb081a32c1eb947d80c7a3d1b2a610084bfa5dfda1795bc25dfcfee",
-          "sha256": "e6c198beddb081a32c1eb947d80c7a3d1b2a610084bfa5dfda1795bc25dfcfee"
+          "url": "https://ghcr.io/v2/homebrew/core/sysdig/blobs/sha256:fb57406caf6ade89e50917434ce9ad7b08d96fa0a805442e3a4ae071cebd8804",
+          "sha256": "fb57406caf6ade89e50917434ce9ad7b08d96fa0a805442e3a4ae071cebd8804"
         }
       }
     }
@@ -66,9 +61,13 @@
     "c-ares",
     "jsoncpp",
     "luajit",
+    "openssl@1.1",
     "tbb",
     "curl",
+    "ncurses",
+    "zlib",
     "elfutils",
+    "gcc",
     "grpc",
     "jq",
     "libb64",
@@ -81,7 +80,9 @@
 
   ],
   "uses_from_macos": [
-    "curl"
+    "curl",
+    "ncurses",
+    "zlib"
   ],
   "requirements": [
 
