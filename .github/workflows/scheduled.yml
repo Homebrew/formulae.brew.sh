@@ -81,15 +81,15 @@ jobs:
             git commit -m "docs: update API samples" _includes/api-samples
           fi
 
-      - name: Update data for Homebrew/linuxbrew-core
+      - name: Update analytics data for Homebrew/linuxbrew-core
         if: matrix.os == 'ubuntu-latest'
         run: |
-          rake linux_formula_and_analytics
+          rake linux_analytics
 
           git reset origin/master
-          git add _data/analytics-linux _data/formula-linux{,_canonical.json} _data/bottle-linux api/formula-linux api/bottle-linux formula-linux
-          if ! git diff --no-patch --exit-code HEAD -- _data/analytics-linux _data/formula-linux{,_canonical.json} _data/bottle-linux api/formula-linux api/bottle-linux formula-linux; then
-            git commit -m "formula-linux: updates from Homebrew/linuxbrew-core" _data/analytics-linux _data/formula-linux{,_canonical.json} _data/bottle-linux api/formula-linux api/bottle-linux formula-linux
+          git add _data/analytics-linux
+          if ! git diff --no-patch --exit-code HEAD -- _data/analytics-linux; then
+            git commit -m "analytics-linux: Updates from Linuxbrew's GA" _data/analytics-linux
           fi
 
       - name: Push commits
