@@ -28,13 +28,33 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 0,
+      "rebuild": 1,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
-        "all": {
+        "arm64_big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/sbt/blobs/sha256:3ab83d5f06068e59c537daa0aa5ad18c56b91204fe2f7a8bbb274129bfdcf521",
-          "sha256": "3ab83d5f06068e59c537daa0aa5ad18c56b91204fe2f7a8bbb274129bfdcf521"
+          "url": "https://ghcr.io/v2/homebrew/core/sbt/blobs/sha256:4ff6b167b5ed75da37702d38836642b870c5ae819b26e64fbbdb670abfb6ccc8",
+          "sha256": "4ff6b167b5ed75da37702d38836642b870c5ae819b26e64fbbdb670abfb6ccc8"
+        },
+        "big_sur": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/sbt/blobs/sha256:4ff6b167b5ed75da37702d38836642b870c5ae819b26e64fbbdb670abfb6ccc8",
+          "sha256": "4ff6b167b5ed75da37702d38836642b870c5ae819b26e64fbbdb670abfb6ccc8"
+        },
+        "catalina": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/sbt/blobs/sha256:4ff6b167b5ed75da37702d38836642b870c5ae819b26e64fbbdb670abfb6ccc8",
+          "sha256": "4ff6b167b5ed75da37702d38836642b870c5ae819b26e64fbbdb670abfb6ccc8"
+        },
+        "mojave": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/sbt/blobs/sha256:4ff6b167b5ed75da37702d38836642b870c5ae819b26e64fbbdb670abfb6ccc8",
+          "sha256": "4ff6b167b5ed75da37702d38836642b870c5ae819b26e64fbbdb670abfb6ccc8"
+        },
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/sbt/blobs/sha256:349fea6916cedb16eb1b9c4e96dd7ecbcd6a9db58522a6124f248b68f38c3f30",
+          "sha256": "349fea6916cedb16eb1b9c4e96dd7ecbcd6a9db58522a6124f248b68f38c3f30"
         }
       }
     }
@@ -60,20 +80,12 @@
 
   ],
   "requirements": [
-    {
-      "name": "arch",
-      "cask": null,
-      "download": null,
-      "version": "x86_64",
-      "contexts": [
 
-      ]
-    }
   ],
   "conflicts_with": [
 
   ],
-  "caveats": "You can use $SBT_OPTS to pass additional JVM options to sbt.\nProject specific options should be placed in .sbtopts in the root of your project.\nGlobal settings should be placed in $(brew --prefix)/etc/sbtopts\n",
+  "caveats": "You can use $SBT_OPTS to pass additional JVM options to sbt.\nProject specific options should be placed in .sbtopts in the root of your project.\nGlobal settings should be placed in $(brew --prefix)/etc/sbtopts\n\nHomebrew's installation does not include `sbtn`.\n",
   "installed": [
     {
       "version": "1.5.5",
