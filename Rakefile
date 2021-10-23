@@ -19,8 +19,7 @@ task :formulae, [:os, :tap] do |task, args|
   ENV["HOMEBREW_NO_COLOR"] = "1"
   sh "brew", "ruby", "script/generate.rb", args[:os], args[:tap]
 end
-CLOBBER.include FileList[%w[_data/formula _data/*_canonical.json api/formula formula
-                         _data/formula-linux api/formula-linux formula-linux]]
+CLOBBER.include FileList[%w[_data/formula _data/*_canonical.json api/formula formula]]
 
 desc "Dump cask data"
 task :cask, [:tap] do |task, args|
@@ -74,7 +73,6 @@ def generate_analytics_files(os)
 
   if os == "linux"
     analytics_data_path = "_data/analytics-linux"
-    core_tap_name = "linuxbrew-core"
     formula_analytics_os_arg = "--linux"
   end
 
@@ -145,11 +143,6 @@ task cask_and_analytics: %i[cask analytics]
 desc "Dump Linux analytics data"
 task :linux_analytics do
   Rake::Task["analytics"].tap(&:reenable).invoke("linux")
-end
-
-desc "Dump all formulae (macOS and Linux)"
-task all_formulae: :formulae do
-  Rake::Task["formulae"].tap(&:reenable).invoke("linux")
 end
 
 desc "Dump all analytics (macOS and Linux)"
