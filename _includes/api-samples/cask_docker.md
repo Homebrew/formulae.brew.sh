@@ -123,16 +123,16 @@
   "analytics": {
     "install": {
       "30d": {
-        "docker": 19090
+        "docker": 18912
       },
       "90d": {
-        "docker": 55445
+        "docker": 55817
       },
       "365d": {
-        "docker": 222208
+        "docker": 222220
       }
     }
   },
-  "generated_date": "2021-10-22"
+  "generated_date": "2021-10-23"
 }
 ```
