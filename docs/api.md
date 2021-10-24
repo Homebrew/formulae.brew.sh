@@ -120,7 +120,7 @@ List all the {{ site.taps.core.fullname }} or {{ site.taps.linux.fullname }} for
 
 ```
 GET https://formulae.brew.sh/api/analytics/${CATEGORY}/homebrew-core/${DAYS}.json
-GET https://formulae.brew.sh/api/analytics-linux/${CATEGORY}/linuxbrew-core/${DAYS}.json
+GET https://formulae.brew.sh/api/analytics-linux/${CATEGORY}/homebrew-core/${DAYS}.json
 ```
 
 #### Variables
