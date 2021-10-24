@@ -24,7 +24,7 @@
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,28 +33,23 @@
       "files": {
         "arm64_big_sur": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/root/blobs/sha256:b047f553b56962b417f1a8deeb43c9a814de15e776aa52287e074e83fd9ea09d",
-          "sha256": "b047f553b56962b417f1a8deeb43c9a814de15e776aa52287e074e83fd9ea09d"
+          "url": "https://ghcr.io/v2/homebrew/core/root/blobs/sha256:8a99e500668f1a9bbbc1a3f047a05058c669f37e92c0a6b8d6b1dddd36391b1b",
+          "sha256": "8a99e500668f1a9bbbc1a3f047a05058c669f37e92c0a6b8d6b1dddd36391b1b"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/root/blobs/sha256:1fa26f261a9a86327106fbb5f2dd48687efa39979c207696f85eb6d6a7814fef",
-          "sha256": "1fa26f261a9a86327106fbb5f2dd48687efa39979c207696f85eb6d6a7814fef"
+          "url": "https://ghcr.io/v2/homebrew/core/root/blobs/sha256:b4f2256214d2a774b1135f500599d3835e49c65720e645664281c3a8b29edbab",
+          "sha256": "b4f2256214d2a774b1135f500599d3835e49c65720e645664281c3a8b29edbab"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/root/blobs/sha256:2c925c6cfea7e222a1aaec1c0bec0e74d6a6f56ca24afd0f36cf0b3ef97b01f6",
-          "sha256": "2c925c6cfea7e222a1aaec1c0bec0e74d6a6f56ca24afd0f36cf0b3ef97b01f6"
-        },
-        "mojave": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/root/blobs/sha256:75c2a278276d76be14f0ed92a78e104a39cdcf0d7e506dda0d172b83747d7ed7",
-          "sha256": "75c2a278276d76be14f0ed92a78e104a39cdcf0d7e506dda0d172b83747d7ed7"
+          "url": "https://ghcr.io/v2/homebrew/core/root/blobs/sha256:1885ade8c0b04f7c086a5cb0f9e3a1063627b994947d1085e4b83b2e4f9e7894",
+          "sha256": "1885ade8c0b04f7c086a5cb0f9e3a1063627b994947d1085e4b83b2e4f9e7894"
         },
         "x86_64_linux": {
           "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/root/blobs/sha256:91c253a9e56202f9469ae864ffaf053e5096cc6345ca09972a04757ab2f349f8",
-          "sha256": "91c253a9e56202f9469ae864ffaf053e5096cc6345ca09972a04757ab2f349f8"
+          "url": "https://ghcr.io/v2/homebrew/core/root/blobs/sha256:3d11c2f6d4eb7f86c694ed9073e4525baa53a128bc58f7dfe7720c37fdc6dc64",
+          "sha256": "3d11c2f6d4eb7f86c694ed9073e4525baa53a128bc58f7dfe7720c37fdc6dc64"
         }
       }
     }
@@ -74,13 +69,16 @@
     "fftw",
     "gcc",
     "gl2ps",
+    "glew",
     "graphviz",
     "gsl",
     "lz4",
     "numpy",
+    "openblas",
     "openssl@1.1",
     "pcre",
     "python@3.9",
+    "sqlite",
     "tbb",
     "xrootd",
     "xz",
@@ -93,7 +91,8 @@
 
   ],
   "uses_from_macos": [
-    "libxml2"
+    "libxml2",
+    "zlib"
   ],
   "requirements": [
     {
@@ -107,7 +106,7 @@
     }
   ],
   "conflicts_with": [
-    "glew"
+
   ],
   "caveats": "As of ROOT 6.22, you should not need the thisroot scripts; but if you\ndepend on the custom variables set by them, you can still run them:\n\nFor bash users:\n  . $(brew --prefix)/bin/thisroot.sh\nFor zsh users:\n  pushd $(brew --prefix) >/dev/null; . bin/thisroot.sh; popd >/dev/null\nFor csh/tcsh users:\n  source $(brew --prefix)/bin/thisroot.csh\nFor fish users:\n  . $(brew --prefix)/bin/thisroot.fish\n",
   "installed": [
