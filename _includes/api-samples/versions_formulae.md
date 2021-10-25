@@ -2,8 +2,8 @@
 {
   ...
   "wget": {
-    "version": "1.21.1",
-    "revision": 1
+    "version": "1.21.2",
+    "revision": 0
   },
   ...
   "zsh": {
