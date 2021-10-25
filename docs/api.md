@@ -26,7 +26,6 @@ List the latest version information for each formula or cask in the given tap. T
 
 ```
 GET https://formulae.brew.sh/api/versions-formulae.json
-GET https://formulae.brew.sh/api/versions-linux.json
 GET https://formulae.brew.sh/api/versions-casks.json
 ```
 
@@ -51,11 +50,10 @@ GET https://formulae.brew.sh/api/formula-linux/${FORMULA}.json
 {% include api-samples/formula_wget.md %}
 
 ### Get bottle metadata for a {{ site.taps.core.repo }} formula
-Get the `brew info --json --bottle --formula <formula>` output for a single, current {{ site.taps.core.fullname }} or {{ site.taps.linux.fullname }} formula.
+Get the `brew info --json --bottle --formula <formula>` output for a single, current {{ site.taps.core.fullname }} formula.
 
 ```
 GET https://formulae.brew.sh/api/bottle/${FORMULA}.json
-GET https://formulae.brew.sh/api/bottle-linux/${FORMULA}.json
 ```
 
 #### Variables
