@@ -21,6 +21,20 @@ GET https://formulae.brew.sh/api/cask.json
 #### [Response](https://formulae.brew.sh/api/formula.json)
 {% include api-samples/formula.md %}
 
+### List the latest versions for all {{ site.taps.core.repo }} or {{ site.taps.cask.repo }} formulae
+List the latest version information for each formula or cask in the given tap. The result is a single JSON object with formula/cask names as keys. The values are JSON objects containing `version` and, for formulae, `revision` keys.
+
+```
+GET https://formulae.brew.sh/api/versions-formulae.json
+GET https://formulae.brew.sh/api/versions-casks.json
+```
+
+#### [Formulae Response](https://formulae.brew.sh/api/versions-formulae.json)
+{% include api-samples/versions_formulae.md %}
+
+#### [Casks Response](https://formulae.brew.sh/api/versions-casks.json)
+{% include api-samples/versions_casks.md %}
+
 ### Get formula metadata for a {{ site.taps.core.repo }} formula
 Get the `brew info --json --formula <formula>` output for a single, current {{ site.taps.core.fullname }} or {{ site.taps.linux.fullname }} formula with extra keys containing analytics data and generation date.
 
@@ -35,6 +49,19 @@ GET https://formulae.brew.sh/api/formula-linux/${FORMULA}.json
 #### [Response](https://formulae.brew.sh/api/formula/wget.json)
 {% include api-samples/formula_wget.md %}
 
+### Get bottle metadata for a {{ site.taps.core.repo }} formula
+Get the `brew info --json --bottle --formula <formula>` output for a single, current {{ site.taps.core.fullname }} formula.
+
+```
+GET https://formulae.brew.sh/api/bottle/${FORMULA}.json
+```
+
+#### Variables
+- `${FORMULA}`: the name of the formula, e.g. `wget`
+
+#### [Response](https://formulae.brew.sh/api/bottle/wget.json)
+{% include api-samples/bottle_wget.md %}
+
 ### Get formula metadata for a {{ site.taps.cask.repo }} formula
 Get the `brew info --json=v2 --cask <cask>` JSON output for a single, current {{ site.taps.cask.fullname }} formula with extra keys containing analytics data and generation date.
 
@@ -47,6 +74,19 @@ GET https://formulae.brew.sh/api/cask/${FORMULA}.json
 
 #### [Response](https://formulae.brew.sh/api/cask/docker.json)
 {% include api-samples/cask_docker.md %}
+
+### Get the source code for a cask in {{ site.taps.cask.fullname }}
+Get the latest source code for a {{ site.taps.cask.repo }} that is defined in the {{ site.taps.cask.fullname }} repo.
+
+```
+GET https://formulae.brew.sh/api/cask-source/${FORMULA}.rb
+```
+
+#### Variables
+- `${FORMULA}`: the name of the cask, e.g. `vagrant`
+
+#### [Response](https://formulae.brew.sh/api/cask-source/vagrant.json)
+{% include api-samples/cask_source_vagrant.md %}
 
 ## Analytics
 
