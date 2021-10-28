@@ -13,13 +13,13 @@
   "license": "MIT",
   "homepage": "https://pypy.org/",
   "versions": {
-    "stable": "7.3.6",
+    "stable": "7.3.7",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://downloads.python.org/pypy/pypy3.7-v7.3.6-src.tar.bz2",
+      "url": "https://downloads.python.org/pypy/pypy3.7-v7.3.7-src.tar.bz2",
       "tag": null,
       "revision": null
     }
@@ -31,30 +31,20 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
-        "monterey": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/pypy3/blobs/sha256:c492225aea0f7fac46cbd4e2e71f0cd6e8f92c5b9de5e70167c95975a44d6708",
-          "sha256": "c492225aea0f7fac46cbd4e2e71f0cd6e8f92c5b9de5e70167c95975a44d6708"
-        },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/pypy3/blobs/sha256:43414ae1aeb1e85a82a4fc80f87cbf33099942886ce658d1d551f0fa92d936ba",
-          "sha256": "43414ae1aeb1e85a82a4fc80f87cbf33099942886ce658d1d551f0fa92d936ba"
+          "url": "https://ghcr.io/v2/homebrew/core/pypy3/blobs/sha256:f4980891d9687298103d5e53f2f783a106d2de25d3b5187da6e11f307a63464d",
+          "sha256": "f4980891d9687298103d5e53f2f783a106d2de25d3b5187da6e11f307a63464d"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/pypy3/blobs/sha256:0bb518f53df09e436a0b2dfe1db3ab03b43b8acf3a1b6f6f344c5e7bea277504",
-          "sha256": "0bb518f53df09e436a0b2dfe1db3ab03b43b8acf3a1b6f6f344c5e7bea277504"
-        },
-        "mojave": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/pypy3/blobs/sha256:3bd01983ff8ceb89b17b08be36dd046537dc2e2ed24d745ea3eac6dbf3abef5b",
-          "sha256": "3bd01983ff8ceb89b17b08be36dd046537dc2e2ed24d745ea3eac6dbf3abef5b"
+          "url": "https://ghcr.io/v2/homebrew/core/pypy3/blobs/sha256:a42821d5afbdf003b7f5ad607881713b23f3a098eb452d7351ad0c3f28aa42f5",
+          "sha256": "a42821d5afbdf003b7f5ad607881713b23f3a098eb452d7351ad0c3f28aa42f5"
         },
         "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/pypy3/blobs/sha256:934569c2bfe26e87de9940ac0c4961aefd7c3fd305fadbd11345a2512fc1f00d",
-          "sha256": "934569c2bfe26e87de9940ac0c4961aefd7c3fd305fadbd11345a2512fc1f00d"
+          "url": "https://ghcr.io/v2/homebrew/core/pypy3/blobs/sha256:e76f45f6f97329af492c51067b6b9e4dc1835fe9a66eaf41e739f213716d5d98",
+          "sha256": "e76f45f6f97329af492c51067b6b9e4dc1835fe9a66eaf41e739f213716d5d98"
         }
       }
     }
@@ -103,7 +93,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "A \"distutils.cfg\" has been written to:\n  $(brew --prefix)/Cellar/pypy3/7.3.6/libexec/lib-python/3/distutils\nspecifying the install-scripts folder as:\n  $(brew --prefix)/share/pypy3\n\nIf you install Python packages via \"pypy3 setup.py install\", easy_install_pypy3,\nor pip_pypy3, any provided scripts will go into the install-scripts folder\nabove, so you may want to add it to your PATH *after* $(brew --prefix)/bin\nso you don't overwrite tools from CPython.\n\nSetuptools and pip have been installed, so you can use easy_install_pypy3 and\npip_pypy3.\nTo update pip and setuptools between pypy3 releases, run:\n    pip_pypy3 install --upgrade pip setuptools\n\nSee: https://docs.brew.sh/Homebrew-and-Python\n",
+  "caveats": "A \"distutils.cfg\" has been written to:\n  $(brew --prefix)/Cellar/pypy3/7.3.7/libexec/lib-python/3/distutils\nspecifying the install-scripts folder as:\n  $(brew --prefix)/share/pypy3\n\nIf you install Python packages via \"pypy3 setup.py install\", easy_install_pypy3,\nor pip_pypy3, any provided scripts will go into the install-scripts folder\nabove, so you may want to add it to your PATH *after* $(brew --prefix)/bin\nso you don't overwrite tools from CPython.\n\nSetuptools and pip have been installed, so you can use easy_install_pypy3 and\npip_pypy3.\nTo update pip and setuptools between pypy3 releases, run:\n    pip_pypy3 install --upgrade pip setuptools\n\nSee: https://docs.brew.sh/Homebrew-and-Python\n",
   "installed": [
 
   ],
