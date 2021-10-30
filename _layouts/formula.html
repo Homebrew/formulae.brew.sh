@@ -3,7 +3,8 @@ layout: default
 permalink: :title
 ---
 {%- assign full_name = page.title -%}
-{%- assign formula_path = page.dir | remove: "/" -%}
+{%- assign formula_path = "formula" -%}
+{%- assign bottle_path = "bottle" -%}
 {%- assign data_name = full_name | remove: "@" | remove: "." | replace: "+", "_" -%}
 {%- assign f = site.data[formula_path][data_name] -%}
 <h2
@@ -25,7 +26,6 @@ permalink: :title
 <p>License: <strong>{{ f.license | join: "</strong>, <strong>" | replace: "_", " " }}</strong></p>
 {%- endif %}
 
-{%- assign bottle_path = formula_path | replace: "formula", "bottle" -%}
 <p><a href="{{ site.baseurl }}/api/{{ formula_path }}/{{ f.name }}.json"><code>/api/{{ formula_path }}/{{ f.name }}.json</code> (JSON API)</a></p>
 <p><a href="{{ site.baseurl }}/api/{{ bottle_path }}/{{ f.name }}.json"><code>/api/{{ bottle_path }}/{{ f.name }}.json</code> (Bottle JSON API)</a></p>
 
@@ -37,7 +37,7 @@ permalink: :title
 {%- elsif f.bottle.stable %} installation support provided
     {%- if f.bottle.stable.files.all -%}.
     {%- else -%}
-        {%- assign bottles = true -%}:
+        {%- assign bottles = true %} for:
     {%- endif -%}
 {%- else %} not available on this platform.
 {%- endif -%}</p>
@@ -58,7 +58,7 @@ permalink: :title
         {%- unless b[0] contains "arm64_" %}
         <tr>
             {%- unless subsequent -%}
-                <th rowspan="{{ intel_bottle_count }}" scope="rowgroup">Intel</th>
+            <th rowspan="{{ intel_bottle_count }}" scope="rowgroup">Intel</th>
             {%- endunless %}
             <td scope="row" style="text-transform:capitalize;">
                 {{ b[0] | replace: "x86_64", "64-bit" | replace: "_", "&nbsp;" }}
@@ -74,9 +74,7 @@ permalink: :title
         {%- if b[0] contains "arm64_" %}
         <tr>
             {%- unless subsequent -%}
-            <th rowspan="{{ arm64_bottle_count }}" scope="rowgroup">
-                Apple Silicon
-            </th>
+            <th rowspan="{{ arm64_bottle_count }}" scope="rowgroup">Apple Silicon</th>
             {%- endunless %}
             <td scope="row" style="text-transform:capitalize;">
                 {{ b[0] | remove_first: "arm64_" | replace: "_", "&nbsp;" }}
@@ -178,7 +176,7 @@ permalink: :title
 {%- if f.conflicts_with.size > 0 %}
 <p>Conflicts with:
     {%- for c in f.conflicts_with %}
-        <strong><a href="{{ site.baseurl }}/formula/{{ c }}">{{ c }}</a></strong>
+        <strong><a href="{{ site.baseurl }}/{{ formula_path }}/{{ c }}">{{ c }}</a></strong>
         {%- unless forloop.last -%}, {% endunless -%}
     {%- endfor %}
 </p>
