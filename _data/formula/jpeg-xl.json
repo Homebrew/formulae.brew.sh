@@ -10,56 +10,46 @@
 
   ],
   "desc": "New file format for still image compression",
-  "license": "Apache-2.0",
+  "license": "BSD-3-Clause",
   "homepage": "https://jpeg.org/jpegxl/index.html",
   "versions": {
-    "stable": "0.5",
+    "stable": "0.6.1",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://gitlab.com/wg1/jpeg-xl/-/archive/v0.5/jpeg-xl-v0.5.tar.bz2",
+      "url": "https://github.com/libjxl/libjxl/archive/v0.6.1.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
-        "arm64_monterey": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/jpeg-xl/blobs/sha256:f9e47df2a8feecf79234e815761ec21619370807db3ff431f5aba99bbb628f22",
-          "sha256": "f9e47df2a8feecf79234e815761ec21619370807db3ff431f5aba99bbb628f22"
-        },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/jpeg-xl/blobs/sha256:37a9eb58bb2e1d55f9691161544bdcd6c615787204f7426436087af5037749f8",
-          "sha256": "37a9eb58bb2e1d55f9691161544bdcd6c615787204f7426436087af5037749f8"
-        },
-        "monterey": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/jpeg-xl/blobs/sha256:f6d6071deca533148e76665aa7c4769754eef667417b7548806528b9d946de83",
-          "sha256": "f6d6071deca533148e76665aa7c4769754eef667417b7548806528b9d946de83"
+          "url": "https://ghcr.io/v2/homebrew/core/jpeg-xl/blobs/sha256:ad8d741fe5ff44ed35f407ff6f692763c937d74e51156563fb3e8245ac534898",
+          "sha256": "ad8d741fe5ff44ed35f407ff6f692763c937d74e51156563fb3e8245ac534898"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/jpeg-xl/blobs/sha256:017bbfa9af1adf69981c1ff8a7f18f3c7b4c8ac1de87168e9f4610825dcfe861",
-          "sha256": "017bbfa9af1adf69981c1ff8a7f18f3c7b4c8ac1de87168e9f4610825dcfe861"
+          "url": "https://ghcr.io/v2/homebrew/core/jpeg-xl/blobs/sha256:77882f055f5509900e8f913352386201a3cb57cbae04f7de254416416d9638d7",
+          "sha256": "77882f055f5509900e8f913352386201a3cb57cbae04f7de254416416d9638d7"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/jpeg-xl/blobs/sha256:b3e21b0631fca6edf8e534f1bdc23a017e766b9dd63afc87e7c16962da5f334c",
-          "sha256": "b3e21b0631fca6edf8e534f1bdc23a017e766b9dd63afc87e7c16962da5f334c"
+          "url": "https://ghcr.io/v2/homebrew/core/jpeg-xl/blobs/sha256:ef47fc0d2de7c6623c1504d6df8b9b041763bec532c4f907793f4ffedc6f3050",
+          "sha256": "ef47fc0d2de7c6623c1504d6df8b9b041763bec532c4f907793f4ffedc6f3050"
         },
-        "mojave": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/jpeg-xl/blobs/sha256:b7e4f3c64f8fe63c0ed2771f8e94ab69c58a3bbc9e716cfda6278682a51b450c",
-          "sha256": "b7e4f3c64f8fe63c0ed2771f8e94ab69c58a3bbc9e716cfda6278682a51b450c"
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/jpeg-xl/blobs/sha256:011b3fd5a6bfdd494edaddf64cb4432cadf6ad71adf24201a9555848eb2717c4",
+          "sha256": "011b3fd5a6bfdd494edaddf64cb4432cadf6ad71adf24201a9555848eb2717c4"
         }
       }
     }
@@ -70,7 +60,6 @@
 
   ],
   "build_dependencies": [
-    "asciidoc",
     "cmake",
     "pkg-config"
   ],
@@ -90,7 +79,12 @@
 
   ],
   "uses_from_macos": [
-
+    {
+      "libxml2": "build"
+    },
+    {
+      "libxslt": "build"
+    }
   ],
   "requirements": [
 
