@@ -3,11 +3,6 @@ layout: base
 ---
 {%- assign analytics_path = page.dir | split: "/" -%}
 {%- assign analytics_path = analytics_path[1] -%}
-{%- if analytics_path == "analytics-linux" -%}
-    {%- assign formula_path = "formula-linux" -%}
-{%- else -%}
-    {%- assign formula_path = "formula" -%}
-{%- endif -%}
 <h2>{{ page.category_pretty }} Events ({{ page.days | split: "d" | first }} days)</h2>
 
 <h3><a href="{{ site.baseurl }}/api/{{ analytics_path }}/{{ page.category }}/{{ page.days }}.json"><code>/api/{{ analytics_path }}/{{ page.category }}/{{ page.days }}.json</code> (JSON API)</a></h3>
@@ -43,9 +38,9 @@ layout: base
     {%- else -%}
         {%- assign full_name = item.formula | split: " " | first -%}
         {%- assign data_name = full_name | remove: "@" | remove: "." | replace: "+", "_" -%}
-        {%- assign formula = site.data[formula_path][data_name] -%}
+        {%- assign formula = site.data.formula[data_name] -%}
         {%- if full_name == formula.name -%}
-            <a href="{{ site.baseurl }}/{{ formula_path }}/{{ full_name }}"><code>{{ item.formula }}</code></a>
+            <a href="{{ site.baseurl }}/formula/{{ full_name }}"><code>{{ item.formula }}</code></a>
         {%- else -%}
             <code>{{ item.formula }}</code>
         {%- endif -%}

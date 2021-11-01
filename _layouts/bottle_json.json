@@ -1,8 +1,6 @@
 ---
 ---
-{%- assign bottle_path = page.dir | split: "/" -%}
-{%- assign bottle_path = bottle_path[2] -%}
 {%- assign full_name = page.name | remove: ".json" -%}
-{%- assign name = full_name | remove: "@" | remove: "." | replace: "+", "_" -%}
-{%- assign bottle = site.data[bottle_path][name] -%}
+{%- assign data_name = full_name | remove: "@" | remove: "." | replace: "+", "_" -%}
+{%- assign bottle = site.data.bottle[data_name] -%}
 {{ bottle | jsonify }}
