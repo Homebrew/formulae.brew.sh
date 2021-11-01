@@ -161,6 +161,36 @@
     },
     "build_error": {
       "30d": {
+        "wget": 6,
+        "wget --HEAD": 1
+      }
+    }
+  },
+  "analytics-linux": {
+    "install": {
+      "30d": {
+        "wget": 1070
+      },
+      "90d": {
+        "wget": 3538
+      },
+      "365d": {
+        "wget": 10681
+      }
+    },
+    "install_on_request": {
+      "30d": {
+        "wget": 1037
+      },
+      "90d": {
+        "wget": 3421
+      },
+      "365d": {
+        "wget": 10206
+      }
+    },
+    "build_error": {
+      "30d": {
         "wget": 0
       }
     }
