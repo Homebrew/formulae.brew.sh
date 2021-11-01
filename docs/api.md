@@ -10,11 +10,10 @@ redirect_from:
 ## Metadata
 
 ### List formulae metadata for all {{ site.taps.core.repo }} or {{ site.taps.cask.repo }} formulae
-List the `brew info --json --all` output for all current {{ site.taps.core.fullname }}, {{ site.taps.linux.fullname }} or {{ site.taps.cask.fullname }} formulae.
+List the `brew info --json --all` output for all current {{ site.taps.core.fullname }} or {{ site.taps.cask.fullname }} formulae.
 
 ```
 GET https://formulae.brew.sh/api/formula.json
-GET https://formulae.brew.sh/api/formula-linux.json
 GET https://formulae.brew.sh/api/cask.json
 ```
 
@@ -36,11 +35,10 @@ GET https://formulae.brew.sh/api/versions-casks.json
 {% include api-samples/versions_casks.md %}
 
 ### Get formula metadata for a {{ site.taps.core.repo }} formula
-Get the `brew info --json --formula <formula>` output for a single, current {{ site.taps.core.fullname }} or {{ site.taps.linux.fullname }} formula with extra keys containing analytics data and generation date.
+Get the `brew info --json --formula <formula>` output for a single, current {{ site.taps.core.fullname }} formula with extra keys containing analytics data and generation date.
 
 ```
 GET https://formulae.brew.sh/api/formula/${FORMULA}.json
-GET https://formulae.brew.sh/api/formula-linux/${FORMULA}.json
 ```
 
 #### Variables
@@ -116,11 +114,11 @@ GET https://formulae.brew.sh/api/analytics-linux/${CATEGORY}/${DAYS}.json
 {% include api-samples/analytics_install_30d.md %}
 
 ### List analytics events for all {{ site.taps.core.repo }} formulae
-List all the {{ site.taps.core.fullname }} or {{ site.taps.linux.fullname }} formulae's analytics events for a specified category over a number of days, grouped by formula name. This is the data source for `brew info --analytics --formula <formula>`.
+List all the {{ site.taps.core.fullname }} formulae's analytics events for a specified category over a number of days, grouped by formula name. This is the data source for `brew info --analytics --formula <formula>`.
 
 ```
 GET https://formulae.brew.sh/api/analytics/${CATEGORY}/homebrew-core/${DAYS}.json
-GET https://formulae.brew.sh/api/analytics-linux/${CATEGORY}/linuxbrew-core/${DAYS}.json
+GET https://formulae.brew.sh/api/analytics-linux/${CATEGORY}/homebrew-core/${DAYS}.json
 ```
 
 #### Variables

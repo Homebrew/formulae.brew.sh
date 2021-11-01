@@ -85,20 +85,20 @@ redirect_from: /analytics-linux/
         <td><a href="{{ site.baseurl }}/analytics-linux/build-error/365d/">365 days</a></td>
     </tr>
     <tr>
-        <td><code>/api/analytics-linux/install/linuxbrew-core/${DAYS}.json</code> (JSON API)</td>
-        <td><a href="{{ site.baseurl }}/api/analytics-linux/install/linuxbrew-core/30d.json">30 days</a></td>
-        <td><a href="{{ site.baseurl }}/api/analytics-linux/install/linuxbrew-core/90d.json">90 days</a></td>
-        <td><a href="{{ site.baseurl }}/api/analytics-linux/install/linuxbrew-core/365d.json">365 days</a></td>
+        <td><code>/api/analytics-linux/install/homebrew-core/${DAYS}.json</code> (JSON API)</td>
+        <td><a href="{{ site.baseurl }}/api/analytics-linux/install/homebrew-core/30d.json">30 days</a></td>
+        <td><a href="{{ site.baseurl }}/api/analytics-linux/install/homebrew-core/90d.json">90 days</a></td>
+        <td><a href="{{ site.baseurl }}/api/analytics-linux/install/homebrew-core/365d.json">365 days</a></td>
     </tr>
     <tr>
-        <td><code>/api/analytics-linux/install-on-request/linuxbrew-core/${DAYS}.json</code> (JSON API)</td>
-        <td><a href="{{ site.baseurl }}/api/analytics-linux/install-on-request/linuxbrew-core/30d.json">30 days</a></td>
-        <td><a href="{{ site.baseurl }}/api/analytics-linux/install-on-request/linuxbrew-core/90d.json">90 days</a></td>
-        <td><a href="{{ site.baseurl }}/api/analytics-linux/install-on-request/linuxbrew-core/365d.json">365 days</a></td>
+        <td><code>/api/analytics-linux/install-on-request/homebrew-core/${DAYS}.json</code> (JSON API)</td>
+        <td><a href="{{ site.baseurl }}/api/analytics-linux/install-on-request/homebrew-core/30d.json">30 days</a></td>
+        <td><a href="{{ site.baseurl }}/api/analytics-linux/install-on-request/homebrew-core/90d.json">90 days</a></td>
+        <td><a href="{{ site.baseurl }}/api/analytics-linux/install-on-request/homebrew-core/365d.json">365 days</a></td>
     </tr>
     <tr>
-        <td><code>/api/analytics-linux/build-error/linuxbrew-core/${DAYS}.json</code> (JSON API)</td>
-        <td><a href="{{ site.baseurl }}/api/analytics-linux/build-error/linuxbrew-core/30d.json">30 days</a></td>
+        <td><code>/api/analytics-linux/build-error/homebrew-core/${DAYS}.json</code> (JSON API)</td>
+        <td><a href="{{ site.baseurl }}/api/analytics-linux/build-error/homebrew-core/30d.json">30 days</a></td>
         <td></td>
         <td></td>
     </tr>
