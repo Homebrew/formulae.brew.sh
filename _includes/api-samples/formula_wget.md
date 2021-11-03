@@ -131,32 +131,32 @@
   "analytics": {
     "install": {
       "30d": {
-        "wget": 186866,
-        "wget --HEAD": 9
+        "wget": 190908,
+        "wget --HEAD": 10
       },
       "90d": {
-        "wget": 637702,
-        "wget --HEAD": 30,
+        "wget": 641313,
+        "wget --HEAD": 31,
         "wget --with-limit-size": 1
       },
       "365d": {
-        "wget": 1912906,
-        "wget --HEAD": 191
+        "wget": 1916577,
+        "wget --HEAD": 192
       }
     },
     "install_on_request": {
       "30d": {
-        "wget": 186309,
-        "wget --HEAD": 9
+        "wget": 190333,
+        "wget --HEAD": 10
       },
       "90d": {
-        "wget": 634952,
-        "wget --HEAD": 27,
+        "wget": 638554,
+        "wget --HEAD": 28,
         "wget --with-limit-size": 1
       },
       "365d": {
-        "wget": 1903848,
-        "wget --HEAD": 188
+        "wget": 1907536,
+        "wget --HEAD": 189
       }
     },
     "build_error": {
@@ -169,24 +169,24 @@
   "analytics-linux": {
     "install": {
       "30d": {
-        "wget": 1079
+        "wget": 1097
       },
       "90d": {
-        "wget": 3550
+        "wget": 3547
       },
       "365d": {
-        "wget": 10718
+        "wget": 10741
       }
     },
     "install_on_request": {
       "30d": {
-        "wget": 1051
+        "wget": 1070
       },
       "90d": {
-        "wget": 3432
+        "wget": 3430
       },
       "365d": {
-        "wget": 10243
+        "wget": 10266
       }
     },
     "build_error": {
@@ -195,6 +195,6 @@
       }
     }
   },
-  "generated_date": "2021-11-02"
+  "generated_date": "2021-11-03"
 }
 ```
