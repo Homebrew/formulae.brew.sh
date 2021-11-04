@@ -17,7 +17,10 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "delete": "/Library/Application Support/CleverFiles",
+      "script": {
+        "executable": "$(brew --prefix)/Caskroom/disk-drill/4.5.369/Disk Drill.app/Contents/Resources/uninstall",
+        "sudo": "true"
+      },
       "signal": {
       }
     },
