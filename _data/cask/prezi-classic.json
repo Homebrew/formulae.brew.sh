@@ -5,7 +5,7 @@
   "name": [
     "Prezi Classic"
   ],
-  "desc": null,
+  "desc": "Desktop client for the Prezi presentation SaaS",
   "homepage": "https://prezi.com/desktop",
   "url": "https://desktopassets.prezi.com/mac/pd6/releases/Prezi_Classic_6.14.0.dmg",
   "appcast": null,
@@ -18,7 +18,19 @@
   "artifacts": [
     [
       "Prezi Classic.app"
-    ]
+    ],
+    {
+      "trash": [
+        "~/Library/Application Support/com.prezi.desktop",
+        "~/Library/Caches/com.prezi.desktop",
+        "~/Library/Logs/Prezi Classic",
+        "~/Library/Logs/Prezi Classic_debug.log",
+        "~/Library/Preferences/com.prezi.desktop.plist",
+        "~/Library/Saved Application State/com.prezi.desktop.savedState"
+      ],
+      "signal": {
+      }
+    }
   ],
   "caveats": null,
   "depends_on": {
