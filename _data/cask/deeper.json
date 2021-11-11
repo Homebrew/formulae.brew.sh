@@ -11,7 +11,7 @@
   "appcast": null,
   "version": "2.6.0",
   "versions": {
-    "monterey": "2.7.0",
+    "monterey": "2.7.5",
     "big_sur": "2.7.0",
     "mojave": "2.4.8",
     "high_sierra": "2.3.3",
@@ -25,13 +25,23 @@
   "artifacts": [
     [
       "Deeper.app"
-    ]
+    ],
+    {
+      "trash": [
+        "~/Library/Caches/com.apple.helpd/Generated/Deeper Help*",
+        "~/Library/Logs/Deeper.log",
+        "~/Library/Preferences/com.titanium.Deeper.plist",
+        "~/Library/Saved Application State/com.titanium.Deeper.savedState"
+      ],
+      "signal": {
+      }
+    }
   ],
   "caveats": null,
   "depends_on": {
     "macos": {
       "<=": [
-        "11"
+        "12"
       ]
     }
   },
