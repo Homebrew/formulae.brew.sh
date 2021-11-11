@@ -14,6 +14,4 @@ cask "mediathekview" do
   end
 
   app "MediathekView.app"
-
-  zap trash: "~/Library/Caches/MediathekView"
 end

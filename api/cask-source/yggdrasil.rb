@@ -1,20 +1,13 @@
 cask "yggdrasil" do
-  arch = Hardware::CPU.intel? ? "amd64" : "arm64"
+  version "0.4.0"
+  sha256 "2425d0bdef84de6c91865e330ec4d27266a5712b015b6c3c771a9745d011e4c7"
 
-  version "0.4.2"
-
-  if Hardware::CPU.intel?
-    sha256 "00abf4a46dd1d75adbc35d9a687a99364d991e824f0302406e78caaa7857ef65"
-  else
-    sha256 "fe317aa64a31ff47d6f27d2ac81694c6bf0aafacd96bee02ede1add8a6a2e7a4"
-  end
-
-  url "https://github.com/yggdrasil-network/yggdrasil-go/releases/download/v#{version}/yggdrasil-#{version}-macos-#{arch}.pkg"
+  url "https://github.com/yggdrasil-network/yggdrasil-go/releases/download/v#{version}/yggdrasil-#{version}-macos-amd64.pkg"
   name "Yggdrasil"
   desc "End-to-end encrypted IPv6 networking to connect worlds"
   homepage "https://github.com/yggdrasil-network/yggdrasil-go"
 
-  pkg "yggdrasil-#{version}-macos-#{arch}.pkg"
+  pkg "yggdrasil-#{version}-macos-amd64.pkg"
 
   uninstall launchctl: "yggdrasil",
             pkgutil:   "io.github.yggdrasil-network.pkg"

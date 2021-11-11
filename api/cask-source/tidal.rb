@@ -1,5 +1,5 @@
 cask "tidal" do
-  version "2.28.0"
+  version "2.26.1"
   sha256 :no_check
 
   url "https://download.tidal.com/desktop/TIDAL.dmg"
@@ -8,8 +8,7 @@ cask "tidal" do
   homepage "https://tidal.com/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    skip "unversioned URL"
   end
 
   app "TIDAL.app"

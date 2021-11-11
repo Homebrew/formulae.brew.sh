@@ -15,7 +15,7 @@ cask "mpv" do
   end
 
   conflicts_with formula: "mpv"
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :sierra"
 
   app "mpv.app"
   binary "#{appdir}/mpv.app/Contents/MacOS/mpv"
