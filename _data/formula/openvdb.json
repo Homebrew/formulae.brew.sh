@@ -9,17 +9,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Sparse volume processing toolkit",
+  "desc": "Sparse volumetric data processing toolkit",
   "license": "MPL-2.0",
   "homepage": "https://www.openvdb.org/",
   "versions": {
-    "stable": "8.1.0",
+    "stable": "9.0.0",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/AcademySoftwareFoundation/openvdb/archive/v8.1.0.tar.gz",
+      "url": "https://github.com/AcademySoftwareFoundation/openvdb/archive/v9.0.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,38 +33,33 @@
       "files": {
         "arm64_monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/openvdb/blobs/sha256:31063bc8947d87d94954752809d6ab0a0e84315ba147f9a653e6b6d11200f605",
-          "sha256": "31063bc8947d87d94954752809d6ab0a0e84315ba147f9a653e6b6d11200f605"
+          "url": "https://ghcr.io/v2/homebrew/core/openvdb/blobs/sha256:4efeba9379d21856de78e1502bfbb0e9914fb9f770b10c8ca353c763c5425dbd",
+          "sha256": "4efeba9379d21856de78e1502bfbb0e9914fb9f770b10c8ca353c763c5425dbd"
         },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/openvdb/blobs/sha256:3b009e6f335c6dd6264c391ede13d7dcda7731851f8e6bb8d7f1395d1baa1338",
-          "sha256": "3b009e6f335c6dd6264c391ede13d7dcda7731851f8e6bb8d7f1395d1baa1338"
+          "url": "https://ghcr.io/v2/homebrew/core/openvdb/blobs/sha256:4acd2ab4377e2fc5a75ed9c778e96061d35e4bb4428d14e4d7ebfd669df305b7",
+          "sha256": "4acd2ab4377e2fc5a75ed9c778e96061d35e4bb4428d14e4d7ebfd669df305b7"
         },
         "monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/openvdb/blobs/sha256:639c5b85b89dda8aeef75fa36e623f33fb9c5554e984adfe85b9a080728f3229",
-          "sha256": "639c5b85b89dda8aeef75fa36e623f33fb9c5554e984adfe85b9a080728f3229"
+          "url": "https://ghcr.io/v2/homebrew/core/openvdb/blobs/sha256:418a7fccce828311fa23674d50ed5d24422ba253bb7aac2adc37545e8046606a",
+          "sha256": "418a7fccce828311fa23674d50ed5d24422ba253bb7aac2adc37545e8046606a"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/openvdb/blobs/sha256:09b92c96f974aa12123a31b92c5cda3fec0678d6491c5e9895d7cdd8dbfdde50",
-          "sha256": "09b92c96f974aa12123a31b92c5cda3fec0678d6491c5e9895d7cdd8dbfdde50"
+          "url": "https://ghcr.io/v2/homebrew/core/openvdb/blobs/sha256:3d094143c12d6b8708d2df2823c6713e7e773d7ce871c3c2443dc1f3278ec77e",
+          "sha256": "3d094143c12d6b8708d2df2823c6713e7e773d7ce871c3c2443dc1f3278ec77e"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/openvdb/blobs/sha256:55ec23082cdec8e584dbacc3b566430a6d83f847b7fbaf58fcc817e05194b255",
-          "sha256": "55ec23082cdec8e584dbacc3b566430a6d83f847b7fbaf58fcc817e05194b255"
-        },
-        "mojave": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/openvdb/blobs/sha256:2a82056566ede58322204b6881cd00600b210d8fd9a781fc46499a39d254830a",
-          "sha256": "2a82056566ede58322204b6881cd00600b210d8fd9a781fc46499a39d254830a"
+          "url": "https://ghcr.io/v2/homebrew/core/openvdb/blobs/sha256:73d9710a66677ce795271bb0f737ae59ab01550729e4b848440c570566177b62",
+          "sha256": "73d9710a66677ce795271bb0f737ae59ab01550729e4b848440c570566177b62"
         },
         "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/openvdb/blobs/sha256:c8c1520e74d9762f6aa607dae1a6d1a111e83808f3f7458c986b3e498fd3487d",
-          "sha256": "c8c1520e74d9762f6aa607dae1a6d1a111e83808f3f7458c986b3e498fd3487d"
+          "url": "https://ghcr.io/v2/homebrew/core/openvdb/blobs/sha256:eaa6699c14759acee35d1ea14a7c081924a0850ac99cdfc779fa234ea98238f7",
+          "sha256": "eaa6699c14759acee35d1ea14a7c081924a0850ac99cdfc779fa234ea98238f7"
         }
       }
     }
@@ -81,11 +76,9 @@
   "dependencies": [
     "boost",
     "c-blosc",
-    "glfw",
-    "ilmbase",
     "jemalloc",
-    "openexr@2",
-    "tbb@2020"
+    "openexr",
+    "tbb"
   ],
   "recommended_dependencies": [
 
