@@ -5,7 +5,7 @@
   "name": [
     "Oracle VirtualBox"
   ],
-  "desc": "Free and open-source hosted hypervisor for x86 virtualization",
+  "desc": "Virtualizer for x86 hardware",
   "homepage": "https://www.virtualbox.org/",
   "url": "https://download.virtualbox.org/virtualbox/6.1.30/VirtualBox-6.1.30-148432-OSX.dmg",
   "appcast": null,
@@ -34,12 +34,9 @@
     {
       "trash": [
         "/Library/Application Support/VirtualBox",
-        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.virtualbox.app.virtualbox.sfl*",
-        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.virtualbox.app.virtualboxvm.sfl*",
-        "~/Library/Preferences/org.virtualbox.app.VirtualBox.plist",
-        "~/Library/Preferences/org.virtualbox.app.VirtualBoxVM.plist",
-        "~/Library/Saved Application State/org.virtualbox.app.VirtualBox.savedState",
-        "~/Library/Saved Application State/org.virtualbox.app.VirtualBoxVM.savedState",
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.virtualbox.app.virtualbox*",
+        "~/Library/Preferences/org.virtualbox.app.VirtualBox*",
+        "~/Library/Saved Application State/org.virtualbox.app.VirtualBox*",
         "~/Library/VirtualBox"
       ],
       "rmdir": "~/VirtualBox VMs",
@@ -53,7 +50,13 @@
       ">=": [
         "10.13"
       ]
-    }
+    },
+    "arch": [
+      {
+        "type": "intel",
+        "bits": 64
+      }
+    ]
   },
   "conflicts_with": {
     "cask": [
