@@ -13,13 +13,13 @@
   "license": "Apache-2.0",
   "homepage": "https://github.com/ClickHouse/clickhouse-cpp#readme",
   "versions": {
-    "stable": "1.5.0",
+    "stable": "2.0.0",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/ClickHouse/clickhouse-cpp/archive/refs/tags/1.5.0.tar.gz",
+      "url": "https://github.com/ClickHouse/clickhouse-cpp/archive/refs/tags/v2.0.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,38 +33,33 @@
       "files": {
         "arm64_monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/clickhouse-cpp/blobs/sha256:9fd21882b8f4db81bcdb7eda8512caedf06970c6171822098f7ea30a9fe1602d",
-          "sha256": "9fd21882b8f4db81bcdb7eda8512caedf06970c6171822098f7ea30a9fe1602d"
+          "url": "https://ghcr.io/v2/homebrew/core/clickhouse-cpp/blobs/sha256:1b42955f4dd85ff527216e6ea7bc5b7bc0b6c9fefdc12e0e486da8a828fbfef3",
+          "sha256": "1b42955f4dd85ff527216e6ea7bc5b7bc0b6c9fefdc12e0e486da8a828fbfef3"
         },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/clickhouse-cpp/blobs/sha256:5474994e7b1cee4b8a59dd29d1a4d8ebfdca4ae8b950e78b16fba2beaa085ab1",
-          "sha256": "5474994e7b1cee4b8a59dd29d1a4d8ebfdca4ae8b950e78b16fba2beaa085ab1"
+          "url": "https://ghcr.io/v2/homebrew/core/clickhouse-cpp/blobs/sha256:728aabedffe514a18f43e49f121fae4d50bfcf7eccecfa942f4580a035168f07",
+          "sha256": "728aabedffe514a18f43e49f121fae4d50bfcf7eccecfa942f4580a035168f07"
         },
         "monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/clickhouse-cpp/blobs/sha256:1786787278c6a9b5060a622b3ef5becf23c33afb3e4ac5e5afc1b9f8da95bec7",
-          "sha256": "1786787278c6a9b5060a622b3ef5becf23c33afb3e4ac5e5afc1b9f8da95bec7"
+          "url": "https://ghcr.io/v2/homebrew/core/clickhouse-cpp/blobs/sha256:89724b1341b84f1f3611ed66bbf16c8fb3c32af36cc17bdef1db37a9084b5a7d",
+          "sha256": "89724b1341b84f1f3611ed66bbf16c8fb3c32af36cc17bdef1db37a9084b5a7d"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/clickhouse-cpp/blobs/sha256:b9ad77091970889f729e933ebba966805e24a798077a8b1f7dbedfd03085e4b3",
-          "sha256": "b9ad77091970889f729e933ebba966805e24a798077a8b1f7dbedfd03085e4b3"
+          "url": "https://ghcr.io/v2/homebrew/core/clickhouse-cpp/blobs/sha256:cd9e75d6000ab927aa483e54161ac28a14936e734c529984c07dd70fc14a5024",
+          "sha256": "cd9e75d6000ab927aa483e54161ac28a14936e734c529984c07dd70fc14a5024"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/clickhouse-cpp/blobs/sha256:2ce4a74242a33abc278c17a5fd51f82dfe427a014e06170ed89dedc4c41fc807",
-          "sha256": "2ce4a74242a33abc278c17a5fd51f82dfe427a014e06170ed89dedc4c41fc807"
-        },
-        "mojave": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/clickhouse-cpp/blobs/sha256:cc2b93d7b7727a606a9554ff0346f8027880c72b5cd95aadb4789fad578d809e",
-          "sha256": "cc2b93d7b7727a606a9554ff0346f8027880c72b5cd95aadb4789fad578d809e"
+          "url": "https://ghcr.io/v2/homebrew/core/clickhouse-cpp/blobs/sha256:1dfc7b327c57b76a173aad4075a14a6aee17f240c7e5660371401b5ecee2e603",
+          "sha256": "1dfc7b327c57b76a173aad4075a14a6aee17f240c7e5660371401b5ecee2e603"
         },
         "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/clickhouse-cpp/blobs/sha256:0c98ae1539ce939c7907e4646860067ba29da9265ae581c3bb38cb1feafe7468",
-          "sha256": "0c98ae1539ce939c7907e4646860067ba29da9265ae581c3bb38cb1feafe7468"
+          "url": "https://ghcr.io/v2/homebrew/core/clickhouse-cpp/blobs/sha256:97073a69174969b32e67a6990bea1129bdca1c7ba952e8e570d548211bf37015",
+          "sha256": "97073a69174969b32e67a6990bea1129bdca1c7ba952e8e570d548211bf37015"
         }
       }
     }
@@ -78,7 +73,8 @@
     "cmake"
   ],
   "dependencies": [
-    "abseil"
+    "abseil",
+    "openssl@1.1"
   ],
   "recommended_dependencies": [
 
