@@ -19,22 +19,32 @@
   },
   "urls": {
     "stable": {
-      "url": "https://downloads.sourceforge.net/project/launch4j/launch4j-3/3.14/launch4j-3.14-macosx-x86.tgz",
-      "tag": null,
-      "revision": null
+      "url": "https://git.code.sf.net/p/launch4j/git.git",
+      "tag": "Release_launch4j-3_14",
+      "revision": "46db737fd1885203fb098f4368cd5cf5c6792373"
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
-        "all": {
+        "monterey": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/launch4j/blobs/sha256:b35bb3862964983d4993c79741d8b85d8accf264f7a281af53d2626c64235e3d",
-          "sha256": "b35bb3862964983d4993c79741d8b85d8accf264f7a281af53d2626c64235e3d"
+          "url": "https://ghcr.io/v2/homebrew/core/launch4j/blobs/sha256:10fe31dd5081fecb626537d801e678e8921c5f8d655f7daee5e6c8dd2e2ef619",
+          "sha256": "10fe31dd5081fecb626537d801e678e8921c5f8d655f7daee5e6c8dd2e2ef619"
+        },
+        "big_sur": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/launch4j/blobs/sha256:4c6bfb289d9aeca25dbc25ff2f9fe12a49a635bf720fe54b788d4796c25bc108",
+          "sha256": "4c6bfb289d9aeca25dbc25ff2f9fe12a49a635bf720fe54b788d4796c25bc108"
+        },
+        "catalina": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/launch4j/blobs/sha256:beffc91a157d5958d257adb6844cdde8fa2d375083e58aa89c5db2dbb9fd37c0",
+          "sha256": "beffc91a157d5958d257adb6844cdde8fa2d375083e58aa89c5db2dbb9fd37c0"
         }
       }
     }
@@ -45,7 +55,7 @@
 
   ],
   "build_dependencies": [
-
+    "ant"
   ],
   "dependencies": [
     "openjdk"
@@ -60,7 +70,24 @@
 
   ],
   "requirements": [
+    {
+      "name": "arch",
+      "cask": null,
+      "download": null,
+      "version": "x86_64",
+      "contexts": [
 
+      ]
+    },
+    {
+      "name": "macos",
+      "cask": null,
+      "download": null,
+      "version": null,
+      "contexts": [
+
+      ]
+    }
   ],
   "conflicts_with": [
 
