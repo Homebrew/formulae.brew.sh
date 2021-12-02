@@ -13,13 +13,13 @@
   "license": "MIT and BSD-3-Clause and Apache-2.0 and BSL-1.0",
   "homepage": "https://julialang.org/",
   "versions": {
-    "stable": "1.6.4",
+    "stable": "1.7.0",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/JuliaLang/julia/releases/download/v1.6.4/julia-1.6.4.tar.gz",
+      "url": "https://github.com/JuliaLang/julia/releases/download/v1.7.0/julia-1.7.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,23 +33,23 @@
       "files": {
         "monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/julia/blobs/sha256:3c36c9bd24b098b1a171d997c2d4228eb9cc5f1e390dfdc6396e396b252a91fa",
-          "sha256": "3c36c9bd24b098b1a171d997c2d4228eb9cc5f1e390dfdc6396e396b252a91fa"
+          "url": "https://ghcr.io/v2/homebrew/core/julia/blobs/sha256:77735bd267a17c49932c29ead90656f78ccab85ca86199dd7c87b734ea5bc8a3",
+          "sha256": "77735bd267a17c49932c29ead90656f78ccab85ca86199dd7c87b734ea5bc8a3"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/julia/blobs/sha256:34b52ff8bdf7baca24e26a749b3d9b6136c6aebceb006d4e9c47e98402179480",
-          "sha256": "34b52ff8bdf7baca24e26a749b3d9b6136c6aebceb006d4e9c47e98402179480"
+          "url": "https://ghcr.io/v2/homebrew/core/julia/blobs/sha256:af12f0c921d83c0d34a08a714f033550c4e19150329c3ef8051a7608a3b7efb3",
+          "sha256": "af12f0c921d83c0d34a08a714f033550c4e19150329c3ef8051a7608a3b7efb3"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/julia/blobs/sha256:bf074042f96819e9dafa1f0edf4f23b92ce7d1ba0bab3c53f90548ec936f448c",
-          "sha256": "bf074042f96819e9dafa1f0edf4f23b92ce7d1ba0bab3c53f90548ec936f448c"
+          "url": "https://ghcr.io/v2/homebrew/core/julia/blobs/sha256:f5b8fb6e630eb1c711709acbd81210133d81ebd58e8a42f17309caf1448ad3ca",
+          "sha256": "f5b8fb6e630eb1c711709acbd81210133d81ebd58e8a42f17309caf1448ad3ca"
         },
         "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/julia/blobs/sha256:3795863b91230f2507cecc522c1ed7074bd6b6ce0fdafdfdf57349115237a18a",
-          "sha256": "3795863b91230f2507cecc522c1ed7074bd6b6ce0fdafdfdf57349115237a18a"
+          "url": "https://ghcr.io/v2/homebrew/core/julia/blobs/sha256:5368aa795df50bfc0952423b0d7cd6a88cc2fa2f2725a783a2b4263e3040c191",
+          "sha256": "5368aa795df50bfc0952423b0d7cd6a88cc2fa2f2725a783a2b4263e3040c191"
         }
       }
     }
@@ -60,9 +60,10 @@
 
   ],
   "build_dependencies": [
-    "python@3.9"
+
   ],
   "dependencies": [
+    "ca-certificates",
     "curl",
     "gcc",
     "gmp",
@@ -88,6 +89,9 @@
   "uses_from_macos": [
     {
       "perl": "build"
+    },
+    {
+      "python": "build"
     },
     "zlib"
   ],
