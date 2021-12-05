@@ -7,14 +7,14 @@
   ],
   "desc": "Install, use, and try Maxon products",
   "homepage": "https://www.maxon.net/en/downloads/",
-  "url": "https://installer.maxon.net/installer/RG_installers/Maxon_App_2.0_Mac.dmg",
+  "url": "https://package-cf.redgiant.com/macos/maxon/products/fuse/mxa-combo-installer/2/1/0/0/Maxon-2.1.0-mac-b5.zip",
   "appcast": null,
-  "version": "2.0.0",
+  "version": "2.1.0,5",
   "versions": {
   },
   "installed": null,
   "outdated": false,
-  "sha256": "b45c6c593c942c99c5f1554cb9f6bf9efef7741773d4b2d17a6832135b4c45d1",
+  "sha256": "c0d9e9ace0e7d19bb27d9d26d10b5f2688acf16c17c76d30884da1468813bc36",
   "artifacts": [
     {
       "delete": [
@@ -25,6 +25,7 @@
         "/Library/Logs/Red Giant"
       ],
       "launchctl": [
+        "com.maxon.mxnotify.agent",
         "com.maxon.mxredirect.agent",
         "com.redgiant.service"
       ],
@@ -32,7 +33,7 @@
       }
     },
     {
-      "path": "$(brew --prefix)/Caskroom/maxon/2.0.0/Maxon App Installer.app/Contents/Scripts/install.sh",
+      "path": "$(brew --prefix)/Caskroom/maxon/2.1.0,5/Maxon App Installer.app/Contents/Scripts/install.sh",
       "args": {
         "must_succeed": "true",
         "sudo": "true",
