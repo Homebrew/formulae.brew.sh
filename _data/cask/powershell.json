@@ -25,7 +25,7 @@
     {
       "trash": [
         "~/.cache/powershell",
-        "~/.config/PowerShell",
+        "~/.config/powershell",
         "~/.local/share/powershell"
       ],
       "signal": {
@@ -34,6 +34,9 @@
   ],
   "caveats": "To use Homebrew in PowerShell, set:\n  Add-Content -Path $PROFILE.CurrentUserAllHosts -Value '$($(brew --prefix)/bin/brew shellenv) | Invoke-Expression'\n",
   "depends_on": {
+    "formula": [
+      "openssl"
+    ],
     "macos": {
       ">=": [
         "10.14"
