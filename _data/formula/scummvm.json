@@ -13,13 +13,13 @@
   "license": "GPL-2.0-or-later",
   "homepage": "https://www.scummvm.org/",
   "versions": {
-    "stable": "2.2.0",
+    "stable": "2.5.0",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://downloads.scummvm.org/frs/scummvm/2.2.0/scummvm-2.2.0.tar.xz",
+      "url": "https://downloads.scummvm.org/frs/scummvm/2.5.0/scummvm-2.5.0.tar.xz",
       "tag": null,
       "revision": null
     }
@@ -28,28 +28,38 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
         "arm64_big_sur": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/scummvm/blobs/sha256:9d0f4d95f666f1a9d2836c8f6c860de097edfe27c351614d644b75f54b862332",
-          "sha256": "9d0f4d95f666f1a9d2836c8f6c860de097edfe27c351614d644b75f54b862332"
+          "url": "https://ghcr.io/v2/homebrew/core/scummvm/blobs/sha256:90d437657d306794297adcfaf083dd0bd951bbf437e8f7ff40c12413efa32376",
+          "sha256": "90d437657d306794297adcfaf083dd0bd951bbf437e8f7ff40c12413efa32376"
+        },
+        "monterey": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/scummvm/blobs/sha256:f8d5919d8dfbaffc4b818decb7859fa37b7ad8d2689adaed5e1d8e9de4f67d7a",
+          "sha256": "f8d5919d8dfbaffc4b818decb7859fa37b7ad8d2689adaed5e1d8e9de4f67d7a"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/scummvm/blobs/sha256:d6d48c84e84ff5adbed86060489c707700f8bc1059196a522575bc1b1ce8b05c",
-          "sha256": "d6d48c84e84ff5adbed86060489c707700f8bc1059196a522575bc1b1ce8b05c"
+          "url": "https://ghcr.io/v2/homebrew/core/scummvm/blobs/sha256:f1543bc3553a0bae3a659f4c17412228cf6fb643c460ec3f488354d65ebcd27b",
+          "sha256": "f1543bc3553a0bae3a659f4c17412228cf6fb643c460ec3f488354d65ebcd27b"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/scummvm/blobs/sha256:ee689cfa14ba1a822bba247b79b615beae697c568de135c844121e9d51818303",
-          "sha256": "ee689cfa14ba1a822bba247b79b615beae697c568de135c844121e9d51818303"
+          "url": "https://ghcr.io/v2/homebrew/core/scummvm/blobs/sha256:07e6e6c14491af15cb9900691fd60276568bdc66ef423752dbe4cde10d5e8bc7",
+          "sha256": "07e6e6c14491af15cb9900691fd60276568bdc66ef423752dbe4cde10d5e8bc7"
         },
         "mojave": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/scummvm/blobs/sha256:184c5b6dc8caaa144d9cc5fb1b02e419afee2b70323a9908f0996d697de18a03",
-          "sha256": "184c5b6dc8caaa144d9cc5fb1b02e419afee2b70323a9908f0996d697de18a03"
+          "url": "https://ghcr.io/v2/homebrew/core/scummvm/blobs/sha256:b83003efb12c36548180f1bb883f02e48276078992b3916196c3495bd80bb9a9",
+          "sha256": "b83003efb12c36548180f1bb883f02e48276078992b3916196c3495bd80bb9a9"
+        },
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/scummvm/blobs/sha256:671cc9da5228b2e1c6500083b3508bc41d7a9fe7c0b94f525732126bae4edb2d",
+          "sha256": "671cc9da5228b2e1c6500083b3508bc41d7a9fe7c0b94f525732126bae4edb2d"
         }
       }
     }
@@ -66,7 +76,7 @@
     "a52dec",
     "faad2",
     "flac",
-    "fluid-synth",
+    "fluid-synth@2.1",
     "freetype",
     "jpeg-turbo",
     "libmpeg2",

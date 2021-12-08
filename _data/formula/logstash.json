@@ -13,13 +13,13 @@
   "license": "Apache-2.0",
   "homepage": "https://www.elastic.co/products/logstash",
   "versions": {
-    "stable": "7.13.1",
+    "stable": "7.15.2",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/elastic/logstash/archive/v7.13.1.tar.gz",
+      "url": "https://github.com/elastic/logstash/archive/v7.15.2.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,18 +33,18 @@
       "files": {
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/logstash/blobs/sha256:3366ad5ba5301c65f9ae308d5ee58ae52271b9c9b4ddfe461f538c134e9ef2c1",
-          "sha256": "3366ad5ba5301c65f9ae308d5ee58ae52271b9c9b4ddfe461f538c134e9ef2c1"
+          "url": "https://ghcr.io/v2/homebrew/core/logstash/blobs/sha256:e28cc949e3580b985310ab38884348d928e591493ec5b1c5a5768f6976332724",
+          "sha256": "e28cc949e3580b985310ab38884348d928e591493ec5b1c5a5768f6976332724"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/logstash/blobs/sha256:d90d34ec2b6e1957a17c44bfbc671fdc42ac648adc14db419f4092aee28b2383",
-          "sha256": "d90d34ec2b6e1957a17c44bfbc671fdc42ac648adc14db419f4092aee28b2383"
+          "url": "https://ghcr.io/v2/homebrew/core/logstash/blobs/sha256:fae6f5700e66f435d43798fa5e1cc1ed1dba28f3655f0337b8cd0cbac902871e",
+          "sha256": "fae6f5700e66f435d43798fa5e1cc1ed1dba28f3655f0337b8cd0cbac902871e"
         },
-        "mojave": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/logstash/blobs/sha256:9e181d1f93c952eb530860dbdcd58a9cdd2133146faed8b5d6db6b1d15d5e3d8",
-          "sha256": "9e181d1f93c952eb530860dbdcd58a9cdd2133146faed8b5d6db6b1d15d5e3d8"
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/logstash/blobs/sha256:1270f53ef89f56359d7c076dfc9c8ad418714ca96d29ea98adfc8001f457621c",
+          "sha256": "1270f53ef89f56359d7c076dfc9c8ad418714ca96d29ea98adfc8001f457621c"
         }
       }
     }
@@ -67,10 +67,9 @@
 
   ],
   "uses_from_macos": [
-    [
-      "ruby",
-      "build"
-    ]
+    {
+      "ruby": "build"
+    }
   ],
   "requirements": [
 

@@ -9,47 +9,57 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Sparse volume processing toolkit",
+  "desc": "Sparse volumetric data processing toolkit",
   "license": "MPL-2.0",
   "homepage": "https://www.openvdb.org/",
   "versions": {
-    "stable": "8.0.1",
+    "stable": "9.0.0",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/AcademySoftwareFoundation/openvdb/archive/v8.0.1.tar.gz",
+      "url": "https://github.com/AcademySoftwareFoundation/openvdb/archive/v9.0.0.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 2,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/openvdb/blobs/sha256:4efeba9379d21856de78e1502bfbb0e9914fb9f770b10c8ca353c763c5425dbd",
+          "sha256": "4efeba9379d21856de78e1502bfbb0e9914fb9f770b10c8ca353c763c5425dbd"
+        },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/openvdb/blobs/sha256:ed36d4355a32b8747fa97a9daffad31291a17738cab0d8b238b1ff3b2e651d3c",
-          "sha256": "ed36d4355a32b8747fa97a9daffad31291a17738cab0d8b238b1ff3b2e651d3c"
+          "url": "https://ghcr.io/v2/homebrew/core/openvdb/blobs/sha256:4acd2ab4377e2fc5a75ed9c778e96061d35e4bb4428d14e4d7ebfd669df305b7",
+          "sha256": "4acd2ab4377e2fc5a75ed9c778e96061d35e4bb4428d14e4d7ebfd669df305b7"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/openvdb/blobs/sha256:418a7fccce828311fa23674d50ed5d24422ba253bb7aac2adc37545e8046606a",
+          "sha256": "418a7fccce828311fa23674d50ed5d24422ba253bb7aac2adc37545e8046606a"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/openvdb/blobs/sha256:e40f84714feb845bcc67b693ba709aa23e5fd2a12ae77a4e7e39bf5a16ca8329",
-          "sha256": "e40f84714feb845bcc67b693ba709aa23e5fd2a12ae77a4e7e39bf5a16ca8329"
+          "url": "https://ghcr.io/v2/homebrew/core/openvdb/blobs/sha256:3d094143c12d6b8708d2df2823c6713e7e773d7ce871c3c2443dc1f3278ec77e",
+          "sha256": "3d094143c12d6b8708d2df2823c6713e7e773d7ce871c3c2443dc1f3278ec77e"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/openvdb/blobs/sha256:2a9d6a3246e04b72f5a39e19a4be80351b50ec1161032a2ac4d9ab4898839967",
-          "sha256": "2a9d6a3246e04b72f5a39e19a4be80351b50ec1161032a2ac4d9ab4898839967"
+          "url": "https://ghcr.io/v2/homebrew/core/openvdb/blobs/sha256:73d9710a66677ce795271bb0f737ae59ab01550729e4b848440c570566177b62",
+          "sha256": "73d9710a66677ce795271bb0f737ae59ab01550729e4b848440c570566177b62"
         },
-        "mojave": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/openvdb/blobs/sha256:68f97f2661f7042b36f208437061cb8a9c0d4c3b2c39ecc0a82351a5a59e231e",
-          "sha256": "68f97f2661f7042b36f208437061cb8a9c0d4c3b2c39ecc0a82351a5a59e231e"
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/openvdb/blobs/sha256:eaa6699c14759acee35d1ea14a7c081924a0850ac99cdfc779fa234ea98238f7",
+          "sha256": "eaa6699c14759acee35d1ea14a7c081924a0850ac99cdfc779fa234ea98238f7"
         }
       }
     }
@@ -66,11 +76,9 @@
   "dependencies": [
     "boost",
     "c-blosc",
-    "glfw",
-    "ilmbase",
     "jemalloc",
-    "openexr@2",
-    "tbb@2020"
+    "openexr",
+    "tbb"
   ],
   "recommended_dependencies": [
 

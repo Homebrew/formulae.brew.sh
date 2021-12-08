@@ -9,7 +9,9 @@
   "homepage": "https://www.google.com/drive/",
   "url": "https://dl.google.com/drive-file-stream/GoogleDrive.dmg",
   "appcast": null,
-  "version": "48.0.13",
+  "version": "53.0.11",
+  "versions": {
+  },
   "installed": null,
   "outdated": false,
   "sha256": "no_check",
@@ -18,8 +20,9 @@
       "login_item": "Google Drive",
       "quit": "com.google.drivefs",
       "pkgutil": [
-        "com.google.drivefs",
+        "com.google.drivefs.arm64",
         "com.google.drivefs.x86_64",
+        "com.google.drivefs.filesystems.dfsfuse.arm64",
         "com.google.drivefs.filesystems.dfsfuse.x86_64",
         "com.google.drivefs.shortcuts"
       ],
@@ -52,11 +55,14 @@
         "com.google.keystone.xpcservice",
         "com.google.keystone.system.xpcservice"
       ],
+      "pkgutil": [
+        "com.google.pkg.Keystone"
+      ],
       "signal": {
       }
     }
   ],
-  "caveats": "Although google-drive may be installed alongside Google Backup and Sync, you should not use the same account with both.\n\n  https://support.google.com/a/answer/7496409#allowboth\n",
+  "caveats": null,
   "depends_on": {
     "macos": {
       ">=": [
@@ -66,5 +72,5 @@
   },
   "conflicts_with": null,
   "container": null,
-  "auto_updates": null
+  "auto_updates": true
 }

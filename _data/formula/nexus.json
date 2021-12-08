@@ -13,13 +13,13 @@
   "license": "EPL-1.0",
   "homepage": "https://www.sonatype.org/",
   "versions": {
-    "stable": "3.30.1-01",
+    "stable": "3.36.0-01",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/sonatype/nexus-public/archive/release-3.30.1-01.tar.gz",
+      "url": "https://github.com/sonatype/nexus-public/archive/release-3.36.0-01.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,18 +33,18 @@
       "files": {
         "big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/nexus/blobs/sha256:a435f6ace0b7a4a54d9f9cd3afa671c5e60b8a68c49627022db9ae10d0e8d057",
-          "sha256": "a435f6ace0b7a4a54d9f9cd3afa671c5e60b8a68c49627022db9ae10d0e8d057"
+          "url": "https://ghcr.io/v2/homebrew/core/nexus/blobs/sha256:6a4adff69bab80b09402137e13b37f2bd3dbd93bc993597f873e25d580109d70",
+          "sha256": "6a4adff69bab80b09402137e13b37f2bd3dbd93bc993597f873e25d580109d70"
         },
         "catalina": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/nexus/blobs/sha256:a0f67c9696e2f72f6e6d897dab4bcac5d7afdc58107faa925e0a22f887d037e5",
-          "sha256": "a0f67c9696e2f72f6e6d897dab4bcac5d7afdc58107faa925e0a22f887d037e5"
+          "url": "https://ghcr.io/v2/homebrew/core/nexus/blobs/sha256:475cd97a0e31ad20c68e8b747647a8bf0d436aee72243cc4df51970738a49cd3",
+          "sha256": "475cd97a0e31ad20c68e8b747647a8bf0d436aee72243cc4df51970738a49cd3"
         },
-        "mojave": {
+        "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/nexus/blobs/sha256:db4d04ddd0cf2103875bf38bf90129f511542cff117e2bd70321a569ba0129ec",
-          "sha256": "db4d04ddd0cf2103875bf38bf90129f511542cff117e2bd70321a569ba0129ec"
+          "url": "https://ghcr.io/v2/homebrew/core/nexus/blobs/sha256:f89392b7185f9e7db723410982c20a337c68d8710c49abdf3263a3b00579bca8",
+          "sha256": "f89392b7185f9e7db723410982c20a337c68d8710c49abdf3263a3b00579bca8"
         }
       }
     }
@@ -67,13 +67,20 @@
 
   ],
   "uses_from_macos": [
-    [
-      "unzip",
-      "build"
-    ]
+    {
+      "unzip": "build"
+    }
   ],
   "requirements": [
+    {
+      "name": "arch",
+      "cask": null,
+      "download": null,
+      "version": "x86_64",
+      "contexts": [
 
+      ]
+    }
   ],
   "conflicts_with": [
 

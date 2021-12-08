@@ -31,6 +31,11 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "monterey": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/mono/blobs/sha256:4a4560ef7bd6dc638600e6fae876c3e27b3443698719a1dae45fe49fc1987f78",
+          "sha256": "4a4560ef7bd6dc638600e6fae876c3e27b3443698719a1dae45fe49fc1987f78"
+        },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
           "url": "https://ghcr.io/v2/homebrew/core/mono/blobs/sha256:fdd17b0e0eb154047fa8091b52763f1f0df0fc921c216f6633d4d59f7cd62af5",
@@ -68,10 +73,9 @@
 
   ],
   "uses_from_macos": [
-    [
-      "unzip",
-      "build"
-    ]
+    {
+      "unzip": "build"
+    }
   ],
   "requirements": [
 

@@ -13,13 +13,13 @@
   "license": "LGPL-2.1-or-later",
   "homepage": "https://hyperrealm.github.io/libconfig/",
   "versions": {
-    "stable": "1.7.2",
+    "stable": "1.7.3",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/hyperrealm/libconfig/archive/v1.7.2.tar.gz",
+      "url": "https://github.com/hyperrealm/libconfig/archive/v1.7.3.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,33 +28,43 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/libconfig/blobs/sha256:8074ac817099b848dfda57a98dcb10eac98781d1aeb85425d6e1713650da8c09",
+          "sha256": "8074ac817099b848dfda57a98dcb10eac98781d1aeb85425d6e1713650da8c09"
+        },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/libconfig/blobs/sha256:4f8ed5fc70f9240873fa41d407fb56b21b3d528609c3c66246faee586196a8d9",
-          "sha256": "4f8ed5fc70f9240873fa41d407fb56b21b3d528609c3c66246faee586196a8d9"
+          "url": "https://ghcr.io/v2/homebrew/core/libconfig/blobs/sha256:e675d6e4c47ca13fe8a8faaf02364c5e09c43f7212b33040aa49c06a808c077c",
+          "sha256": "e675d6e4c47ca13fe8a8faaf02364c5e09c43f7212b33040aa49c06a808c077c"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/libconfig/blobs/sha256:c5fe41cc40b814c29ddfe551058e204f2e50e76dd056aeae57d28cca24be672e",
+          "sha256": "c5fe41cc40b814c29ddfe551058e204f2e50e76dd056aeae57d28cca24be672e"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/libconfig/blobs/sha256:3b66cbc5fae338f422386f6a2eecd650a64391da8d2f7fba259af614729844da",
-          "sha256": "3b66cbc5fae338f422386f6a2eecd650a64391da8d2f7fba259af614729844da"
+          "url": "https://ghcr.io/v2/homebrew/core/libconfig/blobs/sha256:90fad29e719a3bd1b8ebe4eb857299b8a78a229543c3062d370bcdcfa0b8cd5c",
+          "sha256": "90fad29e719a3bd1b8ebe4eb857299b8a78a229543c3062d370bcdcfa0b8cd5c"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/libconfig/blobs/sha256:5133affbfe2df2eccf05017748542e521e70a8db8763c8d8e39e00aec78fe3f8",
-          "sha256": "5133affbfe2df2eccf05017748542e521e70a8db8763c8d8e39e00aec78fe3f8"
+          "url": "https://ghcr.io/v2/homebrew/core/libconfig/blobs/sha256:88689325264c406acb9f624b0c66cae10e2c7b5874b4d78335751b4627a5496c",
+          "sha256": "88689325264c406acb9f624b0c66cae10e2c7b5874b4d78335751b4627a5496c"
         },
         "mojave": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/libconfig/blobs/sha256:b1c005fc0d3a811efcef915d8e84d9cc2828d6c35c5649f71fab3c714b2ae1ea",
-          "sha256": "b1c005fc0d3a811efcef915d8e84d9cc2828d6c35c5649f71fab3c714b2ae1ea"
+          "url": "https://ghcr.io/v2/homebrew/core/libconfig/blobs/sha256:f5470e709146445744e2f9a200e0ea8042be9cd144a3e0b9f0a664b07e1aadc9",
+          "sha256": "f5470e709146445744e2f9a200e0ea8042be9cd144a3e0b9f0a664b07e1aadc9"
         },
-        "high_sierra": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/libconfig/blobs/sha256:5762b7106a3e4ecc470193cd8abcfd40de090c456d42b413e545402246d73f69",
-          "sha256": "5762b7106a3e4ecc470193cd8abcfd40de090c456d42b413e545402246d73f69"
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/libconfig/blobs/sha256:1ddc0a7e749416e1a6f0b1eb2f96fc272af064f5f0f447c647b5d996d798eace",
+          "sha256": "1ddc0a7e749416e1a6f0b1eb2f96fc272af064f5f0f447c647b5d996d798eace"
         }
       }
     }
@@ -79,14 +89,12 @@
 
   ],
   "uses_from_macos": [
-    [
-      "flex",
-      "build"
-    ],
-    [
-      "texinfo",
-      "build"
-    ]
+    {
+      "flex": "build"
+    },
+    {
+      "texinfo": "build"
+    }
   ],
   "requirements": [
 

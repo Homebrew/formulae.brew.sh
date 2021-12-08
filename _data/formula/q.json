@@ -13,48 +13,53 @@
   "license": "GPL-3.0-or-later",
   "homepage": "https://harelba.github.io/q/",
   "versions": {
-    "stable": "2.0.19",
+    "stable": "2.0.20",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/harelba/q/archive/2.0.19.tar.gz",
+      "url": "https://github.com/harelba/q/archive/2.0.20.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/q/blobs/sha256:c72ca06a7c9dbe3b3eaee1b8db72811edbf7e64fbee5b694bcf2ed7e8d877d50",
+          "sha256": "c72ca06a7c9dbe3b3eaee1b8db72811edbf7e64fbee5b694bcf2ed7e8d877d50"
+        },
         "arm64_big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/q/blobs/sha256:eed7070fddc3dda4f3c49cff16ad03d15687348e80b0a04882789300d16e2ae8",
-          "sha256": "eed7070fddc3dda4f3c49cff16ad03d15687348e80b0a04882789300d16e2ae8"
+          "url": "https://ghcr.io/v2/homebrew/core/q/blobs/sha256:c72ca06a7c9dbe3b3eaee1b8db72811edbf7e64fbee5b694bcf2ed7e8d877d50",
+          "sha256": "c72ca06a7c9dbe3b3eaee1b8db72811edbf7e64fbee5b694bcf2ed7e8d877d50"
+        },
+        "monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/q/blobs/sha256:4511c183df36704ec7cb497b4a319409875ea2ef6068255ae2a2e0a2d7293e29",
+          "sha256": "4511c183df36704ec7cb497b4a319409875ea2ef6068255ae2a2e0a2d7293e29"
         },
         "big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/q/blobs/sha256:de0170c2e58f55aa49b81958b53c6ba2a22876f64c7e5782d5760d42a9437822",
-          "sha256": "de0170c2e58f55aa49b81958b53c6ba2a22876f64c7e5782d5760d42a9437822"
+          "url": "https://ghcr.io/v2/homebrew/core/q/blobs/sha256:4511c183df36704ec7cb497b4a319409875ea2ef6068255ae2a2e0a2d7293e29",
+          "sha256": "4511c183df36704ec7cb497b4a319409875ea2ef6068255ae2a2e0a2d7293e29"
         },
         "catalina": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/q/blobs/sha256:c1ba50d0c4c47cddb88e3c2b1aa024b7c8f81810aa2c52c988e61d7115d1e708",
-          "sha256": "c1ba50d0c4c47cddb88e3c2b1aa024b7c8f81810aa2c52c988e61d7115d1e708"
+          "url": "https://ghcr.io/v2/homebrew/core/q/blobs/sha256:4511c183df36704ec7cb497b4a319409875ea2ef6068255ae2a2e0a2d7293e29",
+          "sha256": "4511c183df36704ec7cb497b4a319409875ea2ef6068255ae2a2e0a2d7293e29"
         },
-        "mojave": {
+        "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/q/blobs/sha256:6676084cffd70aec2c8bb073189df32ae0617d7e039d39e4b13a7d6cb7dc05ca",
-          "sha256": "6676084cffd70aec2c8bb073189df32ae0617d7e039d39e4b13a7d6cb7dc05ca"
-        },
-        "high_sierra": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/q/blobs/sha256:a4976c08f89e618b70c73e96fd69bc8faebd193c4935a9d5b425012194c95af5",
-          "sha256": "a4976c08f89e618b70c73e96fd69bc8faebd193c4935a9d5b425012194c95af5"
+          "url": "https://ghcr.io/v2/homebrew/core/q/blobs/sha256:bed14a331133ff96b85fa37e0729ca695bd273f78ee82e792185d137edf9917a",
+          "sha256": "bed14a331133ff96b85fa37e0729ca695bd273f78ee82e792185d137edf9917a"
         }
       }
     }
@@ -65,10 +70,11 @@
 
   ],
   "build_dependencies": [
-
+    "ronn"
   ],
   "dependencies": [
-    "python@3.9"
+    "python@3.9",
+    "six"
   ],
   "recommended_dependencies": [
 
@@ -92,9 +98,9 @@
   "linked_keg": null,
   "pinned": false,
   "outdated": false,
-  "deprecated": false,
-  "deprecation_date": null,
-  "deprecation_reason": null,
+  "deprecated": true,
+  "deprecation_date": "2021-11-30",
+  "deprecation_reason": "requires PyOxidizer, which is a disallowed dependency in homebrew/core",
   "disabled": false,
   "disable_date": null,
   "disable_reason": null

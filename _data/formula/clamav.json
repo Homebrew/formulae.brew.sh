@@ -13,13 +13,13 @@
   "license": "GPL-2.0-or-later",
   "homepage": "https://www.clamav.net/",
   "versions": {
-    "stable": "0.103.2",
+    "stable": "0.104.1",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://www.clamav.net/downloads/production/clamav-0.103.2.tar.gz",
+      "url": "https://www.clamav.net/downloads/production/clamav-0.104.1.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,25 +31,35 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/clamav/blobs/sha256:414f077061d6ef76d11af9d4bc5380cea125ccd2f00c2479367856b587df50c9",
+          "sha256": "414f077061d6ef76d11af9d4bc5380cea125ccd2f00c2479367856b587df50c9"
+        },
         "arm64_big_sur": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/clamav/blobs/sha256:08f7636b609fddf9d71d654831910e8354096d2352b31eedbe3a8f363c36072c",
-          "sha256": "08f7636b609fddf9d71d654831910e8354096d2352b31eedbe3a8f363c36072c"
+          "url": "https://ghcr.io/v2/homebrew/core/clamav/blobs/sha256:0f48e171c14771e049e9217308fafc1066d481c05bc730d94d34d540a10f4b13",
+          "sha256": "0f48e171c14771e049e9217308fafc1066d481c05bc730d94d34d540a10f4b13"
+        },
+        "monterey": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/clamav/blobs/sha256:03ca4a7b0e05a6f27c297e886bb633d9e7bb7b74a843851de555731ca667eeaf",
+          "sha256": "03ca4a7b0e05a6f27c297e886bb633d9e7bb7b74a843851de555731ca667eeaf"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/clamav/blobs/sha256:fe53693f8f14392597ac7495d80188bdee88455862c830d6ada5613ddbe50084",
-          "sha256": "fe53693f8f14392597ac7495d80188bdee88455862c830d6ada5613ddbe50084"
+          "url": "https://ghcr.io/v2/homebrew/core/clamav/blobs/sha256:53f8691e3afa31188f1e237576e6c11b74f9fd220c7c80e0d8cadb72c0d1c609",
+          "sha256": "53f8691e3afa31188f1e237576e6c11b74f9fd220c7c80e0d8cadb72c0d1c609"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/clamav/blobs/sha256:ad496a6937046968511af7c71bac5514ce35f8c104f1711bb6b2ffe1bde372eb",
-          "sha256": "ad496a6937046968511af7c71bac5514ce35f8c104f1711bb6b2ffe1bde372eb"
+          "url": "https://ghcr.io/v2/homebrew/core/clamav/blobs/sha256:ea7fe519230ed6e685833979038891bbe23e7e0574ec0afb0da284ded05a0f8a",
+          "sha256": "ea7fe519230ed6e685833979038891bbe23e7e0574ec0afb0da284ded05a0f8a"
         },
-        "mojave": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/clamav/blobs/sha256:850cecb7bc17f8a0000e4666a1432b320722712fb394191c6b488c1307c60d0c",
-          "sha256": "850cecb7bc17f8a0000e4666a1432b320722712fb394191c6b488c1307c60d0c"
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/clamav/blobs/sha256:a545f4bc983f1a2992751bc62c9651fdf9ce1a930b3a446851b1f8d7122f4dad",
+          "sha256": "a545f4bc983f1a2992751bc62c9651fdf9ce1a930b3a446851b1f8d7122f4dad"
         }
       }
     }
@@ -60,15 +70,16 @@
 
   ],
   "build_dependencies": [
+    "cmake",
     "pkg-config"
   ],
   "dependencies": [
     "json-c",
-    "libiconv",
     "libtool",
     "openssl@1.1",
     "pcre2",
-    "yara"
+    "yara",
+    "libiconv"
   ],
   "recommended_dependencies": [
 
@@ -80,6 +91,7 @@
     "bzip2",
     "curl",
     "libxml2",
+    "ncurses",
     "zlib"
   ],
   "requirements": [

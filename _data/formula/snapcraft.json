@@ -13,15 +13,15 @@
   "license": "GPL-3.0-only",
   "homepage": "https://snapcraft.io/",
   "versions": {
-    "stable": "4.4.1",
+    "stable": "5.0",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
       "url": "https://github.com/snapcore/snapcraft.git",
-      "tag": "4.4.1",
-      "revision": "24162f9de394d11e9debf166f59fe190c9dcff3a"
+      "tag": "5.0",
+      "revision": "54781044a8f858258e90fa4acfd32e750362deee"
     }
   },
   "revision": 1,
@@ -31,25 +31,40 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/snapcraft/blobs/sha256:a6dcb83b7b49cf8d66d10fe8b07f618bd738be17f527aa27bb26c12463547463",
+          "sha256": "a6dcb83b7b49cf8d66d10fe8b07f618bd738be17f527aa27bb26c12463547463"
+        },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/snapcraft/blobs/sha256:41d4fc2c561ca44f95718042d084c2f4aa3cf50e6db6fc8cf781c2b6be58290b",
-          "sha256": "41d4fc2c561ca44f95718042d084c2f4aa3cf50e6db6fc8cf781c2b6be58290b"
+          "url": "https://ghcr.io/v2/homebrew/core/snapcraft/blobs/sha256:bc26b770bd8c1ea649085e8a77d1b3ab3a29d1b996d796308d20eea851d814f7",
+          "sha256": "bc26b770bd8c1ea649085e8a77d1b3ab3a29d1b996d796308d20eea851d814f7"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/snapcraft/blobs/sha256:865b10afdd4e830922e443b194aebc72506b45432181bd6c1371018326dcbbee",
+          "sha256": "865b10afdd4e830922e443b194aebc72506b45432181bd6c1371018326dcbbee"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/snapcraft/blobs/sha256:7a237740c0b541c44fbb68558875043823ecd5c2626d0407020cbd519d55d8fe",
-          "sha256": "7a237740c0b541c44fbb68558875043823ecd5c2626d0407020cbd519d55d8fe"
+          "url": "https://ghcr.io/v2/homebrew/core/snapcraft/blobs/sha256:b442a18012137247cf1822d0db825cca3c0e69bfdb244744de6672db76280e02",
+          "sha256": "b442a18012137247cf1822d0db825cca3c0e69bfdb244744de6672db76280e02"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/snapcraft/blobs/sha256:8537fbbd83c21c8769c766f85a9327852242a0302dfbb982670ccaa5c5b664c9",
-          "sha256": "8537fbbd83c21c8769c766f85a9327852242a0302dfbb982670ccaa5c5b664c9"
+          "url": "https://ghcr.io/v2/homebrew/core/snapcraft/blobs/sha256:a4b036213d992185bd3d61c00b7dc90b0e82dcbc2ec8ab842c1dfed298acd04e",
+          "sha256": "a4b036213d992185bd3d61c00b7dc90b0e82dcbc2ec8ab842c1dfed298acd04e"
         },
         "mojave": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/snapcraft/blobs/sha256:3e87c18435182ab3db5b2fa15d3007651f2e39be37211b7a37085f48555b691e",
-          "sha256": "3e87c18435182ab3db5b2fa15d3007651f2e39be37211b7a37085f48555b691e"
+          "url": "https://ghcr.io/v2/homebrew/core/snapcraft/blobs/sha256:e4cc628cee8d1c5690296b4d60e4d306d92e5c8ad2a619540f4e833e63c54536",
+          "sha256": "e4cc628cee8d1c5690296b4d60e4d306d92e5c8ad2a619540f4e833e63c54536"
+        },
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/snapcraft/blobs/sha256:ebfa2c4782334025436d67b2d2aec5b76e0429c9a245682c138f1d442e8ce5a3",
+          "sha256": "ebfa2c4782334025436d67b2d2aec5b76e0429c9a245682c138f1d442e8ce5a3"
         }
       }
     }
@@ -60,13 +75,14 @@
 
   ],
   "build_dependencies": [
-
+    "rust"
   ],
   "dependencies": [
     "libsodium",
     "libyaml",
     "lxc",
     "python@3.9",
+    "six",
     "snap",
     "xdelta"
   ],
@@ -77,7 +93,8 @@
 
   ],
   "uses_from_macos": [
-
+    "libxml2",
+    "libxslt"
   ],
   "requirements": [
 

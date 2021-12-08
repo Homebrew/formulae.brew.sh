@@ -13,13 +13,13 @@
   "license": "MIT",
   "homepage": "https://github.com/msiemens/PyGitUp",
   "versions": {
-    "stable": "2.0.2",
+    "stable": "2.1.0",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://files.pythonhosted.org/packages/6a/e5/640afbc106bb4e836228977d9593227148b1f7ba365172bd160c4d315c66/git-up-2.0.2.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/89/a3/35f7460cfaf7353ceb23442e5c250fda249cb9b8e26197cf801fa4f63786/git-up-2.1.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,25 +31,40 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/pygitup/blobs/sha256:c1fc3d05c9426628db3014aad4ca9f54c3ea8ed709187e532c5e0a33ff3cec24",
+          "sha256": "c1fc3d05c9426628db3014aad4ca9f54c3ea8ed709187e532c5e0a33ff3cec24"
+        },
         "arm64_big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/pygitup/blobs/sha256:7e4a7970074265fa7855716aa4c4313ddcf91bf6a0dc76969dcac37e3b8e54af",
-          "sha256": "7e4a7970074265fa7855716aa4c4313ddcf91bf6a0dc76969dcac37e3b8e54af"
+          "url": "https://ghcr.io/v2/homebrew/core/pygitup/blobs/sha256:691cecd76ff02753813853585aa00200c059a91cc729def69d4b3249b8045989",
+          "sha256": "691cecd76ff02753813853585aa00200c059a91cc729def69d4b3249b8045989"
+        },
+        "monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/pygitup/blobs/sha256:6dd2171b041258c2674f34efb02a3f0a4e261defac4ff126f623c1d84def433e",
+          "sha256": "6dd2171b041258c2674f34efb02a3f0a4e261defac4ff126f623c1d84def433e"
         },
         "big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/pygitup/blobs/sha256:241451119588df0aedbcf3bfb4084a930a22644629ec2544554f17723cb40110",
-          "sha256": "241451119588df0aedbcf3bfb4084a930a22644629ec2544554f17723cb40110"
+          "url": "https://ghcr.io/v2/homebrew/core/pygitup/blobs/sha256:a420f93c1cadfb852e6e38735b0990ee3981bfe9a7daa413e0a2a5901e07ded9",
+          "sha256": "a420f93c1cadfb852e6e38735b0990ee3981bfe9a7daa413e0a2a5901e07ded9"
         },
         "catalina": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/pygitup/blobs/sha256:24d563dbed328cc4a3267b547e0f7d29d198a6ee17f246c7d5d3b5d0ac7378a3",
-          "sha256": "24d563dbed328cc4a3267b547e0f7d29d198a6ee17f246c7d5d3b5d0ac7378a3"
+          "url": "https://ghcr.io/v2/homebrew/core/pygitup/blobs/sha256:0bb8b6b27418770fd4073ba87ca325aff9402bade15bd914dbdbb0b6181f0a65",
+          "sha256": "0bb8b6b27418770fd4073ba87ca325aff9402bade15bd914dbdbb0b6181f0a65"
         },
         "mojave": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/pygitup/blobs/sha256:99ea13e47193752b83c7ac7751d1ab44cc1c2b549c2b4662ce54cf9ac6fe4255",
-          "sha256": "99ea13e47193752b83c7ac7751d1ab44cc1c2b549c2b4662ce54cf9ac6fe4255"
+          "url": "https://ghcr.io/v2/homebrew/core/pygitup/blobs/sha256:1728a7aaeaef7bb0f4fd323df92427d81a7fb274443cd9624a5e3009463ae563",
+          "sha256": "1728a7aaeaef7bb0f4fd323df92427d81a7fb274443cd9624a5e3009463ae563"
+        },
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/pygitup/blobs/sha256:6f56cfd288b6c4c06519cfd4502adb34803da2a30beb6de0535ec5e5a6d54a49",
+          "sha256": "6f56cfd288b6c4c06519cfd4502adb34803da2a30beb6de0535ec5e5a6d54a49"
         }
       }
     }
@@ -60,7 +75,7 @@
 
   ],
   "build_dependencies": [
-
+    "poetry"
   ],
   "dependencies": [
     "python@3.9"

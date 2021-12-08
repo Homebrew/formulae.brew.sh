@@ -13,13 +13,13 @@
   "license": "AGPL-3.0-or-later",
   "homepage": "https://www.povray.org/",
   "versions": {
-    "stable": "3.7.0.9",
+    "stable": "3.7.0.10",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/POV-Ray/povray/archive/v3.7.0.9.tar.gz",
+      "url": "https://github.com/POV-Ray/povray/archive/v3.7.0.10.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,25 +31,40 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/povray/blobs/sha256:4078f9e9ed5cd96b6859a0d1e225d77146cfb59acfca9b0f6d10557dfeb61b76",
+          "sha256": "4078f9e9ed5cd96b6859a0d1e225d77146cfb59acfca9b0f6d10557dfeb61b76"
+        },
         "arm64_big_sur": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/povray/blobs/sha256:f58475cad4e1bc129e831b586e8ad0ed7c504a46f758ad217895f78ff1a5778c",
-          "sha256": "f58475cad4e1bc129e831b586e8ad0ed7c504a46f758ad217895f78ff1a5778c"
+          "url": "https://ghcr.io/v2/homebrew/core/povray/blobs/sha256:1d34756f9ee836d1d61acfc5650c5244afe44972cd3e2eb234b023b8af8fb4e6",
+          "sha256": "1d34756f9ee836d1d61acfc5650c5244afe44972cd3e2eb234b023b8af8fb4e6"
+        },
+        "monterey": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/povray/blobs/sha256:a71fca973525b23fcf02a8ea1b328657ec7dd0bff50abcbfba8c1b3d948fb0c4",
+          "sha256": "a71fca973525b23fcf02a8ea1b328657ec7dd0bff50abcbfba8c1b3d948fb0c4"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/povray/blobs/sha256:06f7a322d371a831124fb970aacbd9310d0f1cfd478b7fe00d68b58e52d6ea7d",
-          "sha256": "06f7a322d371a831124fb970aacbd9310d0f1cfd478b7fe00d68b58e52d6ea7d"
+          "url": "https://ghcr.io/v2/homebrew/core/povray/blobs/sha256:8255395098744449c44cc26a30167fe767de560f202687cd4c089d4d926b8207",
+          "sha256": "8255395098744449c44cc26a30167fe767de560f202687cd4c089d4d926b8207"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/povray/blobs/sha256:c79203e5cf7306333a3511a79b226815f9e406136e7f10ae8254db555faf238f",
-          "sha256": "c79203e5cf7306333a3511a79b226815f9e406136e7f10ae8254db555faf238f"
+          "url": "https://ghcr.io/v2/homebrew/core/povray/blobs/sha256:04feb4dafdf3f36c668c5444e8b6fcb8253819afed158eab35f4ef26e27ef229",
+          "sha256": "04feb4dafdf3f36c668c5444e8b6fcb8253819afed158eab35f4ef26e27ef229"
         },
         "mojave": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/povray/blobs/sha256:62ecf5b65b5581777dc7a7358846b36e39b75a99bd43f9927bbca393492cafeb",
-          "sha256": "62ecf5b65b5581777dc7a7358846b36e39b75a99bd43f9927bbca393492cafeb"
+          "url": "https://ghcr.io/v2/homebrew/core/povray/blobs/sha256:bcdbae6ca75a38c84eef048ec9ca494d75d8b67f2abb054f31acf0e75dc84edc",
+          "sha256": "bcdbae6ca75a38c84eef048ec9ca494d75d8b67f2abb054f31acf0e75dc84edc"
+        },
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/povray/blobs/sha256:fbf5db051d3e55ab7e213e313167a539113595fcd214919f358f32c7a8c50b95",
+          "sha256": "fbf5db051d3e55ab7e213e313167a539113595fcd214919f358f32c7a8c50b95"
         }
       }
     }
@@ -65,10 +80,11 @@
   ],
   "dependencies": [
     "boost",
+    "imath",
     "jpeg",
     "libpng",
     "libtiff",
-    "openexr@2"
+    "openexr"
   ],
   "recommended_dependencies": [
 

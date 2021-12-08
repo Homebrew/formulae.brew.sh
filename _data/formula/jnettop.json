@@ -10,7 +10,7 @@
 
   ],
   "desc": "View hosts/ports taking up the most network traffic",
-  "license": null,
+  "license": "GPL-2.0-or-later",
   "homepage": "https://web.archive.org/web/20161127214942/jnettop.kubs.info/wiki/",
   "versions": {
     "stable": "0.13.0",
@@ -31,10 +31,20 @@
       "rebuild": 2,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/jnettop/blobs/sha256:f2c6e3fed7a82f036acdf944ac6f27d11946995d961be3a0e804b8a9099a946a",
+          "sha256": "f2c6e3fed7a82f036acdf944ac6f27d11946995d961be3a0e804b8a9099a946a"
+        },
         "arm64_big_sur": {
           "cellar": ":any",
           "url": "https://ghcr.io/v2/homebrew/core/jnettop/blobs/sha256:1f1f3c5e26f7fc52b331300926a4aa93e1081b31cc20cb533f9b0791477cc101",
           "sha256": "1f1f3c5e26f7fc52b331300926a4aa93e1081b31cc20cb533f9b0791477cc101"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/jnettop/blobs/sha256:9e14b85dd45a7b23d5548948dff568bde0f0db0ec59c91baff292c896c804423",
+          "sha256": "9e14b85dd45a7b23d5548948dff568bde0f0db0ec59c91baff292c896c804423"
         },
         "big_sur": {
           "cellar": ":any",
@@ -50,6 +60,11 @@
           "cellar": ":any",
           "url": "https://ghcr.io/v2/homebrew/core/jnettop/blobs/sha256:5b4a91804760ca7e39c76cbd16cd7612ed002d429f8996004e1da49d92839c1a",
           "sha256": "5b4a91804760ca7e39c76cbd16cd7612ed002d429f8996004e1da49d92839c1a"
+        },
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/jnettop/blobs/sha256:2e3617c2641b35e01517e783554157ece0999367fccf494fc9824618277464eb",
+          "sha256": "2e3617c2641b35e01517e783554157ece0999367fccf494fc9824618277464eb"
         }
       }
     }
@@ -72,7 +87,7 @@
 
   ],
   "uses_from_macos": [
-
+    "libpcap"
   ],
   "requirements": [
 

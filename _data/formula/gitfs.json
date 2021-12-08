@@ -15,7 +15,7 @@
   "versions": {
     "stable": "0.5.2",
     "head": "HEAD",
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
@@ -24,9 +24,20 @@
       "revision": null
     }
   },
-  "revision": 5,
+  "revision": 8,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/gitfs/blobs/sha256:5ac737aa93de2901de21b51cf1938665df9d1d8b2b21e514e2ff209d6249ed2a",
+          "sha256": "5ac737aa93de2901de21b51cf1938665df9d1d8b2b21e514e2ff209d6249ed2a"
+        }
+      }
+    }
   },
   "keg_only": false,
   "bottle_disabled": false,
@@ -55,7 +66,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "gitfs clones repos in /var/lib/gitfs. You can either create it with\nsudo mkdir -m 1777 /var/lib/gitfs or use another folder with the\nrepo_path argument.\n\nAlso make sure OSXFUSE is properly installed by running brew info osxfuse.\n",
+  "caveats": "The reasons for disabling this formula can be found here:\n  https://github.com/Homebrew/homebrew-core/pull/64491\n\nAn external tap may provide a replacement formula. See:\n  https://docs.brew.sh/Interesting-Taps-and-Forks\n",
   "installed": [
 
   ],
@@ -67,5 +78,5 @@
   "deprecation_reason": null,
   "disabled": true,
   "disable_date": "2021-04-08",
-  "disable_reason": "requires FUSE"
+  "disable_reason": "requires closed-source macFUSE"
 }

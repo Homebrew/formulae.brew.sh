@@ -13,13 +13,13 @@
   "license": "GPL-2.0-or-later",
   "homepage": "https://faust.grame.fr",
   "versions": {
-    "stable": "2.30.5",
+    "stable": "2.37.3",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/grame-cncm/faust/releases/download/2.30.5/faust-2.30.5.tar.gz",
+      "url": "https://github.com/grame-cncm/faust/releases/download/2.37.3/faust-2.37.3.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,25 +31,30 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/faust/blobs/sha256:1bf84ab85632319d644d791ffec7a0535b7cb188aafad015cdf2068a9cbe11ac",
+          "sha256": "1bf84ab85632319d644d791ffec7a0535b7cb188aafad015cdf2068a9cbe11ac"
+        },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/faust/blobs/sha256:180d720686402bbeb9ac2f18c1c3c0d66282a2443631ab1961ec0b6d2b1e459b",
-          "sha256": "180d720686402bbeb9ac2f18c1c3c0d66282a2443631ab1961ec0b6d2b1e459b"
+          "url": "https://ghcr.io/v2/homebrew/core/faust/blobs/sha256:2bbdef266d98f44577a3ab668d9efff2c254337a8b1d18af38e346ea88a4e266",
+          "sha256": "2bbdef266d98f44577a3ab668d9efff2c254337a8b1d18af38e346ea88a4e266"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/faust/blobs/sha256:10a68392b508ea5eba3c84568e66417e7e0a6027c7d85795882a1640674d6c3b",
+          "sha256": "10a68392b508ea5eba3c84568e66417e7e0a6027c7d85795882a1640674d6c3b"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/faust/blobs/sha256:6d80da1e64a967bbc9549653d1848dba6ffdd8b54d99e1ed1b507ecfbdf84136",
-          "sha256": "6d80da1e64a967bbc9549653d1848dba6ffdd8b54d99e1ed1b507ecfbdf84136"
+          "url": "https://ghcr.io/v2/homebrew/core/faust/blobs/sha256:5a88b886af7e2d9c78be08afb3893e27e68fa371e7d9072360e1fd905bdd2d58",
+          "sha256": "5a88b886af7e2d9c78be08afb3893e27e68fa371e7d9072360e1fd905bdd2d58"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/faust/blobs/sha256:975ec4c8a2c10a975f998a94466734a5f3c08ceefb5c024d40d5d394a994754d",
-          "sha256": "975ec4c8a2c10a975f998a94466734a5f3c08ceefb5c024d40d5d394a994754d"
-        },
-        "mojave": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/faust/blobs/sha256:35e5b689fcec1730122ac0871d4c13eb3b84842991cf9728180fd84f4a654cf5",
-          "sha256": "35e5b689fcec1730122ac0871d4c13eb3b84842991cf9728180fd84f4a654cf5"
+          "url": "https://ghcr.io/v2/homebrew/core/faust/blobs/sha256:dfacb1d893c7e379c14a4e865bf59ff4ff829fbc245c5b0e55160d43032f0a6f",
+          "sha256": "dfacb1d893c7e379c14a4e865bf59ff4ff829fbc245c5b0e55160d43032f0a6f"
         }
       }
     }
@@ -66,7 +71,7 @@
   "dependencies": [
     "libmicrohttpd",
     "libsndfile",
-    "llvm"
+    "llvm@12"
   ],
   "recommended_dependencies": [
 

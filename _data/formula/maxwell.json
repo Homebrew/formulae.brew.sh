@@ -13,13 +13,13 @@
   "license": "Apache-2.0",
   "homepage": "https://maxwells-daemon.io/",
   "versions": {
-    "stable": "1.33.1",
+    "stable": "1.34.1",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/zendesk/maxwell/releases/download/v1.33.1/maxwell-1.33.1.tar.gz",
+      "url": "https://github.com/zendesk/maxwell/releases/download/v1.34.1/maxwell-1.34.1.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -27,9 +27,20 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "all": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/maxwell/blobs/sha256:f154915e71dd3c44243a40c16abdfc63841b30e07edcfedf0fa716abd52ed234",
+          "sha256": "f154915e71dd3c44243a40c16abdfc63841b30e07edcfedf0fa716abd52ed234"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],

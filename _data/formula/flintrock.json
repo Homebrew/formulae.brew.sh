@@ -13,43 +13,53 @@
   "license": "Apache-2.0",
   "homepage": "https://github.com/nchammas/flintrock",
   "versions": {
-    "stable": "1.0.0",
+    "stable": "2.0.0",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://files.pythonhosted.org/packages/e6/18/3b45899e69e6ee24928f8c975b6bf575918029a19fc097de5d4ccbf6e3e7/Flintrock-1.0.0.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/dc/ad/6e3871a510f0d053aa49caee2140a2f64f2d3fa584d3b70408043295fa57/Flintrock-2.0.0.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 3,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/flintrock/blobs/sha256:703a2f46d9c2c2905134bf1d5f4b3b73d3f0fb4a839337c9839c0a7b0ded0f76",
+          "sha256": "703a2f46d9c2c2905134bf1d5f4b3b73d3f0fb4a839337c9839c0a7b0ded0f76"
+        },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/flintrock/blobs/sha256:7db4812f7c3c8e267c7a51e0e16d3d7fbb1121f164bce98dba0d0eb8c571885c",
-          "sha256": "7db4812f7c3c8e267c7a51e0e16d3d7fbb1121f164bce98dba0d0eb8c571885c"
+          "url": "https://ghcr.io/v2/homebrew/core/flintrock/blobs/sha256:428e163a901608f2b8cc61b72cbd87819eefe4b6a5564fbb4e699d722da30246",
+          "sha256": "428e163a901608f2b8cc61b72cbd87819eefe4b6a5564fbb4e699d722da30246"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/flintrock/blobs/sha256:dddda17d2e6ca4c1e4e2a18b9c5ec1b2075eb469ca732b437a71798f9db557d1",
+          "sha256": "dddda17d2e6ca4c1e4e2a18b9c5ec1b2075eb469ca732b437a71798f9db557d1"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/flintrock/blobs/sha256:9fe7ca088a970afb0e7112b44ea942e86370684926dc61a15e8c6b15dc823b7f",
-          "sha256": "9fe7ca088a970afb0e7112b44ea942e86370684926dc61a15e8c6b15dc823b7f"
+          "url": "https://ghcr.io/v2/homebrew/core/flintrock/blobs/sha256:de38bad831b02619d3899a82d61c07275f1fb5401771d276b9a8ab51b4bb3f85",
+          "sha256": "de38bad831b02619d3899a82d61c07275f1fb5401771d276b9a8ab51b4bb3f85"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/flintrock/blobs/sha256:2ea56159856bf5aa6dabbeb60e6353db2c08de216ed7e4eeaadfddd7ebdac627",
-          "sha256": "2ea56159856bf5aa6dabbeb60e6353db2c08de216ed7e4eeaadfddd7ebdac627"
+          "url": "https://ghcr.io/v2/homebrew/core/flintrock/blobs/sha256:ff0526fd317c499f9b1b338418be4b32a2160eab20d3c06a4bc3a68fe7e4bd22",
+          "sha256": "ff0526fd317c499f9b1b338418be4b32a2160eab20d3c06a4bc3a68fe7e4bd22"
         },
-        "mojave": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/flintrock/blobs/sha256:233e8b6b2ddab2030df615ead9d4074da5d79328b4210d329434558bce1b9808",
-          "sha256": "233e8b6b2ddab2030df615ead9d4074da5d79328b4210d329434558bce1b9808"
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/flintrock/blobs/sha256:b2620d137febb3a5596fee637af9e9f6518f0b982f09ba3311543d014e84045e",
+          "sha256": "b2620d137febb3a5596fee637af9e9f6518f0b982f09ba3311543d014e84045e"
         }
       }
     }
@@ -63,7 +73,8 @@
     "rust"
   ],
   "dependencies": [
-    "python@3.9"
+    "python@3.9",
+    "six"
   ],
   "recommended_dependencies": [
 

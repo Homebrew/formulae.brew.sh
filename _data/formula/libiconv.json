@@ -10,7 +10,7 @@
 
   ],
   "desc": "Conversion library",
-  "license": "GPL-3.0",
+  "license": "GPL-3.0-or-later and LGPL-2.0-or-later",
   "homepage": "https://www.gnu.org/software/libiconv/",
   "versions": {
     "stable": "1.16",
@@ -31,10 +31,20 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/libiconv/blobs/sha256:23e9b95c2a691a34dfffef65139708ff6211417a849eee921cb002edc212fcec",
+          "sha256": "23e9b95c2a691a34dfffef65139708ff6211417a849eee921cb002edc212fcec"
+        },
         "arm64_big_sur": {
           "cellar": ":any",
           "url": "https://ghcr.io/v2/homebrew/core/libiconv/blobs/sha256:5d7976b37516995241432ab9c4cb14a0eba03f2e8af5b7bb110147ce045c9e1f",
           "sha256": "5d7976b37516995241432ab9c4cb14a0eba03f2e8af5b7bb110147ce045c9e1f"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/libiconv/blobs/sha256:012b45c589388c4aec3c8a8124711d12722c561f2ecfe0cfd5a1c14ceb50cd80",
+          "sha256": "012b45c589388c4aec3c8a8124711d12722c561f2ecfe0cfd5a1c14ceb50cd80"
         },
         "big_sur": {
           "cellar": ":any",
@@ -85,7 +95,15 @@
 
   ],
   "requirements": [
+    {
+      "name": "macos",
+      "cask": null,
+      "download": null,
+      "version": null,
+      "contexts": [
 
+      ]
+    }
   ],
   "conflicts_with": [
 

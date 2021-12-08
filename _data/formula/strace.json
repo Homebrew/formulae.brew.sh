@@ -13,13 +13,13 @@
   "license": "LGPL-2.1-or-later",
   "homepage": "https://strace.io/",
   "versions": {
-    "stable": "5.12",
+    "stable": "5.15",
     "head": "HEAD",
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/strace/strace/releases/download/v5.12/strace-5.12.tar.xz",
+      "url": "https://github.com/strace/strace/releases/download/v5.15/strace-5.15.tar.xz",
       "tag": null,
       "revision": null
     }
@@ -27,6 +27,17 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/strace/blobs/sha256:d532a2deca6676dd22013f05791a0f8bc3c0d50b913f9523173ac7e33f4b7761",
+          "sha256": "d532a2deca6676dd22013f05791a0f8bc3c0d50b913f9523173ac7e33f4b7761"
+        }
+      }
+    }
   },
   "keg_only": false,
   "bottle_disabled": false,
@@ -37,7 +48,7 @@
 
   ],
   "dependencies": [
-    "linux-headers"
+    "linux-headers@4.4"
   ],
   "recommended_dependencies": [
 

@@ -31,10 +31,20 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/psftools/blobs/sha256:1142f7422c522acca28091e7e522e384d00ea96148a74ac67bef674c59f44325",
+          "sha256": "1142f7422c522acca28091e7e522e384d00ea96148a74ac67bef674c59f44325"
+        },
         "arm64_big_sur": {
           "cellar": ":any",
           "url": "https://ghcr.io/v2/homebrew/core/psftools/blobs/sha256:474daee5c218ce90013ce498fa84dc5486bfdd1ff736535a87bd618fa72f3da9",
           "sha256": "474daee5c218ce90013ce498fa84dc5486bfdd1ff736535a87bd618fa72f3da9"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/psftools/blobs/sha256:cdb289bf8f4b4e86d1145bfbea21cf5ec091c758cfa1f3902fa636a934dbc55b",
+          "sha256": "cdb289bf8f4b4e86d1145bfbea21cf5ec091c758cfa1f3902fa636a934dbc55b"
         },
         "big_sur": {
           "cellar": ":any",
@@ -50,6 +60,11 @@
           "cellar": ":any",
           "url": "https://ghcr.io/v2/homebrew/core/psftools/blobs/sha256:8e53985d7a48b4f927d94ac27339ba7d293181b90fe33d05f22c71ff1e48c126",
           "sha256": "8e53985d7a48b4f927d94ac27339ba7d293181b90fe33d05f22c71ff1e48c126"
+        },
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/psftools/blobs/sha256:c750eb92e19169c1bb81129ab8ce270963e9168500b7c59d59d8bb7fc68ee7b4",
+          "sha256": "c750eb92e19169c1bb81129ab8ce270963e9168500b7c59d59d8bb7fc68ee7b4"
         }
       }
     }
@@ -60,7 +75,9 @@
 
   ],
   "build_dependencies": [
-    "autoconf"
+    "autoconf",
+    "automake",
+    "libtool"
   ],
   "dependencies": [
 

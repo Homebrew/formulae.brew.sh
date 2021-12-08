@@ -7,15 +7,20 @@
   ],
   "desc": "Binary authorization system",
   "homepage": "https://github.com/google/santa",
-  "url": "https://github.com/google/santa/releases/download/2021.5/santa-2021.5.dmg",
+  "url": "https://github.com/google/santa/releases/download/2021.7/santa-2021.7.dmg",
   "appcast": null,
-  "version": "2021.5",
+  "version": "2021.7",
+  "versions": {
+  },
   "installed": null,
   "outdated": false,
-  "sha256": "a54f94ea242ad48d219c80415a86d6b7a44a43075162d1dcbe100542417277ae",
+  "sha256": "7682a855aa2517011fe08eb5c1f420c1dbe2ab6ea3a732bbf915267fda203754",
   "artifacts": [
     {
-      "delete": "$(brew --prefix)/bin/santactl",
+      "delete": [
+        "/Applications/Santa.app",
+        "$(brew --prefix)/bin/santactl"
+      ],
       "kext": "com.google.santa-driver",
       "launchctl": [
         "com.google.santa",
@@ -26,7 +31,7 @@
       "signal": {
       }
     },
-    "santa-2021.5.pkg (Pkg)"
+    "santa-2021.7.pkg (Pkg)"
   ],
   "caveats": "For santa to use EndpointSecurity, it must be granted Full Disk Access under System Preferences → Security & Privacy → Privacy\n\nsanta requires a kernel extension to work.\nIf the installation fails, retry after you enable it in:\n  System Preferences → Security & Privacy → General\n\nFor more information, refer to vendor documentation or this Apple Technical Note:\n  https://developer.apple.com/library/content/technotes/tn2459/_index.html\n",
   "depends_on": {

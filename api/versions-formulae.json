@@ -1,0 +1,11 @@
+---
+---
+{
+{%- assign sorted_formulae = site.data.formula | sort -%}
+{% for formula in sorted_formulae %}
+  "{{ formula[1].name }}":{"version":"{{ formula[1].versions.stable }}","revision":{{ formula[1].revision }}}
+  {%- unless forloop.last -%}
+  ,
+  {%- endunless -%}
+{% endfor %}
+}

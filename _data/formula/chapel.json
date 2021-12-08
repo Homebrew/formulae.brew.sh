@@ -13,38 +13,48 @@
   "license": "Apache-2.0",
   "homepage": "https://chapel-lang.org/",
   "versions": {
-    "stable": "1.24.1",
+    "stable": "1.25.0",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/chapel-lang/chapel/releases/download/1.24.1/chapel-1.24.1.tar.gz",
+      "url": "https://github.com/chapel-lang/chapel/releases/download/1.25.0/chapel-1.25.0.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "monterey": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/chapel/blobs/sha256:91ee14fe8cdb2e5de1bcd0f84cb159a79ff5cfb310644ec427aca1e992c53301",
+          "sha256": "91ee14fe8cdb2e5de1bcd0f84cb159a79ff5cfb310644ec427aca1e992c53301"
+        },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/chapel/blobs/sha256:e792266fb772218ca4acfc90910d4d26836e2c1fe1faa60ffc104bd7baf31046",
-          "sha256": "e792266fb772218ca4acfc90910d4d26836e2c1fe1faa60ffc104bd7baf31046"
+          "url": "https://ghcr.io/v2/homebrew/core/chapel/blobs/sha256:71be5aaea9c567fd89e7cd0943aa6658200ce880da493f3269221745365d2f4f",
+          "sha256": "71be5aaea9c567fd89e7cd0943aa6658200ce880da493f3269221745365d2f4f"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/chapel/blobs/sha256:7a06d32c992460337aa0af964803ace53465ecd90727c6ca57392017d5fb1890",
-          "sha256": "7a06d32c992460337aa0af964803ace53465ecd90727c6ca57392017d5fb1890"
+          "url": "https://ghcr.io/v2/homebrew/core/chapel/blobs/sha256:b50729e75a45fdc2b4b350951d82c52b5abeb26813cf5fc6289a01dcde6afbae",
+          "sha256": "b50729e75a45fdc2b4b350951d82c52b5abeb26813cf5fc6289a01dcde6afbae"
         },
         "mojave": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/chapel/blobs/sha256:c048b2189f4900731fbbfb76efc70bc8e4d85809759ac80b2de7bdeb6db76acf",
-          "sha256": "c048b2189f4900731fbbfb76efc70bc8e4d85809759ac80b2de7bdeb6db76acf"
+          "url": "https://ghcr.io/v2/homebrew/core/chapel/blobs/sha256:486ff899300cc9ca346603badc31e7812f0ece757c60ae878588068ee7738023",
+          "sha256": "486ff899300cc9ca346603badc31e7812f0ece757c60ae878588068ee7738023"
+        },
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/chapel/blobs/sha256:7cf01213c80d41ed1b20451fd9f11b4b651a1b9a603729826a383e73475918b3",
+          "sha256": "7cf01213c80d41ed1b20451fd9f11b4b651a1b9a603729826a383e73475918b3"
         }
       }
     }
@@ -58,6 +68,7 @@
 
   ],
   "dependencies": [
+    "llvm@11",
     "python@3.9"
   ],
   "recommended_dependencies": [

@@ -13,13 +13,13 @@
   "license": "MIT",
   "homepage": "https://www.mesa3d.org/",
   "versions": {
-    "stable": "21.1.2",
+    "stable": "21.3.1",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://archive.mesa3d.org/mesa-21.1.2.tar.xz",
+      "url": "https://mesa.freedesktop.org/archive/mesa-21.3.1.tar.xz",
       "tag": null,
       "revision": null
     }
@@ -31,25 +31,35 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/mesa/blobs/sha256:0b24328f86e2ec2abc0b94ff2ad93b6a8e5e9c990da9713080f0afad33c3f30a",
+          "sha256": "0b24328f86e2ec2abc0b94ff2ad93b6a8e5e9c990da9713080f0afad33c3f30a"
+        },
         "arm64_big_sur": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/mesa/blobs/sha256:d15149248938b4959a14fd8f24e433c1a9446e3ad7dd6584c77eb873e882846a",
-          "sha256": "d15149248938b4959a14fd8f24e433c1a9446e3ad7dd6584c77eb873e882846a"
+          "url": "https://ghcr.io/v2/homebrew/core/mesa/blobs/sha256:28d4473154c77c6fd26c5a29291af6b8af2ae4e9b0cba443e2c825bca7fcacad",
+          "sha256": "28d4473154c77c6fd26c5a29291af6b8af2ae4e9b0cba443e2c825bca7fcacad"
+        },
+        "monterey": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/mesa/blobs/sha256:6d61cc330d58ed3876bb4b9deb6c12272bef628894ccd6d17a6f75bc03b359f8",
+          "sha256": "6d61cc330d58ed3876bb4b9deb6c12272bef628894ccd6d17a6f75bc03b359f8"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/mesa/blobs/sha256:35c8afa1c97db20542e322e1db37015322c7b0b50d2f5b7c4979df02e63c22e7",
-          "sha256": "35c8afa1c97db20542e322e1db37015322c7b0b50d2f5b7c4979df02e63c22e7"
+          "url": "https://ghcr.io/v2/homebrew/core/mesa/blobs/sha256:4c6846d55c0b46196b5f689ceeafc6dbb4b7ec55f02b68d439f2956533a8817b",
+          "sha256": "4c6846d55c0b46196b5f689ceeafc6dbb4b7ec55f02b68d439f2956533a8817b"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/mesa/blobs/sha256:5263b1f81993e09684b4ea5904fff681437ec6dbea8f3d06b688707ad45cd2c6",
-          "sha256": "5263b1f81993e09684b4ea5904fff681437ec6dbea8f3d06b688707ad45cd2c6"
+          "url": "https://ghcr.io/v2/homebrew/core/mesa/blobs/sha256:0be7bf943d14e317ceb1c380bec5c2f89839654c57d704f2649b5f650b0d3679",
+          "sha256": "0be7bf943d14e317ceb1c380bec5c2f89839654c57d704f2649b5f650b0d3679"
         },
-        "mojave": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/mesa/blobs/sha256:b7d85db70c358b3a411fbfc1d1744e4d0484e735d86cc52ed362a2910991cfdb",
-          "sha256": "b7d85db70c358b3a411fbfc1d1744e4d0484e735d86cc52ed362a2910991cfdb"
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/mesa/blobs/sha256:a6d24f2f891c0209c70e2cedc13a152caa3abb652d67393c0ae4f243324398e0",
+          "sha256": "a6d24f2f891c0209c70e2cedc13a152caa3abb652d67393c0ae4f243324398e0"
         }
       }
     }
@@ -80,14 +90,12 @@
 
   ],
   "uses_from_macos": [
-    [
-      "bison",
-      "build"
-    ],
-    [
-      "flex",
-      "build"
-    ],
+    {
+      "bison": "build"
+    },
+    {
+      "flex": "build"
+    },
     "llvm",
     "ncurses",
     "zlib"

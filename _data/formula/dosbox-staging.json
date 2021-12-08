@@ -13,13 +13,13 @@
   "license": "GPL-2.0-or-later",
   "homepage": "https://dosbox-staging.github.io/",
   "versions": {
-    "stable": "0.76.0",
+    "stable": "0.77.1",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/dosbox-staging/dosbox-staging/archive/v0.76.0.tar.gz",
+      "url": "https://github.com/dosbox-staging/dosbox-staging/archive/v0.77.1.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,25 +31,30 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/dosbox-staging/blobs/sha256:88b43a601ab9da67fc95ad8f6300ed97bb1712c88c59823ad958846b48d6c6c8",
+          "sha256": "88b43a601ab9da67fc95ad8f6300ed97bb1712c88c59823ad958846b48d6c6c8"
+        },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/dosbox-staging/blobs/sha256:fb8f0447f5090363a78aba9bc2d454706b5c0fb509ac7fd5887d1f893640c8ee",
-          "sha256": "fb8f0447f5090363a78aba9bc2d454706b5c0fb509ac7fd5887d1f893640c8ee"
+          "url": "https://ghcr.io/v2/homebrew/core/dosbox-staging/blobs/sha256:1e3a2ef4d27acdb78a630db92d2c0442ce1d31ab680d09af3c83e262821ba661",
+          "sha256": "1e3a2ef4d27acdb78a630db92d2c0442ce1d31ab680d09af3c83e262821ba661"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/dosbox-staging/blobs/sha256:540c94977bfa670042463b1b56ca86949231f87ba86058a5aaca909db8cdfe7a",
+          "sha256": "540c94977bfa670042463b1b56ca86949231f87ba86058a5aaca909db8cdfe7a"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/dosbox-staging/blobs/sha256:3b309a468fd37f2f5acd86dfdc13ba761a2dba9b3844c67d7a726761408997ff",
-          "sha256": "3b309a468fd37f2f5acd86dfdc13ba761a2dba9b3844c67d7a726761408997ff"
+          "url": "https://ghcr.io/v2/homebrew/core/dosbox-staging/blobs/sha256:8631465cffcb93e671bc1aae412f7e4444be46108cb78615fa5e6b21f3fb6aa5",
+          "sha256": "8631465cffcb93e671bc1aae412f7e4444be46108cb78615fa5e6b21f3fb6aa5"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/dosbox-staging/blobs/sha256:634724b72b5fcdd54c0bc29bd37bbb00457a4a3762a896f1b743c7d9175c398a",
-          "sha256": "634724b72b5fcdd54c0bc29bd37bbb00457a4a3762a896f1b743c7d9175c398a"
-        },
-        "mojave": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/dosbox-staging/blobs/sha256:403eba84e98409729480a474508c66b259b4125a80efede453da0021f6893611",
-          "sha256": "403eba84e98409729480a474508c66b259b4125a80efede453da0021f6893611"
+          "url": "https://ghcr.io/v2/homebrew/core/dosbox-staging/blobs/sha256:48cd7e24deaab11eff764602bd0c1060e500c3f9cb0bb7f67a3b547ff13065f4",
+          "sha256": "48cd7e24deaab11eff764602bd0c1060e500c3f9cb0bb7f67a3b547ff13065f4"
         }
       }
     }
@@ -60,13 +65,14 @@
 
   ],
   "build_dependencies": [
-    "autoconf",
-    "automake",
+    "meson",
+    "ninja",
     "pkg-config"
   ],
   "dependencies": [
     "fluid-synth",
     "libpng",
+    "mt32emu",
     "opusfile",
     "sdl2",
     "sdl2_net"

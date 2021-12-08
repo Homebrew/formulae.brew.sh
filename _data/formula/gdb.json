@@ -13,13 +13,13 @@
   "license": "GPL-3.0-or-later",
   "homepage": "https://www.gnu.org/software/gdb/",
   "versions": {
-    "stable": "10.2",
+    "stable": "11.1",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://ftp.gnu.org/gnu/gdb/gdb-10.2.tar.xz",
+      "url": "https://ftp.gnu.org/gnu/gdb/gdb-11.1.tar.xz",
       "tag": null,
       "revision": null
     }
@@ -31,20 +31,30 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "monterey": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/gdb/blobs/sha256:c4d3d881ae2ae938b37031f94c9b2780e53f78fa224fe64532b08656157f9afe",
+          "sha256": "c4d3d881ae2ae938b37031f94c9b2780e53f78fa224fe64532b08656157f9afe"
+        },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/gdb/blobs/sha256:31de67be9674e5bd363a554e7f02002687a5ac9734526983e0430b041acea042",
-          "sha256": "31de67be9674e5bd363a554e7f02002687a5ac9734526983e0430b041acea042"
+          "url": "https://ghcr.io/v2/homebrew/core/gdb/blobs/sha256:ce7aa7f3589b5833ff0ace1afb6e43ea01860666bf34ad7f941b9cab5c7ab5ab",
+          "sha256": "ce7aa7f3589b5833ff0ace1afb6e43ea01860666bf34ad7f941b9cab5c7ab5ab"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/gdb/blobs/sha256:66f0ab39e075db4f5de3403c0f8125b54be84b7d009491e0b8e040d774721c3b",
-          "sha256": "66f0ab39e075db4f5de3403c0f8125b54be84b7d009491e0b8e040d774721c3b"
+          "url": "https://ghcr.io/v2/homebrew/core/gdb/blobs/sha256:7543956f666aae922d34accd371fbc57d901adb386776b47e079163933e75755",
+          "sha256": "7543956f666aae922d34accd371fbc57d901adb386776b47e079163933e75755"
         },
         "mojave": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/gdb/blobs/sha256:f1392338a52a0e3d74b3b4f9f1ad4e70977d80ad672789a1371bed545d5528e4",
-          "sha256": "f1392338a52a0e3d74b3b4f9f1ad4e70977d80ad672789a1371bed545d5528e4"
+          "url": "https://ghcr.io/v2/homebrew/core/gdb/blobs/sha256:1d315c9b2213bfe09533c05beb2221a68ae816dc92c321d966c3fe1974e95913",
+          "sha256": "1d315c9b2213bfe09533c05beb2221a68ae816dc92c321d966c3fe1974e95913"
+        },
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/gdb/blobs/sha256:e83bcc7a2b903fb7e76b2d4b2ae2935d96100385a5cbae4316641c90fc724685",
+          "sha256": "e83bcc7a2b903fb7e76b2d4b2ae2935d96100385a5cbae4316641c90fc724685"
         }
       }
     }
@@ -58,6 +68,7 @@
 
   ],
   "dependencies": [
+    "gmp",
     "python@3.9",
     "xz"
   ],
@@ -68,6 +79,9 @@
 
   ],
   "uses_from_macos": [
+    {
+      "texinfo": "build"
+    },
     "expat",
     "ncurses"
   ],
@@ -77,7 +91,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "gdb requires special privileges to access Mach ports.\nYou will need to codesign the binary. For instructions, see:\n\n  https://sourceware.org/gdb/wiki/BuildingOnDarwin\n\nOn 10.12 (Sierra) or later with SIP, you need to run this:\n\n  echo \"set startup-with-shell off\" >> ~/.gdbinit\n",
+  "caveats": "gdb requires special privileges to access Mach ports.\nYou will need to codesign the binary. For instructions, see:\n\n  https://sourceware.org/gdb/wiki/PermissionsDarwin\n",
   "installed": [
 
   ],

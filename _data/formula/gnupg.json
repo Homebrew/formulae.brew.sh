@@ -17,13 +17,13 @@
   "license": "GPL-3.0-or-later",
   "homepage": "https://gnupg.org/",
   "versions": {
-    "stable": "2.3.1",
+    "stable": "2.3.3",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://gnupg.org/ftp/gcrypt/gnupg/gnupg-2.3.1.tar.bz2",
+      "url": "https://gnupg.org/ftp/gcrypt/gnupg/gnupg-2.3.3.tar.bz2",
       "tag": null,
       "revision": null
     }
@@ -35,25 +35,35 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/gnupg/blobs/sha256:7935ce2295cc17a978ad5d00c0cb34f2969c510e8820f1404f44fd7d3bd585b0",
+          "sha256": "7935ce2295cc17a978ad5d00c0cb34f2969c510e8820f1404f44fd7d3bd585b0"
+        },
         "arm64_big_sur": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/gnupg/blobs/sha256:fd27ef93bf469e8f5689c372f6b6dba70f2fb777b8056b22e5688b67a146b902",
-          "sha256": "fd27ef93bf469e8f5689c372f6b6dba70f2fb777b8056b22e5688b67a146b902"
+          "url": "https://ghcr.io/v2/homebrew/core/gnupg/blobs/sha256:e1f444e61d3e8c00970d2e61d513caf02ab4b2c07c2bd8a2b13dd8265e4c379a",
+          "sha256": "e1f444e61d3e8c00970d2e61d513caf02ab4b2c07c2bd8a2b13dd8265e4c379a"
+        },
+        "monterey": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/gnupg/blobs/sha256:054b5d03dc3b3e3fb71ec3f8b4c39e250bde24ac4981c5f2c041567e5643be90",
+          "sha256": "054b5d03dc3b3e3fb71ec3f8b4c39e250bde24ac4981c5f2c041567e5643be90"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/gnupg/blobs/sha256:d1459dc52e4360dd6d812a833218e5ced1f08c10b131981a3ec2aab9fc5d7f9c",
-          "sha256": "d1459dc52e4360dd6d812a833218e5ced1f08c10b131981a3ec2aab9fc5d7f9c"
+          "url": "https://ghcr.io/v2/homebrew/core/gnupg/blobs/sha256:3854d1939e38f51eee0d471dbb86be5880c583fc43099e04f11b7538318606e0",
+          "sha256": "3854d1939e38f51eee0d471dbb86be5880c583fc43099e04f11b7538318606e0"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/gnupg/blobs/sha256:fbdc50f45c45b3444b7d4dd48334e91b8a0c9dbf84da85f379981bbb2ee1a5a3",
-          "sha256": "fbdc50f45c45b3444b7d4dd48334e91b8a0c9dbf84da85f379981bbb2ee1a5a3"
+          "url": "https://ghcr.io/v2/homebrew/core/gnupg/blobs/sha256:a810862dacc767bcece54292cf27854d96c10f028b6fee3bc0ea421aebe8c334",
+          "sha256": "a810862dacc767bcece54292cf27854d96c10f028b6fee3bc0ea421aebe8c334"
         },
-        "mojave": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/gnupg/blobs/sha256:bbbcdf26abc4cb46557b59ba60320317d457e7f794ed3092891df29153b5d807",
-          "sha256": "bbbcdf26abc4cb46557b59ba60320317d457e7f794ed3092891df29153b5d807"
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/gnupg/blobs/sha256:05705f2461335835103d19f0451222e129dac8f05c4c8d3e972dba30a119558d",
+          "sha256": "05705f2461335835103d19f0451222e129dac8f05c4c8d3e972dba30a119558d"
         }
       }
     }
@@ -95,7 +105,7 @@
   "caveats": null,
   "installed": [
     {
-      "version": "2.3.1",
+      "version": "2.3.3_1",
       "used_options": [
 
       ],
@@ -108,23 +118,28 @@
           "declared_directly": true
         },
         {
+          "full_name": "ca-certificates",
+          "version": "2021-10-26",
+          "declared_directly": false
+        },
+        {
           "full_name": "gmp",
           "version": "6.2.1",
           "declared_directly": false
         },
         {
           "full_name": "bdw-gc",
-          "version": "8.0.4",
+          "version": "8.0.6",
           "declared_directly": false
         },
         {
           "full_name": "libffi",
-          "version": "3.3",
+          "version": "3.4.2",
           "declared_directly": false
         },
         {
           "full_name": "m4",
-          "version": "1.4.18",
+          "version": "1.4.19",
           "declared_directly": false
         },
         {
@@ -144,7 +159,7 @@
         },
         {
           "full_name": "readline",
-          "version": "8.1",
+          "version": "8.1.1",
           "declared_directly": false
         },
         {
@@ -154,12 +169,12 @@
         },
         {
           "full_name": "libidn2",
-          "version": "2.3.1",
+          "version": "2.3.2",
           "declared_directly": false
         },
         {
           "full_name": "libtasn1",
-          "version": "4.17.0",
+          "version": "4.18.0",
           "declared_directly": false
         },
         {
@@ -174,7 +189,7 @@
         },
         {
           "full_name": "openssl@1.1",
-          "version": "1.1.1k",
+          "version": "1.1.1l",
           "declared_directly": false
         },
         {
@@ -183,28 +198,13 @@
           "declared_directly": false
         },
         {
-          "full_name": "c-ares",
-          "version": "1.17.1",
-          "declared_directly": false
-        },
-        {
-          "full_name": "jemalloc",
-          "version": "5.2.1",
-          "declared_directly": false
-        },
-        {
-          "full_name": "libev",
-          "version": "4.33",
-          "declared_directly": false
-        },
-        {
-          "full_name": "nghttp2",
-          "version": "1.43.0",
+          "full_name": "libnghttp2",
+          "version": "1.46.0",
           "declared_directly": false
         },
         {
           "full_name": "unbound",
-          "version": "1.13.1",
+          "version": "1.13.2",
           "declared_directly": false
         },
         {
@@ -214,7 +214,7 @@
         },
         {
           "full_name": "libgpg-error",
-          "version": "1.42",
+          "version": "1.43",
           "declared_directly": true
         },
         {
@@ -224,12 +224,12 @@
         },
         {
           "full_name": "libgcrypt",
-          "version": "1.9.3",
+          "version": "1.9.4",
           "declared_directly": true
         },
         {
           "full_name": "libksba",
-          "version": "1.5.1",
+          "version": "1.6.0",
           "declared_directly": true
         },
         {
@@ -244,7 +244,7 @@
         },
         {
           "full_name": "pinentry",
-          "version": "1.1.1",
+          "version": "1.2.0",
           "declared_directly": true
         }
       ],
@@ -252,9 +252,9 @@
       "installed_on_request": true
     }
   ],
-  "linked_keg": "2.3.1",
+  "linked_keg": "2.3.3_1",
   "pinned": false,
-  "outdated": true,
+  "outdated": false,
   "deprecated": false,
   "deprecation_date": null,
   "deprecation_reason": null,

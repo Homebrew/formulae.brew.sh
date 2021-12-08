@@ -13,13 +13,13 @@
   "license": "MIT",
   "homepage": "https://deno.land/",
   "versions": {
-    "stable": "1.11.0",
+    "stable": "1.16.4",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/denoland/deno/releases/download/v1.11.0/deno_src.tar.gz",
+      "url": "https://github.com/denoland/deno/releases/download/v1.16.4/deno_src.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,25 +31,35 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/deno/blobs/sha256:e7856a8a88cad481a301d07934e21e393fd505297c2fa29a5fa0bb7a944a123e",
+          "sha256": "e7856a8a88cad481a301d07934e21e393fd505297c2fa29a5fa0bb7a944a123e"
+        },
         "arm64_big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/deno/blobs/sha256:115fc5213f2516682d6c97eff295c5978d4e3947d32f0cfa0db110bb8146f761",
-          "sha256": "115fc5213f2516682d6c97eff295c5978d4e3947d32f0cfa0db110bb8146f761"
+          "url": "https://ghcr.io/v2/homebrew/core/deno/blobs/sha256:0925c538e4086c842d64339acbcac9bec6e4a34beea8e42531b8ef4dcfeac004",
+          "sha256": "0925c538e4086c842d64339acbcac9bec6e4a34beea8e42531b8ef4dcfeac004"
+        },
+        "monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/deno/blobs/sha256:aa2c9ae1c81253129874c98171e35aa011c4186691fec4b13ac1a1f24c7a4a8f",
+          "sha256": "aa2c9ae1c81253129874c98171e35aa011c4186691fec4b13ac1a1f24c7a4a8f"
         },
         "big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/deno/blobs/sha256:8540fb3e2b261070fa79e015ed93afc53f17395a258c6a6da5a0dd1dc8cd86e9",
-          "sha256": "8540fb3e2b261070fa79e015ed93afc53f17395a258c6a6da5a0dd1dc8cd86e9"
+          "url": "https://ghcr.io/v2/homebrew/core/deno/blobs/sha256:dc5f158c6f08f6fcb7c234ffee8ae139542a0909190af94f7ce0085dc42b4eff",
+          "sha256": "dc5f158c6f08f6fcb7c234ffee8ae139542a0909190af94f7ce0085dc42b4eff"
         },
         "catalina": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/deno/blobs/sha256:112ed26faed7e463bf18eb995cb466f7d58e012838797c49b686fde672009de3",
-          "sha256": "112ed26faed7e463bf18eb995cb466f7d58e012838797c49b686fde672009de3"
+          "url": "https://ghcr.io/v2/homebrew/core/deno/blobs/sha256:b84ec93bb80bfacc1195df310ac5c3779050e9e3aa937bffa49e7819a0fa004f",
+          "sha256": "b84ec93bb80bfacc1195df310ac5c3779050e9e3aa937bffa49e7819a0fa004f"
         },
-        "mojave": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/deno/blobs/sha256:fda2221d9931a351985f13b3877d00e095c3cb115e5acf4f0688c0593472b71e",
-          "sha256": "fda2221d9931a351985f13b3877d00e095c3cb115e5acf4f0688c0593472b71e"
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/deno/blobs/sha256:440fb57e4d83f802ad67d15848879ab038e16e4cd157f50d461784ffc342de41",
+          "sha256": "440fb57e4d83f802ad67d15848879ab038e16e4cd157f50d461784ffc342de41"
         }
       }
     }
@@ -62,6 +72,7 @@
   "build_dependencies": [
     "llvm",
     "ninja",
+    "python@3.9",
     "rust"
   ],
   "dependencies": [
@@ -84,15 +95,6 @@
       "version": "10.0",
       "contexts": [
         "build"
-      ]
-    },
-    {
-      "name": "macos",
-      "cask": null,
-      "download": null,
-      "version": null,
-      "contexts": [
-
       ]
     }
   ],

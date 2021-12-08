@@ -15,13 +15,13 @@
   "license": "Ruby",
   "homepage": "https://www.ruby-lang.org/",
   "versions": {
-    "stable": "2.7.3",
+    "stable": "2.7.5",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.3.tar.xz",
+      "url": "https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.5.tar.xz",
       "tag": null,
       "revision": null
     }
@@ -33,25 +33,35 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/ruby/2.7/blobs/sha256:d8c9aded81bad1b4c0a02c77416a5cfe2c781ae7ef4fd875a13dcc431c863a46",
+          "sha256": "d8c9aded81bad1b4c0a02c77416a5cfe2c781ae7ef4fd875a13dcc431c863a46"
+        },
         "arm64_big_sur": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/ruby/2.7/blobs/sha256:1dbccb05f68478ea9bab7d3c2b944f09c5c08f6ee9dc93e8e342a14fe6a3c06b",
-          "sha256": "1dbccb05f68478ea9bab7d3c2b944f09c5c08f6ee9dc93e8e342a14fe6a3c06b"
+          "url": "https://ghcr.io/v2/homebrew/core/ruby/2.7/blobs/sha256:4ebd01ffb6558f9f32efa209b1142ed6c238af312dd7af99387161da114630a1",
+          "sha256": "4ebd01ffb6558f9f32efa209b1142ed6c238af312dd7af99387161da114630a1"
+        },
+        "monterey": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/ruby/2.7/blobs/sha256:3cd2c86c5a74cfa1c9eee07749ffcb649f3f4ec7a710f61475c24a56075661bc",
+          "sha256": "3cd2c86c5a74cfa1c9eee07749ffcb649f3f4ec7a710f61475c24a56075661bc"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/ruby/2.7/blobs/sha256:3b4cc55acc6b1df7d5dc812c026c428ac4e5d7fe87ad3c1c2dcd6d634c51eba1",
-          "sha256": "3b4cc55acc6b1df7d5dc812c026c428ac4e5d7fe87ad3c1c2dcd6d634c51eba1"
+          "url": "https://ghcr.io/v2/homebrew/core/ruby/2.7/blobs/sha256:dfe8b9f8490d362bc9063ce6aba89337ecf0170e68063f608f6191149aff11fe",
+          "sha256": "dfe8b9f8490d362bc9063ce6aba89337ecf0170e68063f608f6191149aff11fe"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/ruby/2.7/blobs/sha256:5645255c0672afd591440407b7ba58a43a2e2945e88d21208fa031704128f144",
-          "sha256": "5645255c0672afd591440407b7ba58a43a2e2945e88d21208fa031704128f144"
+          "url": "https://ghcr.io/v2/homebrew/core/ruby/2.7/blobs/sha256:11ed255dd542265b600a5e3719f890282db7f55a7faad715522d84facb7e5ca0",
+          "sha256": "11ed255dd542265b600a5e3719f890282db7f55a7faad715522d84facb7e5ca0"
         },
-        "mojave": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/ruby/2.7/blobs/sha256:04ae189062e37ddd4bda4b687ab3c6208b9643a181176b0fa822cbf6eace35a7",
-          "sha256": "04ae189062e37ddd4bda4b687ab3c6208b9643a181176b0fa822cbf6eace35a7"
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/ruby/2.7/blobs/sha256:76f0e1305defee984188fb940c6ea1e823edfe850dde97ec76c81ddd156e5c7f",
+          "sha256": "76f0e1305defee984188fb940c6ea1e823edfe850dde97ec76c81ddd156e5c7f"
         }
       }
     }
@@ -87,7 +97,7 @@
   "caveats": "By default, binaries installed by gem will be placed into:\n  $(brew --prefix)/lib/ruby/gems/2.7.0/bin\n\nYou may want to add this to your PATH.\n",
   "installed": [
     {
-      "version": "2.7.3",
+      "version": "2.7.5",
       "used_options": [
 
       ],
@@ -100,13 +110,18 @@
           "declared_directly": true
         },
         {
+          "full_name": "ca-certificates",
+          "version": "2021-10-26",
+          "declared_directly": false
+        },
+        {
           "full_name": "openssl@1.1",
-          "version": "1.1.1k",
+          "version": "1.1.1l",
           "declared_directly": true
         },
         {
           "full_name": "readline",
-          "version": "8.1",
+          "version": "8.1.1",
           "declared_directly": true
         }
       ],

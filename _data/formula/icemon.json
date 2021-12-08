@@ -10,7 +10,7 @@
 
   ],
   "desc": "Icecream GUI Monitor",
-  "license": "GPL-2.0",
+  "license": "GPL-2.0-or-later",
   "homepage": "https://github.com/icecc/icemon",
   "versions": {
     "stable": "3.3",
@@ -31,6 +31,11 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/icemon/blobs/sha256:3bdc990f8c84ac25b6f68859b54423b26425d08d40b0b91d2dc034b248e8a73a",
+          "sha256": "3bdc990f8c84ac25b6f68859b54423b26425d08d40b0b91d2dc034b248e8a73a"
+        },
         "arm64_big_sur": {
           "cellar": ":any",
           "url": "https://ghcr.io/v2/homebrew/core/icemon/blobs/sha256:f310aad5e98a7cf3c6fca8a1ddcda9af425cb7b442512b5c540619de0312cb60",
@@ -50,6 +55,11 @@
           "cellar": ":any",
           "url": "https://ghcr.io/v2/homebrew/core/icemon/blobs/sha256:34f8c691f2c2d23fc65bc84429f0282c96d47f88036ada6d6f44761287a88441",
           "sha256": "34f8c691f2c2d23fc65bc84429f0282c96d47f88036ada6d6f44761287a88441"
+        },
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/icemon/blobs/sha256:8cf76a2e17950f37348b0f29c0f0ac228fa483c432c16240edb5b70b3002dc6d",
+          "sha256": "8cf76a2e17950f37348b0f29c0f0ac228fa483c432c16240edb5b70b3002dc6d"
         }
       }
     }
@@ -61,6 +71,7 @@
   ],
   "build_dependencies": [
     "cmake",
+    "extra-cmake-modules",
     "pkg-config",
     "sphinx-doc"
   ],

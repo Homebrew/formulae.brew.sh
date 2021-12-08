@@ -10,7 +10,7 @@
 
   ],
   "desc": "Handle input method in command-line",
-  "license": "GPL-3.0",
+  "license": "GPL-3.0-or-later",
   "homepage": "https://github.com/xcodebuild/fcitx-remote-for-osx",
   "versions": {
     "stable": "0.3.0",
@@ -31,10 +31,20 @@
       "rebuild": 1,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/fcitx-remote-for-osx/blobs/sha256:ce28a692f51a2441d407a19430c933720702367a504163979bb0345ae8cf9de8",
+          "sha256": "ce28a692f51a2441d407a19430c933720702367a504163979bb0345ae8cf9de8"
+        },
         "arm64_big_sur": {
           "cellar": ":any_skip_relocation",
           "url": "https://ghcr.io/v2/homebrew/core/fcitx-remote-for-osx/blobs/sha256:12913aa01bc77d930cef72d681c39e473cf5c1a5f412bf971d9eacefed65f586",
           "sha256": "12913aa01bc77d930cef72d681c39e473cf5c1a5f412bf971d9eacefed65f586"
+        },
+        "monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/fcitx-remote-for-osx/blobs/sha256:e40e0497b894b54f53a448f159bfda1ce076c9730c81667e6e6cf409db5fd830",
+          "sha256": "e40e0497b894b54f53a448f159bfda1ce076c9730c81667e6e6cf409db5fd830"
         },
         "big_sur": {
           "cellar": ":any_skip_relocation",
@@ -85,7 +95,15 @@
 
   ],
   "requirements": [
+    {
+      "name": "macos",
+      "cask": null,
+      "download": null,
+      "version": null,
+      "contexts": [
 
+      ]
+    }
   ],
   "conflicts_with": [
 

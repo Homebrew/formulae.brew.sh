@@ -13,13 +13,13 @@
   "license": "GPL-3.0-or-later",
   "homepage": "https://www.djcbsoftware.nl/code/mu/",
   "versions": {
-    "stable": "1.4.15",
+    "stable": "1.6.8",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/djcb/mu/archive/1.4.15.tar.gz",
+      "url": "https://github.com/djcb/mu/releases/download/1.6.8/mu-1.6.8.tar.xz",
       "tag": null,
       "revision": null
     }
@@ -33,23 +33,23 @@
       "files": {
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/mu/blobs/sha256:d7a73a634d7b10e4c1bad9879d5f2b17bdaf1261ed8bfcf231c8a45a4ac7bd3e",
-          "sha256": "d7a73a634d7b10e4c1bad9879d5f2b17bdaf1261ed8bfcf231c8a45a4ac7bd3e"
+          "url": "https://ghcr.io/v2/homebrew/core/mu/blobs/sha256:abbbacf5eb2983c03fc209bd497bb828cf0c0077f0e1ec2d02710e86145db41a",
+          "sha256": "abbbacf5eb2983c03fc209bd497bb828cf0c0077f0e1ec2d02710e86145db41a"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/mu/blobs/sha256:156897a7a8054b5d6621bfb8dead7bedf0479e8bf30e8bbd705f35e2bfbf6654",
-          "sha256": "156897a7a8054b5d6621bfb8dead7bedf0479e8bf30e8bbd705f35e2bfbf6654"
+          "url": "https://ghcr.io/v2/homebrew/core/mu/blobs/sha256:3babbb7a81106cce91530c94be1e66f7184a65e67119d06d14e1641146487eea",
+          "sha256": "3babbb7a81106cce91530c94be1e66f7184a65e67119d06d14e1641146487eea"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/mu/blobs/sha256:2352f980cdc3e560e3901cf91f0163b8f9c4fad08b935646c38abc3cc076f6ba",
-          "sha256": "2352f980cdc3e560e3901cf91f0163b8f9c4fad08b935646c38abc3cc076f6ba"
+          "url": "https://ghcr.io/v2/homebrew/core/mu/blobs/sha256:fb0ee00fbe19850a2edf6f88514a7179392f674fff26246a067ea60d2e570626",
+          "sha256": "fb0ee00fbe19850a2edf6f88514a7179392f674fff26246a067ea60d2e570626"
         },
-        "mojave": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/mu/blobs/sha256:2543a69a0ea5f7c8aeca43e71f6c79bca8332fb2fa5d449c766a7f74462eb6e8",
-          "sha256": "2543a69a0ea5f7c8aeca43e71f6c79bca8332fb2fa5d449c766a7f74462eb6e8"
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/mu/blobs/sha256:db2624e44332ca7e4a4916786db3129394f21f963f10e7b1c4320df4b6f3a21a",
+          "sha256": "db2624e44332ca7e4a4916786db3129394f21f963f10e7b1c4320df4b6f3a21a"
         }
       }
     }
@@ -60,8 +60,6 @@
 
   ],
   "build_dependencies": [
-    "autoconf",
-    "automake",
     "emacs",
     "libgpg-error",
     "libtool",
@@ -80,10 +78,9 @@
 
   ],
   "uses_from_macos": [
-    [
-      "texinfo",
-      "build"
-    ]
+    {
+      "texinfo": "build"
+    }
   ],
   "requirements": [
 

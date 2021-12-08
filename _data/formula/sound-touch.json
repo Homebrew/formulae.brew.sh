@@ -10,16 +10,16 @@
 
   ],
   "desc": "Audio processing library",
-  "license": "LGPL-2.1",
+  "license": "LGPL-2.1-or-later",
   "homepage": "https://www.surina.net/soundtouch/",
   "versions": {
-    "stable": "2.2",
+    "stable": "2.3.1",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://gitlab.com/soundtouch/soundtouch/-/archive/2.2/soundtouch-2.2.tar.gz",
+      "url": "https://codeberg.org/soundtouch/soundtouch/archive/2.3.1.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,33 +28,38 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 0,
+      "rebuild": 1,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/sound-touch/blobs/sha256:0d340cfb0bf1d17b2eea238b756e58cd0559a4e394394b0f5e2031114e75506e",
+          "sha256": "0d340cfb0bf1d17b2eea238b756e58cd0559a4e394394b0f5e2031114e75506e"
+        },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/sound-touch/blobs/sha256:3f1a856a43235f03b83369a1edf8e29cedc4457129c74147433deb48ad102fbf",
-          "sha256": "3f1a856a43235f03b83369a1edf8e29cedc4457129c74147433deb48ad102fbf"
+          "url": "https://ghcr.io/v2/homebrew/core/sound-touch/blobs/sha256:1ccbe6750451a745654c3b00c8f14e1706381074254136278bb4cc1f7b88e009",
+          "sha256": "1ccbe6750451a745654c3b00c8f14e1706381074254136278bb4cc1f7b88e009"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/sound-touch/blobs/sha256:ecf1be5a1ff7d41f7346f32c238ae3f30f965e58252e994082c4f2c7dd7d2784",
+          "sha256": "ecf1be5a1ff7d41f7346f32c238ae3f30f965e58252e994082c4f2c7dd7d2784"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/sound-touch/blobs/sha256:00c6ee28e38c679ca677309863fab484f20eef02d05fda58fd594b4a13b6b65f",
-          "sha256": "00c6ee28e38c679ca677309863fab484f20eef02d05fda58fd594b4a13b6b65f"
+          "url": "https://ghcr.io/v2/homebrew/core/sound-touch/blobs/sha256:cbc1dd06e73d9712e1b1fa21c4767967f122a40e2cd92097c912084f002cc4d5",
+          "sha256": "cbc1dd06e73d9712e1b1fa21c4767967f122a40e2cd92097c912084f002cc4d5"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/sound-touch/blobs/sha256:514181f2783b615a363bb51c4dcf9edc320850d9a4d1effa17b681e2d47736af",
-          "sha256": "514181f2783b615a363bb51c4dcf9edc320850d9a4d1effa17b681e2d47736af"
+          "url": "https://ghcr.io/v2/homebrew/core/sound-touch/blobs/sha256:650c953db2306d78bd309a24206c014037584c08a490e05a89ac5294cef36df4",
+          "sha256": "650c953db2306d78bd309a24206c014037584c08a490e05a89ac5294cef36df4"
         },
-        "mojave": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/sound-touch/blobs/sha256:f990e0d947c1026c51a83471b4466b5e6955c8f7a599d6ecb7da5c8466dcce8f",
-          "sha256": "f990e0d947c1026c51a83471b4466b5e6955c8f7a599d6ecb7da5c8466dcce8f"
-        },
-        "high_sierra": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/sound-touch/blobs/sha256:34e3a02dd0906028a4b7acd7b1ecd26d24df0002fe3e765fb49d24afa3f6a9fb",
-          "sha256": "34e3a02dd0906028a4b7acd7b1ecd26d24df0002fe3e765fb49d24afa3f6a9fb"
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/sound-touch/blobs/sha256:af9833833154ab73181849ccdb563b1f4146848f69fd3cc4b386c9e46a31d8b8",
+          "sha256": "af9833833154ab73181849ccdb563b1f4146848f69fd3cc4b386c9e46a31d8b8"
         }
       }
     }

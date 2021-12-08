@@ -13,38 +13,53 @@
   "license": "Apache-2.0",
   "homepage": "https://crystal-lang.org/",
   "versions": {
-    "stable": "1.0.0",
+    "stable": "1.2.2",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/crystal-lang/crystal/archive/1.0.0.tar.gz",
+      "url": "https://github.com/crystal-lang/crystal/archive/1.2.2.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/crystal/blobs/sha256:7a7f9dd94a238cf2cf3ef52d4f599657e68fa20db67bd924928f8b9f639a1950",
+          "sha256": "7a7f9dd94a238cf2cf3ef52d4f599657e68fa20db67bd924928f8b9f639a1950"
+        },
+        "arm64_big_sur": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/crystal/blobs/sha256:a9a3c2d74078ecf21714efc1c21a6c5fb6316f81dca3a7701e5ab8a243d23d0c",
+          "sha256": "a9a3c2d74078ecf21714efc1c21a6c5fb6316f81dca3a7701e5ab8a243d23d0c"
+        },
+        "monterey": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/crystal/blobs/sha256:09afea2b21777b0c89a6c7e24a2a83bbd568bcbfd58d627f4dbc3e4b45f878e0",
+          "sha256": "09afea2b21777b0c89a6c7e24a2a83bbd568bcbfd58d627f4dbc3e4b45f878e0"
+        },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/crystal/blobs/sha256:a5deb38c8911b4d8aea515981a4f485e0235ce47c8a606b569288d084a75120e",
-          "sha256": "a5deb38c8911b4d8aea515981a4f485e0235ce47c8a606b569288d084a75120e"
+          "url": "https://ghcr.io/v2/homebrew/core/crystal/blobs/sha256:db50f8a2b4279ba7de96ea9dcbef0aaab679103416c5048b7666a22e9eafc2d3",
+          "sha256": "db50f8a2b4279ba7de96ea9dcbef0aaab679103416c5048b7666a22e9eafc2d3"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/crystal/blobs/sha256:f1e79efb22b37d85ddcfd02e689ca0d31bbb3e32997f43c1171b66c6487ea912",
-          "sha256": "f1e79efb22b37d85ddcfd02e689ca0d31bbb3e32997f43c1171b66c6487ea912"
+          "url": "https://ghcr.io/v2/homebrew/core/crystal/blobs/sha256:91ba5feee45f416d7d3cb071522b89955c859118320abb83111ab1f234f098cd",
+          "sha256": "91ba5feee45f416d7d3cb071522b89955c859118320abb83111ab1f234f098cd"
         },
-        "mojave": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/crystal/blobs/sha256:b9d9b425b670df3fdbd89f2cd368bf95185626be94dc28359d0e3f38113d6d5b",
-          "sha256": "b9d9b425b670df3fdbd89f2cd368bf95185626be94dc28359d0e3f38113d6d5b"
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/crystal/blobs/sha256:3d93258d3fead4f8be2b5a6244f6be342fe05ad85db0fd1eb77f87c8c6ed72df",
+          "sha256": "3d93258d3fead4f8be2b5a6244f6be342fe05ad85db0fd1eb77f87c8c6ed72df"
         }
       }
     }
@@ -62,7 +77,7 @@
     "gmp",
     "libevent",
     "libyaml",
-    "llvm@9",
+    "llvm@11",
     "openssl@1.1",
     "pcre",
     "pkg-config"

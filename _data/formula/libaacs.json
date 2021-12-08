@@ -10,7 +10,7 @@
 
   ],
   "desc": "Implements the Advanced Access Content System specification",
-  "license": "LGPL-2.1",
+  "license": "LGPL-2.1-or-later",
   "homepage": "https://www.videolan.org/developers/libaacs.html",
   "versions": {
     "stable": "0.11.0",
@@ -31,10 +31,20 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/libaacs/blobs/sha256:628a46b83ed82425221046952f86bd52c06d7fadc93307dfef15164b16ab821e",
+          "sha256": "628a46b83ed82425221046952f86bd52c06d7fadc93307dfef15164b16ab821e"
+        },
         "arm64_big_sur": {
           "cellar": ":any",
           "url": "https://ghcr.io/v2/homebrew/core/libaacs/blobs/sha256:dcbccde309919c3349987341fda3259e218549d5ec5c34c38c628ff6ada98bce",
           "sha256": "dcbccde309919c3349987341fda3259e218549d5ec5c34c38c628ff6ada98bce"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/libaacs/blobs/sha256:ff947ef0c7044a205b75b39f99d40f9a6650a44f3e71e008ba675624b9b80c2e",
+          "sha256": "ff947ef0c7044a205b75b39f99d40f9a6650a44f3e71e008ba675624b9b80c2e"
         },
         "big_sur": {
           "cellar": ":any",
@@ -55,6 +65,11 @@
           "cellar": ":any",
           "url": "https://ghcr.io/v2/homebrew/core/libaacs/blobs/sha256:6ac467398d3fb886cee220bd7724f1341631b1ac31220e3ee504d687347a731f",
           "sha256": "6ac467398d3fb886cee220bd7724f1341631b1ac31220e3ee504d687347a731f"
+        },
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/libaacs/blobs/sha256:f93ad81a1e4368bfa9b17c913990b81aa4bfa4e3b3a8f80e04e6edfcee12b805",
+          "sha256": "f93ad81a1e4368bfa9b17c913990b81aa4bfa4e3b3a8f80e04e6edfcee12b805"
         }
       }
     }
@@ -77,7 +92,9 @@
 
   ],
   "uses_from_macos": [
-
+    {
+      "flex": "build"
+    }
   ],
   "requirements": [
 

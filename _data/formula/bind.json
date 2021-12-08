@@ -13,13 +13,13 @@
   "license": "MPL-2.0",
   "homepage": "https://www.isc.org/bind/",
   "versions": {
-    "stable": "9.16.16",
+    "stable": "9.16.23",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://downloads.isc.org/isc/bind9/9.16.16/bind-9.16.16.tar.xz",
+      "url": "https://downloads.isc.org/isc/bind9/9.16.23/bind-9.16.23.tar.xz",
       "tag": null,
       "revision": null
     }
@@ -31,25 +31,35 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/bind/blobs/sha256:22638377ac6447aeb514e847af603b666a4e4e4c497e56e4a3f6da942e25613a",
+          "sha256": "22638377ac6447aeb514e847af603b666a4e4e4c497e56e4a3f6da942e25613a"
+        },
         "arm64_big_sur": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/bind/blobs/sha256:1760d6ca4c7828dba00ee1e08d8e5aa29c45e8b6989909e376a6c5addec1cb49",
-          "sha256": "1760d6ca4c7828dba00ee1e08d8e5aa29c45e8b6989909e376a6c5addec1cb49"
+          "url": "https://ghcr.io/v2/homebrew/core/bind/blobs/sha256:35e21939e97396585a53df0d6d8e378149256c5ac267afc3a58947f1eff3fbf6",
+          "sha256": "35e21939e97396585a53df0d6d8e378149256c5ac267afc3a58947f1eff3fbf6"
+        },
+        "monterey": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/bind/blobs/sha256:7690d9647fe222253d69e235f99eba877311419f1f8ad4097365175091f97665",
+          "sha256": "7690d9647fe222253d69e235f99eba877311419f1f8ad4097365175091f97665"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/bind/blobs/sha256:d461b3f29beff84605e9de44c3f28bdc5c3623e532c8123c36120c8ea042cf5b",
-          "sha256": "d461b3f29beff84605e9de44c3f28bdc5c3623e532c8123c36120c8ea042cf5b"
+          "url": "https://ghcr.io/v2/homebrew/core/bind/blobs/sha256:fa3ab286974188c2539646cd13e9408302eb5ece8918aaf3264c989618278f42",
+          "sha256": "fa3ab286974188c2539646cd13e9408302eb5ece8918aaf3264c989618278f42"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/bind/blobs/sha256:c92e452d281ea1e8007c398f705c403b186ea2d855250282dd0d7dc43586db35",
-          "sha256": "c92e452d281ea1e8007c398f705c403b186ea2d855250282dd0d7dc43586db35"
+          "url": "https://ghcr.io/v2/homebrew/core/bind/blobs/sha256:e1cb285a18c2e0feb4d4280966b75751574b402384c9bb2e1e299849760c7a70",
+          "sha256": "e1cb285a18c2e0feb4d4280966b75751574b402384c9bb2e1e299849760c7a70"
         },
-        "mojave": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/bind/blobs/sha256:574b9afb50b52e8530968ddb03958c156692138943491de472354605c4dd4142",
-          "sha256": "574b9afb50b52e8530968ddb03958c156692138943491de472354605c4dd4142"
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/bind/blobs/sha256:611a17a95d0273824aa3c9ce87dd5eed13544c6da7c1ce3abfe4c6f5cbf6dc85",
+          "sha256": "611a17a95d0273824aa3c9ce87dd5eed13544c6da7c1ce3abfe4c6f5cbf6dc85"
         }
       }
     }
@@ -67,7 +77,7 @@
     "libidn2",
     "libuv",
     "openssl@1.1",
-    "python@3.9"
+    "python@3.10"
   ],
   "recommended_dependencies": [
 

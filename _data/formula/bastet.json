@@ -10,7 +10,7 @@
 
   ],
   "desc": "Bastard Tetris",
-  "license": "GPL-3.0",
+  "license": "GPL-3.0-or-later",
   "homepage": "https://fph.altervista.org/prog/bastet.html",
   "versions": {
     "stable": "0.43.2",
@@ -31,10 +31,20 @@
       "rebuild": 1,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/bastet/blobs/sha256:9847fe14d15e54e4e38438ed8282abbc922de3a3ccc7ad3648b6f1be61707a44",
+          "sha256": "9847fe14d15e54e4e38438ed8282abbc922de3a3ccc7ad3648b6f1be61707a44"
+        },
         "arm64_big_sur": {
           "cellar": "/opt/homebrew/Cellar",
           "url": "https://ghcr.io/v2/homebrew/core/bastet/blobs/sha256:048b7752909e1c445b8367ee87002df7511d5d1520fa0f2c39103f60a7c7c3d8",
           "sha256": "048b7752909e1c445b8367ee87002df7511d5d1520fa0f2c39103f60a7c7c3d8"
+        },
+        "monterey": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/bastet/blobs/sha256:4efdae4d19ba49760a781bc930d97b7ad6559c8a8ea987cf628fc48ea6dcd625",
+          "sha256": "4efdae4d19ba49760a781bc930d97b7ad6559c8a8ea987cf628fc48ea6dcd625"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
@@ -65,6 +75,11 @@
           "cellar": "/usr/local/Cellar",
           "url": "https://ghcr.io/v2/homebrew/core/bastet/blobs/sha256:e3745b716c09ce7f3834f4fc30163fa132f93feeec4c301dc9d46b0bc9ca564f",
           "sha256": "e3745b716c09ce7f3834f4fc30163fa132f93feeec4c301dc9d46b0bc9ca564f"
+        },
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/bastet/blobs/sha256:02918b45d68fad9e1ee1e3e4f520107398e2f7df1501dce5f3a7e0052ebde359",
+          "sha256": "02918b45d68fad9e1ee1e3e4f520107398e2f7df1501dce5f3a7e0052ebde359"
         }
       }
     }
@@ -87,7 +102,7 @@
 
   ],
   "uses_from_macos": [
-
+    "ncurses"
   ],
   "requirements": [
 

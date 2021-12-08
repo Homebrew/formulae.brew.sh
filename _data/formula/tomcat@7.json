@@ -16,7 +16,7 @@
   "versions": {
     "stable": "7.0.109",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
@@ -25,12 +25,23 @@
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "all": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/tomcat/7/blobs/sha256:ff26a7e915f64090817e9a62811f3b02142723553f2f5e2e8f7b1b2b594d8477",
+          "sha256": "ff26a7e915f64090817e9a62811f3b02142723553f2f5e2e8f7b1b2b594d8477"
+        }
+      }
+    }
   },
   "keg_only": true,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
@@ -55,7 +66,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": null,
+  "caveats": "Configuration files: $(brew --prefix)/etc/tomcat@7\n",
   "installed": [
 
   ],

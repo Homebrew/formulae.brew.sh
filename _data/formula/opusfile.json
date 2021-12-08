@@ -19,7 +19,7 @@
   },
   "urls": {
     "stable": {
-      "url": "https://ftp.osuosl.org/pub/xiph/releases/opus/opusfile-0.12.tar.gz",
+      "url": "https://downloads.xiph.org/releases/opus/opusfile-0.12.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,10 +31,20 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/opusfile/blobs/sha256:0cdc27b38be83f9e0e7a2ca87d2b5605d597f702b8ae0e6b9f7470b203debf94",
+          "sha256": "0cdc27b38be83f9e0e7a2ca87d2b5605d597f702b8ae0e6b9f7470b203debf94"
+        },
         "arm64_big_sur": {
           "cellar": ":any",
           "url": "https://ghcr.io/v2/homebrew/core/opusfile/blobs/sha256:4274c0f9758385bbf30fabde125317dcf4934e5188d86b791cb1292efb9e26fd",
           "sha256": "4274c0f9758385bbf30fabde125317dcf4934e5188d86b791cb1292efb9e26fd"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/opusfile/blobs/sha256:2b33775ddb195a0de0ae029b833c425db68ae92ed0228f2f508a202ef620823d",
+          "sha256": "2b33775ddb195a0de0ae029b833c425db68ae92ed0228f2f508a202ef620823d"
         },
         "big_sur": {
           "cellar": ":any",
@@ -55,6 +65,11 @@
           "cellar": ":any",
           "url": "https://ghcr.io/v2/homebrew/core/opusfile/blobs/sha256:ff718107c425123a06270b62aa9a7bd3fee4f785d03dac21a58f7059720be22b",
           "sha256": "ff718107c425123a06270b62aa9a7bd3fee4f785d03dac21a58f7059720be22b"
+        },
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/opusfile/blobs/sha256:9279801d0c9111e570f0e095f738d68a3eae182b8d9d6cb0cd6343a25b787644",
+          "sha256": "9279801d0c9111e570f0e095f738d68a3eae182b8d9d6cb0cd6343a25b787644"
         }
       }
     }
@@ -103,8 +118,13 @@
           "declared_directly": true
         },
         {
+          "full_name": "ca-certificates",
+          "version": "2021-10-26",
+          "declared_directly": false
+        },
+        {
           "full_name": "openssl@1.1",
-          "version": "1.1.1k",
+          "version": "1.1.1l",
           "declared_directly": true
         },
         {

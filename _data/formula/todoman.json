@@ -13,13 +13,13 @@
   "license": "ISC",
   "homepage": "https://todoman.readthedocs.io/",
   "versions": {
-    "stable": "4.0.0",
+    "stable": "4.0.1",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://files.pythonhosted.org/packages/18/27/191a27737cc3f75836218d2d1f97740ec26083b3870726946fc54861373a/todoman-4.0.0.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/57/54/04a7c526a466932cf8a72a5b164befe7ec43fe176d89210fa9aafacd99ce/todoman-4.0.1.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,25 +31,35 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/todoman/blobs/sha256:e6c2af04903a260b7d977146bfaf37f7239b9ab01ef4e9e0e0ba9625f8ff02ff",
+          "sha256": "e6c2af04903a260b7d977146bfaf37f7239b9ab01ef4e9e0e0ba9625f8ff02ff"
+        },
         "arm64_big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/todoman/blobs/sha256:b7ad318c91c4605aaf963c4649d6b4da7c2b91f02d0a0e82b0237468a81c8ff4",
-          "sha256": "b7ad318c91c4605aaf963c4649d6b4da7c2b91f02d0a0e82b0237468a81c8ff4"
+          "url": "https://ghcr.io/v2/homebrew/core/todoman/blobs/sha256:ae641aabd1dc241c88f4e6abb9d1db2cfa169c7ae902f0d37fd5c6130d4c4deb",
+          "sha256": "ae641aabd1dc241c88f4e6abb9d1db2cfa169c7ae902f0d37fd5c6130d4c4deb"
+        },
+        "monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/todoman/blobs/sha256:22bac2606d49bc37ca21031aa173ba2c03966c14790c277a0b98ac70e77d19f7",
+          "sha256": "22bac2606d49bc37ca21031aa173ba2c03966c14790c277a0b98ac70e77d19f7"
         },
         "big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/todoman/blobs/sha256:3cff83b0ba438dd9336af01a9fe5a7f25d54749f3192e8ff3a86483df6c4bc08",
-          "sha256": "3cff83b0ba438dd9336af01a9fe5a7f25d54749f3192e8ff3a86483df6c4bc08"
+          "url": "https://ghcr.io/v2/homebrew/core/todoman/blobs/sha256:55297d4fd483f7aabb103bccabe2c4cd9b52fe697a2ae790e60d1bd995f23308",
+          "sha256": "55297d4fd483f7aabb103bccabe2c4cd9b52fe697a2ae790e60d1bd995f23308"
         },
         "catalina": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/todoman/blobs/sha256:85c8a6adc87637301cc986d2d044cee74f4503d826803b0effe8d67a214918eb",
-          "sha256": "85c8a6adc87637301cc986d2d044cee74f4503d826803b0effe8d67a214918eb"
+          "url": "https://ghcr.io/v2/homebrew/core/todoman/blobs/sha256:f7ba9f55948f95f1bc7fd41fdef78674879455b6d6a4539a3e93ebf084acb199",
+          "sha256": "f7ba9f55948f95f1bc7fd41fdef78674879455b6d6a4539a3e93ebf084acb199"
         },
-        "mojave": {
+        "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/todoman/blobs/sha256:44ea3d0d4e8e165fbb9905b371c5c411de0f0d94eddc87a93060b60383ab1844",
-          "sha256": "44ea3d0d4e8e165fbb9905b371c5c411de0f0d94eddc87a93060b60383ab1844"
+          "url": "https://ghcr.io/v2/homebrew/core/todoman/blobs/sha256:4dc0e96695214b98a726cc06e605cc446459880e6937d48d4bc256ea90ff8f05",
+          "sha256": "4dc0e96695214b98a726cc06e605cc446459880e6937d48d4bc256ea90ff8f05"
         }
       }
     }
@@ -64,7 +74,8 @@
   ],
   "dependencies": [
     "python-tabulate",
-    "python@3.9"
+    "python@3.9",
+    "six"
   ],
   "recommended_dependencies": [
 

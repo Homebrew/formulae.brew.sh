@@ -11,15 +11,15 @@
   ],
   "desc": "Asynchronous DNS library",
   "license": "MIT",
-  "homepage": "https://c-ares.haxx.se/",
+  "homepage": "https://c-ares.org/",
   "versions": {
-    "stable": "1.17.1",
+    "stable": "1.18.1",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://c-ares.haxx.se/download/c-ares-1.17.1.tar.gz",
+      "url": "https://c-ares.org/download/c-ares-1.18.1.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,25 +31,35 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/c-ares/blobs/sha256:7b1eacc9efbe8ac32a4a7cdb705fe5b3e637237cdd0ee67ce9a97c36c02ed99d",
+          "sha256": "7b1eacc9efbe8ac32a4a7cdb705fe5b3e637237cdd0ee67ce9a97c36c02ed99d"
+        },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/c-ares/blobs/sha256:63627c4d2e4698ba13b82aeb2a10f3aef3a7bcbb7b459c265dbd840e91e5b175",
-          "sha256": "63627c4d2e4698ba13b82aeb2a10f3aef3a7bcbb7b459c265dbd840e91e5b175"
+          "url": "https://ghcr.io/v2/homebrew/core/c-ares/blobs/sha256:555cf945221fc8f076919a16e07541a37841bfc63ed2c58e24311f93ac2f2af6",
+          "sha256": "555cf945221fc8f076919a16e07541a37841bfc63ed2c58e24311f93ac2f2af6"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/c-ares/blobs/sha256:ab68d14a31625efd1c9289d976a041f4a0b573eeaa623d0d2e2889d36c388ffa",
+          "sha256": "ab68d14a31625efd1c9289d976a041f4a0b573eeaa623d0d2e2889d36c388ffa"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/c-ares/blobs/sha256:514de64e48f4d2c6e448547a30ba03f613b899f30f97f9026740c59eb3f49aeb",
-          "sha256": "514de64e48f4d2c6e448547a30ba03f613b899f30f97f9026740c59eb3f49aeb"
+          "url": "https://ghcr.io/v2/homebrew/core/c-ares/blobs/sha256:d3dd43338a6003320bfc94466887a2336f2a8bb36091326689828dc8a96194e2",
+          "sha256": "d3dd43338a6003320bfc94466887a2336f2a8bb36091326689828dc8a96194e2"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/c-ares/blobs/sha256:3fc1e6a9c560039998b288db7dfb268c87db614841a6fa1048880b8b6bdd6e4c",
-          "sha256": "3fc1e6a9c560039998b288db7dfb268c87db614841a6fa1048880b8b6bdd6e4c"
+          "url": "https://ghcr.io/v2/homebrew/core/c-ares/blobs/sha256:cb7b2f185a1c9e550e0ac6b6e48cca0f521ecf70bee3f04a3e5a878c63d3bb6a",
+          "sha256": "cb7b2f185a1c9e550e0ac6b6e48cca0f521ecf70bee3f04a3e5a878c63d3bb6a"
         },
-        "mojave": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/c-ares/blobs/sha256:8785faa759b2f10fcaefef1e7398b9ffe79b76b2339b4bc4b552fd9c418b1097",
-          "sha256": "8785faa759b2f10fcaefef1e7398b9ffe79b76b2339b4bc4b552fd9c418b1097"
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/c-ares/blobs/sha256:26c1f594d87832209d59cfcd1d635d9d7ee33c1c11ae31e377c92be1483f08c4",
+          "sha256": "26c1f594d87832209d59cfcd1d635d9d7ee33c1c11ae31e377c92be1483f08c4"
         }
       }
     }
@@ -60,8 +70,7 @@
 
   ],
   "build_dependencies": [
-    "cmake",
-    "ninja"
+    "cmake"
   ],
   "dependencies": [
 
@@ -84,7 +93,7 @@
   "caveats": null,
   "installed": [
     {
-      "version": "1.17.1",
+      "version": "1.18.1",
       "used_options": [
 
       ],
@@ -97,7 +106,7 @@
       "installed_on_request": false
     }
   ],
-  "linked_keg": "1.17.1",
+  "linked_keg": "1.18.1",
   "pinned": false,
   "outdated": false,
   "deprecated": false,

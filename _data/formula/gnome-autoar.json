@@ -13,13 +13,13 @@
   "license": "LGPL-2.1-or-later",
   "homepage": "https://github.com/GNOME/gnome-autoar",
   "versions": {
-    "stable": "0.3.3",
+    "stable": "0.4.1",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://download.gnome.org/sources/gnome-autoar/0.3/gnome-autoar-0.3.3.tar.xz",
+      "url": "https://download.gnome.org/sources/gnome-autoar/0.4/gnome-autoar-0.4.1.tar.xz",
       "tag": null,
       "revision": null
     }
@@ -31,25 +31,30 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/gnome-autoar/blobs/sha256:6083f2fef0c5265a0146e05ab241fb4dce7f09442ca0a53898712fa9b022af83",
+          "sha256": "6083f2fef0c5265a0146e05ab241fb4dce7f09442ca0a53898712fa9b022af83"
+        },
         "arm64_big_sur": {
-          "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/gnome-autoar/blobs/sha256:f807cdbfa1846ce767f5da3f9963d23ad06cc76265d513826bbae251d1640f36",
-          "sha256": "f807cdbfa1846ce767f5da3f9963d23ad06cc76265d513826bbae251d1640f36"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/gnome-autoar/blobs/sha256:92a5874a1c8f8c6a27465c8ca186b7813898ce65154c73e6c62f00192619a3eb",
+          "sha256": "92a5874a1c8f8c6a27465c8ca186b7813898ce65154c73e6c62f00192619a3eb"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/gnome-autoar/blobs/sha256:f52638834f3691698469188275254f8cdb647e1bbe040c7421f716d85e0801c7",
+          "sha256": "f52638834f3691698469188275254f8cdb647e1bbe040c7421f716d85e0801c7"
         },
         "big_sur": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/gnome-autoar/blobs/sha256:6d3385e2abadeed4cb9eee7cd106fe2606d34283a1b377898f0ca5bb8581c473",
-          "sha256": "6d3385e2abadeed4cb9eee7cd106fe2606d34283a1b377898f0ca5bb8581c473"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/gnome-autoar/blobs/sha256:b59d4adb70998430549c885e7557eb3e6d46efba9e33120dcac861fa1fa4f2e5",
+          "sha256": "b59d4adb70998430549c885e7557eb3e6d46efba9e33120dcac861fa1fa4f2e5"
         },
         "catalina": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/gnome-autoar/blobs/sha256:68285e5d4bb577d383397ea433eb689d2056a1a8ca2802afbf9c259989c19fc9",
-          "sha256": "68285e5d4bb577d383397ea433eb689d2056a1a8ca2802afbf9c259989c19fc9"
-        },
-        "mojave": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/gnome-autoar/blobs/sha256:81cf65e7c5a708728565785c9ebb3cb9fb3558a3031964e37657961b613fd184",
-          "sha256": "81cf65e7c5a708728565785c9ebb3cb9fb3558a3031964e37657961b613fd184"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/gnome-autoar/blobs/sha256:ec90973e8d6910e5d0296f4a40cf6c4e759ce678ddc9e2aa59669ee6c60c7603",
+          "sha256": "ec90973e8d6910e5d0296f4a40cf6c4e759ce678ddc9e2aa59669ee6c60c7603"
         }
       }
     }
@@ -60,7 +65,8 @@
 
   ],
   "build_dependencies": [
-    "pkg-config"
+    "meson",
+    "ninja"
   ],
   "dependencies": [
     "gtk+3",

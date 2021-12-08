@@ -13,13 +13,13 @@
   "license": "Apache-2.0",
   "homepage": "https://polynote.org/",
   "versions": {
-    "stable": "0.3.12",
+    "stable": "0.4.2",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/polynote/polynote/releases/download/0.3.12/polynote-dist.tar.gz",
+      "url": "https://github.com/polynote/polynote/releases/download/0.4.2/polynote-dist.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -27,9 +27,45 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/polynote/blobs/sha256:62a4274043626becfc4a03053c1e587c0d544b558e5fea3e456c34f5a7c9ca83",
+          "sha256": "62a4274043626becfc4a03053c1e587c0d544b558e5fea3e456c34f5a7c9ca83"
+        },
+        "arm64_big_sur": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/polynote/blobs/sha256:e72f0581a9839ae6cbb0cba192c32e5a9969c18c76447e338181f9f50a083638",
+          "sha256": "e72f0581a9839ae6cbb0cba192c32e5a9969c18c76447e338181f9f50a083638"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/polynote/blobs/sha256:433036a8d84e96224815fdeac331aedeaf17e064a2eb0611e2960535fc2f609d",
+          "sha256": "433036a8d84e96224815fdeac331aedeaf17e064a2eb0611e2960535fc2f609d"
+        },
+        "big_sur": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/polynote/blobs/sha256:50e6449ee44ad049baaa2015a620e91c759a5d3329cdbd48347233fe3545fc30",
+          "sha256": "50e6449ee44ad049baaa2015a620e91c759a5d3329cdbd48347233fe3545fc30"
+        },
+        "catalina": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/polynote/blobs/sha256:2a9c17df458e4225a381530b01ca8903fa317424604d8156e22877914d00a2de",
+          "sha256": "2a9c17df458e4225a381530b01ca8903fa317424604d8156e22877914d00a2de"
+        },
+        "mojave": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/polynote/blobs/sha256:1e9021f5c8c3d0071f1775f1c82abf0240060aa2febae948db2ba6993e42f84d",
+          "sha256": "1e9021f5c8c3d0071f1775f1c82abf0240060aa2febae948db2ba6993e42f84d"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
@@ -37,7 +73,9 @@
 
   ],
   "dependencies": [
-    "openjdk"
+    "numpy",
+    "openjdk",
+    "python@3.9"
   ],
   "recommended_dependencies": [
 

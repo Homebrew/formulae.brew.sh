@@ -13,13 +13,13 @@
   "license": "OLDAP-2.8",
   "homepage": "https://www.openldap.org/software/",
   "versions": {
-    "stable": "2.5.5",
+    "stable": "2.6.0",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://www.openldap.org/software/download/OpenLDAP/openldap-release/openldap-2.5.5.tgz",
+      "url": "https://www.openldap.org/software/download/OpenLDAP/openldap-release/openldap-2.6.0.tgz",
       "tag": null,
       "revision": null
     }
@@ -31,25 +31,35 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/openldap/blobs/sha256:32ca782d525e3dfa153699604c63dbe7d9e17e07ffa91f8716182099cbf4d933",
+          "sha256": "32ca782d525e3dfa153699604c63dbe7d9e17e07ffa91f8716182099cbf4d933"
+        },
         "arm64_big_sur": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/openldap/blobs/sha256:8b66ccd0a169b6f2ecdff69946a458d404fcb34fe2d4171f83530e9f66318c3f",
-          "sha256": "8b66ccd0a169b6f2ecdff69946a458d404fcb34fe2d4171f83530e9f66318c3f"
+          "url": "https://ghcr.io/v2/homebrew/core/openldap/blobs/sha256:ffbaaef1efdb003a16c58de104df6b1c7c3b4ffea7716f9bd076051254888dfe",
+          "sha256": "ffbaaef1efdb003a16c58de104df6b1c7c3b4ffea7716f9bd076051254888dfe"
+        },
+        "monterey": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/openldap/blobs/sha256:e620a3a13105b488ef8c240882510cd98bcdb468321785bdecd4fe4c9e78e9f6",
+          "sha256": "e620a3a13105b488ef8c240882510cd98bcdb468321785bdecd4fe4c9e78e9f6"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/openldap/blobs/sha256:4c98f6da7b2d08b95410c87a6a378dea1299bad5f44dbf2583f468495e05da30",
-          "sha256": "4c98f6da7b2d08b95410c87a6a378dea1299bad5f44dbf2583f468495e05da30"
+          "url": "https://ghcr.io/v2/homebrew/core/openldap/blobs/sha256:c115978e2754736f9ab7390b62722aee6fccf703b050936dd09350943644fde1",
+          "sha256": "c115978e2754736f9ab7390b62722aee6fccf703b050936dd09350943644fde1"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/openldap/blobs/sha256:79ff7be2a569b51a09ee8c6239c36bf55b7f5553cae099550471d930b08a18b7",
-          "sha256": "79ff7be2a569b51a09ee8c6239c36bf55b7f5553cae099550471d930b08a18b7"
+          "url": "https://ghcr.io/v2/homebrew/core/openldap/blobs/sha256:ca98ae4585a63d2f500bf989c7ce2fc769e62919dbfba1709ee54bef6c652a69",
+          "sha256": "ca98ae4585a63d2f500bf989c7ce2fc769e62919dbfba1709ee54bef6c652a69"
         },
-        "mojave": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/openldap/blobs/sha256:82aef6314649c3b0f5b32085976caa677e230829b4dbdca77fcf143182b48209",
-          "sha256": "82aef6314649c3b0f5b32085976caa677e230829b4dbdca77fcf143182b48209"
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/openldap/blobs/sha256:9d36c5c8060799e903c66bef0280240e4d51359182e2c7e49fa7376b7d41777f",
+          "sha256": "9d36c5c8060799e903c66bef0280240e4d51359182e2c7e49fa7376b7d41777f"
         }
       }
     }
@@ -83,7 +93,7 @@
   "caveats": null,
   "installed": [
     {
-      "version": "2.5.5",
+      "version": "2.6.0",
       "used_options": [
 
       ],
@@ -91,8 +101,13 @@
       "poured_from_bottle": true,
       "runtime_dependencies": [
         {
+          "full_name": "ca-certificates",
+          "version": "2021-10-26",
+          "declared_directly": false
+        },
+        {
           "full_name": "openssl@1.1",
-          "version": "1.1.1k",
+          "version": "1.1.1l",
           "declared_directly": true
         }
       ],

@@ -6,36 +6,35 @@
     "Multipass"
   ],
   "desc": "Orchestrates virtual Ubuntu instances",
-  "homepage": "https://github.com/CanonicalLtd/multipass/",
-  "url": "https://github.com/CanonicalLtd/multipass/releases/download/v1.6.2/multipass-1.6.2+mac-Darwin.pkg",
+  "homepage": "https://github.com/canonical/multipass/",
+  "url": "https://github.com/canonical/multipass/releases/download/v1.8.1/multipass-1.8.1+mac-Darwin.pkg",
   "appcast": null,
-  "version": "1.6.2",
+  "version": "1.8.1",
+  "versions": {
+  },
   "installed": null,
   "outdated": false,
-  "sha256": "61ce3f9ff9c32555b583bfa2017501526eb53e68e570c11ae40f69fdc01d69d6",
+  "sha256": "dd34235b8e5532860010e98e535595b9cc356c432a62b6a5d1ac1822bf994bef",
   "artifacts": [
     {
       "launchctl": "com.canonical.multipassd",
       "pkgutil": "com.canonical.multipass.*",
       "delete": [
         "/Applications/Multipass.app",
+        "/Library/Application Support/com.canonical.multipass",
+        "/Library/Logs/Multipass",
         "$(brew --prefix)/bin/multipass",
-        "$(brew --prefix)/etc/bash_completion.d/multipass",
-        "/var/root/Library/Caches/multipassd",
-        "/Library/Application Support/com.canonical.multipass"
+        "$(brew --prefix)/etc/bash_completion.d/multipass"
       ],
       "signal": {
       }
     },
-    "multipass-1.6.2+mac-Darwin.pkg (Pkg)",
+    "multipass-1.8.1+mac-Darwin.pkg (Pkg)",
     {
       "trash": [
         "~/Library/Application Support/multipass",
         "~/Library/Application Support/multipass-gui",
-        "~/Library/Preferences/multipass",
-        "/var/root/Library/Application Support/multipassd",
-        "/var/root/Library/Preferences/multipassd",
-        "/Library/Logs/Multipass"
+        "~/Library/Preferences/multipass"
       ],
       "signal": {
       }
@@ -45,7 +44,7 @@
   "depends_on": {
     "macos": {
       ">=": [
-        "10.12"
+        "10.14"
       ]
     }
   },

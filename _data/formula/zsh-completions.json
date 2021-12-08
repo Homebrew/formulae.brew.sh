@@ -24,7 +24,7 @@
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,8 +33,8 @@
       "files": {
         "all": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/zsh-completions/blobs/sha256:2579cab8a4d96ce2a7d179bf36fb2898d4f3611823c6392f5eac2014ff4d7d1f",
-          "sha256": "2579cab8a4d96ce2a7d179bf36fb2898d4f3611823c6392f5eac2014ff4d7d1f"
+          "url": "https://ghcr.io/v2/homebrew/core/zsh-completions/blobs/sha256:eab228532a15b1c8eddfd38f46306cf723e6f331d38c8874d0305d6fe888ab70",
+          "sha256": "eab228532a15b1c8eddfd38f46306cf723e6f331d38c8874d0305d6fe888ab70"
         }
       }
     }
@@ -65,7 +65,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "To activate these completions, add the following to your .zshrc:\n\n  autoload -Uz compinit\n  compinit\n\nYou may also need to force rebuild `zcompdump`:\n\n  rm -f ~/.zcompdump; compinit\n\nAdditionally, if you receive \"zsh compinit: insecure directories\" warnings when attempting\nto load these completions, you may need to run this:\n\n  chmod -R go-w '$(brew --prefix)/share/zsh'\n",
+  "caveats": "To activate these completions, add the following to your .zshrc:\n\n  if type brew &>/dev/null; then\n    FPATH=$(brew --prefix)/share/zsh-completions:$FPATH\n\n    autoload -Uz compinit\n    compinit\n  fi\n\nYou may also need to force rebuild `zcompdump`:\n\n  rm -f ~/.zcompdump; compinit\n\nAdditionally, if you receive \"zsh compinit: insecure directories\" warnings when attempting\nto load these completions, you may need to run this:\n\n  chmod -R go-w '$(brew --prefix)/share/zsh'\n",
   "installed": [
 
   ],

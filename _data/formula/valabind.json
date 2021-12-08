@@ -24,7 +24,7 @@
       "revision": null
     }
   },
-  "revision": 1,
+  "revision": 2,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,23 +33,33 @@
       "files": {
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/valabind/blobs/sha256:2e1304ff87e55fd7d61e3ee82a1f2d4faad720b4817adfa6f5c6398a2a4c90e3",
-          "sha256": "2e1304ff87e55fd7d61e3ee82a1f2d4faad720b4817adfa6f5c6398a2a4c90e3"
+          "url": "https://ghcr.io/v2/homebrew/core/valabind/blobs/sha256:e3ab92ce9929d10db47821cb54a99943397f7708bcf9bac7fba29e5c1a5a184d",
+          "sha256": "e3ab92ce9929d10db47821cb54a99943397f7708bcf9bac7fba29e5c1a5a184d"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/valabind/blobs/sha256:bf9c0b7132a821fa243686e1f2dd8d7642405c98937c5b9ba662f2bc9bb42d7c",
+          "sha256": "bf9c0b7132a821fa243686e1f2dd8d7642405c98937c5b9ba662f2bc9bb42d7c"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/valabind/blobs/sha256:e6a255cbcfa3065cb00ebdb5b5a72e08d96f1152b749313441a9ab0b824629fd",
-          "sha256": "e6a255cbcfa3065cb00ebdb5b5a72e08d96f1152b749313441a9ab0b824629fd"
+          "url": "https://ghcr.io/v2/homebrew/core/valabind/blobs/sha256:bef04beaf352699df3774e1d26423b16cdd487836553755d6777b5d3a20e4413",
+          "sha256": "bef04beaf352699df3774e1d26423b16cdd487836553755d6777b5d3a20e4413"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/valabind/blobs/sha256:59ac7361a4a4bb36beb102f172ac1a4cfe3ca1e611498fc574f0fc5a2b2f4b2b",
-          "sha256": "59ac7361a4a4bb36beb102f172ac1a4cfe3ca1e611498fc574f0fc5a2b2f4b2b"
+          "url": "https://ghcr.io/v2/homebrew/core/valabind/blobs/sha256:d1013e81b20cf4c4981b7840c12d281fb2042aebb874317e8dff44d550915954",
+          "sha256": "d1013e81b20cf4c4981b7840c12d281fb2042aebb874317e8dff44d550915954"
         },
         "mojave": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/valabind/blobs/sha256:18b32d4e6409d4a73d23f226f475fc1c41680d4f7f5da31e1e73cd70f4958816",
-          "sha256": "18b32d4e6409d4a73d23f226f475fc1c41680d4f7f5da31e1e73cd70f4958816"
+          "url": "https://ghcr.io/v2/homebrew/core/valabind/blobs/sha256:ca8cb97fd10e22e1ac1a8966889c9eda14f33bedeeae8395811c55748e2740cc",
+          "sha256": "ca8cb97fd10e22e1ac1a8966889c9eda14f33bedeeae8395811c55748e2740cc"
+        },
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/valabind/blobs/sha256:d60a5907d80687fc3bf619f357d525ed856aaedf23dbad26fcd8c80636b37698",
+          "sha256": "d60a5907d80687fc3bf619f357d525ed856aaedf23dbad26fcd8c80636b37698"
         }
       }
     }
@@ -73,14 +83,12 @@
 
   ],
   "uses_from_macos": [
-    [
-      "bison",
-      "build"
-    ],
-    [
-      "flex",
-      "build"
-    ]
+    {
+      "bison": "build"
+    },
+    {
+      "flex": "build"
+    }
   ],
   "requirements": [
 

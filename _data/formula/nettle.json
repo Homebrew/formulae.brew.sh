@@ -31,10 +31,20 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/nettle/blobs/sha256:c47b2e4721e5c8347194e3dad066bf00fc6b5d28cb4082f53535dba76a1ed658",
+          "sha256": "c47b2e4721e5c8347194e3dad066bf00fc6b5d28cb4082f53535dba76a1ed658"
+        },
         "arm64_big_sur": {
           "cellar": ":any",
           "url": "https://ghcr.io/v2/homebrew/core/nettle/blobs/sha256:3cd41002e6358b07ca506ed09fb07473d61c1c2717b630f8d708c74ab5d06704",
           "sha256": "3cd41002e6358b07ca506ed09fb07473d61c1c2717b630f8d708c74ab5d06704"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/nettle/blobs/sha256:dccc8b4c4e02bcd485c1558ec1f01ca4c591a502b464629dc2e514add894b64b",
+          "sha256": "dccc8b4c4e02bcd485c1558ec1f01ca4c591a502b464629dc2e514add894b64b"
         },
         "big_sur": {
           "cellar": ":any",
@@ -50,6 +60,11 @@
           "cellar": ":any",
           "url": "https://ghcr.io/v2/homebrew/core/nettle/blobs/sha256:f7900666b8d57164a5e770008390ea3fe2c519941e3f28daba9ef91dad4e5e69",
           "sha256": "f7900666b8d57164a5e770008390ea3fe2c519941e3f28daba9ef91dad4e5e69"
+        },
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/nettle/blobs/sha256:a7c56819e2bc18baf900853311685108aab2cda8fc4963ca095ba893235ef1cb",
+          "sha256": "a7c56819e2bc18baf900853311685108aab2cda8fc4963ca095ba893235ef1cb"
         }
       }
     }
@@ -72,10 +87,9 @@
 
   ],
   "uses_from_macos": [
-    [
-      "m4",
-      "build"
-    ]
+    {
+      "m4": "build"
+    }
   ],
   "requirements": [
 

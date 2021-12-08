@@ -13,13 +13,13 @@
   "license": "Apache-2.0",
   "homepage": "https://ant.apache.org/",
   "versions": {
-    "stable": "1.9.15",
+    "stable": "1.9.16",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://www.apache.org/dyn/closer.lua?path=ant/binaries/apache-ant-1.9.15-bin.tar.bz2",
+      "url": "https://www.apache.org/dyn/closer.lua?path=ant/binaries/apache-ant-1.9.16-bin.tar.bz2",
       "tag": null,
       "revision": null
     }
@@ -27,9 +27,20 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "all": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/ant/1.9/blobs/sha256:94ee3db86c4f18ca79a37125ad2bfeb56298a46ae197f9ac570c1364b6dac3da",
+          "sha256": "94ee3db86c4f18ca79a37125ad2bfeb56298a46ae197f9ac570c1364b6dac3da"
+        }
+      }
+    }
   },
   "keg_only": true,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
@@ -37,7 +48,7 @@
 
   ],
   "dependencies": [
-
+    "openjdk"
   ],
   "recommended_dependencies": [
 

@@ -13,13 +13,13 @@
   "license": "ISC",
   "homepage": "https://jedisct1.github.io/minisign/",
   "versions": {
-    "stable": "0.9",
+    "stable": "0.10",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/jedisct1/minisign/archive/0.9.tar.gz",
+      "url": "https://github.com/jedisct1/minisign/archive/0.10.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,28 +28,43 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/minisign/blobs/sha256:8d3f924d7180fe4b04d9e149691eaa4e08f3abe3c49ad817a551199caf274394",
+          "sha256": "8d3f924d7180fe4b04d9e149691eaa4e08f3abe3c49ad817a551199caf274394"
+        },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/minisign/blobs/sha256:5e915e427db3117320aff459d67438ac7bf94cf3e37291ca02a1d6b83f2fa827",
-          "sha256": "5e915e427db3117320aff459d67438ac7bf94cf3e37291ca02a1d6b83f2fa827"
+          "url": "https://ghcr.io/v2/homebrew/core/minisign/blobs/sha256:50bdf209ebcc5e9079223dc1b47c488423655d154eca277a25269aa8d338dc2a",
+          "sha256": "50bdf209ebcc5e9079223dc1b47c488423655d154eca277a25269aa8d338dc2a"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/minisign/blobs/sha256:e9ed09ebebb07156ae2d4872bc6f77ee4ea8b92145354fc83ddbbae028af1da5",
+          "sha256": "e9ed09ebebb07156ae2d4872bc6f77ee4ea8b92145354fc83ddbbae028af1da5"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/minisign/blobs/sha256:9c86c4043d4ebadd47e6ba606b80dcf0611f302dd11d6f8f56b9c4c1f1d3bfe9",
-          "sha256": "9c86c4043d4ebadd47e6ba606b80dcf0611f302dd11d6f8f56b9c4c1f1d3bfe9"
+          "url": "https://ghcr.io/v2/homebrew/core/minisign/blobs/sha256:73272eb26875a7b1c219279f91c1e97c24f5343bc28698e0adf190cdfbb611f5",
+          "sha256": "73272eb26875a7b1c219279f91c1e97c24f5343bc28698e0adf190cdfbb611f5"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/minisign/blobs/sha256:42a044324786df52bcb3334eb3c07b3c3ac65414af72c17c73ccb0fb081507ab",
-          "sha256": "42a044324786df52bcb3334eb3c07b3c3ac65414af72c17c73ccb0fb081507ab"
+          "url": "https://ghcr.io/v2/homebrew/core/minisign/blobs/sha256:6ef7ba174b48584911276e6491dea599b5e84f3747d2f25753c7b36b55ce3b3c",
+          "sha256": "6ef7ba174b48584911276e6491dea599b5e84f3747d2f25753c7b36b55ce3b3c"
         },
         "mojave": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/minisign/blobs/sha256:fc5d9762d710f500978ac0d09b0fbf6fcf3745c4b018313fe9d3ae5679e1f37e",
-          "sha256": "fc5d9762d710f500978ac0d09b0fbf6fcf3745c4b018313fe9d3ae5679e1f37e"
+          "url": "https://ghcr.io/v2/homebrew/core/minisign/blobs/sha256:9340a13b895807ec4dbfced552ec3a612a5dbcc88b64b363aef876ec57a4ae4a",
+          "sha256": "9340a13b895807ec4dbfced552ec3a612a5dbcc88b64b363aef876ec57a4ae4a"
+        },
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/minisign/blobs/sha256:932f5e7be0cb17788c687f8c474363a2acdbfb1b33041ba8c7d9781dde1d2353",
+          "sha256": "932f5e7be0cb17788c687f8c474363a2acdbfb1b33041ba8c7d9781dde1d2353"
         }
       }
     }
@@ -73,7 +88,9 @@
 
   ],
   "uses_from_macos": [
-
+    {
+      "expect": "test"
+    }
   ],
   "requirements": [
 

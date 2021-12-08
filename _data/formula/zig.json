@@ -13,43 +13,53 @@
   "license": "MIT",
   "homepage": "https://ziglang.org/",
   "versions": {
-    "stable": "0.8.0",
+    "stable": "0.8.1",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://ziglang.org/download/0.8.0/zig-0.8.0.tar.xz",
+      "url": "https://ziglang.org/download/0.8.1/zig-0.8.1.tar.xz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/zig/blobs/sha256:018b275bd4e61525d19dc95f065622cac2deeb83a562d6d779414b056db989ce",
+          "sha256": "018b275bd4e61525d19dc95f065622cac2deeb83a562d6d779414b056db989ce"
+        },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/zig/blobs/sha256:cbfe30a9fc41655c96d04c98a00d4dd451823ee8f55afaa9387c9cf367f66c62",
-          "sha256": "cbfe30a9fc41655c96d04c98a00d4dd451823ee8f55afaa9387c9cf367f66c62"
+          "url": "https://ghcr.io/v2/homebrew/core/zig/blobs/sha256:4b06b5abf72a311162138a852dcadb863974d4c69573dfa13d9857b312010165",
+          "sha256": "4b06b5abf72a311162138a852dcadb863974d4c69573dfa13d9857b312010165"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/zig/blobs/sha256:d882ab923be5da7adf934d5ad34f3b6c90907411c896ad78f87841f513afcbfc",
+          "sha256": "d882ab923be5da7adf934d5ad34f3b6c90907411c896ad78f87841f513afcbfc"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/zig/blobs/sha256:740bcf88640b02fa8b21a6719c62c21afe3dd59ea60bb2a8d5efd4a3826fd5c7",
-          "sha256": "740bcf88640b02fa8b21a6719c62c21afe3dd59ea60bb2a8d5efd4a3826fd5c7"
+          "url": "https://ghcr.io/v2/homebrew/core/zig/blobs/sha256:18e6b29f749642d8a01ce2d9657e206c9b7d3f130264f39f7afde9b9b072e03b",
+          "sha256": "18e6b29f749642d8a01ce2d9657e206c9b7d3f130264f39f7afde9b9b072e03b"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/zig/blobs/sha256:be1c5cab5438eede09322ff1e896202f0cbfaafb0641a596fdd04f0f4f6c6d48",
-          "sha256": "be1c5cab5438eede09322ff1e896202f0cbfaafb0641a596fdd04f0f4f6c6d48"
+          "url": "https://ghcr.io/v2/homebrew/core/zig/blobs/sha256:80fa8f4df5ccc5e0f8b190a8ec86eabd223ec56c756fa5e1821ef8d75d93934f",
+          "sha256": "80fa8f4df5ccc5e0f8b190a8ec86eabd223ec56c756fa5e1821ef8d75d93934f"
         },
-        "mojave": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/zig/blobs/sha256:207446cc593dd0b1c63716d26bbb552a2242bc94fe19033df177186f610872df",
-          "sha256": "207446cc593dd0b1c63716d26bbb552a2242bc94fe19033df177186f610872df"
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/zig/blobs/sha256:effb69c4ee99ffa28c7a927c786565c03f56f99da437026f3788218d962c3ab8",
+          "sha256": "effb69c4ee99ffa28c7a927c786565c03f56f99da437026f3788218d962c3ab8"
         }
       }
     }
@@ -63,7 +73,7 @@
     "cmake"
   ],
   "dependencies": [
-    "llvm"
+    "llvm@12"
   ],
   "recommended_dependencies": [
 

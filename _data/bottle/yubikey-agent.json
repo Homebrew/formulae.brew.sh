@@ -1,100 +1,31 @@
 {
   "name": "yubikey-agent",
-  "pkg_version": "0.1.4",
-  "rebuild": 0,
+  "pkg_version": "0.1.5",
+  "rebuild": 2,
   "bottles": {
+    "arm64_monterey": {
+      "url": "https://ghcr.io/v2/homebrew/core/yubikey-agent/blobs/sha256:be5cb10b00b668117f846d909914b119313ba79f9d0a7170c81b471f775aeed9"
+    },
     "arm64_big_sur": {
-      "url": "https://ghcr.io/v2/homebrew/core/yubikey-agent/blobs/sha256:950c6257f3a78028a23798ec38fc13b21b70c7995246d6bce8ab142b0467014f"
+      "url": "https://ghcr.io/v2/homebrew/core/yubikey-agent/blobs/sha256:d00bf8d22edfe56f5352e59ff3c72d91e98dcf64d4acc3d1c7a5edbadd61402d"
+    },
+    "monterey": {
+      "url": "https://ghcr.io/v2/homebrew/core/yubikey-agent/blobs/sha256:d5c58965efe5beed36e7927edd81cf15446015ddf05a6e35dda1ad7e7c1b8ade"
     },
     "big_sur": {
-      "url": "https://ghcr.io/v2/homebrew/core/yubikey-agent/blobs/sha256:c039d2e64526ae2c7e488cdcf5c104579fecd447886cc857892c1efd28bf7b63"
+      "url": "https://ghcr.io/v2/homebrew/core/yubikey-agent/blobs/sha256:29df3472e1a5e57ed20f54cef3a5c4e87662e5c64f55338b01239741795447c3"
     },
     "catalina": {
-      "url": "https://ghcr.io/v2/homebrew/core/yubikey-agent/blobs/sha256:41bfe241c1ee1424ccee14ba04b583c71cb0dbf481db311fd1f12f552258f941"
+      "url": "https://ghcr.io/v2/homebrew/core/yubikey-agent/blobs/sha256:4e7259eeb5ddd924251e7c73f6ae6904804193e4fee4d49e95fc02f211d3ac2e"
     },
     "mojave": {
-      "url": "https://ghcr.io/v2/homebrew/core/yubikey-agent/blobs/sha256:4ec8a15bca487e38310100533e787d8e7bcc80ab9f6d4285f49f9df58fbee5b3"
+      "url": "https://ghcr.io/v2/homebrew/core/yubikey-agent/blobs/sha256:bf031ee9b131fa3646b624bb6c84a0fc5b02f3abd6b693c5d5c488e58bb4e89c"
+    },
+    "x86_64_linux": {
+      "url": "https://ghcr.io/v2/homebrew/core/yubikey-agent/blobs/sha256:cb43a6764a9caa2c39fba8bdd5ebe79c677923b004f8c2280213bb4afc298d17"
     }
   },
   "dependencies": [
-    {
-      "name": "gettext",
-      "pkg_version": "0.21",
-      "rebuild": 0,
-      "bottles": {
-        "arm64_big_sur": {
-          "url": "https://ghcr.io/v2/homebrew/core/gettext/blobs/sha256:339b62b52ba86dfa73091d37341104b46c01ae354ca425000732df689305442b"
-        },
-        "big_sur": {
-          "url": "https://ghcr.io/v2/homebrew/core/gettext/blobs/sha256:a025e143fe3f5f7e24a936b8b0a4926acfdd025b11d62024e3d355c106536d56"
-        },
-        "catalina": {
-          "url": "https://ghcr.io/v2/homebrew/core/gettext/blobs/sha256:cdea54f52b7c36ebcb5fe26a1cf736d7cd6fd5f2fd016dd8357a8624ffd6b5f8"
-        },
-        "mojave": {
-          "url": "https://ghcr.io/v2/homebrew/core/gettext/blobs/sha256:99707d4dcc731faf980333365a694e9500f2f012f84c0bcb6d8cb5d620c2ce08"
-        },
-        "high_sierra": {
-          "url": "https://ghcr.io/v2/homebrew/core/gettext/blobs/sha256:5ac5783e31205b92907b46bfaaa142620aea7ee3fc4d996876b0913fd2315695"
-        }
-      }
-    },
-    {
-      "name": "libgpg-error",
-      "pkg_version": "1.42",
-      "rebuild": 0,
-      "bottles": {
-        "arm64_big_sur": {
-          "url": "https://ghcr.io/v2/homebrew/core/libgpg-error/blobs/sha256:72d70667728d9b1bfe4071913c800db2baa55af9fc603dbd96b2fcd477d828b0"
-        },
-        "big_sur": {
-          "url": "https://ghcr.io/v2/homebrew/core/libgpg-error/blobs/sha256:453688272ae89f5f4b5a852ec1c2c31d3c2410abb95ca5039f5a0d4edfc4b64b"
-        },
-        "catalina": {
-          "url": "https://ghcr.io/v2/homebrew/core/libgpg-error/blobs/sha256:bb8090fbf1399ed80904df570978a16b72af1b300c17f68493b602606e90d516"
-        },
-        "mojave": {
-          "url": "https://ghcr.io/v2/homebrew/core/libgpg-error/blobs/sha256:ef3446809a6b3d9da0f5d4a45b9d2c21a7bf4549d14cc785843f4f969f13ea39"
-        }
-      }
-    },
-    {
-      "name": "libassuan",
-      "pkg_version": "2.5.5",
-      "rebuild": 0,
-      "bottles": {
-        "arm64_big_sur": {
-          "url": "https://ghcr.io/v2/homebrew/core/libassuan/blobs/sha256:3120a9c83de1631e86002b899ce823abccfd8bcaf90a6f54cbc7cd9ae1fd1fa4"
-        },
-        "big_sur": {
-          "url": "https://ghcr.io/v2/homebrew/core/libassuan/blobs/sha256:3d14f187ed48aa40987fa5fdf3ed9cbc52ddf8d079c7e97553efe510e4a084a0"
-        },
-        "catalina": {
-          "url": "https://ghcr.io/v2/homebrew/core/libassuan/blobs/sha256:75a37cd9a2f103b1f552349ba537cec0bd2ecbb222583b35e237aa6ad90b84c5"
-        },
-        "mojave": {
-          "url": "https://ghcr.io/v2/homebrew/core/libassuan/blobs/sha256:81119eac40ec7e6cfd997631f8d5ed1b6a3646c0b3481acd1c6b98492a187d25"
-        }
-      }
-    },
-    {
-      "name": "pinentry-mac",
-      "pkg_version": "1.1.1.1",
-      "rebuild": 0,
-      "bottles": {
-        "arm64_big_sur": {
-          "url": "https://ghcr.io/v2/homebrew/core/pinentry-mac/blobs/sha256:64958e3763e548e154a485382fdab8525e7df237c9198ce5b60e4966ba91fc41"
-        },
-        "big_sur": {
-          "url": "https://ghcr.io/v2/homebrew/core/pinentry-mac/blobs/sha256:44b9e026ae382505ac98e01aca3d97727deff1dc57e7a15e6aae08371142439c"
-        },
-        "catalina": {
-          "url": "https://ghcr.io/v2/homebrew/core/pinentry-mac/blobs/sha256:2957715c9a914da6774f4f28523962aa512eb89858aae57a35bc299d2458932c"
-        },
-        "mojave": {
-          "url": "https://ghcr.io/v2/homebrew/core/pinentry-mac/blobs/sha256:e7a94a9c022f0996b24ff4da4b9e5cee34cf681a8571320b0f49e129d6fde8e0"
-        }
-      }
-    }
+
   ]
 }

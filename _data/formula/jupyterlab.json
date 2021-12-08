@@ -13,13 +13,13 @@
   "license": "BSD-3-Clause",
   "homepage": "https://jupyter.org/",
   "versions": {
-    "stable": "3.0.16",
+    "stable": "3.2.4",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://files.pythonhosted.org/packages/85/17/4c6b94f3e28f53acc2b18e6d234a6ce8d274ac52cc4e6870a096695b38e3/jupyterlab-3.0.16.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/54/b2/52a045d655d860cd91b49260971ae673a6229e033b98dd7459a32db706fb/jupyterlab-3.2.4.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,25 +31,35 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/jupyterlab/blobs/sha256:8c045546fd7bc96843a6d85ce7e9f3b43e562aa960fc60ad30c9a7257e2bc2a7",
+          "sha256": "8c045546fd7bc96843a6d85ce7e9f3b43e562aa960fc60ad30c9a7257e2bc2a7"
+        },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/jupyterlab/blobs/sha256:892d1f279e6534c4ed454072a0a11232acdfc50a4abcb877a4f62adb71334c09",
-          "sha256": "892d1f279e6534c4ed454072a0a11232acdfc50a4abcb877a4f62adb71334c09"
+          "url": "https://ghcr.io/v2/homebrew/core/jupyterlab/blobs/sha256:20cae7f4a3c0b1c087f0313cd02d3dc25882026f328b2634d844705ee1225c14",
+          "sha256": "20cae7f4a3c0b1c087f0313cd02d3dc25882026f328b2634d844705ee1225c14"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/jupyterlab/blobs/sha256:7ac842720a9391c286f867ef60007120bc630ae90de4aa1623d002c5e5562dcc",
+          "sha256": "7ac842720a9391c286f867ef60007120bc630ae90de4aa1623d002c5e5562dcc"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/jupyterlab/blobs/sha256:5b78baffd0e6bb4c787ec6758d73c41fdee7f1b438e28e117a2e915a8149d198",
-          "sha256": "5b78baffd0e6bb4c787ec6758d73c41fdee7f1b438e28e117a2e915a8149d198"
+          "url": "https://ghcr.io/v2/homebrew/core/jupyterlab/blobs/sha256:a6eb470c09e0abdc1ab1170064e9d5814d03afe510b29bd4a5dae8cc569d5c4b",
+          "sha256": "a6eb470c09e0abdc1ab1170064e9d5814d03afe510b29bd4a5dae8cc569d5c4b"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/jupyterlab/blobs/sha256:e09e5d4f8e6dd1016990d60aef943b4764541bd847ea89ecf4d8a0be3ba7a3c8",
-          "sha256": "e09e5d4f8e6dd1016990d60aef943b4764541bd847ea89ecf4d8a0be3ba7a3c8"
+          "url": "https://ghcr.io/v2/homebrew/core/jupyterlab/blobs/sha256:98ee63b199374b310b052dff5868c4e7335caa99b8053c7e3f466332ee820697",
+          "sha256": "98ee63b199374b310b052dff5868c4e7335caa99b8053c7e3f466332ee820697"
         },
-        "mojave": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/jupyterlab/blobs/sha256:5cf8f4f25f661bb5e4f6f91263bf3d2436c599ed287a044c814c9a56b7fb2654",
-          "sha256": "5cf8f4f25f661bb5e4f6f91263bf3d2436c599ed287a044c814c9a56b7fb2654"
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/jupyterlab/blobs/sha256:0c66fe60e756f923bc3ba12816848115d455eb5eeb4d205e243dea8755b5fbac",
+          "sha256": "0c66fe60e756f923bc3ba12816848115d455eb5eeb4d205e243dea8755b5fbac"
         }
       }
     }
@@ -63,10 +73,10 @@
 
   ],
   "dependencies": [
-    "ipython",
     "node",
     "pandoc",
     "python@3.9",
+    "six",
     "zeromq"
   ],
   "recommended_dependencies": [
@@ -76,10 +86,9 @@
 
   ],
   "uses_from_macos": [
-    [
-      "expect",
-      "test"
-    ]
+    {
+      "expect": "test"
+    }
   ],
   "requirements": [
 

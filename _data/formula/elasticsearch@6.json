@@ -13,13 +13,13 @@
   "license": "Apache-2.0",
   "homepage": "https://www.elastic.co/products/elasticsearch",
   "versions": {
-    "stable": "6.8.13",
+    "stable": "6.8.20",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-oss-6.8.13.tar.gz",
+      "url": "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-oss-6.8.20.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,20 +31,35 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/elasticsearch/6/blobs/sha256:1a59702e05554f76d89c4f3d29559f96b908e9fb93cfaa7e8a4d8abcff6435ed",
+          "sha256": "1a59702e05554f76d89c4f3d29559f96b908e9fb93cfaa7e8a4d8abcff6435ed"
+        },
+        "arm64_big_sur": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/elasticsearch/6/blobs/sha256:1a59702e05554f76d89c4f3d29559f96b908e9fb93cfaa7e8a4d8abcff6435ed",
+          "sha256": "1a59702e05554f76d89c4f3d29559f96b908e9fb93cfaa7e8a4d8abcff6435ed"
+        },
+        "monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/elasticsearch/6/blobs/sha256:bbd66108c17e3232e286afe600af9351f69dbbbad03c76852f6d279717b58002",
+          "sha256": "bbd66108c17e3232e286afe600af9351f69dbbbad03c76852f6d279717b58002"
+        },
         "big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/elasticsearch/6/blobs/sha256:5a169338be55587bc70f8d297a5ade7ab075540935af491d1eee1ec9e64cc200",
-          "sha256": "5a169338be55587bc70f8d297a5ade7ab075540935af491d1eee1ec9e64cc200"
+          "url": "https://ghcr.io/v2/homebrew/core/elasticsearch/6/blobs/sha256:bbd66108c17e3232e286afe600af9351f69dbbbad03c76852f6d279717b58002",
+          "sha256": "bbd66108c17e3232e286afe600af9351f69dbbbad03c76852f6d279717b58002"
         },
         "catalina": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/elasticsearch/6/blobs/sha256:21760b4a0752ec2f70597637ebeb255d3b218605f5117764451c382ecabffeec",
-          "sha256": "21760b4a0752ec2f70597637ebeb255d3b218605f5117764451c382ecabffeec"
+          "url": "https://ghcr.io/v2/homebrew/core/elasticsearch/6/blobs/sha256:bbd66108c17e3232e286afe600af9351f69dbbbad03c76852f6d279717b58002",
+          "sha256": "bbd66108c17e3232e286afe600af9351f69dbbbad03c76852f6d279717b58002"
         },
-        "mojave": {
+        "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/elasticsearch/6/blobs/sha256:c5b912c15f7add574bcf572818b4b1ac40f7b27ddbcad3eff0303a15e9acb174",
-          "sha256": "c5b912c15f7add574bcf572818b4b1ac40f7b27ddbcad3eff0303a15e9acb174"
+          "url": "https://ghcr.io/v2/homebrew/core/elasticsearch/6/blobs/sha256:06d6fa29d877bcfc3f5a5fe5694c4028ed7322442cc75c88a1df7932036aa8b2",
+          "sha256": "06d6fa29d877bcfc3f5a5fe5694c4028ed7322442cc75c88a1df7932036aa8b2"
         }
       }
     }
@@ -58,7 +73,7 @@
 
   ],
   "dependencies": [
-    "openjdk@8"
+    "openjdk"
   ],
   "recommended_dependencies": [
 

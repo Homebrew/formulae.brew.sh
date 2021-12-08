@@ -13,13 +13,13 @@
   "license": "GPL-2.0-or-later",
   "homepage": "https://jackaudio.org/",
   "versions": {
-    "stable": "1.9.18",
+    "stable": "1.9.19",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/jackaudio/jack2/archive/v1.9.18.tar.gz",
+      "url": "https://github.com/jackaudio/jack2/archive/v1.9.19.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,28 +28,43 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 0,
+      "rebuild": 2,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/jack/blobs/sha256:2741e332d2f3c3bf82d78e724cc33f029c20e60f2f3aef9a22255f7ceb356951",
+          "sha256": "2741e332d2f3c3bf82d78e724cc33f029c20e60f2f3aef9a22255f7ceb356951"
+        },
         "arm64_big_sur": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/jack/blobs/sha256:177463669a498f6d799f00e35e735349683eb04245cc1320bdc174e3bd2c80a2",
-          "sha256": "177463669a498f6d799f00e35e735349683eb04245cc1320bdc174e3bd2c80a2"
+          "url": "https://ghcr.io/v2/homebrew/core/jack/blobs/sha256:8460ec59472c5dc1d7f1196dcb68578539054cfb597390793f91c99eb0b9596a",
+          "sha256": "8460ec59472c5dc1d7f1196dcb68578539054cfb597390793f91c99eb0b9596a"
+        },
+        "monterey": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/jack/blobs/sha256:51cb7f7e929c43eaa1f6db9fac1ff1b6acec8ca074eb83b276f1ac70bfdf3f7e",
+          "sha256": "51cb7f7e929c43eaa1f6db9fac1ff1b6acec8ca074eb83b276f1ac70bfdf3f7e"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/jack/blobs/sha256:b975e32278ec862b2ac8811e347d841c18930529fc47c96fa8861ff3015a04e3",
-          "sha256": "b975e32278ec862b2ac8811e347d841c18930529fc47c96fa8861ff3015a04e3"
+          "url": "https://ghcr.io/v2/homebrew/core/jack/blobs/sha256:939c93be6d821e73abe360c69c57b0786086b03bcf95233a0ef1836e18c472f7",
+          "sha256": "939c93be6d821e73abe360c69c57b0786086b03bcf95233a0ef1836e18c472f7"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/jack/blobs/sha256:9ebcf7c9b083d2b3a268f743268c7c649c90ed7ab472073fa65814f7a42e67f9",
-          "sha256": "9ebcf7c9b083d2b3a268f743268c7c649c90ed7ab472073fa65814f7a42e67f9"
+          "url": "https://ghcr.io/v2/homebrew/core/jack/blobs/sha256:fbec3032a541f3e9ce3b327994d4bd305f3f849d1cb3831ec460b2bd2e029c08",
+          "sha256": "fbec3032a541f3e9ce3b327994d4bd305f3f849d1cb3831ec460b2bd2e029c08"
         },
         "mojave": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/jack/blobs/sha256:c6ae412a1b0911052894464e87398feca20a1a60a07bebcad5d6053d80781993",
-          "sha256": "c6ae412a1b0911052894464e87398feca20a1a60a07bebcad5d6053d80781993"
+          "url": "https://ghcr.io/v2/homebrew/core/jack/blobs/sha256:b2974079582c370b9056ac2f98308cb321dc767ac3f67229e891e1de6bc86c8f",
+          "sha256": "b2974079582c370b9056ac2f98308cb321dc767ac3f67229e891e1de6bc86c8f"
+        },
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/jack/blobs/sha256:2a209c4eaf03a6bb1ca47b15acb8f18cbe3fe4d395859f83e31df688bec0b891",
+          "sha256": "2a209c4eaf03a6bb1ca47b15acb8f18cbe3fe4d395859f83e31df688bec0b891"
         }
       }
     }
@@ -63,14 +78,15 @@
     "autoconf",
     "automake",
     "libtool",
-    "pkg-config"
+    "pkg-config",
+    "python@3.9"
   ],
   "dependencies": [
-    "aften",
     "berkeley-db",
     "libsamplerate",
     "libsndfile",
-    "python@3.9"
+    "readline",
+    "aften"
   ],
   "recommended_dependencies": [
 

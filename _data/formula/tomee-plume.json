@@ -13,13 +13,13 @@
   "license": "Apache-2.0",
   "homepage": "https://tomee.apache.org/",
   "versions": {
-    "stable": "8.0.4",
+    "stable": "8.0.8",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://www.apache.org/dyn/closer.lua?path=tomee/tomee-8.0.4/apache-tomee-8.0.4-plume.tar.gz",
+      "url": "https://www.apache.org/dyn/closer.lua?path=tomee/tomee-8.0.8/apache-tomee-8.0.8-plume.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -27,9 +27,20 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "all": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/tomee-plume/blobs/sha256:294874e4a0a67698eee66b53f2eb4f7ab6af92d82b5130335b4b3797bf17a516",
+          "sha256": "294874e4a0a67698eee66b53f2eb4f7ab6af92d82b5130335b4b3797bf17a516"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
@@ -37,7 +48,7 @@
 
   ],
   "dependencies": [
-
+    "openjdk"
   ],
   "recommended_dependencies": [
 
@@ -54,7 +65,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "The home of Apache TomEE Plume is:\n  $(brew --prefix)/opt/tomee-plume/libexec\nTo run Apache TomEE:\n  $(brew --prefix)/opt/tomee-plume/libexec/bin/tomee-plume-startup\n",
+  "caveats": "The home of Apache TomEE Plume is:\n  $(brew --prefix)/opt/tomee-plume/libexec\nTo run Apache TomEE:\n  $(brew --prefix)/opt/tomee-plume/bin/startup.sh\n",
   "installed": [
 
   ],

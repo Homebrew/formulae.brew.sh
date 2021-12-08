@@ -13,13 +13,13 @@
   "license": "Apache-2.0",
   "homepage": "https://nifi.apache.org",
   "versions": {
-    "stable": "1.13.2",
+    "stable": "1.15.0",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://www.apache.org/dyn/closer.lua?path=/nifi/1.13.2/nifi-1.13.2-bin.tar.gz",
+      "url": "https://www.apache.org/dyn/closer.lua?path=/nifi/1.15.0/nifi-1.15.0-bin.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -27,9 +27,20 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "all": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/nifi/blobs/sha256:7d1b3311d1d34c1adbd6228c773725c8e9dfe166779b0984f0549c84e759de40",
+          "sha256": "7d1b3311d1d34c1adbd6228c773725c8e9dfe166779b0984f0549c84e759de40"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],

@@ -14,13 +14,13 @@
   "license": "Apache-2.0",
   "homepage": "https://tomcat.apache.org/",
   "versions": {
-    "stable": "8.5.66",
+    "stable": "8.5.73",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://www.apache.org/dyn/closer.lua?path=tomcat/tomcat-8/v8.5.66/bin/apache-tomcat-8.5.66.tar.gz",
+      "url": "https://www.apache.org/dyn/closer.lua?path=tomcat/tomcat-8/v8.5.73/bin/apache-tomcat-8.5.73.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,9 +28,20 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "all": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/tomcat/8/blobs/sha256:10d480f4c5fc8c6dbb54d571eb32589967d3c8096323f4eb2fc3bae483b405ca",
+          "sha256": "10d480f4c5fc8c6dbb54d571eb32589967d3c8096323f4eb2fc3bae483b405ca"
+        }
+      }
+    }
   },
   "keg_only": true,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
@@ -55,7 +66,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": null,
+  "caveats": "Configuration files: $(brew --prefix)/etc/tomcat@8\n",
   "installed": [
 
   ],

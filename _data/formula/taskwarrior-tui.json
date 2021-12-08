@@ -13,13 +13,13 @@
   "license": "MIT",
   "homepage": "https://github.com/kdheepak/taskwarrior-tui",
   "versions": {
-    "stable": "0.13.24",
+    "stable": "0.16.0",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/kdheepak/taskwarrior-tui/archive/v0.13.24.tar.gz",
+      "url": "https://github.com/kdheepak/taskwarrior-tui/archive/v0.16.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,28 +28,38 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/taskwarrior-tui/blobs/sha256:d23f13155021eca174ef0f94259ca73e089cff52ac626939bc63ddefe792fe85",
+          "sha256": "d23f13155021eca174ef0f94259ca73e089cff52ac626939bc63ddefe792fe85"
+        },
         "arm64_big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/taskwarrior-tui/blobs/sha256:e33ddbdb7101ec7aac6e98e45de434056462a338ecf6c065468cfba6670a88fd",
-          "sha256": "e33ddbdb7101ec7aac6e98e45de434056462a338ecf6c065468cfba6670a88fd"
+          "url": "https://ghcr.io/v2/homebrew/core/taskwarrior-tui/blobs/sha256:5ef5fc41428836a7a2591ee150f3e883b9ae124e1af808dc07e32d08d66340ff",
+          "sha256": "5ef5fc41428836a7a2591ee150f3e883b9ae124e1af808dc07e32d08d66340ff"
+        },
+        "monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/taskwarrior-tui/blobs/sha256:16d73c313f515460ee0317c358bd19159f876069cea3f7ef27312c18c2ed1735",
+          "sha256": "16d73c313f515460ee0317c358bd19159f876069cea3f7ef27312c18c2ed1735"
         },
         "big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/taskwarrior-tui/blobs/sha256:6fbf1f225a09ba9d503a02812d75b903cb2653f2485770605e66e08624fda2d6",
-          "sha256": "6fbf1f225a09ba9d503a02812d75b903cb2653f2485770605e66e08624fda2d6"
+          "url": "https://ghcr.io/v2/homebrew/core/taskwarrior-tui/blobs/sha256:974e70d9c920078bd22120fbe51fd90a9f0fe53dbcd808d73b8175ee0e1320cc",
+          "sha256": "974e70d9c920078bd22120fbe51fd90a9f0fe53dbcd808d73b8175ee0e1320cc"
         },
         "catalina": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/taskwarrior-tui/blobs/sha256:1d5a0b9ad5706b01bac2346379f08d69615d756551f5e878b7ab26057aa3a20a",
-          "sha256": "1d5a0b9ad5706b01bac2346379f08d69615d756551f5e878b7ab26057aa3a20a"
+          "url": "https://ghcr.io/v2/homebrew/core/taskwarrior-tui/blobs/sha256:eec523fc15ca91dbda95d63c4ba64ef01746f204533e5215984b7cf775d15c80",
+          "sha256": "eec523fc15ca91dbda95d63c4ba64ef01746f204533e5215984b7cf775d15c80"
         },
-        "mojave": {
+        "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/taskwarrior-tui/blobs/sha256:437e9b59019bbd750276bc0913db8351e56c66d8d0d8f0e2664d3a5fc7b74d24",
-          "sha256": "437e9b59019bbd750276bc0913db8351e56c66d8d0d8f0e2664d3a5fc7b74d24"
+          "url": "https://ghcr.io/v2/homebrew/core/taskwarrior-tui/blobs/sha256:265078b6a614919f737e7980519a19e5c6b3ebd73de73d249823c9646569ec4e",
+          "sha256": "265078b6a614919f737e7980519a19e5c6b3ebd73de73d249823c9646569ec4e"
         }
       }
     }
@@ -60,7 +70,6 @@
 
   ],
   "build_dependencies": [
-    "pandoc",
     "rust"
   ],
   "dependencies": [

@@ -10,7 +10,7 @@
 
   ],
   "desc": "MP3 technical info viewer and ID3 1.x tag editor",
-  "license": "GPL-2.0",
+  "license": "GPL-2.0-or-later",
   "homepage": "https://www.ibiblio.org/mp3info/",
   "versions": {
     "stable": "0.8.5a",
@@ -31,10 +31,20 @@
       "rebuild": 1,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/mp3info/blobs/sha256:4d14f5dd7a1e4f7e441e94d5c43f7786169190125da84e1b425005c79164e55d",
+          "sha256": "4d14f5dd7a1e4f7e441e94d5c43f7786169190125da84e1b425005c79164e55d"
+        },
         "arm64_big_sur": {
           "cellar": ":any_skip_relocation",
           "url": "https://ghcr.io/v2/homebrew/core/mp3info/blobs/sha256:ebb88262f3ba1eb8196c8821769298b4aa29bb4c5d0733fc8dcd47092cfafdd5",
           "sha256": "ebb88262f3ba1eb8196c8821769298b4aa29bb4c5d0733fc8dcd47092cfafdd5"
+        },
+        "monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/mp3info/blobs/sha256:a6c032a31a38ab8d086b20944fd5b4e3bf074ecaca2f7d593897fd5deb19e250",
+          "sha256": "a6c032a31a38ab8d086b20944fd5b4e3bf074ecaca2f7d593897fd5deb19e250"
         },
         "big_sur": {
           "cellar": ":any_skip_relocation",
@@ -65,6 +75,11 @@
           "cellar": ":any_skip_relocation",
           "url": "https://ghcr.io/v2/homebrew/core/mp3info/blobs/sha256:30c85d8b2afd6e6ad03e473de3bd83ef9c6c607b979570798cfc778ad887b902",
           "sha256": "30c85d8b2afd6e6ad03e473de3bd83ef9c6c607b979570798cfc778ad887b902"
+        },
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/mp3info/blobs/sha256:3cfece9c5d6614f0c1139161f6ca6ced317514cc45a7b13d06ecf0316b53656f",
+          "sha256": "3cfece9c5d6614f0c1139161f6ca6ced317514cc45a7b13d06ecf0316b53656f"
         }
       }
     }
@@ -87,7 +102,7 @@
 
   ],
   "uses_from_macos": [
-
+    "ncurses"
   ],
   "requirements": [
 

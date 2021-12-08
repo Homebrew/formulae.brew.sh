@@ -13,13 +13,13 @@
   "license": "MIT and BSD-3-Clause and Apache-2.0 and BSL-1.0",
   "homepage": "https://julialang.org/",
   "versions": {
-    "stable": "1.6.1",
+    "stable": "1.7.0",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/JuliaLang/julia/releases/download/v1.6.1/julia-1.6.1.tar.gz",
+      "url": "https://github.com/JuliaLang/julia/releases/download/v1.7.0/julia-1.7.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,20 +31,25 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/julia/blobs/sha256:77735bd267a17c49932c29ead90656f78ccab85ca86199dd7c87b734ea5bc8a3",
+          "sha256": "77735bd267a17c49932c29ead90656f78ccab85ca86199dd7c87b734ea5bc8a3"
+        },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/julia/blobs/sha256:d010756c2b3e9bdc72edda8e27078399d779f3b56a2b1c78b28c47f89f269559",
-          "sha256": "d010756c2b3e9bdc72edda8e27078399d779f3b56a2b1c78b28c47f89f269559"
+          "url": "https://ghcr.io/v2/homebrew/core/julia/blobs/sha256:af12f0c921d83c0d34a08a714f033550c4e19150329c3ef8051a7608a3b7efb3",
+          "sha256": "af12f0c921d83c0d34a08a714f033550c4e19150329c3ef8051a7608a3b7efb3"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/julia/blobs/sha256:750cec427377d71a4f8b537a19976e2a63df820216244a0d7d9a8f0a913266f0",
-          "sha256": "750cec427377d71a4f8b537a19976e2a63df820216244a0d7d9a8f0a913266f0"
+          "url": "https://ghcr.io/v2/homebrew/core/julia/blobs/sha256:f5b8fb6e630eb1c711709acbd81210133d81ebd58e8a42f17309caf1448ad3ca",
+          "sha256": "f5b8fb6e630eb1c711709acbd81210133d81ebd58e8a42f17309caf1448ad3ca"
         },
-        "mojave": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/julia/blobs/sha256:b5e9f67413ecebdbc92fec00940b84c032ec0f25f1f0a4c1398fad4ed591ef1f",
-          "sha256": "b5e9f67413ecebdbc92fec00940b84c032ec0f25f1f0a4c1398fad4ed591ef1f"
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/julia/blobs/sha256:5368aa795df50bfc0952423b0d7cd6a88cc2fa2f2725a783a2b4263e3040c191",
+          "sha256": "5368aa795df50bfc0952423b0d7cd6a88cc2fa2f2725a783a2b4263e3040c191"
         }
       }
     }
@@ -55,18 +60,19 @@
 
   ],
   "build_dependencies": [
-    "python@3.9"
+
   ],
   "dependencies": [
+    "ca-certificates",
     "curl",
     "gcc",
     "gmp",
     "libgit2",
+    "libnghttp2",
     "libssh2",
-    "llvm",
-    "mbedtls",
+    "llvm@12",
+    "mbedtls@2",
     "mpfr",
-    "nghttp2",
     "openblas",
     "openlibm",
     "p7zip",
@@ -81,10 +87,12 @@
 
   ],
   "uses_from_macos": [
-    [
-      "perl",
-      "build"
-    ],
+    {
+      "perl": "build"
+    },
+    {
+      "python": "build"
+    },
     "zlib"
   ],
   "requirements": [

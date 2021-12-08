@@ -13,13 +13,13 @@
   "license": "GPL-2.0-or-later",
   "homepage": "https://www.r-project.org/",
   "versions": {
-    "stable": "4.1.0",
+    "stable": "4.1.2",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://cran.r-project.org/src/base/R-4/R-4.1.0.tar.gz",
+      "url": "https://cran.r-project.org/src/base/R-4/R-4.1.2.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,25 +31,35 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/r/blobs/sha256:c33eb0da3cdf04dd64354db3a5995a3ca0066ddf7dfdde59ca0fb8ae97a9c9e1",
+          "sha256": "c33eb0da3cdf04dd64354db3a5995a3ca0066ddf7dfdde59ca0fb8ae97a9c9e1"
+        },
         "arm64_big_sur": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/r/blobs/sha256:bb731e6ec573c08d37da048a4a69411177b58f9d7ad4f340728fcef2e4c3c06e",
-          "sha256": "bb731e6ec573c08d37da048a4a69411177b58f9d7ad4f340728fcef2e4c3c06e"
+          "url": "https://ghcr.io/v2/homebrew/core/r/blobs/sha256:b74a59f79af6c5d1ce9508437a8cb5a2e7856b2107c2cf812f25177716040d3b",
+          "sha256": "b74a59f79af6c5d1ce9508437a8cb5a2e7856b2107c2cf812f25177716040d3b"
+        },
+        "monterey": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/r/blobs/sha256:46663a15e9762deaad72e5fb347c85edebc836fc071f5bd21b1948d90a9311bc",
+          "sha256": "46663a15e9762deaad72e5fb347c85edebc836fc071f5bd21b1948d90a9311bc"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/r/blobs/sha256:4803c5d4e8888494d62c078b658174a23815efbef798c307f565431fe52eed12",
-          "sha256": "4803c5d4e8888494d62c078b658174a23815efbef798c307f565431fe52eed12"
+          "url": "https://ghcr.io/v2/homebrew/core/r/blobs/sha256:caf365bbc3764de78a390765b3b9c353c09bb7a26c8dd951d1dd6d01bf1f2889",
+          "sha256": "caf365bbc3764de78a390765b3b9c353c09bb7a26c8dd951d1dd6d01bf1f2889"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/r/blobs/sha256:452a71839e33b5f1868845f54953ddcecfaca5c1cb61e58290130d9b3d9abda1",
-          "sha256": "452a71839e33b5f1868845f54953ddcecfaca5c1cb61e58290130d9b3d9abda1"
+          "url": "https://ghcr.io/v2/homebrew/core/r/blobs/sha256:4a68b7c06e4582ac3e97785e0dabfd031235614d5451c7acc54c7f6957411e62",
+          "sha256": "4a68b7c06e4582ac3e97785e0dabfd031235614d5451c7acc54c7f6957411e62"
         },
-        "mojave": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/r/blobs/sha256:cf4d202d1bfd57554ab37830308517045f7841d7061957cf7555600b57917928",
-          "sha256": "cf4d202d1bfd57554ab37830308517045f7841d7061957cf7555600b57917928"
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/r/blobs/sha256:9de6d636b0372e196b5a827f9107533d9d31159deefec9d839bd941608b6f737",
+          "sha256": "9de6d636b0372e196b5a827f9107533d9d31159deefec9d839bd941608b6f737"
         }
       }
     }
@@ -63,9 +73,11 @@
     "pkg-config"
   ],
   "dependencies": [
+    "cairo",
     "gcc",
     "gettext",
     "jpeg",
+    "libffi",
     "libpng",
     "openblas",
     "pcre2",
@@ -80,7 +92,7 @@
 
   ],
   "uses_from_macos": [
-
+    "curl"
   ],
   "requirements": [
 

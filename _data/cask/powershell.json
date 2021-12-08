@@ -7,34 +7,39 @@
   ],
   "desc": "Command-line shell and scripting language",
   "homepage": "https://github.com/PowerShell/PowerShell",
-  "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.1.3/powershell-7.1.3-osx-x64.pkg",
+  "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.2.0/powershell-7.2.0-osx-x64.pkg",
   "appcast": null,
-  "version": "7.1.3",
-  "installed": "7.1.3",
+  "version": "7.2.0",
+  "versions": {
+  },
+  "installed": "7.2.0",
   "outdated": false,
-  "sha256": "6e889bc771463555f8639aa3b40e9d571ce365e1c442380ee361189575b27b0f",
+  "sha256": "f73682927bdadb127cf0c18641d5efe9ea12e53053e65d5c54f06fd4ef413a4a",
   "artifacts": [
     {
       "pkgutil": "com.microsoft.powershell",
       "signal": {
       }
     },
-    "powershell-7.1.3-osx-x64.pkg (Pkg)",
+    "powershell-7.2.0-osx-x64.pkg (Pkg)",
     {
       "trash": [
         "~/.cache/powershell",
-        "~/.config/PowerShell",
+        "~/.config/powershell",
         "~/.local/share/powershell"
       ],
       "signal": {
       }
     }
   ],
-  "caveats": null,
+  "caveats": "To use Homebrew in PowerShell, set:\n  Add-Content -Path $PROFILE.CurrentUserAllHosts -Value '$($(brew --prefix)/bin/brew shellenv) | Invoke-Expression'\n",
   "depends_on": {
+    "formula": [
+      "openssl"
+    ],
     "macos": {
       ">=": [
-        "10.13"
+        "10.14"
       ]
     }
   },

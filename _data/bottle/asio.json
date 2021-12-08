@@ -1,38 +1,66 @@
 {
   "name": "asio",
-  "pkg_version": "1.18.2",
+  "pkg_version": "1.20.0",
   "rebuild": 0,
   "bottles": {
+    "arm64_monterey": {
+      "url": "https://ghcr.io/v2/homebrew/core/asio/blobs/sha256:55ef1bffa04528d8b719a1d4885a66dedb61417cf6ffb148bbf9cbb46f19c744"
+    },
     "arm64_big_sur": {
-      "url": "https://ghcr.io/v2/homebrew/core/asio/blobs/sha256:11ab7bb26a9782754a8c872dac4b9cc4c5205fc34061a4678a3eed6d173ab06a"
+      "url": "https://ghcr.io/v2/homebrew/core/asio/blobs/sha256:6ae63027103addf746fc975cf3b9e521b7ab590e4e1a7891e8e10b433533607e"
+    },
+    "monterey": {
+      "url": "https://ghcr.io/v2/homebrew/core/asio/blobs/sha256:74df62b424d6eb41db252df523b3148e73e9d635aabf515434e3e93bec435967"
     },
     "big_sur": {
-      "url": "https://ghcr.io/v2/homebrew/core/asio/blobs/sha256:c51769f155b21a0c7c82862c25ece1d40e79fc7db7b919c7daa5437e4060ad85"
+      "url": "https://ghcr.io/v2/homebrew/core/asio/blobs/sha256:685e304d5cbb0291585a2941c4bc521e3d60175e31ecfc91146d480a84f04325"
     },
     "catalina": {
-      "url": "https://ghcr.io/v2/homebrew/core/asio/blobs/sha256:e3fe0bf41ab84047722cb2936c604b13be10723f9a98f006e21db27d82c38d35"
+      "url": "https://ghcr.io/v2/homebrew/core/asio/blobs/sha256:d98a3f8267b7e3971fb5c712324858aa02252c718b55dc7e842c31922ad72d1c"
     },
     "mojave": {
-      "url": "https://ghcr.io/v2/homebrew/core/asio/blobs/sha256:2f2769fda61b376035b53a8da40860b80566a7725ef294312d4d415ae5aae5e0"
+      "url": "https://ghcr.io/v2/homebrew/core/asio/blobs/sha256:ae04393a3164eff530766bf44aa2983534d3eb1115879b0a9f9c6e027b1b9fca"
+    },
+    "x86_64_linux": {
+      "url": "https://ghcr.io/v2/homebrew/core/asio/blobs/sha256:7011f43a03777135319c7e21f5a96e57b31ced599c41fbf07aba6c0c46871e4b"
     }
   },
   "dependencies": [
     {
-      "name": "openssl@1.1",
-      "pkg_version": "1.1.1k",
+      "name": "ca-certificates",
+      "pkg_version": "2021-10-26",
       "rebuild": 0,
       "bottles": {
+        "all": {
+          "url": "https://ghcr.io/v2/homebrew/core/ca-certificates/blobs/sha256:1bbd45c16a0b9912174c553a6d7ae1b67b11abbeb3155eaf03109bb62d8e5381"
+        }
+      }
+    },
+    {
+      "name": "openssl@1.1",
+      "pkg_version": "1.1.1l_1",
+      "rebuild": 0,
+      "bottles": {
+        "arm64_monterey": {
+          "url": "https://ghcr.io/v2/homebrew/core/openssl/1.1/blobs/sha256:8f5b0bee61c1570b9f0fc0a21d6c322e904ae7975bdaada5787451d18e9677a6"
+        },
         "arm64_big_sur": {
-          "url": "https://ghcr.io/v2/homebrew/core/openssl/1.1/blobs/sha256:0a75e0f116c0653bc7a2b422e5dc500e7e51557303aa4fca9c1a28786189c1da"
+          "url": "https://ghcr.io/v2/homebrew/core/openssl/1.1/blobs/sha256:e3d8556cec907ad1e0ea00aebd0b0b516dde06ea3bf24308290ad785cb360a04"
+        },
+        "monterey": {
+          "url": "https://ghcr.io/v2/homebrew/core/openssl/1.1/blobs/sha256:9a14367813591b51e30828c7d86499479bc6201954f6b10ed591b40cd3b71cc1"
         },
         "big_sur": {
-          "url": "https://ghcr.io/v2/homebrew/core/openssl/1.1/blobs/sha256:17d94c51ddfa8364baed5f3a754063e1ca75f807194f68d0b976619cf4e69c1a"
+          "url": "https://ghcr.io/v2/homebrew/core/openssl/1.1/blobs/sha256:64d4d83f7d3216f2d3107f966b223d11401a2e9391707d959fbdb5c1bd5fbe0c"
         },
         "catalina": {
-          "url": "https://ghcr.io/v2/homebrew/core/openssl/1.1/blobs/sha256:cb610ecdda346011031b890d7b7c6e1942d7fc08cf083b74f148ec7ffed8c7e1"
+          "url": "https://ghcr.io/v2/homebrew/core/openssl/1.1/blobs/sha256:eb4e1d96f1a9eac8d096220550e3ca97a46d59747ec2324e2ff74351f8319c2b"
         },
         "mojave": {
-          "url": "https://ghcr.io/v2/homebrew/core/openssl/1.1/blobs/sha256:7928c80c309c6ece50b1c0d968a1e54011088cc896d26aa511249978a246bd50"
+          "url": "https://ghcr.io/v2/homebrew/core/openssl/1.1/blobs/sha256:add58d2bb5059599029e687d5baf6fd737dff1e5cef7b6c5f4e0fe11b9c8e588"
+        },
+        "x86_64_linux": {
+          "url": "https://ghcr.io/v2/homebrew/core/openssl/1.1/blobs/sha256:84bc9412c1620f5607161c5fe2b6e11ff49de96d704595523f7f7c15f1883cf2"
         }
       }
     }

@@ -13,13 +13,13 @@
   "license": "BSD-3-Clause",
   "homepage": "https://filippo.io/yubikey-agent",
   "versions": {
-    "stable": "0.1.4",
+    "stable": "0.1.5",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/FiloSottile/yubikey-agent/archive/v0.1.4.tar.gz",
+      "url": "https://github.com/FiloSottile/yubikey-agent/archive/v0.1.5.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,28 +28,43 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 0,
+      "rebuild": 2,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/yubikey-agent/blobs/sha256:be5cb10b00b668117f846d909914b119313ba79f9d0a7170c81b471f775aeed9",
+          "sha256": "be5cb10b00b668117f846d909914b119313ba79f9d0a7170c81b471f775aeed9"
+        },
         "arm64_big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/yubikey-agent/blobs/sha256:950c6257f3a78028a23798ec38fc13b21b70c7995246d6bce8ab142b0467014f",
-          "sha256": "950c6257f3a78028a23798ec38fc13b21b70c7995246d6bce8ab142b0467014f"
+          "url": "https://ghcr.io/v2/homebrew/core/yubikey-agent/blobs/sha256:d00bf8d22edfe56f5352e59ff3c72d91e98dcf64d4acc3d1c7a5edbadd61402d",
+          "sha256": "d00bf8d22edfe56f5352e59ff3c72d91e98dcf64d4acc3d1c7a5edbadd61402d"
+        },
+        "monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/yubikey-agent/blobs/sha256:d5c58965efe5beed36e7927edd81cf15446015ddf05a6e35dda1ad7e7c1b8ade",
+          "sha256": "d5c58965efe5beed36e7927edd81cf15446015ddf05a6e35dda1ad7e7c1b8ade"
         },
         "big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/yubikey-agent/blobs/sha256:c039d2e64526ae2c7e488cdcf5c104579fecd447886cc857892c1efd28bf7b63",
-          "sha256": "c039d2e64526ae2c7e488cdcf5c104579fecd447886cc857892c1efd28bf7b63"
+          "url": "https://ghcr.io/v2/homebrew/core/yubikey-agent/blobs/sha256:29df3472e1a5e57ed20f54cef3a5c4e87662e5c64f55338b01239741795447c3",
+          "sha256": "29df3472e1a5e57ed20f54cef3a5c4e87662e5c64f55338b01239741795447c3"
         },
         "catalina": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/yubikey-agent/blobs/sha256:41bfe241c1ee1424ccee14ba04b583c71cb0dbf481db311fd1f12f552258f941",
-          "sha256": "41bfe241c1ee1424ccee14ba04b583c71cb0dbf481db311fd1f12f552258f941"
+          "url": "https://ghcr.io/v2/homebrew/core/yubikey-agent/blobs/sha256:4e7259eeb5ddd924251e7c73f6ae6904804193e4fee4d49e95fc02f211d3ac2e",
+          "sha256": "4e7259eeb5ddd924251e7c73f6ae6904804193e4fee4d49e95fc02f211d3ac2e"
         },
         "mojave": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/yubikey-agent/blobs/sha256:4ec8a15bca487e38310100533e787d8e7bcc80ab9f6d4285f49f9df58fbee5b3",
-          "sha256": "4ec8a15bca487e38310100533e787d8e7bcc80ab9f6d4285f49f9df58fbee5b3"
+          "url": "https://ghcr.io/v2/homebrew/core/yubikey-agent/blobs/sha256:bf031ee9b131fa3646b624bb6c84a0fc5b02f3abd6b693c5d5c488e58bb4e89c",
+          "sha256": "bf031ee9b131fa3646b624bb6c84a0fc5b02f3abd6b693c5d5c488e58bb4e89c"
+        },
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/yubikey-agent/blobs/sha256:cb43a6764a9caa2c39fba8bdd5ebe79c677923b004f8c2280213bb4afc298d17",
+          "sha256": "cb43a6764a9caa2c39fba8bdd5ebe79c677923b004f8c2280213bb4afc298d17"
         }
       }
     }
@@ -63,7 +78,7 @@
     "go"
   ],
   "dependencies": [
-    "pinentry-mac"
+
   ],
   "recommended_dependencies": [
 
@@ -72,7 +87,7 @@
 
   ],
   "uses_from_macos": [
-
+    "pcsc-lite"
   ],
   "requirements": [
 

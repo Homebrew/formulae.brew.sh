@@ -10,21 +10,61 @@
   "url": "https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.tar.gz",
   "appcast": null,
   "version": "latest",
+  "versions": {
+  },
   "installed": null,
   "outdated": false,
   "sha256": "no_check",
   "artifacts": [
-    [
-      "true"
-    ],
     {
       "delete": "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk",
       "signal": {
       }
     },
-    "postflight (Postflight Block)"
+    {
+      "path": "google-cloud-sdk/install.sh",
+      "args": {
+        "must_succeed": "true",
+        "sudo": "false",
+        "args": [
+          "--usage-reporting",
+          "false",
+          "--bash-completion",
+          "false",
+          "--path-update",
+          "false",
+          "--rc-path",
+          "false",
+          "--quiet",
+          "--install-python",
+          "false"
+        ],
+        "print_stdout": "true"
+      }
+    },
+    [
+      "google-cloud-sdk/bin/bq"
+    ],
+    [
+      "google-cloud-sdk/bin/docker-credential-gcloud"
+    ],
+    [
+      "google-cloud-sdk/bin/gcloud"
+    ],
+    [
+      "google-cloud-sdk/bin/git-credential-gcloud.sh",
+      {
+        "target": "git-credential-gcloud"
+      }
+    ],
+    [
+      "google-cloud-sdk/bin/gsutil"
+    ],
+    [
+      "google-cloud-sdk/bin/anthoscli"
+    ]
   ],
-  "caveats": "google-cloud-sdk is installed at $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk. Add your profile:\n\n  for bash users\n    source \"$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc\"\n    source \"$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc\"\n\n  for zsh users\n    source \"$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc\"\n    source \"$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc\"\n\n  for fish users\n    source \"$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc\"\n",
+  "caveats": "To install shell completions, add this to your profile:\n\n  for bash users\n    source \"$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc\"\n\n  for zsh users\n    source \"$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc\"\n",
   "depends_on": {
     "formula": [
       "python"

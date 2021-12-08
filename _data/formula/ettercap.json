@@ -31,6 +31,21 @@
       "rebuild": 1,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/ettercap/blobs/sha256:03b8f22c58c172d1e8f649d789eec2c92ba1b742f12c1681005a023b5ae6395f",
+          "sha256": "03b8f22c58c172d1e8f649d789eec2c92ba1b742f12c1681005a023b5ae6395f"
+        },
+        "arm64_big_sur": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/ettercap/blobs/sha256:9e53f689acd75a9aa32129e3aa3d81af5f799889ed3144adb3e867c6f2470369",
+          "sha256": "9e53f689acd75a9aa32129e3aa3d81af5f799889ed3144adb3e867c6f2470369"
+        },
+        "monterey": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/ettercap/blobs/sha256:ae97b65299092b6419c2786553381188d3303d7c4dd12d1c34d08042ccbae017",
+          "sha256": "ae97b65299092b6419c2786553381188d3303d7c4dd12d1c34d08042ccbae017"
+        },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
           "url": "https://ghcr.io/v2/homebrew/core/ettercap/blobs/sha256:471e0a6f6fb68103bc56ccf90b873cd86c235c34e88972828b6ba69dd2fd9f44",
@@ -50,6 +65,11 @@
           "cellar": "/usr/local/Cellar",
           "url": "https://ghcr.io/v2/homebrew/core/ettercap/blobs/sha256:3ab1aa27eef60cb9099bdd95ca330c0fd63dad10c169c968672bb44d97ae32e1",
           "sha256": "3ab1aa27eef60cb9099bdd95ca330c0fd63dad10c169c968672bb44d97ae32e1"
+        },
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/ettercap/blobs/sha256:58d95c7e206ac3c4f3ccb46f8427b40e63b70bf068239211a1e15656244a0b85",
+          "sha256": "58d95c7e206ac3c4f3ccb46f8427b40e63b70bf068239211a1e15656244a0b85"
         }
       }
     }
@@ -77,7 +97,10 @@
 
   ],
   "uses_from_macos": [
-
+    "curl",
+    "libpcap",
+    "ncurses",
+    "zlib"
   ],
   "requirements": [
 

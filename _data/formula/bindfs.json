@@ -10,16 +10,16 @@
 
   ],
   "desc": "FUSE file system for mounting to another location",
-  "license": "GPL-2.0",
+  "license": "GPL-2.0-or-later",
   "homepage": "https://bindfs.org/",
   "versions": {
-    "stable": "1.14.8",
+    "stable": "1.15.1",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://bindfs.org/downloads/bindfs-1.14.8.tar.gz",
+      "url": "https://bindfs.org/downloads/bindfs-1.15.1.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,20 +31,10 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
-        "catalina": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/bindfs/blobs/sha256:bf4fb90d788651299973a3f48300824ae6b4ec4ce1441dd94d544180f54379bd",
-          "sha256": "bf4fb90d788651299973a3f48300824ae6b4ec4ce1441dd94d544180f54379bd"
-        },
-        "mojave": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/bindfs/blobs/sha256:cc9d4950a1b74a27307bac429892fd85ad439f5707f53a66e800a39b23a32fdf",
-          "sha256": "cc9d4950a1b74a27307bac429892fd85ad439f5707f53a66e800a39b23a32fdf"
-        },
-        "high_sierra": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/bindfs/blobs/sha256:50df08ee8d3cc6f141d8488341f12c32ce478f02dfb8016f533bfeababfe4537",
-          "sha256": "50df08ee8d3cc6f141d8488341f12c32ce478f02dfb8016f533bfeababfe4537"
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/bindfs/blobs/sha256:735ffeec80a1525bfcfe246c699b2a2890f900694b741a1646efeb0f5ba918bf",
+          "sha256": "735ffeec80a1525bfcfe246c699b2a2890f900694b741a1646efeb0f5ba918bf"
         }
       }
     }
@@ -75,7 +65,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": null,
+  "caveats": "The reasons for disabling this formula can be found here:\n  https://github.com/Homebrew/homebrew-core/pull/64491\n\nAn external tap may provide a replacement formula. See:\n  https://docs.brew.sh/Interesting-Taps-and-Forks\n",
   "installed": [
 
   ],
@@ -87,5 +77,5 @@
   "deprecation_reason": null,
   "disabled": true,
   "disable_date": "2021-04-08",
-  "disable_reason": "requires FUSE"
+  "disable_reason": "requires closed-source macFUSE"
 }

@@ -15,7 +15,7 @@
   "versions": {
     "stable": "2.10",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
@@ -27,6 +27,17 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 1,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/net-tools/blobs/sha256:e08cb177a10583b6af76c29fa3c49c930d057aaa759946b72a579205d3fc093f",
+          "sha256": "e08cb177a10583b6af76c29fa3c49c930d057aaa759946b72a579205d3fc093f"
+        }
+      }
+    }
   },
   "keg_only": false,
   "bottle_disabled": false,
@@ -34,7 +45,7 @@
 
   ],
   "build_dependencies": [
-    "gettext"
+
   ],
   "dependencies": [
     "libdnet"

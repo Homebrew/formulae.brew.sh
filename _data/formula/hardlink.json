@@ -10,7 +10,7 @@
 
   ],
   "desc": "Replace file copies using hardlinks",
-  "license": null,
+  "license": "MIT",
   "homepage": "https://jak-linux.org/projects/hardlink/",
   "versions": {
     "stable": "0.3.0",
@@ -31,10 +31,20 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/hardlink/blobs/sha256:88e89ffc8475533034d4b4374d9554702c77397a8e252e8e3746a5f5bc6f66b0",
+          "sha256": "88e89ffc8475533034d4b4374d9554702c77397a8e252e8e3746a5f5bc6f66b0"
+        },
         "arm64_big_sur": {
           "cellar": ":any",
           "url": "https://ghcr.io/v2/homebrew/core/hardlink/blobs/sha256:fe5acfbc7a123db425beb0257ca23f4286b3260bd76b81027ee7528cc05bfdfd",
           "sha256": "fe5acfbc7a123db425beb0257ca23f4286b3260bd76b81027ee7528cc05bfdfd"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/hardlink/blobs/sha256:3d173e277d659f561dae36da590d56edf53aa759cee210cbaaa8fcaa0f6dea6a",
+          "sha256": "3d173e277d659f561dae36da590d56edf53aa759cee210cbaaa8fcaa0f6dea6a"
         },
         "big_sur": {
           "cellar": ":any",
@@ -70,6 +80,11 @@
           "cellar": ":any",
           "url": "https://ghcr.io/v2/homebrew/core/hardlink/blobs/sha256:36c30ed90a3d2b9d2d4d07cb182c2838dfba276a05c22d022a42e16043e86f02",
           "sha256": "36c30ed90a3d2b9d2d4d07cb182c2838dfba276a05c22d022a42e16043e86f02"
+        },
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/hardlink/blobs/sha256:b849b6cdc2d96380221c9dddc48a4c6485db0f4257ea7c48ade59b50e29f7bfd",
+          "sha256": "b849b6cdc2d96380221c9dddc48a4c6485db0f4257ea7c48ade59b50e29f7bfd"
         }
       }
     }
@@ -99,7 +114,7 @@
 
   ],
   "conflicts_with": [
-    "util-linux"
+
   ],
   "caveats": null,
   "installed": [
@@ -108,9 +123,9 @@
   "linked_keg": null,
   "pinned": false,
   "outdated": false,
-  "deprecated": false,
-  "deprecation_date": null,
-  "deprecation_reason": null,
+  "deprecated": true,
+  "deprecation_date": "2021-02-17",
+  "deprecation_reason": "has been merged into `util-linux`",
   "disabled": false,
   "disable_date": null,
   "disable_reason": null

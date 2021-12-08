@@ -13,38 +13,43 @@
   "license": "GPL-3.0-only",
   "homepage": "https://openmodelica.org/",
   "versions": {
-    "stable": "1.16.5",
+    "stable": "1.18.0",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
       "url": "https://github.com/OpenModelica/OpenModelica.git",
-      "tag": "v1.16.5",
-      "revision": "11fcab4f2d6895f2db073572b2bff1a43177313f"
+      "tag": "v1.18.0",
+      "revision": "49be4faa5a625a18efbbd74cc2f5be86aeea37bb"
     }
   },
   "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_big_sur": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/openmodelica/blobs/sha256:ae01ecea5750cd6029053d7bfdf03f7722fd0481b95e43182fd6ab1c74861df7",
+          "sha256": "ae01ecea5750cd6029053d7bfdf03f7722fd0481b95e43182fd6ab1c74861df7"
+        },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/openmodelica/blobs/sha256:bffa7dc5380a70a9d158ff22277113396ed4d9102308531c2addd12f4e10d9e1",
-          "sha256": "bffa7dc5380a70a9d158ff22277113396ed4d9102308531c2addd12f4e10d9e1"
+          "url": "https://ghcr.io/v2/homebrew/core/openmodelica/blobs/sha256:b529ee360266bccd78eae00770243d22ae7b18f801166935e4b8d7acc975b9e5",
+          "sha256": "b529ee360266bccd78eae00770243d22ae7b18f801166935e4b8d7acc975b9e5"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/openmodelica/blobs/sha256:bf668ccb74f44cac73702fa18f7561c38b86ed97195e3c0b3300b541caf92593",
-          "sha256": "bf668ccb74f44cac73702fa18f7561c38b86ed97195e3c0b3300b541caf92593"
+          "url": "https://ghcr.io/v2/homebrew/core/openmodelica/blobs/sha256:bd1b777e0519fb24150ef32346a60044fad89d6e85b3f1cd31296e0906d630bc",
+          "sha256": "bd1b777e0519fb24150ef32346a60044fad89d6e85b3f1cd31296e0906d630bc"
         },
         "mojave": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/openmodelica/blobs/sha256:1754d9ab98671cd3b2a9af2dbd09553370a63fd41eb05797f7ff3c52d367daa0",
-          "sha256": "1754d9ab98671cd3b2a9af2dbd09553370a63fd41eb05797f7ff3c52d367daa0"
+          "url": "https://ghcr.io/v2/homebrew/core/openmodelica/blobs/sha256:e83debeb07e63c23945af3aa3ba904bce30d28ffb4ff1213314d3a25cb90feea",
+          "sha256": "e83debeb07e63c23945af3aa3ba904bce30d28ffb4ff1213314d3a25cb90feea"
         }
       }
     }
@@ -58,7 +63,7 @@
     "autoconf",
     "automake",
     "cmake",
-    "gcc@10",
+    "gcc",
     "gnu-sed",
     "libtool",
     "openjdk",

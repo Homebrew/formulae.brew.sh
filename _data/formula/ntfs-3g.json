@@ -10,41 +10,31 @@
 
   ],
   "desc": "Read-write NTFS driver for FUSE",
-  "license": null,
+  "license": "GPL-2.0-or-later and LGPL-2.0-or-later",
   "homepage": "https://www.tuxera.com/community/open-source-ntfs-3g/",
   "versions": {
-    "stable": "2017.3.23",
+    "stable": "2021.8.22",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://tuxera.com/opensource/ntfs-3g_ntfsprogs-2017.3.23.tgz",
+      "url": "https://tuxera.com/opensource/ntfs-3g_ntfsprogs-2021.8.22.tgz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 3,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
-        "catalina": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/ntfs-3g/blobs/sha256:512daef6a2d9d74416ebb67c08d1c750cae0ba717b6338bd188b3434ad5725db",
-          "sha256": "512daef6a2d9d74416ebb67c08d1c750cae0ba717b6338bd188b3434ad5725db"
-        },
-        "mojave": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/ntfs-3g/blobs/sha256:58304b5065b3ec2e32f2e455c9cc2bcd7f60b6f177c57c60dd0a3eb607d6d4a1",
-          "sha256": "58304b5065b3ec2e32f2e455c9cc2bcd7f60b6f177c57c60dd0a3eb607d6d4a1"
-        },
-        "high_sierra": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/ntfs-3g/blobs/sha256:0c52a06810814dafc2837fa631a08e607a49da99e3be000ee61cd763f24ca7fc",
-          "sha256": "0c52a06810814dafc2837fa631a08e607a49da99e3be000ee61cd763f24ca7fc"
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/ntfs-3g/blobs/sha256:4ec7322145e67988020b06ac47004aadc9cc1ffdfea213d82b787ebbb44bfaef",
+          "sha256": "4ec7322145e67988020b06ac47004aadc9cc1ffdfea213d82b787ebbb44bfaef"
         }
       }
     }
@@ -76,7 +66,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": null,
+  "caveats": "The reasons for disabling this formula can be found here:\n  https://github.com/Homebrew/homebrew-core/pull/64491\n\nAn external tap may provide a replacement formula. See:\n  https://docs.brew.sh/Interesting-Taps-and-Forks\n",
   "installed": [
 
   ],
@@ -88,5 +78,5 @@
   "deprecation_reason": null,
   "disabled": true,
   "disable_date": "2021-04-08",
-  "disable_reason": "requires FUSE"
+  "disable_reason": "requires closed-source macFUSE"
 }

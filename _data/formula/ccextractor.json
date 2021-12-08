@@ -10,16 +10,16 @@
 
   ],
   "desc": "Free, GPL licensed closed caption tool",
-  "license": "GPL-2.0",
+  "license": "GPL-2.0-only",
   "homepage": "https://www.ccextractor.org/",
   "versions": {
-    "stable": "0.88",
+    "stable": "0.93",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/CCExtractor/ccextractor/archive/v0.88.tar.gz",
+      "url": "https://github.com/CCExtractor/ccextractor/archive/v0.93.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,30 +31,40 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/ccextractor/blobs/sha256:2bff9205c6edf2abfc0dc1190f174e986e41163850611972b64c2feba4938a65",
+          "sha256": "2bff9205c6edf2abfc0dc1190f174e986e41163850611972b64c2feba4938a65"
+        },
+        "arm64_big_sur": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/ccextractor/blobs/sha256:6efaaf1c5561ca5b8111ec6d5c4a218478b1ab516879eeed63c253413c29a0fd",
+          "sha256": "6efaaf1c5561ca5b8111ec6d5c4a218478b1ab516879eeed63c253413c29a0fd"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/ccextractor/blobs/sha256:b222085a66cd8bf4c5dddeb77f24c79c7137eda6cc22d109aecf58cc9f07ba15",
+          "sha256": "b222085a66cd8bf4c5dddeb77f24c79c7137eda6cc22d109aecf58cc9f07ba15"
+        },
         "big_sur": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/ccextractor/blobs/sha256:d728849547605c278baea4db869d73a585f79504923b0456819155f1b15a739d",
-          "sha256": "d728849547605c278baea4db869d73a585f79504923b0456819155f1b15a739d"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/ccextractor/blobs/sha256:0a1b989824260d96acce3c9e918d931b59cd3ccebb4be4a3b076d6b7b0829d8a",
+          "sha256": "0a1b989824260d96acce3c9e918d931b59cd3ccebb4be4a3b076d6b7b0829d8a"
         },
         "catalina": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/ccextractor/blobs/sha256:aaba08da14a3266a7b60bcd232c24d121ba9aa1741e768f54e77fd09f6c67fcc",
-          "sha256": "aaba08da14a3266a7b60bcd232c24d121ba9aa1741e768f54e77fd09f6c67fcc"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/ccextractor/blobs/sha256:ca8aa899175221e1fe2bd7a1fb2fe5b955e130f0abf0ab9ae6d03c99732b7a3a",
+          "sha256": "ca8aa899175221e1fe2bd7a1fb2fe5b955e130f0abf0ab9ae6d03c99732b7a3a"
         },
         "mojave": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/ccextractor/blobs/sha256:87a9b43c6ac20b2dc270cc35b1da0df4a92758bc722882407dcacbacb7e806d7",
-          "sha256": "87a9b43c6ac20b2dc270cc35b1da0df4a92758bc722882407dcacbacb7e806d7"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/ccextractor/blobs/sha256:196b7762b3ca019d7a99b678759a0b317e29f15cdd64e19ca7512dd6cd25a6ec",
+          "sha256": "196b7762b3ca019d7a99b678759a0b317e29f15cdd64e19ca7512dd6cd25a6ec"
         },
-        "high_sierra": {
+        "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/ccextractor/blobs/sha256:35be2be5fd71b1784b85a7bd5ba7ccf35f987fd6ed0548df7864cd686e28c5c0",
-          "sha256": "35be2be5fd71b1784b85a7bd5ba7ccf35f987fd6ed0548df7864cd686e28c5c0"
-        },
-        "sierra": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/ccextractor/blobs/sha256:9c78ad6dd2f3c02ef7ca508af88114f8deffa691cf3a546e6ca09ed279b80758",
-          "sha256": "9c78ad6dd2f3c02ef7ca508af88114f8deffa691cf3a546e6ca09ed279b80758"
+          "url": "https://ghcr.io/v2/homebrew/core/ccextractor/blobs/sha256:9ff529cb0ced01ab4a410bb3e28f51cedaec71394560fabad5f6060522090ddf",
+          "sha256": "9ff529cb0ced01ab4a410bb3e28f51cedaec71394560fabad5f6060522090ddf"
         }
       }
     }
@@ -65,10 +75,16 @@
 
   ],
   "build_dependencies": [
-
+    "pkg-config"
   ],
   "dependencies": [
-
+    "freetype",
+    "gpac",
+    "leptonica",
+    "libpng",
+    "protobuf-c",
+    "tesseract",
+    "utf8proc"
   ],
   "recommended_dependencies": [
 

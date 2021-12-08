@@ -9,11 +9,29 @@
   "homepage": "https://anydesk.com/",
   "url": "https://download.anydesk.com/anydesk.dmg",
   "appcast": null,
-  "version": "6.2.0",
+  "version": "6.3.3",
+  "versions": {
+  },
   "installed": null,
   "outdated": false,
   "sha256": "no_check",
   "artifacts": [
+    {
+      "quit": [
+        "com.philandro.anydesk",
+        "com.philandro.anydesk.Helper",
+        "com.philandro.anydesk.service",
+        "com.philandro.anydesk.Frontend"
+      ],
+      "delete": [
+        "/Library/LaunchAgents/com.philandro.anydesk.Frontend.plist",
+        "/Library/LaunchDaemons/com.philandro.anydesk.Helper.plist",
+        "/Library/LaunchDaemons/com.philandro.anydesk.service.plist",
+        "/Library/PrivilegedHelperTools/com.philandro.anydesk.Helper"
+      ],
+      "signal": {
+      }
+    },
     [
       "AnyDesk.app"
     ],

@@ -13,43 +13,53 @@
   "license": "MIT",
   "homepage": "https://easyrpg.org/",
   "versions": {
-    "stable": "0.6.2",
+    "stable": "0.7.0",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://easyrpg.org/downloads/player/0.6.2/liblcf-0.6.2.tar.xz",
+      "url": "https://easyrpg.org/downloads/player/0.7.0/liblcf-0.7.0.tar.xz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 3,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/liblcf/blobs/sha256:7f1164e942934fc234d035cfc9eab11330831244bc69a96061fb3cefc00dd03b",
+          "sha256": "7f1164e942934fc234d035cfc9eab11330831244bc69a96061fb3cefc00dd03b"
+        },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/liblcf/blobs/sha256:ac4128d58f95e92dbb494d02fd3a9c75f41f024c37bf5225e5b4dc551bbd207b",
-          "sha256": "ac4128d58f95e92dbb494d02fd3a9c75f41f024c37bf5225e5b4dc551bbd207b"
+          "url": "https://ghcr.io/v2/homebrew/core/liblcf/blobs/sha256:be2a943fe7db52a0a29c910e04f981464a58e0cab77b65b3f0c39fd56490635b",
+          "sha256": "be2a943fe7db52a0a29c910e04f981464a58e0cab77b65b3f0c39fd56490635b"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/liblcf/blobs/sha256:5520823380b4ff8f68aeaacef327c264e6edd9208e30acd717d792d527aa3763",
+          "sha256": "5520823380b4ff8f68aeaacef327c264e6edd9208e30acd717d792d527aa3763"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/liblcf/blobs/sha256:4324dce9a80a86cbd12fa12f73719cf5a9710f42d7b5d71e29d87fd4179f685c",
-          "sha256": "4324dce9a80a86cbd12fa12f73719cf5a9710f42d7b5d71e29d87fd4179f685c"
+          "url": "https://ghcr.io/v2/homebrew/core/liblcf/blobs/sha256:7ef6b01e609ba9d7f4d57d28b97e396122b6f09245954a6229493d86ea3aa879",
+          "sha256": "7ef6b01e609ba9d7f4d57d28b97e396122b6f09245954a6229493d86ea3aa879"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/liblcf/blobs/sha256:928d1095b1b008b0416636501459f0ff7bd22d8b69eef75ea9e4c151dafbe703",
-          "sha256": "928d1095b1b008b0416636501459f0ff7bd22d8b69eef75ea9e4c151dafbe703"
+          "url": "https://ghcr.io/v2/homebrew/core/liblcf/blobs/sha256:f73afcd81ca34da7633475f9ee5cb470b12fd5e485199bc5073d6d30dacbb77f",
+          "sha256": "f73afcd81ca34da7633475f9ee5cb470b12fd5e485199bc5073d6d30dacbb77f"
         },
-        "mojave": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/liblcf/blobs/sha256:0391e77bd5cefbdfdda6ba603a01e8c206b21acb662649f2e602d66e6f9401ca",
-          "sha256": "0391e77bd5cefbdfdda6ba603a01e8c206b21acb662649f2e602d66e6f9401ca"
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/liblcf/blobs/sha256:b640ca618fe564b9377ebdb7d7f3b7adcdcbef7690ae2e4a37b473d21c0e255a",
+          "sha256": "b640ca618fe564b9377ebdb7d7f3b7adcdcbef7690ae2e4a37b473d21c0e255a"
         }
       }
     }
@@ -60,7 +70,7 @@
 
   ],
   "build_dependencies": [
-    "pkg-config"
+    "cmake"
   ],
   "dependencies": [
     "icu4c"

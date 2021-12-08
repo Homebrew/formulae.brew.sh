@@ -7,6 +7,7 @@
 
   ],
   "versioned_formulae": [
+    "mariadb@10.5",
     "mariadb@10.4",
     "mariadb@10.2",
     "mariadb@10.1"
@@ -15,13 +16,13 @@
   "license": "GPL-2.0-only",
   "homepage": "https://mariadb.org/",
   "versions": {
-    "stable": "10.3.28",
+    "stable": "10.3.32",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://downloads.mariadb.org/f/mariadb-10.3.28/source/mariadb-10.3.28.tar.gz",
+      "url": "https://downloads.mariadb.com/MariaDB/mariadb-10.3.32/source/mariadb-10.3.32.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,20 +34,35 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/mariadb/10.3/blobs/sha256:818f0d840d9ea1d60dd7e90fa138819ed641cf58e1b2cb8dcd5da24f065cfbd6",
+          "sha256": "818f0d840d9ea1d60dd7e90fa138819ed641cf58e1b2cb8dcd5da24f065cfbd6"
+        },
+        "arm64_big_sur": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/mariadb/10.3/blobs/sha256:b11dafec6866b4b2297c4c584cb60357f70732f9c732e82f1336aa5c5a53e344",
+          "sha256": "b11dafec6866b4b2297c4c584cb60357f70732f9c732e82f1336aa5c5a53e344"
+        },
+        "monterey": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/mariadb/10.3/blobs/sha256:05ee47872fdad7dceb6364a042d4d23da83cd2b32021dc8c3f7e61dcb48922ca",
+          "sha256": "05ee47872fdad7dceb6364a042d4d23da83cd2b32021dc8c3f7e61dcb48922ca"
+        },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/mariadb/10.3/blobs/sha256:8a0c8aa99124536d89771c180d9826f6936878377f2826a08ed3a61a131c4ec8",
-          "sha256": "8a0c8aa99124536d89771c180d9826f6936878377f2826a08ed3a61a131c4ec8"
+          "url": "https://ghcr.io/v2/homebrew/core/mariadb/10.3/blobs/sha256:2dca333b2b1d57271f3d317b4d56c2d5889fd96238f9e57947b24664cd70d459",
+          "sha256": "2dca333b2b1d57271f3d317b4d56c2d5889fd96238f9e57947b24664cd70d459"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/mariadb/10.3/blobs/sha256:26baf487ebd0277d313655907bbe344fec667540ad17b5ca9b988ae52b3bcd39",
-          "sha256": "26baf487ebd0277d313655907bbe344fec667540ad17b5ca9b988ae52b3bcd39"
+          "url": "https://ghcr.io/v2/homebrew/core/mariadb/10.3/blobs/sha256:0d8ee6440ee674aba993ae1807903e87f27074d52cd7c359190aa72f5702d1ca",
+          "sha256": "0d8ee6440ee674aba993ae1807903e87f27074d52cd7c359190aa72f5702d1ca"
         },
-        "mojave": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/mariadb/10.3/blobs/sha256:bec90c0b546b96a19674bdd451b09094d2d53fcaba4e7f3092b4906ee38026cf",
-          "sha256": "bec90c0b546b96a19674bdd451b09094d2d53fcaba4e7f3092b4906ee38026cf"
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/mariadb/10.3/blobs/sha256:123b313ecbbbea3071e5b55f046e8f3b40702b43423210daf730fdaa9ea0b84f",
+          "sha256": "123b313ecbbbea3071e5b55f046e8f3b40702b43423210daf730fdaa9ea0b84f"
         }
       }
     }
@@ -57,12 +73,14 @@
 
   ],
   "build_dependencies": [
+    "bison",
     "cmake",
     "pkg-config"
   ],
   "dependencies": [
     "groonga",
-    "openssl@1.1"
+    "openssl@1.1",
+    "pcre2"
   ],
   "recommended_dependencies": [
 
@@ -71,7 +89,9 @@
 
   ],
   "uses_from_macos": [
-
+    "bzip2",
+    "ncurses",
+    "zlib"
   ],
   "requirements": [
 

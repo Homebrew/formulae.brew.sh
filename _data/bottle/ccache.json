@@ -1,29 +1,69 @@
 {
   "name": "ccache",
-  "pkg_version": "4.3",
+  "pkg_version": "4.5.1",
   "rebuild": 0,
   "bottles": {
+    "arm64_monterey": {
+      "url": "https://ghcr.io/v2/homebrew/core/ccache/blobs/sha256:400d5e7df0557fcd5da23b09eb2ad2a3349db05c6fd2cbed77fa9b5cb1e5842c"
+    },
     "arm64_big_sur": {
-      "url": "https://ghcr.io/v2/homebrew/core/ccache/blobs/sha256:77ef6571b788e52f9f90d95911955ce9cfedf8a971c7634a3d5ae9014ae7777c"
+      "url": "https://ghcr.io/v2/homebrew/core/ccache/blobs/sha256:1d03e8a6728d908b222ec0d929c848209edb0e76720959212e35205cf64e0c87"
+    },
+    "monterey": {
+      "url": "https://ghcr.io/v2/homebrew/core/ccache/blobs/sha256:1cb93db06abd2a421e853a47ab40cbf57c6cf27eb51433dd1e2e51b921670585"
     },
     "big_sur": {
-      "url": "https://ghcr.io/v2/homebrew/core/ccache/blobs/sha256:017d4408111c3f5146c95a18aaa11d9dc623af7d257386f28b80076a98798bcd"
+      "url": "https://ghcr.io/v2/homebrew/core/ccache/blobs/sha256:44638dde6b3c03920200fa2385456915461ce7338ac604e87ac0b234f0b72917"
     },
     "catalina": {
-      "url": "https://ghcr.io/v2/homebrew/core/ccache/blobs/sha256:4e905bb6bba1479b2cdf3c93c10f21684f50ac7dbdbada7d292aaaa58e87f7a2"
+      "url": "https://ghcr.io/v2/homebrew/core/ccache/blobs/sha256:5aa9f5e03470cbc2af290f34dfdec800defc00af41ee6dc1e4348d171dcfd8f4"
     },
-    "mojave": {
-      "url": "https://ghcr.io/v2/homebrew/core/ccache/blobs/sha256:8001d6a3ff290c51eccc358c465d652758243540a9647606b608d6b6312b34e3"
+    "x86_64_linux": {
+      "url": "https://ghcr.io/v2/homebrew/core/ccache/blobs/sha256:84f24419115c4fa4d9b6631d49ccf957968a5defce895606fdf31ce954cfc64b"
     }
   },
   "dependencies": [
+    {
+      "name": "hiredis",
+      "pkg_version": "1.0.2",
+      "rebuild": 0,
+      "bottles": {
+        "arm64_monterey": {
+          "url": "https://ghcr.io/v2/homebrew/core/hiredis/blobs/sha256:e499ad54baf866fd665c1160db82f235cd9cb84f8ae369f0be4a14a52e81eae0"
+        },
+        "arm64_big_sur": {
+          "url": "https://ghcr.io/v2/homebrew/core/hiredis/blobs/sha256:95224205d629a4e8715c1e66d722cb580ccd4c78ce5e943f70cd8bde0021e641"
+        },
+        "monterey": {
+          "url": "https://ghcr.io/v2/homebrew/core/hiredis/blobs/sha256:61d0cc662645452391544eaed8720a8043d65ed742a6119166d6b6d98ea62a3f"
+        },
+        "big_sur": {
+          "url": "https://ghcr.io/v2/homebrew/core/hiredis/blobs/sha256:5cbf446863123927636711ced21b342fa66568de9b25ec793fd54d3b3b53ca41"
+        },
+        "catalina": {
+          "url": "https://ghcr.io/v2/homebrew/core/hiredis/blobs/sha256:14ae7b3adb354b673a3744e9d849d6698846d5162d3d5f0eb8f9d8837c858e75"
+        },
+        "mojave": {
+          "url": "https://ghcr.io/v2/homebrew/core/hiredis/blobs/sha256:050805a747642516f0b8a9573f2b2935de26089b7f0380b84f6f8a6e4ab41b50"
+        },
+        "x86_64_linux": {
+          "url": "https://ghcr.io/v2/homebrew/core/hiredis/blobs/sha256:93cdd4749c4f2c4d3862de2a7bacd687a7900c9b3343b9a69ef163b16d3b0e94"
+        }
+      }
+    },
     {
       "name": "zstd",
       "pkg_version": "1.5.0",
       "rebuild": 0,
       "bottles": {
+        "arm64_monterey": {
+          "url": "https://ghcr.io/v2/homebrew/core/zstd/blobs/sha256:ef556ff4a87c5e24a9c489759d713dfcdb1fed7cfed9f49d8f3564a764a695b6"
+        },
         "arm64_big_sur": {
           "url": "https://ghcr.io/v2/homebrew/core/zstd/blobs/sha256:e8962c7923904213f312c86372b670b6b5a7ac7103ee63254ab3d1c349913246"
+        },
+        "monterey": {
+          "url": "https://ghcr.io/v2/homebrew/core/zstd/blobs/sha256:f9320c7fb19940130ab8a46c84a964b0366d2dff72b71bf3af7737a9b72f8ada"
         },
         "big_sur": {
           "url": "https://ghcr.io/v2/homebrew/core/zstd/blobs/sha256:eae17621cfc664d6e527a6d6aa6a000343eced0f60c81b4e2dd9a9aed7b79c3f"
@@ -33,6 +73,9 @@
         },
         "mojave": {
           "url": "https://ghcr.io/v2/homebrew/core/zstd/blobs/sha256:8089b1b5c398c95af5eaacea6033829dd8d255c9f32d6fa2f0c436821c902087"
+        },
+        "x86_64_linux": {
+          "url": "https://ghcr.io/v2/homebrew/core/zstd/blobs/sha256:0fcd15f865d47d9140af51b05c99a3bab12fdfa10f78b47e296eb82f53f685ba"
         }
       }
     }

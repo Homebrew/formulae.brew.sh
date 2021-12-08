@@ -6,6 +6,11 @@ on:
   schedule:
     # Once every hour
     - cron: "0 * * * *"
+
+concurrency:
+  group: scheduled
+  cancel-in-progress: true
+
 jobs:
   generate:
     if: startsWith( github.repository, 'Homebrew/' )
@@ -41,7 +46,7 @@ jobs:
 
       - name: Set up Ruby
         if: matrix.os == 'ubuntu-latest'
-        uses: actions/setup-ruby@main
+        uses: ruby/setup-ruby@v1
         with:
           ruby-version: "2.6"
 
@@ -58,26 +63,33 @@ jobs:
           brew update-reset $(brew --repository homebrew/cask)
           /usr/bin/rake cask
 
+          /usr/bin/rake api_samples
+
           git reset origin/master
           git add _data/formula{,_canonical.json} _data/bottle api/formula api/bottle formula
           if ! git diff --no-patch --exit-code HEAD -- _data/analytics _data/formula{,_canonical.json} _data/bottle api/formula api/bottle formula cask; then
             git commit -m "formula: updates from homebrew/core" _data/analytics _data/formula{,_canonical.json} _data/bottle api/formula api/bottle formula cask
           fi
 
-          git add _data/cask api/cask cask
-          if ! git diff --no-patch --exit-code HEAD -- _data/cask api/cask cask; then
-            git commit -m "cask: updates from homebrew/cask" _data/cask api/cask cask
+          git add _data/cask api/cask api/cask-source cask
+          if ! git diff --no-patch --exit-code HEAD -- _data/cask api/cask api/cask-source cask; then
+            git commit -m "cask: updates from homebrew/cask" _data/cask api/cask api/cask-source cask
           fi
 
-      - name: Update data for Homebrew/linuxbrew-core
+          git add _includes/api-samples
+          if ! git diff --no-patch --exit-code HEAD -- _includes/api-samples; then
+            git commit -m "docs: update API samples" _includes/api-samples
+          fi
+
+      - name: Update analytics data for Homebrew/linuxbrew-core
         if: matrix.os == 'ubuntu-latest'
         run: |
-          rake linux_formula_and_analytics
+          rake linux_analytics
 
           git reset origin/master
-          git add _data/analytics-linux _data/formula-linux{,_canonical.json} _data/bottle-linux api/formula-linux api/bottle-linux formula-linux
-          if ! git diff --no-patch --exit-code HEAD -- _data/analytics-linux _data/formula-linux{,_canonical.json} _data/bottle-linux api/formula-linux api/bottle-linux formula-linux; then
-            git commit -m "formula-linux: updates from Homebrew/linuxbrew-core" _data/analytics-linux _data/formula-linux{,_canonical.json} _data/bottle-linux api/formula-linux api/bottle-linux formula-linux
+          git add _data/analytics-linux
+          if ! git diff --no-patch --exit-code HEAD -- _data/analytics-linux; then
+            git commit -m "analytics-linux: Updates from Linuxbrew's GA" _data/analytics-linux
           fi
 
       - name: Push commits

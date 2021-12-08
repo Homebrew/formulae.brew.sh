@@ -11,15 +11,15 @@
   ],
   "desc": "Cross-platform tool and drivers for liquid coolers and other devices",
   "license": "GPL-3.0-or-later",
-  "homepage": "https://github.com/jonasmalacofilho/liquidctl",
+  "homepage": "https://github.com/liquidctl/liquidctl",
   "versions": {
-    "stable": "1.6.1",
+    "stable": "1.7.2",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://files.pythonhosted.org/packages/8b/aa/fe1e38a2092a674e80def5dcde1d54ae41da7b9424d143f35b1179e9faa1/liquidctl-1.6.1.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/e4/f5/745cc14e5748de5d5ac3ccc1a0a9ee5e0e73858aafcc863514ce88956c0b/liquidctl-1.7.2.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,25 +31,40 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/liquidctl/blobs/sha256:8b23f4d0d050a0d23265a693a95aa8136e23182d055b29900e6a472bdce0faad",
+          "sha256": "8b23f4d0d050a0d23265a693a95aa8136e23182d055b29900e6a472bdce0faad"
+        },
         "arm64_big_sur": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/liquidctl/blobs/sha256:756b2b32a0e6440ef2fb75ac6273c1211960fb132d4a0afc062ef4c41fea5411",
-          "sha256": "756b2b32a0e6440ef2fb75ac6273c1211960fb132d4a0afc062ef4c41fea5411"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/liquidctl/blobs/sha256:f328324cba24b07779199d88ce405d2f6a8a4e023021f71cb8b745b698cd675c",
+          "sha256": "f328324cba24b07779199d88ce405d2f6a8a4e023021f71cb8b745b698cd675c"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/liquidctl/blobs/sha256:1e162bec371b1719136560651500a019b4c46b13153d4c01e813c1bcedcceb09",
+          "sha256": "1e162bec371b1719136560651500a019b4c46b13153d4c01e813c1bcedcceb09"
         },
         "big_sur": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/liquidctl/blobs/sha256:63068884b025d541321ad4e7a35e06547b700a1b687fb0e81a347fdf20759f0e",
-          "sha256": "63068884b025d541321ad4e7a35e06547b700a1b687fb0e81a347fdf20759f0e"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/liquidctl/blobs/sha256:bad09035eeea790c15be5d4f888e5e7d289f2e6d826af9e5e568907275503d70",
+          "sha256": "bad09035eeea790c15be5d4f888e5e7d289f2e6d826af9e5e568907275503d70"
         },
         "catalina": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/liquidctl/blobs/sha256:8b736b2048c0732d0777238ba4a34135906a3d50c9a5018dc292fea77857ab59",
-          "sha256": "8b736b2048c0732d0777238ba4a34135906a3d50c9a5018dc292fea77857ab59"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/liquidctl/blobs/sha256:c20cb061748d4bcc952ed77ab148ca73a4bed576bbe5e1c9b7595eca9a74f8e0",
+          "sha256": "c20cb061748d4bcc952ed77ab148ca73a4bed576bbe5e1c9b7595eca9a74f8e0"
         },
         "mojave": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/liquidctl/blobs/sha256:68edf5e0b19b017ab73a4381525ea5cc9b365c4284ea6ea80e00c09cbbdd7299",
+          "sha256": "68edf5e0b19b017ab73a4381525ea5cc9b365c4284ea6ea80e00c09cbbdd7299"
+        },
+        "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/liquidctl/blobs/sha256:cd4a4c709d22b120df4c2ef1206ebd84cbc1c268fb20f0e5bccee59f7a9c3161",
-          "sha256": "cd4a4c709d22b120df4c2ef1206ebd84cbc1c268fb20f0e5bccee59f7a9c3161"
+          "url": "https://ghcr.io/v2/homebrew/core/liquidctl/blobs/sha256:d9def490100759b197a6785a095d322cd9958bbe9ecbe6b09c8da081d7cf7b51",
+          "sha256": "d9def490100759b197a6785a095d322cd9958bbe9ecbe6b09c8da081d7cf7b51"
         }
       }
     }
@@ -63,8 +78,9 @@
 
   ],
   "dependencies": [
+    "hidapi",
     "libusb",
-    "python@3.9"
+    "python@3.10"
   ],
   "recommended_dependencies": [
 

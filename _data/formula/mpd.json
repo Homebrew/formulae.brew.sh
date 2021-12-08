@@ -13,13 +13,13 @@
   "license": "GPL-2.0-or-later",
   "homepage": "https://www.musicpd.org/",
   "versions": {
-    "stable": "0.22.8",
+    "stable": "0.23.5",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://www.musicpd.org/download/mpd/0.22/mpd-0.22.8.tar.xz",
+      "url": "https://www.musicpd.org/download/mpd/0.23/mpd-0.23.5.tar.xz",
       "tag": null,
       "revision": null
     }
@@ -31,25 +31,35 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/mpd/blobs/sha256:05a1bfc7e55dc393d896b8e8df22fde32687ff5c7bf56c8077bbe2e460e66921",
+          "sha256": "05a1bfc7e55dc393d896b8e8df22fde32687ff5c7bf56c8077bbe2e460e66921"
+        },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/mpd/blobs/sha256:246e858d3140b39ef7c628ea4ec26da926519e7f933dc59298797a67ee8f9d8e",
-          "sha256": "246e858d3140b39ef7c628ea4ec26da926519e7f933dc59298797a67ee8f9d8e"
+          "url": "https://ghcr.io/v2/homebrew/core/mpd/blobs/sha256:4c5cbed8ed3b290d312cd4461f3395aeac17736c66ee707ba3ac2e4b4aa8ce63",
+          "sha256": "4c5cbed8ed3b290d312cd4461f3395aeac17736c66ee707ba3ac2e4b4aa8ce63"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/mpd/blobs/sha256:2c2f446e3de739cef30d96e46781b552c058f4dc2d7fb455c607038b88f747e8",
+          "sha256": "2c2f446e3de739cef30d96e46781b552c058f4dc2d7fb455c607038b88f747e8"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/mpd/blobs/sha256:7c8bbe79789bc8c2b870cd1adc36364f01fbb240465c976e6f7049b4740439e4",
-          "sha256": "7c8bbe79789bc8c2b870cd1adc36364f01fbb240465c976e6f7049b4740439e4"
+          "url": "https://ghcr.io/v2/homebrew/core/mpd/blobs/sha256:0ce780601f044697ec980c61205eaf786b8a45ed9650eeb5e1397162af0c1364",
+          "sha256": "0ce780601f044697ec980c61205eaf786b8a45ed9650eeb5e1397162af0c1364"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/mpd/blobs/sha256:294a0ac898cbb3a3885e923b6bf618d52c9735585f93a22f766d4e709f090a14",
-          "sha256": "294a0ac898cbb3a3885e923b6bf618d52c9735585f93a22f766d4e709f090a14"
+          "url": "https://ghcr.io/v2/homebrew/core/mpd/blobs/sha256:58662cd464e559a839be065b0bc991cd090d9324dda727d052037d6b4ee462c7",
+          "sha256": "58662cd464e559a839be065b0bc991cd090d9324dda727d052037d6b4ee462c7"
         },
-        "mojave": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/mpd/blobs/sha256:0e0291c0e5a514f57d079e704d83f1fb975cd142b2d2ad151e91bca764a1fddd",
-          "sha256": "0e0291c0e5a514f57d079e704d83f1fb975cd142b2d2ad151e91bca764a1fddd"
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/mpd/blobs/sha256:54558ea9e806fe7f00ba3e569915aa478d5a73d870653dbddd7e346d8b7173e9",
+          "sha256": "54558ea9e806fe7f00ba3e569915aa478d5a73d870653dbddd7e346d8b7173e9"
         }
       }
     }
@@ -71,6 +81,7 @@
     "ffmpeg",
     "flac",
     "fluid-synth",
+    "fmt",
     "glib",
     "icu4c",
     "lame",

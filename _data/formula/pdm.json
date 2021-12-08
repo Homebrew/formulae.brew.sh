@@ -13,13 +13,13 @@
   "license": "MIT",
   "homepage": "https://pdm.fming.dev",
   "versions": {
-    "stable": "1.6.2",
+    "stable": "1.11.0",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://files.pythonhosted.org/packages/59/a0/6cc4d9e4dc8a35a38b201756c69fd8b40c844bc15e3a2df9d71f1ebf30ce/pdm-1.6.2.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/16/d8/5e0e61d6a97e3bb9d7d5b24bb9c2e502c687d9c5f7ed712b55ba05f2faae/pdm-1.11.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,25 +31,35 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/pdm/blobs/sha256:a3ace93af73a5c15ea4565caab62d38b667ee17712844b31825bc73ed72b4f51",
+          "sha256": "a3ace93af73a5c15ea4565caab62d38b667ee17712844b31825bc73ed72b4f51"
+        },
         "arm64_big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/pdm/blobs/sha256:af6270ceccbfcb17c17f1953c0af37c6a4a6d41c23c4c8c3ad8fb7ab73bc0e14",
-          "sha256": "af6270ceccbfcb17c17f1953c0af37c6a4a6d41c23c4c8c3ad8fb7ab73bc0e14"
+          "url": "https://ghcr.io/v2/homebrew/core/pdm/blobs/sha256:1440d0406a3ce573d520a96bb4e24a359c3f080aedf29b721bdaf6366b47980a",
+          "sha256": "1440d0406a3ce573d520a96bb4e24a359c3f080aedf29b721bdaf6366b47980a"
+        },
+        "monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/pdm/blobs/sha256:24887ca63052bd3e4aa15420b13cdc9618482edfcad9228d8ebf811ff44b23cd",
+          "sha256": "24887ca63052bd3e4aa15420b13cdc9618482edfcad9228d8ebf811ff44b23cd"
         },
         "big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/pdm/blobs/sha256:b39ff64712e7e23f0f6a49b97ac18dc5022a8ab235b441b26f98e42e3ab4dd09",
-          "sha256": "b39ff64712e7e23f0f6a49b97ac18dc5022a8ab235b441b26f98e42e3ab4dd09"
+          "url": "https://ghcr.io/v2/homebrew/core/pdm/blobs/sha256:51993e6b382b4d786118e02190ead70cb4e10ff67cd4be71e991592ffed40981",
+          "sha256": "51993e6b382b4d786118e02190ead70cb4e10ff67cd4be71e991592ffed40981"
         },
         "catalina": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/pdm/blobs/sha256:2c8dfa071d55a99df894779b576cdf1e4acd4fbd5b1c8f080dd7eac4911a59b1",
-          "sha256": "2c8dfa071d55a99df894779b576cdf1e4acd4fbd5b1c8f080dd7eac4911a59b1"
+          "url": "https://ghcr.io/v2/homebrew/core/pdm/blobs/sha256:5150856fdaafa483c6ed6cd2d30efee03cdcbdef5a9252a8cfee09a07e942b51",
+          "sha256": "5150856fdaafa483c6ed6cd2d30efee03cdcbdef5a9252a8cfee09a07e942b51"
         },
-        "mojave": {
+        "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/pdm/blobs/sha256:60c7503ea14b6ad799523368b212baa2e743058773a752b1a6f9cb4566072816",
-          "sha256": "60c7503ea14b6ad799523368b212baa2e743058773a752b1a6f9cb4566072816"
+          "url": "https://ghcr.io/v2/homebrew/core/pdm/blobs/sha256:8cd4280ed0585db8880b6c0f1d7d06fff4d2b5d6169bbf677375704831b12806",
+          "sha256": "8cd4280ed0585db8880b6c0f1d7d06fff4d2b5d6169bbf677375704831b12806"
         }
       }
     }
@@ -63,7 +73,8 @@
 
   ],
   "dependencies": [
-    "python@3.9"
+    "python@3.10",
+    "six"
   ],
   "recommended_dependencies": [
 

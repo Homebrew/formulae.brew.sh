@@ -13,13 +13,13 @@
   "license": "BSL-1.0",
   "homepage": "https://dlang.org/",
   "versions": {
-    "stable": "2.097.0",
+    "stable": "2.098.0",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/dlang/dmd/archive/v2.097.0.tar.gz",
+      "url": "https://github.com/dlang/dmd/archive/v2.098.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,20 +31,30 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "monterey": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/dmd/blobs/sha256:8618eddb935558875b1c57bbf023334c6767b27d7e915bcfa07f38a91e2cdc47",
+          "sha256": "8618eddb935558875b1c57bbf023334c6767b27d7e915bcfa07f38a91e2cdc47"
+        },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/dmd/blobs/sha256:7b13c3953ee766dd708d49f739acc6c211441bf849a09ea8cffc7da1a26b47da",
-          "sha256": "7b13c3953ee766dd708d49f739acc6c211441bf849a09ea8cffc7da1a26b47da"
+          "url": "https://ghcr.io/v2/homebrew/core/dmd/blobs/sha256:b2c95835a1295b25169b3e96eacfddc479cd24efc6d58285e42a1436c2b097ce",
+          "sha256": "b2c95835a1295b25169b3e96eacfddc479cd24efc6d58285e42a1436c2b097ce"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/dmd/blobs/sha256:fe1f3676f1a382ea3ff1086e2e0a2446c8eff174387d02a263bec32a72104b95",
-          "sha256": "fe1f3676f1a382ea3ff1086e2e0a2446c8eff174387d02a263bec32a72104b95"
+          "url": "https://ghcr.io/v2/homebrew/core/dmd/blobs/sha256:ec5dec4305424b179a815a4d15a8f85591bfb73d5cc92ca34b4ada0f05c34743",
+          "sha256": "ec5dec4305424b179a815a4d15a8f85591bfb73d5cc92ca34b4ada0f05c34743"
         },
         "mojave": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/dmd/blobs/sha256:ac360eb79ccbdbd555fc6795b189f8f71aa2eebe2d9b37c272935af2c5033c33",
-          "sha256": "ac360eb79ccbdbd555fc6795b189f8f71aa2eebe2d9b37c272935af2c5033c33"
+          "url": "https://ghcr.io/v2/homebrew/core/dmd/blobs/sha256:82a178b02a4001d6a7f0e466d33bc6479be456b27bd29b124973164a164fde5f",
+          "sha256": "82a178b02a4001d6a7f0e466d33bc6479be456b27bd29b124973164a164fde5f"
+        },
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/dmd/blobs/sha256:1e65207b55d3c04987dd3679145db28e5952aa6cb2cc5bbf8aa227eb3cfd7b5a",
+          "sha256": "1e65207b55d3c04987dd3679145db28e5952aa6cb2cc5bbf8aa227eb3cfd7b5a"
         }
       }
     }
@@ -67,14 +77,12 @@
 
   ],
   "uses_from_macos": [
-    [
-      "unzip",
-      "build"
-    ],
-    [
-      "xz",
-      "build"
-    ]
+    {
+      "unzip": "build"
+    },
+    {
+      "xz": "build"
+    }
   ],
   "requirements": [
     {

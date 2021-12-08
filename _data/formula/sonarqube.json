@@ -13,13 +13,13 @@
   "license": "LGPL-3.0-or-later",
   "homepage": "https://www.sonarqube.org/",
   "versions": {
-    "stable": "8.9.0.43852",
+    "stable": "9.2.0.49834",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-8.9.0.43852.zip",
+      "url": "https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.2.0.49834.zip",
       "tag": null,
       "revision": null
     }
@@ -27,9 +27,30 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "big_sur": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/sonarqube/blobs/sha256:4ee7fd481ccb4301bb547fb7830ec7dd202959859c2404b753f5ed7ce02ca5aa",
+          "sha256": "4ee7fd481ccb4301bb547fb7830ec7dd202959859c2404b753f5ed7ce02ca5aa"
+        },
+        "catalina": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/sonarqube/blobs/sha256:4ee7fd481ccb4301bb547fb7830ec7dd202959859c2404b753f5ed7ce02ca5aa",
+          "sha256": "4ee7fd481ccb4301bb547fb7830ec7dd202959859c2404b753f5ed7ce02ca5aa"
+        },
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/sonarqube/blobs/sha256:5bd7b5e142d30a1caf30979e5e077f462e076540c514505d354df4625e2be67d",
+          "sha256": "5bd7b5e142d30a1caf30979e5e077f462e076540c514505d354df4625e2be67d"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
@@ -49,7 +70,15 @@
 
   ],
   "requirements": [
+    {
+      "name": "arch",
+      "cask": null,
+      "download": null,
+      "version": "x86_64",
+      "contexts": [
 
+      ]
+    }
   ],
   "conflicts_with": [
     "sonarqube-lts"

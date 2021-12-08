@@ -15,7 +15,7 @@
   "versions": {
     "stable": "21.1",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
@@ -27,9 +27,20 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "all": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/funcoeszz/blobs/sha256:f2c2872df39cc30fc4cf4c277a2b37d299d27eb038d079584e4774cf146476ee",
+          "sha256": "f2c2872df39cc30fc4cf4c277a2b37d299d27eb038d079584e4774cf146476ee"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
@@ -46,7 +57,9 @@
 
   ],
   "uses_from_macos": [
-
+    {
+      "bc": "test"
+    }
   ],
   "requirements": [
 

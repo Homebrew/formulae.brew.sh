@@ -7,40 +7,26 @@
   ],
   "desc": "Use your phone as a high-quality webcam with image tuning controls",
   "homepage": "https://reincubate.com/camo/",
-  "url": "https://reincubate.com/res/labs/camo/CamoStudioMac-1.3.5-4712-Release.app.zip",
+  "url": "https://reincubate.com/res/labs/camo/CamoStudioMac-1.5.1-5687-Release.app.zip",
   "appcast": null,
-  "version": "1.3.5,4712",
+  "version": "1.5.1,5687",
+  "versions": {
+  },
   "installed": null,
   "outdated": false,
-  "sha256": "088eed3a8753d225c7c04771defb8d816015d4bdf1062a01bc01d196d95c587c",
+  "sha256": "11bf7f5da0f158b41df2e883c0a04a91733b7cd2f675f0632c332883f02f8032",
   "artifacts": [
-    {
-      "quit": "com.reincubate.macos.cam",
-      "script": {
-        "executable": "/Applications/Camo Studio.app/Contents/MacOS/Camo Studio",
-        "args": [
-          "-uninstall"
-        ],
-        "sudo": "true",
-        "must_succeed": "false"
-      },
-      "signal": {
-      }
-    },
-    {
-      "path": "$(brew --prefix)/Caskroom/camo-studio/1.3.5,4712/Camo Studio.app/Contents/MacOS/Camo Studio",
-      "args": {
-        "must_succeed": "false",
-        "sudo": "true",
-        "args": [
-          "-install"
-        ],
-        "print_stdout": "true"
-      }
-    },
     [
       "Camo Studio.app"
-    ]
+    ],
+    {
+      "trash": [
+        "~/Library/Caches/com.reincubate.macos.cam",
+        "~/Library/Preferences/com.reincubate.macos.cam.plist"
+      ],
+      "signal": {
+      }
+    }
   ],
   "caveats": null,
   "depends_on": {

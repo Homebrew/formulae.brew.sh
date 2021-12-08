@@ -13,13 +13,13 @@
   "license": "MIT",
   "homepage": "https://bpython-interpreter.org",
   "versions": {
-    "stable": "0.21",
+    "stable": "0.22.1",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://files.pythonhosted.org/packages/8f/34/7bdeba9999d2dfe5c0682291966bfa7edcedf2859885fa0037b8a38d0878/bpython-0.21.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/62/5c/4039865b7e21c792140ec36411b2999b8ffe98da0f0e79eebad779550868/bpython-0.22.1.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,25 +31,35 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/bpython/blobs/sha256:943fae89e278f19412351539d35e992e5401de8d1a15675dd6ec942c58c67d07",
+          "sha256": "943fae89e278f19412351539d35e992e5401de8d1a15675dd6ec942c58c67d07"
+        },
         "arm64_big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/bpython/blobs/sha256:f576b76fa2209abfa8b0923f378318199af89ddfb4915150243d1d7e73543ac0",
-          "sha256": "f576b76fa2209abfa8b0923f378318199af89ddfb4915150243d1d7e73543ac0"
+          "url": "https://ghcr.io/v2/homebrew/core/bpython/blobs/sha256:651508883e03d6502c7b8e2047c3bedfa0c2f863553d14f4748657879077b26b",
+          "sha256": "651508883e03d6502c7b8e2047c3bedfa0c2f863553d14f4748657879077b26b"
+        },
+        "monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/bpython/blobs/sha256:8134659e82336cb7758bb7aee16c19107283b598cdf3c5fa03a493b0279283df",
+          "sha256": "8134659e82336cb7758bb7aee16c19107283b598cdf3c5fa03a493b0279283df"
         },
         "big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/bpython/blobs/sha256:24d61894796f80e46465356b2a45a85861789a430019efd07952c108018eaba4",
-          "sha256": "24d61894796f80e46465356b2a45a85861789a430019efd07952c108018eaba4"
+          "url": "https://ghcr.io/v2/homebrew/core/bpython/blobs/sha256:1fcf7d95f3cac1b2be748e68c99f4dc2d8a4abbc24d8a43675abe3a94f1f66f0",
+          "sha256": "1fcf7d95f3cac1b2be748e68c99f4dc2d8a4abbc24d8a43675abe3a94f1f66f0"
         },
         "catalina": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/bpython/blobs/sha256:cd96e71e3eaf910f6d70dd78a02ccd21048302a16eaaf2fbfedb15712d469752",
-          "sha256": "cd96e71e3eaf910f6d70dd78a02ccd21048302a16eaaf2fbfedb15712d469752"
+          "url": "https://ghcr.io/v2/homebrew/core/bpython/blobs/sha256:6022706aa857d60c9505e3ee5577628fd657c29cf92f8139c9e1075f9d68459f",
+          "sha256": "6022706aa857d60c9505e3ee5577628fd657c29cf92f8139c9e1075f9d68459f"
         },
-        "mojave": {
+        "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/bpython/blobs/sha256:cbf4b82ab3f8f26ac6c7363a411aa3b692b9f2464a390e634dc5b4f61f2da0b7",
-          "sha256": "cbf4b82ab3f8f26ac6c7363a411aa3b692b9f2464a390e634dc5b4f61f2da0b7"
+          "url": "https://ghcr.io/v2/homebrew/core/bpython/blobs/sha256:19ef397613d4c93a53f940f6027d0354d630116da8ff645c627d8257893e3b52",
+          "sha256": "19ef397613d4c93a53f940f6027d0354d630116da8ff645c627d8257893e3b52"
         }
       }
     }
@@ -63,7 +73,8 @@
 
   ],
   "dependencies": [
-    "python@3.9"
+    "python@3.10",
+    "six"
   ],
   "recommended_dependencies": [
 

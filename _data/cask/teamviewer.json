@@ -8,15 +8,21 @@
   "desc": "Remote access and connectivity software focused on security",
   "homepage": "https://www.teamviewer.com/",
   "url": "https://download.teamviewer.com/download/TeamViewer.dmg",
-  "appcast": "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=14.7.1965&os=macos&osversion=10.15.1&type=1&channel=1",
-  "version": "15.18.5",
+  "appcast": null,
+  "version": "15.24.5",
+  "versions": {
+    "high_sierra": "15.2.2756",
+    "sierra": "15.2.2756",
+    "el_capitan": "15.2.2756",
+    "yosemite": "15.2.2756"
+  },
   "installed": null,
   "outdated": false,
   "sha256": "no_check",
   "artifacts": [
     {
       "delete": [
-        "$(brew --prefix)/Caskroom/teamviewer/15.18.5/teamviewer",
+        "$(brew --prefix)/Caskroom/teamviewer/15.24.5/teamviewer",
         "/Applications/TeamViewer.app"
       ],
       "pkgutil": [
@@ -41,6 +47,7 @@
         "/Library/Preferences/com.teamviewer.teamviewer.preferences.plist",
         "~/Library/Application Support/TeamViewer",
         "~/Library/Caches/com.teamviewer.TeamViewer",
+        "~/Library/Caches/TeamViewer",
         "~/Library/Cookies/com.teamviewer.TeamViewer.binarycookies",
         "~/Library/Logs/TeamViewer",
         "~/Library/Preferences/com.teamviewer.TeamViewer.plist",
@@ -54,6 +61,11 @@
   ],
   "caveats": "WARNING: teamviewer has a bug in Catalina where it doesn't deal well with being uninstalled by other utilities.\nThe recommended way to remove it is by running their uninstaller under:\n\n   Preferences → Advanced\n",
   "depends_on": {
+    "macos": {
+      ">=": [
+        "10.11"
+      ]
+    }
   },
   "conflicts_with": {
     "cask": [

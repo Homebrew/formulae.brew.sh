@@ -15,13 +15,13 @@
   "license": "Apache-2.0",
   "homepage": "https://www.erlang.org/",
   "versions": {
-    "stable": "24.0.2",
+    "stable": "24.1.7",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/erlang/otp/releases/download/OTP-24.0.2/otp_src_24.0.2.tar.gz",
+      "url": "https://github.com/erlang/otp/releases/download/OTP-24.1.7/otp_src_24.1.7.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,25 +33,35 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/erlang/blobs/sha256:80d050c1ae1bbdcc58a64cc61d749ba4ea3e9377d533f5102d06a74c48d4e089",
+          "sha256": "80d050c1ae1bbdcc58a64cc61d749ba4ea3e9377d533f5102d06a74c48d4e089"
+        },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/erlang/blobs/sha256:d50e7ed210cbf8a06c2bc87d6c261e43f64ae13f1401e3b05e3bf8403c1bfac3",
-          "sha256": "d50e7ed210cbf8a06c2bc87d6c261e43f64ae13f1401e3b05e3bf8403c1bfac3"
+          "url": "https://ghcr.io/v2/homebrew/core/erlang/blobs/sha256:10c8953929f5f01e2d43b95f78ec4ca24320bf8f22893ed8ccb8c5ab8edbe355",
+          "sha256": "10c8953929f5f01e2d43b95f78ec4ca24320bf8f22893ed8ccb8c5ab8edbe355"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/erlang/blobs/sha256:d5adeb2b9d41f74c4ba51b2e12ccabdc6d94ccb4690efd8edaebdfcf915598e2",
+          "sha256": "d5adeb2b9d41f74c4ba51b2e12ccabdc6d94ccb4690efd8edaebdfcf915598e2"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/erlang/blobs/sha256:db0a9ace0b92a59e8586a560fd7e022aea8b405d5787d2a7e237de3b75ca6fd1",
-          "sha256": "db0a9ace0b92a59e8586a560fd7e022aea8b405d5787d2a7e237de3b75ca6fd1"
+          "url": "https://ghcr.io/v2/homebrew/core/erlang/blobs/sha256:36e1be56d22b25fde8bc2c1cc140110d038867e96e1847fb3f341e7a86858ad9",
+          "sha256": "36e1be56d22b25fde8bc2c1cc140110d038867e96e1847fb3f341e7a86858ad9"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/erlang/blobs/sha256:855422653acbc02598b0308ec3d550ba86d9541cc7018dedfe4c448dc9e2269d",
-          "sha256": "855422653acbc02598b0308ec3d550ba86d9541cc7018dedfe4c448dc9e2269d"
+          "url": "https://ghcr.io/v2/homebrew/core/erlang/blobs/sha256:980d03b2202b26d174ae6ba90f401bcb232ebc180e767bd01642156c3013e701",
+          "sha256": "980d03b2202b26d174ae6ba90f401bcb232ebc180e767bd01642156c3013e701"
         },
-        "mojave": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/erlang/blobs/sha256:13db9a1d679b466df28688dc8cd0bc6d842fe1e147391ea55605a4d5a7487d73",
-          "sha256": "13db9a1d679b466df28688dc8cd0bc6d842fe1e147391ea55605a4d5a7487d73"
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/erlang/blobs/sha256:1611cdc3ee6de30612014d501b8f654eb9c354c99f6fa2d4149944975cc5dbf3",
+          "sha256": "1611cdc3ee6de30612014d501b8f654eb9c354c99f6fa2d4149944975cc5dbf3"
         }
       }
     }
@@ -66,7 +76,7 @@
   ],
   "dependencies": [
     "openssl@1.1",
-    "wxmac"
+    "wxwidgets"
   ],
   "recommended_dependencies": [
 

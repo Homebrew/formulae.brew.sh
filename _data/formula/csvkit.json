@@ -13,48 +13,58 @@
   "license": "MIT",
   "homepage": "https://csvkit.readthedocs.io/",
   "versions": {
-    "stable": "1.0.5",
+    "stable": "1.0.6",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://files.pythonhosted.org/packages/95/c9/8dd118c0ea0114125a8bf50d552626b95f6478bcf29a252296e93d778855/csvkit-1.0.5.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/b6/88/bdd8b8c77e8d8681b69d6689ca2a585d44eab2db23926a2c9e581a5ddd4b/csvkit-1.0.6.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 2,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/csvkit/blobs/sha256:96158e624e5d2d22d8f010f13d3aa8e32672169ca10e2794b07078e3bcc3591f",
+          "sha256": "96158e624e5d2d22d8f010f13d3aa8e32672169ca10e2794b07078e3bcc3591f"
+        },
         "arm64_big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/csvkit/blobs/sha256:8812320438211d768b409cf59c399ca917f753154bc296d0d85101676296477e",
-          "sha256": "8812320438211d768b409cf59c399ca917f753154bc296d0d85101676296477e"
+          "url": "https://ghcr.io/v2/homebrew/core/csvkit/blobs/sha256:aed40922284925d839684f97dd4e3cb63f4cfa21d9adcd45ed25d270e6d89f95",
+          "sha256": "aed40922284925d839684f97dd4e3cb63f4cfa21d9adcd45ed25d270e6d89f95"
+        },
+        "monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/csvkit/blobs/sha256:24491b76d82bdcae83c6b30d5d8e1378d79d5ba1e1e4afe0565c24e7a5fb2e59",
+          "sha256": "24491b76d82bdcae83c6b30d5d8e1378d79d5ba1e1e4afe0565c24e7a5fb2e59"
         },
         "big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/csvkit/blobs/sha256:a13d662245da9f94026619ff3b2ffa4871e2b726243905f3a56c98af1097da49",
-          "sha256": "a13d662245da9f94026619ff3b2ffa4871e2b726243905f3a56c98af1097da49"
+          "url": "https://ghcr.io/v2/homebrew/core/csvkit/blobs/sha256:286fb9d4d74b154881b61e2775fa9e3c8b180467708091df354e4ea5ff084079",
+          "sha256": "286fb9d4d74b154881b61e2775fa9e3c8b180467708091df354e4ea5ff084079"
         },
         "catalina": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/csvkit/blobs/sha256:28ca16e9f55957f60f3232bf41438cbda76377ef9d8a9e0777e62b4a4a098112",
-          "sha256": "28ca16e9f55957f60f3232bf41438cbda76377ef9d8a9e0777e62b4a4a098112"
+          "url": "https://ghcr.io/v2/homebrew/core/csvkit/blobs/sha256:a2d07acf8dfae4b6644d102ed1a7ce19926c67ea82155ec948dc1efb96d5b19d",
+          "sha256": "a2d07acf8dfae4b6644d102ed1a7ce19926c67ea82155ec948dc1efb96d5b19d"
         },
         "mojave": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/csvkit/blobs/sha256:1dfc57c5959b07aa05e887cf092d86ac9313c9c6483887769813160486752987",
-          "sha256": "1dfc57c5959b07aa05e887cf092d86ac9313c9c6483887769813160486752987"
+          "url": "https://ghcr.io/v2/homebrew/core/csvkit/blobs/sha256:217dcc1a45154cfae961bbcb93f8a5ba2a326f550991df30a3a965e3a35bd4eb",
+          "sha256": "217dcc1a45154cfae961bbcb93f8a5ba2a326f550991df30a3a965e3a35bd4eb"
         },
-        "high_sierra": {
+        "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/csvkit/blobs/sha256:bfd1c74b64412f63e290d9a4146ee3131eb71fc3acb354484e2e4520e293180b",
-          "sha256": "bfd1c74b64412f63e290d9a4146ee3131eb71fc3acb354484e2e4520e293180b"
+          "url": "https://ghcr.io/v2/homebrew/core/csvkit/blobs/sha256:e3373715812233b761a23b2dd274076fbbedcbb7c40121040c491cf8f47920d1",
+          "sha256": "e3373715812233b761a23b2dd274076fbbedcbb7c40121040c491cf8f47920d1"
         }
       }
     }
@@ -68,7 +78,8 @@
 
   ],
   "dependencies": [
-    "python@3.9"
+    "python@3.10",
+    "six"
   ],
   "recommended_dependencies": [
 

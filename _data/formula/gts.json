@@ -10,7 +10,7 @@
 
   ],
   "desc": "GNU triangulated surface library",
-  "license": null,
+  "license": "LGPL-2.0-or-later",
   "homepage": "https://gts.sourceforge.io/",
   "versions": {
     "stable": "0.7.6",
@@ -31,10 +31,20 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/gts/blobs/sha256:5eb4dfee13280ea9c104b3839dc42d6ace7b8f6a154c3ea1aa991aae0fc4d4a2",
+          "sha256": "5eb4dfee13280ea9c104b3839dc42d6ace7b8f6a154c3ea1aa991aae0fc4d4a2"
+        },
         "arm64_big_sur": {
           "cellar": ":any",
           "url": "https://ghcr.io/v2/homebrew/core/gts/blobs/sha256:efa1e3990e707e16709bbd258502b9c248c25bb5468e8a7b3ef491c56c3a180a",
           "sha256": "efa1e3990e707e16709bbd258502b9c248c25bb5468e8a7b3ef491c56c3a180a"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/gts/blobs/sha256:7a4a3f8806004639c4006ca8b22d782cd9d9a55ee720468f7858875630882d0e",
+          "sha256": "7a4a3f8806004639c4006ca8b22d782cd9d9a55ee720468f7858875630882d0e"
         },
         "big_sur": {
           "cellar": ":any",
@@ -55,6 +65,11 @@
           "cellar": ":any",
           "url": "https://ghcr.io/v2/homebrew/core/gts/blobs/sha256:5aa85562ed3d0aad446825d7c4e3cc717f8044a2c638bbdcdd0e18bc0f366e81",
           "sha256": "5aa85562ed3d0aad446825d7c4e3cc717f8044a2c638bbdcdd0e18bc0f366e81"
+        },
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/gts/blobs/sha256:8574a923a6854116b836f04ffdd0b556d71c3e63da1127a90c2e6ac573900c88",
+          "sha256": "8574a923a6854116b836f04ffdd0b556d71c3e63da1127a90c2e6ac573900c88"
         }
       }
     }
@@ -65,6 +80,9 @@
 
   ],
   "build_dependencies": [
+    "autoconf",
+    "automake",
+    "libtool",
     "pkg-config"
   ],
   "dependencies": [
@@ -85,7 +103,7 @@
 
   ],
   "conflicts_with": [
-
+    "pcb"
   ],
   "caveats": null,
   "installed": [

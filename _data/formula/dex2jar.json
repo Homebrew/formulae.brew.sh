@@ -13,13 +13,13 @@
   "license": "Apache-2.0",
   "homepage": "https://github.com/pxb1988/dex2jar",
   "versions": {
-    "stable": "2.0",
+    "stable": "2.1",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://downloads.sourceforge.net/project/dex2jar/dex2jar-2.0.zip",
+      "url": "https://github.com/pxb1988/dex2jar/releases/download/v2.1/dex2jar-2.1.zip",
       "tag": null,
       "revision": null
     }
@@ -27,9 +27,20 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "all": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/dex2jar/blobs/sha256:19befbca4d509e7895c346200eb08faf8fba035a297760bc6e3f60785901add1",
+          "sha256": "19befbca4d509e7895c346200eb08faf8fba035a297760bc6e3f60785901add1"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
@@ -37,7 +48,7 @@
 
   ],
   "dependencies": [
-
+    "openjdk"
   ],
   "recommended_dependencies": [
 

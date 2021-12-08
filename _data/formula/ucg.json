@@ -10,7 +10,7 @@
 
   ],
   "desc": "Tool for searching large bodies of source code (like grep)",
-  "license": "GPL-3.0",
+  "license": "GPL-3.0-or-later",
   "homepage": "https://github.com/gvansickle/ucg",
   "versions": {
     "stable": "0.3.3",
@@ -31,6 +31,11 @@
       "rebuild": 1,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/ucg/blobs/sha256:3ffc7fcd491433d72238d232acc46f48e08e1c85b40a147f67dabb7de8ec830d",
+          "sha256": "3ffc7fcd491433d72238d232acc46f48e08e1c85b40a147f67dabb7de8ec830d"
+        },
         "big_sur": {
           "cellar": ":any",
           "url": "https://ghcr.io/v2/homebrew/core/ucg/blobs/sha256:ea472cd9d4ecff1791a8df22e8207387957cad4af9b367698887772b98f434ff",
@@ -60,6 +65,11 @@
           "cellar": ":any",
           "url": "https://ghcr.io/v2/homebrew/core/ucg/blobs/sha256:e4699a681ae9d2e9d68ce7da85fc050907070bc9650fad0c4f76faf991f3a422",
           "sha256": "e4699a681ae9d2e9d68ce7da85fc050907070bc9650fad0c4f76faf991f3a422"
+        },
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/ucg/blobs/sha256:2e2db85a685f30bdda52dbc415278d3e070fc3b8aa8dd5529cede481d5e5e8eb",
+          "sha256": "2e2db85a685f30bdda52dbc415278d3e070fc3b8aa8dd5529cede481d5e5e8eb"
         }
       }
     }
@@ -70,11 +80,11 @@
 
   ],
   "build_dependencies": [
-    "argp-standalone",
     "autoconf",
     "automake",
     "libtool",
-    "pkg-config"
+    "pkg-config",
+    "argp-standalone"
   ],
   "dependencies": [
     "pcre2"

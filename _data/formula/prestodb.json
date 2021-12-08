@@ -13,13 +13,13 @@
   "license": "Apache-2.0",
   "homepage": "https://prestodb.io",
   "versions": {
-    "stable": "0.254.1",
+    "stable": "0.263.1",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://search.maven.org/remotecontent?filepath=com/facebook/presto/presto-server/0.254.1/presto-server-0.254.1.tar.gz",
+      "url": "https://search.maven.org/remotecontent?filepath=com/facebook/presto/presto-server/0.263.1/presto-server-0.263.1.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,8 +33,8 @@
       "files": {
         "all": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/prestodb/blobs/sha256:16be8a1bbf810a89f703c5dcd57c0bbbc7046d438f044aa1a7a9614e8e1ed476",
-          "sha256": "16be8a1bbf810a89f703c5dcd57c0bbbc7046d438f044aa1a7a9614e8e1ed476"
+          "url": "https://ghcr.io/v2/homebrew/core/prestodb/blobs/sha256:80059e86e78b2eb50ba2730f91733754703088df006dea4a09c6972483604e36",
+          "sha256": "80059e86e78b2eb50ba2730f91733754703088df006dea4a09c6972483604e36"
         }
       }
     }
@@ -60,10 +60,18 @@
 
   ],
   "requirements": [
+    {
+      "name": "macos",
+      "cask": null,
+      "download": null,
+      "version": null,
+      "contexts": [
 
+      ]
+    }
   ],
   "conflicts_with": [
-    "prestosql"
+
   ],
   "caveats": "Add connectors to $(brew --prefix)/opt/prestodb/libexec/etc/catalog/. See:\nhttps://prestodb.io/docs/current/connector.html\n",
   "installed": [

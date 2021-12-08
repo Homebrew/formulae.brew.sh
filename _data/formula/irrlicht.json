@@ -10,16 +10,16 @@
 
   ],
   "desc": "Realtime 3D engine",
-  "license": null,
+  "license": "Zlib",
   "homepage": "https://irrlicht.sourceforge.io/",
   "versions": {
-    "stable": "1.8.4",
+    "stable": "1.8.5",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://downloads.sourceforge.net/project/irrlicht/Irrlicht%20SDK/1.8/1.8.4/irrlicht-1.8.4.zip",
+      "url": "https://downloads.sourceforge.net/project/irrlicht/Irrlicht%20SDK/1.8/1.8.5/irrlicht-1.8.5.zip",
       "tag": null,
       "revision": null
     }
@@ -28,23 +28,38 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 2,
+      "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/irrlicht/blobs/sha256:9e1135eb0ccc6348e42bc8fd85612e24ac17a84a2b78df9ec6c68221ceb1d28a",
+          "sha256": "9e1135eb0ccc6348e42bc8fd85612e24ac17a84a2b78df9ec6c68221ceb1d28a"
+        },
+        "arm64_big_sur": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/irrlicht/blobs/sha256:f1b4f3eefb4c1f35fd11f828b05480ea58abd7acceb9343d9cd5a566b0b41b5e",
+          "sha256": "f1b4f3eefb4c1f35fd11f828b05480ea58abd7acceb9343d9cd5a566b0b41b5e"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/irrlicht/blobs/sha256:5896d6a197140a36c3acb1e71271187dd4b181bfaadb3755186fb603983a6dfa",
+          "sha256": "5896d6a197140a36c3acb1e71271187dd4b181bfaadb3755186fb603983a6dfa"
+        },
         "big_sur": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/irrlicht/blobs/sha256:a4e6536fe5a6e4e497585e5155b909878adc3005ef39f46ce4a5e5fdf4e6b9fd",
-          "sha256": "a4e6536fe5a6e4e497585e5155b909878adc3005ef39f46ce4a5e5fdf4e6b9fd"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/irrlicht/blobs/sha256:a7f35a56aa6b22a5a57744f98a033cd3838fcdd6da3ac371607fddd75c80b3c1",
+          "sha256": "a7f35a56aa6b22a5a57744f98a033cd3838fcdd6da3ac371607fddd75c80b3c1"
         },
         "catalina": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/irrlicht/blobs/sha256:da9222c61d7baf0d863ab4cad94c48342d99fb24cb636a88137d049ec8454c7b",
-          "sha256": "da9222c61d7baf0d863ab4cad94c48342d99fb24cb636a88137d049ec8454c7b"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/irrlicht/blobs/sha256:95e628a7c5aca60faf221a6a4b58fa628187666f164de3d895337d554f181e28",
+          "sha256": "95e628a7c5aca60faf221a6a4b58fa628187666f164de3d895337d554f181e28"
         },
-        "mojave": {
+        "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/irrlicht/blobs/sha256:c2cb5b842490ab803c3faaaf4ddd28662ccc67fa72d1af73f95981b0d3371769",
-          "sha256": "c2cb5b842490ab803c3faaaf4ddd28662ccc67fa72d1af73f95981b0d3371769"
+          "url": "https://ghcr.io/v2/homebrew/core/irrlicht/blobs/sha256:623258dd5a7cc16b3369955de891b99163213f175da78d1fd49c6164e3dfe6cd",
+          "sha256": "623258dd5a7cc16b3369955de891b99163213f175da78d1fd49c6164e3dfe6cd"
         }
       }
     }
@@ -58,7 +73,8 @@
 
   ],
   "dependencies": [
-
+    "jpeg",
+    "libpng"
   ],
   "recommended_dependencies": [
 
@@ -67,7 +83,8 @@
 
   ],
   "uses_from_macos": [
-
+    "bzip2",
+    "zlib"
   ],
   "requirements": [
     {

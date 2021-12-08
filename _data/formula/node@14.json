@@ -7,6 +7,7 @@
 
   ],
   "versioned_formulae": [
+    "node@16",
     "node@12",
     "node@10"
   ],
@@ -14,13 +15,13 @@
   "license": "MIT",
   "homepage": "https://nodejs.org/",
   "versions": {
-    "stable": "14.17.0",
+    "stable": "14.18.2",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://nodejs.org/dist/v14.17.0/node-v14.17.0.tar.gz",
+      "url": "https://nodejs.org/dist/v14.18.2/node-v14.18.2.tar.xz",
       "tag": null,
       "revision": null
     }
@@ -32,25 +33,35 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/node/14/blobs/sha256:4e22bbed698312534b247db5ab2a39abdeb5f929bc1535e374a381e6c691ec25",
+          "sha256": "4e22bbed698312534b247db5ab2a39abdeb5f929bc1535e374a381e6c691ec25"
+        },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/node/14/blobs/sha256:9a94ee6cb701f73d99917367d534b9b100c08646d4c88461fec47b2a711e454e",
-          "sha256": "9a94ee6cb701f73d99917367d534b9b100c08646d4c88461fec47b2a711e454e"
+          "url": "https://ghcr.io/v2/homebrew/core/node/14/blobs/sha256:506606cb30069f9938d792093d6b0c11366d59a9cbcee034b65c615cba78d19b",
+          "sha256": "506606cb30069f9938d792093d6b0c11366d59a9cbcee034b65c615cba78d19b"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/node/14/blobs/sha256:103fd4f0e7597f1863dc94693baad9f0d5ea38c09a2e3da14e55271c8e3050b5",
+          "sha256": "103fd4f0e7597f1863dc94693baad9f0d5ea38c09a2e3da14e55271c8e3050b5"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/node/14/blobs/sha256:062783bf3ef055f22c15a0828ebf944cfd493d5cbe4cdb2a3d7a6559fa7bdeb2",
-          "sha256": "062783bf3ef055f22c15a0828ebf944cfd493d5cbe4cdb2a3d7a6559fa7bdeb2"
+          "url": "https://ghcr.io/v2/homebrew/core/node/14/blobs/sha256:8982df93671c6247db7236265e0b4b2b57b2d94d1b275215e3f2d620fc8548c2",
+          "sha256": "8982df93671c6247db7236265e0b4b2b57b2d94d1b275215e3f2d620fc8548c2"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/node/14/blobs/sha256:dcb9cf2bceca1ed58609ef46a9a42b0f68bc3e408a365645b7bdb5bcf216e344",
-          "sha256": "dcb9cf2bceca1ed58609ef46a9a42b0f68bc3e408a365645b7bdb5bcf216e344"
+          "url": "https://ghcr.io/v2/homebrew/core/node/14/blobs/sha256:176617ac12613b0bb1897e06068e0fc92b1f435627cb3ecf94d5832ea49b980a",
+          "sha256": "176617ac12613b0bb1897e06068e0fc92b1f435627cb3ecf94d5832ea49b980a"
         },
-        "mojave": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/node/14/blobs/sha256:c8b8d45d038f3fe40cd63fb7315ad101788b6b8470ba08fcb14b5ad52c237e04",
-          "sha256": "c8b8d45d038f3fe40cd63fb7315ad101788b6b8470ba08fcb14b5ad52c237e04"
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/node/14/blobs/sha256:ce1efce331b57db56d2ae8ba1ffe103d884b2bed295246384ae8809be4e0faea",
+          "sha256": "ce1efce331b57db56d2ae8ba1ffe103d884b2bed295246384ae8809be4e0faea"
         }
       }
     }
@@ -65,7 +76,13 @@
     "python@3.9"
   ],
   "dependencies": [
-    "icu4c"
+    "brotli",
+    "c-ares",
+    "icu4c",
+    "libnghttp2",
+    "libuv",
+    "openssl@1.1",
+    "macos-term-size"
   ],
   "recommended_dependencies": [
 
@@ -74,7 +91,7 @@
 
   ],
   "uses_from_macos": [
-
+    "zlib"
   ],
   "requirements": [
 
@@ -85,7 +102,7 @@
   "caveats": null,
   "installed": [
     {
-      "version": "14.17.0",
+      "version": "14.18.1",
       "used_options": [
 
       ],
@@ -93,18 +110,53 @@
       "poured_from_bottle": true,
       "runtime_dependencies": [
         {
+          "full_name": "brotli",
+          "version": "1.0.9",
+          "declared_directly": true
+        },
+        {
+          "full_name": "c-ares",
+          "version": "1.18.1",
+          "declared_directly": true
+        },
+        {
           "full_name": "icu4c",
           "version": "69.1",
           "declared_directly": true
+        },
+        {
+          "full_name": "libnghttp2",
+          "version": "1.46.0",
+          "declared_directly": true
+        },
+        {
+          "full_name": "libuv",
+          "version": "1.42.0",
+          "declared_directly": true
+        },
+        {
+          "full_name": "ca-certificates",
+          "version": "2021-10-26",
+          "declared_directly": false
+        },
+        {
+          "full_name": "openssl@1.1",
+          "version": "1.1.1l",
+          "declared_directly": true
+        },
+        {
+          "full_name": "macos-term-size",
+          "version": "1.0.0",
+          "declared_directly": true
         }
       ],
-      "installed_as_dependency": false,
-      "installed_on_request": true
+      "installed_as_dependency": true,
+      "installed_on_request": false
     }
   ],
-  "linked_keg": "14.17.0",
+  "linked_keg": null,
   "pinned": false,
-  "outdated": false,
+  "outdated": true,
   "deprecated": false,
   "deprecation_date": null,
   "deprecation_reason": null,

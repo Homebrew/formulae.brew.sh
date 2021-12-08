@@ -11,15 +11,15 @@
   ],
   "desc": "Decentralized, peer to peer payment network",
   "license": "MIT",
-  "homepage": "https://bitcoin.org/",
+  "homepage": "https://bitcoincore.org/",
   "versions": {
-    "stable": "0.21.1",
+    "stable": "22.0",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://bitcoin.org/bin/bitcoin-core-0.21.1/bitcoin-0.21.1.tar.gz",
+      "url": "https://bitcoincore.org/bin/bitcoin-core-22.0/bitcoin-22.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,23 +28,43 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 0,
+      "rebuild": 1,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/bitcoin/blobs/sha256:e8518c5eff6958237409b99a4281e0dcf30c5fbd3a61f6558fa1b51310aaef9f",
+          "sha256": "e8518c5eff6958237409b99a4281e0dcf30c5fbd3a61f6558fa1b51310aaef9f"
+        },
+        "arm64_big_sur": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/bitcoin/blobs/sha256:9421b8a1746299d909b14410991c9d11735dc47b9315d15b5ee38565cad0ae45",
+          "sha256": "9421b8a1746299d909b14410991c9d11735dc47b9315d15b5ee38565cad0ae45"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/bitcoin/blobs/sha256:8948c2404b7cffd74fe7bf979313a236349d397f92b6c0043c1a249918eb833c",
+          "sha256": "8948c2404b7cffd74fe7bf979313a236349d397f92b6c0043c1a249918eb833c"
+        },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/bitcoin/blobs/sha256:c0fc6169ebc38c3ac88562ee05f4e47f8496b4fd132e1f0c2e5f58388b3cbda3",
-          "sha256": "c0fc6169ebc38c3ac88562ee05f4e47f8496b4fd132e1f0c2e5f58388b3cbda3"
+          "url": "https://ghcr.io/v2/homebrew/core/bitcoin/blobs/sha256:a326a566321b9f5b8d86499fcabb246fb7bdbded956791d9293a97705c0bdb12",
+          "sha256": "a326a566321b9f5b8d86499fcabb246fb7bdbded956791d9293a97705c0bdb12"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/bitcoin/blobs/sha256:cece0dd423980991501b1ab1a8d11ea1056df766ccd30dbb1ee09c1e1444a92d",
-          "sha256": "cece0dd423980991501b1ab1a8d11ea1056df766ccd30dbb1ee09c1e1444a92d"
+          "url": "https://ghcr.io/v2/homebrew/core/bitcoin/blobs/sha256:59227888c3021090ea60dda9c54b80447d956e42325abb552e0f343cdaf334cc",
+          "sha256": "59227888c3021090ea60dda9c54b80447d956e42325abb552e0f343cdaf334cc"
         },
         "mojave": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/bitcoin/blobs/sha256:0ee27408b8cc28d13cb707c376287716369c6ca59d2215f0effb0a8813f3e647",
-          "sha256": "0ee27408b8cc28d13cb707c376287716369c6ca59d2215f0effb0a8813f3e647"
+          "url": "https://ghcr.io/v2/homebrew/core/bitcoin/blobs/sha256:12b6d4af2123df56dd5d421153a9901d97ad79b8af81660905446cf1fb592573",
+          "sha256": "12b6d4af2123df56dd5d421153a9901d97ad79b8af81660905446cf1fb592573"
+        },
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/bitcoin/blobs/sha256:bc56082efef1d5c21ae17ae78f8510beb7bfbec3ed65df626fd4b67308afcc57",
+          "sha256": "bc56082efef1d5c21ae17ae78f8510beb7bfbec3ed65df626fd4b67308afcc57"
         }
       }
     }

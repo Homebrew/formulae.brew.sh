@@ -13,43 +13,53 @@
   "license": "GPL-3.0-or-later",
   "homepage": "https://www.ansible.com/",
   "versions": {
-    "stable": "2.9.22",
+    "stable": "2.9.27",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://files.pythonhosted.org/packages/ef/44/91d1b8eb4d94f7e636ec942c2f245132066147e5b65bc9eda5638fc5e20b/ansible-2.9.22.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/5b/99/ce005d0314840e1a6eef34e0faf0ba4f7bccd8172b33cc84fee21afab7ad/ansible-2.9.27.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/ansible/2.9/blobs/sha256:3e38efaf5462ce2f1adb3e4e55b6213fe13691351b2affd3dfc04d7f29dcc24b",
+          "sha256": "3e38efaf5462ce2f1adb3e4e55b6213fe13691351b2affd3dfc04d7f29dcc24b"
+        },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/ansible/2.9/blobs/sha256:df64f3d37a4788cdb09cc66cadac4f10e69bbf567d086ec84da2b82500fc5021",
-          "sha256": "df64f3d37a4788cdb09cc66cadac4f10e69bbf567d086ec84da2b82500fc5021"
+          "url": "https://ghcr.io/v2/homebrew/core/ansible/2.9/blobs/sha256:0fc476860717605697e0f345221311064d38b36fc8570bfde9f5d823eaaee0fb",
+          "sha256": "0fc476860717605697e0f345221311064d38b36fc8570bfde9f5d823eaaee0fb"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/ansible/2.9/blobs/sha256:03d7c27a97e2abb39b1a701caf8e6ad37b5fc7cc5d70db081f0197bec9b30c87",
+          "sha256": "03d7c27a97e2abb39b1a701caf8e6ad37b5fc7cc5d70db081f0197bec9b30c87"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/ansible/2.9/blobs/sha256:f7deb5abca3459791b762f57c416b745f7138bae6a325b960718c0f0a4cd28c4",
-          "sha256": "f7deb5abca3459791b762f57c416b745f7138bae6a325b960718c0f0a4cd28c4"
+          "url": "https://ghcr.io/v2/homebrew/core/ansible/2.9/blobs/sha256:58159b8e7d3ac1d6b698c5dd0d1c3461db1c938df7df1eb427a319d3aa1473de",
+          "sha256": "58159b8e7d3ac1d6b698c5dd0d1c3461db1c938df7df1eb427a319d3aa1473de"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/ansible/2.9/blobs/sha256:683f1a29da318ce038910add6a57adec99d22c7d8ade0b5945909d49bdd8661b",
-          "sha256": "683f1a29da318ce038910add6a57adec99d22c7d8ade0b5945909d49bdd8661b"
+          "url": "https://ghcr.io/v2/homebrew/core/ansible/2.9/blobs/sha256:17c279323a6e4d7b4c82bbb47e98a2de591d4990dd1bef806b1b9e4699c843a9",
+          "sha256": "17c279323a6e4d7b4c82bbb47e98a2de591d4990dd1bef806b1b9e4699c843a9"
         },
-        "mojave": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/ansible/2.9/blobs/sha256:d1209a2f7a546758b6a2d6bbe0e64108cfa70ae4cca7b3e95939f66141b1feba",
-          "sha256": "d1209a2f7a546758b6a2d6bbe0e64108cfa70ae4cca7b3e95939f66141b1feba"
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/ansible/2.9/blobs/sha256:c892261eb5bf221dae9b4400f2f1d9ac12ca440ac9927c65feccbed4dacfb1bd",
+          "sha256": "c892261eb5bf221dae9b4400f2f1d9ac12ca440ac9927c65feccbed4dacfb1bd"
         }
       }
     }
@@ -66,7 +76,8 @@
   "dependencies": [
     "libyaml",
     "openssl@1.1",
-    "python@3.9"
+    "python@3.9",
+    "six"
   ],
   "recommended_dependencies": [
 

@@ -13,13 +13,13 @@
   "license": "GPL-3.0-or-later",
   "homepage": "https://profanity-im.github.io",
   "versions": {
-    "stable": "0.10.0",
+    "stable": "0.11.1",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://profanity-im.github.io/profanity-0.10.0.tar.gz",
+      "url": "https://profanity-im.github.io/profanity-0.11.1.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,23 +28,43 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/profanity/blobs/sha256:f2f1940db34f5f4dbd8e98417e591ae1a3afcaa5270a7993c09a2278cc5dbd88",
+          "sha256": "f2f1940db34f5f4dbd8e98417e591ae1a3afcaa5270a7993c09a2278cc5dbd88"
+        },
+        "arm64_big_sur": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/profanity/blobs/sha256:f25f8e773bc05b798776a12b213bcf96edd7eb59d5b30e933ac1231e6a89fe7f",
+          "sha256": "f25f8e773bc05b798776a12b213bcf96edd7eb59d5b30e933ac1231e6a89fe7f"
+        },
+        "monterey": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/profanity/blobs/sha256:87106dc7e112e37b7307f6a3ff7ca4565c0e269a37c0486b5778648614907e19",
+          "sha256": "87106dc7e112e37b7307f6a3ff7ca4565c0e269a37c0486b5778648614907e19"
+        },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/profanity/blobs/sha256:c997a1e4dd8e64b5cef0a457b734831f84741b45d8d630aa81a89f231499bd42",
-          "sha256": "c997a1e4dd8e64b5cef0a457b734831f84741b45d8d630aa81a89f231499bd42"
+          "url": "https://ghcr.io/v2/homebrew/core/profanity/blobs/sha256:01f299b832782d3ed87ad78fc432c1a20799b3804140c017671ddde7c5b4fb42",
+          "sha256": "01f299b832782d3ed87ad78fc432c1a20799b3804140c017671ddde7c5b4fb42"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/profanity/blobs/sha256:aea5848ba083a0cabee58d7c8bf09220c193287d144321374207cd913d88d397",
-          "sha256": "aea5848ba083a0cabee58d7c8bf09220c193287d144321374207cd913d88d397"
+          "url": "https://ghcr.io/v2/homebrew/core/profanity/blobs/sha256:1096a2f8ed2d6bedc3dd67f6247dee1a35ceb17c6af052161c026865fb318c4d",
+          "sha256": "1096a2f8ed2d6bedc3dd67f6247dee1a35ceb17c6af052161c026865fb318c4d"
         },
         "mojave": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/profanity/blobs/sha256:c146f06dbe713c3e762e0c4ec9ca3c056b6fdb71d641e8905ce9a76ef90ce1eb",
-          "sha256": "c146f06dbe713c3e762e0c4ec9ca3c056b6fdb71d641e8905ce9a76ef90ce1eb"
+          "url": "https://ghcr.io/v2/homebrew/core/profanity/blobs/sha256:3187f12ce661fbf90021b11e313d9a98b5b65da311d04807283f0722539e4f7b",
+          "sha256": "3187f12ce661fbf90021b11e313d9a98b5b65da311d04807283f0722539e4f7b"
+        },
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/profanity/blobs/sha256:1e0abc2724db615d5997766a64fd0b22be03b25fc1e47c4fd07dd509633024ee",
+          "sha256": "1e0abc2724db615d5997766a64fd0b22be03b25fc1e47c4fd07dd509633024ee"
         }
       }
     }
@@ -59,6 +79,7 @@
     "python@3.9"
   ],
   "dependencies": [
+    "curl",
     "glib",
     "gnutls",
     "gpgme",
@@ -76,7 +97,7 @@
 
   ],
   "uses_from_macos": [
-    "curl"
+
   ],
   "requirements": [
 
