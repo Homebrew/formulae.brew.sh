@@ -13,13 +13,13 @@
   "license": "GPL-3.0-or-later and 0BSD and BSD-3-Clause and LGPL-2.0-or-later and MIT",
   "homepage": "https://www.knot-dns.cz/",
   "versions": {
-    "stable": "3.0.6",
+    "stable": "3.1.4",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://secure.nic.cz/files/knot-dns/knot-3.0.6.tar.xz",
+      "url": "https://secure.nic.cz/files/knot-dns/knot-3.1.4.tar.xz",
       "tag": null,
       "revision": null
     }
@@ -31,25 +31,35 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/knot/blobs/sha256:aee36fa6d6c2fdb39eb437ed8f8e828654b1a457ab3dddd3ca1b1efe51f342fb",
+          "sha256": "aee36fa6d6c2fdb39eb437ed8f8e828654b1a457ab3dddd3ca1b1efe51f342fb"
+        },
         "arm64_big_sur": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/knot/blobs/sha256:6fa5ddb12c889c909b0d5332fc44be17ae04d94848b43f1554ad8963b4280ae0",
-          "sha256": "6fa5ddb12c889c909b0d5332fc44be17ae04d94848b43f1554ad8963b4280ae0"
+          "url": "https://ghcr.io/v2/homebrew/core/knot/blobs/sha256:796db763f53b328b0cdc0a6877183ad927ad7a568e260692b6512ad1016b5d26",
+          "sha256": "796db763f53b328b0cdc0a6877183ad927ad7a568e260692b6512ad1016b5d26"
+        },
+        "monterey": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/knot/blobs/sha256:0d2a1b911c7e026911f2077a4865b08839769548f850dc5ba96eba3f32c3b61f",
+          "sha256": "0d2a1b911c7e026911f2077a4865b08839769548f850dc5ba96eba3f32c3b61f"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/knot/blobs/sha256:f34422566603b1323dbd74a9dc7f942e7fd978bd81f2ad5e35cfe6377b4b4b7d",
-          "sha256": "f34422566603b1323dbd74a9dc7f942e7fd978bd81f2ad5e35cfe6377b4b4b7d"
+          "url": "https://ghcr.io/v2/homebrew/core/knot/blobs/sha256:44c7309fb96ca0439046100c55e6008f622ed197aa7ed5b18d307d7d470f7f92",
+          "sha256": "44c7309fb96ca0439046100c55e6008f622ed197aa7ed5b18d307d7d470f7f92"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/knot/blobs/sha256:e4125e75e67016fad7872d0eb272fd888ec94528ad56878dbcbf0244e1ecdba5",
-          "sha256": "e4125e75e67016fad7872d0eb272fd888ec94528ad56878dbcbf0244e1ecdba5"
+          "url": "https://ghcr.io/v2/homebrew/core/knot/blobs/sha256:4e3770dfd45d1c2d96545feac26b86a85a4d5fdc1b7ee0bff9ec3462f6b50d61",
+          "sha256": "4e3770dfd45d1c2d96545feac26b86a85a4d5fdc1b7ee0bff9ec3462f6b50d61"
         },
-        "mojave": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/knot/blobs/sha256:b9eab6187e032e181a2f96da4f80775351f18f51b2d9a62a98ab3b58e8db8906",
-          "sha256": "b9eab6187e032e181a2f96da4f80775351f18f51b2d9a62a98ab3b58e8db8906"
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/knot/blobs/sha256:ad746ccfc7c71cc26b866cd8113551901926a9cd2925cd8b4686a1bf53c6468a",
+          "sha256": "ad746ccfc7c71cc26b866cd8113551901926a9cd2925cd8b4686a1bf53c6468a"
         }
       }
     }
@@ -67,8 +77,8 @@
     "fstrm",
     "gnutls",
     "libidn2",
+    "libnghttp2",
     "lmdb",
-    "nghttp2",
     "protobuf-c",
     "userspace-rcu"
   ],

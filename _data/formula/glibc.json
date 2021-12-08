@@ -15,7 +15,7 @@
   "versions": {
     "stable": "2.23",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
@@ -27,6 +27,17 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/glibc/blobs/sha256:8f5509c5a5fe85b923c196da5bb969d759a70a6a0e228110c5440a8719dc4c8e",
+          "sha256": "8f5509c5a5fe85b923c196da5bb969d759a70a6a0e228110c5440a8719dc4c8e"
+        }
+      }
+    }
   },
   "keg_only": false,
   "bottle_disabled": false,
@@ -35,7 +46,7 @@
   ],
   "build_dependencies": [
     "binutils",
-    "linux-headers"
+    "linux-headers@4.4"
   ],
   "dependencies": [
 

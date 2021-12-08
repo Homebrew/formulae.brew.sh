@@ -9,6 +9,7 @@
     "python@3"
   ],
   "versioned_formulae": [
+    "python@3.10",
     "python@3.8",
     "python@3.7"
   ],
@@ -16,13 +17,13 @@
   "license": "Python-2.0",
   "homepage": "https://www.python.org/",
   "versions": {
-    "stable": "3.9.5",
+    "stable": "3.9.9",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://www.python.org/ftp/python/3.9.5/Python-3.9.5.tar.xz",
+      "url": "https://www.python.org/ftp/python/3.9.9/Python-3.9.9.tar.xz",
       "tag": null,
       "revision": null
     }
@@ -34,25 +35,35 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/python/3.9/blobs/sha256:7c8b15e7d98b67084291ac605649e936343ada7a41da51cea4461c583e998d20",
+          "sha256": "7c8b15e7d98b67084291ac605649e936343ada7a41da51cea4461c583e998d20"
+        },
         "arm64_big_sur": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/python/3.9/blobs/sha256:1bbe1682fa834dbd546107d642ece2fdb722839dd42e8ba0e17599b6a99ca81c",
-          "sha256": "1bbe1682fa834dbd546107d642ece2fdb722839dd42e8ba0e17599b6a99ca81c"
+          "url": "https://ghcr.io/v2/homebrew/core/python/3.9/blobs/sha256:c49cf018e26ee063fb375db7a95325db3c1c98949ee75cff0ba443fd7fa1cfd8",
+          "sha256": "c49cf018e26ee063fb375db7a95325db3c1c98949ee75cff0ba443fd7fa1cfd8"
+        },
+        "monterey": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/python/3.9/blobs/sha256:3413bf6134724b24290bf53bb854cd8476fcc966fd8766eebe750006025bc561",
+          "sha256": "3413bf6134724b24290bf53bb854cd8476fcc966fd8766eebe750006025bc561"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/python/3.9/blobs/sha256:316baac980aa0a3dac263d64de41c4f09b06945a3da1556549a68949a93e4484",
-          "sha256": "316baac980aa0a3dac263d64de41c4f09b06945a3da1556549a68949a93e4484"
+          "url": "https://ghcr.io/v2/homebrew/core/python/3.9/blobs/sha256:4b56d0931cac013168ef78ae32fcce94ac36b1439c6c8501850cea1ebe80d758",
+          "sha256": "4b56d0931cac013168ef78ae32fcce94ac36b1439c6c8501850cea1ebe80d758"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/python/3.9/blobs/sha256:5d79eedf91642b87bd25e7b791b941ce9aad4735fecd1bc59c9c7faab50cbca6",
-          "sha256": "5d79eedf91642b87bd25e7b791b941ce9aad4735fecd1bc59c9c7faab50cbca6"
+          "url": "https://ghcr.io/v2/homebrew/core/python/3.9/blobs/sha256:caf2da2ca0e6a30c004aa0cddef2d9b077e5c5c8982dcc223caed2a11704aa26",
+          "sha256": "caf2da2ca0e6a30c004aa0cddef2d9b077e5c5c8982dcc223caed2a11704aa26"
         },
-        "mojave": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/python/3.9/blobs/sha256:a8f5eefdfe8e5d0b9daea86a13a5be87501ce5c8b96c1be6f146c99dc00df660",
-          "sha256": "a8f5eefdfe8e5d0b9daea86a13a5be87501ce5c8b96c1be6f146c99dc00df660"
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/python/3.9/blobs/sha256:0056d8c3b4a757e170cfaf30fd43cd18ee279d63d6c3d058644688f361da680a",
+          "sha256": "0056d8c3b4a757e170cfaf30fd43cd18ee279d63d6c3d058644688f361da680a"
         }
       }
     }
@@ -96,7 +107,7 @@
   "caveats": "Python has been installed as\n  $(brew --prefix)/bin/python3\n\nUnversioned symlinks `python`, `python-config`, `pip` etc. pointing to\n`python3`, `python3-config`, `pip3` etc., respectively, have been installed into\n  $(brew --prefix)/opt/python@3.9/libexec/bin\n\nYou can install Python packages with\n  pip3 install <package>\nThey will install into the site-package directory\n  $(brew --prefix)/lib/python3.9/site-packages\n\ntkinter is no longer included with this formula, but it is available separately:\n  brew install python-tk@3.9\n\nSee: https://docs.brew.sh/Homebrew-and-Python\n",
   "installed": [
     {
-      "version": "3.9.5",
+      "version": "3.9.9",
       "used_options": [
 
       ],
@@ -105,7 +116,7 @@
       "runtime_dependencies": [
         {
           "full_name": "gdbm",
-          "version": "1.19",
+          "version": "1.22",
           "declared_directly": true
         },
         {
@@ -114,18 +125,23 @@
           "declared_directly": true
         },
         {
+          "full_name": "ca-certificates",
+          "version": "2021-10-26",
+          "declared_directly": false
+        },
+        {
           "full_name": "openssl@1.1",
-          "version": "1.1.1k",
+          "version": "1.1.1l",
           "declared_directly": true
         },
         {
           "full_name": "readline",
-          "version": "8.1",
+          "version": "8.1.1",
           "declared_directly": true
         },
         {
           "full_name": "sqlite",
-          "version": "3.35.5",
+          "version": "3.36.0",
           "declared_directly": true
         },
         {
@@ -138,7 +154,7 @@
       "installed_on_request": true
     }
   ],
-  "linked_keg": "3.9.5",
+  "linked_keg": "3.9.9",
   "pinned": false,
   "outdated": false,
   "deprecated": false,

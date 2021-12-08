@@ -13,13 +13,13 @@
   "license": "LGPL-2.1-or-later",
   "homepage": "https://developer.gnome.org/glib/",
   "versions": {
-    "stable": "2.68.3",
+    "stable": "2.70.2",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://download.gnome.org/sources/glib/2.68/glib-2.68.3.tar.xz",
+      "url": "https://download.gnome.org/sources/glib/2.70/glib-2.70.2.tar.xz",
       "tag": null,
       "revision": null
     }
@@ -31,25 +31,35 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/glib/blobs/sha256:bdcd1badbace8ba7d6ffbaec6cfdb300fe96f90f8279a9071b0bbea59890d09b",
+          "sha256": "bdcd1badbace8ba7d6ffbaec6cfdb300fe96f90f8279a9071b0bbea59890d09b"
+        },
         "arm64_big_sur": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/glib/blobs/sha256:f71020777f716cc22fe8f61eb3973d527bac8b34c3a7149b20cc314d901a16f6",
-          "sha256": "f71020777f716cc22fe8f61eb3973d527bac8b34c3a7149b20cc314d901a16f6"
+          "url": "https://ghcr.io/v2/homebrew/core/glib/blobs/sha256:1bed3e54e8b85fe99a3e88e06ad1da63af0c6fd92cc4081947e385de5b3707d4",
+          "sha256": "1bed3e54e8b85fe99a3e88e06ad1da63af0c6fd92cc4081947e385de5b3707d4"
+        },
+        "monterey": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/glib/blobs/sha256:0b628022094b74510047acda21574ca7fad9c667881856f8fb6b4d69f5684b3f",
+          "sha256": "0b628022094b74510047acda21574ca7fad9c667881856f8fb6b4d69f5684b3f"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/glib/blobs/sha256:ebfa4f4aa16221f88df0259b2468c23a43d86a0c0fb5fb39b4ceb8cdebc3502a",
-          "sha256": "ebfa4f4aa16221f88df0259b2468c23a43d86a0c0fb5fb39b4ceb8cdebc3502a"
+          "url": "https://ghcr.io/v2/homebrew/core/glib/blobs/sha256:85ea450b1a990c33a988c12cea63c25ba3a483465eb9ddc762002dbff588642c",
+          "sha256": "85ea450b1a990c33a988c12cea63c25ba3a483465eb9ddc762002dbff588642c"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/glib/blobs/sha256:8ee9768daf6642ca122ddb3aea294853c979ec8f3d89188cc7ff3c71c517460d",
-          "sha256": "8ee9768daf6642ca122ddb3aea294853c979ec8f3d89188cc7ff3c71c517460d"
+          "url": "https://ghcr.io/v2/homebrew/core/glib/blobs/sha256:9bb57ef98e408fe27b70fbaa609ab72845d8e86e6b75e5618eb5a0c467fe2fa6",
+          "sha256": "9bb57ef98e408fe27b70fbaa609ab72845d8e86e6b75e5618eb5a0c467fe2fa6"
         },
-        "mojave": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/glib/blobs/sha256:cf7cc5466d575b0c1a8c336770d0105c2624cbdb4a33716761b122b0a640cbe2",
-          "sha256": "cf7cc5466d575b0c1a8c336770d0105c2624cbdb4a33716761b122b0a640cbe2"
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/glib/blobs/sha256:6ebba4d716df96faff8a847a703eb172b8b1001af0b6138d70449bc093d684d2",
+          "sha256": "6ebba4d716df96faff8a847a703eb172b8b1001af0b6138d70449bc093d684d2"
         }
       }
     }
@@ -87,72 +97,11 @@
   ],
   "caveats": null,
   "installed": [
-    {
-      "version": "2.68.2",
-      "used_options": [
 
-      ],
-      "built_as_bottle": true,
-      "poured_from_bottle": true,
-      "runtime_dependencies": [
-        {
-          "full_name": "gettext",
-          "version": "0.21",
-          "declared_directly": true
-        },
-        {
-          "full_name": "libffi",
-          "version": "3.3",
-          "declared_directly": true
-        },
-        {
-          "full_name": "pcre",
-          "version": "8.44",
-          "declared_directly": true
-        },
-        {
-          "full_name": "gdbm",
-          "version": "1.19",
-          "declared_directly": false
-        },
-        {
-          "full_name": "mpdecimal",
-          "version": "2.5.1",
-          "declared_directly": false
-        },
-        {
-          "full_name": "openssl@1.1",
-          "version": "1.1.1k",
-          "declared_directly": false
-        },
-        {
-          "full_name": "readline",
-          "version": "8.1",
-          "declared_directly": false
-        },
-        {
-          "full_name": "sqlite",
-          "version": "3.35.5",
-          "declared_directly": false
-        },
-        {
-          "full_name": "xz",
-          "version": "5.2.5",
-          "declared_directly": false
-        },
-        {
-          "full_name": "python@3.9",
-          "version": "3.9.5",
-          "declared_directly": true
-        }
-      ],
-      "installed_as_dependency": true,
-      "installed_on_request": false
-    }
   ],
-  "linked_keg": "2.68.2",
+  "linked_keg": null,
   "pinned": false,
-  "outdated": true,
+  "outdated": false,
   "deprecated": false,
   "deprecation_date": null,
   "deprecation_reason": null,

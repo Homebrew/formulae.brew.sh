@@ -1,57 +1,91 @@
 {
   "name": "mongo-cxx-driver",
-  "pkg_version": "3.6.5",
+  "pkg_version": "3.6.6",
   "rebuild": 0,
   "bottles": {
+    "arm64_monterey": {
+      "url": "https://ghcr.io/v2/homebrew/core/mongo-cxx-driver/blobs/sha256:85b5e04bec351118575d548d41fa4158aef2770bc440896e578e132a997b4621"
+    },
     "arm64_big_sur": {
-      "url": "https://ghcr.io/v2/homebrew/core/mongo-cxx-driver/blobs/sha256:420a8d7b1a441550ba00b2b29c336932527a38c6190747e7eb8e3144ab2eda2e"
+      "url": "https://ghcr.io/v2/homebrew/core/mongo-cxx-driver/blobs/sha256:39739b35a1ea90cbbd5d43e9623adfe38088ef5a19e82d2525e92f6128018923"
+    },
+    "monterey": {
+      "url": "https://ghcr.io/v2/homebrew/core/mongo-cxx-driver/blobs/sha256:394ea0dd52d96967f199136ab5d2cb29bdedd7a274f569d422ca8ff499606523"
     },
     "big_sur": {
-      "url": "https://ghcr.io/v2/homebrew/core/mongo-cxx-driver/blobs/sha256:87df7b24f526a69518b53e40c08e01d2b97c049f6ed6e8dda4896584681cc923"
+      "url": "https://ghcr.io/v2/homebrew/core/mongo-cxx-driver/blobs/sha256:4a4b43266285d03ebc8a084a5c210c97ba845b8fd333eac87f4c395267a6967f"
     },
     "catalina": {
-      "url": "https://ghcr.io/v2/homebrew/core/mongo-cxx-driver/blobs/sha256:6ea86cfbed1987bf3220c501206777b1393ddc939146ada8171365200518d6f4"
+      "url": "https://ghcr.io/v2/homebrew/core/mongo-cxx-driver/blobs/sha256:3376ae78c833751b52cce134f6bd1cfa48e13bc267abf9cb09402b8ccef5dda7"
     },
     "mojave": {
-      "url": "https://ghcr.io/v2/homebrew/core/mongo-cxx-driver/blobs/sha256:e9ef0c9f9b7db18b26d6bcbe033748d072b614c4994dd1894eb06854861df6b9"
+      "url": "https://ghcr.io/v2/homebrew/core/mongo-cxx-driver/blobs/sha256:9936b280f4bdeffa5f2a50c07e860ca2025ac559b2e33e535e3077f97568576b"
+    },
+    "x86_64_linux": {
+      "url": "https://ghcr.io/v2/homebrew/core/mongo-cxx-driver/blobs/sha256:1bfa9bffbeeea55731cd27d71a64aa9da8e9c9f85e2b54946ff62257f5c55435"
     }
   },
   "dependencies": [
     {
-      "name": "openssl@1.1",
-      "pkg_version": "1.1.1k",
+      "name": "ca-certificates",
+      "pkg_version": "2021-10-26",
       "rebuild": 0,
       "bottles": {
+        "all": {
+          "url": "https://ghcr.io/v2/homebrew/core/ca-certificates/blobs/sha256:1bbd45c16a0b9912174c553a6d7ae1b67b11abbeb3155eaf03109bb62d8e5381"
+        }
+      }
+    },
+    {
+      "name": "openssl@1.1",
+      "pkg_version": "1.1.1l_1",
+      "rebuild": 0,
+      "bottles": {
+        "arm64_monterey": {
+          "url": "https://ghcr.io/v2/homebrew/core/openssl/1.1/blobs/sha256:8f5b0bee61c1570b9f0fc0a21d6c322e904ae7975bdaada5787451d18e9677a6"
+        },
         "arm64_big_sur": {
-          "url": "https://ghcr.io/v2/homebrew/core/openssl/1.1/blobs/sha256:0a75e0f116c0653bc7a2b422e5dc500e7e51557303aa4fca9c1a28786189c1da"
+          "url": "https://ghcr.io/v2/homebrew/core/openssl/1.1/blobs/sha256:e3d8556cec907ad1e0ea00aebd0b0b516dde06ea3bf24308290ad785cb360a04"
+        },
+        "monterey": {
+          "url": "https://ghcr.io/v2/homebrew/core/openssl/1.1/blobs/sha256:9a14367813591b51e30828c7d86499479bc6201954f6b10ed591b40cd3b71cc1"
         },
         "big_sur": {
-          "url": "https://ghcr.io/v2/homebrew/core/openssl/1.1/blobs/sha256:17d94c51ddfa8364baed5f3a754063e1ca75f807194f68d0b976619cf4e69c1a"
+          "url": "https://ghcr.io/v2/homebrew/core/openssl/1.1/blobs/sha256:64d4d83f7d3216f2d3107f966b223d11401a2e9391707d959fbdb5c1bd5fbe0c"
         },
         "catalina": {
-          "url": "https://ghcr.io/v2/homebrew/core/openssl/1.1/blobs/sha256:cb610ecdda346011031b890d7b7c6e1942d7fc08cf083b74f148ec7ffed8c7e1"
+          "url": "https://ghcr.io/v2/homebrew/core/openssl/1.1/blobs/sha256:eb4e1d96f1a9eac8d096220550e3ca97a46d59747ec2324e2ff74351f8319c2b"
         },
         "mojave": {
-          "url": "https://ghcr.io/v2/homebrew/core/openssl/1.1/blobs/sha256:7928c80c309c6ece50b1c0d968a1e54011088cc896d26aa511249978a246bd50"
+          "url": "https://ghcr.io/v2/homebrew/core/openssl/1.1/blobs/sha256:add58d2bb5059599029e687d5baf6fd737dff1e5cef7b6c5f4e0fe11b9c8e588"
+        },
+        "x86_64_linux": {
+          "url": "https://ghcr.io/v2/homebrew/core/openssl/1.1/blobs/sha256:84bc9412c1620f5607161c5fe2b6e11ff49de96d704595523f7f7c15f1883cf2"
         }
       }
     },
     {
       "name": "mongo-c-driver",
-      "pkg_version": "1.17.6",
+      "pkg_version": "1.20.0",
       "rebuild": 0,
       "bottles": {
+        "arm64_monterey": {
+          "url": "https://ghcr.io/v2/homebrew/core/mongo-c-driver/blobs/sha256:374efdef4f8445ef889e34b59e36b9aa36f2d1cf278e638ef47a7159ab5e5374"
+        },
         "arm64_big_sur": {
-          "url": "https://ghcr.io/v2/homebrew/core/mongo-c-driver/blobs/sha256:c6da35335b0cf0fca9d2ff3e5e4fbc168c076c489a2aca54ac74819f6f76c4b9"
+          "url": "https://ghcr.io/v2/homebrew/core/mongo-c-driver/blobs/sha256:0de2bee416e8b6ba51a400e4e754d87c908fb9a25685eb30fe1faa7ac5e01d39"
+        },
+        "monterey": {
+          "url": "https://ghcr.io/v2/homebrew/core/mongo-c-driver/blobs/sha256:7bb3e1580f3897a87ed82ecb8906da04847bdbbac71973b9302be36add965ac4"
         },
         "big_sur": {
-          "url": "https://ghcr.io/v2/homebrew/core/mongo-c-driver/blobs/sha256:89acdfb1004a36de76e9b2c931fa0035d1b0a1c767018ac885592bb80eae8ce1"
+          "url": "https://ghcr.io/v2/homebrew/core/mongo-c-driver/blobs/sha256:de451485bdcf498cb967e0d68b2254526f36a92514e59501af8a0c4e7eef914e"
         },
         "catalina": {
-          "url": "https://ghcr.io/v2/homebrew/core/mongo-c-driver/blobs/sha256:09900d6000fe82b602f9a27e6d58e8f49962766adf7995288ae8513264afc23c"
+          "url": "https://ghcr.io/v2/homebrew/core/mongo-c-driver/blobs/sha256:84834568b98294d2764d1256ae549e1b02789db8bb09eb2ed85104505f26103a"
         },
-        "mojave": {
-          "url": "https://ghcr.io/v2/homebrew/core/mongo-c-driver/blobs/sha256:7ba6687451eeedfc18db907c724f9efd4a1a297a933d0e32deab6f4d0dfb129f"
+        "x86_64_linux": {
+          "url": "https://ghcr.io/v2/homebrew/core/mongo-c-driver/blobs/sha256:1514f36700ab9f60f773ca390e5841499cc49277ef500579012d9d3478f456f3"
         }
       }
     }

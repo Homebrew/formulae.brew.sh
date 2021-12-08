@@ -10,7 +10,7 @@
 
   ],
   "desc": "Keepkey Hardware-based SSH/GPG agent",
-  "license": "LGPL-3.0",
+  "license": "LGPL-3.0-only",
   "homepage": "https://github.com/romanz/trezor-agent",
   "versions": {
     "stable": "0.9.0",
@@ -24,37 +24,42 @@
       "revision": null
     }
   },
-  "revision": 4,
+  "revision": 5,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/keepkey-agent/blobs/sha256:9ec1b531c8705fe435f31f16fce8ad100aca11644c5d33e05df1e70056dd3121",
+          "sha256": "9ec1b531c8705fe435f31f16fce8ad100aca11644c5d33e05df1e70056dd3121"
+        },
         "arm64_big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/keepkey-agent/blobs/sha256:cfd630395342344277c614e67fb6bf28aae72314987efb7cbb2a6bf23cc019e1",
-          "sha256": "cfd630395342344277c614e67fb6bf28aae72314987efb7cbb2a6bf23cc019e1"
+          "url": "https://ghcr.io/v2/homebrew/core/keepkey-agent/blobs/sha256:d666d772a79bdf2b128adcc65760f9eb9803d3e7dd17a4aba4bad155f65a1f31",
+          "sha256": "d666d772a79bdf2b128adcc65760f9eb9803d3e7dd17a4aba4bad155f65a1f31"
+        },
+        "monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/keepkey-agent/blobs/sha256:c8dbfb2ce54eacac0cf75615bdf23dd2b5493defc5931ba53825c71a4d53fa71",
+          "sha256": "c8dbfb2ce54eacac0cf75615bdf23dd2b5493defc5931ba53825c71a4d53fa71"
         },
         "big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/keepkey-agent/blobs/sha256:3cf82088797d4ae0b693d840d59cabbaa07dfbad5e997ad500a0245b9c534413",
-          "sha256": "3cf82088797d4ae0b693d840d59cabbaa07dfbad5e997ad500a0245b9c534413"
+          "url": "https://ghcr.io/v2/homebrew/core/keepkey-agent/blobs/sha256:648c7a6bee2065718586b392941e3881e4d10d7971e785df15b63c3c51806b56",
+          "sha256": "648c7a6bee2065718586b392941e3881e4d10d7971e785df15b63c3c51806b56"
         },
         "catalina": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/keepkey-agent/blobs/sha256:6e0175e5f051ad05cbb26fcc2975632e1ffb8373e08c1235b4d7cd61f7cc1cf8",
-          "sha256": "6e0175e5f051ad05cbb26fcc2975632e1ffb8373e08c1235b4d7cd61f7cc1cf8"
+          "url": "https://ghcr.io/v2/homebrew/core/keepkey-agent/blobs/sha256:f5c1be64474b731cf09cd8066c0ef6b33c28a00803bef23b856a24fee92fd1f8",
+          "sha256": "f5c1be64474b731cf09cd8066c0ef6b33c28a00803bef23b856a24fee92fd1f8"
         },
         "mojave": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/keepkey-agent/blobs/sha256:27e81313d7690b317eb8f9a11a413c7b1529d2272bcbcf70b8263b41a406b0f8",
-          "sha256": "27e81313d7690b317eb8f9a11a413c7b1529d2272bcbcf70b8263b41a406b0f8"
-        },
-        "high_sierra": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/keepkey-agent/blobs/sha256:572d3d43c959597434419201e1ab260cafea2e7e7a9f3f07cfd6d2a1d20ab7d3",
-          "sha256": "572d3d43c959597434419201e1ab260cafea2e7e7a9f3f07cfd6d2a1d20ab7d3"
+          "url": "https://ghcr.io/v2/homebrew/core/keepkey-agent/blobs/sha256:900d7ba894e9aa98c285106037db89bf3ddb1a3c08f761781d37f227f2ab960b",
+          "sha256": "900d7ba894e9aa98c285106037db89bf3ddb1a3c08f761781d37f227f2ab960b"
         }
       }
     }
@@ -68,7 +73,9 @@
 
   ],
   "dependencies": [
-    "python@3.9"
+    "libusb",
+    "python@3.10",
+    "six"
   ],
   "recommended_dependencies": [
 

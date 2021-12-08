@@ -13,13 +13,13 @@
   "license": "Apache-2.0",
   "homepage": "https://github.com/qpdf/qpdf",
   "versions": {
-    "stable": "10.3.2",
+    "stable": "10.4.0",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/qpdf/qpdf/releases/download/release-qpdf-10.3.2/qpdf-10.3.2.tar.gz",
+      "url": "https://github.com/qpdf/qpdf/releases/download/release-qpdf-10.4.0/qpdf-10.4.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,25 +31,35 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/qpdf/blobs/sha256:e9c0330ed2141fc0d002c713ebdc7eed450eb3983689d2d061dad9136b7fb0d7",
+          "sha256": "e9c0330ed2141fc0d002c713ebdc7eed450eb3983689d2d061dad9136b7fb0d7"
+        },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/qpdf/blobs/sha256:705a38342dd732f78053f1bbeee0fdcabc7907db7451a15616d12d0ea0015894",
-          "sha256": "705a38342dd732f78053f1bbeee0fdcabc7907db7451a15616d12d0ea0015894"
+          "url": "https://ghcr.io/v2/homebrew/core/qpdf/blobs/sha256:74e4f00d627fff311d1732e9f279f1f3f6acd2374b0c741b8c83c97f1e1327b4",
+          "sha256": "74e4f00d627fff311d1732e9f279f1f3f6acd2374b0c741b8c83c97f1e1327b4"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/qpdf/blobs/sha256:f7086d5e00f0e00f76336ced17b7bcf9f3e16a178b0c67eb404656cb24ee7336",
+          "sha256": "f7086d5e00f0e00f76336ced17b7bcf9f3e16a178b0c67eb404656cb24ee7336"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/qpdf/blobs/sha256:d58a95848a41828fd8a8cf0f1bbc2965f7d5c4b253a359d99750e53c01777c63",
-          "sha256": "d58a95848a41828fd8a8cf0f1bbc2965f7d5c4b253a359d99750e53c01777c63"
+          "url": "https://ghcr.io/v2/homebrew/core/qpdf/blobs/sha256:2baa98138a4f3375d126ddd336e98a1f95ffd21f43504a672d07f4d7a4ba36ff",
+          "sha256": "2baa98138a4f3375d126ddd336e98a1f95ffd21f43504a672d07f4d7a4ba36ff"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/qpdf/blobs/sha256:2896a1a0b6edd8b19b1f596439d60081325f63a4d6ed6cfd859f28790ca8f4d7",
-          "sha256": "2896a1a0b6edd8b19b1f596439d60081325f63a4d6ed6cfd859f28790ca8f4d7"
+          "url": "https://ghcr.io/v2/homebrew/core/qpdf/blobs/sha256:5902aa492e2acf73237342c57f86007fdaff0fd333fc4de0514cb7390e4ae4bd",
+          "sha256": "5902aa492e2acf73237342c57f86007fdaff0fd333fc4de0514cb7390e4ae4bd"
         },
-        "mojave": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/qpdf/blobs/sha256:d017c72291915e439affa7000b113169fd3e48bdd1b2d31760fdfe2f3d1950fd",
-          "sha256": "d017c72291915e439affa7000b113169fd3e48bdd1b2d31760fdfe2f3d1950fd"
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/qpdf/blobs/sha256:c18e99ac413881dd927c712b1a56261922a39d2cb4034ec99b0d129412e3e3e6",
+          "sha256": "c18e99ac413881dd927c712b1a56261922a39d2cb4034ec99b0d129412e3e3e6"
         }
       }
     }
@@ -63,7 +73,8 @@
 
   ],
   "dependencies": [
-    "jpeg"
+    "jpeg",
+    "openssl@1.1"
   ],
   "recommended_dependencies": [
 

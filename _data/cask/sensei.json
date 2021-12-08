@@ -9,13 +9,20 @@
   "homepage": "https://sensei.app/",
   "url": "https://cindori.s3.amazonaws.com/Sensei.dmg",
   "appcast": null,
-  "version": "1.4.6,88",
+  "version": "1.5.1,99",
+  "versions": {
+  },
   "installed": null,
   "outdated": false,
   "sha256": "no_check",
   "artifacts": [
     {
-      "delete": "/Library/PrivilegedHelperTools/org.cindori.SenseiTool",
+      "delete": [
+        "/Library/LaunchAgents/org.cindori.SenseiMonitor.plist",
+        "/Library/LaunchDaemons/org.cindori.SenseiDaemon.plist",
+        "/Library/LaunchDaemons/org.cindori.SenseiHelper.plist",
+        "/Library/PrivilegedHelperTools/org.cindori.SenseiTool"
+      ],
       "launchctl": "org.cindori.SenseiTool",
       "signal": {
       }
@@ -25,8 +32,8 @@
     ],
     {
       "trash": [
-        "~/Library/Application Support/Sensei",
         "~/Library/Application Support/org.cindori.Sensei",
+        "~/Library/Application Support/Sensei",
         "~/Library/Caches/org.cindori.Sensei",
         "~/Library/Cookies/org.cindori.Sensei.binarycookies",
         "~/Library/Preferences/org.cindori.Sensei.plist",

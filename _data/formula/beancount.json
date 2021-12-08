@@ -11,7 +11,7 @@
   ],
   "desc": "Double-entry accounting tool that works on plain text files",
   "license": "GPL-2.0-only",
-  "homepage": "http://furius.ca/beancount/",
+  "homepage": "https://beancount.github.io/",
   "versions": {
     "stable": "2.3.4",
     "head": "HEAD",
@@ -24,32 +24,47 @@
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/beancount/blobs/sha256:3433ba43f239552390a6b9f4c2ecd5b77188300ac2295b9bc5e23749494f33aa",
+          "sha256": "3433ba43f239552390a6b9f4c2ecd5b77188300ac2295b9bc5e23749494f33aa"
+        },
         "arm64_big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/beancount/blobs/sha256:b595ea37250c19e9e90091f20e939d8f6c829e516eba6c300f119c9f1231ba6f",
-          "sha256": "b595ea37250c19e9e90091f20e939d8f6c829e516eba6c300f119c9f1231ba6f"
+          "url": "https://ghcr.io/v2/homebrew/core/beancount/blobs/sha256:3775989da9c68b7519dd4940ce2345fb3b55e8a18268a2534c22d4406acf65a8",
+          "sha256": "3775989da9c68b7519dd4940ce2345fb3b55e8a18268a2534c22d4406acf65a8"
+        },
+        "monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/beancount/blobs/sha256:a538743006e3e1ab6b6103253855c9ab6fe5c4c5156bd619be6afeddec16cd5b",
+          "sha256": "a538743006e3e1ab6b6103253855c9ab6fe5c4c5156bd619be6afeddec16cd5b"
         },
         "big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/beancount/blobs/sha256:ec32f748bf839bc50fb311038a3eb92e7face57899f2f95da1da38d920092295",
-          "sha256": "ec32f748bf839bc50fb311038a3eb92e7face57899f2f95da1da38d920092295"
+          "url": "https://ghcr.io/v2/homebrew/core/beancount/blobs/sha256:bb3d8a42ccc0ee639acf652756e86850f1948d013960958cecd4e834f5020118",
+          "sha256": "bb3d8a42ccc0ee639acf652756e86850f1948d013960958cecd4e834f5020118"
         },
         "catalina": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/beancount/blobs/sha256:02b64e301e10fa05cae697fa0d89f8b7401b355bdcb88c2576b780bcaa3942af",
-          "sha256": "02b64e301e10fa05cae697fa0d89f8b7401b355bdcb88c2576b780bcaa3942af"
+          "url": "https://ghcr.io/v2/homebrew/core/beancount/blobs/sha256:801b8cca4e542c6b92b10684fa8faf950e12d54fe510ad2c9e31b7ad46eb5a82",
+          "sha256": "801b8cca4e542c6b92b10684fa8faf950e12d54fe510ad2c9e31b7ad46eb5a82"
         },
         "mojave": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/beancount/blobs/sha256:3ae7fb4a729070f5caeeae26e4e53f862322b86dcbe5b6d403fc4082d062ea7a",
-          "sha256": "3ae7fb4a729070f5caeeae26e4e53f862322b86dcbe5b6d403fc4082d062ea7a"
+          "url": "https://ghcr.io/v2/homebrew/core/beancount/blobs/sha256:5c4f259b3b25ac670d31a2dd1c87acbf788d75d2e4c969eb8453154f17139cfd",
+          "sha256": "5c4f259b3b25ac670d31a2dd1c87acbf788d75d2e4c969eb8453154f17139cfd"
+        },
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/beancount/blobs/sha256:315a60229c8f8a23865ca7c8402ee79ae3fb122569c01d56cd3f3698dac566ba",
+          "sha256": "315a60229c8f8a23865ca7c8402ee79ae3fb122569c01d56cd3f3698dac566ba"
         }
       }
     }
@@ -63,7 +78,7 @@
 
   ],
   "dependencies": [
-    "python@3.9"
+    "python@3.10"
   ],
   "recommended_dependencies": [
 
@@ -72,7 +87,8 @@
 
   ],
   "uses_from_macos": [
-
+    "libxml2",
+    "libxslt"
   ],
   "requirements": [
 

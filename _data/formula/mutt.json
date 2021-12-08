@@ -13,13 +13,13 @@
   "license": "GPL-2.0-or-later",
   "homepage": "http://www.mutt.org/",
   "versions": {
-    "stable": "2.0.7",
+    "stable": "2.1.3",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://bitbucket.org/mutt/mutt/downloads/mutt-2.0.7.tar.gz",
+      "url": "https://bitbucket.org/mutt/mutt/downloads/mutt-2.1.3.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,25 +31,40 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/mutt/blobs/sha256:caa0f91976aba5f78e7b309ea284d2751efd58e6bf7552020aa3868802dd7583",
+          "sha256": "caa0f91976aba5f78e7b309ea284d2751efd58e6bf7552020aa3868802dd7583"
+        },
         "arm64_big_sur": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/mutt/blobs/sha256:595cd3c610c6d679165f76b1a116b5f7224eaa47dda31cc46cb9c4856ed6f0d6",
-          "sha256": "595cd3c610c6d679165f76b1a116b5f7224eaa47dda31cc46cb9c4856ed6f0d6"
+          "url": "https://ghcr.io/v2/homebrew/core/mutt/blobs/sha256:c70db2e71d8bf54e10c7513002143fca8adbb76e007fa58c7181ee98f89fe930",
+          "sha256": "c70db2e71d8bf54e10c7513002143fca8adbb76e007fa58c7181ee98f89fe930"
+        },
+        "monterey": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/mutt/blobs/sha256:bdaa263db5150dfb05816c47b2a57c939f56424b0720052b39effe17f532ad00",
+          "sha256": "bdaa263db5150dfb05816c47b2a57c939f56424b0720052b39effe17f532ad00"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/mutt/blobs/sha256:0a85da5a778230a29ac3bb51cf1d1683ff7910afbaf97712ef82d755610e3324",
-          "sha256": "0a85da5a778230a29ac3bb51cf1d1683ff7910afbaf97712ef82d755610e3324"
+          "url": "https://ghcr.io/v2/homebrew/core/mutt/blobs/sha256:9ddba3353c0f8e3622d0aa71246a0a4fb044675ec3ed8d80b0ee3ddd2347484d",
+          "sha256": "9ddba3353c0f8e3622d0aa71246a0a4fb044675ec3ed8d80b0ee3ddd2347484d"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/mutt/blobs/sha256:8cce0ee24686172562e62c07b405c037359f7529756136bc453e6205c76f3a28",
-          "sha256": "8cce0ee24686172562e62c07b405c037359f7529756136bc453e6205c76f3a28"
+          "url": "https://ghcr.io/v2/homebrew/core/mutt/blobs/sha256:cd3dcd087d082cc773b91e9d0fe0212911ff58e151ae94cbd0d8af15a8e90f5b",
+          "sha256": "cd3dcd087d082cc773b91e9d0fe0212911ff58e151ae94cbd0d8af15a8e90f5b"
         },
         "mojave": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/mutt/blobs/sha256:522edf7fcaa7dcc96fa9166033dd312898786917a80b7e67a6d3c504e3f82562",
-          "sha256": "522edf7fcaa7dcc96fa9166033dd312898786917a80b7e67a6d3c504e3f82562"
+          "url": "https://ghcr.io/v2/homebrew/core/mutt/blobs/sha256:0dca11043abfbb86f140a6ffea0cce0a72c7daf3f0463d5d4b28efa1ce1c9ecd",
+          "sha256": "0dca11043abfbb86f140a6ffea0cce0a72c7daf3f0463d5d4b28efa1ce1c9ecd"
+        },
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/mutt/blobs/sha256:7d997a85f2de7bd36fb70b37e98814dcbe479abc44d29fd67ad69df600019c34",
+          "sha256": "7d997a85f2de7bd36fb70b37e98814dcbe479abc44d29fd67ad69df600019c34"
         }
       }
     }
@@ -76,6 +91,7 @@
   ],
   "uses_from_macos": [
     "bzip2",
+    "cyrus-sasl",
     "krb5",
     "ncurses",
     "zlib"
@@ -86,7 +102,7 @@
   "conflicts_with": [
     "tin"
   ],
-  "caveats": "mutt_dotlock(1) has been installed, but does not have the permissions to lock\nspool files in /var/mail. To grant the necessary permissions, run\n\n  sudo chgrp mail $(brew --prefix)/Cellar/mutt/2.0.7/bin/mutt_dotlock\n  sudo chmod g+s $(brew --prefix)/Cellar/mutt/2.0.7/bin/mutt_dotlock\n\nAlternatively, you may configure `spoolfile` in your .muttrc to a file inside\nyour home directory.\n",
+  "caveats": "mutt_dotlock(1) has been installed, but does not have the permissions to lock\nspool files in /var/mail. To grant the necessary permissions, run\n\n  sudo chgrp mail $(brew --prefix)/Cellar/mutt/2.1.3/bin/mutt_dotlock\n  sudo chmod g+s $(brew --prefix)/Cellar/mutt/2.1.3/bin/mutt_dotlock\n\nAlternatively, you may configure `spoolfile` in your .muttrc to a file inside\nyour home directory.\n",
   "installed": [
 
   ],

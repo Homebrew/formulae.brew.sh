@@ -13,13 +13,13 @@
   "license": "MIT-0",
   "homepage": "https://github.com/aws-cloudformation/cfn-python-lint/",
   "versions": {
-    "stable": "0.50.0",
+    "stable": "0.56.3",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://files.pythonhosted.org/packages/db/f7/7a36b10461043c513ab42c93d9ee29d4985869176bd5ba750868ff1a1479/cfn-lint-0.50.0.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/44/d1/a806e32c48caa92d0e18d6da87bd7f4e0ba1f814991844e26482f85b6417/cfn-lint-0.56.3.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,25 +31,35 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/cfn-lint/blobs/sha256:75bb210fe903ccd4f7888b50553579ade20d27b1315254f4b9e2d7c629378b9b",
+          "sha256": "75bb210fe903ccd4f7888b50553579ade20d27b1315254f4b9e2d7c629378b9b"
+        },
         "arm64_big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/cfn-lint/blobs/sha256:d49a6c78234106970cbe8155d4d553c9cbc8065c0887a4e0c25f39aa7a18998d",
-          "sha256": "d49a6c78234106970cbe8155d4d553c9cbc8065c0887a4e0c25f39aa7a18998d"
+          "url": "https://ghcr.io/v2/homebrew/core/cfn-lint/blobs/sha256:c267bdb45a41d5bcfa512f85e093ab7773940eff9e068544e3b0b90a2c78ab51",
+          "sha256": "c267bdb45a41d5bcfa512f85e093ab7773940eff9e068544e3b0b90a2c78ab51"
+        },
+        "monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/cfn-lint/blobs/sha256:64e9642f50df9651fa50030411f4b754a1e217ad127206ea6ea0068eedd2f31c",
+          "sha256": "64e9642f50df9651fa50030411f4b754a1e217ad127206ea6ea0068eedd2f31c"
         },
         "big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/cfn-lint/blobs/sha256:259b7345bf3f832948981b86dcfa08f0fd364293e5589cc3b8977a4bd11e7ad1",
-          "sha256": "259b7345bf3f832948981b86dcfa08f0fd364293e5589cc3b8977a4bd11e7ad1"
+          "url": "https://ghcr.io/v2/homebrew/core/cfn-lint/blobs/sha256:f7e8007d1a89917a1293a1117e8104acaa7f3ed4b8f64056f8f575e208711773",
+          "sha256": "f7e8007d1a89917a1293a1117e8104acaa7f3ed4b8f64056f8f575e208711773"
         },
         "catalina": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/cfn-lint/blobs/sha256:d91f25b68b21af7104870458f58f865be3589b2ee834e33962e9c1c782638f64",
-          "sha256": "d91f25b68b21af7104870458f58f865be3589b2ee834e33962e9c1c782638f64"
+          "url": "https://ghcr.io/v2/homebrew/core/cfn-lint/blobs/sha256:0db92f4a497123af7053d3e19d5565967ad9eef219f3fbd4ad9121983a6e904e",
+          "sha256": "0db92f4a497123af7053d3e19d5565967ad9eef219f3fbd4ad9121983a6e904e"
         },
-        "mojave": {
+        "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/cfn-lint/blobs/sha256:8e7b34da9cf4b13fa764306558ceb4a58838d373997b4e0c87fc568352b1b9d7",
-          "sha256": "8e7b34da9cf4b13fa764306558ceb4a58838d373997b4e0c87fc568352b1b9d7"
+          "url": "https://ghcr.io/v2/homebrew/core/cfn-lint/blobs/sha256:4644d01369e88f089555dc636573702da0d9939009ac01c900796b774ce0c911",
+          "sha256": "4644d01369e88f089555dc636573702da0d9939009ac01c900796b774ce0c911"
         }
       }
     }
@@ -63,7 +73,8 @@
 
   ],
   "dependencies": [
-    "python@3.9"
+    "python@3.10",
+    "six"
   ],
   "recommended_dependencies": [
 

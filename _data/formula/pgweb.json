@@ -13,13 +13,13 @@
   "license": "MIT",
   "homepage": "https://sosedoff.github.io/pgweb/",
   "versions": {
-    "stable": "0.11.7",
+    "stable": "0.11.9",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/sosedoff/pgweb/archive/v0.11.7.tar.gz",
+      "url": "https://github.com/sosedoff/pgweb/archive/v0.11.9.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,30 +31,40 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/pgweb/blobs/sha256:9119c191615e7b656cd56561be91fa6491205df19a7f744c6a206946bd6916df",
+          "sha256": "9119c191615e7b656cd56561be91fa6491205df19a7f744c6a206946bd6916df"
+        },
         "arm64_big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/pgweb/blobs/sha256:44278bc4332ff3f952272fd8a9ddbc3ea33f540c869e41e168245c942e0c1ef5",
-          "sha256": "44278bc4332ff3f952272fd8a9ddbc3ea33f540c869e41e168245c942e0c1ef5"
+          "url": "https://ghcr.io/v2/homebrew/core/pgweb/blobs/sha256:8850d3804355efc5d38091e65d3f534526dfb1d054948f7204ebeafabf6cbe67",
+          "sha256": "8850d3804355efc5d38091e65d3f534526dfb1d054948f7204ebeafabf6cbe67"
+        },
+        "monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/pgweb/blobs/sha256:52c113300ac67f9baa714f347a32cf5f6b744527d307fa3a3c975d85ca4c7e20",
+          "sha256": "52c113300ac67f9baa714f347a32cf5f6b744527d307fa3a3c975d85ca4c7e20"
         },
         "big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/pgweb/blobs/sha256:e078e2a62bdd3c7d203895cae1c0fcaacf8b26a9dcd40d1f88b760667adc9d1d",
-          "sha256": "e078e2a62bdd3c7d203895cae1c0fcaacf8b26a9dcd40d1f88b760667adc9d1d"
+          "url": "https://ghcr.io/v2/homebrew/core/pgweb/blobs/sha256:ec49476c0f86d53843e63e7d0d19bce5a7f8db471bba1d050d0650bea83f8e21",
+          "sha256": "ec49476c0f86d53843e63e7d0d19bce5a7f8db471bba1d050d0650bea83f8e21"
         },
         "catalina": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/pgweb/blobs/sha256:38ad603da0bc035e5a905f44e22e70335d965a4ca62a2019d08a03cde3fe7f8c",
-          "sha256": "38ad603da0bc035e5a905f44e22e70335d965a4ca62a2019d08a03cde3fe7f8c"
+          "url": "https://ghcr.io/v2/homebrew/core/pgweb/blobs/sha256:973ebc01c360e25e1b88e274e93e6a948390eeaadd669901916aaffb91888d5f",
+          "sha256": "973ebc01c360e25e1b88e274e93e6a948390eeaadd669901916aaffb91888d5f"
         },
         "mojave": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/pgweb/blobs/sha256:7230e2f2ef476b2768a25796c3f20d45654eb8fa33ff171e70d91188df7e6527",
-          "sha256": "7230e2f2ef476b2768a25796c3f20d45654eb8fa33ff171e70d91188df7e6527"
+          "url": "https://ghcr.io/v2/homebrew/core/pgweb/blobs/sha256:94a5ede934e422a47e9ba408b6dd5ff7182ff4b69301420b220f4ec6fffdccfb",
+          "sha256": "94a5ede934e422a47e9ba408b6dd5ff7182ff4b69301420b220f4ec6fffdccfb"
         },
-        "high_sierra": {
+        "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/pgweb/blobs/sha256:536cc0ae5680a2c6316c569e2989868108f4b6626e496ec99c93e1ea823a7ba5",
-          "sha256": "536cc0ae5680a2c6316c569e2989868108f4b6626e496ec99c93e1ea823a7ba5"
+          "url": "https://ghcr.io/v2/homebrew/core/pgweb/blobs/sha256:2fcde820a38532a5a5371ff9a390841b9013ba5a40e814002092a40061c98b78",
+          "sha256": "2fcde820a38532a5a5371ff9a390841b9013ba5a40e814002092a40061c98b78"
         }
       }
     }
@@ -65,8 +75,7 @@
 
   ],
   "build_dependencies": [
-    "go",
-    "go-bindata"
+    "go"
   ],
   "dependencies": [
 

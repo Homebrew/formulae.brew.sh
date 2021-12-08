@@ -7,35 +7,37 @@
   ],
   "desc": "Data backup and storage service",
   "homepage": "https://backblaze.com/",
-  "url": "https://secure.backblaze.com/api/install_backblaze?file=bzinstall-mac-7.0.2.496.zip",
+  "url": "https://secure.backblaze.com/mac/install_backblaze.dmg",
   "appcast": null,
-  "version": "7.0.2.496",
+  "version": "8.0.1.572",
+  "versions": {
+  },
   "installed": null,
   "outdated": false,
-  "sha256": "1809273e772d236b7056f41c7bf6025673bef30e8f84d302d1c7403d24920fac",
+  "sha256": "no_check",
   "artifacts": [
     {
       "launchctl": [
-        "com.backblaze.bzserv",
-        "com.backblaze.bzbmenu"
+        "com.backblaze.bzbmenu",
+        "com.backblaze.bzserv"
       ],
       "delete": [
         "/Applications/Backblaze.app",
+        "/Library/Logs/DiagnosticReports/bzbmenu_*.*_resource.diag",
         "/Library/PreferencePanes/BackblazeBackup.prefPane"
       ],
       "signal": {
       }
     },
     {
-      "path": "bzdoinstall.app"
+      "path": "Backblaze Installer.app"
     },
     {
       "trash": [
         "/Library/Backblaze.bzpkg",
-        "~/Library/Preferences/com.backblaze.bzbmenu.plist",
         "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.backblaze.*.sfl*",
-        "/Library/Logs/DiagnosticReports/bzbmenu_*.*_resource.diag",
-        "~/Library/Logs/BackblazeGUIInstaller"
+        "~/Library/Logs/BackblazeGUIInstaller",
+        "~/Library/Preferences/com.backblaze.bzbmenu.plist"
       ],
       "signal": {
       }

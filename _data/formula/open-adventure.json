@@ -31,10 +31,20 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/open-adventure/blobs/sha256:25b220fb93f56b0e6007f9b25d31d9d64d86e6976a6cbc479c0abd115bcd468d",
+          "sha256": "25b220fb93f56b0e6007f9b25d31d9d64d86e6976a6cbc479c0abd115bcd468d"
+        },
         "arm64_big_sur": {
           "cellar": ":any_skip_relocation",
           "url": "https://ghcr.io/v2/homebrew/core/open-adventure/blobs/sha256:3e6e5fe49a6e152e07666b01ef6ce83063f1de437e65970079656e8ae4c2e357",
           "sha256": "3e6e5fe49a6e152e07666b01ef6ce83063f1de437e65970079656e8ae4c2e357"
+        },
+        "monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/open-adventure/blobs/sha256:da5283e16c1fb5a6ed671bd8490e43065325268d30289872851c43c477514c89",
+          "sha256": "da5283e16c1fb5a6ed671bd8490e43065325268d30289872851c43c477514c89"
         },
         "big_sur": {
           "cellar": ":any_skip_relocation",
@@ -50,6 +60,11 @@
           "cellar": ":any_skip_relocation",
           "url": "https://ghcr.io/v2/homebrew/core/open-adventure/blobs/sha256:950ef945af942573058ad712f85547fff68d282caa403ae8645ccf4a90ae3d30",
           "sha256": "950ef945af942573058ad712f85547fff68d282caa403ae8645ccf4a90ae3d30"
+        },
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/open-adventure/blobs/sha256:477e0809fe0844f0075943170f4554b716638a2b9f43b2c41531d48311edcf20",
+          "sha256": "477e0809fe0844f0075943170f4554b716638a2b9f43b2c41531d48311edcf20"
         }
       }
     }
@@ -73,14 +88,10 @@
 
   ],
   "uses_from_macos": [
-    [
-      "libedit",
-      "build"
-    ],
-    [
-      "libxml2",
-      "build"
-    ]
+    {
+      "libxml2": "build"
+    },
+    "libedit"
   ],
   "requirements": [
 

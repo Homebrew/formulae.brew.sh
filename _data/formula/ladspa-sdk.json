@@ -13,13 +13,13 @@
   "license": "LGPL-2.1-only",
   "homepage": "https://ladspa.org",
   "versions": {
-    "stable": "1.15",
+    "stable": "1.17",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://www.ladspa.org/download/ladspa_sdk_1.15.tgz",
+      "url": "https://www.ladspa.org/download/ladspa_sdk_1.17.tgz",
       "tag": null,
       "revision": null
     }
@@ -27,6 +27,17 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/ladspa-sdk/blobs/sha256:72ba7e13eb469fb95d31f484047e2cef71faf60a965b91f8e2bdd6239db6c358",
+          "sha256": "72ba7e13eb469fb95d31f484047e2cef71faf60a965b91f8e2bdd6239db6c358"
+        }
+      }
+    }
   },
   "keg_only": false,
   "bottle_disabled": false,
@@ -37,7 +48,7 @@
 
   ],
   "dependencies": [
-
+    "libsndfile"
   ],
   "recommended_dependencies": [
 

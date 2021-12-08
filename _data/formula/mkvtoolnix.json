@@ -13,38 +13,53 @@
   "license": "GPL-2.0-or-later",
   "homepage": "https://mkvtoolnix.download/",
   "versions": {
-    "stable": "57.0.0",
+    "stable": "63.0.0",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://mkvtoolnix.download/sources/mkvtoolnix-57.0.0.tar.xz",
+      "url": "https://mkvtoolnix.download/sources/mkvtoolnix-63.0.0.tar.xz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/mkvtoolnix/blobs/sha256:47849090fe5ad9cda3a4779e14de46ba54f268608930a261eedac493a6becc84",
+          "sha256": "47849090fe5ad9cda3a4779e14de46ba54f268608930a261eedac493a6becc84"
+        },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/mkvtoolnix/blobs/sha256:18c8c541489a27a489f8d48ce90b458c7b2028bbd0737e64e282b45a6b0dc7b9",
-          "sha256": "18c8c541489a27a489f8d48ce90b458c7b2028bbd0737e64e282b45a6b0dc7b9"
+          "url": "https://ghcr.io/v2/homebrew/core/mkvtoolnix/blobs/sha256:3ec56645cb777ae84fffe4c8a4e236cc9dfd9bc6bc2dc7cb0d024e4777c57dfe",
+          "sha256": "3ec56645cb777ae84fffe4c8a4e236cc9dfd9bc6bc2dc7cb0d024e4777c57dfe"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/mkvtoolnix/blobs/sha256:c17572754abd6c5560a1d282ad7b6335cdd55f86cb32c22ce0a8c8c6879aa703",
+          "sha256": "c17572754abd6c5560a1d282ad7b6335cdd55f86cb32c22ce0a8c8c6879aa703"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/mkvtoolnix/blobs/sha256:2ff9f546779b5b827a54e245de9c07f6ca94a9bef11c8d52c7629546b8373f4d",
-          "sha256": "2ff9f546779b5b827a54e245de9c07f6ca94a9bef11c8d52c7629546b8373f4d"
+          "url": "https://ghcr.io/v2/homebrew/core/mkvtoolnix/blobs/sha256:6a6782c4d9767c74867897f82c1271484c052958f0c0e9b6130c4006936a2f6a",
+          "sha256": "6a6782c4d9767c74867897f82c1271484c052958f0c0e9b6130c4006936a2f6a"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/mkvtoolnix/blobs/sha256:d6af7128b1009a2d02b8045259f2ce0465cfdaa4f3c7a31cc1c04233d518e99d",
-          "sha256": "d6af7128b1009a2d02b8045259f2ce0465cfdaa4f3c7a31cc1c04233d518e99d"
+          "url": "https://ghcr.io/v2/homebrew/core/mkvtoolnix/blobs/sha256:f8c76770694af732cb6608f0eb8f8760daad244a86da1b068647a2e263b4d076",
+          "sha256": "f8c76770694af732cb6608f0eb8f8760daad244a86da1b068647a2e263b4d076"
+        },
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/mkvtoolnix/blobs/sha256:21aa5c0fbe8c10c2b374b045d9eadbf656d6e240e4183a685655584df81c3b5e",
+          "sha256": "21aa5c0fbe8c10c2b374b045d9eadbf656d6e240e4183a685655584df81c3b5e"
         }
       }
     }
@@ -63,14 +78,14 @@
     "flac",
     "fmt",
     "gettext",
+    "gmp",
     "libebml",
-    "libmagic",
     "libmatroska",
     "libogg",
     "libvorbis",
     "nlohmann-json",
-    "pcre2",
     "pugixml",
+    "qt",
     "utf8cpp"
   ],
   "recommended_dependencies": [
@@ -80,14 +95,12 @@
 
   ],
   "uses_from_macos": [
-    [
-      "libxslt",
-      "build"
-    ],
-    [
-      "ruby",
-      "build"
-    ]
+    {
+      "libxslt": "build"
+    },
+    {
+      "ruby": "build"
+    }
   ],
   "requirements": [
     {

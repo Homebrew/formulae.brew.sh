@@ -10,46 +10,51 @@
 
   ],
   "desc": "TADS multimedia interpreter",
-  "license": "GPL-3.0",
-  "homepage": "https://qtads.sourceforge.io/",
+  "license": "GPL-3.0-or-later",
+  "homepage": "https://realnc.github.io/qtads/",
   "versions": {
-    "stable": "2.1.7",
+    "stable": "3.2.0",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://downloads.sourceforge.net/project/qtads/qtads-2.x/2.1.7/qtads-2.1.7.tar.bz2",
+      "url": "https://github.com/realnc/qtads/releases/download/v3.2.0/qtads-3.2.0-source.tar.xz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 2,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/qtads/blobs/sha256:ee81b4a35b37b3917513e52e3330011529dc4911a1cbfe56117d7286e3b56bdc",
+          "sha256": "ee81b4a35b37b3917513e52e3330011529dc4911a1cbfe56117d7286e3b56bdc"
+        },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/qtads/blobs/sha256:435e78a2cbbac2b581aa335b6467a3c6cd89e65e2ecfa3f4b8865049c176b346",
-          "sha256": "435e78a2cbbac2b581aa335b6467a3c6cd89e65e2ecfa3f4b8865049c176b346"
+          "url": "https://ghcr.io/v2/homebrew/core/qtads/blobs/sha256:efb0917e30907f43e0d75d4593842bc30f89694913d0fa4d6a78b312862cc9cd",
+          "sha256": "efb0917e30907f43e0d75d4593842bc30f89694913d0fa4d6a78b312862cc9cd"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/qtads/blobs/sha256:1b7ad03b5fc2ceab4f7d8ffa5c6abc5eaef6f1c23152110f4e76b98598b3ca49",
-          "sha256": "1b7ad03b5fc2ceab4f7d8ffa5c6abc5eaef6f1c23152110f4e76b98598b3ca49"
+          "url": "https://ghcr.io/v2/homebrew/core/qtads/blobs/sha256:d3f92978a0454521d20577fda97c3cef034e60be673f06bcef5db44376e7ed3f",
+          "sha256": "d3f92978a0454521d20577fda97c3cef034e60be673f06bcef5db44376e7ed3f"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/qtads/blobs/sha256:d9cde41ffc4ee4adf1b026b15bbd22e2bfdc8dd994866b007bff0936c4218608",
-          "sha256": "d9cde41ffc4ee4adf1b026b15bbd22e2bfdc8dd994866b007bff0936c4218608"
+          "url": "https://ghcr.io/v2/homebrew/core/qtads/blobs/sha256:16bb2be33f9757e197011ec42652b90e8220203cb6b59a261dfd2658707adc9e",
+          "sha256": "16bb2be33f9757e197011ec42652b90e8220203cb6b59a261dfd2658707adc9e"
         },
         "mojave": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/qtads/blobs/sha256:d4db6c775198a2052b34c67255bdc26d18605d80885eacc3a7f596e980f89e0f",
-          "sha256": "d4db6c775198a2052b34c67255bdc26d18605d80885eacc3a7f596e980f89e0f"
+          "url": "https://ghcr.io/v2/homebrew/core/qtads/blobs/sha256:01215c3c22a58a47a1b4ff91e7a1558a301d0620c50b553f77f0fb30d75d8ae9",
+          "sha256": "01215c3c22a58a47a1b4ff91e7a1558a301d0620c50b553f77f0fb30d75d8ae9"
         }
       }
     }
@@ -63,10 +68,12 @@
     "pkg-config"
   ],
   "dependencies": [
+    "fluid-synth",
+    "libsndfile",
+    "libvorbis",
+    "mpg123",
     "qt@5",
-    "sdl2",
-    "sdl2_mixer",
-    "sdl_sound"
+    "sdl2"
   ],
   "recommended_dependencies": [
 

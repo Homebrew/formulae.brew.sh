@@ -24,32 +24,42 @@
       "revision": null
     }
   },
-  "revision": 5,
+  "revision": 7,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/stormssh/blobs/sha256:a75b8177eb8ca535665d4e6198b936b0c709c91a8bbc2274f49bbd22d394f677",
+          "sha256": "a75b8177eb8ca535665d4e6198b936b0c709c91a8bbc2274f49bbd22d394f677"
+        },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/stormssh/blobs/sha256:aa25e63f9cf6ff6d69e1c7b48dce6834de0ce4ed2d74af6775212ef1c9314f52",
-          "sha256": "aa25e63f9cf6ff6d69e1c7b48dce6834de0ce4ed2d74af6775212ef1c9314f52"
+          "url": "https://ghcr.io/v2/homebrew/core/stormssh/blobs/sha256:c9cc953d93d1534a753f07f088194514d75fc220f3ad34fc6a0e6324be1604ad",
+          "sha256": "c9cc953d93d1534a753f07f088194514d75fc220f3ad34fc6a0e6324be1604ad"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/stormssh/blobs/sha256:22a0178c38fd3644223aac5b7ba6f4e0c766e7aa6fef706a8b703eb9f76d6d5c",
+          "sha256": "22a0178c38fd3644223aac5b7ba6f4e0c766e7aa6fef706a8b703eb9f76d6d5c"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/stormssh/blobs/sha256:e2519c5c0c796e4fa0a5f63a7bcbe4f17c188616c10abf6aee4921c2670a7f7e",
-          "sha256": "e2519c5c0c796e4fa0a5f63a7bcbe4f17c188616c10abf6aee4921c2670a7f7e"
+          "url": "https://ghcr.io/v2/homebrew/core/stormssh/blobs/sha256:ad691ed14359decd9760497aed20b6b0f6d4e54c978e3c191a52b59a8331bf32",
+          "sha256": "ad691ed14359decd9760497aed20b6b0f6d4e54c978e3c191a52b59a8331bf32"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/stormssh/blobs/sha256:91c073021a2155e31ecfc09a7e5e2e03172c34408f31c725895b0ddd1bcf9a31",
-          "sha256": "91c073021a2155e31ecfc09a7e5e2e03172c34408f31c725895b0ddd1bcf9a31"
+          "url": "https://ghcr.io/v2/homebrew/core/stormssh/blobs/sha256:d32420400831851cfc19a8512008eec8cf9d69f60b028a46455394408be367c5",
+          "sha256": "d32420400831851cfc19a8512008eec8cf9d69f60b028a46455394408be367c5"
         },
-        "mojave": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/stormssh/blobs/sha256:ffeaf80fd8e4ff994985be761d55d90fd4a60a4198b3aa87983b8933dab8b4b4",
-          "sha256": "ffeaf80fd8e4ff994985be761d55d90fd4a60a4198b3aa87983b8933dab8b4b4"
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/stormssh/blobs/sha256:4c0a72be0bad9b3a4a023974ca99c0dea3579d3ba9d00a4c9d0d97201eed75f3",
+          "sha256": "4c0a72be0bad9b3a4a023974ca99c0dea3579d3ba9d00a4c9d0d97201eed75f3"
         }
       }
     }
@@ -60,10 +70,11 @@
 
   ],
   "build_dependencies": [
-
+    "rust"
   ],
   "dependencies": [
-    "python@3.9"
+    "python@3.10",
+    "six"
   ],
   "recommended_dependencies": [
 

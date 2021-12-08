@@ -1,0 +1,64 @@
+{
+  "token": "maxon",
+  "full_token": "maxon",
+  "tap": "homebrew/cask",
+  "name": [
+    "Maxon App"
+  ],
+  "desc": "Install, use, and try Maxon products",
+  "homepage": "https://www.maxon.net/en/downloads/",
+  "url": "https://package-cf.redgiant.com/macos/maxon/products/fuse/mxa-combo-installer/2/1/0/0/Maxon-2.1.0-mac-b5.zip",
+  "appcast": null,
+  "version": "2.1.0,5",
+  "versions": {
+  },
+  "installed": null,
+  "outdated": false,
+  "sha256": "c0d9e9ace0e7d19bb27d9d26d10b5f2688acf16c17c76d30884da1468813bc36",
+  "artifacts": [
+    {
+      "delete": [
+        "/Applications/Maxon.app",
+        "/Library/Application Support/Maxon",
+        "/Library/Application Support/Red Giant",
+        "/Library/Logs/Maxon",
+        "/Library/Logs/Red Giant"
+      ],
+      "launchctl": [
+        "com.maxon.mxnotify.agent",
+        "com.maxon.mxredirect.agent",
+        "com.redgiant.service"
+      ],
+      "signal": {
+      }
+    },
+    {
+      "path": "$(brew --prefix)/Caskroom/maxon/2.1.0,5/Maxon App Installer.app/Contents/Scripts/install.sh",
+      "args": {
+        "must_succeed": "true",
+        "sudo": "true",
+        "print_stdout": "true"
+      }
+    },
+    {
+      "trash": [
+        "~/Library/Application Support/Maxon",
+        "~/Library/Application Support/Red Giant",
+        "~/Library/Caches/net.maxon.app-manager",
+        "~/Library/Preferences/Maxon",
+        "~/Library/Preferences/net.maxon.app-manager.plist",
+        "~/Library/Saved Application State/net.maxon.app-manager.savedState",
+        "/Users/Shared/Maxon",
+        "/Users/Shared/Red Giant"
+      ],
+      "signal": {
+      }
+    }
+  ],
+  "caveats": null,
+  "depends_on": {
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": null
+}

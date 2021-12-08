@@ -11,7 +11,7 @@
   ],
   "desc": "Core part of the JavaScript engine that powers Microsoft Edge",
   "license": "MIT",
-  "homepage": "https://github.com/Microsoft/ChakraCore",
+  "homepage": "https://github.com/chakra-core/ChakraCore",
   "versions": {
     "stable": "1.11.24",
     "head": null,
@@ -19,7 +19,7 @@
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/Microsoft/ChakraCore/archive/v1.11.24.tar.gz",
+      "url": "https://github.com/chakra-core/ChakraCore/archive/v1.11.24.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -55,7 +55,8 @@
 
   ],
   "build_dependencies": [
-    "cmake"
+    "cmake",
+    "python@3.9"
   ],
   "dependencies": [
     "icu4c"
@@ -67,7 +68,12 @@
 
   ],
   "uses_from_macos": [
-
+    {
+      "llvm": [
+        "build",
+        "test"
+      ]
+    }
   ],
   "requirements": [
 

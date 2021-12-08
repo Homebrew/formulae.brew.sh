@@ -13,13 +13,13 @@
   "license": "Apache-2.0",
   "homepage": "https://geode.apache.org/",
   "versions": {
-    "stable": "1.13.2",
+    "stable": "1.14.0",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://www.apache.org/dyn/closer.lua?path=geode/1.13.2/apache-geode-1.13.2.tgz",
+      "url": "https://www.apache.org/dyn/closer.lua?path=geode/1.14.0/apache-geode-1.14.0.tgz",
       "tag": null,
       "revision": null
     }
@@ -27,9 +27,20 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "all": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/apache-geode/blobs/sha256:219e2500b68c58788b63042b5d85c01bb766b39208f0848dcbb31bd6dcc72803",
+          "sha256": "219e2500b68c58788b63042b5d85c01bb766b39208f0848dcbb31bd6dcc72803"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
@@ -37,7 +48,7 @@
 
   ],
   "dependencies": [
-    "openjdk@8"
+    "openjdk@11"
   ],
   "recommended_dependencies": [
 

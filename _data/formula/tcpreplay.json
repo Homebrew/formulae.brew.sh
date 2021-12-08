@@ -10,16 +10,16 @@
 
   ],
   "desc": "Replay saved tcpdump files at arbitrary speeds",
-  "license": "GPL-3.0",
+  "license": "BSD-2-Clause and BSD-3-Clause and BSD-4-Clause and GPL-3.0-or-later and ISC",
   "homepage": "https://tcpreplay.appneta.com/",
   "versions": {
-    "stable": "4.3.3",
+    "stable": "4.3.4",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/appneta/tcpreplay/releases/download/v4.3.3/tcpreplay-4.3.3.tar.gz",
+      "url": "https://github.com/appneta/tcpreplay/releases/download/v4.3.4/tcpreplay-4.3.4.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,28 +28,43 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 0,
+      "rebuild": 1,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/tcpreplay/blobs/sha256:bbfff741e443b06465748f494eb4fa2147e06860cd986c349ff907130e2b8a1f",
+          "sha256": "bbfff741e443b06465748f494eb4fa2147e06860cd986c349ff907130e2b8a1f"
+        },
+        "arm64_big_sur": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/tcpreplay/blobs/sha256:4ff671547bf0a9b988a01d6af0ed8c387b62c79097a6915aadc50af2d11c330b",
+          "sha256": "4ff671547bf0a9b988a01d6af0ed8c387b62c79097a6915aadc50af2d11c330b"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/tcpreplay/blobs/sha256:aaf944f4924fc025530933d1d815fceee0277e91a630a4d61bd1cf807acc395c",
+          "sha256": "aaf944f4924fc025530933d1d815fceee0277e91a630a4d61bd1cf807acc395c"
+        },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/tcpreplay/blobs/sha256:772815bcf05a81fb36acf09acb31bc2eb467cf3b90815461e94fc7babd584d2d",
-          "sha256": "772815bcf05a81fb36acf09acb31bc2eb467cf3b90815461e94fc7babd584d2d"
+          "url": "https://ghcr.io/v2/homebrew/core/tcpreplay/blobs/sha256:55ffb5347204c187b5151181efef39586b052340e8dc40635809fc8eb36ed0e6",
+          "sha256": "55ffb5347204c187b5151181efef39586b052340e8dc40635809fc8eb36ed0e6"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/tcpreplay/blobs/sha256:a4b41c27929bfd52016d1cc576089a9cb42dfd0e595c3078a40b26bd39fbd65f",
-          "sha256": "a4b41c27929bfd52016d1cc576089a9cb42dfd0e595c3078a40b26bd39fbd65f"
+          "url": "https://ghcr.io/v2/homebrew/core/tcpreplay/blobs/sha256:2268f0760672a512de278ea4c686b976e75589bb374663c1b9ecbf49ada784ca",
+          "sha256": "2268f0760672a512de278ea4c686b976e75589bb374663c1b9ecbf49ada784ca"
         },
         "mojave": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/tcpreplay/blobs/sha256:0ec1b2260c108d103d4d594a8fff9482656833e5308690b90c5ef0a05a155546",
-          "sha256": "0ec1b2260c108d103d4d594a8fff9482656833e5308690b90c5ef0a05a155546"
+          "url": "https://ghcr.io/v2/homebrew/core/tcpreplay/blobs/sha256:7724d4f1f79cd07a77b430e63e541486d8f666785215dfd898ba54ff2aa35186",
+          "sha256": "7724d4f1f79cd07a77b430e63e541486d8f666785215dfd898ba54ff2aa35186"
         },
-        "high_sierra": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/tcpreplay/blobs/sha256:439ed368cf28fb710cefec00f88de8d32e0d039abed0f8761f1a1ae4731dac53",
-          "sha256": "439ed368cf28fb710cefec00f88de8d32e0d039abed0f8761f1a1ae4731dac53"
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/tcpreplay/blobs/sha256:12598cf97924b496cfc7558b4b74e6c26a9334e89bbf2fb8ec497ea2ab8a509f",
+          "sha256": "12598cf97924b496cfc7558b4b74e6c26a9334e89bbf2fb8ec497ea2ab8a509f"
         }
       }
     }
@@ -60,7 +75,9 @@
 
   ],
   "build_dependencies": [
-
+    "autoconf",
+    "automake",
+    "libtool"
   ],
   "dependencies": [
     "libdnet"
@@ -72,7 +89,7 @@
 
   ],
   "uses_from_macos": [
-
+    "libpcap"
   ],
   "requirements": [
 

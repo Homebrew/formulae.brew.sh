@@ -15,7 +15,7 @@
   "versions": {
     "stable": "0.0.20190126",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
@@ -24,12 +24,23 @@
       "revision": null
     }
   },
-  "revision": 2,
+  "revision": 3,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "all": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/nicovideo-dl/blobs/sha256:bd14d4d14a48df2134225b9fd2de504a41f505140eeab321d49521298fb86345",
+          "sha256": "bd14d4d14a48df2134225b9fd2de504a41f505140eeab321d49521298fb86345"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
@@ -37,7 +48,7 @@
 
   ],
   "dependencies": [
-    "python@3.9"
+    "python@3.10"
   ],
   "recommended_dependencies": [
 

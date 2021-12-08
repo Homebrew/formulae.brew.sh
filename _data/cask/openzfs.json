@@ -5,41 +5,52 @@
   "name": [
     "OpenZFS on OS X"
   ],
-  "desc": "Open source port of OpenZFS",
+  "desc": "ZFS driver and utilities",
   "homepage": "https://openzfsonosx.org/",
-  "url": "https://openzfsonosx.org/w/images/6/6f/OpenZFS_on_OS_X_1.9.4.dmg",
+  "url": "https://openzfsonosx.org/forum/download/file.php?id=343",
   "appcast": null,
-  "version": "1.9.4,6f",
+  "version": "2.1.0,343",
+  "versions": {
+    "catalina": "2.1.0,344",
+    "mojave": "2.1.0,345",
+    "high_sierra": "2.1.0,346",
+    "sierra": "2.1.0,354",
+    "el_capitan": "2.1.0,353",
+    "yosemite": "2.1.0,352"
+  },
   "installed": null,
   "outdated": false,
-  "sha256": "4dc027cec9cb2fcbf572c1dfe5b1a31f0e14d3f55f1b4f8787903f8332db838b",
+  "sha256": "2cc0c2da33be3ce331e922ba2ca7c585179e79f1addc72246f10df95b7d7b8d7",
   "artifacts": [
     "uninstall_preflight (Preflight Block)",
     {
-      "delete": "~/zfsuninstaller.*",
-      "launchctl": "org.openzfsonosx.zed",
-      "script": {
-        "executable": "$(brew --prefix)/Caskroom/openzfs/1.9.4,6f/Docs & Scripts/uninstall-openzfsonosx.sh",
-        "sudo": "true"
-      },
+      "pkgutil": "org.openzfsonosx.zfs",
+      "launchctl": [
+        "org.openzfsonosx.InvariantDisks",
+        "org.openzfsonosx.zconfigd",
+        "org.openzfsonosx.zed",
+        "org.openzfsonosx.zpool-import",
+        "org.openzfsonosx.zpool-import-all"
+      ],
       "signal": {
       }
     },
-    "OpenZFS on OS X 1.9.4 Catalina.pkg (Pkg)"
+    "OpenZFSonOsX-2.1.0-Big.Sur-11.pkg (Pkg)",
+    "postflight (Postflight Block)"
   ],
   "caveats": "openzfs requires a kernel extension to work.\nIf the installation fails, retry after you enable it in:\n  System Preferences → Security & Privacy → General\n\nFor more information, refer to vendor documentation or this Apple Technical Note:\n  https://developer.apple.com/library/content/technotes/tn2459/_index.html\n",
   "depends_on": {
     "macos": {
-      "==": [
-        "10.11",
-        "10.12",
-        "10.13",
-        "10.14",
-        "10.15"
+      ">=": [
+        "10.10"
       ]
     }
   },
-  "conflicts_with": null,
+  "conflicts_with": {
+    "cask": [
+      "openzfs-dev"
+    ]
+  },
   "container": null,
   "auto_updates": null
 }

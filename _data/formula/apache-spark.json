@@ -13,13 +13,13 @@
   "license": "Apache-2.0",
   "homepage": "https://spark.apache.org/",
   "versions": {
-    "stable": "3.1.2",
+    "stable": "3.2.0",
     "head": "HEAD",
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://www.apache.org/dyn/closer.lua?path=spark/spark-3.1.2/spark-3.1.2-bin-hadoop3.2.tgz",
+      "url": "https://dlcdn.apache.org/spark/spark-3.2.0/spark-3.2.0-bin-hadoop3.2.tgz",
       "tag": null,
       "revision": null
     }
@@ -27,9 +27,20 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "all": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/apache-spark/blobs/sha256:38bb1c937822a04a206c78dc5d7992d2617c448e8e5adcb650fab83315627a89",
+          "sha256": "38bb1c937822a04a206c78dc5d7992d2617c448e8e5adcb650fab83315627a89"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],

@@ -13,13 +13,13 @@
   "license": "Apache-2.0",
   "homepage": "https://docs.openstack.org/infra/jenkins-job-builder/",
   "versions": {
-    "stable": "3.9.0",
+    "stable": "3.11.0",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://files.pythonhosted.org/packages/1b/63/a87bc9bd2461cb0fbc59b257df94c579bcdcec17dac070f04d4a0e57214c/jenkins-job-builder-3.9.0.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/ff/0a/5ed164f5e10ff7841e6f408aaf29eac4a2ca4f5288aaf9cc2d7478d6b1a4/jenkins-job-builder-3.11.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,25 +31,40 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/jenkins-job-builder/blobs/sha256:35c8d22a60495e29b450dfd2220ee6f10aa77aad50bce893bd39a5433c285a6a",
+          "sha256": "35c8d22a60495e29b450dfd2220ee6f10aa77aad50bce893bd39a5433c285a6a"
+        },
         "arm64_big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/jenkins-job-builder/blobs/sha256:5704840b402f29ac033794e0069511bbd26086c92ab48c270771fd7611364ea6",
-          "sha256": "5704840b402f29ac033794e0069511bbd26086c92ab48c270771fd7611364ea6"
+          "url": "https://ghcr.io/v2/homebrew/core/jenkins-job-builder/blobs/sha256:9ba53ae0b7014810b81813161316c9071c86b82600581ff5a70e24bec9f93fca",
+          "sha256": "9ba53ae0b7014810b81813161316c9071c86b82600581ff5a70e24bec9f93fca"
+        },
+        "monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/jenkins-job-builder/blobs/sha256:5016bc64c99ba56bab09a61065c500bd1ad481f375df0dcffd0e8c80530e3f7f",
+          "sha256": "5016bc64c99ba56bab09a61065c500bd1ad481f375df0dcffd0e8c80530e3f7f"
         },
         "big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/jenkins-job-builder/blobs/sha256:69c8972dffda3834ad3f2f88de9644b709019f0caebdc9845befa8e89345da8b",
-          "sha256": "69c8972dffda3834ad3f2f88de9644b709019f0caebdc9845befa8e89345da8b"
+          "url": "https://ghcr.io/v2/homebrew/core/jenkins-job-builder/blobs/sha256:110cb98febf8d9ffd03b562cb79f3bf2fa992cb9b036c3e0d74c3a8437e50431",
+          "sha256": "110cb98febf8d9ffd03b562cb79f3bf2fa992cb9b036c3e0d74c3a8437e50431"
         },
         "catalina": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/jenkins-job-builder/blobs/sha256:aa8129b03faa3af6f24a123059e18a179522de86c8db75cdb05bf2fdace0cc06",
-          "sha256": "aa8129b03faa3af6f24a123059e18a179522de86c8db75cdb05bf2fdace0cc06"
+          "url": "https://ghcr.io/v2/homebrew/core/jenkins-job-builder/blobs/sha256:37b7ddb8ab5d198557b9d6000ab2d9210e9686f9f37325973a6ecdbd987673e0",
+          "sha256": "37b7ddb8ab5d198557b9d6000ab2d9210e9686f9f37325973a6ecdbd987673e0"
         },
         "mojave": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/jenkins-job-builder/blobs/sha256:c987e38ace62b50528df2ff117d949b6299715e96214bfd77a96b1fa14ecf5f7",
-          "sha256": "c987e38ace62b50528df2ff117d949b6299715e96214bfd77a96b1fa14ecf5f7"
+          "url": "https://ghcr.io/v2/homebrew/core/jenkins-job-builder/blobs/sha256:d4ec72cb626e3fd091c3ba0d077ce28914923e85dc6b23e40978faeef6ade89b",
+          "sha256": "d4ec72cb626e3fd091c3ba0d077ce28914923e85dc6b23e40978faeef6ade89b"
+        },
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/jenkins-job-builder/blobs/sha256:2682dcc83eb3304d98410c8844728d78acf496228c912d2b722c2feea4d7c287",
+          "sha256": "2682dcc83eb3304d98410c8844728d78acf496228c912d2b722c2feea4d7c287"
         }
       }
     }
@@ -63,7 +78,8 @@
 
   ],
   "dependencies": [
-    "python@3.9"
+    "python@3.9",
+    "six"
   ],
   "recommended_dependencies": [
 

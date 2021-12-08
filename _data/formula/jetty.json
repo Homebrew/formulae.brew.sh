@@ -13,13 +13,13 @@
   "license": "Apache-2.0 or EPL-1.0",
   "homepage": "https://www.eclipse.org/jetty/",
   "versions": {
-    "stable": "9.4.41.v20210516",
+    "stable": "9.4.44.v20210927",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://search.maven.org/remotecontent?filepath=org/eclipse/jetty/jetty-distribution/9.4.41.v20210516/jetty-distribution-9.4.41.v20210516.tar.gz",
+      "url": "https://search.maven.org/remotecontent?filepath=org/eclipse/jetty/jetty-distribution/9.4.44.v20210927/jetty-distribution-9.4.44.v20210927.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -27,9 +27,40 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "arm64_big_sur": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/jetty/blobs/sha256:a6be10513ab590b3a3eb6ae631a5480af414a2347dcd194530105f0263d6b967",
+          "sha256": "a6be10513ab590b3a3eb6ae631a5480af414a2347dcd194530105f0263d6b967"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/jetty/blobs/sha256:e2d53532f1b42e4722773be37c4f871fc4d4312ed3309764bc0b204f2fc15283",
+          "sha256": "e2d53532f1b42e4722773be37c4f871fc4d4312ed3309764bc0b204f2fc15283"
+        },
+        "big_sur": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/jetty/blobs/sha256:e8777d929a1655066acee7b4467241db035911c971da87619bb2df7b68db4b57",
+          "sha256": "e8777d929a1655066acee7b4467241db035911c971da87619bb2df7b68db4b57"
+        },
+        "catalina": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/jetty/blobs/sha256:e8777d929a1655066acee7b4467241db035911c971da87619bb2df7b68db4b57",
+          "sha256": "e8777d929a1655066acee7b4467241db035911c971da87619bb2df7b68db4b57"
+        },
+        "mojave": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/jetty/blobs/sha256:e8777d929a1655066acee7b4467241db035911c971da87619bb2df7b68db4b57",
+          "sha256": "e8777d929a1655066acee7b4467241db035911c971da87619bb2df7b68db4b57"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
@@ -49,7 +80,15 @@
 
   ],
   "requirements": [
+    {
+      "name": "arch",
+      "cask": null,
+      "download": null,
+      "version": "x86_64",
+      "contexts": [
 
+      ]
+    }
   ],
   "conflicts_with": [
 

@@ -10,46 +10,61 @@
 
   ],
   "desc": "Version control system implemented in Python with multi-format support",
-  "license": "GPL-2.0",
+  "license": "GPL-2.0-or-later",
   "homepage": "https://www.breezy-vcs.org",
   "versions": {
-    "stable": "3.2.0",
+    "stable": "3.2.1",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://files.pythonhosted.org/packages/09/71/b75b6f8872516a3fb5fa20f98f32097ac126a847cb90c5c9189fac5e47f9/breezy-3.2.0.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/e4/93/101bb70d7e6c171c7a3a99d50d9f9b64a17a5845cfd6c8ecb95d844bac68/breezy-3.2.1.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/breezy/blobs/sha256:ce18d109ba318dd50c753cd3d02fc90ad6df9575ebdb7c515a1847dfc931598f",
+          "sha256": "ce18d109ba318dd50c753cd3d02fc90ad6df9575ebdb7c515a1847dfc931598f"
+        },
         "arm64_big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/breezy/blobs/sha256:346e68c4f53bd4dbafca6cc99b506aec39e7832404e8b71ed14a1aecff098d53",
-          "sha256": "346e68c4f53bd4dbafca6cc99b506aec39e7832404e8b71ed14a1aecff098d53"
+          "url": "https://ghcr.io/v2/homebrew/core/breezy/blobs/sha256:dbec16ab9ab4fec8b1f9e68bbb11a190e066c9201a538da5923996ef366f30f9",
+          "sha256": "dbec16ab9ab4fec8b1f9e68bbb11a190e066c9201a538da5923996ef366f30f9"
+        },
+        "monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/breezy/blobs/sha256:9ffbad5b832bcd48b2622fabbc1c8677716046cbbcdb44a94b7056d988b356dd",
+          "sha256": "9ffbad5b832bcd48b2622fabbc1c8677716046cbbcdb44a94b7056d988b356dd"
         },
         "big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/breezy/blobs/sha256:5e752e52c7483cf0bb746b39767e3d993e0625f1cff5d8d5136a9a739c10c8de",
-          "sha256": "5e752e52c7483cf0bb746b39767e3d993e0625f1cff5d8d5136a9a739c10c8de"
+          "url": "https://ghcr.io/v2/homebrew/core/breezy/blobs/sha256:cec1b7917f72dd243bb066e794f94164e4c626b1034900945f5c47b5cf0c0615",
+          "sha256": "cec1b7917f72dd243bb066e794f94164e4c626b1034900945f5c47b5cf0c0615"
         },
         "catalina": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/breezy/blobs/sha256:749d279b1025328b55c6cdefab609d7c783d08c776b2d9b36c8c3b47aa893779",
-          "sha256": "749d279b1025328b55c6cdefab609d7c783d08c776b2d9b36c8c3b47aa893779"
+          "url": "https://ghcr.io/v2/homebrew/core/breezy/blobs/sha256:8da239d61c5e5c0b2b767fac9ca5c76e282681dc74f71b6f61223cea93f2aa22",
+          "sha256": "8da239d61c5e5c0b2b767fac9ca5c76e282681dc74f71b6f61223cea93f2aa22"
         },
         "mojave": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/breezy/blobs/sha256:6f121c4a7496b887843277ea099ac7980cfdcc786df32ebc2f48de1e18220f7e",
-          "sha256": "6f121c4a7496b887843277ea099ac7980cfdcc786df32ebc2f48de1e18220f7e"
+          "url": "https://ghcr.io/v2/homebrew/core/breezy/blobs/sha256:6f28d8c1bf39889ea05179529c3d1d1c4b2b9076ba859111d881f771635e2be7",
+          "sha256": "6f28d8c1bf39889ea05179529c3d1d1c4b2b9076ba859111d881f771635e2be7"
+        },
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/breezy/blobs/sha256:8eccce30623dfdaeaa0761d98739153c986f27d05f177282e7c3d8aa49182992",
+          "sha256": "8eccce30623dfdaeaa0761d98739153c986f27d05f177282e7c3d8aa49182992"
         }
       }
     }
@@ -65,7 +80,8 @@
   ],
   "dependencies": [
     "openssl@1.1",
-    "python@3.9"
+    "python@3.9",
+    "six"
   ],
   "recommended_dependencies": [
 
@@ -80,7 +96,7 @@
 
   ],
   "conflicts_with": [
-
+    "bazaar"
   ],
   "caveats": null,
   "installed": [

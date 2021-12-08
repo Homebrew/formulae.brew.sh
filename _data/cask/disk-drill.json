@@ -7,15 +7,20 @@
   ],
   "desc": "Data recovery software",
   "homepage": "https://www.cleverfiles.com/",
-  "url": "https://www.cleverfiles.com/releases/DiskDrill_4.3.316.dmg",
+  "url": "https://dl.cleverfiles.com/diskdrill.dmg",
   "appcast": null,
-  "version": "4.3.316",
+  "version": "4.6.370",
+  "versions": {
+  },
   "installed": null,
   "outdated": false,
-  "sha256": "b719aae51440468c52364805ece402eadd3d39533334e037799f3e411c776f57",
+  "sha256": "no_check",
   "artifacts": [
     {
-      "delete": "/Library/Application Support/CleverFiles",
+      "script": {
+        "executable": "$(brew --prefix)/Caskroom/disk-drill/4.6.370/Disk Drill.app/Contents/Resources/uninstall",
+        "sudo": "true"
+      },
       "signal": {
       }
     },
@@ -26,7 +31,11 @@
       "trash": [
         "~/Library/Application Support/DiskDrill",
         "~/Library/Caches/com.cleverfiles.Disk_Drill",
-        "~/Library/Logs/DiskDrill.log"
+        "~/Library/Containers/com.cleverfiles.DiskDrill.Media/Data/cfbackd.chief",
+        "~/Library/Logs/DiskDrill.log",
+        "~/Library/Preferences/com.cleverfiles.Disk_Drill.plist",
+        "~/Library/Preferences/com.cleverfiles.DiskDrill.plist",
+        "~/Library/Preferences/com.cleverfiles.DiskDrill-setapp.plist"
       ],
       "signal": {
       }

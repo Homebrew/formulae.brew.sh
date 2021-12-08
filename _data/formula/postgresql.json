@@ -5,9 +5,10 @@
   "oldname": null,
   "aliases": [
     "postgres",
-    "postgresql@13"
+    "postgresql@14"
   ],
   "versioned_formulae": [
+    "postgresql@13",
     "postgresql@12",
     "postgresql@11",
     "postgresql@10",
@@ -19,43 +20,53 @@
   "license": "PostgreSQL",
   "homepage": "https://www.postgresql.org/",
   "versions": {
-    "stable": "13.3",
+    "stable": "14.1",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://ftp.postgresql.org/pub/source/v13.3/postgresql-13.3.tar.bz2",
+      "url": "https://ftp.postgresql.org/pub/source/v14.1/postgresql-14.1.tar.bz2",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/postgresql/blobs/sha256:6e6f3099ad1e64fbdc9dff2152c33a2f01743d2010330bcb34cefe13052fa228",
+          "sha256": "6e6f3099ad1e64fbdc9dff2152c33a2f01743d2010330bcb34cefe13052fa228"
+        },
         "arm64_big_sur": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/postgresql/blobs/sha256:7c0e1b76d60b428facd521c729323221712d7f6d9954e21da389aeeb2c62348e",
-          "sha256": "7c0e1b76d60b428facd521c729323221712d7f6d9954e21da389aeeb2c62348e"
+          "url": "https://ghcr.io/v2/homebrew/core/postgresql/blobs/sha256:d75aee6c8beaabf4add33f0f77f150b13523ffc21f6b72fd2a3c1ea0b7095362",
+          "sha256": "d75aee6c8beaabf4add33f0f77f150b13523ffc21f6b72fd2a3c1ea0b7095362"
+        },
+        "monterey": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/postgresql/blobs/sha256:027c8b48406c3d732241426e0f5d2caf9f48cb4d2d38610b8f5d46f0adf7a89f",
+          "sha256": "027c8b48406c3d732241426e0f5d2caf9f48cb4d2d38610b8f5d46f0adf7a89f"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/postgresql/blobs/sha256:eaf28965ead970ecfb327b121ec6a07f0a4e39865797a1a0383605a17e5911e3",
-          "sha256": "eaf28965ead970ecfb327b121ec6a07f0a4e39865797a1a0383605a17e5911e3"
+          "url": "https://ghcr.io/v2/homebrew/core/postgresql/blobs/sha256:b207e5d55b0696b3b1dd649b4496d8213c933304b2b85e1913270f0834167b7f",
+          "sha256": "b207e5d55b0696b3b1dd649b4496d8213c933304b2b85e1913270f0834167b7f"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/postgresql/blobs/sha256:74e946503c73cd0efc55ad4b373efbd8f4fb8a9e26a670b878c6db25794aea4a",
-          "sha256": "74e946503c73cd0efc55ad4b373efbd8f4fb8a9e26a670b878c6db25794aea4a"
+          "url": "https://ghcr.io/v2/homebrew/core/postgresql/blobs/sha256:7708c5cd803ce6bc1481527ecff0ad387d7489e71a3da47140768995bed3e145",
+          "sha256": "7708c5cd803ce6bc1481527ecff0ad387d7489e71a3da47140768995bed3e145"
         },
-        "mojave": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/postgresql/blobs/sha256:36c7bde4788571e5b66ffe05b6174b62c69781d61c53c3ebcd9d278e8f148197",
-          "sha256": "36c7bde4788571e5b66ffe05b6174b62c69781d61c53c3ebcd9d278e8f148197"
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/postgresql/blobs/sha256:37477f8fd9f0fed2956558ad9f7169123200e6761a65936e8732a3a88d95c3ca",
+          "sha256": "37477f8fd9f0fed2956558ad9f7169123200e6761a65936e8732a3a88d95c3ca"
         }
       }
     }
@@ -92,10 +103,10 @@
   "conflicts_with": [
 
   ],
-  "caveats": "To migrate existing data from a previous major version of PostgreSQL run:\n  brew postgresql-upgrade-database\n\nThis formula has created a default database cluster with:\n  initdb --locale=C -E UTF-8 $(brew --prefix)/var/postgres\nFor more details, read:\n  https://www.postgresql.org/docs/13/app-initdb.html\n",
+  "caveats": "To migrate existing data from a previous major version of PostgreSQL run:\n  brew postgresql-upgrade-database\n\nThis formula has created a default database cluster with:\n  initdb --locale=C -E UTF-8 $(brew --prefix)/var/postgres\nFor more details, read:\n  https://www.postgresql.org/docs/14/app-initdb.html\n",
   "installed": [
     {
-      "version": "13.3",
+      "version": "14.1_1",
       "used_options": [
 
       ],
@@ -108,18 +119,23 @@
           "declared_directly": true
         },
         {
+          "full_name": "ca-certificates",
+          "version": "2021-10-26",
+          "declared_directly": false
+        },
+        {
           "full_name": "openssl@1.1",
-          "version": "1.1.1k",
+          "version": "1.1.1l",
           "declared_directly": true
         },
         {
           "full_name": "krb5",
-          "version": "1.19.1",
+          "version": "1.19.2",
           "declared_directly": true
         },
         {
           "full_name": "readline",
-          "version": "8.1",
+          "version": "8.1.1",
           "declared_directly": true
         }
       ],
@@ -127,7 +143,7 @@
       "installed_on_request": true
     }
   ],
-  "linked_keg": "13.3",
+  "linked_keg": "14.1_1",
   "pinned": false,
   "outdated": false,
   "deprecated": false,

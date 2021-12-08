@@ -13,13 +13,13 @@
   "license": "Apache-2.0",
   "homepage": "https://github.com/dnanexus/dx-toolkit",
   "versions": {
-    "stable": "0.311.0",
+    "stable": "0.316.0",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://files.pythonhosted.org/packages/e8/c1/d1ce252f300df890db7a510363423c21fbe34db2d5b143cd788db1898e7c/dxpy-0.311.0.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/70/a1/08769f7ea9acb0ba0f4ae3105f22360d80ecbcabd685779d25fc05357fa8/dxpy-0.316.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,25 +31,35 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/dxpy/blobs/sha256:48863a29844a7e437da4fb17bff739a1fc959ca77f2a945cfcd9aa551a58f87b",
+          "sha256": "48863a29844a7e437da4fb17bff739a1fc959ca77f2a945cfcd9aa551a58f87b"
+        },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/dxpy/blobs/sha256:60e6db426f95e39c93db2345fda9da3709d3caea1cbf85e2e21ccfe40e4abf81",
-          "sha256": "60e6db426f95e39c93db2345fda9da3709d3caea1cbf85e2e21ccfe40e4abf81"
+          "url": "https://ghcr.io/v2/homebrew/core/dxpy/blobs/sha256:392652a26d9feae023a0571c84dc9ead4d636a328fd5a061768e61e6a4c9a031",
+          "sha256": "392652a26d9feae023a0571c84dc9ead4d636a328fd5a061768e61e6a4c9a031"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/dxpy/blobs/sha256:f40faf6580ec693eeab51db542e9b0adb42ba164ecbb67db5094a4f72954cf98",
+          "sha256": "f40faf6580ec693eeab51db542e9b0adb42ba164ecbb67db5094a4f72954cf98"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/dxpy/blobs/sha256:3e0ce912380a175b776027556788babc94d233bb4a09951f8bafe37484308f32",
-          "sha256": "3e0ce912380a175b776027556788babc94d233bb4a09951f8bafe37484308f32"
+          "url": "https://ghcr.io/v2/homebrew/core/dxpy/blobs/sha256:81e8cea88704f20ecd92767f8bb7a916e2412e22f183fd7849e7f027e0f32ca7",
+          "sha256": "81e8cea88704f20ecd92767f8bb7a916e2412e22f183fd7849e7f027e0f32ca7"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/dxpy/blobs/sha256:8b1064bd40e576282f7a5589b7a1cae5fa1cd92d8b0c9f43fca9e7e7bb05d4ae",
-          "sha256": "8b1064bd40e576282f7a5589b7a1cae5fa1cd92d8b0c9f43fca9e7e7bb05d4ae"
+          "url": "https://ghcr.io/v2/homebrew/core/dxpy/blobs/sha256:6e117a38cc5940ee402ad9f5868e8808150c974996115d715f9874352572630c",
+          "sha256": "6e117a38cc5940ee402ad9f5868e8808150c974996115d715f9874352572630c"
         },
-        "mojave": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/dxpy/blobs/sha256:816a71b9df6d0ecfecb605f6c51e945725d57f8dc5b65ec9333dd8ef756927b4",
-          "sha256": "816a71b9df6d0ecfecb605f6c51e945725d57f8dc5b65ec9333dd8ef756927b4"
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/dxpy/blobs/sha256:82efb58f7a91efccfd47697920bd2cfd464990a254ec9c3f3f24261aa4696e87",
+          "sha256": "82efb58f7a91efccfd47697920bd2cfd464990a254ec9c3f3f24261aa4696e87"
         }
       }
     }
@@ -60,10 +70,11 @@
 
   ],
   "build_dependencies": [
-
+    "rust"
   ],
   "dependencies": [
     "python@3.9",
+    "six",
     "readline"
   ],
   "recommended_dependencies": [

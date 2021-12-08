@@ -13,13 +13,13 @@
   "license": "Apache-2.0",
   "homepage": "https://github.com/awslabs/aws-cfn-template-flip",
   "versions": {
-    "stable": "1.2.3",
+    "stable": "1.3.0",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://files.pythonhosted.org/packages/76/5a/314a934b75f2f52d1845e4344b9bbdacdd76d82784b678ec27c2ed57fd2c/cfn_flip-1.2.3.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/ca/75/8eba0bb52a6c58e347bc4c839b249d9f42380de93ed12a14eba4355387b4/cfn_flip-1.3.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,30 +31,40 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/cfn-flip/blobs/sha256:62ce1d4aaafd2b6c0baf9e899baf1354ae375e8810fb119e0f33e59d98dd42dd",
+          "sha256": "62ce1d4aaafd2b6c0baf9e899baf1354ae375e8810fb119e0f33e59d98dd42dd"
+        },
         "arm64_big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/cfn-flip/blobs/sha256:c697eb2c6521e79bbdf5a834866914b9316383789a8ac885d7f1439b2c2774d2",
-          "sha256": "c697eb2c6521e79bbdf5a834866914b9316383789a8ac885d7f1439b2c2774d2"
+          "url": "https://ghcr.io/v2/homebrew/core/cfn-flip/blobs/sha256:c30e20ba1e20a93f6c4e0cb15b76f2c7cbd9cf65d0bc4865d933d3a6c8d16aa4",
+          "sha256": "c30e20ba1e20a93f6c4e0cb15b76f2c7cbd9cf65d0bc4865d933d3a6c8d16aa4"
+        },
+        "monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/cfn-flip/blobs/sha256:dde77b69e0bce0d7e720dbeb50ecca04adbba5c7b20dec92f07dbb27b07c379a",
+          "sha256": "dde77b69e0bce0d7e720dbeb50ecca04adbba5c7b20dec92f07dbb27b07c379a"
         },
         "big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/cfn-flip/blobs/sha256:6e839991d90501ef68afcec82bd4445dcf24242b33a31bd5ebf3004799e81512",
-          "sha256": "6e839991d90501ef68afcec82bd4445dcf24242b33a31bd5ebf3004799e81512"
+          "url": "https://ghcr.io/v2/homebrew/core/cfn-flip/blobs/sha256:2fc754ceec0d6bd7964c67c025dd6194396b3c5a8b7e857cffceb80d1d540869",
+          "sha256": "2fc754ceec0d6bd7964c67c025dd6194396b3c5a8b7e857cffceb80d1d540869"
         },
         "catalina": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/cfn-flip/blobs/sha256:e0f813ad41397d94b167cbcae814862abf436cd46b0996f83da0dae5e3d6d717",
-          "sha256": "e0f813ad41397d94b167cbcae814862abf436cd46b0996f83da0dae5e3d6d717"
+          "url": "https://ghcr.io/v2/homebrew/core/cfn-flip/blobs/sha256:173f26ac0f8cdd2e87e3555dbbab76c30b674b949a07bf27b5b8fe6ffbb406d7",
+          "sha256": "173f26ac0f8cdd2e87e3555dbbab76c30b674b949a07bf27b5b8fe6ffbb406d7"
         },
         "mojave": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/cfn-flip/blobs/sha256:d22cab76b33a3b6b836aa723242befc46fb8028fe282af1d4ccee64e4a21165a",
-          "sha256": "d22cab76b33a3b6b836aa723242befc46fb8028fe282af1d4ccee64e4a21165a"
+          "url": "https://ghcr.io/v2/homebrew/core/cfn-flip/blobs/sha256:49d83ff2732db641922de273119a56b99d286ef95b489a96a06cd509b004c65d",
+          "sha256": "49d83ff2732db641922de273119a56b99d286ef95b489a96a06cd509b004c65d"
         },
-        "high_sierra": {
+        "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/cfn-flip/blobs/sha256:29ecc4856f9b64362498cf82765cef635f7b12f6b8570a19f5c223ca007a4e0c",
-          "sha256": "29ecc4856f9b64362498cf82765cef635f7b12f6b8570a19f5c223ca007a4e0c"
+          "url": "https://ghcr.io/v2/homebrew/core/cfn-flip/blobs/sha256:1956e8bde147547f9b1812bf32964d1f22dd7c512fca7b0ba23c4cadaad31cb4",
+          "sha256": "1956e8bde147547f9b1812bf32964d1f22dd7c512fca7b0ba23c4cadaad31cb4"
         }
       }
     }
@@ -68,7 +78,7 @@
 
   ],
   "dependencies": [
-    "python@3.9"
+    "python@3.10"
   ],
   "recommended_dependencies": [
 

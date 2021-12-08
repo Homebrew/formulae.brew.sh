@@ -31,10 +31,20 @@
       "rebuild": 1,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/cmu-sphinxbase/blobs/sha256:10c702ad300d51ffac6ed0251cf3b64952d549ad0a67792b80fe055a182014f2",
+          "sha256": "10c702ad300d51ffac6ed0251cf3b64952d549ad0a67792b80fe055a182014f2"
+        },
         "arm64_big_sur": {
           "cellar": ":any",
           "url": "https://ghcr.io/v2/homebrew/core/cmu-sphinxbase/blobs/sha256:d8ca2666d2ee6c5ff4a5a88ad086cfcf3e0cf744e6614ea31b451dfd86196c17",
           "sha256": "d8ca2666d2ee6c5ff4a5a88ad086cfcf3e0cf744e6614ea31b451dfd86196c17"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/cmu-sphinxbase/blobs/sha256:36b168f91bef9ea210c0fcbe6ace6a24d14aa50d11fd464a742e543ede25a6fe",
+          "sha256": "36b168f91bef9ea210c0fcbe6ace6a24d14aa50d11fd464a742e543ede25a6fe"
         },
         "big_sur": {
           "cellar": ":any",
@@ -60,6 +70,11 @@
           "cellar": ":any",
           "url": "https://ghcr.io/v2/homebrew/core/cmu-sphinxbase/blobs/sha256:fde603304716876e192bef822f8df21c26e09688d43580d3f9a61c78e03dbbb0",
           "sha256": "fde603304716876e192bef822f8df21c26e09688d43580d3f9a61c78e03dbbb0"
+        },
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/cmu-sphinxbase/blobs/sha256:078ae69b46fd06a8fcd68df8457e8c96e078c0276a027ae640ac18aad99d6669",
+          "sha256": "078ae69b46fd06a8fcd68df8457e8c96e078c0276a027ae640ac18aad99d6669"
         }
       }
     }
@@ -83,7 +98,9 @@
 
   ],
   "uses_from_macos": [
-
+    {
+      "bison": "build"
+    }
   ],
   "requirements": [
 

@@ -15,7 +15,7 @@
   "versions": {
     "stable": "246",
     "head": "HEAD",
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
@@ -27,6 +27,17 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 2,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/systemd/blobs/sha256:e9a110ca3890c88a257831d4ed305a995ece7cebdbb3994cb376ecc521e445ee",
+          "sha256": "e9a110ca3890c88a257831d4ed305a995ece7cebdbb3994cb376ecc521e445ee"
+        }
+      }
+    }
   },
   "keg_only": false,
   "bottle_disabled": false,
@@ -45,7 +56,8 @@
     "m4",
     "meson",
     "ninja",
-    "pkg-config"
+    "pkg-config",
+    "rsync"
   ],
   "dependencies": [
     "expat",
@@ -53,7 +65,8 @@
     "lz4",
     "openssl@1.1",
     "util-linux",
-    "xz"
+    "xz",
+    "zstd"
   ],
   "recommended_dependencies": [
 

@@ -1,38 +1,66 @@
 {
   "name": "fossil",
-  "pkg_version": "2.15.1",
+  "pkg_version": "2.17",
   "rebuild": 0,
   "bottles": {
+    "arm64_monterey": {
+      "url": "https://ghcr.io/v2/homebrew/core/fossil/blobs/sha256:0d253775540cedf23dfb2d3135f7a147be6aafcef658ae9567eec0f702254fe4"
+    },
     "arm64_big_sur": {
-      "url": "https://ghcr.io/v2/homebrew/core/fossil/blobs/sha256:9633bfbbc163a837543dd5b0c092ad5ed4ce62c37bbb8312bc968e43b85330dd"
+      "url": "https://ghcr.io/v2/homebrew/core/fossil/blobs/sha256:465292116e1bb204aefa96b56c1350c08af43c2963975ef7a06a71f278637858"
+    },
+    "monterey": {
+      "url": "https://ghcr.io/v2/homebrew/core/fossil/blobs/sha256:22187e1f35814920ea0df4139f2c5f0e60a5b249f7f186345b1791a9a8b5af64"
     },
     "big_sur": {
-      "url": "https://ghcr.io/v2/homebrew/core/fossil/blobs/sha256:4786c0419fabc8af5fa66fc6c71153c4a90b8a9ead91cd0694e6e5239a157723"
+      "url": "https://ghcr.io/v2/homebrew/core/fossil/blobs/sha256:e4ab11e3b0739b51fa4ce5ef8b020df84704c2050a52b1a89a804008ad9fb9d8"
     },
     "catalina": {
-      "url": "https://ghcr.io/v2/homebrew/core/fossil/blobs/sha256:7ddafb4ac71f80d9d96da8566d2d596899c2e8ad873551fb3f3f7d6c3c516585"
+      "url": "https://ghcr.io/v2/homebrew/core/fossil/blobs/sha256:c2464646ca8502f36e67f1a0730d93192e6ddf0eb1b113690c1a64689f4a8d4e"
     },
     "mojave": {
-      "url": "https://ghcr.io/v2/homebrew/core/fossil/blobs/sha256:547cc3cdf20154d928c2be5b62f58005041c865073e551891a00f2ef4b2e020d"
+      "url": "https://ghcr.io/v2/homebrew/core/fossil/blobs/sha256:a0b10c2b031c7c54b51bf919fcd1d79c0f7047804851192af34b4d2c1e377bc8"
+    },
+    "x86_64_linux": {
+      "url": "https://ghcr.io/v2/homebrew/core/fossil/blobs/sha256:b8b5b3ad3e442b166240b72299c66eb22b989d47b5e06ca96a13e2527be1dc48"
     }
   },
   "dependencies": [
     {
-      "name": "openssl@1.1",
-      "pkg_version": "1.1.1k",
+      "name": "ca-certificates",
+      "pkg_version": "2021-10-26",
       "rebuild": 0,
       "bottles": {
+        "all": {
+          "url": "https://ghcr.io/v2/homebrew/core/ca-certificates/blobs/sha256:1bbd45c16a0b9912174c553a6d7ae1b67b11abbeb3155eaf03109bb62d8e5381"
+        }
+      }
+    },
+    {
+      "name": "openssl@1.1",
+      "pkg_version": "1.1.1l_1",
+      "rebuild": 0,
+      "bottles": {
+        "arm64_monterey": {
+          "url": "https://ghcr.io/v2/homebrew/core/openssl/1.1/blobs/sha256:8f5b0bee61c1570b9f0fc0a21d6c322e904ae7975bdaada5787451d18e9677a6"
+        },
         "arm64_big_sur": {
-          "url": "https://ghcr.io/v2/homebrew/core/openssl/1.1/blobs/sha256:0a75e0f116c0653bc7a2b422e5dc500e7e51557303aa4fca9c1a28786189c1da"
+          "url": "https://ghcr.io/v2/homebrew/core/openssl/1.1/blobs/sha256:e3d8556cec907ad1e0ea00aebd0b0b516dde06ea3bf24308290ad785cb360a04"
+        },
+        "monterey": {
+          "url": "https://ghcr.io/v2/homebrew/core/openssl/1.1/blobs/sha256:9a14367813591b51e30828c7d86499479bc6201954f6b10ed591b40cd3b71cc1"
         },
         "big_sur": {
-          "url": "https://ghcr.io/v2/homebrew/core/openssl/1.1/blobs/sha256:17d94c51ddfa8364baed5f3a754063e1ca75f807194f68d0b976619cf4e69c1a"
+          "url": "https://ghcr.io/v2/homebrew/core/openssl/1.1/blobs/sha256:64d4d83f7d3216f2d3107f966b223d11401a2e9391707d959fbdb5c1bd5fbe0c"
         },
         "catalina": {
-          "url": "https://ghcr.io/v2/homebrew/core/openssl/1.1/blobs/sha256:cb610ecdda346011031b890d7b7c6e1942d7fc08cf083b74f148ec7ffed8c7e1"
+          "url": "https://ghcr.io/v2/homebrew/core/openssl/1.1/blobs/sha256:eb4e1d96f1a9eac8d096220550e3ca97a46d59747ec2324e2ff74351f8319c2b"
         },
         "mojave": {
-          "url": "https://ghcr.io/v2/homebrew/core/openssl/1.1/blobs/sha256:7928c80c309c6ece50b1c0d968a1e54011088cc896d26aa511249978a246bd50"
+          "url": "https://ghcr.io/v2/homebrew/core/openssl/1.1/blobs/sha256:add58d2bb5059599029e687d5baf6fd737dff1e5cef7b6c5f4e0fe11b9c8e588"
+        },
+        "x86_64_linux": {
+          "url": "https://ghcr.io/v2/homebrew/core/openssl/1.1/blobs/sha256:84bc9412c1620f5607161c5fe2b6e11ff49de96d704595523f7f7c15f1883cf2"
         }
       }
     }

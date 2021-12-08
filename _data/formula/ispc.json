@@ -13,43 +13,53 @@
   "license": "BSD-3-Clause",
   "homepage": "https://ispc.github.io",
   "versions": {
-    "stable": "1.15.0",
+    "stable": "1.16.1",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/ispc/ispc/archive/v1.15.0.tar.gz",
+      "url": "https://github.com/ispc/ispc/archive/v1.16.1.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 2,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/ispc/blobs/sha256:a9e533da0a8a1ad0327cbe13cf4e73712fd83d40eeff92286e9b2b404a6be58b",
+          "sha256": "a9e533da0a8a1ad0327cbe13cf4e73712fd83d40eeff92286e9b2b404a6be58b"
+        },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/ispc/blobs/sha256:b1fd77e27b4fd504055bbea55c86129ff2505f5346af0704df2b9d040c0a90f1",
-          "sha256": "b1fd77e27b4fd504055bbea55c86129ff2505f5346af0704df2b9d040c0a90f1"
+          "url": "https://ghcr.io/v2/homebrew/core/ispc/blobs/sha256:816feef4722edd8866c394110c503338eaba0bb373c87ddb9a898dc56b1adac7",
+          "sha256": "816feef4722edd8866c394110c503338eaba0bb373c87ddb9a898dc56b1adac7"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/ispc/blobs/sha256:b0d22d24b1a89933c5ccc6b73968641c3ebc99839cb5e7fdbe2135cc9ce4673d",
+          "sha256": "b0d22d24b1a89933c5ccc6b73968641c3ebc99839cb5e7fdbe2135cc9ce4673d"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/ispc/blobs/sha256:330a383d69b4a7c35bc69c5fd189991026a12d0fb08e3eadd867b16167225107",
-          "sha256": "330a383d69b4a7c35bc69c5fd189991026a12d0fb08e3eadd867b16167225107"
+          "url": "https://ghcr.io/v2/homebrew/core/ispc/blobs/sha256:a82168d4f3a51a8078eb3603a9e3810f5a81e32e131fce032f4b505d6d0147e7",
+          "sha256": "a82168d4f3a51a8078eb3603a9e3810f5a81e32e131fce032f4b505d6d0147e7"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/ispc/blobs/sha256:7ce54472561f37b0c2c565dca1e584bf7ed9f0ea27129abd81a69a1f59daadb6",
-          "sha256": "7ce54472561f37b0c2c565dca1e584bf7ed9f0ea27129abd81a69a1f59daadb6"
+          "url": "https://ghcr.io/v2/homebrew/core/ispc/blobs/sha256:168dcec41346433e47d5478793216c86b96c4e9c2a31673e21de60b5f6a95427",
+          "sha256": "168dcec41346433e47d5478793216c86b96c4e9c2a31673e21de60b5f6a95427"
         },
         "mojave": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/ispc/blobs/sha256:47d4032998ea5cdd8bc3732abb7ca7b4d16ea329cfb1197734bbdc72d0b1d7ad",
-          "sha256": "47d4032998ea5cdd8bc3732abb7ca7b4d16ea329cfb1197734bbdc72d0b1d7ad"
+          "url": "https://ghcr.io/v2/homebrew/core/ispc/blobs/sha256:d19b58b941d33a38e574e351d85445c5f8aee6c9ca6a164db874a2753138ae1c",
+          "sha256": "d19b58b941d33a38e574e351d85445c5f8aee6c9ca6a164db874a2753138ae1c"
         }
       }
     }
@@ -66,7 +76,7 @@
     "python@3.9"
   ],
   "dependencies": [
-    "llvm"
+    "llvm@12"
   ],
   "recommended_dependencies": [
 

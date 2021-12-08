@@ -10,7 +10,7 @@
 
   ],
   "desc": "Dextrous text editor",
-  "license": "GPL-2.0",
+  "license": "GPL-2.0-only",
   "homepage": "https://github.com/tihirvon/dex",
   "versions": {
     "stable": "1.0",
@@ -31,10 +31,20 @@
       "rebuild": 1,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/dex/blobs/sha256:b0862918ef89cb4018a08662ec18ca36fab573fdf1e44696fd32813b9f40957c",
+          "sha256": "b0862918ef89cb4018a08662ec18ca36fab573fdf1e44696fd32813b9f40957c"
+        },
         "arm64_big_sur": {
           "cellar": "/opt/homebrew/Cellar",
           "url": "https://ghcr.io/v2/homebrew/core/dex/blobs/sha256:f8ffe6f83659dbdf5f60ee7367291371a1b5cb502ce288ba76d7d392ad943c85",
           "sha256": "f8ffe6f83659dbdf5f60ee7367291371a1b5cb502ce288ba76d7d392ad943c85"
+        },
+        "monterey": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/dex/blobs/sha256:1161d38da36fd3affca64b1b45f68a98e2b935cf1a25418f079f30ed1538eaa3",
+          "sha256": "1161d38da36fd3affca64b1b45f68a98e2b935cf1a25418f079f30ed1538eaa3"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
@@ -92,7 +102,7 @@
 
   ],
   "uses_from_macos": [
-
+    "ncurses"
   ],
   "requirements": [
 

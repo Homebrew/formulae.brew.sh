@@ -13,43 +13,53 @@
   "license": "MIT",
   "homepage": "https://mitmproxy.org",
   "versions": {
-    "stable": "6.0.2",
+    "stable": "7.0.4",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/mitmproxy/mitmproxy/archive/v6.0.2.tar.gz",
+      "url": "https://github.com/mitmproxy/mitmproxy/archive/v7.0.4.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 2,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/mitmproxy/blobs/sha256:6fb2d7d8085b8bc9d29d2809ea71d938231e95604fe0ed53b31753287ae08b96",
+          "sha256": "6fb2d7d8085b8bc9d29d2809ea71d938231e95604fe0ed53b31753287ae08b96"
+        },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/mitmproxy/blobs/sha256:38532a465e64e70d10c3ae915e8b1ad94bc737859744f84f51f7cca9c4821ebe",
-          "sha256": "38532a465e64e70d10c3ae915e8b1ad94bc737859744f84f51f7cca9c4821ebe"
+          "url": "https://ghcr.io/v2/homebrew/core/mitmproxy/blobs/sha256:cd60880fbcc188dce8dea404bee86bc8e30c21e730f98c6a1dfa8a3b9d4d883e",
+          "sha256": "cd60880fbcc188dce8dea404bee86bc8e30c21e730f98c6a1dfa8a3b9d4d883e"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/mitmproxy/blobs/sha256:a174dd8bc068468b83a6308e00521b095e5d11eee40d5264d80b26844f0c584b",
+          "sha256": "a174dd8bc068468b83a6308e00521b095e5d11eee40d5264d80b26844f0c584b"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/mitmproxy/blobs/sha256:0147699f750b68e7b99bd2787a9f12bc7bfbd67072c7993b924645343da7687a",
-          "sha256": "0147699f750b68e7b99bd2787a9f12bc7bfbd67072c7993b924645343da7687a"
+          "url": "https://ghcr.io/v2/homebrew/core/mitmproxy/blobs/sha256:303fc0c22a55497d03387fa8d87dbabf7dd458d0f44fd61e1333ec3fb0c9bc2d",
+          "sha256": "303fc0c22a55497d03387fa8d87dbabf7dd458d0f44fd61e1333ec3fb0c9bc2d"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/mitmproxy/blobs/sha256:ae1a8a9ce9cae1261dba035f21dcc76495d9ad52db35c84c88bf3d8a46de9a26",
-          "sha256": "ae1a8a9ce9cae1261dba035f21dcc76495d9ad52db35c84c88bf3d8a46de9a26"
+          "url": "https://ghcr.io/v2/homebrew/core/mitmproxy/blobs/sha256:78e3e827696328572b8c2e73fc945a588302d077f1557722317485bf183d351c",
+          "sha256": "78e3e827696328572b8c2e73fc945a588302d077f1557722317485bf183d351c"
         },
-        "mojave": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/mitmproxy/blobs/sha256:e875f4b63ff4a62fa36669090c70e44084d69a08f041e650476d02425ea50495",
-          "sha256": "e875f4b63ff4a62fa36669090c70e44084d69a08f041e650476d02425ea50495"
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/mitmproxy/blobs/sha256:d9a37141f5a0eae06547195269489c93b069b88fe3010c4ea62233ece16b0f0f",
+          "sha256": "d9a37141f5a0eae06547195269489c93b069b88fe3010c4ea62233ece16b0f0f"
         }
       }
     }
@@ -60,10 +70,11 @@
 
   ],
   "build_dependencies": [
-
+    "rust"
   ],
   "dependencies": [
     "openssl@1.1",
+    "protobuf",
     "python@3.9",
     "six"
   ],

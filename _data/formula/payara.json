@@ -10,26 +10,37 @@
 
   ],
   "desc": "Java EE application server forked from GlassFish",
-  "license": null,
+  "license": "CDDL-1.1 or (GPL-2.0-only with Classpath-exception-2.0)",
   "homepage": "https://www.payara.fish",
   "versions": {
-    "stable": "5.192",
+    "stable": "5.2021.8",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://search.maven.org/remotecontent?filepath=fish/payara/distributions/payara/5.192/payara-5.192.zip",
+      "url": "https://search.maven.org/remotecontent?filepath=fish/payara/distributions/payara/5.2021.8/payara-5.2021.8.zip",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "all": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/payara/blobs/sha256:6bc43426efc323aeb2117f333e300026631979c60b8854f2b85f97b1bd10e729",
+          "sha256": "6bc43426efc323aeb2117f333e300026631979c60b8854f2b85f97b1bd10e729"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
@@ -37,7 +48,7 @@
 
   ],
   "dependencies": [
-    "openjdk@8"
+    "openjdk@11"
   ],
   "recommended_dependencies": [
 
@@ -49,7 +60,15 @@
 
   ],
   "requirements": [
+    {
+      "name": "macos",
+      "cask": null,
+      "download": null,
+      "version": null,
+      "contexts": [
 
+      ]
+    }
   ],
   "conflicts_with": [
     "glassfish"

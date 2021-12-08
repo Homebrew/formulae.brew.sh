@@ -10,7 +10,7 @@
 
   ],
   "desc": "FUSE module for iOS devices",
-  "license": "LGPL-2.1",
+  "license": "LGPL-2.1-or-later",
   "homepage": "https://www.libimobiledevice.org/",
   "versions": {
     "stable": "1.1.4",
@@ -45,6 +45,11 @@
           "cellar": ":any",
           "url": "https://ghcr.io/v2/homebrew/core/ifuse/blobs/sha256:ff5577f28749cf18671eecd953e96f0c52a06dccf827dcf08e2d64f894dfdd5e",
           "sha256": "ff5577f28749cf18671eecd953e96f0c52a06dccf827dcf08e2d64f894dfdd5e"
+        },
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/ifuse/blobs/sha256:ec03965eeaecd9443c4b5d20a0b20e6275fed16c084a4e05fe1f6cb01f3f7e42",
+          "sha256": "ec03965eeaecd9443c4b5d20a0b20e6275fed16c084a4e05fe1f6cb01f3f7e42"
         }
       }
     }
@@ -80,7 +85,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": null,
+  "caveats": "The reasons for disabling this formula can be found here:\n  https://github.com/Homebrew/homebrew-core/pull/64491\n\nAn external tap may provide a replacement formula. See:\n  https://docs.brew.sh/Interesting-Taps-and-Forks\n",
   "installed": [
 
   ],
@@ -92,5 +97,5 @@
   "deprecation_reason": null,
   "disabled": true,
   "disable_date": "2021-04-08",
-  "disable_reason": "requires FUSE"
+  "disable_reason": "requires closed-source macFUSE"
 }

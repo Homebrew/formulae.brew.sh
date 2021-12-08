@@ -13,13 +13,13 @@
   "license": "MIT",
   "homepage": "https://conan.io",
   "versions": {
-    "stable": "1.37.1",
+    "stable": "1.43.0",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://files.pythonhosted.org/packages/63/f5/07110dc9b065c0c11785d2ff1ebedd79cfad094db228120df1503003e996/conan-1.37.1.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/fb/65/d5a8a16bda247f28c368dc6b47b1694ba0455af05758b53dc28f8c83867c/conan-1.43.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,25 +31,35 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/conan/blobs/sha256:44f861dc0eb158dfdd003ef77bd9a60f5f9de65339ebe580fca326577b3aee04",
+          "sha256": "44f861dc0eb158dfdd003ef77bd9a60f5f9de65339ebe580fca326577b3aee04"
+        },
         "arm64_big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/conan/blobs/sha256:473581ef705c5bd67573b8ffacc230cda707094ca44444846ebd378b6a6fe6aa",
-          "sha256": "473581ef705c5bd67573b8ffacc230cda707094ca44444846ebd378b6a6fe6aa"
+          "url": "https://ghcr.io/v2/homebrew/core/conan/blobs/sha256:1fb5464c5e348ea78fb5e71dd3357c099816468d5ebd2c3188207fcfcaceda21",
+          "sha256": "1fb5464c5e348ea78fb5e71dd3357c099816468d5ebd2c3188207fcfcaceda21"
+        },
+        "monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/conan/blobs/sha256:70fca704a69b8451b82e2c118909290fe9a7f4cb071afc08b4c3c92832404111",
+          "sha256": "70fca704a69b8451b82e2c118909290fe9a7f4cb071afc08b4c3c92832404111"
         },
         "big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/conan/blobs/sha256:f6fcaaad34733747208c1c869c12ec7985fb2a7582ec9673d52a812f7f3c7ca4",
-          "sha256": "f6fcaaad34733747208c1c869c12ec7985fb2a7582ec9673d52a812f7f3c7ca4"
+          "url": "https://ghcr.io/v2/homebrew/core/conan/blobs/sha256:c8c3cdeb8eebfd8cb4b27c9970040a93933682aebc9dbae55536b9e4206f58ec",
+          "sha256": "c8c3cdeb8eebfd8cb4b27c9970040a93933682aebc9dbae55536b9e4206f58ec"
         },
         "catalina": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/conan/blobs/sha256:bdbd414e3e14ee33a7983cf9a13830d79beeacf650b253f29f0ce176e6c6b6c0",
-          "sha256": "bdbd414e3e14ee33a7983cf9a13830d79beeacf650b253f29f0ce176e6c6b6c0"
+          "url": "https://ghcr.io/v2/homebrew/core/conan/blobs/sha256:b1b557db5e545c8f412ff4550433fbcb76d4b53ac85c61a9e38e38f9db3ba82a",
+          "sha256": "b1b557db5e545c8f412ff4550433fbcb76d4b53ac85c61a9e38e38f9db3ba82a"
         },
-        "mojave": {
+        "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/conan/blobs/sha256:dc1e12245e2615bbc165359d8c6056345201033dc7e09f220d5a6d5df73abf07",
-          "sha256": "dc1e12245e2615bbc165359d8c6056345201033dc7e09f220d5a6d5df73abf07"
+          "url": "https://ghcr.io/v2/homebrew/core/conan/blobs/sha256:c1f23e02f0bcb2bc5e2be3c30127b9cab70670a45586f32eab4f04049308c51b",
+          "sha256": "c1f23e02f0bcb2bc5e2be3c30127b9cab70670a45586f32eab4f04049308c51b"
         }
       }
     }
@@ -63,9 +73,11 @@
     "pkg-config"
   ],
   "dependencies": [
+    "cmake",
     "libffi",
     "openssl@1.1",
-    "python@3.9"
+    "python@3.10",
+    "six"
   ],
   "recommended_dependencies": [
 

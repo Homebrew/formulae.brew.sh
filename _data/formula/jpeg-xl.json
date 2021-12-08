@@ -10,46 +10,56 @@
 
   ],
   "desc": "New file format for still image compression",
-  "license": "Apache-2.0",
+  "license": "BSD-3-Clause",
   "homepage": "https://jpeg.org/jpegxl/index.html",
   "versions": {
-    "stable": "0.3.7",
+    "stable": "0.6.1",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://gitlab.com/wg1/jpeg-xl/-/archive/v0.3.7/jpeg-xl-v0.3.7.tar.bz2",
+      "url": "https://github.com/libjxl/libjxl/archive/v0.6.1.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/jpeg-xl/blobs/sha256:299002d5c10f0009bcdf7b2f5c4d544e4b84fc36dd109a0b3dd5eee780dbb5f7",
+          "sha256": "299002d5c10f0009bcdf7b2f5c4d544e4b84fc36dd109a0b3dd5eee780dbb5f7"
+        },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/jpeg-xl/blobs/sha256:e855720e77098e6cf1ada7dd53561e73f426d7b241512c209ef8b21b915cd3b1",
-          "sha256": "e855720e77098e6cf1ada7dd53561e73f426d7b241512c209ef8b21b915cd3b1"
+          "url": "https://ghcr.io/v2/homebrew/core/jpeg-xl/blobs/sha256:ad8d741fe5ff44ed35f407ff6f692763c937d74e51156563fb3e8245ac534898",
+          "sha256": "ad8d741fe5ff44ed35f407ff6f692763c937d74e51156563fb3e8245ac534898"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/jpeg-xl/blobs/sha256:a311fe41c7dc098c82269b42fd819ef20ce7248f9df444ce4890576005124204",
+          "sha256": "a311fe41c7dc098c82269b42fd819ef20ce7248f9df444ce4890576005124204"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/jpeg-xl/blobs/sha256:0abccbb80acb60e345bc1f338bb7647bb6fb946529343104c887b4dc02b685fb",
-          "sha256": "0abccbb80acb60e345bc1f338bb7647bb6fb946529343104c887b4dc02b685fb"
+          "url": "https://ghcr.io/v2/homebrew/core/jpeg-xl/blobs/sha256:77882f055f5509900e8f913352386201a3cb57cbae04f7de254416416d9638d7",
+          "sha256": "77882f055f5509900e8f913352386201a3cb57cbae04f7de254416416d9638d7"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/jpeg-xl/blobs/sha256:432600f118932b15359629c9a94f5a8e017d9985ae888af21f5f605b2f886dbd",
-          "sha256": "432600f118932b15359629c9a94f5a8e017d9985ae888af21f5f605b2f886dbd"
+          "url": "https://ghcr.io/v2/homebrew/core/jpeg-xl/blobs/sha256:ef47fc0d2de7c6623c1504d6df8b9b041763bec532c4f907793f4ffedc6f3050",
+          "sha256": "ef47fc0d2de7c6623c1504d6df8b9b041763bec532c4f907793f4ffedc6f3050"
         },
-        "mojave": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/jpeg-xl/blobs/sha256:d2045261bd46e2deaf3f3c460cac89f3b1810da54379df93a5be1e4f82399244",
-          "sha256": "d2045261bd46e2deaf3f3c460cac89f3b1810da54379df93a5be1e4f82399244"
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/jpeg-xl/blobs/sha256:011b3fd5a6bfdd494edaddf64cb4432cadf6ad71adf24201a9555848eb2717c4",
+          "sha256": "011b3fd5a6bfdd494edaddf64cb4432cadf6ad71adf24201a9555848eb2717c4"
         }
       }
     }
@@ -66,10 +76,10 @@
   "dependencies": [
     "brotli",
     "giflib",
-    "ilmbase",
+    "imath",
     "jpeg",
     "libpng",
-    "openexr@2",
+    "openexr",
     "webp"
   ],
   "recommended_dependencies": [
@@ -79,7 +89,12 @@
 
   ],
   "uses_from_macos": [
-
+    {
+      "libxml2": "build"
+    },
+    {
+      "libxslt": "build"
+    }
   ],
   "requirements": [
 

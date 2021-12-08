@@ -7,18 +7,20 @@
   ],
   "desc": "Menu bar tool to limit maximum charging percentage",
   "homepage": "https://github.com/davidwernhart/AlDente",
-  "url": "https://github.com/davidwernhart/AlDente/releases/download/1.2/AlDente.app.zip",
+  "url": "https://github.com/davidwernhart/AlDente/releases/download/1.10/AlDente1.10.dmg",
   "appcast": null,
-  "version": "1.2",
+  "version": "1.10",
+  "versions": {
+  },
   "installed": null,
   "outdated": false,
-  "sha256": "a588dc29faca894b7321e23420ca17d6a944b9b3b46412435f519b96e4ebee7b",
+  "sha256": "4d2593639a8eeac4723709d154759154991a3fc64106c1a32d8912feeead290d",
   "artifacts": [
     {
       "quit": "com.davidwernhart.Helper",
       "delete": [
-        "/Library/LaunchDaemons/com.davidwernhart.Helper.plist",
-        "/Library/PrivilegedHelperTools/com.davidwernhart.Helper"
+        "/Library/LaunchDaemons/com.apphousekitchen.aldente-pro.helper.plist",
+        "/Library/PrivilegedHelperTools/com.apphousekitchen.aldente-pro.helper"
       ],
       "signal": {
       }
@@ -27,15 +29,24 @@
       "AlDente.app"
     ],
     {
-      "trash": "~/Library/Preferences/com.davidwernhart.AlDente.plist",
+      "trash": [
+        "~/Library/Application Support/AlDente",
+        "~/Library/Caches/com.apphousekitchen.aldente-pro",
+        "~/Library/HTTPStorages/com.apphousekitchen.aldente-pro.binarycookies"
+      ],
       "signal": {
       }
     }
   ],
   "caveats": null,
   "depends_on": {
+    "macos": {
+      ">=": [
+        "11"
+      ]
+    }
   },
   "conflicts_with": null,
   "container": null,
-  "auto_updates": null
+  "auto_updates": true
 }

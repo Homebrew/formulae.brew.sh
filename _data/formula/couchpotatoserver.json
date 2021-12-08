@@ -15,7 +15,7 @@
   "versions": {
     "stable": "3.0.1",
     "head": "HEAD",
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
@@ -27,9 +27,20 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 1,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "all": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/couchpotatoserver/blobs/sha256:f8c2e92a584c48ec2a693d5e7e4cf48ef29fe40b3501668d0205357b4c901c8c",
+          "sha256": "f8c2e92a584c48ec2a693d5e7e4cf48ef29fe40b3501668d0205357b4c901c8c"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
@@ -54,16 +65,16 @@
   "conflicts_with": [
 
   ],
-  "caveats": "CouchPotatoServer defaults to port 5050.",
+  "caveats": null,
   "installed": [
 
   ],
   "linked_keg": null,
   "pinned": false,
   "outdated": false,
-  "deprecated": false,
-  "deprecation_date": null,
-  "deprecation_reason": null,
+  "deprecated": true,
+  "deprecation_date": "2021-09-30",
+  "deprecation_reason": "repo_archived",
   "disabled": false,
   "disable_date": null,
   "disable_reason": null

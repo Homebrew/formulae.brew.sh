@@ -1,38 +1,66 @@
 {
   "name": "squid",
-  "pkg_version": "4.15",
+  "pkg_version": "4.17",
   "rebuild": 0,
   "bottles": {
+    "arm64_monterey": {
+      "url": "https://ghcr.io/v2/homebrew/core/squid/blobs/sha256:4c922c513876e0eac5e5eea248e75f5d7b15ac934defbb29531b547211ca2ed5"
+    },
     "arm64_big_sur": {
-      "url": "https://ghcr.io/v2/homebrew/core/squid/blobs/sha256:87d1e9c13ebf59f67218b7385eecb7690eac4dacf2c4d30a536001bfdc846812"
+      "url": "https://ghcr.io/v2/homebrew/core/squid/blobs/sha256:ab7f9bcb273ce10621b219b3fa36306039a025d0a61745e061ff7135c2c5ce02"
+    },
+    "monterey": {
+      "url": "https://ghcr.io/v2/homebrew/core/squid/blobs/sha256:6c60aef5ac07e2350e67ed8c190bb023152e3fab0ab676b95e77cb3b626f0c24"
     },
     "big_sur": {
-      "url": "https://ghcr.io/v2/homebrew/core/squid/blobs/sha256:9ea3f1e311ff4be0efdafbeb3dd87a4592e66af17b6a5fb01a6f58f7bce72075"
+      "url": "https://ghcr.io/v2/homebrew/core/squid/blobs/sha256:cd2c5c2dc8843d49adf1cf7b7c0b51567a0ad6d8293d3779006906695348e4ec"
     },
     "catalina": {
-      "url": "https://ghcr.io/v2/homebrew/core/squid/blobs/sha256:731cd0467205f2ad7aef705f2a39d4309870259b46ffab1248826cb00eea5011"
+      "url": "https://ghcr.io/v2/homebrew/core/squid/blobs/sha256:4e4cb257f1a82777ba111d1c4a80de8398b7fa9e330cd2506f698e85a6057be9"
     },
     "mojave": {
-      "url": "https://ghcr.io/v2/homebrew/core/squid/blobs/sha256:ce9248b843b329305536ec35a7592dc931d403e2ddeb3d3d023f885a508945d6"
+      "url": "https://ghcr.io/v2/homebrew/core/squid/blobs/sha256:14b611332f6cb8001e15e875f02192b9ce2ca600a2a19f125cd51402032d102e"
+    },
+    "x86_64_linux": {
+      "url": "https://ghcr.io/v2/homebrew/core/squid/blobs/sha256:ff99b1569d2fc90eea26ff2aadff55670eeacf2469fca3e713fb00ee6e77d10b"
     }
   },
   "dependencies": [
     {
-      "name": "openssl@1.1",
-      "pkg_version": "1.1.1k",
+      "name": "ca-certificates",
+      "pkg_version": "2021-10-26",
       "rebuild": 0,
       "bottles": {
+        "all": {
+          "url": "https://ghcr.io/v2/homebrew/core/ca-certificates/blobs/sha256:1bbd45c16a0b9912174c553a6d7ae1b67b11abbeb3155eaf03109bb62d8e5381"
+        }
+      }
+    },
+    {
+      "name": "openssl@1.1",
+      "pkg_version": "1.1.1l_1",
+      "rebuild": 0,
+      "bottles": {
+        "arm64_monterey": {
+          "url": "https://ghcr.io/v2/homebrew/core/openssl/1.1/blobs/sha256:8f5b0bee61c1570b9f0fc0a21d6c322e904ae7975bdaada5787451d18e9677a6"
+        },
         "arm64_big_sur": {
-          "url": "https://ghcr.io/v2/homebrew/core/openssl/1.1/blobs/sha256:0a75e0f116c0653bc7a2b422e5dc500e7e51557303aa4fca9c1a28786189c1da"
+          "url": "https://ghcr.io/v2/homebrew/core/openssl/1.1/blobs/sha256:e3d8556cec907ad1e0ea00aebd0b0b516dde06ea3bf24308290ad785cb360a04"
+        },
+        "monterey": {
+          "url": "https://ghcr.io/v2/homebrew/core/openssl/1.1/blobs/sha256:9a14367813591b51e30828c7d86499479bc6201954f6b10ed591b40cd3b71cc1"
         },
         "big_sur": {
-          "url": "https://ghcr.io/v2/homebrew/core/openssl/1.1/blobs/sha256:17d94c51ddfa8364baed5f3a754063e1ca75f807194f68d0b976619cf4e69c1a"
+          "url": "https://ghcr.io/v2/homebrew/core/openssl/1.1/blobs/sha256:64d4d83f7d3216f2d3107f966b223d11401a2e9391707d959fbdb5c1bd5fbe0c"
         },
         "catalina": {
-          "url": "https://ghcr.io/v2/homebrew/core/openssl/1.1/blobs/sha256:cb610ecdda346011031b890d7b7c6e1942d7fc08cf083b74f148ec7ffed8c7e1"
+          "url": "https://ghcr.io/v2/homebrew/core/openssl/1.1/blobs/sha256:eb4e1d96f1a9eac8d096220550e3ca97a46d59747ec2324e2ff74351f8319c2b"
         },
         "mojave": {
-          "url": "https://ghcr.io/v2/homebrew/core/openssl/1.1/blobs/sha256:7928c80c309c6ece50b1c0d968a1e54011088cc896d26aa511249978a246bd50"
+          "url": "https://ghcr.io/v2/homebrew/core/openssl/1.1/blobs/sha256:add58d2bb5059599029e687d5baf6fd737dff1e5cef7b6c5f4e0fe11b9c8e588"
+        },
+        "x86_64_linux": {
+          "url": "https://ghcr.io/v2/homebrew/core/openssl/1.1/blobs/sha256:84bc9412c1620f5607161c5fe2b6e11ff49de96d704595523f7f7c15f1883cf2"
         }
       }
     }

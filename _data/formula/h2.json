@@ -15,7 +15,7 @@
   "versions": {
     "stable": "1.4.200",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
@@ -27,9 +27,20 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 1,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "all": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/h2/blobs/sha256:95b75dbd44a9a1ed9ca0279e66b7993282b0a6161539de582042dcc806b9f2c7",
+          "sha256": "95b75dbd44a9a1ed9ca0279e66b7993282b0a6161539de582042dcc806b9f2c7"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
@@ -37,7 +48,7 @@
 
   ],
   "dependencies": [
-
+    "openjdk"
   ],
   "recommended_dependencies": [
 

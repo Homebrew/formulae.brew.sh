@@ -7,24 +7,41 @@
   ],
   "desc": "VPN client",
   "homepage": "https://www.privateinternetaccess.com/",
-  "url": "https://installers.privateinternetaccess.com/download/pia-macos-2.9-06393.zip",
+  "url": "https://installers.privateinternetaccess.com/download/pia-macos-3.1.2-06767.zip",
   "appcast": null,
-  "version": "2.9-06393",
+  "version": "3.1.2-06767",
+  "versions": {
+  },
   "installed": null,
   "outdated": false,
-  "sha256": "d6768c0057075be6ae789bb4a71141ee6a5c296972b40c50a961d580a7c5f75a",
+  "sha256": "403f2a3fecae94c753f54f14feb972f9d73c2dbc9ea426d552164b7b06da0c52",
   "artifacts": [
     {
-      "delete": "/Applications/Private Internet Access.app",
+      "script": {
+        "executable": "/Applications/Private Internet Access.app/Contents/Resources/vpn-installer.sh",
+        "args": [
+          "uninstall"
+        ],
+        "sudo": "true"
+      },
       "signal": {
       }
     },
     {
-      "path": "Private Internet Access Installer.app"
+      "path": "Private Internet Access Installer.app/Contents/Resources/vpn-installer.sh",
+      "args": {
+        "must_succeed": "true",
+        "sudo": "true",
+        "print_stdout": "true"
+      }
     },
-    "postflight (Postflight Block)",
     {
-      "trash": "~/.pia_manager",
+      "trash": [
+        "~/Library/Application Support/com.privateinternetaccess.vpn",
+        "~/Library/LaunchAgents/com.privateinternetaccess.vpn",
+        "~/Library/Preferences/com.privateinternetaccess.vpn",
+        "~/Library/Preferences/com.privateinternetaccess.vpn.plist"
+      ],
       "signal": {
       }
     }
@@ -33,7 +50,7 @@
   "depends_on": {
     "macos": {
       ">=": [
-        "10.12"
+        "10.13"
       ]
     }
   },

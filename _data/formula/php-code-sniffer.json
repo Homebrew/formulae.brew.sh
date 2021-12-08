@@ -13,23 +13,34 @@
   "license": "BSD-3-Clause",
   "homepage": "https://github.com/squizlabs/PHP_CodeSniffer/",
   "versions": {
-    "stable": "3.6.0",
+    "stable": "3.6.1",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/squizlabs/PHP_CodeSniffer/releases/download/3.6.0/phpcs.phar",
+      "url": "https://github.com/squizlabs/PHP_CodeSniffer/releases/download/3.6.1/phpcs.phar",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 1,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "all": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/php-code-sniffer/blobs/sha256:35f3e42c6aeea48da2001b2e2aeb17c2bd16b66d266afa8c56b01c0b96365280",
+          "sha256": "35f3e42c6aeea48da2001b2e2aeb17c2bd16b66d266afa8c56b01c0b96365280"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
@@ -37,7 +48,7 @@
 
   ],
   "dependencies": [
-
+    "php"
   ],
   "recommended_dependencies": [
 

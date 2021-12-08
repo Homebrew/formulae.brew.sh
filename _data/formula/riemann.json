@@ -13,13 +13,13 @@
   "license": "EPL-1.0",
   "homepage": "https://riemann.io/",
   "versions": {
-    "stable": "0.3.6",
+    "stable": "0.3.7",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/riemann/riemann/releases/download/0.3.6/riemann-0.3.6.tar.bz2",
+      "url": "https://github.com/riemann/riemann/releases/download/0.3.7/riemann-0.3.7.tar.bz2",
       "tag": null,
       "revision": null
     }
@@ -27,9 +27,20 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "all": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/riemann/blobs/sha256:381f8eafa5f3c7be52f321103634ae6ee1d7f61877a5e59a1f7695bc42e96eb2",
+          "sha256": "381f8eafa5f3c7be52f321103634ae6ee1d7f61877a5e59a1f7695bc42e96eb2"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
@@ -37,7 +48,7 @@
 
   ],
   "dependencies": [
-
+    "openjdk"
   ],
   "recommended_dependencies": [
 

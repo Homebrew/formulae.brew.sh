@@ -15,7 +15,7 @@
   "versions": {
     "stable": "1.2",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
@@ -24,12 +24,23 @@
       "revision": null
     }
   },
-  "revision": 1,
+  "revision": 2,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "all": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/ydiff/blobs/sha256:6496ac2da3fe8681060dc732141f174db77cca1f3a8fe7aeffa8201ba2638c1b",
+          "sha256": "6496ac2da3fe8681060dc732141f174db77cca1f3a8fe7aeffa8201ba2638c1b"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
@@ -37,7 +48,7 @@
 
   ],
   "dependencies": [
-    "python@3.9"
+    "python@3.10"
   ],
   "recommended_dependencies": [
 

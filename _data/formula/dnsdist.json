@@ -10,16 +10,16 @@
 
   ],
   "desc": "Highly DNS-, DoS- and abuse-aware loadbalancer",
-  "license": null,
+  "license": "GPL-2.0-only",
   "homepage": "https://www.dnsdist.org/",
   "versions": {
-    "stable": "1.6.0",
+    "stable": "1.6.1",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://downloads.powerdns.com/releases/dnsdist-1.6.0.tar.bz2",
+      "url": "https://downloads.powerdns.com/releases/dnsdist-1.6.1.tar.bz2",
       "tag": null,
       "revision": null
     }
@@ -31,20 +31,35 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/dnsdist/blobs/sha256:7d06f0eba9c36eec1d240c27d38dd00041d75142ea0e41c310036bbcc11f0296",
+          "sha256": "7d06f0eba9c36eec1d240c27d38dd00041d75142ea0e41c310036bbcc11f0296"
+        },
+        "arm64_big_sur": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/dnsdist/blobs/sha256:869de3f18ef4fd38bf91b7c1c41d38c67e5f83bf58fd891f3360549c3b6523d3",
+          "sha256": "869de3f18ef4fd38bf91b7c1c41d38c67e5f83bf58fd891f3360549c3b6523d3"
+        },
+        "monterey": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/dnsdist/blobs/sha256:d5d75f9ecba7ded160def73c4d5af60a864a0b717a24126aa04d28c6bbcbbe7d",
+          "sha256": "d5d75f9ecba7ded160def73c4d5af60a864a0b717a24126aa04d28c6bbcbbe7d"
+        },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/dnsdist/blobs/sha256:21a26e9d34532f445a8d74c8e72e73ae651bee6cb15334cef5c724ff480e5816",
-          "sha256": "21a26e9d34532f445a8d74c8e72e73ae651bee6cb15334cef5c724ff480e5816"
+          "url": "https://ghcr.io/v2/homebrew/core/dnsdist/blobs/sha256:977b8f7e4fc0869f95b4cbee33446117eff314802034a2320523d8aefbbaf51e",
+          "sha256": "977b8f7e4fc0869f95b4cbee33446117eff314802034a2320523d8aefbbaf51e"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/dnsdist/blobs/sha256:be7966bd9808586a3cd621df9bb7a0810275827e91be1baf3b282461ea5c998d",
-          "sha256": "be7966bd9808586a3cd621df9bb7a0810275827e91be1baf3b282461ea5c998d"
+          "url": "https://ghcr.io/v2/homebrew/core/dnsdist/blobs/sha256:6701dd21d4fee82fa13705db5f4280bb63d5c7087fee38bdcb05b338fdf6556e",
+          "sha256": "6701dd21d4fee82fa13705db5f4280bb63d5c7087fee38bdcb05b338fdf6556e"
         },
         "mojave": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/dnsdist/blobs/sha256:9baf86315d64a8f44b281af8e2eb331d0010c096e142aa30484736ac3a3fb08c",
-          "sha256": "9baf86315d64a8f44b281af8e2eb331d0010c096e142aa30484736ac3a3fb08c"
+          "url": "https://ghcr.io/v2/homebrew/core/dnsdist/blobs/sha256:13d58a2f2ff183ae418825f54c454bf960bd9dddc6d357ce5c08025f7d1c23be",
+          "sha256": "13d58a2f2ff183ae418825f54c454bf960bd9dddc6d357ce5c08025f7d1c23be"
         }
       }
     }
@@ -63,7 +78,7 @@
     "fstrm",
     "h2o",
     "libsodium",
-    "luajit",
+    "luajit-openresty",
     "openssl@1.1",
     "protobuf",
     "re2"

@@ -13,13 +13,13 @@
   "license": "BSD-2-Clause",
   "homepage": "https://tarantool.org/",
   "versions": {
-    "stable": "2.7.2.0",
+    "stable": "2.8.2.0",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://download.tarantool.org/tarantool/2.7/src/tarantool-2.7.2.0.tar.gz",
+      "url": "https://download.tarantool.org/tarantool/2.8/src/tarantool-2.8.2.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,20 +31,35 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/tarantool/blobs/sha256:de7b4c495bff9624a7dbf7cc37a7620258a268a74dfcbfc1f156c44532a8d5e1",
+          "sha256": "de7b4c495bff9624a7dbf7cc37a7620258a268a74dfcbfc1f156c44532a8d5e1"
+        },
+        "arm64_big_sur": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/tarantool/blobs/sha256:baade3b1eb4ce24bd5d93faae9c2b349205c8354bb33797f0d3dc3af5f9d8d01",
+          "sha256": "baade3b1eb4ce24bd5d93faae9c2b349205c8354bb33797f0d3dc3af5f9d8d01"
+        },
+        "monterey": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/tarantool/blobs/sha256:c0d05dd63bca5a14ec2571f03c1e9b89db486abd8331c7ccd2eea36b81eb2cb6",
+          "sha256": "c0d05dd63bca5a14ec2571f03c1e9b89db486abd8331c7ccd2eea36b81eb2cb6"
+        },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/tarantool/blobs/sha256:5e98389b6a0239a8aeea044669945e4d80ec14dd8dfe6c58f4d1ebd91a28b366",
-          "sha256": "5e98389b6a0239a8aeea044669945e4d80ec14dd8dfe6c58f4d1ebd91a28b366"
+          "url": "https://ghcr.io/v2/homebrew/core/tarantool/blobs/sha256:10cee819c78efa179feee44d3edf4cb11f665f610ce60fc95cb0816c86d6b07b",
+          "sha256": "10cee819c78efa179feee44d3edf4cb11f665f610ce60fc95cb0816c86d6b07b"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/tarantool/blobs/sha256:61934bd99237595810bf56a9546f99f20531afd38ef498ab9a7a82e4dfb45fad",
-          "sha256": "61934bd99237595810bf56a9546f99f20531afd38ef498ab9a7a82e4dfb45fad"
+          "url": "https://ghcr.io/v2/homebrew/core/tarantool/blobs/sha256:ad6831afd452a2724c7df1ab9acf56e6e6e3582bdf9868864dcba7ecd1d1d9e9",
+          "sha256": "ad6831afd452a2724c7df1ab9acf56e6e6e3582bdf9868864dcba7ecd1d1d9e9"
         },
-        "mojave": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/tarantool/blobs/sha256:b4c338aeeeadebd49bafc500f8e866a32b6a8f89fc288b005b5a691dfe285529",
-          "sha256": "b4c338aeeeadebd49bafc500f8e866a32b6a8f89fc288b005b5a691dfe285529"
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/tarantool/blobs/sha256:f319e0625842b831deb7d0ed2ac1402b9301e5663ec94101becd6b59719b7f06",
+          "sha256": "f319e0625842b831deb7d0ed2ac1402b9301e5663ec94101becd6b59719b7f06"
         }
       }
     }
@@ -59,8 +74,10 @@
   ],
   "dependencies": [
     "icu4c",
+    "libyaml",
     "openssl@1.1",
-    "readline"
+    "readline",
+    "zstd"
   ],
   "recommended_dependencies": [
 

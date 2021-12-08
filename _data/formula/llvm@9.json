@@ -7,6 +7,7 @@
 
   ],
   "versioned_formulae": [
+    "llvm@12",
     "llvm@11",
     "llvm@8",
     "llvm@7"
@@ -26,27 +27,37 @@
       "revision": null
     }
   },
-  "revision": 2,
+  "revision": 4,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/llvm/9/blobs/sha256:f7d35848ad1b76f358c742719cf3f0fe5cc913a0e04e1a81838ecc30cea22d7f",
+          "sha256": "f7d35848ad1b76f358c742719cf3f0fe5cc913a0e04e1a81838ecc30cea22d7f"
+        },
+        "big_sur": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/llvm/9/blobs/sha256:611f1a48eaa5ea4abda72ec633671c1ec56541fb2acf9ed8021ac540e863ab33",
+          "sha256": "611f1a48eaa5ea4abda72ec633671c1ec56541fb2acf9ed8021ac540e863ab33"
+        },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/llvm/9/blobs/sha256:86f022bf477a011e5f416a0e98984de4c07fbba366dc494c6cef315807112a01",
-          "sha256": "86f022bf477a011e5f416a0e98984de4c07fbba366dc494c6cef315807112a01"
+          "url": "https://ghcr.io/v2/homebrew/core/llvm/9/blobs/sha256:111e5fdea2179635cb834f62ac0e8e967c4b9e9ad4ed99c8db6a0879f58ff524",
+          "sha256": "111e5fdea2179635cb834f62ac0e8e967c4b9e9ad4ed99c8db6a0879f58ff524"
         },
         "mojave": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/llvm/9/blobs/sha256:e3f1be89db13adc068d2a0bfcb5f06e6220074e79c3af021a75d5e8b0cb3a1c8",
-          "sha256": "e3f1be89db13adc068d2a0bfcb5f06e6220074e79c3af021a75d5e8b0cb3a1c8"
+          "url": "https://ghcr.io/v2/homebrew/core/llvm/9/blobs/sha256:de79caa57933b7618c0cb92aad49fdf7f8758d0875466050908737d32f9e5b61",
+          "sha256": "de79caa57933b7618c0cb92aad49fdf7f8758d0875466050908737d32f9e5b61"
         },
-        "high_sierra": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/llvm/9/blobs/sha256:715609e32eedc2d2135ab5f24799de649ab89d19dd765c697cc59b4ac11b3825",
-          "sha256": "715609e32eedc2d2135ab5f24799de649ab89d19dd765c697cc59b4ac11b3825"
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/llvm/9/blobs/sha256:02addeab63f5540124b9b12c600952190c400c3a7559596537166ef21d9cf3d9",
+          "sha256": "02addeab63f5540124b9b12c600952190c400c3a7559596537166ef21d9cf3d9"
         }
       }
     }
@@ -60,7 +71,6 @@
     "cmake"
   ],
   "dependencies": [
-    "libffi",
     "swig"
   ],
   "recommended_dependencies": [
@@ -70,18 +80,13 @@
 
   ],
   "uses_from_macos": [
-
+    "libedit",
+    "libffi",
+    "libxml2",
+    "ncurses",
+    "zlib"
   ],
   "requirements": [
-    {
-      "name": "xcode",
-      "cask": null,
-      "download": null,
-      "version": null,
-      "contexts": [
-        "build"
-      ]
-    },
     {
       "name": "arch",
       "cask": null,

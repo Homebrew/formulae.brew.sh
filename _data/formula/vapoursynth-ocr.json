@@ -10,46 +10,61 @@
 
   ],
   "desc": "VapourSynth filters - Tesseract OCR filter",
-  "license": "ISC",
-  "homepage": "http://www.vapoursynth.com",
+  "license": "MIT",
+  "homepage": "https://www.vapoursynth.com",
   "versions": {
-    "stable": "53",
+    "stable": "1",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/vapoursynth/vapoursynth/archive/R53.tar.gz",
+      "url": "https://github.com/vapoursynth/vs-ocr/archive/R1.tar.gz",
       "tag": null,
       "revision": null
     }
   },
   "revision": 0,
-  "version_scheme": 0,
+  "version_scheme": 1,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/vapoursynth-ocr/blobs/sha256:a7a6a9f8639cb97e67fb5e6bdd7d8571303adf861e9c509078844594db1b036c",
+          "sha256": "a7a6a9f8639cb97e67fb5e6bdd7d8571303adf861e9c509078844594db1b036c"
+        },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/vapoursynth-ocr/blobs/sha256:0f47ed98e6b770f53a458c4fa8bb12c38c221de1e864a1227d3b1a08f2557fcf",
-          "sha256": "0f47ed98e6b770f53a458c4fa8bb12c38c221de1e864a1227d3b1a08f2557fcf"
+          "url": "https://ghcr.io/v2/homebrew/core/vapoursynth-ocr/blobs/sha256:abef84d6213651b91d9e60d32ae065b3227de72a2371f97266825b81f50d7148",
+          "sha256": "abef84d6213651b91d9e60d32ae065b3227de72a2371f97266825b81f50d7148"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/vapoursynth-ocr/blobs/sha256:1a6aac2710a3c004da08525b72426c1fb0512c302fca6ba488451687bcf34622",
+          "sha256": "1a6aac2710a3c004da08525b72426c1fb0512c302fca6ba488451687bcf34622"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/vapoursynth-ocr/blobs/sha256:09c4405c9221feef7fa8a09e8f7a1d8bd6ab7fcc8b9feddc3a9a338d91fe1edf",
-          "sha256": "09c4405c9221feef7fa8a09e8f7a1d8bd6ab7fcc8b9feddc3a9a338d91fe1edf"
+          "url": "https://ghcr.io/v2/homebrew/core/vapoursynth-ocr/blobs/sha256:d31d4f0eb749e5797e856de45e1c1f3e862abe31e897696887e20123330a29ae",
+          "sha256": "d31d4f0eb749e5797e856de45e1c1f3e862abe31e897696887e20123330a29ae"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/vapoursynth-ocr/blobs/sha256:99b1665bc4dea00f8984e748d814cd88f904b9fbe220e3d0bb0d5affde8430fd",
-          "sha256": "99b1665bc4dea00f8984e748d814cd88f904b9fbe220e3d0bb0d5affde8430fd"
+          "url": "https://ghcr.io/v2/homebrew/core/vapoursynth-ocr/blobs/sha256:6c7e3eb62e6cf0a5140b158fce51c5fca682e04b7b1074fd6425c9b0bf8ef40b",
+          "sha256": "6c7e3eb62e6cf0a5140b158fce51c5fca682e04b7b1074fd6425c9b0bf8ef40b"
         },
         "mojave": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/vapoursynth-ocr/blobs/sha256:ec7fa75affd62d2a864e3613a4833981d1d40301d5ea8a95be642bc7969fe5da",
-          "sha256": "ec7fa75affd62d2a864e3613a4833981d1d40301d5ea8a95be642bc7969fe5da"
+          "url": "https://ghcr.io/v2/homebrew/core/vapoursynth-ocr/blobs/sha256:916f671b1aabc46a37c7197f061bf73c0360a8d3e22a72cce74009802b341351",
+          "sha256": "916f671b1aabc46a37c7197f061bf73c0360a8d3e22a72cce74009802b341351"
+        },
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/vapoursynth-ocr/blobs/sha256:f1f688bb5c6cadf726d4df511ce40d58453839d74185f29a219e7e681b2abb9c",
+          "sha256": "f1f688bb5c6cadf726d4df511ce40d58453839d74185f29a219e7e681b2abb9c"
         }
       }
     }
@@ -60,10 +75,8 @@
 
   ],
   "build_dependencies": [
-    "autoconf",
-    "automake",
-    "libtool",
-    "nasm",
+    "meson",
+    "ninja",
     "pkg-config"
   ],
   "dependencies": [

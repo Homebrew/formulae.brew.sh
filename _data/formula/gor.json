@@ -10,18 +10,18 @@
 
   ],
   "desc": "Real-time HTTP traffic replay tool written in Go",
-  "license": "LGPL-3.0",
+  "license": "LGPL-3.0-only",
   "homepage": "https://goreplay.org",
   "versions": {
-    "stable": "1.2.0",
+    "stable": "1.3.3",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
       "url": "https://github.com/buger/goreplay.git",
-      "tag": "v1.2.0",
-      "revision": "2b73ea1f0ceee50bd96f705e23af3885f990daa3"
+      "tag": "1.3.3",
+      "revision": "f8ef77e8cf4aae59029daf6cbd2fc784af811cee"
     }
   },
   "revision": 0,
@@ -31,30 +31,40 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/gor/blobs/sha256:fe66f6fc334df036e4fe3f6cd579bc73ac6eacef6848e2c46a6e475a4874c9c2",
+          "sha256": "fe66f6fc334df036e4fe3f6cd579bc73ac6eacef6848e2c46a6e475a4874c9c2"
+        },
         "arm64_big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/gor/blobs/sha256:c5cb3c8f00af6a0ef7a8d1c24c4de59563c85bc51bb8a9f878ad4c283aa1954b",
-          "sha256": "c5cb3c8f00af6a0ef7a8d1c24c4de59563c85bc51bb8a9f878ad4c283aa1954b"
+          "url": "https://ghcr.io/v2/homebrew/core/gor/blobs/sha256:227fba89a0ef4516c6b25e9c865c60de19731213a96f6b471ea7780f7bb72485",
+          "sha256": "227fba89a0ef4516c6b25e9c865c60de19731213a96f6b471ea7780f7bb72485"
+        },
+        "monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/gor/blobs/sha256:be4aae24b0d4f5c8e55631a5314eb0f1f08a77c404b432b7db71b7e2d5186d82",
+          "sha256": "be4aae24b0d4f5c8e55631a5314eb0f1f08a77c404b432b7db71b7e2d5186d82"
         },
         "big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/gor/blobs/sha256:b02c8cacea6257c1faf97f6c3a686f09fc1519e54cbd80713b19c95b9c03ced2",
-          "sha256": "b02c8cacea6257c1faf97f6c3a686f09fc1519e54cbd80713b19c95b9c03ced2"
+          "url": "https://ghcr.io/v2/homebrew/core/gor/blobs/sha256:6ff4869f7dcd7a5b830eb005940900360f31450d82538ff4208e6093e09840ce",
+          "sha256": "6ff4869f7dcd7a5b830eb005940900360f31450d82538ff4208e6093e09840ce"
         },
         "catalina": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/gor/blobs/sha256:0a2c7715c47fa3fb9ba70494b1bf20a4216cabb09d909702f86d810a07c58f17",
-          "sha256": "0a2c7715c47fa3fb9ba70494b1bf20a4216cabb09d909702f86d810a07c58f17"
+          "url": "https://ghcr.io/v2/homebrew/core/gor/blobs/sha256:822445285cbf26edb06857be8bdeb0c5a7f6df0c9a801316e1537fc1794becb2",
+          "sha256": "822445285cbf26edb06857be8bdeb0c5a7f6df0c9a801316e1537fc1794becb2"
         },
         "mojave": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/gor/blobs/sha256:347fab444ceaee3d2dae0f23cedcd924267bbbba95a099ad5602ba3051fd5c1f",
-          "sha256": "347fab444ceaee3d2dae0f23cedcd924267bbbba95a099ad5602ba3051fd5c1f"
+          "url": "https://ghcr.io/v2/homebrew/core/gor/blobs/sha256:25f3c17675fa60d8ce06a2a94c95ac5210f00e23d4dfcad6e6a98449080e2b33",
+          "sha256": "25f3c17675fa60d8ce06a2a94c95ac5210f00e23d4dfcad6e6a98449080e2b33"
         },
-        "high_sierra": {
+        "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/gor/blobs/sha256:0e07f5bf90d57b9bd1b0ccb961e6ee240fd8346a923c45d075b66cd7c4714a63",
-          "sha256": "0e07f5bf90d57b9bd1b0ccb961e6ee240fd8346a923c45d075b66cd7c4714a63"
+          "url": "https://ghcr.io/v2/homebrew/core/gor/blobs/sha256:1239ddcc67670144a35dbdf90712514bc56f52ccbc755285eef6e54ed909afb1",
+          "sha256": "1239ddcc67670144a35dbdf90712514bc56f52ccbc755285eef6e54ed909afb1"
         }
       }
     }
@@ -77,6 +87,9 @@
 
   ],
   "uses_from_macos": [
+    {
+      "netcat": "test"
+    },
     "libpcap"
   ],
   "requirements": [

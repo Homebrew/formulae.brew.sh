@@ -11,7 +11,7 @@
     "ghc@8.8"
   ],
   "desc": "Glorious Glasgow Haskell Compilation System",
-  "license": "BSD-3-Clause",
+  "license": "BSD-3-Clause and (LGPL-3.0-or-later or GPL-2.0-or-later)",
   "homepage": "https://haskell.org/ghc/",
   "versions": {
     "stable": "8.6.5",
@@ -32,6 +32,11 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "monterey": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/ghc/8.6/blobs/sha256:f8935d48a1813d6b4b6b515a447abbbff2a82ad6b297cdecb89cbce7edebab51",
+          "sha256": "f8935d48a1813d6b4b6b515a447abbbff2a82ad6b297cdecb89cbce7edebab51"
+        },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
           "url": "https://ghcr.io/v2/homebrew/core/ghc/8.6/blobs/sha256:d8cc7eb020495417a2674bb0b4129720fef30fd9c5688713501dd5ca6c1dea0f",
@@ -51,6 +56,11 @@
           "cellar": "/usr/local/Cellar",
           "url": "https://ghcr.io/v2/homebrew/core/ghc/8.6/blobs/sha256:67a54e9d669e51b8018d064b771d31079421b777b03077dc7f02949ecdf8b0c0",
           "sha256": "67a54e9d669e51b8018d064b771d31079421b777b03077dc7f02949ecdf8b0c0"
+        },
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/ghc/8.6/blobs/sha256:01c58d9164965d31c6b66f6063f4ff4d451348d4d3f143a2aa8886249f1c1a8b",
+          "sha256": "01c58d9164965d31c6b66f6063f4ff4d451348d4d3f143a2aa8886249f1c1a8b"
         }
       }
     }
@@ -61,8 +71,7 @@
 
   ],
   "build_dependencies": [
-    "python@3.9",
-    "sphinx-doc"
+    "python@3.9"
   ],
   "dependencies": [
 
@@ -74,7 +83,10 @@
 
   ],
   "uses_from_macos": [
-
+    {
+      "m4": "build"
+    },
+    "ncurses"
   ],
   "requirements": [
     {

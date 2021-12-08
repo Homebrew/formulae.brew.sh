@@ -13,33 +13,53 @@
   "license": "Apache-2.0",
   "homepage": "https://swift.org",
   "versions": {
-    "stable": "5.2.5",
+    "stable": "5.5.1",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/apple/swift/archive/swift-5.2.5-RELEASE.tar.gz",
+      "url": "https://github.com/apple/swift/archive/swift-5.5.1-RELEASE.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
-        "catalina": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/swift/blobs/sha256:26e59645661eaeea4b9c59deea4dd5591dedce7c74b20c772f2e82ab3450d678",
-          "sha256": "26e59645661eaeea4b9c59deea4dd5591dedce7c74b20c772f2e82ab3450d678"
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/swift/blobs/sha256:803ea73f224d38aedf294dcd0096fb358cf21fad4633a3f47a275e0dd53a4e44",
+          "sha256": "803ea73f224d38aedf294dcd0096fb358cf21fad4633a3f47a275e0dd53a4e44"
         },
-        "mojave": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/swift/blobs/sha256:b49fe185bb64ab86515c9b51d43046aad807fa70e49668a403385a72cc4a70b7",
-          "sha256": "b49fe185bb64ab86515c9b51d43046aad807fa70e49668a403385a72cc4a70b7"
+        "arm64_big_sur": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/swift/blobs/sha256:f7edacc38c4468f861618eceea75f446f2cc75079d7ff73a3bc43ffd2608f895",
+          "sha256": "f7edacc38c4468f861618eceea75f446f2cc75079d7ff73a3bc43ffd2608f895"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/swift/blobs/sha256:b567de7928d285220accb588371311b59f7e34afffeaa0b9ff5c84cfab11e73a",
+          "sha256": "b567de7928d285220accb588371311b59f7e34afffeaa0b9ff5c84cfab11e73a"
+        },
+        "big_sur": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/swift/blobs/sha256:6dfbf15ff07819809c517c6bf100de4b5420a2b37598a7f1dee15d77fd326ad4",
+          "sha256": "6dfbf15ff07819809c517c6bf100de4b5420a2b37598a7f1dee15d77fd326ad4"
+        },
+        "catalina": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/swift/blobs/sha256:bfa10d795640b722db43c6cf261930844df82ba265712039478d00687254e0d9",
+          "sha256": "bfa10d795640b722db43c6cf261930844df82ba265712039478d00687254e0d9"
+        },
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/swift/blobs/sha256:24a5b18d199ff1df49f3f00ad64070f8d6b16b37e83989174d9e7755fb3217b2",
+          "sha256": "24a5b18d199ff1df49f3f00ad64070f8d6b16b37e83989174d9e7755fb3217b2"
         }
       }
     }
@@ -54,7 +74,7 @@
     "ninja"
   ],
   "dependencies": [
-
+    "python@3.10"
   ],
   "recommended_dependencies": [
 
@@ -63,14 +83,29 @@
 
   ],
   "uses_from_macos": [
-    "icu4c"
+    {
+      "llvm": [
+        "build",
+        "test"
+      ]
+    },
+    {
+      "rsync": "build"
+    },
+    "curl",
+    "icu4c",
+    "libedit",
+    "libxml2",
+    "ncurses",
+    "sqlite",
+    "zlib"
   ],
   "requirements": [
     {
       "name": "xcode",
       "cask": null,
       "download": null,
-      "version": "11.2",
+      "version": "12.3",
       "contexts": [
         "build"
       ]
@@ -79,7 +114,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "The toolchain has been installed to:\n  $(brew --prefix)/opt/swift/Swift-5.2.5.xctoolchain\n\nYou can find the Swift binary at:\n  $(brew --prefix)/opt/swift/Swift-5.2.5.xctoolchain/usr/bin/swift\n\nYou can also symlink the toolchain for use within Xcode:\n  ln -s $(brew --prefix)/opt/swift/Swift-5.2.5.xctoolchain ~/Library/Developer/Toolchains/Swift-5.2.5.xctoolchain\n",
+  "caveats": "An Xcode toolchain has been installed to:\n  $(brew --prefix)/opt/swift/Swift-5.5.xctoolchain\n\nThis can be symlinked for use within Xcode:\n  ln -s $(brew --prefix)/opt/swift/Swift-5.5.xctoolchain ~/Library/Developer/Toolchains/Swift-5.5.xctoolchain\n",
   "installed": [
 
   ],

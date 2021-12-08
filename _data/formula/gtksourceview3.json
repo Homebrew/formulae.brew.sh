@@ -10,7 +10,7 @@
 
   ],
   "desc": "Text view with syntax, undo/redo, and text marks",
-  "license": null,
+  "license": "LGPL-2.1-or-later",
   "homepage": "https://projects.gnome.org/gtksourceview/",
   "versions": {
     "stable": "3.24.11",
@@ -36,6 +36,11 @@
           "url": "https://ghcr.io/v2/homebrew/core/gtksourceview3/blobs/sha256:920ee02f85863c74d7c151cde00f0a8dbd18c66e825a50c7d8f36f3af9da06b6",
           "sha256": "920ee02f85863c74d7c151cde00f0a8dbd18c66e825a50c7d8f36f3af9da06b6"
         },
+        "monterey": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/gtksourceview3/blobs/sha256:bce68f417d64947e6bbf996bd0682be7a5d3e7e413c25bb77c0686f9e47036bd",
+          "sha256": "bce68f417d64947e6bbf996bd0682be7a5d3e7e413c25bb77c0686f9e47036bd"
+        },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
           "url": "https://ghcr.io/v2/homebrew/core/gtksourceview3/blobs/sha256:2dc6c71c803b006967ee4154912c7f6e050c5c8c8f68a113335e66f48fe32277",
@@ -55,6 +60,11 @@
           "cellar": "/usr/local/Cellar",
           "url": "https://ghcr.io/v2/homebrew/core/gtksourceview3/blobs/sha256:d67cdf5db8996c90d56ad6468c830fcb8e28b26753ab7d332b3a4c990c17e84b",
           "sha256": "d67cdf5db8996c90d56ad6468c830fcb8e28b26753ab7d332b3a4c990c17e84b"
+        },
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/gtksourceview3/blobs/sha256:db335b9e4164c8aaf7d03badd31dad42ee3810c49427263d5883d36b213204dc",
+          "sha256": "db335b9e4164c8aaf7d03badd31dad42ee3810c49427263d5883d36b213204dc"
         }
       }
     }
@@ -65,13 +75,12 @@
 
   ],
   "build_dependencies": [
-    "autoconf",
-    "automake",
     "gobject-introspection",
-    "intltool",
-    "libtool",
     "pkg-config",
-    "vala"
+    "vala",
+    "autoconf@2.69",
+    "automake",
+    "libtool"
   ],
   "dependencies": [
     "gettext",

@@ -13,43 +13,53 @@
   "license": "GPL-3.0-only",
   "homepage": "https://jrnl.sh/",
   "versions": {
-    "stable": "2.8.1",
+    "stable": "2.8.3",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://files.pythonhosted.org/packages/76/9b/87e8c99a2bb5ae7d6912c25d70eadd20b1c5a882acfc8aec61402b157440/jrnl-2.8.1.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/82/95/0853c227abcbead539b624cd0c98f959f141e261dbe7c9be350aecdfdbfe/jrnl-2.8.3.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/jrnl/blobs/sha256:fcdcdfc09aab5b927f4ed89ce7d42559c84831707c97ed572697c97dfea5f985",
+          "sha256": "fcdcdfc09aab5b927f4ed89ce7d42559c84831707c97ed572697c97dfea5f985"
+        },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/jrnl/blobs/sha256:8e35532250e8864b1b81559f6e675b794ffb20a301f6874dd8cc469df2b12de9",
-          "sha256": "8e35532250e8864b1b81559f6e675b794ffb20a301f6874dd8cc469df2b12de9"
+          "url": "https://ghcr.io/v2/homebrew/core/jrnl/blobs/sha256:d9c5a290f6761fad179a7d51621d4dc47f9d9c979f9dcfb358b943f8c70c5c92",
+          "sha256": "d9c5a290f6761fad179a7d51621d4dc47f9d9c979f9dcfb358b943f8c70c5c92"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/jrnl/blobs/sha256:4eedaa815db33fac4fd98c68f690a2aab0010c05829ca213d1a560f372260d84",
+          "sha256": "4eedaa815db33fac4fd98c68f690a2aab0010c05829ca213d1a560f372260d84"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/jrnl/blobs/sha256:75de14f6e281c827e06e3317a68c06fa680b1fff15d7ad63c9f4a991b1ac48e3",
-          "sha256": "75de14f6e281c827e06e3317a68c06fa680b1fff15d7ad63c9f4a991b1ac48e3"
+          "url": "https://ghcr.io/v2/homebrew/core/jrnl/blobs/sha256:812efe64f0ce448710e634e8c0f3d7f2f03685319fba067db571724c3f0c96c6",
+          "sha256": "812efe64f0ce448710e634e8c0f3d7f2f03685319fba067db571724c3f0c96c6"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/jrnl/blobs/sha256:1819fb9d1ac45a4ac4ea688ab7269f89e66c7f505ece4dedcaaa64c268cbc152",
-          "sha256": "1819fb9d1ac45a4ac4ea688ab7269f89e66c7f505ece4dedcaaa64c268cbc152"
+          "url": "https://ghcr.io/v2/homebrew/core/jrnl/blobs/sha256:fb2add6dbf23957ea55379a1610148e677af792673f6530239b054a3d1409cd5",
+          "sha256": "fb2add6dbf23957ea55379a1610148e677af792673f6530239b054a3d1409cd5"
         },
-        "mojave": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/jrnl/blobs/sha256:64ff4066d306e04755e8f1fafbbc8806f42a10d63ca31d23d88f4123299f61b0",
-          "sha256": "64ff4066d306e04755e8f1fafbbc8806f42a10d63ca31d23d88f4123299f61b0"
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/jrnl/blobs/sha256:bc76e19e8a3a2151a4b25591bc255daefd33343c8d7104792360dec17b5f4513",
+          "sha256": "bc76e19e8a3a2151a4b25591bc255daefd33343c8d7104792360dec17b5f4513"
         }
       }
     }
@@ -72,10 +82,9 @@
 
   ],
   "uses_from_macos": [
-    [
-      "expect",
-      "test"
-    ]
+    {
+      "expect": "test"
+    }
   ],
   "requirements": [
 

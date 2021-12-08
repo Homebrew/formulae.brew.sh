@@ -15,7 +15,7 @@
   "versions": {
     "stable": "0.3.15",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
@@ -27,9 +27,20 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "all": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/zinc/blobs/sha256:86fb3d24eab6f75b51641311d7f9f574a31878f1c93ec1af0938ae2428178cc5",
+          "sha256": "86fb3d24eab6f75b51641311d7f9f574a31878f1c93ec1af0938ae2428178cc5"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
@@ -37,7 +48,7 @@
 
   ],
   "dependencies": [
-
+    "openjdk@11"
   ],
   "recommended_dependencies": [
 

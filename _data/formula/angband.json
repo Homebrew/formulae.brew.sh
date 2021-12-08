@@ -10,16 +10,16 @@
 
   ],
   "desc": "Dungeon exploration game",
-  "license": "GPL-2.0",
-  "homepage": "https://rephial.org/",
+  "license": "GPL-2.0-only",
+  "homepage": "https://angband.github.io/angband/",
   "versions": {
-    "stable": "4.2.1",
+    "stable": "4.2.3",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://rephial.org/downloads/4.2/angband-4.2.1.tar.gz",
+      "url": "https://github.com/angband/angband/releases/download/4.2.3/Angband-4.2.3.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,30 +31,40 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/angband/blobs/sha256:0012d8a153dcf3036a9eab9314fb048031e0113209318aa919a6114edfaafdc8",
+          "sha256": "0012d8a153dcf3036a9eab9314fb048031e0113209318aa919a6114edfaafdc8"
+        },
         "arm64_big_sur": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/angband/blobs/sha256:156672377070d2d66c338e5ebc9e6a3ea0afd544a1da97f9ef35cdd2b0a859cc",
-          "sha256": "156672377070d2d66c338e5ebc9e6a3ea0afd544a1da97f9ef35cdd2b0a859cc"
+          "url": "https://ghcr.io/v2/homebrew/core/angband/blobs/sha256:ab6002b750047f4c544b8427a2f021395b75ab7f9f93c26fc0f3625b758f5842",
+          "sha256": "ab6002b750047f4c544b8427a2f021395b75ab7f9f93c26fc0f3625b758f5842"
+        },
+        "monterey": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/angband/blobs/sha256:119541b0dec51b0e8f6dbb01b5d00b2f202921477154411adb4265cb5fbc2c10",
+          "sha256": "119541b0dec51b0e8f6dbb01b5d00b2f202921477154411adb4265cb5fbc2c10"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/angband/blobs/sha256:ed5e9c7b858074dbb7bea12199e8a326cd61e0335fb268e0d88894609995c88d",
-          "sha256": "ed5e9c7b858074dbb7bea12199e8a326cd61e0335fb268e0d88894609995c88d"
+          "url": "https://ghcr.io/v2/homebrew/core/angband/blobs/sha256:3f6aee791649219ab05f70d1c9170e09137d23ee31fcfdd3862c242dd2165771",
+          "sha256": "3f6aee791649219ab05f70d1c9170e09137d23ee31fcfdd3862c242dd2165771"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/angband/blobs/sha256:b59aedacab5c3588719bfc1ebc17b936ffe5105ed8e7edd19caccc340a81271f",
-          "sha256": "b59aedacab5c3588719bfc1ebc17b936ffe5105ed8e7edd19caccc340a81271f"
+          "url": "https://ghcr.io/v2/homebrew/core/angband/blobs/sha256:c983b2033647d198120ae6295302f812fc7f35fc5d43e4bb430ff63f1fd89c31",
+          "sha256": "c983b2033647d198120ae6295302f812fc7f35fc5d43e4bb430ff63f1fd89c31"
         },
         "mojave": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/angband/blobs/sha256:96f6f2e31023c69aba44c4ccc40acf652d5a76bbd1b9cd6a7ebead33a0a2161e",
-          "sha256": "96f6f2e31023c69aba44c4ccc40acf652d5a76bbd1b9cd6a7ebead33a0a2161e"
+          "url": "https://ghcr.io/v2/homebrew/core/angband/blobs/sha256:6eb8682054143520fbf931cac520aa8b1c3e8776db5d8e13c374698563fba23e",
+          "sha256": "6eb8682054143520fbf931cac520aa8b1c3e8776db5d8e13c374698563fba23e"
         },
-        "high_sierra": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/angband/blobs/sha256:95463908fbefe4988a9ab3dcc031cd1c7d6767ed6557d1baca813446e5ca6b9c",
-          "sha256": "95463908fbefe4988a9ab3dcc031cd1c7d6767ed6557d1baca813446e5ca6b9c"
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/angband/blobs/sha256:c846da0bf2b065f0867cf114896938c321c5a86de031dfd0ec7bd94913425ac0",
+          "sha256": "c846da0bf2b065f0867cf114896938c321c5a86de031dfd0ec7bd94913425ac0"
         }
       }
     }
@@ -65,8 +75,7 @@
 
   ],
   "build_dependencies": [
-    "autoconf",
-    "automake"
+
   ],
   "dependencies": [
 

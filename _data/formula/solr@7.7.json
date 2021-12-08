@@ -11,11 +11,11 @@
   ],
   "desc": "Enterprise search platform from the Apache Lucene project",
   "license": "Apache-2.0",
-  "homepage": "https://lucene.apache.org/solr/",
+  "homepage": "https://solr.apache.org",
   "versions": {
     "stable": "7.7.3",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
@@ -27,9 +27,20 @@
   "revision": 1,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 1,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "all": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/solr/7.7/blobs/sha256:d6c1393dd7b6230c255ad1d2c632b542eb9a7d569e24661acf9d8cd14e5967c1",
+          "sha256": "d6c1393dd7b6230c255ad1d2c632b542eb9a7d569e24661acf9d8cd14e5967c1"
+        }
+      }
+    }
   },
   "keg_only": true,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],

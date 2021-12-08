@@ -13,13 +13,13 @@
   "license": "Apache-2.0",
   "homepage": "https://saltproject.io/",
   "versions": {
-    "stable": "3003",
+    "stable": "3004",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://files.pythonhosted.org/packages/e9/e8/4c23ba10ae61f04bf15837c659af9623663d6e3d2917700ae07ed9645629/salt-3003.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/0f/35/e4e1f092eb1a22e807f9bcc5712701bf4d55f9ab41eb2cca55680817ef05/salt-3004.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,25 +31,40 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/salt/blobs/sha256:f3b9197394edfe8fb34ee9347dfa6956322c4b3ff06906e9338bcae49b2c7c6a",
+          "sha256": "f3b9197394edfe8fb34ee9347dfa6956322c4b3ff06906e9338bcae49b2c7c6a"
+        },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/salt/blobs/sha256:f86a86b6ad5ff99d7212e14fcac51e2bad07d864a65fb699d69a555c3fcbd718",
-          "sha256": "f86a86b6ad5ff99d7212e14fcac51e2bad07d864a65fb699d69a555c3fcbd718"
+          "url": "https://ghcr.io/v2/homebrew/core/salt/blobs/sha256:8305b4d8a25285d3790accc72bf32533d87be0078e8b94d7d6985bbc288b4eac",
+          "sha256": "8305b4d8a25285d3790accc72bf32533d87be0078e8b94d7d6985bbc288b4eac"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/salt/blobs/sha256:90119f731b01f13b72b29b7183d8116e1f556ef7ff07dd00ce30aef3c4035f4a",
+          "sha256": "90119f731b01f13b72b29b7183d8116e1f556ef7ff07dd00ce30aef3c4035f4a"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/salt/blobs/sha256:4cb82eb3d129c7e0d6591bc15a1c746ff0c2f8876c58f2d6e7cabbb295496e55",
-          "sha256": "4cb82eb3d129c7e0d6591bc15a1c746ff0c2f8876c58f2d6e7cabbb295496e55"
+          "url": "https://ghcr.io/v2/homebrew/core/salt/blobs/sha256:fb43c3220747e15c2765cd2547dfb1e58fa1ce42bf75d3a41f7d843783414277",
+          "sha256": "fb43c3220747e15c2765cd2547dfb1e58fa1ce42bf75d3a41f7d843783414277"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/salt/blobs/sha256:147713aa3228517feceadb2bfb8b3f75872289162e82d25488cf9f2a2cbec02b",
-          "sha256": "147713aa3228517feceadb2bfb8b3f75872289162e82d25488cf9f2a2cbec02b"
+          "url": "https://ghcr.io/v2/homebrew/core/salt/blobs/sha256:0b7b479e06d49678e091dc8db52cee0c0029a1443183980353cf1d35e471b326",
+          "sha256": "0b7b479e06d49678e091dc8db52cee0c0029a1443183980353cf1d35e471b326"
         },
         "mojave": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/salt/blobs/sha256:6adc650ef17fe080720531c7a9172e3e505d79f82b9cd2c3afe95033e8b426c2",
-          "sha256": "6adc650ef17fe080720531c7a9172e3e505d79f82b9cd2c3afe95033e8b426c2"
+          "url": "https://ghcr.io/v2/homebrew/core/salt/blobs/sha256:0ef6d36c15f1b9ee2845e01a45be1e68860ea5d9e9a32e0b63e280ce1a5fe03e",
+          "sha256": "0ef6d36c15f1b9ee2845e01a45be1e68860ea5d9e9a32e0b63e280ce1a5fe03e"
+        },
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/salt/blobs/sha256:a92261447bce65f316635fb213653073e5b2246a0aca79e56d1ad9fd3f36f8dc",
+          "sha256": "a92261447bce65f316635fb213653073e5b2246a0aca79e56d1ad9fd3f36f8dc"
         }
       }
     }
@@ -66,7 +81,8 @@
     "libgit2",
     "libyaml",
     "openssl@1.1",
-    "python@3.9",
+    "python@3.10",
+    "six",
     "zeromq"
   ],
   "recommended_dependencies": [

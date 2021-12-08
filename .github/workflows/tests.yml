@@ -1,28 +1,34 @@
-name: GitHub Actions CI
+name: CI
 on:
   push:
-    branches: master
+    branches:
+      - master
   pull_request:
+
+concurrency:
+  group: "${{ github.ref }}"
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
 jobs:
   tests:
     runs-on: ubuntu-latest
     steps:
-    - name: Set up Git repository
-      uses: actions/checkout@master
+      - name: Set up Git repository
+        uses: actions/checkout@master
 
-    - name: Set up Homebrew
-      id: set-up-homebrew
-      uses: Homebrew/actions/setup-homebrew@master
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@master
 
-    - name: Set up Ruby
-      uses: actions/setup-ruby@main
-      with:
-        ruby-version: '2.6'
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "2.6"
 
-    - name: Install RubyGems
-      run: |
-        gem install bundler -v "~>1"
-        bundle install --jobs 4 --retry 3
+      - name: Install RubyGems
+        run: |
+          gem install bundler -v "~>1"
+          bundle install --jobs 4 --retry 3
 
-    - name: Generate site
-      run: bundle exec rake all_formulae cask
+      - name: Generate site
+        run: bundle exec rake formulae cask

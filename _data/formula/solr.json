@@ -4,22 +4,22 @@
   "tap": "homebrew/core",
   "oldname": null,
   "aliases": [
-    "solr@8.8"
+    "solr@8.10"
   ],
   "versioned_formulae": [
     "solr@7.7"
   ],
   "desc": "Enterprise search platform from the Apache Lucene project",
   "license": "Apache-2.0",
-  "homepage": "https://lucene.apache.org/solr/",
+  "homepage": "https://solr.apache.org/",
   "versions": {
-    "stable": "8.8.2",
+    "stable": "8.10.1",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://www.apache.org/dyn/closer.lua?path=lucene/solr/8.8.2/solr-8.8.2.tgz",
+      "url": "https://www.apache.org/dyn/closer.lua?path=lucene/solr/8.10.1/solr-8.10.1.tgz",
       "tag": null,
       "revision": null
     }
@@ -27,9 +27,20 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "all": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/solr/blobs/sha256:05fa5d11df5c036aade9a389d1231e159074ab64b8276adf05c675ecd7ddb538",
+          "sha256": "05fa5d11df5c036aade9a389d1231e159074ab64b8276adf05c675ecd7ddb538"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
@@ -49,7 +60,15 @@
 
   ],
   "requirements": [
+    {
+      "name": "macos",
+      "cask": null,
+      "download": null,
+      "version": null,
+      "contexts": [
 
+      ]
+    }
   ],
   "conflicts_with": [
 

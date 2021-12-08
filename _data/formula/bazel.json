@@ -13,13 +13,13 @@
   "license": "Apache-2.0",
   "homepage": "https://bazel.build/",
   "versions": {
-    "stable": "4.1.0",
+    "stable": "4.2.2",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/bazelbuild/bazel/releases/download/4.1.0/bazel-4.1.0-dist.zip",
+      "url": "https://github.com/bazelbuild/bazel/releases/download/4.2.2/bazel-4.2.2-dist.zip",
       "tag": null,
       "revision": null
     }
@@ -33,23 +33,23 @@
       "files": {
         "arm64_big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/bazel/blobs/sha256:c823b4c4e41a2aa9b36c25ae8c4c2983cb06c29f1b8198974815c24edd19712c",
-          "sha256": "c823b4c4e41a2aa9b36c25ae8c4c2983cb06c29f1b8198974815c24edd19712c"
+          "url": "https://ghcr.io/v2/homebrew/core/bazel/blobs/sha256:fc088664ed521ba80180eeda2d0ecb47d7f6b40dc8c85a00c96f045f65c44ea0",
+          "sha256": "fc088664ed521ba80180eeda2d0ecb47d7f6b40dc8c85a00c96f045f65c44ea0"
         },
         "big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/bazel/blobs/sha256:68ba1b9ef6eb74c9d64d4c71ecfef8008585deba136a86afa9ffa488c322646e",
-          "sha256": "68ba1b9ef6eb74c9d64d4c71ecfef8008585deba136a86afa9ffa488c322646e"
+          "url": "https://ghcr.io/v2/homebrew/core/bazel/blobs/sha256:297cfcb430e4c4211d96de65128dbb57073d0a17ae8757155d6bcdb88bb4e278",
+          "sha256": "297cfcb430e4c4211d96de65128dbb57073d0a17ae8757155d6bcdb88bb4e278"
         },
         "catalina": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/bazel/blobs/sha256:37cb81e7d6d5b60b5866a5eb57fbff26fa2dc9e37accab99d862a298adea3204",
-          "sha256": "37cb81e7d6d5b60b5866a5eb57fbff26fa2dc9e37accab99d862a298adea3204"
+          "url": "https://ghcr.io/v2/homebrew/core/bazel/blobs/sha256:036be227f279a9876f07bd01a9d5a25ab2887538a130bb11767338f0d7b4b1a1",
+          "sha256": "036be227f279a9876f07bd01a9d5a25ab2887538a130bb11767338f0d7b4b1a1"
         },
-        "mojave": {
+        "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/bazel/blobs/sha256:dbd4edf845b075e517442522bc2dd12f993d16d3b895f06dbf2024bd933754cf",
-          "sha256": "dbd4edf845b075e517442522bc2dd12f993d16d3b895f06dbf2024bd933754cf"
+          "url": "https://ghcr.io/v2/homebrew/core/bazel/blobs/sha256:c9808c9b07a7b2382cdea16fd4032fec08773e808d4c2b1e34ab5398b86cfd99",
+          "sha256": "c9808c9b07a7b2382cdea16fd4032fec08773e808d4c2b1e34ab5398b86cfd99"
         }
       }
     }
@@ -60,7 +60,7 @@
 
   ],
   "build_dependencies": [
-    "python@3.9"
+    "python@3.10"
   ],
   "dependencies": [
     "openjdk@11"
@@ -72,13 +72,14 @@
 
   ],
   "uses_from_macos": [
+    "unzip",
     "zip"
   ],
   "requirements": [
 
   ],
   "conflicts_with": [
-
+    "bazelisk"
   ],
   "caveats": null,
   "installed": [

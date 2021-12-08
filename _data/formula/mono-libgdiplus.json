@@ -13,43 +13,53 @@
   "license": "MIT",
   "homepage": "https://www.mono-project.com/docs/gui/libgdiplus/",
   "versions": {
-    "stable": "6.0.5",
+    "stable": "6.1",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/mono/libgdiplus/archive/6.0.5.tar.gz",
+      "url": "https://download.mono-project.com/sources/libgdiplus/libgdiplus-6.1.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/mono-libgdiplus/blobs/sha256:3a30135d330f2b768291589843b24cde7344f54518160c264536c9cd23250f08",
+          "sha256": "3a30135d330f2b768291589843b24cde7344f54518160c264536c9cd23250f08"
+        },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/mono-libgdiplus/blobs/sha256:1ffc07c204c2dfb3caad9695283676bb2793da4f95889d09fa2a976c2699720b",
-          "sha256": "1ffc07c204c2dfb3caad9695283676bb2793da4f95889d09fa2a976c2699720b"
+          "url": "https://ghcr.io/v2/homebrew/core/mono-libgdiplus/blobs/sha256:5fe649e5e343da32be7676e8790029d54baac8d774bbcd495c7967429e92e9a5",
+          "sha256": "5fe649e5e343da32be7676e8790029d54baac8d774bbcd495c7967429e92e9a5"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/mono-libgdiplus/blobs/sha256:046892c0f224f24e10a5778fd2b7de125f4bce367bfe05ce87129adac666f13f",
+          "sha256": "046892c0f224f24e10a5778fd2b7de125f4bce367bfe05ce87129adac666f13f"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/mono-libgdiplus/blobs/sha256:251d2f8b3f0aefe6678a1e34288cdcdc160410dc4b3b555d08cf58d01f9c37a0",
-          "sha256": "251d2f8b3f0aefe6678a1e34288cdcdc160410dc4b3b555d08cf58d01f9c37a0"
+          "url": "https://ghcr.io/v2/homebrew/core/mono-libgdiplus/blobs/sha256:5945a30d86c27fce4226a1147d63c062f94e802bedb60fef5f7667d30d002d50",
+          "sha256": "5945a30d86c27fce4226a1147d63c062f94e802bedb60fef5f7667d30d002d50"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/mono-libgdiplus/blobs/sha256:d72a67f877199f82b096a47a19b071414581fed3160f62942dcbe21804fb29b7",
-          "sha256": "d72a67f877199f82b096a47a19b071414581fed3160f62942dcbe21804fb29b7"
+          "url": "https://ghcr.io/v2/homebrew/core/mono-libgdiplus/blobs/sha256:327f8abb39efba8d47c231eb679b70375a6a6b3ab6b0f53f9dc21c72a04a3ea9",
+          "sha256": "327f8abb39efba8d47c231eb679b70375a6a6b3ab6b0f53f9dc21c72a04a3ea9"
         },
-        "mojave": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/mono-libgdiplus/blobs/sha256:c865c0d6aac91e8293d951a1c7d278bc8d64cba7babab1dc60f9fc198b6649fd",
-          "sha256": "c865c0d6aac91e8293d951a1c7d278bc8d64cba7babab1dc60f9fc198b6649fd"
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/mono-libgdiplus/blobs/sha256:2f136449315a9e66724ef8a8b056151ec0579e7adf0433d50fadb3bac44634dc",
+          "sha256": "2f136449315a9e66724ef8a8b056151ec0579e7adf0433d50fadb3bac44634dc"
         }
       }
     }
@@ -60,9 +70,6 @@
 
   ],
   "build_dependencies": [
-    "autoconf",
-    "automake",
-    "libtool",
     "pkg-config"
   ],
   "dependencies": [
@@ -76,8 +83,7 @@
     "libexif",
     "libpng",
     "libtiff",
-    "pango",
-    "pixman"
+    "pango"
   ],
   "recommended_dependencies": [
 

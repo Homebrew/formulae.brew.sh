@@ -10,12 +10,12 @@
 
   ],
   "desc": "Build Artifact Repository Manager",
-  "license": "Apache-2.0",
+  "license": "Apache-2.0 and GPL-2.0-only",
   "homepage": "https://archiva.apache.org/",
   "versions": {
     "stable": "2.2.5",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
@@ -24,19 +24,46 @@
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "arm64_big_sur": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/apache-archiva/blobs/sha256:aaaa03ae8f9cbafef6a26cdc3c25607c79b7706084a4f88a2982a7e145091819",
+          "sha256": "aaaa03ae8f9cbafef6a26cdc3c25607c79b7706084a4f88a2982a7e145091819"
+        },
+        "big_sur": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/apache-archiva/blobs/sha256:aaaa03ae8f9cbafef6a26cdc3c25607c79b7706084a4f88a2982a7e145091819",
+          "sha256": "aaaa03ae8f9cbafef6a26cdc3c25607c79b7706084a4f88a2982a7e145091819"
+        },
+        "catalina": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/apache-archiva/blobs/sha256:aaaa03ae8f9cbafef6a26cdc3c25607c79b7706084a4f88a2982a7e145091819",
+          "sha256": "aaaa03ae8f9cbafef6a26cdc3c25607c79b7706084a4f88a2982a7e145091819"
+        },
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/apache-archiva/blobs/sha256:4f813febed2dba705cfd48f49c6350861bf62a1271c8543b1f548c96d47770fe",
+          "sha256": "4f813febed2dba705cfd48f49c6350861bf62a1271c8543b1f548c96d47770fe"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
   "build_dependencies": [
-
+    "ant"
   ],
   "dependencies": [
+    "java-service-wrapper",
     "openjdk"
   ],
   "recommended_dependencies": [

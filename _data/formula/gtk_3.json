@@ -13,43 +13,53 @@
   "license": "LGPL-2.0-or-later",
   "homepage": "https://gtk.org/",
   "versions": {
-    "stable": "3.24.29",
+    "stable": "3.24.30",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://download.gnome.org/sources/gtk+/3.24/gtk+-3.24.29.tar.xz",
+      "url": "https://download.gnome.org/sources/gtk+/3.24/gtk+-3.24.30.tar.xz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/gtkx3/blobs/sha256:f62f7380b2af3404ccdc0acd2b60905cfd3601dedc127c2f9de515e0cb85ba8a",
+          "sha256": "f62f7380b2af3404ccdc0acd2b60905cfd3601dedc127c2f9de515e0cb85ba8a"
+        },
         "arm64_big_sur": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/gtkx3/blobs/sha256:2c25223fa2dd059afba57d35ee6b700b5911827df386df211af7150aac862ad4",
-          "sha256": "2c25223fa2dd059afba57d35ee6b700b5911827df386df211af7150aac862ad4"
+          "url": "https://ghcr.io/v2/homebrew/core/gtkx3/blobs/sha256:b15f71d2812ad9ab6eb8b39a81b4f5a9e62a5ed791c37a4261ed0398474bf728",
+          "sha256": "b15f71d2812ad9ab6eb8b39a81b4f5a9e62a5ed791c37a4261ed0398474bf728"
+        },
+        "monterey": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/gtkx3/blobs/sha256:e343c15b8b8dc8a82a8b25acbfc84270852f2ed645edf8244340ea83e392fc1d",
+          "sha256": "e343c15b8b8dc8a82a8b25acbfc84270852f2ed645edf8244340ea83e392fc1d"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/gtkx3/blobs/sha256:4e6a45810d70045f5b538f0bce3858965ff65a5bf2a7765a2707fefad141a8d3",
-          "sha256": "4e6a45810d70045f5b538f0bce3858965ff65a5bf2a7765a2707fefad141a8d3"
+          "url": "https://ghcr.io/v2/homebrew/core/gtkx3/blobs/sha256:5a95198f2dc0db4b6e38b45c8ebe2afa4f5272202cb6cceee0ac0dcd13119247",
+          "sha256": "5a95198f2dc0db4b6e38b45c8ebe2afa4f5272202cb6cceee0ac0dcd13119247"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/gtkx3/blobs/sha256:a4960ef5af1ee4246fbcaee1edece012c72faca4cd86666066685597121edc15",
-          "sha256": "a4960ef5af1ee4246fbcaee1edece012c72faca4cd86666066685597121edc15"
+          "url": "https://ghcr.io/v2/homebrew/core/gtkx3/blobs/sha256:9265ed649be9bec04adb2cba082ac44d41e54fa2e64b7b84b1997cc9530d6de1",
+          "sha256": "9265ed649be9bec04adb2cba082ac44d41e54fa2e64b7b84b1997cc9530d6de1"
         },
-        "mojave": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/gtkx3/blobs/sha256:2d5a82e40154be62fc29cb91b14febd5e33cd06e61c1c1b1f0a038068135eca4",
-          "sha256": "2d5a82e40154be62fc29cb91b14febd5e33cd06e61c1c1b1f0a038068135eca4"
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/gtkx3/blobs/sha256:477b64ab32e7e940360515d1065382b3b2ee6afc4fd213f9fff72fd7aaeb3c7e",
+          "sha256": "477b64ab32e7e940360515d1065382b3b2ee6afc4fd213f9fff72fd7aaeb3c7e"
         }
       }
     }
@@ -83,10 +93,9 @@
 
   ],
   "uses_from_macos": [
-    [
-      "libxslt",
-      "build"
-    ]
+    {
+      "libxslt": "build"
+    }
   ],
   "requirements": [
 

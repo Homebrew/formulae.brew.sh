@@ -13,15 +13,15 @@
   "license": "MIT",
   "homepage": "https://www.duckdb.org",
   "versions": {
-    "stable": "0.2.6",
+    "stable": "0.3.1",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/cwida/duckdb.git",
-      "tag": "v0.2.6",
-      "revision": "8295e245d59c471bdd1a1bea27e7f04333c212b0"
+      "url": "https://github.com/duckdb/duckdb.git",
+      "tag": "v0.3.1",
+      "revision": "88aa81c6b1b851c538145e6431ea766a6e0ef435"
     }
   },
   "revision": 0,
@@ -31,25 +31,35 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/duckdb/blobs/sha256:d62b4d92c3161fdbc03bd72ea5353d15d2e7ce7d457240fb1a7ef18e53957f19",
+          "sha256": "d62b4d92c3161fdbc03bd72ea5353d15d2e7ce7d457240fb1a7ef18e53957f19"
+        },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/duckdb/blobs/sha256:c8ae8cb83c0e90060d2404f5484f9a341273430e73fecd83878e71ed408a11d1",
-          "sha256": "c8ae8cb83c0e90060d2404f5484f9a341273430e73fecd83878e71ed408a11d1"
+          "url": "https://ghcr.io/v2/homebrew/core/duckdb/blobs/sha256:0edcf2ae659f36d918cdf3a070b198ec0ec0c2208b0dfe9338bf1aea72ab2c73",
+          "sha256": "0edcf2ae659f36d918cdf3a070b198ec0ec0c2208b0dfe9338bf1aea72ab2c73"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/duckdb/blobs/sha256:f5351c2f7c5198483042f3acc94f38324138e9d65e48589d584c916144bfc9c9",
+          "sha256": "f5351c2f7c5198483042f3acc94f38324138e9d65e48589d584c916144bfc9c9"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/duckdb/blobs/sha256:6db79be340d21aed37a8d10f25d9f8dbcbbb7fea94535037e019cc9de88b58b0",
-          "sha256": "6db79be340d21aed37a8d10f25d9f8dbcbbb7fea94535037e019cc9de88b58b0"
+          "url": "https://ghcr.io/v2/homebrew/core/duckdb/blobs/sha256:b17d562d33b1f735cff89f08cefb1158aeaf0e42487aee0a691966653fabdbb1",
+          "sha256": "b17d562d33b1f735cff89f08cefb1158aeaf0e42487aee0a691966653fabdbb1"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/duckdb/blobs/sha256:ee6034cc5856f527c4fc45a55a4a284272e18728ea0407d47f3fa2523b372f1f",
-          "sha256": "ee6034cc5856f527c4fc45a55a4a284272e18728ea0407d47f3fa2523b372f1f"
+          "url": "https://ghcr.io/v2/homebrew/core/duckdb/blobs/sha256:7109176d3717de319efd7eb4a5b74d282ad593d3325bf36932bedef20b11ddfb",
+          "sha256": "7109176d3717de319efd7eb4a5b74d282ad593d3325bf36932bedef20b11ddfb"
         },
-        "mojave": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/duckdb/blobs/sha256:03a8b8f6fa84d2198428ebcfffb3b52590048416bf3bd3484ea0a705e434545c",
-          "sha256": "03a8b8f6fa84d2198428ebcfffb3b52590048416bf3bd3484ea0a705e434545c"
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/duckdb/blobs/sha256:45ab4e1bbf1d1b744b80e2726a7ae9c32f59fc412e00d197293cae56430cbb95",
+          "sha256": "45ab4e1bbf1d1b744b80e2726a7ae9c32f59fc412e00d197293cae56430cbb95"
         }
       }
     }
@@ -64,7 +74,7 @@
     "python@3.9"
   ],
   "dependencies": [
-
+    "utf8proc"
   ],
   "recommended_dependencies": [
 

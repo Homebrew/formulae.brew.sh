@@ -13,43 +13,53 @@
   "license": "MIT",
   "homepage": "https://github.com/gleitz/howdoi",
   "versions": {
-    "stable": "2.0.16",
+    "stable": "2.0.19",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://files.pythonhosted.org/packages/8c/af/f4b90c7a8662b7c284330a02ed4652a61aa93ac48fbcb510932c60cbc6e0/howdoi-2.0.16.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/50/0c/bcc0913772484a46edbf2f6544e2fb651ea8188e268767f21bbd2415ee3b/howdoi-2.0.19.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/howdoi/blobs/sha256:d5bdb01b518d5a5b40b54c8364df6be23fccfd4f7ace5031b67aed088f6bb709",
+          "sha256": "d5bdb01b518d5a5b40b54c8364df6be23fccfd4f7ace5031b67aed088f6bb709"
+        },
         "arm64_big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/howdoi/blobs/sha256:fd65a6bceb00b96632601857014dfc42f2e1e938988eeff7589c0ff63c993770",
-          "sha256": "fd65a6bceb00b96632601857014dfc42f2e1e938988eeff7589c0ff63c993770"
+          "url": "https://ghcr.io/v2/homebrew/core/howdoi/blobs/sha256:c362fe8fd6af73a8a335f97a58b8860a0537f961de510fc4251dcccdfbcc6548",
+          "sha256": "c362fe8fd6af73a8a335f97a58b8860a0537f961de510fc4251dcccdfbcc6548"
+        },
+        "monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/howdoi/blobs/sha256:846e356044a432c34c51746eea87868e10652086774b8652722aacc796db1fd2",
+          "sha256": "846e356044a432c34c51746eea87868e10652086774b8652722aacc796db1fd2"
         },
         "big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/howdoi/blobs/sha256:29d8cbc7f1b06c7efbe47011c565cc683247f8c84277aaea4ac514d8d3cb69df",
-          "sha256": "29d8cbc7f1b06c7efbe47011c565cc683247f8c84277aaea4ac514d8d3cb69df"
+          "url": "https://ghcr.io/v2/homebrew/core/howdoi/blobs/sha256:0db8cab06d1e8315179877b33ac69f0e9802ec666fdf426e6d12e1f337b774d1",
+          "sha256": "0db8cab06d1e8315179877b33ac69f0e9802ec666fdf426e6d12e1f337b774d1"
         },
         "catalina": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/howdoi/blobs/sha256:4d15db7a8145bd361a7a0469c2b20285062366dd0506ba5f80d4a46804b6bb4b",
-          "sha256": "4d15db7a8145bd361a7a0469c2b20285062366dd0506ba5f80d4a46804b6bb4b"
+          "url": "https://ghcr.io/v2/homebrew/core/howdoi/blobs/sha256:187b4d563f8bcdbd4d13b3d964ea983a29d6a30f65ae5dfdaca3891fc01ac3d8",
+          "sha256": "187b4d563f8bcdbd4d13b3d964ea983a29d6a30f65ae5dfdaca3891fc01ac3d8"
         },
-        "mojave": {
+        "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/howdoi/blobs/sha256:578a64b4de3bdfd0fd6ad790c29377d6b56163309e86a69d8397e94c3a2844f9",
-          "sha256": "578a64b4de3bdfd0fd6ad790c29377d6b56163309e86a69d8397e94c3a2844f9"
+          "url": "https://ghcr.io/v2/homebrew/core/howdoi/blobs/sha256:275d501d35da9aef0f92e42e61573c6e6fe15d0fb1d36349cfb1b7e5406ea95d",
+          "sha256": "275d501d35da9aef0f92e42e61573c6e6fe15d0fb1d36349cfb1b7e5406ea95d"
         }
       }
     }
@@ -63,7 +73,8 @@
 
   ],
   "dependencies": [
-    "python@3.9"
+    "python@3.9",
+    "six"
   ],
   "recommended_dependencies": [
 

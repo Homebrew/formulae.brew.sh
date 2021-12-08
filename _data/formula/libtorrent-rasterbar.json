@@ -13,48 +13,58 @@
   "license": "BSD-3-Clause",
   "homepage": "https://www.libtorrent.org/",
   "versions": {
-    "stable": "1.2.10",
+    "stable": "2.0.4",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/arvidn/libtorrent/releases/download/libtorrent-1.2.10/libtorrent-rasterbar-1.2.10.tar.gz",
+      "url": "https://github.com/arvidn/libtorrent/releases/download/v2.0.4/libtorrent-rasterbar-2.0.4.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/libtorrent-rasterbar/blobs/sha256:0ead84bb9718094efd04862389a0f0653d8e41f52977a1adb2a557db495b89d2",
+          "sha256": "0ead84bb9718094efd04862389a0f0653d8e41f52977a1adb2a557db495b89d2"
+        },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/libtorrent-rasterbar/blobs/sha256:566168949b3c30d457469e9e1a6ee366aef3e8a3f72191b36cfcd87033834b28",
-          "sha256": "566168949b3c30d457469e9e1a6ee366aef3e8a3f72191b36cfcd87033834b28"
+          "url": "https://ghcr.io/v2/homebrew/core/libtorrent-rasterbar/blobs/sha256:c2c117a2c0c9c2c8df372a7b8d91605096d1dde615c8fb90c4572ff8ffee4a3d",
+          "sha256": "c2c117a2c0c9c2c8df372a7b8d91605096d1dde615c8fb90c4572ff8ffee4a3d"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/libtorrent-rasterbar/blobs/sha256:8544e762eab85086ca9b145a6c30a2233c52d4c807f66f5ce2ab61178021122b",
+          "sha256": "8544e762eab85086ca9b145a6c30a2233c52d4c807f66f5ce2ab61178021122b"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/libtorrent-rasterbar/blobs/sha256:92d140b497497ac2edc980534ff710ff50b99e967c2a01fe0c952c51a0bf3aeb",
-          "sha256": "92d140b497497ac2edc980534ff710ff50b99e967c2a01fe0c952c51a0bf3aeb"
+          "url": "https://ghcr.io/v2/homebrew/core/libtorrent-rasterbar/blobs/sha256:d48ce0307a32554477f8e726ac48f53452172dd53af279d418d35b47d981c903",
+          "sha256": "d48ce0307a32554477f8e726ac48f53452172dd53af279d418d35b47d981c903"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/libtorrent-rasterbar/blobs/sha256:2b5460c509171200053dbb6d0eb45b71737695239beff530d63c55265c89fec5",
-          "sha256": "2b5460c509171200053dbb6d0eb45b71737695239beff530d63c55265c89fec5"
+          "url": "https://ghcr.io/v2/homebrew/core/libtorrent-rasterbar/blobs/sha256:427766e035c86318f55b44fe60b740355ddd2f804c3ceef6a15a838857d6efbd",
+          "sha256": "427766e035c86318f55b44fe60b740355ddd2f804c3ceef6a15a838857d6efbd"
         },
         "mojave": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/libtorrent-rasterbar/blobs/sha256:593dae5994fb2e71c44f0150196d8cb719872b15e6212a8d669b1ed43c4f8f90",
-          "sha256": "593dae5994fb2e71c44f0150196d8cb719872b15e6212a8d669b1ed43c4f8f90"
+          "url": "https://ghcr.io/v2/homebrew/core/libtorrent-rasterbar/blobs/sha256:a4d966bc79d6771bdebcdfd55e1f9d8455e9caa0e0d4ed72b1bf562c8197aa21",
+          "sha256": "a4d966bc79d6771bdebcdfd55e1f9d8455e9caa0e0d4ed72b1bf562c8197aa21"
         },
-        "high_sierra": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/libtorrent-rasterbar/blobs/sha256:9f140786725e1a24971d5d3a99ff77cb35ec713f6fb6fd871b40633d4a322ea3",
-          "sha256": "9f140786725e1a24971d5d3a99ff77cb35ec713f6fb6fd871b40633d4a322ea3"
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/libtorrent-rasterbar/blobs/sha256:37574565f695cfe16d3c9cbc1572de7f778fbed517e5c91a13fe0aa403fc421c",
+          "sha256": "37574565f695cfe16d3c9cbc1572de7f778fbed517e5c91a13fe0aa403fc421c"
         }
       }
     }
@@ -65,7 +75,7 @@
 
   ],
   "build_dependencies": [
-    "pkg-config"
+    "cmake"
   ],
   "dependencies": [
     "boost",

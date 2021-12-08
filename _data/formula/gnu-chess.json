@@ -13,13 +13,13 @@
   "license": "GPL-3.0-or-later",
   "homepage": "https://www.gnu.org/software/chess/",
   "versions": {
-    "stable": "6.2.8",
+    "stable": "6.2.9",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://ftp.gnu.org/gnu/chess/gnuchess-6.2.8.tar.gz",
+      "url": "https://ftp.gnu.org/gnu/chess/gnuchess-6.2.9.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,25 +31,40 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/gnu-chess/blobs/sha256:b03db46e113c63c8d141181ca6f89626414827a3d0aa15dc88e7cb72f2fcaf69",
+          "sha256": "b03db46e113c63c8d141181ca6f89626414827a3d0aa15dc88e7cb72f2fcaf69"
+        },
         "arm64_big_sur": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/gnu-chess/blobs/sha256:9f6f4e4be12a9b4a543077dfeff7220216c5b50076b3fe502452726654c588b3",
-          "sha256": "9f6f4e4be12a9b4a543077dfeff7220216c5b50076b3fe502452726654c588b3"
+          "url": "https://ghcr.io/v2/homebrew/core/gnu-chess/blobs/sha256:8e356eccb6a541eee641342bc7f923b35271fd51c094ca6b83e8abdecd7226a1",
+          "sha256": "8e356eccb6a541eee641342bc7f923b35271fd51c094ca6b83e8abdecd7226a1"
+        },
+        "monterey": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/gnu-chess/blobs/sha256:7e1eed30943db3dc80910b5f10ae6df5b65354e65748fff524dba044ea495da8",
+          "sha256": "7e1eed30943db3dc80910b5f10ae6df5b65354e65748fff524dba044ea495da8"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/gnu-chess/blobs/sha256:4049d5fe6c4ae97e9756faae5f8a25e4f20d2af9ae97999a79ffeb9fe4a0dc85",
-          "sha256": "4049d5fe6c4ae97e9756faae5f8a25e4f20d2af9ae97999a79ffeb9fe4a0dc85"
+          "url": "https://ghcr.io/v2/homebrew/core/gnu-chess/blobs/sha256:11997b7b97ab58380f07e491fc9b75649f52ab6d7edfdfbdbf025a3a12d81d3a",
+          "sha256": "11997b7b97ab58380f07e491fc9b75649f52ab6d7edfdfbdbf025a3a12d81d3a"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/gnu-chess/blobs/sha256:31f8d094109dfff455ac3ec6ccd46c5b109b105bd0a6f348778c4ff4469cb304",
-          "sha256": "31f8d094109dfff455ac3ec6ccd46c5b109b105bd0a6f348778c4ff4469cb304"
+          "url": "https://ghcr.io/v2/homebrew/core/gnu-chess/blobs/sha256:d3dcc4bec287a4b09dbb0dba0f7fc51943812fed43eeda21a5f3d314ae77dbf6",
+          "sha256": "d3dcc4bec287a4b09dbb0dba0f7fc51943812fed43eeda21a5f3d314ae77dbf6"
         },
         "mojave": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/gnu-chess/blobs/sha256:64398f15fb0e590834f9970a8eff17744e3f038b56709c7e54923181ddaa8934",
-          "sha256": "64398f15fb0e590834f9970a8eff17744e3f038b56709c7e54923181ddaa8934"
+          "url": "https://ghcr.io/v2/homebrew/core/gnu-chess/blobs/sha256:03d9103b7fbbfeaf487d3b6dbac291eaacd51299052b62ddd3564eaedc513f08",
+          "sha256": "03d9103b7fbbfeaf487d3b6dbac291eaacd51299052b62ddd3564eaedc513f08"
+        },
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/gnu-chess/blobs/sha256:ef91217fa368cd712df9a7c4c6def92eeb5a26b37d5c0e9ee51e13a3ab7cca26",
+          "sha256": "ef91217fa368cd712df9a7c4c6def92eeb5a26b37d5c0e9ee51e13a3ab7cca26"
         }
       }
     }
@@ -80,7 +95,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "This formula also downloads the additional opening book.  The\nopening book is a PGN file located in $(brew --prefix)/Cellar/gnu-chess/6.2.8/share/doc/gnu-chess that can be added\nusing gnuchess commands.\n",
+  "caveats": "This formula also downloads the additional opening book.  The\nopening book is a PGN file located in $(brew --prefix)/Cellar/gnu-chess/6.2.9/share/doc/gnu-chess that can be added\nusing gnuchess commands.\n",
   "installed": [
 
   ],

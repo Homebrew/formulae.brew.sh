@@ -31,10 +31,20 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/gearman/blobs/sha256:e1f5ee186f9a9c32001fd4736f5ff9d16aa64a15662a22cc14722d3fd86b7b7b",
+          "sha256": "e1f5ee186f9a9c32001fd4736f5ff9d16aa64a15662a22cc14722d3fd86b7b7b"
+        },
         "arm64_big_sur": {
           "cellar": ":any",
           "url": "https://ghcr.io/v2/homebrew/core/gearman/blobs/sha256:6e3d3504ff3a5d4fb152ec03975aacea300cfca0875c8370c6dcb7bbcbc9ccda",
           "sha256": "6e3d3504ff3a5d4fb152ec03975aacea300cfca0875c8370c6dcb7bbcbc9ccda"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/gearman/blobs/sha256:93226ae14964f4e2cbe195dbfec4cbcbc85901eae7f4a29d7a023ac369dc0c50",
+          "sha256": "93226ae14964f4e2cbe195dbfec4cbcbc85901eae7f4a29d7a023ac369dc0c50"
         },
         "big_sur": {
           "cellar": ":any",
@@ -55,6 +65,11 @@
           "cellar": ":any",
           "url": "https://ghcr.io/v2/homebrew/core/gearman/blobs/sha256:8664f5b9c91ef99190cb70000758aa3d50f68afcad01d2e8cac234adf6a5424c",
           "sha256": "8664f5b9c91ef99190cb70000758aa3d50f68afcad01d2e8cac234adf6a5424c"
+        },
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/gearman/blobs/sha256:5c3fcefe30fbbffde1969348e359191a4b2b3aee1f0f1ea4f43e11ad57865f80",
+          "sha256": "5c3fcefe30fbbffde1969348e359191a4b2b3aee1f0f1ea4f43e11ad57865f80"
         }
       }
     }
@@ -80,7 +95,10 @@
 
   ],
   "uses_from_macos": [
-
+    {
+      "gperf": "build"
+    },
+    "sqlite"
   ],
   "requirements": [
 

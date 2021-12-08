@@ -9,17 +9,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Formatter/translator for text files to numerous formats. Includes a2x",
+  "desc": "Formatter/translator for text files to numerous formats",
   "license": "GPL-2.0-only",
-  "homepage": "https://asciidoc.org/",
+  "homepage": "https://asciidoc-py.github.io/",
   "versions": {
-    "stable": "9.1.0",
+    "stable": "10.0.2",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/asciidoc-py/asciidoc-py/archive/9.1.0.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/c2/d0/5334f7d8205aa11f2e4751f4137466c8d8a36b148dcf3874db87b40ce72e/asciidoc-10.0.2.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,28 +28,38 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/asciidoc/blobs/sha256:59bc4ac9a515e3b9fb04413170253db01735afda37468487bc7c4e05c56cda7d",
+          "sha256": "59bc4ac9a515e3b9fb04413170253db01735afda37468487bc7c4e05c56cda7d"
+        },
         "arm64_big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/asciidoc/blobs/sha256:6687327cf31fe69822eb54e8fb1d411bc22237e346020beb69487bc55822583b",
-          "sha256": "6687327cf31fe69822eb54e8fb1d411bc22237e346020beb69487bc55822583b"
+          "url": "https://ghcr.io/v2/homebrew/core/asciidoc/blobs/sha256:59bc4ac9a515e3b9fb04413170253db01735afda37468487bc7c4e05c56cda7d",
+          "sha256": "59bc4ac9a515e3b9fb04413170253db01735afda37468487bc7c4e05c56cda7d"
+        },
+        "monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/asciidoc/blobs/sha256:03ab2d49198b047f011cdacdfbb9f08260d4ecab0657b3b74dc99034db6085c7",
+          "sha256": "03ab2d49198b047f011cdacdfbb9f08260d4ecab0657b3b74dc99034db6085c7"
         },
         "big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/asciidoc/blobs/sha256:3cae7527216fda7e1e3f46ef2ba9db4bf713c524ee70399afd322200d4bbcd32",
-          "sha256": "3cae7527216fda7e1e3f46ef2ba9db4bf713c524ee70399afd322200d4bbcd32"
+          "url": "https://ghcr.io/v2/homebrew/core/asciidoc/blobs/sha256:03ab2d49198b047f011cdacdfbb9f08260d4ecab0657b3b74dc99034db6085c7",
+          "sha256": "03ab2d49198b047f011cdacdfbb9f08260d4ecab0657b3b74dc99034db6085c7"
         },
         "catalina": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/asciidoc/blobs/sha256:84d2a53471facc216cf0b1022e8e57c7b0d7a07be8bbb8af727d55dcbdba2991",
-          "sha256": "84d2a53471facc216cf0b1022e8e57c7b0d7a07be8bbb8af727d55dcbdba2991"
+          "url": "https://ghcr.io/v2/homebrew/core/asciidoc/blobs/sha256:03ab2d49198b047f011cdacdfbb9f08260d4ecab0657b3b74dc99034db6085c7",
+          "sha256": "03ab2d49198b047f011cdacdfbb9f08260d4ecab0657b3b74dc99034db6085c7"
         },
-        "mojave": {
+        "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/asciidoc/blobs/sha256:f1af645cce45046ab1e15b53676efc14d306e088547db2ee64e2678efdeecc5a",
-          "sha256": "f1af645cce45046ab1e15b53676efc14d306e088547db2ee64e2678efdeecc5a"
+          "url": "https://ghcr.io/v2/homebrew/core/asciidoc/blobs/sha256:d64213d02fb9f66ef08fb25987477d3d1c0b3e876ba8a74ae2153610a269f1e3",
+          "sha256": "d64213d02fb9f66ef08fb25987477d3d1c0b3e876ba8a74ae2153610a269f1e3"
         }
       }
     }
@@ -60,12 +70,11 @@
 
   ],
   "build_dependencies": [
-    "autoconf",
-    "docbook-xsl"
+
   ],
   "dependencies": [
     "docbook",
-    "python@3.9",
+    "python@3.10",
     "source-highlight"
   ],
   "recommended_dependencies": [
@@ -75,14 +84,7 @@
 
   ],
   "uses_from_macos": [
-    [
-      "libxml2",
-      "build"
-    ],
-    [
-      "libxslt",
-      "build"
-    ]
+
   ],
   "requirements": [
 

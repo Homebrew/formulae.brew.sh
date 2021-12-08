@@ -13,13 +13,13 @@
   "license": "Cannot Represent",
   "homepage": "https://wiki.qt.io/Qbs",
   "versions": {
-    "stable": "1.19.0",
+    "stable": "1.20.1",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://download.qt.io/official_releases/qbs/1.19.0/qbs-src-1.19.0.tar.gz",
+      "url": "https://download.qt.io/official_releases/qbs/1.20.1/qbs-src-1.20.1.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,25 +31,30 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/qbs/blobs/sha256:67dfbdb18377e3bba450d7e607a4a226ee0ddb813f1bf708508892f8d8468a59",
+          "sha256": "67dfbdb18377e3bba450d7e607a4a226ee0ddb813f1bf708508892f8d8468a59"
+        },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/qbs/blobs/sha256:b4d74d2e4dc98fef1cfb89c427577a2dd089db3d770db38ba746168d2712bdd1",
-          "sha256": "b4d74d2e4dc98fef1cfb89c427577a2dd089db3d770db38ba746168d2712bdd1"
+          "url": "https://ghcr.io/v2/homebrew/core/qbs/blobs/sha256:92aac9bdcf321990f97af795af823b02b0f3e747e32b96e2f55f2be34ba5e31f",
+          "sha256": "92aac9bdcf321990f97af795af823b02b0f3e747e32b96e2f55f2be34ba5e31f"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/qbs/blobs/sha256:0e02bd6df4db43c782b258333751ac000a79e8b7cd750c9b0f57845dd054da8f",
-          "sha256": "0e02bd6df4db43c782b258333751ac000a79e8b7cd750c9b0f57845dd054da8f"
+          "url": "https://ghcr.io/v2/homebrew/core/qbs/blobs/sha256:c3d85f2b1e1f08d4f1eafa5635f892d2fd30929b61b78a350904f2e94eb5ccb4",
+          "sha256": "c3d85f2b1e1f08d4f1eafa5635f892d2fd30929b61b78a350904f2e94eb5ccb4"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/qbs/blobs/sha256:ca244d8a16d468c9c9e5b97ca56f5896df5be74e8b345d28c2fc6776d1d434ef",
-          "sha256": "ca244d8a16d468c9c9e5b97ca56f5896df5be74e8b345d28c2fc6776d1d434ef"
+          "url": "https://ghcr.io/v2/homebrew/core/qbs/blobs/sha256:13e3ffaf58f1778c57fd83eb8da7949dfadd639a25ca259fab7197411cf16cdb",
+          "sha256": "13e3ffaf58f1778c57fd83eb8da7949dfadd639a25ca259fab7197411cf16cdb"
         },
         "mojave": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/qbs/blobs/sha256:0f3cedebe6f9eaf2ffc9491b37115a8fb84c491d09fc7b4e886d16ebb22590f2",
-          "sha256": "0f3cedebe6f9eaf2ffc9491b37115a8fb84c491d09fc7b4e886d16ebb22590f2"
+          "url": "https://ghcr.io/v2/homebrew/core/qbs/blobs/sha256:7e224f3dc560b76aef993ed1b72c8dd51a839928fa3351e77cec37b333b3d534",
+          "sha256": "7e224f3dc560b76aef993ed1b72c8dd51a839928fa3351e77cec37b333b3d534"
         }
       }
     }
@@ -60,7 +65,7 @@
 
   ],
   "build_dependencies": [
-
+    "cmake"
   ],
   "dependencies": [
     "qt@5"

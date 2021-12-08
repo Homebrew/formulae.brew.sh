@@ -15,7 +15,7 @@
   "versions": {
     "stable": "1.4",
     "head": "HEAD",
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
@@ -27,9 +27,20 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "all": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/timedog/blobs/sha256:a0fa4a5e282aa24e8c97c2b522a32f3182b6c6b6d83da1dd5590fe9f31b9215c",
+          "sha256": "a0fa4a5e282aa24e8c97c2b522a32f3182b6c6b6d83da1dd5590fe9f31b9215c"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
@@ -49,7 +60,15 @@
 
   ],
   "requirements": [
+    {
+      "name": "macos",
+      "cask": null,
+      "download": null,
+      "version": null,
+      "contexts": [
 
+      ]
+    }
   ],
   "conflicts_with": [
 

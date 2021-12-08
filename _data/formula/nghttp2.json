@@ -13,13 +13,13 @@
   "license": "MIT",
   "homepage": "https://nghttp2.org/",
   "versions": {
-    "stable": "1.43.0",
+    "stable": "1.46.0",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/nghttp2/nghttp2/releases/download/v1.43.0/nghttp2-1.43.0.tar.xz",
+      "url": "https://github.com/nghttp2/nghttp2/releases/download/v1.46.0/nghttp2-1.46.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,25 +31,40 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/nghttp2/blobs/sha256:dd713ae5e09d42b3565b0948fd710e340231f97c9125d3aaa3aac69b11648140",
+          "sha256": "dd713ae5e09d42b3565b0948fd710e340231f97c9125d3aaa3aac69b11648140"
+        },
         "arm64_big_sur": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/nghttp2/blobs/sha256:e927b6ac25987d073b7d65d87bf27b30a95cd1196ffff4b5b82bf955da42b1c7",
-          "sha256": "e927b6ac25987d073b7d65d87bf27b30a95cd1196ffff4b5b82bf955da42b1c7"
+          "url": "https://ghcr.io/v2/homebrew/core/nghttp2/blobs/sha256:d460789e9fd34f91aa1e9e4ca1b7f19a1d404bfe5a2436137da377316efbea93",
+          "sha256": "d460789e9fd34f91aa1e9e4ca1b7f19a1d404bfe5a2436137da377316efbea93"
+        },
+        "monterey": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/nghttp2/blobs/sha256:a4c091e6343a0153b4ea4223d8a5f22f598a2cd874ae0080b605e812bce9f131",
+          "sha256": "a4c091e6343a0153b4ea4223d8a5f22f598a2cd874ae0080b605e812bce9f131"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/nghttp2/blobs/sha256:e6112c4ce4b08b60edbb3d7fca3e22498bbe1881bd6ca95df52b9f2726b0c62a",
-          "sha256": "e6112c4ce4b08b60edbb3d7fca3e22498bbe1881bd6ca95df52b9f2726b0c62a"
+          "url": "https://ghcr.io/v2/homebrew/core/nghttp2/blobs/sha256:da456fbcfd7be04c28fe0882f7ba187db2c584ccc3eabc5ab631ac8278513984",
+          "sha256": "da456fbcfd7be04c28fe0882f7ba187db2c584ccc3eabc5ab631ac8278513984"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/nghttp2/blobs/sha256:5db5819e321f04b2301165cc267913ceacb161faa0504f4e067e074a101871b8",
-          "sha256": "5db5819e321f04b2301165cc267913ceacb161faa0504f4e067e074a101871b8"
+          "url": "https://ghcr.io/v2/homebrew/core/nghttp2/blobs/sha256:e667dd7d98de20e202058c50faf84645e1379bb60b55a49a8cd7eee6b4adfcc9",
+          "sha256": "e667dd7d98de20e202058c50faf84645e1379bb60b55a49a8cd7eee6b4adfcc9"
         },
         "mojave": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/nghttp2/blobs/sha256:cbcac00ca57c0c71e148124ed31cf37abcd28f5adc11565fa51f9f277b401a09",
-          "sha256": "cbcac00ca57c0c71e148124ed31cf37abcd28f5adc11565fa51f9f277b401a09"
+          "url": "https://ghcr.io/v2/homebrew/core/nghttp2/blobs/sha256:961ca4a0fb74c72bd1e184351aa375c60df79410acd0a1f8930e23584c9e6b86",
+          "sha256": "961ca4a0fb74c72bd1e184351aa375c60df79410acd0a1f8930e23584c9e6b86"
+        },
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/nghttp2/blobs/sha256:690725dd14f28ac675bc901d789a5d17474c00a4914012a4b67e63027af6004f",
+          "sha256": "690725dd14f28ac675bc901d789a5d17474c00a4914012a4b67e63027af6004f"
         }
       }
     }
@@ -66,6 +81,7 @@
     "c-ares",
     "jemalloc",
     "libev",
+    "libnghttp2",
     "openssl@1.1"
   ],
   "recommended_dependencies": [
@@ -86,40 +102,9 @@
   ],
   "caveats": null,
   "installed": [
-    {
-      "version": "1.43.0",
-      "used_options": [
 
-      ],
-      "built_as_bottle": true,
-      "poured_from_bottle": true,
-      "runtime_dependencies": [
-        {
-          "full_name": "c-ares",
-          "version": "1.17.1",
-          "declared_directly": true
-        },
-        {
-          "full_name": "jemalloc",
-          "version": "5.2.1",
-          "declared_directly": true
-        },
-        {
-          "full_name": "libev",
-          "version": "4.33",
-          "declared_directly": true
-        },
-        {
-          "full_name": "openssl@1.1",
-          "version": "1.1.1k",
-          "declared_directly": true
-        }
-      ],
-      "installed_as_dependency": true,
-      "installed_on_request": false
-    }
   ],
-  "linked_keg": "1.43.0",
+  "linked_keg": null,
   "pinned": false,
   "outdated": false,
   "deprecated": false,

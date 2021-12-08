@@ -3,12 +3,13 @@ layout: default
 permalink: :title
 ---
 {%- assign full_name = page.title -%}
-{%- assign formula_path = page.dir | remove: "/" -%}
+{%- assign formula_path = "formula" -%}
+{%- assign bottle_path = "bottle" -%}
 {%- assign data_name = full_name | remove: "@" | remove: "." | replace: "+", "_" -%}
 {%- assign f = site.data[formula_path][data_name] -%}
 <h2
-    {%- if f.disabled %} class="disabled" title="This formula has been disabled"
-    {%- elsif f.deprecated %} class="deprecated" title="This formula has been deprecated"
+    {%- if f.disabled %} class="disabled" title="This formula has been disabled since {{ f.disable_date }} because it {{ f.disable_reason }}"
+    {%- elsif f.deprecated %} class="deprecated" title="This formula has been deprecated since {{ f.deprecation_date }} because it {{ f.deprecation_reason }}"
     {%- endif -%}
     >{{ f.name }}</h2>
 
@@ -25,28 +26,18 @@ permalink: :title
 <p>License: <strong>{{ f.license | join: "</strong>, <strong>" | replace: "_", " " }}</strong></p>
 {%- endif %}
 
-{%- assign bottle_path = formula_path | replace: "formula", "bottle" -%}
-<p><a href="{{ site.baseurl }}/api/{{ formula_path }}/{{ f.name }}.json"><code>/api/{{ formula_path }}/{{ f.name }}.json</code> (JSON API)</a></p>
-<p><a href="{{ site.baseurl }}/api/{{ bottle_path }}/{{ f.name }}.json"><code>/api/{{ bottle_path }}/{{ f.name }}.json</code> (Bottle JSON API)</a></p>
+<p>Formula JSON API: <a href="{{ site.baseurl }}/api/{{ formula_path }}/{{ f.name }}.json"><code>/api/{{ formula_path }}/{{ f.name }}.json</code></a></p>
+<p>Bottle JSON API: <a href="{{ site.baseurl }}/api/{{ bottle_path }}/{{ f.name }}.json"><code>/api/{{ bottle_path }}/{{ f.name }}.json</code></a></p>
 
-{%- if formula_path == "formula-linux" %}
-<p><a target="_blank" href="{{ site.taps.linux.remote }}/blob/HEAD/Formula/{{ f.name }}.rb">Linux formula code</a> on GitHub</p>
-{%- else %}
-<p><a target="_blank" href="{{ site.taps.core.remote }}/blob/HEAD/Formula/{{ f.name }}.rb">Formula code</a> on GitHub</p>
-{%- endif %}
+<p>Formula code: <a target="_blank" href="{{ site.taps.core.remote }}/blob/HEAD/Formula/{{ f.name }}.rb"><code>{{ f.name }}.rb</code></a> on GitHub</p>
 
 <p>Bottle (binary package)
 {%- assign bottles = false -%}
 {%- if f.bottle_disabled %} not required, support provided for all supported Homebrew platforms.
-{%- elsif formula_path == "formula-linux" -%}
-    {%- if f.bottle.stable.files.x86_64_linux %} installation support provided for Linux platforms:
-        {%- assign bottles = true -%}
-    {%- else %} not available on this platform.
-    {%- endif -%}
-{%- elsif f.bottle.stable %} installation support provided for macOS releases
+{%- elsif f.bottle.stable %} installation support provided
     {%- if f.bottle.stable.files.all -%}.
     {%- else -%}
-        {%- assign bottles = true -%}:
+        {%- assign bottles = true %} for:
     {%- endif -%}
 {%- else %} not available on this platform.
 {%- endif -%}</p>
@@ -67,7 +58,7 @@ permalink: :title
         {%- unless b[0] contains "arm64_" %}
         <tr>
             {%- unless subsequent -%}
-                <th rowspan="{{ intel_bottle_count }}" scope="rowgroup">Intel</th>
+            <th rowspan="{{ intel_bottle_count }}" scope="rowgroup">Intel</th>
             {%- endunless %}
             <td scope="row" style="text-transform:capitalize;">
                 {{ b[0] | replace: "x86_64", "64-bit" | replace: "_", "&nbsp;" }}
@@ -83,13 +74,7 @@ permalink: :title
         {%- if b[0] contains "arm64_" %}
         <tr>
             {%- unless subsequent -%}
-            <th rowspan="{{ arm64_bottle_count }}" scope="rowgroup">
-                {%- if formula_path == "formula-linux" -%}
-                    ARM64
-                {%- else -%}
-                    Apple Silicon
-                {%- endif -%}
-            </th>
+            <th rowspan="{{ arm64_bottle_count }}" scope="rowgroup">Apple Silicon</th>
             {%- endunless %}
             <td scope="row" style="text-transform:capitalize;">
                 {{ b[0] | remove_first: "arm64_" | replace: "_", "&nbsp;" }}
@@ -191,7 +176,7 @@ permalink: :title
 {%- if f.conflicts_with.size > 0 %}
 <p>Conflicts with:
     {%- for c in f.conflicts_with %}
-        <strong><a href="{{ site.baseurl }}/formula/{{ c }}">{{ c }}</a></strong>
+        <strong><a href="{{ site.baseurl }}/{{ formula_path }}/{{ c }}">{{ c }}</a></strong>
         {%- unless forloop.last -%}, {% endunless -%}
     {%- endfor %}
 </p>
@@ -209,22 +194,15 @@ permalink: :title
 </table>
 {%- endif %}
 
-<p>Analytics:</p>
+<p>Analytics (macOS):</p>
 <table>
-{%- if formula_path == "formula-linux" -%}
-    {%- assign analytics_path = "analytics-linux" -%}
-    {%- assign analytics_data_source = "linuxbrew-core" -%}
-{%- else -%}
-    {%- assign analytics_path = "analytics" -%}
-    {%- assign analytics_data_source = "homebrew-core" -%}
-{%- endif -%}
 {%- assign intervals = "30d, 90d, 365d" | split: ", " -%}
 {%- for interval in intervals -%}
     {%- assign interval_days = interval | replace: "d", " days" -%}
     <tr>
         <th colspan="2">Installs ({{ interval_days }})</th>
     </tr>
-    {%- for fa in site.data[analytics_path].install[analytics_data_source][interval].formulae[full_name] -%}
+    {%- for fa in site.data.analytics.install.homebrew-core[interval].formulae[full_name] -%}
     <tr>
         <td><code>{{ fa.formula }}</code></td>
         <td class="number-data">{{ fa.count }}</td>
@@ -239,7 +217,7 @@ permalink: :title
     <tr>
         <th colspan="2">Installs on Request ({{ interval_days }})</th>
     </tr>
-    {%- for fa in site.data[analytics_path].install-on-request[analytics_data_source][interval].formulae[full_name] -%}
+    {%- for fa in site.data.analytics.install-on-request.homebrew-core[interval].formulae[full_name] -%}
     <tr>
         <td><code>{{ fa.formula }}</code></td>
         <td class="number-data">{{ fa.count }}</td>
@@ -255,7 +233,61 @@ permalink: :title
     <tr>
         <th colspan="2">Build Errors ({{ interval_days }})</th>
     </tr>
-        {%- for fa in site.data[analytics_path].build-error[analytics_data_source][interval].formulae[full_name] -%}
+        {%- for fa in site.data.analytics.build-error.homebrew-core[interval].formulae[full_name] -%}
+    <tr>
+        <td><code>{{ fa.formula }}</code></td>
+        <td class="number-data">{{ fa.count }}</td>
+    </tr>
+        {%- else -%}
+    <tr>
+        <td><code>{{ full_name }}</code></td>
+        <td class="number-data">0</td>
+    </tr>
+        {%- endfor -%}
+    {%- endif -%}
+{%- endfor %}
+</table>
+
+<p>Analytics (Linux):</p>
+<table>
+{%- assign intervals = "30d, 90d, 365d" | split: ", " -%}
+{%- for interval in intervals -%}
+    {%- assign interval_days = interval | replace: "d", " days" -%}
+    <tr>
+        <th colspan="2">Installs ({{ interval_days }})</th>
+    </tr>
+    {%- for fa in site.data.analytics-linux.install.homebrew-core[interval].formulae[full_name] -%}
+    <tr>
+        <td><code>{{ fa.formula }}</code></td>
+        <td class="number-data">{{ fa.count }}</td>
+    </tr>
+    {%- else -%}
+    <tr>
+        <td><code>{{ full_name }}</code></td>
+        <td class="number-data">0</td>
+    </tr>
+    {%- endfor -%}
+
+    <tr>
+        <th colspan="2">Installs on Request ({{ interval_days }})</th>
+    </tr>
+    {%- for fa in site.data.analytics-linux.install-on-request.homebrew-core[interval].formulae[full_name] -%}
+    <tr>
+        <td><code>{{ fa.formula }}</code></td>
+        <td class="number-data">{{ fa.count }}</td>
+    </tr>
+    {%- else -%}
+    <tr>
+        <td><code>{{ full_name }}</code></td>
+        <td class="number-data">0</td>
+    </tr>
+    {%- endfor -%}
+
+    {%- if forloop.first -%}
+    <tr>
+        <th colspan="2">Build Errors ({{ interval_days }})</th>
+    </tr>
+        {%- for fa in site.data.analytics-linux.build-error.homebrew-core[interval].formulae[full_name] -%}
     <tr>
         <td><code>{{ fa.formula }}</code></td>
         <td class="number-data">{{ fa.count }}</td>

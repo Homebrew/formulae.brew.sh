@@ -10,7 +10,7 @@
 
   ],
   "desc": "Implementation of the AT&T Plan 9 shell",
-  "license": null,
+  "license": "Zlib",
   "homepage": "http://doc.cat-v.org/plan_9/4th_edition/papers/rc",
   "versions": {
     "stable": "1.7.4",
@@ -31,10 +31,20 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/rc/blobs/sha256:4ac5175270dab427e207bc53ab5d47f6e3f28e8618b471df5a59dc2fd29719cb",
+          "sha256": "4ac5175270dab427e207bc53ab5d47f6e3f28e8618b471df5a59dc2fd29719cb"
+        },
         "arm64_big_sur": {
           "cellar": ":any_skip_relocation",
           "url": "https://ghcr.io/v2/homebrew/core/rc/blobs/sha256:18c672af9e2e5d2e88ca29d57aec584aaa57daac97b9ac330d9f8164beb9ecce",
           "sha256": "18c672af9e2e5d2e88ca29d57aec584aaa57daac97b9ac330d9f8164beb9ecce"
+        },
+        "monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/rc/blobs/sha256:02d867de600bc9787231892ab7de1dcd48caff4328cfd7d7c44e0a15eca6a677",
+          "sha256": "02d867de600bc9787231892ab7de1dcd48caff4328cfd7d7c44e0a15eca6a677"
         },
         "big_sur": {
           "cellar": ":any_skip_relocation",
@@ -60,6 +70,11 @@
           "cellar": ":any_skip_relocation",
           "url": "https://ghcr.io/v2/homebrew/core/rc/blobs/sha256:627e45477eabd5854e3c5f39af5290befd43d03b385d1b20f0ce4b49636fd2d9",
           "sha256": "627e45477eabd5854e3c5f39af5290befd43d03b385d1b20f0ce4b49636fd2d9"
+        },
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/rc/blobs/sha256:6623be4e09b3e283101e33938ec83f0c47d07ad164a30c5854a66d8e64e31447",
+          "sha256": "6623be4e09b3e283101e33938ec83f0c47d07ad164a30c5854a66d8e64e31447"
         }
       }
     }
@@ -82,7 +97,7 @@
 
   ],
   "uses_from_macos": [
-
+    "libedit"
   ],
   "requirements": [
 

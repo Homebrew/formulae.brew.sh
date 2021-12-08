@@ -13,13 +13,13 @@
   "license": "Apache-2.0",
   "homepage": "https://github.com/leanprover/elan",
   "versions": {
-    "stable": "1.0.6",
+    "stable": "1.3.1",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/leanprover/elan/archive/v1.0.6.tar.gz",
+      "url": "https://github.com/leanprover/elan/archive/v1.3.1.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,20 +31,25 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/elan-init/blobs/sha256:b3fe1b75cae3f28df2396ed8135c81cce9aba4983818c23cc512e9f5bf7fad1d",
+          "sha256": "b3fe1b75cae3f28df2396ed8135c81cce9aba4983818c23cc512e9f5bf7fad1d"
+        },
         "big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/elan-init/blobs/sha256:d6bb68e6a6c0c5f5d6dfb0495e7454373d0fec561e4606ddb6865edd255eb3c5",
-          "sha256": "d6bb68e6a6c0c5f5d6dfb0495e7454373d0fec561e4606ddb6865edd255eb3c5"
+          "url": "https://ghcr.io/v2/homebrew/core/elan-init/blobs/sha256:4f5f7dc532d5336c0cdb6842d24e47f141baaaa421234231c018606c9e640aca",
+          "sha256": "4f5f7dc532d5336c0cdb6842d24e47f141baaaa421234231c018606c9e640aca"
         },
         "catalina": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/elan-init/blobs/sha256:e1f9cc59ffd3e2c3e7c37c1b78dade5179e823bc1f0470b34d52b59d7b677511",
-          "sha256": "e1f9cc59ffd3e2c3e7c37c1b78dade5179e823bc1f0470b34d52b59d7b677511"
+          "url": "https://ghcr.io/v2/homebrew/core/elan-init/blobs/sha256:da690e90eb12525fb959d870768efc6aafc52bf89079b55dab286aba933cbf47",
+          "sha256": "da690e90eb12525fb959d870768efc6aafc52bf89079b55dab286aba933cbf47"
         },
-        "mojave": {
+        "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/elan-init/blobs/sha256:d3d8c87d4f4a10373603106d9ec5ec8a8675f19eae1ebc063c354a75f08cb8ad",
-          "sha256": "d3d8c87d4f4a10373603106d9ec5ec8a8675f19eae1ebc063c354a75f08cb8ad"
+          "url": "https://ghcr.io/v2/homebrew/core/elan-init/blobs/sha256:b911325b4e04255311dda1dab5ab19516f3196ba63b11170d782149d2a5f36c7",
+          "sha256": "b911325b4e04255311dda1dab5ab19516f3196ba63b11170d782149d2a5f36c7"
         }
       }
     }
@@ -68,7 +73,7 @@
 
   ],
   "uses_from_macos": [
-
+    "zlib"
   ],
   "requirements": [
     {

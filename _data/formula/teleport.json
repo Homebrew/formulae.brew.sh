@@ -13,13 +13,13 @@
   "license": "Apache-2.0",
   "homepage": "https://gravitational.com/teleport",
   "versions": {
-    "stable": "6.2.3",
+    "stable": "8.0.1",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/gravitational/teleport/archive/v6.2.3.tar.gz",
+      "url": "https://github.com/gravitational/teleport/archive/v8.0.1.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,25 +31,35 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/teleport/blobs/sha256:44d7f4fa8d8360e73959a0491866733dd6441ef2d21a78fadfa0596eda8150a2",
+          "sha256": "44d7f4fa8d8360e73959a0491866733dd6441ef2d21a78fadfa0596eda8150a2"
+        },
         "arm64_big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/teleport/blobs/sha256:b4c8108b4cc7e31d60fcb92487232290be9b14c6a8dcb0e59b8c7db180413b32",
-          "sha256": "b4c8108b4cc7e31d60fcb92487232290be9b14c6a8dcb0e59b8c7db180413b32"
+          "url": "https://ghcr.io/v2/homebrew/core/teleport/blobs/sha256:4d80024e85f0ced66613426ef2885fc1f5145b8cef3ee467db6cbddef4c3121f",
+          "sha256": "4d80024e85f0ced66613426ef2885fc1f5145b8cef3ee467db6cbddef4c3121f"
+        },
+        "monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/teleport/blobs/sha256:3ff2b42842eeb92f491a875b197d448fea8f220a7a59fca2fc2bafe34266dff1",
+          "sha256": "3ff2b42842eeb92f491a875b197d448fea8f220a7a59fca2fc2bafe34266dff1"
         },
         "big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/teleport/blobs/sha256:2fa2d0cccf0f3bc2ae711cb1269bfc61ce57e02fadc7a8158e87258aee5c5ff8",
-          "sha256": "2fa2d0cccf0f3bc2ae711cb1269bfc61ce57e02fadc7a8158e87258aee5c5ff8"
+          "url": "https://ghcr.io/v2/homebrew/core/teleport/blobs/sha256:87cfa19fd80458499605a37aab6549f0bc4c082f0d40653f6e5930a6aa4f67a6",
+          "sha256": "87cfa19fd80458499605a37aab6549f0bc4c082f0d40653f6e5930a6aa4f67a6"
         },
         "catalina": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/teleport/blobs/sha256:3ea370c895d22e4f3e186052133ecd3c8616dcee775efb79e91ec2ec8eea47f4",
-          "sha256": "3ea370c895d22e4f3e186052133ecd3c8616dcee775efb79e91ec2ec8eea47f4"
+          "url": "https://ghcr.io/v2/homebrew/core/teleport/blobs/sha256:57c88346e3178d763bcf4e16a3db149f453b30081014ccd4fe8ae04565f9bcc8",
+          "sha256": "57c88346e3178d763bcf4e16a3db149f453b30081014ccd4fe8ae04565f9bcc8"
         },
-        "mojave": {
+        "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/teleport/blobs/sha256:f34dad9004387dc832ab3c45fb1c31c99eb55ebadbb282804434489c2e292641",
-          "sha256": "f34dad9004387dc832ab3c45fb1c31c99eb55ebadbb282804434489c2e292641"
+          "url": "https://ghcr.io/v2/homebrew/core/teleport/blobs/sha256:a87f748ec983ac642fbdd4c86108af4368b8495727872b78d27ec2757cd3f38f",
+          "sha256": "a87f748ec983ac642fbdd4c86108af4368b8495727872b78d27ec2757cd3f38f"
         }
       }
     }
@@ -72,14 +82,12 @@
 
   ],
   "uses_from_macos": [
-    [
-      "curl",
-      "test"
-    ],
-    [
-      "netcat",
-      "test"
-    ],
+    {
+      "curl": "test"
+    },
+    {
+      "netcat": "test"
+    },
     "zip"
   ],
   "requirements": [

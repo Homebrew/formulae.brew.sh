@@ -13,13 +13,13 @@
   "license": "BSD-2-Clause",
   "homepage": "https://github.com/johnkerl/miller",
   "versions": {
-    "stable": "5.10.2",
+    "stable": "5.10.3",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/johnkerl/miller/releases/download/v5.10.2/mlr-5.10.2.tar.gz",
+      "url": "https://github.com/johnkerl/miller/releases/download/v5.10.3/miller-5.10.3.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,25 +31,35 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/miller/blobs/sha256:745c0e00c92719c72c3f456dbe1156b635a6f5d02846a91afb685ff40de4eb84",
+          "sha256": "745c0e00c92719c72c3f456dbe1156b635a6f5d02846a91afb685ff40de4eb84"
+        },
         "arm64_big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/miller/blobs/sha256:43dbaa91eb0f047f2189f6108860b7fcf572315186e21ad3f32e753ed9826969",
-          "sha256": "43dbaa91eb0f047f2189f6108860b7fcf572315186e21ad3f32e753ed9826969"
+          "url": "https://ghcr.io/v2/homebrew/core/miller/blobs/sha256:5c6c8eabb55854dd768fec35d68f5a3c51cc74bcbd969f547a9efaba752ad420",
+          "sha256": "5c6c8eabb55854dd768fec35d68f5a3c51cc74bcbd969f547a9efaba752ad420"
+        },
+        "monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/miller/blobs/sha256:6077eff1c560d0ffb82c57d63cfea591ceb6c848fc9d14876b671343a4e0279f",
+          "sha256": "6077eff1c560d0ffb82c57d63cfea591ceb6c848fc9d14876b671343a4e0279f"
         },
         "big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/miller/blobs/sha256:f6a4e253c2f653c0d988aca0a2ed81cf8b8e2ce4040cc43a27582759ba8759f6",
-          "sha256": "f6a4e253c2f653c0d988aca0a2ed81cf8b8e2ce4040cc43a27582759ba8759f6"
+          "url": "https://ghcr.io/v2/homebrew/core/miller/blobs/sha256:f0b5eea480a0c744e16ddf6982dd5c883aac77033ea5b96c4539834901c86187",
+          "sha256": "f0b5eea480a0c744e16ddf6982dd5c883aac77033ea5b96c4539834901c86187"
         },
         "catalina": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/miller/blobs/sha256:5538dc76e119ce1507806b67eaa7612af4c68a9a491257a10844545ee2d5a669",
-          "sha256": "5538dc76e119ce1507806b67eaa7612af4c68a9a491257a10844545ee2d5a669"
+          "url": "https://ghcr.io/v2/homebrew/core/miller/blobs/sha256:4aba0073513fd6104e8df701372f21facb78205f5453bf3a871d4a67613bf746",
+          "sha256": "4aba0073513fd6104e8df701372f21facb78205f5453bf3a871d4a67613bf746"
         },
-        "mojave": {
+        "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/miller/blobs/sha256:c04494a29315e246aaa9a553eff17ee4ab4e83a1dfe9a46995ea6e0eebc1221a",
-          "sha256": "c04494a29315e246aaa9a553eff17ee4ab4e83a1dfe9a46995ea6e0eebc1221a"
+          "url": "https://ghcr.io/v2/homebrew/core/miller/blobs/sha256:cdf09268c39fe5dcb7764352c2ba331a295dff401e8b533986b8a8cb0f186cdd",
+          "sha256": "cdf09268c39fe5dcb7764352c2ba331a295dff401e8b533986b8a8cb0f186cdd"
         }
       }
     }
@@ -74,10 +84,9 @@
 
   ],
   "uses_from_macos": [
-    [
-      "flex",
-      "build"
-    ]
+    {
+      "flex": "build"
+    }
   ],
   "requirements": [
 

@@ -2,7 +2,7 @@
 
 [Homebrew Formulae](https://formulae.brew.sh) is an online package browser for [Homebrew](https://brew.sh).
 
-It displays all packages in the [Homebrew/homebrew-core](https://github.com/Homebrew/homebrew-core), [Homebrew/homebrew-cask](https://github.com/Homebrew/homebrew-cask) and [Homebrew/linuxbrew-core](https://github.com/Homebrew/linuxbrew-core) taps. A [GitHub Action](https://github.com/Homebrew/formulae.brew.sh/blob/master/.github/workflows/scheduled.yml) is run periodically which pulls changes from each tap and deploys the site to GitHub Pages.
+It displays all packages in the [Homebrew/homebrew-core](https://github.com/Homebrew/homebrew-core) and [Homebrew/homebrew-cask](https://github.com/Homebrew/homebrew-cask). A [GitHub Action](https://github.com/Homebrew/formulae.brew.sh/blob/master/.github/workflows/scheduled.yml) is run periodically which pulls changes from each tap and deploys the site to GitHub Pages.
 
 ## JSON API
 It also provides a JSON API for all packages (or individual packages) in each tap and their related analytics. This JSON data is used for the creation of the HTML resources on this site.

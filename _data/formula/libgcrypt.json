@@ -13,43 +13,58 @@
   "license": "GPL-2.0-only",
   "homepage": "https://gnupg.org/related_software/libgcrypt/",
   "versions": {
-    "stable": "1.9.3",
+    "stable": "1.9.4",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://gnupg.org/ftp/gcrypt/libgcrypt/libgcrypt-1.9.3.tar.bz2",
+      "url": "https://gnupg.org/ftp/gcrypt/libgcrypt/libgcrypt-1.9.4.tar.bz2",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/libgcrypt/blobs/sha256:db8ca3ac372b23c25be44950acae40a4bb8faa4312df72023a28959a09cd8ea7",
+          "sha256": "db8ca3ac372b23c25be44950acae40a4bb8faa4312df72023a28959a09cd8ea7"
+        },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/libgcrypt/blobs/sha256:6ff63025955ee85e6ff10b955f32b1c583439860ad72da5d88acc60b1c9ecc73",
-          "sha256": "6ff63025955ee85e6ff10b955f32b1c583439860ad72da5d88acc60b1c9ecc73"
+          "url": "https://ghcr.io/v2/homebrew/core/libgcrypt/blobs/sha256:ebe24d93edccd91ac094387b74b0c42aeebd44a6bb5f583816c8d1690690cf57",
+          "sha256": "ebe24d93edccd91ac094387b74b0c42aeebd44a6bb5f583816c8d1690690cf57"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/libgcrypt/blobs/sha256:b8b834ecc967d71931b73f4102ef74be06812358def29cf37700ae1d57494c80",
+          "sha256": "b8b834ecc967d71931b73f4102ef74be06812358def29cf37700ae1d57494c80"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/libgcrypt/blobs/sha256:1848ca1e79f8c4315ba761eb4ad1022d237d6701d47a207130b09093d99f24ef",
-          "sha256": "1848ca1e79f8c4315ba761eb4ad1022d237d6701d47a207130b09093d99f24ef"
+          "url": "https://ghcr.io/v2/homebrew/core/libgcrypt/blobs/sha256:19f11700630c036864c3acaf39d6b26b8d7f46a96b7eab4cab5d118ce5a0c28a",
+          "sha256": "19f11700630c036864c3acaf39d6b26b8d7f46a96b7eab4cab5d118ce5a0c28a"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/libgcrypt/blobs/sha256:91ec702c7907c1ddd20998ff35299a63ac6108cb4f9a76df1c368a4c49da4a90",
-          "sha256": "91ec702c7907c1ddd20998ff35299a63ac6108cb4f9a76df1c368a4c49da4a90"
+          "url": "https://ghcr.io/v2/homebrew/core/libgcrypt/blobs/sha256:22b69fca91210d5598644b6164980ea3d53ccbb9a66124314ae3836b9100a4bf",
+          "sha256": "22b69fca91210d5598644b6164980ea3d53ccbb9a66124314ae3836b9100a4bf"
         },
         "mojave": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/libgcrypt/blobs/sha256:6a8fa532b2c12d89f2becc1a84e9b5d07fef25a080a607f2d7b341eea5e6081b",
-          "sha256": "6a8fa532b2c12d89f2becc1a84e9b5d07fef25a080a607f2d7b341eea5e6081b"
+          "url": "https://ghcr.io/v2/homebrew/core/libgcrypt/blobs/sha256:d40e101e9605d7ba2b56fa6c441565192a85b3bb67302ab4feeac4d38a56d261",
+          "sha256": "d40e101e9605d7ba2b56fa6c441565192a85b3bb67302ab4feeac4d38a56d261"
+        },
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/libgcrypt/blobs/sha256:c199805c55e5f11d84e19554b3583d78a2e681a0ba549508927c2528d07372cd",
+          "sha256": "c199805c55e5f11d84e19554b3583d78a2e681a0ba549508927c2528d07372cd"
         }
       }
     }
@@ -83,7 +98,7 @@
   "caveats": null,
   "installed": [
     {
-      "version": "1.9.3",
+      "version": "1.9.4_1",
       "used_options": [
 
       ],
@@ -92,7 +107,7 @@
       "runtime_dependencies": [
         {
           "full_name": "libgpg-error",
-          "version": "1.42",
+          "version": "1.43",
           "declared_directly": true
         }
       ],
@@ -100,7 +115,7 @@
       "installed_on_request": false
     }
   ],
-  "linked_keg": "1.9.3",
+  "linked_keg": "1.9.4_1",
   "pinned": false,
   "outdated": false,
   "deprecated": false,

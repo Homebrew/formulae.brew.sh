@@ -31,6 +31,11 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/mvtools/blobs/sha256:5fc1c4a4fda847ebc2a78fe9972fd99fa7c4f7f52b74cb68825181634f9c3d5e",
+          "sha256": "5fc1c4a4fda847ebc2a78fe9972fd99fa7c4f7f52b74cb68825181634f9c3d5e"
+        },
         "big_sur": {
           "cellar": ":any",
           "url": "https://ghcr.io/v2/homebrew/core/mvtools/blobs/sha256:df691836b6052e38806e3e4a662f0b5da22120f8f586ad6ea388e2673dcf01b3",
@@ -50,6 +55,11 @@
           "cellar": ":any",
           "url": "https://ghcr.io/v2/homebrew/core/mvtools/blobs/sha256:0a1bab6b74375cb11959d2100e562bb2cc8124da7115b754975cd70c31e676b2",
           "sha256": "0a1bab6b74375cb11959d2100e562bb2cc8124da7115b754975cd70c31e676b2"
+        },
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/mvtools/blobs/sha256:915cd8e779a5143a86f77cecc9efae2029eda0194358b52e69c4e59811c20c6f",
+          "sha256": "915cd8e779a5143a86f77cecc9efae2029eda0194358b52e69c4e59811c20c6f"
         }
       }
     }
@@ -85,7 +95,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "MVTools will not be autoloaded in your VapourSynth scripts. To use it\nuse the following code in your scripts:\n\n  core.std.LoadPlugin(path=\"$(brew --prefix)/lib/libmvtools.dylib\")\n",
+  "caveats": "MVTools will not be autoloaded in your VapourSynth scripts. To use it\nuse the following code in your scripts:\n\n  vs.core.std.LoadPlugin(path=\"$(brew --prefix)/lib/libmvtools.dylib\")\n",
   "installed": [
 
   ],

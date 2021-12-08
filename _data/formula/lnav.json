@@ -13,13 +13,13 @@
   "license": "BSD-2-Clause",
   "homepage": "https://lnav.org/",
   "versions": {
-    "stable": "0.9.0",
+    "stable": "0.10.1",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/tstack/lnav/releases/download/v0.9.0/lnav-0.9.0.tar.gz",
+      "url": "https://github.com/tstack/lnav/releases/download/v0.10.1/lnav-0.10.1.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,30 +31,35 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/lnav/blobs/sha256:19feba2a42503e1bddbc247e2d6c72e59ccf4cdb25f8ef18fef050e054d4eb89",
+          "sha256": "19feba2a42503e1bddbc247e2d6c72e59ccf4cdb25f8ef18fef050e054d4eb89"
+        },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/lnav/blobs/sha256:6b79f37c40cf7a626865ffef75bc445813d91473d64068e6d906eb3cedeeab4a",
-          "sha256": "6b79f37c40cf7a626865ffef75bc445813d91473d64068e6d906eb3cedeeab4a"
+          "url": "https://ghcr.io/v2/homebrew/core/lnav/blobs/sha256:d162151f7043144d24b47c6ae23b61cdbb71959b5c77bba016e0f3d538dc432b",
+          "sha256": "d162151f7043144d24b47c6ae23b61cdbb71959b5c77bba016e0f3d538dc432b"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/lnav/blobs/sha256:eab9bc062c791cf77864916cc055b281b593d153c5afd165171fb554203ecd67",
+          "sha256": "eab9bc062c791cf77864916cc055b281b593d153c5afd165171fb554203ecd67"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/lnav/blobs/sha256:11eb34ef34f635e008facc8890c0bcb07585d62dd9c273890552890d863adf0e",
-          "sha256": "11eb34ef34f635e008facc8890c0bcb07585d62dd9c273890552890d863adf0e"
+          "url": "https://ghcr.io/v2/homebrew/core/lnav/blobs/sha256:57dcbc897e03444f03e78e2fbeaf9c20c65b8b4ba93c759da5118b206007fe04",
+          "sha256": "57dcbc897e03444f03e78e2fbeaf9c20c65b8b4ba93c759da5118b206007fe04"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/lnav/blobs/sha256:b21b188394092e3ca801819e0b2eb26017132fb2baadfcb014d6fb3c8c6253e3",
-          "sha256": "b21b188394092e3ca801819e0b2eb26017132fb2baadfcb014d6fb3c8c6253e3"
+          "url": "https://ghcr.io/v2/homebrew/core/lnav/blobs/sha256:c137529abc15c63b8e4d865f433712355b5f6fc750ac76c177f805cb7813dd44",
+          "sha256": "c137529abc15c63b8e4d865f433712355b5f6fc750ac76c177f805cb7813dd44"
         },
-        "mojave": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/lnav/blobs/sha256:49510aa07d98f6a05f6d7ea19dc30f2ada6456b3fb644620efe1e7e3c92673b4",
-          "sha256": "49510aa07d98f6a05f6d7ea19dc30f2ada6456b3fb644620efe1e7e3c92673b4"
-        },
-        "high_sierra": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/lnav/blobs/sha256:538a2a0b9f09829b33901bd33e5d8f566745f23a3d3fe95d6fa7f6608d3bb485",
-          "sha256": "538a2a0b9f09829b33901bd33e5d8f566745f23a3d3fe95d6fa7f6608d3bb485"
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/lnav/blobs/sha256:bd04107f50f8d01f00f476ad87ae8228416f81a3124e0a3d64948d7fd2d695fc",
+          "sha256": "bd04107f50f8d01f00f476ad87ae8228416f81a3124e0a3d64948d7fd2d695fc"
         }
       }
     }
@@ -68,6 +73,7 @@
 
   ],
   "dependencies": [
+    "libarchive",
     "pcre",
     "readline",
     "sqlite"

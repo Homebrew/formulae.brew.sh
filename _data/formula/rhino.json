@@ -15,7 +15,7 @@
   "versions": {
     "stable": "1.7.13",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
@@ -27,9 +27,20 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 1,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "all": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/rhino/blobs/sha256:6e4b37521b15f564ab82aad7b1a727b9158becee6472af1a26a21884d2baf44d",
+          "sha256": "6e4b37521b15f564ab82aad7b1a727b9158becee6472af1a26a21884d2baf44d"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
@@ -37,7 +48,7 @@
 
   ],
   "dependencies": [
-
+    "openjdk@11"
   ],
   "recommended_dependencies": [
 

@@ -60,6 +60,11 @@
           "cellar": ":any",
           "url": "https://ghcr.io/v2/homebrew/core/ext4fuse/blobs/sha256:b11f564b7e7c08af0b0a3e9854973d39809bf2d8a56014f4882772b2f7307ac1",
           "sha256": "b11f564b7e7c08af0b0a3e9854973d39809bf2d8a56014f4882772b2f7307ac1"
+        },
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/ext4fuse/blobs/sha256:5dc94c281e33bde87ef6c239f7ac37ad6653e72d002359ffb01d0f50f1e8278c",
+          "sha256": "5dc94c281e33bde87ef6c239f7ac37ad6653e72d002359ffb01d0f50f1e8278c"
         }
       }
     }
@@ -90,7 +95,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": null,
+  "caveats": "The reasons for disabling this formula can be found here:\n  https://github.com/Homebrew/homebrew-core/pull/64491\n\nAn external tap may provide a replacement formula. See:\n  https://docs.brew.sh/Interesting-Taps-and-Forks\n",
   "installed": [
 
   ],
@@ -102,5 +107,5 @@
   "deprecation_reason": null,
   "disabled": true,
   "disable_date": "2021-04-08",
-  "disable_reason": "requires FUSE"
+  "disable_reason": "requires closed-source macFUSE"
 }

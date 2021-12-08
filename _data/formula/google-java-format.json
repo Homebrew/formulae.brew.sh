@@ -13,13 +13,13 @@
   "license": "Apache-2.0",
   "homepage": "https://github.com/google/google-java-format",
   "versions": {
-    "stable": "1.10.0",
+    "stable": "1.13.0",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/google/google-java-format/releases/download/v1.10.0/google-java-format-1.10.0-all-deps.jar",
+      "url": "https://github.com/google/google-java-format/releases/download/v1.13.0/google-java-format-1.13.0-all-deps.jar",
       "tag": null,
       "revision": null
     }
@@ -27,9 +27,20 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "all": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/google-java-format/blobs/sha256:c8c651c5f2e77a127ad39a48b29776d92a6b5de39ea1e9239fa339dbe02f7841",
+          "sha256": "c8c651c5f2e77a127ad39a48b29776d92a6b5de39ea1e9239fa339dbe02f7841"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
@@ -37,7 +48,8 @@
 
   ],
   "dependencies": [
-    "openjdk"
+    "openjdk",
+    "python@3.10"
   ],
   "recommended_dependencies": [
 

@@ -31,10 +31,20 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/sdcc/blobs/sha256:cdbba6dcec050612f65b0cdaf28d0cb10f26e9090e208ee4e43bd1f95b83b243",
+          "sha256": "cdbba6dcec050612f65b0cdaf28d0cb10f26e9090e208ee4e43bd1f95b83b243"
+        },
         "arm64_big_sur": {
           "cellar": "/opt/homebrew/Cellar",
           "url": "https://ghcr.io/v2/homebrew/core/sdcc/blobs/sha256:204b16ac599b7a7c4f881f5689b47f3af4d09134b63686c716f42751e192c1ff",
           "sha256": "204b16ac599b7a7c4f881f5689b47f3af4d09134b63686c716f42751e192c1ff"
+        },
+        "monterey": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/sdcc/blobs/sha256:62b6882a1689b65133f962bbb33ecafd875a0369206b0ac57d25dc62a8d42663",
+          "sha256": "62b6882a1689b65133f962bbb33ecafd875a0369206b0ac57d25dc62a8d42663"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
@@ -50,6 +60,11 @@
           "cellar": "/usr/local/Cellar",
           "url": "https://ghcr.io/v2/homebrew/core/sdcc/blobs/sha256:ed31251e97c22718ffd714b06561cba755cce2030d0213324fe986e1bf0b8137",
           "sha256": "ed31251e97c22718ffd714b06561cba755cce2030d0213324fe986e1bf0b8137"
+        },
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/sdcc/blobs/sha256:249aea9a8895f2081ad2de9b845c81c40c8afaba690f5371f4d2ecfdda552703",
+          "sha256": "249aea9a8895f2081ad2de9b845c81c40c8afaba690f5371f4d2ecfdda552703"
         }
       }
     }
@@ -75,18 +90,15 @@
 
   ],
   "uses_from_macos": [
-    [
-      "bison",
-      "build"
-    ],
-    [
-      "flex",
-      "build"
-    ],
-    [
-      "texinfo",
-      "build"
-    ]
+    {
+      "bison": "build"
+    },
+    {
+      "flex": "build"
+    },
+    {
+      "texinfo": "build"
+    }
   ],
   "requirements": [
 

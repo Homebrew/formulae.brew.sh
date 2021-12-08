@@ -13,13 +13,13 @@
   "license": "Apache-2.0",
   "homepage": "https://github.com/gitbucket/gitbucket",
   "versions": {
-    "stable": "4.35.3",
+    "stable": "4.36.2",
     "head": "HEAD",
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/gitbucket/gitbucket/releases/download/4.35.3/gitbucket.war",
+      "url": "https://github.com/gitbucket/gitbucket/releases/download/4.36.2/gitbucket.war",
       "tag": null,
       "revision": null
     }
@@ -27,9 +27,20 @@
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "all": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/gitbucket/blobs/sha256:e36a21cee810ab68ae0fa938fbbf070262a8d2d0032725d8fa6cc0a8648fa1da",
+          "sha256": "e36a21cee810ab68ae0fa938fbbf070262a8d2d0032725d8fa6cc0a8648fa1da"
+        }
+      }
+    }
   },
   "keg_only": false,
-  "bottle_disabled": true,
+  "bottle_disabled": false,
   "options": [
 
   ],
@@ -54,7 +65,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "Note: When using launchctl the port will be 8080.\n",
+  "caveats": "Note: When using `brew services` the port will be 8080.\n",
   "installed": [
 
   ],

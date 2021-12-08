@@ -13,13 +13,13 @@
   "license": "blessing",
   "homepage": "https://www.sqlite.org/sqldiff.html",
   "versions": {
-    "stable": "3.35.5",
+    "stable": "3.37.0",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://www.sqlite.org/2021/sqlite-src-3350500.zip",
+      "url": "https://www.sqlite.org/2021/sqlite-src-3370000.zip",
       "tag": null,
       "revision": null
     }
@@ -31,25 +31,35 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/sqldiff/blobs/sha256:72353be341649f1a0497989e172920803b8ae7661424aa296501d239b0a078c0",
+          "sha256": "72353be341649f1a0497989e172920803b8ae7661424aa296501d239b0a078c0"
+        },
         "arm64_big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/sqldiff/blobs/sha256:9839317031b372febeb9f1f48546c14e8918ea3a6cafb36b9e60dd2adc8933a6",
-          "sha256": "9839317031b372febeb9f1f48546c14e8918ea3a6cafb36b9e60dd2adc8933a6"
+          "url": "https://ghcr.io/v2/homebrew/core/sqldiff/blobs/sha256:c553c869f3381e1956617ab3ccf4f88485b79053748ad1e851269c6818cad4b3",
+          "sha256": "c553c869f3381e1956617ab3ccf4f88485b79053748ad1e851269c6818cad4b3"
+        },
+        "monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/sqldiff/blobs/sha256:962dd3ee4729854f3913bb375c6fa4d0c6adfd4d7b87a5b3a4a99b543a2b3c77",
+          "sha256": "962dd3ee4729854f3913bb375c6fa4d0c6adfd4d7b87a5b3a4a99b543a2b3c77"
         },
         "big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/sqldiff/blobs/sha256:5ae74319dff30a9ebfa0a8b7a55ccab35f3b290044aba4d657a4f7658ff55f4f",
-          "sha256": "5ae74319dff30a9ebfa0a8b7a55ccab35f3b290044aba4d657a4f7658ff55f4f"
+          "url": "https://ghcr.io/v2/homebrew/core/sqldiff/blobs/sha256:88f8a911eec18ab21f5f414bd9bdca0a8f3cfe878a2dd3a6ef50d6513af7a0a2",
+          "sha256": "88f8a911eec18ab21f5f414bd9bdca0a8f3cfe878a2dd3a6ef50d6513af7a0a2"
         },
         "catalina": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/sqldiff/blobs/sha256:aa2b5f08da7c7462aa60215c0e6867946f1e13fe6684e85a7c7d1661f2e19f25",
-          "sha256": "aa2b5f08da7c7462aa60215c0e6867946f1e13fe6684e85a7c7d1661f2e19f25"
+          "url": "https://ghcr.io/v2/homebrew/core/sqldiff/blobs/sha256:fbfa768a058d763f9b9f5f9c5ee6615d738f1f9944a552dd6e806986d77108a3",
+          "sha256": "fbfa768a058d763f9b9f5f9c5ee6615d738f1f9944a552dd6e806986d77108a3"
         },
-        "mojave": {
+        "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/sqldiff/blobs/sha256:363db854250812775c4ff18cfca92a1cd274a263268bdfcd461dd9812f1d0708",
-          "sha256": "363db854250812775c4ff18cfca92a1cd274a263268bdfcd461dd9812f1d0708"
+          "url": "https://ghcr.io/v2/homebrew/core/sqldiff/blobs/sha256:53678ad0e79051ff1710edccc4bfb669b87b78761a48e4a37840764275a8331f",
+          "sha256": "53678ad0e79051ff1710edccc4bfb669b87b78761a48e4a37840764275a8331f"
         }
       }
     }
@@ -72,14 +82,12 @@
 
   ],
   "uses_from_macos": [
-    [
-      "tcl-tk",
-      "build"
-    ],
-    [
-      "sqlite",
-      "test"
-    ]
+    {
+      "tcl-tk": "build"
+    },
+    {
+      "sqlite": "test"
+    }
   ],
   "requirements": [
 

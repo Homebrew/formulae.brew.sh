@@ -7,6 +7,7 @@
 
   ],
   "versioned_formulae": [
+    "php@8.0",
     "php@7.3",
     "php@7.2"
   ],
@@ -14,43 +15,53 @@
   "license": "PHP-3.01",
   "homepage": "https://www.php.net/",
   "versions": {
-    "stable": "7.4.20",
+    "stable": "7.4.26",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://www.php.net/distributions/php-7.4.20.tar.xz",
+      "url": "https://www.php.net/distributions/php-7.4.26.tar.xz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 0,
+      "rebuild": 1,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/php/7.4/blobs/sha256:81a8032238791f23f887349d6943f90ceb3da52e3f417d78b189775d38e85357",
+          "sha256": "81a8032238791f23f887349d6943f90ceb3da52e3f417d78b189775d38e85357"
+        },
         "arm64_big_sur": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/php/7.4/blobs/sha256:1a16f58da5ab0f6f0d44f7e11a1b86900cc7664fa416b2b8d6aa136f0f97c90a",
-          "sha256": "1a16f58da5ab0f6f0d44f7e11a1b86900cc7664fa416b2b8d6aa136f0f97c90a"
+          "url": "https://ghcr.io/v2/homebrew/core/php/7.4/blobs/sha256:5a1944f50b0518a2eed2de990b6a5308521fd01f1ab775c212b5a60fa1419521",
+          "sha256": "5a1944f50b0518a2eed2de990b6a5308521fd01f1ab775c212b5a60fa1419521"
+        },
+        "monterey": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/php/7.4/blobs/sha256:4765467db60ec6b29d2bed89d4e66bc8dd0894940d6af3abc3ad725153a4525b",
+          "sha256": "4765467db60ec6b29d2bed89d4e66bc8dd0894940d6af3abc3ad725153a4525b"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/php/7.4/blobs/sha256:41f4b9372fcc41d78a7afaac0acc62d96716ed859cd9f4405929cd7e03253b01",
-          "sha256": "41f4b9372fcc41d78a7afaac0acc62d96716ed859cd9f4405929cd7e03253b01"
+          "url": "https://ghcr.io/v2/homebrew/core/php/7.4/blobs/sha256:66b6be0e17e1d0f53ff422957528961949b123bb2d2b5e9cd6bf2d0213ae6a6d",
+          "sha256": "66b6be0e17e1d0f53ff422957528961949b123bb2d2b5e9cd6bf2d0213ae6a6d"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/php/7.4/blobs/sha256:8545e5177648e082eb19a1db0bceb965103616cd185bdd850185b59cd40c62f1",
-          "sha256": "8545e5177648e082eb19a1db0bceb965103616cd185bdd850185b59cd40c62f1"
+          "url": "https://ghcr.io/v2/homebrew/core/php/7.4/blobs/sha256:45a68b2e359fe3372935101ee7adcf62931e9f73705fdac11e1777c80be1fdce",
+          "sha256": "45a68b2e359fe3372935101ee7adcf62931e9f73705fdac11e1777c80be1fdce"
         },
-        "mojave": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/php/7.4/blobs/sha256:ec4d1b42da2a49db620b78fc6ff125df47e38dcbc1c8e16a75b87cfb8d187056",
-          "sha256": "ec4d1b42da2a49db620b78fc6ff125df47e38dcbc1c8e16a75b87cfb8d187056"
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/php/7.4/blobs/sha256:8492d5186d18cb547ce9d21e87aa9961a5c0aa340c9401c8bbde2d5ff8184c32",
+          "sha256": "8492d5186d18cb547ce9d21e87aa9961a5c0aa340c9401c8bbde2d5ff8184c32"
         }
       }
     }
@@ -74,11 +85,9 @@
     "freetds",
     "gd",
     "gettext",
-    "glib",
     "gmp",
     "icu4c",
     "krb5",
-    "libffi",
     "libpq",
     "libsodium",
     "libzip",
@@ -97,12 +106,12 @@
 
   ],
   "uses_from_macos": [
-    [
-      "xz",
-      "build"
-    ],
+    {
+      "xz": "build"
+    },
     "bzip2",
     "libedit",
+    "libffi",
     "libxml2",
     "libxslt",
     "zlib"
@@ -120,10 +129,10 @@
   "linked_keg": null,
   "pinned": false,
   "outdated": false,
-  "deprecated": false,
-  "deprecation_date": "2022-11-28",
-  "deprecation_reason": null,
+  "deprecated": true,
+  "deprecation_date": null,
+  "deprecation_reason": "versioned_formula",
   "disabled": false,
-  "disable_date": null,
+  "disable_date": "2022-11-28",
   "disable_reason": null
 }

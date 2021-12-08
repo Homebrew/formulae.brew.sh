@@ -13,13 +13,13 @@
   "license": "Apache-2.0",
   "homepage": "https://github.com/aws-cloudformation/cloudformation-cli/",
   "versions": {
-    "stable": "0.2.12",
+    "stable": "0.2.22",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://files.pythonhosted.org/packages/a8/e1/7227509cee69bbb3bbb2d01a35dddfdf81505e9241932a47a4fbc19983d0/cloudformation-cli-0.2.12.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/8e/ed/69242616bcbbc551b37a8e5af1dbcb3fe8837a79fab05007faa4d24c3172/cloudformation-cli-0.2.22.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,25 +31,35 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/cloudformation-cli/blobs/sha256:527f96ab395f3949dbb185d7c73b98c6c6079fa39199a601becc300ac4875500",
+          "sha256": "527f96ab395f3949dbb185d7c73b98c6c6079fa39199a601becc300ac4875500"
+        },
         "arm64_big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/cloudformation-cli/blobs/sha256:7eaa68ce607b53279993f0dc5e040547645115ac4688f3f24726d7050095987d",
-          "sha256": "7eaa68ce607b53279993f0dc5e040547645115ac4688f3f24726d7050095987d"
+          "url": "https://ghcr.io/v2/homebrew/core/cloudformation-cli/blobs/sha256:22daa3c9c822e2b9db5c8d4bed7a0e66fc8e2d841cb3232f20910eaf69128d9d",
+          "sha256": "22daa3c9c822e2b9db5c8d4bed7a0e66fc8e2d841cb3232f20910eaf69128d9d"
+        },
+        "monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/cloudformation-cli/blobs/sha256:8675b8549c231ea0ec866c3b3e44ca218b08b33686f762a4c47711c51c048168",
+          "sha256": "8675b8549c231ea0ec866c3b3e44ca218b08b33686f762a4c47711c51c048168"
         },
         "big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/cloudformation-cli/blobs/sha256:ccc40327beb9fbc5a79be28ef30de117afb963bb37e61e1b80060653be1f7908",
-          "sha256": "ccc40327beb9fbc5a79be28ef30de117afb963bb37e61e1b80060653be1f7908"
+          "url": "https://ghcr.io/v2/homebrew/core/cloudformation-cli/blobs/sha256:f8cc3ada701b2cd10a057bcc1dc01350f31211a90ca5ffe1123453819a75a388",
+          "sha256": "f8cc3ada701b2cd10a057bcc1dc01350f31211a90ca5ffe1123453819a75a388"
         },
         "catalina": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/cloudformation-cli/blobs/sha256:8298336f0aebd0985c46d54f6f01814159b165358188ba8513eaec0eb5ec8612",
-          "sha256": "8298336f0aebd0985c46d54f6f01814159b165358188ba8513eaec0eb5ec8612"
+          "url": "https://ghcr.io/v2/homebrew/core/cloudformation-cli/blobs/sha256:6d79b44023a4b79c9dc9d14184f644977094faca334738e28dea6a55a85a92cb",
+          "sha256": "6d79b44023a4b79c9dc9d14184f644977094faca334738e28dea6a55a85a92cb"
         },
-        "mojave": {
+        "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/cloudformation-cli/blobs/sha256:30f966c0f837f5190187cb3d10bc3d46c2b6a18e60fe0ac9f317fa86a7276af1",
-          "sha256": "30f966c0f837f5190187cb3d10bc3d46c2b6a18e60fe0ac9f317fa86a7276af1"
+          "url": "https://ghcr.io/v2/homebrew/core/cloudformation-cli/blobs/sha256:c6265a4926850efec749fe20d9c298e1fdf99cf0cf5c35f5fb50d7cc017bac98",
+          "sha256": "c6265a4926850efec749fe20d9c298e1fdf99cf0cf5c35f5fb50d7cc017bac98"
         }
       }
     }
@@ -64,7 +74,8 @@
   ],
   "dependencies": [
     "go",
-    "python@3.9"
+    "python@3.10",
+    "six"
   ],
   "recommended_dependencies": [
 
@@ -73,10 +84,9 @@
 
   ],
   "uses_from_macos": [
-    [
-      "expect",
-      "test"
-    ]
+    {
+      "expect": "test"
+    }
   ],
   "requirements": [
 

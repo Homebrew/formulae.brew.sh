@@ -7,30 +7,35 @@
   ],
   "desc": "Host Software - DiskTool Console (dtc) and UI",
   "homepage": "https://www.kryoflux.com/",
-  "url": "https://www.kryoflux.com/download/kryoflux_2.62_macosx.zip",
+  "url": "https://www.kryoflux.com/download/kryoflux_3.00_macosx.dmg",
   "appcast": null,
-  "version": "2.62",
+  "version": "3.00",
+  "versions": {
+  },
   "installed": null,
   "outdated": false,
-  "sha256": "f4aac0ee77dd8576be686516eaef97dd468ce2f2af099fb6ae2b156eef614350",
+  "sha256": "39674e173d3c4532118edbfff3804d6399512172890169e41d381c8bb7a58c7f",
   "artifacts": [
     {
-      "pkgutil": [
-        "com.kryoflux.pkg.KryoFlux-UI",
-        "com.kryoflux.usr.pkg",
-        "com.kryoflux.Library.pkg"
-      ],
+      "pkgutil": "com.kryoflux.pkg.DTC",
       "signal": {
       }
     },
-    "kryoflux_2.62_macosx/dtc/KryoFlux.mpkg (Pkg)",
+    "KryoFlux.pkg (Pkg)",
+    [
+      "KryoFlux UI.app"
+    ],
     {
-      "trash": "~/Library/Preferences/com.kryoflux.ui.plist",
+      "trash": [
+        "~/Library/Preferences/com.kryoflux.ui.plist",
+        "~/Library/Preferences/com.kryoflux.kryoflux-ui.plist",
+        "~/.kryoflux"
+      ],
       "signal": {
       }
     }
   ],
-  "caveats": "kryoflux requires Java. You can install the latest version with:\n  brew install --cask adoptopenjdk\n",
+  "caveats": "Cask kryoflux installs files under $(brew --prefix). The presence of such\nfiles can cause warnings when running `brew doctor`, which is considered\nto be a bug in Homebrew Cask.\n",
   "depends_on": {
   },
   "conflicts_with": null,

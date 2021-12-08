@@ -10,12 +10,12 @@
 
   ],
   "desc": "FUSE driver to read/write Windows' BitLocker-ed volumes",
-  "license": "GPL-2.0",
+  "license": "GPL-2.0-only",
   "homepage": "https://github.com/Aorimn/dislocker",
   "versions": {
     "stable": "0.7.1",
     "head": null,
-    "bottle": false
+    "bottle": true
   },
   "urls": {
     "stable": {
@@ -24,9 +24,20 @@
       "revision": null
     }
   },
-  "revision": 5,
+  "revision": 6,
   "version_scheme": 0,
   "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/dislocker/blobs/sha256:56e7885d22b62ad21f3a021f07c9942a39aeb04adf9244bf4815a1196993b7a0",
+          "sha256": "56e7885d22b62ad21f3a021f07c9942a39aeb04adf9244bf4815a1196993b7a0"
+        }
+      }
+    }
   },
   "keg_only": false,
   "bottle_disabled": false,
@@ -37,7 +48,7 @@
     "cmake"
   ],
   "dependencies": [
-    "mbedtls"
+    "mbedtls@2"
   ],
   "recommended_dependencies": [
 
@@ -54,7 +65,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": null,
+  "caveats": "The reasons for disabling this formula can be found here:\n  https://github.com/Homebrew/homebrew-core/pull/64491\n\nAn external tap may provide a replacement formula. See:\n  https://docs.brew.sh/Interesting-Taps-and-Forks\n",
   "installed": [
 
   ],
@@ -66,5 +77,5 @@
   "deprecation_reason": null,
   "disabled": true,
   "disable_date": "2021-04-08",
-  "disable_reason": "requires FUSE"
+  "disable_reason": "requires closed-source macFUSE"
 }

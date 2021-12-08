@@ -13,13 +13,13 @@
   "license": "GPL-3.0-or-later",
   "homepage": "https://github.com/jarun/buku",
   "versions": {
-    "stable": "4.5",
+    "stable": "4.6",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://files.pythonhosted.org/packages/d5/af/90b27f5e932ae7bf7ccdc86f0619a8726cd61233258faac51caafe7116b8/buku-4.5.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/94/96/1d62b1346c07f8abc661fa499fef0acc7a110735e5b768b8899e58be8dc5/buku-4.6.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,25 +31,35 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/buku/blobs/sha256:bd82f2bad98d948c235d5e32217804c07634e4ab07180713eb888c0776f29fdc",
+          "sha256": "bd82f2bad98d948c235d5e32217804c07634e4ab07180713eb888c0776f29fdc"
+        },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/buku/blobs/sha256:7c27aa8811abb25446408ae2ff7b9b23a52566de53eb28821f544b342c700618",
-          "sha256": "7c27aa8811abb25446408ae2ff7b9b23a52566de53eb28821f544b342c700618"
+          "url": "https://ghcr.io/v2/homebrew/core/buku/blobs/sha256:e31f0ad05b1a9c72b87b7dedd507da14e47eeccfebe76be1b232fd39ee5c7d05",
+          "sha256": "e31f0ad05b1a9c72b87b7dedd507da14e47eeccfebe76be1b232fd39ee5c7d05"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/buku/blobs/sha256:e705007e83611e5f4c84cfb01455b9dccb87266dbc8544227dc46e68f2f07076",
+          "sha256": "e705007e83611e5f4c84cfb01455b9dccb87266dbc8544227dc46e68f2f07076"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/buku/blobs/sha256:6337072398171994b7e0bfd0ca8535ba5492fdbb5836573539c283c8ce6ede70",
-          "sha256": "6337072398171994b7e0bfd0ca8535ba5492fdbb5836573539c283c8ce6ede70"
+          "url": "https://ghcr.io/v2/homebrew/core/buku/blobs/sha256:3fa71c59bb1e2a3a80344e68e1f5e050e252ea9f178748d6693dee326fa43bfa",
+          "sha256": "3fa71c59bb1e2a3a80344e68e1f5e050e252ea9f178748d6693dee326fa43bfa"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/buku/blobs/sha256:5484288da6724aa9d73ce7ca2719e08013235e9cc852e6366b15ec1bc96944f9",
-          "sha256": "5484288da6724aa9d73ce7ca2719e08013235e9cc852e6366b15ec1bc96944f9"
+          "url": "https://ghcr.io/v2/homebrew/core/buku/blobs/sha256:4f7e27299d51821e1e75c2a310130b45ae1da654b3f1c2c4cf11af59b8d44ced",
+          "sha256": "4f7e27299d51821e1e75c2a310130b45ae1da654b3f1c2c4cf11af59b8d44ced"
         },
-        "mojave": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/buku/blobs/sha256:9c1b39060e8c194c3a0afe38f30d766ffda32acd7e85b1ef70bd7357325348dc",
-          "sha256": "9c1b39060e8c194c3a0afe38f30d766ffda32acd7e85b1ef70bd7357325348dc"
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/buku/blobs/sha256:256543511e4bc3a7138678179c7530355cfde21a45c65b9233934c3a90d3db5a",
+          "sha256": "256543511e4bc3a7138678179c7530355cfde21a45c65b9233934c3a90d3db5a"
         }
       }
     }
@@ -64,7 +74,8 @@
   ],
   "dependencies": [
     "openssl@1.1",
-    "python@3.9"
+    "python@3.9",
+    "six"
   ],
   "recommended_dependencies": [
 
@@ -73,10 +84,9 @@
 
   ],
   "uses_from_macos": [
-    [
-      "expect",
-      "test"
-    ],
+    {
+      "expect": "test"
+    },
     "libffi"
   ],
   "requirements": [

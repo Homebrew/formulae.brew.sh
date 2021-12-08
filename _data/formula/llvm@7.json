@@ -7,6 +7,7 @@
 
   ],
   "versioned_formulae": [
+    "llvm@12",
     "llvm@11",
     "llvm@9",
     "llvm@8"
@@ -26,7 +27,7 @@
       "revision": null
     }
   },
-  "revision": 2,
+  "revision": 3,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -35,18 +36,18 @@
       "files": {
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/llvm/7/blobs/sha256:400bb0bb43849d1f118d93a1647de6e9636934e941c43a6f4866258f764f42b3",
-          "sha256": "400bb0bb43849d1f118d93a1647de6e9636934e941c43a6f4866258f764f42b3"
+          "url": "https://ghcr.io/v2/homebrew/core/llvm/7/blobs/sha256:ea1162f57d529a64b516055b9d1756dfa6402177f0f149453da9310580e063ec",
+          "sha256": "ea1162f57d529a64b516055b9d1756dfa6402177f0f149453da9310580e063ec"
         },
         "mojave": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/llvm/7/blobs/sha256:564f25a86c519b737a795de441da6c6c14e9f026813a73149b7939c986241ba6",
-          "sha256": "564f25a86c519b737a795de441da6c6c14e9f026813a73149b7939c986241ba6"
+          "url": "https://ghcr.io/v2/homebrew/core/llvm/7/blobs/sha256:6deab84061586ffe36ab8755f9f3b3b792b0829a7933716aa2bf39f389a14ff6",
+          "sha256": "6deab84061586ffe36ab8755f9f3b3b792b0829a7933716aa2bf39f389a14ff6"
         },
-        "high_sierra": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/llvm/7/blobs/sha256:4170d8e522ce8aea22450c818bb68b6142671f4239262395d8f09d82621ee343",
-          "sha256": "4170d8e522ce8aea22450c818bb68b6142671f4239262395d8f09d82621ee343"
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/llvm/7/blobs/sha256:17e8b89b11ca5faa71904c05483a96fda1e2268c9c8c76f7607a983e93f2a877",
+          "sha256": "17e8b89b11ca5faa71904c05483a96fda1e2268c9c8c76f7607a983e93f2a877"
         }
       }
     }
@@ -69,7 +70,11 @@
 
   ],
   "uses_from_macos": [
-
+    "libedit",
+    "libffi",
+    "libxml2",
+    "ncurses",
+    "zlib"
   ],
   "requirements": [
     {
@@ -86,6 +91,15 @@
       "cask": null,
       "download": null,
       "version": "x86_64",
+      "contexts": [
+
+      ]
+    },
+    {
+      "name": "maximum_macos",
+      "cask": null,
+      "download": null,
+      "version": "10.15",
       "contexts": [
 
       ]

@@ -7,12 +7,14 @@
   ],
   "desc": "Spot and merge differences in text and image files or folders",
   "homepage": "https://www.kaleidoscope.app/",
-  "url": "https://updates.kaleidoscope.app/v2/prod/Kaleidoscope-2.4.1-1453-apr-6-2021.app.zip",
+  "url": "https://updates.kaleidoscope.app/v3/prod/Kaleidoscope-3.1.2-2022.app.zip",
   "appcast": null,
-  "version": "2.4.1,1453:apr-6-2021",
+  "version": "3.1.2,2022",
+  "versions": {
+  },
   "installed": null,
   "outdated": false,
-  "sha256": "5b6c995b00eeb0163d9ac139f4a4da289e57e0ee364fc959a5ba909e9b19715a",
+  "sha256": "304a779895019867d33cd530058022f5382c483c019d544203ded953ae9cef8a",
   "artifacts": [
     [
       "Kaleidoscope.app"
@@ -22,11 +24,17 @@
     ],
     {
       "trash": [
+        "~/Library/Application Support/app.kaleidoscope.v*",
         "~/Library/Application Support/com.blackpixel.kaleidoscope",
+        "~/Library/Application Support/Kaleidoscope",
+        "~/Library/Caches/app.kaleidoscope.v*",
         "~/Library/Caches/com.blackpixel.kaleidoscope",
         "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.blackpixel.kaleidoscope",
+        "~/Library/Preferences/app.kaleidoscope.v*.plist",
         "~/Library/Preferences/com.blackpixel.kaleidoscope.plist",
-        "~/Library/Saved Application State/com.blackpixel.kaleidoscope.savedState"
+        "~/Library/Saved Application State/app.kaleidoscope.v*.savedState",
+        "~/Library/Saved Application State/com.blackpixel.kaleidoscope.savedState",
+        "~/Library/WebKit/app.kaleidoscope.v*"
       ],
       "signal": {
       }
@@ -36,11 +44,15 @@
   "depends_on": {
     "macos": {
       ">=": [
-        "10.13"
+        "11"
       ]
     }
   },
-  "conflicts_with": null,
+  "conflicts_with": {
+    "cask": [
+      "homebrew/cask-versions/kaleidoscope2"
+    ]
+  },
   "container": null,
   "auto_updates": true
 }

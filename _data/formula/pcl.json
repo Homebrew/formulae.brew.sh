@@ -13,43 +13,48 @@
   "license": "BSD-3-Clause",
   "homepage": "https://pointclouds.org/",
   "versions": {
-    "stable": "1.11.1",
+    "stable": "1.12.0",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/PointCloudLibrary/pcl/archive/pcl-1.11.1.tar.gz",
+      "url": "https://github.com/PointCloudLibrary/pcl/archive/pcl-1.12.0.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 8,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/pcl/blobs/sha256:a79c6632a39fa1ffc97b27466802dc20128bfc23b4cfa76103aea3d040a04267",
+          "sha256": "a79c6632a39fa1ffc97b27466802dc20128bfc23b4cfa76103aea3d040a04267"
+        },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/pcl/blobs/sha256:6ba5d120dd629c8fe294cfcfd75817024935e4901807732ec3ecb4404430ca63",
-          "sha256": "6ba5d120dd629c8fe294cfcfd75817024935e4901807732ec3ecb4404430ca63"
+          "url": "https://ghcr.io/v2/homebrew/core/pcl/blobs/sha256:e496a31533633ec5cf7be22fb21263b055bb687d26f32eaafbe4c73730f4d06a",
+          "sha256": "e496a31533633ec5cf7be22fb21263b055bb687d26f32eaafbe4c73730f4d06a"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/pcl/blobs/sha256:e26ac7c25e8d1cd5581b0c25a4a5abcfdc49938784696f988c606cd4248294a8",
-          "sha256": "e26ac7c25e8d1cd5581b0c25a4a5abcfdc49938784696f988c606cd4248294a8"
+          "url": "https://ghcr.io/v2/homebrew/core/pcl/blobs/sha256:b88a242bc2fffa34de88c90bead3d90b6d70164b16794f76e35a06729d481ca2",
+          "sha256": "b88a242bc2fffa34de88c90bead3d90b6d70164b16794f76e35a06729d481ca2"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/pcl/blobs/sha256:4c25e37d19f4f7e300be112a6ef5dcfeaa9523b1e4aa0457a4873e478663dc54",
-          "sha256": "4c25e37d19f4f7e300be112a6ef5dcfeaa9523b1e4aa0457a4873e478663dc54"
+          "url": "https://ghcr.io/v2/homebrew/core/pcl/blobs/sha256:73b9c13e364e61267c1aace859a398bde588e6ee6504a386884c83f3df2224c1",
+          "sha256": "73b9c13e364e61267c1aace859a398bde588e6ee6504a386884c83f3df2224c1"
         },
-        "mojave": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/pcl/blobs/sha256:ee7e82622e783b380752ed27eeb65f6a33bc843c30a633c73bde7db2a5f3a304",
-          "sha256": "ee7e82622e783b380752ed27eeb65f6a33bc843c30a633c73bde7db2a5f3a304"
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/pcl/blobs/sha256:92b130c0b6d7ebe1af990efd4dd1cdc2042125477a139b8a3cc4163da7dfc7ef",
+          "sha256": "92b130c0b6d7ebe1af990efd4dd1cdc2042125477a139b8a3cc4163da7dfc7ef"
         }
       }
     }
@@ -64,7 +69,6 @@
     "pkg-config"
   ],
   "dependencies": [
-    "vtk@8.2",
     "boost",
     "cminpack",
     "eigen",
@@ -74,7 +78,8 @@
     "libpcap",
     "libusb",
     "qhull",
-    "qt@5"
+    "qt@5",
+    "vtk"
   ],
   "recommended_dependencies": [
 

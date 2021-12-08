@@ -10,8 +10,8 @@
 
   ],
   "desc": "Proxy DNS server with permanent caching",
-  "license": "GPL-3.0",
-  "homepage": "http://members.home.nl/p.a.rombouts/pdnsd/",
+  "license": "GPL-3.0-or-later",
+  "homepage": "https://web.archive.org/web/20201203080556/members.home.nl/p.a.rombouts/pdnsd/",
   "versions": {
     "stable": "1.2.9a-par",
     "head": null,
@@ -19,7 +19,7 @@
   },
   "urls": {
     "stable": {
-      "url": "http://members.home.nl/p.a.rombouts/pdnsd/releases/pdnsd-1.2.9a-par.tar.gz",
+      "url": "https://web.archive.org/web/20200323100335/members.home.nl/p.a.rombouts/pdnsd/releases/pdnsd-1.2.9a-par.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,10 +31,20 @@
       "rebuild": 2,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/pdnsd/blobs/sha256:3ea74a916606066431810d0b959ca508cb0fd6cb27c2902495db6e9cf6e1e30d",
+          "sha256": "3ea74a916606066431810d0b959ca508cb0fd6cb27c2902495db6e9cf6e1e30d"
+        },
         "arm64_big_sur": {
           "cellar": "/opt/homebrew/Cellar",
           "url": "https://ghcr.io/v2/homebrew/core/pdnsd/blobs/sha256:2a39399ddd344c3d38b4052ca914dc99eebd452a9cf323518504c19671e7b2f6",
           "sha256": "2a39399ddd344c3d38b4052ca914dc99eebd452a9cf323518504c19671e7b2f6"
+        },
+        "monterey": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/pdnsd/blobs/sha256:76c55bb21dc763f58cb9bb6c8611811cec2d414825c5b0d66a295946c8871db4",
+          "sha256": "76c55bb21dc763f58cb9bb6c8611811cec2d414825c5b0d66a295946c8871db4"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
@@ -65,6 +75,11 @@
           "cellar": "/usr/local/Cellar",
           "url": "https://ghcr.io/v2/homebrew/core/pdnsd/blobs/sha256:1fa2f1f6ba9fc4fe710c1dc1d5bfb2b9663c557f5cdddf3a2fff8394f138a08f",
           "sha256": "1fa2f1f6ba9fc4fe710c1dc1d5bfb2b9663c557f5cdddf3a2fff8394f138a08f"
+        },
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/pdnsd/blobs/sha256:4402ca761308936338a2c45fd5642eb8d19c80ec6700b1bcb79203f4396d76c4",
+          "sha256": "4402ca761308936338a2c45fd5642eb8d19c80ec6700b1bcb79203f4396d76c4"
         }
       }
     }

@@ -31,10 +31,20 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/thrift/0.9/blobs/sha256:051ccc03d1ec77a43ba687fcfe8a20f8f41d8892a6260bf0b8d9cb1a36560c11",
+          "sha256": "051ccc03d1ec77a43ba687fcfe8a20f8f41d8892a6260bf0b8d9cb1a36560c11"
+        },
         "arm64_big_sur": {
           "cellar": ":any",
           "url": "https://ghcr.io/v2/homebrew/core/thrift/0.9/blobs/sha256:0b96eded35c6da92ea4fb6a2cbbc2c572838a9a7a0221161088adb77f8ccaa9f",
           "sha256": "0b96eded35c6da92ea4fb6a2cbbc2c572838a9a7a0221161088adb77f8ccaa9f"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/thrift/0.9/blobs/sha256:01572a1b6a61c90cbb2e21f324fe3705c98943888915c32a78a072672ba2740c",
+          "sha256": "01572a1b6a61c90cbb2e21f324fe3705c98943888915c32a78a072672ba2740c"
         },
         "big_sur": {
           "cellar": ":any",
@@ -55,6 +65,11 @@
           "cellar": ":any",
           "url": "https://ghcr.io/v2/homebrew/core/thrift/0.9/blobs/sha256:a85aabc6f3c1d496f618c41e1ca367d2e8c730d9fd543f5b2a74af2760a1869a",
           "sha256": "a85aabc6f3c1d496f618c41e1ca367d2e8c730d9fd543f5b2a74af2760a1869a"
+        },
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/thrift/0.9/blobs/sha256:20900326c3b385d60e26a62482fecc0c1b30b7d6c9b0b9ec81726938f73ebe7d",
+          "sha256": "20900326c3b385d60e26a62482fecc0c1b30b7d6c9b0b9ec81726938f73ebe7d"
         }
       }
     }
@@ -82,7 +97,9 @@
 
   ],
   "uses_from_macos": [
-
+    {
+      "flex": "build"
+    }
   ],
   "requirements": [
 
