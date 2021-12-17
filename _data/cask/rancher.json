@@ -7,16 +7,22 @@
   ],
   "desc": "Kubernetes and container management on the desktop",
   "homepage": "https://rancherdesktop.io/",
-  "url": "https://github.com/rancher-sandbox/rancher-desktop/releases/download/v0.6.1/Rancher.Desktop-0.6.1.dmg",
+  "url": "https://github.com/rancher-sandbox/rancher-desktop/releases/download/v0.7.0/Rancher.Desktop-0.7.0.x86_64.dmg",
   "appcast": null,
-  "version": "0.6.1",
+  "version": "0.7.0",
   "versions": {
   },
   "installed": null,
   "outdated": false,
-  "sha256": "181b46b6da8906e8bbbe0bc67e962a44b5abc13aa4b9bea54a0fbc9520795649",
+  "sha256": "3af104a4fd0637560e395e3889fd657fab71e4e7a697553426c332ed6071e167",
   "artifacts": [
     {
+      "delete": [
+        "/opt/rancher-desktop",
+        "/private/etc/sudoers.d/rancher-desktop-lima",
+        "/private/var/run/docker.sock",
+        "/private/var/run/rancher-desktop-lima"
+      ],
       "quit": "io.rancherdesktop.app",
       "signal": {
       }
@@ -31,10 +37,13 @@
       "/Applications/Rancher Desktop.app/Contents/Resources/resources/darwin/bin/kim"
     ],
     [
+      "/Applications/Rancher Desktop.app/Contents/Resources/resources/darwin/bin/nerdctl"
+    ],
+    [
       "/Applications/Rancher Desktop.app/Contents/Resources/resources/darwin/bin/kubectl"
     ],
     [
-      "/Applications/Rancher Desktop.app/Contents/Resources/resources/darwin/bin/nerdctl"
+      "/Applications/Rancher Desktop.app/Contents/Resources/resources/darwin/bin/docker"
     ],
     {
       "trash": [
@@ -57,7 +66,11 @@
   "depends_on": {
   },
   "conflicts_with": {
+    "cask": [
+      "docker"
+    ],
     "formula": [
+      "docker",
       "helm",
       "kubernetes-cli"
     ]
