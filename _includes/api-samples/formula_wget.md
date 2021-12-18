@@ -171,21 +171,21 @@
         "wget": 1076
       },
       "90d": {
-        "wget": 3221
+        "wget": 3218
       },
       "365d": {
-        "wget": 11259
+        "wget": 11274
       }
     },
     "install_on_request": {
       "30d": {
-        "wget": 1060
+        "wget": 1061
       },
       "90d": {
-        "wget": 3134
+        "wget": 3133
       },
       "365d": {
-        "wget": 10807
+        "wget": 10823
       }
     },
     "build_error": {
@@ -194,6 +194,6 @@
       }
     }
   },
-  "generated_date": "2021-12-17"
+  "generated_date": "2021-12-18"
 }
 ```
