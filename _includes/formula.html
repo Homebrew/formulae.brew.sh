@@ -1,8 +1,0 @@
-
-        <td><a href="{{ site.baseurl }}/{{ include.formula_path || default: "formula" }}/{{ include.formula.name }}"
-            {%- if include.formula.disabled %} class="disabled" title="This formula has been disabled"
-            {%- elsif include.formula.deprecated %} class="deprecated" title="This formula has been deprecated"
-            {%- endif -%}
-            >{{ include.formula.name }}</a></td>
-        <td>{{ include.formula.versions.stable }}</td>
-        <td>{{ include.formula.desc | xml_escape }}</td>
