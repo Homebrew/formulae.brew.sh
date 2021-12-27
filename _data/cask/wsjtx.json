@@ -1,0 +1,50 @@
+{
+  "token": "wsjtx",
+  "full_token": "wsjtx",
+  "tap": "homebrew/cask",
+  "name": [
+    "WSJT-X"
+  ],
+  "desc": "Ham radio app implementing communication protocols for weak-signal conditions",
+  "homepage": "https://physics.princeton.edu/pulsar/k1jt/wsjtx.html",
+  "url": "https://physics.princeton.edu/pulsar/k1jt/wsjtx-2.5.3-Darwin.dmg",
+  "appcast": null,
+  "version": "2.5.3",
+  "versions": {
+  },
+  "installed": null,
+  "outdated": false,
+  "sha256": "595a90359a16551a4ed36aaaffb4d3efc5fce03754a1e3093812813ad783a2be",
+  "artifacts": [
+    [
+      "wsjtx.app"
+    ],
+    [
+      "com.wsjtx.sysctl.plist",
+      {
+        "target": "/Library/LaunchDaemons/com.wsjtx.sysctl.plist"
+      }
+    ],
+    "postflight (Postflight Block)",
+    {
+      "trash": [
+        "~/Library/Application Support/WSJT-X",
+        "~/Library/Preferences/WSJT-X.ini",
+        "~/Library/Saved Application State/org.k1jt.wsjtx.savedState"
+      ],
+      "signal": {
+      }
+    }
+  ],
+  "caveats": "You must reboot for the installation of wsjtx to take effect.\n",
+  "depends_on": {
+    "macos": {
+      ">=": [
+        "10.13"
+      ]
+    }
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": null
+}
