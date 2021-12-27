@@ -15,7 +15,7 @@ cask "suspicious-package" do
     end
   end
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :mojave"
 
   app "Suspicious Package.app"
   binary "#{appdir}/Suspicious Package.app/Contents/SharedSupport/spkg"

@@ -1,20 +1,16 @@
 cask "xnviewmp" do
-  version "0.99.6"
+  version "0.99.4"
   sha256 :no_check
 
   url "https://download.xnview.com/XnViewMP-mac.dmg"
   name "XnViewMP"
   desc "Photo viewer, image manager, image resizer and more"
-  homepage "https://www.xnview.com/en/xnviewmp/"
+  homepage "https://www.xnview.com/"
 
   livecheck do
-    url :homepage
-    regex(/>XnView\sMP\sv?(\d+(?:\.\d+)+)[\s<]/i)
+    url :url
+    strategy :extract_plist
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "XnViewMP.app"
-
-  zap trash: "~/Library/Saved Application State/com.xnview.XnView.savedState"
 end

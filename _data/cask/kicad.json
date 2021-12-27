@@ -7,39 +7,97 @@
   ],
   "desc": "Electronics design automation suite",
   "homepage": "https://kicad.org/",
-  "url": "https://kicad-downloads.s3.cern.ch/osx/stable/kicad-unified-6.0.0-0.dmg",
+  "url": "https://kicad-downloads.s3.cern.ch/osx/stable/kicad-unified-5.1.12-1-10_14.dmg",
   "appcast": null,
-  "version": "6.0.0-0",
+  "version": "5.1.12-1",
   "versions": {
   },
   "installed": null,
   "outdated": false,
-  "sha256": "ac8d93c9e4d3eb03446f18e6803f92168cf34f35080595425d0c5cb448c2a743",
+  "sha256": "c2380302f0ddce72123aa0ae4a6561b3acc168c3c04fc6b3019ee3325dcd65e3",
   "artifacts": [
     {
-      "delete": [
-        "/Applications/KiCad",
-        "/Library/Application Support/kicad/demos"
+      "rmdir": [
+        "/Library/Application Support/kicad",
+        "/Applications/KiCad"
       ],
       "signal": {
       }
     },
     [
-      "KiCad"
+      "KiCad/bitmap2component.app",
+      {
+        "target": "KiCad/bitmap2component.app"
+      }
     ],
     [
-      "demos",
+      "KiCad/eeschema.app",
       {
-        "target": "/Library/Application Support/kicad/demos"
+        "target": "KiCad/eeschema.app"
+      }
+    ],
+    [
+      "KiCad/gerbview.app",
+      {
+        "target": "KiCad/gerbview.app"
+      }
+    ],
+    [
+      "KiCad/pcb_calculator.app",
+      {
+        "target": "KiCad/pcb_calculator.app"
+      }
+    ],
+    [
+      "KiCad/pcbnew.app",
+      {
+        "target": "KiCad/pcbnew.app"
+      }
+    ],
+    [
+      "KiCad/pl_editor.app",
+      {
+        "target": "KiCad/pl_editor.app"
+      }
+    ],
+    [
+      "kicad/help",
+      {
+        "target": "/Library/Application Support/kicad/help"
+      }
+    ],
+    [
+      "kicad/library",
+      {
+        "target": "/Library/Application Support/kicad/library"
+      }
+    ],
+    [
+      "kicad/modules",
+      {
+        "target": "/Library/Application Support/kicad/modules"
+      }
+    ],
+    [
+      "kicad/share",
+      {
+        "target": "/Library/Application Support/kicad/share"
+      }
+    ],
+    [
+      "kicad/template",
+      {
+        "target": "/Library/Application Support/kicad/template"
+      }
+    ],
+    [
+      "KiCad/kicad.app",
+      {
+        "target": "KiCad/kicad.app"
       }
     ],
     {
-      "trash": [
-        "/Library/Application Support/kicad",
-        "~/Library/Application Support/kicad",
-        "~/Library/Preferences/kicad",
-        "~/Library/Preferences/org.kicad-pcb.*"
-      ],
+      "trash": "~/Library/Preferences/kicad",
       "signal": {
       }
     }
@@ -48,7 +106,7 @@
   "depends_on": {
     "macos": {
       ">=": [
-        "10.15"
+        "10.14"
       ]
     }
   },

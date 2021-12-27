@@ -9,7 +9,7 @@ cask "babeledit" do
 
   livecheck do
     url "https://www.codeandweb.com/babeledit/download"
-    regex(%r{babeledit/download/v?(\d+(?:\.\d+)+)/mac-64}i)
+    regex(/BabelEdit[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   app "BabelEdit.app"

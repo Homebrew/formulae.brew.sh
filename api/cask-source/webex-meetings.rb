@@ -17,8 +17,6 @@ cask "webex-meetings" do
     strategy :extract_plist
   end
 
-  auto_updates true
-
   pkg "Cisco_Webex_Meetings.pkg"
 
   uninstall quit:      [
