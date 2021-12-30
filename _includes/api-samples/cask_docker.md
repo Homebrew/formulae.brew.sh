@@ -82,6 +82,7 @@
       "trash": [
         "$(brew --prefix)/bin/docker-compose.backup",
         "$(brew --prefix)/bin/docker.backup",
+        "~/.docker",
         "~/Library/Application Scripts/com.docker.helper",
         "~/Library/Application Support/com.bugsnag.Bugsnag/com.docker.docker",
         "~/Library/Application Support/Docker Desktop",
