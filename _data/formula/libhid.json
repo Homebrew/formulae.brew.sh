@@ -31,10 +31,20 @@
       "rebuild": 1,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/libhid/blobs/sha256:b69b1ff4ecd6f24b292da9085e8aa30694f24081c5183bdcb6c95d7f535c55dc",
+          "sha256": "b69b1ff4ecd6f24b292da9085e8aa30694f24081c5183bdcb6c95d7f535c55dc"
+        },
         "arm64_big_sur": {
           "cellar": ":any",
           "url": "https://ghcr.io/v2/homebrew/core/libhid/blobs/sha256:01170cf4863c640d89c02c1c8d10759aa9ab7b16a0ab88bccdefdf10c5174620",
           "sha256": "01170cf4863c640d89c02c1c8d10759aa9ab7b16a0ab88bccdefdf10c5174620"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/libhid/blobs/sha256:d1a311d2e981c50f68ecb636a98659ff67894b30309942ad1258f96b66d017aa",
+          "sha256": "d1a311d2e981c50f68ecb636a98659ff67894b30309942ad1258f96b66d017aa"
         },
         "big_sur": {
           "cellar": ":any",
@@ -86,7 +96,9 @@
 
   ],
   "build_dependencies": [
-
+    "autoconf",
+    "automake",
+    "libtool"
   ],
   "dependencies": [
     "libusb",
