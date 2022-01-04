@@ -20,7 +20,15 @@
       "Aerial.saver"
     ],
     {
-      "trash": "~/Library/Caches/Aerial",
+      "trash": [
+        "~/Library/Application Support/Aerial",
+        "~/Library/Caches/Aerial",
+        "~/Library/Containers/com.apple.ScreenSaver.Engine.legacyScreenSaver.x86-64/Data/Library/Caches/Aerial",
+        "~/Library/Containers/com.apple.ScreenSaver.Engine.legacyScreenSaver/Data/Library/Application Support/Aerial",
+        "~/Library/Containers/com.apple.ScreenSaver.Engine.legacyScreenSaver/Data/Library/Caches/Aerial",
+        "~/Library/Preferences/ByHost/com.JohnCoates.Aerial*",
+        "~/Library/Screen Savers/Aerial.saver"
+      ],
       "signal": {
       }
     }
@@ -33,7 +41,11 @@
       ]
     }
   },
-  "conflicts_with": null,
+  "conflicts_with": {
+    "cask": [
+      "homebrew/cask-versions/aerial-beta"
+    ]
+  },
   "container": null,
   "auto_updates": null
 }
