@@ -3,7 +3,7 @@
   "full_token": "adguard-vpn",
   "tap": "homebrew/cask",
   "name": [
-    "Adguard VPN"
+    "AdGuard VPN"
   ],
   "desc": "VPN for privacy and security",
   "homepage": "https://adguard-vpn.com/",
@@ -20,12 +20,25 @@
       "quit": "com.adguard.mac.vpn",
       "launchctl": "com.adguard.mac.vpn.tun-helper",
       "pkgutil": "com.adguard.mac.vpn-pkg",
+      "delete": [
+        "/Library/Application Support/AdGuard Software/com.adguard.mac.vpn",
+        "/Library/Application Support/com.adguard.mac.vpn",
+        "/Library/LaunchDaemons/com.adguard.mac.vpn.tun-helper.plist"
+      ],
+      "rmdir": "/Library/Application Support/AdGuard Software",
       "signal": {
       }
     },
     "AdGuard VPN.pkg (Pkg)",
     {
-      "trash": "/Library/Application Support/com.adguard.mac.vpn",
+      "trash": [
+        "/Library/Logs/com.adguard.mac.vpn",
+        "~/Library/Application Scripts/com.adguard.mac.vpn.launchatlogin",
+        "~/Library/Caches/com.adguard.mac.vpn",
+        "~/Library/Containers/com.adguard.mac.vpn.launchatlogin",
+        "~/Library/HTTPStorages/com.adguard.mac.vpn",
+        "~/Library/Preferences/com.adguard.mac.vpn.plist"
+      ],
       "signal": {
       }
     }
