@@ -1,34 +1,35 @@
 {
-  "token": "nordvpn-teams",
-  "full_token": "nordvpn-teams",
+  "token": "nordlayer",
+  "full_token": "nordlayer",
   "tap": "homebrew/cask",
   "name": [
-    "NordVPN Teams"
+    "NordLayer"
   ],
   "desc": "Security software for business",
-  "homepage": "https://nordvpnteams.com/",
-  "url": "https://downloads.nordteams.com/mac/latest/NordVPNTeams.pkg",
+  "homepage": "https://nordlayer.com/",
+  "url": "https://downloads.nordlayer.com/mac/latest/NordLayer_v2.1.0.zip",
   "appcast": null,
-  "version": "2.0.5,1568",
+  "version": "2.1.0,1666",
   "versions": {
   },
   "installed": null,
   "outdated": false,
-  "sha256": "no_check",
+  "sha256": "978167da3bf1926f8113f8315fda7967ace4b80c915a710bddde779eeb5758f7",
   "artifacts": [
     {
-      "quit": "com.nordvpn.macos.teams.NordVPNTeamsLauncher",
-      "launchctl": "com.nordvpn.macos.teams.helper",
-      "delete": "/Library/PrivilegedHelperTools/com.nordvpn.osx.helper",
-      "pkgutil": "com.nordvpn.macos.teams",
+      "quit": "com.nordvpn.macos.teams",
+      "launchctl": "com.nordvpn.macos.teams",
       "signal": {
       }
     },
-    "NordVPNTeams.pkg (Pkg)",
+    [
+      "NordLayer.app"
+    ],
     {
       "trash": [
         "~/Library/Application Support/com.nordvpn.macos.teams",
         "~/Library/Caches/com.nordvpn.macos.teams",
+        "~/Library/HTTPStorages/com.nordvpn.macos.teams",
         "~/Library/Preferences/com.nordvpn.macos.teams.plist"
       ],
       "signal": {
@@ -37,6 +38,11 @@
   ],
   "caveats": null,
   "depends_on": {
+    "macos": {
+      ">=": [
+        "10.12"
+      ]
+    }
   },
   "conflicts_with": null,
   "container": null,
