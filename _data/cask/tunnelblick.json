@@ -22,6 +22,7 @@
         "net.tunnelblick.tunnelblick.LaunchAtLogin",
         "net.tunnelblick.tunnelblick.tunnelblickd"
       ],
+      "delete": "/Library/Application Support/Tunnelblick",
       "quit": "net.tunnelblick.tunnelblick",
       "signal": {
       }
@@ -31,11 +32,11 @@
     ],
     {
       "trash": [
-        "/Library/Application Support/Tunnelblick",
         "~/Library/Application Support/Tunnelblick",
         "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/Tunnelblick*",
         "~/Library/Caches/net.tunnelblick.tunnelblick",
         "~/Library/Cookies/net.tunnelblick.tunnelblick.binarycookies",
+        "~/Library/HTTPStorages/net.tunnelblick.tunnelblick",
         "~/Library/Preferences/net.tunnelblick.tunnelblick.plist"
       ],
       "signal": {
@@ -44,6 +45,11 @@
   ],
   "caveats": "For security reasons, tunnelblick must be installed to /Applications,\nand will request to be moved at launch.\n",
   "depends_on": {
+    "macos": {
+      ">=": [
+        "10.10"
+      ]
+    }
   },
   "conflicts_with": null,
   "container": null,
