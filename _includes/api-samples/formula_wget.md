@@ -132,30 +132,30 @@
   "analytics": {
     "install": {
       "30d": {
-        "wget": 88953,
+        "wget": 87082,
         "wget --HEAD": 5
       },
       "90d": {
-        "wget": 411632,
-        "wget --HEAD": 26
+        "wget": 410139,
+        "wget --HEAD": 25
       },
       "365d": {
-        "wget": 1935981,
-        "wget --HEAD": 177
+        "wget": 1930003,
+        "wget --HEAD": 173
       }
     },
     "install_on_request": {
       "30d": {
-        "wget": 88514,
+        "wget": 86656,
         "wget --HEAD": 5
       },
       "90d": {
-        "wget": 410246,
-        "wget --HEAD": 26
+        "wget": 408748,
+        "wget --HEAD": 25
       },
       "365d": {
-        "wget": 1927856,
-        "wget --HEAD": 174
+        "wget": 1921911,
+        "wget --HEAD": 170
       }
     },
     "build_error": {
