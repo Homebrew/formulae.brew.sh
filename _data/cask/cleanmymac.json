@@ -17,7 +17,10 @@
   "sha256": "1f415dd5ff9fe03aba01ddbacd1c6e5fb972cf90f5798ac4d3e4ab88c137e230",
   "artifacts": [
     {
-      "delete": "/Library/PrivilegedHelperTools/com.macpaw.CleanMyMac4.Agent",
+      "delete": [
+        "/Library/PrivilegedHelperTools/com.macpaw.CleanMyMac4.Agent",
+        "/Library/LaunchDaemons/com.macpaw.CleanMyMac4.Agent.plist"
+      ],
       "launchctl": [
         "com.macpaw.CleanMyMac4.Agent",
         "com.macpaw.CleanMyMac4.HealthMonitor",
@@ -39,14 +42,13 @@
     ],
     {
       "trash": [
-        "/Library/LaunchDaemons/com.macpaw.CleanMyMac4.Agent.plist",
         "/Users/Shared/CleanMyMac X Menu",
         "/Users/Shared/CleanMyMac X",
         "~/Library/Application Scripts/com.macpaw.CleanMyMac4.CleanMyMacWidget",
         "~/Library/Application Support/CleanMyMac X Menu",
         "~/Library/Application Support/CleanMyMac X",
-        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.macpaw.cleanmymac4.scheduler.sfl*",
         "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.macpaw.cleanmymac4.sfl*",
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.macpaw.cleanmymac4.scheduler.sfl*",
         "~/Library/Caches/CleanMyMac 4",
         "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/com.macpaw.CleanMyMac4.help*",
         "~/Library/Caches/com.macpaw.CleanMyMac4.HealthMonitor",
@@ -78,7 +80,11 @@
   "caveats": null,
   "depends_on": {
   },
-  "conflicts_with": null,
+  "conflicts_with": {
+    "cask": [
+      "cleanmymac-zh"
+    ]
+  },
   "container": null,
   "auto_updates": true
 }
