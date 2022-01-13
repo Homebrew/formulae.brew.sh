@@ -99,7 +99,7 @@
           },
           {
             "full_name": "libunistring",
-            "version": "0.9.10",
+            "version": "1.0",
             "declared_directly": false
           },
           {
