@@ -7,14 +7,14 @@
   ],
   "desc": "Tool to run Java Web Start-based applications after the release of Java 11",
   "homepage": "https://openwebstart.com/",
-  "url": "https://github.com/karakun/OpenWebStart/releases/download/v1.5.0/OpenWebStart_macos_1_5_0.dmg",
+  "url": "https://github.com/karakun/OpenWebStart/releases/download/v1.5.1/OpenWebStart_macos_1_5_1.dmg",
   "appcast": null,
-  "version": "1.5.0",
+  "version": "1.5.1",
   "versions": {
   },
   "installed": null,
   "outdated": false,
-  "sha256": "30aee9333dcbdb2b925ec34c66803f973f6504760494b24fe61e013917106921",
+  "sha256": "5836d95e3bc326ba985e5fa6ea63bdf8efe93973115b27ab6a530368e798a6c2",
   "artifacts": [
     "uninstall_preflight (Preflight Block)",
     {
@@ -25,11 +25,12 @@
         ],
         "sudo": "true"
       },
+      "delete": "/Applications/OpenWebStart",
       "signal": {
       }
     },
     {
-      "path": "$(brew --prefix)/Caskroom/openwebstart/1.5.0/OpenWebStart Installer.app/Contents/MacOS/JavaApplicationStub",
+      "path": "$(brew --prefix)/Caskroom/openwebstart/1.5.1/OpenWebStart Installer.app/Contents/MacOS/JavaApplicationStub",
       "args": {
         "must_succeed": "true",
         "sudo": "true",
@@ -42,9 +43,8 @@
     },
     {
       "trash": [
-        "~/.config/icedtea-web",
         "~/.cache/icedtea-web",
-        "/Applications/OpenWebStart"
+        "~/.config/icedtea-web"
       ],
       "signal": {
       }

@@ -17,6 +17,7 @@
   "sha256": "758459b63a798bd57eb08bb3cbe94c080a1762656c9a7a7e43f017e1211ecd2d",
   "artifacts": [
     {
+      "quit": "org.openvpn.client.app",
       "launchctl": [
         "org.openvpn.client",
         "org.openvpn.helper"
@@ -33,11 +34,6 @@
         "org.openvpn.helper_framework.pkg",
         "org.openvpn.helper_launch.pkg"
       ],
-      "delete": [
-        "/Library/LaunchDaemons/org.openvpn.client.plist",
-        "/Library/LaunchDaemons/org.openvpn.helper.plist"
-      ],
-      "quit": "org.openvpn.client.app",
       "signal": {
       }
     },
@@ -53,6 +49,11 @@
   ],
   "caveats": null,
   "depends_on": {
+    "macos": {
+      ">=": [
+        "10.10"
+      ]
+    }
   },
   "conflicts_with": null,
   "container": null,
