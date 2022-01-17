@@ -13,13 +13,13 @@
   "license": "GPL-2.0-or-later",
   "homepage": "https://qjackctl.sourceforge.io/",
   "versions": {
-    "stable": "0.9.5",
+    "stable": "0.9.6",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://downloads.sourceforge.net/project/qjackctl/qjackctl/0.9.5/qjackctl-0.9.5.tar.gz",
+      "url": "https://downloads.sourceforge.net/project/qjackctl/qjackctl/0.9.6/qjackctl-0.9.6.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -32,24 +32,29 @@
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
         "arm64_monterey": {
-          "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/qjackctl/blobs/sha256:1b46db8481b0aec95ed530f94dda8f984aaf81ff99d5b968a4e030bcc711a51e",
-          "sha256": "1b46db8481b0aec95ed530f94dda8f984aaf81ff99d5b968a4e030bcc711a51e"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/qjackctl/blobs/sha256:1b144f9e426d110c45baf9947c91d772a6b009ce7782caafc0b534e22873cd05",
+          "sha256": "1b144f9e426d110c45baf9947c91d772a6b009ce7782caafc0b534e22873cd05"
         },
         "arm64_big_sur": {
-          "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/qjackctl/blobs/sha256:1b46db8481b0aec95ed530f94dda8f984aaf81ff99d5b968a4e030bcc711a51e",
-          "sha256": "1b46db8481b0aec95ed530f94dda8f984aaf81ff99d5b968a4e030bcc711a51e"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/qjackctl/blobs/sha256:2ab81b4a160c701801c3fb1fb825f25604b6033be11b47e5e1780f4301d7d7a0",
+          "sha256": "2ab81b4a160c701801c3fb1fb825f25604b6033be11b47e5e1780f4301d7d7a0"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/qjackctl/blobs/sha256:563f4b996a365640d37b858a47d7db2b958f5caae9fab93aedfdaaa980140153",
+          "sha256": "563f4b996a365640d37b858a47d7db2b958f5caae9fab93aedfdaaa980140153"
         },
         "big_sur": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/qjackctl/blobs/sha256:d8f854c69cbedb599a259ce77293e8bbb287ac2e3885c1ce4962be12aa49c6d9",
-          "sha256": "d8f854c69cbedb599a259ce77293e8bbb287ac2e3885c1ce4962be12aa49c6d9"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/qjackctl/blobs/sha256:a66f26c99a0f9ee7a7b8c7c935a54aa6280e35363b9f7ba0b3a935743366c7fa",
+          "sha256": "a66f26c99a0f9ee7a7b8c7c935a54aa6280e35363b9f7ba0b3a935743366c7fa"
         },
         "catalina": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/qjackctl/blobs/sha256:f6ed6c17172898b5b6899835a1fabf88e2f667602efa9741c3ad9558ce179aba",
-          "sha256": "f6ed6c17172898b5b6899835a1fabf88e2f667602efa9741c3ad9558ce179aba"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/qjackctl/blobs/sha256:2a245cbda6afc11f608f59149efa21219b40f3e77711e39032ba94c92ff3e439",
+          "sha256": "2a245cbda6afc11f608f59149efa21219b40f3e77711e39032ba94c92ff3e439"
         }
       }
     }
@@ -61,11 +66,11 @@
 
   ],
   "build_dependencies": [
-    "pkg-config"
+    "cmake"
   ],
   "dependencies": [
     "jack",
-    "qt@5"
+    "qt"
   ],
   "recommended_dependencies": [
 
