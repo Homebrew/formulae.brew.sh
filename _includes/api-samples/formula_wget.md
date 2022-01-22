@@ -172,11 +172,11 @@
         "wget --HEAD": 1
       },
       "90d": {
-        "wget": 2980,
+        "wget": 2978,
         "wget --HEAD": 1
       },
       "365d": {
-        "wget": 11452,
+        "wget": 11447,
         "wget --HEAD": 1
       }
     },
@@ -186,11 +186,11 @@
         "wget --HEAD": 1
       },
       "90d": {
-        "wget": 2921,
+        "wget": 2918,
         "wget --HEAD": 1
       },
       "365d": {
-        "wget": 11043,
+        "wget": 11039,
         "wget --HEAD": 1
       }
     },
@@ -201,6 +201,6 @@
       }
     }
   },
-  "generated_date": "2022-01-21"
+  "generated_date": "2022-01-22"
 }
 ```
