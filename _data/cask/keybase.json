@@ -7,17 +7,20 @@
   ],
   "desc": "End-to-end encryption software",
   "homepage": "https://keybase.io/",
-  "url": "https://prerelease.keybase.io/darwin-updates/Keybase-5.9.0-20211216221146%2B9b33c9201f.zip",
+  "url": "https://prerelease.keybase.io/darwin-updates/Keybase-5.9.0-20220121192730%2B95a3939b3a.zip",
   "appcast": null,
-  "version": "5.9.0,20211216221146,9b33c9201f",
+  "version": "5.9.0,20220121192730,95a3939b3a",
   "versions": {
   },
   "installed": null,
   "outdated": false,
-  "sha256": "17f0c419665e98c26eb705bbcf591bd222125ab19f3085f3dbf5e3926cdd7a22",
+  "sha256": "00a113f296545b464135764c51a66e0ab792785004cf37f6e3f9cc220990c267",
   "artifacts": [
     {
-      "delete": "/Library/PrivilegedHelperTools/keybase.Helper",
+      "delete": [
+        "/Library/Logs/keybase*",
+        "/Library/PrivilegedHelperTools/keybase.Helper"
+      ],
       "launchctl": "keybase.Helper",
       "signal": {
         "TERM": "keybase.ElectronHelper",
@@ -40,9 +43,7 @@
         "~/Library/Caches/Keybase",
         "~/Library/Group Containers/keybase",
         "~/Library/Logs/Keybase*",
-        "~/Library/Logs/keybase*",
-        "~/Library/Preferences/keybase*",
-        "/Library/Logs/keybase*"
+        "~/Library/Preferences/keybase*"
       ],
       "rmdir": "/keybase",
       "signal": {
