@@ -7,29 +7,30 @@
   ],
   "desc": "Managed client-based VPN service to securely access AWS resources",
   "homepage": "https://aws.amazon.com/vpn/",
-  "url": "https://d20adtppz83p9s.cloudfront.net/OSX/1.4.0/AWS_VPN_Client.pkg",
+  "url": "https://d20adtppz83p9s.cloudfront.net/OSX/2.0.0/AWS_VPN_Client.pkg",
   "appcast": null,
-  "version": "1.4.0",
+  "version": "2.0.0",
   "versions": {
   },
   "installed": null,
   "outdated": false,
-  "sha256": "594ade5053f6b35ea044adfe1a74b2b706a46bf2d976670d670d3b4e207c954e",
+  "sha256": "38041552c095de3d74a1affbbc212bd311f659b50b3f6311962430e66ebba46f",
   "artifacts": [
     {
       "pkgutil": "com.amazon.awsvpnclient",
       "quit": "com.amazonaws.acvc.osx",
       "launchctl": "com.amazonaws.acvc.helper",
+      "delete": [
+        "/Library/Application Support/AWSVPNClient",
+        "/Library/LaunchDaemons/com.amazonaws.acvc.helper.plist",
+        "/Library/PrivilegedHelperTools/com.amazonaws.acvc.helper"
+      ],
       "signal": {
       }
     },
     "AWS_VPN_Client.pkg (Pkg)",
     {
       "trash": [
-        "/Applications/AWS VPN Client",
-        "/Library/Application Support/AWSVPNClient",
-        "/Library/LaunchDaemons/com.amazonaws.acvc.helper.plist",
-        "/Library/PrivilegedHelperTools/com.amazonaws.acvc.helper",
         "~/.config/AWSVPNClient",
         "~/Library/Preferences/com.amazonaws.acvc.osx.plist",
         "~/Library/Saved Application State/com.amazonaws.acvc.osx.savedState"
