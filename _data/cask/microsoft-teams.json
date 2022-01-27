@@ -7,26 +7,28 @@
   ],
   "desc": "Meet, chat, call, and collaborate in just one place",
   "homepage": "https://teams.microsoft.com/downloads",
-  "url": "https://statics.teams.cdn.office.net/production-osx/1.4.00.34557/Teams_osx.pkg",
+  "url": "https://statics.teams.cdn.office.net/production-osx/1.4.00.35562/Teams_osx.pkg",
   "appcast": null,
-  "version": "1.4.00.34557",
+  "version": "1.4.00.35562",
   "versions": {
   },
   "installed": null,
   "outdated": false,
-  "sha256": "4e540460dbc8910eddae44b64889d37b6ea261175fdeede4a6d45c81030456a9",
+  "sha256": "d82f20d86e2c7a683ddb37e299b307fff88756239db938b8d3f8ec91a24ac659",
   "artifacts": [
     {
       "pkgutil": "com.microsoft.teams",
       "launchctl": "com.microsoft.teams.TeamsUpdaterDaemon",
+      "delete": [
+        "/Library/Logs/Microsoft/Teams",
+        "/Library/Preferences/com.microsoft.teams.plist"
+      ],
       "signal": {
       }
     },
     "Teams_osx.pkg (Pkg)",
     {
       "trash": [
-        "/Library/Logs/Microsoft/Teams",
-        "/Library/Preferences/com.microsoft.teams.plist",
         "~/Library/Application Support/com.microsoft.teams",
         "~/Library/Application Support/Microsoft/Teams",
         "~/Library/Application Support/Teams",
