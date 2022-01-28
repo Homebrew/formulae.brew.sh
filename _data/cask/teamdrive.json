@@ -7,14 +7,14 @@
   ],
   "desc": "Secure cloud storage service",
   "homepage": "https://www.teamdrive.com/",
-  "url": "https://download.teamdrive.net/4.7.2.3014/TMDR/mac/Install-TeamDrive-4.7.2.3014_TMDR.dmg",
+  "url": "https://download.teamdrive.net/4.7.3.3113/TMDR/mac/Install-TeamDrive-4.7.3.3113_TMDR.dmg",
   "appcast": null,
-  "version": "4.7.2.3014",
+  "version": "4.7.3.3113",
   "versions": {
   },
   "installed": null,
   "outdated": false,
-  "sha256": "899960b99c3fd1e2224a6d0ad0299cde1e0aae55e6408da3a59f5de4c62de81d",
+  "sha256": "fa5197a93056534920a81a4f17e1b181eb1d5ab88701fcd6c7517ca3f4b36a12",
   "artifacts": [
     {
       "script": {
@@ -30,7 +30,7 @@
       }
     },
     {
-      "path": "Install-TeamDrive-4.7.2.3014_TMDR.app/Contents/MacOS/osx-x86_64",
+      "path": "Install-TeamDrive-4.7.3.3113_TMDR.app/Contents/MacOS/osx-x86_64",
       "args": {
         "must_succeed": "true",
         "sudo": "false",
@@ -45,6 +45,9 @@
     },
     {
       "trash": [
+        "/Users/Shared/teamdrive.fsfilter",
+        "/Users/Shared/teamdrive.ini",
+        "~/.teamdrive",
         "~/Library/Application Scripts/com.teamdrive.teamdrive3.FinderExt",
         "~/Library/Application Support/teamdrive",
         "~/Library/Caches/teamdrive",
@@ -52,10 +55,7 @@
         "~/Library/Group Containers/com.teamdrive.teamdrive3.finderExt",
         "~/Library/Preferences/com.teamdrive.TeamDrive.plist",
         "~/Library/Preferences/com.teamdrive.teamdrive3.plist",
-        "~/Library/Saved Application State/com.teamdrive.teamdrive3.savedState",
-        "/Users/Shared/teamdrive.fsfilter",
-        "/Users/Shared/teamdrive.ini",
-        "~/.teamdrive"
+        "~/Library/Saved Application State/com.teamdrive.teamdrive3.savedState"
       ],
       "signal": {
       }
@@ -63,6 +63,11 @@
   ],
   "caveats": null,
   "depends_on": {
+    "macos": {
+      ">=": [
+        "10.14"
+      ]
+    }
   },
   "conflicts_with": null,
   "container": null,
