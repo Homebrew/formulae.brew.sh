@@ -1,26 +1,25 @@
 {
-  "name": "ffmpeg",
-  "full_name": "ffmpeg",
+  "name": "ffmpeg@4",
+  "full_name": "ffmpeg@4",
   "tap": "homebrew/core",
   "oldname": null,
   "aliases": [
-    "ffmpeg@5"
+
   ],
   "versioned_formulae": [
-    "ffmpeg@4",
     "ffmpeg@2.8"
   ],
   "desc": "Play, record, convert, and stream audio and video",
   "license": "GPL-2.0-or-later",
   "homepage": "https://ffmpeg.org/",
   "versions": {
-    "stable": "5.0",
-    "head": "HEAD",
+    "stable": "4.4.1",
+    "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://ffmpeg.org/releases/ffmpeg-5.0.tar.xz",
+      "url": "https://ffmpeg.org/releases/ffmpeg-4.4.1.tar.xz",
       "tag": null,
       "revision": null
     }
@@ -34,39 +33,42 @@
       "files": {
         "arm64_monterey": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/ffmpeg/blobs/sha256:f807e6b2e26f5ddce60ca8f15b919c062b562f1b43d8a2c069ee9e05909f37c9",
-          "sha256": "f807e6b2e26f5ddce60ca8f15b919c062b562f1b43d8a2c069ee9e05909f37c9"
+          "url": "https://ghcr.io/v2/homebrew/core/ffmpeg/4/blobs/sha256:e5bb29c1f83c1c48bc0b3adcb05b5bc9ac04f5d99d5d1e1f8bd02a115e9b5104",
+          "sha256": "e5bb29c1f83c1c48bc0b3adcb05b5bc9ac04f5d99d5d1e1f8bd02a115e9b5104"
         },
         "arm64_big_sur": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/ffmpeg/blobs/sha256:5b1cc9597fe6c19ddf2cf500776af90f6760df1fe4c8d07d13b57f41bda7eb8e",
-          "sha256": "5b1cc9597fe6c19ddf2cf500776af90f6760df1fe4c8d07d13b57f41bda7eb8e"
+          "url": "https://ghcr.io/v2/homebrew/core/ffmpeg/4/blobs/sha256:545c2a76da393e9f4719209493f1d4a50ff25899b5ce5ac59fe4d719b4715e51",
+          "sha256": "545c2a76da393e9f4719209493f1d4a50ff25899b5ce5ac59fe4d719b4715e51"
         },
         "monterey": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/ffmpeg/blobs/sha256:6d42fbce2174305767276f48ae0ab1d28c1584b6ad74886f0245f9eb3afbdca2",
-          "sha256": "6d42fbce2174305767276f48ae0ab1d28c1584b6ad74886f0245f9eb3afbdca2"
+          "url": "https://ghcr.io/v2/homebrew/core/ffmpeg/4/blobs/sha256:397d1907352f6ada22576bf8944034d841cce24233fe5bc9ed9b249cd79d1825",
+          "sha256": "397d1907352f6ada22576bf8944034d841cce24233fe5bc9ed9b249cd79d1825"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/ffmpeg/blobs/sha256:0059bc1449f6215d2a2b94958b8e77e36e08d90accef23be53f3e15f949ba570",
-          "sha256": "0059bc1449f6215d2a2b94958b8e77e36e08d90accef23be53f3e15f949ba570"
+          "url": "https://ghcr.io/v2/homebrew/core/ffmpeg/4/blobs/sha256:7e4be682fe8f62668b25f991e697290cb7ad909c9c31ebaa24d8a4b670715834",
+          "sha256": "7e4be682fe8f62668b25f991e697290cb7ad909c9c31ebaa24d8a4b670715834"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/ffmpeg/blobs/sha256:fa7fbd12e162d3d15b1f4d51225fdb68f6fdb264935b2837e9b9f2633c1f0886",
-          "sha256": "fa7fbd12e162d3d15b1f4d51225fdb68f6fdb264935b2837e9b9f2633c1f0886"
+          "url": "https://ghcr.io/v2/homebrew/core/ffmpeg/4/blobs/sha256:4d836cc976f06fa4b67ba53f900b4c94d4097ce88db5846547351fad2a8c4af7",
+          "sha256": "4d836cc976f06fa4b67ba53f900b4c94d4097ce88db5846547351fad2a8c4af7"
         },
         "x86_64_linux": {
           "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/ffmpeg/blobs/sha256:f1d6f528baff08e5d093d199e321cf3cb535d35b660b8d1b29ab14066e1436e1",
-          "sha256": "f1d6f528baff08e5d093d199e321cf3cb535d35b660b8d1b29ab14066e1436e1"
+          "url": "https://ghcr.io/v2/homebrew/core/ffmpeg/4/blobs/sha256:aac393e201fd79971e19f697c440f27f0be57e6cc1f3469d61e384b231f058e3",
+          "sha256": "aac393e201fd79971e19f697c440f27f0be57e6cc1f3469d61e384b231f058e3"
         }
       }
     }
   },
-  "keg_only": false,
-  "keg_only_reason": null,
+  "keg_only": true,
+  "keg_only_reason": {
+    "reason": ":versioned_formula",
+    "explanation": ""
+  },
   "bottle_disabled": false,
   "options": [
 
@@ -125,7 +127,7 @@
 
   ],
   "conflicts_with": [
-    "chromaprint"
+
   ],
   "caveats": null,
   "installed": [
