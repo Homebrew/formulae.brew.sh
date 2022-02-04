@@ -1,0 +1,48 @@
+{
+  "token": "inkstitch",
+  "full_token": "inkstitch",
+  "tap": "homebrew/cask",
+  "name": [
+    "Inkstitch"
+  ],
+  "desc": "Inkscape extension for machine embroidery design",
+  "homepage": "https://inkstitch.org/",
+  "url": "https://github.com/inkstitch/inkstitch/releases/download/v2.1.2/inkstitch-v2.1.2-osx.pkg",
+  "appcast": null,
+  "version": "2.1.2",
+  "versions": {
+  },
+  "installed": null,
+  "outdated": false,
+  "sha256": "655ce58e8cc94d50ba971d763a4522c70629ddf221e3ab6a92a4a386c5569cb2",
+  "artifacts": [
+    "preflight (Preflight Block)",
+    {
+      "pkgutil": "org.inkstitch.installer",
+      "delete": "~/Library/Application Support/org.inkscape.Inkscape/config/inkscape/extensions/inkstitch",
+      "signal": {
+      }
+    },
+    "inkstitch-v2.1.2-osx.pkg (Pkg)",
+    {
+      "trash": "~/Library/Application Support/inkstitch",
+      "rmdir": "~/Library/Application Support/org.inkscape.Inkscape/config/inkscape/extensions/",
+      "signal": {
+      }
+    }
+  ],
+  "caveats": null,
+  "depends_on": {
+    "cask": [
+      "inkscape"
+    ],
+    "macos": {
+      ">=": [
+        "10.11"
+      ]
+    }
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": null
+}
