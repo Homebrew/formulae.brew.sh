@@ -13,13 +13,13 @@
   "license": "MIT",
   "homepage": "https://github.com/microsoft/vcpkg",
   "versions": {
-    "stable": "2021.05.12",
+    "stable": "2022.02.01",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/microsoft/vcpkg/archive/2021.05.12.tar.gz",
+      "url": "https://github.com/microsoft/vcpkg-tool/archive/2022-02-01.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -32,39 +32,34 @@
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
         "arm64_monterey": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/vcpkg/blobs/sha256:8116bce6059d312ab0532fc41b37d7a1e96b3676aab2e36b1d700cdb4b777807",
-          "sha256": "8116bce6059d312ab0532fc41b37d7a1e96b3676aab2e36b1d700cdb4b777807"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/vcpkg/blobs/sha256:e56d14451c5fff08954f5e80b28fbdd526b8a3b67613b67e950fcea904c3a670",
+          "sha256": "e56d14451c5fff08954f5e80b28fbdd526b8a3b67613b67e950fcea904c3a670"
         },
         "arm64_big_sur": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/vcpkg/blobs/sha256:e58d2e3fbf843883563579ec544828788ca051c9b5bd46edc0e5df71c35b90dc",
-          "sha256": "e58d2e3fbf843883563579ec544828788ca051c9b5bd46edc0e5df71c35b90dc"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/vcpkg/blobs/sha256:63e30448648cd0fd0a4c3061eb7ae9daae1ef12b5e427ab6116311a061c2001c",
+          "sha256": "63e30448648cd0fd0a4c3061eb7ae9daae1ef12b5e427ab6116311a061c2001c"
         },
         "monterey": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/vcpkg/blobs/sha256:65fcbc684c9d1a081ce9e21efe81c81a6688eef365057abb14006cc264f6de01",
-          "sha256": "65fcbc684c9d1a081ce9e21efe81c81a6688eef365057abb14006cc264f6de01"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/vcpkg/blobs/sha256:ec36c7272114fabb727c9022676c84f5bc3122fcf0b15f46bbcd123ec4c33aea",
+          "sha256": "ec36c7272114fabb727c9022676c84f5bc3122fcf0b15f46bbcd123ec4c33aea"
         },
         "big_sur": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/vcpkg/blobs/sha256:d963bef9ed861e8e67c4ef2080f04adf3a91bb971776f60f3f40bd5a6a875e07",
-          "sha256": "d963bef9ed861e8e67c4ef2080f04adf3a91bb971776f60f3f40bd5a6a875e07"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/vcpkg/blobs/sha256:a9167340b8bfec76065321945e99403ae94667d0601341aea657cf723af10cef",
+          "sha256": "a9167340b8bfec76065321945e99403ae94667d0601341aea657cf723af10cef"
         },
         "catalina": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/vcpkg/blobs/sha256:143a0c4e50b0d96bdaa7ed913105654188664ac105500c74f66add89fe1cf098",
-          "sha256": "143a0c4e50b0d96bdaa7ed913105654188664ac105500c74f66add89fe1cf098"
-        },
-        "mojave": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/vcpkg/blobs/sha256:301a0c5460bebfa3f05fb2ed8d264fce2a9fe9f261853fed991a59d1c1cd58ad",
-          "sha256": "301a0c5460bebfa3f05fb2ed8d264fce2a9fe9f261853fed991a59d1c1cd58ad"
+          "url": "https://ghcr.io/v2/homebrew/core/vcpkg/blobs/sha256:ad3ee6bbc1bfeaf59455fc8f9fd853b7b65a7d626875159207fc10e054593edd",
+          "sha256": "ad3ee6bbc1bfeaf59455fc8f9fd853b7b65a7d626875159207fc10e054593edd"
         },
         "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/vcpkg/blobs/sha256:aac3ac181306d79ac32984bdfecf34c9fa90703ed11e78044fae8630ca085222",
-          "sha256": "aac3ac181306d79ac32984bdfecf34c9fa90703ed11e78044fae8630ca085222"
+          "url": "https://ghcr.io/v2/homebrew/core/vcpkg/blobs/sha256:b6274ab6a2f28983a1125f45eea28ed1cb5d04009988b2092602091734f1724d",
+          "sha256": "b6274ab6a2f28983a1125f45eea28ed1cb5d04009988b2092602091734f1724d"
         }
       }
     }
@@ -76,11 +71,11 @@
 
   ],
   "build_dependencies": [
-    "cmake",
-    "ninja"
+    "cmake"
   ],
   "dependencies": [
-
+    "fmt",
+    "ninja"
   ],
   "recommended_dependencies": [
 
@@ -97,7 +92,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": null,
+  "caveats": "This formula provieds only the `vcpkg` executable. To use vcpkg:\n  git clone https://github.com/microsoft/vcpkg \"$HOME/vcpkg\"\n  export VCPKG_ROOT=\"$HOME/vcpkg\"\n",
   "installed": [
 
   ],
