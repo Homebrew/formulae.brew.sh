@@ -5,28 +5,27 @@
   "name": [
     "Parallels Access"
   ],
-  "desc": null,
+  "desc": "Simplest remote access to your computer from anywhere",
   "homepage": "https://www.parallels.com/products/access/",
-  "url": "https://download.parallels.com/pmobile/v5/5.5.0-36378/ParallelsAccess-5.5.0-36378-mac.dmg",
+  "url": "https://download.parallels.com/pmobile/v7/7.0.0-39895/ParallelsAccess-7.0.0-39895-mac.dmg",
   "appcast": null,
-  "version": "5.5.0-36378",
+  "version": "7.0.0-39895",
   "versions": {
   },
   "installed": null,
   "outdated": false,
-  "sha256": "8a7e85adae4b9402fb413557c9e6f0913d8cf02f81ac286d0bc846ac17ad1e07",
+  "sha256": "c80dae90a90aea8fd1ec81da914c8b4258e33ff5d49f1d381b58eed130e4f91e",
   "artifacts": [
     "preflight (Preflight Block)",
     {
       "launchctl": [
-        "com.parallels.mobile.startgui.launchagent",
+        "com.parallels.mobile.audioloader",
         "com.parallels.mobile.dispatcher.launchdaemon",
         "com.parallels.mobile.kextloader.launchdaemon",
-        "com.parallels.mobile.prl_deskctl_agent.launchagent"
+        "com.parallels.mobile.prl_deskctl_agent.launchagent",
+        "com.parallels.mobile.startgui.launchagent"
       ],
-      "quit": [
-        "com.parallels.inputmethod.ParallelsIM"
-      ],
+      "quit": "com.parallels.inputmethod.ParallelsIM",
       "signal": {
         "TERM": "com.parallels.mobile.prl_deskctl_agent"
       },
@@ -40,9 +39,9 @@
       "trash": [
         "~/Library/Cookies/com.parallels.mobile.prl_deskctl_agent.binarycookies",
         "~/Library/Group Containers/4C6364ACXT.com.parallels.Access",
-        "~/Library/Preferences/com.parallels.Parallels Access.plist",
+        "~/Library/Preferences/com.parallels.mobile.plist",
         "~/Library/Preferences/com.parallels.Parallels Access.plist.sdb",
-        "~/Library/Preferences/com.parallels.mobile.plist"
+        "~/Library/Preferences/com.parallels.Parallels Access.plist"
       ],
       "signal": {
       }
