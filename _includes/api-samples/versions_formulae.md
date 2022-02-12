@@ -7,8 +7,8 @@
   },
   ...
   "zsh": {
-    "version": "5.8",
-    "revision": 1
+    "version": "5.8.1",
+    "revision": 0
   },
   ...
 }
