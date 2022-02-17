@@ -7,30 +7,31 @@
   ],
   "desc": "Tool to run Java Web Start-based applications after the release of Java 11",
   "homepage": "https://openwebstart.com/",
-  "url": "https://github.com/karakun/OpenWebStart/releases/download/v1.5.1/OpenWebStart_macos_1_5_1.dmg",
+  "url": "https://github.com/karakun/OpenWebStart/releases/download/v1.5.2/OpenWebStart_macos_1_5_2.dmg",
   "appcast": null,
-  "version": "1.5.1",
+  "version": "1.5.2",
   "versions": {
   },
   "installed": null,
   "outdated": false,
-  "sha256": "5836d95e3bc326ba985e5fa6ea63bdf8efe93973115b27ab6a530368e798a6c2",
+  "sha256": "7e53421fd008b8ed18e1f805921e37e7622d72aa3a65f137a8ca808d36e0b696",
   "artifacts": [
     "uninstall_preflight (Preflight Block)",
     {
       "script": {
         "executable": "/Applications/OpenWebStart/OpenWebStart Uninstaller.app/Contents/MacOS/JavaApplicationStub",
         "args": [
-          "-c"
+          "-q"
         ],
-        "sudo": "true"
+        "sudo": "true",
+        "print_stderr": "false"
       },
       "delete": "/Applications/OpenWebStart",
       "signal": {
       }
     },
     {
-      "path": "$(brew --prefix)/Caskroom/openwebstart/1.5.1/OpenWebStart Installer.app/Contents/MacOS/JavaApplicationStub",
+      "path": "$(brew --prefix)/Caskroom/openwebstart/1.5.2/OpenWebStart Installer.app/Contents/MacOS/JavaApplicationStub",
       "args": {
         "must_succeed": "true",
         "sudo": "true",
