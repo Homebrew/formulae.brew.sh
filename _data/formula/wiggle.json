@@ -10,7 +10,7 @@
 
   ],
   "desc": "Program for applying patches with conflicting changes",
-  "license": "GPL-2.0",
+  "license": "GPL-2.0-or-later",
   "homepage": "https://github.com/neilbrown/wiggle",
   "versions": {
     "stable": "1.3",
@@ -55,6 +55,11 @@
           "cellar": ":any_skip_relocation",
           "url": "https://ghcr.io/v2/homebrew/core/wiggle/blobs/sha256:e50353191b0368db9dd898d730b74ea3612c1cff728717fc8b5904a6d44e2015",
           "sha256": "e50353191b0368db9dd898d730b74ea3612c1cff728717fc8b5904a6d44e2015"
+        },
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/wiggle/blobs/sha256:e9181d60a846d40b7850bb1647b1dcfba43a56f46d26bda4965df7e6f9857900",
+          "sha256": "e9181d60a846d40b7850bb1647b1dcfba43a56f46d26bda4965df7e6f9857900"
         }
       }
     }
@@ -78,7 +83,10 @@
 
   ],
   "uses_from_macos": [
-
+    {
+      "groff": "build"
+    },
+    "ncurses"
   ],
   "requirements": [
 
