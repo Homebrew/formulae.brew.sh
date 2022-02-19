@@ -13,18 +13,18 @@
   "license": "GPL-3.0-or-later",
   "homepage": "https://www.gnu.org/software/gdb/",
   "versions": {
-    "stable": "10.2",
+    "stable": "11.2",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://ftp.gnu.org/gnu/gdb/gdb-10.2.tar.xz",
+      "url": "https://ftp.gnu.org/gnu/gdb/gdb-11.2.tar.xz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 2,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,33 +33,33 @@
       "files": {
         "arm64_monterey": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/i386-elf-gdb/blobs/sha256:ea7d902a723c95cb18fe55d53c034cc245b663be9591fbc69139ce8c8b7382b0",
-          "sha256": "ea7d902a723c95cb18fe55d53c034cc245b663be9591fbc69139ce8c8b7382b0"
+          "url": "https://ghcr.io/v2/homebrew/core/i386-elf-gdb/blobs/sha256:6db8c02704d1836ef16f46769f7ca6c49422876b81c144ce781481da0a9ec629",
+          "sha256": "6db8c02704d1836ef16f46769f7ca6c49422876b81c144ce781481da0a9ec629"
         },
         "arm64_big_sur": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/i386-elf-gdb/blobs/sha256:d943e7587d70a3e6a6c58e72688a5b302b8346abd95376ed50a69612fc1b503e",
-          "sha256": "d943e7587d70a3e6a6c58e72688a5b302b8346abd95376ed50a69612fc1b503e"
+          "url": "https://ghcr.io/v2/homebrew/core/i386-elf-gdb/blobs/sha256:51349a449a0d4e32f06acbf5516fea00444a189a41812303e0317a831d1bee30",
+          "sha256": "51349a449a0d4e32f06acbf5516fea00444a189a41812303e0317a831d1bee30"
         },
         "monterey": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/i386-elf-gdb/blobs/sha256:97989e0669664911ab1b563476d3b1e7094456c98b222c4ad54c7a51e25a34cc",
-          "sha256": "97989e0669664911ab1b563476d3b1e7094456c98b222c4ad54c7a51e25a34cc"
+          "url": "https://ghcr.io/v2/homebrew/core/i386-elf-gdb/blobs/sha256:3d121bee077b2fab236f9b73795407fef99238804db1fd1a3bd8fb24dcab3497",
+          "sha256": "3d121bee077b2fab236f9b73795407fef99238804db1fd1a3bd8fb24dcab3497"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/i386-elf-gdb/blobs/sha256:995a23f630c40101c11ad55d4f2b002398f282ea05934630acd4343a9a1aa407",
-          "sha256": "995a23f630c40101c11ad55d4f2b002398f282ea05934630acd4343a9a1aa407"
+          "url": "https://ghcr.io/v2/homebrew/core/i386-elf-gdb/blobs/sha256:c2e085712bd764ceea43c583c6bc44351e61a06385bc2cf64a6ea337f583fb05",
+          "sha256": "c2e085712bd764ceea43c583c6bc44351e61a06385bc2cf64a6ea337f583fb05"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/i386-elf-gdb/blobs/sha256:ce22008756d411fbe5f3a4727e157ac7b4fb413f175b2da07793385f884f8cc7",
-          "sha256": "ce22008756d411fbe5f3a4727e157ac7b4fb413f175b2da07793385f884f8cc7"
+          "url": "https://ghcr.io/v2/homebrew/core/i386-elf-gdb/blobs/sha256:8309db4002952af3b1334101ad227e1b0328413dc6b04cf252596c6245690829",
+          "sha256": "8309db4002952af3b1334101ad227e1b0328413dc6b04cf252596c6245690829"
         },
         "x86_64_linux": {
           "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/i386-elf-gdb/blobs/sha256:de8f9b0dc7709e23f693fc38567e80e6b90b5bf3dd81d033e9580baabcaa96a3",
-          "sha256": "de8f9b0dc7709e23f693fc38567e80e6b90b5bf3dd81d033e9580baabcaa96a3"
+          "url": "https://ghcr.io/v2/homebrew/core/i386-elf-gdb/blobs/sha256:f84b25344a2e3e0508bb642988da76cbd57521c3a834d814654e637e9b703d84",
+          "sha256": "f84b25344a2e3e0508bb642988da76cbd57521c3a834d814654e637e9b703d84"
         }
       }
     }
@@ -75,6 +75,7 @@
   ],
   "dependencies": [
     "i686-elf-gcc",
+    "gmp",
     "python@3.10",
     "xz"
   ],
