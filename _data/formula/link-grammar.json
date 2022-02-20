@@ -13,13 +13,13 @@
   "license": "LGPL-2.1",
   "homepage": "https://www.abisource.com/projects/link-grammar/",
   "versions": {
-    "stable": "5.10.2",
+    "stable": "5.10.3",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://www.abisource.com/downloads/link-grammar/5.10.2/link-grammar-5.10.2.tar.gz",
+      "url": "https://www.abisource.com/downloads/link-grammar/5.10.3/link-grammar-5.10.3.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,38 +28,38 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
         "arm64_monterey": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/link-grammar/blobs/sha256:2497cfab315f6c199b5a4d751d08354e3997b0ab7d2bf139b1f433765f26b877",
-          "sha256": "2497cfab315f6c199b5a4d751d08354e3997b0ab7d2bf139b1f433765f26b877"
+          "url": "https://ghcr.io/v2/homebrew/core/link-grammar/blobs/sha256:9d3c2064646f6be246876ed348481b291a5869b06793e03fca87e67ecc98615f",
+          "sha256": "9d3c2064646f6be246876ed348481b291a5869b06793e03fca87e67ecc98615f"
         },
         "arm64_big_sur": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/link-grammar/blobs/sha256:58f608417bce28f09eb9af4ecaf696ef8dc81085c41b6d41e9226026000dd79b",
-          "sha256": "58f608417bce28f09eb9af4ecaf696ef8dc81085c41b6d41e9226026000dd79b"
+          "url": "https://ghcr.io/v2/homebrew/core/link-grammar/blobs/sha256:8ed6448e255fef875deb8c7d2cccf8f804e2cf8ee9fc57bdf0083dc02b5a4726",
+          "sha256": "8ed6448e255fef875deb8c7d2cccf8f804e2cf8ee9fc57bdf0083dc02b5a4726"
         },
         "monterey": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/link-grammar/blobs/sha256:84b1c36c5cdfb1dbce496d3ea10c7182a6b1deb66369146088a9cf77fde7e2c4",
-          "sha256": "84b1c36c5cdfb1dbce496d3ea10c7182a6b1deb66369146088a9cf77fde7e2c4"
+          "url": "https://ghcr.io/v2/homebrew/core/link-grammar/blobs/sha256:741e76f60e1aae9b9389704b8b74c0803b1696da2cc3272452f9f88009f6b2ec",
+          "sha256": "741e76f60e1aae9b9389704b8b74c0803b1696da2cc3272452f9f88009f6b2ec"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/link-grammar/blobs/sha256:45fd5772d8e9438a0d4a82055bea5b32ae0cb2ded6942ae455b6ceedf4042547",
-          "sha256": "45fd5772d8e9438a0d4a82055bea5b32ae0cb2ded6942ae455b6ceedf4042547"
+          "url": "https://ghcr.io/v2/homebrew/core/link-grammar/blobs/sha256:57353f7624c91fe0a3cc4107dd8bec7a03c2df2462d22748736fa8d06de42b01",
+          "sha256": "57353f7624c91fe0a3cc4107dd8bec7a03c2df2462d22748736fa8d06de42b01"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/link-grammar/blobs/sha256:690244f41acdcc0dc7821d0f3ca6d8453c82a8ba237f185bf18b3f79efa67791",
-          "sha256": "690244f41acdcc0dc7821d0f3ca6d8453c82a8ba237f185bf18b3f79efa67791"
+          "url": "https://ghcr.io/v2/homebrew/core/link-grammar/blobs/sha256:9145c0d64b5eaf99fcb6687544362d5eafb3e64f2d1cff0746482a1088e5258b",
+          "sha256": "9145c0d64b5eaf99fcb6687544362d5eafb3e64f2d1cff0746482a1088e5258b"
         },
         "x86_64_linux": {
           "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/link-grammar/blobs/sha256:d183af52518aa19ed2e0628496fb925b0c355b3310a37997b83a7f281874c5ba",
-          "sha256": "d183af52518aa19ed2e0628496fb925b0c355b3310a37997b83a7f281874c5ba"
+          "url": "https://ghcr.io/v2/homebrew/core/link-grammar/blobs/sha256:a41e9efa99f8615254faa5f3024f236fa0fe59cc7cede0ac8d936269599b121a",
+          "sha256": "a41e9efa99f8615254faa5f3024f236fa0fe59cc7cede0ac8d936269599b121a"
         }
       }
     }
@@ -89,6 +89,9 @@
 
   ],
   "uses_from_macos": [
+    {
+      "flex": "build"
+    },
     "sqlite"
   ],
   "requirements": [
