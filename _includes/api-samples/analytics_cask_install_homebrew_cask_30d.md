@@ -2,27 +2,27 @@
 {
   "category": "cask_install",
   "total_items": 6497,
-  "start_date": "2022-01-21",
-  "end_date": "2022-02-20",
-  "total_count": 1029425,
+  "start_date": "2022-01-22",
+  "end_date": "2022-02-21",
+  "total_count": 1007112,
   "formulae": {
     ...
     "docker": [
       {
         "cask": "docker",
-        "count": "24,409"
+        "count": "24,023"
       }
     ],
     "docker-edge": [
       {
         "cask": "docker-edge",
-        "count": "51"
+        "count": "44"
       }
     ],
     "docker-toolbox": [
       {
         "cask": "docker-toolbox",
-        "count": "137"
+        "count": "139"
       }
     ],
     ...
