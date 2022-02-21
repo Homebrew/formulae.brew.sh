@@ -7,9 +7,9 @@
   },
   ...
   "onyx": {
-    "version": "4.0.1",
+    "version": "4.0.2",
     "versions": {
-      "monterey": "4.1.5",
+      "monterey": "4.1.6",
       "catalina": "3.8.7",
       "mojave": "3.6.8",
       "high_sierra": "3.4.9",
