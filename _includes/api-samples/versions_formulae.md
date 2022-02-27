@@ -2,7 +2,7 @@
 {
   ...
   "wget": {
-    "version": "1.21.2",
+    "version": "1.21.3",
     "revision": 0
   },
   ...
