@@ -6,25 +6,35 @@
     "GCC ARM Embedded"
   ],
   "desc": "Pre-built GNU bare-metal toolchain for 32-bit Arm processors",
-  "homepage": "https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm",
-  "url": "https://developer.arm.com/-/media/Files/downloads/gnu-rm/10.3-2021.10/gcc-arm-none-eabi-10.3-2021.10-mac.pkg",
+  "homepage": "https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain",
+  "url": "https://developer.arm.com/-/media/Files/downloads/gnu/11.2-2022.02/binrel/gcc-arm-11.2-2022.02-darwin-x86_64-arm-none-eabi.pkg",
   "appcast": null,
-  "version": "10.3-2021.10",
+  "version": "11.2-2022.02",
   "versions": {
   },
   "installed": null,
   "outdated": false,
-  "sha256": "e3888a1d0af798be7f98d67a3e6dc4fc96d92d5b57fc635e0c021a4a36087b5d",
+  "sha256": "105ac7f9b2be62c55d6853a099a92488c16f08bb296a694ef8430e5ddf8dead8",
   "artifacts": [
     {
-      "pkgutil": "gcc.arm-none-eabi-10",
-      "delete": "/Applications/ARM",
+      "pkgutil": "gcc-arm-11.2-2022.02-darwin-x86_64-arm-none-eabi",
+      "delete": [
+        "/Applications/ARM/11.2-2022.02-darwin-x86_64-arm-none-eabi-manifest",
+        "/Applications/ARM/bin/arm-none-eabi-*",
+        "/Applications/ARM/arm-none-eabi",
+        "/Applications/ARM/lib/gcc/arm-none-eabi",
+        "/Applications/ARM/libexec/gcc/arm-none-eabi",
+        "/Applications/ARM/share/doc/arm-none-eabi",
+        "/Applications/ARM/share/gcc-arm-none-eabi",
+        "/Applications/ARM/share/man/man1/arm-none-eabi-*.1",
+        "/Applications/ARM/share/man/man5/arm-none-eabi-gdbinit.5"
+      ],
       "signal": {
       }
     },
-    "gcc-arm-none-eabi-10.3-2021.10-mac.pkg (Pkg)",
+    "gcc-arm-11.2-2022.02-darwin-x86_64-arm-none-eabi.pkg (Pkg)",
     [
-      "/Applications/ARM/bin/arm-none-eabi-addr2line"
+      "/Applications/ARM/bin/arm-none-eabi-ar"
     ],
     [
       "/Applications/ARM/bin/arm-none-eabi-as"
@@ -48,7 +58,7 @@
       "/Applications/ARM/bin/arm-none-eabi-gcc"
     ],
     [
-      "/Applications/ARM/bin/arm-none-eabi-gcc-10.3.1"
+      "/Applications/ARM/bin/arm-none-eabi-gcc-11.2.1"
     ],
     [
       "/Applications/ARM/bin/arm-none-eabi-gcc-ar"
@@ -69,16 +79,10 @@
       "/Applications/ARM/bin/arm-none-eabi-gcov-tool"
     ],
     [
-      "/Applications/ARM/bin/arm-none-eabi-gdb"
-    ],
-    [
       "/Applications/ARM/bin/arm-none-eabi-gdb-add-index"
     ],
     [
-      "/Applications/ARM/bin/arm-none-eabi-gdb-add-index-py"
-    ],
-    [
-      "/Applications/ARM/bin/arm-none-eabi-gdb-py"
+      "/Applications/ARM/bin/arm-none-eabi-gfortran"
     ],
     [
       "/Applications/ARM/bin/arm-none-eabi-gprof"
@@ -117,11 +121,25 @@
       "/Applications/ARM/bin/arm-none-eabi-strip"
     ],
     [
-      "/Applications/ARM/bin/arm-none-eabi-ar"
-    ]
+      "/Applications/ARM/bin/arm-none-eabi-gdb"
+    ],
+    [
+      "/Applications/ARM/bin/arm-none-eabi-addr2line"
+    ],
+    {
+      "delete": "/Application/ARM",
+      "signal": {
+      }
+    }
   ],
   "caveats": null,
   "depends_on": {
+    "arch": [
+      {
+        "type": "intel",
+        "bits": 64
+      }
+    ]
   },
   "conflicts_with": null,
   "container": null,
