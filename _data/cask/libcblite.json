@@ -1,0 +1,61 @@
+{
+  "token": "libcblite",
+  "full_token": "libcblite",
+  "tap": "homebrew/cask",
+  "name": [
+    "Couchbase Lite (Enterprise Edition)"
+  ],
+  "desc": "Couchbase Lite Libraries for C and C++ (Enterprise Edition)",
+  "homepage": "https://www.couchbase.com/products/lite",
+  "url": "https://packages.couchbase.com/releases/couchbase-lite-c/3.0.0/couchbase-lite-c-enterprise-3.0.0-macos.zip",
+  "appcast": null,
+  "version": "3.0.0",
+  "versions": {
+  },
+  "installed": null,
+  "outdated": false,
+  "sha256": "abd416d4753b204a1327ffd53f4b12fc5eec2419191b8b0fa55b78d79b7b23a2",
+  "artifacts": [
+    [
+      "libcblite-3.0.0/include/cbl",
+      {
+        "target": "$(brew --prefix)/include/cbl"
+      }
+    ],
+    [
+      "libcblite-3.0.0/include/fleece",
+      {
+        "target": "$(brew --prefix)/include/fleece"
+      }
+    ],
+    [
+      "libcblite-3.0.0/lib/cmake/CouchbaseLite",
+      {
+        "target": "$(brew --prefix)/lib/cmake/CouchbaseLite"
+      }
+    ],
+    [
+      "libcblite-3.0.0/lib/libcblite.3.0.0.dylib",
+      {
+        "target": "$(brew --prefix)/lib/libcblite.3.0.0.dylib"
+      }
+    ],
+    "postflight (Postflight Block)",
+    "uninstall_postflight (Postflight Block)"
+  ],
+  "caveats": null,
+  "depends_on": {
+    "macos": {
+      ">=": [
+        "10.14"
+      ]
+    }
+  },
+  "conflicts_with": {
+    "cask": [
+      "libcblite-community"
+    ]
+  },
+  "container": null,
+  "auto_updates": null
+}
