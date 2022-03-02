@@ -4,7 +4,7 @@
   "tap": "homebrew/core",
   "oldname": null,
   "aliases": [
-    "mariadb@10.6"
+    "mariadb@10.7"
   ],
   "versioned_formulae": [
     "mariadb@10.5",
@@ -17,13 +17,13 @@
   "license": "GPL-2.0-only",
   "homepage": "https://mariadb.org/",
   "versions": {
-    "stable": "10.6.7",
+    "stable": "10.7.3",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://downloads.mariadb.com/MariaDB/mariadb-10.6.7/source/mariadb-10.6.7.tar.gz",
+      "url": "https://downloads.mariadb.com/MariaDB/mariadb-10.7.3/source/mariadb-10.7.3.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -37,33 +37,33 @@
       "files": {
         "arm64_monterey": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/mariadb/blobs/sha256:07c81d2b029d536ddb73e4b3b1b9502ac8f7cfc2d6aafcb0e33fcf15cf5d3873",
-          "sha256": "07c81d2b029d536ddb73e4b3b1b9502ac8f7cfc2d6aafcb0e33fcf15cf5d3873"
+          "url": "https://ghcr.io/v2/homebrew/core/mariadb/blobs/sha256:5d7ed761206507fb173a3ba88d4895a3b148d5dabc492ffa1c06511b845b9259",
+          "sha256": "5d7ed761206507fb173a3ba88d4895a3b148d5dabc492ffa1c06511b845b9259"
         },
         "arm64_big_sur": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/mariadb/blobs/sha256:5d29f5d7ae15b68a7e7e99c309099213876db8fdb04f414e083f7ae66610f468",
-          "sha256": "5d29f5d7ae15b68a7e7e99c309099213876db8fdb04f414e083f7ae66610f468"
+          "url": "https://ghcr.io/v2/homebrew/core/mariadb/blobs/sha256:2a58adf34772884da1dcd8810ae75f364fe32cd5583232ef883fb0fc9cd18ee1",
+          "sha256": "2a58adf34772884da1dcd8810ae75f364fe32cd5583232ef883fb0fc9cd18ee1"
         },
         "monterey": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/mariadb/blobs/sha256:e6d7a6ad7552ab2c5a658f91af7388aa0d33129386ab03ceb5249c9c3beb42c2",
-          "sha256": "e6d7a6ad7552ab2c5a658f91af7388aa0d33129386ab03ceb5249c9c3beb42c2"
+          "url": "https://ghcr.io/v2/homebrew/core/mariadb/blobs/sha256:439378c9adf87ed440d543882a0a6aafdbe089e2bcc1af7225069a08ffc34782",
+          "sha256": "439378c9adf87ed440d543882a0a6aafdbe089e2bcc1af7225069a08ffc34782"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/mariadb/blobs/sha256:1dee509380202236093d1f290d5cb8b8d71678b0f1b3bc524c657432c36c59bf",
-          "sha256": "1dee509380202236093d1f290d5cb8b8d71678b0f1b3bc524c657432c36c59bf"
+          "url": "https://ghcr.io/v2/homebrew/core/mariadb/blobs/sha256:adc6ce57b9eebf48518a7fd24d7bb73a5772aae7b2d4f613267750b9f275d693",
+          "sha256": "adc6ce57b9eebf48518a7fd24d7bb73a5772aae7b2d4f613267750b9f275d693"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/mariadb/blobs/sha256:01843361337272e3023e4dd3b88171d6549258725ecd741fc47942ba972f6e50",
-          "sha256": "01843361337272e3023e4dd3b88171d6549258725ecd741fc47942ba972f6e50"
+          "url": "https://ghcr.io/v2/homebrew/core/mariadb/blobs/sha256:79f8fa2726c17537e74b7bcfdeb8362ee26ab1a80977410903ba79b8ce635dfc",
+          "sha256": "79f8fa2726c17537e74b7bcfdeb8362ee26ab1a80977410903ba79b8ce635dfc"
         },
         "x86_64_linux": {
           "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/mariadb/blobs/sha256:1346c4ed3921511ebd0b819f6a7756ed0f7e8bedc7cb92c870957b300e2e2bbd",
-          "sha256": "1346c4ed3921511ebd0b819f6a7756ed0f7e8bedc7cb92c870957b300e2e2bbd"
+          "url": "https://ghcr.io/v2/homebrew/core/mariadb/blobs/sha256:08514bc3921cc57b7fdabb4482150d5ddf7298767ff097fb56d3a1822db05e1e",
+          "sha256": "08514bc3921cc57b7fdabb4482150d5ddf7298767ff097fb56d3a1822db05e1e"
         }
       }
     }
@@ -77,12 +77,14 @@
   "build_dependencies": [
     "bison",
     "cmake",
+    "fmt",
     "pkg-config"
   ],
   "dependencies": [
     "groonga",
     "openssl@1.1",
-    "pcre2"
+    "pcre2",
+    "zstd"
   ],
   "recommended_dependencies": [
 
