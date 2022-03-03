@@ -2,15 +2,15 @@
 {
   "category": "install",
   "total_items": 6507,
-  "start_date": "2022-01-31",
-  "end_date": "2022-03-02",
-  "total_count": 37595464,
+  "start_date": "2022-02-01",
+  "end_date": "2022-03-03",
+  "total_count": 37597007,
   "formulae": {
     ...
     "wget": [
       {
         "formula": "wget",
-        "count": "133,216"
+        "count": "142,136"
       },
       {
         "formula": "wget --HEAD",
