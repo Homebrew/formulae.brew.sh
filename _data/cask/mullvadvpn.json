@@ -7,28 +7,33 @@
   ],
   "desc": "VPN client",
   "homepage": "https://mullvad.net/",
-  "url": "https://github.com/mullvad/mullvadvpn-app/releases/download/2021.6/MullvadVPN-2021.6.pkg",
+  "url": "https://github.com/mullvad/mullvadvpn-app/releases/download/2022.1/MullvadVPN-2022.1.pkg",
   "appcast": null,
-  "version": "2021.6",
+  "version": "2022.1",
   "versions": {
   },
   "installed": null,
   "outdated": false,
-  "sha256": "fddd96e5c8d829936b63be4a754b865d52422e7984369c5ab479706892b38b71",
+  "sha256": "a8322f73a082be65fa28692ace6fca3432fd40cacf6ef131cd2fb5bd49cbb8f6",
   "artifacts": [
     {
       "pkgutil": "net.mullvad.vpn",
       "launchctl": "net.mullvad.daemon",
+      "delete": [
+        "/etc/mullvad-vpn",
+        "/Library/Caches/mullvad-vpn",
+        "/Library/LaunchDaemons/net.mullvad.daemon.plist",
+        "/var/log/mullvad-vpn"
+      ],
       "signal": {
       }
     },
-    "MullvadVPN-2021.6.pkg (Pkg)",
+    "MullvadVPN-2022.1.pkg (Pkg)",
     {
       "trash": [
         "~/Library/Application Support/Mullvad VPN",
         "~/Library/Logs/Mullvad VPN",
-        "~/Library/Preferences/net.mullvad.vpn.plist",
-        "/Library/LaunchDaemons/net.mullvad.daemon.plist"
+        "~/Library/Preferences/net.mullvad.vpn.plist"
       ],
       "signal": {
       }
