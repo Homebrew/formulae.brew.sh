@@ -13,33 +13,43 @@
   "license": "LGPL-2.0-or-later and MIT",
   "homepage": "https://gitlab.gnome.org/GNOME/gjs/wikis/Home",
   "versions": {
-    "stable": "1.70.0",
-    "head": null,
+    "stable": "1.70.1",
+    "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://download.gnome.org/sources/gjs/1.70/gjs-1.70.0.tar.xz",
+      "url": "https://download.gnome.org/sources/gjs/1.70/gjs-1.70.1.tar.xz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 2,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "monterey": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/gjs/blobs/sha256:4366423967ed653d2fa9ecf3ed9297456c1b7c9206d0ceb590a343af007600fe",
+          "sha256": "4366423967ed653d2fa9ecf3ed9297456c1b7c9206d0ceb590a343af007600fe"
+        },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/gjs/blobs/sha256:30567ac5c7946ccfe9f8b6411a26c1c98bfd5a66c2f39107beeb2eea0dbec123",
-          "sha256": "30567ac5c7946ccfe9f8b6411a26c1c98bfd5a66c2f39107beeb2eea0dbec123"
+          "url": "https://ghcr.io/v2/homebrew/core/gjs/blobs/sha256:9d531cf47c4d4be12eab2e89c40c6d904c7a71b5e7683d77a6eb36eaead4df9a",
+          "sha256": "9d531cf47c4d4be12eab2e89c40c6d904c7a71b5e7683d77a6eb36eaead4df9a"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/gjs/blobs/sha256:c34ecceabbd268bfb7b4076c66934a8960b5587c5e777e3390dcda8a8aa45603",
-          "sha256": "c34ecceabbd268bfb7b4076c66934a8960b5587c5e777e3390dcda8a8aa45603"
+          "url": "https://ghcr.io/v2/homebrew/core/gjs/blobs/sha256:4f764d816b6a8e40103b334385c043a3189604b5491658f72ed0fdba0fd55635",
+          "sha256": "4f764d816b6a8e40103b334385c043a3189604b5491658f72ed0fdba0fd55635"
+        },
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/gjs/blobs/sha256:eb196582efbb21df0e6fb6e4632dbb2ea6c0b7b2c7deac1e068f2a9110409950",
+          "sha256": "eb196582efbb21df0e6fb6e4632dbb2ea6c0b7b2c7deac1e068f2a9110409950"
         }
       }
     }
@@ -51,19 +61,13 @@
 
   ],
   "build_dependencies": [
-    "autoconf@2.13",
     "meson",
-    "ninja",
-    "pkg-config",
-    "python@3.8",
-    "rust",
-    "six"
+    "ninja"
   ],
   "dependencies": [
+    "spidermonkey@78",
     "gobject-introspection",
     "gtk+3",
-    "llvm",
-    "nspr",
     "readline"
   ],
   "recommended_dependencies": [
