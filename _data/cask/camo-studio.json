@@ -16,20 +16,38 @@
   "outdated": false,
   "sha256": "11bf7f5da0f158b41df2e883c0a04a91733b7cd2f675f0632c332883f02f8032",
   "artifacts": [
+    {
+      "delete": [
+        "/Library/Audio/Plug-Ins/HAL/ReincubateCamoAudio.driver",
+        "/Library/CoreMediaIO/Plug-Ins/DAL/ReincubateCamoDAL.plugin"
+      ],
+      "signal": {
+      }
+    },
     [
       "Camo Studio.app"
     ],
     {
       "trash": [
+        "~/Library/Application Support/Reincubate/Camo",
+        "~/Library/Caches/SentryCrash/Camo Studio",
         "~/Library/Caches/com.reincubate.macos.cam",
-        "~/Library/Preferences/com.reincubate.macos.cam.plist"
+        "~/Library/HTTPStorages/com.reincubate.macos.cam",
+        "~/Library/Preferences/com.reincubate.macos.cam.plist",
+        "~/Library/WebKit/com.reincubate.macos.cam"
       ],
+      "rmdir": "~/Library/Application Support/Reincubate",
       "signal": {
       }
     }
   ],
   "caveats": null,
   "depends_on": {
+    "macos": {
+      ">=": [
+        "10.13"
+      ]
+    }
   },
   "conflicts_with": null,
   "container": null,
