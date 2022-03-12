@@ -163,27 +163,27 @@
   "analytics-linux": {
     "install": {
       "30d": {
-        "wget": 1192
+        "wget": 1193
       },
       "90d": {
-        "wget": 3151,
+        "wget": 3166,
         "wget --HEAD": 2
       },
       "365d": {
-        "wget": 11944,
+        "wget": 11959,
         "wget --HEAD": 2
       }
     },
     "install_on_request": {
       "30d": {
-        "wget": 1160
+        "wget": 1158
       },
       "90d": {
-        "wget": 3079,
+        "wget": 3092,
         "wget --HEAD": 2
       },
       "365d": {
-        "wget": 11584,
+        "wget": 11597,
         "wget --HEAD": 2
       }
     },
@@ -193,6 +193,6 @@
       }
     }
   },
-  "generated_date": "2022-03-11"
+  "generated_date": "2022-03-12"
 }
 ```
