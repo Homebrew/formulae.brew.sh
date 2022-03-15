@@ -1,22 +1,25 @@
 {
   "name": "rakudo-star",
-  "pkg_version": "2021.04",
+  "pkg_version": "2022.02",
   "rebuild": 0,
   "bottles": {
+    "arm64_monterey": {
+      "url": "https://ghcr.io/v2/homebrew/core/rakudo-star/blobs/sha256:c9b64b922ecd90d9fdf216957f1f4eac36550e72c0c8bf8ad734a40d9f36fe67"
+    },
     "arm64_big_sur": {
-      "url": "https://ghcr.io/v2/homebrew/core/rakudo-star/blobs/sha256:13f29562a836448fb820c7efa93eb2fd635eda7b428635bce9002ccac1e28a6a"
+      "url": "https://ghcr.io/v2/homebrew/core/rakudo-star/blobs/sha256:7bd7f7d2530c7daabbcc92eab0b2bef5a12e87081e292d2c677c26b498d6279e"
+    },
+    "monterey": {
+      "url": "https://ghcr.io/v2/homebrew/core/rakudo-star/blobs/sha256:1c89d13394cb956e2f84601aca508be1e172862da4dcd5e9328684935beddb7c"
     },
     "big_sur": {
-      "url": "https://ghcr.io/v2/homebrew/core/rakudo-star/blobs/sha256:a7dd4d2139e570762a78b60e505f62e581825732768ae49b4f9ca2ffc52bbb23"
+      "url": "https://ghcr.io/v2/homebrew/core/rakudo-star/blobs/sha256:7bcae40d6e519d5eeb262d7fbe680612fd3e1d8c83e1bd44d9f1f2e949c85e7c"
     },
     "catalina": {
-      "url": "https://ghcr.io/v2/homebrew/core/rakudo-star/blobs/sha256:40bf7dfbdda3c1091dc5d4b8fd5a776ca8e6ba722b48fb7c536deb1914263096"
-    },
-    "mojave": {
-      "url": "https://ghcr.io/v2/homebrew/core/rakudo-star/blobs/sha256:4bb9fd2754e328dca6a7199f900a85bea5a673bd7ee4a1f47e330144eee81cff"
+      "url": "https://ghcr.io/v2/homebrew/core/rakudo-star/blobs/sha256:7627c1c3b28e9fe804792535ae1e637c5950401285a97a5fc1fd118724f05d77"
     },
     "x86_64_linux": {
-      "url": "https://ghcr.io/v2/homebrew/core/rakudo-star/blobs/sha256:1b05bf9ce1cf2b663b0f7c2b25332352db5a4e848df0b49b7b55ed49c298e5d1"
+      "url": "https://ghcr.io/v2/homebrew/core/rakudo-star/blobs/sha256:65b324dd0afd9213b9ba82c229b9c8edeecd28ec0092d0c48da72e36f57d3185"
     }
   },
   "dependencies": [
@@ -98,6 +101,41 @@
         },
         "x86_64_linux": {
           "url": "https://ghcr.io/v2/homebrew/core/libffi/blobs/sha256:48e34a380ab065bda9191298bd3eefc895f1c2315d508cb83614eac01cf38301"
+        }
+      }
+    },
+    {
+      "name": "ca-certificates",
+      "pkg_version": "2022-02-01",
+      "rebuild": 0,
+      "bottles": {
+        "all": {
+          "url": "https://ghcr.io/v2/homebrew/core/ca-certificates/blobs/sha256:40e00f88df310bc2dc42aefb3e834c0a3022f125fecdf21f26431d12a104dbc0"
+        }
+      }
+    },
+    {
+      "name": "openssl@3",
+      "pkg_version": "3.0.2",
+      "rebuild": 0,
+      "bottles": {
+        "arm64_monterey": {
+          "url": "https://ghcr.io/v2/homebrew/core/openssl/3/blobs/sha256:e6c758c0dad7b4bdd94780981e2e6bd9b27870ab9ff9053fb6b0d31f55af1a09"
+        },
+        "arm64_big_sur": {
+          "url": "https://ghcr.io/v2/homebrew/core/openssl/3/blobs/sha256:32aaa40d1376e4e2828bbb7ff578bc62ff81787b1f505f98a144bc0f71791414"
+        },
+        "monterey": {
+          "url": "https://ghcr.io/v2/homebrew/core/openssl/3/blobs/sha256:764a33bea6b6a03b5198a70926825a19648902bdfe5a7f226d1fd7878effdf8b"
+        },
+        "big_sur": {
+          "url": "https://ghcr.io/v2/homebrew/core/openssl/3/blobs/sha256:d13274d1ba2bc7f160a06c72c075511493cd62296ec2a902cbd7117d010b458e"
+        },
+        "catalina": {
+          "url": "https://ghcr.io/v2/homebrew/core/openssl/3/blobs/sha256:44274e7d53336756f76b14bba53f99e562504ddd45d60fec727031cc6212fa7c"
+        },
+        "x86_64_linux": {
+          "url": "https://ghcr.io/v2/homebrew/core/openssl/3/blobs/sha256:588dc1ab6669c6819436f31af7198492741bb7f46180abd308b799469bcfc5f8"
         }
       }
     },

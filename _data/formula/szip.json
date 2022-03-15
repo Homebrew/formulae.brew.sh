@@ -84,8 +84,11 @@
       }
     }
   },
-  "keg_only": false,
-  "keg_only_reason": null,
+  "keg_only": true,
+  "keg_only_reason": {
+    "reason": "szip conflicts with libaec, which provides an open-source replacement",
+    "explanation": ""
+  },
   "bottle_disabled": false,
   "options": [
 
@@ -109,7 +112,7 @@
 
   ],
   "conflicts_with": [
-    "libaec"
+
   ],
   "caveats": null,
   "installed": [
@@ -118,9 +121,9 @@
   "linked_keg": null,
   "pinned": false,
   "outdated": false,
-  "deprecated": false,
-  "deprecation_date": null,
-  "deprecation_reason": null,
+  "deprecated": true,
+  "deprecation_date": "2022-03-15",
+  "deprecation_reason": "has an incompatible license. Check out `libaec` instead",
   "disabled": false,
   "disable_date": null,
   "disable_reason": null
