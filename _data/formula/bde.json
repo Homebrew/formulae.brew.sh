@@ -24,7 +24,7 @@
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -32,29 +32,24 @@
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
         "monterey": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/bde/blobs/sha256:9ec907d3e43b34a000b90c9dfe31c2011d21fc36191a053b23074ea02db4a3fb",
-          "sha256": "9ec907d3e43b34a000b90c9dfe31c2011d21fc36191a053b23074ea02db4a3fb"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/bde/blobs/sha256:dc3a4b7f935f65892ff0f6ab01030805b194bcf445d6bac5764d02d7a2013292",
+          "sha256": "dc3a4b7f935f65892ff0f6ab01030805b194bcf445d6bac5764d02d7a2013292"
         },
         "big_sur": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/bde/blobs/sha256:adbdc903efa552e2c8d746a630b41c7f91406c9373f3b20c5bbafdc15c49afef",
-          "sha256": "adbdc903efa552e2c8d746a630b41c7f91406c9373f3b20c5bbafdc15c49afef"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/bde/blobs/sha256:b67cceb437125529fcc53d7025b45691dd45feecc1878f30cd9e87d325a4a458",
+          "sha256": "b67cceb437125529fcc53d7025b45691dd45feecc1878f30cd9e87d325a4a458"
         },
         "catalina": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/bde/blobs/sha256:b11a948d232e02bf0ceaee439451f94ce48cc024b7737400b5ca21fbfe0aafb5",
-          "sha256": "b11a948d232e02bf0ceaee439451f94ce48cc024b7737400b5ca21fbfe0aafb5"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/bde/blobs/sha256:8f96d15c8dbe7b0e37f83675371d24e9f9428250d459534d2f0c3483c7e3c945",
+          "sha256": "8f96d15c8dbe7b0e37f83675371d24e9f9428250d459534d2f0c3483c7e3c945"
         },
-        "mojave": {
+        "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/bde/blobs/sha256:5915ea6038ff06703afa39cd989f62aa69cb3d0a0021acffb759a5a306312c78",
-          "sha256": "5915ea6038ff06703afa39cd989f62aa69cb3d0a0021acffb759a5a306312c78"
-        },
-        "high_sierra": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/bde/blobs/sha256:7690286795f26cc1fe240355e75a6cea19c8dddbb441e3a3e905c3a276f44191",
-          "sha256": "7690286795f26cc1fe240355e75a6cea19c8dddbb441e3a3e905c3a276f44191"
+          "url": "https://ghcr.io/v2/homebrew/core/bde/blobs/sha256:de9fb5dc040eca7698710fb9091cdd7e2da5d0ec7708d27d0ecaeb641eb42af8",
+          "sha256": "de9fb5dc040eca7698710fb9091cdd7e2da5d0ec7708d27d0ecaeb641eb42af8"
         }
       }
     }
@@ -67,10 +62,11 @@
   ],
   "build_dependencies": [
     "cmake",
-    "ninja"
+    "pkg-config",
+    "python@3.10"
   ],
   "dependencies": [
-
+    "pcre2"
   ],
   "recommended_dependencies": [
 
