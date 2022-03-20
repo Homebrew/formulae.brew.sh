@@ -7,25 +7,34 @@
   ],
   "desc": "Remove junk and unused files",
   "homepage": "https://www.ccleaner.com/ccleaner-mac",
-  "url": "https://download.ccleaner.com/mac/CCMacSetup118.dmg",
+  "url": "https://download.ccleaner.com/mac/CCMacSetup204.dmg",
   "appcast": null,
-  "version": "1.18.30",
+  "version": "2.4.141",
   "versions": {
   },
   "installed": null,
   "outdated": false,
-  "sha256": "52295172b846c477f1c5396c9f568d602b89fad52d2fcaba394a14296e096ce6",
+  "sha256": "3369595d8e8fce701a22a18df88632556ec81ffae98872c37e100754afe1fdcb",
   "artifacts": [
     {
       "quit": "com.piriform.ccleaner",
-      "launchctl": "com.piriform.ccleaner.CCleanerAgent",
+      "pkgutil": "com.piriform.pkg.CCleaner",
+      "launchctl": [
+        "com.piriform.CCleaner",
+        "com.piriform.ccleaner.CCleanerAgent",
+        "com.piriform.ccleaner (com.piriform.CCleaner)",
+        "com.piriform.ccleaner.engine.xpc",
+        "com.piriform.ccleaner.services.submit",
+        "com.piriform.ccleaner.services.xpc",
+        "com.piriform.ccleaner.uninstall",
+        "com.piriform.ccleaner.update",
+        "com.piriform.ccleaner.update.xpc"
+      ],
       "delete": "/Library/PrivilegedHelperTools/com.piriform.ccleaner.CCleanerAgent",
       "signal": {
       }
     },
-    [
-      "CCleaner.app"
-    ],
+    "Install CCleaner.pkg (Pkg)",
     {
       "trash": [
         "~/Library/Application Support/CCleaner",
