@@ -20,9 +20,7 @@
       "pkgutil": "com.haystacksoftware.Arq",
       "quit": "com.haystacksoftware.Arq",
       "delete": [
-        "/Applications/Arq.app",
-        "/Library/Application Support/ArqAgent",
-        "/Library/Application Support/ArqAgentAPFS"
+        "/Applications/Arq.app"
       ],
       "launchctl": [
         "com.haystacksoftware.ArqMonitor",
@@ -33,7 +31,14 @@
     },
     "Arq7.16.pkg (Pkg)",
     {
-      "trash": "~/Library/Application Support/Arq *",
+      "trash": [
+        "~/Library/Arq *",
+        "~/Library/Application Support/Arq *",
+        "~/Library/Preferences/com.haystacksoftware.Arq.plist",
+        "~/Library/Preferences/com.haystacksoftware.ArqMonitor.plist",
+        "/Library/Application Support/ArqAgent",
+        "/Library/Application Support/ArqAgentAPFS"
+      ],
       "signal": {
       }
     }
