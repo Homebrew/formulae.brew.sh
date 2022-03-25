@@ -166,24 +166,24 @@
         "wget": 1237
       },
       "90d": {
-        "wget": 3182,
+        "wget": 3180,
         "wget --HEAD": 2
       },
       "365d": {
-        "wget": 12087,
+        "wget": 12092,
         "wget --HEAD": 2
       }
     },
     "install_on_request": {
       "30d": {
-        "wget": 1200
+        "wget": 1199
       },
       "90d": {
-        "wget": 3109,
+        "wget": 3107,
         "wget --HEAD": 2
       },
       "365d": {
-        "wget": 11729,
+        "wget": 11735,
         "wget --HEAD": 2
       }
     },
@@ -193,6 +193,6 @@
       }
     }
   },
-  "generated_date": "2022-03-24"
+  "generated_date": "2022-03-25"
 }
 ```
