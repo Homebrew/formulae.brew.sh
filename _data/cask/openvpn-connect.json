@@ -22,10 +22,6 @@
         "org.openvpn.client",
         "org.openvpn.helper"
       ],
-      "script": {
-        "executable": "/Applications/OpenVPN Connect/Uninstall OpenVPN Connect.app/Contents/Resources/remove.sh",
-        "sudo": "true"
-      },
       "pkgutil": [
         "org.openvpn.client_framework.pkg",
         "org.openvpn.client_launch.pkg",
@@ -34,6 +30,13 @@
         "org.openvpn.helper_framework.pkg",
         "org.openvpn.helper_launch.pkg"
       ],
+      "delete": [
+        "/Applications/OpenVPN Connect",
+        "/Applications/OpenVPN Connect.app"
+      ],
+      "login_item": [
+        "OpenVPN Connect"
+      ],
       "signal": {
       }
     },
@@ -41,8 +44,18 @@
     {
       "trash": [
         "~/Library/Application Support/OpenVPN Connect",
-        "~/Library/Preferences/org.openvpn.client.app.plist"
+        "~/Library/Logs/OpenVPN Connect",
+        "~/Library/Preferences/org.openvpn.client.app.helper.plist",
+        "~/Library/Preferences/org.openvpn.client.app.plist",
+        "~/Library/Saved Application State/org.openvpn.client.app.savedState"
       ],
+      "script": {
+        "executable": "security",
+        "args": [
+          "delete-keychain",
+          "openvpn.keychain-db"
+        ]
+      },
       "signal": {
       }
     }
