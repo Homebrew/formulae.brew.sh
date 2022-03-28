@@ -1,6 +1,6 @@
 {
-  "name": "dependency-check",
-  "full_name": "dependency-check",
+  "name": "acl",
+  "full_name": "acl",
   "tap": "homebrew/core",
   "oldname": null,
   "aliases": [
@@ -9,17 +9,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "OWASP dependency-check",
-  "license": "Apache-2.0",
-  "homepage": "https://owasp.org/www-project-dependency-check/",
+  "desc": "Commands for manipulating POSIX access control lists",
+  "license": "GPL-2.0-or-later and LGPL-2.1-or-later",
+  "homepage": "https://savannah.nongnu.org/projects/acl/",
   "versions": {
-    "stable": "7.0.2",
+    "stable": "2.3.1",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/jeremylong/DependencyCheck/releases/download/v7.0.2/dependency-check-7.0.2-release.zip",
+      "url": "https://download.savannah.nongnu.org/releases/acl/acl-2.3.1.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,10 +31,10 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
-        "all": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/dependency-check/blobs/sha256:a084822b55ed46d3d376dcc5c4912328cd615a695364ccc39c61620e1ebae211",
-          "sha256": "a084822b55ed46d3d376dcc5c4912328cd615a695364ccc39c61620e1ebae211"
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/acl/blobs/sha256:bda9616eeceada8e39117a143c7ab5a581e58d26c9a6c32acb930c07d8a934d8",
+          "sha256": "bda9616eeceada8e39117a143c7ab5a581e58d26c9a6c32acb930c07d8a934d8"
         }
       }
     }
@@ -49,7 +49,7 @@
 
   ],
   "dependencies": [
-    "openjdk"
+    "attr"
   ],
   "recommended_dependencies": [
 
@@ -61,7 +61,15 @@
 
   ],
   "requirements": [
+    {
+      "name": "linux",
+      "cask": null,
+      "download": null,
+      "version": null,
+      "contexts": [
 
+      ]
+    }
   ],
   "conflicts_with": [
 
