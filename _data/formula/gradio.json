@@ -28,28 +28,28 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 0,
+      "rebuild": 1,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "monterey": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/gradio/blobs/sha256:23007e95399ae41c47177de867ecc857cfe04a3573a2c78aaebb0fcd04a389aa",
+          "sha256": "23007e95399ae41c47177de867ecc857cfe04a3573a2c78aaebb0fcd04a389aa"
+        },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/gradio/blobs/sha256:e6468d6afe0f7e65ebf642bf4a5935464b0e390f6c607f58573221e8a0ff03f4",
-          "sha256": "e6468d6afe0f7e65ebf642bf4a5935464b0e390f6c607f58573221e8a0ff03f4"
+          "url": "https://ghcr.io/v2/homebrew/core/gradio/blobs/sha256:72f8e30b711bee61d93b6da03927edb44f7414b1be112e6259aba2ffe9f84fde",
+          "sha256": "72f8e30b711bee61d93b6da03927edb44f7414b1be112e6259aba2ffe9f84fde"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/gradio/blobs/sha256:80de210e71cbf7bd18f125ed1b74c58939046418905bbbbe03892b1b7d4dc8ca",
-          "sha256": "80de210e71cbf7bd18f125ed1b74c58939046418905bbbbe03892b1b7d4dc8ca"
+          "url": "https://ghcr.io/v2/homebrew/core/gradio/blobs/sha256:0417071790ce31f0e7c80b800fabc91a0aef1b8faff27b892136defb02350067",
+          "sha256": "0417071790ce31f0e7c80b800fabc91a0aef1b8faff27b892136defb02350067"
         },
-        "mojave": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/gradio/blobs/sha256:afed2590e43bb873751bf147da70228edf518aaa4da9a47a8e74a339385e7407",
-          "sha256": "afed2590e43bb873751bf147da70228edf518aaa4da9a47a8e74a339385e7407"
-        },
-        "high_sierra": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/gradio/blobs/sha256:772bc7cd809b085f9eaf2419ae9ddae50e80cbaaace480fe1f3d23c26bd8f164",
-          "sha256": "772bc7cd809b085f9eaf2419ae9ddae50e80cbaaace480fe1f3d23c26bd8f164"
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/gradio/blobs/sha256:88ba113096595acdaa8529ce24f0ce5735f1b595af740c8c1bd3b77a7c795d4e",
+          "sha256": "88ba113096595acdaa8529ce24f0ce5735f1b595af740c8c1bd3b77a7c795d4e"
         }
       }
     }
@@ -61,8 +61,10 @@
 
   ],
   "build_dependencies": [
+    "graphviz",
     "meson",
-    "ninja"
+    "ninja",
+    "pkg-config"
   ],
   "dependencies": [
     "adwaita-icon-theme",
@@ -75,7 +77,7 @@
     "gtk+3",
     "hicolor-icon-theme",
     "json-glib",
-    "libsoup",
+    "libsoup@2",
     "python@3.7"
   ],
   "recommended_dependencies": [
@@ -85,7 +87,12 @@
 
   ],
   "uses_from_macos": [
-
+    {
+      "bison": "build"
+    },
+    {
+      "flex": "build"
+    }
   ],
   "requirements": [
 
