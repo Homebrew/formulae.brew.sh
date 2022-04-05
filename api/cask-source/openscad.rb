@@ -9,6 +9,7 @@ cask "openscad" do
 
   livecheck do
     url "https://files.openscad.org/"
+    strategy :page_match
     regex(/href=.*?OpenSCAD-(\d+(?:\.\d+)*)\.dmg/i)
   end
 

@@ -1,15 +1,8 @@
 cask "beekeeper-studio" do
-  version "3.3.8"
+  version "3.2.1"
+  sha256 "295bde2be2d95699fe4f5e8ee6a2a66a50d4d84e9a81ee9861073d1392231456"
 
-  arch = Hardware::CPU.intel? ? "" : "-arm64"
-
-  if Hardware::CPU.intel?
-    sha256 "ddcbf5227ef4cf11d50e782419005f88c17c7bdd3c800f1af5149487262eee1e"
-  else
-    sha256 "ad3448e874fbb60de7ee9596007c7c8d0cef23fdb1aba5ba3342a06567c28f62"
-  end
-
-  url "https://github.com/beekeeper-studio/beekeeper-studio/releases/download/v#{version}/Beekeeper-Studio-#{version}#{arch}.dmg",
+  url "https://github.com/beekeeper-studio/beekeeper-studio/releases/download/v#{version}/Beekeeper-Studio-#{version}.dmg",
       verified: "github.com/beekeeper-studio/beekeeper-studio/"
   name "Beekeeper Studio"
   desc "Cross platform SQL editor and database management app"

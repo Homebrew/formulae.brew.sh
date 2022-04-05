@@ -9,6 +9,7 @@ cask "texmaker" do
 
   livecheck do
     url "https://www.xm1math.net/texmaker/download.html"
+    strategy :page_match
     regex(%r{href=.*?/texmaker-(\d+(?:\.\d+)*)\.dmg}i)
   end
 

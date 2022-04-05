@@ -9,6 +9,7 @@ cask "mesasqlite" do
 
   livecheck do
     url "http://www.desertsandsoftware.com/?page_id=99"
+    strategy :page_match
     regex(/version\s*(\d+(?:\.\d+)*)/i)
   end
 

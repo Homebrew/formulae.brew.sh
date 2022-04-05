@@ -9,6 +9,7 @@ cask "roaringapps" do
 
   livecheck do
     url :homepage
+    strategy :page_match
     regex(%r{href=.*?/RoaringApps-(\d+(?:\.\d+)*)\.zip}i)
   end
 

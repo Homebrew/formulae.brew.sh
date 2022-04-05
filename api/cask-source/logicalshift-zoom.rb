@@ -9,6 +9,7 @@ cask "logicalshift-zoom" do
 
   livecheck do
     url "https://www.logicalshift.co.uk/unix/zoom/older.html"
+    strategy :page_match
     regex(%r{href=.*?/Zoom-(\d+(?:\.\d+)*)\.dmg}i)
   end
 

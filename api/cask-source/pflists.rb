@@ -8,6 +8,7 @@ cask "pflists" do
 
   livecheck do
     url "https://www.hanynet.com/pflists/"
+    strategy :page_match
     regex(%r{href=.*?/pflists-(\d+(?:\.\d+)*)\.zip}i)
   end
 

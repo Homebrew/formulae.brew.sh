@@ -1,23 +1,16 @@
 cask "scilab" do
-  prefix = Hardware::CPU.intel? ? "" : "accelerate-" # there is also an "openblas-" version
-
   version "6.1.1"
+  sha256 "922e879979fe4e1fde83be4b3df02070c0930a56a75cdeb9b5ef46ae29f0ef57"
 
-  if Hardware::CPU.intel?
-    sha256 "b417aace594cba882b19c2711aa125d8374d5da8b0a24df2873592765598e457"
-  else
-    sha256 "2f87710fc47c6d8e6777ee280ece589342e536c17290b9c033ea0dfcef3b4912"
-  end
-
-  url "https://www.utc.fr/~mottelet/scilab/download/#{version}/scilab-#{version}-#{prefix}#{Hardware::CPU.arch}.dmg",
+  url "https://www.utc.fr/~mottelet/scilab/download/#{version}/scilab-#{version}-x86_64.dmg",
       verified: "utc.fr/~mottelet/scilab/"
   name "Scilab"
   desc "Software for numerical computation"
   homepage "https://www.scilab.org/"
 
   livecheck do
-    url "https://www.utc.fr/~mottelet/scilab_for_macOS.html"
-    regex(/href=.*?scilab[._-]v?(\d+(?:\.\d+)+)-#{prefix}#{Hardware::CPU.arch}\.dmg/i)
+    url "https://www.scilab.org/download/"
+    strategy :header_match
   end
 
   depends_on macos: ">= :high_sierra"

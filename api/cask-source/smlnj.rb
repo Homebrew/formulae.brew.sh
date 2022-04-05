@@ -10,6 +10,7 @@ cask "smlnj" do
 
   livecheck do
     url :homepage
+    strategy :page_match
     regex(%r{href=.*?/smlnj-amd64-(\d+(?:\.\d+)*)\.pkg}i)
   end
 

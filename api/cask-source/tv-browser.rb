@@ -8,11 +8,8 @@ cask "tv-browser" do
   desc "Electronic TV guide"
   homepage "https://www.tvbrowser.org/"
 
-  # TV-Browser has used a single-digit version (4) for a major version release
-  # in the past, so this has to use the looser (*) version regex format.
   livecheck do
-    url :url
-    regex(%r{url=.*?/tvbrowser[._-]v?(\d+(?:\.\d+)*)(?:[._-]mac(?:java)?)?\.dmg}i)
+    regex(%r{url=.*?/tvbrowser/files/.*?[-_/](\d+(?:[-.]\d+)+)[._-]macjava.dmg}i)
   end
 
   app "TV-Browser.app"

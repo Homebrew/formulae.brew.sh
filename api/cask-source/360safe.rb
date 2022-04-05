@@ -9,6 +9,7 @@ cask "360safe" do
 
   livecheck do
     url "https://www.360totalsecurity.com/en/version/360-total-security-mac/"
+    strategy :page_match
     regex(/version-history-list.*?(\d+(?:\.\d+)+)/i)
   end
 

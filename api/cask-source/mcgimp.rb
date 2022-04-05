@@ -9,6 +9,7 @@ cask "mcgimp" do
 
   livecheck do
     url :homepage
+    strategy :page_match
     regex(%r{href=.*?/McGimp-(\d+(?:\.\d+)*)\.app\.zip}i)
   end
 

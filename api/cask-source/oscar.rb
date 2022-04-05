@@ -10,6 +10,7 @@ cask "oscar" do
 
   livecheck do
     url "https://www.sleepfiles.com/OSCAR/"
+    strategy :page_match
     regex(%r{href=.*?/OSCAR-(\d+(?:\.\d+)*)\.dmg}i)
   end
 

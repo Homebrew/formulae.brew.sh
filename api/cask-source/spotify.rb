@@ -1,7 +1,12 @@
 cask "spotify" do
   arch = Hardware::CPU.intel? ? "" : "ARM64"
 
-  version "1.1.81.604,ccacfc8c,16"
+  if Hardware::CPU.intel?
+    version "1.1.81.604,ccacfc8c,16"
+  else
+    version "1.1.80.699,gc3dac750,7"
+  end
+
   sha256 :no_check
 
   url "https://download.scdn.co/Spotify#{arch}.dmg",

@@ -9,6 +9,7 @@ cask "switchresx" do
 
   livecheck do
     url "https://www.madrau.com/srx_download/srx_download/history.php"
+    strategy :page_match
     regex(/SwitchResX\s*(\d+(?:\.\d+)*)/i)
   end
 

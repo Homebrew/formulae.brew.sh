@@ -13,8 +13,6 @@ cask "image2icon" do
     strategy :sparkle
   end
 
-  auto_updates true
-
   app "Image2Icon.app"
 
   zap trash: [

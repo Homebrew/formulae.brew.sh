@@ -7,14 +7,14 @@
   ],
   "desc": "Client program for the OpenVPN Access Server",
   "homepage": "https://openvpn.net/client-connect-vpn-for-mac-os/",
-  "url": "https://swupdate.openvpn.net/downloads/connect/openvpn-connect-3.3.5.4310_signed.dmg",
+  "url": "https://swupdate.openvpn.net/downloads/connect/openvpn-connect-3.3.4.4269_signed.dmg",
   "appcast": null,
-  "version": "3.3.5,4310",
+  "version": "3.3.4,4269",
   "versions": {
   },
   "installed": null,
   "outdated": false,
-  "sha256": "2cdf0138b949eee1e6675616bd32e42d97434ba270604d2d7bc1e899c961657f",
+  "sha256": "3274ef48eaf6d3557cd09958227360825f8cba8c40b6691a5050aae93ebfe18b",
   "artifacts": [
     {
       "quit": "org.openvpn.client.app",
@@ -22,6 +22,10 @@
         "org.openvpn.client",
         "org.openvpn.helper"
       ],
+      "script": {
+        "executable": "/Applications/OpenVPN Connect/Uninstall OpenVPN Connect.app/Contents/Resources/remove.sh",
+        "sudo": "true"
+      },
       "pkgutil": [
         "org.openvpn.client_framework.pkg",
         "org.openvpn.client_launch.pkg",
@@ -30,32 +34,15 @@
         "org.openvpn.helper_framework.pkg",
         "org.openvpn.helper_launch.pkg"
       ],
-      "delete": [
-        "/Applications/OpenVPN Connect",
-        "/Applications/OpenVPN Connect.app"
-      ],
-      "login_item": [
-        "OpenVPN Connect"
-      ],
       "signal": {
       }
     },
-    "OpenVPN_Connect_3_3_5(4310)_Installer_signed.pkg (Pkg)",
+    "OpenVPN_Connect_3_3_4(4269)_Installer_signed.pkg (Pkg)",
     {
       "trash": [
         "~/Library/Application Support/OpenVPN Connect",
-        "~/Library/Logs/OpenVPN Connect",
-        "~/Library/Preferences/org.openvpn.client.app.helper.plist",
-        "~/Library/Preferences/org.openvpn.client.app.plist",
-        "~/Library/Saved Application State/org.openvpn.client.app.savedState"
+        "~/Library/Preferences/org.openvpn.client.app.plist"
       ],
-      "script": {
-        "executable": "security",
-        "args": [
-          "delete-keychain",
-          "openvpn.keychain-db"
-        ]
-      },
       "signal": {
       }
     }

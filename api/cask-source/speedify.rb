@@ -1,14 +1,14 @@
 cask "speedify" do
-  version "11.9.2,8960"
-  sha256 "71c0f67a5301e065a696e18f6373d57c8ced97675dc6d0cb1aa84c299a520bed"
+  version "11.8.0,8872"
+  sha256 :no_check
 
-  url "https://downloads.speedify.com/Speedify-#{version.csv.first}.#{version.csv.second}.dmg"
+  url "https://downloads.speedify.com/speedify.php?platform=osx"
   name "Speedify"
   desc "VPN client"
   homepage "https://speedify.com/"
 
   livecheck do
-    url "https://downloads.speedify.com/speedify.php?platform=osx"
+    url :url
     strategy :extract_plist
   end
 

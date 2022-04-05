@@ -16,6 +16,7 @@ cask "mamp" do
 
   livecheck do
     url "https://www.mamp.info/en/downloads/"
+    strategy :page_match
     regex(%r{href=.*?/MAMP[._-]MAMP[._-]PRO[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.pkg}i)
   end
 

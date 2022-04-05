@@ -9,6 +9,7 @@ cask "nisus-thesaurus" do
 
   livecheck do
     url "https://nisus.com/Thesaurus/updates.php"
+    strategy :page_match
     regex(/Version\s*(\d+(?:\.\d+)*)/i)
   end
 

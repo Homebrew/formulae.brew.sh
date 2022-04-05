@@ -9,6 +9,7 @@ cask "qr-journal" do
 
   livecheck do
     url :homepage
+    strategy :page_match
     regex(%r{href=.*?/QRJournal(\d+(?:\.\d+)*)\.dmg}i)
   end
 

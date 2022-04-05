@@ -9,6 +9,7 @@ cask "leksah" do
 
   livecheck do
     url "http://www.leksah.org/packages/"
+    strategy :page_match
     regex(/href=.*?leksah-(\d+(?:\.\d+)*-ghc-\d+(?:\.\d+)*)\.dmg/i)
   end
 

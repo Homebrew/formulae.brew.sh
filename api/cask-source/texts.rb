@@ -9,6 +9,7 @@ cask "texts" do
 
   livecheck do
     url "http://www.texts.io/download/"
+    strategy :page_match
     regex(%r{href=.*?/Texts-(\d+(?:\.\d+)*)\.dmg}i)
   end
 

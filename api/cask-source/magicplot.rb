@@ -9,6 +9,7 @@ cask "magicplot" do
 
   livecheck do
     url :homepage
+    strategy :page_match
     regex(/href=.*?MagicPlot(\d+(?:\.\d+)*)\.zip/i)
   end
 
