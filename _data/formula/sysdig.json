@@ -13,43 +13,53 @@
   "license": "Apache-2.0",
   "homepage": "https://sysdig.com/",
   "versions": {
-    "stable": "0.28.0",
-    "head": null,
+    "stable": "0.29.1",
+    "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/draios/sysdig/archive/0.28.0.tar.gz",
+      "url": "https://github.com/draios/sysdig/archive/0.29.1.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 4,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/sysdig/blobs/sha256:99007e29c317d182eac5d1bbc012923cfe79fe55d18a2d67c59a1ccfc5f1f4cd",
+          "sha256": "99007e29c317d182eac5d1bbc012923cfe79fe55d18a2d67c59a1ccfc5f1f4cd"
+        },
+        "arm64_big_sur": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/sysdig/blobs/sha256:f5cd5f54755bc6a11cd7caa668b77443cef3525d5ecd83c16ac55f457ad8e825",
+          "sha256": "f5cd5f54755bc6a11cd7caa668b77443cef3525d5ecd83c16ac55f457ad8e825"
+        },
         "monterey": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/sysdig/blobs/sha256:27f12b16506648c0008931a50dd62f95e471a6f3f9e7595b7ab70e66e0ba8e30",
-          "sha256": "27f12b16506648c0008931a50dd62f95e471a6f3f9e7595b7ab70e66e0ba8e30"
+          "url": "https://ghcr.io/v2/homebrew/core/sysdig/blobs/sha256:9e216bff3c6b1aa19f941e59ff1ebf87f8ae654652b3a420b9b241e06273f117",
+          "sha256": "9e216bff3c6b1aa19f941e59ff1ebf87f8ae654652b3a420b9b241e06273f117"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/sysdig/blobs/sha256:a2d83b0067680f370a49439986ab6ffe15aa40b18be6449055d62f3c363cc418",
-          "sha256": "a2d83b0067680f370a49439986ab6ffe15aa40b18be6449055d62f3c363cc418"
+          "url": "https://ghcr.io/v2/homebrew/core/sysdig/blobs/sha256:e0dc81c3a526b17c763adef4571ed9d45f363e34bdc60b7ec0b70aba60e45f1d",
+          "sha256": "e0dc81c3a526b17c763adef4571ed9d45f363e34bdc60b7ec0b70aba60e45f1d"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/sysdig/blobs/sha256:e1ca7ff40901f9b89f38a36f3e8e211d6da2799d3bd5ce8ed2edeb0784fe25e6",
-          "sha256": "e1ca7ff40901f9b89f38a36f3e8e211d6da2799d3bd5ce8ed2edeb0784fe25e6"
+          "url": "https://ghcr.io/v2/homebrew/core/sysdig/blobs/sha256:7224fe9f8964fccd29f046e071e2d36aa0828b74afa68c57618928c007bda98c",
+          "sha256": "7224fe9f8964fccd29f046e071e2d36aa0828b74afa68c57618928c007bda98c"
         },
         "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/sysdig/blobs/sha256:848cb41fbe1057fbcd8579642abca78eae8ab5d2e22d86c30cc8871395d5110d",
-          "sha256": "848cb41fbe1057fbcd8579642abca78eae8ab5d2e22d86c30cc8871395d5110d"
+          "url": "https://ghcr.io/v2/homebrew/core/sysdig/blobs/sha256:7160997a58095eb261ab953439596afdb5eaf25030fdf4796d8d470361f92d3a",
+          "sha256": "7160997a58095eb261ab953439596afdb5eaf25030fdf4796d8d470361f92d3a"
         }
       }
     }
@@ -66,9 +76,10 @@
   "dependencies": [
     "c-ares",
     "jsoncpp",
-    "luajit",
+    "luajit-openresty",
     "openssl@1.1",
-    "tbb"
+    "tbb",
+    "yaml-cpp"
   ],
   "recommended_dependencies": [
 
