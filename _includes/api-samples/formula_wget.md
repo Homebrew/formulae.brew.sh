@@ -102,7 +102,7 @@
         },
         {
           "full_name": "ca-certificates",
-          "version": "2022-03-18",
+          "version": "2022-03-29",
           "declared_directly": false
         },
         {
@@ -127,35 +127,35 @@
   "analytics": {
     "install": {
       "30d": {
-        "wget": 199515,
+        "wget": 202496,
         "wget --HEAD": 3
       },
       "90d": {
-        "wget": 489571,
-        "wget --HEAD": 16
+        "wget": 492292,
+        "wget --HEAD": 15
       },
       "365d": {
-        "wget": 1851787,
-        "wget --HEAD": 107
+        "wget": 1853402,
+        "wget --HEAD": 105
       }
     },
     "install_on_request": {
       "30d": {
-        "wget": 198528,
+        "wget": 201463,
         "wget --HEAD": 3
       },
       "90d": {
-        "wget": 487067,
-        "wget --HEAD": 16
+        "wget": 489759,
+        "wget --HEAD": 15
       },
       "365d": {
-        "wget": 1843622,
-        "wget --HEAD": 104
+        "wget": 1845201,
+        "wget --HEAD": 102
       }
     },
     "build_error": {
       "30d": {
-        "wget": 29,
+        "wget": 27,
         "wget --HEAD": 2
       }
     }
