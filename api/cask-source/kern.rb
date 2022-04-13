@@ -9,7 +9,7 @@ cask "kern" do
 
   livecheck do
     url :homepage
-    regex(/v(\d+(?:\.\d+)+)/i)
+    regex(/v(\d+(?:\.\d+)+)/)
   end
 
   pkg "kern_#{version.dots_to_underscores}_mac.pkg"

@@ -10,6 +10,7 @@ cask "nally" do
 
   livecheck do
     url "https://yllan.org/app/Nally/"
+    strategy :page_match
     regex(%r{href=.*?/Nally-(\d+(?:\.\d+)*)\.app\.zip}i)
   end
 

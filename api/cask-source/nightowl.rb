@@ -9,6 +9,7 @@ cask "nightowl" do
 
   livecheck do
     url "https://nightowl.kramser.xyz/api/public_update"
+    strategy :page_match
     regex(/"version":\s*"(\d+(?:\.\d+)*)/i)
   end
 

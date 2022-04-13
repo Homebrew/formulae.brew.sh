@@ -9,6 +9,7 @@ cask "logicsniffer" do
 
   livecheck do
     url :homepage
+    strategy :page_match
     regex(%r{href=.*?/ols-(\d+(?:\.\d+)*)-full\.dmg}i)
   end
 

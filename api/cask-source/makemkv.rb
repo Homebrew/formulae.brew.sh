@@ -16,9 +16,7 @@ cask "makemkv" do
   binary "#{appdir}/MakeMKV.app/Contents/MacOS/makemkvcon"
 
   zap trash: [
-    "~/Library/MakeMKV",
     "~/Library/Preferences/com.makemkv.MakeMKV.plist",
     "~/Library/Saved Application State/com.makemkv.MakeMKV.savedState",
-    "~/Movies/.MakeMKV",
   ]
 end

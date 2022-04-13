@@ -1,5 +1,5 @@
 cask "plistedit-pro" do
-  version "1.9.5,933"
+  version "1.9.3,928"
   sha256 :no_check
 
   url "https://www.fatcatsoftware.com/plisteditpro/PlistEditPro.zip"
@@ -8,7 +8,7 @@ cask "plistedit-pro" do
   homepage "https://www.fatcatsoftware.com/plisteditpro/"
 
   livecheck do
-    url "https://www.fatcatsoftware.com/plisteditpro/downloads/appcast.xml"
+    url "https://www.fatcatsoftware.com/plisteditpro/plisteditpro_appcast.xml"
     strategy :sparkle
   end
 

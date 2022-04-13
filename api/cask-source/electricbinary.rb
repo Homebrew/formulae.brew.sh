@@ -9,6 +9,7 @@ cask "electricbinary" do
 
   livecheck do
     url "https://ftp.gnu.org/pub/gnu/electric/"
+    strategy :page_match
     regex(/href=.*?electricBinary-(\d+(?:\.\d+)*)\.jar/i)
   end
 

@@ -9,6 +9,7 @@ cask "leela" do
 
   livecheck do
     url "https://sjeng.org/leela.html"
+    strategy :page_match
     regex(%r{href=.*?/Leela_(\d+(?:\.\d+)*)\.dmg}i)
   end
 

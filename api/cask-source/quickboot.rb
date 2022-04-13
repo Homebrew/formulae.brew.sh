@@ -8,6 +8,7 @@ cask "quickboot" do
 
   livecheck do
     url :homepage
+    strategy :page_match
     regex(%r{href=.*?/QuickBoot-(\d+(?:\.\d+)*-\d+)\.zip}i)
   end
 

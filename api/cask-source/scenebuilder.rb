@@ -9,6 +9,7 @@ cask "scenebuilder" do
 
   livecheck do
     url :homepage
+    strategy :page_match
     regex(%r{href=.*?/SceneBuilder-(\d+(?:\.\d+)*)\.dmg}i)
   end
 

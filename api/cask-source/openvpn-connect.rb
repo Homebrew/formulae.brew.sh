@@ -1,6 +1,6 @@
 cask "openvpn-connect" do
-  version "3.3.5,4310"
-  sha256 "2cdf0138b949eee1e6675616bd32e42d97434ba270604d2d7bc1e899c961657f"
+  version "3.3.4,4269"
+  sha256 "3274ef48eaf6d3557cd09958227360825f8cba8c40b6691a5050aae93ebfe18b"
 
   url "https://swupdate.openvpn.net/downloads/connect/openvpn-connect-#{version.csv.first}.#{version.csv.second}_signed.dmg"
   name "OpenVPN Connect client"
@@ -21,35 +21,26 @@ cask "openvpn-connect" do
 
   pkg "OpenVPN_Connect_#{version.csv.first.dots_to_underscores}(#{version.csv.second})_Installer_signed.pkg"
 
-  uninstall quit:       "org.openvpn.client.app",
-            launchctl:  [
+  uninstall quit:      "org.openvpn.client.app",
+            launchctl: [
               "org.openvpn.client",
               "org.openvpn.helper",
             ],
-            pkgutil:    [
+            script:    {
+              executable: "/Applications/OpenVPN Connect/Uninstall OpenVPN Connect.app/Contents/Resources/remove.sh",
+              sudo:       true,
+            },
+            pkgutil:   [
               "org.openvpn.client_framework.pkg",
               "org.openvpn.client_launch.pkg",
               "org.openvpn.client_uninstall.pkg",
               "org.openvpn.client.pkg",
               "org.openvpn.helper_framework.pkg",
               "org.openvpn.helper_launch.pkg",
-            ],
-            delete:     [
-              "/Applications/OpenVPN Connect",
-              "/Applications/OpenVPN Connect.app",
-            ],
-            login_item: [
-              "OpenVPN Connect",
             ]
 
   zap trash: [
     "~/Library/Application Support/OpenVPN Connect",
-    "~/Library/Logs/OpenVPN Connect",
-    "~/Library/Preferences/org.openvpn.client.app.helper.plist",
     "~/Library/Preferences/org.openvpn.client.app.plist",
-    "~/Library/Saved Application State/org.openvpn.client.app.savedState",
-  ], script: {
-    executable: "security",
-    args:       ["delete-keychain", "openvpn.keychain-db"],
-  }
+  ]
 end

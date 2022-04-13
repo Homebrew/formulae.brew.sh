@@ -9,6 +9,7 @@ cask "tnefs-enough" do
 
   livecheck do
     url :homepage
+    strategy :page_match
     regex(%r{href=.*?/TNEF(\d+(?:\.\d+)*)\.dmg}i)
   end
 

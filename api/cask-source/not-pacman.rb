@@ -8,6 +8,7 @@ cask "not-pacman" do
 
   livecheck do
     url "https://stabyourself.net/notpacman"
+    strategy :page_match
     regex(%r{href=.*?/dl\.php\?file=notpacman-(\d+)/notpacman-osx\.zip}i)
   end
 

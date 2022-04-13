@@ -9,6 +9,7 @@ cask "scidvsmac" do
 
   livecheck do
     url :homepage
+    strategy :page_match
     regex(/ScidvsMac-(\d+(?:\.\d+)*)\.dmg/i)
   end
 

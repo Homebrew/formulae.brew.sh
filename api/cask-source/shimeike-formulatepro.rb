@@ -9,7 +9,7 @@ cask "shimeike-formulatepro" do
 
   livecheck do
     url :url
-    regex(/^v?(\d+(?:\.\d+)+)[a-z]?$/i)
+    regex(/^v?(\d+(?:\.\d+)+)[a-z]?$/)
   end
 
   app "FormulatePro.app"

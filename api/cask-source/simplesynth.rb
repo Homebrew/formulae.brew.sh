@@ -9,6 +9,7 @@ cask "simplesynth" do
 
   livecheck do
     url :homepage
+    strategy :page_match
     regex(%r{href=.*?/SimpleSynth-(\d+(?:\.\d+)*)\.zip}i)
   end
 

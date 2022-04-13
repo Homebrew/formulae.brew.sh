@@ -9,6 +9,7 @@ cask "medibangpaintpro" do
 
   livecheck do
     url "https://medibangpaint.com/en/app-download/"
+    strategy :page_match
     regex(%r{href=.*?/MediBangPaintPro-(\d+(?:\.\d+)*)\.dmg}i)
   end
 

@@ -5,7 +5,7 @@
   "name": [
     "Paragon NTFS for Mac"
   ],
-  "desc": "Paragon read-write NTFS driver",
+  "desc": null,
   "homepage": "https://www.paragon-software.com/ufsdhome/ntfs-mac/",
   "url": "https://dl.paragon-software.com/demo/ntfsmac15_trial.dmg",
   "appcast": null,
@@ -23,27 +23,13 @@
       "quit": "com.paragon-software.ntfs*",
       "signal": {
         "KILL": "com.paragon-software.ntfs.notification-agent"
-      },
-      "delete": [
-        "/Library/Application Support/Paragon Software/com.paragon-software.kernelio.kext",
-        "/Library/Application Support/Paragon Software/uc.ntfs",
-        "/Library/LaunchDaemons/com.paragon-software.installer.plist",
-        "/Library/PrivilegedHelperTools/com.paragon-software.installer"
-      ],
-      "rmdir": "/Library/Application Support/Paragon Software/"
+      }
     },
     {
       "path": "FSInstaller.app"
     },
     {
-      "trash": [
-        "~/Library/Application Support/com.paragon-software.ntfs.*",
-        "~/Library/Caches/com.paragon-software.ntfs.fsapp",
-        "~/Library/HTTPStorages/com.paragon-software.ntfs.*",
-        "~/Library/Preferences/com.paragon-software.ntfs.fsapp.plist",
-        "~/Library/Saved Application State/com.paragon-software.ntfs.fsapp.savedState",
-        "~/Library/WebKit/com.paragon-software.ntfs.fsapp"
-      ],
+      "trash": "~/Library/Preferences/com.paragon-software.ntfs.fsapp.plist",
       "signal": {
       }
     }

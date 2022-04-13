@@ -8,6 +8,7 @@ cask "nanostudio" do
 
   livecheck do
     url "https://www.blipinteractive.co.uk/nanostudio1/"
+    strategy :page_match
     regex(%r{href=.*?/NanoStudio-(\d+(?:\.\d+)*)\.dmg\.zip}i)
   end
 

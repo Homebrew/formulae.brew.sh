@@ -8,6 +8,7 @@ cask "teeworlds" do
 
   livecheck do
     url "https://teeworlds.com/?page=downloads"
+    strategy :page_match
     regex(%r{href=.*?/teeworlds-(\d+(?:\.\d+)*)-osx\.dmg}i)
   end
 

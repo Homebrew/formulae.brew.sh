@@ -16,7 +16,7 @@ cask "audiogridder-plugin" do
 
   livecheck do
     url "https://audiogridder.com/releases/latest.txt"
-    regex(/(\d+(?:\.\d+)+)/i)
+    regex(/(\d+(?:\.\d+)+)/)
   end
 
   pkg "AudioGridderPlugin_#{version}_macOS-#{arch}.pkg"

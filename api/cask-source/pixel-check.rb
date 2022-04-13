@@ -8,6 +8,7 @@ cask "pixel-check" do
 
   livecheck do
     url "http://macguitar.me/apps/pixelcheck/"
+    strategy :page_match
     regex(%r{href=.*?/PXC(\d+(?:\.\d+)*)\.zip}i)
   end
 

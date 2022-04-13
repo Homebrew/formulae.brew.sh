@@ -9,6 +9,7 @@ cask "olive" do
 
   livecheck do
     url "https://olivevideoeditor.org/download.php"
+    strategy :page_match
     regex(/golegacy\.php\?hash=(.*)&type=/i)
   end
 

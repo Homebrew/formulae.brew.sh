@@ -9,6 +9,7 @@ cask "netlogo" do
 
   livecheck do
     url "https://ccl.northwestern.edu/netlogo/oldversions.shtml"
+    strategy :page_match
     regex(/NetLogo\s*(\d+(?:\.\d+)+)/i)
   end
 

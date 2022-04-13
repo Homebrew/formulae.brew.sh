@@ -10,7 +10,7 @@ cask "pynsource" do
 
   livecheck do
     url :url
-    regex(/^version[._-]v?(\d+(?:\.\d+)+)$/i)
+    regex(/^version[._-]v?(\d+(?:\.\d+)+)$/)
   end
 
   app "Pynsource.app"

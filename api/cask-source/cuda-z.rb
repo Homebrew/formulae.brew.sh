@@ -9,6 +9,7 @@ cask "cuda-z" do
 
   livecheck do
     url :homepage
+    strategy :page_match
     regex(/CUDA-Z-(\d+(?:\.\d+)+)\.dmg/i)
   end
 

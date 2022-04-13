@@ -9,7 +9,7 @@ cask "the-watcher" do
 
   livecheck do
     url "https://watcher.app/downloads/latest-version.txt"
-    regex(/(\d+(?:\.\d+)+)/i)
+    regex(/(\d+(?:\.\d+)+)/)
   end
 
   depends_on macos: ">= :big_sur"

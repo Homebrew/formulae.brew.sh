@@ -9,6 +9,7 @@ cask "valley" do
 
   livecheck do
     url :homepage
+    strategy :page_match
     regex(%r{href=.*?/Unigine_Valley-(\d+(?:\.\d+)*)\.dmg}i)
   end
 

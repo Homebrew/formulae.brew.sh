@@ -9,7 +9,8 @@ cask "mini-vmac" do
 
   livecheck do
     url "https://www.gryphel.com/d/minivmac/md5.txt"
-    regex(/minivmac[._-]v?(\d+(?:\.\d+)+)[._-]mc64[._-]bin\.t/i)
+    strategy :page_match
+    regex(/minivmac-(\d+(?:\.\d+)*)-mc64.bin\.tgz/i)
   end
 
   app "Mini vMac.app"

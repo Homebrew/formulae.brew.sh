@@ -9,7 +9,7 @@ cask "virtualbox-extension-pack" do
 
   livecheck do
     url "https://download.virtualbox.org/virtualbox/LATEST.TXT"
-    regex(/(\d+(?:\.\d+)+)/i)
+    regex(/(\d+(?:\.\d+)+)/)
   end
 
   conflicts_with cask: "virtualbox-extension-pack-beta"
