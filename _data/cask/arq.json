@@ -7,22 +7,20 @@
   ],
   "desc": "Multi-cloud backup application",
   "homepage": "https://www.arqbackup.com/",
-  "url": "https://www.arqbackup.com/download/arqbackup/Arq7.15.pkg",
+  "url": "https://www.arqbackup.com/download/arqbackup/Arq7.18.1.pkg",
   "appcast": null,
-  "version": "7.15",
+  "version": "7.18.1",
   "versions": {
   },
   "installed": null,
   "outdated": false,
-  "sha256": "d6142fc7ff8bd72390c5ba312a56e6d14ef3fbb96cc0f155c60610cf142770fb",
+  "sha256": "58094b8364bb1c9d2f4322d9c44548139776ed4f2018915393937b80f4307f33",
   "artifacts": [
     {
       "pkgutil": "com.haystacksoftware.Arq",
       "quit": "com.haystacksoftware.Arq",
       "delete": [
-        "/Applications/Arq.app",
-        "/Library/Application Support/ArqAgent",
-        "/Library/Application Support/ArqAgentAPFS"
+        "/Applications/Arq.app"
       ],
       "launchctl": [
         "com.haystacksoftware.ArqMonitor",
@@ -31,9 +29,16 @@
       "signal": {
       }
     },
-    "Arq7.15.pkg (Pkg)",
+    "Arq7.18.1.pkg (Pkg)",
     {
-      "trash": "~/Library/Application Support/Arq *",
+      "trash": [
+        "~/Library/Arq *",
+        "~/Library/Application Support/Arq *",
+        "~/Library/Preferences/com.haystacksoftware.Arq.plist",
+        "~/Library/Preferences/com.haystacksoftware.ArqMonitor.plist",
+        "/Library/Application Support/ArqAgent",
+        "/Library/Application Support/ArqAgentAPFS"
+      ],
       "signal": {
       }
     }

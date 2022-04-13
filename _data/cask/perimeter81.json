@@ -7,14 +7,14 @@
   ],
   "desc": "Zero trust network as a service client",
   "homepage": "https://perimeter81.com/",
-  "url": "https://static.perimeter81.com/apps/osx/sdp/Perimeter81.pkg",
+  "url": "https://static.perimeter81.com/agents/mac/Perimeter81_8.0.4.116.pkg",
   "appcast": null,
-  "version": "7.0.0",
+  "version": "8.0.4.116",
   "versions": {
   },
   "installed": null,
   "outdated": false,
-  "sha256": "no_check",
+  "sha256": "48be8a6437053f1ae04273877a2e880676208b88a40045f4455485ecd5e76655",
   "artifacts": [
     {
       "pkgutil": "com.safervpn.osx.smb",
@@ -22,12 +22,18 @@
         "TERM": "com.safervpn.osx.smb"
       },
       "launchctl": [
+        "system/com.perimeter81d",
+        "com.perimeter81d",
+        "com.perimeter81d.app",
         "com.perimeter81.Perimeter81",
         "com.perimeter81.osx.HelperTool"
       ],
-      "delete": "/Library/PrivilegedHelperTools/com.perimeter81.osx.HelperTool"
+      "delete": [
+        "/Library/PrivilegedHelperTools/com.perimeter81.osx.HelperTool",
+        "/Library/PrivilegedHelperTools/com.perimeter81d.app/Contents/MacOS/com.perimeter81d"
+      ]
     },
-    "Perimeter81.pkg (Pkg)",
+    "Perimeter81_8.0.4.116.pkg (Pkg)",
     {
       "trash": [
         "~/Library/Application Support/com.safervpn.osx.smb",
