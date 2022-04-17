@@ -13,13 +13,13 @@
   "license": "GPL-2.0",
   "homepage": "https://www.nagios.org/",
   "versions": {
-    "stable": "4.4.6",
+    "stable": "4.4.7",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://downloads.sourceforge.net/project/nagios/nagios-4.x/nagios-4.4.6/nagios-4.4.6.tar.gz",
+      "url": "https://downloads.sourceforge.net/project/nagios/nagios-4.x/nagios-4.4.7/nagios-4.4.7.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,38 +28,33 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 2,
+      "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
         "arm64_monterey": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/nagios/blobs/sha256:2b77251a1b5c81fb004289653d2638bc4b48204969ae564da6aba1b1d7934ef4",
-          "sha256": "2b77251a1b5c81fb004289653d2638bc4b48204969ae564da6aba1b1d7934ef4"
+          "url": "https://ghcr.io/v2/homebrew/core/nagios/blobs/sha256:0cf6b15c9ae411bb833a5e3a02f00cf79dfe848f96f263a76b13ff6aa95b8c08",
+          "sha256": "0cf6b15c9ae411bb833a5e3a02f00cf79dfe848f96f263a76b13ff6aa95b8c08"
         },
         "arm64_big_sur": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/nagios/blobs/sha256:1ed969491c110280e2a679170c7848d78b15eb9a06bcef27a3fef551aad06b9c",
-          "sha256": "1ed969491c110280e2a679170c7848d78b15eb9a06bcef27a3fef551aad06b9c"
+          "url": "https://ghcr.io/v2/homebrew/core/nagios/blobs/sha256:27ef33f3fdeb9434d286ab412dde3a6b5b8c25cefba533320681f1daf136a7dc",
+          "sha256": "27ef33f3fdeb9434d286ab412dde3a6b5b8c25cefba533320681f1daf136a7dc"
         },
         "monterey": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/nagios/blobs/sha256:452a9ca237648ee83cace7f6eb1ba098b8bd6d3ccb927301908edb975945d82c",
-          "sha256": "452a9ca237648ee83cace7f6eb1ba098b8bd6d3ccb927301908edb975945d82c"
+          "url": "https://ghcr.io/v2/homebrew/core/nagios/blobs/sha256:28aee4339d0c5a399ed695f66bedef3fa16dcd3779d500ed4a9ca919b8f19297",
+          "sha256": "28aee4339d0c5a399ed695f66bedef3fa16dcd3779d500ed4a9ca919b8f19297"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/nagios/blobs/sha256:6472fe7ecf390a6e320619c07c646177667b5f9fc1b142385b24fa07c6577d81",
-          "sha256": "6472fe7ecf390a6e320619c07c646177667b5f9fc1b142385b24fa07c6577d81"
+          "url": "https://ghcr.io/v2/homebrew/core/nagios/blobs/sha256:c6e08e7b0dccc9b77167145ec7dba514bb907eaadd7d2c7b4e15a73818d29649",
+          "sha256": "c6e08e7b0dccc9b77167145ec7dba514bb907eaadd7d2c7b4e15a73818d29649"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/nagios/blobs/sha256:f8e2718a8f2c5bc9041085a9ee8a79f3496330ed1f896cfcc66b84a3de4f08c8",
-          "sha256": "f8e2718a8f2c5bc9041085a9ee8a79f3496330ed1f896cfcc66b84a3de4f08c8"
-        },
-        "mojave": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/nagios/blobs/sha256:f74727cd114d3afb3b413391e2f34703b243292232de3e1344db43ab6259c7d8",
-          "sha256": "f74727cd114d3afb3b413391e2f34703b243292232de3e1344db43ab6259c7d8"
+          "url": "https://ghcr.io/v2/homebrew/core/nagios/blobs/sha256:382d4b6be1a3a45eac3f573cb2c6454f83ee6cf6befb4a4473ff43dbaef69551",
+          "sha256": "382d4b6be1a3a45eac3f573cb2c6454f83ee6cf6befb4a4473ff43dbaef69551"
         }
       }
     }
@@ -76,7 +71,8 @@
   "dependencies": [
     "gd",
     "libpng",
-    "nagios-plugins"
+    "nagios-plugins",
+    "openssl@1.1"
   ],
   "recommended_dependencies": [
 
@@ -93,7 +89,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "First we need to create a command dir using superhuman powers:\n\n  mkdir -p $(brew --prefix)/var/lib/nagios/rw\n  sudo chgrp _www $(brew --prefix)/var/lib/nagios/rw\n  sudo chmod 2775 $(brew --prefix)/var/lib/nagios/rw\n\nThen install the Nagios web frontend into Apple's built-in Apache:\n\n  1) Turn on Personal Web Sharing.\n\n  2) Load the cgi and php modules by patching /etc/apache2/httpd.conf:\n\n    -#LoadModule php5_module        libexec/apache2/libphp5.so\n    +LoadModule php5_module        libexec/apache2/libphp5.so\n\n    -#LoadModule cgi_module libexec/apache2/mod_cgi.so\n    +LoadModule cgi_module libexec/apache2/mod_cgi.so\n\n  3) Symlink the sample config and create your web account:\n\n    sudo ln -sf $(brew --prefix)/Cellar/nagios/4.4.6/share/nagios.conf /etc/apache2/other/\n    htpasswd -cs $(brew --prefix)/etc/nagios/htpasswd.users nagiosadmin\n    sudo apachectl restart\n\nLog in with your web account (and don't forget to RTFM :-)\n\n  open http://localhost/nagios\n\n",
+  "caveats": "First we need to create a command dir using superhuman powers:\n\n  mkdir -p $(brew --prefix)/var/lib/nagios/rw\n  sudo chgrp _www $(brew --prefix)/var/lib/nagios/rw\n  sudo chmod 2775 $(brew --prefix)/var/lib/nagios/rw\n\nThen install the Nagios web frontend into Apple's built-in Apache:\n\n  1) Turn on Personal Web Sharing.\n\n  2) Load the cgi and php modules by patching /etc/apache2/httpd.conf:\n\n    -#LoadModule php5_module        libexec/apache2/libphp5.so\n    +LoadModule php5_module        libexec/apache2/libphp5.so\n\n    -#LoadModule cgi_module libexec/apache2/mod_cgi.so\n    +LoadModule cgi_module libexec/apache2/mod_cgi.so\n\n  3) Symlink the sample config and create your web account:\n\n    sudo ln -sf $(brew --prefix)/Cellar/nagios/4.4.7/share/nagios.conf /etc/apache2/other/\n    htpasswd -cs $(brew --prefix)/etc/nagios/htpasswd.users nagiosadmin\n    sudo apachectl restart\n\nLog in with your web account (and don't forget to RTFM :-)\n\n  open http://localhost/nagios\n\n",
   "installed": [
 
   ],
