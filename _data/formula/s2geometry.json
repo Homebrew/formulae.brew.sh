@@ -13,43 +13,53 @@
   "license": "Apache-2.0",
   "homepage": "https://github.com/google/s2geometry",
   "versions": {
-    "stable": "0.9.0",
+    "stable": "0.10.0",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/google/s2geometry/archive/v0.9.0.tar.gz",
+      "url": "https://github.com/google/s2geometry/archive/v0.10.0.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 2,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/s2geometry/blobs/sha256:f5ae62a781be74d570f0c650bcc0cadd0c3c4a2138c8fe4d84b3cf92b45b8bab",
+          "sha256": "f5ae62a781be74d570f0c650bcc0cadd0c3c4a2138c8fe4d84b3cf92b45b8bab"
+        },
+        "arm64_big_sur": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/s2geometry/blobs/sha256:c1eb8f9f0550ef3fd9ac28d0e2ef2439267a58700e5a14ead2cee7a8d6419829",
+          "sha256": "c1eb8f9f0550ef3fd9ac28d0e2ef2439267a58700e5a14ead2cee7a8d6419829"
+        },
         "monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/s2geometry/blobs/sha256:48041de390b83abe6f77dd9b624b99846a444643077885745ec2f6f1fa212b54",
-          "sha256": "48041de390b83abe6f77dd9b624b99846a444643077885745ec2f6f1fa212b54"
+          "url": "https://ghcr.io/v2/homebrew/core/s2geometry/blobs/sha256:1517a221db901db944d606c2cb25680feeee9a89bacdec865167f7aac07d3410",
+          "sha256": "1517a221db901db944d606c2cb25680feeee9a89bacdec865167f7aac07d3410"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/s2geometry/blobs/sha256:68903a12c6383cbfef68c89a82c224aa5f51fc7fb03cd416b67f395aa134c218",
-          "sha256": "68903a12c6383cbfef68c89a82c224aa5f51fc7fb03cd416b67f395aa134c218"
+          "url": "https://ghcr.io/v2/homebrew/core/s2geometry/blobs/sha256:9af8adbc134bf233951eca8d1092d5ad1113304dbff197cb3e8c56a35c11a542",
+          "sha256": "9af8adbc134bf233951eca8d1092d5ad1113304dbff197cb3e8c56a35c11a542"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/s2geometry/blobs/sha256:be6efced1d7d6339598aa104619fafb57b8f3b8f87837882369a17511a1d4800",
-          "sha256": "be6efced1d7d6339598aa104619fafb57b8f3b8f87837882369a17511a1d4800"
+          "url": "https://ghcr.io/v2/homebrew/core/s2geometry/blobs/sha256:d9b29aad13307081b4f4d00e082a1698314ebc8f690d05e86b1c11bcdae89dc7",
+          "sha256": "d9b29aad13307081b4f4d00e082a1698314ebc8f690d05e86b1c11bcdae89dc7"
         },
-        "mojave": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/s2geometry/blobs/sha256:bb270713b3f271b75d992cd0bc76e594163c319104e9aac8ac58605dd7e31135",
-          "sha256": "bb270713b3f271b75d992cd0bc76e594163c319104e9aac8ac58605dd7e31135"
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/s2geometry/blobs/sha256:e57418caf840a4991114d7660c29eec116c5105efdb676248057d25caad44983",
+          "sha256": "e57418caf840a4991114d7660c29eec116c5105efdb676248057d25caad44983"
         }
       }
     }
@@ -61,11 +71,11 @@
 
   ],
   "build_dependencies": [
-    "cmake",
-    "glog",
-    "googletest"
+    "cmake"
   ],
   "dependencies": [
+    "abseil",
+    "glog",
     "openssl@1.1"
   ],
   "recommended_dependencies": [
