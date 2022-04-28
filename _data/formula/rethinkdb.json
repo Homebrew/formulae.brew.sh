@@ -13,13 +13,13 @@
   "license": "Apache-2.0",
   "homepage": "https://rethinkdb.com/",
   "versions": {
-    "stable": "2.4.1",
+    "stable": "2.4.2",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://download.rethinkdb.com/repository/raw/dist/rethinkdb-2.4.1.tgz",
+      "url": "https://download.rethinkdb.com/repository/raw/dist/rethinkdb-2.4.2.tgz",
       "tag": null,
       "revision": null
     }
@@ -28,28 +28,38 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/rethinkdb/blobs/sha256:987be35527e8b38d14adac7f8ce76de983ace1a0d75ae45689ebaab20d17560d",
+          "sha256": "987be35527e8b38d14adac7f8ce76de983ace1a0d75ae45689ebaab20d17560d"
+        },
+        "arm64_big_sur": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/rethinkdb/blobs/sha256:dd7cc0284f0fe97d3e90314ba5f9cf999a2d46bf0ae885c1c5400ddba5e31bf3",
+          "sha256": "dd7cc0284f0fe97d3e90314ba5f9cf999a2d46bf0ae885c1c5400ddba5e31bf3"
+        },
         "monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/rethinkdb/blobs/sha256:38494245ae4ca4cd8b7e5d95070bea8cf0525d37254e7c415e993538192baf09",
-          "sha256": "38494245ae4ca4cd8b7e5d95070bea8cf0525d37254e7c415e993538192baf09"
+          "url": "https://ghcr.io/v2/homebrew/core/rethinkdb/blobs/sha256:31fb40137594acac9e198d73fcab40abcaac5c743e9ea9679d64a6fbaa7ddad2",
+          "sha256": "31fb40137594acac9e198d73fcab40abcaac5c743e9ea9679d64a6fbaa7ddad2"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/rethinkdb/blobs/sha256:4f4b04c2bc0243cb1be67ee785e85cccbecf507899b439a0497920637e2c14cc",
-          "sha256": "4f4b04c2bc0243cb1be67ee785e85cccbecf507899b439a0497920637e2c14cc"
+          "url": "https://ghcr.io/v2/homebrew/core/rethinkdb/blobs/sha256:de667915331e34d36a60a23809b290e96a0ce3636748cde367d3a3f5aca6131d",
+          "sha256": "de667915331e34d36a60a23809b290e96a0ce3636748cde367d3a3f5aca6131d"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/rethinkdb/blobs/sha256:0937ad0dab31f165b3b33c0d8e9629b44ee4580e74009881ca097edb2a8157c2",
-          "sha256": "0937ad0dab31f165b3b33c0d8e9629b44ee4580e74009881ca097edb2a8157c2"
+          "url": "https://ghcr.io/v2/homebrew/core/rethinkdb/blobs/sha256:d6bc3dd9beaa5bfddca42ed872853813815b0ba558608612a3c676cd29947be1",
+          "sha256": "d6bc3dd9beaa5bfddca42ed872853813815b0ba558608612a3c676cd29947be1"
         },
-        "mojave": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/rethinkdb/blobs/sha256:35771b918dd1e41939aea3a8eec2b3fa8ee38ca4236c1ad0bd2695c3bb598caf",
-          "sha256": "35771b918dd1e41939aea3a8eec2b3fa8ee38ca4236c1ad0bd2695c3bb598caf"
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/rethinkdb/blobs/sha256:1681a0198b8f118040914abb46dd214783b0eec4c1d2c7230ed1bbea14b5d443",
+          "sha256": "1681a0198b8f118040914abb46dd214783b0eec4c1d2c7230ed1bbea14b5d443"
         }
       }
     }
@@ -64,7 +74,8 @@
     "boost"
   ],
   "dependencies": [
-    "openssl@1.1"
+    "openssl@1.1",
+    "protobuf"
   ],
   "recommended_dependencies": [
 
@@ -73,18 +84,15 @@
 
   ],
   "uses_from_macos": [
-    "curl"
+    {
+      "python": "build"
+    },
+    "curl",
+    "ncurses",
+    "zlib"
   ],
   "requirements": [
-    {
-      "name": "macos",
-      "cask": null,
-      "download": null,
-      "version": null,
-      "contexts": [
 
-      ]
-    }
   ],
   "conflicts_with": [
 
