@@ -14,7 +14,7 @@ cask "mullvadvpn" do
   end
 
   conflicts_with cask: "homebrew/cask-versions/mullvadvpn-beta"
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :high_sierra"
 
   pkg "MullvadVPN-#{version}.pkg"
 
