@@ -7,21 +7,26 @@
   ],
   "desc": "Kubernetes and container management on the desktop",
   "homepage": "https://rancherdesktop.io/",
-  "url": "https://github.com/rancher-sandbox/rancher-desktop/releases/download/v1.3.0/Rancher.Desktop-1.3.0.x86_64.dmg",
+  "url": "https://github.com/rancher-sandbox/rancher-desktop/releases/download/v1.2.1/Rancher.Desktop-1.2.1.x86_64.dmg",
   "appcast": null,
-  "version": "1.3.0",
+  "version": "1.2.1",
   "versions": {
   },
   "installed": null,
   "outdated": false,
-  "sha256": "b333b6083ebed0b6174c021e437675acc7ef661a15bdd4954eff2ac74d5472ce",
+  "sha256": "00f2c92da9a715ceb0c4e3b58dffe3a346c78ac7ed07564e1a6254c719149c21",
   "artifacts": [
     {
       "delete": [
         "/opt/rancher-desktop",
         "/private/etc/sudoers.d/zzzzz-rancher-desktop-lima",
         "/private/var/run/docker.sock",
-        "/private/var/run/rancher-desktop-*"
+        "/private/var/run/rancher-desktop-*",
+        "$(brew --prefix)/bin/docker",
+        "$(brew --prefix)/bin/helm",
+        "$(brew --prefix)/bin/kubectl",
+        "$(brew --prefix)/bin/nerdctl",
+        "$(brew --prefix)/bin/rdctl"
       ],
       "quit": "io.rancherdesktop.app",
       "signal": {
@@ -33,7 +38,6 @@
     {
       "trash": [
         "~/.kuberlr",
-        "~/.rd",
         "~/Library/Application Support/Caches/rancher-desktop-updater",
         "~/Library/Application Support/Rancher Desktop",
         "~/Library/Application Support/rancher-desktop",
@@ -55,6 +59,11 @@
   "conflicts_with": {
     "cask": [
       "docker"
+    ],
+    "formula": [
+      "docker",
+      "helm",
+      "kubernetes-cli"
     ]
   },
   "container": null,

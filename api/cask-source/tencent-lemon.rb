@@ -13,8 +13,6 @@ cask "tencent-lemon" do
     regex(/"latest":{"version":"(\d+(?:\.\d+)+)"/i)
   end
 
-  auto_updates true
-
   app "Tencent Lemon.app"
 
   uninstall delete: [

@@ -7,7 +7,6 @@ cask "bob" do
   desc "Translation application for text, pictures, and manual input"
   homepage "https://github.com/ripperhe/Bob"
 
-  auto_updates true
   depends_on macos: ">= :sierra"
 
   app "Bob.app"

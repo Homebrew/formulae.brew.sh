@@ -6,7 +6,7 @@ cask "ledger-live" do
       verified: "github.com/LedgerHQ/ledger-live-desktop/"
   name "Ledger Live"
   desc "Wallet desktop application to maintain multiple cryptocurrencies"
-  homepage "https://www.ledger.com/ledger-live"
+  homepage "https://www.ledgerwallet.com/live"
 
   livecheck do
     url :url

@@ -1,6 +1,6 @@
 cask "amitv87-pip" do
-  version "2.03"
-  sha256 "b06ab33ce89bb24ea77539d31272a07e03a571f84df0eb97e4d542bb3b6c0bc2"
+  version "1.50"
+  sha256 "ac8506a315f58addd4cfe1f6518a4987f93606e11157681de51031e66a072c98"
 
   url "https://github.com/amitv87/PiP/releases/download/v#{version}/PiP-#{version}.dmg"
   name "PiP"
