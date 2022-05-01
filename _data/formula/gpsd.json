@@ -13,13 +13,13 @@
   "license": "BSD-2-Clause",
   "homepage": "https://gpsd.gitlab.io/gpsd/",
   "versions": {
-    "stable": "3.23.1",
+    "stable": "3.24",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://download.savannah.gnu.org/releases/gpsd/gpsd-3.23.1.tar.xz",
+      "url": "https://download.savannah.gnu.org/releases/gpsd/gpsd-3.24.tar.xz",
       "tag": null,
       "revision": null
     }
@@ -28,38 +28,38 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
         "arm64_monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/gpsd/blobs/sha256:363e6a7e67b050a027ff46ae2c444c7f1125d39f515fe77e39cc9041656c7977",
-          "sha256": "363e6a7e67b050a027ff46ae2c444c7f1125d39f515fe77e39cc9041656c7977"
+          "url": "https://ghcr.io/v2/homebrew/core/gpsd/blobs/sha256:9ee32da6d1a4cebc72344070d1f446a95e62446253453426a227a784a9986a2a",
+          "sha256": "9ee32da6d1a4cebc72344070d1f446a95e62446253453426a227a784a9986a2a"
         },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/gpsd/blobs/sha256:3b9099d2a71d641a8f1c935fa7a02b9535968fd2edef5584fc7143bc0f04d6b7",
-          "sha256": "3b9099d2a71d641a8f1c935fa7a02b9535968fd2edef5584fc7143bc0f04d6b7"
+          "url": "https://ghcr.io/v2/homebrew/core/gpsd/blobs/sha256:538fd1fc7101ca412dea133b318cabe4111708bb8b64d6fc14e74e92ec334d79",
+          "sha256": "538fd1fc7101ca412dea133b318cabe4111708bb8b64d6fc14e74e92ec334d79"
         },
         "monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/gpsd/blobs/sha256:df2284611cbdcd349ba5fdf8d7a0a21b710d41b7f8b770231fd70bdd76e3519f",
-          "sha256": "df2284611cbdcd349ba5fdf8d7a0a21b710d41b7f8b770231fd70bdd76e3519f"
+          "url": "https://ghcr.io/v2/homebrew/core/gpsd/blobs/sha256:fb3def1aeef8ecbc9e771bdcce032a808bcdaeaa72f48511c3a3d61baa6b5a72",
+          "sha256": "fb3def1aeef8ecbc9e771bdcce032a808bcdaeaa72f48511c3a3d61baa6b5a72"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/gpsd/blobs/sha256:328535be408821bb68bd55cf385c978b28043d4a561168a8f7dd3a200a41ae02",
-          "sha256": "328535be408821bb68bd55cf385c978b28043d4a561168a8f7dd3a200a41ae02"
+          "url": "https://ghcr.io/v2/homebrew/core/gpsd/blobs/sha256:771bb0164955c209ec3bfd4cc1801da5a4ca44feffdc493192906b39d245e833",
+          "sha256": "771bb0164955c209ec3bfd4cc1801da5a4ca44feffdc493192906b39d245e833"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/gpsd/blobs/sha256:f38c863774029e15c3a4a17213b470e82f1ca167cd1221d0d3b7efb2c953f92f",
-          "sha256": "f38c863774029e15c3a4a17213b470e82f1ca167cd1221d0d3b7efb2c953f92f"
+          "url": "https://ghcr.io/v2/homebrew/core/gpsd/blobs/sha256:dfeda18cdf0234e2d2b3d8cc4146f3a1ba5f923b26cfdd8f4e97f6a1d72e3492",
+          "sha256": "dfeda18cdf0234e2d2b3d8cc4146f3a1ba5f923b26cfdd8f4e97f6a1d72e3492"
         },
         "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/gpsd/blobs/sha256:e1a8f97e40f3f2bf07d67731dcaee835fa0d9f211a05542a5420e363ef35d266",
-          "sha256": "e1a8f97e40f3f2bf07d67731dcaee835fa0d9f211a05542a5420e363ef35d266"
+          "url": "https://ghcr.io/v2/homebrew/core/gpsd/blobs/sha256:1b8f2870eb113ea890064d3011f1508869211a0dc2679cf41c02aff5fe7e9022",
+          "sha256": "1b8f2870eb113ea890064d3011f1508869211a0dc2679cf41c02aff5fe7e9022"
         }
       }
     }
@@ -93,7 +93,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "gpsd does not automatically detect GPS device addresses. Once started, you\nneed to force it to connect to your GPS:\n\n  GPSD_SOCKET=\"$(brew --prefix)/var/gpsd.sock\" $(brew --prefix)/Cellar/gpsd/3.23.1/sbin/gpsdctl add /dev/tty.usbserial-XYZ\n",
+  "caveats": "gpsd does not automatically detect GPS device addresses. Once started, you\nneed to force it to connect to your GPS:\n\n  GPSD_SOCKET=\"$(brew --prefix)/var/gpsd.sock\" $(brew --prefix)/Cellar/gpsd/3.24/sbin/gpsdctl add /dev/tty.usbserial-XYZ\n",
   "installed": [
 
   ],
