@@ -1,6 +1,6 @@
 {
-  "name": "linux-pam",
-  "full_name": "linux-pam",
+  "name": "sse2neon",
+  "full_name": "sse2neon",
   "tap": "homebrew/core",
   "oldname": null,
   "aliases": [
@@ -9,32 +9,32 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Pluggable Authentication Modules for Linux",
-  "license": "BSD-3-Clause or GPL-1.0-only",
-  "homepage": "http://www.linux-pam.org",
+  "desc": "Translator from Intel SSE intrinsics to Arm/Aarch64 NEON implementation",
+  "license": "MIT",
+  "homepage": "https://github.com/DLTcollab/sse2neon",
   "versions": {
-    "stable": "1.5.2",
+    "stable": "1.5.1",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/linux-pam/linux-pam/releases/download/v1.5.2/Linux-PAM-1.5.2.tar.xz",
+      "url": "https://github.com/DLTcollab/sse2neon/archive/v1.5.1.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
-        "x86_64_linux": {
-          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/linux-pam/blobs/sha256:96727d4bf89b7bc6fdc5e0882e80fbc20a73a595684a749215c5dcd3cf5b0fb4",
-          "sha256": "96727d4bf89b7bc6fdc5e0882e80fbc20a73a595684a749215c5dcd3cf5b0fb4"
+        "all": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/sse2neon/blobs/sha256:b693ec3aa8d6dc9c6ea07d4abae801b34c5d884585453ae3ddc5a0ee87ed3577",
+          "sha256": "b693ec3aa8d6dc9c6ea07d4abae801b34c5d884585453ae3ddc5a0ee87ed3577"
         }
       }
     }
@@ -46,12 +46,10 @@
 
   ],
   "build_dependencies": [
-    "pkg-config"
+
   ],
   "dependencies": [
-    "libprelude",
-    "libtirpc",
-    "libxcrypt"
+
   ],
   "recommended_dependencies": [
 
@@ -64,10 +62,10 @@
   ],
   "requirements": [
     {
-      "name": "linux",
+      "name": "arch",
       "cask": null,
       "download": null,
-      "version": null,
+      "version": "arm64",
       "contexts": [
 
       ]

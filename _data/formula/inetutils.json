@@ -24,7 +24,7 @@
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,38 +33,33 @@
       "files": {
         "arm64_monterey": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/inetutils/blobs/sha256:6bc3499a13f6fddc89d967fe8bc9633ddd5970d9a40e596cca7e2b32484b6051",
-          "sha256": "6bc3499a13f6fddc89d967fe8bc9633ddd5970d9a40e596cca7e2b32484b6051"
+          "url": "https://ghcr.io/v2/homebrew/core/inetutils/blobs/sha256:719ffa2f0f2ceb20e2f7ee047e5118bcba46040aabd7b46b319d266ff02843f6",
+          "sha256": "719ffa2f0f2ceb20e2f7ee047e5118bcba46040aabd7b46b319d266ff02843f6"
         },
         "arm64_big_sur": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/inetutils/blobs/sha256:40b658c6c497bff3c916956203f971517a3c1d0f6bf46f0d675ec25c888fffae",
-          "sha256": "40b658c6c497bff3c916956203f971517a3c1d0f6bf46f0d675ec25c888fffae"
+          "url": "https://ghcr.io/v2/homebrew/core/inetutils/blobs/sha256:06e1b871cd18130d4f71efc57d01c2e876fc9d511c1ea2b2249366e4f8d15afe",
+          "sha256": "06e1b871cd18130d4f71efc57d01c2e876fc9d511c1ea2b2249366e4f8d15afe"
         },
         "monterey": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/inetutils/blobs/sha256:44587f414ae56e0e323755737282bb069739bac0a5a8e220e1951af1f00b49bd",
-          "sha256": "44587f414ae56e0e323755737282bb069739bac0a5a8e220e1951af1f00b49bd"
+          "url": "https://ghcr.io/v2/homebrew/core/inetutils/blobs/sha256:606878e0fbf9d8b4afbb29a89a60fa21307b6568a58a72b7f696199d79a36dd5",
+          "sha256": "606878e0fbf9d8b4afbb29a89a60fa21307b6568a58a72b7f696199d79a36dd5"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/inetutils/blobs/sha256:4f4ded12f0164096243102d086f95d54ed6def282b758d3b69a88133b3fc2f3d",
-          "sha256": "4f4ded12f0164096243102d086f95d54ed6def282b758d3b69a88133b3fc2f3d"
+          "url": "https://ghcr.io/v2/homebrew/core/inetutils/blobs/sha256:f55a13bc58c0ac46ef7494774785e11d01da80eecde7fbc70a1b4ced5f09aa43",
+          "sha256": "f55a13bc58c0ac46ef7494774785e11d01da80eecde7fbc70a1b4ced5f09aa43"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/inetutils/blobs/sha256:274d56c19d93ffb4c32f3a896872cf78222a28bee436ae363c35455d279f4ed7",
-          "sha256": "274d56c19d93ffb4c32f3a896872cf78222a28bee436ae363c35455d279f4ed7"
-        },
-        "mojave": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/inetutils/blobs/sha256:077af2b47b07e9c4d2f3f574561ba6d6c90e879e93a4be0b2454a9e13b7842ea",
-          "sha256": "077af2b47b07e9c4d2f3f574561ba6d6c90e879e93a4be0b2454a9e13b7842ea"
+          "url": "https://ghcr.io/v2/homebrew/core/inetutils/blobs/sha256:f0f4d878a515dc35778a55fe360338831179c86f0cf2312cec2e73c6a963da7c",
+          "sha256": "f0f4d878a515dc35778a55fe360338831179c86f0cf2312cec2e73c6a963da7c"
         },
         "x86_64_linux": {
           "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/inetutils/blobs/sha256:d2ef16a78009201d1b6a594cc44bc8fc44c6a730b91c96e23588f1c71de6d234",
-          "sha256": "d2ef16a78009201d1b6a594cc44bc8fc44c6a730b91c96e23588f1c71de6d234"
+          "url": "https://ghcr.io/v2/homebrew/core/inetutils/blobs/sha256:e746cfe4e95d27e755cde821e3e4973005e065e36da2b70259f38e76885bc634",
+          "sha256": "e746cfe4e95d27e755cde821e3e4973005e065e36da2b70259f38e76885bc634"
         }
       }
     }
@@ -79,7 +74,7 @@
 
   ],
   "dependencies": [
-    "libidn"
+    "libidn2"
   ],
   "recommended_dependencies": [
 
@@ -88,7 +83,8 @@
 
   ],
   "uses_from_macos": [
-
+    "libxcrypt",
+    "ncurses"
   ],
   "requirements": [
 
@@ -97,7 +93,7 @@
     "telnet",
     "tnftp"
   ],
-  "caveats": "The following commands have been installed with the prefix 'g'.\n\n    dnsdomainname\n    ftp\n    rcp\n    rexec\n    rlogin\n    rsh\n    telnet\n\nIf you really need to use these commands with their normal names, you\ncan add a \"gnubin\" directory to your PATH from your bashrc like:\n\n    PATH=\"$(brew --prefix)/opt/inetutils/libexec/gnubin:$PATH\"\n",
+  "caveats": "Only the following commands have been installed without the prefix 'g'.\n\n    dnsdomainname\n    ftp\n    rcp\n    rexec\n    rlogin\n    rsh\n    telnet\n\nIf you really need to use other commands with their normal names,\nyou can add a \"gnubin\" directory to your PATH from your bashrc like:\n\n    PATH=\"$(brew --prefix)/opt/inetutils/libexec/gnubin:$PATH\"\n",
   "installed": [
 
   ],
