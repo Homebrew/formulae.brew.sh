@@ -104,7 +104,7 @@
           },
           {
             "full_name": "ca-certificates",
-            "version": "2022-03-29",
+            "version": "2022-04-26",
             "declared_directly": false
           },
           {
