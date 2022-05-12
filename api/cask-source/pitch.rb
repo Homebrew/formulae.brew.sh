@@ -9,9 +9,11 @@ cask "pitch" do
 
   livecheck do
     url "https://desktop-app-builds.pitch.com/latest-mac.yml"
-    regex(/Pitch[._-]v?(\d+(?:\.\d+)+).*?[._-]ci(\d+)\.dmg/i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
+    strategy :page_match do |page|
+      match = page.match(/Pitch[._-]v?(\d+(?:\.\d+)+)[._-]ci(\d+)\.dmg/i)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]}"
     end
   end
 

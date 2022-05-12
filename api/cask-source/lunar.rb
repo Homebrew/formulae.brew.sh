@@ -1,6 +1,6 @@
 cask "lunar" do
-  version "5.6.4"
-  sha256 "a634c75b148cab31e30ebc3847d27190beff37fb00d33bae1e348f3d194be648"
+  version "5.6.3"
+  sha256 "de5709c11e6cbbf3dfafd654784ec081b7d467bad51b13ec66450a30c0d93306"
 
   url "https://static.lunar.fyi/releases/Lunar-#{version}.dmg"
   name "Lunar"
@@ -8,12 +8,13 @@ cask "lunar" do
   homepage "https://lunar.fyi/"
 
   livecheck do
-    url "https://static.lunar.fyi/appcast-stable.xml"
-    strategy :sparkle
+    # The sparkle strategy cannot be used because we need to skip alpha releases in the appcast
+    url "https://static.lunar.fyi/appcast2.xml"
+    regex(/url=.*?Lunar[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :catalina"
 
   app "Lunar.app"
 
