@@ -13,13 +13,13 @@
   "license": "GPL-2.0-only",
   "homepage": "https://www.manticoresearch.com",
   "versions": {
-    "stable": "3.6.0",
+    "stable": "4.2.0",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://repo.manticoresearch.com/repository/manticoresearch_source/release/manticore-3.6.0-210504-96d61d8-release-source.tar.gz",
+      "url": "https://github.com/manticoresoftware/manticoresearch/archive/refs/tags/4.2.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,28 +28,38 @@
   "version_scheme": 1,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/manticoresearch/blobs/sha256:f55f960076fbee621f9292de41f671db7aab5587eec035e9ee9060268b3f306c",
+          "sha256": "f55f960076fbee621f9292de41f671db7aab5587eec035e9ee9060268b3f306c"
+        },
         "arm64_big_sur": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/manticoresearch/blobs/sha256:e285345ff7b6a8a99c0cbac69232301a6ad97cd09abae93bfffce5d3885f6ac2",
-          "sha256": "e285345ff7b6a8a99c0cbac69232301a6ad97cd09abae93bfffce5d3885f6ac2"
+          "url": "https://ghcr.io/v2/homebrew/core/manticoresearch/blobs/sha256:37f16dfb2b31f7dacdc1818a4417f765637c1de051ade808b1123bfba2d125d3",
+          "sha256": "37f16dfb2b31f7dacdc1818a4417f765637c1de051ade808b1123bfba2d125d3"
+        },
+        "monterey": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/manticoresearch/blobs/sha256:509bc6f6379aad68ad2df404becf0183653b87400d38e3fb897afb6088209939",
+          "sha256": "509bc6f6379aad68ad2df404becf0183653b87400d38e3fb897afb6088209939"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/manticoresearch/blobs/sha256:11dfe819517e1b8c379d761ed9391192bb585564588a0ee23f85880a4b7e2f8c",
-          "sha256": "11dfe819517e1b8c379d761ed9391192bb585564588a0ee23f85880a4b7e2f8c"
+          "url": "https://ghcr.io/v2/homebrew/core/manticoresearch/blobs/sha256:717f6d93410c969f7d1c717af610cfc8815548b6835208b5c690639c48a384f0",
+          "sha256": "717f6d93410c969f7d1c717af610cfc8815548b6835208b5c690639c48a384f0"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/manticoresearch/blobs/sha256:77c342a7a0d4a7c786b2c777b92522ab8b9eae7806074b0f81112cd7890c4d91",
-          "sha256": "77c342a7a0d4a7c786b2c777b92522ab8b9eae7806074b0f81112cd7890c4d91"
+          "url": "https://ghcr.io/v2/homebrew/core/manticoresearch/blobs/sha256:0595b59292ca6b2e1f947f053720ce4c478111736df58d76048ad43b7bf4cfac",
+          "sha256": "0595b59292ca6b2e1f947f053720ce4c478111736df58d76048ad43b7bf4cfac"
         },
-        "mojave": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/manticoresearch/blobs/sha256:f20768ffb1961f40fe39b3bebd20491f31cd2d91f9c43c4b5897458a50354a06",
-          "sha256": "f20768ffb1961f40fe39b3bebd20491f31cd2d91f9c43c4b5897458a50354a06"
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/manticoresearch/blobs/sha256:704acba2d67a0e365ac8f458969be7ba54fed2390797aa6b93fcff1a74bdad96",
+          "sha256": "704acba2d67a0e365ac8f458969be7ba54fed2390797aa6b93fcff1a74bdad96"
         }
       }
     }
@@ -62,12 +72,11 @@
   ],
   "build_dependencies": [
     "boost",
-    "cmake",
-    "icu4c",
-    "libpq",
-    "mysql"
+    "cmake"
   ],
   "dependencies": [
+    "libpq",
+    "mysql",
     "openssl@1.1"
   ],
   "recommended_dependencies": [
@@ -77,7 +86,12 @@
 
   ],
   "uses_from_macos": [
-
+    {
+      "bison": "build"
+    },
+    {
+      "flex": "build"
+    }
   ],
   "requirements": [
 
