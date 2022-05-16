@@ -21,11 +21,14 @@
     {
       "delete": [
         "/Library/PrivilegedHelperTools/com.docker.vmnetd",
+        "$(brew --prefix)/bin/com.docker.cli",
+        "$(brew --prefix)/bin/docker-compose-v1",
         "$(brew --prefix)/bin/docker-compose",
         "$(brew --prefix)/bin/docker-credential-desktop",
         "$(brew --prefix)/bin/docker-credential-ecr-login",
         "$(brew --prefix)/bin/docker-credential-osxkeychain",
         "$(brew --prefix)/bin/docker",
+        "$(brew --prefix)/bin/hub-tool",
         "$(brew --prefix)/bin/hyperkit",
         "$(brew --prefix)/bin/kubectl.docker",
         "$(brew --prefix)/bin/kubectl",
@@ -125,13 +128,13 @@
   "analytics": {
     "install": {
       "30d": {
-        "docker": 26038
+        "docker": 25702
       },
       "90d": {
-        "docker": 80284
+        "docker": 79491
       },
       "365d": {
-        "docker": 262635
+        "docker": 262726
       }
     }
   },
