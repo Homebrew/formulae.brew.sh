@@ -24,7 +24,7 @@
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -32,39 +32,34 @@
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
         "arm64_monterey": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/aria2/blobs/sha256:74859913b0f8dc82fede202f5b6cb3384202e76887549addc050009e4d277aec",
-          "sha256": "74859913b0f8dc82fede202f5b6cb3384202e76887549addc050009e4d277aec"
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/aria2/blobs/sha256:b0ec32121f2f4c94afce1cf43101d0441176e4d3de2461160cf220b4c4c2a89f",
+          "sha256": "b0ec32121f2f4c94afce1cf43101d0441176e4d3de2461160cf220b4c4c2a89f"
         },
         "arm64_big_sur": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/aria2/blobs/sha256:22b11ee6f82f8d693fb2f6c0dd90a81174033640974003e63e4e8f98fbd3f145",
-          "sha256": "22b11ee6f82f8d693fb2f6c0dd90a81174033640974003e63e4e8f98fbd3f145"
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/aria2/blobs/sha256:89db8d96ab739c0ebcc8a800169d7001c18fae4d3fce8217b8ffa5455d1f46cf",
+          "sha256": "89db8d96ab739c0ebcc8a800169d7001c18fae4d3fce8217b8ffa5455d1f46cf"
         },
         "monterey": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/aria2/blobs/sha256:ab509067c72eb555b1583189054622744f39e344e1ee51bfd91c3102167be95b",
-          "sha256": "ab509067c72eb555b1583189054622744f39e344e1ee51bfd91c3102167be95b"
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/aria2/blobs/sha256:410b790649fe92ac3c146aa394a6ff1d70411303e68b7c4ff5c5e4ce82435b30",
+          "sha256": "410b790649fe92ac3c146aa394a6ff1d70411303e68b7c4ff5c5e4ce82435b30"
         },
         "big_sur": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/aria2/blobs/sha256:8960d7b6b56fb29e020fb96da5305c3340d266f3e5e0c552248759e8c6169244",
-          "sha256": "8960d7b6b56fb29e020fb96da5305c3340d266f3e5e0c552248759e8c6169244"
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/aria2/blobs/sha256:cebab5dd720d1b80d429c50b7e84944912a2e2c25f471d6f379fbb5670080026",
+          "sha256": "cebab5dd720d1b80d429c50b7e84944912a2e2c25f471d6f379fbb5670080026"
         },
         "catalina": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/aria2/blobs/sha256:1e9db3f9fd405ed7a303b89379c2a8f3f01c5f5aa92cfbc8ae560c4e28618f8e",
-          "sha256": "1e9db3f9fd405ed7a303b89379c2a8f3f01c5f5aa92cfbc8ae560c4e28618f8e"
-        },
-        "mojave": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/aria2/blobs/sha256:3ecd30ea4573748ec438182dbba6fad002c1465da7ef9f7a32f227fdeddde464",
-          "sha256": "3ecd30ea4573748ec438182dbba6fad002c1465da7ef9f7a32f227fdeddde464"
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/aria2/blobs/sha256:2be60bad723be29d33143d487e6bc0c32e0a37de083043bb2fa5c31e586ad37e",
+          "sha256": "2be60bad723be29d33143d487e6bc0c32e0a37de083043bb2fa5c31e586ad37e"
         },
         "x86_64_linux": {
           "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/aria2/blobs/sha256:c7dacb09aaa9eb22baf6ee6ee198896fb8a851ddf69d7c534c968f1b79edd69d",
-          "sha256": "c7dacb09aaa9eb22baf6ee6ee198896fb8a851ddf69d7c534c968f1b79edd69d"
+          "url": "https://ghcr.io/v2/homebrew/core/aria2/blobs/sha256:04dc2fd6656aae3435205cb9c8e4c43c902d02a2e639e61c100c0125e19f62e2",
+          "sha256": "04dc2fd6656aae3435205cb9c8e4c43c902d02a2e639e61c100c0125e19f62e2"
         }
       }
     }
@@ -79,7 +74,9 @@
     "pkg-config"
   ],
   "dependencies": [
-    "libssh2"
+    "gettext",
+    "libssh2",
+    "sqlite"
   ],
   "recommended_dependencies": [
 
@@ -129,7 +126,7 @@
   ],
   "linked_keg": "1.36.0",
   "pinned": false,
-  "outdated": false,
+  "outdated": true,
   "deprecated": false,
   "deprecation_date": null,
   "deprecation_reason": null,
