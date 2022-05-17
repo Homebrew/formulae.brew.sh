@@ -89,7 +89,7 @@
 
   ],
   "uses_from_macos": [
-
+    "llvm"
   ],
   "requirements": [
 
@@ -97,7 +97,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "`brew install llnode` does not link the plugin to LLDB PlugIns dir.\n\nTo load this plugin in LLDB, one will need to either\n\n* Type `plugin load $(brew --prefix)/opt/llnode/llnode.dylib` on each run of lldb\n* Install plugin into PlugIns dir manually:\n\n    mkdir -p ~/Library/Application\\ Support/LLDB/PlugIns\n    ln -sf $(brew --prefix)/opt/llnode/llnode.dylib \\\n        ~/Library/Application\\ Support/LLDB/PlugIns/\n",
+  "caveats": "`brew install llnode` does not link the plugin to LLDB PlugIns dir.\n\nTo load this plugin in LLDB, one will need to either\n\n* Type `plugin load $(brew --prefix)/opt/llnode/llnode.dylib` on each run of lldb\n* Install plugin into PlugIns dir manually (macOS only):\n\n    mkdir -p ~/Library/Application\\ Support/LLDB/PlugIns\n    ln -sf $(brew --prefix)/opt/llnode/llnode.dylib \\\n        ~/Library/Application\\ Support/LLDB/PlugIns/\n",
   "installed": [
 
   ],
