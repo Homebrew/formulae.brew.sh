@@ -1,28 +1,28 @@
 ```json
 {
   "category": "cask_install",
-  "total_items": 6499,
-  "start_date": "2022-04-18",
-  "end_date": "2022-05-18",
-  "total_count": 930303,
+  "total_items": 6515,
+  "start_date": "2022-04-19",
+  "end_date": "2022-05-19",
+  "total_count": 936179,
   "formulae": {
     ...
     "docker": [
       {
         "cask": "docker",
-        "count": "27,327"
+        "count": "27,766"
       }
     ],
     "docker-edge": [
       {
         "cask": "docker-edge",
-        "count": "17"
+        "count": "18"
       }
     ],
     "docker-toolbox": [
       {
         "cask": "docker-toolbox",
-        "count": "105"
+        "count": "110"
       }
     ],
     ...
