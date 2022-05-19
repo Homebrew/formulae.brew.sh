@@ -13,13 +13,13 @@
   "license": "GPL-2.0-only",
   "homepage": "https://www.ejabberd.im",
   "versions": {
-    "stable": "21.12",
+    "stable": "22.05",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://static.process-one.net/ejabberd/downloads/21.12/ejabberd-21.12.tgz",
+      "url": "https://github.com/processone/ejabberd/archive/refs/tags/22.05.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,33 +33,33 @@
       "files": {
         "arm64_monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/ejabberd/blobs/sha256:c4873e5f20dc834c2b31e8a3a0a8e4b2c72ff0cc3f1af5de65236cf2823d6524",
-          "sha256": "c4873e5f20dc834c2b31e8a3a0a8e4b2c72ff0cc3f1af5de65236cf2823d6524"
+          "url": "https://ghcr.io/v2/homebrew/core/ejabberd/blobs/sha256:e4ae78568fd0c9db8eac5476082cf922e2c41d3e950cae20ba3342030ca6d2f2",
+          "sha256": "e4ae78568fd0c9db8eac5476082cf922e2c41d3e950cae20ba3342030ca6d2f2"
         },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/ejabberd/blobs/sha256:2c0f3a0d99e52c4e25e6844669929f992ee89514847532aa0cfff77aba2b1297",
-          "sha256": "2c0f3a0d99e52c4e25e6844669929f992ee89514847532aa0cfff77aba2b1297"
+          "url": "https://ghcr.io/v2/homebrew/core/ejabberd/blobs/sha256:4bf6c4c8d85610dfabea9fefbbacfedbd20ece86bdd513afbfd126b932f71630",
+          "sha256": "4bf6c4c8d85610dfabea9fefbbacfedbd20ece86bdd513afbfd126b932f71630"
         },
         "monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/ejabberd/blobs/sha256:2aab8f179a30fb248fd1e07a00ac149bd763451f11a385f916d1950e0dea5858",
-          "sha256": "2aab8f179a30fb248fd1e07a00ac149bd763451f11a385f916d1950e0dea5858"
+          "url": "https://ghcr.io/v2/homebrew/core/ejabberd/blobs/sha256:e36160a15fd2ace0ccca9be68f91920e366bbe7a1e76f109152ea4397123225a",
+          "sha256": "e36160a15fd2ace0ccca9be68f91920e366bbe7a1e76f109152ea4397123225a"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/ejabberd/blobs/sha256:38f754a3aa6ef9c634104f39fd0c41e5d501525d69b437fd1520ff5544c1d01e",
-          "sha256": "38f754a3aa6ef9c634104f39fd0c41e5d501525d69b437fd1520ff5544c1d01e"
+          "url": "https://ghcr.io/v2/homebrew/core/ejabberd/blobs/sha256:4b3fd6069f6273d2f292d6bdec216783963e6071b0972ee11e7afd23663d1f2e",
+          "sha256": "4b3fd6069f6273d2f292d6bdec216783963e6071b0972ee11e7afd23663d1f2e"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/ejabberd/blobs/sha256:383e3974b71e4d572c5f509b3b33f228eef34f18ab607633e632c387a9562863",
-          "sha256": "383e3974b71e4d572c5f509b3b33f228eef34f18ab607633e632c387a9562863"
+          "url": "https://ghcr.io/v2/homebrew/core/ejabberd/blobs/sha256:551ed90dd256ea103807e74f7d58aa319e1bd3c34d9cf91bfb0b4d9b4492f22b",
+          "sha256": "551ed90dd256ea103807e74f7d58aa319e1bd3c34d9cf91bfb0b4d9b4492f22b"
         },
         "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/ejabberd/blobs/sha256:61e4ae90bc4c22ec6114b3a26a9cb9d2285328b4e86219e58d50dae56cba2aec",
-          "sha256": "61e4ae90bc4c22ec6114b3a26a9cb9d2285328b4e86219e58d50dae56cba2aec"
+          "url": "https://ghcr.io/v2/homebrew/core/ejabberd/blobs/sha256:35e94cd42d1f356f143e0d7ccc89cfced53138fcc2d6ce82c18044d2c9ca51b0",
+          "sha256": "35e94cd42d1f356f143e0d7ccc89cfced53138fcc2d6ce82c18044d2c9ca51b0"
         }
       }
     }
@@ -71,10 +71,11 @@
 
   ],
   "build_dependencies": [
-
+    "autoconf",
+    "automake"
   ],
   "dependencies": [
-    "erlang@22",
+    "erlang",
     "gd",
     "libyaml",
     "openssl@1.1"
