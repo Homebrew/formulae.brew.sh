@@ -6,19 +6,24 @@
     "Microsoft Visual Studio"
   ],
   "desc": "Integrated development environment",
-  "homepage": "https://www.visualstudio.com/vs/visual-studio-mac/",
-  "url": "https://dl.xamarin.com/VsMac/VisualStudioForMac-8.10.23.7.dmg",
+  "homepage": "https://visualstudio.microsoft.com/vs/mac/",
+  "url": "https://download.visualstudio.microsoft.com/download/pr/7ee991cc-6c5d-46cb-896f-c86d7dca8bb0/32dbed11930f5e08a4525e55fd651a9d/visualstudioformacinstaller-17.0.0.314.dmg",
   "appcast": null,
-  "version": "8.10.23.7",
+  "version": "17.0.0.314",
   "versions": {
   },
   "installed": null,
   "outdated": false,
-  "sha256": "ed2d530d9ea56019beeb119f7ae75bee0dff4270a0e4528829d89a1bcad94cd2",
+  "sha256": "630a1581c825e8edeb68f7286aee9a44f838ba539af9f4756970aeae067866ec",
   "artifacts": [
-    [
-      "Visual Studio.app"
-    ],
+    {
+      "delete": "/Applications/Visual Studio.app",
+      "signal": {
+      }
+    },
+    {
+      "path": "Install Visual Studio for Mac.app"
+    },
     {
       "trash": [
         "/Applications/Xamarin Profiler.app",
@@ -26,11 +31,18 @@
         "~/Library/Application Support/CrashReporter/VisualStudio*",
         "~/Library/Application Support/VisualStudio",
         "~/Library/Caches/VisualStudio",
+        "~/Library/Caches/VisualStudioInstaller",
+        "~/Library/Caches/XamarinInstaller",
         "~/Library/Developer/Xamarin",
         "~/Library/Logs/VisualStudio",
+        "~/Library/Logs/VisualStudioInstaller",
+        "~/Library/Logs/XamarinInstaller",
+        "~/Library/MonoAndroid",
+        "~/Library/MonoTouch",
         "~/Library/Preferences/Visual*Studio",
         "~/Library/Preferences/Xamarin",
-        "~/Library/VisualStudio"
+        "~/Library/VisualStudio",
+        "~/Library/Xamarin.Mac"
       ],
       "signal": {
       }
@@ -40,7 +52,7 @@
   "depends_on": {
     "macos": {
       ">=": [
-        "10.13"
+        "10.15"
       ]
     },
     "cask": [
