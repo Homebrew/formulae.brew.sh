@@ -66,9 +66,12 @@
 
   ],
   "build_dependencies": [
+    "httpd",
     "nginx"
   ],
   "dependencies": [
+    "apr",
+    "apr-util",
     "openssl@1.1",
     "pcre"
   ],
@@ -79,6 +82,11 @@
 
   ],
   "uses_from_macos": [
+    {
+      "xz": "build"
+    },
+    "curl",
+    "libxcrypt",
     "ruby"
   ],
   "requirements": [
