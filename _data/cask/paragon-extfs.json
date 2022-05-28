@@ -3,10 +3,10 @@
   "full_token": "paragon-extfs",
   "tap": "homebrew/cask",
   "name": [
-    "Paragon ExtFS"
+    "extFS for Mac by Paragon Software"
   ],
-  "desc": null,
-  "homepage": "https://www.paragon-software.com/ufsdhome/extfs-mac/",
+  "desc": "Read/write support for ext2/3/4 formatted volumes",
+  "homepage": "https://www.paragon-software.com/home/extfs-mac/",
   "url": "https://dl.paragon-software.com/demo/trial_extfs.dmg",
   "appcast": null,
   "version": "latest",
@@ -26,16 +26,28 @@
       }
     },
     {
-      "path": "FSInstaller.app"
+      "path": "Install extFS for Mac.app"
     },
     {
-      "trash": "~/Library/Preferences/com.paragon-software.extfs.fsapp.plist",
+      "trash": [
+        "~/Library/Application Support/com.paragon-software.extfs.*",
+        "~/Library/Caches/com.paragon-software.extfs.fsapp",
+        "~/Library/HTTPStorages/com.paragon-software.extfs.*",
+        "~/Library/Preferences/com.paragon-software.extfs.fsapp.plist",
+        "~/Library/Saved Application State/com.paragon-software.extfs.fsapp.savedState",
+        "~/Library/WebKit/com.paragon-software.extfs.fsapp"
+      ],
       "signal": {
       }
     }
   ],
   "caveats": "paragon-extfs requires a kernel extension to work.\nIf the installation fails, retry after you enable it in:\n  System Preferences → Security & Privacy → General\n\nFor more information, refer to vendor documentation or this Apple Technical Note:\n  https://developer.apple.com/library/content/technotes/tn2459/_index.html\n",
   "depends_on": {
+    "macos": {
+      ">=": [
+        "10.12"
+      ]
+    }
   },
   "conflicts_with": null,
   "container": null,

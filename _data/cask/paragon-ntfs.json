@@ -3,10 +3,10 @@
   "full_token": "paragon-ntfs",
   "tap": "homebrew/cask",
   "name": [
-    "Paragon NTFS for Mac"
+    "Microsoft NTFS for Mac by Paragon Software"
   ],
-  "desc": "Paragon read-write NTFS driver",
-  "homepage": "https://www.paragon-software.com/ufsdhome/ntfs-mac/",
+  "desc": "Read/write support for NTFS formatted volumes",
+  "homepage": "https://www.paragon-software.com/home/ntfs-mac/",
   "url": "https://dl.paragon-software.com/demo/ntfsmac15_trial.dmg",
   "appcast": null,
   "version": "15",
@@ -23,17 +23,10 @@
       "quit": "com.paragon-software.ntfs*",
       "signal": {
         "KILL": "com.paragon-software.ntfs.notification-agent"
-      },
-      "delete": [
-        "/Library/Application Support/Paragon Software/com.paragon-software.kernelio.kext",
-        "/Library/Application Support/Paragon Software/uc.ntfs",
-        "/Library/LaunchDaemons/com.paragon-software.installer.plist",
-        "/Library/PrivilegedHelperTools/com.paragon-software.installer"
-      ],
-      "rmdir": "/Library/Application Support/Paragon Software/"
+      }
     },
     {
-      "path": "FSInstaller.app"
+      "path": "Install NTFS for Mac.app"
     },
     {
       "trash": [
@@ -50,6 +43,11 @@
   ],
   "caveats": "paragon-ntfs requires a kernel extension to work.\nIf the installation fails, retry after you enable it in:\n  System Preferences → Security & Privacy → General\n\nFor more information, refer to vendor documentation or this Apple Technical Note:\n  https://developer.apple.com/library/content/technotes/tn2459/_index.html\n",
   "depends_on": {
+    "macos": {
+      ">=": [
+        "10.12"
+      ]
+    }
   },
   "conflicts_with": null,
   "container": null,
