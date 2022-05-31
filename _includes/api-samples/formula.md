@@ -65,7 +65,6 @@
     },
     "keg_only": false,
     "keg_only_reason": null,
-    "bottle_disabled": false,
     "options": [],
     "build_dependencies": [
       "pkg-config"
