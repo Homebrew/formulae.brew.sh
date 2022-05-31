@@ -17,13 +17,15 @@
   "sha256": "62e2f46f0b072d03c2b03d79e19d52c3386fe131b698b70f8b6d99a8ee5c0100",
   "artifacts": [
     {
-      "script": {
-        "executable": "/Applications/Private Internet Access.app/Contents/Resources/vpn-installer.sh",
-        "args": [
-          "uninstall"
-        ],
-        "sudo": "true"
-      },
+      "quit": "com.privateinternetaccess.vpn",
+      "delete": [
+        "/Applications/Private Internet Access.app",
+        "$(brew --prefix)/bin/piactl"
+      ],
+      "launchctl": [
+        "com.privateinternetaccess.vpn.installhelper",
+        "com.privateinternetaccess.vpn.daemon"
+      ],
       "signal": {
       }
     },
@@ -36,6 +38,13 @@
       }
     },
     {
+      "script": {
+        "executable": "/Applications/Private Internet Access.app/Contents/Resources/vpn-installer.sh",
+        "args": [
+          "uninstall"
+        ],
+        "sudo": "true"
+      },
       "trash": [
         "~/Library/Application Support/com.privateinternetaccess.vpn",
         "~/Library/LaunchAgents/com.privateinternetaccess.vpn",
