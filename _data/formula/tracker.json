@@ -13,18 +13,18 @@
   "license": "LGPL-2.1-or-later and GPL-2.0-or-later",
   "homepage": "https://gnome.pages.gitlab.gnome.org/tracker/",
   "versions": {
-    "stable": "3.1.2",
+    "stable": "3.3.0",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://download.gnome.org/sources/tracker/3.1/tracker-3.1.2.tar.xz",
+      "url": "https://download.gnome.org/sources/tracker/3.3/tracker-3.3.0.tar.xz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 2,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,28 +33,33 @@
       "files": {
         "arm64_monterey": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/tracker/blobs/sha256:91f76976c6f234c9a9349b7fd3049a5004a5c557577e6e9c24aeba0e5818c3a3",
-          "sha256": "91f76976c6f234c9a9349b7fd3049a5004a5c557577e6e9c24aeba0e5818c3a3"
+          "url": "https://ghcr.io/v2/homebrew/core/tracker/blobs/sha256:2833c82369acab097a1dea8a210fd0b4954884e2621d04746d6b2f0647e0dc9d",
+          "sha256": "2833c82369acab097a1dea8a210fd0b4954884e2621d04746d6b2f0647e0dc9d"
         },
         "arm64_big_sur": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/tracker/blobs/sha256:121d8f5ee8518474aa90f5fc7e02e88b2cb0b17ca5b94b181b3204eb761727fa",
-          "sha256": "121d8f5ee8518474aa90f5fc7e02e88b2cb0b17ca5b94b181b3204eb761727fa"
+          "url": "https://ghcr.io/v2/homebrew/core/tracker/blobs/sha256:dc6a9c8418887b60efa7155eb35e679caf4150ae0318cf3f396186ed9872d420",
+          "sha256": "dc6a9c8418887b60efa7155eb35e679caf4150ae0318cf3f396186ed9872d420"
         },
         "monterey": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/tracker/blobs/sha256:e1e4da63da95c45ce6b717d20e544f84104a7d42e3fb207dae41cab4eedf2cfa",
-          "sha256": "e1e4da63da95c45ce6b717d20e544f84104a7d42e3fb207dae41cab4eedf2cfa"
+          "url": "https://ghcr.io/v2/homebrew/core/tracker/blobs/sha256:0bde1314517725d5cca31b1e59f0996c85aba8841eba5642802d0bb2b283456d",
+          "sha256": "0bde1314517725d5cca31b1e59f0996c85aba8841eba5642802d0bb2b283456d"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/tracker/blobs/sha256:0d3e0b8be3a4422e04bd665ad59d566889d9cecd7237ef0ef7168b7c6c32a6f2",
-          "sha256": "0d3e0b8be3a4422e04bd665ad59d566889d9cecd7237ef0ef7168b7c6c32a6f2"
+          "url": "https://ghcr.io/v2/homebrew/core/tracker/blobs/sha256:e9b560ea16c39cb4b647859888994a328dd01bba40844d538562a930874097a5",
+          "sha256": "e9b560ea16c39cb4b647859888994a328dd01bba40844d538562a930874097a5"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/tracker/blobs/sha256:980958cbbf2d74eadde9cf0043934ed1a56698520d764bee24cf83691b41b4ca",
-          "sha256": "980958cbbf2d74eadde9cf0043934ed1a56698520d764bee24cf83691b41b4ca"
+          "url": "https://ghcr.io/v2/homebrew/core/tracker/blobs/sha256:edf898777df78313be89ae31c0b549533e2290069d21a7c559f6f53c140cf286",
+          "sha256": "edf898777df78313be89ae31c0b549533e2290069d21a7c559f6f53c140cf286"
+        },
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/tracker/blobs/sha256:dddb0188234e4232f993e4e67e58ecccdb38e4c95a9a91c873d61f45d1e3cd8e",
+          "sha256": "dddb0188234e4232f993e4e67e58ecccdb38e4c95a9a91c873d61f45d1e3cd8e"
         }
       }
     }
@@ -69,13 +74,16 @@
     "meson",
     "ninja",
     "pkg-config",
+    "pygobject3",
     "vala"
   ],
   "dependencies": [
     "dbus",
+    "glib",
     "icu4c",
     "json-glib",
-    "libsoup@2"
+    "libsoup",
+    "sqlite"
   ],
   "recommended_dependencies": [
 
@@ -84,7 +92,7 @@
 
   ],
   "uses_from_macos": [
-
+    "libxml2"
   ],
   "requirements": [
 
