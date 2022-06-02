@@ -138,6 +138,6 @@
       }
     }
   },
-  "generated_date": "2022-06-01"
+  "generated_date": "2022-06-02"
 }
 ```
