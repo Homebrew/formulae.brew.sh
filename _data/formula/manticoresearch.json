@@ -13,13 +13,13 @@
   "license": "GPL-2.0-only",
   "homepage": "https://www.manticoresearch.com",
   "versions": {
-    "stable": "4.2.0",
+    "stable": "5.0.2",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/manticoresoftware/manticoresearch/archive/refs/tags/4.2.0.tar.gz",
+      "url": "https://github.com/manticoresoftware/manticoresearch/archive/refs/tags/5.0.2.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,33 +33,33 @@
       "files": {
         "arm64_monterey": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/manticoresearch/blobs/sha256:f55f960076fbee621f9292de41f671db7aab5587eec035e9ee9060268b3f306c",
-          "sha256": "f55f960076fbee621f9292de41f671db7aab5587eec035e9ee9060268b3f306c"
+          "url": "https://ghcr.io/v2/homebrew/core/manticoresearch/blobs/sha256:06bebc9c1ac2ca722dda99885d5157dfaf369311d5fee875746f08aadea40028",
+          "sha256": "06bebc9c1ac2ca722dda99885d5157dfaf369311d5fee875746f08aadea40028"
         },
         "arm64_big_sur": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/manticoresearch/blobs/sha256:37f16dfb2b31f7dacdc1818a4417f765637c1de051ade808b1123bfba2d125d3",
-          "sha256": "37f16dfb2b31f7dacdc1818a4417f765637c1de051ade808b1123bfba2d125d3"
+          "url": "https://ghcr.io/v2/homebrew/core/manticoresearch/blobs/sha256:50d35bf3d23482bb5b8667d4017c030b2635f2fcc3f1a5dc82e3f738382d7ac9",
+          "sha256": "50d35bf3d23482bb5b8667d4017c030b2635f2fcc3f1a5dc82e3f738382d7ac9"
         },
         "monterey": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/manticoresearch/blobs/sha256:509bc6f6379aad68ad2df404becf0183653b87400d38e3fb897afb6088209939",
-          "sha256": "509bc6f6379aad68ad2df404becf0183653b87400d38e3fb897afb6088209939"
+          "url": "https://ghcr.io/v2/homebrew/core/manticoresearch/blobs/sha256:360caa77c18f7578c09d28a537f80708ffbc5b07f2481deac1ae4175de5e105d",
+          "sha256": "360caa77c18f7578c09d28a537f80708ffbc5b07f2481deac1ae4175de5e105d"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/manticoresearch/blobs/sha256:717f6d93410c969f7d1c717af610cfc8815548b6835208b5c690639c48a384f0",
-          "sha256": "717f6d93410c969f7d1c717af610cfc8815548b6835208b5c690639c48a384f0"
+          "url": "https://ghcr.io/v2/homebrew/core/manticoresearch/blobs/sha256:170351c742a0942ac1c56108c8d58feef9ccca906cba72316e887c6eb8c875c1",
+          "sha256": "170351c742a0942ac1c56108c8d58feef9ccca906cba72316e887c6eb8c875c1"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/manticoresearch/blobs/sha256:0595b59292ca6b2e1f947f053720ce4c478111736df58d76048ad43b7bf4cfac",
-          "sha256": "0595b59292ca6b2e1f947f053720ce4c478111736df58d76048ad43b7bf4cfac"
+          "url": "https://ghcr.io/v2/homebrew/core/manticoresearch/blobs/sha256:7698255e8b7e7781402b3ff2e3168f6f26f60beb994a01ce6864ed067228a8bc",
+          "sha256": "7698255e8b7e7781402b3ff2e3168f6f26f60beb994a01ce6864ed067228a8bc"
         },
         "x86_64_linux": {
           "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/manticoresearch/blobs/sha256:704acba2d67a0e365ac8f458969be7ba54fed2390797aa6b93fcff1a74bdad96",
-          "sha256": "704acba2d67a0e365ac8f458969be7ba54fed2390797aa6b93fcff1a74bdad96"
+          "url": "https://ghcr.io/v2/homebrew/core/manticoresearch/blobs/sha256:609611a0c37c36f012ab85034e3bed51ca3b53e378ffb2de0e121b534a374fc1",
+          "sha256": "609611a0c37c36f012ab85034e3bed51ca3b53e378ffb2de0e121b534a374fc1"
         }
       }
     }
@@ -74,9 +74,12 @@
     "cmake"
   ],
   "dependencies": [
+    "icu4c",
     "libpq",
-    "mysql",
-    "openssl@1.1"
+    "mysql-client",
+    "openssl@1.1",
+    "unixodbc",
+    "zstd"
   ],
   "recommended_dependencies": [
 
@@ -90,7 +93,9 @@
     },
     {
       "flex": "build"
-    }
+    },
+    "libxml2",
+    "zlib"
   ],
   "requirements": [
 
