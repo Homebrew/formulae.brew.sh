@@ -33,7 +33,12 @@
         "$(brew --prefix)/bin/kubectl.docker",
         "$(brew --prefix)/bin/kubectl",
         "$(brew --prefix)/bin/notary",
-        "$(brew --prefix)/bin/vpnkit"
+        "$(brew --prefix)/bin/vpnkit",
+        "$(brew --prefix)/share/zsh/site-functions/_docker",
+        "$(brew --prefix)/share/zsh/site-functions/_docker_compose",
+        "$(brew --prefix)/share/zsh/site-functions/_docker-compose",
+        "$(brew --prefix)/share/fish/vendor_completions.d/docker.fish",
+        "$(brew --prefix)/etc/bash_completion.d/docker"
       ],
       "launchctl": [
         "com.docker.helper",
