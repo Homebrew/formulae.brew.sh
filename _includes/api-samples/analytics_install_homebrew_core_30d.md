@@ -1,16 +1,16 @@
 ```json
 {
   "category": "install",
-  "total_items": 6677,
-  "start_date": "2022-05-06",
-  "end_date": "2022-06-05",
-  "total_count": 34953769,
+  "total_items": 6667,
+  "start_date": "2022-05-07",
+  "end_date": "2022-06-06",
+  "total_count": 34280405,
   "formulae": {
     ...
     "wget": [
       {
         "formula": "wget",
-        "count": "123,970"
+        "count": "121,086"
       },
       {
         "formula": "wget --HEAD",
