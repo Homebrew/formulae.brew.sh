@@ -14,8 +14,7 @@
       "mojave": "3.6.8",
       "high_sierra": "3.4.9",
       "sierra": "3.3.1",
-      "el_capitan": "3.1.9",
-      "yosemite": "3.0.2"
+      "el_capitan": "3.1.9"
     }
   },
   ...
