@@ -11,10 +11,16 @@ FileUtils.mkdir_p directories
 json_template = IO.read "_api_cask.json.in"
 html_template = IO.read "_cask.html.in"
 
+cask_sources = {}
+
 tap.cask_files.each do |p|
   c = Cask::CaskLoader.load(p)
+  source = p.read
+  cask_sources[c.token] = source
   IO.write("_data/cask/#{c.token}.json", "#{JSON.pretty_generate(c.to_h)}\n")
   IO.write("api/cask/#{c.token}.json", json_template)
-  IO.write("api/cask-source/#{c.token}.rb", p.read)
+  IO.write("api/cask-source/#{c.token}.rb", source)
   IO.write("cask/#{c.token}.html", html_template.gsub("title: $TITLE", "title: \"#{c.token}\""))
 end
+
+IO.write("api/cask-source.json", "#{JSON.pretty_generate(cask_sources)}\n")
