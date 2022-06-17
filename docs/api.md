@@ -73,6 +73,16 @@ GET https://formulae.brew.sh/api/cask/${FORMULA}.json
 #### [Response](https://formulae.brew.sh/api/cask/docker.json)
 {% include api-samples/cask_docker.md %}
 
+### Get the source code for all casks in {{ site.taps.cask.fullname }}
+Get the latest source code for all casks that are defined in the {{ site.taps.cask.fullname }} repo.
+
+```
+GET https://formulae.brew.sh/api/cask-source.json
+```
+
+#### [Response](https://formulae.brew.sh/api/cask-source.json)
+{% include api-samples/cask_source.md %}
+
 ### Get the source code for a cask in {{ site.taps.cask.fullname }}
 Get the latest source code for a {{ site.taps.cask.repo }} that is defined in the {{ site.taps.cask.fullname }} repo.
 
@@ -83,7 +93,7 @@ GET https://formulae.brew.sh/api/cask-source/${FORMULA}.rb
 #### Variables
 - `${FORMULA}`: the name of the cask, e.g. `vagrant`
 
-#### [Response](https://formulae.brew.sh/api/cask-source/vagrant.json)
+#### [Response](https://formulae.brew.sh/api/cask-source/vagrant.rb)
 {% include api-samples/cask_source_vagrant.md %}
 
 ## Analytics

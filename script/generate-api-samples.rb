@@ -6,6 +6,7 @@ SAMPLES = {
   analytics_install_homebrew_core_30d:      "analytics/install/homebrew-core/30d.json",
   bottle_wget:                              "bottle/wget.json",
   cask_docker:                              "cask/docker.json",
+  cask_source:                              "cask-source.json",
   cask_source_vagrant:                      "cask-source/vagrant.rb",
   formula_wget:                             "formula/wget.json",
   formula:                                  "formula.json",
@@ -58,6 +59,10 @@ def format_json_contents(name, api_url)
     contents["formulae"].select! do |formula_name, _|
       formula_name == "wget"
     end
+  when :cask_source
+    contents.select! do |cask_token|
+      %w[docker onyx].include? cask_token
+    end
   when :formula
     contents.select! do |obj|
       obj["name"] == "wget"
@@ -91,6 +96,10 @@ def format_json_contents(name, api_url)
     contents.sub!(/("formulae": {)/, "\\1\n    ...")
     contents.sub!(/}(?=\n    \])/, "},\n      ...")
     contents.sub!(/\](?=\n  }\n})/, "],\n    ...")
+  when :cask_source
+    contents.sub!(/^{/, "{\n  ...")
+    contents.sub!(/",(?=\n  ")/, "\",\n  ...")
+    contents.sub!(/"(?=\n})/, "\",\n  ...")
   when :formula
     contents.sub!(/^\[/, "[\n  ...")
     contents.sub!(/}(?=\n\])/, "},\n  ...")
