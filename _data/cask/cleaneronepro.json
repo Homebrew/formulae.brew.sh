@@ -1,0 +1,54 @@
+{
+  "token": "cleaneronepro",
+  "full_token": "cleaneronepro",
+  "tap": "homebrew/cask",
+  "name": [
+    "cleaneronepro"
+  ],
+  "desc": "All-in-one Cleaner App",
+  "homepage": "https://cleanerone.trendmicro.com/",
+  "url": "https://files.trendmicro.com/products/CleanerOnePro/COPG0001/CleanerOnePro_6_6_2.zip",
+  "appcast": null,
+  "version": "6.6.2,4920",
+  "versions": {
+  },
+  "installed": null,
+  "outdated": false,
+  "sha256": "a2bc0802fcfe778e988e9d7b808a6ac07859693e20cbd5913ea6b35a1ef08182",
+  "artifacts": [
+    {
+      "delete": [
+        "/Library/LaunchDaemons/com.trendmicro.TrendCleanerPro.HelperTool.plist",
+        "/Library/PrivilegedHelperTools/com.trendmicro.TrendCleanerPro.HelperTool"
+      ],
+      "launchctl": "com.trendmicro.TrendCleanerPro.HelperTool",
+      "quit": "com.trendmicro.TrendCleanerPro",
+      "signal": {
+      }
+    },
+    [
+      "CleanerOnePro.app"
+    ],
+    {
+      "trash": [
+        "~/Library/Application Support/com.trendmicro.TrendCleanerPro",
+        "~/Library/Caches/com.trendmicro.TrendCleanerPro",
+        "~/Library/Logs/com.trendmicro.TrendCleanerPro",
+        "~/Library/Preferences/com.trendmicro.TrendCleanerPro.plist"
+      ],
+      "signal": {
+      }
+    }
+  ],
+  "caveats": null,
+  "depends_on": {
+    "macos": {
+      ">=": [
+        "10.13"
+      ]
+    }
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": true
+}
