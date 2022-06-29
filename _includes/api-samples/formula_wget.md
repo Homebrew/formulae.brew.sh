@@ -106,7 +106,7 @@
         },
         {
           "full_name": "openssl@1.1",
-          "version": "1.1.1o",
+          "version": "1.1.1p",
           "declared_directly": true
         }
       ],
