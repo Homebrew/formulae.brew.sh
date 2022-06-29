@@ -131,6 +131,7 @@
   },
   "container": null,
   "auto_updates": true,
+  "variations": {},
   "analytics": {
     "install": {
       "30d": {
