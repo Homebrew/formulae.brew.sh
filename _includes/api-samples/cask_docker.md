@@ -145,6 +145,6 @@
       }
     }
   },
-  "generated_date": "2022-06-30"
+  "generated_date": "2022-07-01"
 }
 ```
