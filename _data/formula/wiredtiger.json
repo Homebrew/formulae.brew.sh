@@ -13,13 +13,13 @@
   "license": "GPL-2.0-only or GPL-3.0-only",
   "homepage": "https://source.wiredtiger.com/",
   "versions": {
-    "stable": "10.0.0",
+    "stable": "11.0.0",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/wiredtiger/wiredtiger/releases/download/10.0.0/wiredtiger-10.0.0.tar.bz2",
+      "url": "https://github.com/wiredtiger/wiredtiger/archive/refs/tags/11.0.0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,38 +33,33 @@
       "files": {
         "arm64_monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/wiredtiger/blobs/sha256:4b72a7ac0c4f99e3fa6cdd8395f03bf0c819ccbcd90e9e4ce373de6e016180f4",
-          "sha256": "4b72a7ac0c4f99e3fa6cdd8395f03bf0c819ccbcd90e9e4ce373de6e016180f4"
+          "url": "https://ghcr.io/v2/homebrew/core/wiredtiger/blobs/sha256:54ae003509c8488b6dbf019a88fad8215198e3e10ad120b4fb79fa87b33d2051",
+          "sha256": "54ae003509c8488b6dbf019a88fad8215198e3e10ad120b4fb79fa87b33d2051"
         },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/wiredtiger/blobs/sha256:2e2b170afa925805d7f94e127dc6c66f7ae5d042a37860e736e9c6cbf1696acb",
-          "sha256": "2e2b170afa925805d7f94e127dc6c66f7ae5d042a37860e736e9c6cbf1696acb"
+          "url": "https://ghcr.io/v2/homebrew/core/wiredtiger/blobs/sha256:04f9b121ef62be4f365d36bc1e2c901bfafe37bf62580b701898c01a9b58d359",
+          "sha256": "04f9b121ef62be4f365d36bc1e2c901bfafe37bf62580b701898c01a9b58d359"
         },
         "monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/wiredtiger/blobs/sha256:2d693bed27b7602f8645f861bd063f98ef9e9653294e238550a57c4fbb762924",
-          "sha256": "2d693bed27b7602f8645f861bd063f98ef9e9653294e238550a57c4fbb762924"
+          "url": "https://ghcr.io/v2/homebrew/core/wiredtiger/blobs/sha256:bcf4fa0509021ae516a154281108eef2575616dcd0c16f1bc1937f0dc09e6f5a",
+          "sha256": "bcf4fa0509021ae516a154281108eef2575616dcd0c16f1bc1937f0dc09e6f5a"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/wiredtiger/blobs/sha256:73dec56cf3779376bb1e111c6d96900bfd73e5df072dfce752defaf06d98b167",
-          "sha256": "73dec56cf3779376bb1e111c6d96900bfd73e5df072dfce752defaf06d98b167"
+          "url": "https://ghcr.io/v2/homebrew/core/wiredtiger/blobs/sha256:ebaab842d86b6088ef042da0b73d23e7da494128916e5b16f17daa16e8cfc028",
+          "sha256": "ebaab842d86b6088ef042da0b73d23e7da494128916e5b16f17daa16e8cfc028"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/wiredtiger/blobs/sha256:16d0323167834b745163edf87b88693a7b49ace3f901042c0d78fbfbe5afa8a8",
-          "sha256": "16d0323167834b745163edf87b88693a7b49ace3f901042c0d78fbfbe5afa8a8"
-        },
-        "mojave": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/wiredtiger/blobs/sha256:0c2bbb142e29427648f66455b69028d1650b3d420700d31e952a70e58cc361f8",
-          "sha256": "0c2bbb142e29427648f66455b69028d1650b3d420700d31e952a70e58cc361f8"
+          "url": "https://ghcr.io/v2/homebrew/core/wiredtiger/blobs/sha256:ab75e49599d73c0537853750e440137ee2c07c8b027f6cf21c19dd8a3fb7644b",
+          "sha256": "ab75e49599d73c0537853750e440137ee2c07c8b027f6cf21c19dd8a3fb7644b"
         },
         "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/wiredtiger/blobs/sha256:2e89496c6a6af975b83b16006c84ef7c69d7df3b0e127e2f58a3b2ff6cfc860f",
-          "sha256": "2e89496c6a6af975b83b16006c84ef7c69d7df3b0e127e2f58a3b2ff6cfc860f"
+          "url": "https://ghcr.io/v2/homebrew/core/wiredtiger/blobs/sha256:f9b01253492207235ce85d2e72773bfff7fb5a054978c11cdb00b428e921f5bd",
+          "sha256": "f9b01253492207235ce85d2e72773bfff7fb5a054978c11cdb00b428e921f5bd"
         }
       }
     }
@@ -75,7 +70,8 @@
 
   ],
   "build_dependencies": [
-
+    "ccache",
+    "cmake"
   ],
   "dependencies": [
     "snappy"
