@@ -18,12 +18,26 @@
   "artifacts": [
     [
       "OmegaT_4.3.3_Mac_Notarized/OmegaT.app"
-    ]
+    ],
+    {
+      "trash": [
+        "~/Library/Application Support/OmegaT",
+        "~/Library/Caches/OmegaT",
+        "~/Library/Preferences/OmegaT",
+        "~/Library/Saved Application State/org.omegat.OmegaT.savedState"
+      ],
+      "signal": {
+      }
+    }
   ],
   "caveats": null,
   "depends_on": {
   },
-  "conflicts_with": null,
+  "conflicts_with": {
+    "cask": [
+      "homebrew/cask-versions/omegat-latest"
+    ]
+  },
   "container": null,
   "auto_updates": null,
   "variations": {

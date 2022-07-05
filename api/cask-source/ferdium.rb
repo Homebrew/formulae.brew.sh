@@ -1,12 +1,12 @@
 cask "ferdium" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "6.0.0-nightly.86"
+  version "6.0.0-nightly.89"
 
   if Hardware::CPU.intel?
-    sha256 "d180282b528d67add6130f4745979cc2004966ab5ae56afc353512e452941623"
+    sha256 "6dbbfd3891cef4b4e939cbaa75b9ea13bef37d21a58c2e78ce2587a08ba3a5d8"
   else
-    sha256 "5673dd84db3a808fbab5f36d2f23b00344b2210ab14032b78589484398f70ea1"
+    sha256 "ccf1748a256bb3bec7851255456c3c59895bcb9e3433833bc5b626e826b991ac"
   end
 
   url "https://github.com/ferdium/ferdium-app/releases/download/v#{version}/Ferdium-mac-#{version}-#{arch}.dmg",
