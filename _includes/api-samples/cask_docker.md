@@ -10,13 +10,13 @@
   ],
   "desc": "App to build and share containerized applications and microservices",
   "homepage": "https://www.docker.com/products/docker-desktop",
-  "url": "https://desktop.docker.com/mac/main/amd64/82025/Docker.dmg",
+  "url": "https://desktop.docker.com/mac/main/amd64/82475/Docker.dmg",
   "appcast": null,
-  "version": "4.10.0,82025",
+  "version": "4.10.1,82475",
   "versions": {},
   "installed": null,
   "outdated": false,
-  "sha256": "07bfe00296b724e4e772e268217bc8169a8b23ad98e6da419b13ebfe31b54643",
+  "sha256": "8be8e5245d6a8dbf7b8cb580fb7d99f04cc143c95323695c0d9be4f85dd60b0e",
   "artifacts": [
     {
       "delete": [
@@ -135,13 +135,13 @@
   "analytics": {
     "install": {
       "30d": {
-        "docker": 26081
+        "docker": 26418
       },
       "90d": {
-        "docker": 79138
+        "docker": 78711
       },
       "365d": {
-        "docker": 276002
+        "docker": 276084
       }
     }
   },
