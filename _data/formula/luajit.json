@@ -13,13 +13,13 @@
   "license": "MIT",
   "homepage": "https://luajit.org/luajit.html",
   "versions": {
-    "stable": "2.0.5",
+    "stable": "2.1.0-beta3-20220712.6",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://luajit.org/download/LuaJIT-2.0.5.tar.gz",
+      "url": "https://github.com/LuaJIT/LuaJIT/archive/50936d784474747b4569d988767f1b5bab8bb6d0.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,28 +28,38 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 5,
+      "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/luajit/blobs/sha256:519a2e60557c73f7a181727d69aa7d94007afa7d6041b823c867790d80313176",
+          "sha256": "519a2e60557c73f7a181727d69aa7d94007afa7d6041b823c867790d80313176"
+        },
+        "arm64_big_sur": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/luajit/blobs/sha256:09f3f32a0869b6ed81c250f66b1ed6a5d9d4db8fd8e0b25c8b2ad6a7b7be343e",
+          "sha256": "09f3f32a0869b6ed81c250f66b1ed6a5d9d4db8fd8e0b25c8b2ad6a7b7be343e"
+        },
         "monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/luajit/blobs/sha256:351112e416f845b313dc71cb2a54d349330a6c676ea381d30f5d9d1c676e795c",
-          "sha256": "351112e416f845b313dc71cb2a54d349330a6c676ea381d30f5d9d1c676e795c"
+          "url": "https://ghcr.io/v2/homebrew/core/luajit/blobs/sha256:d7796f1663ba457d6deb7a19cfaea8be8a21d8064d73fb13196480bc307708fc",
+          "sha256": "d7796f1663ba457d6deb7a19cfaea8be8a21d8064d73fb13196480bc307708fc"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/luajit/blobs/sha256:5f5d205e4e49f015379ef230d3a068a2fa3079ab42341a473297290fa654a782",
-          "sha256": "5f5d205e4e49f015379ef230d3a068a2fa3079ab42341a473297290fa654a782"
+          "url": "https://ghcr.io/v2/homebrew/core/luajit/blobs/sha256:2182294caa7cf5589ebb5d6862e5eaa0fa367f697f95b44058f59f57db5b524c",
+          "sha256": "2182294caa7cf5589ebb5d6862e5eaa0fa367f697f95b44058f59f57db5b524c"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/luajit/blobs/sha256:ee0c6394223cff8789452c0fc413d91cefeea1a3b5b5e2e39931620e8037c628",
-          "sha256": "ee0c6394223cff8789452c0fc413d91cefeea1a3b5b5e2e39931620e8037c628"
+          "url": "https://ghcr.io/v2/homebrew/core/luajit/blobs/sha256:ddc9c0063bb5d8d47ece519063e118983a9b0c9b5add83c9dafc0dcb5c59682a",
+          "sha256": "ddc9c0063bb5d8d47ece519063e118983a9b0c9b5add83c9dafc0dcb5c59682a"
         },
         "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/luajit/blobs/sha256:67663e6413774ef4b8be6678e389a6adb8e23ef50f52d5bb6d44f2b1069f6e8a",
-          "sha256": "67663e6413774ef4b8be6678e389a6adb8e23ef50f52d5bb6d44f2b1069f6e8a"
+          "url": "https://ghcr.io/v2/homebrew/core/luajit/blobs/sha256:95a5d53908af9ce0abe23dbe82df20bdeac624ffe7d2e84b8d92b89aebd76e9c",
+          "sha256": "95a5d53908af9ce0abe23dbe82df20bdeac624ffe7d2e84b8d92b89aebd76e9c"
         }
       }
     }
