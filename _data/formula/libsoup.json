@@ -24,7 +24,7 @@
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,33 +33,33 @@
       "files": {
         "arm64_monterey": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/libsoup/blobs/sha256:3a65a35c6dfa623e09f5b36d098445e215871ec09d0a3ed18b5bd25b05e452fd",
-          "sha256": "3a65a35c6dfa623e09f5b36d098445e215871ec09d0a3ed18b5bd25b05e452fd"
+          "url": "https://ghcr.io/v2/homebrew/core/libsoup/blobs/sha256:ce9be7a6430e5ad4130b5119695c18fca50ceeaa4b48e2070e086e5671b2b906",
+          "sha256": "ce9be7a6430e5ad4130b5119695c18fca50ceeaa4b48e2070e086e5671b2b906"
         },
         "arm64_big_sur": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/libsoup/blobs/sha256:a90ecc9dc9b6172189d9f748a3d7bb19bbd826d9f457bd617db49200470637fa",
-          "sha256": "a90ecc9dc9b6172189d9f748a3d7bb19bbd826d9f457bd617db49200470637fa"
+          "url": "https://ghcr.io/v2/homebrew/core/libsoup/blobs/sha256:fade8aa78c7d30d257cacac998c3fcf5a9ed2f23e9eb8650bb0bbdf75c1dc781",
+          "sha256": "fade8aa78c7d30d257cacac998c3fcf5a9ed2f23e9eb8650bb0bbdf75c1dc781"
         },
         "monterey": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/libsoup/blobs/sha256:40baff4cb1af532c52cc26714a5fc57315f4d120612cef73e97efd2965c077bd",
-          "sha256": "40baff4cb1af532c52cc26714a5fc57315f4d120612cef73e97efd2965c077bd"
+          "url": "https://ghcr.io/v2/homebrew/core/libsoup/blobs/sha256:d6c2693071efd9ae4ebdc8c238af301e1a304214a14de6b7219fce94703b677c",
+          "sha256": "d6c2693071efd9ae4ebdc8c238af301e1a304214a14de6b7219fce94703b677c"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/libsoup/blobs/sha256:201612adc949ca409beca80f2830c6984d6dd13d9cc6f36d5472662af573f489",
-          "sha256": "201612adc949ca409beca80f2830c6984d6dd13d9cc6f36d5472662af573f489"
+          "url": "https://ghcr.io/v2/homebrew/core/libsoup/blobs/sha256:70466230085dee25a369684a2739b26553bf849a30faeea47b44d8a40d4d62f0",
+          "sha256": "70466230085dee25a369684a2739b26553bf849a30faeea47b44d8a40d4d62f0"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/libsoup/blobs/sha256:0e5daf91cd10e169a35bc821675e438b331ed3f1092f2abafc461d564be85fa3",
-          "sha256": "0e5daf91cd10e169a35bc821675e438b331ed3f1092f2abafc461d564be85fa3"
+          "url": "https://ghcr.io/v2/homebrew/core/libsoup/blobs/sha256:f7cd4fd0f05050c24dc2d1bce7a9074417d1ec8ff5ed6272a8574e860bfdadcc",
+          "sha256": "f7cd4fd0f05050c24dc2d1bce7a9074417d1ec8ff5ed6272a8574e860bfdadcc"
         },
         "x86_64_linux": {
           "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/libsoup/blobs/sha256:865315a09372ab22d48f15bef518e54fdd69493dae309bca6f8816206c948834",
-          "sha256": "865315a09372ab22d48f15bef518e54fdd69493dae309bca6f8816206c948834"
+          "url": "https://ghcr.io/v2/homebrew/core/libsoup/blobs/sha256:f05deaf1f0ffb5404a40160e7042a68d3008af7468861cdbffe8f7f4e0181ae0",
+          "sha256": "f05deaf1f0ffb5404a40160e7042a68d3008af7468861cdbffe8f7f4e0181ae0"
         }
       }
     }
@@ -70,10 +70,12 @@
 
   ],
   "build_dependencies": [
+    "glib-utils",
     "gobject-introspection",
     "meson",
     "ninja",
     "pkg-config",
+    "python@3.10",
     "vala"
   ],
   "dependencies": [
@@ -89,7 +91,8 @@
   ],
   "uses_from_macos": [
     "krb5",
-    "libxml2"
+    "libxml2",
+    "sqlite"
   ],
   "requirements": [
 

@@ -24,7 +24,7 @@
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,33 +33,33 @@
       "files": {
         "arm64_monterey": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/glib/blobs/sha256:dd94ffde0318591e91b826353d83387839c57b4455bd79243c7227a2ad83b677",
-          "sha256": "dd94ffde0318591e91b826353d83387839c57b4455bd79243c7227a2ad83b677"
+          "url": "https://ghcr.io/v2/homebrew/core/glib/blobs/sha256:af335e6bfa338341ac2c97e7da0f5d1c4191d28acda36b5ce4b2720e875f02bf",
+          "sha256": "af335e6bfa338341ac2c97e7da0f5d1c4191d28acda36b5ce4b2720e875f02bf"
         },
         "arm64_big_sur": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/glib/blobs/sha256:d15faebb0bd544559668770ff5ce9b69ce464bd81af81c7d0761c63aacc5cbe6",
-          "sha256": "d15faebb0bd544559668770ff5ce9b69ce464bd81af81c7d0761c63aacc5cbe6"
+          "url": "https://ghcr.io/v2/homebrew/core/glib/blobs/sha256:60e0ef5296fbec04c0ed32409d6439a0dbcbbd68c5907769777b14f984088fbf",
+          "sha256": "60e0ef5296fbec04c0ed32409d6439a0dbcbbd68c5907769777b14f984088fbf"
         },
         "monterey": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/glib/blobs/sha256:659c2c285a67d2679c89c039864fa38dc4df64cbfd67bd77ecbeb3f8c701db41",
-          "sha256": "659c2c285a67d2679c89c039864fa38dc4df64cbfd67bd77ecbeb3f8c701db41"
+          "url": "https://ghcr.io/v2/homebrew/core/glib/blobs/sha256:528f8a75879a9e52ea0a9ab65c018e01333514e22d1b70896be8ff3b96b35189",
+          "sha256": "528f8a75879a9e52ea0a9ab65c018e01333514e22d1b70896be8ff3b96b35189"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/glib/blobs/sha256:b747e3542fe204aa1dc1a5892806bdfe0257f7cdfdf0f27d3164742a82e77344",
-          "sha256": "b747e3542fe204aa1dc1a5892806bdfe0257f7cdfdf0f27d3164742a82e77344"
+          "url": "https://ghcr.io/v2/homebrew/core/glib/blobs/sha256:504908c9397c17f97cdf7b32ddbbdc7ac0af4a13937ba83161cb85f8f06b2c75",
+          "sha256": "504908c9397c17f97cdf7b32ddbbdc7ac0af4a13937ba83161cb85f8f06b2c75"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/glib/blobs/sha256:b98e6592d4b92001719c9dd983a76231b352c60915176375a9954c557daf1477",
-          "sha256": "b98e6592d4b92001719c9dd983a76231b352c60915176375a9954c557daf1477"
+          "url": "https://ghcr.io/v2/homebrew/core/glib/blobs/sha256:151fedd4c8545530c9a8b750ffb6b189db50ce95239ca03d1ec98bf7feefeb55",
+          "sha256": "151fedd4c8545530c9a8b750ffb6b189db50ce95239ca03d1ec98bf7feefeb55"
         },
         "x86_64_linux": {
           "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/glib/blobs/sha256:656c6a4aaa9c2a802e4167b46cccc8ee2dfaed3b33cdcc974a8f35903af0c09a",
-          "sha256": "656c6a4aaa9c2a802e4167b46cccc8ee2dfaed3b33cdcc974a8f35903af0c09a"
+          "url": "https://ghcr.io/v2/homebrew/core/glib/blobs/sha256:5b23356a0c0fbaea9fb96554e7a2a8d5bab0f16c050acae1df7fa50f344fd32b",
+          "sha256": "5b23356a0c0fbaea9fb96554e7a2a8d5bab0f16c050acae1df7fa50f344fd32b"
         }
       }
     }
@@ -72,13 +72,13 @@
   "build_dependencies": [
     "meson",
     "ninja",
-    "pkg-config"
+    "pkg-config",
+    "python@3.10"
   ],
   "dependencies": [
     "gettext",
     "libffi",
-    "pcre",
-    "python@3.9"
+    "pcre"
   ],
   "recommended_dependencies": [
 
@@ -95,7 +95,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": null,
+  "caveats": "Python executables and libraries are no longer included with this formula, but they are available separately:\n  brew install glib-utils\n",
   "installed": [
     {
       "version": "2.72.2",
@@ -167,7 +167,7 @@
   ],
   "linked_keg": "2.72.2",
   "pinned": false,
-  "outdated": false,
+  "outdated": true,
   "deprecated": false,
   "deprecation_date": null,
   "deprecation_reason": null,
