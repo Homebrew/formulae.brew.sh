@@ -1,6 +1,6 @@
 {
-  "token": "opencore-legacy-patcher-gui",
-  "full_token": "opencore-legacy-patcher-gui",
+  "token": "opencore-patcher",
+  "full_token": "opencore-patcher",
   "tap": "homebrew/cask",
   "name": [
     "OpenCore Legacy Patcher GUI"
@@ -14,19 +14,23 @@
   },
   "installed": null,
   "outdated": false,
-  "sha256": "no_check",
+  "sha256": "4efad961c310355e0667641f3b0c90bc058e8554a5b53c21038e0726ec79c974",
   "artifacts": [
+    {
+      "delete": "/Library/LaunchAgents/com.dortania.opencore-legacy-patcher.auto-patch.plist",
+      "signal": {
+      }
+    },
     [
       "OpenCore-Patcher.app"
     ],
     {
       "trash": [
-        "/Library/LaunchAgents/com.dortania.opencore-legacy-patcher.auto-patch.plist",
-        "/Users/Shared/.com.dortania.opencore-legacy-patcher.plist",
         "~/Library/Application Support/CrashReporter/OpenCore-Patcher*",
         "~/Library/Preferences/com.dortania.opencore-legacy-patcher-wxpython.plist",
         "~/Library/Saved Application State/com.dortania.opencore-legacy-patcher-wxpython.savedState",
-        "~/Library/Saved Application State/com.dortania.opencore-legacy-patcher.savedState"
+        "~/Library/Saved Application State/com.dortania.opencore-legacy-patcher.savedState",
+        "/Users/Shared/.com.dortania.opencore-legacy-patcher.plist"
       ],
       "signal": {
       }
@@ -36,7 +40,7 @@
   "depends_on": {
   },
   "conflicts_with": null,
-  "container": "{:type=>:zip}",
+  "container": null,
   "auto_updates": true,
   "variations": {
   }
