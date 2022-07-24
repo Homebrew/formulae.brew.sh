@@ -102,5 +102,17 @@
   "deprecation_reason": null,
   "disabled": false,
   "disable_date": null,
-  "disable_reason": null
+  "disable_reason": null,
+  "variations": {
+    "x86_64_linux": {
+      "build_dependencies": [
+        "rust",
+        "pkg-config"
+      ],
+      "dependencies": [
+        "openssl@1.1"
+      ],
+      "caveats": "To use the browser extension, manually link the app manifest with:\n  sudo mkdir -p \"/usr/lib/mozilla/native-messaging-hosts\"\n  sudo ln -sf \"$(brew --prefix)/opt/firefoxpwa/share/firefoxpwa.json\" \"/usr/lib/mozilla/native-messaging-hosts/firefoxpwa.json\"\n"
+    }
+  }
 }

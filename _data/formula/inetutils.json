@@ -104,5 +104,20 @@
   "deprecation_reason": null,
   "disabled": false,
   "disable_date": null,
-  "disable_reason": null
+  "disable_reason": null,
+  "variations": {
+    "sierra": {
+      "caveats": "Only the following commands have been installed without the prefix 'g'.\n\n    dnsdomainname\n    rcp\n    rexec\n    rlogin\n    rsh\n\nIf you really need to use other commands with their normal names,\nyou can add a \"gnubin\" directory to your PATH from your bashrc like:\n\n    PATH=\"$(brew --prefix)/opt/inetutils/libexec/gnubin:$PATH\"\n"
+    },
+    "el_capitan": {
+      "caveats": "Only the following commands have been installed without the prefix 'g'.\n\n    dnsdomainname\n    rcp\n    rexec\n    rlogin\n    rsh\n\nIf you really need to use other commands with their normal names,\nyou can add a \"gnubin\" directory to your PATH from your bashrc like:\n\n    PATH=\"$(brew --prefix)/opt/inetutils/libexec/gnubin:$PATH\"\n"
+    },
+    "x86_64_linux": {
+      "dependencies": [
+        "libidn2",
+        "readline"
+      ],
+      "caveats": "The following commands have been installed with the prefix 'g'.\n\n    dnsdomainname\n    hostname\n    ifconfig\n    logger\n    ping\n    whois\n\nIf you really need to use these commands with their normal names,\nyou can add a \"gnubin\" directory to your PATH from your bashrc like:\n\n    PATH=\"$(brew --prefix)/opt/inetutils/libexec/gnubin:$PATH\"\n"
+    }
+  }
 }
