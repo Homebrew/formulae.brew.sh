@@ -123,6 +123,15 @@
   "disabled": false,
   "disable_date": null,
   "disable_reason": null,
+  "variations": {
+    "x86_64_linux": {
+      "dependencies": [
+        "libidn2",
+        "openssl@1.1",
+        "util-linux"
+      ]
+    }
+  },
   "analytics": {
     "install": {
       "30d": {
