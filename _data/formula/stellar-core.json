@@ -13,15 +13,15 @@
   "license": "Apache-2.0",
   "homepage": "https://www.stellar.org/",
   "versions": {
-    "stable": "19.1.0",
+    "stable": "19.3.0",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
       "url": "https://github.com/stellar/stellar-core.git",
-      "tag": "v19.1.0",
-      "revision": "e801fd93b2757bebb18ae8b4550afba444d225af"
+      "tag": "v19.3.0",
+      "revision": "9ce6dc4e9889ce86083c0e3ba2e773e0ff2ced3a"
     }
   },
   "revision": 0,
@@ -33,33 +33,33 @@
       "files": {
         "arm64_monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/stellar-core/blobs/sha256:c18a862a439f80897d2b3c34783cee9994fe1c2fc8c3632b276a3a399ccc6db3",
-          "sha256": "c18a862a439f80897d2b3c34783cee9994fe1c2fc8c3632b276a3a399ccc6db3"
+          "url": "https://ghcr.io/v2/homebrew/core/stellar-core/blobs/sha256:1448e110ca53e698c17c8b03f9624b97cd27a5b850b873a68a2d431f768ee98e",
+          "sha256": "1448e110ca53e698c17c8b03f9624b97cd27a5b850b873a68a2d431f768ee98e"
         },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/stellar-core/blobs/sha256:59c1c608da2a26ad6552caf23ba92797d748a91b8e9641d820732bd407731c79",
-          "sha256": "59c1c608da2a26ad6552caf23ba92797d748a91b8e9641d820732bd407731c79"
+          "url": "https://ghcr.io/v2/homebrew/core/stellar-core/blobs/sha256:3e2d3cb23a83a67588967e7fc6f469a53a6ae368b05c3295dfe7559dabb90306",
+          "sha256": "3e2d3cb23a83a67588967e7fc6f469a53a6ae368b05c3295dfe7559dabb90306"
         },
         "monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/stellar-core/blobs/sha256:249f9213f8921277ff6cb3d5e135dfb478187ed2163f53e07aa1ed62e3d101f7",
-          "sha256": "249f9213f8921277ff6cb3d5e135dfb478187ed2163f53e07aa1ed62e3d101f7"
+          "url": "https://ghcr.io/v2/homebrew/core/stellar-core/blobs/sha256:28bce77a35079c3da0c3553dec91bd0282f29f55a98f015a1e66b04dff37828c",
+          "sha256": "28bce77a35079c3da0c3553dec91bd0282f29f55a98f015a1e66b04dff37828c"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/stellar-core/blobs/sha256:6539c8222657db288d71c18f9cac871192b62f5fde9a01bfd4eff63ca19489e8",
-          "sha256": "6539c8222657db288d71c18f9cac871192b62f5fde9a01bfd4eff63ca19489e8"
+          "url": "https://ghcr.io/v2/homebrew/core/stellar-core/blobs/sha256:243a2fcfe423ba6a6023b70df32d044095bfcb5545d571f3ccf63b9d3bfd2f87",
+          "sha256": "243a2fcfe423ba6a6023b70df32d044095bfcb5545d571f3ccf63b9d3bfd2f87"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/stellar-core/blobs/sha256:0009b7fcc0f13e436b90263a40a1c3e699c9a3a3b1ad21f3ad38d2f905dd31e2",
-          "sha256": "0009b7fcc0f13e436b90263a40a1c3e699c9a3a3b1ad21f3ad38d2f905dd31e2"
+          "url": "https://ghcr.io/v2/homebrew/core/stellar-core/blobs/sha256:c2b043f20dbe8038906076e402cfab67b41f50a97236a60a4b5ab46f51f99721",
+          "sha256": "c2b043f20dbe8038906076e402cfab67b41f50a97236a60a4b5ab46f51f99721"
         },
         "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/stellar-core/blobs/sha256:e21653c184658c398754103254d7fa0841693601b6d560daf95ef6a514dd361c",
-          "sha256": "e21653c184658c398754103254d7fa0841693601b6d560daf95ef6a514dd361c"
+          "url": "https://ghcr.io/v2/homebrew/core/stellar-core/blobs/sha256:9abefc1c4abcd62475c622bc3f433a947d14f8aaf538153bb57cc5173d7ce0bd",
+          "sha256": "9abefc1c4abcd62475c622bc3f433a947d14f8aaf538153bb57cc5173d7ce0bd"
         }
       }
     }
@@ -72,6 +72,7 @@
   "build_dependencies": [
     "autoconf",
     "automake",
+    "bison",
     "libtool",
     "pandoc",
     "pkg-config"
@@ -89,9 +90,6 @@
 
   ],
   "uses_from_macos": [
-    {
-      "bison": "build"
-    },
     {
       "flex": "build"
     }
