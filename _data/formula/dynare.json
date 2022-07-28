@@ -13,43 +13,53 @@
   "license": "GPL-3.0-or-later",
   "homepage": "https://www.dynare.org/",
   "versions": {
-    "stable": "5.1",
+    "stable": "5.2",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://www.dynare.org/release/source/dynare-5.1.tar.xz",
+      "url": "https://www.dynare.org/release/source/dynare-5.2.tar.xz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/dynare/blobs/sha256:f92eccd38bb8dc2d92926546ca3539caca433f9d19d139b0729b45b5313bf9ac",
+          "sha256": "f92eccd38bb8dc2d92926546ca3539caca433f9d19d139b0729b45b5313bf9ac"
+        },
+        "arm64_big_sur": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/dynare/blobs/sha256:bea758ae18c53d53bf2da9741863bed79b40fe6bb154272e63e03251c55728e7",
+          "sha256": "bea758ae18c53d53bf2da9741863bed79b40fe6bb154272e63e03251c55728e7"
+        },
         "monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/dynare/blobs/sha256:74b0c0829590cd6f298b2112445986075845a1d795973896a7de1a3b3b943ba8",
-          "sha256": "74b0c0829590cd6f298b2112445986075845a1d795973896a7de1a3b3b943ba8"
+          "url": "https://ghcr.io/v2/homebrew/core/dynare/blobs/sha256:df203652c63ef1746795342e296e14c3dcbd1ec3ef6b62ced2e180c71d0bfcfd",
+          "sha256": "df203652c63ef1746795342e296e14c3dcbd1ec3ef6b62ced2e180c71d0bfcfd"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/dynare/blobs/sha256:dc535e5c5fe69ccd611b59cf9030bed241491a7f024c60feb4a4eacb9268c1bc",
-          "sha256": "dc535e5c5fe69ccd611b59cf9030bed241491a7f024c60feb4a4eacb9268c1bc"
+          "url": "https://ghcr.io/v2/homebrew/core/dynare/blobs/sha256:0bc71e7957e71fcdffa5c95a3e2f7ede3f77e68d2d2b49173bb38373767f84c6",
+          "sha256": "0bc71e7957e71fcdffa5c95a3e2f7ede3f77e68d2d2b49173bb38373767f84c6"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/dynare/blobs/sha256:a130cdc442e3b1889850d4711bc728ed5a93d4903ec0475c5f698840ac8012c6",
-          "sha256": "a130cdc442e3b1889850d4711bc728ed5a93d4903ec0475c5f698840ac8012c6"
+          "url": "https://ghcr.io/v2/homebrew/core/dynare/blobs/sha256:58d37e0b773ea7dfa25e6eba288738a9ba462debb3f56dc9ce29dded99820671",
+          "sha256": "58d37e0b773ea7dfa25e6eba288738a9ba462debb3f56dc9ce29dded99820671"
         },
         "x86_64_linux": {
           "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/dynare/blobs/sha256:5f1f77d8c26a48e8b2f9e2a78ea79cfe6e2262d4e47779722ed53a2a9616016e",
-          "sha256": "5f1f77d8c26a48e8b2f9e2a78ea79cfe6e2262d4e47779722ed53a2a9616016e"
+          "url": "https://ghcr.io/v2/homebrew/core/dynare/blobs/sha256:46058b79d7c8312426b96d6a98c2c43c859be7cc73476bc1ad0fc09268e6c7fd",
+          "sha256": "46058b79d7c8312426b96d6a98c2c43c859be7cc73476bc1ad0fc09268e6c7fd"
         }
       }
     }
@@ -60,10 +70,6 @@
 
   ],
   "build_dependencies": [
-    "autoconf",
-    "automake",
-    "bison",
-    "flex",
     "boost",
     "cweb"
   ],
