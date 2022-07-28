@@ -110,10 +110,36 @@
   "disable_date": null,
   "disable_reason": null,
   "variations": {
+    "arm64_ventura": {
+      "dependencies": [
+        "openssl@1.1"
+      ]
+    },
+    "arm64_monterey": {
+      "dependencies": [
+        "openssl@1.1"
+      ]
+    },
+    "ventura": {
+      "dependencies": [
+        "openssl@1.1"
+      ]
+    },
+    "monterey": {
+      "dependencies": [
+        "openssl@1.1"
+      ]
+    },
     "x86_64_linux": {
+      "build_dependencies": [
+        "cmake",
+        "doxygen",
+        "python"
+      ],
       "dependencies": [
         "openssl@1.1",
         "curl",
+        "libxml2",
         "util-linux"
       ]
     }

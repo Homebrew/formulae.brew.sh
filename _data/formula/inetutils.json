@@ -115,6 +115,8 @@
     "x86_64_linux": {
       "dependencies": [
         "libidn2",
+        "libxcrypt",
+        "ncurses",
         "readline"
       ],
       "caveats": "The following commands have been installed with the prefix 'g'.\n\n    dnsdomainname\n    hostname\n    ifconfig\n    logger\n    ping\n    whois\n\nIf you really need to use these commands with their normal names,\nyou can add a \"gnubin\" directory to your PATH from your bashrc like:\n\n    PATH=\"$(brew --prefix)/opt/inetutils/libexec/gnubin:$PATH\"\n"

@@ -134,6 +134,14 @@
   "disable_reason": null,
   "variations": {
     "x86_64_linux": {
+      "build_dependencies": [
+        "asio",
+        "cmake",
+        "eigen",
+        "swig",
+        "bison",
+        "flex"
+      ],
       "dependencies": [
         "faust",
         "fltk",
@@ -153,6 +161,8 @@
         "portmidi",
         "python@3.9",
         "stk",
+        "curl",
+        "zlib",
         "gcc"
       ],
       "caveats": "srconv is not installed because it conflicts with binutils. To run srconv:\n  csound --utility=srconv\n\nTo use the Java bindings, you may need to add to /Users/runner/.bash_profile:\n  export CLASSPATH=\"$(brew --prefix)/opt/csound/libexec/csnd6.jar:.\"\nand link the native shared library into your Java Extensions folder:\n  sudo mkdir -p /usr/java/packages/lib\n  sudo ln -s \"$(brew --prefix)/opt/csound/libexec/lib_jcsound6.jnilib\" /usr/java/packages/lib\n"

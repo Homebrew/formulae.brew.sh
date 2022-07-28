@@ -119,11 +119,19 @@
   "disable_reason": null,
   "variations": {
     "x86_64_linux": {
+      "build_dependencies": [
+        "python@3.10",
+        "bison",
+        "flex",
+        "perl"
+      ],
       "dependencies": [
         "gnutls",
         "krb5",
         "libtasn1",
-        "readline"
+        "readline",
+        "libxcrypt",
+        "zlib"
       ],
       "caveats": null
     }
