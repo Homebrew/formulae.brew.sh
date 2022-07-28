@@ -76,13 +76,13 @@
     "python@3.10"
   ],
   "dependencies": [
-    "libpng",
     "libzip",
     "miniupnpc",
     "sdl2",
     "snappy",
     "zstd",
-    "molten-vk"
+    "molten-vk",
+    "libpng"
   ],
   "recommended_dependencies": [
 
@@ -113,16 +113,46 @@
   "disable_date": null,
   "disable_reason": null,
   "variations": {
+    "arm64_ventura": {
+      "dependencies": [
+        "libzip",
+        "miniupnpc",
+        "sdl2",
+        "snappy",
+        "zstd",
+        "molten-vk"
+      ]
+    },
+    "arm64_monterey": {
+      "dependencies": [
+        "libzip",
+        "miniupnpc",
+        "sdl2",
+        "snappy",
+        "zstd",
+        "molten-vk"
+      ]
+    },
+    "arm64_big_sur": {
+      "dependencies": [
+        "libzip",
+        "miniupnpc",
+        "sdl2",
+        "snappy",
+        "zstd",
+        "molten-vk"
+      ]
+    },
     "x86_64_linux": {
       "dependencies": [
-        "libpng",
         "libzip",
         "miniupnpc",
         "sdl2",
         "snappy",
         "zstd",
         "zlib",
-        "glew"
+        "glew",
+        "libpng"
       ]
     }
   }
