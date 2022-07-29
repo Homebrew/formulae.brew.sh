@@ -13,13 +13,13 @@
   "license": "Apache-2.0",
   "homepage": "https://arrow.apache.org/",
   "versions": {
-    "stable": "8.0.0",
+    "stable": "8.0.1",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://www.apache.org/dyn/closer.lua?path=arrow/arrow-8.0.0/apache-arrow-8.0.0.tar.gz",
+      "url": "https://www.apache.org/dyn/closer.lua?path=arrow/arrow-8.0.1/apache-arrow-8.0.1.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,33 +33,33 @@
       "files": {
         "arm64_monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/apache-arrow-glib/blobs/sha256:d5ca4c03e21608573570d28055ff7dba54ff16237c4e2e85953f85ab2b297400",
-          "sha256": "d5ca4c03e21608573570d28055ff7dba54ff16237c4e2e85953f85ab2b297400"
+          "url": "https://ghcr.io/v2/homebrew/core/apache-arrow-glib/blobs/sha256:2b85faa106edf308595c12af9a62a7f05e100cfaba6b337600ec832dba09aa71",
+          "sha256": "2b85faa106edf308595c12af9a62a7f05e100cfaba6b337600ec832dba09aa71"
         },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/apache-arrow-glib/blobs/sha256:6a21e83c704d9734adafc7cbb4087ae6f0389c3cc537d0598fae0ec186cfcd4e",
-          "sha256": "6a21e83c704d9734adafc7cbb4087ae6f0389c3cc537d0598fae0ec186cfcd4e"
+          "url": "https://ghcr.io/v2/homebrew/core/apache-arrow-glib/blobs/sha256:9a1924c7eb7853e71ea0dee8a9e062a657849ae2a25343a37b344c684e8470a3",
+          "sha256": "9a1924c7eb7853e71ea0dee8a9e062a657849ae2a25343a37b344c684e8470a3"
         },
         "monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/apache-arrow-glib/blobs/sha256:014cc1483619a6a4686d0e8a73fbd618ee41fb3a16e5e969d598af7c4ff28744",
-          "sha256": "014cc1483619a6a4686d0e8a73fbd618ee41fb3a16e5e969d598af7c4ff28744"
+          "url": "https://ghcr.io/v2/homebrew/core/apache-arrow-glib/blobs/sha256:15f68c3d3eff600ae62bd362e3dc32ea0e97cfd45155f747fa4a73db1624ba4c",
+          "sha256": "15f68c3d3eff600ae62bd362e3dc32ea0e97cfd45155f747fa4a73db1624ba4c"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/apache-arrow-glib/blobs/sha256:7e407ababc447ecdcba628a18f6d1d974172db8fadb9fb1784196f023e50eb72",
-          "sha256": "7e407ababc447ecdcba628a18f6d1d974172db8fadb9fb1784196f023e50eb72"
+          "url": "https://ghcr.io/v2/homebrew/core/apache-arrow-glib/blobs/sha256:92e1eb8ccab434bb9d5234ebf620ef4f26e93984778b9864404ceff06af377f0",
+          "sha256": "92e1eb8ccab434bb9d5234ebf620ef4f26e93984778b9864404ceff06af377f0"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/apache-arrow-glib/blobs/sha256:1c04df7e3fb2431974ecc8dbf3231611be54ca76799abe2d505bc807a8291555",
-          "sha256": "1c04df7e3fb2431974ecc8dbf3231611be54ca76799abe2d505bc807a8291555"
+          "url": "https://ghcr.io/v2/homebrew/core/apache-arrow-glib/blobs/sha256:249dff425624bda77f3d26f3f60b3c50a11479e8e11234281b039c4d641535f3",
+          "sha256": "249dff425624bda77f3d26f3f60b3c50a11479e8e11234281b039c4d641535f3"
         },
         "x86_64_linux": {
           "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/apache-arrow-glib/blobs/sha256:d049b74d0292bb4c61e40f353c4ca6e5a465e47e3a06d60a979eeccd355ca652",
-          "sha256": "d049b74d0292bb4c61e40f353c4ca6e5a465e47e3a06d60a979eeccd355ca652"
+          "url": "https://ghcr.io/v2/homebrew/core/apache-arrow-glib/blobs/sha256:570d7b532ae126ead199b182cac3eb3de4ccc01fc5b75adf6bd3dd63d8085ca7",
+          "sha256": "570d7b532ae126ead199b182cac3eb3de4ccc01fc5b75adf6bd3dd63d8085ca7"
         }
       }
     }
@@ -70,6 +70,7 @@
 
   ],
   "build_dependencies": [
+    "glib-utils",
     "gobject-introspection",
     "meson",
     "ninja",
