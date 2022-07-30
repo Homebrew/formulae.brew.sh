@@ -24,7 +24,7 @@
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,33 +33,33 @@
       "files": {
         "arm64_monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/mupdf/blobs/sha256:03b44ccd0487381a58a07de71e21e1918f2fc3190e1d722279524e52d6c6048d",
-          "sha256": "03b44ccd0487381a58a07de71e21e1918f2fc3190e1d722279524e52d6c6048d"
+          "url": "https://ghcr.io/v2/homebrew/core/mupdf/blobs/sha256:ede506c4bc48b3092f01c6cf28b010bc97335fecdd82868b26906fb2b40d7657",
+          "sha256": "ede506c4bc48b3092f01c6cf28b010bc97335fecdd82868b26906fb2b40d7657"
         },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/mupdf/blobs/sha256:4dfdeb86efe9bb8916894a9f205303c9a3f30f9196d4581b58210ce911a15901",
-          "sha256": "4dfdeb86efe9bb8916894a9f205303c9a3f30f9196d4581b58210ce911a15901"
+          "url": "https://ghcr.io/v2/homebrew/core/mupdf/blobs/sha256:47a750c5a8496636ec95b6cb795f5d8c69fd8276a7d82bfa56f7c335f3752449",
+          "sha256": "47a750c5a8496636ec95b6cb795f5d8c69fd8276a7d82bfa56f7c335f3752449"
         },
         "monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/mupdf/blobs/sha256:98b7f2424ffa5f77a81746b1d7de923ca60dcd646f84b79f56609811e6e0ad1b",
-          "sha256": "98b7f2424ffa5f77a81746b1d7de923ca60dcd646f84b79f56609811e6e0ad1b"
+          "url": "https://ghcr.io/v2/homebrew/core/mupdf/blobs/sha256:521afd339695b937ee947ac532bee1167f4f9d0eacc78d7e7d85bbd6dd001555",
+          "sha256": "521afd339695b937ee947ac532bee1167f4f9d0eacc78d7e7d85bbd6dd001555"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/mupdf/blobs/sha256:5e4fde38177603b4290d8ce7fb87af8445e98e902b59186bc96d5bfa20a6e8ca",
-          "sha256": "5e4fde38177603b4290d8ce7fb87af8445e98e902b59186bc96d5bfa20a6e8ca"
+          "url": "https://ghcr.io/v2/homebrew/core/mupdf/blobs/sha256:fdf5620f1d447bbdfe12f933717500d018f0848d7dbf785d6c8b632a9037435b",
+          "sha256": "fdf5620f1d447bbdfe12f933717500d018f0848d7dbf785d6c8b632a9037435b"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/mupdf/blobs/sha256:2a78967b68a4f3ed3312388503fa26c2604ac83201a76fb7cb6fcc9284833228",
-          "sha256": "2a78967b68a4f3ed3312388503fa26c2604ac83201a76fb7cb6fcc9284833228"
+          "url": "https://ghcr.io/v2/homebrew/core/mupdf/blobs/sha256:53fa93d6ad092065f3b2d734a275ea0c1123036978c11ba76791d6285fec102b",
+          "sha256": "53fa93d6ad092065f3b2d734a275ea0c1123036978c11ba76791d6285fec102b"
         },
         "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/mupdf/blobs/sha256:ce34ee7f29f260e04c6b135d7d1d139d4f395cb68aa5ea47016770911688706d",
-          "sha256": "ce34ee7f29f260e04c6b135d7d1d139d4f395cb68aa5ea47016770911688706d"
+          "url": "https://ghcr.io/v2/homebrew/core/mupdf/blobs/sha256:9e02cd29a6a482eb30cf82bd599cf014db70d70fd965d7c832d914f044afd128",
+          "sha256": "9e02cd29a6a482eb30cf82bd599cf014db70d70fd965d7c832d914f044afd128"
         }
       }
     }
@@ -74,8 +74,14 @@
     "pkg-config"
   ],
   "dependencies": [
-    "freeglut",
-    "mesa"
+    "freetype",
+    "gumbo-parser",
+    "harfbuzz",
+    "jbig2dec",
+    "jpeg-turbo",
+    "mujs",
+    "openjpeg",
+    "openssl@1.1"
   ],
   "recommended_dependencies": [
 
@@ -84,7 +90,7 @@
 
   ],
   "uses_from_macos": [
-
+    "zlib"
   ],
   "requirements": [
 
@@ -106,5 +112,22 @@
   "disable_date": null,
   "disable_reason": null,
   "variations": {
+    "x86_64_linux": {
+      "dependencies": [
+        "freetype",
+        "gumbo-parser",
+        "harfbuzz",
+        "jbig2dec",
+        "jpeg-turbo",
+        "mujs",
+        "openjpeg",
+        "openssl@1.1",
+        "zlib",
+        "freeglut",
+        "libx11",
+        "libxext",
+        "mesa"
+      ]
+    }
   }
 }
