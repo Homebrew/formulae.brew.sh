@@ -73,8 +73,7 @@
 
   ],
   "dependencies": [
-    "simde",
-    "tbb"
+
   ],
   "recommended_dependencies": [
 
@@ -83,6 +82,7 @@
 
   ],
   "uses_from_macos": [
+    "perl",
     "python",
     "zlib"
   ],
@@ -106,5 +106,47 @@
   "disable_date": null,
   "disable_reason": null,
   "variations": {
+    "arm64_ventura": {
+      "build_dependencies": [
+        "simde"
+      ]
+    },
+    "arm64_monterey": {
+      "build_dependencies": [
+        "simde"
+      ]
+    },
+    "arm64_big_sur": {
+      "build_dependencies": [
+        "simde"
+      ]
+    },
+    "mojave": {
+      "dependencies": [
+        "python"
+      ]
+    },
+    "high_sierra": {
+      "dependencies": [
+        "python"
+      ]
+    },
+    "sierra": {
+      "dependencies": [
+        "python"
+      ]
+    },
+    "el_capitan": {
+      "dependencies": [
+        "python"
+      ]
+    },
+    "x86_64_linux": {
+      "dependencies": [
+        "perl",
+        "python",
+        "zlib"
+      ]
+    }
   }
 }
