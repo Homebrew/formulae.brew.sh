@@ -55,11 +55,6 @@
           "cellar": "/usr/local/Cellar",
           "url": "https://ghcr.io/v2/homebrew/core/csound/blobs/sha256:0b953aee205007ead4e9e69a2bbcb572b5f2d3fbf1b22e8539ca007c8628dab1",
           "sha256": "0b953aee205007ead4e9e69a2bbcb572b5f2d3fbf1b22e8539ca007c8628dab1"
-        },
-        "x86_64_linux": {
-          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/csound/blobs/sha256:d4bd60ac72dd39fbe4c20833d2455aeda2ef701d7fe82c4acda7dec079ee1aa5",
-          "sha256": "d4bd60ac72dd39fbe4c20833d2455aeda2ef701d7fe82c4acda7dec079ee1aa5"
         }
       }
     }
@@ -162,8 +157,7 @@
         "python@3.9",
         "stk",
         "curl",
-        "zlib",
-        "gcc"
+        "zlib"
       ],
       "caveats": "srconv is not installed because it conflicts with binutils. To run srconv:\n  csound --utility=srconv\n\nTo use the Java bindings, you may need to add to /Users/runner/.bash_profile:\n  export CLASSPATH=\"$(brew --prefix)/opt/csound/libexec/csnd6.jar:.\"\nand link the native shared library into your Java Extensions folder:\n  sudo mkdir -p /usr/java/packages/lib\n  sudo ln -s \"$(brew --prefix)/opt/csound/libexec/lib_jcsound6.jnilib\" /usr/java/packages/lib\n"
     }
