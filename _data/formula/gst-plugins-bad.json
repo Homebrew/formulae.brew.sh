@@ -24,7 +24,7 @@
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,33 +33,33 @@
       "files": {
         "arm64_monterey": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/gst-plugins-bad/blobs/sha256:46da6999173d22ef0fd829526a64b3f3f89f616303b0ac1afe893fadfaec3232",
-          "sha256": "46da6999173d22ef0fd829526a64b3f3f89f616303b0ac1afe893fadfaec3232"
+          "url": "https://ghcr.io/v2/homebrew/core/gst-plugins-bad/blobs/sha256:883e428e0916301e1ee4b21e041372a2b523f5e66ec649f6e1a7d073639878f9",
+          "sha256": "883e428e0916301e1ee4b21e041372a2b523f5e66ec649f6e1a7d073639878f9"
         },
         "arm64_big_sur": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/gst-plugins-bad/blobs/sha256:de6fdaac3c569c9a78a499faf6966272a183a1d9f61694e78122a2dcd977c133",
-          "sha256": "de6fdaac3c569c9a78a499faf6966272a183a1d9f61694e78122a2dcd977c133"
+          "url": "https://ghcr.io/v2/homebrew/core/gst-plugins-bad/blobs/sha256:bdd8b41d13f8c98b863f0ca559881c7e4532e9845ac4aaf8a4951d9259f5117b",
+          "sha256": "bdd8b41d13f8c98b863f0ca559881c7e4532e9845ac4aaf8a4951d9259f5117b"
         },
         "monterey": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/gst-plugins-bad/blobs/sha256:976262867aad49f38d0a731c1c9df014a47cff8ae8db884640fd87062d2f99a5",
-          "sha256": "976262867aad49f38d0a731c1c9df014a47cff8ae8db884640fd87062d2f99a5"
+          "url": "https://ghcr.io/v2/homebrew/core/gst-plugins-bad/blobs/sha256:19fb8cc5efdccea94dd4574eac1e35da2a46b2ca6f48278b3a06d01385c0b8aa",
+          "sha256": "19fb8cc5efdccea94dd4574eac1e35da2a46b2ca6f48278b3a06d01385c0b8aa"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/gst-plugins-bad/blobs/sha256:1a847ff34650437ed1b5c1f05e49f815f52286b2ec8b7740c6dd44269cd6c285",
-          "sha256": "1a847ff34650437ed1b5c1f05e49f815f52286b2ec8b7740c6dd44269cd6c285"
+          "url": "https://ghcr.io/v2/homebrew/core/gst-plugins-bad/blobs/sha256:92107bb45bd7256d49cd09f2bcd56906f2942c8ff29728ced7ff50963030e84b",
+          "sha256": "92107bb45bd7256d49cd09f2bcd56906f2942c8ff29728ced7ff50963030e84b"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/gst-plugins-bad/blobs/sha256:3d57ee5dcf5458c0478435c8f8b327b37a20d80f2483e7c06216752c26831d41",
-          "sha256": "3d57ee5dcf5458c0478435c8f8b327b37a20d80f2483e7c06216752c26831d41"
+          "url": "https://ghcr.io/v2/homebrew/core/gst-plugins-bad/blobs/sha256:c2f67922be2cb4bea0c6606b9a4a144d2deba28277fdc47a1a1aabe2cc80dacd",
+          "sha256": "c2f67922be2cb4bea0c6606b9a4a144d2deba28277fdc47a1a1aabe2cc80dacd"
         },
         "x86_64_linux": {
           "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/gst-plugins-bad/blobs/sha256:3b2c2623d83f2a701b4ec8c09dd7770c6694414d4dc9b290f3ea0c8d5e638792",
-          "sha256": "3b2c2623d83f2a701b4ec8c09dd7770c6694414d4dc9b290f3ea0c8d5e638792"
+          "url": "https://ghcr.io/v2/homebrew/core/gst-plugins-bad/blobs/sha256:669d27f5ea32b0cb17da5ca723e537ef0c68110bc5300140e158d3d386eb158e",
+          "sha256": "669d27f5ea32b0cb17da5ca723e537ef0c68110bc5300140e158d3d386eb158e"
         }
       }
     }
@@ -70,6 +70,7 @@
 
   ],
   "build_dependencies": [
+    "glib-utils",
     "gobject-introspection",
     "meson",
     "ninja",
@@ -80,7 +81,7 @@
     "faad2",
     "gettext",
     "gst-plugins-base",
-    "jpeg",
+    "jpeg-turbo",
     "libnice",
     "libusrsctp",
     "openssl@1.1",
@@ -97,7 +98,9 @@
 
   ],
   "uses_from_macos": [
-
+    {
+      "python": "build"
+    }
   ],
   "requirements": [
 
@@ -119,13 +122,61 @@
   "disable_date": null,
   "disable_reason": null,
   "variations": {
+    "mojave": {
+      "build_dependencies": [
+        "glib-utils",
+        "gobject-introspection",
+        "meson",
+        "ninja",
+        "pkg-config",
+        "python"
+      ]
+    },
+    "high_sierra": {
+      "build_dependencies": [
+        "glib-utils",
+        "gobject-introspection",
+        "meson",
+        "ninja",
+        "pkg-config",
+        "python"
+      ]
+    },
+    "sierra": {
+      "build_dependencies": [
+        "glib-utils",
+        "gobject-introspection",
+        "meson",
+        "ninja",
+        "pkg-config",
+        "python"
+      ]
+    },
+    "el_capitan": {
+      "build_dependencies": [
+        "glib-utils",
+        "gobject-introspection",
+        "meson",
+        "ninja",
+        "pkg-config",
+        "python"
+      ]
+    },
     "x86_64_linux": {
+      "build_dependencies": [
+        "glib-utils",
+        "gobject-introspection",
+        "meson",
+        "ninja",
+        "pkg-config",
+        "python"
+      ],
       "dependencies": [
         "faac",
         "faad2",
         "gettext",
         "gst-plugins-base",
-        "jpeg",
+        "jpeg-turbo",
         "libnice",
         "libusrsctp",
         "openssl@1.1",
