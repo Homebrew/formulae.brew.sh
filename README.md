@@ -27,5 +27,9 @@ bundle install
 bundle exec jekyll serve
 ```
 
+## Search
+Search is indexed by Algolia crawler at https://crawler.algolia.com/admin/crawlers/26b9e6e2-bce4-4f42-9930-6b6ddf06cc9e/overview.
+This is only accessible by brew organisation members.
+
 ## License
 Code is under the [BSD 2-clause "Simplified" License](LICENSE.txt).
