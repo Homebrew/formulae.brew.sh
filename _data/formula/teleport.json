@@ -13,13 +13,13 @@
   "license": "Apache-2.0",
   "homepage": "https://gravitational.com/teleport",
   "versions": {
-    "stable": "10.0.2",
+    "stable": "10.1.2",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/gravitational/teleport/archive/v10.0.2.tar.gz",
+      "url": "https://github.com/gravitational/teleport/archive/v10.1.2.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -28,38 +28,38 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
         "arm64_monterey": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/teleport/blobs/sha256:21a441a0ab43effd522c6af0d5407496f31c56d6cb9fa36d3122f2a67b1efd6b",
-          "sha256": "21a441a0ab43effd522c6af0d5407496f31c56d6cb9fa36d3122f2a67b1efd6b"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/teleport/blobs/sha256:0b0bbb2a6b7640154c64bc07e07374d0d8d341929493164f602912597e3b49d3",
+          "sha256": "0b0bbb2a6b7640154c64bc07e07374d0d8d341929493164f602912597e3b49d3"
         },
         "arm64_big_sur": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/teleport/blobs/sha256:8f63f000f66e016fcb18db4bf91da8cbf673ca0e839a2a3f7ee5b7b80251be9a",
-          "sha256": "8f63f000f66e016fcb18db4bf91da8cbf673ca0e839a2a3f7ee5b7b80251be9a"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/teleport/blobs/sha256:af09895d193977da1cf253067b25797e337c59439ed3b4ff4bb7fd1a8f5f2e16",
+          "sha256": "af09895d193977da1cf253067b25797e337c59439ed3b4ff4bb7fd1a8f5f2e16"
         },
         "monterey": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/teleport/blobs/sha256:afdf3db6551998f87b9a9a7904c0790d3986dce8d00113c2deca5f626deb9e8a",
-          "sha256": "afdf3db6551998f87b9a9a7904c0790d3986dce8d00113c2deca5f626deb9e8a"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/teleport/blobs/sha256:dc6df422436a9217996fd63439e932927f40f2bf22cf544c47d92672e1fbd624",
+          "sha256": "dc6df422436a9217996fd63439e932927f40f2bf22cf544c47d92672e1fbd624"
         },
         "big_sur": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/teleport/blobs/sha256:ec82fefa40954e558b746df9cd2275fd61c38113b187999367ff682abfb2014b",
-          "sha256": "ec82fefa40954e558b746df9cd2275fd61c38113b187999367ff682abfb2014b"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/teleport/blobs/sha256:ab4e1b37fdf4e2d0f439536e810eca956e2ae69440ae24fcf2d59b34ec69b264",
+          "sha256": "ab4e1b37fdf4e2d0f439536e810eca956e2ae69440ae24fcf2d59b34ec69b264"
         },
         "catalina": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/teleport/blobs/sha256:53afbfe07596291ba98a18e2acb9c59bfc113a8949ce27d1feac185a30790bee",
-          "sha256": "53afbfe07596291ba98a18e2acb9c59bfc113a8949ce27d1feac185a30790bee"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/teleport/blobs/sha256:cb30e1306ffe699372cee958ec1b63012f9eef1957071f0b799dba271424e46f",
+          "sha256": "cb30e1306ffe699372cee958ec1b63012f9eef1957071f0b799dba271424e46f"
         },
         "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/teleport/blobs/sha256:93169ed6c121f537b379e075dbf43edc2174a6eade96ba3dada855a5251ee54b",
-          "sha256": "93169ed6c121f537b379e075dbf43edc2174a6eade96ba3dada855a5251ee54b"
+          "url": "https://ghcr.io/v2/homebrew/core/teleport/blobs/sha256:fab4c68a015079538b8c71568c8d9c7b5e6ca019b92b39d8ece1b54fb548ddbd",
+          "sha256": "fab4c68a015079538b8c71568c8d9c7b5e6ca019b92b39d8ece1b54fb548ddbd"
         }
       }
     }
@@ -70,7 +70,8 @@
 
   ],
   "build_dependencies": [
-    "go"
+    "go",
+    "pkg-config"
   ],
   "dependencies": [
     "libfido2"
