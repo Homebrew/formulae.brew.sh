@@ -1,15 +1,12 @@
 {
-  "name": "go",
-  "full_name": "go",
+  "name": "go@1.18",
+  "full_name": "go@1.18",
   "tap": "homebrew/core",
   "oldname": null,
   "aliases": [
-    "go@1.19",
-    "golang",
-    "google-go"
+
   ],
   "versioned_formulae": [
-    "go@1.18",
     "go@1.17",
     "go@1.16",
     "go@1.15",
@@ -20,13 +17,13 @@
   "license": "BSD-3-Clause",
   "homepage": "https://go.dev/",
   "versions": {
-    "stable": "1.19",
-    "head": "HEAD",
+    "stable": "1.18.5",
+    "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://go.dev/dl/go1.19.src.tar.gz",
+      "url": "https://go.dev/dl/go1.18.5.src.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -40,39 +37,42 @@
       "files": {
         "arm64_monterey": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/go/blobs/sha256:053b3a83d7a9f47ec3b435e3681a2e3ea29ac7d267fe1f97e144b2512c736eb9",
-          "sha256": "053b3a83d7a9f47ec3b435e3681a2e3ea29ac7d267fe1f97e144b2512c736eb9"
+          "url": "https://ghcr.io/v2/homebrew/core/go/1.18/blobs/sha256:707a6267d14332e1d531f6dda66a0612e5b683c72c1734b583c5eebdd758afda",
+          "sha256": "707a6267d14332e1d531f6dda66a0612e5b683c72c1734b583c5eebdd758afda"
         },
         "arm64_big_sur": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/go/blobs/sha256:4bc6f293bc5c42caab60cd2e2821e12f3a4f0a76c2afca347efdb2e8715f972a",
-          "sha256": "4bc6f293bc5c42caab60cd2e2821e12f3a4f0a76c2afca347efdb2e8715f972a"
+          "url": "https://ghcr.io/v2/homebrew/core/go/1.18/blobs/sha256:0d406be09c56e7c820e30aa7400b3200ca9f3a6174526e6200a2f6c844497990",
+          "sha256": "0d406be09c56e7c820e30aa7400b3200ca9f3a6174526e6200a2f6c844497990"
         },
         "monterey": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/go/blobs/sha256:0c072d504cbf5ac584d85f46882afc51db91d341e97c9a2c83bc74b980b8409b",
-          "sha256": "0c072d504cbf5ac584d85f46882afc51db91d341e97c9a2c83bc74b980b8409b"
+          "url": "https://ghcr.io/v2/homebrew/core/go/1.18/blobs/sha256:3b6e32f0801f152f9e630f6ff26a6e6eca691de5e46aeb5781d5902c836a43e7",
+          "sha256": "3b6e32f0801f152f9e630f6ff26a6e6eca691de5e46aeb5781d5902c836a43e7"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/go/blobs/sha256:97671397aef87943379ddd6a8f4c56eca31da2d63db57d25fea9e1ce01fbd7be",
-          "sha256": "97671397aef87943379ddd6a8f4c56eca31da2d63db57d25fea9e1ce01fbd7be"
+          "url": "https://ghcr.io/v2/homebrew/core/go/1.18/blobs/sha256:da1e50b6838e4fd786291d72342bef7dc268705073c4ba2776da8712ab21f27d",
+          "sha256": "da1e50b6838e4fd786291d72342bef7dc268705073c4ba2776da8712ab21f27d"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/go/blobs/sha256:0fe6f9f864e16a828c88fef98ea89ed03eb7e5c1bc5c83151d0e952fa276b719",
-          "sha256": "0fe6f9f864e16a828c88fef98ea89ed03eb7e5c1bc5c83151d0e952fa276b719"
+          "url": "https://ghcr.io/v2/homebrew/core/go/1.18/blobs/sha256:6ba31a1cb38755b2f96e302601fb1072c0fe3987f55e5b58ce962a3a53992083",
+          "sha256": "6ba31a1cb38755b2f96e302601fb1072c0fe3987f55e5b58ce962a3a53992083"
         },
         "x86_64_linux": {
           "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/go/blobs/sha256:5814764a0a39b6ada34106e5775a437c667d9f907041e2a2c0059c780a8a3a1a",
-          "sha256": "5814764a0a39b6ada34106e5775a437c667d9f907041e2a2c0059c780a8a3a1a"
+          "url": "https://ghcr.io/v2/homebrew/core/go/1.18/blobs/sha256:1239b31826eaa991fd437df24e752d5ae8b06bae8819761202492ad46fc3e33d",
+          "sha256": "1239b31826eaa991fd437df24e752d5ae8b06bae8819761202492ad46fc3e33d"
         }
       }
     }
   },
-  "keg_only": false,
-  "keg_only_reason": null,
+  "keg_only": true,
+  "keg_only_reason": {
+    "reason": ":versioned_formula",
+    "explanation": ""
+  },
   "options": [
 
   ],
