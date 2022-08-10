@@ -13,18 +13,18 @@
   "license": "LGPL-2.0-or-later with WxWindows-exception-3.1",
   "homepage": "https://www.wxpython.org/",
   "versions": {
-    "stable": "4.1.1",
+    "stable": "4.2.0",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://files.pythonhosted.org/packages/b0/4d/80d65c37ee60a479d338d27a2895fb15bbba27a3e6bb5b6d72bb28246e99/wxPython-4.1.1.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/d9/33/b616c7ed4742be6e0d111ca375b41379607dc7cc7ac7ff6aead7a5a0bf53/wxPython-4.2.0.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 3,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,28 +33,28 @@
       "files": {
         "arm64_monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/wxpython/blobs/sha256:7b558516617be5aa563cf1250276eea3eda660e19bdf8bf66417aa55215992ea",
-          "sha256": "7b558516617be5aa563cf1250276eea3eda660e19bdf8bf66417aa55215992ea"
+          "url": "https://ghcr.io/v2/homebrew/core/wxpython/blobs/sha256:f9a20a76b190163dac2af2f1813e8e39dd9f637ead5453acdf415c5f2551dc13",
+          "sha256": "f9a20a76b190163dac2af2f1813e8e39dd9f637ead5453acdf415c5f2551dc13"
         },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/wxpython/blobs/sha256:89af5734fee0d433fff77e1cb39f4beaea35fc17518ca0dc99881c892518f0b4",
-          "sha256": "89af5734fee0d433fff77e1cb39f4beaea35fc17518ca0dc99881c892518f0b4"
+          "url": "https://ghcr.io/v2/homebrew/core/wxpython/blobs/sha256:6e5b449ee672e78a72d700d78dcf9d11c65eaaa657c9369979dceb7eeb245761",
+          "sha256": "6e5b449ee672e78a72d700d78dcf9d11c65eaaa657c9369979dceb7eeb245761"
         },
         "monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/wxpython/blobs/sha256:25ed4d082bf30adc0cdd9652f1866702345ae422d69329e0e3a683522d5a5d9d",
-          "sha256": "25ed4d082bf30adc0cdd9652f1866702345ae422d69329e0e3a683522d5a5d9d"
+          "url": "https://ghcr.io/v2/homebrew/core/wxpython/blobs/sha256:6aef2edb2894f75c23c859edd6db7bd308d6420f4680ce32839b7904b425d382",
+          "sha256": "6aef2edb2894f75c23c859edd6db7bd308d6420f4680ce32839b7904b425d382"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/wxpython/blobs/sha256:cf40f9fb59df2b8ea5712b1bf4e1891694c144a010a7b119a6df24f39b46c8a3",
-          "sha256": "cf40f9fb59df2b8ea5712b1bf4e1891694c144a010a7b119a6df24f39b46c8a3"
+          "url": "https://ghcr.io/v2/homebrew/core/wxpython/blobs/sha256:3914f0cc1a1a67431e76c7ca793e5b3bf48ccbf98cb24f9476c8518ea87f3b43",
+          "sha256": "3914f0cc1a1a67431e76c7ca793e5b3bf48ccbf98cb24f9476c8518ea87f3b43"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/wxpython/blobs/sha256:363cff6b220e1d12e1075e3dfbb580eab83c0fea65f3c4f398d2d6eba80c5145",
-          "sha256": "363cff6b220e1d12e1075e3dfbb580eab83c0fea65f3c4f398d2d6eba80c5145"
+          "url": "https://ghcr.io/v2/homebrew/core/wxpython/blobs/sha256:561959e711b0801d74c68ee2333bd5905e160923ca49a3e2f0dceaf3c80cf534",
+          "sha256": "561959e711b0801d74c68ee2333bd5905e160923ca49a3e2f0dceaf3c80cf534"
         }
       }
     }
@@ -65,18 +65,15 @@
 
   ],
   "build_dependencies": [
-
+    "doxygen",
+    "sip"
   ],
   "dependencies": [
-    "freetype",
-    "jpeg-turbo",
-    "libpng",
-    "libtiff",
     "numpy",
     "pillow",
-    "python@3.9",
+    "python@3.10",
     "six",
-    "tcl-tk"
+    "wxwidgets"
   ],
   "recommended_dependencies": [
 
@@ -85,7 +82,7 @@
 
   ],
   "uses_from_macos": [
-    "zlib"
+
   ],
   "requirements": [
 
@@ -109,19 +106,16 @@
   "variations": {
     "x86_64_linux": {
       "build_dependencies": [
+        "doxygen",
+        "sip",
         "pkg-config"
       ],
       "dependencies": [
-        "freetype",
-        "jpeg-turbo",
-        "libpng",
-        "libtiff",
         "numpy",
         "pillow",
-        "python@3.9",
+        "python@3.10",
         "six",
-        "tcl-tk",
-        "zlib",
+        "wxwidgets",
         "gtk+3"
       ]
     }
