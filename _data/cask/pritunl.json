@@ -45,5 +45,83 @@
   "container": null,
   "auto_updates": null,
   "variations": {
+    "arm64_ventura": {
+      "url": "https://github.com/pritunl/pritunl-client-electron/releases/download/1.2.3236.80/Pritunl.arm64.pkg.zip",
+      "artifacts": [
+        {
+          "pkgutil": "com.pritunl.pkg.Pritunl",
+          "launchctl": [
+            "com.pritunl.client",
+            "com.pritunl.service"
+          ],
+          "signal": {
+            "TERM": "com.electron.pritunl"
+          },
+          "delete": "/Applications/Pritunl.app"
+        },
+        "Pritunl.arm64.pkg (Pkg)",
+        {
+          "trash": [
+            "~/Library/Application Support/pritunl",
+            "~/Library/Caches/pritunl",
+            "~/Library/Preferences/com.electron.pritunl*"
+          ],
+          "signal": {
+          }
+        }
+      ]
+    },
+    "arm64_monterey": {
+      "url": "https://github.com/pritunl/pritunl-client-electron/releases/download/1.2.3236.80/Pritunl.arm64.pkg.zip",
+      "artifacts": [
+        {
+          "pkgutil": "com.pritunl.pkg.Pritunl",
+          "launchctl": [
+            "com.pritunl.client",
+            "com.pritunl.service"
+          ],
+          "signal": {
+            "TERM": "com.electron.pritunl"
+          },
+          "delete": "/Applications/Pritunl.app"
+        },
+        "Pritunl.arm64.pkg (Pkg)",
+        {
+          "trash": [
+            "~/Library/Application Support/pritunl",
+            "~/Library/Caches/pritunl",
+            "~/Library/Preferences/com.electron.pritunl*"
+          ],
+          "signal": {
+          }
+        }
+      ]
+    },
+    "arm64_big_sur": {
+      "url": "https://github.com/pritunl/pritunl-client-electron/releases/download/1.2.3236.80/Pritunl.arm64.pkg.zip",
+      "artifacts": [
+        {
+          "pkgutil": "com.pritunl.pkg.Pritunl",
+          "launchctl": [
+            "com.pritunl.client",
+            "com.pritunl.service"
+          ],
+          "signal": {
+            "TERM": "com.electron.pritunl"
+          },
+          "delete": "/Applications/Pritunl.app"
+        },
+        "Pritunl.arm64.pkg (Pkg)",
+        {
+          "trash": [
+            "~/Library/Application Support/pritunl",
+            "~/Library/Caches/pritunl",
+            "~/Library/Preferences/com.electron.pritunl*"
+          ],
+          "signal": {
+          }
+        }
+      ]
+    }
   }
 }

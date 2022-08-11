@@ -58,5 +58,110 @@
   "container": "{:type=>:naked}",
   "auto_updates": true,
   "variations": {
+    "arm64_ventura": {
+      "url": "https://repo.anaconda.com/miniconda/Miniconda3-py39_4.12.0-MacOSX-arm64.sh",
+      "artifacts": [
+        {
+          "delete": "$(brew --prefix)/Caskroom/miniconda/base",
+          "signal": {
+          }
+        },
+        {
+          "path": "Miniconda3-py39_4.12.0-MacOSX-arm64.sh",
+          "args": {
+            "must_succeed": "true",
+            "sudo": "false",
+            "args": [
+              "-b",
+              "-p",
+              "$(brew --prefix)/Caskroom/miniconda/base"
+            ],
+            "print_stdout": "true"
+          }
+        },
+        [
+          "$(brew --prefix)/Caskroom/miniconda/base/condabin/conda"
+        ],
+        {
+          "trash": [
+            "~/.condarc",
+            "~/.conda",
+            "~/.continuum"
+          ],
+          "signal": {
+          }
+        }
+      ]
+    },
+    "arm64_monterey": {
+      "url": "https://repo.anaconda.com/miniconda/Miniconda3-py39_4.12.0-MacOSX-arm64.sh",
+      "artifacts": [
+        {
+          "delete": "$(brew --prefix)/Caskroom/miniconda/base",
+          "signal": {
+          }
+        },
+        {
+          "path": "Miniconda3-py39_4.12.0-MacOSX-arm64.sh",
+          "args": {
+            "must_succeed": "true",
+            "sudo": "false",
+            "args": [
+              "-b",
+              "-p",
+              "$(brew --prefix)/Caskroom/miniconda/base"
+            ],
+            "print_stdout": "true"
+          }
+        },
+        [
+          "$(brew --prefix)/Caskroom/miniconda/base/condabin/conda"
+        ],
+        {
+          "trash": [
+            "~/.condarc",
+            "~/.conda",
+            "~/.continuum"
+          ],
+          "signal": {
+          }
+        }
+      ]
+    },
+    "arm64_big_sur": {
+      "url": "https://repo.anaconda.com/miniconda/Miniconda3-py39_4.12.0-MacOSX-arm64.sh",
+      "artifacts": [
+        {
+          "delete": "$(brew --prefix)/Caskroom/miniconda/base",
+          "signal": {
+          }
+        },
+        {
+          "path": "Miniconda3-py39_4.12.0-MacOSX-arm64.sh",
+          "args": {
+            "must_succeed": "true",
+            "sudo": "false",
+            "args": [
+              "-b",
+              "-p",
+              "$(brew --prefix)/Caskroom/miniconda/base"
+            ],
+            "print_stdout": "true"
+          }
+        },
+        [
+          "$(brew --prefix)/Caskroom/miniconda/base/condabin/conda"
+        ],
+        {
+          "trash": [
+            "~/.condarc",
+            "~/.conda",
+            "~/.continuum"
+          ],
+          "signal": {
+          }
+        }
+      ]
+    }
   }
 }

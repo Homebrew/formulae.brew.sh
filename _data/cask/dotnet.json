@@ -53,5 +53,65 @@
   "container": null,
   "auto_updates": null,
   "variations": {
+    "arm64_ventura": {
+      "url": "https://download.visualstudio.microsoft.com/download/pr/3da50ef8-7b22-4f08-95e9-3641416fdc08/ee91bcdbbbb117803e315f673c9d19f1/dotnet-runtime-6.0.7-osx-arm64.pkg",
+      "artifacts": [
+        {
+          "pkgutil": "com.microsoft.dotnet.*",
+          "delete": "/etc/paths.d/dotnet",
+          "signal": {
+          }
+        },
+        "dotnet-runtime-6.0.7-osx-arm64.pkg (Pkg)",
+        [
+          "$(brew --prefix)/share/dotnet/dotnet"
+        ],
+        {
+          "trash": "~/.nuget",
+          "signal": {
+          }
+        }
+      ]
+    },
+    "arm64_monterey": {
+      "url": "https://download.visualstudio.microsoft.com/download/pr/3da50ef8-7b22-4f08-95e9-3641416fdc08/ee91bcdbbbb117803e315f673c9d19f1/dotnet-runtime-6.0.7-osx-arm64.pkg",
+      "artifacts": [
+        {
+          "pkgutil": "com.microsoft.dotnet.*",
+          "delete": "/etc/paths.d/dotnet",
+          "signal": {
+          }
+        },
+        "dotnet-runtime-6.0.7-osx-arm64.pkg (Pkg)",
+        [
+          "$(brew --prefix)/share/dotnet/dotnet"
+        ],
+        {
+          "trash": "~/.nuget",
+          "signal": {
+          }
+        }
+      ]
+    },
+    "arm64_big_sur": {
+      "url": "https://download.visualstudio.microsoft.com/download/pr/3da50ef8-7b22-4f08-95e9-3641416fdc08/ee91bcdbbbb117803e315f673c9d19f1/dotnet-runtime-6.0.7-osx-arm64.pkg",
+      "artifacts": [
+        {
+          "pkgutil": "com.microsoft.dotnet.*",
+          "delete": "/etc/paths.d/dotnet",
+          "signal": {
+          }
+        },
+        "dotnet-runtime-6.0.7-osx-arm64.pkg (Pkg)",
+        [
+          "$(brew --prefix)/share/dotnet/dotnet"
+        ],
+        {
+          "trash": "~/.nuget",
+          "signal": {
+          }
+        }
+      ]
+    }
   }
 }

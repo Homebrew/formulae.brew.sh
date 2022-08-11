@@ -57,5 +57,119 @@
   "container": "{:type=>:naked}",
   "auto_updates": true,
   "variations": {
+    "arm64_ventura": {
+      "url": "https://repo.anaconda.com/archive/Anaconda3-2022.05-MacOSX-arm64.sh",
+      "artifacts": [
+        {
+          "delete": [
+            "$(brew --prefix)/anaconda3",
+            "/Applications/Anaconda-Navigator.app"
+          ],
+          "signal": {
+          }
+        },
+        {
+          "path": "Anaconda3-2022.05-MacOSX-arm64.sh",
+          "args": {
+            "must_succeed": "true",
+            "sudo": "true",
+            "args": [
+              "-b",
+              "-p",
+              "$(brew --prefix)/anaconda3"
+            ],
+            "print_stdout": "true"
+          }
+        },
+        "postflight (Postflight Block)",
+        {
+          "trash": [
+            "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.continuum.io.sfl*",
+            "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.continuum.python.sfl*",
+            "~/.anaconda",
+            "~/.conda",
+            "~/.condarc"
+          ],
+          "signal": {
+          }
+        }
+      ]
+    },
+    "arm64_monterey": {
+      "url": "https://repo.anaconda.com/archive/Anaconda3-2022.05-MacOSX-arm64.sh",
+      "artifacts": [
+        {
+          "delete": [
+            "$(brew --prefix)/anaconda3",
+            "/Applications/Anaconda-Navigator.app"
+          ],
+          "signal": {
+          }
+        },
+        {
+          "path": "Anaconda3-2022.05-MacOSX-arm64.sh",
+          "args": {
+            "must_succeed": "true",
+            "sudo": "true",
+            "args": [
+              "-b",
+              "-p",
+              "$(brew --prefix)/anaconda3"
+            ],
+            "print_stdout": "true"
+          }
+        },
+        "postflight (Postflight Block)",
+        {
+          "trash": [
+            "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.continuum.io.sfl*",
+            "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.continuum.python.sfl*",
+            "~/.anaconda",
+            "~/.conda",
+            "~/.condarc"
+          ],
+          "signal": {
+          }
+        }
+      ]
+    },
+    "arm64_big_sur": {
+      "url": "https://repo.anaconda.com/archive/Anaconda3-2022.05-MacOSX-arm64.sh",
+      "artifacts": [
+        {
+          "delete": [
+            "$(brew --prefix)/anaconda3",
+            "/Applications/Anaconda-Navigator.app"
+          ],
+          "signal": {
+          }
+        },
+        {
+          "path": "Anaconda3-2022.05-MacOSX-arm64.sh",
+          "args": {
+            "must_succeed": "true",
+            "sudo": "true",
+            "args": [
+              "-b",
+              "-p",
+              "$(brew --prefix)/anaconda3"
+            ],
+            "print_stdout": "true"
+          }
+        },
+        "postflight (Postflight Block)",
+        {
+          "trash": [
+            "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.continuum.io.sfl*",
+            "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.continuum.python.sfl*",
+            "~/.anaconda",
+            "~/.conda",
+            "~/.condarc"
+          ],
+          "signal": {
+          }
+        }
+      ]
+    }
   }
 }

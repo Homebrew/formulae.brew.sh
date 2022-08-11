@@ -57,5 +57,107 @@
   "container": "{:type=>:naked}",
   "auto_updates": true,
   "variations": {
+    "arm64_ventura": {
+      "url": "https://github.com/conda-forge/miniforge/releases/download/4.13.0-1/Miniforge3-4.13.0-1-MacOSX-arm64.sh",
+      "artifacts": [
+        {
+          "delete": "$(brew --prefix)/Caskroom/miniforge/base",
+          "signal": {
+          }
+        },
+        {
+          "path": "Miniforge3-4.13.0-1-MacOSX-arm64.sh",
+          "args": {
+            "must_succeed": "true",
+            "sudo": "false",
+            "args": [
+              "-b",
+              "-p",
+              "$(brew --prefix)/Caskroom/miniforge/base"
+            ],
+            "print_stdout": "true"
+          }
+        },
+        [
+          "$(brew --prefix)/Caskroom/miniforge/base/condabin/conda"
+        ],
+        {
+          "trash": [
+            "~/.condarc",
+            "~/.conda"
+          ],
+          "signal": {
+          }
+        }
+      ]
+    },
+    "arm64_monterey": {
+      "url": "https://github.com/conda-forge/miniforge/releases/download/4.13.0-1/Miniforge3-4.13.0-1-MacOSX-arm64.sh",
+      "artifacts": [
+        {
+          "delete": "$(brew --prefix)/Caskroom/miniforge/base",
+          "signal": {
+          }
+        },
+        {
+          "path": "Miniforge3-4.13.0-1-MacOSX-arm64.sh",
+          "args": {
+            "must_succeed": "true",
+            "sudo": "false",
+            "args": [
+              "-b",
+              "-p",
+              "$(brew --prefix)/Caskroom/miniforge/base"
+            ],
+            "print_stdout": "true"
+          }
+        },
+        [
+          "$(brew --prefix)/Caskroom/miniforge/base/condabin/conda"
+        ],
+        {
+          "trash": [
+            "~/.condarc",
+            "~/.conda"
+          ],
+          "signal": {
+          }
+        }
+      ]
+    },
+    "arm64_big_sur": {
+      "url": "https://github.com/conda-forge/miniforge/releases/download/4.13.0-1/Miniforge3-4.13.0-1-MacOSX-arm64.sh",
+      "artifacts": [
+        {
+          "delete": "$(brew --prefix)/Caskroom/miniforge/base",
+          "signal": {
+          }
+        },
+        {
+          "path": "Miniforge3-4.13.0-1-MacOSX-arm64.sh",
+          "args": {
+            "must_succeed": "true",
+            "sudo": "false",
+            "args": [
+              "-b",
+              "-p",
+              "$(brew --prefix)/Caskroom/miniforge/base"
+            ],
+            "print_stdout": "true"
+          }
+        },
+        [
+          "$(brew --prefix)/Caskroom/miniforge/base/condabin/conda"
+        ],
+        {
+          "trash": [
+            "~/.condarc",
+            "~/.conda"
+          ],
+          "signal": {
+          }
+        }
+      ]
+    }
   }
 }
