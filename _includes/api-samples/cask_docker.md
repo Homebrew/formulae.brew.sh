@@ -131,7 +131,17 @@
   },
   "container": null,
   "auto_updates": true,
-  "variations": {},
+  "variations": {
+    "arm64_ventura": {
+      "url": "https://desktop.docker.com/mac/main/arm64/84025/Docker.dmg"
+    },
+    "arm64_monterey": {
+      "url": "https://desktop.docker.com/mac/main/arm64/84025/Docker.dmg"
+    },
+    "arm64_big_sur": {
+      "url": "https://desktop.docker.com/mac/main/arm64/84025/Docker.dmg"
+    }
+  },
   "analytics": {
     "install": {
       "30d": {
