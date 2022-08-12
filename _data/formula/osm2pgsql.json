@@ -24,7 +24,7 @@
       "revision": null
     }
   },
-  "revision": 3,
+  "revision": 4,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,33 +33,33 @@
       "files": {
         "arm64_monterey": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/osm2pgsql/blobs/sha256:2b1c23342805ddc22b8c69c2f91a24d33703fab6fcbb381870c2f60179058f70",
-          "sha256": "2b1c23342805ddc22b8c69c2f91a24d33703fab6fcbb381870c2f60179058f70"
+          "url": "https://ghcr.io/v2/homebrew/core/osm2pgsql/blobs/sha256:e5cfe24753f30f192f3a51dc714250c74dcf41294700495442977f3db18dc091",
+          "sha256": "e5cfe24753f30f192f3a51dc714250c74dcf41294700495442977f3db18dc091"
         },
         "arm64_big_sur": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/osm2pgsql/blobs/sha256:77e304190222d4da2d28b9db1c468a1b172cbf29d90598bcd683c7418840d0f8",
-          "sha256": "77e304190222d4da2d28b9db1c468a1b172cbf29d90598bcd683c7418840d0f8"
+          "url": "https://ghcr.io/v2/homebrew/core/osm2pgsql/blobs/sha256:7e4512d8cbf14c168340c5f569c9c4caa8f9666eb5fe4f5324b99cdfb77cbc34",
+          "sha256": "7e4512d8cbf14c168340c5f569c9c4caa8f9666eb5fe4f5324b99cdfb77cbc34"
         },
         "monterey": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/osm2pgsql/blobs/sha256:278ba1a3e688722170d489a157fdf8ea6011483133bad8dbaefccc05dc07c8d1",
-          "sha256": "278ba1a3e688722170d489a157fdf8ea6011483133bad8dbaefccc05dc07c8d1"
+          "url": "https://ghcr.io/v2/homebrew/core/osm2pgsql/blobs/sha256:c55c28a4a7d61e2ecc74e439d178c2479ba6bb1f70d5a4c8a419432141d477f8",
+          "sha256": "c55c28a4a7d61e2ecc74e439d178c2479ba6bb1f70d5a4c8a419432141d477f8"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/osm2pgsql/blobs/sha256:0751305ff2a2d2cf937234c7741e6919a26978e8fa992444287c1904fa34713f",
-          "sha256": "0751305ff2a2d2cf937234c7741e6919a26978e8fa992444287c1904fa34713f"
+          "url": "https://ghcr.io/v2/homebrew/core/osm2pgsql/blobs/sha256:461f444d3d7da2f549b445e3d16839ac42105c01aa859b086d6ca7f9f8c141ca",
+          "sha256": "461f444d3d7da2f549b445e3d16839ac42105c01aa859b086d6ca7f9f8c141ca"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/osm2pgsql/blobs/sha256:49ac82bbb990d26771605e6dd82dce3594cccb5d8717ced6632b807d16f88395",
-          "sha256": "49ac82bbb990d26771605e6dd82dce3594cccb5d8717ced6632b807d16f88395"
+          "url": "https://ghcr.io/v2/homebrew/core/osm2pgsql/blobs/sha256:2094de94b79ac68652e5671b360d9fa158146b6c3d0263dee84f5008c7c52d99",
+          "sha256": "2094de94b79ac68652e5671b360d9fa158146b6c3d0263dee84f5008c7c52d99"
         },
         "x86_64_linux": {
           "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/osm2pgsql/blobs/sha256:b81aa6a292f1edcee0fc87f495925e09081d4c821b64371535251e759b9154e4",
-          "sha256": "b81aa6a292f1edcee0fc87f495925e09081d4c821b64371535251e759b9154e4"
+          "url": "https://ghcr.io/v2/homebrew/core/osm2pgsql/blobs/sha256:753d07bfe5ff3a913144fb09cd892918f77569e9a5b44977fc37ad7d93c27a97",
+          "sha256": "753d07bfe5ff3a913144fb09cd892918f77569e9a5b44977fc37ad7d93c27a97"
         }
       }
     }
@@ -76,8 +76,8 @@
   "dependencies": [
     "boost",
     "geos",
-    "luajit-openresty",
-    "postgresql",
+    "libpq",
+    "luajit",
     "proj"
   ],
   "recommended_dependencies": [
@@ -87,7 +87,7 @@
 
   ],
   "uses_from_macos": [
-
+    "expat"
   ],
   "requirements": [
 
