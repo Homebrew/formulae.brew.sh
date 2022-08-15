@@ -133,13 +133,16 @@
   "auto_updates": true,
   "variations": {
     "arm64_ventura": {
-      "url": "https://desktop.docker.com/mac/main/arm64/84025/Docker.dmg"
+      "url": "https://desktop.docker.com/mac/main/arm64/84025/Docker.dmg",
+      "sha256": "a7d84117bef83764cb9bf275cd01b8ba0c43f08dbfe4d4a7d4f05549cdd81f54"
     },
     "arm64_monterey": {
-      "url": "https://desktop.docker.com/mac/main/arm64/84025/Docker.dmg"
+      "url": "https://desktop.docker.com/mac/main/arm64/84025/Docker.dmg",
+      "sha256": "a7d84117bef83764cb9bf275cd01b8ba0c43f08dbfe4d4a7d4f05549cdd81f54"
     },
     "arm64_big_sur": {
-      "url": "https://desktop.docker.com/mac/main/arm64/84025/Docker.dmg"
+      "url": "https://desktop.docker.com/mac/main/arm64/84025/Docker.dmg",
+      "sha256": "a7d84117bef83764cb9bf275cd01b8ba0c43f08dbfe4d4a7d4f05549cdd81f54"
     }
   },
   "analytics": {
