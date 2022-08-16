@@ -11,50 +11,55 @@
   ],
   "desc": "GNOME library for gecoding and reverse geocoding",
   "license": "GPL-2.0-or-later",
-  "homepage": "https://developer.gnome.org/geocode-glib",
+  "homepage": "https://gitlab.gnome.org/GNOME/geocode-glib",
   "versions": {
-    "stable": "3.26.2",
+    "stable": "3.26.4",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://download.gnome.org/sources/geocode-glib/3.26/geocode-glib-3.26.2.tar.xz",
+      "url": "https://download.gnome.org/sources/geocode-glib/3.26/geocode-glib-3.26.4.tar.xz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 2,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/geocode-glib/blobs/sha256:e05e16cff98263e502be86ba8e0dacc2b9db8c206ab2e39328aa251958fa46ff",
+          "sha256": "e05e16cff98263e502be86ba8e0dacc2b9db8c206ab2e39328aa251958fa46ff"
+        },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/geocode-glib/blobs/sha256:21cca31313c96d334bf20a5db535619d0114128474f2f38bb09e4bbf422b721d",
-          "sha256": "21cca31313c96d334bf20a5db535619d0114128474f2f38bb09e4bbf422b721d"
+          "url": "https://ghcr.io/v2/homebrew/core/geocode-glib/blobs/sha256:5dc4f7038ee843898bc1d66c831de594045bc07d75803d9ceeb439979e974635",
+          "sha256": "5dc4f7038ee843898bc1d66c831de594045bc07d75803d9ceeb439979e974635"
         },
         "monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/geocode-glib/blobs/sha256:d25cc02e785d8f10bedca31db01bf00c1cf0f2553f8ab4cac8266ad02fc7ed9e",
-          "sha256": "d25cc02e785d8f10bedca31db01bf00c1cf0f2553f8ab4cac8266ad02fc7ed9e"
+          "url": "https://ghcr.io/v2/homebrew/core/geocode-glib/blobs/sha256:a852370762b744056678baa6be4c500f2ed664ac62e7e8f5158601b076526216",
+          "sha256": "a852370762b744056678baa6be4c500f2ed664ac62e7e8f5158601b076526216"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/geocode-glib/blobs/sha256:41432c280b4a1244a1a55466059170cd470d5e86fddf1cf3ca7bc4f5f7d14960",
-          "sha256": "41432c280b4a1244a1a55466059170cd470d5e86fddf1cf3ca7bc4f5f7d14960"
+          "url": "https://ghcr.io/v2/homebrew/core/geocode-glib/blobs/sha256:641b09e8c9fc3bfcd486651f28cac679dde0d14c7d70d026030d8cb2e05848f7",
+          "sha256": "641b09e8c9fc3bfcd486651f28cac679dde0d14c7d70d026030d8cb2e05848f7"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/geocode-glib/blobs/sha256:a0bdd13a694d1f4ee94de206de6fc03ad01df82ce3ca7ea7850e274eb86772b2",
-          "sha256": "a0bdd13a694d1f4ee94de206de6fc03ad01df82ce3ca7ea7850e274eb86772b2"
+          "url": "https://ghcr.io/v2/homebrew/core/geocode-glib/blobs/sha256:d89e09d0947a2aaf675a5039e7199518592f19611a5cd21f0edda22cbf4d16d2",
+          "sha256": "d89e09d0947a2aaf675a5039e7199518592f19611a5cd21f0edda22cbf4d16d2"
         },
         "x86_64_linux": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/geocode-glib/blobs/sha256:5087451ab0d29991b1760b263802a81a2497f5a157f40ac931570c2146de42a8",
-          "sha256": "5087451ab0d29991b1760b263802a81a2497f5a157f40ac931570c2146de42a8"
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/geocode-glib/blobs/sha256:e0224472f08ddfa0a81deb972c4bb6e15e1ff8ae53df5cbe47d130f20a7aa8fc",
+          "sha256": "e0224472f08ddfa0a81deb972c4bb6e15e1ff8ae53df5cbe47d130f20a7aa8fc"
         }
       }
     }
@@ -65,12 +70,14 @@
 
   ],
   "build_dependencies": [
+    "glib-utils",
     "gobject-introspection",
     "meson",
     "ninja",
     "pkg-config"
   ],
   "dependencies": [
+    "glib",
     "gtk+3",
     "json-glib",
     "libsoup@2"
