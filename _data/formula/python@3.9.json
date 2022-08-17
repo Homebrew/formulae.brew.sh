@@ -105,11 +105,57 @@
   ],
   "caveats": "Python has been installed as\n  $(brew --prefix)/bin/python3.9\n\nUnversioned and major-versioned symlinks `python`, `python3`, `python-config`, `python3-config`, `pip`, `pip3`, etc. pointing to\n`python3.9`, `python3.9-config`, `pip3.9` etc., respectively, have been installed into\n  $(brew --prefix)/opt/python@3.9/libexec/bin\n\nYou can install Python packages with\n  pip3.9 install <package>\nThey will install into the site-package directory\n  $(brew --prefix)/lib/python3.9/site-packages\n\ntkinter is no longer included with this formula, but it is available separately:\n  brew install python-tk@3.9\n\nIf you do not need a specific version of Python, and always want Homebrew's `python3` in your PATH:\n  brew install python3\n\nSee: https://docs.brew.sh/Homebrew-and-Python\n",
   "installed": [
+    {
+      "version": "3.9.13_2",
+      "used_options": [
 
+      ],
+      "built_as_bottle": true,
+      "poured_from_bottle": true,
+      "runtime_dependencies": [
+        {
+          "full_name": "gdbm",
+          "version": "1.23",
+          "declared_directly": true
+        },
+        {
+          "full_name": "mpdecimal",
+          "version": "2.5.1",
+          "declared_directly": true
+        },
+        {
+          "full_name": "ca-certificates",
+          "version": "2022-07-19",
+          "declared_directly": false
+        },
+        {
+          "full_name": "openssl@1.1",
+          "version": "1.1.1q",
+          "declared_directly": true
+        },
+        {
+          "full_name": "readline",
+          "version": "8.1.2",
+          "declared_directly": true
+        },
+        {
+          "full_name": "sqlite",
+          "version": "3.39.2",
+          "declared_directly": true
+        },
+        {
+          "full_name": "xz",
+          "version": "5.2.5",
+          "declared_directly": true
+        }
+      ],
+      "installed_as_dependency": false,
+      "installed_on_request": true
+    }
   ],
-  "linked_keg": null,
+  "linked_keg": "3.9.13_2",
   "pinned": false,
-  "outdated": false,
+  "outdated": true,
   "deprecated": false,
   "deprecation_date": null,
   "deprecation_reason": null,
