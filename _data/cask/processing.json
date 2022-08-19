@@ -7,14 +7,14 @@
   ],
   "desc": "Flexible software sketchbook and a language for learning how to code",
   "homepage": "https://processing.org/",
-  "url": "https://github.com/processing/processing/releases/download/processing-0270-3.5.4/processing-3.5.4-macosx.zip",
+  "url": "https://github.com/processing/processing4/releases/download/processing-1286-4.0.1/processing-4.0.1-macos-x64.zip",
   "appcast": null,
-  "version": "3.5.4,0270",
+  "version": "4.0.1,1286",
   "versions": {
   },
   "installed": null,
   "outdated": false,
-  "sha256": "4d64fe42a6c5c0863cc82e93a036e73731999ee9448be45bc322f91b0010bb6b",
+  "sha256": "6cabb7acd3b98adc4f4d9cf749cf2f3c4c2379c802862634a77fd91c6ca901c2",
   "artifacts": [
     {
       "quit": "org.processing.app",
@@ -28,6 +28,7 @@
       "trash": [
         "~/Library/Processing",
         "~/Preferences/org.processing.app.plist",
+        "~/Preferences/org.processing.four.plist",
         "~/Preferences/processing.app.tools.plist"
       ],
       "signal": {
@@ -36,15 +37,32 @@
   ],
   "caveats": null,
   "depends_on": {
+    "macos": {
+      ">=": [
+        "10.15"
+      ]
+    }
   },
   "conflicts_with": {
     "cask": [
       "homebrew/cask-versions/processing2",
-      "homebrew/cask-versions/processing-beta"
+      "homebrew/cask-versions/processing3"
     ]
   },
   "container": null,
   "auto_updates": null,
   "variations": {
+    "arm64_ventura": {
+      "url": "https://github.com/processing/processing4/releases/download/processing-1286-4.0.1/processing-4.0.1-macos-aarch64.zip",
+      "sha256": "aa5b3f8e277fada2f73086677fde16aa7d7a08cd5e8d02ba5227952b295460aa"
+    },
+    "arm64_monterey": {
+      "url": "https://github.com/processing/processing4/releases/download/processing-1286-4.0.1/processing-4.0.1-macos-aarch64.zip",
+      "sha256": "aa5b3f8e277fada2f73086677fde16aa7d7a08cd5e8d02ba5227952b295460aa"
+    },
+    "arm64_big_sur": {
+      "url": "https://github.com/processing/processing4/releases/download/processing-1286-4.0.1/processing-4.0.1-macos-aarch64.zip",
+      "sha256": "aa5b3f8e277fada2f73086677fde16aa7d7a08cd5e8d02ba5227952b295460aa"
+    }
   }
 }
