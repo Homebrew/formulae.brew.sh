@@ -4,7 +4,7 @@
   "tap": "homebrew/core",
   "oldname": null,
   "aliases": [
-    "glibc@2.23"
+    "glibc@2.35"
   ],
   "versioned_formulae": [
     "glibc@2.13"
@@ -13,13 +13,13 @@
   "license": "GPL-2.0-or-later and LGPL-2.1-or-later",
   "homepage": "https://www.gnu.org/software/libc/",
   "versions": {
-    "stable": "2.23",
+    "stable": "2.35",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://ftp.gnu.org/gnu/glibc/glibc-2.23.tar.gz",
+      "url": "https://ftp.gnu.org/gnu/glibc/glibc-2.35.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,8 +33,8 @@
       "files": {
         "x86_64_linux": {
           "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/glibc/blobs/sha256:8f5509c5a5fe85b923c196da5bb969d759a70a6a0e228110c5440a8719dc4c8e",
-          "sha256": "8f5509c5a5fe85b923c196da5bb969d759a70a6a0e228110c5440a8719dc4c8e"
+          "url": "https://ghcr.io/v2/homebrew/core/glibc/blobs/sha256:cd51b67e67b9a5d27880efc06a2b01b71e0b7b8b2cc207e6e961e46c423018e3",
+          "sha256": "cd51b67e67b9a5d27880efc06a2b01b71e0b7b8b2cc207e6e961e46c423018e3"
         }
       }
     }
@@ -45,11 +45,10 @@
 
   ],
   "build_dependencies": [
-    "binutils",
-    "linux-headers@4.4"
+
   ],
   "dependencies": [
-
+    "linux-headers@5.15"
   ],
   "recommended_dependencies": [
 
@@ -61,33 +60,6 @@
 
   ],
   "requirements": [
-    {
-      "name": "gawk",
-      "cask": null,
-      "download": null,
-      "version": null,
-      "contexts": [
-        "build"
-      ]
-    },
-    {
-      "name": "make",
-      "cask": null,
-      "download": null,
-      "version": null,
-      "contexts": [
-        "build"
-      ]
-    },
-    {
-      "name": "sed",
-      "cask": null,
-      "download": null,
-      "version": null,
-      "contexts": [
-        "build"
-      ]
-    },
     {
       "name": "brewedglibcnotolder",
       "cask": null,
