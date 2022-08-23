@@ -15,8 +15,4 @@ cask "webpack-dashboard" do
     "~/Library/Preferences/org.formidable.WebpackDashboard.plist",
     "~/Library/Saved Application State/org.formidable.WebpackDashboard.savedState",
   ]
-
-  caveats do
-    discontinued
-  end
 end

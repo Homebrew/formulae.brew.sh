@@ -20,8 +20,4 @@ cask "termhere" do
     "~/Library/Logs/DiagnosticReports/TermHere Finder Extension*",
     "~/Library/Preferences/ws.hbang.TermHere.plist",
   ]
-
-  caveats do
-    discontinued
-  end
 end

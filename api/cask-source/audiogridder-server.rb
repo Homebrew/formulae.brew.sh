@@ -2,8 +2,13 @@ cask "audiogridder-server" do
   arch arm: "arm64", intel: "x86_64"
 
   version "1.1.1"
-  sha256 arm:   "26be020b2ba57d7a0102a152099fcc5e993ce4bbcb23f47d80d5d9f24421658b",
-         intel: "072e52bd56fedb1c481961beacca99096e3a65ba36339bdd78155fd1f1d133ea"
+
+  on_intel do
+    sha256 "072e52bd56fedb1c481961beacca99096e3a65ba36339bdd78155fd1f1d133ea"
+  end
+  on_arm do
+    sha256 "26be020b2ba57d7a0102a152099fcc5e993ce4bbcb23f47d80d5d9f24421658b"
+  end
 
   url "https://audiogridder.com/releases/AudioGridderServer_#{version}_macOS-#{arch}.pkg"
   name "AudioGridder Server"

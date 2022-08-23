@@ -2,8 +2,13 @@ cask "mysql-connector-python" do
   arch arm: "arm64", intel: "x86-64bit"
 
   version "8.0.30"
-  sha256 arm:   "bbe251a4a9bea7a73ca1aa0112d8de0ac44f69fe45e3453a3a5c4b02e4661d0b",
-         intel: "673b43fbe5cf3ea4b8997bcb29a4e79390607434e81682e9b15466b502a43aa8"
+
+  on_intel do
+    sha256 "673b43fbe5cf3ea4b8997bcb29a4e79390607434e81682e9b15466b502a43aa8"
+  end
+  on_arm do
+    sha256 "bbe251a4a9bea7a73ca1aa0112d8de0ac44f69fe45e3453a3a5c4b02e4661d0b"
+  end
 
   url "https://dev.mysql.com/get/Downloads/Connector-Python/mysql-connector-python-#{version}-macos12-#{arch}.dmg"
   name "MySQL Connector for Python"

@@ -8,8 +8,4 @@ cask "udeler" do
   homepage "https://github.com/FaisalUmair/udemy-downloader-gui/"
 
   app "Udeler.app"
-
-  caveats do
-    discontinued
-  end
 end
