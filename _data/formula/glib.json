@@ -2,7 +2,7 @@
   "name": "glib",
   "full_name": "glib",
   "tap": "homebrew/core",
-  "oldname": null,
+  "oldname": "glib-utils",
   "aliases": [
 
   ],
@@ -24,7 +24,7 @@
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,33 +33,33 @@
       "files": {
         "arm64_monterey": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/glib/blobs/sha256:36038c2b4fb7dbede91facedd3dd3062e0ae697149e5ce758bbd17ce0e2448ab",
-          "sha256": "36038c2b4fb7dbede91facedd3dd3062e0ae697149e5ce758bbd17ce0e2448ab"
+          "url": "https://ghcr.io/v2/homebrew/core/glib/blobs/sha256:8c8e1967a433dfa7f97de6adfde709a2f7c0d92578306b687fb724fd40d7a3a1",
+          "sha256": "8c8e1967a433dfa7f97de6adfde709a2f7c0d92578306b687fb724fd40d7a3a1"
         },
         "arm64_big_sur": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/glib/blobs/sha256:a3265f48c2c88487e5f1db1230ec8f9382a2fb68d5eafe90a9ad75fd7c71de85",
-          "sha256": "a3265f48c2c88487e5f1db1230ec8f9382a2fb68d5eafe90a9ad75fd7c71de85"
+          "url": "https://ghcr.io/v2/homebrew/core/glib/blobs/sha256:687095abc028a3ab7f347c48ddf6ba37edacf17059ba1e07a087fb87dac21adc",
+          "sha256": "687095abc028a3ab7f347c48ddf6ba37edacf17059ba1e07a087fb87dac21adc"
         },
         "monterey": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/glib/blobs/sha256:29d582d267be192c3262bbc318af8ac451f067d8e647c671b8685c4ef349d6a8",
-          "sha256": "29d582d267be192c3262bbc318af8ac451f067d8e647c671b8685c4ef349d6a8"
+          "url": "https://ghcr.io/v2/homebrew/core/glib/blobs/sha256:925ec9227fa871a84c732deebf53b1e8091f92ed80a17a07d935ba4dddf2e53b",
+          "sha256": "925ec9227fa871a84c732deebf53b1e8091f92ed80a17a07d935ba4dddf2e53b"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/glib/blobs/sha256:5711f5a9d216f5ace87ec33851ad868623835ca0f940df46e87a62621662f7ac",
-          "sha256": "5711f5a9d216f5ace87ec33851ad868623835ca0f940df46e87a62621662f7ac"
+          "url": "https://ghcr.io/v2/homebrew/core/glib/blobs/sha256:629a83d9b016a50734db389d47e1c153eb445238de819c8ab5d5feb778ed53ec",
+          "sha256": "629a83d9b016a50734db389d47e1c153eb445238de819c8ab5d5feb778ed53ec"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/glib/blobs/sha256:605292cae9fba2b545a9a7bfe6a97623dd6aa055a0c05747d3143297a137b0a2",
-          "sha256": "605292cae9fba2b545a9a7bfe6a97623dd6aa055a0c05747d3143297a137b0a2"
+          "url": "https://ghcr.io/v2/homebrew/core/glib/blobs/sha256:c1ed98ced5b80282159a41cb4e0ef44a5b8ecd7fa0ca9710dbe27b07564ba867",
+          "sha256": "c1ed98ced5b80282159a41cb4e0ef44a5b8ecd7fa0ca9710dbe27b07564ba867"
         },
         "x86_64_linux": {
           "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/glib/blobs/sha256:6bf1b47d083b90834e59c72f3ba6d6a8edc7637bcecba7d3ff769eff8d66a946",
-          "sha256": "6bf1b47d083b90834e59c72f3ba6d6a8edc7637bcecba7d3ff769eff8d66a946"
+          "url": "https://ghcr.io/v2/homebrew/core/glib/blobs/sha256:0c89e2d8b3fe5587f8f67ec3775fef38583648771605d4aafd8222c786c74e9d",
+          "sha256": "0c89e2d8b3fe5587f8f67ec3775fef38583648771605d4aafd8222c786c74e9d"
         }
       }
     }
@@ -72,12 +72,10 @@
   "build_dependencies": [
     "meson",
     "ninja",
-    "pkg-config",
-    "python@3.10"
+    "pkg-config"
   ],
   "dependencies": [
     "gettext",
-    "libffi",
     "pcre"
   ],
   "recommended_dependencies": [
@@ -87,7 +85,8 @@
 
   ],
   "uses_from_macos": [
-
+    "libffi",
+    "python"
   ],
   "requirements": [
 
@@ -95,7 +94,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "Python executables and libraries are no longer included with this formula, but they are available separately:\n  brew install glib-utils\n",
+  "caveats": null,
   "installed": [
     {
       "version": "2.72.3",
@@ -127,7 +126,7 @@
   ],
   "linked_keg": "2.72.3",
   "pinned": false,
-  "outdated": false,
+  "outdated": true,
   "deprecated": false,
   "deprecation_date": null,
   "deprecation_reason": null,
@@ -135,11 +134,44 @@
   "disable_date": null,
   "disable_reason": null,
   "variations": {
+    "mojave": {
+      "dependencies": [
+        "gettext",
+        "pcre",
+        "libffi",
+        "python"
+      ]
+    },
+    "high_sierra": {
+      "dependencies": [
+        "gettext",
+        "pcre",
+        "libffi",
+        "python"
+      ]
+    },
+    "sierra": {
+      "dependencies": [
+        "gettext",
+        "pcre",
+        "libffi",
+        "python"
+      ]
+    },
+    "el_capitan": {
+      "dependencies": [
+        "gettext",
+        "pcre",
+        "libffi",
+        "python"
+      ]
+    },
     "x86_64_linux": {
       "dependencies": [
         "gettext",
-        "libffi",
         "pcre",
+        "libffi",
+        "python",
         "util-linux"
       ]
     }
