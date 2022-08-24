@@ -19,12 +19,12 @@
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/thkukuk/libnsl/archive/v2.0.0.tar.gz",
+      "url": "https://github.com/thkukuk/libnsl/releases/download/v2.0.0/libnsl-2.0.0.tar.xz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,25 +33,19 @@
       "files": {
         "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/libnsl/blobs/sha256:3b5adecb3863612dbba0ab392e1c33b9c69b6e68532c30eaa6b7032181bfc855",
-          "sha256": "3b5adecb3863612dbba0ab392e1c33b9c69b6e68532c30eaa6b7032181bfc855"
+          "url": "https://ghcr.io/v2/homebrew/core/libnsl/blobs/sha256:ed70b285939e2ab21ba53d122ce2d4beab4cd0f9c86925c3d3a2cfb1b0eeecb3",
+          "sha256": "ed70b285939e2ab21ba53d122ce2d4beab4cd0f9c86925c3d3a2cfb1b0eeecb3"
         }
       }
     }
   },
-  "keg_only": true,
-  "keg_only_reason": {
-    "reason": "it conflicts with glibc",
-    "explanation": ""
-  },
+  "keg_only": false,
+  "keg_only_reason": null,
   "options": [
 
   ],
   "build_dependencies": [
-    "autoconf",
-    "automake",
     "gettext",
-    "libtool",
     "pkg-config"
   ],
   "dependencies": [
@@ -64,9 +58,7 @@
 
   ],
   "uses_from_macos": [
-    {
-      "m4": "build"
-    }
+
   ],
   "requirements": [
     {
