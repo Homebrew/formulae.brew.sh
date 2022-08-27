@@ -17,18 +17,24 @@
   "sha256": "ab9ae93045eaee02a4e57dd5ff18e026ed2381062c1579e4555ff7112c110df4",
   "artifacts": [
     {
-      "launchctl": [
-        "com.github.outset.boot",
-        "com.github.outset.cleanup",
-        "com.github.outset.login",
-        "com.github.outset.login-privileged",
-        "com.github.outset.on-demand"
-      ],
-      "pkgutil": "com.github.outset",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "launchctl": [
+            "com.github.outset.boot",
+            "com.github.outset.cleanup",
+            "com.github.outset.login",
+            "com.github.outset.login-privileged",
+            "com.github.outset.on-demand"
+          ],
+          "pkgutil": "com.github.outset"
+        }
+      ]
     },
-    "outset-3.0.3.pkg (Pkg)"
+    {
+      "pkg": [
+        "outset-3.0.3.pkg"
+      ]
+    }
   ],
   "caveats": "Cask outset installs files under $(brew --prefix). The presence of such\nfiles can cause warnings when running `brew doctor`, which is considered\nto be a bug in Homebrew Cask.\n",
   "depends_on": {

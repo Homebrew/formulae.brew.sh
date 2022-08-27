@@ -17,15 +17,21 @@
   "sha256": "1a4c826356f08d1febf8138220cf0f0ba0d00e8cd0ef082db3043a0bcc03f435",
   "artifacts": [
     {
-      "pkgutil": "com.virtualgl.vglclient",
-      "script": {
-        "executable": "/opt/VirtualGL/bin/uninstall",
-        "sudo": "true"
-      },
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "com.virtualgl.vglclient",
+          "script": {
+            "executable": "/opt/VirtualGL/bin/uninstall",
+            "sudo": "true"
+          }
+        }
+      ]
     },
-    "VirtualGL.pkg (Pkg)"
+    {
+      "pkg": [
+        "VirtualGL.pkg"
+      ]
+    }
   ],
   "caveats": null,
   "depends_on": {

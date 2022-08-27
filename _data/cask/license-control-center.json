@@ -17,31 +17,39 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "delete": [
-        "/Applications/License Control Center.app",
-        "/Library/Receipts/eLicenserControl.pkg",
-        "/Library/Receipts/LCC.pkg",
-        "/Library/Receipts/NOS.pkg",
-        "/Library/Receipts/POS.pkg"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": [
+            "/Applications/License Control Center.app",
+            "/Library/Receipts/eLicenserControl.pkg",
+            "/Library/Receipts/LCC.pkg",
+            "/Library/Receipts/NOS.pkg",
+            "/Library/Receipts/POS.pkg"
+          ]
+        }
+      ]
     },
     {
-      "path": "eLicenserControlSetup.app"
+      "installer": [
+        {
+          "manual": "eLicenserControlSetup.app"
+        }
+      ]
     },
     {
-      "trash": [
-        "/Library/Application Support/Syncrosoft",
-        "/Library/Application Support/eLicenser",
-        "/Library/Syncrosoft",
-        "/var/db/receipts/com.syncrosoft.*",
-        "/var/db/receipts/com.eLicenser.*",
-        "~/Library/Preferences/com.Syncrosoft.LCC.plist",
-        "~/Library/Saved Application State/com.Syncrosoft.LCC.savedState"
-      ],
-      "signal": {
-      }
+      "zap": [
+        {
+          "trash": [
+            "/Library/Application Support/Syncrosoft",
+            "/Library/Application Support/eLicenser",
+            "/Library/Syncrosoft",
+            "/var/db/receipts/com.syncrosoft.*",
+            "/var/db/receipts/com.eLicenser.*",
+            "~/Library/Preferences/com.Syncrosoft.LCC.plist",
+            "~/Library/Saved Application State/com.Syncrosoft.LCC.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

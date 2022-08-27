@@ -17,22 +17,28 @@
   "sha256": "4651afc3f51763df3cc496a00c26f29dba6d4ce4989151d3bc820c8e181d6c23",
   "artifacts": [
     {
-      "quit": "io.balena.etcher.*",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "io.balena.etcher.*"
+        }
+      ]
     },
-    [
-      "balenaEtcher.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/balena-etcher",
-        "~/Library/Preferences/io.balena.etcher.helper.plist",
-        "~/Library/Preferences/io.balena.etcher.plist",
-        "~/Library/Saved Application State/io.balena.etcher.savedState"
-      ],
-      "signal": {
-      }
+      "app": [
+        "balenaEtcher.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/balena-etcher",
+            "~/Library/Preferences/io.balena.etcher.helper.plist",
+            "~/Library/Preferences/io.balena.etcher.plist",
+            "~/Library/Saved Application State/io.balena.etcher.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

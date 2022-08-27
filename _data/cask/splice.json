@@ -17,21 +17,27 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "quit": "com.splice.Splice",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "com.splice.Splice"
+        }
+      ]
     },
-    [
-      "Splice.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/*Splice*",
-        "~/Library/Caches/com.splice*",
-        "~/Library/Preferences/com.splice*"
-      ],
-      "signal": {
-      }
+      "app": [
+        "Splice.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/*Splice*",
+            "~/Library/Caches/com.splice*",
+            "~/Library/Preferences/com.splice*"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

@@ -17,16 +17,24 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "quit": "com.zwift.ZwiftLauncher",
-      "pkgutil": "com.zwift.ZwiftLauncher",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "com.zwift.ZwiftLauncher",
+          "pkgutil": "com.zwift.ZwiftLauncher"
+        }
+      ]
     },
-    "ZwiftInstaller.pkg (Pkg)",
     {
-      "trash": "~/Library/Application Support/Zwift",
-      "signal": {
-      }
+      "pkg": [
+        "ZwiftInstaller.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": "~/Library/Application Support/Zwift"
+        }
+      ]
     }
   ],
   "caveats": null,

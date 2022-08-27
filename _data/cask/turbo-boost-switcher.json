@@ -17,21 +17,29 @@
   "sha256": "f755ac05358f3cdeb8f2b34fe35595865ff87e73421350ab0568e08892541932",
   "artifacts": [
     {
-      "quit": "rugarciap.com.Turbo-Boost-Switcher",
-      "kext": "com.rugarciap.DisableTurboBoost",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "rugarciap.com.Turbo-Boost-Switcher",
+          "kext": "com.rugarciap.DisableTurboBoost"
+        }
+      ]
     },
-    [
-      "tbswitcher_resources"
-    ],
-    [
-      "Turbo Boost Switcher.app"
-    ],
     {
-      "trash": "~/Library/Preferences/rugarciap.com.Turbo-Boost-Switcher.plist",
-      "signal": {
-      }
+      "suite": [
+        "tbswitcher_resources"
+      ]
+    },
+    {
+      "app": [
+        "Turbo Boost Switcher.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": "~/Library/Preferences/rugarciap.com.Turbo-Boost-Switcher.plist"
+        }
+      ]
     }
   ],
   "caveats": "turbo-boost-switcher requires a kernel extension to work.\nIf the installation fails, retry after you enable it in:\n  System Preferences → Security & Privacy → General\n\nFor more information, refer to vendor documentation or this Apple Technical Note:\n  https://developer.apple.com/library/content/technotes/tn2459/_index.html\n",

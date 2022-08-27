@@ -17,28 +17,36 @@
   "sha256": "b7f17bb16c80c1616ab9b54b9fa4d18220fac748a74bc47b276260e57ca13877",
   "artifacts": [
     {
-      "pkgutil": [
-        "org.digiKam",
-        "org.kde.digikam"
-      ],
-      "delete": [
-        "/Applications/digikam.app",
-        "/Applications/showfoto.app"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": [
+            "org.digiKam",
+            "org.kde.digikam"
+          ],
+          "delete": [
+            "/Applications/digikam.app",
+            "/Applications/showfoto.app"
+          ]
+        }
+      ]
     },
-    "digiKam-7.7.0-MacOS-x86-64.pkg (Pkg)",
     {
-      "trash": [
-        "~/Library/Application Support/digikam",
-        "~/Library/Caches/digikam",
-        "~/Library/Preferences/digikam.plist",
-        "~/Library/Preferences/digikamrc",
-        "~/Library/Saved Application State/digikam.savedState"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "digiKam-7.7.0-MacOS-x86-64.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/digikam",
+            "~/Library/Caches/digikam",
+            "~/Library/Preferences/digikam.plist",
+            "~/Library/Preferences/digikamrc",
+            "~/Library/Saved Application State/digikam.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

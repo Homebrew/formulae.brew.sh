@@ -17,27 +17,33 @@
   "sha256": "aadd3a9dd9a9ee3034ce33f96894d83448b1505913e10bdad60b56453298e774",
   "artifacts": [
     {
-      "quit": "app.tuple.app",
-      "launchctl": "app.tuple.app-LaunchAtLoginHelper",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "app.tuple.app",
+          "launchctl": "app.tuple.app-LaunchAtLoginHelper"
+        }
+      ]
     },
-    [
-      "Tuple.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Scripts/app.tuple.app-LaunchAtLoginHelper",
-        "~/Library/Application Support/app.tuple.app",
-        "~/Library/Caches/app.tuple.app",
-        "~/Library/Caches/com.crashlytics.data/app.tuple.app",
-        "~/Library/Caches/io.fabric.sdk.mac.data/app.tuple.app",
-        "~/Library/Containers/app.tuple.app-LaunchAtLoginHelper",
-        "~/Library/Preferences/app.tuple.app.plist",
-        "~/Library/WebKit/app.tuple.app"
-      ],
-      "signal": {
-      }
+      "app": [
+        "Tuple.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Scripts/app.tuple.app-LaunchAtLoginHelper",
+            "~/Library/Application Support/app.tuple.app",
+            "~/Library/Caches/app.tuple.app",
+            "~/Library/Caches/com.crashlytics.data/app.tuple.app",
+            "~/Library/Caches/io.fabric.sdk.mac.data/app.tuple.app",
+            "~/Library/Containers/app.tuple.app-LaunchAtLoginHelper",
+            "~/Library/Preferences/app.tuple.app.plist",
+            "~/Library/WebKit/app.tuple.app"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

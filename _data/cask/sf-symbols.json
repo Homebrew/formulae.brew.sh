@@ -21,16 +21,24 @@
   "sha256": "351135280b21d3c5ca958e362bfde3207a1e548b1ff427876c2c42301c86c7bc",
   "artifacts": [
     {
-      "pkgutil": "com.apple.SFSymbols.plist",
-      "delete": "/Applications/SF Symbols.app",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "com.apple.SFSymbols.plist",
+          "delete": "/Applications/SF Symbols.app"
+        }
+      ]
     },
-    "SF Symbols.pkg (Pkg)",
     {
-      "trash": "~/Library/Preferences/com.apple.SFSymbols.plist",
-      "signal": {
-      }
+      "pkg": [
+        "SF Symbols.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": "~/Library/Preferences/com.apple.SFSymbols.plist"
+        }
+      ]
     }
   ],
   "caveats": null,

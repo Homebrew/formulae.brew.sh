@@ -17,24 +17,30 @@
   "sha256": "6e40562a2034b109bfc15fcb7b107d132396f420fe39abed49cc32338489ec29",
   "artifacts": [
     {
-      "delete": [
-        "/Applications/WhatsYourSign.app",
-        "~/Library/Application Scripts/com.objective-see.WhatsYourSignExt.FinderSync",
-        "~/Library/Containers/com.objective-see.WhatsYourSignExt.FinderSync"
-      ],
-      "script": {
-        "executable": "/usr/bin/pluginkit",
-        "args": [
-          "-r",
-          "/Applications/WhatsYourSign.app/Contents/PlugIns/WhatsYourSign.appex"
-        ],
-        "must_succeed": "false"
-      },
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": [
+            "/Applications/WhatsYourSign.app",
+            "~/Library/Application Scripts/com.objective-see.WhatsYourSignExt.FinderSync",
+            "~/Library/Containers/com.objective-see.WhatsYourSignExt.FinderSync"
+          ],
+          "script": {
+            "executable": "/usr/bin/pluginkit",
+            "args": [
+              "-r",
+              "/Applications/WhatsYourSign.app/Contents/PlugIns/WhatsYourSign.appex"
+            ],
+            "must_succeed": "false"
+          }
+        }
+      ]
     },
     {
-      "path": "WhatsYourSign Installer.app"
+      "installer": [
+        {
+          "manual": "WhatsYourSign Installer.app"
+        }
+      ]
     }
   ],
   "caveats": null,

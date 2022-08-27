@@ -17,27 +17,33 @@
   "sha256": "f612824e8c76230e4b2e0528c8204c487e8a922f9544fe2ca9176ac52faf4446",
   "artifacts": [
     {
-      "delete": [
-        "/Library/LaunchDaemons/com.trendmicro.TrendCleanerPro.HelperTool.plist",
-        "/Library/PrivilegedHelperTools/com.trendmicro.TrendCleanerPro.HelperTool"
-      ],
-      "launchctl": "com.trendmicro.TrendCleanerPro.HelperTool",
-      "quit": "com.trendmicro.TrendCleanerPro",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": [
+            "/Library/LaunchDaemons/com.trendmicro.TrendCleanerPro.HelperTool.plist",
+            "/Library/PrivilegedHelperTools/com.trendmicro.TrendCleanerPro.HelperTool"
+          ],
+          "launchctl": "com.trendmicro.TrendCleanerPro.HelperTool",
+          "quit": "com.trendmicro.TrendCleanerPro"
+        }
+      ]
     },
-    [
-      "CleanerOnePro.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/com.trendmicro.TrendCleanerPro",
-        "~/Library/Caches/com.trendmicro.TrendCleanerPro",
-        "~/Library/Logs/com.trendmicro.TrendCleanerPro",
-        "~/Library/Preferences/com.trendmicro.TrendCleanerPro.plist"
-      ],
-      "signal": {
-      }
+      "app": [
+        "CleanerOnePro.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/com.trendmicro.TrendCleanerPro",
+            "~/Library/Caches/com.trendmicro.TrendCleanerPro",
+            "~/Library/Logs/com.trendmicro.TrendCleanerPro",
+            "~/Library/Preferences/com.trendmicro.TrendCleanerPro.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

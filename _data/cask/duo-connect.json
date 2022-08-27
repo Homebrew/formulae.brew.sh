@@ -17,17 +17,23 @@
   "sha256": "e49703db4d199c0a1b0ce3f5906f3998b56a96b552d870ecdfd694c368fc32f0",
   "artifacts": [
     {
-      "launchctl": [
-        "com.duo.connect.tcp",
-        "com.duo.connect.tcp.plist",
-        "com.duo.connect.tun",
-        "com.duo.connect.tun.plist"
-      ],
-      "pkgutil": "com.duo.connect.bin",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "launchctl": [
+            "com.duo.connect.tcp",
+            "com.duo.connect.tcp.plist",
+            "com.duo.connect.tun",
+            "com.duo.connect.tun.plist"
+          ],
+          "pkgutil": "com.duo.connect.bin"
+        }
+      ]
     },
-    "DuoConnect-2.0.3.pkg (Pkg)"
+    {
+      "pkg": [
+        "DuoConnect-2.0.3.pkg"
+      ]
+    }
   ],
   "caveats": null,
   "depends_on": {

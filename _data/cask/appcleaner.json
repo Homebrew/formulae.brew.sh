@@ -19,23 +19,29 @@
   "sha256": "610c22fda19d558130e742f9c1d5a40587bc182967abdb2e47b4385fdaad1501",
   "artifacts": [
     {
-      "quit": "net.freemacsoft.AppCleaner",
-      "launchctl": "net.freemacsoft.AppCleaner-SmartDelete",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "net.freemacsoft.AppCleaner",
+          "launchctl": "net.freemacsoft.AppCleaner-SmartDelete"
+        }
+      ]
     },
-    [
-      "AppCleaner.app"
-    ],
     {
-      "trash": [
-        "~/Library/Caches/net.freemacsoft.AppCleaner",
-        "~/Library/Preferences/net.freemacsoft.AppCleaner.plist",
-        "~/Library/Preferences/net.freemacsoft.AppCleaner-SmartDelete.plist",
-        "~/Library/Saved Application State/net.freemacsoft.AppCleaner.savedState"
-      ],
-      "signal": {
-      }
+      "app": [
+        "AppCleaner.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Caches/net.freemacsoft.AppCleaner",
+            "~/Library/Preferences/net.freemacsoft.AppCleaner.plist",
+            "~/Library/Preferences/net.freemacsoft.AppCleaner-SmartDelete.plist",
+            "~/Library/Saved Application State/net.freemacsoft.AppCleaner.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

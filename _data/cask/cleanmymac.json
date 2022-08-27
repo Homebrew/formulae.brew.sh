@@ -17,64 +17,70 @@
   "sha256": "8171527833a3f75495697e446ded236cfc43fb99cd9e6b9c7f8f9e6b2d696ff4",
   "artifacts": [
     {
-      "delete": [
-        "/Library/LaunchDaemons/com.macpaw.CleanMyMac4.Agent.plist",
-        "/Library/PrivilegedHelperTools/com.macpaw.CleanMyMac4.Agent"
-      ],
-      "launchctl": [
-        "com.macpaw.CleanMyMac4.Agent",
-        "com.macpaw.CleanMyMac4.HealthMonitor",
-        "com.macpaw.CleanMyMac4.Menu",
-        "com.macpaw.CleanMyMac4.Scheduler",
-        "com.macpaw.CleanMyMac4.Updater"
-      ],
-      "login_item": "CleanMyMac 4 Menu",
-      "quit": [
-        "com.macpaw.CleanMyMac4",
-        "com.macpaw.CleanMyMac4.HealthMonitor",
-        "com.macpaw.CleanMyMac4.Menu"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": [
+            "/Library/LaunchDaemons/com.macpaw.CleanMyMac4.Agent.plist",
+            "/Library/PrivilegedHelperTools/com.macpaw.CleanMyMac4.Agent"
+          ],
+          "launchctl": [
+            "com.macpaw.CleanMyMac4.Agent",
+            "com.macpaw.CleanMyMac4.HealthMonitor",
+            "com.macpaw.CleanMyMac4.Menu",
+            "com.macpaw.CleanMyMac4.Scheduler",
+            "com.macpaw.CleanMyMac4.Updater"
+          ],
+          "login_item": "CleanMyMac 4 Menu",
+          "quit": [
+            "com.macpaw.CleanMyMac4",
+            "com.macpaw.CleanMyMac4.HealthMonitor",
+            "com.macpaw.CleanMyMac4.Menu"
+          ]
+        }
+      ]
     },
-    [
-      "CleanMyMac X.app"
-    ],
     {
-      "trash": [
-        "/Users/Shared/CleanMyMac X Menu",
-        "/Users/Shared/CleanMyMac X",
-        "~/Library/Application Scripts/com.macpaw.CleanMyMac4.CleanMyMacWidget",
-        "~/Library/Application Support/CleanMyMac X Menu",
-        "~/Library/Application Support/CleanMyMac X",
-        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.macpaw.cleanmymac4.scheduler.sfl*",
-        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.macpaw.cleanmymac4.sfl*",
-        "~/Library/Caches/CleanMyMac 4",
-        "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/com.macpaw.CleanMyMac4.help*",
-        "~/Library/Caches/com.macpaw.CleanMyMac4.HealthMonitor",
-        "~/Library/Caches/com.macpaw.CleanMyMac4.KnowledgeBase",
-        "~/Library/Caches/com.macpaw.CleanMyMac4.Menu",
-        "~/Library/Caches/com.macpaw.CleanMyMac4.Scheduler",
-        "~/Library/Caches/com.macpaw.CleanMyMac4.Updater",
-        "~/Library/Caches/com.macpaw.CleanMyMac4",
-        "~/Library/Containers/com.macpaw.CleanMyMac4.CleanMyMacWidget",
-        "~/Library/Group Containers/*.com.macpaw.CleanMyMac4",
-        "~/Library/LaunchAgents/com.macpaw.CleanMyMac4.HealthMonitor.plist",
-        "~/Library/LaunchAgents/com.macpaw.CleanMyMac4.Updater.plist",
-        "~/Library/Logs/CleanMyMac 4.log",
-        "~/Library/Logs/CleanMyMac X Menu/HealthMonitor",
-        "~/Library/Logs/com.macpaw.CleanMyMac4",
-        "~/Library/Preferences/com.macpaw.CleanMyMac-4-Helper.plist",
-        "~/Library/Preferences/com.macpaw.CleanMyMac4.HealthMonitor.plist",
-        "~/Library/Preferences/com.macpaw.CleanMyMac4.KnowledgeBase.plist",
-        "~/Library/Preferences/com.macpaw.cleanmymac4.Menu.plist",
-        "~/Library/Preferences/com.macpaw.CleanMyMac4.plist",
-        "~/Library/Preferences/com.macpaw.CleanMyMac4.Scheduler.plist",
-        "~/Library/WebKit/com.macpaw.CleanMyMac4",
-        "~/Pictures/Photos Library.photoslibrary/private/com.macpaw.CleanMyMac4"
-      ],
-      "signal": {
-      }
+      "app": [
+        "CleanMyMac X.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "/Users/Shared/CleanMyMac X Menu",
+            "/Users/Shared/CleanMyMac X",
+            "~/Library/Application Scripts/com.macpaw.CleanMyMac4.CleanMyMacWidget",
+            "~/Library/Application Support/CleanMyMac X Menu",
+            "~/Library/Application Support/CleanMyMac X",
+            "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.macpaw.cleanmymac4.scheduler.sfl*",
+            "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.macpaw.cleanmymac4.sfl*",
+            "~/Library/Caches/CleanMyMac 4",
+            "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/com.macpaw.CleanMyMac4.help*",
+            "~/Library/Caches/com.macpaw.CleanMyMac4.HealthMonitor",
+            "~/Library/Caches/com.macpaw.CleanMyMac4.KnowledgeBase",
+            "~/Library/Caches/com.macpaw.CleanMyMac4.Menu",
+            "~/Library/Caches/com.macpaw.CleanMyMac4.Scheduler",
+            "~/Library/Caches/com.macpaw.CleanMyMac4.Updater",
+            "~/Library/Caches/com.macpaw.CleanMyMac4",
+            "~/Library/Containers/com.macpaw.CleanMyMac4.CleanMyMacWidget",
+            "~/Library/Group Containers/*.com.macpaw.CleanMyMac4",
+            "~/Library/LaunchAgents/com.macpaw.CleanMyMac4.HealthMonitor.plist",
+            "~/Library/LaunchAgents/com.macpaw.CleanMyMac4.Updater.plist",
+            "~/Library/Logs/CleanMyMac 4.log",
+            "~/Library/Logs/CleanMyMac X Menu/HealthMonitor",
+            "~/Library/Logs/com.macpaw.CleanMyMac4",
+            "~/Library/Preferences/com.macpaw.CleanMyMac-4-Helper.plist",
+            "~/Library/Preferences/com.macpaw.CleanMyMac4.HealthMonitor.plist",
+            "~/Library/Preferences/com.macpaw.CleanMyMac4.KnowledgeBase.plist",
+            "~/Library/Preferences/com.macpaw.cleanmymac4.Menu.plist",
+            "~/Library/Preferences/com.macpaw.CleanMyMac4.plist",
+            "~/Library/Preferences/com.macpaw.CleanMyMac4.Scheduler.plist",
+            "~/Library/WebKit/com.macpaw.CleanMyMac4",
+            "~/Pictures/Photos Library.photoslibrary/private/com.macpaw.CleanMyMac4"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

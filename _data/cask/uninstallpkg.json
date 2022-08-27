@@ -17,22 +17,28 @@
   "sha256": "35441d5520cdf0ac35e20c76704a65c97183d3729c49d1012c16a55a7056f70d",
   "artifacts": [
     {
-      "delete": "/Library/PrivilegedHelperTools/com.corecode.UninstallPKGDeleteHelper",
-      "launchctl": "com.corecode.UninstallPKGDeleteHelper",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": "/Library/PrivilegedHelperTools/com.corecode.UninstallPKGDeleteHelper",
+          "launchctl": "com.corecode.UninstallPKGDeleteHelper"
+        }
+      ]
     },
-    [
-      "UninstallPKG.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/UninstallPKG",
-        "~/Library/Preferences/com.corecode.UninstallPKG.plist",
-        "~/Library/Saved Application State/com.corecode.UninstallPKG.savedState"
-      ],
-      "signal": {
-      }
+      "app": [
+        "UninstallPKG.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/UninstallPKG",
+            "~/Library/Preferences/com.corecode.UninstallPKG.plist",
+            "~/Library/Saved Application State/com.corecode.UninstallPKG.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

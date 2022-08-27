@@ -17,24 +17,30 @@
   "sha256": "947c0c417ddf0fa0abcdb4d8e9b49f9e26bf17bd3590261f0d8ca1acabe8cf97",
   "artifacts": [
     {
-      "quit": "nz.jamsinclair.ballast",
-      "launchctl": "nz.jamsinclair.ballast-LaunchAtLoginHelper",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "nz.jamsinclair.ballast",
+          "launchctl": "nz.jamsinclair.ballast-LaunchAtLoginHelper"
+        }
+      ]
     },
-    [
-      "ballast.app"
-    ],
     {
-      "trash": [
-        "~/Library/Preferences/nz.jamsinclair.ballast.plist",
-        "~/Library/Application Scripts/nz.jamsinclair.ballast",
-        "~/Library/Application Scripts/nz.jamsinclair.ballast-LaunchAtLoginHelper",
-        "~/Library/Containers/nz.jamsinclair.ballast",
-        "~/Library/Containers/nz.jamsinclair.ballast-LaunchAtLoginHelper"
-      ],
-      "signal": {
-      }
+      "app": [
+        "ballast.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Preferences/nz.jamsinclair.ballast.plist",
+            "~/Library/Application Scripts/nz.jamsinclair.ballast",
+            "~/Library/Application Scripts/nz.jamsinclair.ballast-LaunchAtLoginHelper",
+            "~/Library/Containers/nz.jamsinclair.ballast",
+            "~/Library/Containers/nz.jamsinclair.ballast-LaunchAtLoginHelper"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

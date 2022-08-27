@@ -17,22 +17,30 @@
   "sha256": "00a102a997360728e7fad37950b73918c54de10696b979e5f90ef75a560c314d",
   "artifacts": [
     {
-      "pkgutil": [
-        "com.xamarin.xamarin.ios.pkg",
-        "com.xamarin.xamarin-ios-build-host.pkg",
-        "com.xamarin.monotouch.pkg"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": [
+            "com.xamarin.xamarin.ios.pkg",
+            "com.xamarin.xamarin-ios-build-host.pkg",
+            "com.xamarin.monotouch.pkg"
+          ]
+        }
+      ]
     },
-    "xamarin.ios-15.12.0.2.pkg (Pkg)",
     {
-      "trash": [
-        "/Developer/MonoTouch",
-        "/Library/Frameworks/Xamarin.iOS.framework"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "xamarin.ios-15.12.0.2.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "/Developer/MonoTouch",
+            "/Library/Frameworks/Xamarin.iOS.framework"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

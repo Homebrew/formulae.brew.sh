@@ -17,20 +17,28 @@
   "sha256": "72607b5e8d7c9c220135c967b91e258efcd4154e047cd64a7720c0d173e718d0",
   "artifacts": [
     {
-      "pkgutil": "com.cinc-project.pkg.cinc-workstation",
-      "launchctl": "io.chef.chef-workstation.app",
-      "script": {
-        "executable": "/opt/cinc-workstation/bin/uninstall_chef_workstation",
-        "sudo": "true"
-      },
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "com.cinc-project.pkg.cinc-workstation",
+          "launchctl": "io.chef.chef-workstation.app",
+          "script": {
+            "executable": "/opt/cinc-workstation/bin/uninstall_chef_workstation",
+            "sudo": "true"
+          }
+        }
+      ]
     },
-    "cinc-workstation-22.7.1006-1.x86_64.pkg (Pkg)",
     {
-      "trash": "~/.cinc-workstation/",
-      "signal": {
-      }
+      "pkg": [
+        "cinc-workstation-22.7.1006-1.x86_64.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": "~/.cinc-workstation/"
+        }
+      ]
     }
   ],
   "caveats": null,

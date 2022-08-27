@@ -16,31 +16,39 @@
   "outdated": false,
   "sha256": "bb5858619a58561d07d23df470b9548b82c1544cea9ffade30c4362dc8f3bd93",
   "artifacts": [
-    "uninstall_preflight (Preflight Block)",
     {
-      "launchctl": [
-        "net.tunnelblick.tunnelblick.LaunchAtLogin",
-        "net.tunnelblick.tunnelblick.tunnelblickd"
-      ],
-      "delete": "/Library/Application Support/Tunnelblick",
-      "quit": "net.tunnelblick.tunnelblick",
-      "signal": {
-      }
+      "uninstall_preflight": null
     },
-    [
-      "Tunnelblick.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/Tunnelblick",
-        "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/Tunnelblick*",
-        "~/Library/Caches/net.tunnelblick.tunnelblick",
-        "~/Library/Cookies/net.tunnelblick.tunnelblick.binarycookies",
-        "~/Library/HTTPStorages/net.tunnelblick.tunnelblick",
-        "~/Library/Preferences/net.tunnelblick.tunnelblick.plist"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "launchctl": [
+            "net.tunnelblick.tunnelblick.LaunchAtLogin",
+            "net.tunnelblick.tunnelblick.tunnelblickd"
+          ],
+          "delete": "/Library/Application Support/Tunnelblick",
+          "quit": "net.tunnelblick.tunnelblick"
+        }
+      ]
+    },
+    {
+      "app": [
+        "Tunnelblick.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/Tunnelblick",
+            "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/Tunnelblick*",
+            "~/Library/Caches/net.tunnelblick.tunnelblick",
+            "~/Library/Cookies/net.tunnelblick.tunnelblick.binarycookies",
+            "~/Library/HTTPStorages/net.tunnelblick.tunnelblick",
+            "~/Library/Preferences/net.tunnelblick.tunnelblick.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": "For security reasons, tunnelblick must be installed to /Applications,\nand will request to be moved at launch.\n",

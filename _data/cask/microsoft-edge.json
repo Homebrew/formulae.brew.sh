@@ -17,31 +17,48 @@
   "sha256": "18e1861cd4c51d7b6877f5d9f492feb5c34fcfad1f5165773024109cf483e166",
   "artifacts": [
     {
-      "pkgutil": "com.microsoft.edgemac",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "com.microsoft.edgemac"
+        }
+      ]
     },
-    "MicrosoftEdge-104.0.1293.70.pkg (Pkg)",
     {
-      "trash": [
-        "~/Library/Application Scripts/com.microsoft.edgemac.wdgExtension",
-        "~/Library/Application Support/Microsoft Edge",
-        "~/Library/Application Support/Microsoft/EdgeUpdater",
-        "~/Library/Caches/com.microsoft.edgemac",
-        "~/Library/Caches/com.microsoft.EdgeUpdater",
-        "~/Library/Caches/Microsoft Edge",
-        "~/Library/Containers/com.microsoft.edgemac.wdgExtension",
-        "~/Library/HTTPStorages/com.microsoft.edgemac",
-        "~/Library/HTTPStorages/com.microsoft.edgemac.binarycookies",
-        "~/Library/HTTPStorages/com.microsoft.EdgeUpdater",
-        "~/Library/Microsoft/EdgeUpdater",
-        "~/Library/Preferences/com.microsoft.edgemac.plist",
-        "~/Library/Saved Application State/com.microsoft.edgemac.savedState",
-        "~/Library/WebKit/com.microsoft.edgemac"
-      ],
-      "rmdir": "/Library/Application Support/Microsoft",
-      "signal": {
-      }
+      "pkg": [
+        "MicrosoftEdge-104.0.1293.70.pkg",
+        {
+          "choices": [
+            {
+              "choiceIdentifier": "com.microsoft.package.Microsoft_AutoUpdate.app",
+              "choiceAttribute": "selected",
+              "attributeSetting": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Scripts/com.microsoft.edgemac.wdgExtension",
+            "~/Library/Application Support/Microsoft Edge",
+            "~/Library/Application Support/Microsoft/EdgeUpdater",
+            "~/Library/Caches/com.microsoft.edgemac",
+            "~/Library/Caches/com.microsoft.EdgeUpdater",
+            "~/Library/Caches/Microsoft Edge",
+            "~/Library/Containers/com.microsoft.edgemac.wdgExtension",
+            "~/Library/HTTPStorages/com.microsoft.edgemac",
+            "~/Library/HTTPStorages/com.microsoft.edgemac.binarycookies",
+            "~/Library/HTTPStorages/com.microsoft.EdgeUpdater",
+            "~/Library/Microsoft/EdgeUpdater",
+            "~/Library/Preferences/com.microsoft.edgemac.plist",
+            "~/Library/Saved Application State/com.microsoft.edgemac.savedState",
+            "~/Library/WebKit/com.microsoft.edgemac"
+          ],
+          "rmdir": "/Library/Application Support/Microsoft"
+        }
+      ]
     }
   ],
   "caveats": null,

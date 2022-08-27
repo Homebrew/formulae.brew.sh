@@ -17,23 +17,29 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "launchctl": "com.coccoc.CocCoc",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "launchctl": "com.coccoc.CocCoc"
+        }
+      ]
     },
-    [
-      "CocCoc.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/Coccoc",
-        "~/Library/Caches/Coccoc",
-        "~/Library/Caches/com.coccoc.Coccoc",
-        "~/Library/Preferences/com.coccoc.Coccoc.plist",
-        "~/Library/Saved Application State/com.coccoc.Coccoc.savedState"
-      ],
-      "signal": {
-      }
+      "app": [
+        "CocCoc.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/Coccoc",
+            "~/Library/Caches/Coccoc",
+            "~/Library/Caches/com.coccoc.Coccoc",
+            "~/Library/Preferences/com.coccoc.Coccoc.plist",
+            "~/Library/Saved Application State/com.coccoc.Coccoc.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

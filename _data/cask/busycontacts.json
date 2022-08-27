@@ -17,13 +17,22 @@
   "sha256": "67d0b89f3cb1e28083153d2772fae023e5d4a7a1d32ce8fcfb0e9a355de5709b",
   "artifacts": [
     {
-      "pkgutil": "com.busymac.busycontacts.pkg",
-      "quit": "com.busymac.busycontacts",
-      "signal": {
-        "KILL": "com.busymac.busycontacts"
-      }
+      "uninstall": [
+        {
+          "pkgutil": "com.busymac.busycontacts.pkg",
+          "quit": "com.busymac.busycontacts",
+          "signal": [
+            "KILL",
+            "com.busymac.busycontacts"
+          ]
+        }
+      ]
     },
-    "BusyContacts Installer.pkg (Pkg)"
+    {
+      "pkg": [
+        "BusyContacts Installer.pkg"
+      ]
+    }
   ],
   "caveats": null,
   "depends_on": {

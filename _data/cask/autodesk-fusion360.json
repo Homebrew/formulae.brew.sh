@@ -17,36 +17,39 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "quit": [
-        "com.autodesk.fusion360",
-        "com.autodesk.dls.streamer.scriptapp.Autodesk-Fusion-360"
-      ],
-      "script": {
-        "executable": "$(brew --prefix)/Caskroom/autodesk-fusion360/latest/Install Autodesk Fusion 360.app/Contents/MacOS/streamer",
-        "args": [
-          "--process",
-          "uninstall",
-          "--appid",
-          "73e72ada57b7480280f7a6f4a289729f",
-          "--stream",
-          "production",
-          "--quiet"
-        ]
-      },
-      "delete": [
-        "~/Applications/Autodesk Fusion 360.app",
-        "~/Applications/Remove Autodesk Fusion 360.app"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": [
+            "com.autodesk.fusion360",
+            "com.autodesk.dls.streamer.scriptapp.Autodesk-Fusion-360"
+          ],
+          "script": {
+            "executable": "$(brew --prefix)/Caskroom/autodesk-fusion360/latest/Install Autodesk Fusion 360.app/Contents/MacOS/streamer",
+            "args": [
+              "--process",
+              "uninstall",
+              "--appid",
+              "73e72ada57b7480280f7a6f4a289729f",
+              "--stream",
+              "production",
+              "--quiet"
+            ]
+          },
+          "delete": [
+            "~/Applications/Autodesk Fusion 360.app",
+            "~/Applications/Remove Autodesk Fusion 360.app"
+          ]
+        }
+      ]
     },
     {
-      "path": "$(brew --prefix)/Caskroom/autodesk-fusion360/latest/Install Autodesk Fusion 360.app/Contents/MacOS/Fusion 360 Client Downloader",
-      "args": {
-        "must_succeed": "true",
-        "sudo": "false",
-        "print_stdout": "true"
-      }
+      "installer": [
+        {
+          "script": {
+            "executable": "$(brew --prefix)/Caskroom/autodesk-fusion360/latest/Install Autodesk Fusion 360.app/Contents/MacOS/Fusion 360 Client Downloader"
+          }
+        }
+      ]
     }
   ],
   "caveats": null,

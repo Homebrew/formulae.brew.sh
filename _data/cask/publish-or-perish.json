@@ -17,19 +17,27 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "pkgutil": "com.tarma.popmac.pkg",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "com.tarma.popmac.pkg"
+        }
+      ]
     },
-    "PoP7Mac.pkg (Pkg)",
     {
-      "trash": [
-        "~/Library/Application Support/Publish or Perish",
-        "~/Library/Preferences/Publish or Perish.json",
-        "~/Library/Preferences/com.tarma.popmac.plist"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "PoP7Mac.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/Publish or Perish",
+            "~/Library/Preferences/Publish or Perish.json",
+            "~/Library/Preferences/com.tarma.popmac.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

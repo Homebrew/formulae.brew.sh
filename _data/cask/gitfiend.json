@@ -16,24 +16,32 @@
   "outdated": false,
   "sha256": "128c1bcfac29662b92ca3d8909b6f6e6aae8e74649587eeb994474c5c61c6c39",
   "artifacts": [
-    "preflight (Preflight Block)",
-    [
-      "GitFiend.app"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/gitfiend/0.35.3/gitfiend.wrapper.sh",
-      {
-        "target": "gitfiend"
-      }
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/GitFiend",
-        "~/Library/Preferences/com.tobysuggate.gitfiend.plist",
-        "~/Library/Saved Application State/com.tobysuggate.gitfiend.savedState"
-      ],
-      "signal": {
-      }
+      "preflight": null
+    },
+    {
+      "app": [
+        "GitFiend.app"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/gitfiend/0.35.3/gitfiend.wrapper.sh",
+        {
+          "target": "gitfiend"
+        }
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/GitFiend",
+            "~/Library/Preferences/com.tobysuggate.gitfiend.plist",
+            "~/Library/Saved Application State/com.tobysuggate.gitfiend.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

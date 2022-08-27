@@ -17,23 +17,29 @@
   "sha256": "1360a03e6710f9d2aa5f789e2110e3e10d3c581f6524b82c7c1077287912953d",
   "artifacts": [
     {
-      "launchctl": "com.gifox.gifox2.agent",
-      "quit": "com.gifox.gifox2",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "launchctl": "com.gifox.gifox2.agent",
+          "quit": "com.gifox.gifox2"
+        }
+      ]
     },
-    [
-      "Gifox.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/Gifox 2",
-        "~/Library/Caches/com.gifox.gifox2",
-        "~/Library/Cookies/com.gifox.gifox2.binarycookies",
-        "~/Library/Preferences/com.gifox.gifox2.plist"
-      ],
-      "signal": {
-      }
+      "app": [
+        "Gifox.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/Gifox 2",
+            "~/Library/Caches/com.gifox.gifox2",
+            "~/Library/Cookies/com.gifox.gifox2.binarycookies",
+            "~/Library/Preferences/com.gifox.gifox2.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

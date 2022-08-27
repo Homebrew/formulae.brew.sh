@@ -17,29 +17,40 @@
   "sha256": "412bddebac28e229c7973dad6d702c67d1b42195b99b009af26ef036f5631349",
   "artifacts": [
     {
-      "delete": "/Applications/Parallels Toolbox.app",
-      "signal": {
-        "TERM": "com.parallels.toolbox"
-      }
+      "uninstall": [
+        {
+          "delete": "/Applications/Parallels Toolbox.app",
+          "signal": [
+            "TERM",
+            "com.parallels.toolbox"
+          ]
+        }
+      ]
     },
     {
-      "path": "Install Parallels Toolbox.app"
+      "installer": [
+        {
+          "manual": "Install Parallels Toolbox.app"
+        }
+      ]
     },
     {
-      "trash": [
-        "~/Library/Application Scripts/*.com.parallels.toolbox",
-        "~/Library/Application Scripts/com.parallels.toolbox.*-Safari-Extension",
-        "~/Library/Application Support/com.parallels.toolbox",
-        "~/Library/Group Containers/*.com.parallels.toolbox",
-        "~/Library/Logs/ParallelsToolbox",
-        "~/Library/Logs/prl.toolbox.ceplog.log",
-        "~/Library/Logs/prl.toolbox.ceplog.xml",
-        "~/Library/Preferences/*.com.parallels.toolbox.*.plist",
-        "~/Library/Preferences/com.parallels.toolbox.*.plist",
-        "~/Library/Preferences/com.parallels.toolbox.plist"
-      ],
-      "signal": {
-      }
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Scripts/*.com.parallels.toolbox",
+            "~/Library/Application Scripts/com.parallels.toolbox.*-Safari-Extension",
+            "~/Library/Application Support/com.parallels.toolbox",
+            "~/Library/Group Containers/*.com.parallels.toolbox",
+            "~/Library/Logs/ParallelsToolbox",
+            "~/Library/Logs/prl.toolbox.ceplog.log",
+            "~/Library/Logs/prl.toolbox.ceplog.xml",
+            "~/Library/Preferences/*.com.parallels.toolbox.*.plist",
+            "~/Library/Preferences/com.parallels.toolbox.*.plist",
+            "~/Library/Preferences/com.parallels.toolbox.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

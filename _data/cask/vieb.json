@@ -16,23 +16,31 @@
   "outdated": false,
   "sha256": "ce68fd4485e58472a0f6b1461cab301d6e11ffb9a38f1ada8d0d22b08edd8cb0",
   "artifacts": [
-    "preflight (Preflight Block)",
-    [
-      "Vieb.app"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/vieb/9.0.0/vieb.wrapper.sh",
-      {
-        "target": "vieb"
-      }
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/Vieb",
-        "~/Library/Caches/Vieb"
-      ],
-      "signal": {
-      }
+      "preflight": null
+    },
+    {
+      "app": [
+        "Vieb.app"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/vieb/9.0.0/vieb.wrapper.sh",
+        {
+          "target": "vieb"
+        }
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/Vieb",
+            "~/Library/Caches/Vieb"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

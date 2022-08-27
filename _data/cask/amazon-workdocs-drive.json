@@ -17,25 +17,36 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "signal": {
-        "TERM": "com.Amazon.WorkDocs.Drive"
-      },
-      "pkgutil": [
-        "com.Amazon.WorkDocs.Drive",
-        "com.Amazon.WorkDocs.Drive.pkg.Core"
-      ],
-      "launchctl": "com.Amazon.WorkDocs.DriveUpdater"
+      "uninstall": [
+        {
+          "signal": [
+            "TERM",
+            "com.Amazon.WorkDocs.Drive"
+          ],
+          "pkgutil": [
+            "com.Amazon.WorkDocs.Drive",
+            "com.Amazon.WorkDocs.Drive.pkg.Core"
+          ],
+          "launchctl": "com.Amazon.WorkDocs.DriveUpdater"
+        }
+      ]
     },
-    "AmazonWorkDocsDrive.pkg (Pkg)",
     {
-      "trash": [
-        "~/Library/Application Scripts/com.Amazon.WorkDocs.DriveFinderExtension",
-        "~/Library/Containers/com.Amazon.WorkDocs.DriveFinderExtension",
-        "~/Library/LaunchAgents/com.amazon.workdocs.workdocsclient.plist",
-        "~/Library/Preferences/com.amazon.workdocs.workdocsclient.plist"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "AmazonWorkDocsDrive.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Scripts/com.Amazon.WorkDocs.DriveFinderExtension",
+            "~/Library/Containers/com.Amazon.WorkDocs.DriveFinderExtension",
+            "~/Library/LaunchAgents/com.amazon.workdocs.workdocsclient.plist",
+            "~/Library/Preferences/com.amazon.workdocs.workdocsclient.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

@@ -17,25 +17,33 @@
   "sha256": "0e1b5918df1cb846751fe55878fbd904acbd23abf4e11848f4d0d8ab2206d92c",
   "artifacts": [
     {
-      "pkgutil": "com.foxit.pkg.pdfeditor",
-      "delete": [
-        "/Applications/Foxit PDF Editor.app",
-        "/Library/Application Support/Foxit Software/FoxitService/FoxitPDFEditorUpdateService.app",
-        "/Library/LaunchDaemons/com.foxit.PDFEditorUpdateService.plist"
-      ],
-      "launchctl": "com.foxit.PDFEditorUpdateService",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "com.foxit.pkg.pdfeditor",
+          "delete": [
+            "/Applications/Foxit PDF Editor.app",
+            "/Library/Application Support/Foxit Software/FoxitService/FoxitPDFEditorUpdateService.app",
+            "/Library/LaunchDaemons/com.foxit.PDFEditorUpdateService.plist"
+          ],
+          "launchctl": "com.foxit.PDFEditorUpdateService"
+        }
+      ]
     },
-    "FoxitPDFEditor1201.L10N.Setup.pkg (Pkg)",
     {
-      "trash": [
-        "~/Library/Application Support/Foxit Software/Foxit PDF Editor",
-        "~/Library/Caches/com.foxit-software.Foxit PDF Editor",
-        "~/Library/Preferences/com.foxit-software.Foxit PDF Editor.plist"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "FoxitPDFEditor1201.L10N.Setup.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/Foxit Software/Foxit PDF Editor",
+            "~/Library/Caches/com.foxit-software.Foxit PDF Editor",
+            "~/Library/Preferences/com.foxit-software.Foxit PDF Editor.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

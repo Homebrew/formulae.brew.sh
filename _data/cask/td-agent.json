@@ -17,15 +17,21 @@
   "sha256": "518d9089f8f163a6da51fe55622535776fc5dd5b45bdb277745cf8a14f600ff7",
   "artifacts": [
     {
-      "pkgutil": [
-        "com.treasuredata.tdagent",
-        "test.treasuredatainc.pkg.td-agent"
-      ],
-      "launchctl": "td-agent",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": [
+            "com.treasuredata.tdagent",
+            "test.treasuredatainc.pkg.td-agent"
+          ],
+          "launchctl": "td-agent"
+        }
+      ]
     },
-    "td-agent-4.4.1.pkg (Pkg)"
+    {
+      "pkg": [
+        "td-agent-4.4.1.pkg"
+      ]
+    }
   ],
   "caveats": null,
   "depends_on": {

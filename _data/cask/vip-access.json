@@ -17,18 +17,26 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "pkgutil": "com.symantec.vippaccess",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "com.symantec.vippaccess"
+        }
+      ]
     },
-    "VIP Access.pkg (Pkg)",
     {
-      "trash": [
-        "~/Library/Caches/com.symantec.VIP-Access",
-        "~/Library/Preferences/com.symantec.VIP-Access.plist"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "VIP Access.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Caches/com.symantec.VIP-Access",
+            "~/Library/Preferences/com.symantec.VIP-Access.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

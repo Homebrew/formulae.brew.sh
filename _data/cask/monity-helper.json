@@ -17,18 +17,24 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "quit": "com.Monity.Helper",
-      "launchctl": "com.Monity.Helper",
-      "pkgutil": [
-        "com.Monity.Helper.monityHelper.com.Monity.Helper.pkg",
-        "com.Monity.Helper.monityHelper.MonityHelper.pkg",
-        "com.Monity.Helper.monityHelper.postflight.pkg",
-        "com.Monity.Helper.monityHelper.preflight.pkg"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "com.Monity.Helper",
+          "launchctl": "com.Monity.Helper",
+          "pkgutil": [
+            "com.Monity.Helper.monityHelper.com.Monity.Helper.pkg",
+            "com.Monity.Helper.monityHelper.MonityHelper.pkg",
+            "com.Monity.Helper.monityHelper.postflight.pkg",
+            "com.Monity.Helper.monityHelper.preflight.pkg"
+          ]
+        }
+      ]
     },
-    "MonityHelper.pkg (Pkg)"
+    {
+      "pkg": [
+        "MonityHelper.pkg"
+      ]
+    }
   ],
   "caveats": null,
   "depends_on": {

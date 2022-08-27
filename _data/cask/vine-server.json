@@ -17,26 +17,38 @@
   "sha256": "f3e22c807332df25ce2e37d06ff9552c973d69ee54d2ba9a376358d9d9337af2",
   "artifacts": [
     {
-      "delete": "/Library/Application Support/VineServer",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": "/Library/Application Support/VineServer"
+        }
+      ]
     },
-    [
-      "Vine Server.app"
-    ],
-    [
-      "/Applications/Vine Server.app/Contents/MacOS/OSXvnc-server"
-    ],
-    [
-      "/Applications/Vine Server.app/Contents/MacOS/storepasswd"
-    ],
-    [
-      "/Applications/Vine Server.app/Contents/MacOS/Vine Server"
-    ],
     {
-      "trash": "~/Library/Preferences/de.uni-mannheim.VineServer.plist",
-      "signal": {
-      }
+      "app": [
+        "Vine Server.app"
+      ]
+    },
+    {
+      "binary": [
+        "/Applications/Vine Server.app/Contents/MacOS/OSXvnc-server"
+      ]
+    },
+    {
+      "binary": [
+        "/Applications/Vine Server.app/Contents/MacOS/storepasswd"
+      ]
+    },
+    {
+      "binary": [
+        "/Applications/Vine Server.app/Contents/MacOS/Vine Server"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": "~/Library/Preferences/de.uni-mannheim.VineServer.plist"
+        }
+      ]
     }
   ],
   "caveats": null,

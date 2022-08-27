@@ -17,28 +17,34 @@
   "sha256": "5d5212eec364c8ed00dd213bd8577f31266d73d5c1519cb3eda5201f158118d8",
   "artifacts": [
     {
-      "delete": [
-        "/Library/Logs/Lemon",
-        "/Library/Preferences/LemonDaemon_packet.dat"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": [
+            "/Library/Logs/Lemon",
+            "/Library/Preferences/LemonDaemon_packet.dat"
+          ]
+        }
+      ]
     },
-    [
-      "Tencent Lemon.app"
-    ],
     {
-      "trash": [
-        "~/Library/Caches/com.tencent.Lemon",
-        "~/Library/Caches/com.tencent.LemonMonitor",
-        "~/Library/Logs/LemonMonitor.log",
-        "~/Library/Logs/Tencent Lemon.log",
-        "~/Library/Preferences/com.tencent.LemonUpdate.plist",
-        "~/Library/Preferences/LemonMonitor_packet.dat",
-        "~/Library/Preferences/Tencent Lemon_packet.dat"
-      ],
-      "signal": {
-      }
+      "app": [
+        "Tencent Lemon.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Caches/com.tencent.Lemon",
+            "~/Library/Caches/com.tencent.LemonMonitor",
+            "~/Library/Logs/LemonMonitor.log",
+            "~/Library/Logs/Tencent Lemon.log",
+            "~/Library/Preferences/com.tencent.LemonUpdate.plist",
+            "~/Library/Preferences/LemonMonitor_packet.dat",
+            "~/Library/Preferences/Tencent Lemon_packet.dat"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

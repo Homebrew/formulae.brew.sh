@@ -17,20 +17,28 @@
   "sha256": "1ea229bebb1cdfa3b6091cacfd7ab04da781cd6191db9ed08a73eb901aefa418",
   "artifacts": [
     {
-      "login_item": "HWMonitor",
-      "pkgutil": "org.hwsensors.HWMonitor",
-      "quit": "org.hwsensors.HWMonitor",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "login_item": "HWMonitor",
+          "pkgutil": "org.hwsensors.HWMonitor",
+          "quit": "org.hwsensors.HWMonitor"
+        }
+      ]
     },
-    "HWSensors.6.26.1440.pkg (Pkg)",
     {
-      "trash": [
-        "~/Library/Application Support/HWMonitor",
-        "~/Library/Preferences/org.hwsensors.HWMonitor.plist"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "HWSensors.6.26.1440.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/HWMonitor",
+            "~/Library/Preferences/org.hwsensors.HWMonitor.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": "hwsensors has been officially discontinued upstream.\nIt may stop working correctly (or at all) in recent versions of macOS.\n",

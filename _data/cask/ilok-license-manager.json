@@ -17,19 +17,25 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "pkgutil": [
-        "com.paceap.pkg.eden.iLokLicenseManager",
-        "com.paceap.pkg.eden.licensed",
-        "com.paceap.pkg.eden.activationexperience"
-      ],
-      "launchctl": [
-        "com.paceap.eden.licensed",
-        "com.paceap.eden.licensed.agent"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": [
+            "com.paceap.pkg.eden.iLokLicenseManager",
+            "com.paceap.pkg.eden.licensed",
+            "com.paceap.pkg.eden.activationexperience"
+          ],
+          "launchctl": [
+            "com.paceap.eden.licensed",
+            "com.paceap.eden.licensed.agent"
+          ]
+        }
+      ]
     },
-    "License Support.pkg (Pkg)"
+    {
+      "pkg": [
+        "License Support.pkg"
+      ]
+    }
   ],
   "caveats": null,
   "depends_on": {

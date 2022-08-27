@@ -16,36 +16,46 @@
   "outdated": false,
   "sha256": "6739fcc1b4c88b732a762cd24da6d7281f156ef8042d8f06acd21e9a20517d2e",
   "artifacts": [
-    "preflight (Preflight Block)",
     {
-      "login_item": "Tailscale",
-      "quit": "io.tailscale.ipn.macsys",
-      "signal": {
-      }
+      "preflight": null
     },
-    [
-      "Tailscale.app"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/tailscale/1.28.0/tailscale.wrapper.sh",
-      {
-        "target": "tailscale"
-      }
-    ],
     {
-      "trash": [
-        "Library/Tailscale",
-        "~/Library/Application Scripts/*.io.tailscale.ipn.macsys",
-        "~/Library/Application Scripts/io.tailscale.ipn.macsys.share-extension",
-        "~/Library/Application Scripts/io.tailscale.ipn.macsys",
-        "~/Library/Containers/io.tailscale.ipn.macos.network-extension",
-        "~/Library/Containers/io.tailscale.ipn.macsys.share-extension",
-        "~/Library/Containers/io.tailscale.ipn.macsys",
-        "~/Library/Containers/Tailscale",
-        "~/Library/Group Containers/*.io.tailscale.ipn.macsys"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "login_item": "Tailscale",
+          "quit": "io.tailscale.ipn.macsys"
+        }
+      ]
+    },
+    {
+      "app": [
+        "Tailscale.app"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/tailscale/1.28.0/tailscale.wrapper.sh",
+        {
+          "target": "tailscale"
+        }
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "Library/Tailscale",
+            "~/Library/Application Scripts/*.io.tailscale.ipn.macsys",
+            "~/Library/Application Scripts/io.tailscale.ipn.macsys.share-extension",
+            "~/Library/Application Scripts/io.tailscale.ipn.macsys",
+            "~/Library/Containers/io.tailscale.ipn.macos.network-extension",
+            "~/Library/Containers/io.tailscale.ipn.macsys.share-extension",
+            "~/Library/Containers/io.tailscale.ipn.macsys",
+            "~/Library/Containers/Tailscale",
+            "~/Library/Group Containers/*.io.tailscale.ipn.macsys"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

@@ -17,16 +17,25 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "launchctl": [
-        "com.videostream.launcher",
-        "com.videostream.updater.0.4.3"
-      ],
-      "pkgutil": "com.videostream",
-      "signal": {
-        "TERM": "com.videostream"
-      }
+      "uninstall": [
+        {
+          "launchctl": [
+            "com.videostream.launcher",
+            "com.videostream.updater.0.4.3"
+          ],
+          "pkgutil": "com.videostream",
+          "signal": [
+            "TERM",
+            "com.videostream"
+          ]
+        }
+      ]
     },
-    "Videostream.pkg (Pkg)"
+    {
+      "pkg": [
+        "Videostream.pkg"
+      ]
+    }
   ],
   "caveats": null,
   "depends_on": {

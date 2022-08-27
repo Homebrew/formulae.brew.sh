@@ -17,28 +17,38 @@
   "sha256": "c31cde7a2a0f4f63e91229d3122ae5bb7f758b0cf3093b486b0e683f6d2a62a3",
   "artifacts": [
     {
-      "pkgutil": [
-        "com.microsoft.dotnet.*",
-        "com.microsoft.netstandard.pack.targeting.*"
-      ],
-      "delete": [
-        "/etc/paths.d/dotnet",
-        "/etc/paths.d/dotnet-cli-tools"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": [
+            "com.microsoft.dotnet.*",
+            "com.microsoft.netstandard.pack.targeting.*"
+          ],
+          "delete": [
+            "/etc/paths.d/dotnet",
+            "/etc/paths.d/dotnet-cli-tools"
+          ]
+        }
+      ]
     },
-    "dotnet-sdk-6.0.400-osx-x64.pkg (Pkg)",
-    [
-      "$(brew --prefix)/share/dotnet/dotnet"
-    ],
     {
-      "trash": [
-        "~/.dotnet",
-        "~/.nuget"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "dotnet-sdk-6.0.400-osx-x64.pkg"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/share/dotnet/dotnet"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/.dotnet",
+            "~/.nuget"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,
@@ -68,28 +78,38 @@
       "sha256": "adb224aa775120fdaf88b48a890466853e8a8a0719c9de0199d79451b41ba7d3",
       "artifacts": [
         {
-          "pkgutil": [
-            "com.microsoft.dotnet.*",
-            "com.microsoft.netstandard.pack.targeting.*"
-          ],
-          "delete": [
-            "/etc/paths.d/dotnet",
-            "/etc/paths.d/dotnet-cli-tools"
-          ],
-          "signal": {
-          }
+          "uninstall": [
+            {
+              "pkgutil": [
+                "com.microsoft.dotnet.*",
+                "com.microsoft.netstandard.pack.targeting.*"
+              ],
+              "delete": [
+                "/etc/paths.d/dotnet",
+                "/etc/paths.d/dotnet-cli-tools"
+              ]
+            }
+          ]
         },
-        "dotnet-sdk-6.0.400-osx-arm64.pkg (Pkg)",
-        [
-          "$(brew --prefix)/share/dotnet/dotnet"
-        ],
         {
-          "trash": [
-            "~/.dotnet",
-            "~/.nuget"
-          ],
-          "signal": {
-          }
+          "pkg": [
+            "dotnet-sdk-6.0.400-osx-arm64.pkg"
+          ]
+        },
+        {
+          "binary": [
+            "$(brew --prefix)/share/dotnet/dotnet"
+          ]
+        },
+        {
+          "zap": [
+            {
+              "trash": [
+                "~/.dotnet",
+                "~/.nuget"
+              ]
+            }
+          ]
         }
       ]
     },
@@ -99,28 +119,38 @@
       "sha256": "adb224aa775120fdaf88b48a890466853e8a8a0719c9de0199d79451b41ba7d3",
       "artifacts": [
         {
-          "pkgutil": [
-            "com.microsoft.dotnet.*",
-            "com.microsoft.netstandard.pack.targeting.*"
-          ],
-          "delete": [
-            "/etc/paths.d/dotnet",
-            "/etc/paths.d/dotnet-cli-tools"
-          ],
-          "signal": {
-          }
+          "uninstall": [
+            {
+              "pkgutil": [
+                "com.microsoft.dotnet.*",
+                "com.microsoft.netstandard.pack.targeting.*"
+              ],
+              "delete": [
+                "/etc/paths.d/dotnet",
+                "/etc/paths.d/dotnet-cli-tools"
+              ]
+            }
+          ]
         },
-        "dotnet-sdk-6.0.400-osx-arm64.pkg (Pkg)",
-        [
-          "$(brew --prefix)/share/dotnet/dotnet"
-        ],
         {
-          "trash": [
-            "~/.dotnet",
-            "~/.nuget"
-          ],
-          "signal": {
-          }
+          "pkg": [
+            "dotnet-sdk-6.0.400-osx-arm64.pkg"
+          ]
+        },
+        {
+          "binary": [
+            "$(brew --prefix)/share/dotnet/dotnet"
+          ]
+        },
+        {
+          "zap": [
+            {
+              "trash": [
+                "~/.dotnet",
+                "~/.nuget"
+              ]
+            }
+          ]
         }
       ]
     },
@@ -130,28 +160,38 @@
       "sha256": "adb224aa775120fdaf88b48a890466853e8a8a0719c9de0199d79451b41ba7d3",
       "artifacts": [
         {
-          "pkgutil": [
-            "com.microsoft.dotnet.*",
-            "com.microsoft.netstandard.pack.targeting.*"
-          ],
-          "delete": [
-            "/etc/paths.d/dotnet",
-            "/etc/paths.d/dotnet-cli-tools"
-          ],
-          "signal": {
-          }
+          "uninstall": [
+            {
+              "pkgutil": [
+                "com.microsoft.dotnet.*",
+                "com.microsoft.netstandard.pack.targeting.*"
+              ],
+              "delete": [
+                "/etc/paths.d/dotnet",
+                "/etc/paths.d/dotnet-cli-tools"
+              ]
+            }
+          ]
         },
-        "dotnet-sdk-6.0.400-osx-arm64.pkg (Pkg)",
-        [
-          "$(brew --prefix)/share/dotnet/dotnet"
-        ],
         {
-          "trash": [
-            "~/.dotnet",
-            "~/.nuget"
-          ],
-          "signal": {
-          }
+          "pkg": [
+            "dotnet-sdk-6.0.400-osx-arm64.pkg"
+          ]
+        },
+        {
+          "binary": [
+            "$(brew --prefix)/share/dotnet/dotnet"
+          ]
+        },
+        {
+          "zap": [
+            {
+              "trash": [
+                "~/.dotnet",
+                "~/.nuget"
+              ]
+            }
+          ]
         }
       ]
     }

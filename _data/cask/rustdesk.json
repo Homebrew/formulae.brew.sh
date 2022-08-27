@@ -17,23 +17,29 @@
   "sha256": "48fd33e3ae6f41a747fe07fc0bad594b0b6a65ce4ea28dd0adfa527e18ccdb2d",
   "artifacts": [
     {
-      "quit": "com.carriez.rustdesk",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "com.carriez.rustdesk"
+        }
+      ]
     },
-    [
-      "RustDesk.app"
-    ],
     {
-      "trash": [
-        "/Library/LaunchAgents/com.carriez.RustDesk_server.plist",
-        "/Library/LaunchDaemons/com.carriez.RustDesk_service.plist",
-        "~/Library/Logs/RustDesk",
-        "~/Library/Preferences/com.carriez.RustDesk",
-        "~/Library/Saved Application State/com.carriez.rustdesk.savedState"
-      ],
-      "signal": {
-      }
+      "app": [
+        "RustDesk.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "/Library/LaunchAgents/com.carriez.RustDesk_server.plist",
+            "/Library/LaunchDaemons/com.carriez.RustDesk_service.plist",
+            "~/Library/Logs/RustDesk",
+            "~/Library/Preferences/com.carriez.RustDesk",
+            "~/Library/Saved Application State/com.carriez.rustdesk.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

@@ -17,17 +17,25 @@
   "sha256": "9a797ad403180d94f180d2c265885cc6b506ec054cd8489578b431319466abe4",
   "artifacts": [
     {
-      "quit": "com.adobe.adobedigitaleditions.app",
-      "pkgutil": "com.adobe.adobedigitaleditions.app",
-      "delete": "/Applications/Adobe Digital Editions.app",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "com.adobe.adobedigitaleditions.app",
+          "pkgutil": "com.adobe.adobedigitaleditions.app",
+          "delete": "/Applications/Adobe Digital Editions.app"
+        }
+      ]
     },
-    "Digital Editions 4.5 Installer.pkg (Pkg)",
     {
-      "trash": "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.adobe.adobedigitaleditions.app.sfl*",
-      "signal": {
-      }
+      "pkg": [
+        "Digital Editions 4.5 Installer.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.adobe.adobedigitaleditions.app.sfl*"
+        }
+      ]
     }
   ],
   "caveats": null,

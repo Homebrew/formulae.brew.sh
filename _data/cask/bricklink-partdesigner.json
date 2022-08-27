@@ -17,22 +17,30 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "pkgutil": "com.bricklink.pkg.PartDesigner",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "com.bricklink.pkg.PartDesigner"
+        }
+      ]
     },
-    "PartDesigner.pkg (Pkg)",
     {
-      "trash": [
-        "~/Library/Application Support/unity.BrickLink.Part Designer",
-        "~/Library/Caches/com.plausiblelabs.crashreporter.data/unity.BrickLink.Part Designer",
-        "~/Library/Preferences/unity.BrickLink.Part Designer.plist",
-        "~/Library/Preferences/unity.BrickLink.Patcher.plist",
-        "~/Library/Saved Application State/unity.BrickLink.Part Designer.savedState",
-        "~/Library/Saved Application State/unity.BrickLink.Patcher.savedState"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "PartDesigner.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/unity.BrickLink.Part Designer",
+            "~/Library/Caches/com.plausiblelabs.crashreporter.data/unity.BrickLink.Part Designer",
+            "~/Library/Preferences/unity.BrickLink.Part Designer.plist",
+            "~/Library/Preferences/unity.BrickLink.Patcher.plist",
+            "~/Library/Saved Application State/unity.BrickLink.Part Designer.savedState",
+            "~/Library/Saved Application State/unity.BrickLink.Patcher.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

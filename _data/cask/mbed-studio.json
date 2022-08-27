@@ -16,22 +16,32 @@
   "outdated": false,
   "sha256": "no_check",
   "artifacts": [
-    "preflight (Preflight Block)",
     {
-      "pkgutil": "com.arm.mbed.studio",
-      "signal": {
-      }
+      "preflight": null
     },
-    "MbedStudio.pkg (Pkg)",
     {
-      "trash": [
-        "~/Library/Application Support/Mbed Studio",
-        "~/.mbed-library-cache",
-        "~/.mbed-library-pipeline",
-        "~/.mbed-studio"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "com.arm.mbed.studio"
+        }
+      ]
+    },
+    {
+      "pkg": [
+        "MbedStudio.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/Mbed Studio",
+            "~/.mbed-library-cache",
+            "~/.mbed-library-pipeline",
+            "~/.mbed-studio"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

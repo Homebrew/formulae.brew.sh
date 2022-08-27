@@ -17,19 +17,27 @@
   "sha256": "4dc627a377679504044d39fa10c410e9559d70c122a3cee0fc17ddceaf605d17",
   "artifacts": [
     {
-      "pkgutil": "org.netbeans.ide.*|glassfish.*",
-      "delete": "/Applications/NetBeans",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "org.netbeans.ide.*|glassfish.*",
+          "delete": "/Applications/NetBeans"
+        }
+      ]
     },
-    "Apache NetBeans 14.pkg (Pkg)",
     {
-      "trash": [
-        "~/Library/Application Support/NetBeans",
-        "~/Library/Caches/NetBeans"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "Apache NetBeans 14.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/NetBeans",
+            "~/Library/Caches/NetBeans"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

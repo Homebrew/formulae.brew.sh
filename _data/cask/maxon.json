@@ -17,42 +17,48 @@
   "sha256": "7e7ba5ef683d84dac6645eea1fa32e7d737f1225865adaec27da11bf17cf96a2",
   "artifacts": [
     {
-      "delete": [
-        "/Applications/Maxon.app",
-        "/Library/Application Support/Maxon",
-        "/Library/Application Support/Red Giant",
-        "/Library/Logs/Maxon",
-        "/Library/Logs/Red Giant"
-      ],
-      "launchctl": [
-        "com.maxon.mxnotify.agent",
-        "com.maxon.mxredirect.agent",
-        "com.redgiant.service"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": [
+            "/Applications/Maxon.app",
+            "/Library/Application Support/Maxon",
+            "/Library/Application Support/Red Giant",
+            "/Library/Logs/Maxon",
+            "/Library/Logs/Red Giant"
+          ],
+          "launchctl": [
+            "com.maxon.mxnotify.agent",
+            "com.maxon.mxredirect.agent",
+            "com.redgiant.service"
+          ]
+        }
+      ]
     },
     {
-      "path": "$(brew --prefix)/Caskroom/maxon/3.1/Maxon App Installer.app/Contents/Scripts/install.sh",
-      "args": {
-        "must_succeed": "true",
-        "sudo": "true",
-        "print_stdout": "true"
-      }
+      "installer": [
+        {
+          "script": {
+            "executable": "$(brew --prefix)/Caskroom/maxon/3.1/Maxon App Installer.app/Contents/Scripts/install.sh",
+            "sudo": "true"
+          }
+        }
+      ]
     },
     {
-      "trash": [
-        "~/Library/Application Support/Maxon",
-        "~/Library/Application Support/Red Giant",
-        "~/Library/Caches/net.maxon.app-manager",
-        "~/Library/Preferences/Maxon",
-        "~/Library/Preferences/net.maxon.app-manager.plist",
-        "~/Library/Saved Application State/net.maxon.app-manager.savedState",
-        "/Users/Shared/Maxon",
-        "/Users/Shared/Red Giant"
-      ],
-      "signal": {
-      }
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/Maxon",
+            "~/Library/Application Support/Red Giant",
+            "~/Library/Caches/net.maxon.app-manager",
+            "~/Library/Preferences/Maxon",
+            "~/Library/Preferences/net.maxon.app-manager.plist",
+            "~/Library/Saved Application State/net.maxon.app-manager.savedState",
+            "/Users/Shared/Maxon",
+            "/Users/Shared/Red Giant"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

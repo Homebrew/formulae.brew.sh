@@ -17,19 +17,29 @@
   "sha256": "8d473f7214ba76b70ca30905e2ebd07d7c421f1cff320285bd8ec8d2a7a5b083",
   "artifacts": [
     {
-      "launchctl": "com.ntrippar.sekey",
-      "pkgutil": "com.ntrippar.sekey",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "launchctl": "com.ntrippar.sekey",
+          "pkgutil": "com.ntrippar.sekey"
+        }
+      ]
     },
-    "SeKey-0.1.pkg (Pkg)",
-    [
-      "/Applications/SeKey.app/Contents/MacOS/sekey"
-    ],
     {
-      "trash": "~/.sekey",
-      "signal": {
-      }
+      "pkg": [
+        "SeKey-0.1.pkg"
+      ]
+    },
+    {
+      "binary": [
+        "/Applications/SeKey.app/Contents/MacOS/sekey"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": "~/.sekey"
+        }
+      ]
     }
   ],
   "caveats": "Append the following line to your ~/.bash_profile or ~/.zshrc:\n\n  export SSH_AUTH_SOCK=$HOME/.sekey/ssh-agent.ssh\n\nthen source the file to update your current session.\n",

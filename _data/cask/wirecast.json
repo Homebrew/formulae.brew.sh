@@ -17,28 +17,34 @@
   "sha256": "1056602c4a4218a0b0b678323de48cf6e59a44c9c873d9cb31581495ea10a38a",
   "artifacts": [
     {
-      "delete": [
-        "/Library/LaunchDaemons/net.telestream.LicensingHelper.plist",
-        "/Library/Preferences/net.telestream.wirecast.plist",
-        "/Library/PriviledgedHelperTools/net.telestream.LicensingHelper"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": [
+            "/Library/LaunchDaemons/net.telestream.LicensingHelper.plist",
+            "/Library/Preferences/net.telestream.wirecast.plist",
+            "/Library/PriviledgedHelperTools/net.telestream.LicensingHelper"
+          ]
+        }
+      ]
     },
-    [
-      "Wirecast.app"
-    ],
     {
-      "trash": [
-        "~/Library/Caches/net.telestream.wirecast/",
-        "~/Library/HTTPStorages/net.telestream.wirecast",
-        "~/Library/Logs/Wirecast",
-        "~/Library/Preferences/Wirecast",
-        "~/Library/Preferences/net.telestream.wirecast.plist",
-        "~/Library/Saved Applicate State/net.telestream.wirecast.savedState"
-      ],
-      "signal": {
-      }
+      "app": [
+        "Wirecast.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Caches/net.telestream.wirecast/",
+            "~/Library/HTTPStorages/net.telestream.wirecast",
+            "~/Library/Logs/Wirecast",
+            "~/Library/Preferences/Wirecast",
+            "~/Library/Preferences/net.telestream.wirecast.plist",
+            "~/Library/Saved Applicate State/net.telestream.wirecast.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

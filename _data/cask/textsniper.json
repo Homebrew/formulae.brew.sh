@@ -17,25 +17,31 @@
   "sha256": "311323aa7606600f5c45446f5c832e81fac072d11241342288ff2eceeb190887",
   "artifacts": [
     {
-      "quit": "com.valerijs.boguckis.TextSniper",
-      "launchctl": "com.valerijs.boguckis.TextSniper-LaunchAtLoginHelper",
-      "delete": "/Applications/TextSniper.app",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "com.valerijs.boguckis.TextSniper",
+          "launchctl": "com.valerijs.boguckis.TextSniper-LaunchAtLoginHelper",
+          "delete": "/Applications/TextSniper.app"
+        }
+      ]
     },
-    [
-      "TextSniper.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Scripts/com.valerijs.boguckis.TextSniper-LaunchAtLoginHelper",
-        "~/Library/Application Support/com.valerijs.boguckis.TextSniper",
-        "~/Library/Caches/com.valerijs.boguckis.TextSniper",
-        "~/Library/Containers/com.valerijs.boguckis.TextSniper-LaunchAtLoginHelper",
-        "~/Library/Preferences/com.valerijs.boguckis.TextSniper.plist"
-      ],
-      "signal": {
-      }
+      "app": [
+        "TextSniper.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Scripts/com.valerijs.boguckis.TextSniper-LaunchAtLoginHelper",
+            "~/Library/Application Support/com.valerijs.boguckis.TextSniper",
+            "~/Library/Caches/com.valerijs.boguckis.TextSniper",
+            "~/Library/Containers/com.valerijs.boguckis.TextSniper-LaunchAtLoginHelper",
+            "~/Library/Preferences/com.valerijs.boguckis.TextSniper.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

@@ -17,17 +17,23 @@
   "sha256": "65a914edce60c0110d4ad4ff371389059ff6ab77b6e0a4b7135c9f3097d8565d",
   "artifacts": [
     {
-      "quit": [
-        "com.mti.Monotype-SkyFonts",
-        "com.mti.Monotype-SkyFontsHelper"
-      ],
-      "launchctl": "com.mti.Monotype-SkyFontsHelper",
-      "delete": "/Applications/Skyfonts",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": [
+            "com.mti.Monotype-SkyFonts",
+            "com.mti.Monotype-SkyFontsHelper"
+          ],
+          "launchctl": "com.mti.Monotype-SkyFontsHelper",
+          "delete": "/Applications/Skyfonts"
+        }
+      ]
     },
     {
-      "path": "Install SkyFonts.app"
+      "installer": [
+        {
+          "manual": "Install SkyFonts.app"
+        }
+      ]
     }
   ],
   "caveats": null,

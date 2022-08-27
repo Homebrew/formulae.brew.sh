@@ -17,24 +17,30 @@
   "sha256": "946f49215c4559f28ebf8b183698f986c3de0baa8d1e10d2cdd1fbe44fb9d9f2",
   "artifacts": [
     {
-      "delete": [
-        "~/Library/Application Support/localdev",
-        "~/Library/Preferences/io.pantheon.local.helper.plist",
-        "~/Library/Preferences/io.pantheon.local.plist"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": [
+            "~/Library/Application Support/localdev",
+            "~/Library/Preferences/io.pantheon.local.helper.plist",
+            "~/Library/Preferences/io.pantheon.local.plist"
+          ]
+        }
+      ]
     },
-    [
-      "Localdev.app"
-    ],
     {
-      "trash": [
-        "~/Localdev",
-        "~/.pantheonlocaldev"
-      ],
-      "signal": {
-      }
+      "app": [
+        "Localdev.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Localdev",
+            "~/.pantheonlocaldev"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

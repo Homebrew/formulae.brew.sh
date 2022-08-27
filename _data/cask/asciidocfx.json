@@ -17,26 +17,30 @@
   "sha256": "84c2e92655551c2a02ed400815b6a004631ba6f2db9be6a0ab86e9be6b838f9f",
   "artifacts": [
     {
-      "script": {
-        "executable": "/Applications/AsciidocFX/AsciidocFX Uninstaller.app/Contents/MacOS/JavaApplicationStub",
-        "args": [
-          "-q"
-        ],
-        "sudo": "true"
-      },
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "script": {
+            "executable": "/Applications/AsciidocFX/AsciidocFX Uninstaller.app/Contents/MacOS/JavaApplicationStub",
+            "args": [
+              "-q"
+            ],
+            "sudo": "true"
+          }
+        }
+      ]
     },
     {
-      "path": "AsciidocFX Installer.app/Contents/MacOS/JavaApplicationStub",
-      "args": {
-        "must_succeed": "true",
-        "sudo": "true",
-        "args": [
-          "-q"
-        ],
-        "print_stdout": "true"
-      }
+      "installer": [
+        {
+          "script": {
+            "executable": "AsciidocFX Installer.app/Contents/MacOS/JavaApplicationStub",
+            "args": [
+              "-q"
+            ],
+            "sudo": "true"
+          }
+        }
+      ]
     }
   ],
   "caveats": null,

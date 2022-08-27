@@ -17,21 +17,27 @@
   "sha256": "65f1358e53b2a65ce88f48a3d25d2346633c0a1a743e791d3be0f7e337236906",
   "artifacts": [
     {
-      "launchctl": "com.fing.service",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "launchctl": "com.fing.service"
+        }
+      ]
     },
-    [
-      "Fing.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/Fing",
-        "~/Library/Preferences/com.fing.app.plist",
-        "~/Library/Saved Application State/com.fing.app.savedState"
-      ],
-      "signal": {
-      }
+      "app": [
+        "Fing.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/Fing",
+            "~/Library/Preferences/com.fing.app.plist",
+            "~/Library/Saved Application State/com.fing.app.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

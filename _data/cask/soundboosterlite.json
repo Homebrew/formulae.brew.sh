@@ -17,20 +17,28 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "quit": "com.froyosoft.SoundBoosterLite",
-      "launchctl": "com.froyosoft.soundboosterxpc",
-      "pkgutil": "com.froyosoft.pkg.SoundBoosterLite",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "com.froyosoft.SoundBoosterLite",
+          "launchctl": "com.froyosoft.soundboosterxpc",
+          "pkgutil": "com.froyosoft.pkg.SoundBoosterLite"
+        }
+      ]
     },
-    "SoundBoosterLite.pkg (Pkg)",
     {
-      "trash": [
-        "~/Library/Application Scripts/com.froyosoft.SoundBoosterLite",
-        "~/Library/Containers/com.froyosoft.SoundBoosterLite"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "SoundBoosterLite.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Scripts/com.froyosoft.SoundBoosterLite",
+            "~/Library/Containers/com.froyosoft.SoundBoosterLite"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

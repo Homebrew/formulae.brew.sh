@@ -17,15 +17,21 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "quit": [
-        "com.econtechnologies.chronosync",
-        "com.econtechnologies.backgrounder.chronosync"
-      ],
-      "pkgutil": "com.econtechnologies.pkg.ChronoSyncApplication",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": [
+            "com.econtechnologies.chronosync",
+            "com.econtechnologies.backgrounder.chronosync"
+          ],
+          "pkgutil": "com.econtechnologies.pkg.ChronoSyncApplication"
+        }
+      ]
     },
-    "Install.pkg (Pkg)"
+    {
+      "pkg": [
+        "Install.pkg"
+      ]
+    }
   ],
   "caveats": null,
   "depends_on": {

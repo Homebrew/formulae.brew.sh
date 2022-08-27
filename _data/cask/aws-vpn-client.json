@@ -17,26 +17,34 @@
   "sha256": "d88a4b5c9c0f9e64cef52ab508c65aff23913f712589c1f994b0578db985baf9",
   "artifacts": [
     {
-      "pkgutil": "com.amazon.awsvpnclient",
-      "quit": "com.amazonaws.acvc.osx",
-      "launchctl": "com.amazonaws.acvc.helper",
-      "delete": [
-        "/Library/Application Support/AWSVPNClient",
-        "/Library/LaunchDaemons/com.amazonaws.acvc.helper.plist",
-        "/Library/PrivilegedHelperTools/com.amazonaws.acvc.helper"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "com.amazon.awsvpnclient",
+          "quit": "com.amazonaws.acvc.osx",
+          "launchctl": "com.amazonaws.acvc.helper",
+          "delete": [
+            "/Library/Application Support/AWSVPNClient",
+            "/Library/LaunchDaemons/com.amazonaws.acvc.helper.plist",
+            "/Library/PrivilegedHelperTools/com.amazonaws.acvc.helper"
+          ]
+        }
+      ]
     },
-    "AWS_VPN_Client.pkg (Pkg)",
     {
-      "trash": [
-        "~/.config/AWSVPNClient",
-        "~/Library/Preferences/com.amazonaws.acvc.osx.plist",
-        "~/Library/Saved Application State/com.amazonaws.acvc.osx.savedState"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "AWS_VPN_Client.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/.config/AWSVPNClient",
+            "~/Library/Preferences/com.amazonaws.acvc.osx.plist",
+            "~/Library/Saved Application State/com.amazonaws.acvc.osx.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

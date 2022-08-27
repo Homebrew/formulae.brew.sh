@@ -16,22 +16,34 @@
   "outdated": false,
   "sha256": "a464f98332cf2920e9b9b04b33d04013b3a12ae6801d57baa4610407ad39bb78",
   "artifacts": [
-    "uninstall_preflight (Preflight Block)",
     {
-      "signal": {
-        "TERM": "com.twocanoes.Winclone10"
-      },
-      "pkgutil": "com.twocanoes.pkg.Winclone*"
+      "uninstall_preflight": null
     },
-    "Winclone.pkg (Pkg)",
     {
-      "trash": [
-        "~/Library/Application Support/Winclone",
-        "~/Library/Caches/com.twocanoes.Winclone10",
-        "~/Library/Logs/Winclone"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "signal": {
+            "TERM": "com.twocanoes.Winclone10"
+          },
+          "pkgutil": "com.twocanoes.pkg.Winclone*"
+        }
+      ]
+    },
+    {
+      "pkg": [
+        "Winclone.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/Winclone",
+            "~/Library/Caches/com.twocanoes.Winclone10",
+            "~/Library/Logs/Winclone"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

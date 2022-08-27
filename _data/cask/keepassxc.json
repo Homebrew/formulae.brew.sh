@@ -17,28 +17,36 @@
   "sha256": "473f994698ec082f16bb20b4824dadbfb744f53a01b737b4016f6cc45f403b83",
   "artifacts": [
     {
-      "quit": "org.keepassxc.keepassxc",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "org.keepassxc.keepassxc"
+        }
+      ]
     },
-    [
-      "KeePassXC.app"
-    ],
-    [
-      "/Applications/KeePassXC.app/Contents/MacOS/keepassxc-cli"
-    ],
     {
-      "trash": [
-        "~/.keepassxc",
-        "~/Library/Application Support/CrashReporter/KeePassXC_*.plist",
-        "~/Library/Application Support/keepassxc",
-        "~/Library/Caches/org.keepassx.keepassxc",
-        "~/Library/Logs/DiagnosticReports/KeePassXC_*.crash",
-        "~/Library/Preferences/org.keepassx.keepassxc.plist",
-        "~/Library/Saved Application State/org.keepassx.keepassxc.savedState"
-      ],
-      "signal": {
-      }
+      "app": [
+        "KeePassXC.app"
+      ]
+    },
+    {
+      "binary": [
+        "/Applications/KeePassXC.app/Contents/MacOS/keepassxc-cli"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/.keepassxc",
+            "~/Library/Application Support/CrashReporter/KeePassXC_*.plist",
+            "~/Library/Application Support/keepassxc",
+            "~/Library/Caches/org.keepassx.keepassxc",
+            "~/Library/Logs/DiagnosticReports/KeePassXC_*.crash",
+            "~/Library/Preferences/org.keepassx.keepassxc.plist",
+            "~/Library/Saved Application State/org.keepassx.keepassxc.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

@@ -17,30 +17,34 @@
   "sha256": "acb3a9d1935d17e7c9b47b64913aa832a764b82b0d44430ea43487a235bb4e95",
   "artifacts": [
     {
-      "script": {
-        "executable": "/Applications/TI/simplelink_msp432e4_sdk_4_20_00_12/uninstall.app/Contents/MacOS/installbuilder.sh",
-        "args": [
-          "--mode",
-          "unattended"
-        ],
-        "sudo": "true"
-      },
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "script": {
+            "executable": "/Applications/TI/simplelink_msp432e4_sdk_4_20_00_12/uninstall.app/Contents/MacOS/installbuilder.sh",
+            "args": [
+              "--mode",
+              "unattended"
+            ],
+            "sudo": "true"
+          }
+        }
+      ]
     },
     {
-      "path": "simplelink_msp432e4_sdk_4_20_00_12.app/Contents/MacOS/installbuilder.sh",
-      "args": {
-        "must_succeed": "true",
-        "sudo": "true",
-        "args": [
-          "--mode",
-          "unattended",
-          "--prefix",
-          "/Applications/TI"
-        ],
-        "print_stdout": "true"
-      }
+      "installer": [
+        {
+          "script": {
+            "executable": "simplelink_msp432e4_sdk_4_20_00_12.app/Contents/MacOS/installbuilder.sh",
+            "args": [
+              "--mode",
+              "unattended",
+              "--prefix",
+              "/Applications/TI"
+            ],
+            "sudo": "true"
+          }
+        }
+      ]
     }
   ],
   "caveats": null,

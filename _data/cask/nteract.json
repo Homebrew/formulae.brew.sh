@@ -17,23 +17,29 @@
   "sha256": "de65abe5ed76489217a9c29bcc177aa5b2ee2f0657cd017301af33280ca8a737",
   "artifacts": [
     {
-      "delete": "$(brew --prefix)/bin/nteract",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": "$(brew --prefix)/bin/nteract"
+        }
+      ]
     },
-    [
-      "nteract.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/Caches/nteract-updater",
-        "~/Library/Application Support/nteract",
-        "~/Library/Logs/nteract",
-        "~/Library/Preferences/io.nteract.nteract.plist",
-        "~/Library/Saved Application State/io.nteract.nteract.savedState"
-      ],
-      "signal": {
-      }
+      "app": [
+        "nteract.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/Caches/nteract-updater",
+            "~/Library/Application Support/nteract",
+            "~/Library/Logs/nteract",
+            "~/Library/Preferences/io.nteract.nteract.plist",
+            "~/Library/Saved Application State/io.nteract.nteract.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

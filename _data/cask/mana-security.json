@@ -17,24 +17,30 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "quit": "com.manasecurity.mana",
-      "login_item": "Mana Security",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "com.manasecurity.mana",
+          "login_item": "Mana Security"
+        }
+      ]
     },
-    [
-      "Mana Security.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/Mana Security",
-        "~/Library/Caches/com.manasecurity*",
-        "~/Library/Logs/Mana Security",
-        "~/Library/Preferences/com.manasecurity*",
-        "~/Library/Saved Application State/com.manasecurity*"
-      ],
-      "signal": {
-      }
+      "app": [
+        "Mana Security.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/Mana Security",
+            "~/Library/Caches/com.manasecurity*",
+            "~/Library/Logs/Mana Security",
+            "~/Library/Preferences/com.manasecurity*",
+            "~/Library/Saved Application State/com.manasecurity*"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

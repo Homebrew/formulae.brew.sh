@@ -17,19 +17,27 @@
   "sha256": "22ed3fe050c3b965841ccc5590a3a03bb9498f8620e01ba4dea5557dcd24fe43",
   "artifacts": [
     {
-      "pkgutil": "com.intel.pkg.PowerGadget.*",
-      "kext": "com.intel.driver.EnergyDriver",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "com.intel.pkg.PowerGadget.*",
+          "kext": "com.intel.driver.EnergyDriver"
+        }
+      ]
     },
-    "Install Intel Power Gadget.pkg (Pkg)",
     {
-      "trash": [
-        "~/Library/Caches/com.intel.PowerGadget",
-        "~/Library/Preferences/com.intel.PowerGadget.plist"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "Install Intel Power Gadget.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Caches/com.intel.PowerGadget",
+            "~/Library/Preferences/com.intel.PowerGadget.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": "intel-power-gadget requires a kernel extension to work.\nIf the installation fails, retry after you enable it in:\n  System Preferences → Security & Privacy → General\n\nFor more information, refer to vendor documentation or this Apple Technical Note:\n  https://developer.apple.com/library/content/technotes/tn2459/_index.html\n",

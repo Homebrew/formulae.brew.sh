@@ -16,23 +16,31 @@
   "outdated": false,
   "sha256": "458f0355d3353aab39bbc7fd17b1ea1ed55d699d79abf85b96fb6177c0d78d83",
   "artifacts": [
-    "preflight (Preflight Block)",
-    [
-      "Goneovim-v0.6.3-macos/goneovim.app"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/goneovim/0.6.3/goneovim.wrapper.sh",
-      {
-        "target": "goneovim"
-      }
-    ],
     {
-      "trash": [
-        "~/Library/Saved Application State/com.ident.goneovim.savedState",
-        "~/.goneovim"
-      ],
-      "signal": {
-      }
+      "preflight": null
+    },
+    {
+      "app": [
+        "Goneovim-v0.6.3-macos/goneovim.app"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/goneovim/0.6.3/goneovim.wrapper.sh",
+        {
+          "target": "goneovim"
+        }
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Saved Application State/com.ident.goneovim.savedState",
+            "~/.goneovim"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

@@ -17,13 +17,19 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "pkgutil": "com.econtechnologies.pkg.ChronoAgent",
-      "launchctl": "com.econtechnologies.ChronoAgentRemote",
-      "quit": "com.econtechnologies.backgrounder.CAMonitorBackgrounder",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "com.econtechnologies.pkg.ChronoAgent",
+          "launchctl": "com.econtechnologies.ChronoAgentRemote",
+          "quit": "com.econtechnologies.backgrounder.CAMonitorBackgrounder"
+        }
+      ]
     },
-    "Install.pkg (Pkg)"
+    {
+      "pkg": [
+        "Install.pkg"
+      ]
+    }
   ],
   "caveats": null,
   "depends_on": {

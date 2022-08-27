@@ -17,18 +17,26 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "launchctl": "com.figma.daemon",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "launchctl": "com.figma.daemon"
+        }
+      ]
     },
-    "FigmaInstaller.pkg (Pkg)",
     {
-      "trash": [
-        "~/Library/Preferences/com.figma.FigmaDaemon.plist",
-        "~/Library/Caches/com.figma.FigmaDaemon"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "FigmaInstaller.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Preferences/com.figma.FigmaDaemon.plist",
+            "~/Library/Caches/com.figma.FigmaDaemon"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

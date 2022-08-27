@@ -17,22 +17,30 @@
   "sha256": "65a5fee8bcfa4bbd3be444efbcd997110a49f5ccc1fffc4457c0110ab51adecb",
   "artifacts": [
     {
-      "script": {
-        "executable": "uninstall.tool",
-        "input": [
-          "Yes"
-        ],
-        "sudo": "true"
-      },
-      "pkgutil": "com.vagrant.vagrant",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "script": {
+            "executable": "uninstall.tool",
+            "input": [
+              "Yes"
+            ],
+            "sudo": "true"
+          },
+          "pkgutil": "com.vagrant.vagrant"
+        }
+      ]
     },
-    "vagrant.pkg (Pkg)",
     {
-      "trash": "~/.vagrant.d",
-      "signal": {
-      }
+      "pkg": [
+        "vagrant.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": "~/.vagrant.d"
+        }
+      ]
     }
   ],
   "caveats": null,

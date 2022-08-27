@@ -17,30 +17,34 @@
   "sha256": "7dbe27c23f176b1ec32b1415b225f31ed081d820cab25233dac99241d7a84222",
   "artifacts": [
     {
-      "quit": "com.bitnami.manager",
-      "script": {
-        "executable": "/Applications/XAMPP/uninstall.app/Contents/MacOS/osx-x86_64",
-        "args": [
-          "--mode",
-          "unattended"
-        ],
-        "sudo": "true"
-      },
-      "delete": "/Applications/XAMPP/",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "com.bitnami.manager",
+          "script": {
+            "executable": "/Applications/XAMPP/uninstall.app/Contents/MacOS/osx-x86_64",
+            "args": [
+              "--mode",
+              "unattended"
+            ],
+            "sudo": "true"
+          },
+          "delete": "/Applications/XAMPP/"
+        }
+      ]
     },
     {
-      "path": "xampp-osx-8.1.6-0-installer.app/Contents/MacOS/osx-x86_64",
-      "args": {
-        "must_succeed": "true",
-        "sudo": "true",
-        "args": [
-          "--mode",
-          "unattended"
-        ],
-        "print_stdout": "true"
-      }
+      "installer": [
+        {
+          "script": {
+            "executable": "xampp-osx-8.1.6-0-installer.app/Contents/MacOS/osx-x86_64",
+            "args": [
+              "--mode",
+              "unattended"
+            ],
+            "sudo": "true"
+          }
+        }
+      ]
     }
   ],
   "caveats": null,

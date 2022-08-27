@@ -16,34 +16,50 @@
   "outdated": false,
   "sha256": "f810107f9e8907edc83859eb2560a62e9c3c87f2d1ae4a3d517f80234fff3f11",
   "artifacts": [
-    [
-      "cmdline-tools",
-      {
-        "target": "$(brew --prefix)/share/android-commandlinetools/cmdline-tools/latest"
-      }
-    ],
-    [
-      "$(brew --prefix)/share/android-commandlinetools/cmdline-tools/latest/bin/avdmanager"
-    ],
-    [
-      "$(brew --prefix)/share/android-commandlinetools/cmdline-tools/latest/bin/lint"
-    ],
-    [
-      "$(brew --prefix)/share/android-commandlinetools/cmdline-tools/latest/bin/retrace"
-    ],
-    [
-      "$(brew --prefix)/share/android-commandlinetools/cmdline-tools/latest/bin/screenshot2"
-    ],
-    [
-      "$(brew --prefix)/share/android-commandlinetools/cmdline-tools/latest/bin/sdkmanager"
-    ],
-    [
-      "$(brew --prefix)/share/android-commandlinetools/cmdline-tools/latest/bin/apkanalyzer"
-    ],
     {
-      "trash": "$(brew --prefix)/share/android-commandlinetools",
-      "signal": {
-      }
+      "artifact": [
+        "cmdline-tools",
+        {
+          "target": "$(brew --prefix)/share/android-commandlinetools/cmdline-tools/latest"
+        }
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/share/android-commandlinetools/cmdline-tools/latest/bin/avdmanager"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/share/android-commandlinetools/cmdline-tools/latest/bin/lint"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/share/android-commandlinetools/cmdline-tools/latest/bin/retrace"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/share/android-commandlinetools/cmdline-tools/latest/bin/screenshot2"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/share/android-commandlinetools/cmdline-tools/latest/bin/sdkmanager"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/share/android-commandlinetools/cmdline-tools/latest/bin/apkanalyzer"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": "$(brew --prefix)/share/android-commandlinetools"
+        }
+      ]
     }
   ],
   "caveats": "Default Android SDK root is $(brew --prefix)/share/android-commandlinetools\n\nandroid-commandlinetools requires Java. You can install the latest version with:\n  brew install --cask temurin\n",

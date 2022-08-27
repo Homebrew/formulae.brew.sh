@@ -17,25 +17,31 @@
   "sha256": "0751ee61be154d2efbe9c39ad496544f53944b4d880aefa1ef487b35755cc952",
   "artifacts": [
     {
-      "quit": "at.obdev.MicroSnitch",
-      "launchctl": "at.obdev.MicroSnitchOpenAtLoginHelper",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "at.obdev.MicroSnitch",
+          "launchctl": "at.obdev.MicroSnitchOpenAtLoginHelper"
+        }
+      ]
     },
-    [
-      "Micro Snitch.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/at.obdev.MicroSnitchOpenAtLoginHelper",
-        "~/Library/Application Support/Micro Snitch",
-        "~/Library/Caches/at.obdev.MicroSnitch",
-        "~/Library/Containers/at.obdev.MicroSnitchOpenAtLoginHelper",
-        "~/Library/Logs/Micro Snitch.log",
-        "~/Library/Preferences/at.obdev.MicroSnitch.plist"
-      ],
-      "signal": {
-      }
+      "app": [
+        "Micro Snitch.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/at.obdev.MicroSnitchOpenAtLoginHelper",
+            "~/Library/Application Support/Micro Snitch",
+            "~/Library/Caches/at.obdev.MicroSnitch",
+            "~/Library/Containers/at.obdev.MicroSnitchOpenAtLoginHelper",
+            "~/Library/Logs/Micro Snitch.log",
+            "~/Library/Preferences/at.obdev.MicroSnitch.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

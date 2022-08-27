@@ -17,15 +17,21 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "pkgutil": "com.google.pkg.GoogleJapaneseInput",
-      "launchctl": [
-        "com.google.inputmethod.Japanese.Converter",
-        "com.google.inputmethod.Japanese.Renderer"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "com.google.pkg.GoogleJapaneseInput",
+          "launchctl": [
+            "com.google.inputmethod.Japanese.Converter",
+            "com.google.inputmethod.Japanese.Renderer"
+          ]
+        }
+      ]
     },
-    "GoogleJapaneseInput.pkg (Pkg)"
+    {
+      "pkg": [
+        "GoogleJapaneseInput.pkg"
+      ]
+    }
   ],
   "caveats": null,
   "depends_on": {

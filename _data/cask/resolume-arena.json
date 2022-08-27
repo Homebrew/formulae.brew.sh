@@ -17,29 +17,40 @@
   "sha256": "b1d467fdc06198953908021057e2d3ab4658b0116375a6e67a35f2cfd06703f3",
   "artifacts": [
     {
-      "pkgutil": [
-        "com.resolume.pkg.ResolumeArena.*",
-        "com.resolume.pkg.ResolumeDXV",
-        "com.resolume.pkg.ResolumeQuickLook",
-        "com.resolume.pkg.ResolumeAlley",
-        "com.resolume.pkg.ResolumeWireNodes",
-        "com.resolume.pkg.ResolumeCommon",
-        "com.resolume.pkg.ResolumeWire"
-      ],
-      "delete": "/Applications/Resolume Arena 7",
-      "signal": {
-        "TERM": "com.resolume.arena"
-      },
-      "launchctl": "com.resolume.arena"
+      "uninstall": [
+        {
+          "pkgutil": [
+            "com.resolume.pkg.ResolumeArena.*",
+            "com.resolume.pkg.ResolumeDXV",
+            "com.resolume.pkg.ResolumeQuickLook",
+            "com.resolume.pkg.ResolumeAlley",
+            "com.resolume.pkg.ResolumeWireNodes",
+            "com.resolume.pkg.ResolumeCommon",
+            "com.resolume.pkg.ResolumeWire"
+          ],
+          "delete": "/Applications/Resolume Arena 7",
+          "signal": [
+            "TERM",
+            "com.resolume.arena"
+          ],
+          "launchctl": "com.resolume.arena"
+        }
+      ]
     },
-    "Resolume Arena Installer.pkg (Pkg)",
     {
-      "pkgutil": [
-        "com.resolume.pkg.ResolumeDXV",
-        "com.resolume.pkg.ResolumeQuickLook"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "Resolume Arena Installer.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "pkgutil": [
+            "com.resolume.pkg.ResolumeDXV",
+            "com.resolume.pkg.ResolumeQuickLook"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

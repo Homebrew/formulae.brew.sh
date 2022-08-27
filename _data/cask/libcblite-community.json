@@ -16,32 +16,44 @@
   "outdated": false,
   "sha256": "a7714c03e719351cf77646d1462491af9fccb6011cce79bba5064d618a06bd57",
   "artifacts": [
-    [
-      "libcblite-3.0.2/include/cbl",
-      {
-        "target": "$(brew --prefix)/include/cbl"
-      }
-    ],
-    [
-      "libcblite-3.0.2/include/fleece",
-      {
-        "target": "$(brew --prefix)/include/fleece"
-      }
-    ],
-    [
-      "libcblite-3.0.2/lib/cmake/CouchbaseLite",
-      {
-        "target": "$(brew --prefix)/lib/cmake/CouchbaseLite"
-      }
-    ],
-    [
-      "libcblite-3.0.2/lib/libcblite.3.0.2.dylib",
-      {
-        "target": "$(brew --prefix)/lib/libcblite.3.0.2.dylib"
-      }
-    ],
-    "postflight (Postflight Block)",
-    "uninstall_postflight (Postflight Block)"
+    {
+      "artifact": [
+        "libcblite-3.0.2/include/cbl",
+        {
+          "target": "$(brew --prefix)/include/cbl"
+        }
+      ]
+    },
+    {
+      "artifact": [
+        "libcblite-3.0.2/include/fleece",
+        {
+          "target": "$(brew --prefix)/include/fleece"
+        }
+      ]
+    },
+    {
+      "artifact": [
+        "libcblite-3.0.2/lib/cmake/CouchbaseLite",
+        {
+          "target": "$(brew --prefix)/lib/cmake/CouchbaseLite"
+        }
+      ]
+    },
+    {
+      "artifact": [
+        "libcblite-3.0.2/lib/libcblite.3.0.2.dylib",
+        {
+          "target": "$(brew --prefix)/lib/libcblite.3.0.2.dylib"
+        }
+      ]
+    },
+    {
+      "postflight": null
+    },
+    {
+      "uninstall_postflight": null
+    }
   ],
   "caveats": null,
   "depends_on": {

@@ -17,27 +17,35 @@
   "sha256": "fe589d40ee8a4970a7fa1d2c78627c8eb538797401bd47309fa8d3ea5f922f71",
   "artifacts": [
     {
-      "launchctl": "com.canonical.multipassd",
-      "pkgutil": "com.canonical.multipass.*",
-      "delete": [
-        "/Applications/Multipass.app",
-        "/Library/Application Support/com.canonical.multipass",
-        "/Library/Logs/Multipass",
-        "$(brew --prefix)/bin/multipass",
-        "$(brew --prefix)/etc/bash_completion.d/multipass"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "launchctl": "com.canonical.multipassd",
+          "pkgutil": "com.canonical.multipass.*",
+          "delete": [
+            "/Applications/Multipass.app",
+            "/Library/Application Support/com.canonical.multipass",
+            "/Library/Logs/Multipass",
+            "$(brew --prefix)/bin/multipass",
+            "$(brew --prefix)/etc/bash_completion.d/multipass"
+          ]
+        }
+      ]
     },
-    "multipass-1.10.1+mac-Darwin.pkg (Pkg)",
     {
-      "trash": [
-        "~/Library/Application Support/multipass",
-        "~/Library/Application Support/multipass-gui",
-        "~/Library/Preferences/multipass"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "multipass-1.10.1+mac-Darwin.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/multipass",
+            "~/Library/Application Support/multipass-gui",
+            "~/Library/Preferences/multipass"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

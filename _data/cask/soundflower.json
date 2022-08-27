@@ -17,21 +17,29 @@
   "sha256": "6b5e56d53238cf0f9075886aa40580634fc9d23368239f22eccebfd97c9f8e34",
   "artifacts": [
     {
-      "early_script": {
-        "executable": "/sbin/kextunload",
-        "args": [
-          "-b",
-          "com.Cycling74.driver.Soundflower"
-        ],
-        "must_succeed": "false"
-      },
-      "pkgutil": "com.cycling74.soundflower.*",
-      "kext": "com.Cycling74.driver.Soundflower",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "early_script": {
+            "executable": "/sbin/kextunload",
+            "args": [
+              "-b",
+              "com.Cycling74.driver.Soundflower"
+            ],
+            "must_succeed": "false"
+          },
+          "pkgutil": "com.cycling74.soundflower.*",
+          "kext": "com.Cycling74.driver.Soundflower"
+        }
+      ]
     },
-    "Soundflower.pkg (Pkg)",
-    "postflight (Postflight Block)"
+    {
+      "pkg": [
+        "Soundflower.pkg"
+      ]
+    },
+    {
+      "postflight": null
+    }
   ],
   "caveats": "soundflower requires a kernel extension to work.\nIf the installation fails, retry after you enable it in:\n  System Preferences → Security & Privacy → General\n\nFor more information, refer to vendor documentation or this Apple Technical Note:\n  https://developer.apple.com/library/content/technotes/tn2459/_index.html\n",
   "depends_on": {

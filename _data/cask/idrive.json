@@ -17,32 +17,40 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "launchctl": [
-        "IDSyncDaemon",
-        "IDWifiManager",
-        "IDriveDaemon"
-      ],
-      "pkgutil": "com.profsoftnet.idrive.*",
-      "quit": [
-        "com.prosfotnet.IDWifiManager",
-        "com.prosoftnet.IDrive",
-        "com.prosoftnet.IDriveDaemon",
-        "com.prosoftnet.IDriveMonitor"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "launchctl": [
+            "IDSyncDaemon",
+            "IDWifiManager",
+            "IDriveDaemon"
+          ],
+          "pkgutil": "com.profsoftnet.idrive.*",
+          "quit": [
+            "com.prosfotnet.IDWifiManager",
+            "com.prosoftnet.IDrive",
+            "com.prosoftnet.IDriveDaemon",
+            "com.prosoftnet.IDriveMonitor"
+          ]
+        }
+      ]
     },
-    "IDrive.pkg (Pkg)",
     {
-      "trash": [
-        "/Library/Application Support/IDriveforMac",
-        "~/Library/Application Support/IDriveforMac",
-        "~/Library/Caches/com.prosoftnet.IDriveMonitor",
-        "~/Library/Preferences/com.prosoftnet.IDrive.plist",
-        "~/Library/Preferences/com.prosoftnet.IDriveMonitor.plist"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "IDrive.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "/Library/Application Support/IDriveforMac",
+            "~/Library/Application Support/IDriveforMac",
+            "~/Library/Caches/com.prosoftnet.IDriveMonitor",
+            "~/Library/Preferences/com.prosoftnet.IDrive.plist",
+            "~/Library/Preferences/com.prosoftnet.IDriveMonitor.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

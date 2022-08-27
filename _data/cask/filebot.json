@@ -16,32 +16,40 @@
   "outdated": false,
   "sha256": "38935215702be042aae44effad9cd5e82139ece8ecdb55ee86515b875064873a",
   "artifacts": [
-    [
-      "FileBot.app"
-    ],
-    [
-      "/Applications/FileBot.app/Contents/MacOS/filebot.sh",
-      {
-        "target": "filebot"
-      }
-    ],
-    [
-      "/Applications/FileBot.app/Contents/Resources/bash_completion.d/filebot_completion",
-      {
-        "target": "$(brew --prefix)/etc/bash_completion.d/filebot"
-      }
-    ],
     {
-      "trash": [
-        "~/Library/Application Scripts/net.filebot.FileBot",
-        "~/Library/Containers/net.filebot.FileBot",
-        "~/Library/Preferences/net.filebot.FileBot.app.plist",
-        "~/Library/Preferences/net.filebot.ui.plist",
-        "~/Library/Saved Application State/net.filebot.FileBot.app.savedState",
-        "~/Library/Saved Application State/net.filebot.FileBot.savedState"
-      ],
-      "signal": {
-      }
+      "app": [
+        "FileBot.app"
+      ]
+    },
+    {
+      "binary": [
+        "/Applications/FileBot.app/Contents/MacOS/filebot.sh",
+        {
+          "target": "filebot"
+        }
+      ]
+    },
+    {
+      "binary": [
+        "/Applications/FileBot.app/Contents/Resources/bash_completion.d/filebot_completion",
+        {
+          "target": "$(brew --prefix)/etc/bash_completion.d/filebot"
+        }
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Scripts/net.filebot.FileBot",
+            "~/Library/Containers/net.filebot.FileBot",
+            "~/Library/Preferences/net.filebot.FileBot.app.plist",
+            "~/Library/Preferences/net.filebot.ui.plist",
+            "~/Library/Saved Application State/net.filebot.FileBot.app.savedState",
+            "~/Library/Saved Application State/net.filebot.FileBot.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

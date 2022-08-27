@@ -17,22 +17,28 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "script": {
-        "executable": "/Applications/Chrome Remote Desktop Host Uninstaller.app/Contents/MacOS/remoting_host_uninstaller",
-        "args": [
-          "--no-ui"
-        ],
-        "sudo": "true"
-      },
-      "pkgutil": [
-        "com.google.pkg.ChromeRemoteDesktopHost",
-        "com.google.pkg.ChromeRemoteDesktopHostService",
-        "com.google.pkg.ChromeRemoteDesktopHostUninstaller"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "script": {
+            "executable": "/Applications/Chrome Remote Desktop Host Uninstaller.app/Contents/MacOS/remoting_host_uninstaller",
+            "args": [
+              "--no-ui"
+            ],
+            "sudo": "true"
+          },
+          "pkgutil": [
+            "com.google.pkg.ChromeRemoteDesktopHost",
+            "com.google.pkg.ChromeRemoteDesktopHostService",
+            "com.google.pkg.ChromeRemoteDesktopHostUninstaller"
+          ]
+        }
+      ]
     },
-    "Chrome Remote Desktop Host.pkg (Pkg)"
+    {
+      "pkg": [
+        "Chrome Remote Desktop Host.pkg"
+      ]
+    }
   ],
   "caveats": "You must log out and log back in for the installation of chrome-remote-desktop-host to take effect.\n",
   "depends_on": {

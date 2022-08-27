@@ -17,25 +17,31 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "quit": "com.box.sync",
-      "delete": [
-        "/Library/PrivilegedHelperTools/com.box.sync.iconhelper",
-        "/Library/PrivilegedHelperTools/com.box.sync.bootstrapper"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "com.box.sync",
+          "delete": [
+            "/Library/PrivilegedHelperTools/com.box.sync.iconhelper",
+            "/Library/PrivilegedHelperTools/com.box.sync.bootstrapper"
+          ]
+        }
+      ]
     },
-    [
-      "Box Sync.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/Box/Box Sync",
-        "~/Library/Logs/Box/Box Sync"
-      ],
-      "rmdir": "~/Library/Application Support/Box",
-      "signal": {
-      }
+      "app": [
+        "Box Sync.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/Box/Box Sync",
+            "~/Library/Logs/Box/Box Sync"
+          ],
+          "rmdir": "~/Library/Application Support/Box"
+        }
+      ]
     }
   ],
   "caveats": null,

@@ -17,24 +17,35 @@
   "sha256": "0e627cafdae59c94e765b3633b3ff69e91ca4d36e4489f530577d984980f855a",
   "artifacts": [
     {
-      "pkgutil": "com.busymac.busycal3.pkg",
-      "quit": "N4RA379GBW.com.busymac.busycal3.alarm",
-      "signal": {
-        "TERM": "com.busymac.busycal3"
-      },
-      "delete": "/Applications/BusyCal.app"
+      "uninstall": [
+        {
+          "pkgutil": "com.busymac.busycal3.pkg",
+          "quit": "N4RA379GBW.com.busymac.busycal3.alarm",
+          "signal": [
+            "TERM",
+            "com.busymac.busycal3"
+          ],
+          "delete": "/Applications/BusyCal.app"
+        }
+      ]
     },
-    "BusyCal Installer.pkg (Pkg)",
     {
-      "trash": [
-        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.busymac.busycal2022.sfl*",
-        "~/Library/Containers/com.busymac.busycal3",
-        "~/Library/Containers/N4RA379GBW.com.busymac.busycal3.alarm",
-        "~/Library/Group Containers/com.busymac.busycal3",
-        "~/Library/Group Containers/N4RA379GBW.com.busymac.busycal3"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "BusyCal Installer.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.busymac.busycal2022.sfl*",
+            "~/Library/Containers/com.busymac.busycal3",
+            "~/Library/Containers/N4RA379GBW.com.busymac.busycal3.alarm",
+            "~/Library/Group Containers/com.busymac.busycal3",
+            "~/Library/Group Containers/N4RA379GBW.com.busymac.busycal3"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

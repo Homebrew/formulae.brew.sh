@@ -17,17 +17,27 @@
   "sha256": "5eb297b35921817d4e579f93c287b011257d1e596eb209f984799f875b171706",
   "artifacts": [
     {
-      "pkgutil": "com.onefatgiraffe.mailtrackerblocker",
-      "delete": "/Library/Mail/Bundles/MailTrackerBlocker.mailbundle",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "com.onefatgiraffe.mailtrackerblocker",
+          "delete": "/Library/Mail/Bundles/MailTrackerBlocker.mailbundle"
+        }
+      ]
     },
-    "MailTrackerBlocker.pkg (Pkg)",
-    "uninstall_postflight (Postflight Block)",
     {
-      "trash": "~/Library/Containers/com.apple.mail/Data/Library/Application Support/com.onefatgiraffe.mailtrackerblocker",
-      "signal": {
-      }
+      "pkg": [
+        "MailTrackerBlocker.pkg"
+      ]
+    },
+    {
+      "uninstall_postflight": null
+    },
+    {
+      "zap": [
+        {
+          "trash": "~/Library/Containers/com.apple.mail/Data/Library/Application Support/com.onefatgiraffe.mailtrackerblocker"
+        }
+      ]
     }
   ],
   "caveats": null,

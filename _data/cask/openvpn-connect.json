@@ -17,47 +17,55 @@
   "sha256": "58fe9415e1efa72f55a079c5d89354ade132313107655ceaa3541121c1b3c432",
   "artifacts": [
     {
-      "quit": "org.openvpn.client.app",
-      "launchctl": [
-        "org.openvpn.client",
-        "org.openvpn.helper"
-      ],
-      "pkgutil": [
-        "org.openvpn.client_framework.pkg",
-        "org.openvpn.client_launch.pkg",
-        "org.openvpn.client_uninstall.pkg",
-        "org.openvpn.client.pkg",
-        "org.openvpn.helper_framework.pkg",
-        "org.openvpn.helper_launch.pkg"
-      ],
-      "delete": [
-        "/Applications/OpenVPN Connect",
-        "/Applications/OpenVPN Connect.app"
-      ],
-      "login_item": [
-        "OpenVPN Connect"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "org.openvpn.client.app",
+          "launchctl": [
+            "org.openvpn.client",
+            "org.openvpn.helper"
+          ],
+          "pkgutil": [
+            "org.openvpn.client_framework.pkg",
+            "org.openvpn.client_launch.pkg",
+            "org.openvpn.client_uninstall.pkg",
+            "org.openvpn.client.pkg",
+            "org.openvpn.helper_framework.pkg",
+            "org.openvpn.helper_launch.pkg"
+          ],
+          "delete": [
+            "/Applications/OpenVPN Connect",
+            "/Applications/OpenVPN Connect.app"
+          ],
+          "login_item": [
+            "OpenVPN Connect"
+          ]
+        }
+      ]
     },
-    "OpenVPN_Connect_3_3_6(4368)_Installer_signed.pkg (Pkg)",
     {
-      "trash": [
-        "~/Library/Application Support/OpenVPN Connect",
-        "~/Library/Logs/OpenVPN Connect",
-        "~/Library/Preferences/org.openvpn.client.app.helper.plist",
-        "~/Library/Preferences/org.openvpn.client.app.plist",
-        "~/Library/Saved Application State/org.openvpn.client.app.savedState"
-      ],
-      "script": {
-        "executable": "security",
-        "args": [
-          "delete-keychain",
-          "openvpn.keychain-db"
-        ]
-      },
-      "signal": {
-      }
+      "pkg": [
+        "OpenVPN_Connect_3_3_6(4368)_Installer_signed.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/OpenVPN Connect",
+            "~/Library/Logs/OpenVPN Connect",
+            "~/Library/Preferences/org.openvpn.client.app.helper.plist",
+            "~/Library/Preferences/org.openvpn.client.app.plist",
+            "~/Library/Saved Application State/org.openvpn.client.app.savedState"
+          ],
+          "script": {
+            "executable": "security",
+            "args": [
+              "delete-keychain",
+              "openvpn.keychain-db"
+            ]
+          }
+        }
+      ]
     }
   ],
   "caveats": null,

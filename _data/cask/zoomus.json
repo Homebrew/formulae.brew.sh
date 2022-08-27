@@ -16,9 +16,11 @@
   "outdated": false,
   "sha256": "614fa5e81ca40fa868e8b682e59ce7f2195bd70593b42e95af2a405afb395c21",
   "artifacts": [
-    [
-      "true"
-    ]
+    {
+      "stage_only": [
+        "true"
+      ]
+    }
   ],
   "caveats": "RENAME WARNING\n\nDue to prevalent user confusion, the zoomus cask (this one) will be renamed to zoom.\nIn the meantime, zoomus will install zoom for you as a dependency, but you should update your scripts.\n\nWe’re aware this solution is subpar. If you’d like to help us improve it,\nwe accept PRs and need the equivalent of formula_renames.json for casks: https://docs.brew.sh/Rename-A-Formula\n\nTo migrate now, do:\n  brew uninstall zoomus\n  brew install zoom\n",
   "depends_on": {

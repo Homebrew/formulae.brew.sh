@@ -17,28 +17,34 @@
   "sha256": "d6fafea9ea0854cc257759332ac77447a61de85dac7132300fe48a8f91bda528",
   "artifacts": [
     {
-      "script": {
-        "executable": "/Applications/LuLu.app/Contents/Resources/LuLu Uninstaller.app/Contents/MacOS/LuLu Uninstaller",
-        "args": [
-          "-uninstall"
-        ],
-        "sudo": "true"
-      },
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "script": {
+            "executable": "/Applications/LuLu.app/Contents/Resources/LuLu Uninstaller.app/Contents/MacOS/LuLu Uninstaller",
+            "args": [
+              "-uninstall"
+            ],
+            "sudo": "true"
+          }
+        }
+      ]
     },
-    [
-      "LuLu.app"
-    ],
     {
-      "trash": [
-        "~/Library/Caches/com.objective-see.lulu",
-        "~/Library/Caches/com.objective-see.lulu.helper",
-        "~/Library/Preferences/com.objective-see.lulu.plist",
-        "~/Library/Preferences/com.objective-see.lulu.helper.plist"
-      ],
-      "signal": {
-      }
+      "app": [
+        "LuLu.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Caches/com.objective-see.lulu",
+            "~/Library/Caches/com.objective-see.lulu.helper",
+            "~/Library/Preferences/com.objective-see.lulu.plist",
+            "~/Library/Preferences/com.objective-see.lulu.helper.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

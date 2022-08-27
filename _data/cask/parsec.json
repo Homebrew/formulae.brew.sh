@@ -17,17 +17,27 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "pkgutil": "tv.parsec.www",
-      "quit": "tv.parsec.www",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "tv.parsec.www",
+          "quit": "tv.parsec.www"
+        }
+      ]
     },
-    "parsec-macos.pkg (Pkg)",
-    "postflight (Postflight Block)",
     {
-      "trash": "~/.parsec",
-      "signal": {
-      }
+      "pkg": [
+        "parsec-macos.pkg"
+      ]
+    },
+    {
+      "postflight": null
+    },
+    {
+      "zap": [
+        {
+          "trash": "~/.parsec"
+        }
+      ]
     }
   ],
   "caveats": null,

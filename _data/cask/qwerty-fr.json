@@ -17,20 +17,26 @@
   "sha256": "aa036941b3552df47c58e27fc5641835da3ab3df660c4092086a2ea75d36fa28",
   "artifacts": [
     {
-      "delete": [
-        "/Library/Keyboard Layouts/qwerty-fr.bundle/",
-        "/System/Library/Caches/com.apple.IntlDataCache.le*"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": [
+            "/Library/Keyboard Layouts/qwerty-fr.bundle/",
+            "/System/Library/Caches/com.apple.IntlDataCache.le*"
+          ]
+        }
+      ]
     },
-    [
-      "qwerty-fr.bundle",
-      {
-        "target": "/Library/Keyboard Layouts/qwerty-fr.bundle"
-      }
-    ],
-    "postflight (Postflight Block)"
+    {
+      "artifact": [
+        "qwerty-fr.bundle",
+        {
+          "target": "/Library/Keyboard Layouts/qwerty-fr.bundle"
+        }
+      ]
+    },
+    {
+      "postflight": null
+    }
   ],
   "caveats": "You must reboot for the installation of qwerty-fr to take effect.\n",
   "depends_on": {

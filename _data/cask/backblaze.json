@@ -17,30 +17,38 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "launchctl": [
-        "com.backblaze.bzbmenu",
-        "com.backblaze.bzserv"
-      ],
-      "delete": [
-        "/Applications/Backblaze.app",
-        "/Library/Logs/DiagnosticReports/bzbmenu_*.*_resource.diag",
-        "/Library/PreferencePanes/BackblazeBackup.prefPane"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "launchctl": [
+            "com.backblaze.bzbmenu",
+            "com.backblaze.bzserv"
+          ],
+          "delete": [
+            "/Applications/Backblaze.app",
+            "/Library/Logs/DiagnosticReports/bzbmenu_*.*_resource.diag",
+            "/Library/PreferencePanes/BackblazeBackup.prefPane"
+          ]
+        }
+      ]
     },
     {
-      "path": "Backblaze Installer.app"
+      "installer": [
+        {
+          "manual": "Backblaze Installer.app"
+        }
+      ]
     },
     {
-      "trash": [
-        "/Library/Backblaze.bzpkg",
-        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.backblaze.*.sfl*",
-        "~/Library/Logs/BackblazeGUIInstaller",
-        "~/Library/Preferences/com.backblaze.bzbmenu.plist"
-      ],
-      "signal": {
-      }
+      "zap": [
+        {
+          "trash": [
+            "/Library/Backblaze.bzpkg",
+            "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.backblaze.*.sfl*",
+            "~/Library/Logs/BackblazeGUIInstaller",
+            "~/Library/Preferences/com.backblaze.bzbmenu.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

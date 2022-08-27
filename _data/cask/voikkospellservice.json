@@ -17,13 +17,20 @@
   "sha256": "b94df1e56bab0895831723d369a6e99c03202e99a6db5fe62625af9b4fa17973",
   "artifacts": [
     {
-      "signal": {
-        "TERM": "org.puimula.VoikkoSpellService"
-      }
+      "uninstall": [
+        {
+          "signal": [
+            "TERM",
+            "org.puimula.VoikkoSpellService"
+          ]
+        }
+      ]
     },
-    [
-      "VoikkoSpellService.app"
-    ]
+    {
+      "service": [
+        "VoikkoSpellService.app"
+      ]
+    }
   ],
   "caveats": null,
   "depends_on": {

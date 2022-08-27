@@ -17,75 +17,99 @@
   "sha256": "39c31038387eaff772e3d120a01b3d6901be8f7c70a23b580d91db3d15ed710d",
   "artifacts": [
     {
-      "delete": "$(brew --prefix)/Caskroom/j/903/j",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": "$(brew --prefix)/Caskroom/j/903/j"
+        }
+      ]
     },
     {
-      "path": "j903/macos-fix.command",
-      "args": {
-        "must_succeed": "true",
-        "sudo": "false",
-        "print_stdout": "true"
-      }
+      "installer": [
+        {
+          "script": {
+            "executable": "j903/macos-fix.command"
+          }
+        }
+      ]
     },
     {
-      "path": "j903/bin/jconsole",
-      "args": {
-        "must_succeed": "true",
-        "sudo": "false",
-        "args": [
-          "-js",
-          "load 'pacman'",
-          "'install' jpkg '*'",
-          "exit 0"
-        ],
-        "print_stdout": "true"
-      }
+      "installer": [
+        {
+          "script": {
+            "executable": "j903/bin/jconsole",
+            "args": [
+              "-js",
+              "load 'pacman'",
+              "'install' jpkg '*'",
+              "exit 0"
+            ]
+          }
+        }
+      ]
     },
-    [
-      "j903/jqt.app"
-    ],
-    [
-      "j903/jbrk.app"
-    ],
-    [
-      "j903/jcon.app"
-    ],
-    [
-      "j903/jhs.app"
-    ],
-    [
-      "j903/bin/jconsole",
-      {
-        "target": "jconsole"
-      }
-    ],
-    [
-      "j903/bin/jbrk.command",
-      {
-        "target": "jbrk"
-      }
-    ],
-    [
-      "j903/bin/jhs.command",
-      {
-        "target": "jhs"
-      }
-    ],
-    [
-      "j903/bin/jqt.command",
-      {
-        "target": "jqt"
-      }
-    ],
-    [
-      "j903/bin/jconsole",
-      {
-        "target": "jcon"
-      }
-    ],
-    "postflight (Postflight Block)"
+    {
+      "app": [
+        "j903/jqt.app"
+      ]
+    },
+    {
+      "app": [
+        "j903/jbrk.app"
+      ]
+    },
+    {
+      "app": [
+        "j903/jcon.app"
+      ]
+    },
+    {
+      "app": [
+        "j903/jhs.app"
+      ]
+    },
+    {
+      "binary": [
+        "j903/bin/jconsole",
+        {
+          "target": "jconsole"
+        }
+      ]
+    },
+    {
+      "binary": [
+        "j903/bin/jbrk.command",
+        {
+          "target": "jbrk"
+        }
+      ]
+    },
+    {
+      "binary": [
+        "j903/bin/jhs.command",
+        {
+          "target": "jhs"
+        }
+      ]
+    },
+    {
+      "binary": [
+        "j903/bin/jqt.command",
+        {
+          "target": "jqt"
+        }
+      ]
+    },
+    {
+      "binary": [
+        "j903/bin/jconsole",
+        {
+          "target": "jcon"
+        }
+      ]
+    },
+    {
+      "postflight": null
+    }
   ],
   "caveats": null,
   "depends_on": {

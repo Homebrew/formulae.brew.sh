@@ -17,18 +17,26 @@
   "sha256": "cba1598dc5d03fbf28fa649dafca5cd251f273066cc3a050966834a73ba66c3e",
   "artifacts": [
     {
-      "pkgutil": "com.hp.pkg.cloudprint.HP-ePrint-Mobile",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "com.hp.pkg.cloudprint.HP-ePrint-Mobile"
+        }
+      ]
     },
-    "HP ePrint Installer.pkg (Pkg)",
     {
-      "trash": [
-        "~/Library/Containers/com.hp.cloudprint.HP-ePrint-Mobile",
-        "~/Library/PDF Services/HP ePrint"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "HP ePrint Installer.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Containers/com.hp.cloudprint.HP-ePrint-Mobile",
+            "~/Library/PDF Services/HP ePrint"
+          ]
+        }
+      ]
     }
   ],
   "caveats": "hp-eprint has been officially discontinued upstream.\nIt may stop working correctly (or at all) in recent versions of macOS.\n",

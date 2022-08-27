@@ -16,19 +16,23 @@
   "outdated": false,
   "sha256": "no_check",
   "artifacts": [
-    [
-      "AppDelete.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/AppDelete",
-        "~/Library/Caches/com.apps4macs.AppDelete",
-        "~/Library/Preferences/com.apps4macs.AppDelete.plist",
-        "~/Library/Saved Application State/com.apps4macs.AppDelete.savedState",
-        "~/Library/Services/AppDelete.workflow"
-      ],
-      "signal": {
-      }
+      "app": [
+        "AppDelete.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/AppDelete",
+            "~/Library/Caches/com.apps4macs.AppDelete",
+            "~/Library/Preferences/com.apps4macs.AppDelete.plist",
+            "~/Library/Saved Application State/com.apps4macs.AppDelete.savedState",
+            "~/Library/Services/AppDelete.workflow"
+          ]
+        }
+      ]
     }
   ],
   "caveats": "appdelete has been officially discontinued upstream.\nIt may stop working correctly (or at all) in recent versions of macOS.\n",

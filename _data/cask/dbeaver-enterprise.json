@@ -17,21 +17,30 @@
   "sha256": "0d7392dcb7f220fd77680388a3578684e63983efe6b2691f16dc3d1471883e3f",
   "artifacts": [
     {
-      "signal": {
-        "TERM": "com.dbeaver.product.enterprise"
-      }
+      "uninstall": [
+        {
+          "signal": [
+            "TERM",
+            "com.dbeaver.product.enterprise"
+          ]
+        }
+      ]
     },
-    [
-      "DBeaverEE.app"
-    ],
     {
-      "trash": [
-        "~/Library/DBeaverData",
-        "~/Library/Preferences/com.dbeaver.product.enterprise.plist",
-        "~/Library/Saved Application State/com.dbeaver.product.enterprise.savedState"
-      ],
-      "signal": {
-      }
+      "app": [
+        "DBeaverEE.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/DBeaverData",
+            "~/Library/Preferences/com.dbeaver.product.enterprise.plist",
+            "~/Library/Saved Application State/com.dbeaver.product.enterprise.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

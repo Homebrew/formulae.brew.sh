@@ -17,19 +17,27 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "pkgutil": "com.hipbyte.rubymotion.pkg",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "com.hipbyte.rubymotion.pkg"
+        }
+      ]
     },
     {
-      "path": "RubyMotion Installer.app"
+      "installer": [
+        {
+          "manual": "RubyMotion Installer.app"
+        }
+      ]
     },
     {
-      "trash": [
-        "~/.rubymotion"
-      ],
-      "signal": {
-      }
+      "zap": [
+        {
+          "trash": [
+            "~/.rubymotion"
+          ]
+        }
+      ]
     }
   ],
   "caveats": "The vendor offers a free license for rubymotion at:\n  http://www.rubymotion.com/download/starter/\n",

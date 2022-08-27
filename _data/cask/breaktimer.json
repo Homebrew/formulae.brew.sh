@@ -17,32 +17,40 @@
   "sha256": "feebd9f838df0892664a1377f4e2cd568ffe823132390b82f6592da17d164566",
   "artifacts": [
     {
-      "quit": "com.tomjwatson.breaktimer",
-      "launchctl": "com.tomjwatson.breaktimer.ShipIt",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "com.tomjwatson.breaktimer",
+          "launchctl": "com.tomjwatson.breaktimer.ShipIt"
+        }
+      ]
     },
-    [
-      "BreakTimer.app"
-    ],
-    [
-      "/Applications/BreakTimer.app/Contents/MacOS/BreakTimer",
-      {
-        "target": "breaktimer"
-      }
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/BreakTimer",
-        "~/Library/Caches/com.tomjwatson.breaktimer",
-        "~/Library/Caches/com.tomjwatson.breaktimer.ShipIt",
-        "~/Library/Logs/BreakTimer",
-        "~/Library/Preferences/ByHost/com.tomjwatson.breaktimer.ShipIt.*.plist",
-        "~/Library/Preferences/com.tomjwatson.breaktimer.plist",
-        "~/Library/Saved Application State/com.tomjwatson.breaktimer.savedState"
-      ],
-      "signal": {
-      }
+      "app": [
+        "BreakTimer.app"
+      ]
+    },
+    {
+      "binary": [
+        "/Applications/BreakTimer.app/Contents/MacOS/BreakTimer",
+        {
+          "target": "breaktimer"
+        }
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/BreakTimer",
+            "~/Library/Caches/com.tomjwatson.breaktimer",
+            "~/Library/Caches/com.tomjwatson.breaktimer.ShipIt",
+            "~/Library/Logs/BreakTimer",
+            "~/Library/Preferences/ByHost/com.tomjwatson.breaktimer.ShipIt.*.plist",
+            "~/Library/Preferences/com.tomjwatson.breaktimer.plist",
+            "~/Library/Saved Application State/com.tomjwatson.breaktimer.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

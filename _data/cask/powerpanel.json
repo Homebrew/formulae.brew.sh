@@ -17,14 +17,20 @@
   "sha256": "85e4bcdaf178e3f2919aff1ad638bc9e80dcdbfa3a868486613aafb0d775c8a8",
   "artifacts": [
     {
-      "pkgutil": "com.cpsww.ppupsd",
-      "launchctl": "com.cpsww.ppupsd",
-      "delete": "/Applications/CyberPower PowerPanel Personal",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "com.cpsww.ppupsd",
+          "launchctl": "com.cpsww.ppupsd",
+          "delete": "/Applications/CyberPower PowerPanel Personal"
+        }
+      ]
     },
     {
-      "path": "CyberPower PowerPanel Personal Installer.app"
+      "installer": [
+        {
+          "manual": "CyberPower PowerPanel Personal Installer.app"
+        }
+      ]
     }
   ],
   "caveats": null,

@@ -17,22 +17,32 @@
   "sha256": "c491428ddf2501b4f8fda90efa6bbc2780bb5806e4bd8c2e53ffaea4434610e6",
   "artifacts": [
     {
-      "launchctl": "com.enclave",
-      "pkgutil": "com.enclave.*",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "launchctl": "com.enclave",
+          "pkgutil": "com.enclave.*"
+        }
+      ]
     },
-    "enclave_osx-installer-x64-stable-2022.08.23.pkg (Pkg)",
-    [
-      "/Applications/enclave/enclave"
-    ],
     {
-      "delete": [
-        "/etc/enclave",
-        "/var/log/enclave"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "enclave_osx-installer-x64-stable-2022.08.23.pkg"
+      ]
+    },
+    {
+      "binary": [
+        "/Applications/enclave/enclave"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "delete": [
+            "/etc/enclave",
+            "/var/log/enclave"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

@@ -16,23 +16,31 @@
   "outdated": false,
   "sha256": "b398701443bdd8826fa83c2852ae8461f04f71b6666a070cb55adc8d2ca2ff91",
   "artifacts": [
-    "preflight (Preflight Block)",
-    [
-      "Blender.app"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/blender/3.2.2/blender.wrapper.sh",
-      {
-        "target": "blender"
-      }
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/Blender",
-        "~/Library/Saved Application State/org.blenderfoundation.blender.savedState"
-      ],
-      "signal": {
-      }
+      "preflight": null
+    },
+    {
+      "app": [
+        "Blender.app"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/blender/3.2.2/blender.wrapper.sh",
+        {
+          "target": "blender"
+        }
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/Blender",
+            "~/Library/Saved Application State/org.blenderfoundation.blender.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

@@ -17,25 +17,31 @@
   "sha256": "aa3c3df48894ec1e28f3089d93da68085ada43b715eb0f3e31fdda71da021057",
   "artifacts": [
     {
-      "delete": [
-        "/Applications/xdm.app",
-        "~/Library/LaunchAgents/org.sdg.xdman.plist"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": [
+            "/Applications/xdm.app",
+            "~/Library/LaunchAgents/org.sdg.xdman.plist"
+          ]
+        }
+      ]
     },
     {
-      "path": "$(brew --prefix)/Caskroom/xdm/7.2.7/install",
-      "args": {
-        "must_succeed": "true",
-        "sudo": "true",
-        "print_stdout": "true"
-      }
+      "installer": [
+        {
+          "script": {
+            "executable": "$(brew --prefix)/Caskroom/xdm/7.2.7/install",
+            "sudo": "true"
+          }
+        }
+      ]
     },
     {
-      "trash": "~/.xdman",
-      "signal": {
-      }
+      "zap": [
+        {
+          "trash": "~/.xdman"
+        }
+      ]
     }
   ],
   "caveats": null,

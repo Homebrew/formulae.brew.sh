@@ -17,21 +17,30 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "signal": {
-        "TERM": "Cisco-Systems.Spark"
-      }
+      "uninstall": [
+        {
+          "signal": [
+            "TERM",
+            "Cisco-Systems.Spark"
+          ]
+        }
+      ]
     },
-    [
-      "Webex.app"
-    ],
     {
-      "trash": [
-        "~/Library/Caches/Cisco-Systems.Spark",
-        "~/Library/Logs/SparkMacDesktop",
-        "~/Library/Preferences/Cisco-Systems.Spark.plist"
-      ],
-      "signal": {
-      }
+      "app": [
+        "Webex.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Caches/Cisco-Systems.Spark",
+            "~/Library/Logs/SparkMacDesktop",
+            "~/Library/Preferences/Cisco-Systems.Spark.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

@@ -17,14 +17,20 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "script": {
-        "executable": "Extras/uninstall.sh",
-        "sudo": "true"
-      },
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "script": {
+            "executable": "Extras/uninstall.sh",
+            "sudo": "true"
+          }
+        }
+      ]
     },
-    "packages/Packages.pkg (Pkg)"
+    {
+      "pkg": [
+        "packages/Packages.pkg"
+      ]
+    }
   ],
   "caveats": null,
   "depends_on": {

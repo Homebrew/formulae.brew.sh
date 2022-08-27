@@ -17,30 +17,35 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "delete": [
-        "~/Applications/itch.app",
-        "~/Library/Application Support/itch-setup/"
-      ],
-      "quit": "io.itch.mac",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": [
+            "~/Applications/itch.app",
+            "~/Library/Application Support/itch-setup/"
+          ],
+          "quit": "io.itch.mac"
+        }
+      ]
     },
     {
-      "path": "Install itch.app/Contents/MacOS/itch-setup",
-      "args": {
-        "must_succeed": "true",
-        "sudo": "false",
-        "print_stdout": "true"
-      }
+      "installer": [
+        {
+          "script": {
+            "executable": "Install itch.app/Contents/MacOS/itch-setup"
+          }
+        }
+      ]
     },
     {
-      "trash": [
-        "~/Library/Application Support/itch/",
-        "~/Library/Preferences/io.itch.mac.helper.plist",
-        "~/Library/Preferences/io.itch.mac.plist"
-      ],
-      "signal": {
-      }
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/itch/",
+            "~/Library/Preferences/io.itch.mac.helper.plist",
+            "~/Library/Preferences/io.itch.mac.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

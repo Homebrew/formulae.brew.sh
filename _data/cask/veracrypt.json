@@ -17,19 +17,27 @@
   "sha256": "8acfdcfca5b64218431b990d1018b0c54feb508207640e819397cdbe701ae1eb",
   "artifacts": [
     {
-      "pkgutil": "com.idrix.pkg.veracrypt",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "com.idrix.pkg.veracrypt"
+        }
+      ]
     },
-    "VeraCrypt_Installer.pkg (Pkg)",
     {
-      "trash": [
-        "~/Library/Application Support/VeraCrypt",
-        "~/Library/Preferences/org.idrix.VeraCrypt.plist",
-        "~/Library/Saved Application State/org.idrix.VeraCrypt.savedState"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "VeraCrypt_Installer.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/VeraCrypt",
+            "~/Library/Preferences/org.idrix.VeraCrypt.plist",
+            "~/Library/Saved Application State/org.idrix.VeraCrypt.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

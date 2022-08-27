@@ -17,27 +17,35 @@
   "sha256": "87be3d61e5406cd55e3c8ff50567e255379b085d1eeca330899186f7ad96b117",
   "artifacts": [
     {
-      "pkgutil": [
-        "com.nulana.rxagentmac.daemon",
-        "com.nulana.rxagentmac"
-      ],
-      "signal": {
-        "KILL": "com.nulana.rxagentmac"
-      },
-      "launchctl": [
-        "com.nulana.rxagentmac.daemon",
-        "com.nulana.rxagentmac.gui",
-        "com.nulana.rxagentmac.rc",
-        "com.nulana.rxagentmac.user"
-      ],
-      "login_item": "Remotix Agent",
-      "quit": "com.nulana.rxagentmac",
-      "delete": [
-        "/Library/LaunchAgents/com.nulana.rxagentmac.user.plist",
-        "/Library/LaunchDaemons/com.nulana.rxagentmac.daemon.plist"
+      "uninstall": [
+        {
+          "pkgutil": [
+            "com.nulana.rxagentmac.daemon",
+            "com.nulana.rxagentmac"
+          ],
+          "signal": {
+            "KILL": "com.nulana.rxagentmac"
+          },
+          "launchctl": [
+            "com.nulana.rxagentmac.daemon",
+            "com.nulana.rxagentmac.gui",
+            "com.nulana.rxagentmac.rc",
+            "com.nulana.rxagentmac.user"
+          ],
+          "login_item": "Remotix Agent",
+          "quit": "com.nulana.rxagentmac",
+          "delete": [
+            "/Library/LaunchAgents/com.nulana.rxagentmac.user.plist",
+            "/Library/LaunchDaemons/com.nulana.rxagentmac.daemon.plist"
+          ]
+        }
       ]
     },
-    "RemotixAgent-1.5.19-23333.pkg (Pkg)"
+    {
+      "pkg": [
+        "RemotixAgent-1.5.19-23333.pkg"
+      ]
+    }
   ],
   "caveats": null,
   "depends_on": {

@@ -19,21 +19,27 @@
   "sha256": "3baa9efeacc2b73a8fff5839f07cb97efe109c62886f4d56c06c7d8005950e4a",
   "artifacts": [
     {
-      "pkgutil": [
-        "com.xrite.i1profiler.*",
-        "com.xrite.xritedeviceservices.*",
-        "com.xrite.hasp.installer.*"
-      ],
-      "launchctl": [
-        "com.aladdin.aksusbd",
-        "com.aladdin.hasplmd"
-      ],
-      "delete": "/Applications/i1Profiler/i1Profiler.app",
-      "rmdir": "/Applications/i1Profiler",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": [
+            "com.xrite.i1profiler.*",
+            "com.xrite.xritedeviceservices.*",
+            "com.xrite.hasp.installer.*"
+          ],
+          "launchctl": [
+            "com.aladdin.aksusbd",
+            "com.aladdin.hasplmd"
+          ],
+          "delete": "/Applications/i1Profiler/i1Profiler.app",
+          "rmdir": "/Applications/i1Profiler"
+        }
+      ]
     },
-    "i1Profiler.pkg (Pkg)"
+    {
+      "pkg": [
+        "i1Profiler.pkg"
+      ]
+    }
   ],
   "caveats": "You must reboot for the installation of i1profiler to take effect.\n",
   "depends_on": {

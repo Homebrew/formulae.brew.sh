@@ -17,28 +17,38 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "kext": "com.paragon-software.filesystems.ntfs",
-      "launchctl": "com.paragon-software.ntfs*",
-      "pkgutil": "com.paragon-software.pkg.ntfs",
-      "quit": "com.paragon-software.ntfs*",
-      "signal": {
-        "KILL": "com.paragon-software.ntfs.notification-agent"
-      }
+      "uninstall": [
+        {
+          "kext": "com.paragon-software.filesystems.ntfs",
+          "launchctl": "com.paragon-software.ntfs*",
+          "pkgutil": "com.paragon-software.pkg.ntfs",
+          "quit": "com.paragon-software.ntfs*",
+          "signal": {
+            "KILL": "com.paragon-software.ntfs.notification-agent"
+          }
+        }
+      ]
     },
     {
-      "path": "Install NTFS for Mac.app"
+      "installer": [
+        {
+          "manual": "Install NTFS for Mac.app"
+        }
+      ]
     },
     {
-      "trash": [
-        "~/Library/Application Support/com.paragon-software.ntfs.*",
-        "~/Library/Caches/com.paragon-software.ntfs.fsapp",
-        "~/Library/HTTPStorages/com.paragon-software.ntfs.*",
-        "~/Library/Preferences/com.paragon-software.ntfs.fsapp.plist",
-        "~/Library/Saved Application State/com.paragon-software.ntfs.fsapp.savedState",
-        "~/Library/WebKit/com.paragon-software.ntfs.fsapp"
-      ],
-      "signal": {
-      }
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/com.paragon-software.ntfs.*",
+            "~/Library/Caches/com.paragon-software.ntfs.fsapp",
+            "~/Library/HTTPStorages/com.paragon-software.ntfs.*",
+            "~/Library/Preferences/com.paragon-software.ntfs.fsapp.plist",
+            "~/Library/Saved Application State/com.paragon-software.ntfs.fsapp.savedState",
+            "~/Library/WebKit/com.paragon-software.ntfs.fsapp"
+          ]
+        }
+      ]
     }
   ],
   "caveats": "paragon-ntfs requires a kernel extension to work.\nIf the installation fails, retry after you enable it in:\n  System Preferences → Security & Privacy → General\n\nFor more information, refer to vendor documentation or this Apple Technical Note:\n  https://developer.apple.com/library/content/technotes/tn2459/_index.html\n",

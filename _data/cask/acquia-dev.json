@@ -17,30 +17,38 @@
   "sha256": "91c4d524ed5e218897a7284480e616f833e59e91cadafa966563e8034fdee19a",
   "artifacts": [
     {
-      "script": {
-        "executable": "/Applications/DevDesktop/uninstall.app/Contents/MacOS/installbuilder.sh",
-        "args": [
-          "--mode",
-          "unattended",
-          "--unattendedmodeui",
-          "none"
-        ],
-        "sudo": "true"
-      },
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "script": {
+            "executable": "/Applications/DevDesktop/uninstall.app/Contents/MacOS/installbuilder.sh",
+            "args": [
+              "--mode",
+              "unattended",
+              "--unattendedmodeui",
+              "none"
+            ],
+            "sudo": "true"
+          }
+        }
+      ]
     },
     {
-      "path": "Acquia Dev Desktop Installer.app"
+      "installer": [
+        {
+          "manual": "Acquia Dev Desktop Installer.app"
+        }
+      ]
     },
     {
-      "trash": [
-        "~/.acquia",
-        "~/Library/Caches/com.acquia.acquia-dev-desktop2",
-        "~/Library/Saved Application State/com.acquia.acquia-dev-desktop2.savedState"
-      ],
-      "signal": {
-      }
+      "zap": [
+        {
+          "trash": [
+            "~/.acquia",
+            "~/Library/Caches/com.acquia.acquia-dev-desktop2",
+            "~/Library/Saved Application State/com.acquia.acquia-dev-desktop2.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": "acquia-dev has been officially discontinued upstream.\nIt may stop working correctly (or at all) in recent versions of macOS.\n",

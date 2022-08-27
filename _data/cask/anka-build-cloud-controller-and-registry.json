@@ -17,22 +17,30 @@
   "sha256": "7ffd3733c760cbe3c11426ecbea95c93f3a960c7373c436d86f554c6154584ff",
   "artifacts": [
     {
-      "script": {
-        "executable": "/Library/Application Support/Veertu/Anka/tools/controller/uninstall.sh",
-        "args": [
-          "-f"
-        ],
-        "sudo": "true"
-      },
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "script": {
+            "executable": "/Library/Application Support/Veertu/Anka/tools/controller/uninstall.sh",
+            "args": [
+              "-f"
+            ],
+            "sudo": "true"
+          }
+        }
+      ]
     },
-    "AnkaControllerRegistry-1.27.0-76c64d00.pkg (Pkg)",
     {
-      "trash": "/Library/Logs/Veertu/AnkaController",
-      "rmdir": "/Library/Application Support/Veertu/Anka/registry",
-      "signal": {
-      }
+      "pkg": [
+        "AnkaControllerRegistry-1.27.0-76c64d00.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": "/Library/Logs/Veertu/AnkaController",
+          "rmdir": "/Library/Application Support/Veertu/Anka/registry"
+        }
+      ]
     }
   ],
   "caveats": "Installing anka-build-cloud-controller-and-registry means you have AGREED to the license at:\n  https://veertu.com/terms-and-conditions/\n",

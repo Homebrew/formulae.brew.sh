@@ -17,23 +17,33 @@
   "sha256": "f170957702c48f96c0fa9706b72f6d6048bcc87be393eb1d01289c20e1111325",
   "artifacts": [
     {
-      "delete": [
-        "/Library/Application Support/Background Music",
-        "/Library/Audio/Plug-Ins/HAL/Background Music Device.driver",
-        "$(brew --prefix)/libexec/BGMXPCHelper.xpc"
-      ],
-      "pkgutil": "com.bearisdriving.BGM",
-      "quit": "com.bearisdriving.BGM.App",
-      "launchctl": "com.bearisdriving.BGM.XPCHelper",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": [
+            "/Library/Application Support/Background Music",
+            "/Library/Audio/Plug-Ins/HAL/Background Music Device.driver",
+            "$(brew --prefix)/libexec/BGMXPCHelper.xpc"
+          ],
+          "pkgutil": "com.bearisdriving.BGM",
+          "quit": "com.bearisdriving.BGM.App",
+          "launchctl": "com.bearisdriving.BGM.XPCHelper"
+        }
+      ]
     },
-    "BackgroundMusic-0.4.0.pkg (Pkg)",
-    "uninstall_postflight (Postflight Block)",
     {
-      "trash": "~/Library/Preferences/com.bearisdriving.BGM.App.plist",
-      "signal": {
-      }
+      "pkg": [
+        "BackgroundMusic-0.4.0.pkg"
+      ]
+    },
+    {
+      "uninstall_postflight": null
+    },
+    {
+      "zap": [
+        {
+          "trash": "~/Library/Preferences/com.bearisdriving.BGM.App.plist"
+        }
+      ]
     }
   ],
   "caveats": null,

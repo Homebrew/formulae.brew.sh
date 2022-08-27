@@ -17,13 +17,19 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "pkgutil": "com.haystacksoftware.ArqCloudBackup",
-      "quit": "com.haystacksoftware.ArqCloudBackup",
-      "launchctl": "com.haystacksoftware.arqcloudagent",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "com.haystacksoftware.ArqCloudBackup",
+          "quit": "com.haystacksoftware.ArqCloudBackup",
+          "launchctl": "com.haystacksoftware.arqcloudagent"
+        }
+      ]
     },
-    "Install Arq Cloud Backup.pkg (Pkg)"
+    {
+      "pkg": [
+        "Install Arq Cloud Backup.pkg"
+      ]
+    }
   ],
   "caveats": null,
   "depends_on": {

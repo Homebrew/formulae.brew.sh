@@ -17,21 +17,29 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "quit": "finalshellinstall.all",
-      "pkgutil": "finalshellinstall.all",
-      "delete": "/Applications/FinalShell.app",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "finalshellinstall.all",
+          "pkgutil": "finalshellinstall.all",
+          "delete": "/Applications/FinalShell.app"
+        }
+      ]
     },
-    "finalshell_install.pkg (Pkg)",
     {
-      "trash": [
-        "~/fsdownload",
-        "~/Library/FinalShell",
-        "~/Library/Saved Application State/myssh.savedState"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "finalshell_install.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/fsdownload",
+            "~/Library/FinalShell",
+            "~/Library/Saved Application State/myssh.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

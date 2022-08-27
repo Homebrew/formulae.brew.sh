@@ -17,25 +17,33 @@
   "sha256": "00bdac95834d5ba8578c84e2bd6a3419a496c656c984b194f0cd0f89a46b3a56",
   "artifacts": [
     {
-      "delete": "/Applications/Lightkey.app",
-      "pkgutil": [
-        "de.monospc.lightkey.pkg.App",
-        "de.monospc.lightkey.pkg.documentation",
-        "de.monospc.lightkey.pkg.OLA"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": "/Applications/Lightkey.app",
+          "pkgutil": [
+            "de.monospc.lightkey.pkg.App",
+            "de.monospc.lightkey.pkg.documentation",
+            "de.monospc.lightkey.pkg.OLA"
+          ]
+        }
+      ]
     },
-    "LightkeyInstaller.pkg (Pkg)",
     {
-      "trash": [
-        "~/Library/Application Support/Lightkey",
-        "~/Library/Caches/de.monospc.Lightkey",
-        "~/Library/Logs/Lightkey OLA.log",
-        "~/Library/Preferences/de.monospc.Lightkey.plist"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "LightkeyInstaller.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/Lightkey",
+            "~/Library/Caches/de.monospc.Lightkey",
+            "~/Library/Logs/Lightkey OLA.log",
+            "~/Library/Preferences/de.monospc.Lightkey.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

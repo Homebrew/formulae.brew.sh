@@ -17,29 +17,37 @@
   "sha256": "61cbbb8a770ad058dcb007f8746d5fc469abe57bdbad3fe4b060bbfe529c79d5",
   "artifacts": [
     {
-      "quit": "com.plexapp.plexmediaserver",
-      "launchctl": "com.plexapp.mediaserver",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "com.plexapp.plexmediaserver",
+          "launchctl": "com.plexapp.mediaserver"
+        }
+      ]
     },
-    [
-      "Plex Media Server.app"
-    ],
-    [
-      "/Applications/Plex Media Server.app/Contents/MacOS/Plex Media Scanner",
-      {
-        "target": "plexms"
-      }
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/Plex Media Server/",
-        "~/Library/Caches/PlexMediaServer/",
-        "~/Library/Logs/Plex Media Server/",
-        "~/Library/Preferences/com.plexapp.plexmediaserver.plist"
-      ],
-      "signal": {
-      }
+      "app": [
+        "Plex Media Server.app"
+      ]
+    },
+    {
+      "binary": [
+        "/Applications/Plex Media Server.app/Contents/MacOS/Plex Media Scanner",
+        {
+          "target": "plexms"
+        }
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/Plex Media Server/",
+            "~/Library/Caches/PlexMediaServer/",
+            "~/Library/Logs/Plex Media Server/",
+            "~/Library/Preferences/com.plexapp.plexmediaserver.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

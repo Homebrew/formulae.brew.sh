@@ -17,34 +17,42 @@
   "sha256": "a411181c16daf95b9b9c8f974d5ebe99bd9aa1840a9dc35c0443d3235a38d7dc",
   "artifacts": [
     {
-      "pkgutil": [
-        "com.microsoft.MSTeamsAudioDevice",
-        "com.microsoft.teams"
-      ],
-      "launchctl": "com.microsoft.teams.TeamsUpdaterDaemon",
-      "delete": [
-        "/Library/Logs/Microsoft/Teams",
-        "/Library/Preferences/com.microsoft.teams.plist"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": [
+            "com.microsoft.MSTeamsAudioDevice",
+            "com.microsoft.teams"
+          ],
+          "launchctl": "com.microsoft.teams.TeamsUpdaterDaemon",
+          "delete": [
+            "/Library/Logs/Microsoft/Teams",
+            "/Library/Preferences/com.microsoft.teams.plist"
+          ]
+        }
+      ]
     },
-    "Teams_osx.pkg (Pkg)",
     {
-      "trash": [
-        "~/Library/Application Support/com.microsoft.teams",
-        "~/Library/Application Support/Microsoft/Teams",
-        "~/Library/Application Support/Teams",
-        "~/Library/Caches/com.microsoft.teams",
-        "~/Library/Cookies/com.microsoft.teams.binarycookies",
-        "~/Library/Logs/Microsoft Teams",
-        "~/Library/Preferences/com.microsoft.teams.plist",
-        "~/Library/Saved Application State/com.microsoft.teams.savedState",
-        "~/Library/WebKit/com.microsoft.teams"
-      ],
-      "rmdir": "~/Library/Application Support/Microsoft",
-      "signal": {
-      }
+      "pkg": [
+        "Teams_osx.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/com.microsoft.teams",
+            "~/Library/Application Support/Microsoft/Teams",
+            "~/Library/Application Support/Teams",
+            "~/Library/Caches/com.microsoft.teams",
+            "~/Library/Cookies/com.microsoft.teams.binarycookies",
+            "~/Library/Logs/Microsoft Teams",
+            "~/Library/Preferences/com.microsoft.teams.plist",
+            "~/Library/Saved Application State/com.microsoft.teams.savedState",
+            "~/Library/WebKit/com.microsoft.teams"
+          ],
+          "rmdir": "~/Library/Application Support/Microsoft"
+        }
+      ]
     }
   ],
   "caveats": null,

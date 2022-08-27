@@ -17,27 +17,35 @@
   "sha256": "b4258f782cadba07621d23344706caf0a18ff2f0c3d7b66a143e1d1a39b47e9a",
   "artifacts": [
     {
-      "quit": "com.datadoghq.agent",
-      "launchctl": "com.datadoghq.agent",
-      "pkgutil": "com.datadoghq.agent",
-      "delete": [
-        "/Applications/Datadog Agent.app",
-        "$(brew --prefix)/bin/datadog-agent"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "com.datadoghq.agent",
+          "launchctl": "com.datadoghq.agent",
+          "pkgutil": "com.datadoghq.agent",
+          "delete": [
+            "/Applications/Datadog Agent.app",
+            "$(brew --prefix)/bin/datadog-agent"
+          ]
+        }
+      ]
     },
     {
-      "path": "datadog-agent-7.38.2-1.pkg"
+      "installer": [
+        {
+          "manual": "datadog-agent-7.38.2-1.pkg"
+        }
+      ]
     },
     {
-      "trash": [
-        "~/.datadog-agent",
-        "~/Library/LaunchAgents/com.datadoghq.agent.plist",
-        "/opt/datadog-agent"
-      ],
-      "signal": {
-      }
+      "zap": [
+        {
+          "trash": [
+            "~/.datadog-agent",
+            "~/Library/LaunchAgents/com.datadoghq.agent.plist",
+            "/opt/datadog-agent"
+          ]
+        }
+      ]
     }
   ],
   "caveats": "You will need to update /opt/datadog-agent/etc/datadog.yaml and replace APIKEY with your api key\n\nIf you ever want to start/stop the Agent, please use the Datadog Agent App or datadog-agent command.\nIt will start automatically at login, if you want to enable it at startup, run these commands:\n\nsudo cp '/opt/datadog-agent/etc/com.datadoghq.agent.plist.example' /Library/LaunchDaemons/com.datadoghq.agent.plist\nsudo launchctl load -w /Library/LaunchDaemons/com.datadoghq.agent.plist\n",

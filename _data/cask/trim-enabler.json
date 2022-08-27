@@ -17,29 +17,35 @@
   "sha256": "e26f27030303c41cfcfe59fe72ad43202db666bcaaf9047ebf52cbad87896db5",
   "artifacts": [
     {
-      "delete": "/Library/PrivilegedHelperTools/org.cindori.TEHelper",
-      "launchctl": "org.cindori.TEHelper",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": "/Library/PrivilegedHelperTools/org.cindori.TEHelper",
+          "launchctl": "org.cindori.TEHelper"
+        }
+      ]
     },
-    [
-      "Trim Enabler.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/CrashReporter/Trim Enabler_4.plist",
-        "~/Library/Application Support/org.cindori.TrimEnabler4",
-        "~/Library/Application Support/Trim Enabler",
-        "~/Library/Caches/org.cindori.TrimEnabler4",
-        "~/Library/Caches/com.plausiblelabs.crashreporter.data/org.cindori.TrimEnabler4",
-        "~/Library/Cookies/org.cindori.TrimEnabler4.binarycookies",
-        "~/Library/Logs/DiagnosticReports/Trim Enabler_4.crash",
-        "~/Library/Preferences/org.cindori.TrimEnabler.plist",
-        "~/Library/Preferences/org.cindori.TrimEnabler4.plist",
-        "~/Library/Saved Application State/org.cindori.TrimEnabler4.savedState"
-      ],
-      "signal": {
-      }
+      "app": [
+        "Trim Enabler.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/CrashReporter/Trim Enabler_4.plist",
+            "~/Library/Application Support/org.cindori.TrimEnabler4",
+            "~/Library/Application Support/Trim Enabler",
+            "~/Library/Caches/org.cindori.TrimEnabler4",
+            "~/Library/Caches/com.plausiblelabs.crashreporter.data/org.cindori.TrimEnabler4",
+            "~/Library/Cookies/org.cindori.TrimEnabler4.binarycookies",
+            "~/Library/Logs/DiagnosticReports/Trim Enabler_4.crash",
+            "~/Library/Preferences/org.cindori.TrimEnabler.plist",
+            "~/Library/Preferences/org.cindori.TrimEnabler4.plist",
+            "~/Library/Saved Application State/org.cindori.TrimEnabler4.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

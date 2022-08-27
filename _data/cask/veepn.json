@@ -17,21 +17,27 @@
   "sha256": "6d55af3b8150821cd7de5f62a3d986e0dcc29e1415d2d4a947f6c40748ac63b0",
   "artifacts": [
     {
-      "launchctl": "com.veepn.macos.helper",
-      "delete": "/Library/PrivilegedHelperTools/com.veepn.macos.helper",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "launchctl": "com.veepn.macos.helper",
+          "delete": "/Library/PrivilegedHelperTools/com.veepn.macos.helper"
+        }
+      ]
     },
-    [
-      "VeePN.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/com.veepn.macos.direct",
-        "~/Library/Preferences/com.veepn.macos.direct.plist"
-      ],
-      "signal": {
-      }
+      "app": [
+        "VeePN.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/com.veepn.macos.direct",
+            "~/Library/Preferences/com.veepn.macos.direct.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

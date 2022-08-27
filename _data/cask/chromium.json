@@ -16,25 +16,33 @@
   "outdated": false,
   "sha256": "no_check",
   "artifacts": [
-    "preflight (Preflight Block)",
-    [
-      "chrome-mac/Chromium.app"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/chromium/latest/chromium.wrapper.sh",
-      {
-        "target": "chromium"
-      }
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/Chromium",
-        "~/Library/Caches/Chromium",
-        "~/Library/Preferences/org.chromium.Chromium.plist",
-        "~/Library/Saved Application State/org.chromium.Chromium.savedState"
-      ],
-      "signal": {
-      }
+      "preflight": null
+    },
+    {
+      "app": [
+        "chrome-mac/Chromium.app"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/chromium/latest/chromium.wrapper.sh",
+        {
+          "target": "chromium"
+        }
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/Chromium",
+            "~/Library/Caches/Chromium",
+            "~/Library/Preferences/org.chromium.Chromium.plist",
+            "~/Library/Saved Application State/org.chromium.Chromium.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

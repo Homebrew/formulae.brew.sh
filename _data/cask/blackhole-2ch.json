@@ -17,13 +17,21 @@
   "sha256": "35bee2f2cae83c01360e9c9d75c025e5da9ecebf7a38c230fa683735aa25eb92",
   "artifacts": [
     {
-      "quit": "com.apple.audio.AudioMIDISetup",
-      "pkgutil": "audio.existential.BlackHole2ch",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "com.apple.audio.AudioMIDISetup",
+          "pkgutil": "audio.existential.BlackHole2ch"
+        }
+      ]
     },
-    "BlackHole2ch.v0.4.0.pkg (Pkg)",
-    "uninstall_postflight (Postflight Block)"
+    {
+      "pkg": [
+        "BlackHole2ch.v0.4.0.pkg"
+      ]
+    },
+    {
+      "uninstall_postflight": null
+    }
   ],
   "caveats": null,
   "depends_on": {

@@ -16,20 +16,26 @@
   "outdated": false,
   "sha256": "491be0e2dd7cd903d094e671aa7e2b7797332addbd60d962e79eb731110a968a",
   "artifacts": [
-    "preflight (Preflight Block)",
     {
-      "delete": "/Applications/BiglyBT",
-      "signal": {
-      }
+      "preflight": null
     },
     {
-      "trash": [
-        "~/Library/Application Support/BiglyBT",
-        "~/Library/Preferences/com.biglybt.plist",
-        "~/Library/Saved Application State/com.biglybt.savedState"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": "/Applications/BiglyBT"
+        }
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/BiglyBT",
+            "~/Library/Preferences/com.biglybt.plist",
+            "~/Library/Saved Application State/com.biglybt.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": "biglybt requires Java 8+. You can install the latest version with:\n  brew install --cask temurin\n",

@@ -17,22 +17,28 @@
   "sha256": "c88ec00075f9c0504f793ec354be9752c700717deefe2164a67d6daeb90ff48d",
   "artifacts": [
     {
-      "launchctl": "com.sempliva.TilesHelper",
-      "quit": "com.sempliva.Tiles",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "launchctl": "com.sempliva.TilesHelper",
+          "quit": "com.sempliva.Tiles"
+        }
+      ]
     },
-    [
-      "Tiles.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/com.sempliva.Tiles",
-        "~/Library/Caches/com.sempliva.Tiles",
-        "~/Library/Preferences/com.semplive.Tiles.plist"
-      ],
-      "signal": {
-      }
+      "app": [
+        "Tiles.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/com.sempliva.Tiles",
+            "~/Library/Caches/com.sempliva.Tiles",
+            "~/Library/Preferences/com.semplive.Tiles.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

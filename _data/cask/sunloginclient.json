@@ -18,20 +18,26 @@
   "sha256": "bee6c4dd52c1d300b012bce1b70cc3bcce29c0feccdfb57ba6cb248e4433468f",
   "artifacts": [
     {
-      "quit": "com.oray.sunlogin.macclient",
-      "pkgutil": "com.oray.sunlogin.macclient",
-      "launchctl": [
-        "com.oray.sunlogin ()",
-        "com.oray.sunlogin.agent",
-        "com.oray.sunlogin.desktopagent",
-        "com.oray.sunlogin.helper",
-        "com.oray.sunlogin.service",
-        "com.oray.sunlogin.startup"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "com.oray.sunlogin.macclient",
+          "pkgutil": "com.oray.sunlogin.macclient",
+          "launchctl": [
+            "com.oray.sunlogin ()",
+            "com.oray.sunlogin.agent",
+            "com.oray.sunlogin.desktopagent",
+            "com.oray.sunlogin.helper",
+            "com.oray.sunlogin.service",
+            "com.oray.sunlogin.startup"
+          ]
+        }
+      ]
     },
-    "SunloginClient.pkg (Pkg)"
+    {
+      "pkg": [
+        "SunloginClient.pkg"
+      ]
+    }
   ],
   "caveats": null,
   "depends_on": {

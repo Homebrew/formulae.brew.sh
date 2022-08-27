@@ -17,19 +17,27 @@
   "sha256": "6b8e07c76c896ee5b79708f3317deb1197ce6c1f87acd45ee740c4423b5a8645",
   "artifacts": [
     {
-      "quit": "de.jabc.cinco.meta.product.product",
-      "pkgutil": "de.jabc.cinco.meta.product.product.cinco.pkg.component",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "de.jabc.cinco.meta.product.product",
+          "pkgutil": "de.jabc.cinco.meta.product.product.cinco.pkg.component"
+        }
+      ]
     },
-    "Install Cinco.pkg (Pkg)",
     {
-      "trash": [
-        "~/Library/Preferences/de.jabc.cinco.meta.product.product.plist",
-        "~/Library/Saved Application State/de.jabc.cinco.meta.product.product.savedState"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "Install Cinco.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Preferences/de.jabc.cinco.meta.product.product.plist",
+            "~/Library/Saved Application State/de.jabc.cinco.meta.product.product.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": "Installing cinco means you have AGREED to the license at:\n  https://www.eclipse.org/legal/epl-v10.html\n\ncinco requires Java 11. You can install it with:\n  brew install --cask homebrew/cask-versions/temurin11\n",

@@ -17,27 +17,35 @@
   "sha256": "69ab972ca0b84068003cbabe5ba9bb45841ac51b668f500d8e71123737abc954",
   "artifacts": [
     {
-      "quit": "org.godotengine.godot",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "org.godotengine.godot"
+        }
+      ]
     },
-    [
-      "Godot.app"
-    ],
-    [
-      "/Applications/Godot.app/Contents/MacOS/Godot",
-      {
-        "target": "godot"
-      }
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/Godot",
-        "~/Library/Caches/Godot",
-        "~/Library/Saved Application State/org.godotengine.godot.savedState"
-      ],
-      "signal": {
-      }
+      "app": [
+        "Godot.app"
+      ]
+    },
+    {
+      "binary": [
+        "/Applications/Godot.app/Contents/MacOS/Godot",
+        {
+          "target": "godot"
+        }
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/Godot",
+            "~/Library/Caches/Godot",
+            "~/Library/Saved Application State/org.godotengine.godot.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

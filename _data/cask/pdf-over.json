@@ -17,13 +17,17 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "trash": "~/.pdf-over",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "trash": "~/.pdf-over"
+        }
+      ]
     },
-    [
-      "PDF-Over.app"
-    ]
+    {
+      "app": [
+        "PDF-Over.app"
+      ]
+    }
   ],
   "caveats": "pdf-over requires Java 8+. You can install the latest version with:\n  brew install --cask temurin\n",
   "depends_on": {

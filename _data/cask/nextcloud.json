@@ -18,26 +18,36 @@
   "sha256": "1d7de94dd4028f57121ac896255b6d560c378d10f85a849f719c664861a57306",
   "artifacts": [
     {
-      "pkgutil": "com.nextcloud.desktopclient",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "com.nextcloud.desktopclient"
+        }
+      ]
     },
-    "Nextcloud-3.5.4.pkg (Pkg)",
-    [
-      "/Applications/Nextcloud.app/Contents/MacOS/nextcloudcmd"
-    ],
     {
-      "trash": [
-        "~/Library/Application Scripts/com.nextcloud.desktopclient.FinderSyncExt",
-        "~/Library/Application Support/Nextcloud",
-        "~/Library/Caches/Nextcloud",
-        "~/Library/Containers/com.nextcloud.desktopclient.FinderSyncExt",
-        "~/Library/Group Containers/com.nextcloud.desktopclient",
-        "~/Library/Preferences/com.nextcloud.desktopclient.plist",
-        "~/Library/Preferences/Nextcloud"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "Nextcloud-3.5.4.pkg"
+      ]
+    },
+    {
+      "binary": [
+        "/Applications/Nextcloud.app/Contents/MacOS/nextcloudcmd"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Scripts/com.nextcloud.desktopclient.FinderSyncExt",
+            "~/Library/Application Support/Nextcloud",
+            "~/Library/Caches/Nextcloud",
+            "~/Library/Containers/com.nextcloud.desktopclient.FinderSyncExt",
+            "~/Library/Group Containers/com.nextcloud.desktopclient",
+            "~/Library/Preferences/com.nextcloud.desktopclient.plist",
+            "~/Library/Preferences/Nextcloud"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

@@ -20,31 +20,41 @@
   "sha256": "34f9308b099d03de611411741d9ead2e57d3cc1eca7f15c3aeff69ab2c783095",
   "artifacts": [
     {
-      "launchctl": [
-        "com.cyxtera.appgate.sdp.client.agent",
-        "com.cyxtera.appgate.sdp.helper",
-        "com.cyxtera.appgate.sdp.tun",
-        "com.cyxtera.appgate.sdp.updater"
-      ],
-      "quit": [
-        "com.cyxtera.appgate.helper",
-        "com.cyxtera.appgate.sdp"
-      ],
-      "signal": {
-        "QUIT": "com.cyxtera.appgate"
-      },
-      "pkgutil": "com.appgate.pkg.appgatetun.component"
+      "uninstall": [
+        {
+          "launchctl": [
+            "com.cyxtera.appgate.sdp.client.agent",
+            "com.cyxtera.appgate.sdp.helper",
+            "com.cyxtera.appgate.sdp.tun",
+            "com.cyxtera.appgate.sdp.updater"
+          ],
+          "quit": [
+            "com.cyxtera.appgate.helper",
+            "com.cyxtera.appgate.sdp"
+          ],
+          "signal": {
+            "QUIT": "com.cyxtera.appgate"
+          },
+          "pkgutil": "com.appgate.pkg.appgatetun.component"
+        }
+      ]
     },
-    "AppGate SDP Installer.pkg (Pkg)",
     {
-      "trash": [
-        "~/Library/Application Support/appgate-ui",
-        "~/Library/Caches/com.cyxtera.appgate.sdp.uninstall",
-        "~/Library/Preferences/com.cyxtera.appgate.sdp*",
-        "~/Library/Saved Application State/com.cyxtera.appgate.sdp.savedState"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "AppGate SDP Installer.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/appgate-ui",
+            "~/Library/Caches/com.cyxtera.appgate.sdp.uninstall",
+            "~/Library/Preferences/com.cyxtera.appgate.sdp*",
+            "~/Library/Saved Application State/com.cyxtera.appgate.sdp.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

@@ -17,13 +17,19 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "pkgutil": "com.Aviatrix.VPNClient",
-      "delete": "/Applications/Aviatrix VPN Client.app",
-      "launchctl": "aviatrix.vpn.client.rp.plist",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "com.Aviatrix.VPNClient",
+          "delete": "/Applications/Aviatrix VPN Client.app",
+          "launchctl": "aviatrix.vpn.client.rp.plist"
+        }
+      ]
     },
-    "AVPNC_mac.pkg (Pkg)"
+    {
+      "pkg": [
+        "AVPNC_mac.pkg"
+      ]
+    }
   ],
   "caveats": null,
   "depends_on": {

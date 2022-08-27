@@ -17,19 +17,25 @@
   "sha256": "3d1e48e04303f930bf09cc9299214ab418e9cc3099d4c1e6d219c2be93d8acd8",
   "artifacts": [
     {
-      "launchctl": "com.expressvpn.ExpressVPN.agent",
-      "script": {
-        "executable": "/Applications/ExpressVPN.app/Contents/Resources/uninstall.tool",
-        "input": [
-          "Yes"
-        ],
-        "sudo": "true"
-      },
-      "pkgutil": "com.expressvpn.ExpressVPN",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "launchctl": "com.expressvpn.ExpressVPN.agent",
+          "script": {
+            "executable": "/Applications/ExpressVPN.app/Contents/Resources/uninstall.tool",
+            "input": [
+              "Yes"
+            ],
+            "sudo": "true"
+          },
+          "pkgutil": "com.expressvpn.ExpressVPN"
+        }
+      ]
     },
-    "expressvpn_mac_11.6.0.69298_release.pkg (Pkg)"
+    {
+      "pkg": [
+        "expressvpn_mac_11.6.0.69298_release.pkg"
+      ]
+    }
   ],
   "caveats": null,
   "depends_on": {

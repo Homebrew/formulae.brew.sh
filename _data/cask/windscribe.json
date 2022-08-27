@@ -17,37 +17,45 @@
   "sha256": "a9b9df3132d28e3887b8a1b173e2227a431385caf64c92840adc9568b416a959",
   "artifacts": [
     {
-      "launchctl": [
-        "com.windscribe.helper.macos",
-        "com.windscribe.launcher.macos"
-      ],
-      "quit": [
-        "com.windscribe.gui.macos",
-        "com.windscribe.helper.macos",
-        "com.windscribe.launcher.macos"
-      ],
-      "delete": [
-        "/Applications/Windscribe.app",
-        "/Library/LaunchDaemons/com.windscribe.helper.macos.plist",
-        "/Library/PrivilegedHelperTools/com.windscribe.helper.macos",
-        "$(brew --prefix)/bin/windscribe-cli"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "launchctl": [
+            "com.windscribe.helper.macos",
+            "com.windscribe.launcher.macos"
+          ],
+          "quit": [
+            "com.windscribe.gui.macos",
+            "com.windscribe.helper.macos",
+            "com.windscribe.launcher.macos"
+          ],
+          "delete": [
+            "/Applications/Windscribe.app",
+            "/Library/LaunchDaemons/com.windscribe.helper.macos.plist",
+            "/Library/PrivilegedHelperTools/com.windscribe.helper.macos",
+            "$(brew --prefix)/bin/windscribe-cli"
+          ]
+        }
+      ]
     },
     {
-      "path": "WindscribeInstaller.app"
+      "installer": [
+        {
+          "manual": "WindscribeInstaller.app"
+        }
+      ]
     },
     {
-      "trash": [
-        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.windscribe.launcher.macos.sfl*",
-        "~/Library/Application Support/Windscribe",
-        "~/Library/Preferences/com.aaa.windscribe.windscribe.plist",
-        "~/Library/Preferences/com.windscribe.Windscribe2.plist",
-        "~/Library/Saved Application State/com.windscribe.gui.macos.savedState"
-      ],
-      "signal": {
-      }
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.windscribe.launcher.macos.sfl*",
+            "~/Library/Application Support/Windscribe",
+            "~/Library/Preferences/com.aaa.windscribe.windscribe.plist",
+            "~/Library/Preferences/com.windscribe.Windscribe2.plist",
+            "~/Library/Saved Application State/com.windscribe.gui.macos.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

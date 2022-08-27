@@ -18,21 +18,25 @@
   "sha256": "36e62eab4ef8d2b004c6886182fc49830afdf56f4f14f9be07adfe552d7140d2",
   "artifacts": [
     {
-      "delete": [
-        "/Library/Application Support/io.github.halo.linkdaemon",
-        "/Library/Application Support/LinkLiar"
-      ],
-      "launchctl": [
-        "io.github.halo.linkdaemon",
-        "io.github.halo.linkhelper"
-      ],
-      "quit": "io.github.halo.LinkLiar",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": [
+            "/Library/Application Support/io.github.halo.linkdaemon",
+            "/Library/Application Support/LinkLiar"
+          ],
+          "launchctl": [
+            "io.github.halo.linkdaemon",
+            "io.github.halo.linkhelper"
+          ],
+          "quit": "io.github.halo.LinkLiar"
+        }
+      ]
     },
-    [
-      "LinkLiar.app"
-    ]
+    {
+      "app": [
+        "LinkLiar.app"
+      ]
+    }
   ],
   "caveats": null,
   "depends_on": {

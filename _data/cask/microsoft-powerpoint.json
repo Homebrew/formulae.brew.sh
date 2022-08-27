@@ -21,27 +21,44 @@
   "sha256": "50429e4ec3cbfd762b0dccaea1a74869581a0481e2c1ab7022a62f9e6edeb0ac",
   "artifacts": [
     {
-      "pkgutil": [
-        "com.microsoft.package.Microsoft_PowerPoint.app",
-        "com.microsoft.pkg.licensing"
-      ],
-      "delete": "/Applications/Microsoft PowerPoint.app",
-      "launchctl": "com.microsoft.office.licensingV2.helper",
-      "quit": "com.microsoft.autoupdate2",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": [
+            "com.microsoft.package.Microsoft_PowerPoint.app",
+            "com.microsoft.pkg.licensing"
+          ],
+          "delete": "/Applications/Microsoft PowerPoint.app",
+          "launchctl": "com.microsoft.office.licensingV2.helper",
+          "quit": "com.microsoft.autoupdate2"
+        }
+      ]
     },
-    "Microsoft_PowerPoint_16.64.22081401_Installer.pkg (Pkg)",
     {
-      "trash": [
-        "~/Library/Application Scripts/com.microsoft.Powerpoint",
-        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.powerpoint.sfl*",
-        "~/Library/Containers/com.microsoft.Powerpoint",
-        "~/Library/Preferences/com.microsoft.Powerpoint.plist",
-        "~/Library/Saved Application State/com.microsoft.Powerpoint.savedState"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "Microsoft_PowerPoint_16.64.22081401_Installer.pkg",
+        {
+          "choices": [
+            {
+              "choiceIdentifier": "com.microsoft.autoupdate",
+              "choiceAttribute": "selected",
+              "attributeSetting": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Scripts/com.microsoft.Powerpoint",
+            "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.powerpoint.sfl*",
+            "~/Library/Containers/com.microsoft.Powerpoint",
+            "~/Library/Preferences/com.microsoft.Powerpoint.plist",
+            "~/Library/Saved Application State/com.microsoft.Powerpoint.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

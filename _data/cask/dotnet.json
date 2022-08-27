@@ -17,19 +17,29 @@
   "sha256": "b401bf0279e076a7e3187858f7be9613fe06b0260565155e5e0118e24ba3e0a2",
   "artifacts": [
     {
-      "pkgutil": "com.microsoft.dotnet.*",
-      "delete": "/etc/paths.d/dotnet",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "com.microsoft.dotnet.*",
+          "delete": "/etc/paths.d/dotnet"
+        }
+      ]
     },
-    "dotnet-runtime-6.0.8-osx-x64.pkg (Pkg)",
-    [
-      "$(brew --prefix)/share/dotnet/dotnet"
-    ],
     {
-      "trash": "~/.nuget",
-      "signal": {
-      }
+      "pkg": [
+        "dotnet-runtime-6.0.8-osx-x64.pkg"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/share/dotnet/dotnet"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": "~/.nuget"
+        }
+      ]
     }
   ],
   "caveats": null,
@@ -59,19 +69,29 @@
       "sha256": "48077415a07f66e809230fed5b9b39bd0118cff1751c68ad270779b0786c1d1a",
       "artifacts": [
         {
-          "pkgutil": "com.microsoft.dotnet.*",
-          "delete": "/etc/paths.d/dotnet",
-          "signal": {
-          }
+          "uninstall": [
+            {
+              "pkgutil": "com.microsoft.dotnet.*",
+              "delete": "/etc/paths.d/dotnet"
+            }
+          ]
         },
-        "dotnet-runtime-6.0.8-osx-arm64.pkg (Pkg)",
-        [
-          "$(brew --prefix)/share/dotnet/dotnet"
-        ],
         {
-          "trash": "~/.nuget",
-          "signal": {
-          }
+          "pkg": [
+            "dotnet-runtime-6.0.8-osx-arm64.pkg"
+          ]
+        },
+        {
+          "binary": [
+            "$(brew --prefix)/share/dotnet/dotnet"
+          ]
+        },
+        {
+          "zap": [
+            {
+              "trash": "~/.nuget"
+            }
+          ]
         }
       ]
     },
@@ -81,19 +101,29 @@
       "sha256": "48077415a07f66e809230fed5b9b39bd0118cff1751c68ad270779b0786c1d1a",
       "artifacts": [
         {
-          "pkgutil": "com.microsoft.dotnet.*",
-          "delete": "/etc/paths.d/dotnet",
-          "signal": {
-          }
+          "uninstall": [
+            {
+              "pkgutil": "com.microsoft.dotnet.*",
+              "delete": "/etc/paths.d/dotnet"
+            }
+          ]
         },
-        "dotnet-runtime-6.0.8-osx-arm64.pkg (Pkg)",
-        [
-          "$(brew --prefix)/share/dotnet/dotnet"
-        ],
         {
-          "trash": "~/.nuget",
-          "signal": {
-          }
+          "pkg": [
+            "dotnet-runtime-6.0.8-osx-arm64.pkg"
+          ]
+        },
+        {
+          "binary": [
+            "$(brew --prefix)/share/dotnet/dotnet"
+          ]
+        },
+        {
+          "zap": [
+            {
+              "trash": "~/.nuget"
+            }
+          ]
         }
       ]
     },
@@ -103,19 +133,29 @@
       "sha256": "48077415a07f66e809230fed5b9b39bd0118cff1751c68ad270779b0786c1d1a",
       "artifacts": [
         {
-          "pkgutil": "com.microsoft.dotnet.*",
-          "delete": "/etc/paths.d/dotnet",
-          "signal": {
-          }
+          "uninstall": [
+            {
+              "pkgutil": "com.microsoft.dotnet.*",
+              "delete": "/etc/paths.d/dotnet"
+            }
+          ]
         },
-        "dotnet-runtime-6.0.8-osx-arm64.pkg (Pkg)",
-        [
-          "$(brew --prefix)/share/dotnet/dotnet"
-        ],
         {
-          "trash": "~/.nuget",
-          "signal": {
-          }
+          "pkg": [
+            "dotnet-runtime-6.0.8-osx-arm64.pkg"
+          ]
+        },
+        {
+          "binary": [
+            "$(brew --prefix)/share/dotnet/dotnet"
+          ]
+        },
+        {
+          "zap": [
+            {
+              "trash": "~/.nuget"
+            }
+          ]
         }
       ]
     }

@@ -17,11 +17,17 @@
   "sha256": "83781555d25924ecbf1adb3022d4180e83a81240d3746b47bd8beb8beb035648",
   "artifacts": [
     {
-      "pkgutil": "deepstream.io",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "deepstream.io"
+        }
+      ]
     },
-    "deepstream.io-mac-6.2.1.pkg (Pkg)"
+    {
+      "pkg": [
+        "deepstream.io-mac-6.2.1.pkg"
+      ]
+    }
   ],
   "caveats": "Cask deepstream installs files under $(brew --prefix). The presence of such\nfiles can cause warnings when running `brew doctor`, which is considered\nto be a bug in Homebrew Cask.\n",
   "depends_on": {

@@ -17,18 +17,33 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "quit": "com.microsoft.autoupdate2",
-      "pkgutil": [
-        "com.microsoft.CompanyPortalMac",
-        "com.microsoft.CompanyPortal"
-      ],
-      "delete": [
-        "/Applications/Company Portal.app"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "com.microsoft.autoupdate2",
+          "pkgutil": [
+            "com.microsoft.CompanyPortalMac",
+            "com.microsoft.CompanyPortal"
+          ],
+          "delete": [
+            "/Applications/Company Portal.app"
+          ]
+        }
+      ]
     },
-    "CompanyPortal-Installer.pkg (Pkg)"
+    {
+      "pkg": [
+        "CompanyPortal-Installer.pkg",
+        {
+          "choices": [
+            {
+              "choiceIdentifier": "com.microsoft.package.Microsoft_AutoUpdate.app",
+              "choiceAttribute": "selected",
+              "attributeSetting": "0"
+            }
+          ]
+        }
+      ]
+    }
   ],
   "caveats": null,
   "depends_on": {

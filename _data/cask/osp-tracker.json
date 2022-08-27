@@ -17,28 +17,32 @@
   "sha256": "5d528f91647eaf16a867c95d14410d7c99bffc93fff2d040964e5e9da5cfa79d",
   "artifacts": [
     {
-      "script": {
-        "executable": "$(brew --prefix)/tracker/uninstall_Tracker.app/Contents/MacOS/installbuilder.sh",
-        "args": [
-          "--mode",
-          "unattended"
-        ],
-        "sudo": "true"
-      },
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "script": {
+            "executable": "$(brew --prefix)/tracker/uninstall_Tracker.app/Contents/MacOS/installbuilder.sh",
+            "args": [
+              "--mode",
+              "unattended"
+            ],
+            "sudo": "true"
+          }
+        }
+      ]
     },
     {
-      "path": "Tracker-6.0.10-osx-installer.app/Contents/MacOS/installbuilder.sh",
-      "args": {
-        "must_succeed": "true",
-        "sudo": "true",
-        "args": [
-          "--mode",
-          "unattended"
-        ],
-        "print_stdout": "true"
-      }
+      "installer": [
+        {
+          "script": {
+            "executable": "Tracker-6.0.10-osx-installer.app/Contents/MacOS/installbuilder.sh",
+            "args": [
+              "--mode",
+              "unattended"
+            ],
+            "sudo": "true"
+          }
+        }
+      ]
     }
   ],
   "caveats": null,

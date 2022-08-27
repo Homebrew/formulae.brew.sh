@@ -17,19 +17,29 @@
   "sha256": "ca08be8c52cd40251c4a39bf2536b962aabb26ba7df26729cfc44c3abcacf9cd",
   "artifacts": [
     {
-      "delete": "/Applications/Logitech Presentation",
-      "login_item": "LogiPresentation",
-      "signal": {
-        "KILL": "LogiPresentation"
-      }
+      "uninstall": [
+        {
+          "delete": "/Applications/Logitech Presentation",
+          "login_item": "LogiPresentation",
+          "signal": {
+            "KILL": "LogiPresentation"
+          }
+        }
+      ]
     },
     {
-      "path": "LogiPresentation Installer.app"
+      "installer": [
+        {
+          "manual": "LogiPresentation Installer.app"
+        }
+      ]
     },
     {
-      "trash": "/Library/Application Support/Logitech.localized/Logitech Presentation.localiz",
-      "signal": {
-      }
+      "zap": [
+        {
+          "trash": "/Library/Application Support/Logitech.localized/Logitech Presentation.localiz"
+        }
+      ]
     }
   ],
   "caveats": null,

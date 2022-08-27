@@ -17,20 +17,28 @@
   "sha256": "47c892a8f3c8d1ac3ddaf9c9a477a29defcc559643faec749d4e162943ea1ffd",
   "artifacts": [
     {
-      "pkgutil": "com.ibm.cloud.cli",
-      "delete": [
-        "$(brew --prefix)/bin/bluemix",
-        "$(brew --prefix)/bin/bx",
-        "$(brew --prefix)/ibmcloud"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "com.ibm.cloud.cli",
+          "delete": [
+            "$(brew --prefix)/bin/bluemix",
+            "$(brew --prefix)/bin/bx",
+            "$(brew --prefix)/ibmcloud"
+          ]
+        }
+      ]
     },
-    "IBM_Cloud_CLI_2.10.0.pkg (Pkg)",
     {
-      "trash": "~/.bluemix",
-      "signal": {
-      }
+      "pkg": [
+        "IBM_Cloud_CLI_2.10.0.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": "~/.bluemix"
+        }
+      ]
     }
   ],
   "caveats": "Cask ibm-cloud-cli installs files under $(brew --prefix). The presence of such\nfiles can cause warnings when running `brew doctor`, which is considered\nto be a bug in Homebrew Cask.\n",

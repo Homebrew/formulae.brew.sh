@@ -17,26 +17,34 @@
   "sha256": "2869fccc122e4b4cc115a3c9ff00cc96febfa8b7198bb98c1520467b84f69643",
   "artifacts": [
     {
-      "quit": "org.acidanthera.MaciASL",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "org.acidanthera.MaciASL"
+        }
+      ]
     },
-    [
-      "MaciASL.app"
-    ],
-    [
-      "/Applications/MaciASL.app/Contents/MacOS/iasl-stable",
-      {
-        "target": "iasl"
-      }
-    ],
     {
-      "trash": [
-        "~/Library/Preferences/org.acidanthera.MaciASL.plist",
-        "~/Library/Saved Application State/org.acidanthera.MaciASL.savedState"
-      ],
-      "signal": {
-      }
+      "app": [
+        "MaciASL.app"
+      ]
+    },
+    {
+      "binary": [
+        "/Applications/MaciASL.app/Contents/MacOS/iasl-stable",
+        {
+          "target": "iasl"
+        }
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Preferences/org.acidanthera.MaciASL.plist",
+            "~/Library/Saved Application State/org.acidanthera.MaciASL.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

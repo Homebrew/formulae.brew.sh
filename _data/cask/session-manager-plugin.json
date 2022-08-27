@@ -17,14 +17,22 @@
   "sha256": "36e7e2daad93136bcac708b27636e10f1259417c603457f27e9e00c629badad8",
   "artifacts": [
     {
-      "pkgutil": "session-manager-plugin",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "session-manager-plugin"
+        }
+      ]
     },
-    "session-manager-plugin.pkg (Pkg)",
-    [
-      "$(brew --prefix)/sessionmanagerplugin/bin/session-manager-plugin"
-    ]
+    {
+      "pkg": [
+        "session-manager-plugin.pkg"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/sessionmanagerplugin/bin/session-manager-plugin"
+      ]
+    }
   ],
   "caveats": null,
   "depends_on": {

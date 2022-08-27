@@ -17,22 +17,30 @@
   "sha256": "99de6ea54029d14b7c7b94d7a4d5096470a65a26a3aff53164213272b0d33896",
   "artifacts": [
     {
-      "pkgutil": "com.sony.pkg.PMHInstaller",
-      "launchctl": [
-        "com.sony.SonyAutoLauncher.agent",
-        "com.sony.WirelessAutoImportLauncher.agent"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "com.sony.pkg.PMHInstaller",
+          "launchctl": [
+            "com.sony.SonyAutoLauncher.agent",
+            "com.sony.WirelessAutoImportLauncher.agent"
+          ]
+        }
+      ]
     },
-    "PMH_INST.pkg (Pkg)",
     {
-      "trash": [
-        "/Applications/PMHMac.app",
-        "/Applications/Wireless Auto Import.app"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "PMH_INST.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "/Applications/PMHMac.app",
+            "/Applications/Wireless Auto Import.app"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

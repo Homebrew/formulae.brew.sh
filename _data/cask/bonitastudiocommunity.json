@@ -17,30 +17,35 @@
   "sha256": "cfb8a83764f01b0ff985e0f211540487291254261d8559383ddc5182d1d14f05",
   "artifacts": [
     {
-      "quit": "org.bonitasoft.studio.product",
-      "delete": "/Applications/BonitaStudioCommunity-2022.1-u0.app",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "org.bonitasoft.studio.product",
+          "delete": "/Applications/BonitaStudioCommunity-2022.1-u0.app"
+        }
+      ]
     },
     {
-      "path": "$(brew --prefix)/Caskroom/bonitastudiocommunity/2022.1-u0/BonitaStudioCommunity-2022.1-u0.app/Contents/MacOS/installbuilder.sh",
-      "args": {
-        "must_succeed": "true",
-        "sudo": "false",
-        "args": [
-          "--mode",
-          "unattended"
-        ],
-        "print_stdout": "true"
-      }
+      "installer": [
+        {
+          "script": {
+            "executable": "$(brew --prefix)/Caskroom/bonitastudiocommunity/2022.1-u0/BonitaStudioCommunity-2022.1-u0.app/Contents/MacOS/installbuilder.sh",
+            "args": [
+              "--mode",
+              "unattended"
+            ]
+          }
+        }
+      ]
     },
     {
-      "trash": [
-        "~/Library/Preferences/org.bonitasoft.studio.product.plist",
-        "/Library/Caches/org.bonitasoft.studio.product"
-      ],
-      "signal": {
-      }
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Preferences/org.bonitasoft.studio.product.plist",
+            "/Library/Caches/org.bonitasoft.studio.product"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

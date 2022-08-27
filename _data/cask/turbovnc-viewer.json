@@ -17,15 +17,21 @@
   "sha256": "0b9f083d753dc65c0a023d8d9c6c95da997184645ea216b60a8e1db72f8baccb",
   "artifacts": [
     {
-      "pkgutil": "com.virtualgl.turbovnc",
-      "script": {
-        "executable": "/opt/TurboVNC/bin/uninstall",
-        "sudo": "true"
-      },
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "com.virtualgl.turbovnc",
+          "script": {
+            "executable": "/opt/TurboVNC/bin/uninstall",
+            "sudo": "true"
+          }
+        }
+      ]
     },
-    "TurboVNC.pkg (Pkg)"
+    {
+      "pkg": [
+        "TurboVNC.pkg"
+      ]
+    }
   ],
   "caveats": null,
   "depends_on": {

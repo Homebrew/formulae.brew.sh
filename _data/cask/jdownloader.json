@@ -16,19 +16,25 @@
   "outdated": false,
   "sha256": "no_check",
   "artifacts": [
-    "preflight (Preflight Block)",
     {
-      "delete": [
-        "/Applications/JDownloader 2.0",
-        "/Applications/JDownloader2.app"
-      ],
-      "signal": {
-      }
+      "preflight": null
     },
     {
-      "trash": "~/Library/Preferences/org.jdownloader.launcher.plist",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": [
+            "/Applications/JDownloader 2.0",
+            "/Applications/JDownloader2.app"
+          ]
+        }
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": "~/Library/Preferences/org.jdownloader.launcher.plist"
+        }
+      ]
     }
   ],
   "caveats": null,

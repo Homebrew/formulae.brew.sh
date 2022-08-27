@@ -17,34 +17,41 @@
   "sha256": "007bae6f18dc7b6f2ca6209b5a0c9bd2f283154152f82becf787aac709a51633",
   "artifacts": [
     {
-      "delete": "$(brew --prefix)/Caskroom/miniconda/base",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": "$(brew --prefix)/Caskroom/miniconda/base"
+        }
+      ]
     },
     {
-      "path": "Miniconda3-py39_4.12.0-MacOSX-x86_64.sh",
-      "args": {
-        "must_succeed": "true",
-        "sudo": "false",
-        "args": [
-          "-b",
-          "-p",
-          "$(brew --prefix)/Caskroom/miniconda/base"
-        ],
-        "print_stdout": "true"
-      }
+      "installer": [
+        {
+          "script": {
+            "executable": "Miniconda3-py39_4.12.0-MacOSX-x86_64.sh",
+            "args": [
+              "-b",
+              "-p",
+              "$(brew --prefix)/Caskroom/miniconda/base"
+            ]
+          }
+        }
+      ]
     },
-    [
-      "$(brew --prefix)/Caskroom/miniconda/base/condabin/conda"
-    ],
     {
-      "trash": [
-        "~/.condarc",
-        "~/.conda",
-        "~/.continuum"
-      ],
-      "signal": {
-      }
+      "binary": [
+        "$(brew --prefix)/Caskroom/miniconda/base/condabin/conda"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/.condarc",
+            "~/.conda",
+            "~/.continuum"
+          ]
+        }
+      ]
     }
   ],
   "caveats": "Please run the following to setup your shell:\n  conda init \"$(basename \"${SHELL}\")\"\n",
@@ -63,34 +70,41 @@
       "sha256": "4bd112168cc33f8a4a60d3ef7e72b52a85972d588cd065be803eb21d73b625ef",
       "artifacts": [
         {
-          "delete": "$(brew --prefix)/Caskroom/miniconda/base",
-          "signal": {
-          }
+          "uninstall": [
+            {
+              "delete": "$(brew --prefix)/Caskroom/miniconda/base"
+            }
+          ]
         },
         {
-          "path": "Miniconda3-py39_4.12.0-MacOSX-arm64.sh",
-          "args": {
-            "must_succeed": "true",
-            "sudo": "false",
-            "args": [
-              "-b",
-              "-p",
-              "$(brew --prefix)/Caskroom/miniconda/base"
-            ],
-            "print_stdout": "true"
-          }
+          "installer": [
+            {
+              "script": {
+                "executable": "Miniconda3-py39_4.12.0-MacOSX-arm64.sh",
+                "args": [
+                  "-b",
+                  "-p",
+                  "$(brew --prefix)/Caskroom/miniconda/base"
+                ]
+              }
+            }
+          ]
         },
-        [
-          "$(brew --prefix)/Caskroom/miniconda/base/condabin/conda"
-        ],
         {
-          "trash": [
-            "~/.condarc",
-            "~/.conda",
-            "~/.continuum"
-          ],
-          "signal": {
-          }
+          "binary": [
+            "$(brew --prefix)/Caskroom/miniconda/base/condabin/conda"
+          ]
+        },
+        {
+          "zap": [
+            {
+              "trash": [
+                "~/.condarc",
+                "~/.conda",
+                "~/.continuum"
+              ]
+            }
+          ]
         }
       ]
     },
@@ -99,34 +113,41 @@
       "sha256": "4bd112168cc33f8a4a60d3ef7e72b52a85972d588cd065be803eb21d73b625ef",
       "artifacts": [
         {
-          "delete": "$(brew --prefix)/Caskroom/miniconda/base",
-          "signal": {
-          }
+          "uninstall": [
+            {
+              "delete": "$(brew --prefix)/Caskroom/miniconda/base"
+            }
+          ]
         },
         {
-          "path": "Miniconda3-py39_4.12.0-MacOSX-arm64.sh",
-          "args": {
-            "must_succeed": "true",
-            "sudo": "false",
-            "args": [
-              "-b",
-              "-p",
-              "$(brew --prefix)/Caskroom/miniconda/base"
-            ],
-            "print_stdout": "true"
-          }
+          "installer": [
+            {
+              "script": {
+                "executable": "Miniconda3-py39_4.12.0-MacOSX-arm64.sh",
+                "args": [
+                  "-b",
+                  "-p",
+                  "$(brew --prefix)/Caskroom/miniconda/base"
+                ]
+              }
+            }
+          ]
         },
-        [
-          "$(brew --prefix)/Caskroom/miniconda/base/condabin/conda"
-        ],
         {
-          "trash": [
-            "~/.condarc",
-            "~/.conda",
-            "~/.continuum"
-          ],
-          "signal": {
-          }
+          "binary": [
+            "$(brew --prefix)/Caskroom/miniconda/base/condabin/conda"
+          ]
+        },
+        {
+          "zap": [
+            {
+              "trash": [
+                "~/.condarc",
+                "~/.conda",
+                "~/.continuum"
+              ]
+            }
+          ]
         }
       ]
     },
@@ -135,34 +156,41 @@
       "sha256": "4bd112168cc33f8a4a60d3ef7e72b52a85972d588cd065be803eb21d73b625ef",
       "artifacts": [
         {
-          "delete": "$(brew --prefix)/Caskroom/miniconda/base",
-          "signal": {
-          }
+          "uninstall": [
+            {
+              "delete": "$(brew --prefix)/Caskroom/miniconda/base"
+            }
+          ]
         },
         {
-          "path": "Miniconda3-py39_4.12.0-MacOSX-arm64.sh",
-          "args": {
-            "must_succeed": "true",
-            "sudo": "false",
-            "args": [
-              "-b",
-              "-p",
-              "$(brew --prefix)/Caskroom/miniconda/base"
-            ],
-            "print_stdout": "true"
-          }
+          "installer": [
+            {
+              "script": {
+                "executable": "Miniconda3-py39_4.12.0-MacOSX-arm64.sh",
+                "args": [
+                  "-b",
+                  "-p",
+                  "$(brew --prefix)/Caskroom/miniconda/base"
+                ]
+              }
+            }
+          ]
         },
-        [
-          "$(brew --prefix)/Caskroom/miniconda/base/condabin/conda"
-        ],
         {
-          "trash": [
-            "~/.condarc",
-            "~/.conda",
-            "~/.continuum"
-          ],
-          "signal": {
-          }
+          "binary": [
+            "$(brew --prefix)/Caskroom/miniconda/base/condabin/conda"
+          ]
+        },
+        {
+          "zap": [
+            {
+              "trash": [
+                "~/.condarc",
+                "~/.conda",
+                "~/.continuum"
+              ]
+            }
+          ]
         }
       ]
     }

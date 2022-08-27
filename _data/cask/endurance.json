@@ -17,14 +17,18 @@
   "sha256": "27af8456f8c0439fefc9f35e7a723291cad94f223628b878696a3c58ff5b0517",
   "artifacts": [
     {
-      "delete": "/Library/PrivilegedHelperTools/com.MagnetismStudios.endurance.helper",
-      "launchctl": "com.MagnetismStudios.endurance.helper",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": "/Library/PrivilegedHelperTools/com.MagnetismStudios.endurance.helper",
+          "launchctl": "com.MagnetismStudios.endurance.helper"
+        }
+      ]
     },
-    [
-      "Endurance.app"
-    ]
+    {
+      "app": [
+        "Endurance.app"
+      ]
+    }
   ],
   "caveats": null,
   "depends_on": {

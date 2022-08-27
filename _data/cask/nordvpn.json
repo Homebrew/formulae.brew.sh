@@ -17,36 +17,44 @@
   "sha256": "a7b3e6e92e0457427c189afddf450200567c58c81ee6c77654f53beab3aee018",
   "artifacts": [
     {
-      "quit": [
-        "com.nordvpn.macos",
-        "com.nordvpn.macos.NordVPNLauncher"
-      ],
-      "launchctl": [
-        "com.nordvpn.macos.helper",
-        "com.nordvpn.NordVPN.Helper"
-      ],
-      "delete": [
-        "/Library/PrivilegedHelperTools/com.nordvpn.macos.helper",
-        "/Library/PrivilegedHelperTools/com.nordvpn.macos.ovpnDnsManager",
-        "/Library/PrivilegedHelperTools/ovpn"
-      ],
-      "login_item": "NordVPN",
-      "pkgutil": "com.nordvpn.macos",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": [
+            "com.nordvpn.macos",
+            "com.nordvpn.macos.NordVPNLauncher"
+          ],
+          "launchctl": [
+            "com.nordvpn.macos.helper",
+            "com.nordvpn.NordVPN.Helper"
+          ],
+          "delete": [
+            "/Library/PrivilegedHelperTools/com.nordvpn.macos.helper",
+            "/Library/PrivilegedHelperTools/com.nordvpn.macos.ovpnDnsManager",
+            "/Library/PrivilegedHelperTools/ovpn"
+          ],
+          "login_item": "NordVPN",
+          "pkgutil": "com.nordvpn.macos"
+        }
+      ]
     },
-    "NordVPN.pkg (Pkg)",
     {
-      "trash": [
-        "~/Library/Application Support/com.nordvpn.macos",
-        "~/Library/Caches/com.nordvpn.macos",
-        "~/Library/Cookies/com.nordvpn.macos.binarycookies",
-        "~/Library/Logs/NordVPN/",
-        "~/Library/Preferences/com.nordvpn.macos.plist",
-        "~/Library/Saved Application State/com.nordvpn.macos.savedState"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "NordVPN.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/com.nordvpn.macos",
+            "~/Library/Caches/com.nordvpn.macos",
+            "~/Library/Cookies/com.nordvpn.macos.binarycookies",
+            "~/Library/Logs/NordVPN/",
+            "~/Library/Preferences/com.nordvpn.macos.plist",
+            "~/Library/Saved Application State/com.nordvpn.macos.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

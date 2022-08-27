@@ -17,24 +17,30 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "launchctl": "mega.mac.megaupdater",
-      "login_item": "MEGAsync",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "launchctl": "mega.mac.megaupdater",
+          "login_item": "MEGAsync"
+        }
+      ]
     },
-    [
-      "MEGAsync.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Scripts/mega.mac.MEGAShellExtFinder",
-        "~/Library/Caches/mega.mac",
-        "~/Library/Containers/mega.mac.MEGAShellExtFinder",
-        "~/Library/LaunchAgents/mega.mac.megaupdater.plist",
-        "~/Library/Preferences/mega.mac.plist"
-      ],
-      "signal": {
-      }
+      "app": [
+        "MEGAsync.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Scripts/mega.mac.MEGAShellExtFinder",
+            "~/Library/Caches/mega.mac",
+            "~/Library/Containers/mega.mac.MEGAShellExtFinder",
+            "~/Library/LaunchAgents/mega.mac.megaupdater.plist",
+            "~/Library/Preferences/mega.mac.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

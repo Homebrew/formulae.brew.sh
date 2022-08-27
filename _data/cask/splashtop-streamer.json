@@ -17,18 +17,24 @@
   "sha256": "c41616eb9974073697a5aea2f82d93e872bdc56915e42cc4d4fd56b9a01e7527",
   "artifacts": [
     {
-      "quit": "com.splashtop.Splashtop-Streamer",
-      "launchctl": [
-        "com.splashtop.streamer-daemon",
-        "com.splashtop.streamer-for-root",
-        "com.splashtop.streamer-for-user",
-        "com.splashtop.streamer-srioframebuffer"
-      ],
-      "pkgutil": "com.splashtop.Splashtop-Streamer",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "com.splashtop.Splashtop-Streamer",
+          "launchctl": [
+            "com.splashtop.streamer-daemon",
+            "com.splashtop.streamer-for-root",
+            "com.splashtop.streamer-for-user",
+            "com.splashtop.streamer-srioframebuffer"
+          ],
+          "pkgutil": "com.splashtop.Splashtop-Streamer"
+        }
+      ]
     },
-    "Splashtop Streamer.pkg (Pkg)"
+    {
+      "pkg": [
+        "Splashtop Streamer.pkg"
+      ]
+    }
   ],
   "caveats": null,
   "depends_on": {

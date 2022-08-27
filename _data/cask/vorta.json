@@ -16,13 +16,17 @@
   "outdated": false,
   "sha256": "dc680f227acb79fc598b00c519534628e7b5b039a17d28c6f5ecca2df95c8551",
   "artifacts": [
-    [
-      "Vorta.app"
-    ],
     {
-      "trash": "~/Library/Application Support/Vorta",
-      "signal": {
-      }
+      "app": [
+        "Vorta.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": "~/Library/Application Support/Vorta"
+        }
+      ]
     }
   ],
   "caveats": "vorta requires BorgBackup to run. If you do not need mount support, use the official formula:\n\n  brew install borgbackup\n\nIf you plan on mounting archives using macFUSE, consider using the Tap maintained by the Borg team:\n\n  brew install --cask macfuse\n  brew install borgbackup/tap/borgbackup-fuse\n",

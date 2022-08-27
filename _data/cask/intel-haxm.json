@@ -17,25 +17,29 @@
   "sha256": "b936f7247d1962d945d764a7cf2b698f71a98335ceda0848109fd947adbb2ec2",
   "artifacts": [
     {
-      "pkgutil": "com.intel.kext.haxm.*",
-      "script": {
-        "sudo": "true",
-        "must_succeed": "true",
-        "executable": "silent_install.sh",
-        "args": [
-          "-u"
-        ]
-      },
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "com.intel.kext.haxm.*",
+          "script": {
+            "sudo": "true",
+            "must_succeed": "true",
+            "executable": "silent_install.sh",
+            "args": [
+              "-u"
+            ]
+          }
+        }
+      ]
     },
     {
-      "path": "silent_install.sh",
-      "args": {
-        "must_succeed": "true",
-        "sudo": "true",
-        "print_stdout": "true"
-      }
+      "installer": [
+        {
+          "script": {
+            "executable": "silent_install.sh",
+            "sudo": "true"
+          }
+        }
+      ]
     }
   ],
   "caveats": "intel-haxm requires a kernel extension to work.\nIf the installation fails, retry after you enable it in:\n  System Preferences → Security & Privacy → General\n\nFor more information, refer to vendor documentation or this Apple Technical Note:\n  https://developer.apple.com/library/content/technotes/tn2459/_index.html\n",

@@ -16,30 +16,40 @@
   "outdated": false,
   "sha256": "06da7802b3fad9023e759288a854a7447e0f3f87e4094b7552e856a8cb49e918",
   "artifacts": [
-    "preflight (Preflight Block)",
-    [
-      "LBRY.app"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/lbry/0.53.4/lbrynet.wrapper.sh",
-      {
-        "target": "lbrynet"
-      }
-    ],
-    [
-      "$(brew --prefix)/Caskroom/lbry/0.53.4/libry-first.wrapper.sh",
-      {
-        "target": "lbry-first"
-      }
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/lbry",
-        "~/Library/Preferences/io.lbry.LBRY.plist",
-        "~/Library/Saved Application State/io.lbry.LBRY.savedState"
-      ],
-      "signal": {
-      }
+      "preflight": null
+    },
+    {
+      "app": [
+        "LBRY.app"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/lbry/0.53.4/lbrynet.wrapper.sh",
+        {
+          "target": "lbrynet"
+        }
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/lbry/0.53.4/libry-first.wrapper.sh",
+        {
+          "target": "lbry-first"
+        }
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/lbry",
+            "~/Library/Preferences/io.lbry.LBRY.plist",
+            "~/Library/Saved Application State/io.lbry.LBRY.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

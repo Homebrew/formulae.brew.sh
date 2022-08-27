@@ -17,24 +17,30 @@
   "sha256": "063f68a324a51b2a613736efc3a69f16a50cf20ad0966b3e8107c7cf9731e683",
   "artifacts": [
     {
-      "delete": [
-        "/Library/LaunchDaemons/com.soma-zone.BackupLoupe.Helper.plist",
-        "/Library/PrivilegedHelperTools/com.soma-zone.BackupLoupe.Helper"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": [
+            "/Library/LaunchDaemons/com.soma-zone.BackupLoupe.Helper.plist",
+            "/Library/PrivilegedHelperTools/com.soma-zone.BackupLoupe.Helper"
+          ]
+        }
+      ]
     },
-    [
-      "BackupLoupe.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/BackupLoupe",
-        "~/Library/Caches/com.apple.helpd/Generated/BackupLoupe*",
-        "~/Library/Preferences/com.soma-zone.BackupLoupe.plist"
-      ],
-      "signal": {
-      }
+      "app": [
+        "BackupLoupe.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/BackupLoupe",
+            "~/Library/Caches/com.apple.helpd/Generated/BackupLoupe*",
+            "~/Library/Preferences/com.soma-zone.BackupLoupe.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

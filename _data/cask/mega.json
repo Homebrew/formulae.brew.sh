@@ -18,25 +18,33 @@
   "sha256": "9e018d900d020836e475f78065aa275e556c82af16be3fed39515d956045809a",
   "artifacts": [
     {
-      "quit": "com.company.MEGA11",
-      "pkgutil": "com.igem.pkg.MEGA11",
-      "delete": [
-        "/Applications/MEGA11.app",
-        "$(brew --prefix)/bin/megacc",
-        "$(brew --prefix)/share/man/man1/mega.1",
-        "$(brew --prefix)/share/man/man1/megacc.1"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "com.company.MEGA11",
+          "pkgutil": "com.igem.pkg.MEGA11",
+          "delete": [
+            "/Applications/MEGA11.app",
+            "$(brew --prefix)/bin/megacc",
+            "$(brew --prefix)/share/man/man1/mega.1",
+            "$(brew --prefix)/share/man/man1/megacc.1"
+          ]
+        }
+      ]
     },
-    "MEGA_11.0.13_installer.pkg (Pkg)",
     {
-      "trash": [
-        "~/Library/Preferences/com.company.MEGA*",
-        "~/Library/Saved Application State/com.company.MEGA*"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "MEGA_11.0.13_installer.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Preferences/com.company.MEGA*",
+            "~/Library/Saved Application State/com.company.MEGA*"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

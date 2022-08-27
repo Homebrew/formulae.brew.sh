@@ -16,38 +16,52 @@
   "outdated": false,
   "sha256": "fc41bab49d4c1fe9239bfd06e4eb7cda8348635aaa3568fec942f43a9d5eb04b",
   "artifacts": [
-    "preflight (Preflight Block)",
-    [
-      "$(brew --prefix)/Caskroom/android-ndk/25b/ndk_exec.sh",
-      {
-        "target": "ndk-build"
-      }
-    ],
-    [
-      "$(brew --prefix)/Caskroom/android-ndk/25b/ndk_exec.sh",
-      {
-        "target": "ndk-depends"
-      }
-    ],
-    [
-      "$(brew --prefix)/Caskroom/android-ndk/25b/ndk_exec.sh",
-      {
-        "target": "ndk-gdb"
-      }
-    ],
-    [
-      "$(brew --prefix)/Caskroom/android-ndk/25b/ndk_exec.sh",
-      {
-        "target": "ndk-stack"
-      }
-    ],
-    [
-      "$(brew --prefix)/Caskroom/android-ndk/25b/ndk_exec.sh",
-      {
-        "target": "ndk-which"
-      }
-    ],
-    "uninstall_postflight (Postflight Block)"
+    {
+      "preflight": null
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/android-ndk/25b/ndk_exec.sh",
+        {
+          "target": "ndk-build"
+        }
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/android-ndk/25b/ndk_exec.sh",
+        {
+          "target": "ndk-depends"
+        }
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/android-ndk/25b/ndk_exec.sh",
+        {
+          "target": "ndk-gdb"
+        }
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/android-ndk/25b/ndk_exec.sh",
+        {
+          "target": "ndk-stack"
+        }
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/android-ndk/25b/ndk_exec.sh",
+        {
+          "target": "ndk-which"
+        }
+      ]
+    },
+    {
+      "uninstall_postflight": null
+    }
   ],
   "caveats": "You may want to add to your profile:\n   'export ANDROID_NDK_HOME=\"$(brew --prefix)/share/android-ndk\"'\n",
   "depends_on": {

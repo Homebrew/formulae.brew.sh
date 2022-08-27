@@ -17,26 +17,32 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "launchctl": [
-        "com.globaldelight.Boom3D",
-        "com.globaldelight.Boom3DHelper"
-      ],
-      "quit": "com.globaldelight.Boom3D",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "launchctl": [
+            "com.globaldelight.Boom3D",
+            "com.globaldelight.Boom3DHelper"
+          ],
+          "quit": "com.globaldelight.Boom3D"
+        }
+      ]
     },
-    [
-      "Boom 3D.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/Boom3D",
-        "~/Library/Application Support/com.globaldelight.Boom3D",
-        "~/Library/Preferences/com.globaldelight.Boom3D.plist",
-        "~/Library/Preferences/com.globaldelight.Boom3DHelper.plist"
-      ],
-      "signal": {
-      }
+      "app": [
+        "Boom 3D.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/Boom3D",
+            "~/Library/Application Support/com.globaldelight.Boom3D",
+            "~/Library/Preferences/com.globaldelight.Boom3D.plist",
+            "~/Library/Preferences/com.globaldelight.Boom3DHelper.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

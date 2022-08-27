@@ -17,19 +17,27 @@
   "sha256": "66440f01d869ab60b1f6020a3f44fdf784a2a77b8899172a50798001464c9a2c",
   "artifacts": [
     {
-      "pkgutil": "net.torguard.TorGuardDesktopQt",
-      "delete": "/Applications/TorGuard.app",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "net.torguard.TorGuardDesktopQt",
+          "delete": "/Applications/TorGuard.app"
+        }
+      ]
     },
-    "Install TorGuard.pkg (Pkg)",
     {
-      "trash": [
-        "~/Library/Preferences/net.torguard.TorGuard*.plist",
-        "~/Library/Saved Application State/net.torguard.TorGuardDesktopQt.savedState"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "Install TorGuard.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Preferences/net.torguard.TorGuard*.plist",
+            "~/Library/Saved Application State/net.torguard.TorGuardDesktopQt.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

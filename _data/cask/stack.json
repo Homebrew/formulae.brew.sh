@@ -17,22 +17,31 @@
   "sha256": "da2c1db8f6f73b7635f78df26d5f4d150a710d18ad803ed1644f563c944009f4",
   "artifacts": [
     {
-      "login_item": "stack",
-      "signal": {
-        "TERM": "nl.transip.stack"
-      },
-      "pkgutil": "nl.transip.stack"
+      "uninstall": [
+        {
+          "login_item": "stack",
+          "signal": [
+            "TERM",
+            "nl.transip.stack"
+          ],
+          "pkgutil": "nl.transip.stack"
+        }
+      ]
     },
-    [
-      "stack.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/STACK/",
-        "~/Library/Caches/nl.transip.stack"
-      ],
-      "signal": {
-      }
+      "app": [
+        "stack.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/STACK/",
+            "~/Library/Caches/nl.transip.stack"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

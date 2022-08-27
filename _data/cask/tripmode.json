@@ -22,31 +22,40 @@
   "sha256": "93a3d1fa2ba00053c144f0224fbc5054ba419a42bd0169d509e13c7a9f805727",
   "artifacts": [
     {
-      "signal": {
-        "TERM": "ch.tripmode.TripMode"
-      },
-      "launchctl": [
-        "ch.tripmode.nke.TripMode",
-        "ch.tripmode.TripMode.HelperTool"
-      ],
-      "delete": "/Library/PrivilegedHelperTools/ch.tripmode.TripMode.HelperTool"
+      "uninstall": [
+        {
+          "signal": [
+            "TERM",
+            "ch.tripmode.TripMode"
+          ],
+          "launchctl": [
+            "ch.tripmode.nke.TripMode",
+            "ch.tripmode.TripMode.HelperTool"
+          ],
+          "delete": "/Library/PrivilegedHelperTools/ch.tripmode.TripMode.HelperTool"
+        }
+      ]
     },
-    [
-      "TripMode.app"
-    ],
     {
-      "trash": [
-        "/Library/Application Support/Tripmode",
-        "~/Library/Application Scripts/com.alix-sarl.TripMode",
-        "~/Library/Application Scripts/P39EL2R8C4.com.alix-sarl.TripMode",
-        "~/Library/Application Support/Tripmode",
-        "~/Library/Caches/com.apple.helpd/Generated/ch.tripmode.TripMode.help*3.1.3",
-        "~/Library/Caches/ch.tripmode.TripMode",
-        "~/Library/Group Containers/P39EL2R8C4.com.alix-sarl.TripMode",
-        "~/Library/Preferences/ch.tripmode.TripMode.plist"
-      ],
-      "signal": {
-      }
+      "app": [
+        "TripMode.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "/Library/Application Support/Tripmode",
+            "~/Library/Application Scripts/com.alix-sarl.TripMode",
+            "~/Library/Application Scripts/P39EL2R8C4.com.alix-sarl.TripMode",
+            "~/Library/Application Support/Tripmode",
+            "~/Library/Caches/com.apple.helpd/Generated/ch.tripmode.TripMode.help*3.1.3",
+            "~/Library/Caches/ch.tripmode.TripMode",
+            "~/Library/Group Containers/P39EL2R8C4.com.alix-sarl.TripMode",
+            "~/Library/Preferences/ch.tripmode.TripMode.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

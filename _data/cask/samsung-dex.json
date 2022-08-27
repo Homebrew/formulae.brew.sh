@@ -17,15 +17,21 @@
   "sha256": "6bf45739e81ad7970ae86147b64bc1df3392154b00672243fb666c62c983a9f6",
   "artifacts": [
     {
-      "pkgutil": [
-        "com.samsung.pkg.dexonpc",
-        "com.samsung.pkg.mss_connectivity2",
-        "com.samsung.pkg.ssud"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": [
+            "com.samsung.pkg.dexonpc",
+            "com.samsung.pkg.mss_connectivity2",
+            "com.samsung.pkg.ssud"
+          ]
+        }
+      ]
     },
-    "Install Samsung DeX.pkg (Pkg)"
+    {
+      "pkg": [
+        "Install Samsung DeX.pkg"
+      ]
+    }
   ],
   "caveats": "samsung-dex has been officially discontinued upstream.\nIt may stop working correctly (or at all) in recent versions of macOS.\n\nsamsung-dex requires a kernel extension to work.\nIf the installation fails, retry after you enable it in:\n  System Preferences → Security & Privacy → General\n\nFor more information, refer to vendor documentation or this Apple Technical Note:\n  https://developer.apple.com/library/content/technotes/tn2459/_index.html\n\nYou must reboot for the installation of samsung-dex to take effect.\n",
   "depends_on": {

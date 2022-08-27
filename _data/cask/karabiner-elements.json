@@ -22,42 +22,52 @@
   "sha256": "b102602b712825ff3072bd222fd8995e5e8d240ae9b540d3ac378d2b08047ee3",
   "artifacts": [
     {
-      "early_script": {
-        "executable": "/Library/Application Support/org.pqrs/Karabiner-DriverKit-VirtualHIDDevice/scripts/uninstall/remove_files.sh",
-        "sudo": "true"
-      },
-      "signal": {
-        "TERM": "org.pqrs.Karabiner-NotificationWindow"
-      },
-      "pkgutil": [
-        "org.pqrs.Karabiner-DriverKit-VirtualHIDDevice",
-        "org.pqrs.Karabiner-Elements"
-      ],
-      "launchctl": [
-        "org.pqrs.karabiner.agent.karabiner_grabber",
-        "org.pqrs.karabiner.agent.karabiner_observer",
-        "org.pqrs.karabiner.karabiner_console_user_server",
-        "org.pqrs.karabiner.karabiner_session_monitor"
-      ],
-      "script": {
-        "executable": "/Library/Application Support/org.pqrs/Karabiner-Elements/uninstall_core.sh",
-        "sudo": "true"
-      },
-      "delete": "/Library/Application Support/org.pqrs/"
+      "uninstall": [
+        {
+          "early_script": {
+            "executable": "/Library/Application Support/org.pqrs/Karabiner-DriverKit-VirtualHIDDevice/scripts/uninstall/remove_files.sh",
+            "sudo": "true"
+          },
+          "signal": {
+            "TERM": "org.pqrs.Karabiner-NotificationWindow"
+          },
+          "pkgutil": [
+            "org.pqrs.Karabiner-DriverKit-VirtualHIDDevice",
+            "org.pqrs.Karabiner-Elements"
+          ],
+          "launchctl": [
+            "org.pqrs.karabiner.agent.karabiner_grabber",
+            "org.pqrs.karabiner.agent.karabiner_observer",
+            "org.pqrs.karabiner.karabiner_console_user_server",
+            "org.pqrs.karabiner.karabiner_session_monitor"
+          ],
+          "script": {
+            "executable": "/Library/Application Support/org.pqrs/Karabiner-Elements/uninstall_core.sh",
+            "sudo": "true"
+          },
+          "delete": "/Library/Application Support/org.pqrs/"
+        }
+      ]
     },
-    "Karabiner-Elements.pkg (Pkg)",
     {
-      "trash": [
-        "~/.config/karabiner",
-        "~/.local/share/karabiner",
-        "~/Library/Application Scripts/org.pqrs.Karabiner-VirtualHIDDevice-Manager",
-        "~/Library/Application Support/Karabiner-Elements",
-        "~/Library/Caches/org.pqrs.Karabiner-Elements.Updater",
-        "~/Library/Containers/org.pqrs.Karabiner-VirtualHIDDevice-Manager",
-        "~/Library/Preferences/org.pqrs.Karabiner-Elements.Updater.plist"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "Karabiner-Elements.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/.config/karabiner",
+            "~/.local/share/karabiner",
+            "~/Library/Application Scripts/org.pqrs.Karabiner-VirtualHIDDevice-Manager",
+            "~/Library/Application Support/Karabiner-Elements",
+            "~/Library/Caches/org.pqrs.Karabiner-Elements.Updater",
+            "~/Library/Containers/org.pqrs.Karabiner-VirtualHIDDevice-Manager",
+            "~/Library/Preferences/org.pqrs.Karabiner-Elements.Updater.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

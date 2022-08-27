@@ -16,21 +16,25 @@
   "outdated": false,
   "sha256": "no_check",
   "artifacts": [
-    [
-      "Knock.app"
-    ],
     {
-      "trash": [
-        "~/Library/Preferences/com.knock.mac.plist",
-        "~/Library/Logs/Knock",
-        "~/Library/Caches/com.knock.mac",
-        "~/Library/Caches/com.crashlytics.data/com.knock.mac"
-      ],
-      "rmdir": [
-        "~/Library/Caches/com.crashlytics.data"
-      ],
-      "signal": {
-      }
+      "app": [
+        "Knock.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Preferences/com.knock.mac.plist",
+            "~/Library/Logs/Knock",
+            "~/Library/Caches/com.knock.mac",
+            "~/Library/Caches/com.crashlytics.data/com.knock.mac"
+          ],
+          "rmdir": [
+            "~/Library/Caches/com.crashlytics.data"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

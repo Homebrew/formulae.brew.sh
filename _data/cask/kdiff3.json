@@ -16,20 +16,28 @@
   "outdated": false,
   "sha256": "9cfb02c73cba644d9f778947a98d0e61a08db027b15149059e7df99566a19862",
   "artifacts": [
-    "preflight (Preflight Block)",
-    [
-      "kdiff3.app"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/kdiff3/1.9.4/kdiff3.wrapper.sh",
-      {
-        "target": "kdiff3"
-      }
-    ],
     {
-      "trash": "~/.kdiff3rc",
-      "signal": {
-      }
+      "preflight": null
+    },
+    {
+      "app": [
+        "kdiff3.app"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/kdiff3/1.9.4/kdiff3.wrapper.sh",
+        {
+          "target": "kdiff3"
+        }
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": "~/.kdiff3rc"
+        }
+      ]
     }
   ],
   "caveats": null,

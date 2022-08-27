@@ -17,23 +17,31 @@
   "sha256": "176f3210c3b53b882dee831af622010cf1ba74b54d4d71cdfe4ab4bc4eef17ed",
   "artifacts": [
     {
-      "signal": {
-        "TERM": "com.kubernetic.desktop"
-      }
+      "uninstall": [
+        {
+          "signal": {
+            "TERM": "com.kubernetic.desktop"
+          }
+        }
+      ]
     },
-    [
-      "Kubernetic.app"
-    ],
     {
-      "trash": [
-        "~/.kubernetic",
-        "~/Library/Application Support/Kubernetic",
-        "~/Library/Logs/Kubernetic",
-        "~/Library/Preferences/com.kubernetic.desktop.*",
-        "~/Library/Saved Application State/com.kubernetic.desktop.*"
-      ],
-      "signal": {
-      }
+      "app": [
+        "Kubernetic.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/.kubernetic",
+            "~/Library/Application Support/Kubernetic",
+            "~/Library/Logs/Kubernetic",
+            "~/Library/Preferences/com.kubernetic.desktop.*",
+            "~/Library/Saved Application State/com.kubernetic.desktop.*"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

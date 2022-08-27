@@ -21,23 +21,40 @@
   "sha256": "5e5c84713725b4761b35f718d23ee29914c822db8247269ffddfbaea82881054",
   "artifacts": [
     {
-      "pkgutil": [
-        "com.microsoft.package.Microsoft_Outlook.app",
-        "com.microsoft.pkg.licensing"
-      ],
-      "launchctl": "com.microsoft.office.licensingV2.helper",
-      "quit": "com.microsoft.autoupdate2",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": [
+            "com.microsoft.package.Microsoft_Outlook.app",
+            "com.microsoft.pkg.licensing"
+          ],
+          "launchctl": "com.microsoft.office.licensingV2.helper",
+          "quit": "com.microsoft.autoupdate2"
+        }
+      ]
     },
-    "Microsoft_Outlook_16.64.22081401_Installer.pkg (Pkg)",
     {
-      "trash": [
-        "~/Library/Application Scripts/com.microsoft.Outlook",
-        "~/Library/Containers/com.microsoft.Outlook"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "Microsoft_Outlook_16.64.22081401_Installer.pkg",
+        {
+          "choices": [
+            {
+              "choiceIdentifier": "com.microsoft.autoupdate",
+              "choiceAttribute": "selected",
+              "attributeSetting": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Scripts/com.microsoft.Outlook",
+            "~/Library/Containers/com.microsoft.Outlook"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

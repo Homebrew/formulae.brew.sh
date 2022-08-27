@@ -17,27 +17,35 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "quit": "com.avast.browser",
-      "pkgutil": "com.avast.browser",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "com.avast.browser",
+          "pkgutil": "com.avast.browser"
+        }
+      ]
     },
-    "AvastSecureBrowserSetup.pkg (Pkg)",
     {
-      "trash": [
-        "~/Library/Application Support/AVAST Software/Browser",
-        "~/Library/Caches/AVAST Software/Browser",
-        "~/Library/Caches/com.avast.browser",
-        "~/Library/Preferences/com.avast.AvastSecureBrowser.plist",
-        "~/Library/Preferences/com.avast.browser.plist",
-        "~/Library/Saved Application State/com.avast.browser.savedState"
-      ],
-      "rmdir": [
-        "~/Library/Application Support/AVAST Software",
-        "~/Library/Caches/AVAST Software"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "AvastSecureBrowserSetup.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/AVAST Software/Browser",
+            "~/Library/Caches/AVAST Software/Browser",
+            "~/Library/Caches/com.avast.browser",
+            "~/Library/Preferences/com.avast.AvastSecureBrowser.plist",
+            "~/Library/Preferences/com.avast.browser.plist",
+            "~/Library/Saved Application State/com.avast.browser.savedState"
+          ],
+          "rmdir": [
+            "~/Library/Application Support/AVAST Software",
+            "~/Library/Caches/AVAST Software"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

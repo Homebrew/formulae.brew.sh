@@ -16,16 +16,20 @@
   "outdated": false,
   "sha256": "32d07e6e04c6b8df0a38d69d7d371e48969b0aa4794bb13863296976cc9f96ff",
   "artifacts": [
-    [
-      "ClamXAV.app"
-    ],
     {
-      "trash": [
-        "~/Library/Caches/uk.co.markallan.clamxav",
-        "~/Library/Logs/clamXav-scan.*"
-      ],
-      "signal": {
-      }
+      "app": [
+        "ClamXAV.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Caches/uk.co.markallan.clamxav",
+            "~/Library/Logs/clamXav-scan.*"
+          ]
+        }
+      ]
     }
   ],
   "caveats": "Cask clamxav installs files under $(brew --prefix). The presence of such\nfiles can cause warnings when running `brew doctor`, which is considered\nto be a bug in Homebrew Cask.\n",

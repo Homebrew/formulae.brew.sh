@@ -17,15 +17,21 @@
   "sha256": "9c2f72c011cd477071e51238d5bfa0c202babdd263c1e4ea6b3d4e4605da2907",
   "artifacts": [
     {
-      "pkgutil": "tv.duckie.base.pkg",
-      "delete": [
-        "/Applicatons/duckieTV.app",
-        "~/Library/Application Support/DuckieTV-Standalone"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "tv.duckie.base.pkg",
+          "delete": [
+            "/Applicatons/duckieTV.app",
+            "~/Library/Application Support/DuckieTV-Standalone"
+          ]
+        }
+      ]
     },
-    "DuckieTV-1.1.5-OSX-x64.pkg (Pkg)"
+    {
+      "pkg": [
+        "DuckieTV-1.1.5-OSX-x64.pkg"
+      ]
+    }
   ],
   "caveats": null,
   "depends_on": {

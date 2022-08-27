@@ -17,25 +17,33 @@
   "sha256": "8e66c73ebd5d97bbe2b79e27bdfd3f06299edb7f941246ea52cc32883917df12",
   "artifacts": [
     {
-      "quit": "com.xk72.Charles",
-      "launchctl": "com.xk72.Charles.ProxyHelper",
-      "delete": "/Library/PrivilegedHelperTools/com.xk72.Charles.ProxyHelper",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "com.xk72.Charles",
+          "launchctl": "com.xk72.Charles.ProxyHelper",
+          "delete": "/Library/PrivilegedHelperTools/com.xk72.Charles.ProxyHelper"
+        }
+      ]
     },
-    [
-      "Charles.app"
-    ],
-    "uninstall_postflight (Postflight Block)",
     {
-      "trash": [
-        "~/Library/Application Support/Charles",
-        "~/Library/Preferences/com.xk72.Charles.plist",
-        "~/Library/Preferences/com.xk72.charles.config",
-        "~/Library/Saved Application State/com.xk72.Charles.savedState"
-      ],
-      "signal": {
-      }
+      "app": [
+        "Charles.app"
+      ]
+    },
+    {
+      "uninstall_postflight": null
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/Charles",
+            "~/Library/Preferences/com.xk72.Charles.plist",
+            "~/Library/Preferences/com.xk72.charles.config",
+            "~/Library/Saved Application State/com.xk72.Charles.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

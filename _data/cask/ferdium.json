@@ -17,29 +17,35 @@
   "sha256": "131c29c39275143d294b022581556cf9ac2ed458efc13fea06f677205d854da1",
   "artifacts": [
     {
-      "quit": "com.ferdium.ferdium-app",
-      "delete": "/Library/Logs/DiagnosticReports/Ferdium Helper_.*wakeups_resource.diag",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "com.ferdium.ferdium-app",
+          "delete": "/Library/Logs/DiagnosticReports/Ferdium Helper_.*wakeups_resource.diag"
+        }
+      ]
     },
-    [
-      "Ferdium.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/Caches/ferdium-updater",
-        "~/Library/Application Support/Ferdium",
-        "~/Library/Caches/com.ferdium.ferdium-app",
-        "~/Library/Caches/com.ferdium.ferdium-app.ShipIt",
-        "~/Library/Logs/Ferdium",
-        "~/Library/Preferences/ByHost/com.ferdium.ferdium-app.ShipIt.*.plist",
-        "~/Library/Preferences/com.electron.ferdium.helper.plist",
-        "~/Library/Preferences/com.electron.ferdium.plist",
-        "~/Library/Preferences/com.ferdium.ferdium-app.plist",
-        "~/Library/Saved Application State/com.ferdium.ferdium-app.savedState"
-      ],
-      "signal": {
-      }
+      "app": [
+        "Ferdium.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/Caches/ferdium-updater",
+            "~/Library/Application Support/Ferdium",
+            "~/Library/Caches/com.ferdium.ferdium-app",
+            "~/Library/Caches/com.ferdium.ferdium-app.ShipIt",
+            "~/Library/Logs/Ferdium",
+            "~/Library/Preferences/ByHost/com.ferdium.ferdium-app.ShipIt.*.plist",
+            "~/Library/Preferences/com.electron.ferdium.helper.plist",
+            "~/Library/Preferences/com.electron.ferdium.plist",
+            "~/Library/Preferences/com.ferdium.ferdium-app.plist",
+            "~/Library/Saved Application State/com.ferdium.ferdium-app.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

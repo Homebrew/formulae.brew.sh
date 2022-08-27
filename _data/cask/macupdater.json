@@ -17,29 +17,37 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "quit": "com.corecode.MacUpdater",
-      "launchctl": "com.corecode.MacUpdaterLaunchHelper",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "com.corecode.MacUpdater",
+          "launchctl": "com.corecode.MacUpdaterLaunchHelper"
+        }
+      ]
     },
-    [
-      "MacUpdater.app"
-    ],
-    [
-      "/Applications/MacUpdater.app/Contents/Resources/macupdater_client"
-    ],
     {
-      "trash": [
-        "~/Library/Application Scripts/com.corecode.MacUpdaterLaunchHelper",
-        "~/Library/Application Support/MacUpdater",
-        "~/Library/Application Support/MacUpdaterInstallHelper",
-        "~/Library/Caches/com.corecode.MacUpdater",
-        "~/Library/Containers/com.corecode.MacUpdaterLaunchHelper",
-        "~/Library/Cookies/com.corecode.MacUpdater.binarycookies",
-        "~/Library/Preferences/com.corecode.MacUpdater.plist"
-      ],
-      "signal": {
-      }
+      "app": [
+        "MacUpdater.app"
+      ]
+    },
+    {
+      "binary": [
+        "/Applications/MacUpdater.app/Contents/Resources/macupdater_client"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Scripts/com.corecode.MacUpdaterLaunchHelper",
+            "~/Library/Application Support/MacUpdater",
+            "~/Library/Application Support/MacUpdaterInstallHelper",
+            "~/Library/Caches/com.corecode.MacUpdater",
+            "~/Library/Containers/com.corecode.MacUpdaterLaunchHelper",
+            "~/Library/Cookies/com.corecode.MacUpdater.binarycookies",
+            "~/Library/Preferences/com.corecode.MacUpdater.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

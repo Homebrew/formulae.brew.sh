@@ -17,100 +17,144 @@
   "sha256": "6ffbd3e1b6922e1e2b661d63b1b5058528e60c52b2d25d04a8a551859f35cdf4",
   "artifacts": [
     {
-      "script": {
-        "executable": "Uninstall-xc32-v4.10.app/Contents/MacOS/installbuilder.sh",
-        "args": [
-          "--mode",
-          "unattended"
-        ],
-        "sudo": "true"
-      },
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "script": {
+            "executable": "Uninstall-xc32-v4.10.app/Contents/MacOS/installbuilder.sh",
+            "args": [
+              "--mode",
+              "unattended"
+            ],
+            "sudo": "true"
+          }
+        }
+      ]
     },
     {
-      "path": "xc32-v4.10-osx-installer.app/Contents/MacOS/installbuilder.sh",
-      "args": {
-        "must_succeed": "true",
-        "sudo": "true",
-        "args": [
-          "--mode",
-          "unattended",
-          "--unattendedmodeui",
-          "none",
-          "--ModifyAll",
-          "0",
-          "--netservername",
-          "\"\"",
-          "--LicenseType",
-          "FreeMode",
-          "--prefix",
-          "$(brew --prefix)/Caskroom/mplab-xc32/4.10"
-        ],
-        "input": [
-          "y"
-        ],
-        "print_stdout": "true"
-      }
+      "installer": [
+        {
+          "script": {
+            "executable": "xc32-v4.10-osx-installer.app/Contents/MacOS/installbuilder.sh",
+            "args": [
+              "--mode",
+              "unattended",
+              "--unattendedmodeui",
+              "none",
+              "--ModifyAll",
+              "0",
+              "--netservername",
+              "\"\"",
+              "--LicenseType",
+              "FreeMode",
+              "--prefix",
+              "$(brew --prefix)/Caskroom/mplab-xc32/4.10"
+            ],
+            "input": [
+              "y"
+            ],
+            "sudo": "true"
+          }
+        }
+      ]
     },
-    [
-      "$(brew --prefix)/Caskroom/mplab-xc32/4.10/bin/xc32-addr2line"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/mplab-xc32/4.10/bin/xc32-as"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/mplab-xc32/4.10/bin/xc32-bin2hex"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/mplab-xc32/4.10/bin/xc32-c++"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/mplab-xc32/4.10/bin/xc32-c++filt"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/mplab-xc32/4.10/bin/xc32-cpp"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/mplab-xc32/4.10/bin/xc32-elfedit"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/mplab-xc32/4.10/bin/xc32-g++"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/mplab-xc32/4.10/bin/xc32-gcc"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/mplab-xc32/4.10/bin/xc32-ld"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/mplab-xc32/4.10/bin/xc32-nm"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/mplab-xc32/4.10/bin/xc32-objcopy"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/mplab-xc32/4.10/bin/xc32-objdump"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/mplab-xc32/4.10/bin/xc32-ranlib"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/mplab-xc32/4.10/bin/xc32-readelf"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/mplab-xc32/4.10/bin/xc32-size"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/mplab-xc32/4.10/bin/xc32-strings"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/mplab-xc32/4.10/bin/xc32-strip"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/mplab-xc32/4.10/bin/xc32-ar"
-    ],
-    "postflight (Postflight Block)"
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/mplab-xc32/4.10/bin/xc32-addr2line"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/mplab-xc32/4.10/bin/xc32-as"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/mplab-xc32/4.10/bin/xc32-bin2hex"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/mplab-xc32/4.10/bin/xc32-c++"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/mplab-xc32/4.10/bin/xc32-c++filt"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/mplab-xc32/4.10/bin/xc32-cpp"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/mplab-xc32/4.10/bin/xc32-elfedit"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/mplab-xc32/4.10/bin/xc32-g++"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/mplab-xc32/4.10/bin/xc32-gcc"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/mplab-xc32/4.10/bin/xc32-ld"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/mplab-xc32/4.10/bin/xc32-nm"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/mplab-xc32/4.10/bin/xc32-objcopy"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/mplab-xc32/4.10/bin/xc32-objdump"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/mplab-xc32/4.10/bin/xc32-ranlib"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/mplab-xc32/4.10/bin/xc32-readelf"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/mplab-xc32/4.10/bin/xc32-size"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/mplab-xc32/4.10/bin/xc32-strings"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/mplab-xc32/4.10/bin/xc32-strip"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/mplab-xc32/4.10/bin/xc32-ar"
+      ]
+    },
+    {
+      "postflight": null
+    }
   ],
   "caveats": null,
   "depends_on": {

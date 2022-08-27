@@ -17,21 +17,30 @@
   "sha256": "7495fb235067c6548179a7e6fbaaa728e9616b92e5b5984481d4c97f84996953",
   "artifacts": [
     {
-      "signal": {
-        "TERM": "com.boostio.boostnote"
-      }
+      "uninstall": [
+        {
+          "signal": [
+            "TERM",
+            "com.boostio.boostnote"
+          ]
+        }
+      ]
     },
-    [
-      "Boost Note.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/Boost Note",
-        "~/Library/Preferences/com.boostio.boostnote.plist",
-        "~/Library/Saved Application State/com.boostio.boostnote.savedState"
-      ],
-      "signal": {
-      }
+      "app": [
+        "Boost Note.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/Boost Note",
+            "~/Library/Preferences/com.boostio.boostnote.plist",
+            "~/Library/Saved Application State/com.boostio.boostnote.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

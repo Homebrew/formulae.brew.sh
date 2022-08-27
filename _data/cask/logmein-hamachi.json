@@ -17,23 +17,31 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "script": {
-        "executable": "/Applications/LogMeIn Hamachi/HamachiUninstaller.app/Contents/Resources/uninstaller.sh",
-        "sudo": "true"
-      },
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "script": {
+            "executable": "/Applications/LogMeIn Hamachi/HamachiUninstaller.app/Contents/Resources/uninstaller.sh",
+            "sudo": "true"
+          }
+        }
+      ]
     },
     {
-      "path": "LogMeInHamachiInstaller.app"
+      "installer": [
+        {
+          "manual": "LogMeInHamachiInstaller.app"
+        }
+      ]
     },
     {
-      "trash": [
-        "/Library/Application Support/LogMeIn Hamachi",
-        "~/Library/Application Support/LogMeIn Hamachi"
-      ],
-      "signal": {
-      }
+      "zap": [
+        {
+          "trash": [
+            "/Library/Application Support/LogMeIn Hamachi",
+            "~/Library/Application Support/LogMeIn Hamachi"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

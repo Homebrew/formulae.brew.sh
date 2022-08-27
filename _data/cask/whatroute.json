@@ -17,26 +17,32 @@
   "sha256": "44529f990df882a8cca7bbc83e2bf866ae770940863bcd830e0fdfac2bf17635",
   "artifacts": [
     {
-      "delete": "/Library/PrivilegedHelperTools/net.whatroute.whatroute2helper",
-      "launchctl": [
-        "net.whatroute.LaunchHelper",
-        "net.whatroute.whatroute2helper"
-      ],
-      "quit": "net.whatroute.whatroute2",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": "/Library/PrivilegedHelperTools/net.whatroute.whatroute2helper",
+          "launchctl": [
+            "net.whatroute.LaunchHelper",
+            "net.whatroute.whatroute2helper"
+          ],
+          "quit": "net.whatroute.whatroute2"
+        }
+      ]
     },
-    [
-      "WhatRoute.app"
-    ],
     {
-      "trash": [
-        "~/Library/Caches/net.whatroute.whatroute2",
-        "~/Library/Logs/net.whatroute.whatroute2",
-        "~/Library/Preferences/net.whatroute.whatroute2.plist"
-      ],
-      "signal": {
-      }
+      "app": [
+        "WhatRoute.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Caches/net.whatroute.whatroute2",
+            "~/Library/Logs/net.whatroute.whatroute2",
+            "~/Library/Preferences/net.whatroute.whatroute2.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

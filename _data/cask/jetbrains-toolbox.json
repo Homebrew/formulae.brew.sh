@@ -17,29 +17,38 @@
   "sha256": "0f0ce719cbacfd83d10608a07795b3102a57e7fc1652864098fda599fca5323f",
   "artifacts": [
     {
-      "signal": {
-        "TERM": "com.jetbrains.toolbox"
-      },
-      "launchctl": "com.jetbrains.toolbox"
+      "uninstall": [
+        {
+          "signal": [
+            "TERM",
+            "com.jetbrains.toolbox"
+          ],
+          "launchctl": "com.jetbrains.toolbox"
+        }
+      ]
     },
-    [
-      "JetBrains Toolbox.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/JetBrains/Toolbox",
-        "~/Library/Caches/JetBrains/Toolbox",
-        "~/Library/Logs/JetBrains/Toolbox",
-        "~/Library/Preferences/com.jetbrains.toolbox.renderer.plist",
-        "~/Library/Saved Application State/com.jetbrains.toolbox.savedState"
-      ],
-      "rmdir": [
-        "~/Library/Application Support/JetBrains",
-        "~/Library/Caches/JetBrains",
-        "~/Library/Logs/JetBrains"
-      ],
-      "signal": {
-      }
+      "app": [
+        "JetBrains Toolbox.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/JetBrains/Toolbox",
+            "~/Library/Caches/JetBrains/Toolbox",
+            "~/Library/Logs/JetBrains/Toolbox",
+            "~/Library/Preferences/com.jetbrains.toolbox.renderer.plist",
+            "~/Library/Saved Application State/com.jetbrains.toolbox.savedState"
+          ],
+          "rmdir": [
+            "~/Library/Application Support/JetBrains",
+            "~/Library/Caches/JetBrains",
+            "~/Library/Logs/JetBrains"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

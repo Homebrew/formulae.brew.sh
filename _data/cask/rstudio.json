@@ -16,13 +16,17 @@
   "outdated": false,
   "sha256": "7b1a22854f10a9647a01ba442a50c26f0177b4cc9aa6faf9321a72eb861e5ca8",
   "artifacts": [
-    [
-      "RStudio.app"
-    ],
     {
-      "trash": "~/.rstudio-desktop",
-      "signal": {
-      }
+      "app": [
+        "RStudio.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": "~/.rstudio-desktop"
+        }
+      ]
     }
   ],
   "caveats": "rstudio depends on R. The R Project provides official binaries:\n\n  brew install --cask r\n\nAlternatively, the Homebrew-compiled version of R omits the GUI app:\n\n  brew install r\n",

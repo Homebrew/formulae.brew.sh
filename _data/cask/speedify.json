@@ -17,22 +17,28 @@
   "sha256": "3cf81a09b57aa2d37e24056ec7c06666bc41a777eb0fdd6ddb8fc855843b19dc",
   "artifacts": [
     {
-      "launchctl": [
-        "me.connectify.SMJobBlessHelper",
-        "SpeedifyService",
-        "SwitchboardService"
-      ],
-      "script": "/Applications/Speedify.app/Contents/Resources/uninstall-speedify-service.sh",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "launchctl": [
+            "me.connectify.SMJobBlessHelper",
+            "SpeedifyService",
+            "SwitchboardService"
+          ],
+          "script": "/Applications/Speedify.app/Contents/Resources/uninstall-speedify-service.sh"
+        }
+      ]
     },
-    [
-      "Speedify.app"
-    ],
     {
-      "trash": "~/Library/Speedify",
-      "signal": {
-      }
+      "app": [
+        "Speedify.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": "~/Library/Speedify"
+        }
+      ]
     }
   ],
   "caveats": null,

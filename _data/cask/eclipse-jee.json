@@ -16,21 +16,25 @@
   "outdated": false,
   "sha256": "84fdae52853e84fe530f002482a5ddddfc1a88932e93c341001192fc54daa8b1",
   "artifacts": [
-    [
-      "Eclipse.app",
-      {
-        "target": "Eclipse JEE.app"
-      }
-    ],
     {
-      "trash": [
-        "~/Library/Caches/org.eclipse.platform.ide",
-        "~/Library/Cookies/org.eclipse.platform.ide.binarycookies",
-        "~/Library/Preferences/org.eclipse.platform.ide.plist",
-        "~/Library/Saved Application State/org.eclipse.platform.ide.savedState"
-      ],
-      "signal": {
-      }
+      "app": [
+        "Eclipse.app",
+        {
+          "target": "Eclipse JEE.app"
+        }
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Caches/org.eclipse.platform.ide",
+            "~/Library/Cookies/org.eclipse.platform.ide.binarycookies",
+            "~/Library/Preferences/org.eclipse.platform.ide.plist",
+            "~/Library/Saved Application State/org.eclipse.platform.ide.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": "eclipse-jee requires Java. You can install the latest version with:\n  brew install --cask temurin\n",

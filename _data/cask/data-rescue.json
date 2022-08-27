@@ -17,24 +17,30 @@
   "sha256": "45ba579f20251bbe4c7d8cd52a31da210abbb15428c4d42d6c617ac40ce3fd69",
   "artifacts": [
     {
-      "quit": "com.prosofteng.DataRescue",
-      "delete": "/Library/Application Support/Data Rescue",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "com.prosofteng.DataRescue",
+          "delete": "/Library/Application Support/Data Rescue"
+        }
+      ]
     },
-    [
-      "Data Rescue.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/Data Rescue",
-        "~/Library/HTTPStorages/com.prosofteng.DataRescue",
-        "~/Library/Preferences/com.prosofteng.Data Rescue.plist",
-        "~/Library/Preferences/com.prosofteng.DataRescue.plist",
-        "~/Library/Saved Application State/com.prosofteng.DataRescue.savedState"
-      ],
-      "signal": {
-      }
+      "app": [
+        "Data Rescue.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/Data Rescue",
+            "~/Library/HTTPStorages/com.prosofteng.DataRescue",
+            "~/Library/Preferences/com.prosofteng.Data Rescue.plist",
+            "~/Library/Preferences/com.prosofteng.DataRescue.plist",
+            "~/Library/Saved Application State/com.prosofteng.DataRescue.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

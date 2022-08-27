@@ -17,31 +17,39 @@
   "sha256": "bf73610b57213baa3f325f892bc293f2fce673309ea041b65e9ddf1f4ee7f82c",
   "artifacts": [
     {
-      "pkgutil": [
-        "com.microsoft.rdc.macos",
-        "com.microsoft.package.Microsoft_AutoUpdate.app"
-      ],
-      "launchctl": [
-        "com.microsoft.autoupdate.helper",
-        "com.microsoft.update.agent"
-      ],
-      "quit": [
-        "com.microsoft.autoupdate2",
-        "com.microsoft.autoupdate.fba",
-        "com.microsoft.errorreporting"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": [
+            "com.microsoft.rdc.macos",
+            "com.microsoft.package.Microsoft_AutoUpdate.app"
+          ],
+          "launchctl": [
+            "com.microsoft.autoupdate.helper",
+            "com.microsoft.update.agent"
+          ],
+          "quit": [
+            "com.microsoft.autoupdate2",
+            "com.microsoft.autoupdate.fba",
+            "com.microsoft.errorreporting"
+          ]
+        }
+      ]
     },
-    "Microsoft_Remote_Desktop_10.7.9_installer.pkg (Pkg)",
     {
-      "trash": [
-        "~/Library/Application Scripts/com.microsoft.rdc.macos",
-        "~/Library/Containers/com.microsoft.rdc.macos",
-        "~/Library/Group Containers/UBF8T346G9.com.microsoft.rdc"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "Microsoft_Remote_Desktop_10.7.9_installer.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Scripts/com.microsoft.rdc.macos",
+            "~/Library/Containers/com.microsoft.rdc.macos",
+            "~/Library/Group Containers/UBF8T346G9.com.microsoft.rdc"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

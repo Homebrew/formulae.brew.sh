@@ -17,16 +17,22 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "pkgutil": [
-        "com.amazon.kc2.kindleComicCreator*",
-        "com.amazon.kc2.KindleComicCreator*",
-        "com.amazon.kc2.KindlePreviewer.pkg"
-      ],
-      "launchctl": "com.amazon.KindlePreviewerUpdater",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": [
+            "com.amazon.kc2.kindleComicCreator*",
+            "com.amazon.kc2.KindleComicCreator*",
+            "com.amazon.kc2.KindlePreviewer.pkg"
+          ],
+          "launchctl": "com.amazon.KindlePreviewerUpdater"
+        }
+      ]
     },
-    "Kindle Comic Creator.pkg (Pkg)"
+    {
+      "pkg": [
+        "Kindle Comic Creator.pkg"
+      ]
+    }
   ],
   "caveats": null,
   "depends_on": {

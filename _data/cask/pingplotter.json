@@ -17,22 +17,28 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "quit": "com.pingman.pingplotter.mac",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "com.pingman.pingplotter.mac"
+        }
+      ]
     },
-    [
-      "PingPlotter.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/PingPlotter",
-        "~/Library/Logs/PingPlotter",
-        "~/Library/Preferences/com.pingman.pingplotter.mac.plist",
-        "~/Library/Saved Application State/com.pingman.pingplotter.mac.savedState"
-      ],
-      "signal": {
-      }
+      "app": [
+        "PingPlotter.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/PingPlotter",
+            "~/Library/Logs/PingPlotter",
+            "~/Library/Preferences/com.pingman.pingplotter.mac.plist",
+            "~/Library/Saved Application State/com.pingman.pingplotter.mac.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

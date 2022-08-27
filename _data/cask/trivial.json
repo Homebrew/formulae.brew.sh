@@ -17,25 +17,31 @@
   "sha256": "a0a3d0a59ccf23368011acca93c76ef6d7d76539391824bc3c72c2425047716b",
   "artifacts": [
     {
-      "launchctl": "com.decisivetactics.trivial-server",
-      "delete": [
-        "/Library/Application Support/com.decisivetactics.trivial",
-        "/Library/LaunchDaemons/com.decisivetactics.trivial-server.plist"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "launchctl": "com.decisivetactics.trivial-server",
+          "delete": [
+            "/Library/Application Support/com.decisivetactics.trivial",
+            "/Library/LaunchDaemons/com.decisivetactics.trivial-server.plist"
+          ]
+        }
+      ]
     },
-    [
-      "Trivial.app"
-    ],
     {
-      "trash": [
-        "~/Library/Caches/com.decisivetactics.trivial",
-        "~/Library/HTTPStorages/com.decisivetactics.trivial",
-        "~/Library/Preferences/com.decisivetactics.trivial.plist"
-      ],
-      "signal": {
-      }
+      "app": [
+        "Trivial.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Caches/com.decisivetactics.trivial",
+            "~/Library/HTTPStorages/com.decisivetactics.trivial",
+            "~/Library/Preferences/com.decisivetactics.trivial.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

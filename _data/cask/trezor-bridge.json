@@ -17,17 +17,25 @@
   "sha256": "a8a5352f888467cb1bc3b4273ee26c7f0da2a58f60e31aeffea46153aa03be07",
   "artifacts": [
     {
-      "pkgutil": "com.bitcointrezor.pkg.TREZORBridge*",
-      "launchctl": "com.bitcointrezor.trezorBridge.trezord",
-      "delete": "/Applications/Utilities/TREZOR Bridge",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "com.bitcointrezor.pkg.TREZORBridge*",
+          "launchctl": "com.bitcointrezor.trezorBridge.trezord",
+          "delete": "/Applications/Utilities/TREZOR Bridge"
+        }
+      ]
     },
-    "trezor-bridge-2.0.27.pkg (Pkg)",
     {
-      "trash": "~/Library/Logs/trezord.log",
-      "signal": {
-      }
+      "pkg": [
+        "trezor-bridge-2.0.27.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": "~/Library/Logs/trezord.log"
+        }
+      ]
     }
   ],
   "caveats": null,

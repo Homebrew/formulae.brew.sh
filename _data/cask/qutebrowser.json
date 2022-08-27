@@ -16,25 +16,33 @@
   "outdated": false,
   "sha256": "9c52c7ade3485103686b31e49d2576da3f57f43bba2b062528988a5ee606bb39",
   "artifacts": [
-    "preflight (Preflight Block)",
-    [
-      "qutebrowser.app"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/qutebrowser/2.5.2/qutebrowser.wrapper.sh",
-      {
-        "target": "qutebrowser"
-      }
-    ],
     {
-      "rmdir": "~/.qutebrowser",
-      "trash": [
-        "~/Library/Application Support/qutebrowser",
-        "~/Library/Caches/qutebrowser",
-        "~/Library/Preferences/qutebrowser"
-      ],
-      "signal": {
-      }
+      "preflight": null
+    },
+    {
+      "app": [
+        "qutebrowser.app"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/qutebrowser/2.5.2/qutebrowser.wrapper.sh",
+        {
+          "target": "qutebrowser"
+        }
+      ]
+    },
+    {
+      "zap": [
+        {
+          "rmdir": "~/.qutebrowser",
+          "trash": [
+            "~/Library/Application Support/qutebrowser",
+            "~/Library/Caches/qutebrowser",
+            "~/Library/Preferences/qutebrowser"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

@@ -17,33 +17,40 @@
   "sha256": "80ee5ce53a1f4edb21677dd6794a043ad7d1db6e3d5ffe7a994937923a50a2c9",
   "artifacts": [
     {
-      "delete": "$(brew --prefix)/Caskroom/miniforge/base",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": "$(brew --prefix)/Caskroom/miniforge/base"
+        }
+      ]
     },
     {
-      "path": "Miniforge3-4.14.0-0-MacOSX-x86_64.sh",
-      "args": {
-        "must_succeed": "true",
-        "sudo": "false",
-        "args": [
-          "-b",
-          "-p",
-          "$(brew --prefix)/Caskroom/miniforge/base"
-        ],
-        "print_stdout": "true"
-      }
+      "installer": [
+        {
+          "script": {
+            "executable": "Miniforge3-4.14.0-0-MacOSX-x86_64.sh",
+            "args": [
+              "-b",
+              "-p",
+              "$(brew --prefix)/Caskroom/miniforge/base"
+            ]
+          }
+        }
+      ]
     },
-    [
-      "$(brew --prefix)/Caskroom/miniforge/base/condabin/conda"
-    ],
     {
-      "trash": [
-        "~/.condarc",
-        "~/.conda"
-      ],
-      "signal": {
-      }
+      "binary": [
+        "$(brew --prefix)/Caskroom/miniforge/base/condabin/conda"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/.condarc",
+            "~/.conda"
+          ]
+        }
+      ]
     }
   ],
   "caveats": "Please run the following to setup your shell:\n  conda init \"$(basename \"${SHELL}\")\"\n",
@@ -62,33 +69,40 @@
       "sha256": "91b7cadb5986af1c38555cfb4214dcb353212492a89d5e7f4c32204829ed1829",
       "artifacts": [
         {
-          "delete": "$(brew --prefix)/Caskroom/miniforge/base",
-          "signal": {
-          }
+          "uninstall": [
+            {
+              "delete": "$(brew --prefix)/Caskroom/miniforge/base"
+            }
+          ]
         },
         {
-          "path": "Miniforge3-4.14.0-0-MacOSX-arm64.sh",
-          "args": {
-            "must_succeed": "true",
-            "sudo": "false",
-            "args": [
-              "-b",
-              "-p",
-              "$(brew --prefix)/Caskroom/miniforge/base"
-            ],
-            "print_stdout": "true"
-          }
+          "installer": [
+            {
+              "script": {
+                "executable": "Miniforge3-4.14.0-0-MacOSX-arm64.sh",
+                "args": [
+                  "-b",
+                  "-p",
+                  "$(brew --prefix)/Caskroom/miniforge/base"
+                ]
+              }
+            }
+          ]
         },
-        [
-          "$(brew --prefix)/Caskroom/miniforge/base/condabin/conda"
-        ],
         {
-          "trash": [
-            "~/.condarc",
-            "~/.conda"
-          ],
-          "signal": {
-          }
+          "binary": [
+            "$(brew --prefix)/Caskroom/miniforge/base/condabin/conda"
+          ]
+        },
+        {
+          "zap": [
+            {
+              "trash": [
+                "~/.condarc",
+                "~/.conda"
+              ]
+            }
+          ]
         }
       ]
     },
@@ -97,33 +111,40 @@
       "sha256": "91b7cadb5986af1c38555cfb4214dcb353212492a89d5e7f4c32204829ed1829",
       "artifacts": [
         {
-          "delete": "$(brew --prefix)/Caskroom/miniforge/base",
-          "signal": {
-          }
+          "uninstall": [
+            {
+              "delete": "$(brew --prefix)/Caskroom/miniforge/base"
+            }
+          ]
         },
         {
-          "path": "Miniforge3-4.14.0-0-MacOSX-arm64.sh",
-          "args": {
-            "must_succeed": "true",
-            "sudo": "false",
-            "args": [
-              "-b",
-              "-p",
-              "$(brew --prefix)/Caskroom/miniforge/base"
-            ],
-            "print_stdout": "true"
-          }
+          "installer": [
+            {
+              "script": {
+                "executable": "Miniforge3-4.14.0-0-MacOSX-arm64.sh",
+                "args": [
+                  "-b",
+                  "-p",
+                  "$(brew --prefix)/Caskroom/miniforge/base"
+                ]
+              }
+            }
+          ]
         },
-        [
-          "$(brew --prefix)/Caskroom/miniforge/base/condabin/conda"
-        ],
         {
-          "trash": [
-            "~/.condarc",
-            "~/.conda"
-          ],
-          "signal": {
-          }
+          "binary": [
+            "$(brew --prefix)/Caskroom/miniforge/base/condabin/conda"
+          ]
+        },
+        {
+          "zap": [
+            {
+              "trash": [
+                "~/.condarc",
+                "~/.conda"
+              ]
+            }
+          ]
         }
       ]
     },
@@ -132,33 +153,40 @@
       "sha256": "91b7cadb5986af1c38555cfb4214dcb353212492a89d5e7f4c32204829ed1829",
       "artifacts": [
         {
-          "delete": "$(brew --prefix)/Caskroom/miniforge/base",
-          "signal": {
-          }
+          "uninstall": [
+            {
+              "delete": "$(brew --prefix)/Caskroom/miniforge/base"
+            }
+          ]
         },
         {
-          "path": "Miniforge3-4.14.0-0-MacOSX-arm64.sh",
-          "args": {
-            "must_succeed": "true",
-            "sudo": "false",
-            "args": [
-              "-b",
-              "-p",
-              "$(brew --prefix)/Caskroom/miniforge/base"
-            ],
-            "print_stdout": "true"
-          }
+          "installer": [
+            {
+              "script": {
+                "executable": "Miniforge3-4.14.0-0-MacOSX-arm64.sh",
+                "args": [
+                  "-b",
+                  "-p",
+                  "$(brew --prefix)/Caskroom/miniforge/base"
+                ]
+              }
+            }
+          ]
         },
-        [
-          "$(brew --prefix)/Caskroom/miniforge/base/condabin/conda"
-        ],
         {
-          "trash": [
-            "~/.condarc",
-            "~/.conda"
-          ],
-          "signal": {
-          }
+          "binary": [
+            "$(brew --prefix)/Caskroom/miniforge/base/condabin/conda"
+          ]
+        },
+        {
+          "zap": [
+            {
+              "trash": [
+                "~/.condarc",
+                "~/.conda"
+              ]
+            }
+          ]
         }
       ]
     }

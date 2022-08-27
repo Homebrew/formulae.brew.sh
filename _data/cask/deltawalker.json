@@ -17,26 +17,32 @@
   "sha256": "8d508521c98c4dec3a7affe1190e4911818032ffc82a17a7fb4a64b0a097246f",
   "artifacts": [
     {
-      "script": {
-        "executable": "$(brew --prefix)/Caskroom/deltawalker/2.6.4/run-me-first",
-        "sudo": "false",
-        "must_succeed": "false"
-      },
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "script": {
+            "executable": "$(brew --prefix)/Caskroom/deltawalker/2.6.4/run-me-first",
+            "sudo": "false",
+            "must_succeed": "false"
+          }
+        }
+      ]
     },
-    [
-      "DeltaWalker.app"
-    ],
     {
-      "trash": [
-        "~/Library/Caches/com.deltopia.DeltaWalker",
-        "~/Library/Containers/com.deltopia.DeltaWalker",
-        "~/Library/Preferences/com.deltopia.DeltaWalker.plist",
-        "~/Library/Saved Application State/com.deltopia.DeltaWalker.savedState"
-      ],
-      "signal": {
-      }
+      "app": [
+        "DeltaWalker.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Caches/com.deltopia.DeltaWalker",
+            "~/Library/Containers/com.deltopia.DeltaWalker",
+            "~/Library/Preferences/com.deltopia.DeltaWalker.plist",
+            "~/Library/Saved Application State/com.deltopia.DeltaWalker.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

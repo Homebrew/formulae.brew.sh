@@ -17,30 +17,38 @@
   "sha256": "f270dac14cf355026268d2a5a00d903c5102b69e0d2db2a7e47142f7eb76e025",
   "artifacts": [
     {
-      "launchctl": "org.xquartz.privileged_startx",
-      "pkgutil": "org.xquartz.X11",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "launchctl": "org.xquartz.privileged_startx",
+          "pkgutil": "org.xquartz.X11"
+        }
+      ]
     },
-    "XQuartz.pkg (Pkg)",
     {
-      "trash": [
-        "~/.Xauthority",
-        "~/Library/Application Support/XQuartz",
-        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.xquartz.x11.sfl*",
-        "~/Library/Caches/org.xquartz.X11",
-        "~/Library/Cookies/org.xquartz.X11.binarycookies",
-        "~/Library/Logs/X11/org.xquartz.log",
-        "~/Library/Logs/X11/org.xquartz.log.old",
-        "~/Library/Preferences/org.xquartz.X11.plist",
-        "~/Library/Saved Application State/org.xquartz.X11.savedState"
-      ],
-      "rmdir": [
-        "~/.fonts",
-        "~/Library/Logs/X11"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "XQuartz.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/.Xauthority",
+            "~/Library/Application Support/XQuartz",
+            "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.xquartz.x11.sfl*",
+            "~/Library/Caches/org.xquartz.X11",
+            "~/Library/Cookies/org.xquartz.X11.binarycookies",
+            "~/Library/Logs/X11/org.xquartz.log",
+            "~/Library/Logs/X11/org.xquartz.log.old",
+            "~/Library/Preferences/org.xquartz.X11.plist",
+            "~/Library/Saved Application State/org.xquartz.X11.savedState"
+          ],
+          "rmdir": [
+            "~/.fonts",
+            "~/Library/Logs/X11"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

@@ -17,16 +17,26 @@
   "sha256": "bc3fff0f495d1cd9bb6d607425bd9e37ba93f5325a0f8b74419bbcce9d82880f",
   "artifacts": [
     {
-      "pkgutil": "com.wearezeta.zclient.mac",
-      "signal": {
-        "TERM": "com.wearezeta.zclient.mac"
-      }
+      "uninstall": [
+        {
+          "pkgutil": "com.wearezeta.zclient.mac",
+          "signal": {
+            "TERM": "com.wearezeta.zclient.mac"
+          }
+        }
+      ]
     },
-    "Wire.pkg (Pkg)",
     {
-      "trash": "~/Library/Containers/com.wearezeta.zclient.mac",
-      "signal": {
-      }
+      "pkg": [
+        "Wire.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": "~/Library/Containers/com.wearezeta.zclient.mac"
+        }
+      ]
     }
   ],
   "caveats": null,

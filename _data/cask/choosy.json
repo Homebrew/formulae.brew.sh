@@ -21,19 +21,27 @@
   "sha256": "71fe3c3c592d449063189a575a39b1f00735ee20cf1de94552896f5f8e93bf47",
   "artifacts": [
     {
-      "pkgutil": "com.choosyosx.Choosy",
-      "quit": "com.choosyosx.Choosy",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "com.choosyosx.Choosy",
+          "quit": "com.choosyosx.Choosy"
+        }
+      ]
     },
-    "Choosy.pkg (Pkg)",
     {
-      "trash": [
-        "~/Library/Application Support/Choosy",
-        "~/Library/Preferences/com.choosyosx.ChoosyPrefPane.plist"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "Choosy.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/Choosy",
+            "~/Library/Preferences/com.choosyosx.ChoosyPrefPane.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

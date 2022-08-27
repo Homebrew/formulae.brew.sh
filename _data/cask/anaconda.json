@@ -17,37 +17,45 @@
   "sha256": "1a10c06660ebe1204e538b4e9d810142441af9dfd74b077eee2761ec6e675f39",
   "artifacts": [
     {
-      "delete": [
-        "$(brew --prefix)/anaconda3",
-        "/Applications/Anaconda-Navigator.app"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": [
+            "$(brew --prefix)/anaconda3",
+            "/Applications/Anaconda-Navigator.app"
+          ]
+        }
+      ]
     },
     {
-      "path": "Anaconda3-2022.05-MacOSX-x86_64.sh",
-      "args": {
-        "must_succeed": "true",
-        "sudo": "true",
-        "args": [
-          "-b",
-          "-p",
-          "$(brew --prefix)/anaconda3"
-        ],
-        "print_stdout": "true"
-      }
+      "installer": [
+        {
+          "script": {
+            "executable": "Anaconda3-2022.05-MacOSX-x86_64.sh",
+            "args": [
+              "-b",
+              "-p",
+              "$(brew --prefix)/anaconda3"
+            ],
+            "sudo": "true"
+          }
+        }
+      ]
     },
-    "postflight (Postflight Block)",
     {
-      "trash": [
-        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.continuum.io.sfl*",
-        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.continuum.python.sfl*",
-        "~/.anaconda",
-        "~/.conda",
-        "~/.condarc"
-      ],
-      "signal": {
-      }
+      "postflight": null
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.continuum.io.sfl*",
+            "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.continuum.python.sfl*",
+            "~/.anaconda",
+            "~/.conda",
+            "~/.condarc"
+          ]
+        }
+      ]
     }
   ],
   "caveats": "Cask anaconda installs files under $(brew --prefix). The presence of such\nfiles can cause warnings when running `brew doctor`, which is considered\nto be a bug in Homebrew Cask.\n",
@@ -62,37 +70,45 @@
       "sha256": "a12119931945a9a1453993582259cc67318a9a75a15731e5ccc15365e7f88a36",
       "artifacts": [
         {
-          "delete": [
-            "$(brew --prefix)/anaconda3",
-            "/Applications/Anaconda-Navigator.app"
-          ],
-          "signal": {
-          }
+          "uninstall": [
+            {
+              "delete": [
+                "$(brew --prefix)/anaconda3",
+                "/Applications/Anaconda-Navigator.app"
+              ]
+            }
+          ]
         },
         {
-          "path": "Anaconda3-2022.05-MacOSX-arm64.sh",
-          "args": {
-            "must_succeed": "true",
-            "sudo": "true",
-            "args": [
-              "-b",
-              "-p",
-              "$(brew --prefix)/anaconda3"
-            ],
-            "print_stdout": "true"
-          }
+          "installer": [
+            {
+              "script": {
+                "executable": "Anaconda3-2022.05-MacOSX-arm64.sh",
+                "args": [
+                  "-b",
+                  "-p",
+                  "$(brew --prefix)/anaconda3"
+                ],
+                "sudo": "true"
+              }
+            }
+          ]
         },
-        "postflight (Postflight Block)",
         {
-          "trash": [
-            "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.continuum.io.sfl*",
-            "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.continuum.python.sfl*",
-            "~/.anaconda",
-            "~/.conda",
-            "~/.condarc"
-          ],
-          "signal": {
-          }
+          "postflight": null
+        },
+        {
+          "zap": [
+            {
+              "trash": [
+                "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.continuum.io.sfl*",
+                "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.continuum.python.sfl*",
+                "~/.anaconda",
+                "~/.conda",
+                "~/.condarc"
+              ]
+            }
+          ]
         }
       ]
     },
@@ -101,37 +117,45 @@
       "sha256": "a12119931945a9a1453993582259cc67318a9a75a15731e5ccc15365e7f88a36",
       "artifacts": [
         {
-          "delete": [
-            "$(brew --prefix)/anaconda3",
-            "/Applications/Anaconda-Navigator.app"
-          ],
-          "signal": {
-          }
+          "uninstall": [
+            {
+              "delete": [
+                "$(brew --prefix)/anaconda3",
+                "/Applications/Anaconda-Navigator.app"
+              ]
+            }
+          ]
         },
         {
-          "path": "Anaconda3-2022.05-MacOSX-arm64.sh",
-          "args": {
-            "must_succeed": "true",
-            "sudo": "true",
-            "args": [
-              "-b",
-              "-p",
-              "$(brew --prefix)/anaconda3"
-            ],
-            "print_stdout": "true"
-          }
+          "installer": [
+            {
+              "script": {
+                "executable": "Anaconda3-2022.05-MacOSX-arm64.sh",
+                "args": [
+                  "-b",
+                  "-p",
+                  "$(brew --prefix)/anaconda3"
+                ],
+                "sudo": "true"
+              }
+            }
+          ]
         },
-        "postflight (Postflight Block)",
         {
-          "trash": [
-            "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.continuum.io.sfl*",
-            "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.continuum.python.sfl*",
-            "~/.anaconda",
-            "~/.conda",
-            "~/.condarc"
-          ],
-          "signal": {
-          }
+          "postflight": null
+        },
+        {
+          "zap": [
+            {
+              "trash": [
+                "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.continuum.io.sfl*",
+                "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.continuum.python.sfl*",
+                "~/.anaconda",
+                "~/.conda",
+                "~/.condarc"
+              ]
+            }
+          ]
         }
       ]
     },
@@ -140,37 +164,45 @@
       "sha256": "a12119931945a9a1453993582259cc67318a9a75a15731e5ccc15365e7f88a36",
       "artifacts": [
         {
-          "delete": [
-            "$(brew --prefix)/anaconda3",
-            "/Applications/Anaconda-Navigator.app"
-          ],
-          "signal": {
-          }
+          "uninstall": [
+            {
+              "delete": [
+                "$(brew --prefix)/anaconda3",
+                "/Applications/Anaconda-Navigator.app"
+              ]
+            }
+          ]
         },
         {
-          "path": "Anaconda3-2022.05-MacOSX-arm64.sh",
-          "args": {
-            "must_succeed": "true",
-            "sudo": "true",
-            "args": [
-              "-b",
-              "-p",
-              "$(brew --prefix)/anaconda3"
-            ],
-            "print_stdout": "true"
-          }
+          "installer": [
+            {
+              "script": {
+                "executable": "Anaconda3-2022.05-MacOSX-arm64.sh",
+                "args": [
+                  "-b",
+                  "-p",
+                  "$(brew --prefix)/anaconda3"
+                ],
+                "sudo": "true"
+              }
+            }
+          ]
         },
-        "postflight (Postflight Block)",
         {
-          "trash": [
-            "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.continuum.io.sfl*",
-            "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.continuum.python.sfl*",
-            "~/.anaconda",
-            "~/.conda",
-            "~/.condarc"
-          ],
-          "signal": {
-          }
+          "postflight": null
+        },
+        {
+          "zap": [
+            {
+              "trash": [
+                "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.continuum.io.sfl*",
+                "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.continuum.python.sfl*",
+                "~/.anaconda",
+                "~/.conda",
+                "~/.condarc"
+              ]
+            }
+          ]
         }
       ]
     }

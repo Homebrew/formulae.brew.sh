@@ -17,19 +17,27 @@
   "sha256": "5a4459944a6d0233ec9dcc5e55e94a43b682845913f71e6d0f62dec4fa2f9386",
   "artifacts": [
     {
-      "pkgutil": "com.pioneer.rekordbox.6.*",
-      "delete": "/Applications/rekordbox 6",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "com.pioneer.rekordbox.6.*",
+          "delete": "/Applications/rekordbox 6"
+        }
+      ]
     },
-    "Install_rekordbox_6_6_4.pkg (Pkg)",
     {
-      "trash": [
-        "~/Library/Application Support/Pioneer/rekordbox",
-        "~/Library/Pioneer/rekordbox"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "Install_rekordbox_6_6_4.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/Pioneer/rekordbox",
+            "~/Library/Pioneer/rekordbox"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

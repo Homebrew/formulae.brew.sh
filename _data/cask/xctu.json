@@ -17,30 +17,35 @@
   "sha256": "549aa41bca87035df7251765404a6600c0696a260a09d6d35e8e11b783d5fa0a",
   "artifacts": [
     {
-      "trash": "/Applications/XCTU.app",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "trash": "/Applications/XCTU.app"
+        }
+      ]
     },
     {
-      "path": "$(brew --prefix)/Caskroom/xctu/40003027_AE/xctu_installer.app/Contents/MacOS/installbuilder.sh",
-      "args": {
-        "must_succeed": "true",
-        "sudo": "false",
-        "args": [
-          "--mode",
-          "unattended"
-        ],
-        "print_stdout": "true"
-      }
+      "installer": [
+        {
+          "script": {
+            "executable": "$(brew --prefix)/Caskroom/xctu/40003027_AE/xctu_installer.app/Contents/MacOS/installbuilder.sh",
+            "args": [
+              "--mode",
+              "unattended"
+            ]
+          }
+        }
+      ]
     },
     {
-      "trash": [
-        "~/Library/Caches/XCTU",
-        "~/Library/Preferences/XCTU.plist",
-        "~/Library/Saved Application State/XCTU.savedState"
-      ],
-      "signal": {
-      }
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Caches/XCTU",
+            "~/Library/Preferences/XCTU.plist",
+            "~/Library/Saved Application State/XCTU.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

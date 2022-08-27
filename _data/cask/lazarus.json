@@ -17,15 +17,21 @@
   "sha256": "0efbf6cfcf4777f49c3eb91a8268224e7cee8e640b1d3be88907d7a7c894845d",
   "artifacts": [
     {
-      "pkgutil": [
-        "org.freepascal.pkg.fpcsrc-320-laz",
-        "org.lazarus-ide.pkg.LazarusIDE"
-      ],
-      "delete": "/Applications/Lazarus.app",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": [
+            "org.freepascal.pkg.fpcsrc-320-laz",
+            "org.lazarus-ide.pkg.LazarusIDE"
+          ],
+          "delete": "/Applications/Lazarus.app"
+        }
+      ]
     },
-    "Lazarus-2.2.2-0-x86_64-macosx.pkg (Pkg)"
+    {
+      "pkg": [
+        "Lazarus-2.2.2-0-x86_64-macosx.pkg"
+      ]
+    }
   ],
   "caveats": null,
   "depends_on": {

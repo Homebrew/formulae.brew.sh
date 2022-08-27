@@ -20,26 +20,32 @@
   "sha256": "545cff53df31b63fe28e794fb7f45e4c891885f5de57422b1483724f6d7ed4e0",
   "artifacts": [
     {
-      "quit": "net.freemacsoft.LiteIcon",
-      "delete": [
-        "/Library/PrivilegedHelperTools/net.freemacsoft.LiteIcon.LIHelperTool",
-        "~/Library/Application Support/LiteIcon"
-      ],
-      "launchctl": "net.freemacsoft.LiteIcon.LIHelperTool",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "net.freemacsoft.LiteIcon",
+          "delete": [
+            "/Library/PrivilegedHelperTools/net.freemacsoft.LiteIcon.LIHelperTool",
+            "~/Library/Application Support/LiteIcon"
+          ],
+          "launchctl": "net.freemacsoft.LiteIcon.LIHelperTool"
+        }
+      ]
     },
-    [
-      "LiteIcon.app"
-    ],
     {
-      "trash": [
-        "~/Library/Preferences/net.freemacsoft.LiteIcon.plist",
-        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.freemacsoft.liteicon.sfl*",
-        "~/Library/Application Support/CrashReporter/LiteIcon_*.plist"
-      ],
-      "signal": {
-      }
+      "app": [
+        "LiteIcon.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Preferences/net.freemacsoft.LiteIcon.plist",
+            "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.freemacsoft.liteicon.sfl*",
+            "~/Library/Application Support/CrashReporter/LiteIcon_*.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

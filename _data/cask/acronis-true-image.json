@@ -17,12 +17,18 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "pkgutil": "com.acronis.trueimageformac",
-      "delete": "/Applications/Acronis True Image.app",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "com.acronis.trueimageformac",
+          "delete": "/Applications/Acronis True Image.app"
+        }
+      ]
     },
-    "Install Acronis True Image.pkg (Pkg)"
+    {
+      "pkg": [
+        "Install Acronis True Image.pkg"
+      ]
+    }
   ],
   "caveats": null,
   "depends_on": {

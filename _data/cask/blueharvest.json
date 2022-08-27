@@ -17,22 +17,28 @@
   "sha256": "68ef0bdc01414d549ed9fc439f0910465694f8d63b630e90657460417aaed03c",
   "artifacts": [
     {
-      "delete": "/Library/PrivilegedHelperTools/com.zeroonetwenty.BlueHarvestHelper8",
-      "launchctl": "com.zeroonetwenty.BlueHarvestHelper8",
-      "quit": "com.zeroonetwenty.BlueHarvest5",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": "/Library/PrivilegedHelperTools/com.zeroonetwenty.BlueHarvestHelper8",
+          "launchctl": "com.zeroonetwenty.BlueHarvestHelper8",
+          "quit": "com.zeroonetwenty.BlueHarvest5"
+        }
+      ]
     },
-    [
-      "BlueHarvest.app"
-    ],
     {
-      "trash": [
-        "~/Library/Caches/com.zeroonetwenty.BlueHarvest5",
-        "~/Library/Preferences/com.zeroonetwenty.BlueHarvest5.plist"
-      ],
-      "signal": {
-      }
+      "app": [
+        "BlueHarvest.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Caches/com.zeroonetwenty.BlueHarvest5",
+            "~/Library/Preferences/com.zeroonetwenty.BlueHarvest5.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

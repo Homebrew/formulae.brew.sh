@@ -17,18 +17,24 @@
   "sha256": "d05999fd5eecd1e7faf2086846b3ba0e5d5f4c2f20574ec371d74f27f7f99f5e",
   "artifacts": [
     {
-      "script": {
-        "executable": "uninstall.tool",
-        "input": [
-          "Yes"
-        ],
-        "sudo": "true"
-      },
-      "pkgutil": "com.vagrant.vagrant-vmware-utility",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "script": {
+            "executable": "uninstall.tool",
+            "input": [
+              "Yes"
+            ],
+            "sudo": "true"
+          },
+          "pkgutil": "com.vagrant.vagrant-vmware-utility"
+        }
+      ]
     },
-    "VagrantVMwareUtility.pkg (Pkg)"
+    {
+      "pkg": [
+        "VagrantVMwareUtility.pkg"
+      ]
+    }
   ],
   "caveats": null,
   "depends_on": {

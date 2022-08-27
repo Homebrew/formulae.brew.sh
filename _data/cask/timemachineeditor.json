@@ -17,12 +17,18 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "launchctl": "com.tclementdev.timemachineeditor.scheduler",
-      "pkgutil": "com.tclementdev.pkg.timemachineeditor",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "launchctl": "com.tclementdev.timemachineeditor.scheduler",
+          "pkgutil": "com.tclementdev.pkg.timemachineeditor"
+        }
+      ]
     },
-    "TimeMachineEditor.pkg (Pkg)"
+    {
+      "pkg": [
+        "TimeMachineEditor.pkg"
+      ]
+    }
   ],
   "caveats": null,
   "depends_on": {

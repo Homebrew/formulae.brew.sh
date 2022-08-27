@@ -16,28 +16,36 @@
   "outdated": false,
   "sha256": "cca267f2c51ae568e02f3b4d8a6adba87b2bde5f011a2b87c595c102d89f11d8",
   "artifacts": [
-    "preflight (Preflight Block)",
-    [
-      "VLC.app"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/vlc/3.0.17.3/vlc.wrapper.sh",
-      {
-        "target": "vlc"
-      }
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.videolan.vlc.sfl*",
-        "~/Library/Application Support/org.videolan.vlc",
-        "~/Library/Application Support/VLC",
-        "~/Library/Caches/org.videolan.vlc",
-        "~/Library/Preferences/org.videolan.vlc",
-        "~/Library/Preferences/org.videolan.vlc.plist",
-        "~/Library/Saved Application State/org.videolan.vlc.savedState"
-      ],
-      "signal": {
-      }
+      "preflight": null
+    },
+    {
+      "app": [
+        "VLC.app"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/vlc/3.0.17.3/vlc.wrapper.sh",
+        {
+          "target": "vlc"
+        }
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.videolan.vlc.sfl*",
+            "~/Library/Application Support/org.videolan.vlc",
+            "~/Library/Application Support/VLC",
+            "~/Library/Caches/org.videolan.vlc",
+            "~/Library/Preferences/org.videolan.vlc",
+            "~/Library/Preferences/org.videolan.vlc.plist",
+            "~/Library/Saved Application State/org.videolan.vlc.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

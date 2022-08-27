@@ -17,19 +17,27 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "quit": "com.ahmedmen.Bob",
-      "pkgutil": "com.lazy.pkg.lazy-app",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "com.ahmedmen.Bob",
+          "pkgutil": "com.lazy.pkg.lazy-app"
+        }
+      ]
     },
-    "lazy.pkg (Pkg)",
     {
-      "trash": [
-        "~/Library/Application Scripts/com.ahmedmen.Bob",
-        "~/Library/Containers/com.ahmedmen.Bob"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "lazy.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Scripts/com.ahmedmen.Bob",
+            "~/Library/Containers/com.ahmedmen.Bob"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

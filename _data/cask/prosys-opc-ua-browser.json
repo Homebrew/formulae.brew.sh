@@ -17,20 +17,23 @@
   "sha256": "fa4ce0dd4ed9222a9e2a24ec68934969b4f6a8bc852ef165dcd50ceb2cccc2c4",
   "artifacts": [
     {
-      "delete": "/Applications/Prosys OPC UA Browser.app",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": "/Applications/Prosys OPC UA Browser.app"
+        }
+      ]
     },
     {
-      "path": "Prosys OPC UA Browser Installer.app/Contents/MacOS/JavaApplicationStub",
-      "args": {
-        "must_succeed": "true",
-        "sudo": "false",
-        "args": [
-          "-q"
-        ],
-        "print_stdout": "true"
-      }
+      "installer": [
+        {
+          "script": {
+            "executable": "Prosys OPC UA Browser Installer.app/Contents/MacOS/JavaApplicationStub",
+            "args": [
+              "-q"
+            ]
+          }
+        }
+      ]
     }
   ],
   "caveats": null,

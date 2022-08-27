@@ -17,21 +17,27 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "quit": "com.manytricks.witchdaemon",
-      "login_item": "witchdaemon",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "com.manytricks.witchdaemon",
+          "login_item": "witchdaemon"
+        }
+      ]
     },
-    [
-      "Witch.prefPane"
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/Witch",
-        "~/Library/Preferences/com.manytricks.Witch.plist"
-      ],
-      "signal": {
-      }
+      "prefpane": [
+        "Witch.prefPane"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/Witch",
+            "~/Library/Preferences/com.manytricks.Witch.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

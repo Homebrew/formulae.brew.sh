@@ -17,12 +17,18 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "pkgutil": "net.installer.mipony.*",
-      "quit": "com.downloader.Mipony",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "net.installer.mipony.*",
+          "quit": "com.downloader.Mipony"
+        }
+      ]
     },
-    "Mipony-Installer.pkg (Pkg)"
+    {
+      "pkg": [
+        "Mipony-Installer.pkg"
+      ]
+    }
   ],
   "caveats": null,
   "depends_on": {

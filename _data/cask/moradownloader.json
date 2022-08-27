@@ -17,18 +17,26 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "pkgutil": "jp.co.sonymusicsolutions.moradownloader",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "jp.co.sonymusicsolutions.moradownloader"
+        }
+      ]
     },
-    "MoraDownloader.pkg (Pkg)",
     {
-      "trash": [
-        "~/Library/Application Support/moraDownloader",
-        "~/Library/Preferences/jp.co.sonymusicsolutions.moradownloader.plist"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "MoraDownloader.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/moraDownloader",
+            "~/Library/Preferences/jp.co.sonymusicsolutions.moradownloader.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

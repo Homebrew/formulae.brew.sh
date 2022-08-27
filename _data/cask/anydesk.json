@@ -17,31 +17,37 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "quit": [
-        "com.philandro.anydesk",
-        "com.philandro.anydesk.Helper",
-        "com.philandro.anydesk.service",
-        "com.philandro.anydesk.Frontend"
-      ],
-      "delete": [
-        "/Library/LaunchAgents/com.philandro.anydesk.Frontend.plist",
-        "/Library/LaunchDaemons/com.philandro.anydesk.Helper.plist",
-        "/Library/LaunchDaemons/com.philandro.anydesk.service.plist",
-        "/Library/PrivilegedHelperTools/com.philandro.anydesk.Helper"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": [
+            "com.philandro.anydesk",
+            "com.philandro.anydesk.Helper",
+            "com.philandro.anydesk.service",
+            "com.philandro.anydesk.Frontend"
+          ],
+          "delete": [
+            "/Library/LaunchAgents/com.philandro.anydesk.Frontend.plist",
+            "/Library/LaunchDaemons/com.philandro.anydesk.Helper.plist",
+            "/Library/LaunchDaemons/com.philandro.anydesk.service.plist",
+            "/Library/PrivilegedHelperTools/com.philandro.anydesk.Helper"
+          ]
+        }
+      ]
     },
-    [
-      "AnyDesk.app"
-    ],
     {
-      "trash": [
-        "~/.anydesk",
-        "~/Library/Preferences/com.philandro.anydesk.plist"
-      ],
-      "signal": {
-      }
+      "app": [
+        "AnyDesk.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/.anydesk",
+            "~/Library/Preferences/com.philandro.anydesk.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

@@ -16,24 +16,32 @@
   "outdated": false,
   "sha256": "f607ca12bdc313884c5a6f504fbf662a0511bf39fe04a9b2a694c986cd34bb67",
   "artifacts": [
-    [
-      "rar/default.sfx",
-      {
-        "target": "$(brew --prefix)/lib/default.sfx"
-      }
-    ],
-    [
-      "rar/rarfiles.lst",
-      {
-        "target": "$(brew --prefix)/etc/rarfiles.lst"
-      }
-    ],
-    [
-      "rar/rar"
-    ],
-    [
-      "rar/unrar"
-    ]
+    {
+      "artifact": [
+        "rar/default.sfx",
+        {
+          "target": "$(brew --prefix)/lib/default.sfx"
+        }
+      ]
+    },
+    {
+      "artifact": [
+        "rar/rarfiles.lst",
+        {
+          "target": "$(brew --prefix)/etc/rarfiles.lst"
+        }
+      ]
+    },
+    {
+      "binary": [
+        "rar/rar"
+      ]
+    },
+    {
+      "binary": [
+        "rar/unrar"
+      ]
+    }
   ],
   "caveats": null,
   "depends_on": {

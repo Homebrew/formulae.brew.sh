@@ -21,25 +21,33 @@
   "outdated": false,
   "sha256": "20fcdcbb5c5bc50aa27e455f988cc3aa4b6650656af81f2d3a798295d107c4d8",
   "artifacts": [
-    "preflight (Preflight Block)",
-    [
-      "CopyQ.app"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/copyq/6.2.0/copyq.wrapper.sh",
-      {
-        "target": "copyq"
-      }
-    ],
     {
-      "trash": [
-        "~/.config/copyq",
-        "~/Library/Application Support/copyq",
-        "~/Library/Application Support/copyq.log",
-        "~/Library/Preferences/com.copyq.copyq.plist"
-      ],
-      "signal": {
-      }
+      "preflight": null
+    },
+    {
+      "app": [
+        "CopyQ.app"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/copyq/6.2.0/copyq.wrapper.sh",
+        {
+          "target": "copyq"
+        }
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/.config/copyq",
+            "~/Library/Application Support/copyq",
+            "~/Library/Application Support/copyq.log",
+            "~/Library/Preferences/com.copyq.copyq.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": "copyq is not signed and requires Accessibility access,\nso you will need to re-grant Accessibility access every time the app is updated.\n\nEnable or re-enable it in:\n  System Preferences → Security & Privacy → Privacy → Accessibility\nTo re-enable, untick and retick copyq.app.\n",

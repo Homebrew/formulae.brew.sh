@@ -17,26 +17,32 @@
   "sha256": "c100561a76336eef7607310b15b75ac377796be3175c2e4ddf1d66289212ac9b",
   "artifacts": [
     {
-      "launchctl": [
-        "org.tuxfamily.chronyd",
-        "org.tuxfamily.chronyc"
-      ],
-      "delete": [
-        "/etc/chrony.d",
-        "/var/db/chrony",
-        "/Library/LaunchDaemons/org.tuxfamily.chronyd",
-        "/Library/LaunchDaemons/org.tuxfamily.chronyc"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "launchctl": [
+            "org.tuxfamily.chronyd",
+            "org.tuxfamily.chronyc"
+          ],
+          "delete": [
+            "/etc/chrony.d",
+            "/var/db/chrony",
+            "/Library/LaunchDaemons/org.tuxfamily.chronyd",
+            "/Library/LaunchDaemons/org.tuxfamily.chronyc"
+          ]
+        }
+      ]
     },
-    [
-      "ChronyControl.app"
-    ],
     {
-      "trash": "/var/log/chrony",
-      "signal": {
-      }
+      "app": [
+        "ChronyControl.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": "/var/log/chrony"
+        }
+      ]
     }
   ],
   "caveats": null,

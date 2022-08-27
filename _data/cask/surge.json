@@ -17,24 +17,30 @@
   "sha256": "f0b5f4cae11f0596f2c59d80d20ef5337f0a4dcf3cc0dda0d2c31314a6a5317d",
   "artifacts": [
     {
-      "launchctl": "com.nssurge.surge-mac.helper",
-      "delete": "/Library/PrivilegedHelperTools/com.nssurge.surge-mac.helper",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "launchctl": "com.nssurge.surge-mac.helper",
+          "delete": "/Library/PrivilegedHelperTools/com.nssurge.surge-mac.helper"
+        }
+      ]
     },
-    [
-      "Surge.app"
-    ],
     {
-      "delete": [
-        "~/Library/Application Support/com.nssurge.surge-mac",
-        "~/Library/Caches/com.nssurge.surge-mac",
-        "~/Library/Caches/com.nssurge.surge-mac.plist",
-        "~/Library/Logs/Surge",
-        "~/Library/Preferences/com.nssurge.surge-mac.plist"
-      ],
-      "signal": {
-      }
+      "app": [
+        "Surge.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "delete": [
+            "~/Library/Application Support/com.nssurge.surge-mac",
+            "~/Library/Caches/com.nssurge.surge-mac",
+            "~/Library/Caches/com.nssurge.surge-mac.plist",
+            "~/Library/Logs/Surge",
+            "~/Library/Preferences/com.nssurge.surge-mac.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

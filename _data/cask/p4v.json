@@ -18,45 +18,63 @@
   "outdated": false,
   "sha256": "d72c017e516d37508e0433dcf94fa96e208781a24a161bb545eee3100cfb963b",
   "artifacts": [
-    "preflight (Preflight Block)",
-    [
-      "p4v.app"
-    ],
-    [
-      "p4merge.app"
-    ],
-    [
-      "p4admin.app"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/p4v/2022.2,2304646/p4.wrapper.sh",
-      {
-        "target": "p4v"
-      }
-    ],
-    [
-      "p4vc"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/p4v/2022.2,2304646/p4.wrapper.sh",
-      {
-        "target": "p4admin"
-      }
-    ],
-    [
-      "$(brew --prefix)/Caskroom/p4v/2022.2,2304646/p4.wrapper.sh",
-      {
-        "target": "p4merge"
-      }
-    ],
     {
-      "trash": [
-        "~/Library/Preferences/com.perforce.p4v",
-        "~/Library/Preferences/com.perforce.p4v.plist",
-        "~/Library/Saved Application State/com.perforce.p4v.savedState"
-      ],
-      "signal": {
-      }
+      "preflight": null
+    },
+    {
+      "app": [
+        "p4v.app"
+      ]
+    },
+    {
+      "app": [
+        "p4merge.app"
+      ]
+    },
+    {
+      "app": [
+        "p4admin.app"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/p4v/2022.2,2304646/p4.wrapper.sh",
+        {
+          "target": "p4v"
+        }
+      ]
+    },
+    {
+      "binary": [
+        "p4vc"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/p4v/2022.2,2304646/p4.wrapper.sh",
+        {
+          "target": "p4admin"
+        }
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/p4v/2022.2,2304646/p4.wrapper.sh",
+        {
+          "target": "p4merge"
+        }
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Preferences/com.perforce.p4v",
+            "~/Library/Preferences/com.perforce.p4v.plist",
+            "~/Library/Saved Application State/com.perforce.p4v.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

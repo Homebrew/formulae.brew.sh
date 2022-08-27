@@ -17,12 +17,18 @@
   "sha256": "0d9fad0d8cfb102e04517cb5cf71c092a46102203db35e8eeae4daf4bfa449a6",
   "artifacts": [
     {
-      "delete": "$(brew --prefix)/Caskroom/libreoffice-language-pack/7.4.0/libreoffice-language-pack",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": "$(brew --prefix)/Caskroom/libreoffice-language-pack/7.4.0/libreoffice-language-pack"
+        }
+      ]
     },
     {
-      "path": "LibreOffice Language Pack.app"
+      "installer": [
+        {
+          "manual": "LibreOffice Language Pack.app"
+        }
+      ]
     }
   ],
   "caveats": null,

@@ -17,15 +17,21 @@
   "sha256": "82d00dad86c388b0f9c13a6b3220de8cefde504c609f43167f34ab98ec19fbda",
   "artifacts": [
     {
-      "launchctl": "com.facebook.osqueryd",
-      "pkgutil": [
-        "com.facebook.osquery",
-        "io.osquery.agent"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "launchctl": "com.facebook.osqueryd",
+          "pkgutil": [
+            "com.facebook.osquery",
+            "io.osquery.agent"
+          ]
+        }
+      ]
     },
-    "osquery-5.4.0.pkg (Pkg)"
+    {
+      "pkg": [
+        "osquery-5.4.0.pkg"
+      ]
+    }
   ],
   "caveats": null,
   "depends_on": {

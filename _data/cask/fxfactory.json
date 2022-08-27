@@ -17,24 +17,32 @@
   "sha256": "4f0ec77c2fa9cb3483db3e66f75b256d7f82ac5f292d1825f6ccaf37db9a304b",
   "artifacts": [
     {
-      "pkgutil": "com.fxfactory.pkg",
-      "launchctl": "com.fxfactory.FxFactory.helper",
-      "delete": [
-        "/Library/Application Support/FxFactory",
-        "/Library/LaunchDaemons/com.fxfactory.FxFactory.helper.plist",
-        "/Library/PrivilegedHelperTools/com.fxfactory.FxFactory.helper"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "com.fxfactory.pkg",
+          "launchctl": "com.fxfactory.FxFactory.helper",
+          "delete": [
+            "/Library/Application Support/FxFactory",
+            "/Library/LaunchDaemons/com.fxfactory.FxFactory.helper.plist",
+            "/Library/PrivilegedHelperTools/com.fxfactory.FxFactory.helper"
+          ]
+        }
+      ]
     },
-    "Install FxFactory 7.2.8.pkg (Pkg)",
     {
-      "trash": [
-        "~/Library/Application Scripts/com.fxfactory.FxFactoryService.pluginkit",
-        "~/Movies/Motion Templates.localized"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "Install FxFactory 7.2.8.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Scripts/com.fxfactory.FxFactoryService.pluginkit",
+            "~/Movies/Motion Templates.localized"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

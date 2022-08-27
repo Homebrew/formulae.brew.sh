@@ -17,24 +17,30 @@
   "sha256": "5d1e74d9e9c8cfe9c914adb901bf401507f2e7675e3c7032bec66048ce2dec97",
   "artifacts": [
     {
-      "delete": "/Library/Logs/DiagnosticReports/Kindle_*.diag",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": "/Library/Logs/DiagnosticReports/Kindle_*.diag"
+        }
+      ]
     },
-    [
-      "Kindle.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/Kindle",
-        "~/Library/Caches/com.amazon.Kindle",
-        "~/Library/Caches/com.amazon.Kindle-Crash-Reporter",
-        "~/Library/HTTPStorages/com.amazon.Kindle.binarycookies",
-        "~/Library/Preferences/com.amazon.Kindle.plist",
-        "~/Library/Saved Application State/com.amazon.Kindle.savedState"
-      ],
-      "signal": {
-      }
+      "app": [
+        "Kindle.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/Kindle",
+            "~/Library/Caches/com.amazon.Kindle",
+            "~/Library/Caches/com.amazon.Kindle-Crash-Reporter",
+            "~/Library/HTTPStorages/com.amazon.Kindle.binarycookies",
+            "~/Library/Preferences/com.amazon.Kindle.plist",
+            "~/Library/Saved Application State/com.amazon.Kindle.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

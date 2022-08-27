@@ -17,16 +17,22 @@
   "sha256": "3e2cafdcf35786e90a909961a8f839a4d9f31ebe68a236d52d97d5635ac5f03f",
   "artifacts": [
     {
-      "launchctl": "com.backup42.desktop",
-      "pkgutil": "com.code42.app.pkg",
-      "script": {
-        "executable": "Uninstall.app/Contents/Resources/uninstall.sh",
-        "sudo": "true"
-      },
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "launchctl": "com.backup42.desktop",
+          "pkgutil": "com.code42.app.pkg",
+          "script": {
+            "executable": "Uninstall.app/Contents/Resources/uninstall.sh",
+            "sudo": "true"
+          }
+        }
+      ]
     },
-    "Install Code42.pkg (Pkg)"
+    {
+      "pkg": [
+        "Install Code42.pkg"
+      ]
+    }
   ],
   "caveats": null,
   "depends_on": {

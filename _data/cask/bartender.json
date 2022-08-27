@@ -22,28 +22,34 @@
   "sha256": "b6c0172af9bd24bf10114eb7528ff7de40e9ba6fbb14bce92fa9a2f8e92edb0a",
   "artifacts": [
     {
-      "delete": [
-        "/Library/Audio/Plug-Ins/HAL/BartenderAudioPlugIn.plugin",
-        "/Library/PrivilegedHelperTools/com.surteesstudios.Bartender.BartenderInstallHelper",
-        "/Library/ScriptingAdditions/BartenderHelper.osax",
-        "/System/Library/ScriptingAdditions/BartenderSystemHelper.osax"
-      ],
-      "launchctl": "com.surteesstudios.Bartender.BartenderInstallHelper",
-      "quit": "com.surteesstudios.Bartender",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": [
+            "/Library/Audio/Plug-Ins/HAL/BartenderAudioPlugIn.plugin",
+            "/Library/PrivilegedHelperTools/com.surteesstudios.Bartender.BartenderInstallHelper",
+            "/Library/ScriptingAdditions/BartenderHelper.osax",
+            "/System/Library/ScriptingAdditions/BartenderSystemHelper.osax"
+          ],
+          "launchctl": "com.surteesstudios.Bartender.BartenderInstallHelper",
+          "quit": "com.surteesstudios.Bartender"
+        }
+      ]
     },
-    [
-      "Bartender 4.app"
-    ],
     {
-      "trash": [
-        "~/Library/Caches/com.surteesstudios.Bartender",
-        "~/Library/Cookies/com.surteesstudios.Bartender.binarycookies",
-        "~/Library/Preferences/com.surteesstudios.Bartender.plist"
-      ],
-      "signal": {
-      }
+      "app": [
+        "Bartender 4.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Caches/com.surteesstudios.Bartender",
+            "~/Library/Cookies/com.surteesstudios.Bartender.binarycookies",
+            "~/Library/Preferences/com.surteesstudios.Bartender.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

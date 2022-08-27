@@ -17,19 +17,27 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "pkgutil": "com.trusourcelabs.NoMAD",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "com.trusourcelabs.NoMAD"
+        }
+      ]
     },
-    "NoMAD.pkg (Pkg)",
     {
-      "trash": [
-        "~/Library/Application Support/CrashReporter/NoMAD*",
-        "~/Library/Logs/DiagnosticReports/NoMAD*",
-        "~/Library/Preferences/com.trusourcelabs.NoMAD.plist"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "NoMAD.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/CrashReporter/NoMAD*",
+            "~/Library/Logs/DiagnosticReports/NoMAD*",
+            "~/Library/Preferences/com.trusourcelabs.NoMAD.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

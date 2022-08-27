@@ -17,20 +17,28 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "pkgutil": "com.rescuetime.RescueTime",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "com.rescuetime.RescueTime"
+        }
+      ]
     },
-    "RescueTimeInstaller_X.pkg (Pkg)",
     {
-      "trash": [
-        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.rescuetime.rescuetime.sfl*",
-        "~/Library/Caches/com.rescuetime.RescueTime",
-        "~/Library/Preferences/com.rescuetime.RescueTime.plist",
-        "~/Library/RescueTime.com"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "RescueTimeInstaller_X.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.rescuetime.rescuetime.sfl*",
+            "~/Library/Caches/com.rescuetime.RescueTime",
+            "~/Library/Preferences/com.rescuetime.RescueTime.plist",
+            "~/Library/RescueTime.com"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

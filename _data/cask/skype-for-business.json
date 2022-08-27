@@ -17,27 +17,44 @@
   "sha256": "7e85e8a3640bc1187ccf6750554eeff9b80a85b4c5f0447f066e1156829d6f2e",
   "artifacts": [
     {
-      "delete": "/Applications/Skype for Business.app",
-      "pkgutil": [
-        "com.microsoft.SkypeForBusiness",
-        "com.microsoft.SkypeForBusiness.MeetingJoinPlugin"
-      ],
-      "login_item": "Skype for Business",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": "/Applications/Skype for Business.app",
+          "pkgutil": [
+            "com.microsoft.SkypeForBusiness",
+            "com.microsoft.SkypeForBusiness.MeetingJoinPlugin"
+          ],
+          "login_item": "Skype for Business"
+        }
+      ]
     },
-    "SkypeForBusinessInstaller-16.29.0.95.pkg (Pkg)",
     {
-      "trash": [
-        "/Library/Internet Plug-Ins/MeetingJoinPlugin.plugin",
-        "~/Library/Application Support/com.microsoft.SkypeForBusinessTAP",
-        "~/Library/Application Support/Skype for Business",
-        "~/Library/Preferences/com.microsoft.SkypeForBusinessTAP.plist",
-        "~/Library/Preferences/com.microsoft.SkypeForBusinessTAP.debuglogging.plist"
-      ],
-      "rmdir": "/Library/Application Support/Microsoft",
-      "signal": {
-      }
+      "pkg": [
+        "SkypeForBusinessInstaller-16.29.0.95.pkg",
+        {
+          "choices": [
+            {
+              "choiceIdentifier": "com.microsoft.autoupdate.fba",
+              "choiceAttribute": "selected",
+              "attributeSetting": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "/Library/Internet Plug-Ins/MeetingJoinPlugin.plugin",
+            "~/Library/Application Support/com.microsoft.SkypeForBusinessTAP",
+            "~/Library/Application Support/Skype for Business",
+            "~/Library/Preferences/com.microsoft.SkypeForBusinessTAP.plist",
+            "~/Library/Preferences/com.microsoft.SkypeForBusinessTAP.debuglogging.plist"
+          ],
+          "rmdir": "/Library/Application Support/Microsoft"
+        }
+      ]
     }
   ],
   "caveats": null,

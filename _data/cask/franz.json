@@ -17,29 +17,37 @@
   "sha256": "9b6907c132624c645e9d39bc9822a239b0e3a7507d40bcc97bf2be6ca3fc171f",
   "artifacts": [
     {
-      "signal": {
-        "QUIT": "com.meetfranz.franz"
-      },
-      "delete": "/Library/Logs/DiagnosticReports/Franz Helper_.*wakeups_resource.diag"
+      "uninstall": [
+        {
+          "signal": {
+            "QUIT": "com.meetfranz.franz"
+          },
+          "delete": "/Library/Logs/DiagnosticReports/Franz Helper_.*wakeups_resource.diag"
+        }
+      ]
     },
-    [
-      "Franz.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/Caches/franz-updater",
-        "~/Library/Application Support/Franz",
-        "~/Library/Caches/com.meetfranz.franz",
-        "~/Library/Caches/com.meetfranz.franz.ShipIt",
-        "~/Library/Logs/Franz",
-        "~/Library/Preferences/ByHost/com.meetfranz.franz.ShipIt.*.plist",
-        "~/Library/Preferences/com.electron.franz.helper.plist",
-        "~/Library/Preferences/com.electron.franz.plist",
-        "~/Library/Preferences/com.meetfranz.franz.plist",
-        "~/Library/Saved Application State/com.electron.franz.savedState"
-      ],
-      "signal": {
-      }
+      "app": [
+        "Franz.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/Caches/franz-updater",
+            "~/Library/Application Support/Franz",
+            "~/Library/Caches/com.meetfranz.franz",
+            "~/Library/Caches/com.meetfranz.franz.ShipIt",
+            "~/Library/Logs/Franz",
+            "~/Library/Preferences/ByHost/com.meetfranz.franz.ShipIt.*.plist",
+            "~/Library/Preferences/com.electron.franz.helper.plist",
+            "~/Library/Preferences/com.electron.franz.plist",
+            "~/Library/Preferences/com.meetfranz.franz.plist",
+            "~/Library/Saved Application State/com.electron.franz.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

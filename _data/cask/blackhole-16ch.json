@@ -17,13 +17,21 @@
   "sha256": "5eb7139e51d50a7f301e160bc38bb09385d49cee9efefe5fcb6d97c97a27cdfb",
   "artifacts": [
     {
-      "quit": "com.apple.audio.AudioMIDISetup",
-      "pkgutil": "audio.existential.BlackHole16ch",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "com.apple.audio.AudioMIDISetup",
+          "pkgutil": "audio.existential.BlackHole16ch"
+        }
+      ]
     },
-    "BlackHole16ch.v0.4.0.pkg (Pkg)",
-    "uninstall_postflight (Postflight Block)"
+    {
+      "pkg": [
+        "BlackHole16ch.v0.4.0.pkg"
+      ]
+    },
+    {
+      "uninstall_postflight": null
+    }
   ],
   "caveats": null,
   "depends_on": {

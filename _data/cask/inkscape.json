@@ -16,27 +16,35 @@
   "outdated": false,
   "sha256": "8117d5d864358c9f626ce574d07d2f121ad96fc96a535cc3fddaba3c74bd3279",
   "artifacts": [
-    "preflight (Preflight Block)",
-    [
-      "Inkscape.app"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/inkscape/1.2.1/inkscape.wrapper.sh",
-      {
-        "target": "inkscape"
-      }
-    ],
     {
-      "trash": [
-        "~/.config/inkscape",
-        "~/Library/Application Support/Inkscape",
-        "~/Library/Application Support/org.inkscape.Inkscape",
-        "~/Library/Caches/org.inkscape.Inkscape*",
-        "~/Library/Preferences/org.inkscape.Inkscape.plist",
-        "~/Library/Saved Application State/org.inkscape.Inkscape.savedState"
-      ],
-      "signal": {
-      }
+      "preflight": null
+    },
+    {
+      "app": [
+        "Inkscape.app"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/inkscape/1.2.1/inkscape.wrapper.sh",
+        {
+          "target": "inkscape"
+        }
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/.config/inkscape",
+            "~/Library/Application Support/Inkscape",
+            "~/Library/Application Support/org.inkscape.Inkscape",
+            "~/Library/Caches/org.inkscape.Inkscape*",
+            "~/Library/Preferences/org.inkscape.Inkscape.plist",
+            "~/Library/Saved Application State/org.inkscape.Inkscape.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

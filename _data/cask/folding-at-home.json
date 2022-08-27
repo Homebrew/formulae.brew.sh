@@ -17,20 +17,28 @@
   "sha256": "c6a559f46e25aa7a9e67227affbccfef77527f663da80be6c55a4f7e7e29866f",
   "artifacts": [
     {
-      "pkgutil": "org.foldingathome.*",
-      "launchctl": "org.foldingathome.fahclient",
-      "quit": [
-        "org.foldingathome.fahcontrol",
-        "org.foldingathome.fahviewer"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "org.foldingathome.*",
+          "launchctl": "org.foldingathome.fahclient",
+          "quit": [
+            "org.foldingathome.fahcontrol",
+            "org.foldingathome.fahviewer"
+          ]
+        }
+      ]
     },
-    "fah-installer_7.6.21_x86_64-b.pkg (Pkg)",
     {
-      "trash": "/Library/Application Support/FAHClient",
-      "signal": {
-      }
+      "pkg": [
+        "fah-installer_7.6.21_x86_64-b.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": "/Library/Application Support/FAHClient"
+        }
+      ]
     }
   ],
   "caveats": null,

@@ -17,30 +17,36 @@
   "sha256": "1f9039a66a8ac17573c6501a59bb01e02fd78ec70eea3316bff03f87370773e5",
   "artifacts": [
     {
-      "delete": "/Library/PrivilegedHelperTools/com.soma-zone.LaunchControl.Helper",
-      "launchctl": "com.soma-zone.LaunchControl.Helper",
-      "quit": [
-        "com.soma-zone.JobWatch",
-        "com.soma-zone.LaunchControl",
-        "com.soma-zone.LicenseWindow",
-        "com.soma-zone.QuickLaunch"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": "/Library/PrivilegedHelperTools/com.soma-zone.LaunchControl.Helper",
+          "launchctl": "com.soma-zone.LaunchControl.Helper",
+          "quit": [
+            "com.soma-zone.JobWatch",
+            "com.soma-zone.LaunchControl",
+            "com.soma-zone.LicenseWindow",
+            "com.soma-zone.QuickLaunch"
+          ]
+        }
+      ]
     },
-    [
-      "LaunchControl.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/LaunchControl",
-        "~/Library/Caches/com.apple.helpd/Generated/com.soma-zone.LaunchControl.help*",
-        "~/Library/Caches/com.apple.helpd/Generated/LaunchControl Help*",
-        "~/Library/Caches/com.soma-zone.LaunchControl",
-        "~/Library/Preferences/com.soma-zone.LaunchControl.plist"
-      ],
-      "signal": {
-      }
+      "app": [
+        "LaunchControl.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/LaunchControl",
+            "~/Library/Caches/com.apple.helpd/Generated/com.soma-zone.LaunchControl.help*",
+            "~/Library/Caches/com.apple.helpd/Generated/LaunchControl Help*",
+            "~/Library/Caches/com.soma-zone.LaunchControl",
+            "~/Library/Preferences/com.soma-zone.LaunchControl.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

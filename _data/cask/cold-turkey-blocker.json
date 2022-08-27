@@ -17,20 +17,26 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "launchctl": [
-        "launchkeep.cold-turkey",
-        "launchkeep.cold-turkey-all-users"
-      ],
-      "pkgutil": [
-        "com.getcoldturkey.coldturkeyblocker",
-        "com.getcoldturkey.blocker-chrome-ext",
-        "com.getcoldturkey.blocker-edge-ext",
-        "com.getcoldturkey.blocker-firefox-ext"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "launchctl": [
+            "launchkeep.cold-turkey",
+            "launchkeep.cold-turkey-all-users"
+          ],
+          "pkgutil": [
+            "com.getcoldturkey.coldturkeyblocker",
+            "com.getcoldturkey.blocker-chrome-ext",
+            "com.getcoldturkey.blocker-edge-ext",
+            "com.getcoldturkey.blocker-firefox-ext"
+          ]
+        }
+      ]
     },
-    "Cold_Turkey_Mac_Installer.pkg (Pkg)"
+    {
+      "pkg": [
+        "Cold_Turkey_Mac_Installer.pkg"
+      ]
+    }
   ],
   "caveats": null,
   "depends_on": {

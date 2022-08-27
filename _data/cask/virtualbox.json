@@ -17,31 +17,65 @@
   "sha256": "f97b303b86afb799da497bf6f5d8b3510963057a39231bc5df007eed7179b085",
   "artifacts": [
     {
-      "script": {
-        "executable": "VirtualBox_Uninstall.tool",
-        "args": [
-          "--unattended"
-        ],
-        "sudo": "true"
-      },
-      "pkgutil": "org.virtualbox.pkg.*",
-      "delete": "$(brew --prefix)/bin/vboximg-mount",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "script": {
+            "executable": "VirtualBox_Uninstall.tool",
+            "args": [
+              "--unattended"
+            ],
+            "sudo": "true"
+          },
+          "pkgutil": "org.virtualbox.pkg.*",
+          "delete": "$(brew --prefix)/bin/vboximg-mount"
+        }
+      ]
     },
-    "VirtualBox.pkg (Pkg)",
-    "postflight (Postflight Block)",
     {
-      "trash": [
-        "/Library/Application Support/VirtualBox",
-        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.virtualbox.app.virtualbox*",
-        "~/Library/Preferences/org.virtualbox.app.VirtualBox*",
-        "~/Library/Saved Application State/org.virtualbox.app.VirtualBox*",
-        "~/Library/VirtualBox"
-      ],
-      "rmdir": "~/VirtualBox VMs",
-      "signal": {
-      }
+      "pkg": [
+        "VirtualBox.pkg",
+        {
+          "choices": [
+            {
+              "choiceIdentifier": "choiceVBoxKEXTs",
+              "choiceAttribute": "selected",
+              "attributeSetting": "1"
+            },
+            {
+              "choiceIdentifier": "choiceVBox",
+              "choiceAttribute": "selected",
+              "attributeSetting": "1"
+            },
+            {
+              "choiceIdentifier": "choiceVBoxCLI",
+              "choiceAttribute": "selected",
+              "attributeSetting": "1"
+            },
+            {
+              "choiceIdentifier": "choiceOSXFuseCore",
+              "choiceAttribute": "selected",
+              "attributeSetting": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "postflight": null
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "/Library/Application Support/VirtualBox",
+            "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.virtualbox.app.virtualbox*",
+            "~/Library/Preferences/org.virtualbox.app.VirtualBox*",
+            "~/Library/Saved Application State/org.virtualbox.app.VirtualBox*",
+            "~/Library/VirtualBox"
+          ],
+          "rmdir": "~/VirtualBox VMs"
+        }
+      ]
     }
   ],
   "caveats": "virtualbox requires a kernel extension to work.\nIf the installation fails, retry after you enable it in:\n  System Preferences → Security & Privacy → General\n\nFor more information, refer to vendor documentation or this Apple Technical Note:\n  https://developer.apple.com/library/content/technotes/tn2459/_index.html\n",

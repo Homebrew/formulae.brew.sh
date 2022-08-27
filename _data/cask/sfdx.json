@@ -17,23 +17,31 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "pkgutil": [
-        "com.salesforce.developer.cli",
-        "com.salesforce.cli"
-      ],
-      "delete": "$(brew --prefix)/bin/sfdx",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": [
+            "com.salesforce.developer.cli",
+            "com.salesforce.cli"
+          ],
+          "delete": "$(brew --prefix)/bin/sfdx"
+        }
+      ]
     },
-    "sfdx.pkg (Pkg)",
     {
-      "trash": [
-        "~/.cache/sfdx",
-        "~/.config/sfdx",
-        "~/.local/share/sfdx"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "sfdx.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/.cache/sfdx",
+            "~/.config/sfdx",
+            "~/.local/share/sfdx"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

@@ -17,33 +17,41 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "delete": "/Library/Audio/Plug-Ins/HAL/InstantOn.driver",
-      "quit": [
-        "com.rogueamoeba.Airfoil",
-        "com.rogueamoeba.AirfoilSpeakers"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": "/Library/Audio/Plug-Ins/HAL/InstantOn.driver",
+          "quit": [
+            "com.rogueamoeba.Airfoil",
+            "com.rogueamoeba.AirfoilSpeakers"
+          ]
+        }
+      ]
     },
-    [
-      "Airfoil/Airfoil Satellite.app"
-    ],
-    [
-      "Airfoil/Airfoil.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/Airfoil",
-        "~/Library/Application Support/Airfoil Satellite",
-        "~/Library/Caches/com.rogueamoeba.Airfoil",
-        "~/Library/Caches/com.rogueamoeba.AirfoilSpeakers",
-        "~/Library/Preferences/com.rogueamoeba.Airfoil.plist",
-        "~/Library/Preferences/com.rogueamoeba.AirfoilSpeakers.plist",
-        "~/Library/Saved Application State/com.rogueamoeba.Airfoil.savedState",
-        "~/Library/Saved Application State/com.rogueamoeba.AirfoilSpeakers.savedState"
-      ],
-      "signal": {
-      }
+      "app": [
+        "Airfoil/Airfoil Satellite.app"
+      ]
+    },
+    {
+      "app": [
+        "Airfoil/Airfoil.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/Airfoil",
+            "~/Library/Application Support/Airfoil Satellite",
+            "~/Library/Caches/com.rogueamoeba.Airfoil",
+            "~/Library/Caches/com.rogueamoeba.AirfoilSpeakers",
+            "~/Library/Preferences/com.rogueamoeba.Airfoil.plist",
+            "~/Library/Preferences/com.rogueamoeba.AirfoilSpeakers.plist",
+            "~/Library/Saved Application State/com.rogueamoeba.Airfoil.savedState",
+            "~/Library/Saved Application State/com.rogueamoeba.AirfoilSpeakers.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

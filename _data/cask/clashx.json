@@ -17,31 +17,37 @@
   "sha256": "095ea0379fa5ec07381c0b7c9c745bbaed297c7c83a0020c7baafecfb76265e5",
   "artifacts": [
     {
-      "delete": [
-        "/Library/LaunchDaemons/com.west2online.ClashX.ProxyConfigHelper.plist",
-        "/Library/PrivilegedHelperTools/com.west2online.ClashX.ProxyConfigHelper"
-      ],
-      "launchctl": "com.west2online.ClashX.ProxyConfigHelper",
-      "quit": "com.west2online.ClashX",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": [
+            "/Library/LaunchDaemons/com.west2online.ClashX.ProxyConfigHelper.plist",
+            "/Library/PrivilegedHelperTools/com.west2online.ClashX.ProxyConfigHelper"
+          ],
+          "launchctl": "com.west2online.ClashX.ProxyConfigHelper",
+          "quit": "com.west2online.ClashX"
+        }
+      ]
     },
-    [
-      "ClashX.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/com.west2online.ClashX",
-        "~/Library/Caches/com.crashlytics.data/com.west2online.ClashX",
-        "~/Library/Caches/com.west2online.ClashX",
-        "~/Library/Caches/io.fabric.sdk.mac.data/com.west2online.ClashX",
-        "~/Library/Cookies/com.west2online.ClashX.binarycookies",
-        "~/Library/Logs/ClashX",
-        "~/Library/Preferences/com.west2online.ClashX.plist",
-        "~/.config/clash/"
-      ],
-      "signal": {
-      }
+      "app": [
+        "ClashX.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/com.west2online.ClashX",
+            "~/Library/Caches/com.crashlytics.data/com.west2online.ClashX",
+            "~/Library/Caches/com.west2online.ClashX",
+            "~/Library/Caches/io.fabric.sdk.mac.data/com.west2online.ClashX",
+            "~/Library/Cookies/com.west2online.ClashX.binarycookies",
+            "~/Library/Logs/ClashX",
+            "~/Library/Preferences/com.west2online.ClashX.plist",
+            "~/.config/clash/"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

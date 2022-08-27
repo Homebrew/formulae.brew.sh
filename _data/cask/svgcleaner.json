@@ -16,22 +16,28 @@
   "outdated": false,
   "sha256": "d1f3098ad5008a8f727d53e764239844db063a0a9cc2aa21ac0b0bdef6011335",
   "artifacts": [
-    [
-      "SVGCleaner.app"
-    ],
-    [
-      "/Applications/SVGCleaner.app/Contents/MacOS/svgcleaner-cli",
-      {
-        "target": "svgcleaner"
-      }
-    ],
     {
-      "trash": [
-        "~/Library/Preferences/com.svgcleaner.svgcleaner.plist",
-        "~/Library/Saved Application State/com.yourcompany.SVGCleaner.savedState"
-      ],
-      "signal": {
-      }
+      "app": [
+        "SVGCleaner.app"
+      ]
+    },
+    {
+      "binary": [
+        "/Applications/SVGCleaner.app/Contents/MacOS/svgcleaner-cli",
+        {
+          "target": "svgcleaner"
+        }
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Preferences/com.svgcleaner.svgcleaner.plist",
+            "~/Library/Saved Application State/com.yourcompany.SVGCleaner.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": "svgcleaner has been officially discontinued upstream.\nIt may stop working correctly (or at all) in recent versions of macOS.\n",

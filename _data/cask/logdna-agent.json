@@ -17,12 +17,18 @@
   "sha256": "033077ff2acd4e3f7eacab5c94b07db459d50d788be62a8a091ffa9cb759e41d",
   "artifacts": [
     {
-      "pkgutil": "com.logdna.logdna-agent",
-      "launchctl": "com.logdna.logdna-agentd",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "com.logdna.logdna-agent",
+          "launchctl": "com.logdna.logdna-agentd"
+        }
+      ]
     },
-    "logdna-agent-2.2.2.pkg (Pkg)"
+    {
+      "pkg": [
+        "logdna-agent-2.2.2.pkg"
+      ]
+    }
   ],
   "caveats": "When you first start logdna-agent, you must set your LogDNA Ingestion Key with the command:\n  sudo logdna-agent -k <ingestion-key>\n\nTo always run logdna-agent in the background, use the command:\n  sudo launchctl load -w /Library/LaunchDaemons/com.logdna.logdna-agent.plist\n",
   "depends_on": {

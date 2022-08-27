@@ -17,33 +17,40 @@
   "sha256": "949f046b4404cc8e081807b048050e6642d8db5520c20d5158a7ef721fbf76c5",
   "artifacts": [
     {
-      "delete": "$(brew --prefix)/Caskroom/mambaforge/base",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": "$(brew --prefix)/Caskroom/mambaforge/base"
+        }
+      ]
     },
     {
-      "path": "Mambaforge-4.14.0-0-MacOSX-x86_64.sh",
-      "args": {
-        "must_succeed": "true",
-        "sudo": "false",
-        "args": [
-          "-b",
-          "-p",
-          "$(brew --prefix)/Caskroom/mambaforge/base"
-        ],
-        "print_stdout": "true"
-      }
+      "installer": [
+        {
+          "script": {
+            "executable": "Mambaforge-4.14.0-0-MacOSX-x86_64.sh",
+            "args": [
+              "-b",
+              "-p",
+              "$(brew --prefix)/Caskroom/mambaforge/base"
+            ]
+          }
+        }
+      ]
     },
-    [
-      "$(brew --prefix)/Caskroom/mambaforge/base/condabin/conda"
-    ],
     {
-      "trash": [
-        "~/.condarc",
-        "~/.conda"
-      ],
-      "signal": {
-      }
+      "binary": [
+        "$(brew --prefix)/Caskroom/mambaforge/base/condabin/conda"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/.condarc",
+            "~/.conda"
+          ]
+        }
+      ]
     }
   ],
   "caveats": "Please run the following to setup your shell:\n  conda init \"$(basename \"${SHELL}\")\"\n",
@@ -63,33 +70,40 @@
       "sha256": "35d05a65e19b8e5d596964936ddd6023ae66d664a25ba291a52fec18f06a73b6",
       "artifacts": [
         {
-          "delete": "$(brew --prefix)/Caskroom/mambaforge/base",
-          "signal": {
-          }
+          "uninstall": [
+            {
+              "delete": "$(brew --prefix)/Caskroom/mambaforge/base"
+            }
+          ]
         },
         {
-          "path": "Mambaforge-4.14.0-0-MacOSX-arm64.sh",
-          "args": {
-            "must_succeed": "true",
-            "sudo": "false",
-            "args": [
-              "-b",
-              "-p",
-              "$(brew --prefix)/Caskroom/mambaforge/base"
-            ],
-            "print_stdout": "true"
-          }
+          "installer": [
+            {
+              "script": {
+                "executable": "Mambaforge-4.14.0-0-MacOSX-arm64.sh",
+                "args": [
+                  "-b",
+                  "-p",
+                  "$(brew --prefix)/Caskroom/mambaforge/base"
+                ]
+              }
+            }
+          ]
         },
-        [
-          "$(brew --prefix)/Caskroom/mambaforge/base/condabin/conda"
-        ],
         {
-          "trash": [
-            "~/.condarc",
-            "~/.conda"
-          ],
-          "signal": {
-          }
+          "binary": [
+            "$(brew --prefix)/Caskroom/mambaforge/base/condabin/conda"
+          ]
+        },
+        {
+          "zap": [
+            {
+              "trash": [
+                "~/.condarc",
+                "~/.conda"
+              ]
+            }
+          ]
         }
       ]
     },
@@ -98,33 +112,40 @@
       "sha256": "35d05a65e19b8e5d596964936ddd6023ae66d664a25ba291a52fec18f06a73b6",
       "artifacts": [
         {
-          "delete": "$(brew --prefix)/Caskroom/mambaforge/base",
-          "signal": {
-          }
+          "uninstall": [
+            {
+              "delete": "$(brew --prefix)/Caskroom/mambaforge/base"
+            }
+          ]
         },
         {
-          "path": "Mambaforge-4.14.0-0-MacOSX-arm64.sh",
-          "args": {
-            "must_succeed": "true",
-            "sudo": "false",
-            "args": [
-              "-b",
-              "-p",
-              "$(brew --prefix)/Caskroom/mambaforge/base"
-            ],
-            "print_stdout": "true"
-          }
+          "installer": [
+            {
+              "script": {
+                "executable": "Mambaforge-4.14.0-0-MacOSX-arm64.sh",
+                "args": [
+                  "-b",
+                  "-p",
+                  "$(brew --prefix)/Caskroom/mambaforge/base"
+                ]
+              }
+            }
+          ]
         },
-        [
-          "$(brew --prefix)/Caskroom/mambaforge/base/condabin/conda"
-        ],
         {
-          "trash": [
-            "~/.condarc",
-            "~/.conda"
-          ],
-          "signal": {
-          }
+          "binary": [
+            "$(brew --prefix)/Caskroom/mambaforge/base/condabin/conda"
+          ]
+        },
+        {
+          "zap": [
+            {
+              "trash": [
+                "~/.condarc",
+                "~/.conda"
+              ]
+            }
+          ]
         }
       ]
     },
@@ -133,33 +154,40 @@
       "sha256": "35d05a65e19b8e5d596964936ddd6023ae66d664a25ba291a52fec18f06a73b6",
       "artifacts": [
         {
-          "delete": "$(brew --prefix)/Caskroom/mambaforge/base",
-          "signal": {
-          }
+          "uninstall": [
+            {
+              "delete": "$(brew --prefix)/Caskroom/mambaforge/base"
+            }
+          ]
         },
         {
-          "path": "Mambaforge-4.14.0-0-MacOSX-arm64.sh",
-          "args": {
-            "must_succeed": "true",
-            "sudo": "false",
-            "args": [
-              "-b",
-              "-p",
-              "$(brew --prefix)/Caskroom/mambaforge/base"
-            ],
-            "print_stdout": "true"
-          }
+          "installer": [
+            {
+              "script": {
+                "executable": "Mambaforge-4.14.0-0-MacOSX-arm64.sh",
+                "args": [
+                  "-b",
+                  "-p",
+                  "$(brew --prefix)/Caskroom/mambaforge/base"
+                ]
+              }
+            }
+          ]
         },
-        [
-          "$(brew --prefix)/Caskroom/mambaforge/base/condabin/conda"
-        ],
         {
-          "trash": [
-            "~/.condarc",
-            "~/.conda"
-          ],
-          "signal": {
-          }
+          "binary": [
+            "$(brew --prefix)/Caskroom/mambaforge/base/condabin/conda"
+          ]
+        },
+        {
+          "zap": [
+            {
+              "trash": [
+                "~/.condarc",
+                "~/.conda"
+              ]
+            }
+          ]
         }
       ]
     }

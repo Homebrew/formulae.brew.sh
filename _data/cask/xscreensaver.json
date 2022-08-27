@@ -17,15 +17,21 @@
   "sha256": "8a081a719d668c41a2cc63ed7e363c0dcecb12b1ce3c68fe123cbcde136d28a0",
   "artifacts": [
     {
-      "pkgutil": "org.jwz.xscreensaver",
-      "delete": [
-        "/Applications/Apple2.app",
-        "/Applications/Phosphor.app"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "org.jwz.xscreensaver",
+          "delete": [
+            "/Applications/Apple2.app",
+            "/Applications/Phosphor.app"
+          ]
+        }
+      ]
     },
-    "Install Everything.pkg (Pkg)"
+    {
+      "pkg": [
+        "Install Everything.pkg"
+      ]
+    }
   ],
   "caveats": null,
   "depends_on": {

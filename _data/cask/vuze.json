@@ -17,25 +17,31 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "delete": "/Applications/Vuze.app",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": "/Applications/Vuze.app"
+        }
+      ]
     },
     {
-      "path": "Vuze Installer.app/Contents/MacOS/JavaApplicationStub",
-      "args": {
-        "must_succeed": "true",
-        "sudo": "true",
-        "args": [
-          "-q"
-        ],
-        "print_stdout": "true"
-      }
+      "installer": [
+        {
+          "script": {
+            "executable": "Vuze Installer.app/Contents/MacOS/JavaApplicationStub",
+            "args": [
+              "-q"
+            ],
+            "sudo": "true"
+          }
+        }
+      ]
     },
     {
-      "trash": "~/Library/Application Support/Vuze",
-      "signal": {
-      }
+      "zap": [
+        {
+          "trash": "~/Library/Application Support/Vuze"
+        }
+      ]
     }
   ],
   "caveats": null,

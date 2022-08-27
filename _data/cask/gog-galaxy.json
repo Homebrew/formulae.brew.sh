@@ -17,28 +17,36 @@
   "sha256": "c531d4c5019a179facb4117fde2026cb2fb153a55402329cffcf9c42e46385c2",
   "artifacts": [
     {
-      "delete": "/Applications/GOG Galaxy.app",
-      "launchctl": [
-        "com.gog.galaxy.autoLauncher",
-        "com.gog.galaxy.ClientService",
-        "com.gog.galaxy.commservice"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": "/Applications/GOG Galaxy.app",
+          "launchctl": [
+            "com.gog.galaxy.autoLauncher",
+            "com.gog.galaxy.ClientService",
+            "com.gog.galaxy.commservice"
+          ]
+        }
+      ]
     },
-    "galaxy_client_2.0.53.99.pkg (Pkg)",
     {
-      "trash": [
-        "/Library/LaunchDaemons/com.gog.galaxy.ClientService.plist",
-        "/Library/PrivilegedHelperTools/com.gog.galaxy.ClientService",
-        "/Users/Shared/GOG.com",
-        "~/Library/Application Support/GOG.com",
-        "~/Library/Preferences/com.gog.galaxy.cef.renderer.plist",
-        "~/Library/Preferences/com.gog.galaxy.plist",
-        "~/Library/Saved Application State/com.gog.galaxy.savedState"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "galaxy_client_2.0.53.99.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "/Library/LaunchDaemons/com.gog.galaxy.ClientService.plist",
+            "/Library/PrivilegedHelperTools/com.gog.galaxy.ClientService",
+            "/Users/Shared/GOG.com",
+            "~/Library/Application Support/GOG.com",
+            "~/Library/Preferences/com.gog.galaxy.cef.renderer.plist",
+            "~/Library/Preferences/com.gog.galaxy.plist",
+            "~/Library/Saved Application State/com.gog.galaxy.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

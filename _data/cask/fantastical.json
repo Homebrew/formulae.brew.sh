@@ -17,24 +17,30 @@
   "sha256": "c892f67ddafaa09c43596d745170be2062854fa776bc56c4102e142e029b7c39",
   "artifacts": [
     {
-      "launchctl": "com.flexibits.fantastical3.mac.launcher",
-      "quit": "com.flexibits.fantastical3.mac",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "launchctl": "com.flexibits.fantastical3.mac.launcher",
+          "quit": "com.flexibits.fantastical3.mac"
+        }
+      ]
     },
-    [
-      "Fantastical.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Scripts/com.flexibits.fantastical3.*",
-        "~/Library/Application Scripts/com.flexibits.fbcaldav.*",
-        "~/Library/Containers/com.flexibits.fantastical3.*",
-        "~/Library/Containers/com.flexibits.fbcaldav.*",
-        "~/Library/Preferences/com.flexibits.fantastical.plist"
-      ],
-      "signal": {
-      }
+      "app": [
+        "Fantastical.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Scripts/com.flexibits.fantastical3.*",
+            "~/Library/Application Scripts/com.flexibits.fbcaldav.*",
+            "~/Library/Containers/com.flexibits.fantastical3.*",
+            "~/Library/Containers/com.flexibits.fbcaldav.*",
+            "~/Library/Preferences/com.flexibits.fantastical.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

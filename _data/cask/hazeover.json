@@ -19,21 +19,27 @@
   "sha256": "d6b18a0a4c45e809cc9dd168626bbab6be378ed9ba38c8bde16c39fa44239adf",
   "artifacts": [
     {
-      "launchctl": "com.pointum.hazeover.launcher",
-      "quit": "com.pointum.hazeover",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "launchctl": "com.pointum.hazeover.launcher",
+          "quit": "com.pointum.hazeover"
+        }
+      ]
     },
-    [
-      "HazeOver.app"
-    ],
     {
-      "trash": [
-        "~/Library/Caches/com.pointum.hazeover",
-        "~/Library/Preferences/com.pointum.hazeover.plist"
-      ],
-      "signal": {
-      }
+      "app": [
+        "HazeOver.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Caches/com.pointum.hazeover",
+            "~/Library/Preferences/com.pointum.hazeover.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

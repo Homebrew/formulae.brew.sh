@@ -16,24 +16,32 @@
   "outdated": false,
   "sha256": "b64e2fe7ea8296a63cb3e75274c73379731d64dc492778214e6f3ae728e330d1",
   "artifacts": [
-    "uninstall_preflight (Preflight Block)",
     {
-      "delete": [
-        "/Library/Application Support/IVPN",
-        "/Library/PrivilegedHelperTools/net.ivpn.client.Helper"
-      ],
-      "launchctl": "net.ivpn.client.Helper",
-      "quit": "net.ivpn.client.IVPN",
-      "signal": {
-      }
+      "uninstall_preflight": null
     },
-    [
-      "IVPN.app"
-    ],
     {
-      "trash": "~/Library/Preferences/net.ivpn.client.IVPN.plist",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": [
+            "/Library/Application Support/IVPN",
+            "/Library/PrivilegedHelperTools/net.ivpn.client.Helper"
+          ],
+          "launchctl": "net.ivpn.client.Helper",
+          "quit": "net.ivpn.client.IVPN"
+        }
+      ]
+    },
+    {
+      "app": [
+        "IVPN.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": "~/Library/Preferences/net.ivpn.client.IVPN.plist"
+        }
+      ]
     }
   ],
   "caveats": null,

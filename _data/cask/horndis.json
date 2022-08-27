@@ -17,12 +17,18 @@
   "sha256": "15f5c6cbe14e5c0f11bf27172dfbcdf3b753122d128807d6bad94c8f4c2b71e1",
   "artifacts": [
     {
-      "kext": "com.joshuawise.kexts.HoRNDIS",
-      "pkgutil": "com.joshuawise.*",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "kext": "com.joshuawise.kexts.HoRNDIS",
+          "pkgutil": "com.joshuawise.*"
+        }
+      ]
     },
-    "HoRNDIS-9.2.pkg (Pkg)"
+    {
+      "pkg": [
+        "HoRNDIS-9.2.pkg"
+      ]
+    }
   ],
   "caveats": "horndis requires a kernel extension to work.\nIf the installation fails, retry after you enable it in:\n  System Preferences → Security & Privacy → General\n\nFor more information, refer to vendor documentation or this Apple Technical Note:\n  https://developer.apple.com/library/content/technotes/tn2459/_index.html\n",
   "depends_on": {

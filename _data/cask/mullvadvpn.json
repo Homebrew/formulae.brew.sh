@@ -17,26 +17,34 @@
   "sha256": "5eaf48182a13985b224f8c37047851f792ec27d51c9c0fbcf1195d7740e9fcff",
   "artifacts": [
     {
-      "pkgutil": "net.mullvad.vpn",
-      "launchctl": "net.mullvad.daemon",
-      "delete": [
-        "/Library/Caches/mullvad-vpn",
-        "/Library/LaunchDaemons/net.mullvad.daemon.plist",
-        "/var/log/mullvad-vpn"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "net.mullvad.vpn",
+          "launchctl": "net.mullvad.daemon",
+          "delete": [
+            "/Library/Caches/mullvad-vpn",
+            "/Library/LaunchDaemons/net.mullvad.daemon.plist",
+            "/var/log/mullvad-vpn"
+          ]
+        }
+      ]
     },
-    "MullvadVPN-2022.4.pkg (Pkg)",
     {
-      "trash": [
-        "/etc/mullvad-vpn",
-        "~/Library/Application Support/Mullvad VPN",
-        "~/Library/Logs/Mullvad VPN",
-        "~/Library/Preferences/net.mullvad.vpn.plist"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "MullvadVPN-2022.4.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "/etc/mullvad-vpn",
+            "~/Library/Application Support/Mullvad VPN",
+            "~/Library/Logs/Mullvad VPN",
+            "~/Library/Preferences/net.mullvad.vpn.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

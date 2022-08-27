@@ -17,20 +17,28 @@
   "sha256": "b8f69d2a20cb776b57f8603d7ca6491ba332d70fe9c3e93a3cf4eb6a9e761024",
   "artifacts": [
     {
-      "quit": "org.thonny.Thonny",
-      "pkgutil": "org.thonny.Thonny.component",
-      "delete": "/Applications/Thonny.app",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "org.thonny.Thonny",
+          "pkgutil": "org.thonny.Thonny.component",
+          "delete": "/Applications/Thonny.app"
+        }
+      ]
     },
-    "thonny-4.0.0.pkg (Pkg)",
     {
-      "trash": [
-        "~/Library/Saved Application State/org.thonny.Thonny.savedState",
-        "~/Library/Thonny"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "thonny-4.0.0.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Saved Application State/org.thonny.Thonny.savedState",
+            "~/Library/Thonny"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

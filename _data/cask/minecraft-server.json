@@ -16,19 +16,29 @@
   "outdated": false,
   "sha256": "b26727069ef5f61c704add9a378ac90e3d271fd7876c0bd3dcfbe9fd0bec4d96",
   "artifacts": [
-    "preflight (Preflight Block)",
-    "uninstall_preflight (Preflight Block)",
-    [
-      "$(brew --prefix)/Caskroom/minecraft-server/1.19.2,f69c284232d7c7580bd89a5a4931c3581eae1378/minecraft-server.wrapper.sh",
-      {
-        "target": "minecraft-server"
-      }
-    ],
-    "postflight (Postflight Block)",
     {
-      "trash": "$(brew --prefix)/etc/minecraft-server",
-      "signal": {
-      }
+      "preflight": null
+    },
+    {
+      "uninstall_preflight": null
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/minecraft-server/1.19.2,f69c284232d7c7580bd89a5a4931c3581eae1378/minecraft-server.wrapper.sh",
+        {
+          "target": "minecraft-server"
+        }
+      ]
+    },
+    {
+      "postflight": null
+    },
+    {
+      "zap": [
+        {
+          "trash": "$(brew --prefix)/etc/minecraft-server"
+        }
+      ]
     }
   ],
   "caveats": "Configuration files are located in\n\n  $(brew --prefix)/etc/minecraft-server\n\nminecraft-server requires Java 16+. You can install the latest version with:\n  brew install --cask temurin\n",

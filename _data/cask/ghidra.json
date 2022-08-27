@@ -16,15 +16,23 @@
   "outdated": false,
   "sha256": "17db4ba7d411d11b00d1638f163ab5d61ef38712cd68e462eb8c855ec5cfb5ed",
   "artifacts": [
-    "preflight (Preflight Block)",
-    "uninstall_preflight (Preflight Block)",
-    [
-      "$(brew --prefix)/Caskroom/ghidra/10.1.5-20220726/ghidra_10.1.5_PUBLIC/ghidraRun"
-    ],
     {
-      "trash": "~/.ghidra",
-      "signal": {
-      }
+      "preflight": null
+    },
+    {
+      "uninstall_preflight": null
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/ghidra/10.1.5-20220726/ghidra_10.1.5_PUBLIC/ghidraRun"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": "~/.ghidra"
+        }
+      ]
     }
   ],
   "caveats": "ghidra requires Java 11+. You can install the latest version with:\n  brew install --cask temurin\n",

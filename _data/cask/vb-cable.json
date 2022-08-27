@@ -17,13 +17,19 @@
   "sha256": "e46b41c6876995403cb1da37d7c0d566f59edd83aa9fcbcdc3a205eb0b6e05c7",
   "artifacts": [
     {
-      "launchctl": "com.vbaudio.vbcableagent",
-      "pkgutil": "com.vbaudio.vbcable",
-      "delete": "/Library/Preferences/com.vbaudio.vbcable.plist",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "launchctl": "com.vbaudio.vbcableagent",
+          "pkgutil": "com.vbaudio.vbcable",
+          "delete": "/Library/Preferences/com.vbaudio.vbcable.plist"
+        }
+      ]
     },
-    "vb-cable-installer.pkg (Pkg)"
+    {
+      "pkg": [
+        "vb-cable-installer.pkg"
+      ]
+    }
   ],
   "caveats": null,
   "depends_on": {

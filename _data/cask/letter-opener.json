@@ -17,18 +17,24 @@
   "sha256": "157530cae59bccbbec536bbc74870519b2edc80f0d9596ce8fb9929372fa13ca",
   "artifacts": [
     {
-      "pkgutil": [
-        "pkg.app.letteropener.*",
-        "com.restoroot.Letter-Opener"
-      ],
-      "launchctl": [
-        "app.letteropener.agent",
-        "app.letteropener.softwareupdate.agent"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": [
+            "pkg.app.letteropener.*",
+            "com.restoroot.Letter-Opener"
+          ],
+          "launchctl": [
+            "app.letteropener.agent",
+            "app.letteropener.softwareupdate.agent"
+          ]
+        }
+      ]
     },
-    "Install Letter Opener.pkg (Pkg)"
+    {
+      "pkg": [
+        "Install Letter Opener.pkg"
+      ]
+    }
   ],
   "caveats": null,
   "depends_on": {

@@ -17,24 +17,32 @@
   "sha256": "29e53a23bb97cb260290c868dc92a31cdba359f98cbf6643742d367204c207f2",
   "artifacts": [
     {
-      "pkgutil": "com.twocanoes.pkg.MDS",
-      "launchctl": "com.mds-micromdm",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "com.twocanoes.pkg.MDS",
+          "launchctl": "com.mds-micromdm"
+        }
+      ]
     },
-    "MDS.pkg (Pkg)",
     {
-      "trash": [
-        "$(brew --prefix)/mds-micromdm",
-        "~/Library/Application Support/MDS",
-        "~/Library/Application Support/com.twocanoes.mds.sync",
-        "~/Library/Logs/com.twocanoes.mds.log",
-        "~/Library/Preferences/com.apple.imdsmsrecordstore.plist",
-        "/Library/LaunchDaemons/com.twocanoes.mdshelpertool.plist",
-        "/Library/PrivilegedHelperTools/com.twocanoes.mdshelpertool"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "MDS.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "$(brew --prefix)/mds-micromdm",
+            "~/Library/Application Support/MDS",
+            "~/Library/Application Support/com.twocanoes.mds.sync",
+            "~/Library/Logs/com.twocanoes.mds.log",
+            "~/Library/Preferences/com.apple.imdsmsrecordstore.plist",
+            "/Library/LaunchDaemons/com.twocanoes.mdshelpertool.plist",
+            "/Library/PrivilegedHelperTools/com.twocanoes.mdshelpertool"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

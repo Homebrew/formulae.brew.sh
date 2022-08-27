@@ -17,37 +17,43 @@
   "sha256": "ceee2ece8dde1e1d8d498aa5d9782dbf5a62b324903732e08a97de086811446b",
   "artifacts": [
     {
-      "script": {
-        "executable": "$(brew --prefix)/Caskroom/reikey/1.4.2/ReiKey Installer.app/Contents/MacOS/ReiKey Installer",
-        "args": [
-          "-uninstall"
-        ],
-        "sudo": "true"
-      },
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "script": {
+            "executable": "$(brew --prefix)/Caskroom/reikey/1.4.2/ReiKey Installer.app/Contents/MacOS/ReiKey Installer",
+            "args": [
+              "-uninstall"
+            ],
+            "sudo": "true"
+          }
+        }
+      ]
     },
     {
-      "path": "$(brew --prefix)/Caskroom/reikey/1.4.2/ReiKey Installer.app/Contents/MacOS/ReiKey Installer",
-      "args": {
-        "must_succeed": "true",
-        "sudo": "true",
-        "args": [
-          "-install"
-        ],
-        "print_stdout": "true"
-      }
+      "installer": [
+        {
+          "script": {
+            "executable": "$(brew --prefix)/Caskroom/reikey/1.4.2/ReiKey Installer.app/Contents/MacOS/ReiKey Installer",
+            "args": [
+              "-install"
+            ],
+            "sudo": "true"
+          }
+        }
+      ]
     },
     {
-      "trash": [
-        "~/Library/Caches/SentryCrash/ReiKey Installer",
-        "~/Library/Caches/SentryCrash/ReiKey Installer/Data",
-        "~/Library/Caches/SentryCrash/ReiKey Installer/Data/ConsoleLog.txt",
-        "~/Library/Caches/SentryCrash/ReiKey Installer/Data/CrashState.json",
-        "~/Library/Caches/SentryCrash/ReiKey Installer/Reports"
-      ],
-      "signal": {
-      }
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Caches/SentryCrash/ReiKey Installer",
+            "~/Library/Caches/SentryCrash/ReiKey Installer/Data",
+            "~/Library/Caches/SentryCrash/ReiKey Installer/Data/ConsoleLog.txt",
+            "~/Library/Caches/SentryCrash/ReiKey Installer/Data/CrashState.json",
+            "~/Library/Caches/SentryCrash/ReiKey Installer/Reports"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

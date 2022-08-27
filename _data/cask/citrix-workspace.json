@@ -17,44 +17,52 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "launchctl": [
-        "com.citrix.AuthManager_Mac",
-        "com.citrix.ctxusbd",
-        "com.citrix.ctxworkspaceupdater",
-        "com.citrix.ReceiverHelper",
-        "com.citrix.safariadapter",
-        "com.citrix.ServiceRecords"
-      ],
-      "quit": [
-        "Citrix.ServiceRecords",
-        "com.citrix.receiver.nomas",
-        "com.citrix.ReceiverHelper"
-      ],
-      "pkgutil": "com.citrix.ICAClient",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "launchctl": [
+            "com.citrix.AuthManager_Mac",
+            "com.citrix.ctxusbd",
+            "com.citrix.ctxworkspaceupdater",
+            "com.citrix.ReceiverHelper",
+            "com.citrix.safariadapter",
+            "com.citrix.ServiceRecords"
+          ],
+          "quit": [
+            "Citrix.ServiceRecords",
+            "com.citrix.receiver.nomas",
+            "com.citrix.ReceiverHelper"
+          ],
+          "pkgutil": "com.citrix.ICAClient"
+        }
+      ]
     },
-    "Install Citrix Workspace.pkg (Pkg)",
     {
-      "trash": [
-        "~/Library/Application Support/com.citrix.CitrixReceiverLauncher",
-        "~/Library/Application Support/com.citrix.HdxRtcEngine",
-        "~/Library/Application Support/com.citrix.receiver.helper",
-        "~/Library/Application Support/com.citrix.receiver.icaviewer.mac",
-        "~/Library/Application Support/com.citrix.receiver.nomas",
-        "~/Library/Application Support/com.citrix.ReceiverUpdater",
-        "~/Library/Logs/Citrix Workspace",
-        "~/Library/Preferences/com.citrix.AuthManager.plist",
-        "~/Library/Preferences/com.citrix.CitrixReceiverLauncher.plist",
-        "~/Library/Preferences/com.citrix.HdxRtcEngine.plist",
-        "~/Library/Preferences/com.citrix.receiver.helper.plist",
-        "~/Library/Preferences/com.citrix.receiver.icaviewer.mac.plist",
-        "~/Library/Preferences/com.citrix.receiver.nomas.plist",
-        "~/Library/Preferences/com.citrix.ReceiverFTU.AccountRecords.plist",
-        "~/Library/Preferences/com.citrix.ReceiverUpdater.plist"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "Install Citrix Workspace.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/com.citrix.CitrixReceiverLauncher",
+            "~/Library/Application Support/com.citrix.HdxRtcEngine",
+            "~/Library/Application Support/com.citrix.receiver.helper",
+            "~/Library/Application Support/com.citrix.receiver.icaviewer.mac",
+            "~/Library/Application Support/com.citrix.receiver.nomas",
+            "~/Library/Application Support/com.citrix.ReceiverUpdater",
+            "~/Library/Logs/Citrix Workspace",
+            "~/Library/Preferences/com.citrix.AuthManager.plist",
+            "~/Library/Preferences/com.citrix.CitrixReceiverLauncher.plist",
+            "~/Library/Preferences/com.citrix.HdxRtcEngine.plist",
+            "~/Library/Preferences/com.citrix.receiver.helper.plist",
+            "~/Library/Preferences/com.citrix.receiver.icaviewer.mac.plist",
+            "~/Library/Preferences/com.citrix.receiver.nomas.plist",
+            "~/Library/Preferences/com.citrix.ReceiverFTU.AccountRecords.plist",
+            "~/Library/Preferences/com.citrix.ReceiverUpdater.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

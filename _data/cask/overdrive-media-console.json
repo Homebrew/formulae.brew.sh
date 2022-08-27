@@ -17,18 +17,26 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "pkgutil": "com.overdrive.overdriveMediaConsole.*",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "com.overdrive.overdriveMediaConsole.*"
+        }
+      ]
     },
-    "OverDrive-Mac-Installer-Version-1.2.pkg (Pkg)",
     {
-      "trash": [
-        "~/Library/Preferences/com.overdrive.overdrivemediaconsole.plist",
-        "~/Library/Caches/com.overdrive.overdrivemediaconsole"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "OverDrive-Mac-Installer-Version-1.2.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Preferences/com.overdrive.overdrivemediaconsole.plist",
+            "~/Library/Caches/com.overdrive.overdrivemediaconsole"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

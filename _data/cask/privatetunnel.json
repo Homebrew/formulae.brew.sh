@@ -17,19 +17,25 @@
   "sha256": "9d0710b152bc50314a09849eaa011166a87ef85a8b93e05d4f089251e978ca69",
   "artifacts": [
     {
-      "pkgutil": [
-        "org.openvpn.privatetunnel.pkg",
-        "org.openvpn.privatetunnel_framework.pkg",
-        "org.openvpn.privatetunnel_launch.pkg",
-        "org.openvpn.privatetunnel_uninstall.pkg"
-      ],
-      "delete": "/Applications/Private Tunnel.app",
-      "quit": "org.openvpn.proivatetunnel.app",
-      "launchctl": "org.openvpn.privatetunnel",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": [
+            "org.openvpn.privatetunnel.pkg",
+            "org.openvpn.privatetunnel_framework.pkg",
+            "org.openvpn.privatetunnel_launch.pkg",
+            "org.openvpn.privatetunnel_uninstall.pkg"
+          ],
+          "delete": "/Applications/Private Tunnel.app",
+          "quit": "org.openvpn.proivatetunnel.app",
+          "launchctl": "org.openvpn.privatetunnel"
+        }
+      ]
     },
-    "Private_Tunnel_3_0_2(3242)_Installer_signed.pkg (Pkg)"
+    {
+      "pkg": [
+        "Private_Tunnel_3_0_2(3242)_Installer_signed.pkg"
+      ]
+    }
   ],
   "caveats": null,
   "depends_on": {

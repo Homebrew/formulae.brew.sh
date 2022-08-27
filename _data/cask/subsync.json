@@ -16,20 +16,28 @@
   "outdated": false,
   "sha256": "8d81f4d8da99b5f6b023da3fd100fccadb0c2b07143e495eb57bd22bfa5a78bd",
   "artifacts": [
-    "preflight (Preflight Block)",
-    [
-      "subsync.app"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/subsync/0.17.0/subsync.wrapper.sh",
-      {
-        "target": "subsync"
-      }
-    ],
     {
-      "trash": "~/Library/Preferences/subsync/",
-      "signal": {
-      }
+      "preflight": null
+    },
+    {
+      "app": [
+        "subsync.app"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/subsync/0.17.0/subsync.wrapper.sh",
+        {
+          "target": "subsync"
+        }
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": "~/Library/Preferences/subsync/"
+        }
+      ]
     }
   ],
   "caveats": null,

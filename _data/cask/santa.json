@@ -17,23 +17,29 @@
   "sha256": "54ac021cef7ede29505072a5f0dc87c4d6bb7524f297180050bdc0e9526da81e",
   "artifacts": [
     {
-      "delete": [
-        "/Applications/Santa.app",
-        "$(brew --prefix)/bin/santactl"
-      ],
-      "kext": "com.google.santa-driver",
-      "launchctl": [
-        "com.google.santa",
-        "com.google.santa.bundleservice",
-        "com.google.santa.metricservice",
-        "com.google.santa.syncservice",
-        "com.google.santad"
-      ],
-      "pkgutil": "com.google.santa",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": [
+            "/Applications/Santa.app",
+            "$(brew --prefix)/bin/santactl"
+          ],
+          "kext": "com.google.santa-driver",
+          "launchctl": [
+            "com.google.santa",
+            "com.google.santa.bundleservice",
+            "com.google.santa.metricservice",
+            "com.google.santa.syncservice",
+            "com.google.santad"
+          ],
+          "pkgutil": "com.google.santa"
+        }
+      ]
     },
-    "santa-2022.8.pkg (Pkg)"
+    {
+      "pkg": [
+        "santa-2022.8.pkg"
+      ]
+    }
   ],
   "caveats": "For santa to use EndpointSecurity, it must be granted Full Disk Access under System Preferences → Security & Privacy → Privacy\n\nsanta requires a kernel extension to work.\nIf the installation fails, retry after you enable it in:\n  System Preferences → Security & Privacy → General\n\nFor more information, refer to vendor documentation or this Apple Technical Note:\n  https://developer.apple.com/library/content/technotes/tn2459/_index.html\n",
   "depends_on": {

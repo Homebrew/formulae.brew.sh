@@ -16,32 +16,42 @@
   "outdated": false,
   "sha256": "no_check",
   "artifacts": [
-    "preflight (Preflight Block)",
     {
-      "delete": "/Applications/Battle.net.app",
-      "signal": {
-      }
+      "preflight": null
     },
     {
-      "path": "Battle.net-Setup.app"
+      "uninstall": [
+        {
+          "delete": "/Applications/Battle.net.app"
+        }
+      ]
     },
     {
-      "trash": [
-        "~/Library/Application Support/Battle.net",
-        "~/Library/Caches/net.battle.bootstrapper",
-        "~/Library/Preferences/net.battle.net.app.plist",
-        "~/Library/Preferences/net.battle.app.helper.plist",
-        "~/Library/Preferences/net.battle.Authenticator.prefs",
-        "~/Library/Preferences/net.battle.Identity.prefs",
-        "~/Library/Preferences/net.battle.plist",
-        "~/Library/Preferences/net.battnet.battle.plist",
-        "~/Library/Saved Application State/net.battle.app.savedState",
-        "/Users/Shared/Battle.net",
-        "/Users/Shared/Blizzard"
-      ],
-      "rmdir": "~/Blizzard",
-      "signal": {
-      }
+      "installer": [
+        {
+          "manual": "Battle.net-Setup.app"
+        }
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/Battle.net",
+            "~/Library/Caches/net.battle.bootstrapper",
+            "~/Library/Preferences/net.battle.net.app.plist",
+            "~/Library/Preferences/net.battle.app.helper.plist",
+            "~/Library/Preferences/net.battle.Authenticator.prefs",
+            "~/Library/Preferences/net.battle.Identity.prefs",
+            "~/Library/Preferences/net.battle.plist",
+            "~/Library/Preferences/net.battnet.battle.plist",
+            "~/Library/Saved Application State/net.battle.app.savedState",
+            "/Users/Shared/Battle.net",
+            "/Users/Shared/Blizzard"
+          ],
+          "rmdir": "~/Blizzard"
+        }
+      ]
     }
   ],
   "caveats": "If you pick an installation directory other than /Applications when installing this cask, you will need to uninstall it manually\n",

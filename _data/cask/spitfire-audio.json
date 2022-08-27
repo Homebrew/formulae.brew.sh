@@ -17,24 +17,30 @@
   "sha256": "c56e387a4d282964697efb13b747f90244f3a30974b9627daca92d7b4fd4bc6b",
   "artifacts": [
     {
-      "delete": [
-        "/Library/LaunchDaemons/com.spitfireaudio.LibraryManagerHelper.plist",
-        "/Library/Logs/Spitfire Audio",
-        "/Library/PrivilegedHelperTools/com.spitfireaudio.LibraryManagerHelper"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": [
+            "/Library/LaunchDaemons/com.spitfireaudio.LibraryManagerHelper.plist",
+            "/Library/Logs/Spitfire Audio",
+            "/Library/PrivilegedHelperTools/com.spitfireaudio.LibraryManagerHelper"
+          ]
+        }
+      ]
     },
-    [
-      "Spitfire Audio.app"
-    ],
     {
-      "delete": [
-        "~/Library/Caches/com.spitfireaudio.spitfireaudio",
-        "~/Library/Preferences/com.spitfireaudio.spitfireaudio.plist"
-      ],
-      "signal": {
-      }
+      "app": [
+        "Spitfire Audio.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "delete": [
+            "~/Library/Caches/com.spitfireaudio.spitfireaudio",
+            "~/Library/Preferences/com.spitfireaudio.spitfireaudio.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

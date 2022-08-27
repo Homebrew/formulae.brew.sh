@@ -17,30 +17,38 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "script": {
-        "executable": "/Applications/AVGAntivirus.app/Contents/Backend/hub/uninstall.sh",
-        "sudo": "true"
-      },
-      "pkgutil": "com.avg.pkg.hub",
-      "launchctl": [
-        "com.avg.hub",
-        "com.avg.hub.schedule",
-        "com.avg.hub.xpc"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "script": {
+            "executable": "/Applications/AVGAntivirus.app/Contents/Backend/hub/uninstall.sh",
+            "sudo": "true"
+          },
+          "pkgutil": "com.avg.pkg.hub",
+          "launchctl": [
+            "com.avg.hub",
+            "com.avg.hub.schedule",
+            "com.avg.hub.xpc"
+          ]
+        }
+      ]
     },
-    "AVG AntiVirus.pkg (Pkg)",
     {
-      "trash": [
-        "/Library/Application Support/AVGAntivirus",
-        "/Library/Application Support/AVGHUB",
-        "~/Library/Application Support/AVGAntivirus",
-        "~/Library/Application Support/AVGHUB",
-        "~/Library/Logs/AVGHUB"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "AVG AntiVirus.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "/Library/Application Support/AVGAntivirus",
+            "/Library/Application Support/AVGHUB",
+            "~/Library/Application Support/AVGAntivirus",
+            "~/Library/Application Support/AVGHUB",
+            "~/Library/Logs/AVGHUB"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

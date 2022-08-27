@@ -17,28 +17,36 @@
   "sha256": "d55db8b0528efed113bf36d70c9658a4e8e801e977b3bb4abe7bc9e17993d2e4",
   "artifacts": [
     {
-      "quit": "com.samschott.maestral",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "com.samschott.maestral"
+        }
+      ]
     },
-    [
-      "Maestral.app"
-    ],
-    [
-      "/Applications/Maestral.app/Contents/MacOS/maestral-cli",
-      {
-        "target": "maestral"
-      }
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/maestral",
-        "~/Library/LaunchAgents/com.samschott.maestral.maestral.plist",
-        "~/Library/Logs/maestral",
-        "~/Library/Preferences/com.samschott.maestral.plist"
-      ],
-      "signal": {
-      }
+      "app": [
+        "Maestral.app"
+      ]
+    },
+    {
+      "binary": [
+        "/Applications/Maestral.app/Contents/MacOS/maestral-cli",
+        {
+          "target": "maestral"
+        }
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/maestral",
+            "~/Library/LaunchAgents/com.samschott.maestral.maestral.plist",
+            "~/Library/Logs/maestral",
+            "~/Library/Preferences/com.samschott.maestral.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

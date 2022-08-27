@@ -17,25 +17,31 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "quit": "com.nordsec.nordpass",
-      "login_item": "NordPass",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "com.nordsec.nordpass",
+          "login_item": "NordPass"
+        }
+      ]
     },
-    [
-      "NordPass.app"
-    ],
     {
-      "trash": [
-        "/Library/Application Support/NordPass",
-        "~/Library/Application Scripts/com.nordsec.nordpass.safari.extension",
-        "~/Library/Application Support/NordPass",
-        "~/Library/Containers/com.nordsec.nordpass.safari.extension",
-        "~/Library/Preferences/com.nordsec.nordpass.plist",
-        "~/Library/Saved Application State/com.nordsec.nordpass.savedState"
-      ],
-      "signal": {
-      }
+      "app": [
+        "NordPass.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "/Library/Application Support/NordPass",
+            "~/Library/Application Scripts/com.nordsec.nordpass.safari.extension",
+            "~/Library/Application Support/NordPass",
+            "~/Library/Containers/com.nordsec.nordpass.safari.extension",
+            "~/Library/Preferences/com.nordsec.nordpass.plist",
+            "~/Library/Saved Application State/com.nordsec.nordpass.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

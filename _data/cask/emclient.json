@@ -17,21 +17,29 @@
   "sha256": "443fa1b48f092937ab27c859d490074a58b96bb2473856e42f5bdbaeaacc4047",
   "artifacts": [
     {
-      "pkgutil": "com.emclient.mail.client.pkg",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "com.emclient.mail.client.pkg"
+        }
+      ]
     },
-    "setup.pkg (Pkg)",
     {
-      "trash": [
-        "~/Library/Caches/com.emclient.mail.client",
-        "~/Library/Preferences/com.emclient.mail.client.plist",
-        "~/Library/Preferences/com.emclient.mail.repair.plist",
-        "~/Library/Preferences/com.emclient.mail.shared.plist",
-        "~/Library/Saved Application State/com.emclient.mail.client.savedState"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "setup.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Caches/com.emclient.mail.client",
+            "~/Library/Preferences/com.emclient.mail.client.plist",
+            "~/Library/Preferences/com.emclient.mail.repair.plist",
+            "~/Library/Preferences/com.emclient.mail.shared.plist",
+            "~/Library/Saved Application State/com.emclient.mail.client.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

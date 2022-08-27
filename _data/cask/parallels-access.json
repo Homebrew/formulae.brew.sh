@@ -16,35 +16,43 @@
   "outdated": false,
   "sha256": "4d3c54fcec2535aa1c2f023b9e7baf290b62e8898c6033db4ab21fdc63e99c73",
   "artifacts": [
-    "preflight (Preflight Block)",
     {
-      "launchctl": [
-        "com.parallels.mobile.audioloader",
-        "com.parallels.mobile.dispatcher.launchdaemon",
-        "com.parallels.mobile.kextloader.launchdaemon",
-        "com.parallels.mobile.prl_deskctl_agent.launchagent",
-        "com.parallels.mobile.startgui.launchagent"
-      ],
-      "quit": "com.parallels.inputmethod.ParallelsIM",
-      "signal": {
-        "TERM": "com.parallels.mobile.prl_deskctl_agent"
-      },
-      "kext": [
-        "com.parallels.virtualhid",
-        "com.parallels.virtualsound"
-      ],
-      "delete": "/Applications/Parallels Access.app"
+      "preflight": null
     },
     {
-      "trash": [
-        "~/Library/Cookies/com.parallels.mobile.prl_deskctl_agent.binarycookies",
-        "~/Library/Group Containers/4C6364ACXT.com.parallels.Access",
-        "~/Library/Preferences/com.parallels.mobile.plist",
-        "~/Library/Preferences/com.parallels.Parallels Access.plist.sdb",
-        "~/Library/Preferences/com.parallels.Parallels Access.plist"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "launchctl": [
+            "com.parallels.mobile.audioloader",
+            "com.parallels.mobile.dispatcher.launchdaemon",
+            "com.parallels.mobile.kextloader.launchdaemon",
+            "com.parallels.mobile.prl_deskctl_agent.launchagent",
+            "com.parallels.mobile.startgui.launchagent"
+          ],
+          "quit": "com.parallels.inputmethod.ParallelsIM",
+          "signal": {
+            "TERM": "com.parallels.mobile.prl_deskctl_agent"
+          },
+          "kext": [
+            "com.parallels.virtualhid",
+            "com.parallels.virtualsound"
+          ],
+          "delete": "/Applications/Parallels Access.app"
+        }
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Cookies/com.parallels.mobile.prl_deskctl_agent.binarycookies",
+            "~/Library/Group Containers/4C6364ACXT.com.parallels.Access",
+            "~/Library/Preferences/com.parallels.mobile.plist",
+            "~/Library/Preferences/com.parallels.Parallels Access.plist.sdb",
+            "~/Library/Preferences/com.parallels.Parallels Access.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": "parallels-access requires a kernel extension to work.\nIf the installation fails, retry after you enable it in:\n  System Preferences → Security & Privacy → General\n\nFor more information, refer to vendor documentation or this Apple Technical Note:\n  https://developer.apple.com/library/content/technotes/tn2459/_index.html\n",

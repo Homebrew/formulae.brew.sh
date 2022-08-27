@@ -17,44 +17,50 @@
   "sha256": "62e2f46f0b072d03c2b03d79e19d52c3386fe131b698b70f8b6d99a8ee5c0100",
   "artifacts": [
     {
-      "quit": "com.privateinternetaccess.vpn",
-      "delete": [
-        "/Applications/Private Internet Access.app",
-        "$(brew --prefix)/bin/piactl"
-      ],
-      "launchctl": [
-        "com.privateinternetaccess.vpn.installhelper",
-        "com.privateinternetaccess.vpn.daemon"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "com.privateinternetaccess.vpn",
+          "delete": [
+            "/Applications/Private Internet Access.app",
+            "$(brew --prefix)/bin/piactl"
+          ],
+          "launchctl": [
+            "com.privateinternetaccess.vpn.installhelper",
+            "com.privateinternetaccess.vpn.daemon"
+          ]
+        }
+      ]
     },
     {
-      "path": "Private Internet Access Installer.app/Contents/Resources/vpn-installer.sh",
-      "args": {
-        "must_succeed": "true",
-        "sudo": "true",
-        "print_stdout": "true"
-      }
+      "installer": [
+        {
+          "script": {
+            "executable": "Private Internet Access Installer.app/Contents/Resources/vpn-installer.sh",
+            "sudo": "true"
+          }
+        }
+      ]
     },
     {
-      "script": {
-        "executable": "/Applications/Private Internet Access.app/Contents/Resources/vpn-installer.sh",
-        "args": [
-          "uninstall"
-        ],
-        "sudo": "true"
-      },
-      "trash": [
-        "~/Library/Application Support/com.privateinternetaccess.vpn",
-        "~/Library/LaunchAgents/com.privateinternetaccess.vpn",
-        "~/Library/LaunchAgents/com.privateinternetaccess.vpn.client.plist",
-        "~/Library/Preferences/com.privateinternetaccess.vpn",
-        "~/Library/Preferences/com.privateinternetaccess.vpn.plist",
-        "~/Library/Preferences/com.privateinternetaccess.vpn.support-tool.com.privateinternetaccess.vpn.plist"
-      ],
-      "signal": {
-      }
+      "zap": [
+        {
+          "script": {
+            "executable": "/Applications/Private Internet Access.app/Contents/Resources/vpn-installer.sh",
+            "args": [
+              "uninstall"
+            ],
+            "sudo": "true"
+          },
+          "trash": [
+            "~/Library/Application Support/com.privateinternetaccess.vpn",
+            "~/Library/LaunchAgents/com.privateinternetaccess.vpn",
+            "~/Library/LaunchAgents/com.privateinternetaccess.vpn.client.plist",
+            "~/Library/Preferences/com.privateinternetaccess.vpn",
+            "~/Library/Preferences/com.privateinternetaccess.vpn.plist",
+            "~/Library/Preferences/com.privateinternetaccess.vpn.support-tool.com.privateinternetaccess.vpn.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

@@ -17,23 +17,29 @@
   "sha256": "5ff0711dead6de50f7a865f373b7129f7da685c54de2adec069f5c44de8b38eb",
   "artifacts": [
     {
-      "delete": "/Library/LaunchAgents/com.dortania.opencore-legacy-patcher.auto-patch.plist",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": "/Library/LaunchAgents/com.dortania.opencore-legacy-patcher.auto-patch.plist"
+        }
+      ]
     },
-    [
-      "OpenCore-Patcher.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/CrashReporter/OpenCore-Patcher*",
-        "~/Library/Preferences/com.dortania.opencore-legacy-patcher-wxpython.plist",
-        "~/Library/Saved Application State/com.dortania.opencore-legacy-patcher-wxpython.savedState",
-        "~/Library/Saved Application State/com.dortania.opencore-legacy-patcher.savedState",
-        "/Users/Shared/.com.dortania.opencore-legacy-patcher.plist"
-      ],
-      "signal": {
-      }
+      "app": [
+        "OpenCore-Patcher.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/CrashReporter/OpenCore-Patcher*",
+            "~/Library/Preferences/com.dortania.opencore-legacy-patcher-wxpython.plist",
+            "~/Library/Saved Application State/com.dortania.opencore-legacy-patcher-wxpython.savedState",
+            "~/Library/Saved Application State/com.dortania.opencore-legacy-patcher.savedState",
+            "/Users/Shared/.com.dortania.opencore-legacy-patcher.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

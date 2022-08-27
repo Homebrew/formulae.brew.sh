@@ -17,20 +17,28 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "pkgutil": "com.analog.LTspice.App",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "com.analog.LTspice.App"
+        }
+      ]
     },
-    "LTspice.pkg (Pkg)",
     {
-      "trash": [
-        "~/Documents/LTspice/examples",
-        "~/Library/Application Support/LTspice",
-        "~/Library/Preferences/com.analog.LTspice.App.plist"
-      ],
-      "rmdir": "~/Documents/LTspice",
-      "signal": {
-      }
+      "pkg": [
+        "LTspice.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Documents/LTspice/examples",
+            "~/Library/Application Support/LTspice",
+            "~/Library/Preferences/com.analog.LTspice.App.plist"
+          ],
+          "rmdir": "~/Documents/LTspice"
+        }
+      ]
     }
   ],
   "caveats": null,

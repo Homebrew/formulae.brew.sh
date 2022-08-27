@@ -17,34 +17,44 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "quit": "com.p5sys.jump.connect",
-      "signal": {
-        "QUIT": "com.p5sys.jump.connect"
-      },
-      "pkgutil": "com.p5sys.jump.connect",
-      "launchctl": [
-        "com.p5sys.jump.connect.service",
-        "com.p5sys.jump.connect.agent"
-      ],
-      "delete": "/Library/Application Support/Jump Desktop/Connect/sharedconfig.plist",
-      "rmdir": [
-        "/Library/Application Support/Jump Desktop/Connect/",
-        "/Library/Application Support/Jump Desktop"
+      "uninstall": [
+        {
+          "quit": "com.p5sys.jump.connect",
+          "signal": {
+            "QUIT": "com.p5sys.jump.connect"
+          },
+          "pkgutil": "com.p5sys.jump.connect",
+          "launchctl": [
+            "com.p5sys.jump.connect.service",
+            "com.p5sys.jump.connect.agent"
+          ],
+          "delete": "/Library/Application Support/Jump Desktop/Connect/sharedconfig.plist",
+          "rmdir": [
+            "/Library/Application Support/Jump Desktop/Connect/",
+            "/Library/Application Support/Jump Desktop"
+          ]
+        }
       ]
     },
-    ".jdc.sparkle_guided.pkg (Pkg)",
     {
-      "trash": [
-        "~/Library/Application Support/com.p5sys.jump.connect",
-        "~/Library/Caches/com.p5sys.jump.connect",
-        "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.p5sys.jump.connect",
-        "~/Library/Caches/Jump Desktop/jump.connect",
-        "~/Library/HTTPStorages/com.p5sys.jump.connect",
-        "~/Library/Preferences/com.p5sys.jump.connect.plist"
-      ],
-      "rmdir": "~/Library/Caches/Jump Desktop",
-      "signal": {
-      }
+      "pkg": [
+        ".jdc.sparkle_guided.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/com.p5sys.jump.connect",
+            "~/Library/Caches/com.p5sys.jump.connect",
+            "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.p5sys.jump.connect",
+            "~/Library/Caches/Jump Desktop/jump.connect",
+            "~/Library/HTTPStorages/com.p5sys.jump.connect",
+            "~/Library/Preferences/com.p5sys.jump.connect.plist"
+          ],
+          "rmdir": "~/Library/Caches/Jump Desktop"
+        }
+      ]
     }
   ],
   "caveats": null,

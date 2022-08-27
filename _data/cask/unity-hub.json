@@ -17,21 +17,27 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "quit": "com.unity3d.unityhub",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "com.unity3d.unityhub"
+        }
+      ]
     },
-    [
-      "Unity Hub.app"
-    ],
     {
-      "trash": [
-        "~/Library/Preferences/com.unity3d.unityhub.plist",
-        "~/Library/Preferences/com.unity3d.unityhub.helper.plist"
-      ],
-      "rmdir": "/Applications/Unity/Hub",
-      "signal": {
-      }
+      "app": [
+        "Unity Hub.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Preferences/com.unity3d.unityhub.plist",
+            "~/Library/Preferences/com.unity3d.unityhub.helper.plist"
+          ],
+          "rmdir": "/Applications/Unity/Hub"
+        }
+      ]
     }
   ],
   "caveats": null,

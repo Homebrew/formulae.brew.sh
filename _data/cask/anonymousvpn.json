@@ -17,15 +17,21 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "pkgutil": "org.anonymousvpn.pkg",
-      "launchctl": [
-        "org.AnonymousVPN.helper",
-        "org.strongswan.charon-xpc"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "org.anonymousvpn.pkg",
+          "launchctl": [
+            "org.AnonymousVPN.helper",
+            "org.strongswan.charon-xpc"
+          ]
+        }
+      ]
     },
-    "AnonymousVPN.pkg (Pkg)"
+    {
+      "pkg": [
+        "AnonymousVPN.pkg"
+      ]
+    }
   ],
   "caveats": null,
   "depends_on": {

@@ -17,21 +17,27 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "quit": "com.getlantern.lantern",
-      "launchctl": "org.getlantern",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "com.getlantern.lantern",
+          "launchctl": "org.getlantern"
+        }
+      ]
     },
-    [
-      "Lantern.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/Lantern",
-        "~/Library/Logs/Lantern"
-      ],
-      "signal": {
-      }
+      "app": [
+        "Lantern.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/Lantern",
+            "~/Library/Logs/Lantern"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

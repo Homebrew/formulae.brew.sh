@@ -17,24 +17,30 @@
   "sha256": "61b47c5509291daafe35c0f73964654a087b63e497964f586e7600d3c5b7c3b4",
   "artifacts": [
     {
-      "delete": "/Applications/SDM.app/Contents/Resources/sdm-socket",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": "/Applications/SDM.app/Contents/Resources/sdm-socket"
+        }
+      ]
     },
-    [
-      "SDM.app"
-    ],
     {
-      "trash": [
-        "~/.sdm",
-        "$(brew --prefix)/bin/sdm",
-        "~/Library/Application Support/SDM",
-        "~/Library/Caches/com.electron.sdm*",
-        "~/Library/Preferences/com.electron.sdm.plist",
-        "~/Library/Saved Application State/com.electron.sdm.savedState"
-      ],
-      "signal": {
-      }
+      "app": [
+        "SDM.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/.sdm",
+            "$(brew --prefix)/bin/sdm",
+            "~/Library/Application Support/SDM",
+            "~/Library/Caches/com.electron.sdm*",
+            "~/Library/Preferences/com.electron.sdm.plist",
+            "~/Library/Saved Application State/com.electron.sdm.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

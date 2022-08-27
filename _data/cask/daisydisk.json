@@ -17,22 +17,28 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "delete": "/Library/PrivilegedHelperTools/com.daisydiskapp.DaisyDiskAdminHelper",
-      "launchctl": "com.daisydiskapp.DaisyDiskAdminHelper",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": "/Library/PrivilegedHelperTools/com.daisydiskapp.DaisyDiskAdminHelper",
+          "launchctl": "com.daisydiskapp.DaisyDiskAdminHelper"
+        }
+      ]
     },
-    [
-      "DaisyDisk.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/DaisyDisk",
-        "~/Library/Caches/com.daisydiskapp.DaisyDiskStandAlone",
-        "~/Library/Preferences/com.daisydiskapp.DaisyDiskStandAlone.plist"
-      ],
-      "signal": {
-      }
+      "app": [
+        "DaisyDisk.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/DaisyDisk",
+            "~/Library/Caches/com.daisydiskapp.DaisyDiskStandAlone",
+            "~/Library/Preferences/com.daisydiskapp.DaisyDiskStandAlone.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

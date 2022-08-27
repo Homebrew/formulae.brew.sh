@@ -17,13 +17,21 @@
   "sha256": "83131c5809815742bf23406361b514f8c798d9f9dc344b7a42bc178886dbd0da",
   "artifacts": [
     {
-      "pkgutil": "es.gob.afirma",
-      "delete": "/Applications/AutoFirma.app",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "es.gob.afirma",
+          "delete": "/Applications/AutoFirma.app"
+        }
+      ]
     },
-    "AutoFirma_1_7_1.pkg (Pkg)",
-    "uninstall_postflight (Postflight Block)"
+    {
+      "pkg": [
+        "AutoFirma_1_7_1.pkg"
+      ]
+    },
+    {
+      "uninstall_postflight": null
+    }
   ],
   "caveats": null,
   "depends_on": {

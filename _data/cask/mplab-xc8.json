@@ -17,58 +17,74 @@
   "sha256": "5889b2fe70738deb5476707a8ab5af7a73362f0a0c5a6b92634ac3c19c5f9a8c",
   "artifacts": [
     {
-      "script": {
-        "executable": "Uninstall-xc8-v2.40.app/Contents/MacOS/installbuilder.sh",
-        "args": [
-          "--mode",
-          "unattended"
-        ],
-        "sudo": "true"
-      },
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "script": {
+            "executable": "Uninstall-xc8-v2.40.app/Contents/MacOS/installbuilder.sh",
+            "args": [
+              "--mode",
+              "unattended"
+            ],
+            "sudo": "true"
+          }
+        }
+      ]
     },
     {
-      "path": "xc8-v2.40-full-install-macos-x64-installer.app/Contents/MacOS/installbuilder.sh",
-      "args": {
-        "must_succeed": "true",
-        "sudo": "true",
-        "args": [
-          "--mode",
-          "unattended",
-          "--unattendedmodeui",
-          "none",
-          "--ModifyAll",
-          "0",
-          "--netservername",
-          "\"\"",
-          "--LicenseType",
-          "FreeMode",
-          "--prefix",
-          "$(brew --prefix)/Caskroom/mplab-xc8/2.40"
-        ],
-        "input": [
-          "y"
-        ],
-        "print_stdout": "true"
-      }
+      "installer": [
+        {
+          "script": {
+            "executable": "xc8-v2.40-full-install-macos-x64-installer.app/Contents/MacOS/installbuilder.sh",
+            "args": [
+              "--mode",
+              "unattended",
+              "--unattendedmodeui",
+              "none",
+              "--ModifyAll",
+              "0",
+              "--netservername",
+              "\"\"",
+              "--LicenseType",
+              "FreeMode",
+              "--prefix",
+              "$(brew --prefix)/Caskroom/mplab-xc8/2.40"
+            ],
+            "input": [
+              "y"
+            ],
+            "sudo": "true"
+          }
+        }
+      ]
     },
-    [
-      "$(brew --prefix)/Caskroom/mplab-xc8/2.40/bin/xc8"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/mplab-xc8/2.40/bin/xc8-ar"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/mplab-xc8/2.40/bin/xc8-cc"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/mplab-xc8/2.40/bin/xclm"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/mplab-xc8/2.40/bin/xc-ccov"
-    ],
-    "postflight (Postflight Block)"
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/mplab-xc8/2.40/bin/xc8"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/mplab-xc8/2.40/bin/xc8-ar"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/mplab-xc8/2.40/bin/xc8-cc"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/mplab-xc8/2.40/bin/xclm"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/mplab-xc8/2.40/bin/xc-ccov"
+      ]
+    },
+    {
+      "postflight": null
+    }
   ],
   "caveats": null,
   "depends_on": {

@@ -17,37 +17,45 @@
   "sha256": "9353980f35f78a9d16951f28d036f5647a2f5a5c1a79f6480cc4b2852bc77e57",
   "artifacts": [
     {
-      "delete": "/Library/Application Support/ShadowsocksX-NG",
-      "launchctl": [
-        "com.qiuyuzhou.shadowsocksX-NG.http",
-        "com.qiuyuzhou.shadowsocksX-NG.kcptun",
-        "com.qiuyuzhou.shadowsocksX-NG.local",
-        "com.qiuyuzhou.ShadowsocksX-NG.LaunchHelper"
-      ],
-      "quit": "com.qiuyuzhou.ShadowsocksX-NG",
-      "script": {
-        "executable": "/Library/Application Support/ShadowsocksX-NG/proxy_conf_helper",
-        "args": [
-          "--mode",
-          "off"
-        ]
-      },
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": "/Library/Application Support/ShadowsocksX-NG",
+          "launchctl": [
+            "com.qiuyuzhou.shadowsocksX-NG.http",
+            "com.qiuyuzhou.shadowsocksX-NG.kcptun",
+            "com.qiuyuzhou.shadowsocksX-NG.local",
+            "com.qiuyuzhou.ShadowsocksX-NG.LaunchHelper"
+          ],
+          "quit": "com.qiuyuzhou.ShadowsocksX-NG",
+          "script": {
+            "executable": "/Library/Application Support/ShadowsocksX-NG/proxy_conf_helper",
+            "args": [
+              "--mode",
+              "off"
+            ]
+          }
+        }
+      ]
     },
-    [
-      "ShadowsocksX-NG-R8.app"
-    ],
-    "postflight (Postflight Block)",
     {
-      "trash": [
-        "~/.ShadowsocksX-NG",
-        "~/Library/Application Support/ShadowsocksX-NG",
-        "~/Library/Caches/com.qiuyuzhou.ShadowsocksX-NG",
-        "~/Library/Preferences/com.qiuyuzhou.ShadowsocksX-NG.plist"
-      ],
-      "signal": {
-      }
+      "app": [
+        "ShadowsocksX-NG-R8.app"
+      ]
+    },
+    {
+      "postflight": null
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/.ShadowsocksX-NG",
+            "~/Library/Application Support/ShadowsocksX-NG",
+            "~/Library/Caches/com.qiuyuzhou.ShadowsocksX-NG",
+            "~/Library/Preferences/com.qiuyuzhou.ShadowsocksX-NG.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

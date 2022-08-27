@@ -17,30 +17,36 @@
   "sha256": "9299863331d720b70519d2bf131240170fd97a866e5de2b7f6fdeae9d841d4a9",
   "artifacts": [
     {
-      "quit": "com.kairos.duetMac",
-      "kext": "com.karios.driver.DuetDisplay",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "com.kairos.duetMac",
+          "kext": "com.karios.driver.DuetDisplay"
+        }
+      ]
     },
-    [
-      "duet.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/com.kairos.duet*",
-        "~/Library/Caches/com.crashlytics.data/com.kairos.duet*",
-        "~/Library/Caches/com.kairos.duet*",
-        "~/Library/Caches/io.fabric.sdk.mac.data/com.kairos.duet*",
-        "~/Library/Caches/SentryCrash/duet",
-        "~/Library/HTTPStorages/com.kairos.duet*",
-        "~/Library/Preferences/com.kairos.duet*.plist"
-      ],
-      "rmdir": [
-        "~/Library/Caches/com.crashlytics.data",
-        "~/Library/Caches/io.fabric.sdk.mac.data"
-      ],
-      "signal": {
-      }
+      "app": [
+        "duet.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/com.kairos.duet*",
+            "~/Library/Caches/com.crashlytics.data/com.kairos.duet*",
+            "~/Library/Caches/com.kairos.duet*",
+            "~/Library/Caches/io.fabric.sdk.mac.data/com.kairos.duet*",
+            "~/Library/Caches/SentryCrash/duet",
+            "~/Library/HTTPStorages/com.kairos.duet*",
+            "~/Library/Preferences/com.kairos.duet*.plist"
+          ],
+          "rmdir": [
+            "~/Library/Caches/com.crashlytics.data",
+            "~/Library/Caches/io.fabric.sdk.mac.data"
+          ]
+        }
+      ]
     }
   ],
   "caveats": "duet requires a kernel extension to work.\nIf the installation fails, retry after you enable it in:\n  System Preferences → Security & Privacy → General\n\nFor more information, refer to vendor documentation or this Apple Technical Note:\n  https://developer.apple.com/library/content/technotes/tn2459/_index.html\n",

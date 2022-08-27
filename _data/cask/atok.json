@@ -17,28 +17,34 @@
   "sha256": "0b30a38812406623ea2ce5371b59f4dc897358a2210079c2512c597e768ad421",
   "artifacts": [
     {
-      "pkgutil": [
-        "com.justsystems.atok32.doc.pkg",
-        "com.justsystems.atok32.pkg",
-        "com.justsystems.atok32.quicklook.pkg",
-        "com.justsystems.atok32.sync.pkg",
-        "com.justsystems.JustOnlineUpdate.pkg",
-        "com.justsystems.pkg.lma"
-      ],
-      "launchctl": [
-        "com.justsystems.atok32.enabler",
-        "com.justsystems.inputmethod.atok32",
-        "com.justsystems.launchd.Atok32.AlBg",
-        "com.justsystems.launchd.jslmad",
-        "com.justsystems.launchd.jslmaUI",
-        "com.justsystems.launchd.UpdateChecker",
-        "com.justsystems.OnlineUpdate"
-      ],
-      "quit": "com.justsystems.UpdateChecker",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": [
+            "com.justsystems.atok32.doc.pkg",
+            "com.justsystems.atok32.pkg",
+            "com.justsystems.atok32.quicklook.pkg",
+            "com.justsystems.atok32.sync.pkg",
+            "com.justsystems.JustOnlineUpdate.pkg",
+            "com.justsystems.pkg.lma"
+          ],
+          "launchctl": [
+            "com.justsystems.atok32.enabler",
+            "com.justsystems.inputmethod.atok32",
+            "com.justsystems.launchd.Atok32.AlBg",
+            "com.justsystems.launchd.jslmad",
+            "com.justsystems.launchd.jslmaUI",
+            "com.justsystems.launchd.UpdateChecker",
+            "com.justsystems.OnlineUpdate"
+          ],
+          "quit": "com.justsystems.UpdateChecker"
+        }
+      ]
     },
-    "ATOK インストーラ.pkg (Pkg)"
+    {
+      "pkg": [
+        "ATOK インストーラ.pkg"
+      ]
+    }
   ],
   "caveats": null,
   "depends_on": {

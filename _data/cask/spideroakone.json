@@ -17,16 +17,26 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "signal": {
-        "TERM": "com.spideroak.orange.client"
-      },
-      "pkgutil": "org.python.python"
+      "uninstall": [
+        {
+          "signal": {
+            "TERM": "com.spideroak.orange.client"
+          },
+          "pkgutil": "org.python.python"
+        }
+      ]
     },
-    "SpiderOakONE.pkg (Pkg)",
     {
-      "trash": "~/Library/Application Support/SpiderOakONE",
-      "signal": {
-      }
+      "pkg": [
+        "SpiderOakONE.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": "~/Library/Application Support/SpiderOakONE"
+        }
+      ]
     }
   ],
   "caveats": null,

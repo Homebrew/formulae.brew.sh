@@ -16,23 +16,29 @@
   "outdated": false,
   "sha256": "0024fa80f4566bc053d705200263c7e7d72f2ae111bf670dc6af90403540d3c7",
   "artifacts": [
-    [
-      "gtkwave.app"
-    ],
-    [
-      "/Applications/gtkwave.app/Contents/Resources/bin/gtkwave_bin_launcher.sh",
-      {
-        "target": "gtkwave"
-      }
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/CrashReporter/gtkwave-bin_*.plist",
-        "~/Library/Preferences/com.geda.gtkwave.plist",
-        "~/Library/Saved Application State/com.geda.gtkwave.savedState"
-      ],
-      "signal": {
-      }
+      "app": [
+        "gtkwave.app"
+      ]
+    },
+    {
+      "binary": [
+        "/Applications/gtkwave.app/Contents/Resources/bin/gtkwave_bin_launcher.sh",
+        {
+          "target": "gtkwave"
+        }
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/CrashReporter/gtkwave-bin_*.plist",
+            "~/Library/Preferences/com.geda.gtkwave.plist",
+            "~/Library/Saved Application State/com.geda.gtkwave.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": "You may need to install Perl’s Switch module to run gtkwave’s command line tool.\n\n  https://ughe.github.io/2018/11/06/gtkwave-osx\n",

@@ -16,36 +16,43 @@
   "outdated": false,
   "sha256": "d423e518c4a5050261fb0f4dda8e54bd5c866588ea3966cb50e2103833dce85a",
   "artifacts": [
-    "preflight (Preflight Block)",
     {
-      "script": {
-        "executable": "/Applications/TI/UniFlash/uninstall.app/Contents/MacOS/installbuilder.sh",
-        "args": [
-          "--mode",
-          "unattended"
-        ],
-        "sudo": "true"
-      },
-      "signal": {
-      }
+      "preflight": null
     },
     {
-      "path": "uniflash_sl.8.0.0.4026.app/Contents/MacOS/installbuilder.sh",
-      "args": {
-        "must_succeed": "true",
-        "sudo": "false",
-        "args": [
-          "--mode",
-          "unattended",
-          "--prefix",
-          "/Applications/TI/UniFlash"
-        ],
-        "print_stdout": "true"
-      }
+      "uninstall": [
+        {
+          "script": {
+            "executable": "/Applications/TI/UniFlash/uninstall.app/Contents/MacOS/installbuilder.sh",
+            "args": [
+              "--mode",
+              "unattended"
+            ],
+            "sudo": "true"
+          }
+        }
+      ]
     },
-    [
-      "$(brew --prefix)/Caskroom/uniflash/8.0.0.4026/dslite"
-    ]
+    {
+      "installer": [
+        {
+          "script": {
+            "executable": "uniflash_sl.8.0.0.4026.app/Contents/MacOS/installbuilder.sh",
+            "args": [
+              "--mode",
+              "unattended",
+              "--prefix",
+              "/Applications/TI/UniFlash"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/uniflash/8.0.0.4026/dslite"
+      ]
+    }
   ],
   "caveats": null,
   "depends_on": {

@@ -17,19 +17,25 @@
   "sha256": "b55b4d4533ed53f8d3e27229f8d414aa2a780f6fb2354e384dc6be0237c9c14b",
   "artifacts": [
     {
-      "pkgutil": "com.microsoft.msbwpackage",
-      "quit": [
-        "com.microsoft.autoupdate2",
-        "com.microsoft.msbwdefaults"
-      ],
-      "launchctl": [
-        "com.microsoft.msbwapp",
-        "com.microsoft.msbwupdater"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "com.microsoft.msbwpackage",
+          "quit": [
+            "com.microsoft.autoupdate2",
+            "com.microsoft.msbwdefaults"
+          ],
+          "launchctl": [
+            "com.microsoft.msbwapp",
+            "com.microsoft.msbwupdater"
+          ]
+        }
+      ]
     },
-    "Bing Wallpaper.pkg (Pkg)"
+    {
+      "pkg": [
+        "Bing Wallpaper.pkg"
+      ]
+    }
   ],
   "caveats": null,
   "depends_on": {

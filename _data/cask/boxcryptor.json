@@ -22,30 +22,36 @@
   "sha256": "0cd09325a1bb9716cd56b67ca8c080d5d0e6ea77c2360cdf15d1368c4725869f",
   "artifacts": [
     {
-      "delete": [
-        "/Library/LaunchDaemons/com.boxcryptor.BCFS.Mounter.Helper.plist",
-        "/Library/LaunchDaemons/com.boxcryptor.osx.PrivilegedHelper.plist",
-        "/Library/PrivilegedHelperTools/com.boxcryptor.BCFS.Mounter.Helper",
-        "/Library/PrivilegedHelperTools/com.boxcryptor.osx.PrivilegedHelper"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": [
+            "/Library/LaunchDaemons/com.boxcryptor.BCFS.Mounter.Helper.plist",
+            "/Library/LaunchDaemons/com.boxcryptor.osx.PrivilegedHelper.plist",
+            "/Library/PrivilegedHelperTools/com.boxcryptor.BCFS.Mounter.Helper",
+            "/Library/PrivilegedHelperTools/com.boxcryptor.osx.PrivilegedHelper"
+          ]
+        }
+      ]
     },
-    [
-      "Boxcryptor.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Scripts/com.boxcryptor.osx.Rednif",
-        "~/Library/Application Support/Boxcryptor",
-        "~/Library/Application Support/com.boxcryptor.osx",
-        "~/Library/Caches/com.boxcryptor.osx",
-        "~/Library/Containers/com.boxcryptor.osx.Rednif",
-        "~/Library/Logs/Boxcryptor",
-        "~/Library/Preferences/com.boxcryptor.osx.plist"
-      ],
-      "signal": {
-      }
+      "app": [
+        "Boxcryptor.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Scripts/com.boxcryptor.osx.Rednif",
+            "~/Library/Application Support/Boxcryptor",
+            "~/Library/Application Support/com.boxcryptor.osx",
+            "~/Library/Caches/com.boxcryptor.osx",
+            "~/Library/Containers/com.boxcryptor.osx.Rednif",
+            "~/Library/Logs/Boxcryptor",
+            "~/Library/Preferences/com.boxcryptor.osx.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

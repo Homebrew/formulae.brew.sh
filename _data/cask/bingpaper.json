@@ -17,24 +17,30 @@
   "sha256": "29694e8ae3bea1a50719865ffe4ca19e7794b1c7dc733a2cd532056cf35641ee",
   "artifacts": [
     {
-      "launchctl": "io.pjw.mac.BingPaperLoginItem",
-      "quit": "io.pjw.mac.BingPaper",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "launchctl": "io.pjw.mac.BingPaperLoginItem",
+          "quit": "io.pjw.mac.BingPaper"
+        }
+      ]
     },
-    [
-      "BingPaper.app"
-    ],
     {
-      "rmdir": "~/Pictures/BingPaper",
-      "trash": [
-        "~/Library/Application Scripts/io.pjw.mac.BingPaper",
-        "~/Library/Application Scripts/io.pjw.mac.BingPaperLoginItem",
-        "~/Library/Containers/io.pjw.mac.BingPaper",
-        "~/Library/Containers/io.pjw.mac.BingPaperLoginItem"
-      ],
-      "signal": {
-      }
+      "app": [
+        "BingPaper.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "rmdir": "~/Pictures/BingPaper",
+          "trash": [
+            "~/Library/Application Scripts/io.pjw.mac.BingPaper",
+            "~/Library/Application Scripts/io.pjw.mac.BingPaperLoginItem",
+            "~/Library/Containers/io.pjw.mac.BingPaper",
+            "~/Library/Containers/io.pjw.mac.BingPaperLoginItem"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

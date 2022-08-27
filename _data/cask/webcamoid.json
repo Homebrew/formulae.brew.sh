@@ -17,29 +17,35 @@
   "sha256": "420f695e5bafbc1b9760ee5fb9bb06707cb302ff973975374ce7d857093c85dd",
   "artifacts": [
     {
-      "quit": "com.webcamoidprj.webcamoid",
-      "launchctl": "org.webcamoid.cmio.AkVCam.Assistant",
-      "delete": "/Library/CoreMediaIO/Plug-Ins/DAL/AkVirtualCamera.plugin",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "com.webcamoidprj.webcamoid",
+          "launchctl": "org.webcamoid.cmio.AkVCam.Assistant",
+          "delete": "/Library/CoreMediaIO/Plug-Ins/DAL/AkVirtualCamera.plugin"
+        }
+      ]
     },
-    [
-      "Webcamoid.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/CrashReporter/webcamoid_*.plist",
-        "~/Library/Caches/Webcamoid",
-        "~/Library/LaunchAgents/org.webcamoid.cmio.AkVCam.Assistant.plist",
-        "~/Library/Logs/DiagnosticReports/webcamoid_*.crash",
-        "~/Library/Preferences/com.webcamoid.PluginsCache.plist",
-        "~/Library/Preferences/com.webcamoid.Webcamoid.plist",
-        "~/Library/Preferences/com.webcamoidprj.webcamoid.plist",
-        "~/Library/Preferences/org.webcamoid.cmio.AkVCam.Assistant.plist",
-        "~/Library/Saved Application State/com.webcamoidprj.webcamoid.savedState"
-      ],
-      "signal": {
-      }
+      "app": [
+        "Webcamoid.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/CrashReporter/webcamoid_*.plist",
+            "~/Library/Caches/Webcamoid",
+            "~/Library/LaunchAgents/org.webcamoid.cmio.AkVCam.Assistant.plist",
+            "~/Library/Logs/DiagnosticReports/webcamoid_*.crash",
+            "~/Library/Preferences/com.webcamoid.PluginsCache.plist",
+            "~/Library/Preferences/com.webcamoid.Webcamoid.plist",
+            "~/Library/Preferences/com.webcamoidprj.webcamoid.plist",
+            "~/Library/Preferences/org.webcamoid.cmio.AkVCam.Assistant.plist",
+            "~/Library/Saved Application State/com.webcamoidprj.webcamoid.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

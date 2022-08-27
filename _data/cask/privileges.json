@@ -17,29 +17,37 @@
   "sha256": "d8d269b8721e0844821c0a0dc6e428ecca6f53403e9993caed55c80bfb7fb52e",
   "artifacts": [
     {
-      "delete": [
-        "/Library/LaunchDaemons/corp.sap.privileges.helper.plist",
-        "/Library/PrivilegedHelperTools/corp.sap.privileges.helper"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": [
+            "/Library/LaunchDaemons/corp.sap.privileges.helper.plist",
+            "/Library/PrivilegedHelperTools/corp.sap.privileges.helper"
+          ]
+        }
+      ]
     },
-    [
-      "Privileges.app"
-    ],
-    [
-      "/Applications/Privileges.app/Contents/Resources/PrivilegesCLI",
-      {
-        "target": "privileges-cli"
-      }
-    ],
     {
-      "trash": [
-        "~/Library/Application Scripts/corp.sap.privileges",
-        "~/Library/Containers/corp.sap.privileges"
-      ],
-      "signal": {
-      }
+      "app": [
+        "Privileges.app"
+      ]
+    },
+    {
+      "binary": [
+        "/Applications/Privileges.app/Contents/Resources/PrivilegesCLI",
+        {
+          "target": "privileges-cli"
+        }
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Scripts/corp.sap.privileges",
+            "~/Library/Containers/corp.sap.privileges"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

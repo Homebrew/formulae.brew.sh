@@ -17,32 +17,42 @@
   "sha256": "c1ecace231226798e95ee4d7a3f301943ca9bbcef58834addb16ca8f4132430f",
   "artifacts": [
     {
-      "quit": [
-        "org.computop.sage",
-        "org.computop.SageMath",
-        "com.tcltk.tcllibrary",
-        "com.tcltk.tklibrary"
-      ],
-      "pkgutil": [
-        "org.computop.SageMath.9_6.bin",
-        "org.computop.SageMath.9_6.share",
-        "org.computop.SageMath.9_6.texlive"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": [
+            "org.computop.sage",
+            "org.computop.SageMath",
+            "com.tcltk.tcllibrary",
+            "com.tcltk.tklibrary"
+          ],
+          "pkgutil": [
+            "org.computop.SageMath.9_6.bin",
+            "org.computop.SageMath.9_6.share",
+            "org.computop.SageMath.9_6.texlive"
+          ]
+        }
+      ]
     },
-    "Recommended_9_6.pkg (Pkg)",
-    [
-      "SageMath-9-6.app"
-    ],
     {
-      "trash": [
-        "~/.sage",
-        "~/Library/Application Support/SageMath",
-        "~/Library/Preferences/SageMath.plist"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "Recommended_9_6.pkg"
+      ]
+    },
+    {
+      "app": [
+        "SageMath-9-6.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/.sage",
+            "~/Library/Application Support/SageMath",
+            "~/Library/Preferences/SageMath.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

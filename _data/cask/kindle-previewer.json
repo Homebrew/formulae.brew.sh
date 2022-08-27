@@ -17,19 +17,27 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "launchctl": "com.amazon.KindlePreviewerUpdater",
-      "pkgutil": "Amazon.Kindle.Previewer.pkg",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "launchctl": "com.amazon.KindlePreviewerUpdater",
+          "pkgutil": "Amazon.Kindle.Previewer.pkg"
+        }
+      ]
     },
-    "KindlePreviewerInstaller.pkg (Pkg)",
     {
-      "trash": [
-        "/Library/LaunchDaemons/com.amazon.KindlePreviewerUpdater.plist",
-        "~/.kindle"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "KindlePreviewerInstaller.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "/Library/LaunchDaemons/com.amazon.KindlePreviewerUpdater.plist",
+            "~/.kindle"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

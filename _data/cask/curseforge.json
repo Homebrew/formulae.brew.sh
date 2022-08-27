@@ -17,21 +17,27 @@
   "sha256": "aecb8ca61cf9b5fcba7b5e6f06dfa9911e86cc60691bd19e503405b473be9e38",
   "artifacts": [
     {
-      "launchctl": "com.overwolf.curseforge.ShipIt",
-      "quit": "com.overwolf.curseforge",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "launchctl": "com.overwolf.curseforge.ShipIt",
+          "quit": "com.overwolf.curseforge"
+        }
+      ]
     },
-    [
-      "CurseForge.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/Caches/curseforge-updater",
-        "~/Library/Application Support/CurseForge"
-      ],
-      "signal": {
-      }
+      "app": [
+        "CurseForge.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/Caches/curseforge-updater",
+            "~/Library/Application Support/CurseForge"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

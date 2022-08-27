@@ -17,25 +17,31 @@
   "sha256": "8db03ca6375f0fe1e67fa8415ac8028199cb75011d5a03f7d064e271ee3b929d",
   "artifacts": [
     {
-      "launchctl": "com.Replacicon.SetIcon",
-      "delete": [
-        "/Library/LaunchDaemons/com.Replacicon.SetIcon.plist",
-        "/Library/PrivilegedHelperTools/com.Replacicon.SetIcon"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "launchctl": "com.Replacicon.SetIcon",
+          "delete": [
+            "/Library/LaunchDaemons/com.Replacicon.SetIcon.plist",
+            "/Library/PrivilegedHelperTools/com.Replacicon.SetIcon"
+          ]
+        }
+      ]
     },
-    [
-      "Replacicon.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/com.Replacicon.Replacicon",
-        "~/Library/Caches/com.Replacicon.Replacicon",
-        "~/Library/Preferences/com.Replacicon.Replacicon.plist"
-      ],
-      "signal": {
-      }
+      "app": [
+        "Replacicon.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/com.Replacicon.Replacicon",
+            "~/Library/Caches/com.Replacicon.Replacicon",
+            "~/Library/Preferences/com.Replacicon.Replacicon.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

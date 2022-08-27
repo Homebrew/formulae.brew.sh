@@ -16,41 +16,51 @@
   "outdated": false,
   "sha256": "a2e76c99a78d9c2559c2f0d2d1ab069f8f721468ec887939746820ef02927dc3",
   "artifacts": [
-    "uninstall_preflight (Preflight Block)",
     {
-      "launchctl": [
-        "com.BlueStacks.AppPlayer.bstservice_helper",
-        "com.BlueStacks.AppPlayer.Service",
-        "com.BlueStacks.AppPlayer.UninstallWatcher",
-        "com.BlueStacks.AppPlayer.Updater"
-      ],
-      "delete": [
-        "/Applications/BlueStacks.app",
-        "/Library/PrivilegedHelperTools/com.BlueStacks.AppPlayer.bstservice_helper"
-      ],
-      "signal": {
-      }
+      "uninstall_preflight": null
     },
     {
-      "path": "BlueStacks Installer.app"
+      "uninstall": [
+        {
+          "launchctl": [
+            "com.BlueStacks.AppPlayer.bstservice_helper",
+            "com.BlueStacks.AppPlayer.Service",
+            "com.BlueStacks.AppPlayer.UninstallWatcher",
+            "com.BlueStacks.AppPlayer.Updater"
+          ],
+          "delete": [
+            "/Applications/BlueStacks.app",
+            "/Library/PrivilegedHelperTools/com.BlueStacks.AppPlayer.bstservice_helper"
+          ]
+        }
+      ]
     },
     {
-      "trash": [
-        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bluestacks.bluestacks.sfl*",
-        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bluestacks.bluestacks-support-tool.sfl*",
-        "~/Library/BlueStacks",
-        "~/Library/Caches/com.bluestacks.BlueStacks",
-        "~/Library/Caches/com.bluestacks.BlueStacks-Support-Tool",
-        "~/Library/Caches/KSCrashReports/BlueStacks",
-        "~/Library/Logs/BlueStacks",
-        "~/Library/Preferences/com.BlueStacks.AppPlayer.DiagnosticTimestamp.txt",
-        "~/Library/Preferences/com.BlueStacks.AppPlayer.plist",
-        "~/Library/Preferences/com.BlueStacks.AppPlayer.SavedFrame.plist",
-        "~/Library/Preferences/com.bluestacks.BlueStacks.plist"
-      ],
-      "rmdir": "~/Library/Caches/KSCrashReports",
-      "signal": {
-      }
+      "installer": [
+        {
+          "manual": "BlueStacks Installer.app"
+        }
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bluestacks.bluestacks.sfl*",
+            "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bluestacks.bluestacks-support-tool.sfl*",
+            "~/Library/BlueStacks",
+            "~/Library/Caches/com.bluestacks.BlueStacks",
+            "~/Library/Caches/com.bluestacks.BlueStacks-Support-Tool",
+            "~/Library/Caches/KSCrashReports/BlueStacks",
+            "~/Library/Logs/BlueStacks",
+            "~/Library/Preferences/com.BlueStacks.AppPlayer.DiagnosticTimestamp.txt",
+            "~/Library/Preferences/com.BlueStacks.AppPlayer.plist",
+            "~/Library/Preferences/com.BlueStacks.AppPlayer.SavedFrame.plist",
+            "~/Library/Preferences/com.bluestacks.BlueStacks.plist"
+          ],
+          "rmdir": "~/Library/Caches/KSCrashReports"
+        }
+      ]
     }
   ],
   "caveats": null,

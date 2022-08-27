@@ -17,31 +17,36 @@
   "sha256": "4cc64f880880b822734b5da80a0c708f936f0eb1ea097f8b108b5d7583cdef4a",
   "artifacts": [
     {
-      "delete": [
-        "/Applications/ReadyAPI-3.30.0.app",
-        "~/Desktop/ReadyAPI 3.30.0"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": [
+            "/Applications/ReadyAPI-3.30.0.app",
+            "~/Desktop/ReadyAPI 3.30.0"
+          ]
+        }
+      ]
     },
     {
-      "path": "ReadyAPI 3.30.0 Installer.app/Contents/MacOS/JavaApplicationStub",
-      "args": {
-        "must_succeed": "true",
-        "sudo": "false",
-        "args": [
-          "-q"
-        ],
-        "print_stdout": "true"
-      }
+      "installer": [
+        {
+          "script": {
+            "executable": "ReadyAPI 3.30.0 Installer.app/Contents/MacOS/JavaApplicationStub",
+            "args": [
+              "-q"
+            ]
+          }
+        }
+      ]
     },
     {
-      "trash": [
-        "~/Library/Application Support/ReadyAPI-3.30.0",
-        "~/Library/Preferences/com.smartbear.ready.plist"
-      ],
-      "signal": {
-      }
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/ReadyAPI-3.30.0",
+            "~/Library/Preferences/com.smartbear.ready.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": "readyapi has been officially discontinued upstream.\nIt may stop working correctly (or at all) in recent versions of macOS.\n",

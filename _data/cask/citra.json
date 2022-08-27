@@ -17,20 +17,28 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "delete": "/Applications/Citra",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": "/Applications/Citra"
+        }
+      ]
     },
     {
-      "path": "citra-setup-mac.app"
+      "installer": [
+        {
+          "manual": "citra-setup-mac.app"
+        }
+      ]
     },
     {
-      "trash": [
-        "~/Library/Preferences/com.citra-emu.citra.plist",
-        "~/Library/Saved Application State/com.citra-emu.citra.savedState"
-      ],
-      "signal": {
-      }
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Preferences/com.citra-emu.citra.plist",
+            "~/Library/Saved Application State/com.citra-emu.citra.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

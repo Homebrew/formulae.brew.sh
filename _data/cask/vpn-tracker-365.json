@@ -17,27 +17,33 @@
   "sha256": "4d1448d3305cc9ea9ed6530847b76b736749035c4d0f720f28ab126528ddd8e6",
   "artifacts": [
     {
-      "delete": [
-        "/Library/Application Support/VPN Tracker 365",
-        "/Library/Extensions/com.equinux.VPNTracker365.*",
-        "/Library/LaunchDaemons/com.equinux.VPNTracker365.agent.plist",
-        "/Library/Preferences/com.equinux.VPNTracker365.plist",
-        "/Library/PrivilegedHelperTools/com.equinux.VPNTracker365.agent",
-        "/Library/PrivilegedHelperTools/com.equinux.VPNTracker365.connectiond"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": [
+            "/Library/Application Support/VPN Tracker 365",
+            "/Library/Extensions/com.equinux.VPNTracker365.*",
+            "/Library/LaunchDaemons/com.equinux.VPNTracker365.agent.plist",
+            "/Library/Preferences/com.equinux.VPNTracker365.plist",
+            "/Library/PrivilegedHelperTools/com.equinux.VPNTracker365.agent",
+            "/Library/PrivilegedHelperTools/com.equinux.VPNTracker365.connectiond"
+          ]
+        }
+      ]
     },
-    [
-      "VPN Tracker 365.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/VPN Tracker 365",
-        "~/Library/Preferences/com.equinux.VPNTracker365.plist"
-      ],
-      "signal": {
-      }
+      "app": [
+        "VPN Tracker 365.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/VPN Tracker 365",
+            "~/Library/Preferences/com.equinux.VPNTracker365.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

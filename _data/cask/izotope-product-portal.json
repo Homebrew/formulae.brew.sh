@@ -17,31 +17,37 @@
   "sha256": "3a7db8315f7564a760897a1d461de5c3220dd19dd42a3a759d6d94dfada5952e",
   "artifacts": [
     {
-      "delete": "/Applications/iZotope Product Portal.app",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": "/Applications/iZotope Product Portal.app"
+        }
+      ]
     },
     {
-      "path": "$(brew --prefix)/Caskroom/izotope-product-portal/1.4.6/Install Product Portal.app/Contents/MacOS/installbuilder.sh",
-      "args": {
-        "must_succeed": "true",
-        "sudo": "true",
-        "args": [
-          "--mode",
-          "unattended",
-          "--disable-components",
-          "launch_after_install"
-        ],
-        "print_stdout": "true"
-      }
+      "installer": [
+        {
+          "script": {
+            "executable": "$(brew --prefix)/Caskroom/izotope-product-portal/1.4.6/Install Product Portal.app/Contents/MacOS/installbuilder.sh",
+            "args": [
+              "--mode",
+              "unattended",
+              "--disable-components",
+              "launch_after_install"
+            ],
+            "sudo": "true"
+          }
+        }
+      ]
     },
     {
-      "trash": [
-        "~/Library/Application Support/iZotope",
-        "~/Library/Saved Application State/com.izotope.audioplugins.productportal.savedState"
-      ],
-      "signal": {
-      }
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/iZotope",
+            "~/Library/Saved Application State/com.izotope.audioplugins.productportal.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

@@ -17,25 +17,31 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "delete": "~/Library/PreferencePanes/MusicManager.prefPane",
-      "quit": "com.google.musicmanager",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": "~/Library/PreferencePanes/MusicManager.prefPane",
+          "quit": "com.google.musicmanager"
+        }
+      ]
     },
-    [
-      "MusicManager.app",
-      {
-        "target": "Music Manager.app"
-      }
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/Google/MusicManager",
-        "~/Library/Logs/MusicManager",
-        "~/Library/Preferences/com.google.musicmanager.plist"
-      ],
-      "signal": {
-      }
+      "app": [
+        "MusicManager.app",
+        {
+          "target": "Music Manager.app"
+        }
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/Google/MusicManager",
+            "~/Library/Logs/MusicManager",
+            "~/Library/Preferences/com.google.musicmanager.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

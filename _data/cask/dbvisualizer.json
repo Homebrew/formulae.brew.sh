@@ -17,30 +17,39 @@
   "sha256": "6b27c46b4d99b74f19add91b2b16d9289d0df4b1d99e2afd920d7ebeca79a440",
   "artifacts": [
     {
-      "signal": {
-        "TERM": "com.dbvis.DbVisualizer"
-      }
+      "uninstall": [
+        {
+          "signal": {
+            "TERM": "com.dbvis.DbVisualizer"
+          }
+        }
+      ]
     },
     {
-      "path": "DbVisualizer Installer.app/Contents/MacOS/JavaApplicationStub",
-      "args": {
-        "must_succeed": "true",
-        "sudo": "false",
-        "args": [
-          "-q",
-          "-dir",
-          "$(brew --prefix)/Caskroom/dbvisualizer/13.0.5"
-        ],
-        "print_stdout": "true"
-      }
+      "installer": [
+        {
+          "script": {
+            "executable": "DbVisualizer Installer.app/Contents/MacOS/JavaApplicationStub",
+            "args": [
+              "-q",
+              "-dir",
+              "$(brew --prefix)/Caskroom/dbvisualizer/13.0.5"
+            ]
+          }
+        }
+      ]
     },
-    [
-      "DbVisualizer.app"
-    ],
     {
-      "trash": "~/.dbvis",
-      "signal": {
-      }
+      "app": [
+        "DbVisualizer.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": "~/.dbvis"
+        }
+      ]
     }
   ],
   "caveats": null,

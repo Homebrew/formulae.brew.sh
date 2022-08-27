@@ -17,29 +17,35 @@
   "sha256": "fa802e2627dc2c9c5ccface1f9c830c5a2e0e9ae7a7339716651010e39928a50",
   "artifacts": [
     {
-      "quit": "com.kytwb.ferdi",
-      "delete": "/Library/Logs/DiagnosticReports/Ferdi Helper_.*wakeups_resource.diag",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "com.kytwb.ferdi",
+          "delete": "/Library/Logs/DiagnosticReports/Ferdi Helper_.*wakeups_resource.diag"
+        }
+      ]
     },
-    [
-      "Ferdi.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/Caches/ferdi-updater",
-        "~/Library/Application Support/Ferdi",
-        "~/Library/Caches/com.kytwb.ferdi",
-        "~/Library/Caches/com.kytwb.ferdi.ShipIt",
-        "~/Library/Logs/Ferdi",
-        "~/Library/Preferences/ByHost/com.kytwb.ferdi.ShipIt.*.plist",
-        "~/Library/Preferences/com.electron.ferdi.helper.plist",
-        "~/Library/Preferences/com.electron.ferdi.plist",
-        "~/Library/Preferences/com.kytwb.ferdi.plist",
-        "~/Library/Saved Application State/com.kytwb.ferdi.savedState"
-      ],
-      "signal": {
-      }
+      "app": [
+        "Ferdi.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/Caches/ferdi-updater",
+            "~/Library/Application Support/Ferdi",
+            "~/Library/Caches/com.kytwb.ferdi",
+            "~/Library/Caches/com.kytwb.ferdi.ShipIt",
+            "~/Library/Logs/Ferdi",
+            "~/Library/Preferences/ByHost/com.kytwb.ferdi.ShipIt.*.plist",
+            "~/Library/Preferences/com.electron.ferdi.helper.plist",
+            "~/Library/Preferences/com.electron.ferdi.plist",
+            "~/Library/Preferences/com.kytwb.ferdi.plist",
+            "~/Library/Saved Application State/com.kytwb.ferdi.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

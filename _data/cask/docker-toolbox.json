@@ -17,23 +17,62 @@
   "sha256": "6ad3fe973d5c8198c24bc270b3bb89c6ad48db28d0d6232710990888bda369f6",
   "artifacts": [
     {
-      "pkgutil": [
-        "io.boot2dockeriso.pkg.boot2dockeriso",
-        "io.docker.pkg.docker",
-        "io.docker.pkg.dockercompose",
-        "io.docker.pkg.dockermachine",
-        "io.docker.pkg.dockerquickstartterminalapp",
-        "io.docker.pkg.kitematicapp"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": [
+            "io.boot2dockeriso.pkg.boot2dockeriso",
+            "io.docker.pkg.docker",
+            "io.docker.pkg.dockercompose",
+            "io.docker.pkg.dockermachine",
+            "io.docker.pkg.dockerquickstartterminalapp",
+            "io.docker.pkg.kitematicapp"
+          ]
+        }
+      ]
     },
-    "DockerToolbox-19.03.1.pkg (Pkg)",
-    "postflight (Postflight Block)",
     {
-      "trash": "~/.docker",
-      "signal": {
-      }
+      "pkg": [
+        "DockerToolbox-19.03.1.pkg",
+        {
+          "choices": [
+            {
+              "choiceIdentifier": "choiceDockerComposeCLI",
+              "choiceAttribute": "selected",
+              "attributeSetting": "1"
+            },
+            {
+              "choiceIdentifier": "choiceDockerQuickstartTerminalAPP",
+              "choiceAttribute": "selected",
+              "attributeSetting": "1"
+            },
+            {
+              "choiceIdentifier": "choiceKitematicAPP",
+              "choiceAttribute": "selected",
+              "attributeSetting": "1"
+            },
+            {
+              "choiceIdentifier": "choiceVBox",
+              "choiceAttribute": "selected",
+              "attributeSetting": "0"
+            },
+            {
+              "choiceIdentifier": "choiceBoot2DockerISO",
+              "choiceAttribute": "selected",
+              "attributeSetting": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "postflight": null
+    },
+    {
+      "zap": [
+        {
+          "trash": "~/.docker"
+        }
+      ]
     }
   ],
   "caveats": "docker-toolbox has been officially discontinued upstream.\nIt may stop working correctly (or at all) in recent versions of macOS.\n",

@@ -17,24 +17,35 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "pkgutil": "com.github.tornaia.desktop-client",
-      "login_item": "myCloudDesktop",
-      "quit": "ch.swisscom.mycloud.desktop.finder",
-      "signal": {
-        "TERM": "ch.swisscom.mycloud.desktop"
-      }
+      "uninstall": [
+        {
+          "pkgutil": "com.github.tornaia.desktop-client",
+          "login_item": "myCloudDesktop",
+          "quit": "ch.swisscom.mycloud.desktop.finder",
+          "signal": [
+            "TERM",
+            "ch.swisscom.mycloud.desktop"
+          ]
+        }
+      ]
     },
     {
-      "path": "myCloud Desktop installer.pkg"
+      "installer": [
+        {
+          "manual": "myCloud Desktop installer.pkg"
+        }
+      ]
     },
     {
-      "trash": [
-        "~/Library/Application Support/myCloudDesktop",
-        "~/Library/Preferences/ch.swisscom.mycloud.desktop.plist",
-        "~/Library/Preferences/ch.swisscom.mycloud.desktop.helper.plist"
-      ],
-      "signal": {
-      }
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/myCloudDesktop",
+            "~/Library/Preferences/ch.swisscom.mycloud.desktop.plist",
+            "~/Library/Preferences/ch.swisscom.mycloud.desktop.helper.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

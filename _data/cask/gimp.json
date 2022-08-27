@@ -17,21 +17,29 @@
   "outdated": false,
   "sha256": "e5547fc01168270bd1ba5380cff610966da229e44f311138f12168cb2f34d3c8",
   "artifacts": [
-    [
-      "GIMP-2.10.app"
-    ],
-    [
-      "/Applications/GIMP-2.10.app/Contents/MacOS/gimp"
-    ],
-    "postflight (Postflight Block)",
     {
-      "trash": [
-        "~/Library/Application Support/Gimp",
-        "~/Library/Preferences/org.gimp.gimp-2.10:.plist",
-        "~/Library/Saved Application State/org.gimp.gimp-2.10:.savedState"
-      ],
-      "signal": {
-      }
+      "app": [
+        "GIMP-2.10.app"
+      ]
+    },
+    {
+      "binary": [
+        "/Applications/GIMP-2.10.app/Contents/MacOS/gimp"
+      ]
+    },
+    {
+      "postflight": null
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/Gimp",
+            "~/Library/Preferences/org.gimp.gimp-2.10:.plist",
+            "~/Library/Saved Application State/org.gimp.gimp-2.10:.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

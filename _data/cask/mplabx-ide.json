@@ -17,64 +17,74 @@
   "sha256": "aaebb401dbd9d9e2fd576cc88807f6dee6702b4d2fe0812a0a486e84e49bedd3",
   "artifacts": [
     {
-      "script": {
-        "executable": "Uninstall_MPLAB_X_IDE_v6.00.app/Contents/MacOS/installbuilder.sh",
-        "args": [
-          "--mode",
-          "unattended"
-        ],
-        "input": [
-          "y",
-          "3"
-        ],
-        "sudo": "true"
-      },
-      "delete": "/Applications/microchip",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "script": {
+            "executable": "Uninstall_MPLAB_X_IDE_v6.00.app/Contents/MacOS/installbuilder.sh",
+            "args": [
+              "--mode",
+              "unattended"
+            ],
+            "input": [
+              "y",
+              "3"
+            ],
+            "sudo": "true"
+          },
+          "delete": "/Applications/microchip"
+        }
+      ]
     },
     {
-      "path": "MPLABX-v6.00-osx-installer.app/Contents/MacOS/installbuilder.sh",
-      "args": {
-        "must_succeed": "true",
-        "sudo": "true",
-        "args": [
-          "--mode",
-          "unattended",
-          "--unattendedmodeui",
-          "none",
-          "--ide",
-          "1",
-          "--ipe",
-          "1",
-          "--othermcu",
-          "0",
-          "--exepermission",
-          "no",
-          "--collectInfo",
-          "0",
-          "--installdir",
-          "$(brew --prefix)/Caskroom/mplabx-ide/6.00"
-        ],
-        "input": [
-          "y"
-        ],
-        "print_stdout": "true"
-      }
+      "installer": [
+        {
+          "script": {
+            "executable": "MPLABX-v6.00-osx-installer.app/Contents/MacOS/installbuilder.sh",
+            "args": [
+              "--mode",
+              "unattended",
+              "--unattendedmodeui",
+              "none",
+              "--ide",
+              "1",
+              "--ipe",
+              "1",
+              "--othermcu",
+              "0",
+              "--exepermission",
+              "no",
+              "--collectInfo",
+              "0",
+              "--installdir",
+              "$(brew --prefix)/Caskroom/mplabx-ide/6.00"
+            ],
+            "input": [
+              "y"
+            ],
+            "sudo": "true"
+          }
+        }
+      ]
     },
-    [
-      "mplab_ide.app",
-      {
-        "target": "microchip/mplab_ide.app"
-      }
-    ],
-    [
-      "mplab_ipe.app",
-      {
-        "target": "microchip/mplab_ipe.app"
-      }
-    ],
-    "postflight (Postflight Block)"
+    {
+      "app": [
+        "mplab_ide.app",
+        {
+          "target": "microchip/mplab_ide.app"
+        }
+      ]
+    },
+    {
+      "app": [
+        "mplab_ipe.app",
+        {
+          "target": "microchip/mplab_ipe.app"
+        }
+      ]
+    },
+    {
+      "postflight": null
+    }
   ],
   "caveats": null,
   "depends_on": {

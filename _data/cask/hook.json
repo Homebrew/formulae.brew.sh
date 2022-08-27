@@ -17,25 +17,31 @@
   "sha256": "0fd1413e2f1f5b88e422c29159338bb301ecf1ba641914d6eca3d5874c11be31",
   "artifacts": [
     {
-      "launchctl": "com.cogsciapps.hookautolaunchhelper",
-      "quit": "com.cogsciapps.hook",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "launchctl": "com.cogsciapps.hookautolaunchhelper",
+          "quit": "com.cogsciapps.hook"
+        }
+      ]
     },
-    [
-      "Hook.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/com.cogsciapps.hook",
-        "~/Library/Caches/com.cogsciapps.hook",
-        "~/Library/HTTPStorages/com.cogsciapps.hook",
-        "~/Library/Logs/com.cogsciapps.hook",
-        "~/Library/Preferences/com.cogsciapps.hook.plist",
-        "~/Library/WebKit/com.cogsciapps.hook"
-      ],
-      "signal": {
-      }
+      "app": [
+        "Hook.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/com.cogsciapps.hook",
+            "~/Library/Caches/com.cogsciapps.hook",
+            "~/Library/HTTPStorages/com.cogsciapps.hook",
+            "~/Library/Logs/com.cogsciapps.hook",
+            "~/Library/Preferences/com.cogsciapps.hook.plist",
+            "~/Library/WebKit/com.cogsciapps.hook"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

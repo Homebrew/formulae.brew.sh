@@ -17,36 +17,42 @@
   "sha256": "e7671127eedc92135b55844dcb9888120e8fb37550f59b3722af2ddca23f4e15",
   "artifacts": [
     {
-      "quit": "org.mozilla.firefox",
-      "delete": "/Library/Logs/DiagnosticReports/firefox_*",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "org.mozilla.firefox",
+          "delete": "/Library/Logs/DiagnosticReports/firefox_*"
+        }
+      ]
     },
-    [
-      "Firefox.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.mozilla.firefox.sfl*",
-        "~/Library/Application Support/CrashReporter/firefox_*",
-        "~/Library/Application Support/Firefox",
-        "~/Library/Caches/Firefox",
-        "~/Library/Caches/Mozilla/updates/Applications/Firefox",
-        "~/Library/Caches/org.mozilla.crashreporter",
-        "~/Library/Caches/org.mozilla.firefox",
-        "~/Library/Preferences/org.mozilla.crashreporter.plist",
-        "~/Library/Preferences/org.mozilla.firefox.plist",
-        "~/Library/Saved Application State/org.mozilla.firefox.savedState",
-        "~/Library/WebKit/org.mozilla.firefox"
-      ],
-      "rmdir": [
-        "~/Library/Application Support/Mozilla",
-        "~/Library/Caches/Mozilla/updates/Applications",
-        "~/Library/Caches/Mozilla/updates",
-        "~/Library/Caches/Mozilla"
-      ],
-      "signal": {
-      }
+      "app": [
+        "Firefox.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.mozilla.firefox.sfl*",
+            "~/Library/Application Support/CrashReporter/firefox_*",
+            "~/Library/Application Support/Firefox",
+            "~/Library/Caches/Firefox",
+            "~/Library/Caches/Mozilla/updates/Applications/Firefox",
+            "~/Library/Caches/org.mozilla.crashreporter",
+            "~/Library/Caches/org.mozilla.firefox",
+            "~/Library/Preferences/org.mozilla.crashreporter.plist",
+            "~/Library/Preferences/org.mozilla.firefox.plist",
+            "~/Library/Saved Application State/org.mozilla.firefox.savedState",
+            "~/Library/WebKit/org.mozilla.firefox"
+          ],
+          "rmdir": [
+            "~/Library/Application Support/Mozilla",
+            "~/Library/Caches/Mozilla/updates/Applications",
+            "~/Library/Caches/Mozilla/updates",
+            "~/Library/Caches/Mozilla"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

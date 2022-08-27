@@ -17,22 +17,30 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "pkgutil": [
-        "com.actualtechnologies.odbcdriver.helpers.pkg",
-        "com.actualtechnologies.odbcmanager.pkg"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": [
+            "com.actualtechnologies.odbcdriver.helpers.pkg",
+            "com.actualtechnologies.odbcmanager.pkg"
+          ]
+        }
+      ]
     },
-    "ODBC Manager.pkg (Pkg)",
     {
-      "trash": [
-        "~/.odbc.ini",
-        "~/.odbcinst.ini",
-        "~/Library/ODBC"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "ODBC Manager.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/.odbc.ini",
+            "~/.odbcinst.ini",
+            "~/Library/ODBC"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

@@ -16,19 +16,29 @@
   "outdated": false,
   "sha256": "44706a29277ed14bee11c3bbdae748ac8b97d203b0a1232c278611f918ac1cfb",
   "artifacts": [
-    "preflight (Preflight Block)",
     {
-      "pkgutil": "org.inkstitch.installer",
-      "delete": "~/Library/Application Support/org.inkscape.Inkscape/config/inkscape/extensions/inkstitch",
-      "signal": {
-      }
+      "preflight": null
     },
-    "inkstitch-v2.2.0-osx.pkg (Pkg)",
     {
-      "trash": "~/Library/Application Support/inkstitch",
-      "rmdir": "~/Library/Application Support/org.inkscape.Inkscape/config/inkscape/extensions/",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "org.inkstitch.installer",
+          "delete": "~/Library/Application Support/org.inkscape.Inkscape/config/inkscape/extensions/inkstitch"
+        }
+      ]
+    },
+    {
+      "pkg": [
+        "inkstitch-v2.2.0-osx.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": "~/Library/Application Support/inkstitch",
+          "rmdir": "~/Library/Application Support/org.inkscape.Inkscape/config/inkscape/extensions/"
+        }
+      ]
     }
   ],
   "caveats": null,

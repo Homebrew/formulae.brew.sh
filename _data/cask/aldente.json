@@ -17,25 +17,31 @@
   "sha256": "8dfd60f93657d7a5be014a468fe60fa4f1e602120f3d6ddeed5b34e7fe57f374",
   "artifacts": [
     {
-      "quit": "com.davidwernhart.Helper",
-      "delete": [
-        "/Library/LaunchDaemons/com.apphousekitchen.aldente-pro.helper.plist",
-        "/Library/PrivilegedHelperTools/com.apphousekitchen.aldente-pro.helper"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "com.davidwernhart.Helper",
+          "delete": [
+            "/Library/LaunchDaemons/com.apphousekitchen.aldente-pro.helper.plist",
+            "/Library/PrivilegedHelperTools/com.apphousekitchen.aldente-pro.helper"
+          ]
+        }
+      ]
     },
-    [
-      "AlDente.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/AlDente",
-        "~/Library/Caches/com.apphousekitchen.aldente-pro",
-        "~/Library/HTTPStorages/com.apphousekitchen.aldente-pro.binarycookies"
-      ],
-      "signal": {
-      }
+      "app": [
+        "AlDente.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/AlDente",
+            "~/Library/Caches/com.apphousekitchen.aldente-pro",
+            "~/Library/HTTPStorages/com.apphousekitchen.aldente-pro.binarycookies"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

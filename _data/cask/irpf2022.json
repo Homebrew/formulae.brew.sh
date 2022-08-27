@@ -17,12 +17,18 @@
   "sha256": "c1630baceab37298170eb7473016e4b6866fc657c5b5da437799adb19129f1eb",
   "artifacts": [
     {
-      "pkgutil": "br.gov.economia.receita.IRPF2022",
-      "delete": "/Library/Application Support/IRPF2022",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "br.gov.economia.receita.IRPF2022",
+          "delete": "/Library/Application Support/IRPF2022"
+        }
+      ]
     },
-    "IRPF2022-v1.8.pkg (Pkg)"
+    {
+      "pkg": [
+        "IRPF2022-v1.8.pkg"
+      ]
+    }
   ],
   "caveats": "IRPF2022 will store data in $HOME/Documents/ProgramasRFB/IRPF2022.\nYou might want to delete this directory after you finish your tax report.\n",
   "depends_on": {

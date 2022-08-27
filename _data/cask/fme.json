@@ -17,27 +17,35 @@
   "sha256": "4b3a76def2e6ba4661d0bfa25731d7bbbfeea899872224b262eee08c740bb665",
   "artifacts": [
     {
-      "pkgutil": [
-        "com.safesoftware.pkg.engine.fme-desktop-2022.1-b22623-macosx",
-        "com.safesoftware.pkg.apps.fme-desktop-2022.1-b22623-macosx"
-      ],
-      "delete": [
-        "/Applications/FME 2022.1",
-        "/Library/FME/2022.1"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": [
+            "com.safesoftware.pkg.engine.fme-desktop-2022.1-b22623-macosx",
+            "com.safesoftware.pkg.apps.fme-desktop-2022.1-b22623-macosx"
+          ],
+          "delete": [
+            "/Applications/FME 2022.1",
+            "/Library/FME/2022.1"
+          ]
+        }
+      ]
     },
-    "fme-desktop-2022.1.1-b22623-macosx.pkg (Pkg)",
     {
-      "trash": [
-        "~/Library/Application Support/FME",
-        "~/Library/Application Support/FME Desktop Help",
-        "~/Library/Application Support/FME Help",
-        "~/Library/Application Support/FME Workbench"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "fme-desktop-2022.1.1-b22623-macosx.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/FME",
+            "~/Library/Application Support/FME Desktop Help",
+            "~/Library/Application Support/FME Help",
+            "~/Library/Application Support/FME Workbench"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

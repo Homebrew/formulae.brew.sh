@@ -17,29 +17,37 @@
   "sha256": "3544bdf12d9b6825c26f8c259055815b875ea7d4c741d87b19b71e7d17dc8d9c",
   "artifacts": [
     {
-      "pkgutil": [
-        "org.serviio.pkg.autostart",
-        "org.serviio.pkg.JRE",
-        "org.serviio.pkg.ServiioConsole",
-        "org.serviio.pkg.Serviio"
-      ],
-      "launchctl": "org.serviio.server",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": [
+            "org.serviio.pkg.autostart",
+            "org.serviio.pkg.JRE",
+            "org.serviio.pkg.ServiioConsole",
+            "org.serviio.pkg.Serviio"
+          ],
+          "launchctl": "org.serviio.server"
+        }
+      ]
     },
-    "Serviio-2.2.1.pkg (Pkg)",
     {
-      "trash": [
-        "/Library/Application Support/Serviio",
-        "/private/var/log/serviio",
-        "~/Library/Application Support/CrashReporter/Serviio-Console Helper_*.plist",
-        "~/Library/Application Support/Serviio-Console-Wrapper",
-        "~/Library/Caches/Serviio-Console-Wrapper",
-        "~/Library/Preferences/org.serviio.serviio-web-console.plist",
-        "~/Library/Saved Application State/org.serviio.serviio-web-console.savedState"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "Serviio-2.2.1.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "/Library/Application Support/Serviio",
+            "/private/var/log/serviio",
+            "~/Library/Application Support/CrashReporter/Serviio-Console Helper_*.plist",
+            "~/Library/Application Support/Serviio-Console-Wrapper",
+            "~/Library/Caches/Serviio-Console-Wrapper",
+            "~/Library/Preferences/org.serviio.serviio-web-console.plist",
+            "~/Library/Saved Application State/org.serviio.serviio-web-console.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

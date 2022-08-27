@@ -17,19 +17,29 @@
   "sha256": "2a2d0f37ec5fcff547c5efa7d08539103a0b46bc16080c2b41a7e749f6e65c61",
   "artifacts": [
     {
-      "pkgutil": [
-        "io.macfuse.installer.components.core",
-        "io.macfuse.installer.components.preferencepane"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": [
+            "io.macfuse.installer.components.core",
+            "io.macfuse.installer.components.preferencepane"
+          ]
+        }
+      ]
     },
-    "Extras/macFUSE 4.4.1.pkg (Pkg)",
-    "postflight (Postflight Block)",
     {
-      "trash": "/Library/PreferencePanes/macFUSE.prefPane",
-      "signal": {
-      }
+      "pkg": [
+        "Extras/macFUSE 4.4.1.pkg"
+      ]
+    },
+    {
+      "postflight": null
+    },
+    {
+      "zap": [
+        {
+          "trash": "/Library/PreferencePanes/macFUSE.prefPane"
+        }
+      ]
     }
   ],
   "caveats": "macfuse requires a kernel extension to work.\nIf the installation fails, retry after you enable it in:\n  System Preferences → Security & Privacy → General\n\nFor more information, refer to vendor documentation or this Apple Technical Note:\n  https://developer.apple.com/library/content/technotes/tn2459/_index.html\n",

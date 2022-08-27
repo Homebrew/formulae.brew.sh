@@ -17,34 +17,38 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "quit": [
-        "com.cisco.webex.webexmta",
-        "com.cisco.webexmeetingsapp"
-      ],
-      "delete": [
-        "/Applications/Cisco Webex Meetings.app",
-        "/Applications/Webex",
-        "~/Library/Application Support/WebEx Folder/Add-ons/Cisco WebEx Start.app",
-        "~/Library/Application Support/WebEx Folder/atgpcext64.bundle",
-        "~/Library/Application Support/WebEx Folder/T33_64UMC*/Meeting Center.app",
-        "~/Library/Application Support/WebEx Folder/T33_64UMC*/WebexAppLauncher.app",
-        "~/Library/Internet Plug-Ins/WebEx64.plugin"
-      ],
-      "launchctl": "com.webex.pluginagent",
-      "pkgutil": "mc.mac.webex.com",
-      "rmdir": "~/Library/Application Support/WebEx Folder/T33_64UMC*",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": [
+            "com.cisco.webex.webexmta",
+            "com.cisco.webexmeetingsapp"
+          ],
+          "delete": [
+            "/Applications/Cisco Webex Meetings.app",
+            "/Applications/Webex",
+            "~/Library/Application Support/WebEx Folder/Add-ons/Cisco WebEx Start.app",
+            "~/Library/Application Support/WebEx Folder/atgpcext64.bundle",
+            "~/Library/Application Support/WebEx Folder/T33_64UMC*/Meeting Center.app",
+            "~/Library/Application Support/WebEx Folder/T33_64UMC*/WebexAppLauncher.app",
+            "~/Library/Internet Plug-Ins/WebEx64.plugin"
+          ],
+          "launchctl": "com.webex.pluginagent",
+          "pkgutil": "mc.mac.webex.com",
+          "rmdir": "~/Library/Application Support/WebEx Folder/T33_64UMC*"
+        }
+      ]
     },
     {
-      "trash": [
-        "~/Library/Application Support/WebEx Folder",
-        "~/Library/Caches/com.cisco.webex.Cisco-WebEx-Start",
-        "~/Library/Caches/com.cisco.webexmeetingsapp",
-        "~/Library/Caches/com.cisco.webexmta"
-      ],
-      "signal": {
-      }
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/WebEx Folder",
+            "~/Library/Caches/com.cisco.webex.Cisco-WebEx-Start",
+            "~/Library/Caches/com.cisco.webexmeetingsapp",
+            "~/Library/Caches/com.cisco.webexmta"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

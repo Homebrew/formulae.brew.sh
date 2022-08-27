@@ -17,26 +17,32 @@
   "sha256": "ffef235dc3bdd94c244da5a8ba6be5995e877fadae85a69c3550653e1dde7f4c",
   "artifacts": [
     {
-      "launchctl": "com.syncwithtech.radar.ShipIt",
-      "quit": "com.syncwithtech.radar",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "launchctl": "com.syncwithtech.radar.ShipIt",
+          "quit": "com.syncwithtech.radar"
+        }
+      ]
     },
-    [
-      "Radar.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/Caches/radar-updater",
-        "~/Library/Application Support/Radar",
-        "~/Library/Caches/com.syncwithtech.radar",
-        "~/Library/Caches/com.syncwithtech.radar.ShipIt",
-        "~/Library/Logs/Radar",
-        "~/Library/Preferences/com.syncwithtech.radar.plist",
-        "~/Library/Saved Application State/com.syncwithtech.radar.savedState"
-      ],
-      "signal": {
-      }
+      "app": [
+        "Radar.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/Caches/radar-updater",
+            "~/Library/Application Support/Radar",
+            "~/Library/Caches/com.syncwithtech.radar",
+            "~/Library/Caches/com.syncwithtech.radar.ShipIt",
+            "~/Library/Logs/Radar",
+            "~/Library/Preferences/com.syncwithtech.radar.plist",
+            "~/Library/Saved Application State/com.syncwithtech.radar.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

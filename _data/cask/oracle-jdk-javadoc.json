@@ -17,16 +17,20 @@
   "sha256": "a138dc62ff5679483f1e4bdb25b45ea005e090bcc0975f8666ad98c74f4bcb3f",
   "artifacts": [
     {
-      "rmdir": "/Library/Java/JavaVirtualMachines/jdk-18.0.2.1.jdk",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "rmdir": "/Library/Java/JavaVirtualMachines/jdk-18.0.2.1.jdk"
+        }
+      ]
     },
-    [
-      "docs",
-      {
-        "target": "/Library/Java/JavaVirtualMachines/jdk-18.0.2.1.jdk/Contents/Home/docs"
-      }
-    ]
+    {
+      "artifact": [
+        "docs",
+        {
+          "target": "/Library/Java/JavaVirtualMachines/jdk-18.0.2.1.jdk/Contents/Home/docs"
+        }
+      ]
+    }
   ],
   "caveats": "Installing oracle-jdk-javadoc means you have AGREED to the license at:\n  https://download.oracle.com/otndocs/jcp/java_se-18-final-spec/license.html\n",
   "depends_on": {

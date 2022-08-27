@@ -17,22 +17,28 @@
   "sha256": "6d9c8c92aaf17a79860371269f4156ba07f27ffc5e11fdb3825df58fc92e2c12",
   "artifacts": [
     {
-      "delete": "~/Library/Internet Plug-Ins/VSeeHelper.plugin",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": "~/Library/Internet Plug-Ins/VSeeHelper.plugin"
+        }
+      ]
     },
-    [
-      "VSee.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/VSee",
-        "~/Library/Caches/com.vsee.VSee",
-        "~/Library/Logs/VSee",
-        "~/Library/Preferences/com.vsee.VSee.plist"
-      ],
-      "signal": {
-      }
+      "app": [
+        "VSee.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/VSee",
+            "~/Library/Caches/com.vsee.VSee",
+            "~/Library/Logs/VSee",
+            "~/Library/Preferences/com.vsee.VSee.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

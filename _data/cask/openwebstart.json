@@ -16,39 +16,47 @@
   "outdated": false,
   "sha256": "c2a71ce2e22adbf96aab869f0c96b2d26f839eace0d6692bf861070334fb2898",
   "artifacts": [
-    "uninstall_preflight (Preflight Block)",
     {
-      "script": {
-        "executable": "/Applications/OpenWebStart/OpenWebStart Uninstaller.app/Contents/MacOS/JavaApplicationStub",
-        "args": [
-          "-q"
-        ],
-        "sudo": "true",
-        "print_stderr": "false"
-      },
-      "delete": "/Applications/OpenWebStart",
-      "signal": {
-      }
+      "uninstall_preflight": null
     },
     {
-      "path": "$(brew --prefix)/Caskroom/openwebstart/1.6.0/OpenWebStart Installer.app/Contents/MacOS/JavaApplicationStub",
-      "args": {
-        "must_succeed": "true",
-        "sudo": "true",
-        "args": [
-          "-q"
-        ],
-        "print_stderr": "false",
-        "print_stdout": "true"
-      }
+      "uninstall": [
+        {
+          "script": {
+            "executable": "/Applications/OpenWebStart/OpenWebStart Uninstaller.app/Contents/MacOS/JavaApplicationStub",
+            "args": [
+              "-q"
+            ],
+            "sudo": "true",
+            "print_stderr": "false"
+          },
+          "delete": "/Applications/OpenWebStart"
+        }
+      ]
     },
     {
-      "trash": [
-        "~/.cache/icedtea-web",
-        "~/.config/icedtea-web"
-      ],
-      "signal": {
-      }
+      "installer": [
+        {
+          "script": {
+            "executable": "$(brew --prefix)/Caskroom/openwebstart/1.6.0/OpenWebStart Installer.app/Contents/MacOS/JavaApplicationStub",
+            "args": [
+              "-q"
+            ],
+            "sudo": "true",
+            "print_stderr": "false"
+          }
+        }
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/.cache/icedtea-web",
+            "~/.config/icedtea-web"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

@@ -17,34 +17,40 @@
   "sha256": "61a5700f1add9fe909aa921e4980f4fea08ba2e6e402e733a4bd11bb380583e9",
   "artifacts": [
     {
-      "delete": "/Library/PrivilegedHelperTools/com.binarynights.ForkLiftHelper",
-      "launchctl": [
-        "com.binarynights.ForkLiftHelper",
-        "com.binarynights.ForkLiftMini"
-      ],
-      "quit": [
-        "com.binarynights.ForkLift-3",
-        "com.binarynights.ForkLiftMini"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": "/Library/PrivilegedHelperTools/com.binarynights.ForkLiftHelper",
+          "launchctl": [
+            "com.binarynights.ForkLiftHelper",
+            "com.binarynights.ForkLiftMini"
+          ],
+          "quit": [
+            "com.binarynights.ForkLift-3",
+            "com.binarynights.ForkLiftMini"
+          ]
+        }
+      ]
     },
-    [
-      "ForkLift.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/ForkLift",
-        "~/Library/Caches/com.binarynights.ForkLift-3",
-        "~/Library/Cookies/com.binarynights.ForkLift-3.binarycookies",
-        "~/Library/Logs/ForkLift",
-        "~/Library/Logs/ForkLiftMini",
-        "~/Library/Preferences/com.binarynights.ForkLift-3.plist",
-        "~/Library/Preferences/com.binarynights.ForkLiftMini.plist",
-        "~/Library/Saved Application State/com.binarynights.ForkLift-3.savedState"
-      ],
-      "signal": {
-      }
+      "app": [
+        "ForkLift.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/ForkLift",
+            "~/Library/Caches/com.binarynights.ForkLift-3",
+            "~/Library/Cookies/com.binarynights.ForkLift-3.binarycookies",
+            "~/Library/Logs/ForkLift",
+            "~/Library/Logs/ForkLiftMini",
+            "~/Library/Preferences/com.binarynights.ForkLift-3.plist",
+            "~/Library/Preferences/com.binarynights.ForkLiftMini.plist",
+            "~/Library/Saved Application State/com.binarynights.ForkLift-3.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

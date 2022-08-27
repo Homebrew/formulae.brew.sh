@@ -17,41 +17,49 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "delete": "$(brew --prefix)/Caskroom/yandex-cloud-cli/latest/yandex-cloud-cli",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": "$(brew --prefix)/Caskroom/yandex-cloud-cli/latest/yandex-cloud-cli"
+        }
+      ]
     },
     {
-      "path": "install.sh",
-      "args": {
-        "must_succeed": "true",
-        "sudo": "false",
-        "args": [
-          "-i",
-          "$(brew --prefix)/Caskroom/yandex-cloud-cli/latest/yandex-cloud-cli",
-          "-n"
-        ],
-        "print_stdout": "true"
-      }
+      "installer": [
+        {
+          "script": {
+            "executable": "install.sh",
+            "args": [
+              "-i",
+              "$(brew --prefix)/Caskroom/yandex-cloud-cli/latest/yandex-cloud-cli",
+              "-n"
+            ]
+          }
+        }
+      ]
     },
     {
-      "path": "yandex-cloud-cli/bin/yc",
-      "args": {
-        "must_succeed": "true",
-        "sudo": "false",
-        "args": [
-          "components",
-          "post-update"
-        ],
-        "print_stdout": "true"
-      }
+      "installer": [
+        {
+          "script": {
+            "executable": "yandex-cloud-cli/bin/yc",
+            "args": [
+              "components",
+              "post-update"
+            ]
+          }
+        }
+      ]
     },
-    [
-      "yandex-cloud-cli/bin/docker-credential-yc"
-    ],
-    [
-      "yandex-cloud-cli/bin/yc"
-    ]
+    {
+      "binary": [
+        "yandex-cloud-cli/bin/docker-credential-yc"
+      ]
+    },
+    {
+      "binary": [
+        "yandex-cloud-cli/bin/yc"
+      ]
+    }
   ],
   "caveats": "To install shell completions add this to your profile:\n\n  for bash users\n    source \"$(brew --prefix)/Caskroom/yandex-cloud-cli/latest/yandex-cloud-cli/completion.bash.inc\"\n\n  for zsh users\n    source \"$(brew --prefix)/Caskroom/yandex-cloud-cli/latest/yandex-cloud-cli/completion.zsh.inc\"\n",
   "depends_on": {

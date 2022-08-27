@@ -17,21 +17,27 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "quit": "com.fsecure.freedome.osx",
-      "pkgutil": "com.f-secure.freedome*",
-      "launchctl": [
-        "com.f-secure.freedome.gui",
-        "com.f-secure.freedome.uninstall",
-        "com.f-secure.fsvpn-ike-agent.production.macos",
-        "com.f-secure.fsvpn-service-helper.production",
-        "com.f-secure.fsvpn-service.production",
-        "com.f-secure.fsvpn-upstream.production",
-        "fsvpn-ike-agent.production.macos"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "com.fsecure.freedome.osx",
+          "pkgutil": "com.f-secure.freedome*",
+          "launchctl": [
+            "com.f-secure.freedome.gui",
+            "com.f-secure.freedome.uninstall",
+            "com.f-secure.fsvpn-ike-agent.production.macos",
+            "com.f-secure.fsvpn-service-helper.production",
+            "com.f-secure.fsvpn-service.production",
+            "com.f-secure.fsvpn-upstream.production",
+            "fsvpn-ike-agent.production.macos"
+          ]
+        }
+      ]
     },
-    "Freedome.pkg (Pkg)"
+    {
+      "pkg": [
+        "Freedome.pkg"
+      ]
+    }
   ],
   "caveats": null,
   "depends_on": {

@@ -17,88 +17,124 @@
   "sha256": "508a659eae771f59082167f1661c173d3db2cbfab371a2883f21b671f8801872",
   "artifacts": [
     {
-      "script": {
-        "executable": "Uninstall-xc16-v2.09.app/Contents/MacOS/installbuilder.sh",
-        "args": [
-          "--mode",
-          "unattended"
-        ],
-        "sudo": "true"
-      },
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "script": {
+            "executable": "Uninstall-xc16-v2.09.app/Contents/MacOS/installbuilder.sh",
+            "args": [
+              "--mode",
+              "unattended"
+            ],
+            "sudo": "true"
+          }
+        }
+      ]
     },
     {
-      "path": "xc16-v2.09-osx-installer.app/Contents/MacOS/installbuilder.sh",
-      "args": {
-        "must_succeed": "true",
-        "sudo": "true",
-        "args": [
-          "--mode",
-          "unattended",
-          "--unattendedmodeui",
-          "none",
-          "--ModifyAll",
-          "0",
-          "--netservername",
-          "\"\"",
-          "--LicenseType",
-          "WorkstationMode",
-          "--prefix",
-          "$(brew --prefix)/Caskroom/mplab-xc16/2.09"
-        ],
-        "input": [
-          "y"
-        ],
-        "print_stdout": "true"
-      }
+      "installer": [
+        {
+          "script": {
+            "executable": "xc16-v2.09-osx-installer.app/Contents/MacOS/installbuilder.sh",
+            "args": [
+              "--mode",
+              "unattended",
+              "--unattendedmodeui",
+              "none",
+              "--ModifyAll",
+              "0",
+              "--netservername",
+              "\"\"",
+              "--LicenseType",
+              "WorkstationMode",
+              "--prefix",
+              "$(brew --prefix)/Caskroom/mplab-xc16/2.09"
+            ],
+            "input": [
+              "y"
+            ],
+            "sudo": "true"
+          }
+        }
+      ]
     },
-    [
-      "$(brew --prefix)/Caskroom/mplab-xc16/2.09/bin/sim30"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/mplab-xc16/2.09/bin/xc16-as"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/mplab-xc16/2.09/bin/xc16-bin2hex"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/mplab-xc16/2.09/bin/xc16-cc1"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/mplab-xc16/2.09/bin/xc16-gcc"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/mplab-xc16/2.09/bin/xc16-ld"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/mplab-xc16/2.09/bin/xc16-nm"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/mplab-xc16/2.09/bin/xc16-objcopy"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/mplab-xc16/2.09/bin/xc16-objdump"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/mplab-xc16/2.09/bin/xc16-pa"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/mplab-xc16/2.09/bin/xc16-ranlib"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/mplab-xc16/2.09/bin/xc16-readelf"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/mplab-xc16/2.09/bin/xc16-strings"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/mplab-xc16/2.09/bin/xc16-strip"
-    ],
-    [
-      "$(brew --prefix)/Caskroom/mplab-xc16/2.09/bin/xc16-ar"
-    ],
-    "postflight (Postflight Block)"
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/mplab-xc16/2.09/bin/sim30"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/mplab-xc16/2.09/bin/xc16-as"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/mplab-xc16/2.09/bin/xc16-bin2hex"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/mplab-xc16/2.09/bin/xc16-cc1"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/mplab-xc16/2.09/bin/xc16-gcc"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/mplab-xc16/2.09/bin/xc16-ld"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/mplab-xc16/2.09/bin/xc16-nm"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/mplab-xc16/2.09/bin/xc16-objcopy"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/mplab-xc16/2.09/bin/xc16-objdump"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/mplab-xc16/2.09/bin/xc16-pa"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/mplab-xc16/2.09/bin/xc16-ranlib"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/mplab-xc16/2.09/bin/xc16-readelf"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/mplab-xc16/2.09/bin/xc16-strings"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/mplab-xc16/2.09/bin/xc16-strip"
+      ]
+    },
+    {
+      "binary": [
+        "$(brew --prefix)/Caskroom/mplab-xc16/2.09/bin/xc16-ar"
+      ]
+    },
+    {
+      "postflight": null
+    }
   ],
   "caveats": null,
   "depends_on": {

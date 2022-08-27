@@ -16,16 +16,20 @@
   "outdated": false,
   "sha256": "b4e5c8618cb327cd3ba612a25976d7df7b49f612669f90488d8c680e32f8f61f",
   "artifacts": [
-    [
-      "openconnect-gui/1.5.3/OpenConnect-GUI.app"
-    ],
     {
-      "delete": [
-        "~/Library/Application Support/OpenConnect-GUI Team",
-        "~/Library/Preferences/io.github.openconnect.openconnect-gui.plist"
-      ],
-      "signal": {
-      }
+      "app": [
+        "openconnect-gui/1.5.3/OpenConnect-GUI.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "delete": [
+            "~/Library/Application Support/OpenConnect-GUI Team",
+            "~/Library/Preferences/io.github.openconnect.openconnect-gui.plist"
+          ]
+        }
+      ]
     }
   ],
   "caveats": "openconnect-gui has been officially discontinued upstream.\nIt may stop working correctly (or at all) in recent versions of macOS.\n",

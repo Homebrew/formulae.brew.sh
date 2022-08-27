@@ -16,18 +16,28 @@
   "outdated": false,
   "sha256": "857733642d2501fc157c30085adfbbf4e63dc37199b20bb8363007b6c0a78a71",
   "artifacts": [
-    "preflight (Preflight Block)",
-    "uninstall_preflight (Preflight Block)",
     {
-      "delete": "/Applications/SQuirreLSQL.app",
-      "signal": {
-      }
+      "preflight": null
     },
-    "postflight (Postflight Block)",
     {
-      "trash": "~/.squirrel-sql",
-      "signal": {
-      }
+      "uninstall_preflight": null
+    },
+    {
+      "uninstall": [
+        {
+          "delete": "/Applications/SQuirreLSQL.app"
+        }
+      ]
+    },
+    {
+      "postflight": null
+    },
+    {
+      "zap": [
+        {
+          "trash": "~/.squirrel-sql"
+        }
+      ]
     }
   ],
   "caveats": "squirrelsql requires Java 11+. You can install the latest version with:\n  brew install --cask temurin\n",

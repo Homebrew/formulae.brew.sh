@@ -17,21 +17,32 @@
   "sha256": "e010897ffab5fff125ba1e3b2b249cc62bfcae7613de858061d0b496464883be",
   "artifacts": [
     {
-      "pkgutil": "com.twonky.server.Twonky",
-      "launchctl": [
-        "com.twonky.server.Twonky",
-        "com.twonky.server.tsuninstall"
-      ],
-      "signal": {
-        "TERM": "com.twonky.server.Twonky"
-      },
-      "delete": "/Applications/Twonky.app"
+      "uninstall": [
+        {
+          "pkgutil": "com.twonky.server.Twonky",
+          "launchctl": [
+            "com.twonky.server.Twonky",
+            "com.twonky.server.tsuninstall"
+          ],
+          "signal": [
+            "TERM",
+            "com.twonky.server.Twonky"
+          ],
+          "delete": "/Applications/Twonky.app"
+        }
+      ]
     },
-    "TwonkyServerInstaller-8.5.2.pkg (Pkg)",
     {
-      "trash": "~/Twonky Library.twonky",
-      "signal": {
-      }
+      "pkg": [
+        "TwonkyServerInstaller-8.5.2.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": "~/Twonky Library.twonky"
+        }
+      ]
     }
   ],
   "caveats": null,

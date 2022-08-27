@@ -16,28 +16,33 @@
   "outdated": false,
   "sha256": "no_check",
   "artifacts": [
-    "uninstall_preflight (Preflight Block)",
     {
-      "quit": "com.install4j.5889-6375-8446-2021",
-      "script": {
-        "executable": "/Applications/Trader Workstation/Trader Workstation Uninstaller.app/Contents/MacOS/JavaApplicationStub",
-        "args": [
-          "-q"
-        ]
-      },
-      "signal": {
-      }
+      "uninstall_preflight": null
     },
     {
-      "path": "$(brew --prefix)/Caskroom/trader-workstation/10.17.1w/Trader Workstation Installer.app/Contents/MacOS/JavaApplicationStub",
-      "args": {
-        "must_succeed": "true",
-        "sudo": "false",
-        "args": [
-          "-q"
-        ],
-        "print_stdout": "true"
-      }
+      "uninstall": [
+        {
+          "quit": "com.install4j.5889-6375-8446-2021",
+          "script": {
+            "executable": "/Applications/Trader Workstation/Trader Workstation Uninstaller.app/Contents/MacOS/JavaApplicationStub",
+            "args": [
+              "-q"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "installer": [
+        {
+          "script": {
+            "executable": "$(brew --prefix)/Caskroom/trader-workstation/10.17.1w/Trader Workstation Installer.app/Contents/MacOS/JavaApplicationStub",
+            "args": [
+              "-q"
+            ]
+          }
+        }
+      ]
     }
   ],
   "caveats": null,

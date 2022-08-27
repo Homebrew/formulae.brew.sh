@@ -17,28 +17,34 @@
   "sha256": "7c2805dde4eb128cfdf993fea08e3bb7573234bf61b66fd0fecfe3f3bb3d1f47",
   "artifacts": [
     {
-      "delete": "/Applications/MQTT.fx.app",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": "/Applications/MQTT.fx.app"
+        }
+      ]
     },
     {
-      "path": "MQTT.fx Installer.app/Contents/MacOS/JavaApplicationStub",
-      "args": {
-        "must_succeed": "true",
-        "sudo": "true",
-        "args": [
-          "-q"
-        ],
-        "print_stdout": "true"
-      }
+      "installer": [
+        {
+          "script": {
+            "executable": "MQTT.fx Installer.app/Contents/MacOS/JavaApplicationStub",
+            "args": [
+              "-q"
+            ],
+            "sudo": "true"
+          }
+        }
+      ]
     },
     {
-      "trash": [
-        "~/Library/Application Support/MQTT-FX",
-        "~/Library/Application Support/MQTT.fx"
-      ],
-      "signal": {
-      }
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/MQTT-FX",
+            "~/Library/Application Support/MQTT.fx"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

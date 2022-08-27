@@ -17,20 +17,28 @@
   "sha256": "fcd2cf6b81f0a1d96422414ba50c16df870b3ae93912a253817d789d59b56c3e",
   "artifacts": [
     {
-      "pkgutil": "com.xamarin.android.pkg",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": "com.xamarin.android.pkg"
+        }
+      ]
     },
-    "xamarin.android-13.0.0.0.pkg (Pkg)",
     {
-      "trash": [
-        "/Developer/MonoAndroid",
-        "/Library/Frameworks/Xamarin.Android.framework",
-        "~/Library/Caches/Xamarin.Android",
-        "~/Library/Caches/XamarinBuildDownload"
-      ],
-      "signal": {
-      }
+      "pkg": [
+        "xamarin.android-13.0.0.0.pkg"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "/Developer/MonoAndroid",
+            "/Library/Frameworks/Xamarin.Android.framework",
+            "~/Library/Caches/Xamarin.Android",
+            "~/Library/Caches/XamarinBuildDownload"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

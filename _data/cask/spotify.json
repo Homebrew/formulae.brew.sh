@@ -17,28 +17,34 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "quit": "com.spotify.client",
-      "launchctl": "com.spotify.webhelper",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "com.spotify.client",
+          "launchctl": "com.spotify.webhelper"
+        }
+      ]
     },
-    [
-      "Spotify.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/Spotify",
-        "~/Library/Caches/com.spotify.client.helper",
-        "~/Library/Caches/com.spotify.client",
-        "~/Library/Cookies/com.spotify.client.binarycookies",
-        "~/Library/HTTPStorages/com.spotify.client",
-        "~/Library/Logs/Spotify",
-        "~/Library/Preferences/com.spotify.client.helper.plist",
-        "~/Library/Preferences/com.spotify.client.plist",
-        "~/Library/Saved Application State/com.spotify.client.savedState"
-      ],
-      "signal": {
-      }
+      "app": [
+        "Spotify.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/Spotify",
+            "~/Library/Caches/com.spotify.client.helper",
+            "~/Library/Caches/com.spotify.client",
+            "~/Library/Cookies/com.spotify.client.binarycookies",
+            "~/Library/HTTPStorages/com.spotify.client",
+            "~/Library/Logs/Spotify",
+            "~/Library/Preferences/com.spotify.client.helper.plist",
+            "~/Library/Preferences/com.spotify.client.plist",
+            "~/Library/Saved Application State/com.spotify.client.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

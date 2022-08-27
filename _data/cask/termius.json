@@ -17,22 +17,28 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "delete": "/Library/Preferences/com.termius-dmg.mac.plist",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "delete": "/Library/Preferences/com.termius-dmg.mac.plist"
+        }
+      ]
     },
-    [
-      "Termius.app"
-    ],
     {
-      "trash": [
-        "~/.termius",
-        "~/Library/Application Support/Termius",
-        "~/Library/Logs/Termius",
-        "~/Library/Saved Application State/com.termius-dmg.mac.savedState"
-      ],
-      "signal": {
-      }
+      "app": [
+        "Termius.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/.termius",
+            "~/Library/Application Support/Termius",
+            "~/Library/Logs/Termius",
+            "~/Library/Saved Application State/com.termius-dmg.mac.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

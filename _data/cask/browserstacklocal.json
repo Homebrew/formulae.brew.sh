@@ -17,20 +17,26 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "launchctl": "com.browserstack.local",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "launchctl": "com.browserstack.local"
+        }
+      ]
     },
-    [
-      "BrowserStackLocal.app"
-    ],
     {
-      "trash": [
-        "~/.bstack",
-        "~/Library/Caches/com.browserstack.Local"
-      ],
-      "signal": {
-      }
+      "app": [
+        "BrowserStackLocal.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/.bstack",
+            "~/Library/Caches/com.browserstack.Local"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

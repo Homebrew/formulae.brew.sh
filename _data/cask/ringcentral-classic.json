@@ -17,27 +17,35 @@
   "sha256": "d3bd1958f80f0ca9df2de574f37f8ed0f954e6b618091cbf07141a2699a739f6",
   "artifacts": [
     {
-      "signal": {
-        "TERM": "com.Glip.Glip"
-      }
+      "uninstall": [
+        {
+          "signal": {
+            "TERM": "com.Glip.Glip"
+          }
+        }
+      ]
     },
-    [
-      "Glip.app",
-      {
-        "target": "RingCentral Classic.app"
-      }
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/Glip",
-        "~/Library/Caches/com.Glip.Glip",
-        "~/Library/Caches/com.Glip.Glip.ShipIt",
-        "~/Library/Preferences/com.Glip.Glip.helper.plist",
-        "~/Library/Preferences/com.Glip.Glip.plist",
-        "~/Library/Saved Application State/com.Glip.Glip.savedState"
-      ],
-      "signal": {
-      }
+      "app": [
+        "Glip.app",
+        {
+          "target": "RingCentral Classic.app"
+        }
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/Glip",
+            "~/Library/Caches/com.Glip.Glip",
+            "~/Library/Caches/com.Glip.Glip.ShipIt",
+            "~/Library/Preferences/com.Glip.Glip.helper.plist",
+            "~/Library/Preferences/com.Glip.Glip.plist",
+            "~/Library/Saved Application State/com.Glip.Glip.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

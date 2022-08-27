@@ -17,24 +17,30 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "pkgutil": [
-        "com.electron.twilioquest",
-        "com.electron.twilioquest.helper"
-      ],
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "pkgutil": [
+            "com.electron.twilioquest",
+            "com.electron.twilioquest.helper"
+          ]
+        }
+      ]
     },
-    [
-      "TwilioQuest.app"
-    ],
     {
-      "trash": [
-        "~/Library/Application Support/TwilioQuest",
-        "~/Library/Preferences/com.electron.twilioquest.plist",
-        "~/Library/Saved Application State/com.electron.twilioquest.savedState"
-      ],
-      "signal": {
-      }
+      "app": [
+        "TwilioQuest.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/Application Support/TwilioQuest",
+            "~/Library/Preferences/com.electron.twilioquest.plist",
+            "~/Library/Saved Application State/com.electron.twilioquest.savedState"
+          ]
+        }
+      ]
     }
   ],
   "caveats": null,

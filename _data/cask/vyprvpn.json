@@ -17,35 +17,41 @@
   "sha256": "979da3243bee5ca1b932a76eab955a31e278d72e167f0c99219b3e7821b228d3",
   "artifacts": [
     {
-      "quit": "com.goldenfrog.VyprVPN*",
-      "launchctl": [
-        "vyprvpnservice",
-        "com.goldenfrog.resourcewatchdog",
-        "com.goldenfrog.VyprVPNUserAgent"
-      ],
-      "kext": "com.goldenfrog.VyprVPNMalwareFilter",
-      "signal": {
-      }
+      "uninstall": [
+        {
+          "quit": "com.goldenfrog.VyprVPN*",
+          "launchctl": [
+            "vyprvpnservice",
+            "com.goldenfrog.resourcewatchdog",
+            "com.goldenfrog.VyprVPNUserAgent"
+          ],
+          "kext": "com.goldenfrog.VyprVPNMalwareFilter"
+        }
+      ]
     },
-    [
-      "VyprVPN.app"
-    ],
     {
-      "trash": [
-        "/Library/LaunchDaemons/vyrpvpnservice.plist",
-        "/Library/PrivilegedHelperTools/vyprvpnservice",
-        "~/Library/Caches/com.goldenfrog.VyprVPN",
-        "~/Library/LaunchAgents/com.goldenfrog.VyprVPNUserAgent.plist",
-        "~/Library/Logs/GoldenFrog/VyprVPN.log",
-        "~/Library/Preferences/com.goldenfrog.VyprVPN.plist"
-      ],
-      "kext": [
-        "net.sf.tuntaposx.tap",
-        "net.sf.tuntaposx.tun"
-      ],
-      "launchctl": "org.openvpn",
-      "signal": {
-      }
+      "app": [
+        "VyprVPN.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "/Library/LaunchDaemons/vyrpvpnservice.plist",
+            "/Library/PrivilegedHelperTools/vyprvpnservice",
+            "~/Library/Caches/com.goldenfrog.VyprVPN",
+            "~/Library/LaunchAgents/com.goldenfrog.VyprVPNUserAgent.plist",
+            "~/Library/Logs/GoldenFrog/VyprVPN.log",
+            "~/Library/Preferences/com.goldenfrog.VyprVPN.plist"
+          ],
+          "kext": [
+            "net.sf.tuntaposx.tap",
+            "net.sf.tuntaposx.tun"
+          ],
+          "launchctl": "org.openvpn"
+        }
+      ]
     }
   ],
   "caveats": "vyprvpn requires a kernel extension to work.\nIf the installation fails, retry after you enable it in:\n  System Preferences → Security & Privacy → General\n\nFor more information, refer to vendor documentation or this Apple Technical Note:\n  https://developer.apple.com/library/content/technotes/tn2459/_index.html\n",
