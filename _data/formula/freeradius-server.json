@@ -24,7 +24,7 @@
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,33 +33,33 @@
       "files": {
         "arm64_monterey": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/freeradius-server/blobs/sha256:2e379d98dca5701d1378fde394f170eb7e8e9ce8b0e03354a2f0f8ebbf85c6a7",
-          "sha256": "2e379d98dca5701d1378fde394f170eb7e8e9ce8b0e03354a2f0f8ebbf85c6a7"
+          "url": "https://ghcr.io/v2/homebrew/core/freeradius-server/blobs/sha256:0dd32ad086a7c9e439f8354f5106f83354baa0e8f677924024e428b4670db67f",
+          "sha256": "0dd32ad086a7c9e439f8354f5106f83354baa0e8f677924024e428b4670db67f"
         },
         "arm64_big_sur": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/freeradius-server/blobs/sha256:995d7ba020eb495a11ff6017580375564425f2b057f676b8be207d3be5e7559e",
-          "sha256": "995d7ba020eb495a11ff6017580375564425f2b057f676b8be207d3be5e7559e"
+          "url": "https://ghcr.io/v2/homebrew/core/freeradius-server/blobs/sha256:fc470eb68671ba16cbe38a03679a635403a144bf685bb2a4d87e406b32e1adc9",
+          "sha256": "fc470eb68671ba16cbe38a03679a635403a144bf685bb2a4d87e406b32e1adc9"
         },
         "monterey": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/freeradius-server/blobs/sha256:9234f76e27239a02cddd360c6952189c78ce9b5af621022da09ec2cd213eaaa0",
-          "sha256": "9234f76e27239a02cddd360c6952189c78ce9b5af621022da09ec2cd213eaaa0"
+          "url": "https://ghcr.io/v2/homebrew/core/freeradius-server/blobs/sha256:03bbae657f8de9b1f11bb63a98462c45d5ae2560eb5eb14518efb50b033516a8",
+          "sha256": "03bbae657f8de9b1f11bb63a98462c45d5ae2560eb5eb14518efb50b033516a8"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/freeradius-server/blobs/sha256:5c2c7208fbedddbc04b2af8eec2ed5e94bcd7faeb6e3bfde3b6816809c7e9993",
-          "sha256": "5c2c7208fbedddbc04b2af8eec2ed5e94bcd7faeb6e3bfde3b6816809c7e9993"
+          "url": "https://ghcr.io/v2/homebrew/core/freeradius-server/blobs/sha256:6faccaa51f82dbff25170c1cca15ef212a7527d5daa99e451497301764810a82",
+          "sha256": "6faccaa51f82dbff25170c1cca15ef212a7527d5daa99e451497301764810a82"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/freeradius-server/blobs/sha256:be1b8a1d78e7cc9bccb2a6439408297a05a8af2adfef352cc84428c95e3715d6",
-          "sha256": "be1b8a1d78e7cc9bccb2a6439408297a05a8af2adfef352cc84428c95e3715d6"
+          "url": "https://ghcr.io/v2/homebrew/core/freeradius-server/blobs/sha256:adcde92821158f8f2eafe836bc96077995ce9af3bb6fed903b9ddc1b7b0922f5",
+          "sha256": "adcde92821158f8f2eafe836bc96077995ce9af3bb6fed903b9ddc1b7b0922f5"
         },
         "x86_64_linux": {
           "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/freeradius-server/blobs/sha256:768b37acaefc41960a324a7bf1f1ca41459c44c90a45e4bbd9a05f6bfdf571ca",
-          "sha256": "768b37acaefc41960a324a7bf1f1ca41459c44c90a45e4bbd9a05f6bfdf571ca"
+          "url": "https://ghcr.io/v2/homebrew/core/freeradius-server/blobs/sha256:374d20ebf25c7e165fb2d3090b689074281b269ad1497a698c44252347095e48",
+          "sha256": "374d20ebf25c7e165fb2d3090b689074281b269ad1497a698c44252347095e48"
         }
       }
     }
@@ -73,6 +73,7 @@
 
   ],
   "dependencies": [
+    "collectd",
     "openssl@1.1",
     "talloc"
   ],
@@ -83,6 +84,9 @@
 
   ],
   "uses_from_macos": [
+    "krb5",
+    "libpcap",
+    "libxcrypt",
     "perl",
     "sqlite"
   ],
@@ -108,8 +112,12 @@
   "variations": {
     "x86_64_linux": {
       "dependencies": [
+        "collectd",
         "openssl@1.1",
         "talloc",
+        "krb5",
+        "libpcap",
+        "libxcrypt",
         "perl",
         "sqlite",
         "readline"
