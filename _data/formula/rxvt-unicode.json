@@ -13,13 +13,13 @@
   "license": "GPL-3.0-only",
   "homepage": "http://software.schmorp.de/pkg/rxvt-unicode.html",
   "versions": {
-    "stable": "9.26",
+    "stable": "9.30",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "http://dist.schmorp.de/rxvt-unicode/rxvt-unicode-9.26.tar.bz2",
+      "url": "http://dist.schmorp.de/rxvt-unicode/rxvt-unicode-9.30.tar.bz2",
       "tag": null,
       "revision": null
     }
@@ -33,38 +33,33 @@
       "files": {
         "arm64_monterey": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/rxvt-unicode/blobs/sha256:acaab9ae981de980c62c28e89072cf754e9cfce42c79179c8bf96ada884e006e",
-          "sha256": "acaab9ae981de980c62c28e89072cf754e9cfce42c79179c8bf96ada884e006e"
+          "url": "https://ghcr.io/v2/homebrew/core/rxvt-unicode/blobs/sha256:3f7bf25606213515d14a794a47fbb9843d7b93a05eebe3c9811e4690964f0d75",
+          "sha256": "3f7bf25606213515d14a794a47fbb9843d7b93a05eebe3c9811e4690964f0d75"
         },
         "arm64_big_sur": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/rxvt-unicode/blobs/sha256:2ad5cfb39d86aff0d7f3b785aee5058ce2b0bf113b13b24f963c1b8d60679ff3",
-          "sha256": "2ad5cfb39d86aff0d7f3b785aee5058ce2b0bf113b13b24f963c1b8d60679ff3"
+          "url": "https://ghcr.io/v2/homebrew/core/rxvt-unicode/blobs/sha256:323e9de530d90736b2e9696191c63a886b917b366587d0e751e323b2c98357f2",
+          "sha256": "323e9de530d90736b2e9696191c63a886b917b366587d0e751e323b2c98357f2"
         },
         "monterey": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/rxvt-unicode/blobs/sha256:e7fe499f09e78e5b61e12ceb8b910c44b643b10018bde3d390223e0643f32e38",
-          "sha256": "e7fe499f09e78e5b61e12ceb8b910c44b643b10018bde3d390223e0643f32e38"
+          "url": "https://ghcr.io/v2/homebrew/core/rxvt-unicode/blobs/sha256:eebf1bb059ef21b86b5f78068e8d09177a4ef134357561748c24a06e3315b808",
+          "sha256": "eebf1bb059ef21b86b5f78068e8d09177a4ef134357561748c24a06e3315b808"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/rxvt-unicode/blobs/sha256:5e3a94dc348d57ada5dcb55eafee51b1ffa8bf78e10a8a2b0af9ac56b2d2ff02",
-          "sha256": "5e3a94dc348d57ada5dcb55eafee51b1ffa8bf78e10a8a2b0af9ac56b2d2ff02"
+          "url": "https://ghcr.io/v2/homebrew/core/rxvt-unicode/blobs/sha256:3b4b6b8748e2a7273c393eb581055acdfcc034c386676d48cc8b2b1ee045bdec",
+          "sha256": "3b4b6b8748e2a7273c393eb581055acdfcc034c386676d48cc8b2b1ee045bdec"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/rxvt-unicode/blobs/sha256:b97c65d257344a16accd34497c77ec3638674c7c596b7f05c190d606975de9af",
-          "sha256": "b97c65d257344a16accd34497c77ec3638674c7c596b7f05c190d606975de9af"
-        },
-        "mojave": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/rxvt-unicode/blobs/sha256:ecec482ad2b840b1cdb3945a42bcc31656d61a83ae3d08af2d2dafb1a4002d9d",
-          "sha256": "ecec482ad2b840b1cdb3945a42bcc31656d61a83ae3d08af2d2dafb1a4002d9d"
+          "url": "https://ghcr.io/v2/homebrew/core/rxvt-unicode/blobs/sha256:20124df7ce3f99991a32ac808a055f91ab317b4864b27c87ea650c4178352c84",
+          "sha256": "20124df7ce3f99991a32ac808a055f91ab317b4864b27c87ea650c4178352c84"
         },
         "x86_64_linux": {
           "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/rxvt-unicode/blobs/sha256:33700270809fe7d85c106cc6ef8aeb0c85c053ea52f39e6124464cfbf01a8309",
-          "sha256": "33700270809fe7d85c106cc6ef8aeb0c85c053ea52f39e6124464cfbf01a8309"
+          "url": "https://ghcr.io/v2/homebrew/core/rxvt-unicode/blobs/sha256:07c529a6fd59c5e8d73341d78ba945cba0f6a885dd0814aa0a0e66c1aa3e13c8",
+          "sha256": "07c529a6fd59c5e8d73341d78ba945cba0f6a885dd0814aa0a0e66c1aa3e13c8"
         }
       }
     }
@@ -75,6 +70,7 @@
 
   ],
   "build_dependencies": [
+    "cmake",
     "pkg-config"
   ],
   "dependencies": [
