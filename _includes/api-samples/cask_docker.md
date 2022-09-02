@@ -10,13 +10,13 @@
   ],
   "desc": "App to build and share containerized applications and microservices",
   "homepage": "https://www.docker.com/products/docker-desktop",
-  "url": "https://desktop.docker.com/mac/main/amd64/84025/Docker.dmg",
+  "url": "https://desktop.docker.com/mac/main/amd64/85629/Docker.dmg",
   "appcast": null,
-  "version": "4.11.1,84025",
+  "version": "4.12.0,85629",
   "versions": {},
   "installed": null,
   "outdated": false,
-  "sha256": "b2f4ad8fea37dfb7d9147f169a9ceab71d7d0d12ff912057c60b58c0e91aed35",
+  "sha256": "41085009458ba1741c6a86c414190780ff3b288879aa27821fc4a985d229653c",
   "artifacts": [
     {
       "uninstall": [
@@ -153,16 +153,16 @@
   "auto_updates": true,
   "variations": {
     "arm64_ventura": {
-      "url": "https://desktop.docker.com/mac/main/arm64/84025/Docker.dmg",
-      "sha256": "a7d84117bef83764cb9bf275cd01b8ba0c43f08dbfe4d4a7d4f05549cdd81f54"
+      "url": "https://desktop.docker.com/mac/main/arm64/85629/Docker.dmg",
+      "sha256": "7eb63b4819cd1f87c61d5e8f54613692e07fb203d81bcf8d66f5de55489d3b81"
     },
     "arm64_monterey": {
-      "url": "https://desktop.docker.com/mac/main/arm64/84025/Docker.dmg",
-      "sha256": "a7d84117bef83764cb9bf275cd01b8ba0c43f08dbfe4d4a7d4f05549cdd81f54"
+      "url": "https://desktop.docker.com/mac/main/arm64/85629/Docker.dmg",
+      "sha256": "7eb63b4819cd1f87c61d5e8f54613692e07fb203d81bcf8d66f5de55489d3b81"
     },
     "arm64_big_sur": {
-      "url": "https://desktop.docker.com/mac/main/arm64/84025/Docker.dmg",
-      "sha256": "a7d84117bef83764cb9bf275cd01b8ba0c43f08dbfe4d4a7d4f05549cdd81f54"
+      "url": "https://desktop.docker.com/mac/main/arm64/85629/Docker.dmg",
+      "sha256": "7eb63b4819cd1f87c61d5e8f54613692e07fb203d81bcf8d66f5de55489d3b81"
     }
   },
   "analytics": {
@@ -178,6 +178,6 @@
       }
     }
   },
-  "generated_date": "2022-09-01"
+  "generated_date": "2022-09-02"
 }
 ```
