@@ -20,7 +20,10 @@
       "uninstall": [
         {
           "pkgutil": "com.electron.jupyterlab-desktop",
-          "delete": "$(brew --prefix)/bin/jlab"
+          "delete": [
+            "$(brew --prefix)/bin/jlab",
+            "~/Library/jupyterlab-desktop"
+          ]
         }
       ]
     },
@@ -39,7 +42,6 @@
             "~/Library/Caches/org.jupyter.jupyterlab-desktop.ShipIt",
             "~/Library/HTTPStorages/org.jupyter.jupyterlab-desktop",
             "~/Library/Jupyter",
-            "~/Library/jupyterlab-desktop",
             "~/Library/Logs/jupyterlab-desktop",
             "~/Library/Logs/JupyterLab",
             "~/Library/Preferences/com.electron.jupyterlab-desktop.plist",
