@@ -13,13 +13,13 @@
   "license": "AGPL-3.0-only",
   "homepage": "https://github.com/rui314/mold",
   "versions": {
-    "stable": "1.4.1",
+    "stable": "1.4.2",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/rui314/mold/archive/v1.4.1.tar.gz",
+      "url": "https://github.com/rui314/mold/archive/v1.4.2.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,33 +33,33 @@
       "files": {
         "arm64_monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/mold/blobs/sha256:1769f0f31daaa8c9001f5a3926e4c5dcc304e22e9560e9c22984677538e14b65",
-          "sha256": "1769f0f31daaa8c9001f5a3926e4c5dcc304e22e9560e9c22984677538e14b65"
+          "url": "https://ghcr.io/v2/homebrew/core/mold/blobs/sha256:d9ca2c1f6af2e4f743d4288720761a823281d61f275432d52e8cca1dcc5cb07b",
+          "sha256": "d9ca2c1f6af2e4f743d4288720761a823281d61f275432d52e8cca1dcc5cb07b"
         },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/mold/blobs/sha256:1e8c9d89d0ea082402d0934cdb1d5e62631602e688afcdb99d0b9e708e34ee11",
-          "sha256": "1e8c9d89d0ea082402d0934cdb1d5e62631602e688afcdb99d0b9e708e34ee11"
+          "url": "https://ghcr.io/v2/homebrew/core/mold/blobs/sha256:8724e3ac84bf9e0b622a3288ca0ef0e2fc908f69652c76739bbbfe3265272cf1",
+          "sha256": "8724e3ac84bf9e0b622a3288ca0ef0e2fc908f69652c76739bbbfe3265272cf1"
         },
         "monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/mold/blobs/sha256:269acc4b86a893bf75910175c59f4eae65bdcfeba532a89994ddf1a02c97f75c",
-          "sha256": "269acc4b86a893bf75910175c59f4eae65bdcfeba532a89994ddf1a02c97f75c"
+          "url": "https://ghcr.io/v2/homebrew/core/mold/blobs/sha256:496404b2907ec2ebf7d3b9d3240835701ba08e9f883841941e776686335bc7b9",
+          "sha256": "496404b2907ec2ebf7d3b9d3240835701ba08e9f883841941e776686335bc7b9"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/mold/blobs/sha256:ca94aa841c7db02bffacfbcba6b54f5556e85a34ced605910aa3e6bebe18db44",
-          "sha256": "ca94aa841c7db02bffacfbcba6b54f5556e85a34ced605910aa3e6bebe18db44"
+          "url": "https://ghcr.io/v2/homebrew/core/mold/blobs/sha256:6db751d4f6fa051067ff636047beb77082d070b2e757009d572fcb616fb4f4a3",
+          "sha256": "6db751d4f6fa051067ff636047beb77082d070b2e757009d572fcb616fb4f4a3"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/mold/blobs/sha256:824ea85e81d588389b41f3178de64d2d39c67bfc00911e6cd7c6d61492478f66",
-          "sha256": "824ea85e81d588389b41f3178de64d2d39c67bfc00911e6cd7c6d61492478f66"
+          "url": "https://ghcr.io/v2/homebrew/core/mold/blobs/sha256:2422b73a95ec0b419cf0cf266fd5f0fbf2bd484a02c59440b92a2f42b8a29064",
+          "sha256": "2422b73a95ec0b419cf0cf266fd5f0fbf2bd484a02c59440b92a2f42b8a29064"
         },
         "x86_64_linux": {
-          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/mold/blobs/sha256:1f6956da7d017869584c2c03d65f3b674479618f7c23061e8196022df760c161",
-          "sha256": "1f6956da7d017869584c2c03d65f3b674479618f7c23061e8196022df760c161"
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/mold/blobs/sha256:4e367801bde744244609a4100c43855b22f0f358b5005852ec286fbd2d911b87",
+          "sha256": "4e367801bde744244609a4100c43855b22f0f358b5005852ec286fbd2d911b87"
         }
       }
     }
@@ -82,9 +82,6 @@
 
   ],
   "uses_from_macos": [
-    {
-      "python": "build"
-    },
     "zlib"
   ],
   "requirements": [
@@ -107,35 +104,7 @@
   "disable_date": null,
   "disable_reason": null,
   "variations": {
-    "mojave": {
-      "build_dependencies": [
-        "cmake",
-        "python"
-      ]
-    },
-    "high_sierra": {
-      "build_dependencies": [
-        "cmake",
-        "python"
-      ]
-    },
-    "sierra": {
-      "build_dependencies": [
-        "cmake",
-        "python"
-      ]
-    },
-    "el_capitan": {
-      "build_dependencies": [
-        "cmake",
-        "python"
-      ]
-    },
     "x86_64_linux": {
-      "build_dependencies": [
-        "cmake",
-        "python"
-      ],
       "dependencies": [
         "tbb",
         "zlib",
