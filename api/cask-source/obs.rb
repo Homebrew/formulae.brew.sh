@@ -1,19 +1,22 @@
 cask "obs" do
-  version "27.2.4"
-  sha256 "9aeed92816f23fdb4819eb1b0c989c158aaab246e0bd024933429614b06435f2"
+  arch arm: "arm64", intel: "x86_64"
 
-  url "https://cdn-fastly.obsproject.com/downloads/obs-mac-#{version}.dmg"
+  version "28.0.1"
+  sha256 arm:   "57b3777bd815d40d80bce0e8bc41e7ab6765318f024f44e5ccc6e82ac44e1694",
+         intel: "246e1b174af3f61513e4e004e948a325149091b5165b7005391570f6d334ee3e"
+
+  url "https://cdn-fastly.obsproject.com/downloads/obs-studio-#{version}-macos-#{arch}.dmg"
   name "OBS"
   desc "Open-source software for live streaming and screen recording"
   homepage "https://obsproject.com/"
 
   livecheck do
-    url :homepage
-    regex(%r{href=.*?/obs[._-]mac[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+    url "https://obsproject.com/download/"
+    regex(%r{href=.*?/obs[._-]studio[._-]v?(\d+(?:\.\d+)+).*?\.dmg}i)
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   app "OBS.app"
 
