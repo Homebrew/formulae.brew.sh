@@ -1,12 +1,12 @@
 cask "webex-meetings" do
-  version "2208.2620.4209.3"
+  version "42.8.0.23281"
   sha256 :no_check
 
   on_intel do
-    url "https://akamaicdn.webex.com/client/webexapp.dmg"
+    url "https://binaries.webex.com/WebexTeamsDesktop-MACOS-Gold/Webex.dmg"
   end
   on_arm do
-    url "https://akamaicdn.webex.com/client/Cisco_Webex_Meetings.pkg"
+    url "https://binaries.webex.com/WebexDesktop-MACOS-Apple-Silicon-Gold/Webex.dmg"
   end
 
   name "Webex Meetings"
@@ -14,13 +14,12 @@ cask "webex-meetings" do
   homepage "https://www.webex.com/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://help.webex.com/en-us/article/mqkve8/Webex-App-|-Release-notes"
+    regex(/Mac[._-—](\d+(?:\.\d+)+)/i)
   end
 
   auto_updates true
-
-  pkg "Cisco_Webex_Meetings.pkg"
+  depends_on macos: ">= :high_sierra"
 
   uninstall quit:      [
               "com.cisco.webex.webexmta",

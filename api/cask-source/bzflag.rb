@@ -16,9 +16,4 @@ cask "bzflag" do
   end
 
   app "BZFlag-#{version}.app"
-
-  zap trash: [
-    "~/Library/Application Support/BZFlag",
-    "~/Library/Saved Application State/org.bzflag.BZFlag.savedState",
-  ]
 end

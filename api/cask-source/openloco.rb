@@ -12,8 +12,4 @@ cask "openloco" do
   app "OpenLoco.app"
 
   zap trash: "~/Library/Preferences/io.openloco.OpenLoco.plist"
-
-  caveats do
-    discontinued
-  end
 end

@@ -17,7 +17,6 @@ cask "minitube" do
   app "Minitube.app"
 
   zap trash: [
-    "~/Library/HTTPStorages/org.tordini.flavio.minitube",
     "~/Library/Preferences/org.tordini.flavio.minitube.plist",
     "~/Library/Saved Application State/org.tordini.flavio.minitube.savedState",
   ]
