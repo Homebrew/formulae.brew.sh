@@ -13,53 +13,53 @@
   "license": "GPL-3.0-only",
   "homepage": "https://snapcraft.io/",
   "versions": {
-    "stable": "5.0",
+    "stable": "7.1.4",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
       "url": "https://github.com/snapcore/snapcraft.git",
-      "tag": "5.0",
-      "revision": "54781044a8f858258e90fa4acfd32e750362deee"
+      "tag": "7.1.4",
+      "revision": "725d3935aad23331087328f2c65ea3d112a7db4f"
     }
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
         "arm64_monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/snapcraft/blobs/sha256:4dddbb0763167c0dd55efbf9de703d98aef64a33832a48bbd11ba67ff976dce0",
-          "sha256": "4dddbb0763167c0dd55efbf9de703d98aef64a33832a48bbd11ba67ff976dce0"
+          "url": "https://ghcr.io/v2/homebrew/core/snapcraft/blobs/sha256:44422ead1e14363dd3f24957d34789ec88cc946f781202992eeddd0788f7ff05",
+          "sha256": "44422ead1e14363dd3f24957d34789ec88cc946f781202992eeddd0788f7ff05"
         },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/snapcraft/blobs/sha256:4f694957b000eeac82f0bd412e8e35f7343f163fb0be7d3d75b31748bf2621aa",
-          "sha256": "4f694957b000eeac82f0bd412e8e35f7343f163fb0be7d3d75b31748bf2621aa"
+          "url": "https://ghcr.io/v2/homebrew/core/snapcraft/blobs/sha256:dd9fad8ecec6aae22011c62717282b78b59c1c789a2f5cb06136adbf6a429527",
+          "sha256": "dd9fad8ecec6aae22011c62717282b78b59c1c789a2f5cb06136adbf6a429527"
         },
         "monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/snapcraft/blobs/sha256:fa6f1500f39010225c398634ce3a8b80c81d43e344deb7921912c4c97b4ef767",
-          "sha256": "fa6f1500f39010225c398634ce3a8b80c81d43e344deb7921912c4c97b4ef767"
+          "url": "https://ghcr.io/v2/homebrew/core/snapcraft/blobs/sha256:2bba1441138b337ae6f34ffee989d17c531d9c5781fd0b62c78fa45bf8c81201",
+          "sha256": "2bba1441138b337ae6f34ffee989d17c531d9c5781fd0b62c78fa45bf8c81201"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/snapcraft/blobs/sha256:73e7d77afaf667484b821c6c43560461cd484f9ea031f603084a942aa1bdadf3",
-          "sha256": "73e7d77afaf667484b821c6c43560461cd484f9ea031f603084a942aa1bdadf3"
+          "url": "https://ghcr.io/v2/homebrew/core/snapcraft/blobs/sha256:7802570218446be647904a4c793ed3e1d2268b37b7a29f6ef9955be71956a997",
+          "sha256": "7802570218446be647904a4c793ed3e1d2268b37b7a29f6ef9955be71956a997"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/snapcraft/blobs/sha256:aeeabe599366fce9157670a566b6624f3a9b78e5078287632a4ab766120fd379",
-          "sha256": "aeeabe599366fce9157670a566b6624f3a9b78e5078287632a4ab766120fd379"
+          "url": "https://ghcr.io/v2/homebrew/core/snapcraft/blobs/sha256:99e7a83ee37044eabbd961e38e32b3c68caef8292c4aaec3b6abdd562a934b65",
+          "sha256": "99e7a83ee37044eabbd961e38e32b3c68caef8292c4aaec3b6abdd562a934b65"
         },
         "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/snapcraft/blobs/sha256:fcd639e34e8e1a0c183938cd95d2663a343d99c6ff981bbaad5d16873b11ab03",
-          "sha256": "fcd639e34e8e1a0c183938cd95d2663a343d99c6ff981bbaad5d16873b11ab03"
+          "url": "https://ghcr.io/v2/homebrew/core/snapcraft/blobs/sha256:d585f24bac3c85a406c98ff0f829dca87276ba237cbc744abf02f16557ccd322",
+          "sha256": "d585f24bac3c85a406c98ff0f829dca87276ba237cbc744abf02f16557ccd322"
         }
       }
     }
@@ -73,10 +73,11 @@
     "rust"
   ],
   "dependencies": [
+    "libpython-tabulate",
     "libsodium",
-    "libyaml",
     "lxc",
-    "python@3.9",
+    "python@3.10",
+    "pyyaml",
     "six",
     "snap",
     "xdelta"
@@ -117,10 +118,11 @@
         "intltool"
       ],
       "dependencies": [
+        "libpython-tabulate",
         "libsodium",
-        "libyaml",
         "lxc",
-        "python@3.9",
+        "python@3.10",
+        "pyyaml",
         "six",
         "snap",
         "xdelta",
