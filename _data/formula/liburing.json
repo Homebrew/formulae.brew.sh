@@ -1,6 +1,6 @@
 {
-  "name": "vulkan-headers",
-  "full_name": "vulkan-headers",
+  "name": "liburing",
+  "full_name": "liburing",
   "tap": "homebrew/core",
   "oldname": null,
   "aliases": [
@@ -9,17 +9,17 @@
   "versioned_formulae": [
 
   ],
-  "desc": "Vulkan Header files and API registry",
-  "license": "Apache-2.0",
-  "homepage": "https://github.com/KhronosGroup/Vulkan-Headers",
+  "desc": "Helpers to setup and teardown io_uring instances",
+  "license": "MIT or LGPL-2.1-only",
+  "homepage": "https://github.com/axboe/liburing",
   "versions": {
-    "stable": "1.3.228",
-    "head": null,
+    "stable": "2.2",
+    "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/KhronosGroup/Vulkan-Headers/archive/v1.3.228.tar.gz",
+      "url": "https://github.com/axboe/liburing/archive/refs/tags/liburing-2.2.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,10 +31,10 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
-        "all": {
+        "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/vulkan-headers/blobs/sha256:8d83ba07bd8abe979db0e90c54c5d1a676e98779d6f414dfdaa11d4d431f397f",
-          "sha256": "8d83ba07bd8abe979db0e90c54c5d1a676e98779d6f414dfdaa11d4d431f397f"
+          "url": "https://ghcr.io/v2/homebrew/core/liburing/blobs/sha256:56f202765112865ba402c9fe20f4b2571b586cff51e80632319ca451f3499f65",
+          "sha256": "56f202765112865ba402c9fe20f4b2571b586cff51e80632319ca451f3499f65"
         }
       }
     }
@@ -45,7 +45,7 @@
 
   ],
   "build_dependencies": [
-    "cmake"
+
   ],
   "dependencies": [
 
@@ -60,7 +60,15 @@
 
   ],
   "requirements": [
+    {
+      "name": "linux",
+      "cask": null,
+      "download": null,
+      "version": null,
+      "contexts": [
 
+      ]
+    }
   ],
   "conflicts_with": [
 
