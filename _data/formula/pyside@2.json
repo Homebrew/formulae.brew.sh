@@ -24,7 +24,7 @@
       "revision": null
     }
   },
-  "revision": 2,
+  "revision": 3,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,33 +33,28 @@
       "files": {
         "arm64_monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/pyside/2/blobs/sha256:bb63893e4d24dd37ef7a89670c453594655be3cc317a64ddcd3566af00225ff0",
-          "sha256": "bb63893e4d24dd37ef7a89670c453594655be3cc317a64ddcd3566af00225ff0"
+          "url": "https://ghcr.io/v2/homebrew/core/pyside/2/blobs/sha256:bedee071b741dde0d9fff218d2c0d3eb282df78042f8461806258e03803ce4d2",
+          "sha256": "bedee071b741dde0d9fff218d2c0d3eb282df78042f8461806258e03803ce4d2"
         },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/pyside/2/blobs/sha256:c82d355cae1bdbdb0fecb4dc7f3f3d84106f7c408397c10111c96c1676562f42",
-          "sha256": "c82d355cae1bdbdb0fecb4dc7f3f3d84106f7c408397c10111c96c1676562f42"
+          "url": "https://ghcr.io/v2/homebrew/core/pyside/2/blobs/sha256:9127707bb8b25282e612d3360ad9467b6528716a61dcb8541637994a5c76bb39",
+          "sha256": "9127707bb8b25282e612d3360ad9467b6528716a61dcb8541637994a5c76bb39"
         },
         "monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/pyside/2/blobs/sha256:d917186f4b00f32829bfe91021a62df99210babc71d1bd7044fe547e393dfcb5",
-          "sha256": "d917186f4b00f32829bfe91021a62df99210babc71d1bd7044fe547e393dfcb5"
+          "url": "https://ghcr.io/v2/homebrew/core/pyside/2/blobs/sha256:ab98e21f4ad696786804474dbca16cf4f4868ada27d26306885111a3060d7e6b",
+          "sha256": "ab98e21f4ad696786804474dbca16cf4f4868ada27d26306885111a3060d7e6b"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/pyside/2/blobs/sha256:2fad23020fb67a16912d8d736c56531eab4ec04bad2018ae8f93b750af8e84c5",
-          "sha256": "2fad23020fb67a16912d8d736c56531eab4ec04bad2018ae8f93b750af8e84c5"
+          "url": "https://ghcr.io/v2/homebrew/core/pyside/2/blobs/sha256:6f7cb05f3476f4b8f3c0d414d65ae72592ef5ea363219d196fac461fe3e9b13b",
+          "sha256": "6f7cb05f3476f4b8f3c0d414d65ae72592ef5ea363219d196fac461fe3e9b13b"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/pyside/2/blobs/sha256:a9b8e595d66326276456bc19f577b3e431accdea286f8d3363cc9e4fbd1f7cd4",
-          "sha256": "a9b8e595d66326276456bc19f577b3e431accdea286f8d3363cc9e4fbd1f7cd4"
-        },
-        "x86_64_linux": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/pyside/2/blobs/sha256:c6ffe08b20ee437a8f6c229595eaf44d472a96eaa7ede50348f7a07f2cbafb9e",
-          "sha256": "c6ffe08b20ee437a8f6c229595eaf44d472a96eaa7ede50348f7a07f2cbafb9e"
+          "url": "https://ghcr.io/v2/homebrew/core/pyside/2/blobs/sha256:41cda4203982c1700e69a91dd5e5fcc8d56ec2016f53c71f0658a6b4b59a9e85",
+          "sha256": "41cda4203982c1700e69a91dd5e5fcc8d56ec2016f53c71f0658a6b4b59a9e85"
         }
       }
     }
@@ -76,9 +71,9 @@
     "cmake"
   ],
   "dependencies": [
-    "llvm",
     "python@3.10",
-    "qt@5"
+    "qt@5",
+    "llvm"
   ],
   "recommended_dependencies": [
 
@@ -112,12 +107,12 @@
   "variations": {
     "x86_64_linux": {
       "dependencies": [
-        "llvm",
         "python@3.10",
         "qt@5",
         "libxml2",
         "libxslt",
         "libxcb",
+        "llvm@14",
         "mesa"
       ]
     }
