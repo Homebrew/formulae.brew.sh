@@ -1,13 +1,22 @@
 {
   "name": "glibc",
-  "pkg_version": "2.35",
+  "pkg_version": "2.35_1",
   "rebuild": 0,
   "bottles": {
     "x86_64_linux": {
-      "url": "https://ghcr.io/v2/homebrew/core/glibc/blobs/sha256:cd51b67e67b9a5d27880efc06a2b01b71e0b7b8b2cc207e6e961e46c423018e3"
+      "url": "https://ghcr.io/v2/homebrew/core/glibc/blobs/sha256:274dd06ae6ecaee3025d6bf21cf4c7641df9a1cc3973e162911a1f4a76000a24"
     }
   },
   "dependencies": [
-
+    {
+      "name": "linux-headers@5.15",
+      "pkg_version": "5.15.57",
+      "rebuild": 1,
+      "bottles": {
+        "x86_64_linux": {
+          "url": "https://ghcr.io/v2/homebrew/core/linux-headers/5.15/blobs/sha256:8692682830cbb1fb74bb61190b644da9de0f4c3a40cf18653a9b4a85bc5ce50d"
+        }
+      }
+    }
   ]
 }

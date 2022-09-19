@@ -24,7 +24,7 @@
       "revision": null
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,22 +33,25 @@
       "files": {
         "x86_64_linux": {
           "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/glibc/blobs/sha256:cd51b67e67b9a5d27880efc06a2b01b71e0b7b8b2cc207e6e961e46c423018e3",
-          "sha256": "cd51b67e67b9a5d27880efc06a2b01b71e0b7b8b2cc207e6e961e46c423018e3"
+          "url": "https://ghcr.io/v2/homebrew/core/glibc/blobs/sha256:274dd06ae6ecaee3025d6bf21cf4c7641df9a1cc3973e162911a1f4a76000a24",
+          "sha256": "274dd06ae6ecaee3025d6bf21cf4c7641df9a1cc3973e162911a1f4a76000a24"
         }
       }
     }
   },
-  "keg_only": false,
-  "keg_only_reason": null,
+  "keg_only": true,
+  "keg_only_reason": {
+    "reason": "it can shadow system glibc if linked",
+    "explanation": ""
+  },
   "options": [
 
   ],
   "build_dependencies": [
-    "linux-headers@5.15"
+
   ],
   "dependencies": [
-
+    "linux-headers@5.15"
   ],
   "recommended_dependencies": [
 
@@ -91,7 +94,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": null,
+  "caveats": "The Homebrew's Glibc has been installed with the following executables:\n  $(brew --prefix)/opt/glibc/bin/ldd\n  $(brew --prefix)/opt/glibc/bin/ld.so\n  $(brew --prefix)/opt/glibc/sbin/ldconfig\n\nBy default, Homebrew's linker will not search for the system's libraries. If you\nwant Homebrew to do so, run:\n\n  cp \"$(brew --prefix)/etc/ld.so.conf.d/99-system-ld.so.conf.example\" \"$(brew --prefix)/etc/ld.so.conf.d/99-system-ld.so.conf\"\n  brew postinstall glibc\n\nto append the system libraries to Homebrew's ld search paths. This is risky and\n**highly not recommended**, because it may cause linkage to Homebrew libraries\nmixed with system libraries.\n",
   "installed": [
 
   ],
