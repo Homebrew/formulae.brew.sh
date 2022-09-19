@@ -13,18 +13,18 @@
   "license": "Apache-2.0",
   "homepage": "https://github.com/haskell/haskell-language-server",
   "versions": {
-    "stable": "1.6.1.0",
+    "stable": "1.8.0.0",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/haskell/haskell-language-server/archive/1.6.1.0.tar.gz",
+      "url": "https://github.com/haskell/haskell-language-server/archive/1.8.0.0.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,33 +33,33 @@
       "files": {
         "arm64_monterey": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/haskell-language-server/blobs/sha256:c55a376af53a07fe4c6b82a02df393f2b7fa3893b511e5a279d315cfb30aece5",
-          "sha256": "c55a376af53a07fe4c6b82a02df393f2b7fa3893b511e5a279d315cfb30aece5"
+          "url": "https://ghcr.io/v2/homebrew/core/haskell-language-server/blobs/sha256:bf00ea6424aeca6c4159348fb18e098edba657166616bccda8e32fe457382589",
+          "sha256": "bf00ea6424aeca6c4159348fb18e098edba657166616bccda8e32fe457382589"
         },
         "arm64_big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/haskell-language-server/blobs/sha256:0808834e5d3bf24dbd5492fd309b631f5eaf0e9a98312795f61573da3b53927c",
-          "sha256": "0808834e5d3bf24dbd5492fd309b631f5eaf0e9a98312795f61573da3b53927c"
+          "url": "https://ghcr.io/v2/homebrew/core/haskell-language-server/blobs/sha256:1ad7dfeb2638c5a9938dc6f3b7724f7ef0dfd748f58024172bda77567ef54f55",
+          "sha256": "1ad7dfeb2638c5a9938dc6f3b7724f7ef0dfd748f58024172bda77567ef54f55"
         },
         "monterey": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/haskell-language-server/blobs/sha256:bfc75df18a32b5d2992cd7940e896d6bba8e0426c8ed8a07a5437f428418f52d",
-          "sha256": "bfc75df18a32b5d2992cd7940e896d6bba8e0426c8ed8a07a5437f428418f52d"
+          "url": "https://ghcr.io/v2/homebrew/core/haskell-language-server/blobs/sha256:b5ee85bbf76737036206843fb9d3381e712495c5ecf19d30500fa0738d6dc3f5",
+          "sha256": "b5ee85bbf76737036206843fb9d3381e712495c5ecf19d30500fa0738d6dc3f5"
         },
         "big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/haskell-language-server/blobs/sha256:fd0dbb35a976afc9601675267e468f52a6c98d7e40d2fa6d8a79be5f783372ab",
-          "sha256": "fd0dbb35a976afc9601675267e468f52a6c98d7e40d2fa6d8a79be5f783372ab"
+          "url": "https://ghcr.io/v2/homebrew/core/haskell-language-server/blobs/sha256:b916bba19076554209aea3fb359b323762044ca8a74bfb9ff67662b15cd335c8",
+          "sha256": "b916bba19076554209aea3fb359b323762044ca8a74bfb9ff67662b15cd335c8"
         },
         "catalina": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/haskell-language-server/blobs/sha256:745ae83e3aefeea846add644123e02c61e64c63b4db5ebae562ff8ac5855f920",
-          "sha256": "745ae83e3aefeea846add644123e02c61e64c63b4db5ebae562ff8ac5855f920"
+          "url": "https://ghcr.io/v2/homebrew/core/haskell-language-server/blobs/sha256:eaabfb9b4f28088843f180577afbf811b5273fc091261fbb2ab637d373bea85a",
+          "sha256": "eaabfb9b4f28088843f180577afbf811b5273fc091261fbb2ab637d373bea85a"
         },
         "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/haskell-language-server/blobs/sha256:3970275f9da78167e853dd9803ba2f85f8309b987c00012e2d7cd8642265e541",
-          "sha256": "3970275f9da78167e853dd9803ba2f85f8309b987c00012e2d7cd8642265e541"
+          "url": "https://ghcr.io/v2/homebrew/core/haskell-language-server/blobs/sha256:068dde2e6fec89fdc79e710befe909b86570024da48f4daf9be135df6d4c04d6",
+          "sha256": "068dde2e6fec89fdc79e710befe909b86570024da48f4daf9be135df6d4c04d6"
         }
       }
     }
@@ -71,6 +71,7 @@
   ],
   "build_dependencies": [
     "cabal-install",
+    "ghc",
     "ghc@8.10",
     "ghc@8.6",
     "ghc@8.8"
@@ -94,7 +95,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "haskell-language-server is built for GHC versions 8.6.5, 8.8.4, 8.10.7.\nYou need to provide your own GHC or install one with\n  brew install ghc@8.10\n",
+  "caveats": "haskell-language-server is built for GHC versions 8.6.5, 8.8.4, 8.10.7, 9.2.4.\nYou need to provide your own GHC or install one with\n  brew install ghc\n",
   "installed": [
 
   ],
@@ -111,23 +112,26 @@
     "arm64_ventura": {
       "build_dependencies": [
         "cabal-install",
+        "ghc",
         "ghc@8.10"
       ],
-      "caveats": "haskell-language-server is built for GHC versions 8.10.7.\nYou need to provide your own GHC or install one with\n  brew install ghc@8.10\n"
+      "caveats": "haskell-language-server is built for GHC versions 8.10.7, 9.2.4.\nYou need to provide your own GHC or install one with\n  brew install ghc\n"
     },
     "arm64_monterey": {
       "build_dependencies": [
         "cabal-install",
+        "ghc",
         "ghc@8.10"
       ],
-      "caveats": "haskell-language-server is built for GHC versions 8.10.7.\nYou need to provide your own GHC or install one with\n  brew install ghc@8.10\n"
+      "caveats": "haskell-language-server is built for GHC versions 8.10.7, 9.2.4.\nYou need to provide your own GHC or install one with\n  brew install ghc\n"
     },
     "arm64_big_sur": {
       "build_dependencies": [
         "cabal-install",
+        "ghc",
         "ghc@8.10"
       ],
-      "caveats": "haskell-language-server is built for GHC versions 8.10.7.\nYou need to provide your own GHC or install one with\n  brew install ghc@8.10\n"
+      "caveats": "haskell-language-server is built for GHC versions 8.10.7, 9.2.4.\nYou need to provide your own GHC or install one with\n  brew install ghc\n"
     },
     "x86_64_linux": {
       "dependencies": [
