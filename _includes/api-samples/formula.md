@@ -73,6 +73,7 @@
       "libidn2",
       "openssl@1.1"
     ],
+    "test_dependencies": [],
     "recommended_dependencies": [],
     "optional_dependencies": [],
     "uses_from_macos": [],
