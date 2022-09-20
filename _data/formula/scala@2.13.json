@@ -1,13 +1,12 @@
 {
-  "name": "scala",
-  "full_name": "scala",
+  "name": "scala@2.13",
+  "full_name": "scala@2.13",
   "tap": "homebrew/core",
   "oldname": null,
   "aliases": [
-    "scala@3"
+
   ],
   "versioned_formulae": [
-    "scala@2.13",
     "scala@2.12",
     "scala@2.11"
   ],
@@ -15,13 +14,13 @@
   "license": "Apache-2.0",
   "homepage": "https://www.scala-lang.org/",
   "versions": {
-    "stable": "3.2.0",
+    "stable": "2.13.8",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/lampepfl/dotty/releases/download/3.2.0/scala3-3.2.0.tar.gz",
+      "url": "https://downloads.lightbend.com/scala/2.13.8/scala-2.13.8.tgz",
       "tag": null,
       "revision": null
     }
@@ -35,14 +34,17 @@
       "files": {
         "all": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/scala/blobs/sha256:cb90d58557b370ad0127b99e9bf18ac6244d4e5980c2548bed7f43601c0246a6",
-          "sha256": "cb90d58557b370ad0127b99e9bf18ac6244d4e5980c2548bed7f43601c0246a6"
+          "url": "https://ghcr.io/v2/homebrew/core/scala/2.13/blobs/sha256:9e72814dbfe3220086b69adcac0b3c11a2a46dd8a8507d9d933433476e632ccc",
+          "sha256": "9e72814dbfe3220086b69adcac0b3c11a2a46dd8a8507d9d933433476e632ccc"
         }
       }
     }
   },
-  "keg_only": false,
-  "keg_only_reason": null,
+  "keg_only": true,
+  "keg_only_reason": {
+    "reason": ":versioned_formula",
+    "explanation": ""
+  },
   "options": [
 
   ],
@@ -67,7 +69,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "To use with IntelliJ, set the Scala home to:\n  $(brew --prefix)/opt/scala/idea\n",
+  "caveats": "To use with IntelliJ, set the Scala home to:\n  $(brew --prefix)/opt/scala@2.13/idea\n",
   "installed": [
 
   ],
