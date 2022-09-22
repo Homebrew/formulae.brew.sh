@@ -7,38 +7,15 @@
   ],
   "desc": "Database management and analysis tool",
   "homepage": "https://www.dbvis.com/",
-  "url": "https://www.dbvis.com/product_download/dbvis-13.0.5/media/dbvis_macos_13_0_5_jre.dmg",
+  "url": "https://www.dbvis.com/product_download/dbvis-14.0/media/dbvis_macos-x64_14_0.dmg",
   "appcast": null,
-  "version": "13.0.5",
+  "version": "14.0",
   "versions": {
   },
   "installed": null,
   "outdated": false,
-  "sha256": "6b27c46b4d99b74f19add91b2b16d9289d0df4b1d99e2afd920d7ebeca79a440",
+  "sha256": "693d858e5e9575f85a4b486ae49c14953a433f3e8250d399d27cf55f04c9b2e3",
   "artifacts": [
-    {
-      "uninstall": [
-        {
-          "signal": {
-            "TERM": "com.dbvis.DbVisualizer"
-          }
-        }
-      ]
-    },
-    {
-      "installer": [
-        {
-          "script": {
-            "executable": "DbVisualizer Installer.app/Contents/MacOS/JavaApplicationStub",
-            "args": [
-              "-q",
-              "-dir",
-              "$(brew --prefix)/Caskroom/dbvisualizer/13.0.5"
-            ]
-          }
-        }
-      ]
-    },
     {
       "app": [
         "DbVisualizer.app"
@@ -47,17 +24,38 @@
     {
       "zap": [
         {
-          "trash": "~/.dbvis"
+          "trash": [
+            "~/.dbvis",
+            "~/Library/Preferences/com.dbvis.DbVisualizer.plist",
+            "~/Library/Saved Application State/com.dbvis.DbVisualizer.savedState"
+          ]
         }
       ]
     }
   ],
   "caveats": null,
   "depends_on": {
+    "macos": {
+      ">=": [
+        "10.11"
+      ]
+    }
   },
   "conflicts_with": null,
   "container": null,
   "auto_updates": null,
   "variations": {
+    "arm64_ventura": {
+      "url": "https://www.dbvis.com/product_download/dbvis-14.0/media/dbvis_macos-aarch64_14_0.dmg",
+      "sha256": "85484ed1b2613b631399980e915ca5656f963dab86ee09c419e0a011b94bcdf9"
+    },
+    "arm64_monterey": {
+      "url": "https://www.dbvis.com/product_download/dbvis-14.0/media/dbvis_macos-aarch64_14_0.dmg",
+      "sha256": "85484ed1b2613b631399980e915ca5656f963dab86ee09c419e0a011b94bcdf9"
+    },
+    "arm64_big_sur": {
+      "url": "https://www.dbvis.com/product_download/dbvis-14.0/media/dbvis_macos-aarch64_14_0.dmg",
+      "sha256": "85484ed1b2613b631399980e915ca5656f963dab86ee09c419e0a011b94bcdf9"
+    }
   }
 }
