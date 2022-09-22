@@ -13,18 +13,18 @@
   "license": "GPL-2.0-or-later",
   "homepage": "https://www.geeqie.org/",
   "versions": {
-    "stable": "1.7.3",
+    "stable": "2.0.1",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/BestImageViewer/geeqie/releases/download/v1.7.3/geeqie-1.7.3.tar.xz",
+      "url": "https://github.com/BestImageViewer/geeqie/releases/download/v2.0.1/geeqie-2.0.1.tar.xz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -33,33 +33,33 @@
       "files": {
         "arm64_monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/geeqie/blobs/sha256:3b3cf00e0d5942d061756b850edc8675a7fcbef19bb44db675deab85f2f89b49",
-          "sha256": "3b3cf00e0d5942d061756b850edc8675a7fcbef19bb44db675deab85f2f89b49"
+          "url": "https://ghcr.io/v2/homebrew/core/geeqie/blobs/sha256:ac70763fb3ebb511318c096abbb73e1f5d7fa40922c41cd31012d1e963e05189",
+          "sha256": "ac70763fb3ebb511318c096abbb73e1f5d7fa40922c41cd31012d1e963e05189"
         },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/geeqie/blobs/sha256:a16904a1405682d3f7b2ce364349a13b849d8484bc64d3ed6e50a5b039c0602c",
-          "sha256": "a16904a1405682d3f7b2ce364349a13b849d8484bc64d3ed6e50a5b039c0602c"
+          "url": "https://ghcr.io/v2/homebrew/core/geeqie/blobs/sha256:372ad39f0335714ff5f459cd850141cd54def30feeed55ee845fc55f2098f1fb",
+          "sha256": "372ad39f0335714ff5f459cd850141cd54def30feeed55ee845fc55f2098f1fb"
         },
         "monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/geeqie/blobs/sha256:0b11ddf837b2078f6732f993a86fb38bd09b75e1d759e75f4ab6a4a25a261c99",
-          "sha256": "0b11ddf837b2078f6732f993a86fb38bd09b75e1d759e75f4ab6a4a25a261c99"
+          "url": "https://ghcr.io/v2/homebrew/core/geeqie/blobs/sha256:ff8f08b56185a58aac2cbb5ba906a86cb32ba0f567389d761f77a72a80ce2964",
+          "sha256": "ff8f08b56185a58aac2cbb5ba906a86cb32ba0f567389d761f77a72a80ce2964"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/geeqie/blobs/sha256:b0a079d4973057f1d6ff163c9bac4313ca8e1ee458aa31a46e76fa93c001e77f",
-          "sha256": "b0a079d4973057f1d6ff163c9bac4313ca8e1ee458aa31a46e76fa93c001e77f"
+          "url": "https://ghcr.io/v2/homebrew/core/geeqie/blobs/sha256:6e971d552d318c0335a555696141afb08aefb9aac05f124e3e3a22bb1c694200",
+          "sha256": "6e971d552d318c0335a555696141afb08aefb9aac05f124e3e3a22bb1c694200"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/geeqie/blobs/sha256:64b9a1210db86f04315c80a722feef26fd428b19625e9d9c3da71059b1697912",
-          "sha256": "64b9a1210db86f04315c80a722feef26fd428b19625e9d9c3da71059b1697912"
+          "url": "https://ghcr.io/v2/homebrew/core/geeqie/blobs/sha256:63d34b4e573a77ece1201658bdf5f458cecc805835f2bf7c681ad6c4988aaebe",
+          "sha256": "63d34b4e573a77ece1201658bdf5f458cecc805835f2bf7c681ad6c4988aaebe"
         },
         "x86_64_linux": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/geeqie/blobs/sha256:5d4a1a0535b8015c07d3a490e454216480af9d68d67e00e16af779d3aeaa9a57",
-          "sha256": "5d4a1a0535b8015c07d3a490e454216480af9d68d67e00e16af779d3aeaa9a57"
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/geeqie/blobs/sha256:ddb88515ed437fef92099883720bfb4e4fd072175b9fc25a725c4768e40f3444",
+          "sha256": "ddb88515ed437fef92099883720bfb4e4fd072175b9fc25a725c4768e40f3444"
         }
       }
     }
@@ -70,9 +70,8 @@
 
   ],
   "build_dependencies": [
-    "autoconf",
-    "automake",
-    "intltool",
+    "meson",
+    "ninja",
     "pkg-config"
   ],
   "dependencies": [
@@ -102,7 +101,7 @@
   ],
   "uses_from_macos": [
     {
-      "perl": "build"
+      "vim": "build"
     }
   ],
   "requirements": [
