@@ -11,15 +11,15 @@
   ],
   "desc": "Convert a Container Linux Config into Ignition",
   "license": "Apache-2.0",
-  "homepage": "https://coreos.com/os/docs/latest/configuration.html",
+  "homepage": "https://flatcar-linux.org/docs/latest/provisioning/config-transpiler/",
   "versions": {
-    "stable": "0.9.0",
+    "stable": "0.9.4",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/coreos/container-linux-config-transpiler/archive/v0.9.0.tar.gz",
+      "url": "https://github.com/flatcar/container-linux-config-transpiler/archive/v0.9.4.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -31,35 +31,35 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/coreos-ct/blobs/sha256:daecb2d366f73487e19a3357e64fe02be095ba9a92ac8d6ed4350d3281d5f9dc",
+          "sha256": "daecb2d366f73487e19a3357e64fe02be095ba9a92ac8d6ed4350d3281d5f9dc"
+        },
+        "arm64_big_sur": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/coreos-ct/blobs/sha256:01ee0a8cdf60e4f9ceefbb28529c508ff16cc8dcc8e6b9d3ea3ab2c5bf05e8a6",
+          "sha256": "01ee0a8cdf60e4f9ceefbb28529c508ff16cc8dcc8e6b9d3ea3ab2c5bf05e8a6"
+        },
+        "monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/coreos-ct/blobs/sha256:d5b7543e14bd73c528cbfca81b32f56c18d17018ef4e7edf7d16870223eaaee2",
+          "sha256": "d5b7543e14bd73c528cbfca81b32f56c18d17018ef4e7edf7d16870223eaaee2"
+        },
         "big_sur": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/coreos-ct/blobs/sha256:a1b57820f00633b3e3af5d7cbee4accb970e8fee0e092fce3901801f3c84ce1e",
-          "sha256": "a1b57820f00633b3e3af5d7cbee4accb970e8fee0e092fce3901801f3c84ce1e"
+          "url": "https://ghcr.io/v2/homebrew/core/coreos-ct/blobs/sha256:9517910a97a3643010e7d0ccc65dab68a6e85a7321780a0d3e095686530b6502",
+          "sha256": "9517910a97a3643010e7d0ccc65dab68a6e85a7321780a0d3e095686530b6502"
         },
         "catalina": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/coreos-ct/blobs/sha256:db582062a1743b1f01a0a90012e8a66d73b2518d88b4fb897afe9709565f6a95",
-          "sha256": "db582062a1743b1f01a0a90012e8a66d73b2518d88b4fb897afe9709565f6a95"
+          "url": "https://ghcr.io/v2/homebrew/core/coreos-ct/blobs/sha256:acb5592eabf664da5576e643378d903d9c30b3ed57c2ecaba8b0d48c8f561041",
+          "sha256": "acb5592eabf664da5576e643378d903d9c30b3ed57c2ecaba8b0d48c8f561041"
         },
-        "mojave": {
+        "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/coreos-ct/blobs/sha256:883c46865e141d74fa7f0815fc51d3f9ea3145019f28dcec402fc457d3f67e27",
-          "sha256": "883c46865e141d74fa7f0815fc51d3f9ea3145019f28dcec402fc457d3f67e27"
-        },
-        "high_sierra": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/coreos-ct/blobs/sha256:5acd28f4e5dd0c74938cc7e7e10c5501badbab1d05316537a9afa173ff64f44e",
-          "sha256": "5acd28f4e5dd0c74938cc7e7e10c5501badbab1d05316537a9afa173ff64f44e"
-        },
-        "sierra": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/coreos-ct/blobs/sha256:8f09ba9875fe34e55de7fd25514493f41276d5c5e9f3cd37e00288fb6d44323e",
-          "sha256": "8f09ba9875fe34e55de7fd25514493f41276d5c5e9f3cd37e00288fb6d44323e"
-        },
-        "el_capitan": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/coreos-ct/blobs/sha256:9a48da5217b7e4b57e56702ee884fbc3067ccd895c2144cf7b02571cbcb80b42",
-          "sha256": "9a48da5217b7e4b57e56702ee884fbc3067ccd895c2144cf7b02571cbcb80b42"
+          "url": "https://ghcr.io/v2/homebrew/core/coreos-ct/blobs/sha256:ebf7582f950db123c1c3e6281ca2947c95abe58b116af11681a24085d1eb1e82",
+          "sha256": "ebf7582f950db123c1c3e6281ca2947c95abe58b116af11681a24085d1eb1e82"
         }
       }
     }
@@ -103,9 +103,9 @@
   "deprecated": false,
   "deprecation_date": null,
   "deprecation_reason": null,
-  "disabled": true,
-  "disable_date": "2022-07-31",
-  "disable_reason": "repo_archived",
+  "disabled": false,
+  "disable_date": null,
+  "disable_reason": null,
   "variations": {
   }
 }
