@@ -10,7 +10,7 @@ on:
 concurrency:
   group: scheduled
   cancel-in-progress: true
-  
+
 permissions:
   contents: write
 
@@ -20,7 +20,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [macOS-latest, ubuntu-latest]
+        os: [macos-latest, ubuntu-22.04]
     steps:
       - name: Check out repository
         uses: actions/checkout@main
@@ -33,7 +33,7 @@ jobs:
         uses: Homebrew/actions/setup-homebrew@master
 
       - name: Set up dependency stubs
-        if: matrix.os == 'ubuntu-latest'
+        if: matrix.os == 'ubuntu-22.04'
         run: |
           # create stubs so build dependencies aren't incorrectly flagged as missing
           for i in python svn unzip xz
@@ -48,7 +48,7 @@ jobs:
           username: BrewTestBot
 
       - name: Set up Ruby
-        if: matrix.os == 'ubuntu-latest'
+        if: matrix.os == 'ubuntu-22.04'
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: "2.6"
@@ -59,7 +59,7 @@ jobs:
         run: echo "$ANALYTICS_JSON_KEY" > ~/.homebrew_analytics.json
 
       - name: Update data for homebrew/core and homebrew/cask
-        if: matrix.os == 'macOS-latest'
+        if: matrix.os == 'macos-latest'
         run: |
           /usr/bin/rake
 
@@ -85,7 +85,7 @@ jobs:
           fi
 
       - name: Update analytics data for Homebrew/linuxbrew-core
-        if: matrix.os == 'ubuntu-latest'
+        if: matrix.os == 'ubuntu-22.04'
         run: |
           rake linux_analytics
 
