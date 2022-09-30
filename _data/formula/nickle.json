@@ -13,13 +13,13 @@
   "license": "MIT",
   "homepage": "https://www.nickle.org/",
   "versions": {
-    "stable": "2.90",
-    "head": null,
+    "stable": "2.91",
+    "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://www.nickle.org/release/nickle-2.90.tar.gz",
+      "url": "https://deb.debian.org/debian/pool/main/n/nickle/nickle_2.91.tar.xz",
       "tag": null,
       "revision": null
     }
@@ -33,28 +33,23 @@
       "files": {
         "monterey": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/nickle/blobs/sha256:b1258d434acb09bb06f6a466a0e895fabbe2469c38d45da48ca8fe8a98d64e4a",
-          "sha256": "b1258d434acb09bb06f6a466a0e895fabbe2469c38d45da48ca8fe8a98d64e4a"
+          "url": "https://ghcr.io/v2/homebrew/core/nickle/blobs/sha256:372a728eaa440022fb6cf28a8a2e4f63171e202efd1d6cc2ab91c934d4f84423",
+          "sha256": "372a728eaa440022fb6cf28a8a2e4f63171e202efd1d6cc2ab91c934d4f84423"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/nickle/blobs/sha256:6e377f6674d6609f634b28941d8c53fef94c9cb429f31d1c765e4a5d8607e88d",
-          "sha256": "6e377f6674d6609f634b28941d8c53fef94c9cb429f31d1c765e4a5d8607e88d"
+          "url": "https://ghcr.io/v2/homebrew/core/nickle/blobs/sha256:135347f40925ae8ff735756acbce9a34d214b4edd489355e8fd1579c716b4657",
+          "sha256": "135347f40925ae8ff735756acbce9a34d214b4edd489355e8fd1579c716b4657"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/nickle/blobs/sha256:3e1d028467ee41d963e9eaa9809f288fbc3effd826e09ae69bd4e4bfd26679c5",
-          "sha256": "3e1d028467ee41d963e9eaa9809f288fbc3effd826e09ae69bd4e4bfd26679c5"
-        },
-        "mojave": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/nickle/blobs/sha256:6fa77667c30e0dfa186868159076bd2e003c34d32624915481f8c52e68b97f23",
-          "sha256": "6fa77667c30e0dfa186868159076bd2e003c34d32624915481f8c52e68b97f23"
+          "url": "https://ghcr.io/v2/homebrew/core/nickle/blobs/sha256:10005a33c40d894911d86bc45ad8671eda24d63d2b4117b61540e6bcc6ac1a85",
+          "sha256": "10005a33c40d894911d86bc45ad8671eda24d63d2b4117b61540e6bcc6ac1a85"
         },
         "x86_64_linux": {
           "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/nickle/blobs/sha256:a80572816adbeb145a3dd76b327bff79653d6ff504eba14b9fb767e73c64a992",
-          "sha256": "a80572816adbeb145a3dd76b327bff79653d6ff504eba14b9fb767e73c64a992"
+          "url": "https://ghcr.io/v2/homebrew/core/nickle/blobs/sha256:3350bde797ffbe319c870163dadcb69d413fcf6c50c75ab88e3e5d5977ae0034",
+          "sha256": "3350bde797ffbe319c870163dadcb69d413fcf6c50c75ab88e3e5d5977ae0034"
         }
       }
     }
@@ -65,7 +60,9 @@
 
   ],
   "build_dependencies": [
-
+    "autoconf",
+    "automake",
+    "flex"
   ],
   "dependencies": [
     "readline"
@@ -80,7 +77,9 @@
 
   ],
   "uses_from_macos": [
-
+    {
+      "bison": "build"
+    }
   ],
   "requirements": [
 
