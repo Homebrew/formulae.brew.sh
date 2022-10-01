@@ -14,7 +14,7 @@
   "homepage": "https://programming.nu/",
   "versions": {
     "stable": "2.3.0",
-    "head": null,
+    "head": "HEAD",
     "bottle": true
   },
   "urls": {
@@ -76,10 +76,7 @@
   ],
   "uses_from_macos": [
     {
-      "llvm": [
-        "build",
-        "test"
-      ]
+      "llvm": "build"
     },
     {
       "swift": "build"
@@ -106,6 +103,24 @@
   "disable_date": null,
   "disable_reason": null,
   "variations": {
+    "arm64_ventura": {
+      "dependencies": [
+        "pcre",
+        "libffi"
+      ]
+    },
+    "arm64_monterey": {
+      "dependencies": [
+        "pcre",
+        "libffi"
+      ]
+    },
+    "arm64_big_sur": {
+      "dependencies": [
+        "pcre",
+        "libffi"
+      ]
+    },
     "x86_64_linux": {
       "build_dependencies": [
         "llvm",
@@ -116,10 +131,8 @@
         "pcre",
         "libffi",
         "gnustep-base",
-        "libobjc2"
-      ],
-      "test_dependencies": [
-        "llvm"
+        "libobjc2",
+        "readline"
       ],
       "caveats": null
     }
