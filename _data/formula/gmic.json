@@ -13,13 +13,13 @@
   "license": "CECILL-2.1",
   "homepage": "https://gmic.eu/",
   "versions": {
-    "stable": "3.0.1",
+    "stable": "3.1.6",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://gmic.eu/files/source/gmic_3.0.1.tar.gz",
+      "url": "https://gmic.eu/files/source/gmic_3.1.6.tar.gz",
       "tag": null,
       "revision": null
     }
@@ -33,33 +33,33 @@
       "files": {
         "arm64_monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/gmic/blobs/sha256:c4695a687fe50770a04247de2b403f5baecb1ab1ce71646bdcf90483046377d8",
-          "sha256": "c4695a687fe50770a04247de2b403f5baecb1ab1ce71646bdcf90483046377d8"
+          "url": "https://ghcr.io/v2/homebrew/core/gmic/blobs/sha256:72dcacdcda2094a8e45e3e661c90f6212dc4a318770cf96e1663959f6615adb7",
+          "sha256": "72dcacdcda2094a8e45e3e661c90f6212dc4a318770cf96e1663959f6615adb7"
         },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/gmic/blobs/sha256:eae7c4b071fd61a508978708ded5ab272d43634122b7480566b369bee918e84b",
-          "sha256": "eae7c4b071fd61a508978708ded5ab272d43634122b7480566b369bee918e84b"
+          "url": "https://ghcr.io/v2/homebrew/core/gmic/blobs/sha256:71d73eaa67e5f4d725a99b97da172060590db4372f8ee66998cb928e0df75da5",
+          "sha256": "71d73eaa67e5f4d725a99b97da172060590db4372f8ee66998cb928e0df75da5"
         },
         "monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/gmic/blobs/sha256:e0360d49276b222dca348523b08f72406d57ae92085c8ad7240a905230bc60fd",
-          "sha256": "e0360d49276b222dca348523b08f72406d57ae92085c8ad7240a905230bc60fd"
+          "url": "https://ghcr.io/v2/homebrew/core/gmic/blobs/sha256:69bcbea5efe9cdb517b4845f2cd68098fc49f562c8ce7120a350698811b760e9",
+          "sha256": "69bcbea5efe9cdb517b4845f2cd68098fc49f562c8ce7120a350698811b760e9"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/gmic/blobs/sha256:efe20f281b18e825d282c0672f9b4bd525cac7d6e2dd971213ab95c1db555ee5",
-          "sha256": "efe20f281b18e825d282c0672f9b4bd525cac7d6e2dd971213ab95c1db555ee5"
+          "url": "https://ghcr.io/v2/homebrew/core/gmic/blobs/sha256:30f5ff5725f9a534e53b00f20131eac293fddc06e1be616af8e537eca7dabe7a",
+          "sha256": "30f5ff5725f9a534e53b00f20131eac293fddc06e1be616af8e537eca7dabe7a"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/gmic/blobs/sha256:864e83816816e75e1f39a7f448d5e1cc204073956806cdfcbc289a78f52ba220",
-          "sha256": "864e83816816e75e1f39a7f448d5e1cc204073956806cdfcbc289a78f52ba220"
+          "url": "https://ghcr.io/v2/homebrew/core/gmic/blobs/sha256:17237ebe1d43273a2a0862f90162f5e5a3f8bf59083f31bbe313082095565ec8",
+          "sha256": "17237ebe1d43273a2a0862f90162f5e5a3f8bf59083f31bbe313082095565ec8"
         },
         "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/gmic/blobs/sha256:4e61637e97caf2fdd854f10c685ef304731a607a8a4e0161d49b0dcfeeac08ef",
-          "sha256": "4e61637e97caf2fdd854f10c685ef304731a607a8a4e0161d49b0dcfeeac08ef"
+          "url": "https://ghcr.io/v2/homebrew/core/gmic/blobs/sha256:06a19742505766b9ae1c10405eaa585381dd8e2d3d22de9b23f148bb2c7d9ef6",
+          "sha256": "06a19742505766b9ae1c10405eaa585381dd8e2d3d22de9b23f148bb2c7d9ef6"
         }
       }
     }
@@ -70,13 +70,14 @@
 
   ],
   "build_dependencies": [
-    "cmake"
+    "pkg-config"
   ],
   "dependencies": [
     "fftw",
-    "jpeg",
+    "jpeg-turbo",
     "libpng",
-    "libtiff"
+    "libtiff",
+    "openexr"
   ],
   "test_dependencies": [
 
@@ -88,7 +89,8 @@
 
   ],
   "uses_from_macos": [
-
+    "curl",
+    "zlib"
   ],
   "requirements": [
 
