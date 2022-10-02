@@ -168,13 +168,13 @@
   "analytics": {
     "install": {
       "30d": {
-        "docker": 25490
+        "docker": 24711
       },
       "90d": {
-        "docker": 78661
+        "docker": 78505
       },
       "365d": {
-        "docker": 298486
+        "docker": 297959
       }
     }
   },
