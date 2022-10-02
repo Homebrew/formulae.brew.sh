@@ -13,13 +13,13 @@
   "license": "Apache-2.0",
   "homepage": "https://www.arangodb.com/",
   "versions": {
-    "stable": "3.9.2",
+    "stable": "3.9.3",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://download.arangodb.com/Source/ArangoDB-3.9.2.tar.bz2",
+      "url": "https://download.arangodb.com/Source/ArangoDB-3.9.3.tar.bz2",
       "tag": null,
       "revision": null
     }
@@ -33,23 +33,23 @@
       "files": {
         "monterey": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/arangodb/blobs/sha256:6ce88863c3d64b6e0f80157b81ccada705ba6a364ee8ff827e46f63df16b3b10",
-          "sha256": "6ce88863c3d64b6e0f80157b81ccada705ba6a364ee8ff827e46f63df16b3b10"
+          "url": "https://ghcr.io/v2/homebrew/core/arangodb/blobs/sha256:fa9cfb815626809db09fae96b14902750d52b32045c204be4d3dd47b2153591a",
+          "sha256": "fa9cfb815626809db09fae96b14902750d52b32045c204be4d3dd47b2153591a"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/arangodb/blobs/sha256:e38065e33bd2ee3eee533bcde177f1ce0c3dfd7c8857f678fe73d4e2e8fcec75",
-          "sha256": "e38065e33bd2ee3eee533bcde177f1ce0c3dfd7c8857f678fe73d4e2e8fcec75"
+          "url": "https://ghcr.io/v2/homebrew/core/arangodb/blobs/sha256:2d89e2bb77096fec1cc03ddc38faffb3c783b151b8e901951bf3bb9598120282",
+          "sha256": "2d89e2bb77096fec1cc03ddc38faffb3c783b151b8e901951bf3bb9598120282"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/arangodb/blobs/sha256:5420623e77cc3c4dd8c272a791ce8d102d46fdceeea983104f2443a6b2cb95c8",
-          "sha256": "5420623e77cc3c4dd8c272a791ce8d102d46fdceeea983104f2443a6b2cb95c8"
+          "url": "https://ghcr.io/v2/homebrew/core/arangodb/blobs/sha256:2b6ef1ed9d1b984ffb10d813151eae4f9f7bfdf8a735496a3454026b51030e5b",
+          "sha256": "2b6ef1ed9d1b984ffb10d813151eae4f9f7bfdf8a735496a3454026b51030e5b"
         },
         "x86_64_linux": {
           "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/arangodb/blobs/sha256:8c311faac036bab8fc2acee10adf136275ccbf5c976795fadae2b08adaefffaf",
-          "sha256": "8c311faac036bab8fc2acee10adf136275ccbf5c976795fadae2b08adaefffaf"
+          "url": "https://ghcr.io/v2/homebrew/core/arangodb/blobs/sha256:2b4b33bdaa222b35622a15cffc573769b7206851531eb5576de11af2cca29cdd",
+          "sha256": "2b4b33bdaa222b35622a15cffc573769b7206851531eb5576de11af2cca29cdd"
         }
       }
     }
@@ -60,9 +60,8 @@
 
   ],
   "build_dependencies": [
-    "ccache",
     "cmake",
-    "go@1.17",
+    "go",
     "python@3.10"
   ],
   "dependencies": [
@@ -108,11 +107,5 @@
   "disable_date": null,
   "disable_reason": null,
   "variations": {
-    "x86_64_linux": {
-      "dependencies": [
-        "openssl@1.1",
-        "gcc"
-      ]
-    }
   }
 }
