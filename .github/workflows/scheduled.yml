@@ -20,7 +20,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [macos-latest, ubuntu-22.04]
+        os: [macos-11, ubuntu-22.04]
     steps:
       - name: Check out repository
         uses: actions/checkout@main
@@ -59,7 +59,7 @@ jobs:
         run: echo "$ANALYTICS_JSON_KEY" > ~/.homebrew_analytics.json
 
       - name: Update data for homebrew/core and homebrew/cask
-        if: matrix.os == 'macos-latest'
+        if: matrix.os == 'macos-11'
         run: |
           /usr/bin/rake
 
