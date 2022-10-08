@@ -84,7 +84,7 @@
       "used_options": [],
       "built_as_bottle": true,
       "poured_from_bottle": true,
-      "time": 1664151574,
+      "time": 1664756499,
       "runtime_dependencies": [
         {
           "full_name": "gettext",
@@ -173,25 +173,25 @@
   "analytics-linux": {
     "install": {
       "30d": {
-        "wget": 1440
+        "wget": 1437
       },
       "90d": {
-        "wget": 3899
+        "wget": 3916
       },
       "365d": {
-        "wget": 13730,
+        "wget": 13716,
         "wget --HEAD": 2
       }
     },
     "install_on_request": {
       "30d": {
-        "wget": 1367
+        "wget": 1361
       },
       "90d": {
-        "wget": 3775
+        "wget": 3789
       },
       "365d": {
-        "wget": 13420,
+        "wget": 13406,
         "wget --HEAD": 2
       }
     },
@@ -201,6 +201,6 @@
       }
     }
   },
-  "generated_date": "2022-10-06"
+  "generated_date": "2022-10-08"
 }
 ```
