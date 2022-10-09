@@ -1,8 +1,8 @@
 {
-  "name": "libtorch",
-  "full_name": "libtorch",
+  "name": "pytorch",
+  "full_name": "pytorch",
   "tap": "homebrew/core",
-  "oldname": null,
+  "oldname": "libtorch",
   "aliases": [
 
   ],
@@ -28,38 +28,38 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
         "arm64_monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/libtorch/blobs/sha256:5e16e47a6006e86190a245820fafbefef2829478818d61b0d6dc9b851f729d78",
-          "sha256": "5e16e47a6006e86190a245820fafbefef2829478818d61b0d6dc9b851f729d78"
+          "url": "https://ghcr.io/v2/homebrew/core/pytorch/blobs/sha256:17dd6a096eee8aecdfd693be17ee30f207f2ada880e52ae3a8bc8a39d7c8cf23",
+          "sha256": "17dd6a096eee8aecdfd693be17ee30f207f2ada880e52ae3a8bc8a39d7c8cf23"
         },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/libtorch/blobs/sha256:4d49131eeb1e403521fcf04833b004a0af997381a54d018047776fe9b3f7dfc7",
-          "sha256": "4d49131eeb1e403521fcf04833b004a0af997381a54d018047776fe9b3f7dfc7"
+          "url": "https://ghcr.io/v2/homebrew/core/pytorch/blobs/sha256:c9a913b6c2a60970338d9ed82f9be168b992f05bbde109f0f65cddaaf0cef602",
+          "sha256": "c9a913b6c2a60970338d9ed82f9be168b992f05bbde109f0f65cddaaf0cef602"
         },
         "monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/libtorch/blobs/sha256:30fca833944f65f0d7c1df6170bbcbdda67623054acc6b99714a38766c9bf975",
-          "sha256": "30fca833944f65f0d7c1df6170bbcbdda67623054acc6b99714a38766c9bf975"
+          "url": "https://ghcr.io/v2/homebrew/core/pytorch/blobs/sha256:41479b4c2d8e9ee045fde9f6f0845c6f154da08e0195acde96462cda084cc863",
+          "sha256": "41479b4c2d8e9ee045fde9f6f0845c6f154da08e0195acde96462cda084cc863"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/libtorch/blobs/sha256:a86aeb431832568ebcf214fbf7d08e96cec8a11eabb07c1e125db1ad48089a95",
-          "sha256": "a86aeb431832568ebcf214fbf7d08e96cec8a11eabb07c1e125db1ad48089a95"
+          "url": "https://ghcr.io/v2/homebrew/core/pytorch/blobs/sha256:74be80be51c2842d3cd81125f4ea71b2fdff940446c4a513835e66629df88479",
+          "sha256": "74be80be51c2842d3cd81125f4ea71b2fdff940446c4a513835e66629df88479"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/libtorch/blobs/sha256:ec36245f5f4274950e000d6a998af57ce93e3357a797ea143d50d5a399e2f270",
-          "sha256": "ec36245f5f4274950e000d6a998af57ce93e3357a797ea143d50d5a399e2f270"
+          "url": "https://ghcr.io/v2/homebrew/core/pytorch/blobs/sha256:a1654f4f335fa0f76b99355b9ef2118eb4225c41d189c282beb75d0fc0302164",
+          "sha256": "a1654f4f335fa0f76b99355b9ef2118eb4225c41d189c282beb75d0fc0302164"
         },
         "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/libtorch/blobs/sha256:bbcffba1dbf409906cc77a2d1889e9ee656a46065dbdb1896f7ff12ca8749a93",
-          "sha256": "bbcffba1dbf409906cc77a2d1889e9ee656a46065dbdb1896f7ff12ca8749a93"
+          "url": "https://ghcr.io/v2/homebrew/core/pytorch/blobs/sha256:f8621ecee06694da1a68357a4fb40417905b8c3de0c486dfc8f0ce2dcac32804",
+          "sha256": "f8621ecee06694da1a68357a4fb40417905b8c3de0c486dfc8f0ce2dcac32804"
         }
       }
     }
@@ -71,11 +71,13 @@
   ],
   "build_dependencies": [
     "cmake",
+    "ninja",
     "python@3.10"
   ],
   "dependencies": [
     "eigen",
     "libuv",
+    "numpy",
     "openblas",
     "openssl@1.1",
     "protobuf",
@@ -85,7 +87,7 @@
     "libomp"
   ],
   "test_dependencies": [
-
+    "python@3.10"
   ],
   "recommended_dependencies": [
 
@@ -120,6 +122,7 @@
       "dependencies": [
         "eigen",
         "libuv",
+        "numpy",
         "openblas",
         "openssl@1.1",
         "protobuf",
