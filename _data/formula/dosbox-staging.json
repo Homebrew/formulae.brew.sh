@@ -13,53 +13,53 @@
   "license": "GPL-2.0-or-later",
   "homepage": "https://dosbox-staging.github.io/",
   "versions": {
-    "stable": "0.78.1",
+    "stable": "0.79.0",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/dosbox-staging/dosbox-staging/archive/v0.78.1.tar.gz",
+      "url": "https://github.com/dosbox-staging/dosbox-staging/archive/v0.79.0.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
         "arm64_monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/dosbox-staging/blobs/sha256:aee8f83dc640a97a4b757386dd049f06be41c471688be8720f50f224edf6edf7",
-          "sha256": "aee8f83dc640a97a4b757386dd049f06be41c471688be8720f50f224edf6edf7"
+          "url": "https://ghcr.io/v2/homebrew/core/dosbox-staging/blobs/sha256:0ebe5b3c3213a23dcb4eae6b2bc7cac9ce9ad4e1fe70c840b02e3f72d6d72b49",
+          "sha256": "0ebe5b3c3213a23dcb4eae6b2bc7cac9ce9ad4e1fe70c840b02e3f72d6d72b49"
         },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/dosbox-staging/blobs/sha256:3e20ac7db17e1c1cfa454ab71754d5b813bfa7d25b2a109aeef01cbbda2263b1",
-          "sha256": "3e20ac7db17e1c1cfa454ab71754d5b813bfa7d25b2a109aeef01cbbda2263b1"
+          "url": "https://ghcr.io/v2/homebrew/core/dosbox-staging/blobs/sha256:52cab7703cfdc21afe3dca8a26ceadd6cfbb4636850728a9fc854ab6560b704b",
+          "sha256": "52cab7703cfdc21afe3dca8a26ceadd6cfbb4636850728a9fc854ab6560b704b"
         },
         "monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/dosbox-staging/blobs/sha256:c5eed54e549f66e2781609bee5dbe2216dc2cea88eef2d7df44b78bc711a5e3c",
-          "sha256": "c5eed54e549f66e2781609bee5dbe2216dc2cea88eef2d7df44b78bc711a5e3c"
+          "url": "https://ghcr.io/v2/homebrew/core/dosbox-staging/blobs/sha256:02018c8733f3d3b307b9388efed158883128652dc8a460dd28284ae441f34fae",
+          "sha256": "02018c8733f3d3b307b9388efed158883128652dc8a460dd28284ae441f34fae"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/dosbox-staging/blobs/sha256:86bfd2c8677f542c8046e80ef60110d24b32ec24f84f6a4779a2f44c031e0dad",
-          "sha256": "86bfd2c8677f542c8046e80ef60110d24b32ec24f84f6a4779a2f44c031e0dad"
+          "url": "https://ghcr.io/v2/homebrew/core/dosbox-staging/blobs/sha256:b71c2f5a96aa2d6f6bf461b11e076279fba7eaf1c508e0792a6e39820a3686c8",
+          "sha256": "b71c2f5a96aa2d6f6bf461b11e076279fba7eaf1c508e0792a6e39820a3686c8"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/dosbox-staging/blobs/sha256:a616bc8157efa84c5bf4f75bdce6c6717df3fd0349e3e1950906e44a867a88ad",
-          "sha256": "a616bc8157efa84c5bf4f75bdce6c6717df3fd0349e3e1950906e44a867a88ad"
+          "url": "https://ghcr.io/v2/homebrew/core/dosbox-staging/blobs/sha256:a266ceb73bd3fcd47d9963e863750545a439e73bc8363ed9f5e425c9a0b4b47e",
+          "sha256": "a266ceb73bd3fcd47d9963e863750545a439e73bc8363ed9f5e425c9a0b4b47e"
         },
         "x86_64_linux": {
           "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/dosbox-staging/blobs/sha256:508eb77dd99c36837cfa25fd10cdc078b5b551546eed5d356018ebfa53e67b7e",
-          "sha256": "508eb77dd99c36837cfa25fd10cdc078b5b551546eed5d356018ebfa53e67b7e"
+          "url": "https://ghcr.io/v2/homebrew/core/dosbox-staging/blobs/sha256:f50fee225c7a21bf3beea92b134fa3c3571dc7fdd1a093e463f114439d346958",
+          "sha256": "f50fee225c7a21bf3beea92b134fa3c3571dc7fdd1a093e463f114439d346958"
         }
       }
     }
@@ -76,12 +76,15 @@
   ],
   "dependencies": [
     "fluid-synth",
+    "glib",
+    "iir1",
     "libpng",
     "libslirp",
     "mt32emu",
     "opusfile",
     "sdl2",
-    "sdl2_net"
+    "sdl2_net",
+    "speexdsp"
   ],
   "test_dependencies": [
 
@@ -93,7 +96,7 @@
 
   ],
   "uses_from_macos": [
-
+    "zlib"
   ],
   "requirements": [
 
@@ -118,12 +121,16 @@
     "x86_64_linux": {
       "dependencies": [
         "fluid-synth",
+        "glib",
+        "iir1",
         "libpng",
         "libslirp",
         "mt32emu",
         "opusfile",
         "sdl2",
         "sdl2_net",
+        "speexdsp",
+        "zlib",
         "mesa",
         "mesa-glu"
       ]
