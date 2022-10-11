@@ -7,25 +7,35 @@
   ],
   "desc": "Remote desktop software",
   "homepage": "https://www.nomachine.com/",
-  "url": "https://download.nomachine.com/download/7.10/MacOSX/nomachine_7.10.1_1.dmg",
+  "url": "https://download.nomachine.com/download/8.1/MacOSX/nomachine_8.1.2_1.dmg",
   "appcast": null,
-  "version": "7.10.1_1",
+  "version": "8.1.2_1",
   "versions": {
   },
   "installed": null,
   "outdated": false,
-  "sha256": "b1d95ccd7ff67e3282f06e08e0948aba8bf3d5c744e10436583591f6fb0df1a9",
+  "sha256": "156c065a6e5e77d53447753db37f121b57ed823660d9f548b9f52e0d5f0701c9",
   "artifacts": [
     {
       "uninstall": [
         {
           "delete": "/Applications/NoMachine.app",
-          "pkgutil": "com.nomachine.nomachine.NoMachine-*.pkg",
+          "pkgutil": [
+            "com.nomachine.nomachine.NoMachine-*.pkg",
+            "com.nomachine.nxnode",
+            "com.nomachine.nxplayer",
+            "com.nomachine.nxrunner",
+            "com.nomachine.nxserver"
+          ],
           "launchctl": [
-            "com.nomachine.localnxserver",
+            "com.nomachine.nxnode",
+            "com.nomachine.nxplayer",
+            "com.nomachine.nxrunner",
             "com.nomachine.nxserver",
+            "com.nomachine.localnxserver",
+            "com.nomachine.uninstall",
             "com.nomachine.server",
-            "com.nomachine.uninstall"
+            "com.nomachine.nxlaunchconf"
           ]
         }
       ]
