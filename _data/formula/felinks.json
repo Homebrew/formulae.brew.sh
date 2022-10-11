@@ -19,7 +19,7 @@
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/rkd77/elinks/archive/refs/tags/v0.15.1.tar.gz",
+      "url": "https://github.com/rkd77/elinks/releases/download/v0.15.1/elinks-0.15.1.tar.xz",
       "tag": null,
       "revision": null
     }
@@ -28,38 +28,38 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 0,
+      "rebuild": 1,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
         "arm64_monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/felinks/blobs/sha256:62fb5bbd61d30658befb6916bbb5af4699fb2777286746dcaa94e9828abd2d2c",
-          "sha256": "62fb5bbd61d30658befb6916bbb5af4699fb2777286746dcaa94e9828abd2d2c"
+          "url": "https://ghcr.io/v2/homebrew/core/felinks/blobs/sha256:e16bb34d706cb774e454993bcd9b3e7355d0dafa41314bd9893bce0a84dd7ae7",
+          "sha256": "e16bb34d706cb774e454993bcd9b3e7355d0dafa41314bd9893bce0a84dd7ae7"
         },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/felinks/blobs/sha256:1576662f71a70f08b3bb2b74fa32b8315a9f7a0012979457c805ae01daa770e9",
-          "sha256": "1576662f71a70f08b3bb2b74fa32b8315a9f7a0012979457c805ae01daa770e9"
+          "url": "https://ghcr.io/v2/homebrew/core/felinks/blobs/sha256:674f805753c94b6ae1e4ae3da4d659213e8bbb2b3141d72bb0aed2b3403adf79",
+          "sha256": "674f805753c94b6ae1e4ae3da4d659213e8bbb2b3141d72bb0aed2b3403adf79"
         },
         "monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/felinks/blobs/sha256:9c4d8fa6827abd2147a9b20fe30de764acd9a05c6496ac3d751d94041151d39c",
-          "sha256": "9c4d8fa6827abd2147a9b20fe30de764acd9a05c6496ac3d751d94041151d39c"
+          "url": "https://ghcr.io/v2/homebrew/core/felinks/blobs/sha256:cf7ce03ce6602554161c33dca17bc1ab13cae1f21afea98d185902790ea1a35e",
+          "sha256": "cf7ce03ce6602554161c33dca17bc1ab13cae1f21afea98d185902790ea1a35e"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/felinks/blobs/sha256:7e382952edc473bcfd458d9bbce990acd5120588d62af6d3f37c5db55c9785d2",
-          "sha256": "7e382952edc473bcfd458d9bbce990acd5120588d62af6d3f37c5db55c9785d2"
+          "url": "https://ghcr.io/v2/homebrew/core/felinks/blobs/sha256:89e15011eeac39eda0601814203794c416d8033842a32e95cc71330374401063",
+          "sha256": "89e15011eeac39eda0601814203794c416d8033842a32e95cc71330374401063"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/felinks/blobs/sha256:6338231bbe0e52aaa943e88aa437876604bc45c726b37e91769450b9808c8e43",
-          "sha256": "6338231bbe0e52aaa943e88aa437876604bc45c726b37e91769450b9808c8e43"
+          "url": "https://ghcr.io/v2/homebrew/core/felinks/blobs/sha256:821c66738ec5fa3549eacf6eac30d3fb508c9d01d1ec6bf375b54805fc8e4f21",
+          "sha256": "821c66738ec5fa3549eacf6eac30d3fb508c9d01d1ec6bf375b54805fc8e4f21"
         },
         "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/felinks/blobs/sha256:c130f71e181e3a807ad0e1951b2b0f97301f7107829d21fb3817d263f918c977",
-          "sha256": "c130f71e181e3a807ad0e1951b2b0f97301f7107829d21fb3817d263f918c977"
+          "url": "https://ghcr.io/v2/homebrew/core/felinks/blobs/sha256:a778ac21ccdc917db0bbbfbf7ae7daee9ae56bf10fc9bb81cb3b6cd78ceed9fb",
+          "sha256": "a778ac21ccdc917db0bbbfbf7ae7daee9ae56bf10fc9bb81cb3b6cd78ceed9fb"
         }
       }
     }
@@ -70,16 +70,12 @@
 
   ],
   "build_dependencies": [
-    "autoconf",
-    "automake",
-    "groff",
-    "libtool",
-    "xmlto"
+    "pkg-config"
   ],
   "dependencies": [
     "brotli",
     "libidn",
-    "openssl@1.1",
+    "openssl@3",
     "tre",
     "zstd"
   ],
@@ -93,7 +89,9 @@
 
   ],
   "uses_from_macos": [
-    "bison",
+    {
+      "bison": "build"
+    },
     "bzip2",
     "expat",
     "zlib"
