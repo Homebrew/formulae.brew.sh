@@ -3,18 +3,18 @@
   "full_token": "adobe-acrobat-reader",
   "tap": "homebrew/cask",
   "name": [
-    "Adobe Acrobat Reader DC"
+    "Adobe Acrobat Reader"
   ],
   "desc": "View, print, and comment on PDF documents",
   "homepage": "https://acrobat.adobe.com/us/en/acrobat/pdf-reader.html",
-  "url": "https://ardownload2.adobe.com/pub/adobe/reader/mac/AcrobatDC/2200220191/AcroRdrDC_2200220191_MUI.dmg",
+  "url": "https://ardownload2.adobe.com/pub/adobe/reader/mac/AcrobatDC/2200320258/AcroRdrDC_2200320258_MUI.dmg",
   "appcast": null,
-  "version": "22.002.20191",
+  "version": "22.003.20258",
   "versions": {
   },
   "installed": null,
   "outdated": false,
-  "sha256": "ce522a1903e55fa1c62533fd106e26f6db3d7be6b0a259204217162aeb2ae51b",
+  "sha256": "f23d3f6a6c10e2df540c2345d8b1c90e28b9ef6de7b9d63739ed9b715b2b7ecc",
   "artifacts": [
     {
       "uninstall": [
@@ -24,7 +24,10 @@
             "com.adobe.armdc.app.pkg",
             "com.adobe.RdrServicesUpdater"
           ],
-          "delete": "/Applications/Adobe Acrobat Reader DC.app",
+          "delete": [
+            "/Applications/Adobe Acrobat Reader.app",
+            "/Library/Preferences/com.adobe.reader.DC.WebResource.plist"
+          ],
           "quit": [
             "com.adobe.AdobeRdrCEF",
             "com.adobe.AdobeRdrCEFHelper",
@@ -40,7 +43,7 @@
     },
     {
       "pkg": [
-        "AcroRdrDC_2200220191_MUI.pkg"
+        "AcroRdrDC_2200320258_MUI.pkg"
       ]
     },
     {
@@ -50,9 +53,8 @@
             "~/Library/Caches/com.adobe.Reader",
             "~/Library/HTTPStorages/com.adobe.Reader.binarycookies",
             "~/Library/Preferences/com.adobe.AdobeRdrCEFHelper.plist",
-            "~/Library/Preferences/com.adobe.crashreporter.plist",
             "~/Library/Preferences/com.adobe.Reader.plist",
-            "/Library/Preferences/com.adobe.reader.DC.WebResource.plist"
+            "~/Library/Preferences/com.adobe.crashreporter.plist"
           ]
         }
       ]
