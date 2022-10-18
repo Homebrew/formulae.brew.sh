@@ -72,5 +72,176 @@
   "container": null,
   "auto_updates": null,
   "variations": {
+    "arm64_ventura": {
+      "url": "https://downloads.veertu.com/anka/Anka-3.1.0.151.pkg",
+      "version": "3.1.0.151",
+      "sha256": "6648a9cd0be56fcde4b5c150b2a59e8302306c477ad1a335f1dd56cb8b42a0ce",
+      "artifacts": [
+        {
+          "uninstall": [
+            {
+              "launchctl": [
+                "com.veertu.anka.ankakbd",
+                "com.veertu.anka.ankanetd",
+                "com.veertu.anka.lupd",
+                "com.veertu.nlimit",
+                "com.veertu.vlaunch"
+              ],
+              "script": {
+                "executable": "/Library/Application Support/Veertu/Anka/tools/uninstall.sh",
+                "args": [
+                  "-f"
+                ],
+                "sudo": "true"
+              }
+            }
+          ]
+        },
+        {
+          "pkg": [
+            "Anka-3.1.0.151.pkg"
+          ]
+        },
+        {
+          "zap": [
+            {
+              "trash": [
+                "/Library/Application Support/Veertu/Anka",
+                "~/.anka",
+                "~/Library/Application Support/CrashReporter/ankahv_*.plist",
+                "~/Library/Application Support/Veertu/Anka",
+                "~/Library/Logs/Anka",
+                "~/Library/Preferences/com.veertu.ankaview.plist"
+              ],
+              "rmdir": [
+                "/Library/Application Support/Veertu",
+                "~/Library/Application Support/Veertu"
+              ]
+            }
+          ]
+        }
+      ],
+      "depends_on": {
+        "macos": {
+          ">=": [
+            "12"
+          ]
+        }
+      }
+    },
+    "arm64_monterey": {
+      "url": "https://downloads.veertu.com/anka/Anka-3.1.0.151.pkg",
+      "version": "3.1.0.151",
+      "sha256": "6648a9cd0be56fcde4b5c150b2a59e8302306c477ad1a335f1dd56cb8b42a0ce",
+      "artifacts": [
+        {
+          "uninstall": [
+            {
+              "launchctl": [
+                "com.veertu.anka.ankakbd",
+                "com.veertu.anka.ankanetd",
+                "com.veertu.anka.lupd",
+                "com.veertu.nlimit",
+                "com.veertu.vlaunch"
+              ],
+              "script": {
+                "executable": "/Library/Application Support/Veertu/Anka/tools/uninstall.sh",
+                "args": [
+                  "-f"
+                ],
+                "sudo": "true"
+              }
+            }
+          ]
+        },
+        {
+          "pkg": [
+            "Anka-3.1.0.151.pkg"
+          ]
+        },
+        {
+          "zap": [
+            {
+              "trash": [
+                "/Library/Application Support/Veertu/Anka",
+                "~/.anka",
+                "~/Library/Application Support/CrashReporter/ankahv_*.plist",
+                "~/Library/Application Support/Veertu/Anka",
+                "~/Library/Logs/Anka",
+                "~/Library/Preferences/com.veertu.ankaview.plist"
+              ],
+              "rmdir": [
+                "/Library/Application Support/Veertu",
+                "~/Library/Application Support/Veertu"
+              ]
+            }
+          ]
+        }
+      ],
+      "depends_on": {
+        "macos": {
+          ">=": [
+            "12"
+          ]
+        }
+      }
+    },
+    "arm64_big_sur": {
+      "url": "https://downloads.veertu.com/anka/Anka-3.1.0.151.pkg",
+      "version": "3.1.0.151",
+      "sha256": "6648a9cd0be56fcde4b5c150b2a59e8302306c477ad1a335f1dd56cb8b42a0ce",
+      "artifacts": [
+        {
+          "uninstall": [
+            {
+              "launchctl": [
+                "com.veertu.anka.ankakbd",
+                "com.veertu.anka.ankanetd",
+                "com.veertu.anka.lupd",
+                "com.veertu.nlimit",
+                "com.veertu.vlaunch"
+              ],
+              "script": {
+                "executable": "/Library/Application Support/Veertu/Anka/tools/uninstall.sh",
+                "args": [
+                  "-f"
+                ],
+                "sudo": "true"
+              }
+            }
+          ]
+        },
+        {
+          "pkg": [
+            "Anka-3.1.0.151.pkg"
+          ]
+        },
+        {
+          "zap": [
+            {
+              "trash": [
+                "/Library/Application Support/Veertu/Anka",
+                "~/.anka",
+                "~/Library/Application Support/CrashReporter/ankahv_*.plist",
+                "~/Library/Application Support/Veertu/Anka",
+                "~/Library/Logs/Anka",
+                "~/Library/Preferences/com.veertu.ankaview.plist"
+              ],
+              "rmdir": [
+                "/Library/Application Support/Veertu",
+                "~/Library/Application Support/Veertu"
+              ]
+            }
+          ]
+        }
+      ],
+      "depends_on": {
+        "macos": {
+          ">=": [
+            "12"
+          ]
+        }
+      }
+    }
   }
 }
