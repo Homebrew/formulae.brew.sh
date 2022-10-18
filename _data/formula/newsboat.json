@@ -13,13 +13,13 @@
   "license": "MIT",
   "homepage": "https://newsboat.org/",
   "versions": {
-    "stable": "2.28",
+    "stable": "2.29",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://newsboat.org/releases/2.28/newsboat-2.28.tar.xz",
+      "url": "https://newsboat.org/releases/2.29/newsboat-2.29.tar.xz",
       "tag": null,
       "revision": null
     }
@@ -33,33 +33,33 @@
       "files": {
         "arm64_monterey": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/newsboat/blobs/sha256:cb6a7256342130ae146557201b3a2397f5a89a8a8aa3b9f3bac77cb4bb8f7a41",
-          "sha256": "cb6a7256342130ae146557201b3a2397f5a89a8a8aa3b9f3bac77cb4bb8f7a41"
+          "url": "https://ghcr.io/v2/homebrew/core/newsboat/blobs/sha256:bd4d256739e209041d93f13180476cbe93062fdb0fc6c737a25e2704b43c52cb",
+          "sha256": "bd4d256739e209041d93f13180476cbe93062fdb0fc6c737a25e2704b43c52cb"
         },
         "arm64_big_sur": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/newsboat/blobs/sha256:3bfbf0e2b6f02eaf28aa995d7cd3e4d51cc3910f79b799fe79a02ad5faaf8ab4",
-          "sha256": "3bfbf0e2b6f02eaf28aa995d7cd3e4d51cc3910f79b799fe79a02ad5faaf8ab4"
+          "url": "https://ghcr.io/v2/homebrew/core/newsboat/blobs/sha256:df34eb234f50448d554bf21c69c8d14ade6ba64ac221210f8d4be68226f3e475",
+          "sha256": "df34eb234f50448d554bf21c69c8d14ade6ba64ac221210f8d4be68226f3e475"
         },
         "monterey": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/newsboat/blobs/sha256:64b1d266a80d1f3b4904241bc86daa98581130b5d3b2c48a34b846279e3f8251",
-          "sha256": "64b1d266a80d1f3b4904241bc86daa98581130b5d3b2c48a34b846279e3f8251"
+          "url": "https://ghcr.io/v2/homebrew/core/newsboat/blobs/sha256:cf6d274222f6e12bd9f24c9f5c5a6e12c07be31405aa8316a715aca7587fc618",
+          "sha256": "cf6d274222f6e12bd9f24c9f5c5a6e12c07be31405aa8316a715aca7587fc618"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/newsboat/blobs/sha256:d2a26459b6caae18e304367517bfe9460b5b4b64b65cb6441c71412104c63711",
-          "sha256": "d2a26459b6caae18e304367517bfe9460b5b4b64b65cb6441c71412104c63711"
+          "url": "https://ghcr.io/v2/homebrew/core/newsboat/blobs/sha256:dda7a1eedb4e426a16926f6bf0870e097eb1583386c6a28237bc874a13a9e9f2",
+          "sha256": "dda7a1eedb4e426a16926f6bf0870e097eb1583386c6a28237bc874a13a9e9f2"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/newsboat/blobs/sha256:442fad92d746195420c8077c79d90c845aad67f797d13d83d1118f7d11f90ac6",
-          "sha256": "442fad92d746195420c8077c79d90c845aad67f797d13d83d1118f7d11f90ac6"
+          "url": "https://ghcr.io/v2/homebrew/core/newsboat/blobs/sha256:516d5c9290a712e34dfe77afdc563cc97161f1e8f78ae454329476739e83ebcc",
+          "sha256": "516d5c9290a712e34dfe77afdc563cc97161f1e8f78ae454329476739e83ebcc"
         },
         "x86_64_linux": {
           "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/newsboat/blobs/sha256:181e18b77ea6218024792a716f7cebd9fad53ba08acd083e8d68be27166a18b6",
-          "sha256": "181e18b77ea6218024792a716f7cebd9fad53ba08acd083e8d68be27166a18b6"
+          "url": "https://ghcr.io/v2/homebrew/core/newsboat/blobs/sha256:fba3e425c96473d52e1cd11690db80324994cf5fbf3b27d34127c798c1e6fdc6",
+          "sha256": "fba3e425c96473d52e1cd11690db80324994cf5fbf3b27d34127c798c1e6fdc6"
         }
       }
     }
@@ -77,7 +77,8 @@
   ],
   "dependencies": [
     "gettext",
-    "json-c"
+    "json-c",
+    "make"
   ],
   "test_dependencies": [
 
@@ -115,5 +116,16 @@
   "disable_date": null,
   "disable_reason": null,
   "variations": {
+    "x86_64_linux": {
+      "dependencies": [
+        "gettext",
+        "json-c",
+        "curl",
+        "libxml2",
+        "libxslt",
+        "ncurses",
+        "sqlite"
+      ]
+    }
   }
 }
