@@ -10,7 +10,7 @@
 
   ],
   "desc": "Tool which checks for the support of TLS/SSL ciphers and flaws",
-  "license": "GPL-2.0-or-later",
+  "license": "GPL-2.0-only",
   "homepage": "https://testssl.sh/",
   "versions": {
     "stable": "3.0.8",
@@ -28,13 +28,13 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 0,
+      "rebuild": 1,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
         "all": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/testssl/blobs/sha256:346e7096964be2c0de0356202fa335c81533da6f4cca421216a583b5f9b0db46",
-          "sha256": "346e7096964be2c0de0356202fa335c81533da6f4cca421216a583b5f9b0db46"
+          "url": "https://ghcr.io/v2/homebrew/core/testssl/blobs/sha256:3a76af565cfb3d79ede861d1ef2edaa3bea39f94dcfa3d8bd7ee72979afbb4f5",
+          "sha256": "3a76af565cfb3d79ede861d1ef2edaa3bea39f94dcfa3d8bd7ee72979afbb4f5"
         }
       }
     }
@@ -48,7 +48,7 @@
 
   ],
   "dependencies": [
-    "openssl@1.1"
+    "openssl@3"
   ],
   "test_dependencies": [
 
@@ -84,7 +84,7 @@
   "variations": {
     "x86_64_linux": {
       "dependencies": [
-        "openssl@1.1",
+        "openssl@3",
         "util-linux"
       ],
       "test_dependencies": [
