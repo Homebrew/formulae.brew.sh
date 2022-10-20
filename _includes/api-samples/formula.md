@@ -86,11 +86,11 @@
         "used_options": [],
         "built_as_bottle": true,
         "poured_from_bottle": true,
-        "time": 1665447579,
+        "time": 1666123355,
         "runtime_dependencies": [
           {
             "full_name": "gettext",
-            "version": "0.21",
+            "version": "0.21.1",
             "declared_directly": false
           },
           {
@@ -105,7 +105,7 @@
           },
           {
             "full_name": "ca-certificates",
-            "version": "2022-07-19",
+            "version": "2022-10-11",
             "declared_directly": false
           },
           {
