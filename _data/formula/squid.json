@@ -13,13 +13,13 @@
   "license": "GPL-2.0-or-later",
   "homepage": "http://www.squid-cache.org/",
   "versions": {
-    "stable": "4.17",
+    "stable": "5.7",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "http://www.squid-cache.org/Versions/v4/squid-4.17.tar.xz",
+      "url": "http://www.squid-cache.org/Versions/v5/squid-5.7.tar.xz",
       "tag": null,
       "revision": null
     }
@@ -33,38 +33,33 @@
       "files": {
         "arm64_monterey": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/squid/blobs/sha256:4c922c513876e0eac5e5eea248e75f5d7b15ac934defbb29531b547211ca2ed5",
-          "sha256": "4c922c513876e0eac5e5eea248e75f5d7b15ac934defbb29531b547211ca2ed5"
+          "url": "https://ghcr.io/v2/homebrew/core/squid/blobs/sha256:2fd285014a9d8b23db15573c51d9ba2bf3a7980aa42d1c3232799db5d7ec5383",
+          "sha256": "2fd285014a9d8b23db15573c51d9ba2bf3a7980aa42d1c3232799db5d7ec5383"
         },
         "arm64_big_sur": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/squid/blobs/sha256:ab7f9bcb273ce10621b219b3fa36306039a025d0a61745e061ff7135c2c5ce02",
-          "sha256": "ab7f9bcb273ce10621b219b3fa36306039a025d0a61745e061ff7135c2c5ce02"
+          "url": "https://ghcr.io/v2/homebrew/core/squid/blobs/sha256:468a3787a8beef9d643d2f602e0a61844a2bc5c5c0d9a5295e9cee103e95014c",
+          "sha256": "468a3787a8beef9d643d2f602e0a61844a2bc5c5c0d9a5295e9cee103e95014c"
         },
         "monterey": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/squid/blobs/sha256:6c60aef5ac07e2350e67ed8c190bb023152e3fab0ab676b95e77cb3b626f0c24",
-          "sha256": "6c60aef5ac07e2350e67ed8c190bb023152e3fab0ab676b95e77cb3b626f0c24"
+          "url": "https://ghcr.io/v2/homebrew/core/squid/blobs/sha256:4f4c35109d3f98579fea0e0176010b8e9a20b6c8bf20ac39bc1fab8603886876",
+          "sha256": "4f4c35109d3f98579fea0e0176010b8e9a20b6c8bf20ac39bc1fab8603886876"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/squid/blobs/sha256:cd2c5c2dc8843d49adf1cf7b7c0b51567a0ad6d8293d3779006906695348e4ec",
-          "sha256": "cd2c5c2dc8843d49adf1cf7b7c0b51567a0ad6d8293d3779006906695348e4ec"
+          "url": "https://ghcr.io/v2/homebrew/core/squid/blobs/sha256:69034d739bcf8ac981393dc1e6d8153fac7b3a1606aa0779e6416186c9ab8346",
+          "sha256": "69034d739bcf8ac981393dc1e6d8153fac7b3a1606aa0779e6416186c9ab8346"
         },
         "catalina": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/squid/blobs/sha256:4e4cb257f1a82777ba111d1c4a80de8398b7fa9e330cd2506f698e85a6057be9",
-          "sha256": "4e4cb257f1a82777ba111d1c4a80de8398b7fa9e330cd2506f698e85a6057be9"
-        },
-        "mojave": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/squid/blobs/sha256:14b611332f6cb8001e15e875f02192b9ce2ca600a2a19f125cd51402032d102e",
-          "sha256": "14b611332f6cb8001e15e875f02192b9ce2ca600a2a19f125cd51402032d102e"
+          "url": "https://ghcr.io/v2/homebrew/core/squid/blobs/sha256:2e36981ce834fbe8cdb59983c58533daf023cbaca7329bb6f8c0b24e3544b5ef",
+          "sha256": "2e36981ce834fbe8cdb59983c58533daf023cbaca7329bb6f8c0b24e3544b5ef"
         },
         "x86_64_linux": {
           "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/squid/blobs/sha256:ff99b1569d2fc90eea26ff2aadff55670eeacf2469fca3e713fb00ee6e77d10b",
-          "sha256": "ff99b1569d2fc90eea26ff2aadff55670eeacf2469fca3e713fb00ee6e77d10b"
+          "url": "https://ghcr.io/v2/homebrew/core/squid/blobs/sha256:e950bb9356faae896c283a810fd284beb277fc89723f08c7cc022f08b04e8a72",
+          "sha256": "e950bb9356faae896c283a810fd284beb277fc89723f08c7cc022f08b04e8a72"
         }
       }
     }
@@ -78,7 +73,7 @@
 
   ],
   "dependencies": [
-    "openssl@1.1"
+    "openssl@3"
   ],
   "test_dependencies": [
 
@@ -90,7 +85,7 @@
 
   ],
   "uses_from_macos": [
-
+    "libxcrypt"
   ],
   "requirements": [
 
