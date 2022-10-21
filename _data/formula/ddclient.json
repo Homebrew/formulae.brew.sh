@@ -13,53 +13,28 @@
   "license": "GPL-2.0-or-later",
   "homepage": "https://ddclient.net/",
   "versions": {
-    "stable": "3.9.1",
+    "stable": "3.10.0",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/ddclient/ddclient/archive/v3.9.1.tar.gz",
+      "url": "https://github.com/ddclient/ddclient/archive/v3.10.0.tar.gz",
       "tag": null,
       "revision": null
     }
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
-        "arm64_monterey": {
+        "all": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/ddclient/blobs/sha256:f1bb00351331eb6595be094e2c0a2e508f7cb12e7eb126eea25b6ee6ca8dfce0",
-          "sha256": "f1bb00351331eb6595be094e2c0a2e508f7cb12e7eb126eea25b6ee6ca8dfce0"
-        },
-        "arm64_big_sur": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/ddclient/blobs/sha256:bec2f1275e4b3ab4c39af7ba4f8d9a4a12782549ebda1b36f0ccf62126ad49dd",
-          "sha256": "bec2f1275e4b3ab4c39af7ba4f8d9a4a12782549ebda1b36f0ccf62126ad49dd"
-        },
-        "monterey": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/ddclient/blobs/sha256:242c680a8427a15d2ea8570e3bb87dd507c17424aa2325fdd1dc71f6d2d0ffb1",
-          "sha256": "242c680a8427a15d2ea8570e3bb87dd507c17424aa2325fdd1dc71f6d2d0ffb1"
-        },
-        "big_sur": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/ddclient/blobs/sha256:7dc3fcde51897744a371694203d03664cddb655bac7ef4249b1c753917db8040",
-          "sha256": "7dc3fcde51897744a371694203d03664cddb655bac7ef4249b1c753917db8040"
-        },
-        "catalina": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/ddclient/blobs/sha256:356aa5bc066e521429ae4474ee978bad0c596045a9d1d4efa4cc46acd0e0e66f",
-          "sha256": "356aa5bc066e521429ae4474ee978bad0c596045a9d1d4efa4cc46acd0e0e66f"
-        },
-        "x86_64_linux": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/ddclient/blobs/sha256:90860f823cc3568a81e12dda3412adbe8d6fdcf13ea50b343489c584c9d3d384",
-          "sha256": "90860f823cc3568a81e12dda3412adbe8d6fdcf13ea50b343489c584c9d3d384"
+          "url": "https://ghcr.io/v2/homebrew/core/ddclient/blobs/sha256:3a0a4ceb683ea6e8513a35882976dc58f7664708f054a32027320938e2257ae7",
+          "sha256": "3a0a4ceb683ea6e8513a35882976dc58f7664708f054a32027320938e2257ae7"
         }
       }
     }
@@ -70,7 +45,8 @@
 
   ],
   "build_dependencies": [
-
+    "autoconf",
+    "automake"
   ],
   "dependencies": [
 
@@ -93,7 +69,7 @@
   "conflicts_with": [
 
   ],
-  "caveats": "For ddclient to work, you will need to create a configuration file\nin $(brew --prefix)/etc/ddclient. A sample configuration can be found in\n$(brew --prefix)/opt/ddclient/share/doc/ddclient.\n\nNote: don't enable daemon mode in the configuration file; see\nadditional information below.\n\nThe next reboot of the system will automatically start ddclient.\n\nYou can adjust the execution interval by changing the value of\nStartInterval (in seconds) in /Library/LaunchDaemons/homebrew.mxcl.ddclient.plist.\n",
+  "caveats": "For ddclient to work, you will need to customise the configuration\nfile at `$(brew --prefix)/etc/ddclient.conf`.\n\nNote: don't enable daemon mode in the configuration file; see\nadditional information below.\n\nThe next reboot of the system will automatically start ddclient.\n\nYou can adjust the execution interval by changing the value of\nStartInterval (in seconds) in /Library/LaunchDaemons/homebrew.mxcl.ddclient.plist.\n",
   "installed": [
 
   ],
