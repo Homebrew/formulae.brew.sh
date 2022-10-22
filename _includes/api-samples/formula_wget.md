@@ -29,6 +29,11 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_ventura": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/wget/blobs/sha256:fb2b2297226438cf2e9af9f1cf94f450730fc515eace8e21dd2db03700e77629",
+          "sha256": "fb2b2297226438cf2e9af9f1cf94f450730fc515eace8e21dd2db03700e77629"
+        },
         "arm64_monterey": {
           "cellar": "/opt/homebrew/Cellar",
           "url": "https://ghcr.io/v2/homebrew/core/wget/blobs/sha256:fc83eec77acee50d2d7ce3bb0cca08d80acccc148e909921de42e57dd5fc7f3d",
@@ -138,30 +143,30 @@
   "analytics": {
     "install": {
       "30d": {
-        "wget": 108659,
+        "wget": 108230,
         "wget --HEAD": 4
       },
       "90d": {
-        "wget": 328429,
-        "wget --HEAD": 12
+        "wget": 330409,
+        "wget --HEAD": 8
       },
       "365d": {
-        "wget": 1608270,
-        "wget --HEAD": 62
+        "wget": 1605442,
+        "wget --HEAD": 61
       }
     },
     "install_on_request": {
       "30d": {
-        "wget": 108061,
+        "wget": 107641,
         "wget --HEAD": 4
       },
       "90d": {
-        "wget": 326688,
-        "wget --HEAD": 12
+        "wget": 328657,
+        "wget --HEAD": 8
       },
       "365d": {
-        "wget": 1600218,
-        "wget --HEAD": 62
+        "wget": 1597389,
+        "wget --HEAD": 61
       }
     },
     "build_error": {
@@ -174,25 +179,25 @@
   "analytics-linux": {
     "install": {
       "30d": {
-        "wget": 1358
+        "wget": 1344
       },
       "90d": {
-        "wget": 3874
+        "wget": 3870
       },
       "365d": {
-        "wget": 13737,
+        "wget": 13741,
         "wget --HEAD": 2
       }
     },
     "install_on_request": {
       "30d": {
-        "wget": 1292
+        "wget": 1280
       },
       "90d": {
-        "wget": 3736
+        "wget": 3731
       },
       "365d": {
-        "wget": 13417,
+        "wget": 13421,
         "wget --HEAD": 2
       }
     },
@@ -202,6 +207,6 @@
       }
     }
   },
-  "generated_date": "2022-10-21"
+  "generated_date": "2022-10-22"
 }
 ```
