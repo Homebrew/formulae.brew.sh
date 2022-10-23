@@ -13,54 +13,54 @@
   "license": "MPL-2.0",
   "homepage": "https://mgba.io/",
   "versions": {
-    "stable": "0.9.3",
+    "stable": "0.10.0",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/mgba-emu/mgba/archive/0.9.3.tar.gz",
+      "url": "https://github.com/mgba-emu/mgba/archive/0.10.0.tar.gz",
       "tag": null,
       "revision": null,
-      "checksum": "692ff0ac50e18380df0ff3ee83071f9926715200d0dceedd9d16a028a59537a0"
+      "checksum": "e2d66d9ce7c51b1ef3b339b04e871287bf166f6a1d7125ef112dbf53ab8bbd48"
     }
   },
-  "revision": 1,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 1,
+      "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
         "arm64_monterey": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/mgba/blobs/sha256:e94c97f422890410db024c0024d844235f303716c8af1d54dad843ea84bcf3df",
-          "sha256": "e94c97f422890410db024c0024d844235f303716c8af1d54dad843ea84bcf3df"
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/mgba/blobs/sha256:fda5f57d8ace572ad6ff1b3457a47077882140d707a1076a8c1a32938ca43ee8",
+          "sha256": "fda5f57d8ace572ad6ff1b3457a47077882140d707a1076a8c1a32938ca43ee8"
         },
         "arm64_big_sur": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/mgba/blobs/sha256:2931042f94c4881ab643856586c17ee22b2b63675f0d3aa0509c53752fb80857",
-          "sha256": "2931042f94c4881ab643856586c17ee22b2b63675f0d3aa0509c53752fb80857"
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/mgba/blobs/sha256:23038b35ba70a5a7a23847607ad84706d14bc507854cdb946a9e47cf3dab6fbe",
+          "sha256": "23038b35ba70a5a7a23847607ad84706d14bc507854cdb946a9e47cf3dab6fbe"
         },
         "monterey": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/mgba/blobs/sha256:b29984650c71f50b533fb156265b10d6cfec4f3ad469a44675f6f0b7ee8fdd38",
-          "sha256": "b29984650c71f50b533fb156265b10d6cfec4f3ad469a44675f6f0b7ee8fdd38"
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/mgba/blobs/sha256:7c3646e7cbd567454301e2917e3e9286624d565d2ba200396f6d376374ff881c",
+          "sha256": "7c3646e7cbd567454301e2917e3e9286624d565d2ba200396f6d376374ff881c"
         },
         "big_sur": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/mgba/blobs/sha256:a072688c9fd543a73816acd77c8aa318bed1ec29f284ca4e8d3adb55304bacdb",
-          "sha256": "a072688c9fd543a73816acd77c8aa318bed1ec29f284ca4e8d3adb55304bacdb"
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/mgba/blobs/sha256:eebee6cce324280243304e19398b22a19bd60efbd04dbd0658fe2285c7e724ca",
+          "sha256": "eebee6cce324280243304e19398b22a19bd60efbd04dbd0658fe2285c7e724ca"
         },
         "catalina": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/mgba/blobs/sha256:4c557e7daec07c756a8089460d2a0336e4e34db80c4709d61d5bd00f7da759fb",
-          "sha256": "4c557e7daec07c756a8089460d2a0336e4e34db80c4709d61d5bd00f7da759fb"
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/mgba/blobs/sha256:9b0054aa6bb75a4afbb22d413e241e54c2fb77243ed5fc712bd74dcc8022f527",
+          "sha256": "9b0054aa6bb75a4afbb22d413e241e54c2fb77243ed5fc712bd74dcc8022f527"
         },
         "x86_64_linux": {
           "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/mgba/blobs/sha256:32c9cdff39692aaa329ae08d19b1dec41a9b21d8e4c73b35f599ed0a010f5a7d",
-          "sha256": "32c9cdff39692aaa329ae08d19b1dec41a9b21d8e4c73b35f599ed0a010f5a7d"
+          "url": "https://ghcr.io/v2/homebrew/core/mgba/blobs/sha256:4c2aed6811fbc6349bf76f323e935f3c21d841b48fb50ec7d0d55aff9aba4727",
+          "sha256": "4c2aed6811fbc6349bf76f323e935f3c21d841b48fb50ec7d0d55aff9aba4727"
         }
       }
     }
@@ -72,16 +72,17 @@
   ],
   "build_dependencies": [
     "cmake",
-    "pkg-config"
+    "pkg-config",
+    "libelf"
   ],
   "dependencies": [
-    "ffmpeg@4",
+    "ffmpeg",
     "libepoxy",
     "libpng",
     "libzip",
+    "lua",
     "qt@5",
-    "sdl2",
-    "sqlite"
+    "sdl2"
   ],
   "test_dependencies": [
 
@@ -93,7 +94,7 @@
 
   ],
   "uses_from_macos": [
-
+    "sqlite"
   ],
   "requirements": [
 
@@ -115,5 +116,22 @@
   "disable_date": null,
   "disable_reason": null,
   "variations": {
+    "x86_64_linux": {
+      "build_dependencies": [
+        "cmake",
+        "pkg-config"
+      ],
+      "dependencies": [
+        "ffmpeg",
+        "libepoxy",
+        "libpng",
+        "libzip",
+        "lua",
+        "qt@5",
+        "sdl2",
+        "sqlite",
+        "elfutils"
+      ]
+    }
   }
 }
