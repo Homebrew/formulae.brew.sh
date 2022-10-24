@@ -7,7 +7,7 @@
   },
   ...
   "onyx": {
-    "version": "4.2.4",
+    "version": "4.2.5",
     "versions": {
       "big_sur": "4.0.2",
       "catalina": "3.8.7",
