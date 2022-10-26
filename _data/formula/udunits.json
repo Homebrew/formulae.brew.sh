@@ -32,6 +32,11 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_ventura": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/udunits/blobs/sha256:c6f54e9f07ec6617aeee1bd95a6ebd444e5b72adb9c3268b9fdb68cd443c26f6",
+          "sha256": "c6f54e9f07ec6617aeee1bd95a6ebd444e5b72adb9c3268b9fdb68cd443c26f6"
+        },
         "arm64_monterey": {
           "cellar": "/opt/homebrew/Cellar",
           "url": "https://ghcr.io/v2/homebrew/core/udunits/blobs/sha256:64af7e42ad61c45d6f1790d747c9e3d8bbd8634a86fc51961646b31a16f64edf",
@@ -97,9 +102,6 @@
     {
       "flex": "build"
     },
-    {
-      "texinfo": "build"
-    },
     "expat"
   ],
   "requirements": [
@@ -122,5 +124,25 @@
   "disable_date": null,
   "disable_reason": null,
   "variations": {
+    "arm64_ventura": {
+      "build_dependencies": [
+        "texinfo"
+      ]
+    },
+    "ventura": {
+      "build_dependencies": [
+        "texinfo"
+      ]
+    },
+    "x86_64_linux": {
+      "build_dependencies": [
+        "bison",
+        "flex",
+        "texinfo"
+      ],
+      "dependencies": [
+        "expat"
+      ]
+    }
   }
 }

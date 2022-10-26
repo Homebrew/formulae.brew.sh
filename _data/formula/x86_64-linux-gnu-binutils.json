@@ -86,7 +86,7 @@
 
   ],
   "uses_from_macos": [
-    "texinfo"
+
   ],
   "requirements": [
 
@@ -108,13 +108,23 @@
   "disable_date": null,
   "disable_reason": null,
   "variations": {
+    "arm64_ventura": {
+      "build_dependencies": [
+        "texinfo"
+      ]
+    },
+    "ventura": {
+      "build_dependencies": [
+        "texinfo"
+      ]
+    },
     "x86_64_linux": {
       "keg_only": true,
       "keg_only_reason": {
         "reason": "it conflicts with `binutils`",
         "explanation": ""
       },
-      "dependencies": [
+      "build_dependencies": [
         "texinfo"
       ]
     }

@@ -32,6 +32,11 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_ventura": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/solid/blobs/sha256:abc0a05c054df066acb09a0303e2af828758236acf0da8ddaa29c18e0d0f670f",
+          "sha256": "abc0a05c054df066acb09a0303e2af828758236acf0da8ddaa29c18e0d0f670f"
+        },
         "arm64_monterey": {
           "cellar": ":any",
           "url": "https://ghcr.io/v2/homebrew/core/solid/blobs/sha256:e670e041979d6f3f95ded01c38b053a701d55dee074e016197ba1b1613128d67",
@@ -88,9 +93,7 @@
 
   ],
   "uses_from_macos": [
-    {
-      "texinfo": "build"
-    }
+
   ],
   "requirements": [
 
@@ -112,5 +115,29 @@
   "disable_date": null,
   "disable_reason": null,
   "variations": {
+    "arm64_ventura": {
+      "build_dependencies": [
+        "autoconf",
+        "automake",
+        "libtool",
+        "texinfo"
+      ]
+    },
+    "ventura": {
+      "build_dependencies": [
+        "autoconf",
+        "automake",
+        "libtool",
+        "texinfo"
+      ]
+    },
+    "x86_64_linux": {
+      "build_dependencies": [
+        "autoconf",
+        "automake",
+        "libtool",
+        "texinfo"
+      ]
+    }
   }
 }
