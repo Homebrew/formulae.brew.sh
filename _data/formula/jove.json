@@ -32,6 +32,11 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_ventura": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/jove/blobs/sha256:b201d1acdef17d2d3a74b4c6aa7d6e59e4c9d74ee208ef508b56017441ac719c",
+          "sha256": "b201d1acdef17d2d3a74b4c6aa7d6e59e4c9d74ee208ef508b56017441ac719c"
+        },
         "arm64_monterey": {
           "cellar": "/opt/homebrew/Cellar",
           "url": "https://ghcr.io/v2/homebrew/core/jove/blobs/sha256:7a4e8fb6e7fb7fbe40fe89e458fa7e1fbd991ebaa1d1ba68c112bc0734603375",
@@ -106,9 +111,6 @@
 
   ],
   "uses_from_macos": [
-    {
-      "groff": "build"
-    },
     "ncurses"
   ],
   "requirements": [
@@ -131,5 +133,23 @@
   "disable_date": null,
   "disable_reason": null,
   "variations": {
+    "arm64_ventura": {
+      "build_dependencies": [
+        "groff"
+      ]
+    },
+    "ventura": {
+      "build_dependencies": [
+        "groff"
+      ]
+    },
+    "x86_64_linux": {
+      "build_dependencies": [
+        "groff"
+      ],
+      "dependencies": [
+        "ncurses"
+      ]
+    }
   }
 }

@@ -32,6 +32,11 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_ventura": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/ledger/blobs/sha256:62a789e94eaaae38c4411a313dd7bb782790a8c39f6a52e662d5b7b97df4e6f1",
+          "sha256": "62a789e94eaaae38c4411a313dd7bb782790a8c39f6a52e662d5b7b97df4e6f1"
+        },
         "arm64_monterey": {
           "cellar": ":any",
           "url": "https://ghcr.io/v2/homebrew/core/ledger/blobs/sha256:6ee63ad79bacfc3c3dca62bfd2afddbcbefc1621265adeb6f4ac33d5b7987ccf",
@@ -89,7 +94,6 @@
 
   ],
   "uses_from_macos": [
-    "groff",
     "libedit"
   ],
   "requirements": [
@@ -112,5 +116,30 @@
   "disable_date": null,
   "disable_reason": null,
   "variations": {
+    "arm64_ventura": {
+      "build_dependencies": [
+        "cmake",
+        "groff"
+      ]
+    },
+    "ventura": {
+      "build_dependencies": [
+        "cmake",
+        "groff"
+      ]
+    },
+    "x86_64_linux": {
+      "build_dependencies": [
+        "cmake",
+        "groff"
+      ],
+      "dependencies": [
+        "boost",
+        "gmp",
+        "mpfr",
+        "python@3.10",
+        "libedit"
+      ]
+    }
   }
 }

@@ -32,6 +32,11 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_ventura": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/vile/blobs/sha256:9fea67ad963f8e76ab09fb3e181acd3ae4af71d8413323e01a51521ff6f4c5cf",
+          "sha256": "9fea67ad963f8e76ab09fb3e181acd3ae4af71d8413323e01a51521ff6f4c5cf"
+        },
         "arm64_monterey": {
           "cellar": "/opt/homebrew/Cellar",
           "url": "https://ghcr.io/v2/homebrew/core/vile/blobs/sha256:0036bd77eb9f1231343f6e21793d6c3b1df01d014411b794aa289e621350a2ac",
@@ -90,9 +95,6 @@
       "flex": "build"
     },
     {
-      "groff": "build"
-    },
-    {
       "expect": "test"
     },
     "libxcrypt",
@@ -119,5 +121,29 @@
   "disable_date": null,
   "disable_reason": null,
   "variations": {
+    "arm64_ventura": {
+      "build_dependencies": [
+        "groff"
+      ]
+    },
+    "ventura": {
+      "build_dependencies": [
+        "groff"
+      ]
+    },
+    "x86_64_linux": {
+      "build_dependencies": [
+        "flex",
+        "groff"
+      ],
+      "dependencies": [
+        "libxcrypt",
+        "ncurses",
+        "perl"
+      ],
+      "test_dependencies": [
+        "expect"
+      ]
+    }
   }
 }

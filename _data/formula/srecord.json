@@ -32,6 +32,11 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_ventura": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/srecord/blobs/sha256:1e62d98c025da186f7de2347a0339eba7f8028133503ff17d263b2c1c8f69fb7",
+          "sha256": "1e62d98c025da186f7de2347a0339eba7f8028133503ff17d263b2c1c8f69fb7"
+        },
         "arm64_monterey": {
           "cellar": ":any",
           "url": "https://ghcr.io/v2/homebrew/core/srecord/blobs/sha256:ea6f0e094cd533b6e4a1edd1be1dca4ccfb1386203fbde1e50d9868cd6145793",
@@ -107,9 +112,7 @@
 
   ],
   "uses_from_macos": [
-    {
-      "groff": "build"
-    }
+
   ],
   "requirements": [
 
@@ -131,6 +134,20 @@
   "disable_date": null,
   "disable_reason": null,
   "variations": {
+    "arm64_ventura": {
+      "build_dependencies": [
+        "boost",
+        "libtool",
+        "groff"
+      ]
+    },
+    "ventura": {
+      "build_dependencies": [
+        "boost",
+        "libtool",
+        "groff"
+      ]
+    },
     "x86_64_linux": {
       "build_dependencies": [
         "boost",

@@ -32,6 +32,11 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_ventura": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/id3v2/blobs/sha256:222ba809b014c313ebe411cff50e684b04ece17c3d2a380ac0b794b03c3aaae2",
+          "sha256": "222ba809b014c313ebe411cff50e684b04ece17c3d2a380ac0b794b03c3aaae2"
+        },
         "arm64_monterey": {
           "cellar": ":any",
           "url": "https://ghcr.io/v2/homebrew/core/id3v2/blobs/sha256:d987f37e40ed136bf3eb8a46e867dad0a78f48a1b5457085161f90404b1eee20",
@@ -106,9 +111,6 @@
 
   ],
   "uses_from_macos": [
-    {
-      "groff": "build"
-    },
     "zlib"
   ],
   "requirements": [
@@ -131,5 +133,24 @@
   "disable_date": null,
   "disable_reason": null,
   "variations": {
+    "arm64_ventura": {
+      "build_dependencies": [
+        "groff"
+      ]
+    },
+    "ventura": {
+      "build_dependencies": [
+        "groff"
+      ]
+    },
+    "x86_64_linux": {
+      "build_dependencies": [
+        "groff"
+      ],
+      "dependencies": [
+        "id3lib",
+        "zlib"
+      ]
+    }
   }
 }
