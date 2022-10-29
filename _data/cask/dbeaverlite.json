@@ -1,0 +1,66 @@
+{
+  "token": "dbeaverlite",
+  "full_token": "dbeaverlite",
+  "tap": "homebrew/cask",
+  "name": [
+    "DBeaver Lite Edition"
+  ],
+  "desc": "Universal database tool and SQL client",
+  "homepage": "https://dbeaver.com/dbeaver-lite/",
+  "url": "https://dbeaver.com/downloads-lite/22.2.0/dbeaver-le-22.2.0-macos-x86_64.dmg",
+  "appcast": null,
+  "version": "22.2.0",
+  "versions": {
+  },
+  "installed": null,
+  "outdated": false,
+  "sha256": "50eaf8ea6cb10523481b6f3e6f5194994373d2ed0d733802b4f649d59fe40b7f",
+  "artifacts": [
+    {
+      "uninstall": [
+        {
+          "signal": [
+            "TERM",
+            "com.dbeaver.product.lite"
+          ]
+        }
+      ]
+    },
+    {
+      "app": [
+        "DBeaverLite.app"
+      ]
+    },
+    {
+      "zap": [
+        {
+          "trash": [
+            "~/Library/DBeaverData",
+            "~/Library/Preferences/com.dbeaver.product.lite.plist",
+            "~/Library/Saved Application State/com.dbeaver.product.lite.savedState"
+          ]
+        }
+      ]
+    }
+  ],
+  "caveats": null,
+  "depends_on": {
+  },
+  "conflicts_with": null,
+  "container": null,
+  "auto_updates": null,
+  "variations": {
+    "arm64_ventura": {
+      "url": "https://dbeaver.com/downloads-lite/22.2.0/dbeaver-le-22.2.0-macos-aarch64.dmg",
+      "sha256": "a2549652dc7a6353ac2c7c2c14c1ef84c72985e5eabc7df223372066d5c181e1"
+    },
+    "arm64_monterey": {
+      "url": "https://dbeaver.com/downloads-lite/22.2.0/dbeaver-le-22.2.0-macos-aarch64.dmg",
+      "sha256": "a2549652dc7a6353ac2c7c2c14c1ef84c72985e5eabc7df223372066d5c181e1"
+    },
+    "arm64_big_sur": {
+      "url": "https://dbeaver.com/downloads-lite/22.2.0/dbeaver-le-22.2.0-macos-aarch64.dmg",
+      "sha256": "a2549652dc7a6353ac2c7c2c14c1ef84c72985e5eabc7df223372066d5c181e1"
+    }
+  }
+}
