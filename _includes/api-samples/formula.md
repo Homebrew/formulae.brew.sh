@@ -92,7 +92,7 @@
         "used_options": [],
         "built_as_bottle": true,
         "poured_from_bottle": true,
-        "time": 1666919936,
+        "time": 1666142422,
         "runtime_dependencies": [
           {
             "full_name": "gettext",
@@ -106,7 +106,7 @@
           },
           {
             "full_name": "libidn2",
-            "version": "2.3.4",
+            "version": "2.3.3",
             "declared_directly": true
           },
           {
