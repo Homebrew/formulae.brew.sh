@@ -13,39 +13,44 @@
   "license": "BSD-3-Clause",
   "homepage": "https://www.idris-lang.org/",
   "versions": {
-    "stable": "0.5.1",
+    "stable": "0.6.0",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/idris-lang/Idris2/archive/v0.5.1.tar.gz",
+      "url": "https://github.com/idris-lang/Idris2/archive/v0.6.0.tar.gz",
       "tag": null,
       "revision": null,
-      "checksum": "da44154f6eba5e22ec5ac64c6ba2c28d2df0a57cf620c5b00c11adb51dbda399"
+      "checksum": "7f5597652ed26abc2d2a6ed4220ec28fafdab773cfae0062a8dfafe7d133e633"
     }
   },
-  "revision": 2,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/idris2/blobs/sha256:d905ded56aaa8c99d992c3e84e7e02d9d5f9c77089143abce7ddd4d8f8f1f4b2",
+          "sha256": "d905ded56aaa8c99d992c3e84e7e02d9d5f9c77089143abce7ddd4d8f8f1f4b2"
+        },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/idris2/blobs/sha256:39fe90502cd4a8a064b4f69bcc5b4e99295826cad363092b47d3353ed41db2da",
-          "sha256": "39fe90502cd4a8a064b4f69bcc5b4e99295826cad363092b47d3353ed41db2da"
+          "url": "https://ghcr.io/v2/homebrew/core/idris2/blobs/sha256:6f4a6e589b386f30801c0cf36ee61cfc35017ded177bcae84235c2562058417c",
+          "sha256": "6f4a6e589b386f30801c0cf36ee61cfc35017ded177bcae84235c2562058417c"
         },
         "catalina": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/idris2/blobs/sha256:f29bcc24fc1a0581eb3f17823641c5444acc4df10e93c17eae573deab9a18fa7",
-          "sha256": "f29bcc24fc1a0581eb3f17823641c5444acc4df10e93c17eae573deab9a18fa7"
+          "url": "https://ghcr.io/v2/homebrew/core/idris2/blobs/sha256:ff005be1e9e4fafc1a20f04f51aa4d72ecc918df190b2dac6b2b341bd3e455ac",
+          "sha256": "ff005be1e9e4fafc1a20f04f51aa4d72ecc918df190b2dac6b2b341bd3e455ac"
         },
         "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/idris2/blobs/sha256:fdd19a501c9b80da87fd4519ed43e9ed31647e17e03d582392d2b3d1517f7c74",
-          "sha256": "fdd19a501c9b80da87fd4519ed43e9ed31647e17e03d582392d2b3d1517f7c74"
+          "url": "https://ghcr.io/v2/homebrew/core/idris2/blobs/sha256:6ed08bd3734a40d1ecebc329afdddc7165d894dc043966fcc7e03ea354347194",
+          "sha256": "6ed08bd3734a40d1ecebc329afdddc7165d894dc043966fcc7e03ea354347194"
         }
       }
     }
@@ -56,7 +61,6 @@
 
   ],
   "build_dependencies": [
-    "coreutils",
     "gmp"
   ],
   "dependencies": [
@@ -72,9 +76,7 @@
 
   ],
   "uses_from_macos": [
-    {
-      "zsh": "build"
-    }
+
   ],
   "requirements": [
 
@@ -96,5 +98,23 @@
   "disable_date": null,
   "disable_reason": null,
   "variations": {
+    "high_sierra": {
+      "build_dependencies": [
+        "gmp",
+        "zsh"
+      ]
+    },
+    "sierra": {
+      "build_dependencies": [
+        "gmp",
+        "zsh"
+      ]
+    },
+    "el_capitan": {
+      "build_dependencies": [
+        "gmp",
+        "zsh"
+      ]
+    }
   }
 }
