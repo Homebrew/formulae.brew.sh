@@ -84,7 +84,9 @@
   "uses_from_macos": [
     {
       "unzip": "build"
-    }
+    },
+    "krb5",
+    "zlib"
   ],
   "requirements": [
 
@@ -140,7 +142,14 @@
       "build_dependencies": [
         "cmake",
         "pkg-config",
-        "unzip"
+        "unzip",
+        "openssl@1.1"
+      ],
+      "dependencies": [
+        "python@3.10",
+        "krb5",
+        "zlib",
+        "ca-certificates"
       ]
     }
   }

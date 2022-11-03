@@ -13,16 +13,16 @@
   "license": "BSD-3-Clause",
   "homepage": "http://montage.ipac.caltech.edu",
   "versions": {
-    "stable": "4.0",
+    "stable": "6.0",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "http://montage.ipac.caltech.edu/download/Montage_v4.0.tar.gz",
+      "url": "http://montage.ipac.caltech.edu/download/Montage_v6.0.tar.gz",
       "tag": null,
       "revision": null,
-      "checksum": "de143e4d4b65086f04bb75cf482dfa824965a5a402f3431f9bceb395033df5fe"
+      "checksum": "1f540a7389d30fcf9f8cd9897617cc68b19350fbcde97c4d1cdc5634de1992c6"
     }
   },
   "revision": 0,
@@ -32,35 +32,30 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/montage/blobs/sha256:32ca9b9c2b38f96f315089ea6a0ac53a1e46a56d5a19e8448976728a7b61e770",
+          "sha256": "32ca9b9c2b38f96f315089ea6a0ac53a1e46a56d5a19e8448976728a7b61e770"
+        },
+        "arm64_big_sur": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/montage/blobs/sha256:f11424edd9f5e990992a1f3ca2109bab5b379cd1315a20f6aca9325737451868",
+          "sha256": "f11424edd9f5e990992a1f3ca2109bab5b379cd1315a20f6aca9325737451868"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/montage/blobs/sha256:7bde65d353daef1efbc2905d9020dc5be21209432acd60082b7e846974b13e59",
+          "sha256": "7bde65d353daef1efbc2905d9020dc5be21209432acd60082b7e846974b13e59"
+        },
         "big_sur": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/montage/blobs/sha256:304f02cffd94ee9e118026fda40db0f27d4ae25c2d42c74e45b3426d11f1ed3d",
-          "sha256": "304f02cffd94ee9e118026fda40db0f27d4ae25c2d42c74e45b3426d11f1ed3d"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/montage/blobs/sha256:4b0e265c15f132b49b7f92f181c9d68f92c5b2a7150b36ebada3af966401d733",
+          "sha256": "4b0e265c15f132b49b7f92f181c9d68f92c5b2a7150b36ebada3af966401d733"
         },
         "catalina": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/montage/blobs/sha256:0335521dd15d7debbfb5db21efbf5f751c571d406fd91aeaa9996226cca63d33",
-          "sha256": "0335521dd15d7debbfb5db21efbf5f751c571d406fd91aeaa9996226cca63d33"
-        },
-        "mojave": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/montage/blobs/sha256:ee1b94e776a2ad68ea41b1edb6a3fb549c43bb373f3f7b9fb3709e4e4fbbb4e8",
-          "sha256": "ee1b94e776a2ad68ea41b1edb6a3fb549c43bb373f3f7b9fb3709e4e4fbbb4e8"
-        },
-        "high_sierra": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/montage/blobs/sha256:3a8fab4097bd0dd0524a5a482065284d35ea0fdd946fb1f5d5ea1e103f5d4443",
-          "sha256": "3a8fab4097bd0dd0524a5a482065284d35ea0fdd946fb1f5d5ea1e103f5d4443"
-        },
-        "sierra": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/montage/blobs/sha256:70b1769202095b84da05fe00a1934d8e8da3fd08b7ddb7135937f4cdc0107f07",
-          "sha256": "70b1769202095b84da05fe00a1934d8e8da3fd08b7ddb7135937f4cdc0107f07"
-        },
-        "el_capitan": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/montage/blobs/sha256:503c3e946aa0d8f277b5e4a5aab75086d5c895551fa679a3129183b95f89b236",
-          "sha256": "503c3e946aa0d8f277b5e4a5aab75086d5c895551fa679a3129183b95f89b236"
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/montage/blobs/sha256:fa8e44313ba11b9784a9ae19a993613c5eaca2089ef7c50ac72ef486fb06d7a5",
+          "sha256": "fa8e44313ba11b9784a9ae19a993613c5eaca2089ef7c50ac72ef486fb06d7a5"
         }
       }
     }
@@ -74,7 +69,9 @@
 
   ],
   "dependencies": [
-
+    "cfitsio",
+    "freetype",
+    "jpeg-turbo"
   ],
   "test_dependencies": [
 
@@ -86,7 +83,7 @@
 
   ],
   "uses_from_macos": [
-
+    "bzip2"
   ],
   "requirements": [
 
