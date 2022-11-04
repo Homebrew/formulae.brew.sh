@@ -1,28 +1,28 @@
 {
-  "name": "trino",
-  "full_name": "trino",
+  "name": "valijson",
+  "full_name": "valijson",
   "tap": "homebrew/core",
-  "oldname": "prestosql",
+  "oldname": null,
   "aliases": [
 
   ],
   "versioned_formulae": [
 
   ],
-  "desc": "Distributed SQL query engine for big data",
-  "license": "Apache-2.0",
-  "homepage": "https://trino.io",
+  "desc": "Header-only C++ library for JSON Schema validation",
+  "license": "BSD-2-Clause",
+  "homepage": "https://github.com/tristanpenman/valijson",
   "versions": {
-    "stable": "402",
+    "stable": "1.0",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://search.maven.org/remotecontent?filepath=io/trino/trino-server/402/trino-server-402.tar.gz",
+      "url": "https://github.com/tristanpenman/valijson/archive/refs/tags/v1.0.tar.gz",
       "tag": null,
       "revision": null,
-      "checksum": "0848ff3a42ec9c4c25c31c8a0054aff814ec44f0bfb35d90ab384959ad0028d4"
+      "checksum": "6b9f0bc89880feb3fe09aa469cd81f6168897d2fbb4e715853da3b94afd3779a"
     }
   },
   "revision": 0,
@@ -34,8 +34,8 @@
       "files": {
         "all": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/trino/blobs/sha256:7ba79eab099f9e65ea73817dc675baf5345cab186fddc821ca348cf6c52a85ee",
-          "sha256": "7ba79eab099f9e65ea73817dc675baf5345cab186fddc821ca348cf6c52a85ee"
+          "url": "https://ghcr.io/v2/homebrew/core/valijson/blobs/sha256:1e97e2da68f435d2401d5960fed6e383ffee630120e239535821a4441c853ecb",
+          "sha256": "1e97e2da68f435d2401d5960fed6e383ffee630120e239535821a4441c853ecb"
         }
       }
     }
@@ -46,14 +46,13 @@
 
   ],
   "build_dependencies": [
-    "gnu-tar"
+    "cmake"
   ],
   "dependencies": [
-    "openjdk",
-    "python@3.10"
+
   ],
   "test_dependencies": [
-
+    "jsoncpp"
   ],
   "recommended_dependencies": [
 
