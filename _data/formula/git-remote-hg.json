@@ -13,39 +13,29 @@
   "license": "GPL-2.0",
   "homepage": "https://github.com/felipec/git-remote-hg",
   "versions": {
-    "stable": "0.4",
+    "stable": "0.6",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/felipec/git-remote-hg/archive/v0.4.tar.gz",
+      "url": "https://github.com/felipec/git-remote-hg/archive/refs/tags/v0.6.tar.gz",
       "tag": null,
       "revision": null,
-      "checksum": "916072d134cde65b7ffa7d1da1acaabb0f29b65c017d0560e907e7a94063d1b1"
+      "checksum": "1d49ffda290c8a307d32191655bdd85015e0e2f68bb2d64cddea04d8ae50a4bf"
     }
   },
-  "revision": 2,
+  "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
-        "catalina": {
+        "all": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/git-remote-hg/blobs/sha256:efcac93a209213486fcf837f83b364b6325adefba09493551e3e6017e669aa9f",
-          "sha256": "efcac93a209213486fcf837f83b364b6325adefba09493551e3e6017e669aa9f"
-        },
-        "mojave": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/git-remote-hg/blobs/sha256:3903ddefc5ed6142943aa33ba298ac51d054159f0c401bcde044934494202a19",
-          "sha256": "3903ddefc5ed6142943aa33ba298ac51d054159f0c401bcde044934494202a19"
-        },
-        "high_sierra": {
-          "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/git-remote-hg/blobs/sha256:1380e5053a25462f27d9be329840b6dda55b08e01b70ed6c581f3c625c7b332d",
-          "sha256": "1380e5053a25462f27d9be329840b6dda55b08e01b70ed6c581f3c625c7b332d"
+          "url": "https://ghcr.io/v2/homebrew/core/git-remote-hg/blobs/sha256:f0f5c166ca3eff456d8a0f430c9a32890c747c1628331ef8079be2e356fcfe4e",
+          "sha256": "f0f5c166ca3eff456d8a0f430c9a32890c747c1628331ef8079be2e356fcfe4e"
         }
       }
     }
@@ -56,10 +46,11 @@
 
   ],
   "build_dependencies": [
-    "asciidoc"
+    "asciidoctor"
   ],
   "dependencies": [
-
+    "mercurial",
+    "python@3.10"
   ],
   "test_dependencies": [
 
@@ -71,19 +62,10 @@
 
   ],
   "uses_from_macos": [
-    "libxml2",
-    "libxslt"
+
   ],
   "requirements": [
-    {
-      "name": "macos",
-      "cask": null,
-      "download": null,
-      "version": null,
-      "contexts": [
 
-      ]
-    }
   ],
   "conflicts_with": [
     "git-cinnabar"
@@ -95,9 +77,9 @@
   "linked_keg": null,
   "pinned": false,
   "outdated": false,
-  "deprecated": true,
-  "deprecation_date": "2022-04-23",
-  "deprecation_reason": "unsupported",
+  "deprecated": false,
+  "deprecation_date": null,
+  "deprecation_reason": null,
   "disabled": false,
   "disable_date": null,
   "disable_reason": null,
