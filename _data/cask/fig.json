@@ -7,14 +7,14 @@
   ],
   "desc": "Reimagine your terminal",
   "homepage": "https://fig.io/",
-  "url": "https://repo.fig.io/generic/stable/asset/2.7.5/universal/fig.dmg",
+  "url": "https://repo.fig.io/generic/stable/asset/2.7.7/universal/fig.dmg",
   "appcast": null,
-  "version": "2.7.5",
+  "version": "2.7.7",
   "versions": {
   },
   "installed": null,
   "outdated": false,
-  "sha256": "5904a17ed815c742250310711b2b80548f2d8d4765a977b5363f10404df7cdae",
+  "sha256": "7b7e448df47e507b60584ccf917ed01e7a41a740bc78e61835c2e396b5c4e94b",
   "artifacts": [
     {
       "uninstall": [
@@ -22,9 +22,8 @@
           "script": {
             "executable": "/Applications/Fig.app/Contents/MacOS/fig-darwin-universal",
             "args": [
-              "app",
-              "uninstall",
-              "--no-open"
+              "_",
+              "brew-uninstall"
             ]
           },
           "launchctl": [
@@ -55,6 +54,14 @@
     {
       "zap": [
         {
+          "script": {
+            "executable": "/Applications/Fig.app/Contents/MacOS/fig-darwin-universal",
+            "args": [
+              "_",
+              "brew-uninstall",
+              "--zap"
+            ]
+          },
           "trash": [
             "~/.fig",
             "~/.fig.dotfiles.bak",
