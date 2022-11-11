@@ -92,7 +92,9 @@
 
   ],
   "uses_from_macos": [
-
+    {
+      "python": "build"
+    }
   ],
   "requirements": [
 
@@ -114,10 +116,38 @@
   "disable_date": null,
   "disable_reason": null,
   "variations": {
+    "mojave": {
+      "build_dependencies": [
+        "rust",
+        "python",
+        "cargo-bundle"
+      ]
+    },
+    "high_sierra": {
+      "build_dependencies": [
+        "rust",
+        "python",
+        "cargo-bundle"
+      ]
+    },
+    "sierra": {
+      "build_dependencies": [
+        "rust",
+        "python",
+        "cargo-bundle"
+      ]
+    },
+    "el_capitan": {
+      "build_dependencies": [
+        "rust",
+        "python",
+        "cargo-bundle"
+      ]
+    },
     "x86_64_linux": {
       "build_dependencies": [
         "rust",
-        "python@3.10"
+        "python"
       ],
       "dependencies": [
         "neovim",
