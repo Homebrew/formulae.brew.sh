@@ -25,7 +25,7 @@
       "checksum": "4d8ea48f8c059e56f7174df89b04a08c32286bae5a21562c5c6f61be6dab7563"
     }
   },
-  "revision": 1,
+  "revision": 2,
   "version_scheme": 0,
   "bottle": {
     "stable": {
@@ -34,8 +34,8 @@
       "files": {
         "all": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/byobu/blobs/sha256:45b2277b96cd2c4c4170fbbe4a8ac92665062e8d0c835bfbd24ee3e3d52f2616",
-          "sha256": "45b2277b96cd2c4c4170fbbe4a8ac92665062e8d0c835bfbd24ee3e3d52f2616"
+          "url": "https://ghcr.io/v2/homebrew/core/byobu/blobs/sha256:567ec86facce7f9acf776836e49fc4742cd22a34f38a3869e1c2c8356290cc71",
+          "sha256": "567ec86facce7f9acf776836e49fc4742cd22a34f38a3869e1c2c8356290cc71"
         }
       }
     }
@@ -49,9 +49,10 @@
 
   ],
   "dependencies": [
-    "coreutils",
+    "gettext",
     "newt",
-    "tmux"
+    "tmux",
+    "coreutils"
   ],
   "test_dependencies": [
 
@@ -85,5 +86,12 @@
   "disable_date": null,
   "disable_reason": null,
   "variations": {
+    "x86_64_linux": {
+      "dependencies": [
+        "gettext",
+        "newt",
+        "tmux"
+      ]
+    }
   }
 }
