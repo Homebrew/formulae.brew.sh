@@ -32,26 +32,6 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
-        "catalina": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/encfs/blobs/sha256:c41dd4f6c6eae27645695e7540a6e1ec25cd4a15756e5f5ed97a345cd39372fc",
-          "sha256": "c41dd4f6c6eae27645695e7540a6e1ec25cd4a15756e5f5ed97a345cd39372fc"
-        },
-        "mojave": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/encfs/blobs/sha256:1cc308274ff04d95ab12bc39be227517dbf264e5cf811d72b153d6f84b06c0cb",
-          "sha256": "1cc308274ff04d95ab12bc39be227517dbf264e5cf811d72b153d6f84b06c0cb"
-        },
-        "high_sierra": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/encfs/blobs/sha256:137944ecee75c5d82634bf1458316c4d64d841ed9f92a4638ad266503f92b66f",
-          "sha256": "137944ecee75c5d82634bf1458316c4d64d841ed9f92a4638ad266503f92b66f"
-        },
-        "sierra": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/encfs/blobs/sha256:79e5d3548036ae74ed956bea6d9c4ab7f2e12faf7b49b541da9a72476159a557",
-          "sha256": "79e5d3548036ae74ed956bea6d9c4ab7f2e12faf7b49b541da9a72476159a557"
-        },
         "x86_64_linux": {
           "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
           "url": "https://ghcr.io/v2/homebrew/core/encfs/blobs/sha256:2c8863fccfcdb4e42cca450763879b7238b5a506a9385b25c3a3c3e2bf27c69d",
@@ -71,6 +51,7 @@
   ],
   "dependencies": [
     "gettext",
+    "libfuse@2",
     "openssl@1.1"
   ],
   "test_dependencies": [
@@ -86,12 +67,20 @@
 
   ],
   "requirements": [
+    {
+      "name": "linux",
+      "cask": null,
+      "download": null,
+      "version": null,
+      "contexts": [
 
+      ]
+    }
   ],
   "conflicts_with": [
 
   ],
-  "caveats": "The reasons for disabling this formula can be found here:\n  https://github.com/Homebrew/homebrew-core/pull/64491\n\nAn external tap may provide a replacement formula. See:\n  https://docs.brew.sh/Interesting-Taps-and-Forks\n",
+  "caveats": null,
   "installed": [
 
   ],
@@ -101,20 +90,9 @@
   "deprecated": false,
   "deprecation_date": null,
   "deprecation_reason": null,
-  "disabled": true,
-  "disable_date": "2021-04-08",
-  "disable_reason": "requires closed-source macFUSE",
+  "disabled": false,
+  "disable_date": null,
+  "disable_reason": null,
   "variations": {
-    "x86_64_linux": {
-      "dependencies": [
-        "gettext",
-        "openssl@1.1",
-        "libfuse@2"
-      ],
-      "caveats": null,
-      "disabled": false,
-      "disable_date": null,
-      "disable_reason": null
-    }
   }
 }

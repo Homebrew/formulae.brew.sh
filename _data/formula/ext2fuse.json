@@ -32,21 +32,6 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
-        "catalina": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/ext2fuse/blobs/sha256:41c770edbb267f3d8d1fe591d947148e7c190adec47940f7d0d6dd1516b6592c",
-          "sha256": "41c770edbb267f3d8d1fe591d947148e7c190adec47940f7d0d6dd1516b6592c"
-        },
-        "mojave": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/ext2fuse/blobs/sha256:541b0787069c0bf37607392a9789ed4e3b2f21ebe214b3274ec27023aa03335f",
-          "sha256": "541b0787069c0bf37607392a9789ed4e3b2f21ebe214b3274ec27023aa03335f"
-        },
-        "high_sierra": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/ext2fuse/blobs/sha256:0b8e89292e91a8fbe00430ae16a3ebbfdbba1017f6dee4801bcf8e63d238962f",
-          "sha256": "0b8e89292e91a8fbe00430ae16a3ebbfdbba1017f6dee4801bcf8e63d238962f"
-        },
         "x86_64_linux": {
           "cellar": ":any_skip_relocation",
           "url": "https://ghcr.io/v2/homebrew/core/ext2fuse/blobs/sha256:cf8a8ab7893e4703857cc93f41853567140bb2713e90dffd0db844d916d83ce9",
@@ -64,7 +49,8 @@
 
   ],
   "dependencies": [
-    "e2fsprogs"
+    "e2fsprogs",
+    "libfuse@2"
   ],
   "test_dependencies": [
 
@@ -79,12 +65,20 @@
 
   ],
   "requirements": [
+    {
+      "name": "linux",
+      "cask": null,
+      "download": null,
+      "version": null,
+      "contexts": [
 
+      ]
+    }
   ],
   "conflicts_with": [
 
   ],
-  "caveats": "The reasons for disabling this formula can be found here:\n  https://github.com/Homebrew/homebrew-core/pull/64491\n\nAn external tap may provide a replacement formula. See:\n  https://docs.brew.sh/Interesting-Taps-and-Forks\n",
+  "caveats": null,
   "installed": [
 
   ],
@@ -94,19 +88,9 @@
   "deprecated": false,
   "deprecation_date": null,
   "deprecation_reason": null,
-  "disabled": true,
-  "disable_date": "2021-04-08",
-  "disable_reason": "requires closed-source macFUSE",
+  "disabled": false,
+  "disable_date": null,
+  "disable_reason": null,
   "variations": {
-    "x86_64_linux": {
-      "dependencies": [
-        "e2fsprogs",
-        "libfuse@2"
-      ],
-      "caveats": null,
-      "disabled": false,
-      "disable_date": null,
-      "disable_reason": null
-    }
   }
 }
