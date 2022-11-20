@@ -32,26 +32,6 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
-        "catalina": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/wdfs/blobs/sha256:a00329ad59065dc12983272eb1da0e861aa73cbfa8b2edc69393a5a2eba4e49f",
-          "sha256": "a00329ad59065dc12983272eb1da0e861aa73cbfa8b2edc69393a5a2eba4e49f"
-        },
-        "mojave": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/wdfs/blobs/sha256:edf41371511f947ef47c0ad7575cffb5831687c975f000f51e538133ec42563f",
-          "sha256": "edf41371511f947ef47c0ad7575cffb5831687c975f000f51e538133ec42563f"
-        },
-        "high_sierra": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/wdfs/blobs/sha256:f2f3ad809ea9104bb5fd49b4f903b0465707baf76be3329422ea34aeed8bacb4",
-          "sha256": "f2f3ad809ea9104bb5fd49b4f903b0465707baf76be3329422ea34aeed8bacb4"
-        },
-        "sierra": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/wdfs/blobs/sha256:7aab5f9c3d807f73dfe9df437a15806b74bc5a76cd3cd13e961ea781c7fa32fb",
-          "sha256": "7aab5f9c3d807f73dfe9df437a15806b74bc5a76cd3cd13e961ea781c7fa32fb"
-        },
         "x86_64_linux": {
           "cellar": ":any_skip_relocation",
           "url": "https://ghcr.io/v2/homebrew/core/wdfs/blobs/sha256:795f6e2939f798aeea462d891b102cb80e32c5abb3586f8d57841843d2120f91",
@@ -70,6 +50,7 @@
   ],
   "dependencies": [
     "glib",
+    "libfuse@2",
     "neon"
   ],
   "test_dependencies": [
@@ -85,12 +66,20 @@
 
   ],
   "requirements": [
+    {
+      "name": "linux",
+      "cask": null,
+      "download": null,
+      "version": null,
+      "contexts": [
 
+      ]
+    }
   ],
   "conflicts_with": [
 
   ],
-  "caveats": "The reasons for disabling this formula can be found here:\n  https://github.com/Homebrew/homebrew-core/pull/64491\n\nAn external tap may provide a replacement formula. See:\n  https://docs.brew.sh/Interesting-Taps-and-Forks\n",
+  "caveats": null,
   "installed": [
 
   ],
@@ -100,20 +89,9 @@
   "deprecated": false,
   "deprecation_date": null,
   "deprecation_reason": null,
-  "disabled": true,
-  "disable_date": "2021-04-08",
-  "disable_reason": "requires closed-source macFUSE",
+  "disabled": false,
+  "disable_date": null,
+  "disable_reason": null,
   "variations": {
-    "x86_64_linux": {
-      "dependencies": [
-        "glib",
-        "neon",
-        "libfuse@2"
-      ],
-      "caveats": null,
-      "disabled": false,
-      "disable_date": null,
-      "disable_reason": null
-    }
   }
 }

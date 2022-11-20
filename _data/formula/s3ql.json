@@ -46,9 +46,12 @@
 
   ],
   "build_dependencies": [
-    "pkg-config"
+    "pkg-config",
+    "rust"
   ],
   "dependencies": [
+    "libffi",
+    "libfuse",
     "openssl@1.1",
     "python@3.9"
   ],
@@ -62,15 +65,23 @@
 
   ],
   "uses_from_macos": [
-    "libffi"
+
   ],
   "requirements": [
+    {
+      "name": "linux",
+      "cask": null,
+      "download": null,
+      "version": null,
+      "contexts": [
 
+      ]
+    }
   ],
   "conflicts_with": [
 
   ],
-  "caveats": "The reasons for disabling this formula can be found here:\n  https://github.com/Homebrew/homebrew-core/pull/64491\n\nAn external tap may provide a replacement formula. See:\n  https://docs.brew.sh/Interesting-Taps-and-Forks\n",
+  "caveats": null,
   "installed": [
 
   ],
@@ -80,25 +91,9 @@
   "deprecated": true,
   "deprecation_date": "2022-11-07",
   "deprecation_reason": "repo_archived",
-  "disabled": true,
-  "disable_date": "2021-04-08",
-  "disable_reason": "requires closed-source macFUSE",
+  "disabled": false,
+  "disable_date": null,
+  "disable_reason": null,
   "variations": {
-    "x86_64_linux": {
-      "build_dependencies": [
-        "pkg-config",
-        "rust"
-      ],
-      "dependencies": [
-        "openssl@1.1",
-        "python@3.9",
-        "libffi",
-        "libfuse"
-      ],
-      "caveats": null,
-      "disabled": false,
-      "disable_date": null,
-      "disable_reason": null
-    }
   }
 }

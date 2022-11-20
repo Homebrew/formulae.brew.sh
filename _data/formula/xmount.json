@@ -32,21 +32,6 @@
       "rebuild": 1,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
-        "catalina": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/xmount/blobs/sha256:55de429679b12e85dcfb854d4add045363a287c172b7b77765591d7d1d89324c",
-          "sha256": "55de429679b12e85dcfb854d4add045363a287c172b7b77765591d7d1d89324c"
-        },
-        "mojave": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/xmount/blobs/sha256:ae937d5fdba6c278bef72a4f87d62a6dafc2f78ad642ee6995bc228743ed37cd",
-          "sha256": "ae937d5fdba6c278bef72a4f87d62a6dafc2f78ad642ee6995bc228743ed37cd"
-        },
-        "high_sierra": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/xmount/blobs/sha256:a4436c7060d9b84abfa6450c7156cd994f42c130eebf1281e21319d6e5c00415",
-          "sha256": "a4436c7060d9b84abfa6450c7156cd994f42c130eebf1281e21319d6e5c00415"
-        },
         "x86_64_linux": {
           "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
           "url": "https://ghcr.io/v2/homebrew/core/xmount/blobs/sha256:e33278ea02578921565961c9671d64fe13d5290a0f3bf0db08e636099c382fb8",
@@ -67,6 +52,7 @@
   "dependencies": [
     "afflib",
     "libewf",
+    "libfuse@2",
     "openssl@1.1"
   ],
   "test_dependencies": [
@@ -82,12 +68,20 @@
 
   ],
   "requirements": [
+    {
+      "name": "linux",
+      "cask": null,
+      "download": null,
+      "version": null,
+      "contexts": [
 
+      ]
+    }
   ],
   "conflicts_with": [
 
   ],
-  "caveats": "The reasons for disabling this formula can be found here:\n  https://github.com/Homebrew/homebrew-core/pull/64491\n\nAn external tap may provide a replacement formula. See:\n  https://docs.brew.sh/Interesting-Taps-and-Forks\n",
+  "caveats": null,
   "installed": [
 
   ],
@@ -97,21 +91,9 @@
   "deprecated": false,
   "deprecation_date": null,
   "deprecation_reason": null,
-  "disabled": true,
-  "disable_date": "2021-04-08",
-  "disable_reason": "requires closed-source macFUSE",
+  "disabled": false,
+  "disable_date": null,
+  "disable_reason": null,
   "variations": {
-    "x86_64_linux": {
-      "dependencies": [
-        "afflib",
-        "libewf",
-        "openssl@1.1",
-        "libfuse@2"
-      ],
-      "caveats": null,
-      "disabled": false,
-      "disable_date": null,
-      "disable_reason": null
-    }
   }
 }

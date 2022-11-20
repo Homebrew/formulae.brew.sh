@@ -49,7 +49,8 @@
     "pkg-config"
   ],
   "dependencies": [
-    "gettext"
+    "gettext",
+    "libfuse@2"
   ],
   "test_dependencies": [
     "coreutils"
@@ -64,12 +65,20 @@
 
   ],
   "requirements": [
+    {
+      "name": "linux",
+      "cask": null,
+      "download": null,
+      "version": null,
+      "contexts": [
 
+      ]
+    }
   ],
   "conflicts_with": [
 
   ],
-  "caveats": "The reasons for disabling this formula can be found here:\n  https://github.com/Homebrew/homebrew-core/pull/64491\n\nAn external tap may provide a replacement formula. See:\n  https://docs.brew.sh/Interesting-Taps-and-Forks\n",
+  "caveats": null,
   "installed": [
 
   ],
@@ -79,19 +88,9 @@
   "deprecated": false,
   "deprecation_date": null,
   "deprecation_reason": null,
-  "disabled": true,
-  "disable_date": "2021-04-08",
-  "disable_reason": "requires closed-source macFUSE",
+  "disabled": false,
+  "disable_date": null,
+  "disable_reason": null,
   "variations": {
-    "x86_64_linux": {
-      "dependencies": [
-        "gettext",
-        "libfuse@2"
-      ],
-      "caveats": null,
-      "disabled": false,
-      "disable_date": null,
-      "disable_reason": null
-    }
   }
 }
