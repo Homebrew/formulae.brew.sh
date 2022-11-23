@@ -97,7 +97,7 @@
         "used_options": [],
         "built_as_bottle": true,
         "poured_from_bottle": true,
-        "time": 1666919936,
+        "time": 1669041006,
         "runtime_dependencies": [
           {
             "full_name": "gettext",
@@ -121,7 +121,7 @@
           },
           {
             "full_name": "openssl@1.1",
-            "version": "1.1.1q",
+            "version": "1.1.1s",
             "declared_directly": true
           }
         ],
