@@ -95,7 +95,7 @@
       "used_options": [],
       "built_as_bottle": true,
       "poured_from_bottle": true,
-      "time": 1666919936,
+      "time": 1669041006,
       "runtime_dependencies": [
         {
           "full_name": "gettext",
@@ -119,7 +119,7 @@
         },
         {
           "full_name": "openssl@1.1",
-          "version": "1.1.1q",
+          "version": "1.1.1s",
           "declared_directly": true
         }
       ],
@@ -184,25 +184,25 @@
   "analytics-linux": {
     "install": {
       "30d": {
-        "wget": 1142
+        "wget": 1163
       },
       "90d": {
-        "wget": 3732
+        "wget": 3721
       },
       "365d": {
-        "wget": 13862,
+        "wget": 13860,
         "wget --HEAD": 2
       }
     },
     "install_on_request": {
       "30d": {
-        "wget": 1084
+        "wget": 1102
       },
       "90d": {
-        "wget": 3558
+        "wget": 3543
       },
       "365d": {
-        "wget": 13507,
+        "wget": 13501,
         "wget --HEAD": 2
       }
     },
@@ -212,6 +212,6 @@
       }
     }
   },
-  "generated_date": "2022-11-22"
+  "generated_date": "2022-11-23"
 }
 ```
