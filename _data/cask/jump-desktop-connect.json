@@ -9,7 +9,7 @@
   "homepage": "https://jumpdesktop.com/connect/",
   "url": "https://mirror.jumpdesktop.com/downloads/connect/JumpDesktopConnect.dmg",
   "appcast": null,
-  "version": "6.7.69,60769",
+  "version": "6.8.91,60891",
   "versions": {
   },
   "installed": null,
@@ -19,9 +19,12 @@
     {
       "uninstall": [
         {
-          "quit": "com.p5sys.jump.connect",
-          "signal": {
-            "QUIT": "com.p5sys.jump.connect"
+          "script": {
+            "executable": "killall",
+            "args": [
+              "JumpConnect"
+            ],
+            "sudo": "true"
           },
           "pkgutil": "com.p5sys.jump.connect",
           "launchctl": [
