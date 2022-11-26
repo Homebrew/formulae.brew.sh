@@ -20,14 +20,13 @@
       "uninstall": [
         {
           "launchctl": [
-            "org.tuxfamily.chronyd",
-            "org.tuxfamily.chronyc"
+            "org.tuxfamily.chronyc",
+            "org.tuxfamily.chronyd"
           ],
           "delete": [
-            "/etc/chrony.d",
-            "/var/db/chrony",
+            "/Library/LaunchDaemons/org.tuxfamily.chronyc",
             "/Library/LaunchDaemons/org.tuxfamily.chronyd",
-            "/Library/LaunchDaemons/org.tuxfamily.chronyc"
+            "/var/db/chrony"
           ]
         }
       ]
@@ -40,17 +39,25 @@
     {
       "zap": [
         {
-          "trash": "/var/log/chrony"
+          "trash": [
+            "/etc/chrony.d",
+            "/var/log/chrony"
+          ]
         }
       ]
     }
   ],
   "caveats": null,
   "depends_on": {
+    "macos": {
+      ">=": [
+        "10.13"
+      ]
+    }
   },
   "conflicts_with": null,
   "container": null,
-  "auto_updates": null,
+  "auto_updates": true,
   "variations": {
   }
 }
