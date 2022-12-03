@@ -7,7 +7,7 @@
   },
   ...
   "onyx": {
-    "version": "4.2.5",
+    "version": "4.2.6",
     "versions": {
       "ventura": "4.3.2",
       "big_sur": "4.0.2",
