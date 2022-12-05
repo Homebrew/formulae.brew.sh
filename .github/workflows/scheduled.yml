@@ -12,7 +12,7 @@ concurrency:
   cancel-in-progress: true
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   generate:
@@ -95,5 +95,18 @@ jobs:
             git commit -m "analytics-linux: Updates from Linuxbrew's GA" _data/analytics-linux
           fi
 
-      - name: Push commits
-        uses: Homebrew/actions/git-try-push@master
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+  deploy:
+    needs: generate
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
