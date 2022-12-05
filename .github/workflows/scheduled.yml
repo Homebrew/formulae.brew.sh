@@ -96,11 +96,6 @@ jobs:
 
       - name: Push commits
         uses: Homebrew/actions/git-try-push@master
-
-      - name: Build site
-        if: matrix.os == 'ubuntu-22.04'
-        run: |
-          rake linux_analytics
   build:
     needs: generate
     runs-on: ubuntu-22.04
