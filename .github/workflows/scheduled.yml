@@ -11,12 +11,11 @@ concurrency:
   group: scheduled
   cancel-in-progress: true
 
-permissions:
-  contents: read
-
 jobs:
   generate:
     if: startsWith( github.repository, 'Homebrew/' )
+    permissions:
+      contents: write
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -95,10 +94,42 @@ jobs:
             git commit -m "analytics-linux: Updates from Linuxbrew's GA" _data/analytics-linux
           fi
 
+      - name: Push commits
+        uses: Homebrew/actions/git-try-push@master
+
+      - name: Build site
+        if: matrix.os == 'ubuntu-22.04'
+        run: |
+          rake linux_analytics
+  build:
+    needs: generate
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@master
+
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "2.6"
+
+      - name: Install RubyGems
+        run: |
+          gem install bundler -v "~>1"
+          bundle install --jobs 4 --retry 3
+
+      - name: Generate site
+        run: bundle exec rake formulae cask
+
       - name: Upload artifact
+        if: matrix.os == 'ubuntu-22.04'
         uses: actions/upload-pages-artifact@v1
   deploy:
-    needs: generate
+    needs: build
     permissions:
       pages: write
       id-token: write
