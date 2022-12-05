@@ -125,6 +125,7 @@ jobs:
         uses: actions/upload-pages-artifact@v1
   deploy:
     needs: build
+    if: ${{ github.ref_name == 'master' }}
     permissions:
       pages: write
       id-token: write
