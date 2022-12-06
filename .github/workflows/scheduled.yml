@@ -121,7 +121,6 @@ jobs:
         run: bundle exec rake formulae cask
 
       - name: Upload artifact
-        if: matrix.os == 'ubuntu-22.04'
         uses: actions/upload-pages-artifact@v1
   deploy:
     needs: build
