@@ -1,11 +1,6 @@
 cask "launchcontrol" do
-  if MacOS.version <= :catalina
-    version "1.52.7,1959"
-    sha256 "16c3d89e41a99cbf43e6996681358e8e7a4bc63fa770b9f8c0bc72c5356a0b8a"
-  else
-    version "2.0.3,2310"
-    sha256 "bd73e6836ba5b27df04b296d8a47df019e22e2bcc67619b11645a919c0f3dd8f"
-  end
+  version "2.0.3,2310"
+  sha256 "bd73e6836ba5b27df04b296d8a47df019e22e2bcc67619b11645a919c0f3dd8f"
 
   url "https://www.soma-zone.com/download/files/LaunchControl-#{version.csv.first}.tar.xz"
   name "LaunchControl"
