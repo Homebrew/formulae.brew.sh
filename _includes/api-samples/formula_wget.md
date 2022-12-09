@@ -148,61 +148,61 @@
   "analytics": {
     "install": {
       "30d": {
-        "wget": 103924,
-        "wget --HEAD": 2
+        "wget": 103184,
+        "wget --HEAD": 3
       },
       "90d": {
-        "wget": 321049,
-        "wget --HEAD": 10
+        "wget": 321195,
+        "wget --HEAD": 11
       },
       "365d": {
-        "wget": 1529097,
+        "wget": 1528939,
         "wget --HEAD": 50
       }
     },
     "install_on_request": {
       "30d": {
-        "wget": 103611,
-        "wget --HEAD": 2
+        "wget": 102820,
+        "wget --HEAD": 3
       },
       "90d": {
-        "wget": 319648,
-        "wget --HEAD": 10
+        "wget": 319732,
+        "wget --HEAD": 11
       },
       "365d": {
-        "wget": 1521199,
+        "wget": 1520985,
         "wget --HEAD": 50
       }
     },
     "build_error": {
       "30d": {
-        "wget": 15,
-        "wget --HEAD": 1
+        "wget": 19,
+        "wget --HEAD": 2
       }
     }
   },
   "analytics-linux": {
     "install": {
       "30d": {
-        "wget": 1118
+        "wget": 1108
       },
       "90d": {
-        "wget": 3672
+        "wget": 3664
       },
       "365d": {
-        "wget": 13874,
+        "wget": 13870,
         "wget --HEAD": 2
       }
     },
     "install_on_request": {
       "30d": {
-        "wget": 1059
+        "wget": 1052
       },
       "90d": {
-        "wget": 3491
+        "wget": 3486
       },
       "365d": {
-        "wget": 13500,
+        "wget": 13496,
         "wget --HEAD": 2
       }
     },
