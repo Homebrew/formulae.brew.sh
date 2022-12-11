@@ -72,7 +72,7 @@
   ],
   "build_dependencies": [
     "go",
-    "node"
+    "node@14"
   ],
   "dependencies": [
 
@@ -87,7 +87,9 @@
 
   ],
   "uses_from_macos": [
-
+    {
+      "python": "build"
+    }
   ],
   "requirements": [
 
@@ -112,7 +114,8 @@
     "x86_64_linux": {
       "build_dependencies": [
         "go",
-        "node",
+        "node@14",
+        "python",
         "pkg-config"
       ]
     }
