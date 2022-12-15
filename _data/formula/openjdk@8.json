@@ -20,43 +20,38 @@
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/openjdk/jdk8u/archive/refs/tags/jdk8u352-b07.tar.gz",
+      "url": "https://github.com/openjdk/jdk8u/archive/refs/tags/jdk8u352-ga.tar.gz",
       "tag": null,
       "revision": null,
-      "checksum": "6d4553325795bea1cea6d28bef886ad6f9ca2bd44442c6d36a6b5d736945f8b8"
+      "checksum": "141dcb6b321cc78e993f1f126dde9f6c0a7af5d11bfe390f5cf5b1513fabdc1c"
     }
   },
   "revision": 0,
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 0,
+      "rebuild": 1,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
         "ventura": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/openjdk/8/blobs/sha256:90907fd77191ae5c5e4352f299a3a8216af684b0913352c4ce38a181cf4c43dd",
-          "sha256": "90907fd77191ae5c5e4352f299a3a8216af684b0913352c4ce38a181cf4c43dd"
+          "url": "https://ghcr.io/v2/homebrew/core/openjdk/8/blobs/sha256:37f21b19b1b1d03f4fbdf9b2406d20d720331fd075f097d720bf399f0ec4602e",
+          "sha256": "37f21b19b1b1d03f4fbdf9b2406d20d720331fd075f097d720bf399f0ec4602e"
         },
         "monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/openjdk/8/blobs/sha256:5c3014bad94438f2f02901c53e63bef392f2a14ea22a497e75ccd8d1a5a599de",
-          "sha256": "5c3014bad94438f2f02901c53e63bef392f2a14ea22a497e75ccd8d1a5a599de"
+          "url": "https://ghcr.io/v2/homebrew/core/openjdk/8/blobs/sha256:46aec17c64762faf957f601de11bafc051c7eaf236d0318a708ed34ea936cfd5",
+          "sha256": "46aec17c64762faf957f601de11bafc051c7eaf236d0318a708ed34ea936cfd5"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/openjdk/8/blobs/sha256:1f1905dc9f4c2c370d49e69cca9344a7d96f08870b41f6e022cd443944c6ac45",
-          "sha256": "1f1905dc9f4c2c370d49e69cca9344a7d96f08870b41f6e022cd443944c6ac45"
-        },
-        "catalina": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/openjdk/8/blobs/sha256:9a0dff54e2f2b87e5b6318b0f3f76df3454ecec52c205462d2b1634824e5d71e",
-          "sha256": "9a0dff54e2f2b87e5b6318b0f3f76df3454ecec52c205462d2b1634824e5d71e"
+          "url": "https://ghcr.io/v2/homebrew/core/openjdk/8/blobs/sha256:616b8c8b60b738da1497e9e2f6fcc918a83fa174921fcdb95fd0f3fcadbaa3aa",
+          "sha256": "616b8c8b60b738da1497e9e2f6fcc918a83fa174921fcdb95fd0f3fcadbaa3aa"
         },
         "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/openjdk/8/blobs/sha256:75cd074c0e1b5b91247c2fbb6f95e3f62a8d3fe5e990f094dff62f373aeece2c",
-          "sha256": "75cd074c0e1b5b91247c2fbb6f95e3f62a8d3fe5e990f094dff62f373aeece2c"
+          "url": "https://ghcr.io/v2/homebrew/core/openjdk/8/blobs/sha256:232cfecc85bdcddd29eed18febc84069c91659e323bf4a137e14f39cb5219537",
+          "sha256": "232cfecc85bdcddd29eed18febc84069c91659e323bf4a137e14f39cb5219537"
         }
       }
     }
@@ -75,7 +70,8 @@
     "gawk"
   ],
   "dependencies": [
-    "freetype"
+    "freetype",
+    "giflib"
   ],
   "test_dependencies": [
 
@@ -87,7 +83,9 @@
 
   ],
   "uses_from_macos": [
-
+    "cups",
+    "unzip",
+    "zip"
   ],
   "requirements": [
     {
@@ -166,17 +164,18 @@
       ],
       "dependencies": [
         "freetype",
-        "alsa-lib",
+        "giflib",
         "cups",
+        "unzip",
+        "zip",
+        "alsa-lib",
         "fontconfig",
         "libx11",
         "libxext",
         "libxrandr",
         "libxrender",
         "libxt",
-        "libxtst",
-        "unzip",
-        "zip"
+        "libxtst"
       ],
       "caveats": null
     }
