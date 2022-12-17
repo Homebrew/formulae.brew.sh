@@ -95,7 +95,7 @@
       "used_options": [],
       "built_as_bottle": true,
       "poured_from_bottle": true,
-      "time": 1670203604,
+      "time": 1670757757,
       "runtime_dependencies": [
         {
           "full_name": "gettext",
@@ -148,46 +148,46 @@
   "analytics": {
     "install": {
       "30d": {
-        "wget": 99670,
-        "wget --HEAD": 3
+        "wget": 98454,
+        "wget --HEAD": 4
       },
       "90d": {
-        "wget": 317399,
-        "wget --HEAD": 12
+        "wget": 318531,
+        "wget --HEAD": 13
       },
       "365d": {
-        "wget": 1526682,
-        "wget --HEAD": 50
+        "wget": 1525950,
+        "wget --HEAD": 51
       }
     },
     "install_on_request": {
       "30d": {
-        "wget": 99292,
-        "wget --HEAD": 3
+        "wget": 98094,
+        "wget --HEAD": 4
       },
       "90d": {
-        "wget": 315994,
-        "wget --HEAD": 12
+        "wget": 317127,
+        "wget --HEAD": 13
       },
       "365d": {
-        "wget": 1518791,
-        "wget --HEAD": 50
+        "wget": 1518074,
+        "wget --HEAD": 51
       }
     },
     "build_error": {
       "30d": {
         "wget": 22,
-        "wget --HEAD": 2
+        "wget --HEAD": 3
       }
     }
   },
   "analytics-linux": {
     "install": {
       "30d": {
-        "wget": 1072
+        "wget": 1065
       },
       "90d": {
-        "wget": 3572
+        "wget": 3557
       },
       "365d": {
         "wget": 13861,
@@ -196,13 +196,13 @@
     },
     "install_on_request": {
       "30d": {
-        "wget": 1028
+        "wget": 1025
       },
       "90d": {
-        "wget": 3407
+        "wget": 3394
       },
       "365d": {
-        "wget": 13484,
+        "wget": 13485,
         "wget --HEAD": 2
       }
     },
