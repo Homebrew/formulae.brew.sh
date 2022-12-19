@@ -41,11 +41,6 @@ jobs:
             sudo chmod +x /usr/bin/$i
           done
 
-      - name: Configure Git user
-        uses: Homebrew/actions/git-user-config@master
-        with:
-          username: BrewTestBot
-
       - name: Set up Ruby
         if: matrix.os == 'ubuntu-22.04'
         uses: ruby/setup-ruby@v1
@@ -67,35 +62,50 @@ jobs:
 
           /usr/bin/rake api_samples
 
-          git reset origin/master
-          git add _data/formula{,_canonical.json} _data/bottle api/formula api/bottle formula
-          if ! git diff --no-patch --exit-code HEAD -- _data/analytics _data/formula{,_canonical.json} _data/bottle api/formula api/bottle formula cask; then
-            git commit -m "formula: updates from homebrew/core" _data/analytics _data/formula{,_canonical.json} _data/bottle api/formula api/bottle formula cask
-          fi
+      - uses: actions/upload-artifact@v3
+        if: matrix.os == 'macos-latest'
+        with:
+          name: data-macos
+          path: _data/
+          retention-days: 5
 
-          git add _data/cask api/cask api/cask-source cask
-          if ! git diff --no-patch --exit-code HEAD -- _data/cask api/cask api/cask-source cask; then
-            git commit -m "cask: updates from homebrew/cask" _data/cask api/cask api/cask-source cask
-          fi
+      - uses: actions/upload-artifact@v3
+        if: matrix.os == 'macos-latest'
+        with:
+          name: api
+          path: api/
+          retention-days: 5
 
-          git add _includes/api-samples
-          if ! git diff --no-patch --exit-code HEAD -- _includes/api-samples; then
-            git commit -m "docs: update API samples" _includes/api-samples
-          fi
+      - uses: actions/upload-artifact@v3
+        if: matrix.os == 'macos-latest'
+        with:
+          name: api-samples
+          path: _includes/api-samples/
+          retention-days: 5
+
+      - uses: actions/upload-artifact@v3
+        if: matrix.os == 'macos-latest'
+        with:
+          name: cask
+          path: cask/
+          retention-days: 5
+
+      - uses: actions/upload-artifact@v3
+        if: matrix.os == 'macos-latest'
+        with:
+          name: formula
+          path: formula/
+          retention-days: 5
 
       - name: Update analytics data for Homebrew/linuxbrew-core
         if: matrix.os == 'ubuntu-22.04'
-        run: |
-          rake linux_analytics
-
-          git reset origin/master
-          git add _data/analytics-linux
-          if ! git diff --no-patch --exit-code HEAD -- _data/analytics-linux; then
-            git commit -m "analytics-linux: Updates from Linuxbrew's GA" _data/analytics-linux
-          fi
-
-      - name: Push commits
-        uses: Homebrew/actions/git-try-push@master
+        run: rake linux_analytics
+      - uses: actions/upload-artifact@v3
+        if: matrix.os == 'ubuntu-22.04'
+        with:
+          name: data-linux
+          path: _data/
+          retention-days: 5
   build:
     needs: generate
     runs-on: ubuntu-22.04
@@ -116,6 +126,12 @@ jobs:
         run: |
           gem install bundler -v "~>1"
           bundle install --jobs 4 --retry 3
+      - uses: actions/download-artifact@v3
+      - name: Move artifacts into place
+        run: |
+          mv data-macos _data
+          mv data-linux _data
+          mv api-samples _includes/api-samples
 
       - name: Generate site
         run: bundle exec rake build
