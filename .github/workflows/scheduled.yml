@@ -100,6 +100,7 @@ jobs:
       - name: Update analytics data for Homebrew/linuxbrew-core
         if: matrix.os == 'ubuntu-22.04'
         run: rake linux_analytics
+
       - uses: actions/upload-artifact@v3
         if: matrix.os == 'ubuntu-22.04'
         with:
@@ -126,7 +127,9 @@ jobs:
         run: |
           gem install bundler -v "~>1"
           bundle install --jobs 4 --retry 3
+
       - uses: actions/download-artifact@v3
+
       - name: Move artifacts into place
         run: |
           mv data-macos _data
