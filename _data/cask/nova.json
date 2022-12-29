@@ -21,8 +21,7 @@
         {
           "delete": [
             "/Library/LaunchDaemons/com.panic.NovaPrivilegedHelper.plist",
-            "/Library/PrivilegedHelperTools/com.panic.NovaPrivilegedHelper",
-            "$(brew --prefix)/share/zsh/site-functions/_nova"
+            "/Library/PrivilegedHelperTools/com.panic.NovaPrivilegedHelper"
           ]
         }
       ]
@@ -30,19 +29,6 @@
     {
       "app": [
         "Nova.app"
-      ]
-    },
-    {
-      "artifact": [
-        "/Applications/Nova.app/Contents/Resources/nova_completions.txt",
-        {
-          "target": "$(brew --prefix)/share/zsh/site-functions/_nova"
-        }
-      ]
-    },
-    {
-      "binary": [
-        "/Applications/Nova.app/Contents/SharedSupport/nova"
       ]
     },
     {
