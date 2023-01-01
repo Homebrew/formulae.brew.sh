@@ -9,7 +9,7 @@
   "onyx": {
     "version": "4.2.7",
     "versions": {
-      "ventura": "4.3.4",
+      "ventura": "4.3.5",
       "big_sur": "4.0.2",
       "catalina": "3.8.7",
       "mojave": "3.6.8",
