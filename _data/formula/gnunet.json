@@ -25,42 +25,47 @@
       "checksum": "8a744ff7a95d1e83215cce118050640f6c12261abe4c60a56bcf88e500f0023d"
     }
   },
-  "revision": 0,
+  "revision": 1,
   "version_scheme": 0,
   "bottle": {
     "stable": {
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_ventura": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/gnunet/blobs/sha256:a91a4ae5c45bb5304fd032f2d02368e6f5c769cfbba1ea5669e8e8e4807bc87b",
+          "sha256": "a91a4ae5c45bb5304fd032f2d02368e6f5c769cfbba1ea5669e8e8e4807bc87b"
+        },
         "arm64_monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/gnunet/blobs/sha256:c67f46ea10a8286ff92e72ea4613635e8acc7e4df8900aa40faad0c733571997",
-          "sha256": "c67f46ea10a8286ff92e72ea4613635e8acc7e4df8900aa40faad0c733571997"
+          "url": "https://ghcr.io/v2/homebrew/core/gnunet/blobs/sha256:b0a6fdd5c5f7b50db8edb9b1390c5c2cf310e275cb71537c2739e78d1ee8b41e",
+          "sha256": "b0a6fdd5c5f7b50db8edb9b1390c5c2cf310e275cb71537c2739e78d1ee8b41e"
         },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/gnunet/blobs/sha256:961caa01a5a6dd1813cedfa4c0b7578a647668bad9e42cc4fdeb35959792cc9d",
-          "sha256": "961caa01a5a6dd1813cedfa4c0b7578a647668bad9e42cc4fdeb35959792cc9d"
+          "url": "https://ghcr.io/v2/homebrew/core/gnunet/blobs/sha256:0f7cc35b0a1e867d4ff39ce79ac947b1f5aba462e27ca568c516d41e20bed7f3",
+          "sha256": "0f7cc35b0a1e867d4ff39ce79ac947b1f5aba462e27ca568c516d41e20bed7f3"
+        },
+        "ventura": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/gnunet/blobs/sha256:1c7ffa62a85d1369f2652f31e4cf69cc937034de7e46d4a6c391a9a7d2eb1c6d",
+          "sha256": "1c7ffa62a85d1369f2652f31e4cf69cc937034de7e46d4a6c391a9a7d2eb1c6d"
         },
         "monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/gnunet/blobs/sha256:d6ead1367a5a2ecd88ee684fb38bbb2624166a588dab29b6d8c12d07092549dc",
-          "sha256": "d6ead1367a5a2ecd88ee684fb38bbb2624166a588dab29b6d8c12d07092549dc"
+          "url": "https://ghcr.io/v2/homebrew/core/gnunet/blobs/sha256:0b1d3996e330a582be35410cdf6d1656ab9b94545047486fe5d27d64d91ec850",
+          "sha256": "0b1d3996e330a582be35410cdf6d1656ab9b94545047486fe5d27d64d91ec850"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/gnunet/blobs/sha256:5225660ade36a2fa11d0a05d217bef128068cf82db182c10ac192843e8f32829",
-          "sha256": "5225660ade36a2fa11d0a05d217bef128068cf82db182c10ac192843e8f32829"
-        },
-        "catalina": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/gnunet/blobs/sha256:559ecc0a42ab11f7b9a43c45230812f2b08b538ac764f8acb5583d4c59b25690",
-          "sha256": "559ecc0a42ab11f7b9a43c45230812f2b08b538ac764f8acb5583d4c59b25690"
+          "url": "https://ghcr.io/v2/homebrew/core/gnunet/blobs/sha256:327fd66c7bc476112f7a11c6d7ab9872ca7b6ce85765fa5ad045c32280b690f0",
+          "sha256": "327fd66c7bc476112f7a11c6d7ab9872ca7b6ce85765fa5ad045c32280b690f0"
         },
         "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/gnunet/blobs/sha256:ad6d518e300932c28f367ca5e340677ac064bcb592944bb9d0928cadbaafa5cb",
-          "sha256": "ad6d518e300932c28f367ca5e340677ac064bcb592944bb9d0928cadbaafa5cb"
+          "url": "https://ghcr.io/v2/homebrew/core/gnunet/blobs/sha256:aa2caa63b0612e0c697d73bdf72feb228ede99c75c75aa284c8606080f329716",
+          "sha256": "aa2caa63b0612e0c697d73bdf72feb228ede99c75c75aa284c8606080f329716"
         }
       }
     }
@@ -71,6 +76,7 @@
 
   ],
   "build_dependencies": [
+    "llvm",
     "pkg-config"
   ],
   "dependencies": [
