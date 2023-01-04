@@ -17,7 +17,7 @@
   "sha256": "eda5d25fd41f4d9d9e4e94cbf05b3cda0758662e210ec2a60456027f3ef04d5e",
   "artifacts": [
     {
-      "preflight": null
+      "preflight": "  preflight do\n    File.write shimscript, <<~EOS\n      #!/bin/sh\n      exec '/Applications/Utilities/Nudge.app/Contents/MacOS/Nudge' \"$@\"\n    EOS\n  end\n"
     },
     {
       "uninstall": [

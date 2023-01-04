@@ -17,7 +17,7 @@
   "sha256": "f5649524565d0392051f6291dc925c4dfb08200fda1a71d73cb46fe203328e1c",
   "artifacts": [
     {
-      "preflight": null
+      "preflight": "  preflight do\n    File.write shimscript, <<~EOS\n      #!/bin/sh\n      exec '#{appdir}/MuseScore #{version.major}.app/Contents/MacOS/mscore' \"$@\"\n    EOS\n  end\n"
     },
     {
       "app": [

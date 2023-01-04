@@ -17,7 +17,7 @@
   "sha256": "c1825303c05ea38af0dbb1db3abfc91f94c4df37f74ec4eb36d3cef526c776fc",
   "artifacts": [
     {
-      "preflight": null
+      "preflight": "  preflight do\n    File.write shimscript, <<~EOS\n      #!/bin/sh\n      cd '#{staged_path}/gogs' && ./gogs \"$@\"\n    EOS\n  end\n"
     },
     {
       "binary": [

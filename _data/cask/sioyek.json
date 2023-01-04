@@ -17,7 +17,7 @@
   "sha256": "0f81831d4fa0d57e7e7e56a40ab6fa6488950b7d6a944aa29918be42cfc46b8a",
   "artifacts": [
     {
-      "preflight": null
+      "preflight": "  preflight do\n    File.write shimscript, <<~EOS\n      #!/bin/sh\n      exec '#{appdir}/sioyek.app/Contents/MacOS/sioyek' \"$@\"\n    EOS\n  end\n"
     },
     {
       "app": [

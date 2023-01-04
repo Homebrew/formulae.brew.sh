@@ -17,7 +17,7 @@
   "sha256": "e5df7722d0d851852dd9cc3449dd42d1fef3e74edda8c20dc04b38cb852b0fec",
   "artifacts": [
     {
-      "preflight": null
+      "preflight": "  preflight do\n    File.write shimscript, <<~EOS\n      #!/bin/sh\n      exec '#{appdir}/klogg.app/Contents/MacOS/klogg' \"$@\"\n    EOS\n  end\n"
     },
     {
       "app": [

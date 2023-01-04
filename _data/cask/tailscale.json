@@ -17,7 +17,7 @@
   "sha256": "d2f6276e3e2eb507892a5230a5eab75acd304def3c2e8d40c72a412be4962dc6",
   "artifacts": [
     {
-      "preflight": null
+      "preflight": "  preflight do\n    File.write shimscript, <<~EOS\n      #!/bin/sh\n      exec '#{appdir}/Tailscale.app/Contents/MacOS/Tailscale' \"$@\"\n    EOS\n  end\n"
     },
     {
       "uninstall": [

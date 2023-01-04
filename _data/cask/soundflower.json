@@ -38,7 +38,7 @@
       ]
     },
     {
-      "postflight": null
+      "postflight": "  postflight do\n    system_command \"/sbin/kextload\",\n                   args: [\"-b\", \"com.Cycling74.driver.Soundflower\"],\n                   sudo: true\n  end\n"
     }
   ],
   "caveats": "soundflower requires a kernel extension to work.\nIf the installation fails, retry after you enable it in:\n  System Preferences → Security & Privacy → General\n\nFor more information, refer to vendor documentation or this Apple Technical Note:\n  https://developer.apple.com/library/content/technotes/tn2459/_index.html\n",

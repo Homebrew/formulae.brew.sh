@@ -17,7 +17,7 @@
   "sha256": "fc41bab49d4c1fe9239bfd06e4eb7cda8348635aaa3568fec942f43a9d5eb04b",
   "artifacts": [
     {
-      "preflight": null
+      "preflight": "  preflight do\n    build = File.read(\"#{staged_path}/source.properties\").match(/(?<=Pkg.Revision\\s=\\s\\d\\d.\\d.)\\d+/)\n    FileUtils.ln_sf(\"#{staged_path}/AndroidNDK#{build}.app/Contents/NDK\", \"#{HOMEBREW_PREFIX}/share/android-ndk\")\n\n    File.write shimscript, <<~EOS\n      #!/bin/bash\n      readonly executable=\"#{staged_path}/AndroidNDK#{build}.app/Contents/NDK/$(basename ${0})\"\n      test -f \"${executable}\" && exec \"${executable}\" \"${@}\"\n    EOS\n  end\n"
     },
     {
       "binary": [
@@ -60,7 +60,7 @@
       ]
     },
     {
-      "uninstall_postflight": null
+      "uninstall_postflight": "  uninstall_postflight do\n    FileUtils.rm_f(\"#{HOMEBREW_PREFIX}/share/android-ndk\")\n  end\n"
     }
   ],
   "caveats": "You may want to add to your profile:\n   'export ANDROID_NDK_HOME=\"$(brew --prefix)/share/android-ndk\"'\n",

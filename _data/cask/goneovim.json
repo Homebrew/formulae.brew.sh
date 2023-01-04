@@ -17,7 +17,7 @@
   "sha256": "552272a09f9d6a969fc2d990efa08083550381a17eb0f78102765a3417061118",
   "artifacts": [
     {
-      "preflight": null
+      "preflight": "  preflight do\n    File.write shimscript, <<~EOS\n      #!/bin/sh\n      exec '#{appdir}/goneovim.app/Contents/MacOS/goneovim' \"$@\"\n    EOS\n  end\n"
     },
     {
       "app": [

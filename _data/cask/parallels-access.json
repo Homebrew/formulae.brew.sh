@@ -17,7 +17,7 @@
   "sha256": "663ee5e79e1cace49baf217b2fba61cdbd0746a920dca589520accf545afdce9",
   "artifacts": [
     {
-      "preflight": null
+      "preflight": "  preflight do\n    system_command \"/usr/bin/hdiutil\",\n                   args: [\"attach\", \"-nobrowse\", \"#{staged_path}/ParallelsAccess-#{version}-mac.dmg\"]\n    system_command \"/Volumes/Parallels Access/Parallels Access.app/Contents/MacOS/pm_ctl\",\n                   args: [\"instance_install\"],\n                   sudo: true\n    system_command \"/usr/bin/hdiutil\",\n                   args: [\"detach\", \"/Volumes/Parallels Access\"]\n  end\n"
     },
     {
       "uninstall": [

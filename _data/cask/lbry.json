@@ -17,7 +17,7 @@
   "sha256": "68e1aa1a5189a822ec160dc0a3134146148da3ffe62ff69862ce48a92cb1e079",
   "artifacts": [
     {
-      "preflight": null
+      "preflight": "  preflight do\n    File.write shim_lbrynet, <<~EOS\n      #!/bin/sh\n      exec '#{appdir}/LBRY.app/Contents/Resources/static/daemon/lbrynet' \"$@\"\n    EOS\n\n    File.write shim_lbryfirst, <<~EOS\n      #!/bin/sh\n      exec '#{appdir}/LBRY.app/Contents/Resources/static/lbry-first/lbry-first' \"$@\"\n    EOS\n  end\n"
     },
     {
       "app": [

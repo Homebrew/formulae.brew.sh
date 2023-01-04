@@ -35,7 +35,7 @@
       ]
     },
     {
-      "postflight": null
+      "postflight": "  postflight do\n    # clear the layout cache before new layouts are recognized\n    system_command \"/bin/rm\",\n                   args: [\"-f\", \"--\", \"/System/Library/Caches/com.apple.IntlDataCache.le*\"],\n                   sudo: true\n  end\n"
     }
   ],
   "caveats": "You must reboot for the installation of qwerty-fr to take effect.\n",

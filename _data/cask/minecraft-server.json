@@ -17,10 +17,10 @@
   "sha256": "4ebd3ad142512953d0193ae3a1d1a30c896907de7c68780977151f6cc79f1e1b",
   "artifacts": [
     {
-      "preflight": null
+      "preflight": "  preflight do\n    FileUtils.mkdir_p config_dir\n\n    File.write shimscript, <<~EOS\n      #!/bin/sh\n      cd '#{config_dir}' && \\\n        exec /usr/bin/java ${@:--Xms1024M -Xmx1024M} -jar '#{staged_path}/server.jar' nogui\n    EOS\n  end\n"
     },
     {
-      "uninstall_preflight": null
+      "uninstall_preflight": "  uninstall_preflight do\n    FileUtils.rm_f eula_file\n  end\n"
     },
     {
       "binary": [
@@ -31,7 +31,7 @@
       ]
     },
     {
-      "postflight": null
+      "postflight": "  postflight do\n    system_command shimscript\n    File.write(eula_file, File.read(eula_file).sub(\"eula=false\", \"eula=TRUE\"))\n  end\n"
     },
     {
       "zap": [

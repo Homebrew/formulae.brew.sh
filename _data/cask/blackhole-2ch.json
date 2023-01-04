@@ -30,7 +30,7 @@
       ]
     },
     {
-      "uninstall_postflight": null
+      "uninstall_postflight": "  uninstall_postflight do\n    system_command \"/bin/launchctl\",\n                   args:         [\n                     \"kickstart\",\n                     \"-kp\",\n                     \"system/com.apple.audio.coreaudiod\",\n                   ],\n                   sudo:         true,\n                   must_succeed: true\n  end\n"
     }
   ],
   "caveats": null,

@@ -17,7 +17,7 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "preflight": null
+      "preflight": "  preflight do\n    File.write shimscript, <<~EOS\n      #!/bin/sh\n      cd \"$(dirname \"$(readlink -n \"${0}\")\")\" && \\\n        java -Djava.library.path='./DynamoDBLocal_lib' -jar 'DynamoDBLocal.jar' \"$@\"\n    EOS\n  end\n"
     },
     {
       "binary": [

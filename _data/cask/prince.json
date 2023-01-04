@@ -17,7 +17,7 @@
   "sha256": "b05bbd018c3532b1ef101799abf24247cf503caa25a105b18a5091bfccfc020b",
   "artifacts": [
     {
-      "preflight": null
+      "preflight": "  preflight do\n    File.write shimscript, <<~EOS\n      #!/bin/sh\n      exec '#{staged_path}/prince-#{version}-macos/lib/prince/bin/prince' --prefix '#{staged_path}/prince-#{version}-macos/lib/prince' \"$@\"\n    EOS\n  end\n"
     },
     {
       "binary": [

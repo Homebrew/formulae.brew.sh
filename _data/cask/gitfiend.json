@@ -17,7 +17,7 @@
   "sha256": "ec727c3db0827ec612c3f89047da807f898316dfddbc3235879ec2fc3478f60f",
   "artifacts": [
     {
-      "preflight": null
+      "preflight": "  preflight do\n    File.write shimscript, <<~EOS\n      #!/bin/sh\n      exec '#{appdir}/GitFiend.app/Contents/MacOS/GitFiend' \"$@\"\n    EOS\n  end\n"
     },
     {
       "app": [

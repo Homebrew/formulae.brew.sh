@@ -17,7 +17,7 @@
   "sha256": "5fff7520edf7e641308ade1851f0d2ea6b6d530dd5aa0013c3508136990f7b07",
   "artifacts": [
     {
-      "preflight": null
+      "preflight": "  preflight do\n    File.write shimscript, <<~EOS\n      #!/bin/sh\n      '#{appdir}/Gqrx.app/Contents/MacOS/gqrx' \"$@\"\n    EOS\n  end\n"
     },
     {
       "app": [

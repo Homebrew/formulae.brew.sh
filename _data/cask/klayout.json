@@ -17,7 +17,7 @@
   "sha256": "82c8497e83fb741d95f409f7be9b837a42240c25ec25b99a7a441b22a74094bd",
   "artifacts": [
     {
-      "preflight": null
+      "preflight": "  preflight do\n    # There is no sub-folder in the DMG; the root *is* the folder\n    FileUtils.mv(staged_path.children, staged_path.join(\"KLayout\").tap(&:mkpath))\n  end\n"
     },
     {
       "uninstall": [

@@ -17,7 +17,7 @@
   "sha256": "881a30184898346b1ccb34e0b04826a28f57b6b133af9543c8b37b0f211d04b7",
   "artifacts": [
     {
-      "preflight": null
+      "preflight": "  preflight do\n    File.write shimscript, <<~EOS\n      #!/bin/sh\n      exec '#{appdir}/Vieb.app/Contents/MacOS/Vieb' \"$@\"\n    EOS\n  end\n"
     },
     {
       "app": [

@@ -9,7 +9,7 @@
   "homepage": "https://www.interactivebrokers.com/",
   "url": "https://download2.interactivebrokers.com/installers/tws/latest/tws-latest-macosx-x64.dmg",
   "appcast": null,
-  "version": "10.20.1f",
+  "version": "10.20.1g",
   "versions": {
   },
   "installed": null,
@@ -17,7 +17,7 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "uninstall_preflight": null
+      "uninstall_preflight": "  uninstall_preflight do\n    system_command \"/usr/bin/pkill\", args: [\"-f\", \"/Applications/Trader Workstation/Trader Workstation.app\"]\n  end\n"
     },
     {
       "uninstall": [
@@ -36,7 +36,7 @@
       "installer": [
         {
           "script": {
-            "executable": "$(brew --prefix)/Caskroom/trader-workstation/10.20.1f/Trader Workstation Installer.app/Contents/MacOS/JavaApplicationStub",
+            "executable": "$(brew --prefix)/Caskroom/trader-workstation/10.20.1g/Trader Workstation Installer.app/Contents/MacOS/JavaApplicationStub",
             "args": [
               "-q"
             ]

@@ -22,7 +22,7 @@
       ]
     },
     {
-      "uninstall_postflight": null
+      "uninstall_postflight": "  uninstall_postflight do\n    cert = \"#{Dir.home}/Library/Application Support/betwixt/ssl/certs/ca.pem\"\n    next unless File.exist? cert\n\n    stdout, * = system_command \"/usr/bin/openssl\",\n                               args: [\n                                 \"x509\",\n                                 \"-fingerprint\", \"-sha256\",\n                                 \"-noout\",\n                                 \"-in\", cert\n                               ]\n    hash = stdout.lines.first.split(\"=\").second.delete(\":\").strip\n    stdout, * = system_command \"/usr/bin/security\",\n                               args: [\"find-certificate\", \"-a\", \"-c\", \"NodeMITMProxyCA\", \"-Z\"],\n                               sudo: true\n    hashes = stdout.lines.grep(/^SHA-256 hash:/) { |l| l.split(\":\").second.strip }\n    if hashes.include?(hash)\n      system_command \"/usr/bin/security\",\n                     args: [\"delete-certificate\", \"-Z\", hash],\n                     sudo: true\n    end\n  end\n"
     },
     {
       "zap": [

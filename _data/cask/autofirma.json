@@ -30,7 +30,7 @@
       ]
     },
     {
-      "uninstall_postflight": null
+      "uninstall_postflight": "  uninstall_postflight do\n    system_command \"/usr/bin/security\",\n                   args: [\n                     \"delete-certificate\",\n                     \"-c\", \"AutoFirma ROOT\"\n                   ],\n                   sudo: true\n\n    system_command \"/usr/bin/security\",\n                   args: [\n                     \"delete-certificate\",\n                     \"-c\", \"127.0.0.1\"\n                   ],\n                   sudo: true\n  end\n"
     }
   ],
   "caveats": null,

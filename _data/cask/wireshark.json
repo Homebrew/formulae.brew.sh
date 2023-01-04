@@ -17,7 +17,7 @@
   "sha256": "9cc8ca2f48858285d3511f3e5e9167aedcfaebc5c06da8369766a4d2d69aa37e",
   "artifacts": [
     {
-      "uninstall_preflight": null
+      "uninstall_preflight": "  uninstall_preflight do\n    system_command \"/usr/sbin/installer\",\n                   args: [\n                     \"-pkg\", \"#{staged_path}/Uninstall ChmodBPF.pkg\",\n                     \"-target\", \"/\"\n                   ],\n                   sudo: true\n    system_command \"/usr/sbin/installer\",\n                   args: [\n                     \"-pkg\", \"#{staged_path}/Remove Wireshark from the system path.pkg\",\n                     \"-target\", \"/\"\n                   ],\n                   sudo: true\n  end\n"
     },
     {
       "uninstall": [

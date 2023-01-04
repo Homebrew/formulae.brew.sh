@@ -17,7 +17,7 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "preflight": null
+      "preflight": "  preflight do\n    # There is no sub-folder in the DMG; the root *is* the folder\n    FileUtils.mv(staged_path.children, staged_path.join(\"Virtual ][\").tap(&:mkpath))\n  end\n"
     },
     {
       "suite": [

@@ -17,10 +17,10 @@
   "sha256": "3b05591f117d487de0323ad3aca30b64a086125c22992a4c528c789db75b5b81",
   "artifacts": [
     {
-      "preflight": null
+      "preflight": "  preflight do\n    set_permissions \"#{staged_path}/Litecoin-Qt.app\", \"0755\"\n  end\n"
     },
     {
-      "uninstall_preflight": null
+      "uninstall_preflight": "  uninstall_preflight do\n    set_permissions \"#{appdir}/Litecoin-Qt.app\", \"0755\"\n  end\n"
     },
     {
       "app": [
@@ -28,7 +28,7 @@
       ]
     },
     {
-      "postflight": null
+      "postflight": "  postflight do\n    set_permissions \"#{appdir}/Litecoin-Qt.app\", \"0555\"\n  end\n"
     }
   ],
   "caveats": null,

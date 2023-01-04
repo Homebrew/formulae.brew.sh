@@ -61,7 +61,7 @@
       ]
     },
     {
-      "postflight": null
+      "postflight": "  postflight do\n    # If VirtualBox is installed before `/usr/local/lib/pkgconfig` is created by Homebrew, it creates it itself\n    # with incorrect permissions that break other packages\n    # See https://github.com/Homebrew/homebrew-cask/issues/68730#issuecomment-534363026\n    set_ownership \"/usr/local/lib/pkgconfig\"\n  end\n"
     },
     {
       "zap": [

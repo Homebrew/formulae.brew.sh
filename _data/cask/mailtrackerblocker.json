@@ -30,7 +30,7 @@
       ]
     },
     {
-      "uninstall_postflight": null
+      "uninstall_postflight": "  uninstall_postflight do\n    if system_command(\"ps\", args: [\"x\"]).stdout.match?(\"Mail.app/Contents/MacOS/Mail\")\n      opoo \"Restart Mail.app to finish uninstalling #{token}\"\n    end\n  end\n"
     },
     {
       "zap": [

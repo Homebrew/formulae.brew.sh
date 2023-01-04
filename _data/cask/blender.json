@@ -17,7 +17,7 @@
   "sha256": "f820d363b74694f2a7a4deca8780ae0dbdce3f312e02cc8234c199ce30bd6c9e",
   "artifacts": [
     {
-      "preflight": null
+      "preflight": "  preflight do\n    # make __pycache__ directories writable, otherwise uninstall fails\n    FileUtils.chmod \"u+w\", Dir.glob(\"#{staged_path}/*.app/**/__pycache__\")\n\n    File.write shimscript, <<~EOS\n      #!/bin/bash\n      '#{appdir}/Blender.app/Contents/MacOS/Blender' \"$@\"\n    EOS\n  end\n"
     },
     {
       "app": [

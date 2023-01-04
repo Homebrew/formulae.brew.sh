@@ -17,7 +17,7 @@
   "sha256": "bcf7a2a8d3967e37d9e79baa6ed18475b2031387c495b2e4cebd0872bf352d54",
   "artifacts": [
     {
-      "preflight": null
+      "preflight": "  preflight do\n    File.write shimscript, <<~EOS\n      #!/bin/bash\n      '#{appdir}/kdiff3.app/Contents/MacOS/kdiff3' \"$@\"\n    EOS\n  end\n"
     },
     {
       "app": [

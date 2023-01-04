@@ -17,7 +17,7 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "preflight": null
+      "preflight": "  preflight do\n    system_command \"#{staged_path}/JDownloader Installer.app/Contents/MacOS/JavaApplicationStub\",\n                   args:         [\n                     \"-dir\", appdir.to_s,\n                     \"-q\",\n                     \"-Dinstall4j.suppressStdout=true\",\n                     \"-Dinstall4j.debug=false\",\n                     \"-VcreateDesktopLinkAction$Boolean=false\",\n                     \"-VaddToDockAction$Boolean=false\"\n                   ],\n                   print_stderr: false\n  end\n"
     },
     {
       "uninstall": [

@@ -17,7 +17,7 @@
   "sha256": "2beaff9671d9367985cfe9548a225af798a7df25fd83a18d07c1148952fa43c9",
   "artifacts": [
     {
-      "uninstall_preflight": null
+      "uninstall_preflight": "  uninstall_preflight do\n    system_command \"/usr/bin/chflags\",\n                   args: [\"-R\", \"nouchg,noschg\", \"/Applications/FortiClient.app\"],\n                   sudo: true\n    system_command \"/usr/bin/chflags\",\n                   args: [\"-R\", \"nouchg,noschg\", \"/Applications/FortiClientUninstaller.app\"],\n                   sudo: true\n  end\n"
     },
     {
       "uninstall": [

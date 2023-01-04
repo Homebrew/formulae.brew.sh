@@ -19,7 +19,7 @@
   "sha256": "28c1a4814fc8838c2711c460b81f0ad0392581e7039ac5bec4409069f17e8c83",
   "artifacts": [
     {
-      "preflight": null
+      "preflight": "  preflight do\n    File.write p4_wrapper, <<~EOS\n      #!/bin/bash\n      set -euo pipefail\n      COMMAND=$(basename \"$0\")\n      if [[ \"$COMMAND\" == \"p4merge\" ]]; then\n        exec \"#{appdir}/${COMMAND}.app/Contents/Resources/launch${COMMAND}\" \"$@\" 2> /dev/null\n      else\n        exec \"#{appdir}/${COMMAND}.app/Contents/MacOS/${COMMAND}\" \"$@\" 2> /dev/null\n      fi\n    EOS\n  end\n"
     },
     {
       "app": [

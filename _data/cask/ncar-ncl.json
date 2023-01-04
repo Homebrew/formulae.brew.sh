@@ -18,7 +18,7 @@
   "sha256": "e2cd644f6b1bb41f55480b8818319e60c450998e31e5e489c69a5e84f3d1f359",
   "artifacts": [
     {
-      "preflight": null
+      "preflight": "  preflight do\n    system_command \"/bin/mkdir\", args: [\"-p\", \"#{HOMEBREW_PREFIX}/ncl-#{version}\"], sudo: true\n  end\n"
     },
     {
       "uninstall": [

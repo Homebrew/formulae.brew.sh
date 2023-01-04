@@ -17,10 +17,10 @@
   "sha256": "feb8a795696b406ad075e2c554c80c7ee7dd55f0952458f694ea1a918aa20ee3",
   "artifacts": [
     {
-      "preflight": null
+      "preflight": "  preflight do\n    # Log4j misinterprets comma in staged_path as alternative delimiter\n    FileUtils.mv(staged_path, \"#{caskroom_path}/#{version.csv.first}-#{version.csv.second}\")\n  end\n"
     },
     {
-      "uninstall_preflight": null
+      "uninstall_preflight": "  uninstall_preflight do\n    FileUtils.mv(\"#{caskroom_path}/#{version.csv.first}-#{version.csv.second}\", staged_path)\n  end\n"
     },
     {
       "binary": [

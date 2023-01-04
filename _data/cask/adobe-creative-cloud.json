@@ -17,7 +17,7 @@
   "sha256": "6295ba59fa9b6f993fdfde942c76d6cce893dcd4b49864f56c4f69bcaecd805d",
   "artifacts": [
     {
-      "uninstall_preflight": null
+      "uninstall_preflight": "  uninstall_preflight do\n    set_ownership \"/Library/Application Support/Adobe\"\n  end\n"
     },
     {
       "uninstall": [
@@ -109,7 +109,7 @@
       ]
     },
     {
-      "uninstall_postflight": null
+      "uninstall_postflight": "  uninstall_postflight do\n    stdout, * = system_command \"/bin/launchctl\", args: [\"print\", \"gui/#{Process.uid}\"]\n    ccx_processes = stdout.lines.grep(/com\\.adobe\\.CCXProcess\\.\\d{5}/) { Regexp.last_match(0) }.uniq\n    ccx_processes.each { |id| system \"/bin/launchctl\", \"bootout\", \"gui/#{Process.uid}/#{id}\" }\n  end\n"
     },
     {
       "zap": [

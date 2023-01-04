@@ -108,7 +108,7 @@
       ]
     },
     {
-      "postflight": null
+      "postflight": "  postflight do\n    # Use `readlink` to get full path of symlinked commands.\n    commands.each do |c|\n      command = \"#{staged_path}/j#{version}/bin/#{c}.command\"\n      File.write command, File.read(command).gsub(\"$0\", '$(/usr/bin/readlink \"$0\" || /bin/echo \"$0\")')\n    end\n\n    # Fix relative paths inside App bundles.\n    apps.each do |a|\n      apprun = \"#{appdir}/#{a}.app/Contents/MacOS/apprun\"\n      File.write apprun, File.read(apprun).gsub(%r{`dirname \"\\$0\"`.*?/bin}, \"#{staged_path}/j#{version}/bin\")\n    end\n  end\n"
     }
   ],
   "caveats": null,

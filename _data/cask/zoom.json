@@ -40,7 +40,7 @@
       ]
     },
     {
-      "postflight": null
+      "postflight": "  postflight do\n    # Description: Ensure console variant of postinstall is non-interactive.\n    # This is because `open \"$APP_PATH\"&` is called from the postinstall\n    # script of the package and we don't want any user intervention there.\n    retries ||= 3\n    ohai \"The Zoom package postinstall script launches the Zoom app\" unless retries < 3\n    ohai \"Attempting to close zoom.us.app to avoid unwanted user intervention\" unless retries < 3\n    return unless system_command \"/usr/bin/pkill\", args: [\"-f\", \"/Applications/zoom.us.app\"]\n\n    rescue RuntimeError\n      sleep 1\n      retry unless (retries -= 1).zero?\n      opoo \"Unable to forcibly close zoom.us.app\"\n  end\n"
     },
     {
       "zap": [

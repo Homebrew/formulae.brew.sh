@@ -17,10 +17,10 @@
   "sha256": "570f62ec38a48be84a3837a8b317c26396cbfd439fc20cde082ebe42659f219c",
   "artifacts": [
     {
-      "preflight": null
+      "preflight": "  preflight do\n    system_command \"chflags\",\n                   args: [\"nohidden\", \"#{staged_path}/Parallels Desktop.app\"]\n    system_command \"xattr\",\n                   args: [\"-d\", \"com.apple.FinderInfo\", \"#{staged_path}/Parallels Desktop.app\"]\n  end\n"
     },
     {
-      "uninstall_preflight": null
+      "uninstall_preflight": "  uninstall_preflight do\n    set_ownership \"#{appdir}/Parallels Desktop.app\"\n  end\n"
     },
     {
       "uninstall": [
@@ -48,7 +48,7 @@
       ]
     },
     {
-      "postflight": null
+      "postflight": "  postflight do\n    system_command \"#{appdir}/Parallels Desktop.app/Contents/MacOS/inittool\",\n                   args: [\"init\"],\n                   sudo: true\n  end\n"
     },
     {
       "zap": [

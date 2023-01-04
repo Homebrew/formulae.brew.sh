@@ -17,7 +17,7 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "preflight": null
+      "preflight": "  preflight do\n    staged_path.glob(\"MbedStudio-*.pkg\").first.rename(\"#{staged_path}/MbedStudio.pkg\")\n  end\n"
     },
     {
       "uninstall": [

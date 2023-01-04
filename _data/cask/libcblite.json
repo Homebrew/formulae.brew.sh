@@ -49,10 +49,10 @@
       ]
     },
     {
-      "postflight": null
+      "postflight": "  postflight do\n    puts \"Creating library symlinks in #{HOMEBREW_PREFIX}/lib\"\n    File.symlink(\"libcblite.#{version}.dylib\", \"#{HOMEBREW_PREFIX}/lib/libcblite.#{version.major}.dylib\")\n    File.symlink(\"libcblite.#{version.major}.dylib\", \"#{HOMEBREW_PREFIX}/lib/libcblite.dylib\")\n  end\n"
     },
     {
-      "uninstall_postflight": null
+      "uninstall_postflight": "  uninstall_postflight do\n    puts \"Removing library symlinks in #{HOMEBREW_PREFIX}/lib\"\n    File.unlink(\"#{HOMEBREW_PREFIX}/lib/libcblite.#{version.major}.dylib\", \"#{HOMEBREW_PREFIX}/lib/libcblite.dylib\")\n  end\n"
     }
   ],
   "caveats": null,

@@ -17,7 +17,7 @@
   "sha256": "e7f5f5d5370d9a4bbfaffb034a8c3b38823d98621126adbcfbd76a29cffeb53b",
   "artifacts": [
     {
-      "uninstall_preflight": null
+      "uninstall_preflight": "  uninstall_preflight do\n    system_command \"/usr/sbin/installer\",\n                   args: [\n                     \"-pkg\", \"#{staged_path}/Uninstaller/Uninstall Winclone.pkg\",\n                     \"-target\", \"/\"\n                   ],\n                   sudo: true\n  end\n"
     },
     {
       "uninstall": [

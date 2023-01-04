@@ -17,7 +17,7 @@
   "sha256": "6e1dcfebfd0d1c4c2ebfcfbdebe688afd08a4077c4ac00db4b507feee9307353",
   "artifacts": [
     {
-      "preflight": null
+      "preflight": "  preflight do\n    File.write shimscript, <<~EOS\n      #!/bin/sh\n      exec '#{appdir}/kitty.app/Contents/MacOS/kitty' \"$@\"\n    EOS\n  end\n"
     },
     {
       "app": [

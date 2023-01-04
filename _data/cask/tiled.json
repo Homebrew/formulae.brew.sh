@@ -17,7 +17,7 @@
   "sha256": "ff1600a192b0ebff2f2394ff93db36c4273aed7c398ad7c5854b2a1249c469d9",
   "artifacts": [
     {
-      "preflight": null
+      "preflight": "  preflight do\n    File.write shimscript, <<~EOS\n      #!/bin/bash\n      exec '#{appdir}/Tiled.app/Contents/MacOS/Tiled' \"$@\"\n    EOS\n  end\n"
     },
     {
       "app": [

@@ -22,7 +22,7 @@
       ]
     },
     {
-      "postflight": null
+      "postflight": "  postflight do\n    # workaround for bug which breaks the app on case-sensitive filesystems\n    Dir.chdir(\"#{appdir}/MeshLab#{version}.app/Contents/MacOS\") do\n      File.symlink(\"meshlab\", \"MeshLab\") unless File.exist? \"MeshLab\"\n    end\n  end\n"
     }
   ],
   "caveats": null,

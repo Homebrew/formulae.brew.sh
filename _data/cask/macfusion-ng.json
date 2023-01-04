@@ -29,7 +29,7 @@
       ]
     },
     {
-      "postflight": null
+      "postflight": "  postflight do\n    Dir.chdir(\"#{appdir}/Macfusion.app/Contents/PlugIns/sshfs.mfplugin/Contents/Resources\") do\n      File.rename(\"sshfs-static\", \"sshfs-static.orig\")\n      File.symlink(\"#{HOMEBREW_PREFIX}/bin/sshfs\", \"sshfs-static\")\n    end\n  end\n"
     },
     {
       "zap": [

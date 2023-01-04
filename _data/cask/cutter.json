@@ -17,7 +17,7 @@
   "sha256": "6d37c18fd91f528c72f92fa7d79a4d0082d377bc02466aa59bf17be155b579c4",
   "artifacts": [
     {
-      "preflight": null
+      "preflight": "  preflight do\n    File.write shimscript, <<~EOS\n      #!/bin/sh\n      '#{appdir}/Cutter.app/Contents/MacOS/Cutter' \"$@\"\n    EOS\n  end\n"
     },
     {
       "app": [

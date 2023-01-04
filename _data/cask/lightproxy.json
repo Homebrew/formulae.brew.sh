@@ -22,7 +22,7 @@
       ]
     },
     {
-      "uninstall_postflight": null
+      "uninstall_postflight": "  uninstall_postflight do\n    stdout, * = system_command \"/usr/bin/security\",\n                               args: [\"find-certificate\", \"-a\", \"-c\", \"LigthProxy\", \"-Z\"],\n                               sudo: true\n    hashes = stdout.lines.grep(/^SHA-256 hash:/) { |l| l.split(\":\").second.strip }\n    hashes.each do |h|\n      system_command \"/usr/bin/security\",\n                     args: [\"delete-certificate\", \"-Z\", h],\n                     sudo: true\n    end\n  end\n"
     }
   ],
   "caveats": null,

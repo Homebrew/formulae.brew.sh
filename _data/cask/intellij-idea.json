@@ -22,7 +22,7 @@
       ]
     },
     {
-      "uninstall_postflight": null
+      "uninstall_postflight": "  uninstall_postflight do\n    ENV[\"PATH\"].split(File::PATH_SEPARATOR).map { |path| File.join(path, \"idea\") }.each do |path|\n      if File.readable?(path) &&\n         File.readlines(path).grep(/# see com.intellij.idea.SocketLock for the server side of this interface/).any?\n        File.delete(path)\n      end\n    end\n  end\n"
     },
     {
       "zap": [

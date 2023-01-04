@@ -17,7 +17,7 @@
   "sha256": "40bb9fbd4b2a18b48138a7fb3285d89187d50caab10506cff81b367b6edc858d",
   "artifacts": [
     {
-      "uninstall_preflight": null
+      "uninstall_preflight": "  uninstall_preflight do\n    set_ownership \"#{appdir}/VMware Fusion.app\"\n  end\n"
     },
     {
       "uninstall": [
@@ -162,7 +162,7 @@
       ]
     },
     {
-      "postflight": null
+      "postflight": "  postflight do\n    system_command \"#{appdir}/VMware Fusion.app/Contents/Library/Initialize VMware Fusion.tool\",\n                   args: [\"set\"],\n                   sudo: true\n  end\n"
     },
     {
       "zap": [

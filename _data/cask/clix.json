@@ -17,7 +17,7 @@
   "sha256": "no_check",
   "artifacts": [
     {
-      "preflight": null
+      "preflight": "  preflight do\n    set_permissions \"#{staged_path}/CLIX/CLIX.app\", \"0755\"\n  end\n"
     },
     {
       "app": [
@@ -25,7 +25,7 @@
       ]
     },
     {
-      "postflight": null
+      "postflight": "  postflight do\n    set_permissions \"#{appdir}/CLIX/CLIX.app\", \"0700\"\n  end\n"
     }
   ],
   "caveats": null,

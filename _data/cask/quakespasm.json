@@ -17,7 +17,7 @@
   "sha256": "c3873d59a5768496fbdfca4b27e37c9f9ac09764f8809997189c374cfd00354f",
   "artifacts": [
     {
-      "preflight": null
+      "preflight": "  preflight do\n    # There is no sub-folder; the root *is* the folder\n    FileUtils.mv(staged_path.children, staged_path.join(\"QuakeSpasm\").tap(&:mkpath))\n  end\n"
     },
     {
       "suite": [

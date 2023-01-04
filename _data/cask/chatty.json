@@ -17,7 +17,7 @@
   "sha256": "d0907aaea49ae60d217a78d96a3d911267e31e0763c6f71810e163f49181398f",
   "artifacts": [
     {
-      "preflight": null
+      "preflight": "  preflight do\n    # There is no sub-folder in the ZIP; the root *is* the folder\n    FileUtils.mv(staged_path.children, staged_path.join(\"Chatty\").tap(&:mkpath))\n  end\n"
     },
     {
       "suite": [

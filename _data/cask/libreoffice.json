@@ -17,7 +17,7 @@
   "sha256": "fe569ba23bb74eb3e86974537dd80e504debe5fd8526a00edbad6be4da18986a",
   "artifacts": [
     {
-      "preflight": null
+      "preflight": "  preflight do\n    File.write shimscript, <<~EOS\n      #!/bin/sh\n      '#{appdir}/LibreOffice.app/Contents/MacOS/soffice' \"$@\"\n    EOS\n  end\n"
     },
     {
       "app": [

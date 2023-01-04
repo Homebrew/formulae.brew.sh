@@ -17,7 +17,7 @@
   "sha256": "d2e9969ba8b5056926b08719e527f781cca9f6b35fdbc54e855d0540c93709b2",
   "artifacts": [
     {
-      "preflight": null
+      "preflight": "  preflight do\n    File.write shimscript, <<~EOS\n      #!/bin/sh\n      exec '#{staged_path}/Inkscape.app/Contents/MacOS/inkscape' \"$@\"\n    EOS\n  end\n"
     },
     {
       "app": [
