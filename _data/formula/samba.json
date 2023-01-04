@@ -29,43 +29,43 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 0,
+      "rebuild": 1,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
         "arm64_ventura": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/samba/blobs/sha256:d7b51d4816df689e904b47e7127c569dc30010d7f468eb0ee1a5ea61d38732dc",
-          "sha256": "d7b51d4816df689e904b47e7127c569dc30010d7f468eb0ee1a5ea61d38732dc"
+          "url": "https://ghcr.io/v2/homebrew/core/samba/blobs/sha256:051b24e4afef1632447fed0407decbc44efc12f4cf6d8144231666c42c4faa25",
+          "sha256": "051b24e4afef1632447fed0407decbc44efc12f4cf6d8144231666c42c4faa25"
         },
         "arm64_monterey": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/samba/blobs/sha256:71e0287b92be4b6a1bf59b39a44bc1797d0c6df3a41ab4cfe289431097d4c765",
-          "sha256": "71e0287b92be4b6a1bf59b39a44bc1797d0c6df3a41ab4cfe289431097d4c765"
+          "url": "https://ghcr.io/v2/homebrew/core/samba/blobs/sha256:c6e18e3f22acea130e83f11eebd51d85b7b594a9d371891257b0a130bbfe31ff",
+          "sha256": "c6e18e3f22acea130e83f11eebd51d85b7b594a9d371891257b0a130bbfe31ff"
         },
         "arm64_big_sur": {
           "cellar": "/opt/homebrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/samba/blobs/sha256:1d9c5c45dc7416eaa9be0274c142a4d419306340a234e8f90f68af012f8ed281",
-          "sha256": "1d9c5c45dc7416eaa9be0274c142a4d419306340a234e8f90f68af012f8ed281"
+          "url": "https://ghcr.io/v2/homebrew/core/samba/blobs/sha256:a9ba7054523b3b13fc6aeb0444a9a816e43cc8c7e1eacbe516d3e2cbd189673c",
+          "sha256": "a9ba7054523b3b13fc6aeb0444a9a816e43cc8c7e1eacbe516d3e2cbd189673c"
         },
         "ventura": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/samba/blobs/sha256:d8a57c488cc1b878e55fa95b75b049d5c6780678f2d885adca92d41cb2035b31",
-          "sha256": "d8a57c488cc1b878e55fa95b75b049d5c6780678f2d885adca92d41cb2035b31"
+          "url": "https://ghcr.io/v2/homebrew/core/samba/blobs/sha256:6111c8adac57188bb113b552e73290f2e6c222cb055bdbd93400a1f14f595847",
+          "sha256": "6111c8adac57188bb113b552e73290f2e6c222cb055bdbd93400a1f14f595847"
         },
         "monterey": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/samba/blobs/sha256:0114b662e6bf42af9560647e00bd058e9da57406349b1bba49dd7bcaa9012a34",
-          "sha256": "0114b662e6bf42af9560647e00bd058e9da57406349b1bba49dd7bcaa9012a34"
+          "url": "https://ghcr.io/v2/homebrew/core/samba/blobs/sha256:4a2fce95e7847202c650b426aa9b8dc76878955032bbb6782c0c23c67d583de4",
+          "sha256": "4a2fce95e7847202c650b426aa9b8dc76878955032bbb6782c0c23c67d583de4"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/samba/blobs/sha256:13749c6d7d2a3f79f33d6ca8b98000e255cf50b191b36ead4c82ba8ff335f780",
-          "sha256": "13749c6d7d2a3f79f33d6ca8b98000e255cf50b191b36ead4c82ba8ff335f780"
+          "url": "https://ghcr.io/v2/homebrew/core/samba/blobs/sha256:c42ecd9a4092379993fca623ce6f8632745c39819075f8488d25735bd5972da9",
+          "sha256": "c42ecd9a4092379993fca623ce6f8632745c39819075f8488d25735bd5972da9"
         },
         "x86_64_linux": {
           "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/samba/blobs/sha256:f97c1ddf6a5dde556437655a11003015aec5acaa74a55bf702e68732d625454f",
-          "sha256": "f97c1ddf6a5dde556437655a11003015aec5acaa74a55bf702e68732d625454f"
+          "url": "https://ghcr.io/v2/homebrew/core/samba/blobs/sha256:0a9271342edc28f7cc7531b8297808fc9f52bc21c246c7bf38c3ef398dfe2839",
+          "sha256": "0a9271342edc28f7cc7531b8297808fc9f52bc21c246c7bf38c3ef398dfe2839"
         }
       }
     }
@@ -76,13 +76,18 @@
 
   ],
   "build_dependencies": [
+    "cmocka",
+    "pkg-config",
     "python@3.11"
   ],
   "dependencies": [
     "gnutls",
+    "icu4c",
     "krb5",
     "libtasn1",
+    "popt",
     "readline",
+    "talloc",
     "openssl@1.1"
   ],
   "test_dependencies": [
@@ -129,6 +134,8 @@
   "variations": {
     "x86_64_linux": {
       "build_dependencies": [
+        "cmocka",
+        "pkg-config",
         "python@3.11",
         "bison",
         "flex",
@@ -136,9 +143,12 @@
       ],
       "dependencies": [
         "gnutls",
+        "icu4c",
         "krb5",
         "libtasn1",
+        "popt",
         "readline",
+        "talloc",
         "libxcrypt",
         "zlib",
         "libtirpc"
