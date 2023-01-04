@@ -3,7 +3,7 @@
   ...
   "wget": {
     "version": "1.21.3",
-    "revision": 0
+    "revision": 1
   },
   ...
   "zsh": {
