@@ -7,14 +7,14 @@
   ],
   "desc": "Mesh VPN based on Wireguard",
   "homepage": "https://tailscale.com/",
-  "url": "https://pkgs.tailscale.com/stable/Tailscale-1.34.1-macos.zip",
+  "url": "https://pkgs.tailscale.com/stable/Tailscale-1.34.2-macos.zip",
   "appcast": null,
-  "version": "1.34.1",
+  "version": "1.34.2",
   "versions": {
   },
   "installed": null,
   "outdated": false,
-  "sha256": "d2f6276e3e2eb507892a5230a5eab75acd304def3c2e8d40c72a412be4962dc6",
+  "sha256": "582b602026f426ea6effd612dba8fa53045b87368162feb5bb2de27b1bcffb66",
   "artifacts": [
     {
       "preflight": "  preflight do\n    File.write shimscript, <<~EOS\n      #!/bin/sh\n      exec '#{appdir}/Tailscale.app/Contents/MacOS/Tailscale' \"$@\"\n    EOS\n  end\n"
@@ -34,7 +34,7 @@
     },
     {
       "binary": [
-        "$(brew --prefix)/Caskroom/tailscale/1.34.1/tailscale.wrapper.sh",
+        "$(brew --prefix)/Caskroom/tailscale/1.34.2/tailscale.wrapper.sh",
         {
           "target": "tailscale"
         }
