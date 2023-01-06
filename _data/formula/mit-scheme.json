@@ -29,33 +29,23 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 0,
+      "rebuild": 1,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
         "monterey": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/mit-scheme/blobs/sha256:5c002d0841ffabfabe64e02901fc9c79815115348fd388da23b9040f04c5ed42",
-          "sha256": "5c002d0841ffabfabe64e02901fc9c79815115348fd388da23b9040f04c5ed42"
+          "url": "https://ghcr.io/v2/homebrew/core/mit-scheme/blobs/sha256:4ca9936e7e9d596a0de4a5a8dd77b7a1d76e94a905651926d64ab2ba02bc42c8",
+          "sha256": "4ca9936e7e9d596a0de4a5a8dd77b7a1d76e94a905651926d64ab2ba02bc42c8"
         },
         "big_sur": {
           "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/mit-scheme/blobs/sha256:2a010afbf69c03bf7da5e45077bf76a1cce13d96748fa6c4c9d4ff74a87674cc",
-          "sha256": "2a010afbf69c03bf7da5e45077bf76a1cce13d96748fa6c4c9d4ff74a87674cc"
-        },
-        "catalina": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/mit-scheme/blobs/sha256:f1f056a425dddbc394caa899e1eab404163b7404ea07f3673850e5fb2ce78aaa",
-          "sha256": "f1f056a425dddbc394caa899e1eab404163b7404ea07f3673850e5fb2ce78aaa"
-        },
-        "mojave": {
-          "cellar": "/usr/local/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/mit-scheme/blobs/sha256:f3b91a23b3e924b1cd560b59a87cf64350a232579390adf35661d9d6cec3b4bc",
-          "sha256": "f3b91a23b3e924b1cd560b59a87cf64350a232579390adf35661d9d6cec3b4bc"
+          "url": "https://ghcr.io/v2/homebrew/core/mit-scheme/blobs/sha256:671d6531ccb7cbc34863bec18fc27c5be3792e955c9dcff569f3e7d61b8dac3f",
+          "sha256": "671d6531ccb7cbc34863bec18fc27c5be3792e955c9dcff569f3e7d61b8dac3f"
         },
         "x86_64_linux": {
           "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/mit-scheme/blobs/sha256:ed4f56aa490d6965f7de9840277d50ced6e8f1e69a07889af434ccac24d414af",
-          "sha256": "ed4f56aa490d6965f7de9840277d50ced6e8f1e69a07889af434ccac24d414af"
+          "url": "https://ghcr.io/v2/homebrew/core/mit-scheme/blobs/sha256:5129eed815f93a963cbca4761637d8d056cf5d6d853fe6feb08c9b53e5f18d36",
+          "sha256": "5129eed815f93a963cbca4761637d8d056cf5d6d853fe6feb08c9b53e5f18d36"
         }
       }
     }
@@ -69,7 +59,7 @@
 
   ],
   "dependencies": [
-    "openssl@1.1"
+
   ],
   "test_dependencies": [
 
@@ -94,6 +84,15 @@
       "version": null,
       "contexts": [
         "build"
+      ]
+    },
+    {
+      "name": "arch",
+      "cask": null,
+      "download": null,
+      "version": "x86_64",
+      "contexts": [
+
       ]
     }
   ],
@@ -130,8 +129,18 @@
         "texinfo"
       ],
       "dependencies": [
-        "openssl@1.1",
         "ncurses"
+      ],
+      "requirements": [
+        {
+          "name": "xcode",
+          "cask": null,
+          "download": null,
+          "version": null,
+          "contexts": [
+            "build"
+          ]
+        }
       ]
     }
   }
