@@ -1,0 +1,140 @@
+{
+  "name": "xinit",
+  "full_name": "xinit",
+  "tap": "homebrew/core",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "Start the X Window System server",
+  "license": "MIT and APSL-2.0",
+  "homepage": "https://gitlab.freedesktop.org/xorg/app/xinit",
+  "versions": {
+    "stable": "1.4.2",
+    "head": null,
+    "bottle": true
+  },
+  "urls": {
+    "stable": {
+      "url": "https://www.x.org/releases/individual/app/xinit-1.4.2.tar.xz",
+      "tag": null,
+      "revision": null,
+      "checksum": "b7d8dc8d22ef9f15985a10b606ee4f2aad6828befa437359934647e88d331f23"
+    }
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "arm64_ventura": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/xinit/blobs/sha256:0fbd33c0f3e8a01224d5f4c2f1437236957d9f9b80d0199f6bf729fe783320c9",
+          "sha256": "0fbd33c0f3e8a01224d5f4c2f1437236957d9f9b80d0199f6bf729fe783320c9"
+        },
+        "arm64_monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/xinit/blobs/sha256:b32fd947d6ab4e3d27cae884ecba3d25d618cc5df48869995db8211857a75cf9",
+          "sha256": "b32fd947d6ab4e3d27cae884ecba3d25d618cc5df48869995db8211857a75cf9"
+        },
+        "arm64_big_sur": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/xinit/blobs/sha256:e3fa6b976ee03fddeea911fb37cf872c72b23b8a4b00ed11299925656b983fd5",
+          "sha256": "e3fa6b976ee03fddeea911fb37cf872c72b23b8a4b00ed11299925656b983fd5"
+        },
+        "ventura": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/xinit/blobs/sha256:3db4e377fbe430f3ea074f0ec1f433b3b7278aa451da736d95a8a1ff72e87047",
+          "sha256": "3db4e377fbe430f3ea074f0ec1f433b3b7278aa451da736d95a8a1ff72e87047"
+        },
+        "monterey": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/xinit/blobs/sha256:b206deb4ff3200499ab32a8984c90901277094697eaed812ec0e8d10765e64d6",
+          "sha256": "b206deb4ff3200499ab32a8984c90901277094697eaed812ec0e8d10765e64d6"
+        },
+        "big_sur": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/xinit/blobs/sha256:1b62cbaab6ec39e95a11057e5ce26209c5b4f5696eaab24c0a59e1b7374a7fe0",
+          "sha256": "1b62cbaab6ec39e95a11057e5ce26209c5b4f5696eaab24c0a59e1b7374a7fe0"
+        },
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/xinit/blobs/sha256:540015cba432ff1f7e719b37f9c2c3af6d8f40784840eeb8e8774cf8575b82a0",
+          "sha256": "540015cba432ff1f7e719b37f9c2c3af6d8f40784840eeb8e8774cf8575b82a0"
+        }
+      }
+    }
+  },
+  "keg_only": false,
+  "keg_only_reason": null,
+  "options": [
+
+  ],
+  "build_dependencies": [
+    "pkg-config",
+    "tradcpp",
+    "lndir",
+    "mkfontscale"
+  ],
+  "dependencies": [
+    "libx11",
+    "xauth",
+    "xmodmap",
+    "xrdb",
+    "xterm",
+    "quartz-wm"
+  ],
+  "test_dependencies": [
+    "xorg-server"
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "To start privileged xinit now and restart at login:\n  sudo brew services start xinit --file=$(brew --prefix)/opt/xinit/homebrew.mxcl.privileged_startx.plist\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "deprecated": false,
+  "deprecation_date": null,
+  "deprecation_reason": null,
+  "disabled": false,
+  "disable_date": null,
+  "disable_reason": null,
+  "variations": {
+    "x86_64_linux": {
+      "build_dependencies": [
+        "pkg-config",
+        "tradcpp"
+      ],
+      "dependencies": [
+        "libx11",
+        "xauth",
+        "xmodmap",
+        "xrdb",
+        "xterm",
+        "twm",
+        "util-linux"
+      ]
+    }
+  }
+}

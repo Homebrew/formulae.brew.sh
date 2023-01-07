@@ -1,0 +1,159 @@
+{
+  "name": "xorg-server",
+  "full_name": "xorg-server",
+  "tap": "homebrew/core",
+  "oldname": null,
+  "aliases": [
+
+  ],
+  "versioned_formulae": [
+
+  ],
+  "desc": "X Window System display server",
+  "license": "MIT and APSL-2.0",
+  "homepage": "https://www.x.org",
+  "versions": {
+    "stable": "21.1.6",
+    "head": null,
+    "bottle": true
+  },
+  "urls": {
+    "stable": {
+      "url": "https://www.x.org/releases/individual/xserver/xorg-server-21.1.6.tar.xz",
+      "tag": null,
+      "revision": null,
+      "checksum": "1eb86ed674d042b6c8b1f9135e59395cbbca35ed551b122f73a7d8bb3bb22484"
+    }
+  },
+  "revision": 0,
+  "version_scheme": 0,
+  "bottle": {
+    "stable": {
+      "rebuild": 0,
+      "root_url": "https://ghcr.io/v2/homebrew/core",
+      "files": {
+        "arm64_ventura": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/xorg-server/blobs/sha256:d9e8763f9c626e33fdd588560292b9b40808b700b0626a1447ed8221e84be118",
+          "sha256": "d9e8763f9c626e33fdd588560292b9b40808b700b0626a1447ed8221e84be118"
+        },
+        "arm64_monterey": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/xorg-server/blobs/sha256:08ff802a6846e14b45b161fc90561b430b9196627589638b667d42c94fc2c44d",
+          "sha256": "08ff802a6846e14b45b161fc90561b430b9196627589638b667d42c94fc2c44d"
+        },
+        "arm64_big_sur": {
+          "cellar": "/opt/homebrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/xorg-server/blobs/sha256:ac1815046be1cbdb3de0ec6ff255d42ff367b70b16c2e83a912af6e8e34987b0",
+          "sha256": "ac1815046be1cbdb3de0ec6ff255d42ff367b70b16c2e83a912af6e8e34987b0"
+        },
+        "ventura": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/xorg-server/blobs/sha256:db951b6b598f1f06c399ab099d02a2f4a10fdda3f77fe42cc1178c9bf772d890",
+          "sha256": "db951b6b598f1f06c399ab099d02a2f4a10fdda3f77fe42cc1178c9bf772d890"
+        },
+        "monterey": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/xorg-server/blobs/sha256:7f53b65000508cb7074ab7be0b9298a8cb8643a01226931fb902ea1fa0f10d53",
+          "sha256": "7f53b65000508cb7074ab7be0b9298a8cb8643a01226931fb902ea1fa0f10d53"
+        },
+        "big_sur": {
+          "cellar": "/usr/local/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/xorg-server/blobs/sha256:b024b869d7d7b1f9f7c23cf4036488fea44c18484549cfad77e59847c6714abe",
+          "sha256": "b024b869d7d7b1f9f7c23cf4036488fea44c18484549cfad77e59847c6714abe"
+        },
+        "x86_64_linux": {
+          "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+          "url": "https://ghcr.io/v2/homebrew/core/xorg-server/blobs/sha256:18d0f486f0c19d60bc2760be2cc3eaa7dff4745acc1577a89b12aec1d68f3b1c",
+          "sha256": "18d0f486f0c19d60bc2760be2cc3eaa7dff4745acc1577a89b12aec1d68f3b1c"
+        }
+      }
+    }
+  },
+  "keg_only": false,
+  "keg_only_reason": null,
+  "options": [
+
+  ],
+  "build_dependencies": [
+    "font-util",
+    "libxkbfile",
+    "meson",
+    "ninja",
+    "pkg-config",
+    "util-macros",
+    "xorgproto",
+    "xtrans"
+  ],
+  "dependencies": [
+    "libxfixes",
+    "libxfont2",
+    "mesa",
+    "pixman",
+    "xauth",
+    "xcb-util",
+    "xcb-util-image",
+    "xcb-util-keysyms",
+    "xcb-util-renderutil",
+    "xcb-util-wm",
+    "xkbcomp",
+    "xkeyboardconfig",
+    "libapplewm"
+  ],
+  "test_dependencies": [
+
+  ],
+  "recommended_dependencies": [
+
+  ],
+  "optional_dependencies": [
+
+  ],
+  "uses_from_macos": [
+
+  ],
+  "requirements": [
+
+  ],
+  "conflicts_with": [
+
+  ],
+  "caveats": "To launch X server, it is recommend to install xinit,\nespecially on macOS, otherwise X11.app will not work:\n  brew install xinit\nIf cask xquartz is installed, this link may be helpful:\n  https://www.xquartz.org/FAQs.html#want-another-x11app-server\n",
+  "installed": [
+
+  ],
+  "linked_keg": null,
+  "pinned": false,
+  "outdated": false,
+  "deprecated": false,
+  "deprecation_date": null,
+  "deprecation_reason": null,
+  "disabled": false,
+  "disable_date": null,
+  "disable_reason": null,
+  "variations": {
+    "x86_64_linux": {
+      "dependencies": [
+        "libxfixes",
+        "libxfont2",
+        "mesa",
+        "pixman",
+        "xauth",
+        "xcb-util",
+        "xcb-util-image",
+        "xcb-util-keysyms",
+        "xcb-util-renderutil",
+        "xcb-util-wm",
+        "xkbcomp",
+        "xkeyboardconfig",
+        "dbus",
+        "libdrm",
+        "libepoxy",
+        "libxcvt",
+        "libxshmfence",
+        "nettle",
+        "systemd"
+      ]
+    }
+  }
+}
