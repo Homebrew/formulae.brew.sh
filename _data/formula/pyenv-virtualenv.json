@@ -13,16 +13,16 @@
   "license": "MIT",
   "homepage": "https://github.com/pyenv/pyenv-virtualenv",
   "versions": {
-    "stable": "1.1.5",
+    "stable": "1.2.0",
     "head": "HEAD",
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/pyenv/pyenv-virtualenv/archive/v1.1.5.tar.gz",
+      "url": "https://github.com/pyenv/pyenv-virtualenv/archive/v1.2.0.tar.gz",
       "tag": null,
       "revision": null,
-      "checksum": "27ae3de027a6f6dccdca4085225512e559c6b94b31625bd2b357a18890a1e618"
+      "checksum": "1824a1a6d273f6efb38a278b60070bd412cfe6592440b73fcf0e0f2d22730aeb"
     }
   },
   "revision": 0,
@@ -32,10 +32,40 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
-        "all": {
+        "arm64_ventura": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/pyenv-virtualenv/blobs/sha256:0e3bfba31c3d4bc538ff156e225ca3dbb1fd15e27cd8fd5885706eb0efdb4405",
-          "sha256": "0e3bfba31c3d4bc538ff156e225ca3dbb1fd15e27cd8fd5885706eb0efdb4405"
+          "url": "https://ghcr.io/v2/homebrew/core/pyenv-virtualenv/blobs/sha256:03551b4cbf9bcbf04eb07de5a382fcda83b8591bba38097bfc62f4cc300b1ec6",
+          "sha256": "03551b4cbf9bcbf04eb07de5a382fcda83b8591bba38097bfc62f4cc300b1ec6"
+        },
+        "arm64_monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/pyenv-virtualenv/blobs/sha256:03551b4cbf9bcbf04eb07de5a382fcda83b8591bba38097bfc62f4cc300b1ec6",
+          "sha256": "03551b4cbf9bcbf04eb07de5a382fcda83b8591bba38097bfc62f4cc300b1ec6"
+        },
+        "arm64_big_sur": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/pyenv-virtualenv/blobs/sha256:03551b4cbf9bcbf04eb07de5a382fcda83b8591bba38097bfc62f4cc300b1ec6",
+          "sha256": "03551b4cbf9bcbf04eb07de5a382fcda83b8591bba38097bfc62f4cc300b1ec6"
+        },
+        "ventura": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/pyenv-virtualenv/blobs/sha256:29fdaa2e9516b77cf0cf41f10058115db14e3c31924cd96f9fe226fa56abbd61",
+          "sha256": "29fdaa2e9516b77cf0cf41f10058115db14e3c31924cd96f9fe226fa56abbd61"
+        },
+        "monterey": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/pyenv-virtualenv/blobs/sha256:29fdaa2e9516b77cf0cf41f10058115db14e3c31924cd96f9fe226fa56abbd61",
+          "sha256": "29fdaa2e9516b77cf0cf41f10058115db14e3c31924cd96f9fe226fa56abbd61"
+        },
+        "big_sur": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/pyenv-virtualenv/blobs/sha256:29fdaa2e9516b77cf0cf41f10058115db14e3c31924cd96f9fe226fa56abbd61",
+          "sha256": "29fdaa2e9516b77cf0cf41f10058115db14e3c31924cd96f9fe226fa56abbd61"
+        },
+        "x86_64_linux": {
+          "cellar": ":any_skip_relocation",
+          "url": "https://ghcr.io/v2/homebrew/core/pyenv-virtualenv/blobs/sha256:0b87d0c08b3ad5cb73e33ca631cf14f487b25646c933faf06e91f1d5e311ccbd",
+          "sha256": "0b87d0c08b3ad5cb73e33ca631cf14f487b25646c933faf06e91f1d5e311ccbd"
         }
       }
     }
@@ -49,7 +79,8 @@
 
   ],
   "dependencies": [
-    "pyenv"
+    "pyenv",
+    "coreutils"
   ],
   "test_dependencies": [
 
@@ -83,5 +114,10 @@
   "disable_date": null,
   "disable_reason": null,
   "variations": {
+    "x86_64_linux": {
+      "dependencies": [
+        "pyenv"
+      ]
+    }
   }
 }
