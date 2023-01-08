@@ -13,16 +13,16 @@
   "license": "Apache-2.0",
   "homepage": "https://www.swift.org",
   "versions": {
-    "stable": "5.7",
+    "stable": "5.7.2",
     "head": null,
     "bottle": true
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/apple/swift/archive/refs/tags/swift-5.7-RELEASE.tar.gz",
+      "url": "https://github.com/apple/swift/archive/refs/tags/swift-5.7.2-RELEASE.tar.gz",
       "tag": null,
       "revision": null,
-      "checksum": "5385aa70a62d57087c4f34e5cde0f0154dc9e3916bf4ac95a21594433e7db5f8"
+      "checksum": "8e7f4f6f70e8806128a66342d101a209c924ffb2f9ff3ccc3064e49302e24577"
     }
   },
   "revision": 0,
@@ -32,30 +32,40 @@
       "rebuild": 0,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
+        "arm64_ventura": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/swift/blobs/sha256:4a306c3d98f12a9217db0aee39d114edd04f358e919d32fbd7ec8fd5f97c41bc",
+          "sha256": "4a306c3d98f12a9217db0aee39d114edd04f358e919d32fbd7ec8fd5f97c41bc"
+        },
         "arm64_monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/swift/blobs/sha256:27fc4f9b3e6da956277755cb0d44341bed37edd39e4189041301afc9c434206f",
-          "sha256": "27fc4f9b3e6da956277755cb0d44341bed37edd39e4189041301afc9c434206f"
+          "url": "https://ghcr.io/v2/homebrew/core/swift/blobs/sha256:e52834f40b535e3141a155c7203cb1402e344698b4da5b9f9266817dad19dbc5",
+          "sha256": "e52834f40b535e3141a155c7203cb1402e344698b4da5b9f9266817dad19dbc5"
         },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/swift/blobs/sha256:7352c769002054aa1d11f8b4a51f3635a8fff633d2eea7877ac1f657b7df351d",
-          "sha256": "7352c769002054aa1d11f8b4a51f3635a8fff633d2eea7877ac1f657b7df351d"
+          "url": "https://ghcr.io/v2/homebrew/core/swift/blobs/sha256:678c7906a19eed36a145280a2c42fe2aed50dd489227509baf4d2482ae7065b8",
+          "sha256": "678c7906a19eed36a145280a2c42fe2aed50dd489227509baf4d2482ae7065b8"
+        },
+        "ventura": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/swift/blobs/sha256:298cc8607f633ba547205141945af8f795561f4999fc84520f5efd8942c93a7c",
+          "sha256": "298cc8607f633ba547205141945af8f795561f4999fc84520f5efd8942c93a7c"
         },
         "monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/swift/blobs/sha256:f37925bbc0f636c8ac5e55e66612a599ec6c865e2aa26d39d1bd56a2ad8b48e7",
-          "sha256": "f37925bbc0f636c8ac5e55e66612a599ec6c865e2aa26d39d1bd56a2ad8b48e7"
+          "url": "https://ghcr.io/v2/homebrew/core/swift/blobs/sha256:04b9cf12442449fe86b1afd8c4c036b526da30e2d67a01495386bcea082db2bc",
+          "sha256": "04b9cf12442449fe86b1afd8c4c036b526da30e2d67a01495386bcea082db2bc"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/swift/blobs/sha256:f628e21fcb52479ae8e7c529653ad734ce2d9ee61c1ba601c68d52ed6ccf0cba",
-          "sha256": "f628e21fcb52479ae8e7c529653ad734ce2d9ee61c1ba601c68d52ed6ccf0cba"
+          "url": "https://ghcr.io/v2/homebrew/core/swift/blobs/sha256:e2e588d8480e4b13f929afe65f8de070aff6d8917f6cf07ca1945d314067cbe1",
+          "sha256": "e2e588d8480e4b13f929afe65f8de070aff6d8917f6cf07ca1945d314067cbe1"
         },
         "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/swift/blobs/sha256:a683d46cd3255c9c6fcf24cda776e23e97ab0812a076a307689363f608290d59",
-          "sha256": "a683d46cd3255c9c6fcf24cda776e23e97ab0812a076a307689363f608290d59"
+          "url": "https://ghcr.io/v2/homebrew/core/swift/blobs/sha256:56498f2aa25e954eac8965cf1fa3afd51b16fc0e054496d9519e16797b368ffb",
+          "sha256": "56498f2aa25e954eac8965cf1fa3afd51b16fc0e054496d9519e16797b368ffb"
         }
       }
     }
@@ -73,7 +83,7 @@
     "ninja"
   ],
   "dependencies": [
-    "python@3.10"
+    "python@3.11"
   ],
   "test_dependencies": [
 
@@ -137,7 +147,7 @@
         "rsync"
       ],
       "dependencies": [
-        "python@3.10",
+        "python@3.11",
         "curl",
         "libedit",
         "libxml2",

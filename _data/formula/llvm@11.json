@@ -34,43 +34,43 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 0,
+      "rebuild": 1,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
         "arm64_ventura": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/llvm/11/blobs/sha256:3b72fa109a152db3a77e9ae88228a03f0575c913a9d45b4a840c9ea5a01cf0e3",
-          "sha256": "3b72fa109a152db3a77e9ae88228a03f0575c913a9d45b4a840c9ea5a01cf0e3"
+          "url": "https://ghcr.io/v2/homebrew/core/llvm/11/blobs/sha256:2dd2d2c64d4eaced81c3fd64beea1c8d68fa17b564b2c536a1931e614f18756c",
+          "sha256": "2dd2d2c64d4eaced81c3fd64beea1c8d68fa17b564b2c536a1931e614f18756c"
         },
         "arm64_monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/llvm/11/blobs/sha256:1f9a2e81762d314611a01ac17cafa7cd8b0c2fc92d697a5cec9555e9e1598497",
-          "sha256": "1f9a2e81762d314611a01ac17cafa7cd8b0c2fc92d697a5cec9555e9e1598497"
+          "url": "https://ghcr.io/v2/homebrew/core/llvm/11/blobs/sha256:d0d40b083bab471b93e36a5075802906672cc666ccc242ec316820fc4349f298",
+          "sha256": "d0d40b083bab471b93e36a5075802906672cc666ccc242ec316820fc4349f298"
         },
         "arm64_big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/llvm/11/blobs/sha256:64552a671357b02596313def4711086027b3e49079d65588dcca75572b87108d",
-          "sha256": "64552a671357b02596313def4711086027b3e49079d65588dcca75572b87108d"
+          "url": "https://ghcr.io/v2/homebrew/core/llvm/11/blobs/sha256:d1732cbc50152aebc30471f942eeec30ca6b150e900a7000940baf3b98c5d5b5",
+          "sha256": "d1732cbc50152aebc30471f942eeec30ca6b150e900a7000940baf3b98c5d5b5"
+        },
+        "ventura": {
+          "cellar": ":any",
+          "url": "https://ghcr.io/v2/homebrew/core/llvm/11/blobs/sha256:b1ad7348bfba7835c9360a7220689304d9be0092558b614fa52c9e5624dd4153",
+          "sha256": "b1ad7348bfba7835c9360a7220689304d9be0092558b614fa52c9e5624dd4153"
         },
         "monterey": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/llvm/11/blobs/sha256:4a368a132b47fa0b3c9678927d59b5bb4fee1538d4fab9f049fc80cf83464830",
-          "sha256": "4a368a132b47fa0b3c9678927d59b5bb4fee1538d4fab9f049fc80cf83464830"
+          "url": "https://ghcr.io/v2/homebrew/core/llvm/11/blobs/sha256:ce98c1e1b94155d74a37826764e8b7f58bb9fe827f9c6988e753e53d78a3824f",
+          "sha256": "ce98c1e1b94155d74a37826764e8b7f58bb9fe827f9c6988e753e53d78a3824f"
         },
         "big_sur": {
           "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/llvm/11/blobs/sha256:375a61e449b4d1bbb9b3633a4b55d1676df0eb3943b6fcef3dc3355ad50d5539",
-          "sha256": "375a61e449b4d1bbb9b3633a4b55d1676df0eb3943b6fcef3dc3355ad50d5539"
-        },
-        "catalina": {
-          "cellar": ":any",
-          "url": "https://ghcr.io/v2/homebrew/core/llvm/11/blobs/sha256:00b2c6b12d4603e8e7fa472aa3c16ed7283d3feae15f0799e90632d1bcf192ab",
-          "sha256": "00b2c6b12d4603e8e7fa472aa3c16ed7283d3feae15f0799e90632d1bcf192ab"
+          "url": "https://ghcr.io/v2/homebrew/core/llvm/11/blobs/sha256:af3a8de67ed789b846b88f0f969026abd53bd4dc06869ac90ee486cda58e1c4c",
+          "sha256": "af3a8de67ed789b846b88f0f969026abd53bd4dc06869ac90ee486cda58e1c4c"
         },
         "x86_64_linux": {
           "cellar": ":any_skip_relocation",
-          "url": "https://ghcr.io/v2/homebrew/core/llvm/11/blobs/sha256:46be09876c5a0c71d98f0d63e7eaaa323c3af97207670a691138ef743f6344de",
-          "sha256": "46be09876c5a0c71d98f0d63e7eaaa323c3af97207670a691138ef743f6344de"
+          "url": "https://ghcr.io/v2/homebrew/core/llvm/11/blobs/sha256:0864d39f56bc7998edd70e07f822f4fdc946746959dd73387770b41fe699f608",
+          "sha256": "0864d39f56bc7998edd70e07f822f4fdc946746959dd73387770b41fe699f608"
         }
       }
     }
@@ -85,10 +85,11 @@
   ],
   "build_dependencies": [
     "cmake",
+    "python@3.11",
     "swig"
   ],
   "dependencies": [
-    "python@3.10"
+
   ],
   "test_dependencies": [
 
@@ -102,7 +103,6 @@
   "uses_from_macos": [
     "libedit",
     "libffi",
-    "libxml2",
     "ncurses",
     "zlib"
   ],
@@ -128,39 +128,34 @@
   "variations": {
     "mojave": {
       "dependencies": [
-        "python@3.10",
         "libffi"
       ]
     },
     "high_sierra": {
       "dependencies": [
-        "python@3.10",
         "libffi"
       ]
     },
     "sierra": {
       "dependencies": [
-        "python@3.10",
         "libffi"
       ]
     },
     "el_capitan": {
       "dependencies": [
-        "python@3.10",
         "libffi"
       ]
     },
     "x86_64_linux": {
       "build_dependencies": [
         "cmake",
+        "python@3.11",
         "swig",
         "pkg-config"
       ],
       "dependencies": [
-        "python@3.10",
         "libedit",
         "libffi",
-        "libxml2",
         "ncurses",
         "zlib",
         "binutils",
