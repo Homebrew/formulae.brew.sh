@@ -11,6 +11,7 @@
   "appcast": null,
   "version": "16.68.22121100",
   "versions": {
+    "catalina": "16.66.22102801",
     "mojave": "16.54.21101001",
     "high_sierra": "16.43.20110804",
     "sierra": "16.30.19101301",
@@ -71,6 +72,49 @@
   "container": null,
   "auto_updates": true,
   "variations": {
+    "catalina": {
+      "url": "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Outlook_16.66.22102801_Installer.pkg",
+      "version": "16.66.22102801",
+      "sha256": "bddede85956713be21fdb5ab72be07ecefd05552752e8e60c649e6a15fd0a2c2",
+      "artifacts": [
+        {
+          "uninstall": [
+            {
+              "pkgutil": [
+                "com.microsoft.package.Microsoft_Outlook.app",
+                "com.microsoft.pkg.licensing"
+              ],
+              "launchctl": "com.microsoft.office.licensingV2.helper",
+              "quit": "com.microsoft.autoupdate2"
+            }
+          ]
+        },
+        {
+          "pkg": [
+            "Microsoft_Outlook_16.66.22102801_Installer.pkg",
+            {
+              "choices": [
+                {
+                  "choiceIdentifier": "com.microsoft.autoupdate",
+                  "choiceAttribute": "selected",
+                  "attributeSetting": "0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "zap": [
+            {
+              "trash": [
+                "~/Library/Application Scripts/com.microsoft.Outlook",
+                "~/Library/Containers/com.microsoft.Outlook"
+              ]
+            }
+          ]
+        }
+      ]
+    },
     "mojave": {
       "url": "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Outlook_16.54.21101001_Installer.pkg",
       "version": "16.54.21101001",
