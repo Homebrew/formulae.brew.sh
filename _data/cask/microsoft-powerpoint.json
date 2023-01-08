@@ -11,6 +11,7 @@
   "appcast": null,
   "version": "16.68.22121100",
   "versions": {
+    "catalina": "16.66.22101101",
     "mojave": "16.54.21101001",
     "high_sierra": "16.43.20110804",
     "sierra": "16.30.19101301",
@@ -75,6 +76,53 @@
   "container": null,
   "auto_updates": true,
   "variations": {
+    "catalina": {
+      "url": "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_PowerPoint_16.66.22101101_Installer.pkg",
+      "version": "16.66.22101101",
+      "sha256": "f311c90fdd538628c73a2b72ea7dbc8e47c0dcb70b6376daff68d9c4708369a1",
+      "artifacts": [
+        {
+          "uninstall": [
+            {
+              "pkgutil": [
+                "com.microsoft.package.Microsoft_PowerPoint.app",
+                "com.microsoft.pkg.licensing"
+              ],
+              "delete": "/Applications/Microsoft PowerPoint.app",
+              "launchctl": "com.microsoft.office.licensingV2.helper",
+              "quit": "com.microsoft.autoupdate2"
+            }
+          ]
+        },
+        {
+          "pkg": [
+            "Microsoft_PowerPoint_16.66.22101101_Installer.pkg",
+            {
+              "choices": [
+                {
+                  "choiceIdentifier": "com.microsoft.autoupdate",
+                  "choiceAttribute": "selected",
+                  "attributeSetting": "0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "zap": [
+            {
+              "trash": [
+                "~/Library/Application Scripts/com.microsoft.Powerpoint",
+                "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.powerpoint.sfl*",
+                "~/Library/Containers/com.microsoft.Powerpoint",
+                "~/Library/Preferences/com.microsoft.Powerpoint.plist",
+                "~/Library/Saved Application State/com.microsoft.Powerpoint.savedState"
+              ]
+            }
+          ]
+        }
+      ]
+    },
     "mojave": {
       "url": "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_PowerPoint_16.54.21101001_Installer.pkg",
       "version": "16.54.21101001",

@@ -11,6 +11,7 @@
   "appcast": null,
   "version": "16.68.22121100",
   "versions": {
+    "catalina": "16.66.22101101",
     "mojave": "16.54.21101001",
     "high_sierra": "16.43.20110804",
     "sierra": "16.30.19101301",
@@ -75,6 +76,53 @@
   "container": null,
   "auto_updates": true,
   "variations": {
+    "catalina": {
+      "url": "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Word_16.66.22101101_Installer.pkg",
+      "version": "16.66.22101101",
+      "sha256": "72557bb37386a097672462e4cf267e91e43c5582aeb0fc70c443a6499341bc9d",
+      "artifacts": [
+        {
+          "uninstall": [
+            {
+              "pkgutil": [
+                "com.microsoft.package.Microsoft_Word.app",
+                "com.microsoft.pkg.licensing"
+              ],
+              "launchctl": "com.microsoft.office.licensingV2.helper",
+              "quit": "com.microsoft.autoupdate2"
+            }
+          ]
+        },
+        {
+          "pkg": [
+            "Microsoft_Word_16.66.22101101_Installer.pkg",
+            {
+              "choices": [
+                {
+                  "choiceIdentifier": "com.microsoft.autoupdate",
+                  "choiceAttribute": "selected",
+                  "attributeSetting": "0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "zap": [
+            {
+              "trash": [
+                "~/Library/Application Scripts/com.microsoft.Word",
+                "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.word.sfl*",
+                "~/Library/Application Support/CrashReporter/Microsoft Word_*.plist",
+                "~/Library/Containers/com.microsoft.Word",
+                "~/Library/Preferences/com.microsoft.Word.plist",
+                "~/Library/Saved Application State/com.microsoft.Word.savedState"
+              ]
+            }
+          ]
+        }
+      ]
+    },
     "mojave": {
       "url": "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Word_16.54.21101001_Installer.pkg",
       "version": "16.54.21101001",
