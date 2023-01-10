@@ -11,7 +11,7 @@
   ],
   "desc": "Database connectivity layer based on ODBC. (alternative to unixodbc)",
   "license": "BSD-3-Clause or LGPL-2.0-only",
-  "homepage": "http://www.iodbc.org/dataspace/iodbc/wiki/iODBC/",
+  "homepage": "https://www.iodbc.org/",
   "versions": {
     "stable": "3.52.15",
     "head": null,
@@ -80,8 +80,11 @@
       }
     }
   },
-  "keg_only": false,
-  "keg_only_reason": null,
+  "keg_only": true,
+  "keg_only_reason": {
+    "reason": "it conflicts with `unixodbc`",
+    "explanation": ""
+  },
   "options": [
 
   ],
@@ -109,7 +112,7 @@
 
   ],
   "conflicts_with": [
-    "unixodbc"
+
   ],
   "caveats": null,
   "installed": [
