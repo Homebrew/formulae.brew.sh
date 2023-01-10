@@ -9,9 +9,9 @@ redirect_from:
 
 ## Metadata
 
-### List metadata for all {{ site.taps.core.repo }} formulae or {{ site.taps.cask.repo }} casks
+### List metadata for all {{ site.taps.core.name }} formulae or {{ site.taps.cask.name }} casks
 
-List the `brew info --json --all` output for all current {{ site.taps.core.fullname }} casks or {{ site.taps.cask.fullname }} formulae.
+List the `brew info --json --all` output for all current {{ site.taps.core.fullname }} formulae or {{ site.taps.cask.fullname }} casks.
 
 ```
 GET https://formulae.brew.sh/api/formula.json
@@ -22,7 +22,7 @@ GET https://formulae.brew.sh/api/cask.json
 
 {% include api-samples/formula.md %}
 
-### List the latest versions for all {{ site.taps.core.repo }} formulae or {{ site.taps.cask.repo }} casks
+### List the latest versions for all {{ site.taps.core.name }} formulae or {{ site.taps.cask.name }} casks
 
 List the latest version information for each formula or cask in the given tap. The result is a single JSON object with formula/cask names as keys. The values are JSON objects containing `version` and, for formulae, `revision` keys.
 
@@ -39,7 +39,7 @@ GET https://formulae.brew.sh/api/versions-casks.json
 
 {% include api-samples/versions_casks.md %}
 
-### Get formula metadata for a {{ site.taps.core.repo }} formula
+### Get formula metadata for a {{ site.taps.core.name }} formula
 
 Get the `brew info --json --formula <formula>` output for a single, current {{ site.taps.core.fullname }} formula with extra keys containing analytics data and generation date.
 
@@ -55,7 +55,7 @@ GET https://formulae.brew.sh/api/formula/${FORMULA}.json
 
 {% include api-samples/formula_wget.md %}
 
-### Get bottle metadata for a {{ site.taps.core.repo }} formula
+### Get bottle metadata for a {{ site.taps.core.name }} formula
 
 Get the `brew info --json --bottle --formula <formula>` output for a single, current {{ site.taps.core.fullname }} formula.
 
@@ -71,7 +71,7 @@ GET https://formulae.brew.sh/api/bottle/${FORMULA}.json
 
 {% include api-samples/bottle_wget.md %}
 
-### Get cask metadata for a {{ site.taps.cask.repo }} cask
+### Get cask metadata for a {{ site.taps.cask.name }} cask
 
 Get the `brew info --json=v2 --cask <cask>` JSON output for a single, current {{ site.taps.cask.fullname }} cask with extra keys containing analytics data and generation date.
 
@@ -89,7 +89,7 @@ GET https://formulae.brew.sh/api/cask/${FORMULA}.json
 
 ### Get the source code for a cask in {{ site.taps.cask.fullname }}
 
-Get the latest source code for a {{ site.taps.cask.repo }} that is defined in the {{ site.taps.cask.fullname }} repo.
+Get the latest source code for a cask that is defined in the {{ site.taps.cask.fullname }} repo.
 
 ```
 GET https://formulae.brew.sh/api/cask-source/${FORMULA}.rb
@@ -133,7 +133,7 @@ GET https://formulae.brew.sh/api/analytics-linux/${CATEGORY}/${DAYS}.json
 
 {% include api-samples/analytics_install_30d.md %}
 
-### List analytics events for all {{ site.taps.core.repo }} formulae
+### List analytics events for all {{ site.taps.core.name }} formulae
 
 List all the {{ site.taps.core.fullname }} formulae's analytics events for a specified category over a number of days, grouped by formula name. This is the data source for `brew info --analytics --formula <formula>`.
 
@@ -158,7 +158,7 @@ GET https://formulae.brew.sh/api/analytics-linux/${CATEGORY}/homebrew-core/${DAY
 
 {% include api-samples/analytics_install_homebrew_core_30d.md %}
 
-### List analytics events for all {{ site.taps.cask.repo }} casks
+### List analytics events for all {{ site.taps.cask.name }} casks
 
 List all the {{ site.taps.cask.fullname }} cask's analytics events for the `cask-install` category over a number of days, grouped by cask token.  This is the data source for `brew info --analytics --cask <cask>`.
 
