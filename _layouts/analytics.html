@@ -40,9 +40,9 @@ layout: base
         {%- assign data_name = full_name | remove: "@" | remove: "." | replace: "+", "_" -%}
         {%- assign formula = site.data.formula[data_name] -%}
         {%- if full_name == formula.name -%}
-            <a href="{{ site.baseurl }}/formula/{{ full_name }}"><code>{{ item.formula }}</code></a>
+            <a href="{{ site.baseurl }}/formula/{{ full_name }}"><code>{{ item.formula | escape }}</code></a>
         {%- else -%}
-            <code>{{ item.formula }}</code>
+            <code>{{ item.formula | escape }}</code>
         {%- endif -%}
     {%- endif -%}
         </td>
