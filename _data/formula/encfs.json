@@ -29,13 +29,13 @@
   "version_scheme": 0,
   "bottle": {
     "stable": {
-      "rebuild": 0,
+      "rebuild": 1,
       "root_url": "https://ghcr.io/v2/homebrew/core",
       "files": {
         "x86_64_linux": {
           "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
-          "url": "https://ghcr.io/v2/homebrew/core/encfs/blobs/sha256:2c8863fccfcdb4e42cca450763879b7238b5a506a9385b25c3a3c3e2bf27c69d",
-          "sha256": "2c8863fccfcdb4e42cca450763879b7238b5a506a9385b25c3a3c3e2bf27c69d"
+          "url": "https://ghcr.io/v2/homebrew/core/encfs/blobs/sha256:765ec364935df8b4e7d4845cd287d70cc2eaeb6ef7634c5109fe27f0dc0bb1fd",
+          "sha256": "765ec364935df8b4e7d4845cd287d70cc2eaeb6ef7634c5109fe27f0dc0bb1fd"
         }
       }
     }
@@ -47,12 +47,13 @@
   ],
   "build_dependencies": [
     "cmake",
+    "gettext",
     "pkg-config"
   ],
   "dependencies": [
-    "gettext",
     "libfuse@2",
-    "openssl@1.1"
+    "openssl@3",
+    "tinyxml2"
   ],
   "test_dependencies": [
 
