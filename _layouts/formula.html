@@ -204,7 +204,7 @@ permalink: :title
     </tr>
     {%- for fa in site.data.analytics.install.homebrew-core[interval].formulae[full_name] -%}
     <tr>
-        <td><code>{{ fa.formula }}</code></td>
+        <td><code>{{ fa.formula | escape }}</code></td>
         <td class="number-data">{{ fa.count }}</td>
     </tr>
     {%- else -%}
@@ -219,7 +219,7 @@ permalink: :title
     </tr>
     {%- for fa in site.data.analytics.install-on-request.homebrew-core[interval].formulae[full_name] -%}
     <tr>
-        <td><code>{{ fa.formula }}</code></td>
+        <td><code>{{ fa.formula | escape }}</code></td>
         <td class="number-data">{{ fa.count }}</td>
     </tr>
     {%- else -%}
@@ -235,7 +235,7 @@ permalink: :title
     </tr>
         {%- for fa in site.data.analytics.build-error.homebrew-core[interval].formulae[full_name] -%}
     <tr>
-        <td><code>{{ fa.formula }}</code></td>
+        <td><code>{{ fa.formula | escape }}</code></td>
         <td class="number-data">{{ fa.count }}</td>
     </tr>
         {%- else -%}
@@ -258,7 +258,7 @@ permalink: :title
     </tr>
     {%- for fa in site.data.analytics-linux.install.homebrew-core[interval].formulae[full_name] -%}
     <tr>
-        <td><code>{{ fa.formula }}</code></td>
+        <td><code>{{ fa.formula | escape }}</code></td>
         <td class="number-data">{{ fa.count }}</td>
     </tr>
     {%- else -%}
@@ -273,7 +273,7 @@ permalink: :title
     </tr>
     {%- for fa in site.data.analytics-linux.install-on-request.homebrew-core[interval].formulae[full_name] -%}
     <tr>
-        <td><code>{{ fa.formula }}</code></td>
+        <td><code>{{ fa.formula | escape }}</code></td>
         <td class="number-data">{{ fa.count }}</td>
     </tr>
     {%- else -%}
@@ -289,7 +289,7 @@ permalink: :title
     </tr>
         {%- for fa in site.data.analytics-linux.build-error.homebrew-core[interval].formulae[full_name] -%}
     <tr>
-        <td><code>{{ fa.formula }}</code></td>
+        <td><code>{{ fa.formula | escape }}</code></td>
         <td class="number-data">{{ fa.count }}</td>
     </tr>
         {%- else -%}
