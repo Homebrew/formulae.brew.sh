@@ -60,7 +60,7 @@ permalink: :title
             {%- unless subsequent -%}
             <th rowspan="{{ intel_bottle_count }}" scope="rowgroup">Intel</th>
             {%- endunless %}
-            <td scope="row" style="text-transform:capitalize;">
+            <td style="text-transform:capitalize;">
                 {{ b[0] | replace: "x86_64", "64-bit" | replace: "_", "&nbsp;" }}
                 {%- assign subsequent = true -%}
             </td>
@@ -76,7 +76,7 @@ permalink: :title
             {%- unless subsequent -%}
             <th rowspan="{{ arm64_bottle_count }}" scope="rowgroup">Apple Silicon</th>
             {%- endunless %}
-            <td scope="row" style="text-transform:capitalize;">
+            <td style="text-transform:capitalize;">
                 {{ b[0] | remove_first: "arm64_" | replace: "_", "&nbsp;" }}
                 {%- assign subsequent = true -%}
             </td>
