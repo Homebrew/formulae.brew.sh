@@ -10,13 +10,13 @@
   ],
   "desc": "App to build and share containerized applications and microservices",
   "homepage": "https://www.docker.com/products/docker-desktop",
-  "url": "https://desktop.docker.com/mac/main/amd64/93002/Docker.dmg",
+  "url": "https://desktop.docker.com/mac/main/amd64/95345/Docker.dmg",
   "appcast": null,
-  "version": "4.15.0,93002",
+  "version": "4.16.0,95345",
   "versions": {},
   "installed": null,
   "outdated": false,
-  "sha256": "bee41d646916e579b16b7fae014e2fb5e5e7b5dbaf7c1949821fd311d3ce430b",
+  "sha256": "4fa95e90b6c39400943b263ae5aa1bb6db5b26043dd0148c4e37d3033a754d33",
   "artifacts": [
     {
       "uninstall": [
@@ -159,28 +159,28 @@
   "auto_updates": true,
   "variations": {
     "arm64_ventura": {
-      "url": "https://desktop.docker.com/mac/main/arm64/93002/Docker.dmg",
-      "sha256": "fc8609d57fb8c8264122f581c0f66497e46e171f8027d85d90213527d6226362"
+      "url": "https://desktop.docker.com/mac/main/arm64/95345/Docker.dmg",
+      "sha256": "3101934a3b062b373a22fd994d743fa6a08fa805695839e6b63bc2d28ebcf59a"
     },
     "arm64_monterey": {
-      "url": "https://desktop.docker.com/mac/main/arm64/93002/Docker.dmg",
-      "sha256": "fc8609d57fb8c8264122f581c0f66497e46e171f8027d85d90213527d6226362"
+      "url": "https://desktop.docker.com/mac/main/arm64/95345/Docker.dmg",
+      "sha256": "3101934a3b062b373a22fd994d743fa6a08fa805695839e6b63bc2d28ebcf59a"
     },
     "arm64_big_sur": {
-      "url": "https://desktop.docker.com/mac/main/arm64/93002/Docker.dmg",
-      "sha256": "fc8609d57fb8c8264122f581c0f66497e46e171f8027d85d90213527d6226362"
+      "url": "https://desktop.docker.com/mac/main/arm64/95345/Docker.dmg",
+      "sha256": "3101934a3b062b373a22fd994d743fa6a08fa805695839e6b63bc2d28ebcf59a"
     }
   },
   "analytics": {
     "install": {
       "30d": {
-        "docker": 19066
+        "docker": 18887
       },
       "90d": {
-        "docker": 71754
+        "docker": 71743
       },
       "365d": {
-        "docker": 309570
+        "docker": 309424
       }
     }
   },
