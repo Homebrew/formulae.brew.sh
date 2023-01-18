@@ -136,7 +136,7 @@ jobs:
         run: echo "$ANALYTICS_JSON_KEY" > ~/.homebrew_analytics.json
 
       - name: Update data for homebrew/core
-        run: /usr/bin/rake
+        run: /usr/bin/rake formulae
 
       - uses: actions/upload-artifact@v3
         with:
@@ -155,8 +155,35 @@ jobs:
           name: formula
           path: formula/
           retention-days: 1
+  generate-analytics:
+    if: startsWith( github.repository, 'Homebrew/' )
+    runs-on: macos-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@main
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+
+      - name: Set up analytics
+        env:
+          ANALYTICS_JSON_KEY: ${{ secrets.HOMEBREW_FORMULAE_BREW_SH_ANALYTICS_JSON_KEY }}
+        run: echo "$ANALYTICS_JSON_KEY" > ~/.homebrew_analytics.json
+
+      - name: Update analytics data
+        run: /usr/bin/rake analytics
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: data-macos
+          path: _data/
+          retention-days: 1
   build:
-    needs: [generate-linux, generate-cask, generate-core, generate-samples]
+    needs: [generate-linux, generate-cask, generate-core, generate-analytics, generate-samples]
     runs-on: ubuntu-22.04
     steps:
       - name: Set up Git repository
