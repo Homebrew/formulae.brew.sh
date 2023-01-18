@@ -48,10 +48,13 @@ jobs:
       - name: Update analytics data for Homebrew/linuxbrew-core
         run: rake linux_analytics
 
+      - name: Archive data
+        run: tar czvf data-linux.tar.gz _data/
+
       - uses: actions/upload-artifact@v3
         with:
           name: data-linux
-          path: _data/
+          path: data-linux.tar.gz
           retention-days: 1
   generate-cask:
     if: startsWith( github.repository, 'Homebrew/' )
@@ -77,44 +80,13 @@ jobs:
           brew update-reset $(brew --repository homebrew/cask)
           /usr/bin/rake cask
 
-      - uses: actions/upload-artifact@v3
-        with:
-          name: data-macos
-          path: _data/
-          retention-days: 1
+      - name: Archive data
+        run: tar czvf data-cask.tar.gz _data/ api/ cask/
 
       - uses: actions/upload-artifact@v3
         with:
-          name: api
-          path: api/
-          retention-days: 1
-
-      - uses: actions/upload-artifact@v3
-        with:
-          name: cask
-          path: cask/
-          retention-days: 1
-  generate-samples:
-    if: startsWith( github.repository, 'Homebrew/' )
-    runs-on: macos-latest
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@main
-        with:
-          fetch-depth: 0
-          ref: ${{ github.event.pull_request.head.sha }}
-
-      - name: Set up Homebrew
-        id: set-up-homebrew
-        uses: Homebrew/actions/setup-homebrew@master
-
-      - name: Update data for api samples
-        run: /usr/bin/rake api_samples
-
-      - uses: actions/upload-artifact@v3
-        with:
-          name: api-samples
-          path: _includes/api-samples/
+          name: data-cask
+          path: data-cask.tar.gz
           retention-days: 1
   generate-core:
     if: startsWith( github.repository, 'Homebrew/' )
@@ -138,22 +110,13 @@ jobs:
       - name: Update data for homebrew/core
         run: /usr/bin/rake formulae
 
-      - uses: actions/upload-artifact@v3
-        with:
-          name: data-macos
-          path: _data/
-          retention-days: 1
+      - name: Archive data
+        run: tar czvf data-core.tar.gz _data/ api/ formula/
 
       - uses: actions/upload-artifact@v3
         with:
-          name: api
-          path: api/
-          retention-days: 1
-
-      - uses: actions/upload-artifact@v3
-        with:
-          name: formula
-          path: formula/
+          name: data-core
+          path: data-core.tar.gz
           retention-days: 1
   generate-analytics:
     if: startsWith( github.repository, 'Homebrew/' )
@@ -177,10 +140,35 @@ jobs:
       - name: Update analytics data
         run: /usr/bin/rake analytics
 
+      - name: Archive data
+        run: tar czvf data-analytics.tar.gz _data/
+
       - uses: actions/upload-artifact@v3
         with:
-          name: data-macos
-          path: _data/
+          name: data-analytics
+          path: data-analytics.tar.gz
+          retention-days: 1
+  generate-samples:
+    if: startsWith( github.repository, 'Homebrew/' )
+    runs-on: macos-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@main
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+
+      - name: Update data for api samples
+        run: /usr/bin/rake api_samples
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: api-samples
+          path: _includes/api-samples/
           retention-days: 1
   build:
     needs: [generate-linux, generate-cask, generate-core, generate-analytics, generate-samples]
@@ -207,8 +195,9 @@ jobs:
 
       - name: Move artifacts into place
         run: |
-          mv data-macos _data
-          mv data-linux _data
+          tar xf data-linux/data-linux.tar.gz
+          tar xf data-core/data-core.tar.gz
+          tar xf data-analytics/data-analytics.tar.gz
           mv api-samples _includes/api-samples
 
       - name: Generate site
