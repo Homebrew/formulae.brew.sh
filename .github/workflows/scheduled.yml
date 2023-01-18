@@ -12,14 +12,9 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  generate:
+  generate-linux:
     if: startsWith( github.repository, 'Homebrew/' )
-    permissions:
-      contents: write
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [macos-latest, ubuntu-22.04]
+    runs-on: ubuntu-22.04
     steps:
       - name: Check out repository
         uses: actions/checkout@main
@@ -32,7 +27,6 @@ jobs:
         uses: Homebrew/actions/setup-homebrew@master
 
       - name: Set up dependency stubs
-        if: matrix.os == 'ubuntu-22.04'
         run: |
           # create stubs so build dependencies aren't incorrectly flagged as missing
           for i in python svn unzip xz
@@ -42,7 +36,6 @@ jobs:
           done
 
       - name: Set up Ruby
-        if: matrix.os == 'ubuntu-22.04'
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: "2.6"
@@ -52,63 +45,118 @@ jobs:
           ANALYTICS_JSON_KEY: ${{ secrets.HOMEBREW_FORMULAE_BREW_SH_ANALYTICS_JSON_KEY }}
         run: echo "$ANALYTICS_JSON_KEY" > ~/.homebrew_analytics.json
 
-      - name: Update data for homebrew/core and homebrew/cask
-        if: matrix.os == 'macos-latest'
-        run: |
-          /usr/bin/rake
+      - name: Update analytics data for Homebrew/linuxbrew-core
+        run: rake linux_analytics
 
+      - uses: actions/upload-artifact@v3
+        with:
+          name: data-linux
+          path: _data/
+          retention-days: 1
+  generate-cask:
+    if: startsWith( github.repository, 'Homebrew/' )
+    runs-on: macos-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@main
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+
+      - name: Set up analytics
+        env:
+          ANALYTICS_JSON_KEY: ${{ secrets.HOMEBREW_FORMULAE_BREW_SH_ANALYTICS_JSON_KEY }}
+        run: echo "$ANALYTICS_JSON_KEY" > ~/.homebrew_analytics.json
+
+      - name: Update data for homebrew/cask
+        run: |
           brew update-reset $(brew --repository homebrew/cask)
           /usr/bin/rake cask
 
-          /usr/bin/rake api_samples
-
       - uses: actions/upload-artifact@v3
-        if: matrix.os == 'macos-latest'
         with:
           name: data-macos
           path: _data/
           retention-days: 1
 
       - uses: actions/upload-artifact@v3
-        if: matrix.os == 'macos-latest'
         with:
           name: api
           path: api/
-          retention-days: 5
+          retention-days: 1
 
       - uses: actions/upload-artifact@v3
-        if: matrix.os == 'macos-latest'
-        with:
-          name: api-samples
-          path: _includes/api-samples/
-          retention-days: 5
-
-      - uses: actions/upload-artifact@v3
-        if: matrix.os == 'macos-latest'
         with:
           name: cask
           path: cask/
-          retention-days: 5
+          retention-days: 1
+  generate-samples:
+    if: startsWith( github.repository, 'Homebrew/' )
+    runs-on: macos-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@main
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+
+      - name: Update data for api samples
+        run: /usr/bin/rake api_samples
 
       - uses: actions/upload-artifact@v3
-        if: matrix.os == 'macos-latest'
+        with:
+          name: api-samples
+          path: _includes/api-samples/
+          retention-days: 1
+  generate-core:
+    if: startsWith( github.repository, 'Homebrew/' )
+    runs-on: macos-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@main
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+
+      - name: Set up analytics
+        env:
+          ANALYTICS_JSON_KEY: ${{ secrets.HOMEBREW_FORMULAE_BREW_SH_ANALYTICS_JSON_KEY }}
+        run: echo "$ANALYTICS_JSON_KEY" > ~/.homebrew_analytics.json
+
+      - name: Update data for homebrew/core
+        run: /usr/bin/rake
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: data-macos
+          path: _data/
+          retention-days: 1
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: api
+          path: api/
+          retention-days: 1
+
+      - uses: actions/upload-artifact@v3
         with:
           name: formula
           path: formula/
-          retention-days: 5
-
-      - name: Update analytics data for Homebrew/linuxbrew-core
-        if: matrix.os == 'ubuntu-22.04'
-        run: rake linux_analytics
-
-      - uses: actions/upload-artifact@v3
-        if: matrix.os == 'ubuntu-22.04'
-        with:
-          name: data-linux
-          path: _data/
-          retention-days: 5
+          retention-days: 1
   build:
-    needs: generate
+    needs: [generate-linux, generate-cask, generate-core, generate-samples]
     runs-on: ubuntu-22.04
     steps:
       - name: Set up Git repository
