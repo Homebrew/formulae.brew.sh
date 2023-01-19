@@ -180,6 +180,14 @@ jobs:
           bundle install --jobs 4 --retry 3
 
       - uses: actions/download-artifact@v3
+      
+      - name: Clean existing data
+        run: |
+          rm -rf _includes/api-samples
+          rm -rf _data/
+          rm -rf api/
+          rm -rf formula/
+          rm -rf cask/
 
       - name: Move artifacts into place
         run: |
