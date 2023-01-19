@@ -195,6 +195,14 @@ jobs:
           tar xf data-cask/data-cask.tar.gz
           tar xf data-analytics/data-analytics.tar.gz
           mv api-samples _includes/api-samples
+          
+      - name: Check unpacked data
+        run: |
+          test -d _includes/api-samples
+          test -d _data/
+          test -d api/
+          test -d formula/
+          test -d cask/
 
       - name: Generate site
         run: bundle exec rake build
