@@ -37,6 +37,9 @@ jobs:
           brew update-reset $(brew --repository homebrew/cask)
           /usr/bin/rake cask
 
+      - name: Remove non-cask data
+        run: rm -rf _data/analytics _data/analytics-linux _data/bottle _data/formula api/analytics api/analytics-linux api/bottle api/formula
+
       - name: Archive data
         run: tar czvf data-cask.tar.gz _data/ api/ cask/
 
@@ -67,6 +70,9 @@ jobs:
 
       - name: Update data for homebrew/core
         run: /usr/bin/rake formulae
+
+      - name: Remove non-core data
+        run: rm -rf _data/analytics _data/analytics-linux _data/cask api/analytics api/analytics-linux api/cask api/cask-source
 
       - name: Archive data
         run: tar czvf data-core.tar.gz _data/ api/ formula/
@@ -112,6 +118,9 @@ jobs:
 
       - name: Update analytics data
         run: rake all_analytics
+
+      - name: Remove non-analytics data
+        run: rm -rf _data/bottle _data/cask _data/formula
 
       - name: Archive data
         run: tar czvf data-analytics.tar.gz _data/
@@ -180,29 +189,13 @@ jobs:
           bundle install --jobs 4 --retry 3
 
       - uses: actions/download-artifact@v3
-      
-      - name: Clean existing data
-        run: |
-          rm -rf _includes/api-samples
-          rm -rf _data/
-          rm -rf api/
-          rm -rf formula/
-          rm -rf cask/
 
       - name: Move artifacts into place
         run: |
-          tar xf data-core/data-core.tar.gz
-          tar xf data-cask/data-cask.tar.gz
           tar xf data-analytics/data-analytics.tar.gz
+          tar xf data-cask/data-cask.tar.gz
+          tar xf data-core/data-core.tar.gz
           mv api-samples _includes/api-samples
-          
-      - name: Check unpacked data
-        run: |
-          test -d _includes/api-samples
-          test -d _data/
-          test -d api/
-          test -d formula/
-          test -d cask/
 
       - name: Generate site
         run: bundle exec rake build
