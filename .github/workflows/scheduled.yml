@@ -72,7 +72,7 @@ jobs:
         run: tar czvf data-core.tar.gz _data/ api/ formula/
         
       - name: print problem
-        run: cat formula/libidn2.json | jq .bottle.stable
+        run: cat api/formula/libidn2.json | jq .bottle.stable
 
       - uses: actions/upload-artifact@v3
         with:
@@ -185,7 +185,7 @@ jobs:
       - uses: actions/download-artifact@v3
       
       - name: print problem
-        run: cat formula/libidn2.json | jq .bottle.stable
+        run: cat api/formula/libidn2.json | jq .bottle.stable
       
       - name: Clean existing data
         run: |
@@ -203,7 +203,7 @@ jobs:
           mv api-samples _includes/api-samples
           
       - name: print problem
-        run: cat formula/libidn2.json | jq .bottle.stable
+        run: cat api/formula/libidn2.json | jq .bottle.stable
           
       - name: Check unpacked data
         run: |
@@ -217,7 +217,7 @@ jobs:
         run: bundle exec rake build
         
       - name: print problem
-        run: cat formula/libidn2.json | jq .bottle.stable
+        run: cat api/formula/libidn2.json | jq .bottle.stable
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
