@@ -218,6 +218,40 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
+  report-status:
+    name: Report deploy status
+    needs: [generate-cask, generate-core, generate-analytics, generate-samples, build, deploy]
+    if: ${{ always() && github.ref_name == 'master' }}
+    env:
+      GH_TOKEN: ${{ secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN }}
+      REPO: ${{ github.repository }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Detect existing deploy failure issue
+        run: |
+          EXISTING_ISSUE=$(gh issue list --repo "$REPO" --author BrewTestBot --label 'deploy failure' | awk '{print $1}')
+          echo "EXISTING_ISSUE=$EXISTING_ISSUE" >> $GITHUB_ENV
+          echo "WORKFLOW_URL=https://github.com/Homebrew/formulae.brew.sh/actions/runs/$RUN_ID" >> $GITHUB_ENV
+        env:
+          RUN_ID: ${{ github.run_id }}
+      - name: Report deploy failure
+        if: ${{ contains(needs.*.result, 'failure') }}
+        run: |
+          ISSUE_TITLE="Site deploy failed"
+          ISSUE_BODY="The most recent site deploy attempt failed.\n\n[Click here to view the most recent failed run]($WORKFLOW_URL)"
+          if [ -n "$EXISTING_ISSUE" ]; then
+            gh issue edit "$EXISTING_ISSUE" --repo "$REPO" --body "$(echo -e "$ISSUE_BODY")"
+          else
+            gh issue create --repo "$REPO" --title "$ISSUE_TITLE" --label "deploy failure" --body "$(echo -e "$ISSUE_BODY")"
+          fi
+      - name: Report deploy success
+        if: ${{ needs.deploy.result == 'success' }}
+        run: |
+          COMMENT_BODY="The most recent site deploy attempt succeeded.\n\n[Click here to view the successful run]($WORKFLOW_URL)"
+          if [ -n "$EXISTING_ISSUE" ]; then
+            gh issue comment "$EXISTING_ISSUE" --repo "$REPO" --body "$(echo -e "$COMMENT_BODY")"
+            gh issue close "$EXISTING_ISSUE" --repo "$REPO"
+          fi
   algolia_recrawl:
     needs: deploy
     name: Algolia Recrawl
