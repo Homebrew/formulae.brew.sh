@@ -218,8 +218,8 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
-  report-status:
-    name: Report deploy status
+  deploy-issue:
+    name: Open/close deploy issues
     needs: [generate-cask, generate-core, generate-analytics, generate-samples, build, deploy]
     if: ${{ always() && github.ref_name == 'master' }}
     env:
@@ -227,7 +227,7 @@ jobs:
       REPO: ${{ github.repository }}
     runs-on: ubuntu-latest
     steps:
-      - name: Detect existing deploy failure issue
+      - name: Find existing deploy failure issue
         run: |
           EXISTING_ISSUE=$(gh issue list --repo "$REPO" --author BrewTestBot --label 'deploy failure' | awk '{print $1}')
           echo "EXISTING_ISSUE=$EXISTING_ISSUE" >> $GITHUB_ENV
@@ -237,8 +237,8 @@ jobs:
       - name: Report deploy failure
         if: ${{ contains(needs.*.result, 'failure') }}
         run: |
-          ISSUE_TITLE="Site deploy failed"
-          ISSUE_BODY="The most recent site deploy attempt failed.\n\n[Click here to view the most recent failed run]($WORKFLOW_URL)"
+          ISSUE_TITLE="formulae.brew.sh deployment failed!"
+          ISSUE_BODY="The most recent [formulae.brew.sh deployment failed]($WORKFLOW_URL)."
           if [ -n "$EXISTING_ISSUE" ]; then
             gh issue edit "$EXISTING_ISSUE" --repo "$REPO" --body "$(echo -e "$ISSUE_BODY")"
           else
@@ -247,7 +247,7 @@ jobs:
       - name: Report deploy success
         if: ${{ needs.deploy.result == 'success' }}
         run: |
-          COMMENT_BODY="The most recent site deploy attempt succeeded.\n\n[Click here to view the successful run]($WORKFLOW_URL)"
+          COMMENT_BODY="The most recent [formulae.brew.sh deployment succeeded]($WORKFLOW_URL). Closing issue."
           if [ -n "$EXISTING_ISSUE" ]; then
             gh issue comment "$EXISTING_ISSUE" --repo "$REPO" --body "$(echo -e "$COMMENT_BODY")"
             gh issue close "$EXISTING_ISSUE" --repo "$REPO"
@@ -255,6 +255,8 @@ jobs:
   algolia_recrawl:
     needs: deploy
     name: Algolia Recrawl
+    # This is run on a schedule by Algolia too so we don't care about failures.
+    continue-on-error: true
     runs-on: ubuntu-latest
     steps:
       - name: Algolia crawler creation and recrawl
