@@ -263,7 +263,7 @@ jobs:
         uses: algolia/algoliasearch-crawler-github-actions@v1
         id: crawler_push
         with:
-          override-config: true
+          crawler-name: Homebrew Search (https://*brew.sh)
           site-url: ${{ needs.deploy.outputs.deploy_url }}
           crawler-user-id: ${{ secrets.CRAWLER_USER_ID }}
           crawler-api-key: ${{ secrets.CRAWLER_API_KEY }}
