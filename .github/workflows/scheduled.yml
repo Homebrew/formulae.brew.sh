@@ -96,7 +96,7 @@ jobs:
         run: rake all_analytics
 
       - name: Archive data
-        run: tar czvf data-analytics.tar.gz _data/analytics/
+        run: tar czvf data-analytics.tar.gz _data/analytics _data/analytics-linux api/analytics api/analytics-linux
 
       - uses: actions/upload-artifact@v3
         with:
@@ -123,8 +123,8 @@ jobs:
         with:
           ruby-version: "2.6"
 
-      - name: Update data for api samples
-        run: rake api_samples
+      # - name: Update data for api samples
+      #   run: rake api_samples
 
       - uses: actions/upload-artifact@v3
         with:
