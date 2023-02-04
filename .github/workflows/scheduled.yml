@@ -28,18 +28,13 @@ jobs:
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
 
-      - name: Set up analytics
-        env:
-          ANALYTICS_JSON_KEY: ${{ secrets.HOMEBREW_FORMULAE_BREW_SH_ANALYTICS_JSON_KEY }}
-        run: echo "$ANALYTICS_JSON_KEY" > ~/.homebrew_analytics.json
-
       - name: Update data for homebrew/cask
         run: |
           brew update-reset $(brew --repository homebrew/cask)
           /usr/bin/rake cask
 
       - name: Archive data
-        run: tar czvf data-cask.tar.gz _data/ api/ cask/
+        run: tar czvf data-cask.tar.gz _data/cask/ api/cask/ api/cask-source/ cask/
 
       - uses: actions/upload-artifact@v3
         with:
@@ -61,16 +56,11 @@ jobs:
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
 
-      - name: Set up analytics
-        env:
-          ANALYTICS_JSON_KEY: ${{ secrets.HOMEBREW_FORMULAE_BREW_SH_ANALYTICS_JSON_KEY }}
-        run: echo "$ANALYTICS_JSON_KEY" > ~/.homebrew_analytics.json
-
       - name: Update data for homebrew/core
         run: /usr/bin/rake formulae
 
       - name: Archive data
-        run: tar czvf data-core.tar.gz _data/ api/ formula/
+        run: tar czvf data-core.tar.gz _data/bottle/ _data/formula/ _data/formula_canonical.json api/bottle/ api/formula/ formula/
 
       - uses: actions/upload-artifact@v3
         with:
@@ -92,15 +82,6 @@ jobs:
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
 
-      - name: Set up dependency stubs
-        run: |
-          # create stubs so build dependencies aren't incorrectly flagged as missing
-          for i in python svn unzip xz
-          do
-            sudo touch /usr/bin/$i
-            sudo chmod +x /usr/bin/$i
-          done
-
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -115,7 +96,7 @@ jobs:
         run: rake all_analytics
 
       - name: Archive data
-        run: tar czvf data-analytics.tar.gz _data/
+        run: tar czvf data-analytics.tar.gz _data/analytics/
 
       - uses: actions/upload-artifact@v3
         with:
@@ -136,15 +117,6 @@ jobs:
       - name: Set up Homebrew
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
-
-      - name: Set up dependency stubs
-        run: |
-          # create stubs so build dependencies aren't incorrectly flagged as missing
-          for i in python svn unzip xz
-          do
-            sudo touch /usr/bin/$i
-            sudo chmod +x /usr/bin/$i
-          done
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
@@ -192,8 +164,8 @@ jobs:
       - name: Generate site
         run: bundle exec rake build
 
-      - name: List generated site files
-        run: find _site/
+      - name: List generated site API files
+        run: find _site/api -type f
 
       - name: Check for formula and cask APIs
         run: test -f _site/api/formula.json && test -f _site/api/cask.json
