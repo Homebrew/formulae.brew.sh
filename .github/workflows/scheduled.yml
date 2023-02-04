@@ -184,13 +184,16 @@ jobs:
 
       - name: Move artifacts into place
         run: |
-          tar xf data-analytics/data-analytics.tar.gz
-          tar xf data-cask/data-cask.tar.gz
-          tar xf data-core/data-core.tar.gz
-          mv api-samples _includes/api-samples
+          tar xvf data-analytics/data-analytics.tar.gz
+          tar xvf data-cask/data-cask.tar.gz
+          tar xvf data-core/data-core.tar.gz
+          mv -v api-samples _includes/api-samples
 
       - name: Generate site
         run: bundle exec rake build
+
+      - name: List generated site files
+        run: find _site/
 
       - name: Check for formula and cask APIs
         run: test -f _site/api/formula.json && test -f _site/api/cask.json
