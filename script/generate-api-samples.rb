@@ -4,13 +4,9 @@ SAMPLES = {
   analytics_cask_install_homebrew_cask_30d: "analytics/cask-install/homebrew-cask/30d.json",
   analytics_install_30d:                    "analytics/install/30d.json",
   analytics_install_homebrew_core_30d:      "analytics/install/homebrew-core/30d.json",
-  bottle_wget:                              "bottle/wget.json",
   cask_docker:                              "cask/docker.json",
-  cask_source_vagrant:                      "cask-source/vagrant.rb",
   formula_wget:                             "formula/wget.json",
   formula:                                  "formula.json",
-  versions_casks:                           "versions-casks.json",
-  versions_formulae:                        "versions-formulae.json",
 }.freeze
 
 def failed!
@@ -95,14 +91,6 @@ def format_json_contents(name, api_path)
     contents.select! do |obj|
       obj["name"] == "wget"
     end
-  when :versions_casks
-    contents.select! do |cask_token, _|
-      %w[docker onyx].include? cask_token
-    end
-  when :versions_formulae
-    contents.select! do |formula_name, _|
-      %w[wget zsh].include? formula_name
-    end
   end
 
   contents = JSON.pretty_generate contents
@@ -127,10 +115,6 @@ def format_json_contents(name, api_path)
   when :formula
     contents.sub!(/^\[/, "[\n  ...")
     contents.sub!(/}(?=\n\])/, "},\n  ...")
-  when :versions_casks, :versions_formulae
-    contents.sub!(/^{/, "{\n  ...")
-    contents.sub!(/(  },)(?=\n  ")/, "\\1\n  ...")
-    contents.sub!(/}(?=\n})/, "},\n  ...")
   end
 
   codify contents, language: "json"

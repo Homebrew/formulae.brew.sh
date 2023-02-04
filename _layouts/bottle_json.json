@@ -1,6 +1,0 @@
----
----
-{%- assign full_name = page.name | remove: ".json" -%}
-{%- assign data_name = full_name | remove: "@" | remove: "." | replace: "+", "_" -%}
-{%- assign bottle = site.data.bottle[data_name] -%}
-{{ bottle | jsonify }}
