@@ -38,9 +38,6 @@ jobs:
           brew update-reset $(brew --repository homebrew/cask)
           /usr/bin/rake cask
 
-      - name: Remove non-cask data
-        run: rm -rf _data/analytics _data/analytics-linux _data/bottle _data/formula api/analytics api/analytics-linux api/bottle api/formula
-
       - name: Archive data
         run: tar czvf data-cask.tar.gz _data/ api/ cask/
 
@@ -71,9 +68,6 @@ jobs:
 
       - name: Update data for homebrew/core
         run: /usr/bin/rake formulae
-
-      - name: Remove non-core data
-        run: rm -rf _data/analytics _data/analytics-linux _data/cask api/analytics api/analytics-linux api/cask api/cask-source
 
       - name: Archive data
         run: tar czvf data-core.tar.gz _data/ api/ formula/
@@ -119,9 +113,6 @@ jobs:
 
       - name: Update analytics data
         run: rake all_analytics
-
-      - name: Remove non-analytics data
-        run: rm -rf _data/bottle _data/cask _data/formula
 
       - name: Archive data
         run: tar czvf data-analytics.tar.gz _data/
@@ -201,6 +192,9 @@ jobs:
       - name: Generate site
         run: bundle exec rake build
 
+      - name: Check for formula and cask APIs
+        run: test -f _site/api/formula.json && test -f _site/api/cask.json &&
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
   deploy:
@@ -221,7 +215,15 @@ jobs:
         uses: actions/deploy-pages@v1
   deploy-issue:
     name: Open/close deploy issues
-    needs: [generate-cask, generate-core, generate-analytics, generate-samples, build, deploy]
+    needs:
+      [
+        generate-cask,
+        generate-core,
+        generate-analytics,
+        generate-samples,
+        build,
+        deploy,
+      ]
     if: ${{ always() && github.ref_name == 'master' }}
     env:
       GH_TOKEN: ${{ secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN }}
