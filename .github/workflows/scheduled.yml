@@ -193,7 +193,7 @@ jobs:
         run: bundle exec rake build
 
       - name: Check for formula and cask APIs
-        run: test -f _site/api/formula.json && test -f _site/api/cask.json &&
+        run: test -f _site/api/formula.json && test -f _site/api/cask.json
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
