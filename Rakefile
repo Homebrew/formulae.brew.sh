@@ -68,11 +68,13 @@ end
 
 def generate_analytics_files(os)
   analytics_data_path = "_data/analytics"
+  analytics_api_path = "api/analytics"
   core_tap_name = "homebrew-core"
   formula_analytics_os_arg = nil
 
   if os == "linux"
     analytics_data_path = "_data/analytics-linux"
+    analytics_api_path = "api/analytics-linux"
     formula_analytics_os_arg = "--linux"
   end
 
@@ -101,6 +103,7 @@ def generate_analytics_files(os)
     end
 
     FileUtils.mkdir_p "#{analytics_data_path}/#{category_name}"
+    FileUtils.mkdir_p "#{analytics_api_path}/#{category_name}"
     %w[30 90 365].each do |days|
       next if days != "30" && category_name == "build-error/#{core_tap_name}"
 
@@ -112,6 +115,14 @@ def generate_analytics_files(os)
 
       sh "brew formula-analytics #{formula_analytics_os_arg} --days-ago=#{days} --#{category_flags} " \
         "> #{analytics_data_path}/#{category_name}/#{days}d.json"
+      IO.write("#{analytics_api_path}/#{category_name}/#{days}d.json", <<~EOS
+        ---
+        layout: analytics_json
+        category: #{category_name}
+        ---
+        {{ content }}
+      EOS
+      )
     end
   end
 end
@@ -126,7 +137,7 @@ task :analytics, [:os] do |task, args|
 
   generate_analytics_files(args[:os])
 end
-CLOBBER.include FileList[%w[_data/analytics _data/analytics-linux]]
+CLOBBER.include FileList[%w[_data/analytics _data/analytics-linux api/analytics api/analytics-linux]]
 
 desc "Update API samples"
 task :api_samples do
