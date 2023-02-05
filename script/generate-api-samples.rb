@@ -13,6 +13,14 @@ SAMPLES = {
   versions_formulae:                        "versions-formulae.json",
 }.freeze
 
+def failed!
+  @failed ||= true
+end
+
+def failed?
+  @failed
+end
+
 def generate_api_samples
   includes_dir = "_includes/api-samples"
 
@@ -33,6 +41,12 @@ end
 def curl_output(api_path)
   api_url = "https://formulae.brew.sh/api/#{api_path}"
   out, err, status = Open3.capture3("curl", "--silent", "--show-error", "--fail", api_url)
+  unless status.success?
+    warn "Error fetching #{api_url}: #{err}"
+    # Return something JSON.parse can handle and we'll warn later.
+    failed!
+    return "{}"
+  end
 
   out.strip
 end
@@ -46,17 +60,20 @@ def format_json_contents(name, api_path)
 
   # TODO: remove when passing
   if contents.nil?
-    puts "Skipping nil #{api_path}"
+    warn "Skipping nil #{api_path}"
+    failed!
     return
   end
 
   if contents.blank?
-    puts "Skipping blank #{api_path}"
+    warn "Skipping blank #{api_path}"
+    failed!
     return
   end
 
   if contents == 'null'
-    puts "Skipping null #{api_path}"
+    warn "Skipping null #{api_path}"
+    failed!
     return
   end
 
@@ -120,3 +137,5 @@ def format_json_contents(name, api_path)
 end
 
 generate_api_samples
+
+abort if failed?
