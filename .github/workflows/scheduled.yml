@@ -160,9 +160,8 @@ jobs:
       - name: Build site
         run: bundle exec rake build
 
-      # TODO: enable when passing
-      # - name: Validate build
-      #   run: ./script/validate-build.rb
+      - name: Validate build
+        run: ./script/validate-build.rb
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
