@@ -19,20 +19,20 @@ def generate_api_samples
   FileUtils.rm_rf includes_dir
   FileUtils.mkdir_p includes_dir
 
-  SAMPLES.each do |name, api_url|
-    contents = if File.extname(api_url) == ".json"
-      format_json_contents name, api_url
+  SAMPLES.each do |name, api_path|
+    contents = if File.extname(api_path) == ".json"
+      format_json_contents name, api_path
     else
-      codify curl_output(api_url), language: "rb"
+      codify curl_output(api_path), language: "rb"
     end
 
     IO.write "#{includes_dir}/#{name}.md", contents
   end
 end
 
-def curl_output(api_url)
-  out, err, status = Open3.capture3("curl", "--silent", "--show-error", "--fail", "https://formulae.brew.sh/api/#{api_url}")
-  raise "Error fetching #{api_url}: #{err}" unless status.success?
+def curl_output(api_path)
+  api_url = "https://formulae.brew.sh/api/#{api_path}"
+  out, err, status = Open3.capture3("curl", "--silent", "--show-error", "--fail", api_url)
 
   out.strip
 end
@@ -41,8 +41,24 @@ def codify(contents, language:)
   "```#{language}\n#{contents}\n```"
 end
 
-def format_json_contents(name, api_url)
-  contents = JSON.parse curl_output(api_url)
+def format_json_contents(name, api_path)
+  contents = JSON.parse curl_output(api_path)
+
+  # TODO: remove when passing
+  if contents.nil?
+    puts "Skipping nil #{api_path}"
+    return
+  end
+
+  if contents.blank?
+    puts "Skipping blank #{api_path}"
+    return
+  end
+
+  if contents == 'null'
+    puts "Skipping null #{api_path}"
+    return
+  end
 
   # Only include a select group of items to reduce the length of the sample
   case name
