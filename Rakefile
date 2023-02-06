@@ -15,8 +15,8 @@ desc "Dump macOS formulae data"
 task :formulae, [:os, :tap] do |task, args|
   args.with_defaults(:os => "mac", :tap => jekyll_config("taps", "core", "name"))
 
-  ENV["HOMEBREW_FORCE_HOMEBREW_ON_LINUX"] = "1" if args[:os] == "mac"
   ENV["HOMEBREW_NO_COLOR"] = "1"
+  ENV["HOMEBREW_NO_INSTALL_FROM_API"] = "1"
   sh "brew", "ruby", "script/generate.rb", args[:os], args[:tap]
 end
 CLOBBER.include FileList[%w[_data/formula _data/bottle api/formula api/bottle formula _data/formula_canonical.json]]
@@ -25,8 +25,8 @@ desc "Dump cask data"
 task :cask, [:tap] do |task, args|
   args.with_defaults(:tap => jekyll_config("taps", "cask", "name"))
 
-  ENV["HOMEBREW_FORCE_HOMEBREW_ON_LINUX"] = "1"
   ENV["HOMEBREW_NO_COLOR"] = "1"
+  ENV["HOMEBREW_NO_INSTALL_FROM_API"] = "1"
   sh "brew", "ruby", "script/generate-cask.rb", args[:tap]
 end
 CLOBBER.include FileList[%w[_data/cask api/cask api/cask-source cask]]
