@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: scheduled
+  group: scheduled-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
