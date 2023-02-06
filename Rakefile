@@ -88,24 +88,28 @@ def generate_analytics_files(os)
     case category
     when "core-build-error"
       category = "all-core-formulae-json --build-error"
-      category_name = "build-error/#{core_tap_name}"
+      category_name = "build-error"
+      data_source = core_tap_name
     when "core-install"
       category = "all-core-formulae-json --install"
-      category_name = "install/#{core_tap_name}"
+      category_name = "install"
+      data_source = core_tap_name
     when "core-install-on-request"
       category = "all-core-formulae-json --install-on-request"
-      category_name = "install-on-request/#{core_tap_name}"
+      category_name = "install-on-request"
+      data_source = core_tap_name
     when "core-cask-install"
       category = "all-core-formulae-json --cask-install"
-      category_name = "cask-install/homebrew-cask"
+      category_name = "cask-install"
+      data_source = "homebrew-cask"
     else
       category_name = category
     end
 
-    FileUtils.mkdir_p "#{analytics_data_path}/#{category_name}"
-    FileUtils.mkdir_p "#{analytics_api_path}/#{category_name}"
+    FileUtils.mkdir_p "#{analytics_data_path}/#{category_name}/#{data_source}"
+    FileUtils.mkdir_p "#{analytics_api_path}/#{category_name}/#{data_source}"
     %w[30 90 365].each do |days|
-      next if days != "30" && category_name == "build-error/#{core_tap_name}"
+      next if days != "30" && category_name == "build-error" && !data_source.nil?
 
       # The `--json` and `--all-core-formulae-json` flags are mutually
       # exclusive, but we need to explicitly set `--json` sometimes,
@@ -113,12 +117,14 @@ def generate_analytics_files(os)
       # `--all-core-formulae-json`.
       category_flags = category.include?("all-core-formulae-json") ? category : "json --#{category}"
 
+      path_suffix = File.join(category_name, data_source || "", "#{days}d.json")
       sh "brew formula-analytics #{formula_analytics_os_arg} --days-ago=#{days} --#{category_flags} " \
-        "> #{analytics_data_path}/#{category_name}/#{days}d.json"
-      IO.write("#{analytics_api_path}/#{category_name}/#{days}d.json", <<~EOS
+        "> #{analytics_data_path}/#{path_suffix}"
+      IO.write("#{analytics_api_path}/#{path_suffix}", <<~EOS
         ---
         layout: analytics_json
         category: #{category_name}
+        #{data_source + ": true" if data_source}
         ---
         {{ content }}
       EOS
