@@ -32,3 +32,11 @@ jobs:
 
       - name: Generate site
         run: bundle exec rake formulae cask
+
+      - name: Validate schemas
+        run: |
+          apt-get install -y jsonschema
+          for item in $(ls _site/api/formula); do
+            echo "Checking $item"
+            jsonschema -i _site/api/formula/$item tests/jsonschema/formula.schema.json
+          done
