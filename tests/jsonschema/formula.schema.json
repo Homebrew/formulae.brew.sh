@@ -1,0 +1,485 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://formulae.brew.sh/api/formula",
+    "$dynamicAnchor": "node",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "Package name"
+        },
+        "full_name": {
+            "type": "string"
+        },
+        "tap": {
+            "type": "string"
+        },
+        "oldname": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "desc": {
+            "type": "string"
+        },
+        "license": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "homepage": {
+            "type": "string",
+            "format": "uri"
+        },
+        "revision": {
+            "type": "integer"
+        },
+        "version_scheme": {
+            "type": "integer"
+        },
+        "keg_only": {
+            "type": "boolean"
+        },
+        "keg_only_reason": {
+            "type": [
+                "object",
+                "null"
+            ],
+            "properties": {
+                "reason": {
+                    "type": "string"
+                },
+                "explanation": {
+                    "type": "string"
+                }
+            }
+        },
+        "pinned": {
+            "type": "boolean"
+        },
+        "outdated": {
+            "type": "boolean"
+        },
+        "caveats": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "linked_keg": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "deprecated": {
+            "type": "boolean"
+        },
+        "deprecation_date": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "format": "date"
+        },
+        "deprecation_reason": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "disabled": {
+            "type": "boolean"
+        },
+        "disable_date": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "format": "date"
+        },
+        "disable_reason": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "generated_date": {
+            "type": "string",
+            "format": "date"
+        },
+        "aliases": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "versioned_formulae": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "options": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "build_dependencies": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "dependencies": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "test_dependencies": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "recommended_dependencies": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "optional_dependencies": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "uses_from_macos": {
+            "type": "array",
+            "items": {
+                "type": [
+                    "string",
+                    "object"
+                ],
+                "patternProperties": {
+                    ".*": {
+                        "type": [
+                            "string",
+                            "array"
+                        ],
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "requirements": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "cask": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "download": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "version": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "contexts": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "conflicts_with": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "variations": {
+            "type": "object",
+            "patternProperties": {
+                ".*": {
+                    "type": "object",
+                    "properties": {
+                        "dependencies": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "installed": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": [],
+                "properties": {
+                    "version": {
+                        "type": "string"
+                    },
+                    "used_options": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "built_as_bottle": {
+                        "type": "boolean"
+                    },
+                    "poured_from_bottle": {
+                        "type": "boolean"
+                    },
+                    "installed_as_dependency": {
+                        "type": "boolean"
+                    },
+                    "installed_on_request": {
+                        "type": "boolean"
+                    },
+                    "time": {
+                        "type": "integer"
+                    },
+                    "runtime_dependencies": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "required": [
+                                "full_name",
+                                "version",
+                                "declared_directly"
+                            ],
+                            "properties": {
+                                "full_name": {
+                                    "type": "string"
+                                },
+                                "version": {
+                                    "type": "string"
+                                },
+                                "declared_directly": {
+                                    "type": "boolean"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "versions": {
+            "type": "object",
+            "properties": {
+                "stable": {
+                    "type": "string"
+                },
+                "head": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "bottle": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "stable",
+                "head",
+                "bottle"
+            ]
+        },
+        "urls": {
+            "type": "object",
+            "properties": {
+                "stable": {
+                    "type": "object",
+                    "required": [
+                        "url",
+                        "tag",
+                        "revision",
+                        "checksum"
+                    ],
+                    "properties": {
+                        "url": {
+                            "type": "string",
+                            "format": "uri"
+                        },
+                        "tag": {
+                            "type": [
+                                "string",
+                                "null"
+                            ]
+                        },
+                        "revision": {
+                            "type": [
+                                "string",
+                                "null"
+                            ]
+                        },
+                        "checksum": {
+                            "type": [
+                                "string",
+                                "null"
+                            ]
+                        }
+                    }
+                },
+                "head": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "bottle": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "stable"
+            ]
+        },
+        "bottles": {
+            "type": "object",
+            "properties": {
+                "stable": {
+                    "type": "object",
+                    "properties": {
+                        "rebuild": {
+                            "type": "integer"
+                        },
+                        "root_url": {
+                            "type": "string",
+                            "format": "uri"
+                        }
+                    },
+                    "patternProperties": {
+                        "^(arm64_|x86_64_)?[a-z_]": {
+                            "type": "object",
+                            "properties": {
+                                "cellar": {
+                                    "type": "string"
+                                },
+                                "url": {
+                                    "type": "string",
+                                    "format": "uri"
+                                },
+                                "sha256": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "required": []
+                }
+            }
+        },
+        "analytics": {
+            "$ref": "#/$defs/analytics-type"
+        },
+        "analytics-linux": {
+            "$ref": "#/$defs/analytics-type"
+        }
+    },
+    "required": [
+        "name",
+        "full_name",
+        "tap",
+        "oldname",
+        "aliases",
+        "versioned_formulae",
+        "desc",
+        "license",
+        "homepage",
+        "versions",
+        "urls",
+        "revision",
+        "version_scheme",
+        "bottle",
+        "keg_only",
+        "keg_only_reason",
+        "options",
+        "build_dependencies",
+        "dependencies",
+        "test_dependencies",
+        "recommended_dependencies",
+        "optional_dependencies",
+        "uses_from_macos",
+        "requirements",
+        "conflicts_with",
+        "caveats",
+        "installed",
+        "linked_keg",
+        "pinned",
+        "outdated",
+        "deprecated",
+        "deprecation_date",
+        "deprecation_reason",
+        "disabled",
+        "disable_date",
+        "disable_reason",
+        "variations",
+        "analytics",
+        "analytics-linux",
+        "generated_date"
+    ],
+    "$defs": {
+        "analytics_item": {
+            "type": "object",
+            "required": [
+                "install",
+                "install_on_request",
+                "build_error"
+            ],
+            "properties": {
+                "install": {
+                    "$ref": "#/$defs/analytics-type"
+                },
+                "install_on_request": {
+                    "$ref": "#/$defs/analytics-type"
+                },
+                "build_error": {
+                    "$ref": "#/$defs/analytics-type"
+                }
+            }
+        },
+        "analytics-type": {
+            "type": "object",
+            "patternProperties": {
+                "(30|90|365)d": {
+                    "type": "object",
+                    "description": "The analytics range",
+                    "patternProperties": {
+                        ".*": {
+                            "type": "integer",
+                            "description": "Formula name as key and analytics count as value"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
