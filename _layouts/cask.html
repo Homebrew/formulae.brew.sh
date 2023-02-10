@@ -77,13 +77,11 @@ permalink: :title
 
 <p>Analytics:</p>
 <table>
-{%- assign intervals = "30d, 90d, 365d" | split: ", " -%}
-{%- for interval in intervals -%}
-    {%- assign interval_days = interval | replace: "d", " days" -%}
+{%- for interval in site.analytics.intervals -%}
     <tr>
-        <th colspan="2">Installs ({{ interval_days }})</th>
+        <th colspan="2">Installs ({{ interval.name }})</th>
     </tr>
-    {%- for fa in site.data.analytics.cask-install.homebrew-cask[interval].formulae[token] -%}
+    {%- for fa in site.data.analytics.cask-install.homebrew-cask[interval.path].formulae[token] -%}
     <tr>
         <td><code>{{ fa.cask }}</code></td>
         <td class="number-data">{{ fa.count }}</td>

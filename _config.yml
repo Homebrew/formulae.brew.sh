@@ -42,6 +42,28 @@ taps:
     fullname: Homebrew/homebrew-cask
     remote: https://github.com/Homebrew/homebrew-cask
 
+analytics:
+  sources:
+    - name: macOS
+      path: analytics
+    - name: Linux
+      path: analytics-linux
+  intervals:
+    - name: 30 days
+      path: 30d
+    - name: 90 days
+      path: 90d
+    - name: 365 days
+      path: 365d
+  categories:
+    formulae:
+      - name: Installs
+        path: install
+      - name: Installs on Request
+        path: install-on-request
+      - name: Build Errors
+        path: build-error
+
 logo: https://brew.sh/assets/img/homebrew-256x256.png
 
 forkme_nwo: Homebrew/formulae.brew.sh
