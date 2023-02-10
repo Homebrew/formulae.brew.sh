@@ -190,112 +190,32 @@ permalink: :title
         <td>{{ f.caveats | xml_escape | replace: soft_indent, hard_indent | strip | newline_to_br }}</td>
     </tr>
 </table>
-{%- endif %}
+{%- endif -%}
 
-<p>Analytics (macOS):</p>
+{%- for source in site.analytics.sources %}
+
+<p>Analytics ({{ source.name }}):</p>
 <table>
-{%- assign intervals = "30d, 90d, 365d" | split: ", " -%}
-{%- for interval in intervals -%}
-    {%- assign interval_days = interval | replace: "d", " days" -%}
-    <tr>
-        <th colspan="2">Installs ({{ interval_days }})</th>
-    </tr>
-    {%- for fa in site.data.analytics.install.homebrew-core[interval].formulae[full_name] -%}
-    <tr>
-        <td><code>{{ fa.formula | escape }}</code></td>
-        <td class="number-data">{{ fa.count }}</td>
-    </tr>
-    {%- else -%}
-    <tr>
-        <td><code>{{ full_name }}</code></td>
-        <td class="number-data">0</td>
-    </tr>
-    {%- endfor -%}
-
-    <tr>
-        <th colspan="2">Installs on Request ({{ interval_days }})</th>
-    </tr>
-    {%- for fa in site.data.analytics.install-on-request.homebrew-core[interval].formulae[full_name] -%}
-    <tr>
-        <td><code>{{ fa.formula | escape }}</code></td>
-        <td class="number-data">{{ fa.count }}</td>
-    </tr>
-    {%- else -%}
-    <tr>
-        <td><code>{{ full_name }}</code></td>
-        <td class="number-data">0</td>
-    </tr>
-    {%- endfor -%}
-
-    {%- if forloop.first -%}
-    <tr>
-        <th colspan="2">Build Errors ({{ interval_days }})</th>
-    </tr>
-        {%- for fa in site.data.analytics.build-error.homebrew-core[interval].formulae[full_name] -%}
-    <tr>
-        <td><code>{{ fa.formula | escape }}</code></td>
-        <td class="number-data">{{ fa.count }}</td>
-    </tr>
-        {%- else -%}
-    <tr>
-        <td><code>{{ full_name }}</code></td>
-        <td class="number-data">0</td>
-    </tr>
-        {%- endfor -%}
+{%- for interval in site.analytics.intervals -%}
+  {%- for category in site.analytics.categories.formulae -%}
+    {%- if forloop.parentloop.first == false and forloop.last -%}
+        {%- break -%}
     {%- endif -%}
+    <tr>
+        <th colspan="2">{{ category.name }} ({{ interval.name }})</th>
+    </tr>
+    {%- for fa in site.data[source.path][category.path].homebrew-core[interval.path].formulae[full_name] -%}
+    <tr>
+        <td><code>{{ fa.formula | escape }}</code></td>
+        <td class="number-data">{{ fa.count }}</td>
+    </tr>
+    {%- else -%}
+    <tr>
+        <td><code>{{ full_name }}</code></td>
+        <td class="number-data">0</td>
+    </tr>
+    {%- endfor -%}
+  {%- endfor -%}
 {%- endfor %}
 </table>
-
-<p>Analytics (Linux):</p>
-<table>
-{%- assign intervals = "30d, 90d, 365d" | split: ", " -%}
-{%- for interval in intervals -%}
-    {%- assign interval_days = interval | replace: "d", " days" -%}
-    <tr>
-        <th colspan="2">Installs ({{ interval_days }})</th>
-    </tr>
-    {%- for fa in site.data.analytics-linux.install.homebrew-core[interval].formulae[full_name] -%}
-    <tr>
-        <td><code>{{ fa.formula | escape }}</code></td>
-        <td class="number-data">{{ fa.count }}</td>
-    </tr>
-    {%- else -%}
-    <tr>
-        <td><code>{{ full_name }}</code></td>
-        <td class="number-data">0</td>
-    </tr>
-    {%- endfor -%}
-
-    <tr>
-        <th colspan="2">Installs on Request ({{ interval_days }})</th>
-    </tr>
-    {%- for fa in site.data.analytics-linux.install-on-request.homebrew-core[interval].formulae[full_name] -%}
-    <tr>
-        <td><code>{{ fa.formula | escape }}</code></td>
-        <td class="number-data">{{ fa.count }}</td>
-    </tr>
-    {%- else -%}
-    <tr>
-        <td><code>{{ full_name }}</code></td>
-        <td class="number-data">0</td>
-    </tr>
-    {%- endfor -%}
-
-    {%- if forloop.first -%}
-    <tr>
-        <th colspan="2">Build Errors ({{ interval_days }})</th>
-    </tr>
-        {%- for fa in site.data.analytics-linux.build-error.homebrew-core[interval].formulae[full_name] -%}
-    <tr>
-        <td><code>{{ fa.formula | escape }}</code></td>
-        <td class="number-data">{{ fa.count }}</td>
-    </tr>
-        {%- else -%}
-    <tr>
-        <td><code>{{ full_name }}</code></td>
-        <td class="number-data">0</td>
-    </tr>
-        {%- endfor -%}
-    {%- endif -%}
 {%- endfor %}
-</table>
