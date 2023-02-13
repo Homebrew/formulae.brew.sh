@@ -9,6 +9,8 @@ FileUtils.mkdir_p directories
 json_template = IO.read "_api_formula.json.in"
 html_template = IO.read "_formula.html.in"
 
+Formulary.enable_factory_cache!
+
 tap.formula_names.each do |n|
   f = Formulary.factory(n)
   IO.write("_data/formula/#{f.name.tr("+", "_")}.json", "#{JSON.pretty_generate(f.to_hash_with_variations)}\n")
