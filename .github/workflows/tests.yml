@@ -35,7 +35,7 @@ jobs:
 
       - name: Validate schemas
         run: |
-          apt-get install -y jsonschema
+          sudo apt-get install -y python-jsonschema
           for item in $(ls _site/api/formula); do
             echo "Checking $item"
             jsonschema -i _site/api/formula/$item tests/jsonschema/formula.schema.json
