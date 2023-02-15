@@ -4,8 +4,8 @@ on:
     paths:
       - .github/workflows/scheduled.yml
   schedule:
-    # Once every hour
-    - cron: "0 * * * *"
+    # Every 15 minutes
+    - cron: "*/15 * * * *"
   workflow_dispatch:
 
 concurrency:
