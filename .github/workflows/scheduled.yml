@@ -93,7 +93,7 @@ jobs:
         run: echo "$ANALYTICS_JSON_KEY" > ~/.homebrew_analytics.json
 
       - name: Update analytics data
-        run: rake all_analytics
+        run: rake all_analytics || sleep 30 && rake all_analytics
 
       - name: Archive data
         run: tar czvf data-analytics.tar.gz _data/analytics _data/analytics-linux api/analytics api/analytics-linux
