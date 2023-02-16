@@ -54,6 +54,22 @@ GET https://formulae.brew.sh/api/cask/${FORMULA}.json
 
 {% include api-samples/cask_docker.md %}
 
+### Get the source code for a cask in {{ site.taps.cask.fullname }}
+
+Get the latest source code for a cask that is defined in the {{ site.taps.cask.fullname }} repo.
+
+```
+GET https://formulae.brew.sh/api/cask-source/${CASK}.rb
+```
+
+#### Variables
+
+- `${CASK}`: the name of the cask, e.g. `vagrant`
+
+#### [Response](https://formulae.brew.sh/api/cask-source/vagrant.json)
+
+{% include api-samples/cask_source_vagrant.md %}
+
 ## Analytics
 
 ### List one category of analytics events

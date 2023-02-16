@@ -5,6 +5,7 @@ SAMPLES = {
   analytics_install_30d:                    "analytics/install/30d.json",
   analytics_install_homebrew_core_30d:      "analytics/install/homebrew-core/30d.json",
   cask_docker:                              "cask/docker.json",
+  cask_source_vagrant:                      "cask-source/vagrant.rb",
   formula_wget:                             "formula/wget.json",
   formula:                                  "formula.json",
 }.freeze
