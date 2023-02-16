@@ -29,7 +29,7 @@ task :cask, [:tap] do |task, args|
   ENV["HOMEBREW_NO_INSTALL_FROM_API"] = "1"
   sh "brew", "ruby", "script/generate-cask.rb", args[:tap]
 end
-CLOBBER.include FileList[%w[_data/cask api/cask cask]]
+CLOBBER.include FileList[%w[_data/cask api/cask api/cask-source cask]]
 
 def generate_analytics?(os)
   return false if ENV["HOMEBREW_NO_ANALYTICS"]

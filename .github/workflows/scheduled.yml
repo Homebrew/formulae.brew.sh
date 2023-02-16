@@ -34,7 +34,7 @@ jobs:
           /usr/bin/rake cask
 
       - name: Archive data
-        run: tar czvf data-cask.tar.gz _data/cask/ api/cask/ cask/
+        run: tar czvf data-cask.tar.gz _data/cask/ api/cask/ api/cask-source/ cask/
 
       - uses: actions/upload-artifact@v3
         with:
