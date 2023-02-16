@@ -9,6 +9,21 @@ def jekyll_config(*props)
   props.empty? ? @config : @config.dig(*props)
 end
 
+MAX_RETRIES = 3
+
+def sh_retry(command)
+  @retries ||= 0
+  sh(command)
+rescue RuntimeError
+  if @retries < MAX_RETRIES
+    sleep 2**(@retries + 3)
+    @retries += 1
+    retry
+  end
+
+  raise
+end
+
 task default: :formula_and_analytics
 
 desc "Dump macOS formulae data"
@@ -30,17 +45,6 @@ task :cask, [:tap] do |task, args|
   sh "brew", "ruby", "script/generate-cask.rb", args[:tap]
 end
 CLOBBER.include FileList[%w[_data/cask api/cask api/cask-source cask]]
-
-def generate_analytics?(os)
-  return false if ENV["HOMEBREW_NO_ANALYTICS"]
-
-  json_file = "_data/analytics#{"-linux" if os == "linux"}/build-error/30d.json"
-  return true unless File.exist?(json_file)
-
-  json = JSON.parse(IO.read(json_file))
-  end_date = Date.parse(json["end_date"])
-  end_date < Date.today
-end
 
 def setup_analytics_credentials
   ga_credentials = ".homebrew_analytics.json"
@@ -118,7 +122,7 @@ def generate_analytics_files(os)
       category_flags = category.include?("all-core-formulae-json") ? category : "json --#{category}"
 
       path_suffix = File.join(category_name, data_source || "", "#{days}d.json")
-      sh "brew formula-analytics #{formula_analytics_os_arg} --days-ago=#{days} --#{category_flags} " \
+      sh_retry "brew formula-analytics #{formula_analytics_os_arg} --days-ago=#{days} --#{category_flags} " \
         "> #{analytics_data_path}/#{path_suffix}"
       IO.write("#{analytics_api_path}/#{path_suffix}", <<~EOS
         ---
@@ -136,8 +140,6 @@ end
 desc "Dump analytics data"
 task :analytics, [:os] do |task, args|
   args.with_defaults(:os => "mac")
-
-  next unless generate_analytics?(args[:os])
 
   setup_analytics
 
