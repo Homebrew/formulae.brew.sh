@@ -43,12 +43,12 @@ GET https://formulae.brew.sh/api/formula/${FORMULA}.json
 Get the `brew info --json=v2 --cask <cask>` JSON output for a single, current {{ site.taps.cask.fullname }} cask with extra keys containing analytics data and generation date.
 
 ```
-GET https://formulae.brew.sh/api/cask/${FORMULA}.json
+GET https://formulae.brew.sh/api/cask/${CASK}.json
 ```
 
 #### Variables
 
-- `${FORMULA}`: the name of the formula, e.g. `docker`
+- `${CASK}`: the name of the cask, e.g. `docker`
 
 #### [Response](https://formulae.brew.sh/api/cask/docker.json)
 
