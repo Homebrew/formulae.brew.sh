@@ -163,6 +163,12 @@ jobs:
       - name: Validate build
         run: ./script/validate-build.rb
 
+      - name: Sign API
+        env:
+          JWS_SIGNING_KEY_ID: homebrew-1
+          JWS_SIGNING_KEY: ${{ secrets.JWS_HOMEBREW_1 }}
+        run: ./script/sign-json.rb
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
   deploy:
