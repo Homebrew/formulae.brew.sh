@@ -12,6 +12,7 @@ error = false
 ].map { |f| Pathname(f) }.each do |path|
   next if path.exist?
 
+  error = true
   warn "#{path}: does not exist"
 end
 
