@@ -1,4 +1,4 @@
-#!/usr/bin/env brew ruby
+#!/usr/bin/env ruby
 
 SAMPLES = {
   analytics_cask_install_homebrew_cask_30d: "analytics/cask-install/homebrew-cask/30d.json",
