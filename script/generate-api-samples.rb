@@ -1,5 +1,9 @@
 #!/usr/bin/env ruby
 
+require "fileutils"
+require "json"
+require "open3"
+
 SAMPLES = {
   analytics_cask_install_homebrew_cask_30d: "analytics/cask-install/homebrew-cask/30d.json",
   analytics_install_30d:                    "analytics/install/30d.json",
@@ -61,8 +65,8 @@ def format_json_contents(name, api_path)
     return
   end
 
-  if contents.blank?
-    warn "Skipping blank #{api_path}"
+  if contents.empty?
+    warn "Skipping empty #{api_path}"
     failed!
     return
   end
