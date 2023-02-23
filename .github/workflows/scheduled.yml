@@ -32,6 +32,8 @@ jobs:
         run: |
           brew update-reset $(brew --repository homebrew/cask)
           /usr/bin/rake cask
+        env:
+          HOMEBREW_DEVELOPER: 1
 
       - name: Archive data
         run: tar czvf data-cask.tar.gz _data/cask/ api/cask/ api/cask-source/ cask/
@@ -58,6 +60,8 @@ jobs:
 
       - name: Update data for homebrew/core
         run: /usr/bin/rake formulae
+        env:
+          HOMEBREW_DEVELOPER: 1
 
       - name: Archive data
         run: tar czvf data-core.tar.gz _data/formula/ _data/formula_canonical.json api/formula/ formula/
