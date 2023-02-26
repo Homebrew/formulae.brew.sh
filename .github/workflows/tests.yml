@@ -31,4 +31,6 @@ jobs:
           bundle install --jobs 4 --retry 3
 
       - name: Generate site
-        run: bundle exec rake formulae cask
+        run: bundle exec rake formulae casks
+        env:
+          HOMEBREW_DEVELOPER: 1

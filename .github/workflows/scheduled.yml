@@ -30,10 +30,11 @@ jobs:
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
 
+      - name: Reset homebrew/cask tap
+        run: brew update-reset $(brew --repository homebrew/cask)
+
       - name: Update data for homebrew/cask
-        run: |
-          brew update-reset $(brew --repository homebrew/cask)
-          /usr/bin/rake cask
+        run: bundle exec rake casks
         env:
           HOMEBREW_DEVELOPER: 1
 
@@ -60,8 +61,11 @@ jobs:
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
 
+      - name: Reset homebrew/core tap
+        run: brew update-reset $(brew --repository homebrew/core)
+
       - name: Update data for homebrew/core
-        run: /usr/bin/rake formulae
+        run: bundle exec rake formulae
         env:
           HOMEBREW_DEVELOPER: 1
 
@@ -99,7 +103,7 @@ jobs:
         run: echo "$ANALYTICS_JSON_KEY" > ~/.homebrew_analytics.json
 
       - name: Update analytics data
-        run: rake all_analytics
+        run: bundle exec rake analytics
 
       - name: Archive data
         run: tar czvf data-analytics.tar.gz _data/analytics _data/analytics-linux api/analytics api/analytics-linux
@@ -130,7 +134,7 @@ jobs:
           ruby-version: "2.6"
 
       - name: Update data for api samples
-        run: rake api_samples
+        run: bundle exec rake api_samples
 
       - uses: actions/upload-artifact@v3
         with:
