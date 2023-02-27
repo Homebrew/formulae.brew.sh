@@ -165,7 +165,7 @@ jobs:
           mv -v api-samples _includes/api-samples
 
       - name: Build site
-        run: /usr/bin/rake build
+        run: bundle exec jekyll build
 
       - name: Validate build
         run: ./script/validate-build.rb

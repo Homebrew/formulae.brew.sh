@@ -9,21 +9,21 @@ It also provides a JSON API for all packages (or individual packages) in each ta
 
 Currently available:
 
-- List formulae metadata for all formulae
-- Get formula metadata for each formula
-- List analytics events for all formulae
-- List analytics events for each formula
+- List metadata for all formulae and casks
+- Get metadata for each formula and cask
+- List analytics events for all formulae and casks
+- List analytics events for each formula and cask
 
 Read more in the [JSON API documentation](https://formulae.brew.sh/docs/api/).
 
 ## Usage
 Open <https://formulae.brew.sh/> in your web browser.
 
-To instead run Homebrew Formulae locally, run:
+To instead run the site locally, run:
 ```bash
 git clone https://github.com/Homebrew/formulae.brew.sh
 cd formulae.brew.sh
-bundle install
+rake generate
 bundle exec jekyll serve
 ```
 

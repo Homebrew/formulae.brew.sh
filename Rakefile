@@ -6,6 +6,9 @@ require "yaml"
 
 task default: :generate
 
+desc "Generate the API files"
+task generate: %i[formulae casks analytics api_samples]
+
 desc "Dump macOS formulae data"
 task :formulae do
   sh "brew", "generate-formula-api"
@@ -53,56 +56,3 @@ task :api_samples do
   sh "ruby", "script/generate-api-samples.rb"
 end
 CLOBBER.include FileList[%w[_includes/api-sample]]
-
-desc "Generate the API files"
-task generate: %i[formulae casks analytics api_samples]
-
-desc "Build the site"
-task :build do
-  require 'jekyll'
-  Jekyll::Commands::Build.process({})
-end
-CLEAN.include FileList["_site"]
-
-desc "Serve the site"
-task :serve do
-  require 'jekyll'
-  Jekyll::Commands::Serve.process({})
-end
-
-desc "Run html proofer to validate the HTML output."
-task html_proofer: :build do
-  require "html-proofer"
-  HTMLProofer.check_directory(
-    "./_site",
-    parallel: { in_threads: 4 },
-    favicon: true,
-    http_status_ignore: [0, 302, 303, 429, 521],
-    assume_extension: true,
-    check_external_hash: true,
-    check_favicon: true,
-    check_opengraph: true,
-    check_img_http: true,
-    disable_external: true,
-    url_ignore: ["http://formulae.brew.sh"]
-  ).run
-end
-
-desc "Run JSON Lint to validate the JSON output."
-task jsonlint: :build do
-  require "jsonlint"
-  files_to_check = FileList["_site/**/*.json"]
-  puts "Running JSON Lint on #{files_to_check.flatten.length} files..."
-
-  linter = JsonLint::Linter.new
-  linter.check_all(files_to_check)
-
-  if linter.errors?
-    linter.display_errors
-    abort "JSON Lint found #{linter.errors_count} errors!"
-  else
-    puts "JSON Lint finished successfully."
-  end
-end
-
-task test: %i[html_proofer jsonlint]
