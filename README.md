@@ -24,6 +24,7 @@ To instead run the site locally, run:
 git clone https://github.com/Homebrew/formulae.brew.sh
 cd formulae.brew.sh
 rake generate
+bundle install
 bundle exec jekyll serve
 ```
 
