@@ -236,23 +236,3 @@ jobs:
             gh issue comment "$EXISTING_ISSUE" --repo "$REPO" --body "$(echo -e "$COMMENT_BODY")"
             gh issue close "$EXISTING_ISSUE" --repo "$REPO"
           fi
-
-  # This is run on a schedule by Algolia too so we don't care about failures.
-  algolia_recrawl:
-    needs: deploy
-    name: Algolia Recrawl
-    runs-on: ubuntu-latest
-    steps:
-      - name: Algolia crawler creation and recrawl
-        uses: algolia/algoliasearch-crawler-github-actions@v1
-        continue-on-error: true
-        id: crawler_push
-        with:
-          crawler-name: Homebrew Search (https://*brew.sh)
-          site-url: ${{ needs.deploy.outputs.deploy_url }}
-          crawler-user-id: ${{ secrets.CRAWLER_USER_ID }}
-          crawler-api-key: ${{ secrets.CRAWLER_API_KEY }}
-          algolia-app-id: ${{ secrets.ALGOLIA_APP_ID }}
-          algolia-api-key: ${{ secrets.ALGOLIA_API_KEY }}
-      - name: Unconditional success step
-        run: true
