@@ -101,6 +101,8 @@ jobs:
 
       - name: Update analytics data
         run: /usr/bin/rake analytics
+        env:
+          HOMEBREW_INFLUXDB_TOKEN: ${{ secrets.HOMEBREW_INFLUXDB_TOKEN }}
 
       - name: Archive data
         run: tar czvf data-analytics.tar.gz _data/analytics _data/analytics-linux api/analytics api/analytics-linux
