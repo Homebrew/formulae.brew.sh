@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "date"
 require "json"
 require "rake"
@@ -7,7 +9,7 @@ require "yaml"
 task default: :generate
 
 desc "Generate the API files"
-task generate: %i[formulae casks analytics api_samples]
+task generate: [:formulae, :casks, :analytics, :api_samples]
 
 desc "Dump macOS formulae data"
 task :formulae do
@@ -33,9 +35,9 @@ end
 
 def setup_formula_analytics_cmd
   ENV["HOMEBREW_NO_AUTO_UPDATE"] = "1"
-  unless `brew tap`.include?("homebrew/formula-analytics")
-    sh "brew", "tap", "Homebrew/formula-analytics"
-  end
+  return if `brew tap`.include?("homebrew/formula-analytics")
+
+  sh "brew", "tap", "Homebrew/formula-analytics"
 end
 
 def setup_analytics
