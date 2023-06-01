@@ -80,16 +80,16 @@ def format_json_contents(name, api_path)
   # Only include a select group of items to reduce the length of the sample
   case name
   when :analytics_cask_install_homebrew_cask_30d
-    contents["items"].select! do |obj|
-      %w[docker docker-edge docker-toolbox].include? obj["formula"]
+    contents["formulae"].select! do |token, _|
+      %w[docker docker-edge docker-toolbox].include? token
     end
   when :analytics_install_30d
     contents["items"].select! do |obj|
       ["wget", "wget --HEAD"].include? obj["formula"]
     end
   when :analytics_install_homebrew_core_30d
-    contents["items"].select! do |obj|
-      obj["formula"] == "wget"
+    contents["formulae"].select! do |formula_name, _|
+      formula_name == "wget"
     end
   when :formula
     contents.select! do |obj|
