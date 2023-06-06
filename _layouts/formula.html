@@ -7,8 +7,8 @@ permalink: :title
 {%- assign data_name = full_name | remove: "@" | remove: "." | replace: "+", "_" -%}
 {%- assign f = site.data[formula_path][data_name] -%}
 <h2
-    {%- if f.disabled %} class="disabled" title="This formula has been disabled since {{ f.disable_date }} because it {{ f.disable_reason }}"
-    {%- elsif f.deprecated %} class="deprecated" title="This formula has been deprecated since {{ f.deprecation_date }} because it {{ f.deprecation_reason }}"
+    {%- if f.disabled %} class="disabled" title="This formula has been disabled since {{ f.disable_date }} because it is {{ f.disable_reason }}"
+    {%- elsif f.deprecated %} class="deprecated" title="This formula has been deprecated since {{ f.deprecation_date }} because it is {{ f.deprecation_reason }}"
     {%- endif -%}
     >{{ f.name }}</h2>
 
