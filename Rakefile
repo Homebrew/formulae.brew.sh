@@ -51,7 +51,7 @@ task :analytics do
 
   sh "brew", "generate-analytics-api"
 end
-CLOBBER.include FileList[%w[_data/analytics _data/analytics-linux api/analytics api/analytics-linux]]
+CLOBBER.include FileList[%w[_data/analytics api/analytics]]
 
 desc "Update API samples"
 task :api_samples do

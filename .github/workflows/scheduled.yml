@@ -105,7 +105,7 @@ jobs:
           HOMEBREW_INFLUXDB_TOKEN: ${{ secrets.HOMEBREW_INFLUXDB_TOKEN }}
 
       - name: Archive data
-        run: tar czvf data-analytics.tar.gz _data/analytics _data/analytics-linux api/analytics api/analytics-linux
+        run: tar czvf data-analytics.tar.gz _data/analytics api/analytics
 
       - uses: actions/upload-artifact@v3
         with:

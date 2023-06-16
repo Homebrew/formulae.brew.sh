@@ -9,35 +9,33 @@
   {{ key_value[0] | jsonify }}:{{ key_value[1] | jsonify }},
 {%- endfor -%}
 
-{%- for source in site.analytics.sources -%}
-  "{{ source.path }}":{
-  {%- for category in site.analytics.categories.formulae -%}
-    "{{ category.path | replace: "-", "_" }}":{
-    {%- for interval in site.analytics.intervals -%}
-      "{{ interval.path }}":{
-      {%- if site.data[source.path][category.path].homebrew-core[interval.path].formulae[full_name].size > 0 -%}
-        {%- for fa in site.data[source.path][category.path].homebrew-core[interval.path].formulae[full_name] -%}
-          {{ fa.formula | jsonify }}:{{ fa.count | remove: "," | plus: 0 }}
-          {%- unless forloop.last -%}
-          ,
-          {%- endunless -%}
-        {%- endfor -%}
-      {%- else -%}
-        {{ full_name | jsonify }}:0
-      {%- endif -%}
-      }
-      {%- if category.path == "build-error" -%}
-        {%- break -%}
-      {%- endif -%}
-      {%- unless forloop.last -%}
-      ,
-      {%- endunless -%}
-    {%- endfor -%}
+"analytics":{
+{%- for category in site.analytics.categories.formulae -%}
+  "{{ category.path | replace: "-", "_" }}":{
+  {%- for interval in site.analytics.intervals -%}
+    "{{ interval.path }}":{
+    {%- if site.data[source.path][category.path].homebrew-core[interval.path].formulae[full_name].size > 0 -%}
+      {%- for fa in site.data[source.path][category.path].homebrew-core[interval.path].formulae[full_name] -%}
+        {{ fa.formula | jsonify }}:{{ fa.count | remove: "," | plus: 0 }}
+        {%- unless forloop.last -%}
+        ,
+        {%- endunless -%}
+      {%- endfor -%}
+    {%- else -%}
+      {{ full_name | jsonify }}:0
+    {%- endif -%}
     }
+    {%- if category.path == "build-error" -%}
+      {%- break -%}
+    {%- endif -%}
     {%- unless forloop.last -%}
     ,
     {%- endunless -%}
   {%- endfor -%}
-  },
+  }
+  {%- unless forloop.last -%}
+  ,
+  {%- endunless -%}
 {%- endfor -%}
+},
 "generated_date":"{{ "today" | date: "%F" }}"}

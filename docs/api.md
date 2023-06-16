@@ -62,7 +62,6 @@ List all analytics events for a specified category over a number of days, ordere
 
 ```
 GET https://formulae.brew.sh/api/analytics/${CATEGORY}/${DAYS}.json
-GET https://formulae.brew.sh/api/analytics-linux/${CATEGORY}/${DAYS}.json
 ```
 
 #### Variables
@@ -90,7 +89,6 @@ List all the {{ site.taps.core.fullname }} formulae's analytics events for a spe
 
 ```
 GET https://formulae.brew.sh/api/analytics/${CATEGORY}/homebrew-core/${DAYS}.json
-GET https://formulae.brew.sh/api/analytics-linux/${CATEGORY}/homebrew-core/${DAYS}.json
 ```
 
 #### Variables
