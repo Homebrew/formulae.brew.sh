@@ -36,6 +36,30 @@ redirect_from: /analytics-linux/
         <td><a href="{{ site.baseurl }}/analytics/os-version/365d/">365 days</a></td>
     </tr>
     <tr>
+        <td>Homebrew Developer Configuration for Events</td>
+        <td><a href="{{ site.baseurl }}/analytics/homebrew-devcmdrun-developer/30d/">30 days</a></td>
+        <td><a href="{{ site.baseurl }}/analytics/homebrew-devcmdrun-developer/90d/">90 days</a></td>
+        <td><a href="{{ site.baseurl }}/analytics/homebrew-devcmdrun-developer/365d/">365 days</a></td>
+    </tr>
+    <tr>
+        <td>OS/Architecture/CI for Events</td>
+        <td><a href="{{ site.baseurl }}/analytics/homebrew-os-arch-ci/30d/">30 days</a></td>
+        <td><a href="{{ site.baseurl }}/analytics/homebrew-os-arch-ci/90d/">90 days</a></td>
+        <td><a href="{{ site.baseurl }}/analytics/homebrew-os-arch-ci/365d/">365 days</a></td>
+    </tr>
+    <tr>
+        <td>Homebrew Prefixes for Events</td>
+        <td><a href="{{ site.baseurl }}/analytics/homebrew-prefixes/30d/">30 days</a></td>
+        <td><a href="{{ site.baseurl }}/analytics/homebrew-prefixes/90d/">90 days</a></td>
+        <td><a href="{{ site.baseurl }}/analytics/homebrew-prefixes/365d/">365 days</a></td>
+    </tr>
+    <tr>
+        <td>Homebrew Versions for Events</td>
+        <td><a href="{{ site.baseurl }}/analytics/homebrew-versions/30d/">30 days</a></td>
+        <td><a href="{{ site.baseurl }}/analytics/homebrew-versions/90d/">90 days</a></td>
+        <td><a href="{{ site.baseurl }}/analytics/homebrew-versions/365d/">365 days</a></td>
+    </tr>
+    <tr>
         <td><code>/api/analytics/install/homebrew-core/${DAYS}.json</code> (JSON API)</td>
         <td><a href="{{ site.baseurl }}/api/analytics/install/homebrew-core/30d.json">30 days</a></td>
         <td><a href="{{ site.baseurl }}/api/analytics/install/homebrew-core/90d.json">90 days</a></td>

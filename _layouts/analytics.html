@@ -18,6 +18,14 @@ layout: base
 {%- case page.category -%}
     {%- when "os-version" -%}
             Version
+    {%- when "homebrew-devcmdrun-developer" -%}
+            Configuration
+    {%- when "homebrew-os-arch-ci" -%}
+            Setup
+    {%- when "homebrew-prefixes" -%}
+            Prefix
+    {%- when "homebrew-versions" -%}
+            Version
     {%- when "cask-install" -%}
             Cask
     {%- else -%}
@@ -33,6 +41,14 @@ layout: base
         <td>
     {%- if page.category == "os-version" -%}
             <code>{{ item.os_version }}</code>
+    {%- elsif page.category == "homebrew-devcmdrun-developer" -%}
+            <code>{{ item.devcmdrun_developer }}</code>
+    {%- elsif page.category == "homebrew-os-arch-ci" -%}
+            <code>{{ item.os_arch_ci }}</code>
+    {%- elsif page.category == "homebrew-prefixes" -%}
+            <code>{{ item.prefix }}</code>
+    {%- elsif page.category == "homebrew-versions" -%}
+            <code>{{ item.version }}</code>
     {%- elsif page.category == "cask-install" -%}
         {%- if site.data.cask[item.cask] != nil -%}
             <a href="{{ site.baseurl }}/cask/{{ item.cask }}"><code>{{ item.cask }}</code></a>
