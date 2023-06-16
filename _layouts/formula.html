@@ -207,7 +207,7 @@ permalink: :title
     <tr>
         <th colspan="2">{{ category.name }} ({{ interval.name }})</th>
     </tr>
-    {%- for fa in site.data[source.path][category.path].homebrew-core[interval.path].formulae[full_name] -%}
+    {%- for fa in site.data.analytics[category.path].homebrew-core[interval.path].formulae[full_name] -%}
     <tr>
         <td><code>{{ fa.formula | escape }}</code></td>
         <td class="number-data">{{ fa.count }}</td>
