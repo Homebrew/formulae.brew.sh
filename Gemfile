@@ -3,5 +3,9 @@
 source "https://rubygems.org"
 
 gem "faraday-retry"
-gem "github-pages", group: :jekyll_plugins
+gem "jekyll"
+gem "jekyll-redirect-from"
+gem "jekyll-remote-theme"
+gem "jekyll-seo-tag"
+gem "jekyll-sitemap"
 gem "rake"
