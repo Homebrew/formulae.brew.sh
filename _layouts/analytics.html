@@ -3,9 +3,13 @@ layout: base
 ---
 {%- assign analytics_path = page.dir | split: "/" -%}
 {%- assign analytics_path = analytics_path[1] -%}
+{%- assign analytics_data = site.data[analytics_path][page.category][page.days] -%}
 <h2>{{ page.category_pretty }} Events ({{ page.days | split: "d" | first }} days)</h2>
 
 <h3><a href="{{ site.baseurl }}/api/{{ analytics_path }}/{{ page.category }}/{{ page.days }}.json"><code>/api/{{ analytics_path }}/{{ page.category }}/{{ page.days }}.json</code> (JSON API)</a></h3>
+
+<h4>Start Date: {{ analytics_data.start_date }}</h4>
+<h4>Total Events: {{ analytics_data.total_count }}</h4>
 
 <table class="full-width">
     <tr>
@@ -23,7 +27,7 @@ layout: base
         <th>Events</th>
         <th>%</th>
     </tr>
-{%- for item in site.data[analytics_path][page.category][page.days].items -%}
+{%- for item in analytics_data.items -%}
     <tr>
         <td class="number-data">#{{ item.number }}</td>
         <td>

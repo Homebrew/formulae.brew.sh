@@ -10,7 +10,12 @@ permalink: :title
     {%- if f.disabled %} class="disabled" title="This formula has been disabled since {{ f.disable_date }} because it {{ f.disable_reason }}"
     {%- elsif f.deprecated %} class="deprecated" title="This formula has been deprecated since {{ f.deprecation_date }} because it {{ f.deprecation_reason }}"
     {%- endif -%}
-    >{{ f.name }}</h2>
+    >
+    {{ f.name }}
+    {%- if f.disabled %} (disabled)
+    {%- elsif f.deprecated %} (deprecated)
+    {%- endif -%}
+</h2>
 
 {%- include install_command.html item=f.name %}
 {%- if f.aliases.size > 0 %}
@@ -192,24 +197,9 @@ permalink: :title
 </table>
 {%- endif -%}
 
-{%- for source in site.analytics.sources %}
-{%- if source.name == "All" -%}
-    <p>Analytics:</p>
-{%- else -%}
-    <p>Analytics ({{ source.name }}):</p>
-{%- endif -%}
+<p>Analytics:</p>
 <table>
 {%- for interval in site.analytics.intervals -%}
-  {%- if source.name == "All" -%}
-    {%- if interval.name != "30 days" -%}
-      {%- continue -%}
-    {%- endif -%}
-  {%- else -%}
-    {%- if interval.name == "30 days" -%}
-      {%- continue -%}
-    {%- endif -%}
-  {%- endif -%}
-
   {%- for category in site.analytics.categories.formulae -%}
     {%- if forloop.parentloop.first == false and forloop.last -%}
         {%- break -%}
@@ -231,4 +221,3 @@ permalink: :title
   {%- endfor -%}
 {%- endfor %}
 </table>
-{%- endfor %}
