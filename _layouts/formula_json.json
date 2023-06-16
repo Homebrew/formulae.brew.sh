@@ -14,8 +14,8 @@
   "{{ category.path | replace: "-", "_" }}":{
   {%- for interval in site.analytics.intervals -%}
     "{{ interval.path }}":{
-    {%- if site.data[source.path][category.path].homebrew-core[interval.path].formulae[full_name].size > 0 -%}
-      {%- for fa in site.data[source.path][category.path].homebrew-core[interval.path].formulae[full_name] -%}
+    {%- if site.data.analytics[category.path].homebrew-core[interval.path].formulae[full_name].size > 0 -%}
+      {%- for fa in site.data.analytics[category.path].homebrew-core[interval.path].formulae[full_name] -%}
         {{ fa.formula | jsonify }}:{{ fa.count | remove: "," | plus: 0 }}
         {%- unless forloop.last -%}
         ,
