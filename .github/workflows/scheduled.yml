@@ -30,6 +30,9 @@ jobs:
       - name: Set up Homebrew
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
+        with:
+          core: false
+          test-bot: false
 
       - name: Update data for homebrew/cask
         run: /usr/bin/rake casks
@@ -59,6 +62,9 @@ jobs:
       - name: Set up Homebrew
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
+        with:
+          cask: false
+          test-bot: false
 
       - name: Update data for homebrew/core
         run: /usr/bin/rake formulae
@@ -88,6 +94,10 @@ jobs:
       - name: Set up Homebrew
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
+        with:
+          core: false
+          cask: false
+          test-bot: false
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
@@ -127,6 +137,10 @@ jobs:
       - name: Set up Homebrew
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
+        with:
+          core: false
+          cask: false
+          test-bot: false
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
@@ -152,6 +166,10 @@ jobs:
       - name: Set up Homebrew
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
+        with:
+          core: false
+          cask: false
+          test-bot: false
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
