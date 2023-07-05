@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 
 require "fileutils"
 require "json"
@@ -34,7 +35,7 @@ def generate_api_samples
       codify curl_output(api_path), language: "rb"
     end
 
-    IO.write "#{includes_dir}/#{name}.md", contents
+    File.write "#{includes_dir}/#{name}.md", contents
   end
 end
 
@@ -71,7 +72,7 @@ def format_json_contents(name, api_path)
     return
   end
 
-  if contents == 'null'
+  if contents == "null"
     warn "Skipping null #{api_path}"
     failed!
     return

@@ -40,7 +40,7 @@ jobs:
           HOMEBREW_DEVELOPER: 1
 
       - name: Archive data
-        run: tar czvf data-cask.tar.gz _data/cask/ api/cask/ api/cask-source/ cask/
+        run: tar czvf data-cask.tar.gz _data/cask/ api/cask/ api/cask-source/ api/cask_tap_migrations.json cask/
 
       - uses: actions/upload-artifact@v3
         with:
@@ -72,7 +72,7 @@ jobs:
           HOMEBREW_DEVELOPER: 1
 
       - name: Archive data
-        run: tar czvf data-core.tar.gz _data/formula/ _data/formula_canonical.json api/formula/ formula/
+        run: tar czvf data-core.tar.gz _data/formula/ _data/formula_canonical.json api/formula/ api/formula_tap_migrations.json formula/
 
       - uses: actions/upload-artifact@v3
         with:

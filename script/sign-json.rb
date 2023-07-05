@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
+
 require "base64"
 require "json"
 require "openssl"
@@ -13,6 +15,8 @@ PRIVATE_KEY = OpenSSL::PKey::RSA.new(ENV.fetch("JWS_SIGNING_KEY")).freeze
 [
   ROOT/"_site/api/formula.json",
   ROOT/"_site/api/cask.json",
+  ROOT/"_site/api/formula_tap_migrations.json",
+  ROOT/"_site/api/cask_tap_migrations.json",
 ].each do |path|
   data_string = path.read
 
