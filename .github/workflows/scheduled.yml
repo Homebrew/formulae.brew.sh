@@ -32,6 +32,7 @@ jobs:
         uses: Homebrew/actions/setup-homebrew@master
         with:
           core: false
+          cask: true
           test-bot: false
 
       - name: Update data for homebrew/cask
@@ -63,6 +64,7 @@ jobs:
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
         with:
+          core: true
           cask: false
           test-bot: false
 
