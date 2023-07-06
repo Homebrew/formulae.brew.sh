@@ -19,16 +19,16 @@ jobs:
       - name: Set up Homebrew
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
+        with:
+          core: false
+          cask: false
+          test-bot: false
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: "2.6"
-
-      - name: Install RubyGems
-        run: |
-          gem install bundler -v "~>1"
-          bundle install --jobs 4 --retry 3
+          bundler-cache: true
 
       - name: Generate site
         run: /usr/bin/rake formulae casks
