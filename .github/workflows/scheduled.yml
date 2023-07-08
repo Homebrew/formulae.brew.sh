@@ -87,43 +87,17 @@ jobs:
     runs-on: ubuntu-22.04
     timeout-minutes: 20
     steps:
-      - name: Check out repository
-        uses: actions/checkout@main
+      - name: Download previous data
+        uses: Homebrew/actions/download-artifact@master
         with:
-          fetch-depth: 0
-          ref: ${{ github.event.pull_request.head.sha }}
-
-      - name: Set up Homebrew
-        id: set-up-homebrew
-        uses: Homebrew/actions/setup-homebrew@master
-        with:
-          core: false
-          cask: false
-          test-bot: false
-
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: "2.6"
-
-      - name: Set up analytics
-        env:
-          ANALYTICS_JSON_KEY: ${{ secrets.HOMEBREW_FORMULAE_BREW_SH_ANALYTICS_JSON_KEY }}
-        run: echo "$ANALYTICS_JSON_KEY" > ~/.homebrew_analytics.json
-
-      - name: Update analytics data
-        run: /usr/bin/rake analytics
-        env:
-          HOMEBREW_INFLUXDB_TOKEN: ${{ secrets.HOMEBREW_INFLUXDB_TOKEN }}
-
-      - name: Archive data
-        run: tar czvf data-analytics.tar.gz _data/analytics api/analytics
+          workflow: scheduled.yml
+          name: data-analytics
 
       - uses: actions/upload-artifact@v3
         with:
           name: data-analytics
           path: data-analytics.tar.gz
-          retention-days: 1
+          retention-days: 3
   generate-samples:
     if: startsWith( github.repository, 'Homebrew/' )
     name: Generate API samples
