@@ -199,7 +199,7 @@ jobs:
         run: ./script/sign-json.rb
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v2
   deploy:
     needs: build
     if: ${{ github.ref_name == 'master' }}
