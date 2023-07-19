@@ -106,11 +106,6 @@ jobs:
         with:
           ruby-version: "2.6"
 
-      - name: Set up analytics
-        env:
-          ANALYTICS_JSON_KEY: ${{ secrets.HOMEBREW_FORMULAE_BREW_SH_ANALYTICS_JSON_KEY }}
-        run: echo "$ANALYTICS_JSON_KEY" > ~/.homebrew_analytics.json
-
       - name: Update analytics data
         run: /usr/bin/rake analytics
         env:

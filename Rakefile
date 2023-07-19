@@ -23,26 +23,11 @@ task :casks do
 end
 CLOBBER.include FileList[%w[_data/cask api/cask api/cask-source cask]]
 
-def setup_analytics_credentials
-  ga_credentials = ".homebrew_analytics.json"
-  return unless File.exist?(ga_credentials)
-
-  ga_credentials_home = File.expand_path("~/#{ga_credentials}")
-  return if File.exist?(ga_credentials_home)
-
-  FileUtils.cp ga_credentials, ga_credentials_home
-end
-
-def setup_formula_analytics_cmd
+def setup_analytics
   ENV["HOMEBREW_NO_AUTO_UPDATE"] = "1"
   return if `brew tap`.include?("homebrew/formula-analytics")
 
   sh "brew", "tap", "Homebrew/formula-analytics"
-end
-
-def setup_analytics
-  setup_analytics_credentials
-  setup_formula_analytics_cmd
 end
 
 desc "Dump analytics data"
