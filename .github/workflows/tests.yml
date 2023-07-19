@@ -20,8 +20,8 @@ jobs:
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
         with:
-          core: false
-          cask: false
+          core: true
+          cask: true
           test-bot: false
 
       - name: Set up Ruby
@@ -30,7 +30,21 @@ jobs:
           ruby-version: "2.6"
           bundler-cache: true
 
-      - name: Generate site
-        run: /usr/bin/rake formulae casks
+      - name: Generate formulae, casks and API samples
+        run: /usr/bin/rake formulae casks api_samples
         env:
           HOMEBREW_DEVELOPER: 1
+
+      - name: Generate analytics
+        if: github.event.pull_request.head.repo.fork == false && (github.event_name == 'pull_request' && github.event.pull_request.user.login != 'dependabot[bot]')
+        run: |
+          brew tap Homebrew/formula-analytics
+          brew formula-analytics --install --json --days-ago=2
+        env:
+          HOMEBREW_INFLUXDB_TOKEN: ${{ secrets.HOMEBREW_INFLUXDB_READ_TOKEN }}
+
+      - name: Build site
+        run: bundle exec jekyll build
+
+      - name: Validate build
+        run: ./script/validate-build.rb
