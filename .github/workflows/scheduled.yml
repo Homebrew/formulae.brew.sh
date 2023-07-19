@@ -84,46 +84,44 @@ jobs:
   generate-analytics:
     if: startsWith( github.repository, 'Homebrew/' )
     name: Generate analytics data
+    permissions:
+      actions: read
     runs-on: ubuntu-22.04
     timeout-minutes: 20
     steps:
-      - name: Check out repository
-        uses: actions/checkout@main
+      - name: Download previous data
+        uses: actions/github-script@v6
         with:
-          fetch-depth: 0
-          ref: ${{ github.event.pull_request.head.sha }}
+          script: |
+            const runs = await github.rest.actions.listWorkflowRuns({
+              ...context.repo,
+              workflow_id: "scheduled.yml",
+              event: "schedule",
+              status: "success",
+            })
 
-      - name: Set up Homebrew
-        id: set-up-homebrew
-        uses: Homebrew/actions/setup-homebrew@master
-        with:
-          core: false
-          cask: false
-          test-bot: false
+            const artifacts = await github.rest.actions.listWorkflowRunArtifacts({
+              ...context.repo,
+              run_id: runs.data.workflow_runs[0].id,
+            })
+            const artifact = artifacts.data.artifacts.find((artifact) => {
+              return artifact.name == "data-analytics"
+            })
 
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: "2.6"
+            const zip = await github.rest.actions.downloadArtifact({
+              ...context.repo,
+              artifact_id: artifact.id,
+              archive_format: "zip",
+            })
+            require("fs").writeFileSync("analytics.zip", Buffer.from(zip.data))
 
-      - name: Set up analytics
-        env:
-          ANALYTICS_JSON_KEY: ${{ secrets.HOMEBREW_FORMULAE_BREW_SH_ANALYTICS_JSON_KEY }}
-        run: echo "$ANALYTICS_JSON_KEY" > ~/.homebrew_analytics.json
-
-      - name: Update analytics data
-        run: /usr/bin/rake analytics
-        env:
-          HOMEBREW_INFLUXDB_TOKEN: ${{ secrets.HOMEBREW_INFLUXDB_TOKEN }}
-
-      - name: Archive data
-        run: tar czvf data-analytics.tar.gz _data/analytics api/analytics
+      - run: unzip analytics.zip
 
       - uses: actions/upload-artifact@v3
         with:
           name: data-analytics
           path: data-analytics.tar.gz
-          retention-days: 1
+          retention-days: 3
   generate-samples:
     if: startsWith( github.repository, 'Homebrew/' )
     name: Generate API samples
