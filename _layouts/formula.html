@@ -58,22 +58,6 @@ permalink: :title
 <table>
     {%- assign subsequent = false -%}
     {%- for b in f.bottle.stable.files -%}
-        {%- unless b[0] contains "arm64_" %}
-        <tr>
-            {%- unless subsequent -%}
-            <th rowspan="{{ intel_bottle_count }}" scope="rowgroup">Intel</th>
-            {%- endunless %}
-            <td style="text-transform:capitalize;">
-                {{ b[0] | replace: "x86_64", "64-bit" | replace: "_", "&nbsp;" }}
-                {%- assign subsequent = true -%}
-            </td>
-            <td>✅</td>
-        </tr>
-        {%- endunless -%}
-    {%- endfor -%}
-    <tr><th colspan="3"></th></tr>
-    {%- assign subsequent = false -%}
-    {%- for b in f.bottle.stable.files -%}
         {%- if b[0] contains "arm64_" %}
         <tr>
             {%- unless subsequent -%}
@@ -87,6 +71,22 @@ permalink: :title
         </tr>
         {%- endif -%}
     {%- endfor %}
+    <tr><th colspan="3"></th></tr>
+    {%- assign subsequent = false -%}
+    {%- for b in f.bottle.stable.files -%}
+        {%- unless b[0] contains "arm64_" %}
+        <tr>
+            {%- unless subsequent -%}
+            <th rowspan="{{ intel_bottle_count }}" scope="rowgroup">Intel</th>
+            {%- endunless %}
+            <td style="text-transform:capitalize;">
+                {{ b[0] | replace: "x86_64", "64-bit" | replace: "_", "&nbsp;" }}
+                {%- assign subsequent = true -%}
+            </td>
+            <td>✅</td>
+        </tr>
+        {%- endunless -%}
+    {%- endfor -%}
 </table>
 {%- endif %}
 
