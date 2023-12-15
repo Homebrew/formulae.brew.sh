@@ -43,7 +43,7 @@ jobs:
       - name: Archive data
         run: tar czvf data-cask.tar.gz _data/cask/ api/cask/ api/cask-source/ api/cask_tap_migrations.json cask/
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: data-cask
           path: data-cask.tar.gz
@@ -76,7 +76,7 @@ jobs:
       - name: Archive data
         run: tar czvf data-core.tar.gz _data/formula/ _data/formula_canonical.json api/formula/ api/formula_tap_migrations.json formula/
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: data-core
           path: data-core.tar.gz
@@ -114,7 +114,7 @@ jobs:
       - name: Archive data
         run: tar czvf data-analytics.tar.gz _data/analytics api/analytics
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: data-analytics
           path: data-analytics.tar.gz
@@ -147,7 +147,7 @@ jobs:
       - name: Update data for api samples
         run: /usr/bin/rake api_samples
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: api-samples
           path: _includes/api-samples/
