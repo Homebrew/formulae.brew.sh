@@ -5,7 +5,16 @@ permalink: :title
 {%- assign token = page.title -%}
 {%- assign formula_path = "formula" -%}
 {%- assign c = site.data.cask[token] -%}
-<h2>{{ token }}</h2>
+<h2
+    {%- if c.disabled %} class="disabled" title="This cask has been disabled since {{ c.disable_date }} because it {{ c.disable_reason }}"
+    {%- elsif c.deprecated %} class="deprecated" title="This cask has been deprecated since {{ c.deprecation_date }} because it {{ c.deprecation_reason }}"
+    {%- endif -%}
+    >
+    {{ token }}
+    {%- if c.disabled %} (disabled)
+    {%- elsif c.deprecated %} (deprecated)
+    {%- endif -%}
+</h2>
 
 {%- include install_command.html item=token modifier=" --cask" %}
 <p class="names">Name{%- if c.name.size > 1 -%}s{%- endif -%}:
