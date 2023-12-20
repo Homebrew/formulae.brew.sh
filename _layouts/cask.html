@@ -31,7 +31,7 @@ permalink: :title
 <p><a href="{{ site.baseurl }}/api/cask/{{ token }}.json"><code>/api/cask/{{ token }}.json</code> (JSON API)</a></p>
 <p><a target="_blank" href="{{ site.taps.cask.remote }}/blob/{{ c.tap_git_head }}/{{ c.ruby_source_path }}">Cask code</a> on GitHub</p>
 
-<p>Current version: <a href="{{ c.url }}">{{ c.version }}</a></p>
+<p>Current version: <a href="{{ c.url }}" title="Download for {{ c.token }}">{{ c.version }}</a></p>
 
 {%- if c.depends_on.size > 0 -%}
     {%- include casks.html casks=c.depends_on.cask description="Depends on casks" -%}
@@ -81,6 +81,26 @@ permalink: :title
     <tr>
         <td>{{ c.caveats | xml_escape | replace: soft_indent, hard_indent | strip | newline_to_br }}</td>
     </tr>
+</table>
+{%- endif %}
+{%- if c.variations.size > 0 -%}
+<p>Variations:</p>
+<table class="full-width">
+    <thead>
+        <th>OS</td>
+        <th>Version</td>
+    </thead>
+    {%- for variation in c.variations -%}
+    <tr>
+        <td>{{ variation[0] }}</td>
+        <td>
+            <a href="{{ variation[1].url | default: c.url }}"
+               title="Download for {{ c.token }} on {{ variation[0] }}">
+                {{ variation[1].version | default: c.version }}
+            </a>
+        </td>
+    </tr>
+    {%- endfor -%}
 </table>
 {%- endif %}
 
