@@ -31,7 +31,7 @@ permalink: :title
 <p><a href="{{ site.baseurl }}/api/cask/{{ token }}.json"><code>/api/cask/{{ token }}.json</code> (JSON API)</a></p>
 <p><a target="_blank" href="{{ site.taps.cask.remote }}/blob/{{ c.tap_git_head }}/{{ c.ruby_source_path }}">Cask code</a> on GitHub</p>
 
-<p>Current version: <a href="{{ c.url }}">{{ c.version }}</a></p>
+<p>Current version: <a href="{{ c.url }}" title="Download for {{ c.token }}">{{ c.version }}</a></p>
 
 {%- if c.depends_on.size > 0 -%}
     {%- include casks.html casks=c.depends_on.cask description="Depends on casks" -%}
@@ -81,6 +81,64 @@ permalink: :title
     <tr>
         <td>{{ c.caveats | xml_escape | replace: soft_indent, hard_indent | strip | newline_to_br }}</td>
     </tr>
+</table>
+{%- endif %}
+
+{%- if c.variations.size > 1 -%}
+
+{%- assign arm64_variation_count = 0 -%}
+{%- assign intel_variation_count = 0 -%}
+{%- for variation in c.variations -%}
+    {%- if variation[0] contains "arm64_" -%}
+        {%- assign arm64_variation_count = arm64_variation_count | plus: 1 -%}
+    {%- else -%}
+        {%- assign intel_variation_count = intel_variation_count | plus: 1 -%}
+    {%- endif -%}
+{%- endfor %}
+
+<p>Variations:</p>
+<table class="full-width">
+    {%- assign subsequent = false -%}
+    {%- for variation in c.variations -%}
+        {%- if variation[0] contains "arm64_" %}
+        <tr>
+            {%- unless subsequent -%}
+            <th rowspan="{{ arm64_variation_count }}" scope="rowgroup">Apple Silicon</th>
+            {%- endunless %}
+            <td style="text-transform:capitalize;">
+                {{ variation[0] | remove_first: "arm64_" | replace: "_", "&nbsp;" }}
+                {%- assign subsequent = true -%}
+            </td>
+            <td>
+                <a href="{{ variation[1].url | default: c.url }}"
+                   title="Download for {{ c.token }} on {{ variation[0] }}">
+                    {{ variation[1].version | default: c.version }}
+                </a>
+            </td>
+        </tr>
+        {%- endif -%}
+    {%- endfor %}
+    <tr><th colspan="3"></th></tr>
+    {%- assign subsequent = false -%}
+    {%- for variation in c.variations -%}
+        {%- unless variation[0] contains "arm64_" %}
+        <tr>
+            {%- unless subsequent -%}
+            <th rowspan="{{ intel_variation_count }}" scope="rowgroup">Intel</th>
+            {%- endunless %}
+            <td style="text-transform:capitalize;">
+                {{ variation[0] | replace: "x86_64", "64-bit" | replace: "_", "&nbsp;" }}
+                {%- assign subsequent = true -%}
+            </td>
+            <td>
+                <a href="{{ variation[1].url | default: c.url }}"
+                   title="Download for {{ c.token }} on {{ variation[0] }}">
+                    {{ variation[1].version | default: c.version }}
+                </a>
+            </td>
+        </tr>
+        {%- endunless -%}
+    {%- endfor -%}
 </table>
 {%- endif %}
 
