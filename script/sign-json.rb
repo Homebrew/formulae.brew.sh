@@ -12,13 +12,10 @@ ROOT = Pathname(__dir__).parent.freeze
 KEY_ID = ENV.fetch("JWS_SIGNING_KEY_ID").freeze
 PRIVATE_KEY = OpenSSL::PKey::RSA.new(ENV.fetch("JWS_SIGNING_KEY")).freeze
 
-[
-  ROOT/"_site/api/formula.json",
-  ROOT/"_site/api/cask.json",
-  ROOT/"_site/api/formula_tap_migrations.json",
-  ROOT/"_site/api/cask_tap_migrations.json",
-].each do |path|
-  data_string = path.read
+# @param in_path [Path] the path of file to be signed
+# @param out_path [Path] the path of the newly signed file
+def sign_json_file(in_path:, out_path:)
+  data_string = in_path.read
 
   # The JSON structure throughout this script is a standard format. References:
   # - RFC7515 [JSON Web Signature (JWS)]
@@ -49,7 +46,7 @@ PRIVATE_KEY = OpenSSL::PKey::RSA.new(ENV.fetch("JWS_SIGNING_KEY")).freeze
     "signature": signature_data,
   }
 
-  File.write(path.dirname/"#{path.sub_ext(".jws.json")}", {
+  File.write(out_path, {
     "payload": data_string,
     "signatures": [
       signature,
@@ -59,3 +56,19 @@ PRIVATE_KEY = OpenSSL::PKey::RSA.new(ENV.fetch("JWS_SIGNING_KEY")).freeze
     ],
   }.to_json)
 end
+
+[
+  ROOT/"_site/api/cask.json",
+  ROOT/"_site/api/formula_tap_migrations.json",
+  ROOT/"_site/api/cask_tap_migrations.json",
+].each do |in_path|
+  out_path = in_path.dirname/"#{in_path.sub_ext(".jws.json")}"
+  sign_json_file(in_path: in_path, out_path: out_path)
+end
+
+internal_formula = ROOT/"_site/api/internal_formula.json"
+sign_json_file(
+  in_path: internal_formula,
+  out_path: ROOT/"_site/api/formula.jsw.json",
+)
+internal_formula.delete
