@@ -183,6 +183,8 @@ jobs:
           tar xvf data-core/data-core.tar.gz
           mv -v api-samples _includes/api-samples
 
+      - run: cat _data/analytics/install/homebrew-core/30d.json
+
       - name: Build site
         run: bundle exec jekyll build
 
