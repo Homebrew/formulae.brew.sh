@@ -11,7 +11,7 @@ redirect_from:
 
 ### List metadata for all {{ site.taps.core.name }} formulae or {{ site.taps.cask.name }} casks
 
-List the `brew info --json --all` output for all current {{ site.taps.core.fullname }} formulae or {{ site.taps.cask.fullname }} casks.
+List the `brew info --json` output for all current {{ site.taps.core.fullname }} formulae or {{ site.taps.cask.fullname }} casks.
 
 ```
 GET https://formulae.brew.sh/api/formula.json
