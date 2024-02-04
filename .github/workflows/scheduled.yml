@@ -74,7 +74,7 @@ jobs:
           HOMEBREW_DEVELOPER: 1
 
       - name: Archive data
-        run: tar czvf data-core.tar.gz _data/formula/ _data/formula_canonical.json api/formula/ api/formula_tap_migrations.json formula/
+        run: tar czvf data-core.tar.gz _data/formula/ _data/formula_canonical.json api/formula/ api/formula_tap_migrations.json formula/ api/internal/v3/homebrew-core.json
 
       - uses: actions/upload-artifact@v3
         with:
