@@ -41,7 +41,17 @@ end
 
 def curl_output(api_path)
   api_url = "https://formulae.brew.sh/api/#{api_path}"
-  out, err, status = Open3.capture3("curl", "--silent", "--show-error", "--fail", api_url)
+  out, err, status = Open3.capture3(
+    "curl",
+    "--silent",
+    "--show-error",
+    "--fail",
+    "--retry", "10",
+    "--retry-all-errors",
+    "--retry-max-time", "120",
+    "--connect-timeout", "20",
+    api_url
+  )
   unless status.success?
     warn "Error fetching #{api_url}: #{err}"
     # Return something JSON.parse can handle and we'll warn later.
