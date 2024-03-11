@@ -6,5 +6,6 @@
             {{ include.token }}
 {%- endif -%}
         </td>
-        <td>{{ include.cask.name.first }}</td>
         <td>{{ include.cask.version | truncate: 25 }}</td>
+        <td>{{ include.cask.desc | xml_escape }}</td>
+        <td>{{ include.cask.name.first }}</td>
