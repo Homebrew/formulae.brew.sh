@@ -84,44 +84,41 @@ jobs:
   generate-analytics:
     if: startsWith( github.repository, 'Homebrew/' )
     name: Generate analytics data
-    permissions:
-      actions: read
     runs-on: ubuntu-22.04
     timeout-minutes: 20
     steps:
-      - name: Download previous data
-        uses: actions/github-script@v7
+      - name: Check out repository
+        uses: actions/checkout@main
         with:
-          script: |
-            const runs = await github.rest.actions.listWorkflowRuns({
-              ...context.repo,
-              workflow_id: "scheduled.yml",
-              event: "schedule",
-              status: "success",
-            })
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha }}
 
-            const artifacts = await github.rest.actions.listWorkflowRunArtifacts({
-              ...context.repo,
-              run_id: runs.data.workflow_runs[0].id,
-            })
-            const artifact = artifacts.data.artifacts.find((artifact) => {
-              return artifact.name == "data-analytics"
-            })
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+        with:
+          core: false
+          cask: false
+          test-bot: false
 
-            const zip = await github.rest.actions.downloadArtifact({
-              ...context.repo,
-              artifact_id: artifact.id,
-              archive_format: "zip",
-            })
-            require("fs").writeFileSync("analytics.zip", Buffer.from(zip.data))
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
 
-      - run: unzip analytics.zip
+      - name: Update analytics data
+        run: /usr/bin/rake analytics
+        env:
+          HOMEBREW_INFLUXDB_TOKEN: ${{ secrets.HOMEBREW_INFLUXDB_READ_TOKEN }}
+
+      - name: Archive data
+        run: tar czvf data-analytics.tar.gz _data/analytics api/analytics
 
       - uses: actions/upload-artifact@v3
         with:
           name: data-analytics
           path: data-analytics.tar.gz
-          retention-days: 3
+          retention-days: 1
   generate-samples:
     if: startsWith( github.repository, 'Homebrew/' )
     name: Generate API samples
