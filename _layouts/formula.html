@@ -7,11 +7,11 @@ permalink: :title
 {%- assign data_name = full_name | remove: "@" | remove: "." | replace: "+", "_" -%}
 {%- assign f = site.data[formula_path][data_name] -%}
 <h2
-    {%- if f.disabled %} class="disabled" title="This formula has been disabled since {{ f.disable_date }} because it {{ f.disable_reason }}"
-    {%- elsif f.deprecated %} class="deprecated" title="This formula has been deprecated since {{ f.deprecation_date }} because it {{ f.deprecation_reason }}"
+    {%- if f.disabled %} class="disabled" title="This formula has been disabled since {{ f.disable_date | escape }} because it {{ f.disable_reason | escape }}"
+    {%- elsif f.deprecated %} class="deprecated" title="This formula has been deprecated since {{ f.deprecation_date | escape }} because it {{ f.deprecation_reason | escape }}"
     {%- endif -%}
     >
-    {{ f.name }}
+    {{ f.name | escape }}
     {%- if f.disabled %} (disabled)
     {%- elsif f.deprecated %} (deprecated)
     {%- endif -%}
@@ -19,20 +19,30 @@ permalink: :title
 
 {%- include install_command.html item=f.name %}
 {%- if f.aliases.size > 0 %}
-<p class="aliases">Also known as: <strong>{{ f.aliases | join: "</strong>, <strong>" }}</strong></p>
+<p class="aliases">Also known as:
+    {%- for alias in f.aliases %}
+        <strong>{{ alias | escape }}</strong>
+        {%- unless forloop.last -%}, {% endunless -%}
+    {%- endfor %}
+</p>
 {%- endif -%}
 {%- if f.oldname %}
-<p class="oldname">Formerly known as: <strong>{{ f.oldname }}</strong></p>
+<p class="oldname">Formerly known as: <strong>{{ f.oldname | escape }}</strong></p>
 {%- endif %}
-<p class="desc">{{ f.desc | xml_escape }}</p>
-<p class="homepage"><a href="{{ f.homepage }}">{{ f.homepage }}</a></p>
+<p class="desc">{{ f.desc | escape }}</p>
+<p class="homepage"><a href="{{ f.homepage | escape }}">{{ f.homepage | escape }}</a></p>
 {%- if f.license.size > 0 %}
-<p>License: <strong>{{ f.license | join: "</strong>, <strong>" | replace: "_", " " }}</strong></p>
+<p>License:
+    {%- for license in f.license %}
+        <strong>{{ license | replace: "_", " " | escape }}</strong>
+        {%- unless forloop.last -%}, {% endunless -%}
+    {%- endfor %}
+</p>
 {%- endif %}
 
-<p>Formula JSON API: <a href="{{ site.baseurl }}/api/{{ formula_path }}/{{ f.name }}.json"><code>/api/{{ formula_path }}/{{ f.name }}.json</code></a></p>
+<p>Formula JSON API: <a href="{{ site.baseurl }}/api/{{ formula_path }}/{{ f.name | uri_escape }}.json"><code>/api/{{ formula_path }}/{{ f.name | escape }}.json</code></a></p>
 
-<p>Formula code: <a target="_blank" href="{{ site.taps.core.remote }}/blob/{{ f.tap_git_head }}/{{ f.ruby_source_path }}"><code>{{ f.name }}.rb</code></a> on GitHub</p>
+<p>Formula code: <a target="_blank" href="{{ site.taps.core.remote }}/blob/{{ f.tap_git_head | url_encode }}/{{ f.ruby_source_path | uri_escape }}"><code>{{ f.name | escape }}.rb</code></a> on GitHub</p>
 
 <p>Bottle (binary package)
 {%- assign bottles = false -%}
@@ -95,13 +105,13 @@ permalink: :title
     <tr>
         <td><strong>stable</strong></td>
         <td>✅</td>
-        <td>{{ f.versions.stable }}</td>
+        <td>{{ f.versions.stable | escape }}</td>
     </tr>
 {%- if f.versions.head %}
     <tr>
         <td><strong>head</strong></td>
         <td>⚡️</td>
-        <td>{{ f.versions.head }}</td>
+        <td>{{ f.versions.head | escape }}</td>
     </tr>
 {%- endif %}
 </table>
@@ -121,8 +131,8 @@ permalink: :title
 <table>
     {%- for o in f.options -%}
     <tr>
-        <td>{{ o.option }}</td>
-        <td>{{ o.description }}</td>
+        <td>{{ o.option | escape }}</td>
+        <td>{{ o.description | escape }}</td>
     </tr>
     {%- endfor %}
 </table>
@@ -140,18 +150,18 @@ permalink: :title
         {%- capture requirement -%}
             {%- case r.name -%}
                 {%- when "arch" -%}
-                    {{ r.version }}
+                    {{ r.version | escape }}
                 {%- when "macos" or "maximum_macos" -%}
                     macOS
                 {%- when "osxfuse" -%}
                     FUSE
                 {%- else -%}
-                    {{ r.name | capitalize }}
+                    {{ r.name | capitalize | escape }}
             {%- endcase -%}
         {%- endcapture -%}
         {%- if r.cask and formula_path == "formula" -%}
             {%- unless r.cask contains "/" -%}
-                <a href="{{ site.baseurl }}/cask/{{ r.cask }}">{{ requirement }}</a>
+                <a href="{{ site.baseurl }}/cask/{{ r.cask | uri_escape }}">{{ requirement }}</a>
             {%- else -%}
                 {{ requirement }}
             {%- endunless -%}
@@ -161,13 +171,13 @@ permalink: :title
     </strong>
         {%- if r.version -%}
             {%- if r.name == "arch" %} architecture
-            {%- elsif r.name contains "maximum" %} &lt;= {{ r.version }}
-            {%- else %} &gt;= {{ r.version }}
+            {%- elsif r.name contains "maximum" %} &lt;= {{ r.version | escape }}
+            {%- else %} &gt;= {{ r.version | escape }}
             {%- endif -%}
         {%- endif -%}
         {%- for c in r.contexts -%}
             {%- if forloop.first %} ( {%- endif -%}
-            {{ c }}
+            {{ c | escape }}
             {%- unless forloop.last -%}, {% endunless -%}
             {%- if forloop.last -%} ) {%- endif -%}
         {%- endfor -%}
@@ -179,7 +189,7 @@ permalink: :title
 {%- if f.conflicts_with.size > 0 %}
 <p>Conflicts with:
     {%- for c in f.conflicts_with %}
-        <strong><a href="{{ site.baseurl }}/{{ formula_path }}/{{ c }}">{{ c }}</a></strong>
+        <strong><a href="{{ site.baseurl }}/{{ formula_path }}/{{ c | uri_escape }}">{{ c | escape }}</a></strong>
         {%- unless forloop.last -%}, {% endunless -%}
     {%- endfor %}
 </p>
@@ -192,7 +202,7 @@ permalink: :title
 &nbsp;&nbsp;&nbsp;&nbsp;{% endcapture %}
 <table class="full-width">
     <tr>
-        <td>{{ f.caveats | xml_escape | replace: soft_indent, hard_indent | strip | newline_to_br }}</td>
+        <td>{{ f.caveats | escape | replace: soft_indent, hard_indent | strip | newline_to_br }}</td>
     </tr>
 </table>
 {%- endif -%}
@@ -214,7 +224,7 @@ permalink: :title
     </tr>
     {%- else -%}
     <tr>
-        <td><code>{{ full_name }}</code></td>
+        <td><code>{{ full_name | escape }}</code></td>
         <td class="number-data">0</td>
     </tr>
     {%- endfor -%}
