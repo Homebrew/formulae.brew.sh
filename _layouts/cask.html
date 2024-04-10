@@ -6,11 +6,11 @@ permalink: :title
 {%- assign formula_path = "formula" -%}
 {%- assign c = site.data.cask[token] -%}
 <h2
-    {%- if c.disabled %} class="disabled" title="This cask has been disabled since {{ c.disable_date }} because it {{ c.disable_reason }}"
-    {%- elsif c.deprecated %} class="deprecated" title="This cask has been deprecated since {{ c.deprecation_date }} because it {{ c.deprecation_reason }}"
+    {%- if c.disabled %} class="disabled" title="This cask has been disabled since {{ c.disable_date | escape }} because it {{ c.disable_reason | escape }}"
+    {%- elsif c.deprecated %} class="deprecated" title="This cask has been deprecated since {{ c.deprecation_date | escape }} because it {{ c.deprecation_reason | escape }}"
     {%- endif -%}
     >
-    {{ token }}
+    {{ token | escape }}
     {%- if c.disabled %} (disabled)
     {%- elsif c.deprecated %} (deprecated)
     {%- endif -%}
@@ -19,19 +19,19 @@ permalink: :title
 {%- include install_command.html item=token modifier=" --cask" %}
 <p class="names">Name{%- if c.name.size > 1 -%}s{%- endif -%}:
 {%- for name in c.name %}
-    <strong>{{ name }}</strong>
+    <strong>{{ name | escape }}</strong>
     {%- unless forloop.last -%}, {% endunless %}
 {%- endfor -%}
 </p>
 {%- if c.desc %}
-<p class="desc">{{ c.desc }}</p>
+<p class="desc">{{ c.desc | escape }}</p>
 {%- endif %}
-<p class="homepage"><a href="{{ c.homepage }}">{{ c.homepage }}</a></p>
+<p class="homepage"><a href="{{ c.homepage | escape }}">{{ c.homepage | escape }}</a></p>
 
-<p><a href="{{ site.baseurl }}/api/cask/{{ token }}.json"><code>/api/cask/{{ token }}.json</code> (JSON API)</a></p>
-<p><a target="_blank" href="{{ site.taps.cask.remote }}/blob/{{ c.tap_git_head }}/{{ c.ruby_source_path }}">Cask code</a> on GitHub</p>
+<p><a href="{{ site.baseurl }}/api/cask/{{ token | uri_escape }}.json"><code>/api/cask/{{ token | escape }}.json</code> (JSON API)</a></p>
+<p><a target="_blank" href="{{ site.taps.cask.remote }}/blob/{{ c.tap_git_head | url_encode }}/{{ c.ruby_source_path | uri_escape }}">Cask code</a> on GitHub</p>
 
-<p>Current version: <a href="{{ c.url }}" title="Download for {{ c.token }}">{{ c.version }}</a></p>
+<p>Current version: <a href="{{ c.url | escape }}" title="Download for {{ c.token | escape }}">{{ c.version | escape }}</a></p>
 
 {%- if c.depends_on.size > 0 -%}
     {%- include casks.html casks=c.depends_on.cask description="Depends on casks" -%}
@@ -40,7 +40,7 @@ permalink: :title
     {%- if c.depends_on.macos -%}
         {%- capture requirements -%}
             macOS {% for x in c.depends_on.macos -%}
-                {{ x.first | xml_escape }} <strong>{{ c.depends_on.macos[x.first] | join: "</strong> / <strong>" }}</strong>
+                {{ x.first | escape }} <strong>{{ c.depends_on.macos[x.first] | join: "</strong> / <strong>" }}</strong>
                 {%- unless forloop.last %} and {% endunless -%}
             {%- endfor -%}
         {%- endcapture -%}
@@ -55,12 +55,6 @@ permalink: :title
                 {%- unless forloop.last %} or {% endunless -%}
             {%- endfor %} architecture
         {%- endcapture -%}
-    {%- endif -%}
-    {%- if c.depends_on.x11 -%}
-        {%- if requirements.size > 0 -%}
-            {%- assign requirements = requirements | append: ", " -%}
-        {%- endif -%}
-        {%- capture requirements -%}{{ requirements }}<strong><a href="{{ site.baseurl }}/cask/xquartz">X11</a></strong>{%- endcapture -%}
     {%- endif -%}
     {%- if requirements.size > 0 %}
 <p>Requires: {{ requirements }}</p>
@@ -79,7 +73,7 @@ permalink: :title
 &nbsp;&nbsp;&nbsp;&nbsp;{% endcapture %}
 <table class="full-width">
     <tr>
-        <td>{{ c.caveats | xml_escape | replace: soft_indent, hard_indent | strip | newline_to_br }}</td>
+        <td>{{ c.caveats | escape | replace: soft_indent, hard_indent | strip | newline_to_br }}</td>
     </tr>
 </table>
 {%- endif %}
@@ -110,9 +104,9 @@ permalink: :title
                 {%- assign subsequent = true -%}
             </td>
             <td>
-                <a href="{{ variation[1].url | default: c.url }}"
-                   title="Download for {{ c.token }} on {{ variation[0] }}">
-                    {{ variation[1].version | default: c.version }}
+                <a href="{{ variation[1].url | default: c.url | escape }}"
+                   title="Download for {{ c.token | escape }} on {{ variation[0] }}">
+                    {{ variation[1].version | default: c.version | escape }}
                 </a>
             </td>
         </tr>
@@ -131,9 +125,9 @@ permalink: :title
                 {%- assign subsequent = true -%}
             </td>
             <td>
-                <a href="{{ variation[1].url | default: c.url }}"
-                   title="Download for {{ c.token }} on {{ variation[0] }}">
-                    {{ variation[1].version | default: c.version }}
+                <a href="{{ variation[1].url | default: c.url | escape }}"
+                   title="Download for {{ c.token | escape }} on {{ variation[0] }}">
+                    {{ variation[1].version | default: c.version | escape }}
                 </a>
             </td>
         </tr>
@@ -150,12 +144,12 @@ permalink: :title
     </tr>
     {%- for fa in site.data.analytics.cask-install.homebrew-cask[interval.path].formulae[token] -%}
     <tr>
-        <td><code>{{ fa.cask }}</code></td>
+        <td><code>{{ fa.cask | escape }}</code></td>
         <td class="number-data">{{ fa.count }}</td>
     </tr>
     {%- else -%}
     <tr>
-        <td><code>{{ token }}</code></td>
+        <td><code>{{ token | escape }}</code></td>
         <td class="number-data">0</td>
     </tr>
     {%- endfor -%}

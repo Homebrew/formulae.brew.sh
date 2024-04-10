@@ -1,11 +1,11 @@
 
         <td>
 {%- if site.data.cask[include.token] != nil -%}
-            <a href="{{ site.baseurl }}/cask/{{ include.token }}">{{ include.token }}</a>
+            <a href="{{ site.baseurl }}/cask/{{ include.token | uri_escape }}">{{ include.token | escape }}</a>
 {%- else -%}
-            {{ include.token }}
+            {{ include.token | escape }}
 {%- endif -%}
         </td>
-        <td>{{ include.cask.version | truncate: 25 }}</td>
-        <td>{{ include.cask.desc | xml_escape }}</td>
-        <td>{{ include.cask.name.first }}</td>
+        <td>{{ include.cask.version | truncate: 25 | escape }}</td>
+        <td>{{ include.cask.desc | escape }}</td>
+        <td>{{ include.cask.name.first | escape }}</td>

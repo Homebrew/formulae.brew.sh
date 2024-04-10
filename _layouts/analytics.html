@@ -40,27 +40,27 @@ layout: base
         <td class="number-data">#{{ item.number }}</td>
         <td>
     {%- if page.category == "os-version" -%}
-            <code>{{ item.os_version }}</code>
+            <code>{{ item.os_version | escape }}</code>
     {%- elsif page.category == "homebrew-devcmdrun-developer" -%}
-            <code>{{ item.devcmdrun_developer }}</code>
+            <code>{{ item.devcmdrun_developer | escape }}</code>
     {%- elsif page.category == "homebrew-os-arch-ci" -%}
-            <code>{{ item.os_arch_ci }}</code>
+            <code>{{ item.os_arch_ci | escape }}</code>
     {%- elsif page.category == "homebrew-prefixes" -%}
-            <code>{{ item.prefix }}</code>
+            <code>{{ item.prefix | escape }}</code>
     {%- elsif page.category == "homebrew-versions" -%}
-            <code>{{ item.version }}</code>
+            <code>{{ item.version | escape }}</code>
     {%- elsif page.category == "cask-install" -%}
         {%- if site.data.cask[item.cask] != nil -%}
-            <a href="{{ site.baseurl }}/cask/{{ item.cask }}"><code>{{ item.cask }}</code></a>
+            <a href="{{ site.baseurl }}/cask/{{ item.cask | uri_escape }}"><code>{{ item.cask | escape }}</code></a>
         {%- else -%}
-            <code>{{ item.cask }}</code>
+            <code>{{ item.cask | escape }}</code>
         {%- endif -%}
     {%- else -%}
         {%- assign full_name = item.formula | split: " " | first -%}
         {%- assign data_name = full_name | remove: "@" | remove: "." | replace: "+", "_" -%}
         {%- assign formula = site.data.formula[data_name] -%}
         {%- if full_name == formula.name -%}
-            <a href="{{ site.baseurl }}/formula/{{ full_name }}"><code>{{ item.formula | escape }}</code></a>
+            <a href="{{ site.baseurl }}/formula/{{ full_name | uri_escape }}"><code>{{ item.formula | escape }}</code></a>
         {%- else -%}
             <code>{{ item.formula | escape }}</code>
         {%- endif -%}
