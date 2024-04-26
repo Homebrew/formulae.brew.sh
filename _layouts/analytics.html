@@ -26,6 +26,8 @@ layout: base
             Prefix
     {%- when "homebrew-versions" -%}
             Version
+    {%- when "brew-command-run" -%}
+            Command
     {%- when "cask-install" -%}
             Cask
     {%- else -%}
@@ -47,6 +49,8 @@ layout: base
             <code>{{ item.os_arch_ci | escape }}</code>
     {%- elsif page.category == "homebrew-prefixes" -%}
             <code>{{ item.prefix | escape }}</code>
+    {%- elsif page.category == "brew-command-run" -%}
+            <code>{{ item.command_run | escape }}</code>
     {%- elsif page.category == "homebrew-versions" -%}
             <code>{{ item.version | escape }}</code>
     {%- elsif page.category == "cask-install" -%}
