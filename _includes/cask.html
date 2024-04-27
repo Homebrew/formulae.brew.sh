@@ -1,9 +1,9 @@
 
         <td>
-{%- if site.data.cask[include.token] != nil -%}
-            <a href="{{ site.baseurl }}/cask/{{ include.token | uri_escape }}">{{ include.token | escape }}</a>
+{%- if site.data.cask[include.sort_key] != nil -%}
+            <a href="{{ site.baseurl }}/cask/{{ include.cask.token | uri_escape }}">{{ include.cask.token | escape }}</a>
 {%- else -%}
-            {{ include.token | escape }}
+            {{ include.cask.token | escape }}
 {%- endif -%}
         </td>
         <td>{{ include.cask.version | truncate: 25 | escape }}</td>
