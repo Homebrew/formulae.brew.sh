@@ -2,21 +2,22 @@
 layout: default
 permalink: :title
 ---
-{%- assign token = page.title -%}
+{%- assign full_name = page.title -%}
 {%- assign formula_path = "formula" -%}
-{%- assign c = site.data.cask[token] -%}
+{%- assign data_name = full_name | remove: "@" | remove: "." | replace: "+", "_" -%}
+{%- assign c = site.data.cask[data_name] -%}
 <h2
     {%- if c.disabled %} class="disabled" title="This cask has been disabled since {{ c.disable_date | escape }} because it {{ c.disable_reason | escape }}"
     {%- elsif c.deprecated %} class="deprecated" title="This cask has been deprecated since {{ c.deprecation_date | escape }} because it {{ c.deprecation_reason | escape }}"
     {%- endif -%}
     >
-    {{ token | escape }}
+    {{ c.token | escape }}
     {%- if c.disabled %} (disabled)
     {%- elsif c.deprecated %} (deprecated)
     {%- endif -%}
 </h2>
 
-{%- include install_command.html item=token modifier=" --cask" %}
+{%- include install_command.html item=c.token modifier=" --cask" %}
 <p class="names">Name{%- if c.name.size > 1 -%}s{%- endif -%}:
 {%- for name in c.name %}
     <strong>{{ name | escape }}</strong>
@@ -28,7 +29,7 @@ permalink: :title
 {%- endif %}
 <p class="homepage"><a href="{{ c.homepage | escape }}">{{ c.homepage | escape }}</a></p>
 
-<p><a href="{{ site.baseurl }}/api/cask/{{ token | uri_escape }}.json"><code>/api/cask/{{ token | escape }}.json</code> (JSON API)</a></p>
+<p><a href="{{ site.baseurl }}/api/cask/{{ c.token | uri_escape }}.json"><code>/api/cask/{{ c.token | escape }}.json</code> (JSON API)</a></p>
 <p><a target="_blank" href="{{ site.taps.cask.remote }}/blob/{{ c.tap_git_head | url_encode }}/{{ c.ruby_source_path | uri_escape }}">Cask code</a> on GitHub</p>
 
 <p>Current version: <a href="{{ c.url | escape }}" title="Download for {{ c.token | escape }}">{{ c.version | escape }}</a></p>
@@ -142,14 +143,14 @@ permalink: :title
     <tr>
         <th colspan="2">Installs ({{ interval.name }})</th>
     </tr>
-    {%- for fa in site.data.analytics.cask-install.homebrew-cask[interval.path].formulae[token] -%}
+    {%- for fa in site.data.analytics.cask-install.homebrew-cask[interval.path].formulae[full_name] -%}
     <tr>
         <td><code>{{ fa.cask | escape }}</code></td>
         <td class="number-data">{{ fa.count }}</td>
     </tr>
     {%- else -%}
     <tr>
-        <td><code>{{ token | escape }}</code></td>
+        <td><code>{{ full_name | escape }}</code></td>
         <td class="number-data">0</td>
     </tr>
     {%- endfor -%}
