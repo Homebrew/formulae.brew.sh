@@ -54,7 +54,8 @@ layout: base
     {%- elsif page.category == "homebrew-versions" -%}
             <code>{{ item.version | escape }}</code>
     {%- elsif page.category == "cask-install" -%}
-        {%- if site.data.cask[item.cask] != nil -%}
+        {%- assign data_name = item.cask | remove: "@" | remove: "." | replace: "+", "_" -%}
+        {%- if site.data.cask[data_name] != nil -%}
             <a href="{{ site.baseurl }}/cask/{{ item.cask | uri_escape }}"><code>{{ item.cask | escape }}</code></a>
         {%- else -%}
             <code>{{ item.cask | escape }}</code>
