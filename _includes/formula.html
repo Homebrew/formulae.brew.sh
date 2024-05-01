@@ -1,5 +1,5 @@
 
-        <td><a href="{{ site.baseurl }}/{{ include.formula_path || default: "formula" }}/{{ include.formula.name | uri_escape }}"
+        <td><a href="{{ site.baseurl }}/formula/{{ include.formula.name | uri_escape }}"
             {%- if include.formula.disabled %} class="disabled" title="This formula has been disabled"
             {%- elsif include.formula.deprecated %} class="deprecated" title="This formula has been deprecated"
             {%- endif -%}
