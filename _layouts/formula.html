@@ -3,9 +3,8 @@ layout: default
 permalink: :title
 ---
 {%- assign full_name = page.title -%}
-{%- assign formula_path = "formula" -%}
 {%- assign data_name = full_name | remove: "@" | remove: "." | replace: "+", "_" -%}
-{%- assign f = site.data[formula_path][data_name] -%}
+{%- assign f = site.data.formula[data_name] -%}
 <h2
     {%- if f.disabled %} class="disabled" title="This formula has been disabled since {{ f.disable_date | escape }} because it {{ f.disable_reason | escape }}"
     {%- elsif f.deprecated %} class="deprecated" title="This formula has been deprecated since {{ f.deprecation_date | escape }} because it {{ f.deprecation_reason | escape }}"
@@ -40,7 +39,7 @@ permalink: :title
 </p>
 {%- endif %}
 
-<p>Formula JSON API: <a href="{{ site.baseurl }}/api/{{ formula_path }}/{{ f.name | uri_escape }}.json"><code>/api/{{ formula_path }}/{{ f.name | escape }}.json</code></a></p>
+<p>Formula JSON API: <a href="{{ site.baseurl }}/api/formula/{{ f.name | uri_escape }}.json"><code>/api/formula/{{ f.name | escape }}.json</code></a></p>
 
 <p>Formula code: <a target="_blank" href="{{ site.taps.core.remote }}/blob/{{ f.tap_git_head | url_encode }}/{{ f.ruby_source_path | uri_escape }}"><code>{{ f.name | escape }}.rb</code></a> on GitHub</p>
 
@@ -116,7 +115,7 @@ permalink: :title
 {%- endif %}
 </table>
 
-{%- include formulae.html formula_path=formula_path formulae=f.versioned_formulae description="Other versions" -%}
+{%- include formulae.html formulae=f.versioned_formulae description="Other versions" -%}
 
 {%- if f.revision > 0 %}
 <p>Revision: <strong>{{ f.revision }}</strong></p>
@@ -138,10 +137,10 @@ permalink: :title
 </table>
 {%- endif -%}
 
-{%- include formulae.html formula_path=formula_path formulae=f.dependencies description="Depends on" -%}
-{%- include formulae.html formula_path=formula_path formulae=f.recommended_dependencies description="Depends on recommended" -%}
-{%- include formulae.html formula_path=formula_path formulae=f.optional_dependencies description="Depends on optionally" -%}
-{%- include formulae.html formula_path=formula_path formulae=f.build_dependencies description="Depends on when building from source" -%}
+{%- include formulae.html formulae=f.dependencies description="Depends on" -%}
+{%- include formulae.html formulae=f.recommended_dependencies description="Depends on recommended" -%}
+{%- include formulae.html formulae=f.optional_dependencies description="Depends on optionally" -%}
+{%- include formulae.html formulae=f.build_dependencies description="Depends on when building from source" -%}
 
 {%- if f.requirements.size > 0 %}
 <p>Requires:
@@ -159,7 +158,7 @@ permalink: :title
                     {{ r.name | capitalize | escape }}
             {%- endcase -%}
         {%- endcapture -%}
-        {%- if r.cask and formula_path == "formula" -%}
+        {%- if r.cask -%}
             {%- unless r.cask contains "/" -%}
                 <a href="{{ site.baseurl }}/cask/{{ r.cask | uri_escape }}">{{ requirement }}</a>
             {%- else -%}
@@ -189,7 +188,7 @@ permalink: :title
 {%- if f.conflicts_with.size > 0 %}
 <p>Conflicts with:
     {%- for c in f.conflicts_with %}
-        <strong><a href="{{ site.baseurl }}/{{ formula_path }}/{{ c | uri_escape }}">{{ c | escape }}</a></strong>
+        <strong><a href="{{ site.baseurl }}/formula/{{ c | uri_escape }}">{{ c | escape }}</a></strong>
         {%- unless forloop.last -%}, {% endunless -%}
     {%- endfor %}
 </p>
