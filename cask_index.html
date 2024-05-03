@@ -9,11 +9,11 @@ permalink: /cask/
 
 <table>
     {%- assign sorted_casks = site.data.cask | sort -%}
-    {%- for c in sorted_casks -%}
+    {%- for cask in sorted_casks -%}
     <tr>
-        {%- assign sort_key = c[0] -%}
-        {%- assign cask = c[1] -%}
-        {%- include cask.html sort_key=sort_key cask=cask -%}
+        {%- assign data_token = cask[0] -%}
+        {%- assign token = cask[1].token -%}
+        {%- include cask.html data_token=data_token token=token -%}
     </tr>
     {%- endfor -%}
 </table>

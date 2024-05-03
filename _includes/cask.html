@@ -1,11 +1,15 @@
 
         <td>
-{%- if site.data.cask[include.sort_key] != nil -%}
-            <a href="{{ site.baseurl }}/cask/{{ include.cask.token | uri_escape }}">{{ include.cask.token | escape }}</a>
+{%- assign include_cdata = site.data.cask[include.data_token] -%}
+{%- if include_cdata != nil -%}
+            <a href="{{ site.baseurl }}/cask/{{ include.token | uri_escape }}">{{ include.token | escape }}</a></td>
+        <td>{{ include_cdata.version | truncate: 25 | escape }}</td>
+        <td>{{ include_cdata.desc | escape }}</td>
+        <td>{{ include_cdata.name.first | escape }}
 {%- else -%}
-            {{ include.cask.token | escape }}
+            {{ include.token | escape }}</td>
+        <td></td>
+        <td></td>
+        <td>
 {%- endif -%}
         </td>
-        <td>{{ include.cask.version | truncate: 25 | escape }}</td>
-        <td>{{ include.cask.desc | escape }}</td>
-        <td>{{ include.cask.name.first | escape }}</td>

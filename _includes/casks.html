@@ -1,10 +1,10 @@
-{%- if include.casks.size > 0 %}
+{%- if include.tokens.size > 0 %}
 <p>{{ include.description }}:</p>
 <table>
-    {%- for token in include.casks -%}
+    {%- for include_token in include.tokens -%}
     <tr>
-        {%- assign cask = site.data.cask[token] -%}
-        {%- include cask.html token=token cask=cask -%}
+        {%- assign include_data_token = include_token | remove: "@" | remove: "." | replace: "+", "_" -%}
+        {%- include cask.html data_token=include_data_token token=include_token -%}
     </tr>
     {%- endfor -%}
 </table>
