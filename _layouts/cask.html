@@ -2,9 +2,9 @@
 layout: default
 permalink: :title
 ---
-{%- assign full_name = page.title -%}
-{%- assign data_name = full_name | remove: "@" | remove: "." | replace: "+", "_" -%}
-{%- assign c = site.data.cask[data_name] -%}
+{%- assign token = page.title -%}
+{%- assign data_token = token | remove: "@" | remove: "." | replace: "+", "_" -%}
+{%- assign c = site.data.cask[data_token] -%}
 <h2
     {%- if c.disabled %} class="disabled" title="This cask has been disabled since {{ c.disable_date | escape }} because it {{ c.disable_reason | escape }}"
     {%- elsif c.deprecated %} class="deprecated" title="This cask has been deprecated since {{ c.deprecation_date | escape }} because it {{ c.deprecation_reason | escape }}"
@@ -34,7 +34,7 @@ permalink: :title
 <p>Current version: <a href="{{ c.url | escape }}" title="Download for {{ c.token | escape }}">{{ c.version | escape }}</a></p>
 
 {%- if c.depends_on.size > 0 -%}
-    {%- include casks.html casks=c.depends_on.cask description="Depends on casks" -%}
+    {%- include casks.html tokens=c.depends_on.cask description="Depends on casks" -%}
     {%- include formulae.html formulae=c.depends_on.formula description="Depends on" -%}
     {%- assign requirements = "" -%}
     {%- if c.depends_on.macos -%}
@@ -61,10 +61,12 @@ permalink: :title
     {%- endif -%}
 {%- endif -%}
 
-{%- include casks.html casks=c.conflicts_with.cask description="Conflicts with casks" -%}
+{%- if c.conflicts_with.size > 0 -%}
+    {%- include casks.html tokens=c.conflicts_with.cask description="Conflicts with casks" -%}
 
-{%- assign conflicts_with_formula = c.conflicts_with.formula | where_exp: "f", "site.data.formula[f]" -%}
-{%- include formulae.html formulae=conflicts_with_formula description="Conflicts with" -%}
+    {%- assign conflicts_with_formula = c.conflicts_with.formula | where_exp: "f", "site.data.formula[f]" -%}
+    {%- include formulae.html formulae=conflicts_with_formula description="Conflicts with" -%}
+{%- endif -%}
 
 {%- if c.caveats -%}
 {%- capture soft_indent %}
@@ -142,14 +144,14 @@ permalink: :title
     <tr>
         <th colspan="2">Installs ({{ interval.name }})</th>
     </tr>
-    {%- for fa in site.data.analytics.cask-install.homebrew-cask[interval.path].formulae[full_name] -%}
+    {%- for fa in site.data.analytics.cask-install.homebrew-cask[interval.path].formulae[token] -%}
     <tr>
         <td><code>{{ fa.cask | escape }}</code></td>
         <td class="number-data">{{ fa.count }}</td>
     </tr>
     {%- else -%}
     <tr>
-        <td><code>{{ full_name | escape }}</code></td>
+        <td><code>{{ token | escape }}</code></td>
         <td class="number-data">0</td>
     </tr>
     {%- endfor -%}
