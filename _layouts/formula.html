@@ -2,9 +2,9 @@
 layout: default
 permalink: :title
 ---
-{%- assign full_name = page.title -%}
-{%- assign data_name = full_name | remove: "@" | remove: "." | replace: "+", "_" -%}
-{%- assign f = site.data.formula[data_name] -%}
+{%- assign fname = page.title -%}
+{%- assign data_fname = fname | remove: "@" | remove: "." | replace: "+", "_" -%}
+{%- assign f = site.data.formula[data_fname] -%}
 <h2
     {%- if f.disabled %} class="disabled" title="This formula has been disabled since {{ f.disable_date | escape }} because it {{ f.disable_reason | escape }}"
     {%- elsif f.deprecated %} class="deprecated" title="This formula has been deprecated since {{ f.deprecation_date | escape }} because it {{ f.deprecation_reason | escape }}"
@@ -115,7 +115,7 @@ permalink: :title
 {%- endif %}
 </table>
 
-{%- include formulae.html formulae=f.versioned_formulae description="Other versions" -%}
+{%- include formulae.html fnames=f.versioned_formulae description="Other versions" -%}
 
 {%- if f.revision > 0 %}
 <p>Revision: <strong>{{ f.revision }}</strong></p>
@@ -137,10 +137,10 @@ permalink: :title
 </table>
 {%- endif -%}
 
-{%- include formulae.html formulae=f.dependencies description="Depends on" -%}
-{%- include formulae.html formulae=f.recommended_dependencies description="Depends on recommended" -%}
-{%- include formulae.html formulae=f.optional_dependencies description="Depends on optionally" -%}
-{%- include formulae.html formulae=f.build_dependencies description="Depends on when building from source" -%}
+{%- include formulae.html fnames=f.dependencies description="Depends on" -%}
+{%- include formulae.html fnames=f.recommended_dependencies description="Depends on recommended" -%}
+{%- include formulae.html fnames=f.optional_dependencies description="Depends on optionally" -%}
+{%- include formulae.html fnames=f.build_dependencies description="Depends on when building from source" -%}
 
 {%- if f.requirements.size > 0 %}
 <p>Requires:
@@ -152,8 +152,6 @@ permalink: :title
                     {{ r.version | escape }}
                 {%- when "macos" or "maximum_macos" -%}
                     macOS
-                {%- when "osxfuse" -%}
-                    FUSE
                 {%- else -%}
                     {{ r.name | capitalize | escape }}
             {%- endcase -%}
@@ -187,8 +185,8 @@ permalink: :title
 
 {%- if f.conflicts_with.size > 0 %}
 <p>Conflicts with:
-    {%- for c in f.conflicts_with %}
-        <strong><a href="{{ site.baseurl }}/formula/{{ c | uri_escape }}">{{ c | escape }}</a></strong>
+    {%- for conflict in f.conflicts_with %}
+        <strong><a href="{{ site.baseurl }}/formula/{{ conflict | uri_escape }}">{{ conflict | escape }}</a></strong>
         {%- unless forloop.last -%}, {% endunless -%}
     {%- endfor %}
 </p>
@@ -216,14 +214,14 @@ permalink: :title
     <tr>
         <th colspan="2">{{ category.name }} ({{ interval.name }})</th>
     </tr>
-    {%- for fa in site.data.analytics[category.path].homebrew-core[interval.path].formulae[full_name] -%}
+    {%- for fa in site.data.analytics[category.path].homebrew-core[interval.path].formulae[fname] -%}
     <tr>
         <td><code>{{ fa.formula | escape }}</code></td>
         <td class="number-data">{{ fa.count }}</td>
     </tr>
     {%- else -%}
     <tr>
-        <td><code>{{ full_name | escape }}</code></td>
+        <td><code>{{ fname | escape }}</code></td>
         <td class="number-data">0</td>
     </tr>
     {%- endfor -%}

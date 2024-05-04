@@ -35,7 +35,7 @@ permalink: :title
 
 {%- if c.depends_on.size > 0 -%}
     {%- include casks.html tokens=c.depends_on.cask description="Depends on casks" -%}
-    {%- include formulae.html formulae=c.depends_on.formula description="Depends on" -%}
+    {%- include formulae.html fnames=c.depends_on.formula description="Depends on" -%}
     {%- assign requirements = "" -%}
     {%- if c.depends_on.macos -%}
         {%- capture requirements -%}
@@ -63,9 +63,7 @@ permalink: :title
 
 {%- if c.conflicts_with.size > 0 -%}
     {%- include casks.html tokens=c.conflicts_with.cask description="Conflicts with casks" -%}
-
-    {%- assign conflicts_with_formula = c.conflicts_with.formula | where_exp: "f", "site.data.formula[f]" -%}
-    {%- include formulae.html formulae=conflicts_with_formula description="Conflicts with" -%}
+    {%- include formulae.html fnames=c.conflicts_with.formula description="Conflicts with" -%}
 {%- endif -%}
 
 {%- if c.caveats -%}
