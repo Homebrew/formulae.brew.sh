@@ -10,10 +10,11 @@ redirect_from: /formula-linux/
 
 <table>
     {%- assign sorted_formulae = site.data.formula | sort -%}
-    {%- for f in sorted_formulae -%}
+    {%- for formula in sorted_formulae -%}
     <tr>
-        {%- assign formula = f[1] -%}
-        {%- include formula.html formula=formula -%}
+        {%- assign data_fname = formula[0] -%}
+        {%- assign fname = formula[1].name -%}
+        {%- include formula.html data_fname=data_fname fname=fname -%}
     </tr>
     {%- endfor -%}
 </table>

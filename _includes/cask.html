@@ -1,9 +1,13 @@
 
         <td>
 {%- assign include_cdata = site.data.cask[include.data_token] -%}
-{%- if include_cdata != nil -%}
-            <a href="{{ site.baseurl }}/cask/{{ include.token | uri_escape }}">{{ include.token | escape }}</a></td>
-        <td>{{ include_cdata.version | truncate: 25 | escape }}</td>
+{%- unless include_cdata -%}
+    {%- assign include_data_token = site.data.cask_canonical[include.token] | remove: "@" | remove: "." | replace: "+", "_" -%}
+    {%- assign include_cdata = site.data.cask[include_data_token] -%}
+{%- endunless -%}
+{%- if include_cdata -%}
+            <a href="{{ site.baseurl }}/cask/{{ include_cdata.token | uri_escape }}">{{ include_cdata.token | escape }}</a></td>
+        <td>{{ include_cdata.version | truncate: 20 | escape }}</td>
         <td>{{ include_cdata.desc | escape }}</td>
         <td>{{ include_cdata.name.first | escape }}
 {%- else -%}

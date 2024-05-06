@@ -1,11 +1,11 @@
 ---
 ---
-{%- assign full_name = page.name | remove: ".json" -%}
-{%- assign data_name = full_name | remove: "@" | remove: "." | replace: "+", "_" -%}
-{%- assign formula = site.data.formula[data_name] -%}
+{%- assign fname = page.name | remove: ".json" -%}
+{%- assign data_fname = fname | remove: "@" | remove: "." | replace: "+", "_" -%}
+{%- assign fdata = site.data.formula[data_fname] -%}
 {
 
-{%- for key_value in formula -%}
+{%- for key_value in fdata -%}
   {{ key_value[0] | jsonify }}:{{ key_value[1] | jsonify }},
 {%- endfor -%}
 
@@ -14,16 +14,14 @@
   "{{ category.path | replace: "-", "_" }}":{
   {%- for interval in site.analytics.intervals -%}
     "{{ interval.path }}":{
-    {%- if site.data.analytics[category.path].homebrew-core[interval.path].formulae[full_name].size > 0 -%}
-      {%- for fa in site.data.analytics[category.path].homebrew-core[interval.path].formulae[full_name] -%}
-        {{ fa.formula | jsonify }}:{{ fa.count | remove: "," | plus: 0 }}
-        {%- unless forloop.last -%}
-        ,
-        {%- endunless -%}
-      {%- endfor -%}
+    {%- for fa in site.data.analytics[category.path].homebrew-core[interval.path].formulae[fname] -%}
+      {{ fa.formula | jsonify }}:{{ fa.count | remove: "," | plus: 0 }}
+      {%- unless forloop.last -%}
+      ,
+      {%- endunless -%}
     {%- else -%}
-      {{ full_name | jsonify }}:0
-    {%- endif -%}
+      {{ fname | jsonify }}:0
+    {%- endfor -%}
     }
     {%- if category.path == "build-error" -%}
       {%- break -%}

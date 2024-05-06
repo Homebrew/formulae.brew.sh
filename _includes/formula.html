@@ -1,8 +1,21 @@
 
-        <td><a href="{{ site.baseurl }}/formula/{{ include.formula.name | uri_escape }}"
-            {%- if include.formula.disabled %} class="disabled" title="This formula has been disabled"
-            {%- elsif include.formula.deprecated %} class="deprecated" title="This formula has been deprecated"
+        <td>
+{%- assign include_fdata = site.data.formula[include.data_fname] -%}
+{%- unless include_fdata -%}
+    {%- assign include_data_fname = site.data.formula_canonical[include.fname] | remove: "@" | remove: "." | replace: "+", "_" -%}
+    {%- assign include_fdata = site.data.formula[include_data_fname] -%}
+{%- endunless -%}
+{%- if include_fdata -%}
+            <a href="{{ site.baseurl }}/formula/{{ include_fdata.name | uri_escape }}"
+            {%- if include_fdata.disabled %} class="disabled" title="This formula has been disabled"
+            {%- elsif include_fdata.deprecated %} class="deprecated" title="This formula has been deprecated"
             {%- endif -%}
-            >{{ include.formula.name | escape }}</a></td>
-        <td>{{ include.formula.versions.stable | escape }}</td>
-        <td>{{ include.formula.desc | escape }}</td>
+            >{{ include_fdata.name | escape }}</a></td>
+        <td>{{ include_fdata.versions.stable | truncate: 20 | escape }}</td>
+        <td>{{ include_fdata.desc | escape }}
+{%- else -%}
+            {{ include.fname | escape }}</td>
+        <td></td>
+        <td>
+{%- endif -%}
+        </td>
