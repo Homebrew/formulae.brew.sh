@@ -6,8 +6,8 @@ permalink: :title
 {%- assign data_token = token | remove: "@" | remove: "." | replace: "+", "_" -%}
 {%- assign c = site.data.cask[data_token] -%}
 <h2
-    {%- if c.disabled %} class="disabled" title="This cask has been disabled since {{ c.disable_date | escape }} because it {{ c.disable_reason | escape }}"
-    {%- elsif c.deprecated %} class="deprecated" title="This cask has been deprecated since {{ c.deprecation_date | escape }} because it {{ c.deprecation_reason | escape }}"
+    {%- if c.disabled %} class="disabled" title="This cask has been disabled since {{ c.disable_date | escape }} because it {{ site.reasons.cask[c.disable_reason] | default: c.disable_reason | escape }}"
+    {%- elsif c.deprecated %} class="deprecated" title="This cask has been deprecated since {{ c.deprecation_date | escape }} because it {{ site.reasons.cask[c.deprecation_reason] | default: c.deprecation_reason | escape }}"
     {%- endif -%}
     >
     {{ c.token | escape }}

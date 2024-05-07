@@ -6,7 +6,11 @@
     {%- assign include_cdata = site.data.cask[include_data_token] -%}
 {%- endunless -%}
 {%- if include_cdata -%}
-            <a href="{{ site.baseurl }}/cask/{{ include_cdata.token | uri_escape }}">{{ include_cdata.token | escape }}</a></td>
+            <a href="{{ site.baseurl }}/cask/{{ include_cdata.token | uri_escape }}"
+            {%- if include_cdata.disabled %} class="disabled" title="This cask has been disabled"
+            {%- elsif include_cdata.deprecated %} class="deprecated" title="This cask has been deprecated"
+            {%- endif -%}
+            >{{ include_cdata.token | escape }}</a></td>
         <td>{{ include_cdata.version | truncate: 20 | escape }}</td>
         <td>{{ include_cdata.desc | escape }}</td>
         <td>{{ include_cdata.name.first | escape }}
