@@ -25,8 +25,13 @@ permalink: :title
     {%- endfor %}
 </p>
 {%- endif -%}
-{%- if f.oldname %}
-<p class="oldname">Formerly known as: <strong>{{ f.oldname | escape }}</strong></p>
+{%- if f.oldnames.size > 0 %}
+<p class="oldnames">Formerly known as:
+    {%- for oldname in f.oldnames %}
+        <strong>{{ oldname | escape }}</strong>
+        {%- unless forloop.last -%}, {% endunless -%}
+    {%- endfor %}
+</p>
 {%- endif %}
 <p class="desc">{{ f.desc | escape }}</p>
 <p class="homepage"><a href="{{ f.homepage | escape }}">{{ f.homepage | escape }}</a></p>

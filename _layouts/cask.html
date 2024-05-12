@@ -33,6 +33,15 @@ permalink: :title
 
 <p>Current version: <a href="{{ c.url | escape }}" title="Download for {{ c.token | escape }}">{{ c.version | escape }}</a></p>
 
+{%- if c.old_tokens.size > 0 %}
+<p class="oldnames">Former tokens:
+    {%- for oldtoken in c.old_tokens %}
+        <strong>{{ oldtoken | escape }}</strong>
+        {%- unless forloop.last -%}, {% endunless -%}
+    {%- endfor %}
+</p>
+{%- endif %}
+
 {%- if c.depends_on.size > 0 -%}
     {%- include casks.html tokens=c.depends_on.cask description="Depends on casks" -%}
     {%- include formulae.html fnames=c.depends_on.formula description="Depends on" -%}
