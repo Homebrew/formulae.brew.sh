@@ -1,9 +1,9 @@
 ---
 title: homebrew-cask
 layout: default
-permalink: /cask/
+permalink: /cask-font/
 ---
-<p>This is a listing of all casks available from the <a href="{{ site.taps.cask.remote }}">{{ site.taps.cask.repo }} tap</a> via the <a href="https://brew.sh">Homebrew</a> package manager for macOS.</p>
+<p>This is a listing of all fonts available from the <a href="{{ site.taps.cask.remote }}">{{ site.taps.cask.repo }} tap</a> via the <a href="https://brew.sh">Homebrew</a> package manager for macOS.</p>
 
 <h2><a href="{{ site.baseurl }}/api/cask.json"><code>/api/cask.json</code> (JSON API)</a></h2>
 
@@ -11,13 +11,13 @@ permalink: /cask/
     {%- assign sorted_casks = site.data.cask | sort -%}
     {%- for cask in sorted_casks -%}
         {%- assign subfolder = cask[1].ruby_source_path | slice: 6, 4 -%}
-        {%- unless subfolder == "font" -%}
+        {%- if subfolder == "font" -%}
         <tr>
             {%- assign data_token = cask[0] -%}
             {%- assign token = cask[1].token -%}
             {%- include cask.html data_token=data_token token=token -%}
         </tr>
-        {%- endunless -%}
+        {%- endif -%}
     {%- endfor -%}
 </table>
 <footer id="border-no-bottom">Last updated: {{ "today" | date: "%F %R" }}</footer>
