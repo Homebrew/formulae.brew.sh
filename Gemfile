@@ -2,6 +2,8 @@
 
 source "https://rubygems.org"
 
+ruby file: ".ruby-version"
+
 gem "faraday-retry"
 gem "jekyll"
 gem "jekyll-redirect-from"
