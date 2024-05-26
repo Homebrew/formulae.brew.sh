@@ -107,9 +107,12 @@ jobs:
         with:
           bundler-cache: true
 
+      - name: Create directories
+        run: mkdir -p _data/analytics api/analytics
+
       - name: Update analytics data
         run: /usr/bin/rake analytics
-        if: github.event.pull_request.head.repo.fork == false && (github.event_name == 'pull_request' && github.event.pull_request.user.login != 'dependabot[bot]')
+        if: github.ref_name == 'master' || (github.event_name == 'pull_request' && github.event.pull_request.head.repo.fork == false && github.event.pull_request.user.login != 'dependabot[bot]')
         env:
           HOMEBREW_INFLUXDB_TOKEN: ${{ secrets.HOMEBREW_INFLUXDB_READ_TOKEN }}
 
@@ -193,7 +196,7 @@ jobs:
         run: ./script/validate-build.rb
 
       - name: Sign API
-        if: github.event.pull_request.head.repo.fork == false && (github.event_name == 'pull_request' && github.event.pull_request.user.login != 'dependabot[bot]')
+        if: github.ref_name == 'master' || (github.event_name == 'pull_request' && github.event.pull_request.head.repo.fork == false && github.event.pull_request.user.login != 'dependabot[bot]')
         env:
           JWS_SIGNING_KEY_ID: homebrew-1
           JWS_SIGNING_KEY: ${{ secrets.JWS_HOMEBREW_1 }}
