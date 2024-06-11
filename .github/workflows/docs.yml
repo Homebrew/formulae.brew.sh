@@ -62,6 +62,11 @@ jobs:
       - name: Check code blocks conform to our Ruby style guide
         run: brew style docs
 
+      - name: Generate formulae.brew.sh API samples
+        if: github.repository == 'Homebrew/formulae.brew.sh'
+        working-directory: docs
+        run: ../script/generate-api-samples.rb
+
       - name: Build the site and check for broken links
         working-directory: docs
         run: bundle exec rake test
