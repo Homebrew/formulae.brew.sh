@@ -17,27 +17,27 @@ task test: :build do
   require "html-proofer"
   HTMLProofer.check_directory(
     "./_site",
-    parallel: { in_threads: 4 },
-    favicon: true,
+    parallel:            { in_threads: 4 },
+    favicon:             true,
     ignore_status_codes: [0, 403],
-    check_favicon: true,
-    check_opengraph: true,
-    check_html: true,
-    check_img_http: true,
-    enforce_https: true,
-    ignore_files: [
-      %r{Kickstarter-Supporters},
+    check_favicon:       true,
+    check_opengraph:     true,
+    check_html:          true,
+    check_img_http:      true,
+    enforce_https:       true,
+    ignore_files:        [
+      /Kickstarter-Supporters/,
     ],
-    ignore_urls: [
+    ignore_urls:         [
       "/",
       %r{https://formulae.brew.sh"},
       %r{https://github.com/},
-      'https://legacy.python.org/dev/peps/pep-0453/#recommendations-for-downstream-distributors',
+      "https://legacy.python.org/dev/peps/pep-0453/#recommendations-for-downstream-distributors",
     ],
-    cache: {
+    cache:               {
       timeframe: {
-        external: "1h"
-      }
-    }
+        external: "1h",
+      },
+    },
   ).run
 end
