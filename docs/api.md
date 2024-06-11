@@ -90,9 +90,9 @@ GET https://formulae.brew.sh/api/analytics/${CATEGORY}/homebrew-core/${DAYS}.jso
 #### Variables
 
 - `${CATEGORY}`: the analytics event category, i.e.
-  - `install`: the installation of all {{ site.taps.core.repo }} formulae
-  - `install-on-request`: the requested installation of all {{ site.taps.core.repo }} formulae (i.e. not as a dependency of other formulae)
-  - `build-error`: the installation failure of all {{ site.taps.core.repo }} formulae
+  - `install`: the installation of all {{ site.taps.core.repository }} formulae
+  - `install-on-request`: the requested installation of all {{ site.taps.core.repository }} formulae (i.e. not as a dependency of other formulae)
+  - `build-error`: the installation failure of all {{ site.taps.core.repository }} formulae
     - only `${DAYS}: 30d` (30 days) is available
 - `${DAYS}`: the number of days of analytics events, i.e.
   - `30d`: 30 days
