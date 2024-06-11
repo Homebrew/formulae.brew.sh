@@ -13,12 +13,12 @@ redirect_from:
 
 List the `brew info --json` output for all current {{ site.taps.core.fullname }} formulae or {{ site.taps.cask.fullname }} casks.
 
-```
-GET https://formulae.brew.sh/api/formula.json
-GET https://formulae.brew.sh/api/cask.json
+```console
+curl https://formulae.brew.sh/api/formula.json
+curl https://formulae.brew.sh/api/cask.json
 ```
 
-#### [Response](https://formulae.brew.sh/api/formula.json)
+**[Response](https://formulae.brew.sh/api/formula.json):**
 
 {% include api-samples/formula.md %}
 
@@ -26,15 +26,15 @@ GET https://formulae.brew.sh/api/cask.json
 
 Get the `brew info --json --formula <formula>` output for a single, current {{ site.taps.core.fullname }} formula with extra keys containing analytics data and generation date.
 
-```
-GET https://formulae.brew.sh/api/formula/${FORMULA}.json
+```console
+curl https://formulae.brew.sh/api/formula/${FORMULA}.json
 ```
 
-#### Variables
+**Variables:**
 
 - `${FORMULA}`: the name of the formula, e.g. `wget`
 
-#### [Response](https://formulae.brew.sh/api/formula/wget.json)
+**[Response](https://formulae.brew.sh/api/formula/wget.json):**
 
 {% include api-samples/formula_wget.md %}
 
@@ -42,15 +42,15 @@ GET https://formulae.brew.sh/api/formula/${FORMULA}.json
 
 Get the `brew info --json=v2 --cask <cask>` JSON output for a single, current {{ site.taps.cask.fullname }} cask with extra keys containing analytics data and generation date.
 
-```
-GET https://formulae.brew.sh/api/cask/${CASK}.json
+```console
+curl https://formulae.brew.sh/api/cask/${CASK}.json
 ```
 
-#### Variables
+**Variables:**
 
 - `${CASK}`: the name of the cask, e.g. `docker`
 
-#### [Response](https://formulae.brew.sh/api/cask/docker.json)
+**[Response](https://formulae.brew.sh/api/cask/docker.json):**
 
 {% include api-samples/cask_docker.md %}
 
@@ -60,11 +60,11 @@ GET https://formulae.brew.sh/api/cask/${CASK}.json
 
 List all analytics events for a specified category over a number of days, ordered by event frequency count. This is the data source for `brew info --analytics`.
 
-```
-GET https://formulae.brew.sh/api/analytics/${CATEGORY}/${DAYS}.json
+```console
+curl https://formulae.brew.sh/api/analytics/${CATEGORY}/${DAYS}.json
 ```
 
-#### Variables
+**Variables:**
 
 - `${CATEGORY}`: the analytics event category, i.e.
   - `install`: the installation of all formulae
@@ -75,7 +75,7 @@ GET https://formulae.brew.sh/api/analytics/${CATEGORY}/${DAYS}.json
   - `90d`: 90 days
   - `365d`: 365 days
 
-#### [Response](https://formulae.brew.sh/api/analytics/install/30d.json)
+**[Response](https://formulae.brew.sh/api/analytics/install/30d.json):**
 
 {% include api-samples/analytics_install_30d.md %}
 
@@ -83,11 +83,11 @@ GET https://formulae.brew.sh/api/analytics/${CATEGORY}/${DAYS}.json
 
 List all the {{ site.taps.core.fullname }} formulae's analytics events for a specified category over a number of days, grouped by formula name. This is the data source for `brew info --analytics --formula <formula>`.
 
-```
-GET https://formulae.brew.sh/api/analytics/${CATEGORY}/homebrew-core/${DAYS}.json
+```console
+curl https://formulae.brew.sh/api/analytics/${CATEGORY}/homebrew-core/${DAYS}.json
 ```
 
-#### Variables
+**Variables:**
 
 - `${CATEGORY}`: the analytics event category, i.e.
   - `install`: the installation of all {{ site.taps.core.repository }} formulae
@@ -99,25 +99,26 @@ GET https://formulae.brew.sh/api/analytics/${CATEGORY}/homebrew-core/${DAYS}.jso
   - `90d`: 90 days
   - `365d`: 365 days
 
-#### [Response](https://formulae.brew.sh/api/analytics/install/homebrew-core/30d.json)
+**[Response](https://formulae.brew.sh/api/analytics/install/homebrew-core/30d.json):**
 
 {% include api-samples/analytics_install_homebrew_core_30d.md %}
 
 ### List analytics events for all {{ site.taps.cask.name }} casks
 
-List all the {{ site.taps.cask.fullname }} cask's analytics events for the `cask-install` category over a number of days, grouped by cask token.  This is the data source for `brew info --analytics --cask <cask>`.
+List all the {{ site.taps.cask.fullname }} cask's analytics events for the `cask-install` category over a number of days, grouped by cask token.
+This is the data source for `brew info --analytics --cask <cask>`.
 
-```
-GET https://formulae.brew.sh/api/analytics/cask-install/homebrew-cask/${DAYS}.json
+```console
+curl https://formulae.brew.sh/api/analytics/cask-install/homebrew-cask/${DAYS}.json
 ```
 
-#### Variables
+**Variables:**
 
 - `${DAYS}`: the number of days of analytics events, i.e.
   - `30d`: 30 days
   - `90d`: 90 days
   - `365d`: 365 days
 
-#### [Response](https://formulae.brew.sh/api/analytics/cask-install/homebrew-cask/30d.json)
+**[Response](https://formulae.brew.sh/api/analytics/cask-install/homebrew-cask/30d.json):**
 
 {% include api-samples/analytics_cask_install_homebrew_cask_30d.md %}
