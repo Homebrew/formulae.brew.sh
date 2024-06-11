@@ -105,7 +105,8 @@ GET https://formulae.brew.sh/api/analytics/${CATEGORY}/homebrew-core/${DAYS}.jso
 
 ### List analytics events for all {{ site.taps.cask.name }} casks
 
-List all the {{ site.taps.cask.fullname }} cask's analytics events for the `cask-install` category over a number of days, grouped by cask token.  This is the data source for `brew info --analytics --cask <cask>`.
+List all the {{ site.taps.cask.fullname }} cask's analytics events for the `cask-install` category over a number of days, grouped by cask token.
+This is the data source for `brew info --analytics --cask <cask>`.
 
 ```
 GET https://formulae.brew.sh/api/analytics/cask-install/homebrew-cask/${DAYS}.json
