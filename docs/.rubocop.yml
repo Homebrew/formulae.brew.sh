@@ -2,12 +2,9 @@ inherit_from: ../Library/.rubocop.yml
 
 AllCops:
   Exclude:
-    - Gemfile
-    - ".mdl*.rb"
-    - Rakefile
-    - "_site/**/*"
-    - Manpage.md
-    - "vendor/**/*"
+    - "**/_site/**/*"
+    - "**/Manpage.md"
+    - "**/vendor/**/*"
 
 # These are included in docs deliberately to show what
 # `brew create` does and what the user should replace.
@@ -22,7 +19,7 @@ FormulaAudit/Homepage:
 
 Layout/LineLength:
   Exclude:
-    - Bottles.md # The bottle block line length is long in its full form.
+    - "**/Bottles.md" # The bottle block line length is long in its full form.
 
 # Apparently Casks are allowed to have constant definitions in blocks and we document this.
 Lint/ConstantDefinitionInBlock:
