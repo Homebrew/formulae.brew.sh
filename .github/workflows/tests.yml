@@ -14,6 +14,12 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  style:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: Homebrew/actions/setup-homebrew@master
+      - run: brew style .
   generate-cask:
     if: startsWith( github.repository, 'Homebrew/' )
     name: Generate homebrew/cask data, pages and API
@@ -160,7 +166,7 @@ jobs:
           retention-days: 1
 
   build:
-    needs: [generate-cask, generate-core, generate-analytics, generate-samples]
+    needs: [style, generate-cask, generate-core, generate-analytics, generate-samples]
     runs-on: ubuntu-22.04
     timeout-minutes: 20
     steps:
@@ -227,6 +233,7 @@ jobs:
     name: Open/close deploy issues
     needs:
       [
+        style,
         generate-cask,
         generate-core,
         generate-analytics,
