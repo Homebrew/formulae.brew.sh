@@ -66,6 +66,18 @@ redirect_from: /analytics-linux/
         <td><a href="{{ site.baseurl }}/analytics/brew-command-run/365d/">365 days</a></td>
     </tr>
     <tr>
+        <td>Homebrew Command and Options Events</td>
+        <td><a href="{{ site.baseurl }}/analytics/brew-command-run-options/30d/">30 days</a></td>
+        <td><a href="{{ site.baseurl }}/analytics/brew-command-run-options/90d/">90 days</a></td>
+        <td><a href="{{ site.baseurl }}/analytics/brew-command-run-options/365d/">365 days</a></td>
+    </tr>
+    <tr>
+        <td>Homebrew Core Test Bot Events</td>
+        <td><a href="{{ site.baseurl }}/analytics/brew-test-bot-test/30d/">30 days</a></td>
+        <td><a href="{{ site.baseurl }}/analytics/brew-test-bot-test/90d/">90 days</a></td>
+        <td><a href="{{ site.baseurl }}/analytics/brew-test-bot-test/365d/">365 days</a></td>
+    </tr>
+    <tr>
         <td><code>/api/analytics/install/homebrew-core/${DAYS}.json</code> (JSON API)</td>
         <td><a href="{{ site.baseurl }}/api/analytics/install/homebrew-core/30d.json">30 days</a></td>
         <td><a href="{{ site.baseurl }}/api/analytics/install/homebrew-core/90d.json">90 days</a></td>
