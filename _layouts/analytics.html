@@ -28,6 +28,10 @@ layout: base
             Version
     {%- when "brew-command-run" -%}
             Command
+    {%- when "brew-command-run-options" -%}
+            Command
+    {%- when "brew-test-bot-test" -%}
+            Command
     {%- when "cask-install" -%}
             Cask
     {%- else -%}
@@ -51,6 +55,10 @@ layout: base
             <code>{{ item.prefix | escape }}</code>
     {%- elsif page.category == "brew-command-run" -%}
             <code>{{ item.command_run | escape }}</code>
+    {%- elsif page.category == "brew-command-run-options" -%}
+            <code>{{ item.command_run_options | escape }}</code>
+    {%- elsif page.category == "brew-test-bot-test" -%}
+            <code>{{ item.test_bot_test | escape }}</code>
     {%- elsif page.category == "homebrew-versions" -%}
             <code>{{ item.version | escape }}</code>
     {%- elsif page.category == "cask-install" -%}
