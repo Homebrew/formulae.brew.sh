@@ -17,6 +17,10 @@ env:
   HOMEBREW_BOOTSNAP: 1
   HOMEBREW_NO_INSTALL_CLEANUP: 1
 
+defaults:
+  run:
+    shell: bash -xeuo pipefail {0}
+
 jobs:
   docs:
     runs-on: ubuntu-22.04
@@ -38,8 +42,6 @@ jobs:
       - name: Cleanup Homebrew/brew docs
         if: github.repository == 'Homebrew/brew'
         run: |
-          set -xeuo pipefail
-
           # Avoid failing on broken symlinks.
           rm Library/Homebrew/os/mac/pkgconfig/fuse/fuse.pc
           rm Library/Homebrew/os/mac/pkgconfig/fuse/osxfuse.pc
