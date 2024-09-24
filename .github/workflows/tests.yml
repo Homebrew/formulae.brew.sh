@@ -250,16 +250,18 @@ jobs:
       RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
     runs-on: ubuntu-latest
     timeout-minutes: 5
+    permissions:
+      issues: write # for Homebrew/actions/create-or-update-issue
     steps:
       - name: Open, update, or close deploy issue
         uses: Homebrew/actions/create-or-update-issue@master
         with:
-          token: ${{ secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN }}
+          token: ${{ github.token }}
           repository: ${{ github.repository }}
           title: formulae.brew.sh deployment failed!
           body: The most recent [formulae.brew.sh deployment failed](${{ env.RUN_URL }}).
           labels: deploy failure
           update-existing: ${{ contains(needs.*.result, 'failure') }}
           close-existing: ${{ needs.deploy.result == 'success' }}
-          close-from-author: BrewTestBot
+          close-from-author: github-actions[bot]
           close-comment: The most recent [formulae.brew.sh deployment succeeded](${{ env.RUN_URL }}). Closing issue.
