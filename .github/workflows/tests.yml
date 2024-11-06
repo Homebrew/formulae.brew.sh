@@ -85,7 +85,7 @@ jobs:
   generate-analytics:
     if: startsWith( github.repository, 'Homebrew/' )
     name: Generate analytics data
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
       - name: Check out repository
@@ -139,7 +139,7 @@ jobs:
   generate-samples:
     if: startsWith( github.repository, 'Homebrew/' )
     name: Generate API samples
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
       - name: Check out repository
@@ -172,7 +172,7 @@ jobs:
 
   build:
     needs: [generate-cask, generate-core, generate-analytics, generate-samples]
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
       - name: Set up Git repository
