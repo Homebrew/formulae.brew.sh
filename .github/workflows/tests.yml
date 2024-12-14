@@ -21,7 +21,7 @@ jobs:
     timeout-minutes: 20
     steps:
       - name: Check out repository
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           fetch-depth: 0
           ref: ${{ github.event.pull_request.head.sha }}
@@ -42,7 +42,7 @@ jobs:
       - name: Archive data
         run: tar czvf data-cask.tar.gz _data/cask/ api/cask/ api/cask-source/ api/cask_tap_migrations.json cask/ api/internal/v3/homebrew-cask.json
 
-      - uses: actions/upload-artifact@b4b15b8c7c6ac21ea08fcf65892d2ee8f75cf882 # v4
+      - uses: actions/upload-artifact@b4b15b8c7c6ac21ea08fcf65892d2ee8f75cf882 # v4.4.3
         with:
           name: data-cask
           path: data-cask.tar.gz
@@ -55,7 +55,7 @@ jobs:
     timeout-minutes: 20
     steps:
       - name: Check out repository
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           fetch-depth: 0
           ref: ${{ github.event.pull_request.head.sha }}
@@ -76,7 +76,7 @@ jobs:
       - name: Archive data
         run: tar czvf data-core.tar.gz _data/formula/ _data/formula_canonical.json api/formula/ api/formula_tap_migrations.json formula/ api/internal/v3/homebrew-core.json
 
-      - uses: actions/upload-artifact@b4b15b8c7c6ac21ea08fcf65892d2ee8f75cf882 # v4
+      - uses: actions/upload-artifact@b4b15b8c7c6ac21ea08fcf65892d2ee8f75cf882 # v4.4.3
         with:
           name: data-core
           path: data-core.tar.gz
@@ -89,7 +89,7 @@ jobs:
     timeout-minutes: 20
     steps:
       - name: Check out repository
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           fetch-depth: 0
           ref: ${{ github.event.pull_request.head.sha }}
@@ -130,7 +130,7 @@ jobs:
       - name: Archive data
         run: tar czvf data-analytics.tar.gz _data/analytics api/analytics
 
-      - uses: actions/upload-artifact@b4b15b8c7c6ac21ea08fcf65892d2ee8f75cf882 # v4
+      - uses: actions/upload-artifact@b4b15b8c7c6ac21ea08fcf65892d2ee8f75cf882 # v4.4.3
         with:
           name: data-analytics
           path: data-analytics.tar.gz
@@ -143,7 +143,7 @@ jobs:
     timeout-minutes: 5
     steps:
       - name: Check out repository
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           fetch-depth: 0
           ref: ${{ github.event.pull_request.head.sha }}
@@ -164,7 +164,7 @@ jobs:
       - name: Update data for api samples
         run: /usr/bin/rake api_samples
 
-      - uses: actions/upload-artifact@b4b15b8c7c6ac21ea08fcf65892d2ee8f75cf882 # v4
+      - uses: actions/upload-artifact@b4b15b8c7c6ac21ea08fcf65892d2ee8f75cf882 # v4.4.3
         with:
           name: api-samples
           path: _includes/api-samples/
@@ -176,7 +176,7 @@ jobs:
     timeout-minutes: 20
     steps:
       - name: Set up Git repository
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
 
       - name: Set up Homebrew
         id: set-up-homebrew
@@ -191,7 +191,7 @@ jobs:
         with:
           bundler-cache: true
 
-      - uses: actions/download-artifact@fa0a91b85d4f404e444e00e005971372dc801d16 # v4
+      - uses: actions/download-artifact@fa0a91b85d4f404e444e00e005971372dc801d16 # v4.1.8
 
       - name: Move artifacts into place
         run: |
@@ -214,7 +214,7 @@ jobs:
         run: ./script/sign-json.rb
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
+        uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3.0.1
 
   deploy:
     needs: build
@@ -232,7 +232,7 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4.0.5
 
   deploy-issue:
     name: Open/close deploy issues
