@@ -233,3 +233,47 @@ permalink: :title
   {%- endfor -%}
 {%- endfor %}
 </table>
+
+<!-- Add separate tables for macOS and Linux dependencies -->
+{%- if f.mac_dependencies.size > 0 %}
+<p>macOS Dependencies:</p>
+<table>
+    {%- for dep in f.mac_dependencies -%}
+    <tr>
+        <td>{{ dep.name | escape }}</td>
+        <td>{{ dep.version | escape }}</td>
+    </tr>
+    {%- endfor -%}
+</table>
+{%- endif -%}
+
+{%- if f.linux_dependencies.size > 0 %}
+<p>Linux Dependencies:</p>
+<table>
+    {%- for dep in f.linux_dependencies -%}
+    <tr>
+        <td>{{ dep.name | escape }}</td>
+        <td>{{ dep.version | escape }}</td>
+    </tr>
+    {%- endfor -%}
+</table>
+{%- endif -%}
+
+<!-- Add separate sections for macOS and Linux caveats -->
+{%- if f.mac_caveats -%}
+<p>macOS Caveats:</p>
+<table class="full-width">
+    <tr>
+        <td>{{ f.mac_caveats | escape | replace: soft_indent, hard_indent | strip | newline_to_br }}</td>
+    </tr>
+</table>
+{%- endif -%}
+
+{%- if f.linux_caveats -%}
+<p>Linux Caveats:</p>
+<table class="full-width">
+    <tr>
+        <td>{{ f.linux_caveats | escape | replace: soft_indent, hard_indent | strip | newline_to_br }}</td>
+    </tr>
+</table>
+{%- endif -%}
