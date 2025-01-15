@@ -5,10 +5,12 @@
 {%- assign fdata = site.data.formula[data_fname] -%}
 {
 
+<!-- Formula Data Section -->
 {%- for key_value in fdata -%}
   {{ key_value[0] | jsonify }}:{{ key_value[1] | jsonify }},
 {%- endfor -%}
 
+<!-- Analytics Section -->
 "analytics":{
 {%- for category in site.analytics.categories.formulae -%}
   "{{ category.path | replace: "-", "_" }}":{
@@ -36,4 +38,14 @@
   {%- endunless -%}
 {%- endfor -%}
 },
+
+<!-- Dependencies Section -->
+"mac_dependencies":{{ fdata.mac_dependencies | jsonify }},
+"linux_dependencies":{{ fdata.linux_dependencies | jsonify }},
+
+<!-- Caveats Section -->
+"mac_caveats":{{ fdata.mac_caveats | jsonify }},
+"linux_caveats":{{ fdata.linux_caveats | jsonify }},
+
+<!-- Generated Date Section -->
 "generated_date":"{{ "today" | date: "%F" }}"}

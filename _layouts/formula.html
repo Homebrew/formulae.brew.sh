@@ -5,9 +5,10 @@ permalink: :title
 {%- assign fname = page.title -%}
 {%- assign data_fname = fname | remove: "@" | remove: "." | replace: "+", "_" -%}
 {%- assign f = site.data.formula[data_fname] -%}
+
+<!-- Formula Header Section -->
 <h2
-    {%- if f.disabled %} class="disabled" title="This formula has been disabled since {{ f.disable_date | escape }} because it {{ site.reasons.formula[f.disable_reason] | default: f.disable_reason | escape }}"
-    {%- elsif f.deprecated %} class="deprecated" title="This formula has been deprecated since {{ f.deprecation_date | escape }} because it {{ site.reasons.formula[f.deprecation_reason] | default: f.deprecation_reason | escape }}"
+    {%- if f.disabled or f.deprecated %} class="{{ f.disabled | default: 'disabled' }} {{ f.deprecated | default: 'deprecated' }}" title="This formula has been {{ f.disabled | default: 'disabled' }} since {{ f.disable_date | escape }} because it {{ site.reasons.formula[f.disable_reason] | default: f.disable_reason | escape }}{{ f.deprecated | default: 'deprecated' }} since {{ f.deprecation_date | escape }} because it {{ site.reasons.formula[f.deprecation_reason] | default: f.deprecation_reason | escape }}"
     {%- endif -%}
     >
     {{ f.name | escape }}
@@ -16,6 +17,7 @@ permalink: :title
     {%- endif -%}
 </h2>
 
+<!-- Install Command Section -->
 {%- include install_command.html item=f.name %}
 {%- if f.aliases.size > 0 %}
 <p class="aliases">Also known as:
@@ -44,10 +46,13 @@ permalink: :title
 </p>
 {%- endif %}
 
+<!-- Formula JSON API Section -->
 <p>Formula JSON API: <a href="{{ site.baseurl }}/api/formula/{{ f.name | uri_escape }}.json"><code>/api/formula/{{ f.name | escape }}.json</code></a></p>
 
+<!-- Formula Code Section -->
 <p>Formula code: <a target="_blank" href="{{ site.taps.core.remote }}/blob/{{ f.tap_git_head | url_encode }}/{{ f.ruby_source_path | uri_escape }}"><code>{{ f.name | escape }}.rb</code></a> on GitHub</p>
 
+<!-- Bottle Section -->
 <p>Bottle (binary package)
 {%- assign bottles = false -%}
 {%- if f.bottle_disabled %} not required, support provided for all supported Homebrew platforms.
@@ -77,7 +82,7 @@ permalink: :title
             {%- unless subsequent -%}
             <th rowspan="{{ arm64_bottle_count }}" scope="rowgroup">Apple Silicon</th>
             {%- endunless %}
-            <td style="text-transform:capitalize;">
+            <td class="bottle-cell">
                 {{ b[0] | remove_first: "arm64_" | replace: "_", "&nbsp;" }}
                 {%- assign subsequent = true -%}
             </td>
@@ -93,17 +98,18 @@ permalink: :title
             {%- unless subsequent -%}
             <th rowspan="{{ intel_bottle_count }}" scope="rowgroup">Intel</th>
             {%- endunless %}
-            <td style="text-transform:capitalize;">
+            <td class="bottle-cell">
                 {{ b[0] | replace: "x86_64", "64-bit" | replace: "_", "&nbsp;" }}
                 {%- assign subsequent = true -%}
             </td>
             <td>✅</td>
         </tr>
         {%- endunless -%}
-    {%- endfor -%}
+    {%- endfor %}
 </table>
 {%- endif %}
 
+<!-- Versions Section -->
 <p>Current versions:</p>
 <table>
     <tr>
@@ -130,6 +136,7 @@ permalink: :title
 <p>Keg-only</p>
 {%- endif -%}
 
+<!-- Options Section -->
 {%- if f.options.size > 0 %}
 <p>Options:</p>
 <table>
@@ -142,11 +149,13 @@ permalink: :title
 </table>
 {%- endif -%}
 
+<!-- Dependencies Section -->
 {%- include formulae.html fnames=f.dependencies description="Depends on" -%}
 {%- include formulae.html fnames=f.recommended_dependencies description="Depends on recommended" -%}
 {%- include formulae.html fnames=f.optional_dependencies description="Depends on optionally" -%}
 {%- include formulae.html fnames=f.build_dependencies description="Depends on when building from source" -%}
 
+<!-- Requirements Section -->
 {%- if f.requirements.size > 0 %}
 <p>Requires:
     {%- for r in f.requirements %}
@@ -188,6 +197,7 @@ permalink: :title
 </p>
 {%- endif -%}
 
+<!-- Conflicts Section -->
 {%- if f.conflicts_with.size > 0 %}
 <p>Conflicts with:
     {%- for conflict in f.conflicts_with %}
@@ -197,6 +207,7 @@ permalink: :title
 </p>
 {%- endif -%}
 
+<!-- Caveats Section -->
 {%- if f.caveats -%}
 {%- capture soft_indent %}
   {% endcapture -%}
@@ -209,6 +220,7 @@ permalink: :title
 </table>
 {%- endif -%}
 
+<!-- Analytics Section -->
 <p>Analytics:</p>
 <table>
 {%- for interval in site.analytics.intervals -%}
@@ -233,3 +245,49 @@ permalink: :title
   {%- endfor -%}
 {%- endfor %}
 </table>
+
+<!-- macOS Dependencies Section -->
+{%- if f.mac_dependencies.size > 0 %}
+<p>macOS Dependencies:</p>
+<table>
+    {%- for dep in f.mac_dependencies -%}
+    <tr>
+        <td>{{ dep.name | escape }}</td>
+        <td>{{ dep.version | escape }}</td>
+    </tr>
+    {%- endfor -%}
+</table>
+{%- endif -%}
+
+<!-- Linux Dependencies Section -->
+{%- if f.linux_dependencies.size > 0 %}
+<p>Linux Dependencies:</p>
+<table>
+    {%- for dep in f.linux_dependencies -%}
+    <tr>
+        <td>{{ dep.name | escape }}</td>
+        <td>{{ dep.version | escape }}</td>
+    </tr>
+    {%- endfor -%}
+</table>
+{%- endif -%}
+
+<!-- macOS Caveats Section -->
+{%- if f.mac_caveats -%}
+<p>macOS Caveats:</p>
+<table class="full-width">
+    <tr>
+        <td>{{ f.mac_caveats | escape | replace: soft_indent, hard_indent | strip | newline_to_br }}</td>
+    </tr>
+</table>
+{%- endif -%}
+
+<!-- Linux Caveats Section -->
+{%- if f.linux_caveats -%}
+<p>Linux Caveats:</p>
+<table class="full-width">
+    <tr>
+        <td>{{ f.linux_caveats | escape | replace: soft_indent, hard_indent | strip | newline_to_br }}</td>
+    </tr>
+</table>
+{%- endif -%}
