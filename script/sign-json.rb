@@ -17,8 +17,6 @@ PRIVATE_KEY = OpenSSL::PKey::RSA.new(ENV.fetch("JWS_SIGNING_KEY")).freeze
   ROOT/"_site/api/cask.json",
   ROOT/"_site/api/formula_tap_migrations.json",
   ROOT/"_site/api/cask_tap_migrations.json",
-  ROOT/"_site/api/internal/v3/homebrew-core.json",
-  ROOT/"_site/api/internal/v3/homebrew-cask.json",
 ].each do |path|
   data_string = path.read
 
