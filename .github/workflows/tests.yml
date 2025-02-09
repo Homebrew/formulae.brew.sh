@@ -113,7 +113,7 @@ jobs:
       - name: Get Python version file
         id: get-python-version
         run: |
-          echo "python-version-file=$(brew --repo Homebrew/brew/Library/Homebrew/formula-analytics)/.python-version" >> "$GITHUB_OUTPUT"
+          echo "python-version-file=$(brew --repo)/Library/Homebrew/formula-analytics/.python-version" >> "$GITHUB_OUTPUT"
   
       - name: Set up Python
         uses: actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38 # v5.4.0
