@@ -110,12 +110,6 @@ jobs:
         with:
           bundler-cache: true
 
-      - name: Tap Homebrew/formula-analytics
-        id: tap-formula-analytics
-        run: |
-          brew tap Homebrew/formula-analytics
-          echo "python-version-file=$(brew --repo Homebrew/formula-analytics)/.python-version" >> "$GITHUB_OUTPUT"
-
       - name: Set up Python
         uses: actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38 # v5.4.0
         with:
