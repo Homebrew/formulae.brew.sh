@@ -23,17 +23,8 @@ task :casks do
 end
 CLOBBER.include FileList[%w[_data/cask _data/cask_canonical.json api/cask api/cask-source api/cask_tap_migrations.json cask]]
 
-def setup_analytics
-  ENV["HOMEBREW_NO_AUTO_UPDATE"] = "1"
-  return if `brew tap`.include?("homebrew/formula-analytics")
-
-  sh "brew", "tap", "homebrew/formula-analytics"
-end
-
 desc "Dump analytics data"
 task :analytics do
-  setup_analytics
-
   sh "brew", "generate-analytics-api"
 end
 CLOBBER.include FileList[%w[_data/analytics api/analytics]]
