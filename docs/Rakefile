@@ -12,6 +12,8 @@ end
 desc "Run Markdownlint to validate the Markdown style."
 task :lint do
   sh "mdl $(git ls-files '*.md' | grep -v 'Manpage.md')"
+  sh "grep -L '^last_review_date:' $(git ls-files '*.md' | grep -v 'Manpage.md') | " \
+     "xargs -I {} echo 'File {} is missing last_review_date frontmatter.'"
 end
 
 desc "Run HTMLProofer to validate the HTML output."
