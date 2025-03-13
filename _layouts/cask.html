@@ -16,6 +16,12 @@ permalink: :title
     {%- endif -%}
 </h2>
 
+{%- if c.disable_replacement %}
+{%- include replacement.html item=c.disable_replacement r_type="cask" %}
+{%- elsif c.deprecation_replacement %}
+{%- include replacement.html item=c.deprecation_replacement r_type="cask" %}
+{%- endif %}
+
 {%- include install_command.html item=c.token modifier=" --cask" %}
 <p class="names">Name{%- if c.name.size > 1 -%}s{%- endif -%}:
 {%- for name in c.name %}
