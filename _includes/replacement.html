@@ -1,0 +1,6 @@
+{%- if site.data.formula[include.item] %}
+{%- assign r_type = "formula" %}
+{%- else %}
+{%- assign r_type = "cask" %}
+{%- endif %}
+<p class="recommended-replacement">Recommended replacement: <strong><a href="{{ site.baseurl }}/{{ r_type }}/{{ include.item | uri_escape }}">{{ include.item | escape }}</a></strong></p>
