@@ -16,6 +16,12 @@ permalink: :title
     {%- endif -%}
 </h2>
 
+{%- if f.disable_replacement %}
+{%- include replacement.html item=f.disable_replacement r_type="formula" %}
+{%- elsif f.deprecation_replacement %}
+{%- include replacement.html item=f.deprecation_replacement r_type="formula" %}
+{%- endif %}
+
 {%- include install_command.html item=f.name %}
 {%- if f.aliases.size > 0 %}
 <p class="aliases">Also known as:
