@@ -68,9 +68,16 @@ permalink: :title
 {%- if bottles -%}
     {%- assign arm64_bottle_count = 0 -%}
     {%- assign intel_bottle_count = 0 -%}
+    {%- assign linux_bottle_count = 0 -%}
     {%- for b in f.bottle.stable.files -%}
         {%- if b[0] contains "arm64_" -%}
-            {%- assign arm64_bottle_count = arm64_bottle_count | plus: 1 -%}
+            {%- if b[0] contains "_linux" -%}
+                {%- assign linux_bottle_count = linux_bottle_count | plus: 1 -%}
+            {%- else -%}
+                {%- assign arm64_bottle_count = arm64_bottle_count | plus: 1 -%}
+            {%- endif -%}
+        {%- elsif b[0] contains "_linux" -%}
+            {%- assign linux_bottle_count = linux_bottle_count | plus: 1 -%}
         {%- else -%}
             {%- assign intel_bottle_count = intel_bottle_count | plus: 1 -%}
         {%- endif -%}
@@ -79,9 +86,12 @@ permalink: :title
     {%- assign subsequent = false -%}
     {%- for b in f.bottle.stable.files -%}
         {%- if b[0] contains "arm64_" %}
+            {%- if b[0] contains "_linux" -%}
+                {%- continue -%}
+            {%- endif -%}
         <tr>
             {%- unless subsequent -%}
-            <th rowspan="{{ arm64_bottle_count }}" scope="rowgroup">Apple Silicon</th>
+            <th rowspan="{{ arm64_bottle_count }}" scope="rowgroup">macOS on<br>Apple Silicon</th>
             {%- endunless %}
             <td style="text-transform:capitalize;">
                 {{ b[0] | remove_first: "arm64_" | replace: "_", "&nbsp;" }}
@@ -95,17 +105,36 @@ permalink: :title
     {%- assign subsequent = false -%}
     {%- for b in f.bottle.stable.files -%}
         {%- unless b[0] contains "arm64_" %}
+            {%- if b[0] contains "_linux" -%}
+                {%- continue -%}
+            {%- endif -%}
         <tr>
             {%- unless subsequent -%}
-            <th rowspan="{{ intel_bottle_count }}" scope="rowgroup">Intel</th>
+            <th rowspan="{{ intel_bottle_count }}" scope="rowgroup">macOS on<br>Intel</th>
             {%- endunless %}
             <td style="text-transform:capitalize;">
-                {{ b[0] | replace: "x86_64", "64-bit" | replace: "_", "&nbsp;" }}
+                {{ b[0] | replace: "_", "&nbsp;" }}
                 {%- assign subsequent = true -%}
             </td>
             <td>✅</td>
         </tr>
         {%- endunless -%}
+    {%- endfor -%}
+    <tr><th colspan="3"></th></tr>
+    {%- assign subsequent = false -%}
+    {%- for b in f.bottle.stable.files -%}
+        {%- if b[0] contains "_linux" %}
+        <tr>
+            {%- unless subsequent -%}
+            <th rowspan="{{ linux_bottle_count }}" scope="rowgroup">Linux</th>
+            {%- endunless %}
+            <td>
+                {{ b[0] | replace: "arm64", "ARM64" | replace: "_linux", "" }}
+                {%- assign subsequent = true -%}
+            </td>
+            <td>✅</td>
+        </tr>
+        {%- endif -%}
     {%- endfor -%}
 </table>
 {%- endif %}
