@@ -16,11 +16,18 @@ permalink: :title
     {%- endif -%}
 </h2>
 
-{%- if f.disable_replacement %}
-{%- include replacement.html item=f.disable_replacement r_type="formula" %}
-{%- elsif f.deprecation_replacement %}
-{%- include replacement.html item=f.deprecation_replacement r_type="formula" %}
-{%- endif %}
+{%- if f.deprecated == false and f.deprecation_date -%}
+    {%- include attribute.html key="Deprecation date" value=f.deprecation_date -%}
+{%- endif -%}
+{%- if f.disabled == false and f.disable_date -%}
+    {%- include attribute.html key="Disable date" value=f.disable_date -%}
+{%- endif -%}
+
+{%- if f.disable_replacement -%}
+    {%- include replacement.html item=f.disable_replacement r_type="formula" -%}
+{%- elsif f.deprecation_replacement -%}
+    {%- include replacement.html item=f.deprecation_replacement r_type="formula" -%}
+{%- endif -%}
 
 {%- include install_command.html item=f.name %}
 {%- if f.aliases.size > 0 %}
@@ -162,8 +169,8 @@ permalink: :title
 
 {%- include formulae.html fnames=f.versioned_formulae description="Other versions" -%}
 
-{%- if f.revision > 0 %}
-<p>Revision: <strong>{{ f.revision }}</strong></p>
+{%- if f.revision > 0 -%}
+    {%- include attribute.html key="Revision" value=f.revision -%}
 {%- endif -%}
 
 {%- if f.keg_only %}
