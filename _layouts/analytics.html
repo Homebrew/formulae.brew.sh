@@ -45,39 +45,41 @@ layout: base
     <tr>
         <td class="number-data">#{{ item.number }}</td>
         <td>
-    {%- if page.category == "os-version" -%}
-            <code>{{ item.os_version | escape }}</code>
-    {%- elsif page.category == "homebrew-devcmdrun-developer" -%}
-            <code>{{ item.devcmdrun_developer | escape }}</code>
-    {%- elsif page.category == "homebrew-os-arch-ci" -%}
-            <code>{{ item.os_arch_ci | escape }}</code>
-    {%- elsif page.category == "homebrew-prefixes" -%}
-            <code>{{ item.prefix | escape }}</code>
-    {%- elsif page.category == "brew-command-run" -%}
-            <code>{{ item.command_run | escape }}</code>
-    {%- elsif page.category == "brew-command-run-options" -%}
-            <code>{{ item.command_run_options | escape }}</code>
-    {%- elsif page.category == "brew-test-bot-test" -%}
-            <code>{{ item.test_bot_test | escape }}</code>
-    {%- elsif page.category == "homebrew-versions" -%}
-            <code>{{ item.version | escape }}</code>
-    {%- elsif page.category == "cask-install" -%}
-        {%- assign data_name = item.cask | remove: "@" | remove: "." | replace: "+", "_" -%}
-        {%- if site.data.cask[data_name] != nil -%}
-            <a href="{{ site.baseurl }}/cask/{{ item.cask | uri_escape }}"><code>{{ item.cask | escape }}</code></a>
+    {%- case page.category -%}
+        {%- when "os-version" -%}
+                <code>{{ item.os_version | escape }}</code>
+        {%- when "homebrew-devcmdrun-developer" -%}
+                <code>{{ item.devcmdrun_developer | escape }}</code>
+        {%- when "homebrew-os-arch-ci" -%}
+                <code>{{ item.os_arch_ci | escape }}</code>
+        {%- when "homebrew-prefixes" -%}
+                <code>{{ item.prefix | escape }}</code>
+        {%- when "homebrew-versions" -%}
+                <code>{{ item.version | escape }}</code>
+        {%- when "brew-command-run" -%}
+                <code>{{ item.command_run | escape }}</code>
+        {%- when "brew-command-run-options" -%}
+                <code>{{ item.command_run_options | escape }}</code>
+        {%- when "brew-test-bot-test" -%}
+                <code>{{ item.test_bot_test | escape }}</code>
+        {%- when "cask-install" -%}
+            {%- assign data_token = item.cask | remove: "@" | remove: "." | replace: "+", "_" -%}
+            {%- assign cdata = site.data.cask[data_token] -%}
+            {%- if cdata and cdata.token == item.cask -%}
+                <a href="{{ site.baseurl }}/cask/{{ item.cask | uri_escape }}"><code>{{ item.cask | escape }}</code></a>
+            {%- else -%}
+                <code>{{ item.cask | escape }}</code>
+            {%- endif -%}
         {%- else -%}
-            <code>{{ item.cask | escape }}</code>
-        {%- endif -%}
-    {%- else -%}
-        {%- assign full_name = item.formula | split: " " | first -%}
-        {%- assign data_name = full_name | remove: "@" | remove: "." | replace: "+", "_" -%}
-        {%- assign formula = site.data.formula[data_name] -%}
-        {%- if full_name == formula.name -%}
-            <a href="{{ site.baseurl }}/formula/{{ full_name | uri_escape }}"><code>{{ item.formula | escape }}</code></a>
-        {%- else -%}
-            <code>{{ item.formula | escape }}</code>
-        {%- endif -%}
-    {%- endif -%}
+            {%- assign fname = item.formula | split: " " | first -%}
+            {%- assign data_fname = fname | remove: "@" | remove: "." | replace: "+", "_" -%}
+            {%- assign fdata = site.data.formula[data_fname] -%}
+            {%- if fdata and fdata.name == fname -%}
+                <a href="{{ site.baseurl }}/formula/{{ fname | uri_escape }}"><code>{{ item.formula | escape }}</code></a>
+            {%- else -%}
+                <code>{{ item.formula | escape }}</code>
+            {%- endif -%}
+    {%- endcase -%}
         </td>
         <td class="number-data">{{ item.count }}</td>
         <td class="number-data">{{ item.percent }}%</td>

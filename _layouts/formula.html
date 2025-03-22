@@ -7,7 +7,7 @@ permalink: :title
 {%- assign f = site.data.formula[data_fname] -%}
 <h2
     {%- if f.disabled %} class="disabled" title="This formula has been disabled since {{ f.disable_date | escape }} because it {{ site.reasons.formula[f.disable_reason] | default: f.disable_reason | escape }}"
-    {%- elsif f.deprecated %} class="deprecated" title="This formula has been deprecated since {{ f.deprecation_date | escape }} because it {{ site.reasons.formula[f.deprecation_reason] | default: f.deprecation_reason | escape }}"
+    {%- elsif f.deprecated %} class="deprecated" title="This formula has been deprecated{% if f.deprecation_date %} since {{ f.deprecation_date | escape }}{% endif %} because it {{ site.reasons.formula[f.deprecation_reason] | default: f.deprecation_reason | escape }}"
     {%- endif -%}
     >
     {{ f.name | escape }}
@@ -16,11 +16,18 @@ permalink: :title
     {%- endif -%}
 </h2>
 
-{%- if f.disable_replacement %}
-{%- include replacement.html item=f.disable_replacement r_type="formula" %}
-{%- elsif f.deprecation_replacement %}
-{%- include replacement.html item=f.deprecation_replacement r_type="formula" %}
-{%- endif %}
+{%- if f.deprecated == false and f.deprecation_date -%}
+    {%- include attribute.html key="Deprecation date" value=f.deprecation_date -%}
+{%- endif -%}
+{%- if f.disabled == false and f.disable_date -%}
+    {%- include attribute.html key="Disable date" value=f.disable_date -%}
+{%- endif -%}
+
+{%- if f.disable_replacement -%}
+    {%- include replacement.html item=f.disable_replacement r_type="formula" -%}
+{%- elsif f.deprecation_replacement -%}
+    {%- include replacement.html item=f.deprecation_replacement r_type="formula" -%}
+{%- endif -%}
 
 {%- include install_command.html item=f.name %}
 {%- if f.aliases.size > 0 %}
@@ -41,6 +48,7 @@ permalink: :title
 {%- endif %}
 <p class="desc">{{ f.desc | escape }}</p>
 <p class="homepage"><a href="{{ f.homepage | escape }}">{{ f.homepage | escape }}</a></p>
+
 {%- if f.license.size > 0 %}
 <p>License:
     {%- for license in f.license %}
@@ -162,8 +170,8 @@ permalink: :title
 
 {%- include formulae.html fnames=f.versioned_formulae description="Other versions" -%}
 
-{%- if f.revision > 0 %}
-<p>Revision: <strong>{{ f.revision }}</strong></p>
+{%- if f.revision > 0 -%}
+    {%- include attribute.html key="Revision" value=f.revision -%}
 {%- endif -%}
 
 {%- if f.keg_only %}
