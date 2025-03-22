@@ -7,7 +7,7 @@ permalink: :title
 {%- assign c = site.data.cask[data_token] -%}
 <h2
     {%- if c.disabled %} class="disabled" title="This cask has been disabled since {{ c.disable_date | escape }} because it {{ site.reasons.cask[c.disable_reason] | default: c.disable_reason | escape }}"
-    {%- elsif c.deprecated %} class="deprecated" title="This cask has been deprecated since {{ c.deprecation_date | escape }} because it {{ site.reasons.cask[c.deprecation_reason] | default: c.deprecation_reason | escape }}"
+    {%- elsif c.deprecated %} class="deprecated" title="This cask has been deprecated{% if c.deprecation_date %} since {{ c.deprecation_date | escape }}{% endif %} because it {{ site.reasons.cask[c.deprecation_reason] | default: c.deprecation_reason | escape }}"
     {%- endif -%}
     >
     {{ c.token | escape }}
@@ -41,8 +41,9 @@ permalink: :title
 {%- endif %}
 <p class="homepage"><a href="{{ c.homepage | escape }}">{{ c.homepage | escape }}</a></p>
 
-<p><a href="{{ site.baseurl }}/api/cask/{{ c.token | uri_escape }}.json"><code>/api/cask/{{ c.token | escape }}.json</code> (JSON API)</a></p>
-<p><a target="_blank" href="{{ site.taps.cask.remote }}/blob/{{ c.tap_git_head | url_encode }}/{{ c.ruby_source_path | uri_escape }}">Cask code</a> on GitHub</p>
+<p>Cask JSON API: <a href="{{ site.baseurl }}/api/cask/{{ c.token | uri_escape }}.json"><code>/api/cask/{{ c.token | escape }}.json</code></a></p>
+
+<p>Cask code: <a target="_blank" href="{{ site.taps.cask.remote }}/blob/{{ c.tap_git_head | url_encode }}/{{ c.ruby_source_path | uri_escape }}"><code>{{ c.token | escape }}.rb</code></a> on GitHub</p>
 
 <p>Current version: <a href="{{ c.url | escape }}" title="Download for {{ c.token | escape }}">{{ c.version | escape }}</a></p>
 
@@ -57,7 +58,7 @@ permalink: :title
 
 {%- if c.depends_on.size > 0 -%}
     {%- include casks.html tokens=c.depends_on.cask description="Depends on casks" -%}
-    {%- include formulae.html fnames=c.depends_on.formula description="Depends on" -%}
+    {%- include formulae.html fnames=c.depends_on.formula description="Depends on formulae" -%}
     {%- assign requirements = "" -%}
     {%- if c.depends_on.macos -%}
         {%- capture requirements -%}
@@ -79,13 +80,13 @@ permalink: :title
         {%- endcapture -%}
     {%- endif -%}
     {%- if requirements.size > 0 %}
-<p>Requires: {{ requirements }}</p>
+<p>Current version requires: {{ requirements }}</p>
     {%- endif -%}
 {%- endif -%}
 
 {%- if c.conflicts_with.size > 0 -%}
     {%- include casks.html tokens=c.conflicts_with.cask description="Conflicts with casks" -%}
-    {%- include formulae.html fnames=c.conflicts_with.formula description="Conflicts with" -%}
+    {%- include formulae.html fnames=c.conflicts_with.formula description="Conflicts with formulae" -%}
 {%- endif -%}
 
 {%- if c.caveats -%}
@@ -112,7 +113,7 @@ permalink: :title
     {%- endif -%}
 {%- endfor %}
 
-<p>Variations:</p>
+<p>Versions:</p>
 <table class="full-width">
     {%- assign subsequent = false -%}
     {%- for variation in c.variations -%}
