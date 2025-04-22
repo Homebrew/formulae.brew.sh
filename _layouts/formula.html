@@ -23,10 +23,14 @@ permalink: :title
     {%- include attribute.html key="Disable date" value=f.disable_date -%}
 {%- endif -%}
 
-{%- if f.disable_replacement -%}
-    {%- include replacement.html item=f.disable_replacement r_type="formula" -%}
-{%- elsif f.deprecation_replacement -%}
-    {%- include replacement.html item=f.deprecation_replacement r_type="formula" -%}
+{%- if f.disable_replacement_formula -%}
+    {%- include replacement.html item=f.disable_replacement_formula r_type="formula" -%}
+{%- elsif f.disable_replacement_cask -%}
+    {%- include replacement.html item=f.disable_replacement_cask r_type="cask" -%}
+{%- elsif f.deprecation_replacement_formula -%}
+    {%- include replacement.html item=f.deprecation_replacement_formula r_type="formula" -%}
+{%- elsif f.deprecation_replacement_cask -%}
+    {%- include replacement.html item=f.deprecation_replacement_cask r_type="cask" -%}
 {%- endif -%}
 
 {%- include install_command.html item=f.name %}
