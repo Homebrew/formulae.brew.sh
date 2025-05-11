@@ -4,10 +4,12 @@ layout: default
 permalink: /formula/
 redirect_from: /formula-linux/
 ---
+<header>
 <p>This is a listing of all packages available from the <a href="{{ site.taps.core.remote }}">{{ site.taps.core.repository }} tap</a> via the <a href="https://brew.sh">Homebrew</a> package manager for macOS and Linux.</p>
 
 <h2><a href="{{ site.baseurl }}/api/formula.json"><code>/api/formula.json</code> (JSON API)</a></h2>
-
+</header>
+<main>
 <table>
     {%- assign sorted_formulae = site.data.formula | sort -%}
     {%- for formula in sorted_formulae -%}
@@ -18,4 +20,5 @@ redirect_from: /formula-linux/
     </tr>
     {%- endfor -%}
 </table>
+</main>
 <footer id="border-no-bottom">Last updated: {{ "today" | date: "%F %R" }}</footer>
