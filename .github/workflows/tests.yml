@@ -138,43 +138,8 @@ jobs:
           path: data-analytics.tar.gz
           retention-days: 1
 
-  generate-samples:
-    if: startsWith( github.repository, 'Homebrew/' )
-    name: Generate API samples
-    runs-on: ubuntu-latest
-    timeout-minutes: 5
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
-        with:
-          fetch-depth: 0
-          persist-credentials: false
-          ref: ${{ github.event.pull_request.head.sha }}
-
-      - name: Set up Homebrew
-        id: set-up-homebrew
-        uses: Homebrew/actions/setup-homebrew@master
-        with:
-          core: false
-          cask: false
-          test-bot: false
-
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@13e7a03dc3ac6c3798f4570bfead2aed4d96abfb # v1.244.0
-        with:
-          bundler-cache: true
-
-      - name: Update data for api samples
-        run: /usr/bin/rake api_samples
-
-      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
-        with:
-          name: api-samples
-          path: _includes/api-samples/
-          retention-days: 1
-
   build:
-    needs: [generate-cask, generate-core, generate-analytics, generate-samples]
+    needs: [generate-cask, generate-core, generate-analytics]
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
@@ -203,7 +168,9 @@ jobs:
           tar xvf data-analytics/data-analytics.tar.gz
           tar xvf data-cask/data-cask.tar.gz
           tar xvf data-core/data-core.tar.gz
-          mv -v api-samples _includes/api-samples
+
+      - name: Generate API samples
+        run: /usr/bin/rake api_samples
 
       - name: Build site
         run: bundle exec jekyll build
@@ -246,7 +213,6 @@ jobs:
         generate-cask,
         generate-core,
         generate-analytics,
-        generate-samples,
         build,
         deploy,
       ]

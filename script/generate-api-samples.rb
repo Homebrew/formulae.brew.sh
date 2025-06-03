@@ -4,6 +4,9 @@
 require "fileutils"
 require "json"
 require "open3"
+require "pathname"
+
+ROOT = Pathname(__dir__).parent.freeze
 
 SAMPLES = {
   analytics_cask_install_homebrew_cask_30d: "analytics/cask-install/homebrew-cask/30d.json",
@@ -11,7 +14,7 @@ SAMPLES = {
   analytics_install_homebrew_core_30d:      "analytics/install/homebrew-core/30d.json",
   cask_docker:                              "cask/docker.json",
   formula_wget:                             "formula/wget.json",
-  formula:                                  "formula.json",
+  formula:                                  "formula/wget.json",
 }.freeze
 
 def failed!
@@ -32,34 +35,15 @@ def generate_api_samples
     contents = if File.extname(api_path) == ".json"
       format_json_contents name, api_path
     else
-      codify curl_output(api_path), language: "rb"
+      codify api_file_contents(api_path), language: "rb"
     end
 
     File.write "#{includes_dir}/#{name}.md", contents
   end
 end
 
-def curl_output(api_path)
-  api_url = "https://formulae.brew.sh/api/#{api_path}"
-  out, err, status = Open3.capture3(
-    "curl",
-    "--silent",
-    "--show-error",
-    "--fail",
-    "--retry", "10",
-    "--retry-all-errors",
-    "--retry-max-time", "120",
-    "--connect-timeout", "20",
-    api_url
-  )
-  unless status.success?
-    warn "Error fetching #{api_url}: #{err}"
-    # Return something JSON.parse can handle and we'll warn later.
-    failed!
-    return "{}"
-  end
-
-  out.strip
+def api_file_contents(api_path)
+  (ROOT/"_data/#{api_path}").read.strip
 end
 
 def codify(contents, language:)
@@ -67,7 +51,7 @@ def codify(contents, language:)
 end
 
 def format_json_contents(name, api_path)
-  contents = JSON.parse curl_output(api_path)
+  contents = JSON.parse api_file_contents(api_path)
 
   # TODO: remove when passing
   if contents.nil?
@@ -102,10 +86,6 @@ def format_json_contents(name, api_path)
     contents["formulae"].select! do |formula_name, _|
       formula_name == "wget"
     end
-  when :formula
-    contents.select! do |obj|
-      obj["name"] == "wget"
-    end
   end
 
   contents = JSON.pretty_generate contents
@@ -128,8 +108,16 @@ def format_json_contents(name, api_path)
     contents.sub!(/}(?=\n    \])/, "},\n      ...")
     contents.sub!(/\](?=\n  }\n})/, "],\n    ...")
   when :formula
-    contents.sub!(/^\[/, "[\n  ...")
-    contents.sub!(/}(?=\n\])/, "},\n  ...")
+    # Each entry in the formula list is a full formula without the analytics or generated date
+    contents.sub!(/(},\n  "analytics":*)$/, "}\n}")
+    contents = contents.lines.map { |line| "  #{line}" }.join
+    contents = <<~RESPONSE.strip
+      [
+        ...
+      #{contents},
+        ...
+      ]
+    RESPONSE
   end
 
   codify contents, language: "json"
