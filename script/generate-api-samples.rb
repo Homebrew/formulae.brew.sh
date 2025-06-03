@@ -4,6 +4,9 @@
 require "fileutils"
 require "json"
 require "open3"
+require "pathname"
+
+ROOT = Pathname(__dir__).parent.freeze
 
 SAMPLES = {
   analytics_cask_install_homebrew_cask_30d: "analytics/cask-install/homebrew-cask/30d.json",
@@ -11,8 +14,18 @@ SAMPLES = {
   analytics_install_homebrew_core_30d:      "analytics/install/homebrew-core/30d.json",
   cask_docker:                              "cask/docker.json",
   formula_wget:                             "formula/wget.json",
-  formula:                                  "formula.json",
+  formula:                                  "formula/wget.json",
 }.freeze
+
+# Use template values for the API contents to allow testing without generating all API files
+USE_TEMPLATES = ARGV.include? "--template"
+TEMPLATE = <<~TEMPLATE
+  {
+    "name": "@@TEMPLATE@@",
+    "formulae": [],
+    "items": []
+  }
+TEMPLATE
 
 def failed!
   @failed ||= true
@@ -32,34 +45,21 @@ def generate_api_samples
     contents = if File.extname(api_path) == ".json"
       format_json_contents name, api_path
     else
-      codify curl_output(api_path), language: "rb"
+      codify api_file_contents(api_path), language: "rb"
     end
 
     File.write "#{includes_dir}/#{name}.md", contents
   end
 end
 
-def curl_output(api_path)
-  api_url = "https://formulae.brew.sh/api/#{api_path}"
-  out, err, status = Open3.capture3(
-    "curl",
-    "--silent",
-    "--show-error",
-    "--fail",
-    "--retry", "10",
-    "--retry-all-errors",
-    "--retry-max-time", "120",
-    "--connect-timeout", "20",
-    api_url
-  )
-  unless status.success?
-    warn "Error fetching #{api_url}: #{err}"
-    # Return something JSON.parse can handle and we'll warn later.
-    failed!
-    return "{}"
-  end
+def api_file_contents(api_path)
+  return TEMPLATE if USE_TEMPLATES
 
-  out.strip
+  api_file = ROOT/"_data/#{api_path}"
+  return api_file.read.strip if api_file.exist?
+
+  warn "Skipping missing API file: #{api_file}"
+  failed!
 end
 
 def codify(contents, language:)
@@ -67,26 +67,10 @@ def codify(contents, language:)
 end
 
 def format_json_contents(name, api_path)
-  contents = JSON.parse curl_output(api_path)
+  contents = api_file_contents(api_path)
+  return if failed?
 
-  # TODO: remove when passing
-  if contents.nil?
-    warn "Skipping nil #{api_path}"
-    failed!
-    return
-  end
-
-  if contents.empty?
-    warn "Skipping empty #{api_path}"
-    failed!
-    return
-  end
-
-  if contents == "null"
-    warn "Skipping null #{api_path}"
-    failed!
-    return
-  end
+  contents = JSON.parse contents
 
   # Only include a select group of items to reduce the length of the sample
   case name
@@ -101,10 +85,6 @@ def format_json_contents(name, api_path)
   when :analytics_install_homebrew_core_30d
     contents["formulae"].select! do |formula_name, _|
       formula_name == "wget"
-    end
-  when :formula
-    contents.select! do |obj|
-      obj["name"] == "wget"
     end
   end
 
@@ -128,8 +108,16 @@ def format_json_contents(name, api_path)
     contents.sub!(/}(?=\n    \])/, "},\n      ...")
     contents.sub!(/\](?=\n  }\n})/, "],\n    ...")
   when :formula
-    contents.sub!(/^\[/, "[\n  ...")
-    contents.sub!(/}(?=\n\])/, "},\n  ...")
+    # Each entry in the formula list is a full formula without the analytics or generated date
+    contents.sub!(/(},\n  "analytics":*)$/, "}\n}")
+    contents = contents.lines.map { |line| "  #{line}" }.join
+    contents = <<~RESPONSE.strip
+      [
+        ...
+      #{contents},
+        ...
+      ]
+    RESPONSE
   end
 
   codify contents, language: "json"
