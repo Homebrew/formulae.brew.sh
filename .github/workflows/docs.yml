@@ -67,7 +67,8 @@ jobs:
       - name: Generate formulae.brew.sh API samples
         if: github.repository == 'Homebrew/formulae.brew.sh'
         working-directory: docs
-        run: ../script/generate-api-samples.rb
+        # This test only needs the files to exist to check for broken links, the content doesn't matter
+        run: ../script/generate-api-samples.rb --template
 
       - name: Build the site and check for broken links
         working-directory: docs

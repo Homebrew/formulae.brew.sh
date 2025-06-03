@@ -17,6 +17,16 @@ SAMPLES = {
   formula:                                  "formula/wget.json",
 }.freeze
 
+# Use template values for the API contents to allow testing without generating all API files
+USE_TEMPLATES = ARGV.include? "--template"
+TEMPLATE = <<~TEMPLATE
+  {
+    "name": "@@TEMPLATE@@",
+    "formulae": [],
+    "items": []
+  }
+TEMPLATE
+
 def failed!
   @failed ||= true
 end
@@ -43,7 +53,13 @@ def generate_api_samples
 end
 
 def api_file_contents(api_path)
-  (ROOT/"_data/#{api_path}").read.strip
+  return TEMPLATE if USE_TEMPLATES
+
+  api_file = ROOT/"_data/#{api_path}"
+  return api_file.read.strip if api_file.exist?
+
+  warn "Skipping missing API file: #{api_file}"
+  failed!
 end
 
 def codify(contents, language:)
@@ -51,26 +67,10 @@ def codify(contents, language:)
 end
 
 def format_json_contents(name, api_path)
-  contents = JSON.parse api_file_contents(api_path)
+  contents = api_file_contents(api_path)
+  return if failed?
 
-  # TODO: remove when passing
-  if contents.nil?
-    warn "Skipping nil #{api_path}"
-    failed!
-    return
-  end
-
-  if contents.empty?
-    warn "Skipping empty #{api_path}"
-    failed!
-    return
-  end
-
-  if contents == "null"
-    warn "Skipping null #{api_path}"
-    failed!
-    return
-  end
+  contents = JSON.parse contents
 
   # Only include a select group of items to reduce the length of the sample
   case name
