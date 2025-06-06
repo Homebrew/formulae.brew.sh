@@ -178,8 +178,13 @@ jobs:
           tar xvf data-core/data-core.tar.gz
 
       - name: Generate API samples
-        run: /usr/bin/rake api_samples
-        if: github.ref_name == 'master' || (github.event_name == 'pull_request' && github.event.pull_request.head.repo.fork == false && github.event.pull_request.user.login != 'dependabot[bot]')
+        run: |
+          GENERATE_SAMPLES="${{ github.ref_name == 'master' || (github.event_name == 'pull_request' && github.event.pull_request.head.repo.fork == false && github.event.pull_request.user.login != 'dependabot[bot]') }}"
+          if [ "$GENERATE_SAMPLES" = "true" ]; then
+            /usr/bin/rake "api_samples"
+          else
+            /usr/bin/rake "api_samples[template]"
+          fi
 
       - name: Build site
         run: bundle exec jekyll build

@@ -30,7 +30,9 @@ end
 CLOBBER.include FileList[%w[_data/analytics api/analytics]]
 
 desc "Update API samples"
-task :api_samples do
-  sh "ruby", "script/generate-api-samples.rb"
+task :api_samples, [:options] do |_, args|
+  generate_args = %w[ruby script/generate-api-samples.rb]
+  generate_args << "--template" if args.options == "template"
+  sh(*generate_args)
 end
 CLOBBER.include FileList[%w[_includes/api-samples]]
