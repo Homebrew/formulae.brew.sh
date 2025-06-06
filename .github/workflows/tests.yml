@@ -177,13 +177,10 @@ jobs:
           tar xvf data-cask/data-cask.tar.gz
           tar xvf data-core/data-core.tar.gz
 
-      - name: Check whether to generate the entire API
-        id: check
-        run: echo "generate-entire-api=${{ github.ref_name == 'master' || (github.event_name == 'pull_request' && github.event.pull_request.head.repo.fork == false && github.event.pull_request.user.login != 'dependabot[bot]') }}" >> "$GITHUB_OUTPUT"
-
       - name: Generate API samples
         run: |
-          if [ "${{ steps.check.outputs.generate-entire-api }}" = "true" ]; then
+          GENERATE_SAMPLES="${{ github.ref_name == 'master' || (github.event_name == 'pull_request' && github.event.pull_request.head.repo.fork == false && github.event.pull_request.user.login != 'dependabot[bot]') }}"
+          if [ "$GENERATE_SAMPLES" = "true" ]; then
             /usr/bin/rake "api_samples"
           else
             /usr/bin/rake "api_samples[template]"
@@ -196,7 +193,7 @@ jobs:
         run: ./script/validate-build.rb
 
       - name: Sign API
-        if: steps.check.outputs.generate-entire-api == 'true'
+        if: github.ref_name == 'master' || (github.event_name == 'pull_request' && github.event.pull_request.head.repo.fork == false && github.event.pull_request.user.login != 'dependabot[bot]')
         env:
           JWS_SIGNING_KEY_ID: homebrew-1
           JWS_SIGNING_KEY: ${{ secrets.JWS_HOMEBREW_1 }}
