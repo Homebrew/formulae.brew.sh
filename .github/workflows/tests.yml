@@ -179,6 +179,7 @@ jobs:
 
       - name: Generate API samples
         run: /usr/bin/rake api_samples
+        if: github.ref_name == 'master' || (github.event_name == 'pull_request' && github.event.pull_request.head.repo.fork == false && github.event.pull_request.user.login != 'dependabot[bot]')
 
       - name: Build site
         run: bundle exec jekyll build
