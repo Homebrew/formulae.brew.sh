@@ -1,3 +1,4 @@
+# This file is synced from `Homebrew/brew` by the `.github` repository, do not modify it directly.
 name: Documentation CI
 
 on:
@@ -24,7 +25,7 @@ jobs:
     steps:
       - name: Set up Homebrew
         id: set-up-homebrew
-        uses: Homebrew/actions/setup-homebrew@master
+        uses: Homebrew/actions/setup-homebrew@main
         with:
           core: false
           cask: false
@@ -67,7 +68,6 @@ jobs:
       - name: Generate formulae.brew.sh API samples
         if: github.repository == 'Homebrew/formulae.brew.sh'
         working-directory: docs
-        # This test only needs the files to exist to check for broken links, the content doesn't matter
         run: ../script/generate-api-samples.rb --template
 
       - name: Build the site and check for broken links
@@ -75,3 +75,4 @@ jobs:
         run: bundle exec rake test
         env:
           JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
