@@ -12,7 +12,7 @@ SAMPLES = {
   analytics_cask_install_homebrew_cask_30d: "analytics/cask-install/homebrew-cask/30d.json",
   analytics_install_30d:                    "analytics/install/30d.json",
   analytics_install_homebrew_core_30d:      "analytics/install/homebrew-core/30d.json",
-  cask_docker:                              "cask/docker.json",
+  cask_docker_desktop:                      "cask/docker-desktop.json",
   formula_wget:                             "formula/wget.json",
   formula:                                  "formula/wget.json",
 }.freeze
