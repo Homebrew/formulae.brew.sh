@@ -48,11 +48,11 @@ curl https://formulae.brew.sh/api/cask/${CASK}.json
 
 **Variables:**
 
-- `${CASK}`: the name of the cask, e.g. `docker`
+- `${CASK}`: the name of the cask, e.g. `docker-desktop`
 
 **[Response](https://formulae.brew.sh/api/cask/docker.json):**
 
-{% include api-samples/cask_docker.md %}
+{% include api-samples/cask_docker_desktop.md %}
 
 ## Analytics
 
