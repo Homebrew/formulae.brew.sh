@@ -177,6 +177,12 @@ jobs:
           tar xvf data-cask/data-cask.tar.gz
           tar xvf data-core/data-core.tar.gz
 
+      - name: Install oras for pulling from GitHub Packages
+        run: brew install oras
+
+      - name: Pull executables.txt from GitHub Packages
+        run: oras pull ghcr.io/homebrew/command-not-found/executables:latest --output api/internal
+
       - name: Generate API samples
         run: |
           GENERATE_SAMPLES="${{ github.ref_name == 'main' || (github.event_name == 'pull_request' && github.event.pull_request.head.repo.fork == false && github.event.pull_request.user.login != 'dependabot[bot]') }}"
