@@ -70,6 +70,12 @@ jobs:
         working-directory: docs
         run: ../script/generate-api-samples.rb --template
 
+      - name: Cache HTML Proofer
+        uses: actions/cache@5a3ec84eff668545956fd18022155c47e93e2684 # v4.2.3
+        with:
+          path: tmp/.htmlproofer
+          key: ${{ runner.os }}-htmlproofer
+
       - name: Build the site and check for broken links
         working-directory: docs
         run: bundle exec rake test
