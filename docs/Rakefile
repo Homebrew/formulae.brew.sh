@@ -38,10 +38,12 @@ task test: :build do
       %r{https://github.com/},
       %r{https://homebrew.1password.com/},
       "https://legacy.python.org/dev/peps/pep-0453/#recommendations-for-downstream-distributors",
+      "https://metacpan.org/pod/local::lib",
     ],
     cache:               {
       timeframe: {
-        external: "1h",
+        external: "1d",
+        internal: "1h",
       },
     },
   ).run
