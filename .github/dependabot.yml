@@ -9,17 +9,6 @@ multi-ecosystem-groups:
       time: '08:00'
       timezone: Etc/UTC
 updates:
-- package-ecosystem: github-actions
-  directory: "/"
-  multi-ecosystem-group: all
-  patterns:
-  - "*"
-  allow:
-  - dependency-type: all
-  cooldown:
-    default-days: 1
-    include:
-    - "*"
 - package-ecosystem: bundler
   directories:
   - "/"
@@ -33,6 +22,17 @@ updates:
     semver-major-days: 14
     semver-minor-days: 7
     semver-patch-days: 1
+    include:
+    - "*"
+- package-ecosystem: github-actions
+  directory: "/"
+  multi-ecosystem-group: all
+  patterns:
+  - "*"
+  allow:
+  - dependency-type: all
+  cooldown:
+    default-days: 1
     include:
     - "*"
 
