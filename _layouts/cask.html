@@ -90,7 +90,6 @@ permalink: :title
 
 {%- if c.conflicts_with.size > 0 -%}
     {%- include casks.html tokens=c.conflicts_with.cask description="Conflicts with casks" -%}
-    {%- include formulae.html fnames=c.conflicts_with.formula description="Conflicts with formulae" -%}
 {%- endif -%}
 
 {%- if c.caveats -%}
