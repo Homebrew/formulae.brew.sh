@@ -84,13 +84,12 @@ permalink: :title
         {%- endcapture -%}
     {%- endif -%}
     {%- if requirements.size > 0 %}
-<p>Current version requires: {{ requirements }}</p>
+<p>Requirements: {{ requirements }}</p>
     {%- endif -%}
 {%- endif -%}
 
 {%- if c.conflicts_with.size > 0 -%}
     {%- include casks.html tokens=c.conflicts_with.cask description="Conflicts with casks" -%}
-    {%- include formulae.html fnames=c.conflicts_with.formula description="Conflicts with formulae" -%}
 {%- endif -%}
 
 {%- if c.caveats -%}
