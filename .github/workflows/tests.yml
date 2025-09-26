@@ -35,7 +35,6 @@ jobs:
         with:
           core: false
           cask: true
-          test-bot: false
 
       - name: Update data for homebrew/cask
         run: /usr/bin/rake casks
@@ -72,7 +71,6 @@ jobs:
         with:
           core: true
           cask: false
-          test-bot: false
 
       - name: Update data for homebrew/core
         run: /usr/bin/rake formulae
@@ -109,7 +107,6 @@ jobs:
         with:
           core: false
           cask: false
-          test-bot: false
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@0481980f17b760ef6bca5e8c55809102a0af1e5a # v1.263.0
@@ -162,7 +159,6 @@ jobs:
         with:
           core: false
           cask: false
-          test-bot: false
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@0481980f17b760ef6bca5e8c55809102a0af1e5a # v1.263.0
