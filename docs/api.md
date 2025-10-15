@@ -50,7 +50,7 @@ curl https://formulae.brew.sh/api/cask/${CASK}.json
 
 - `${CASK}`: the name of the cask, e.g. `docker-desktop`
 
-**[Response](https://formulae.brew.sh/api/cask/docker.json):**
+**[Response](https://formulae.brew.sh/api/cask/docker-desktop.json):**
 
 {% include api-samples/cask_docker_desktop.md %}
 
