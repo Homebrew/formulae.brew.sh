@@ -36,8 +36,7 @@ jobs:
           core: false
           cask: true
 
-      - name: Update data for homebrew/cask
-        run: /usr/bin/rake casks
+      - run: brew generate-cask-api
         env:
           HOMEBREW_DEVELOPER: 1
 
@@ -72,8 +71,7 @@ jobs:
           core: true
           cask: false
 
-      - name: Update data for homebrew/core
-        run: /usr/bin/rake formulae
+      - run: brew generate-formula-api
         env:
           HOMEBREW_DEVELOPER: 1
 
@@ -126,8 +124,36 @@ jobs:
       - name: Create directories
         run: mkdir -p _data/analytics api/analytics
 
+      - name: Determine analytics cache date
+        id: analytics-cache-date
+        run: echo "date=$(date -u +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
+
+      - name: Cache analytics data
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
+        with:
+          path: |
+            _data/analytics
+            api/analytics
+          key: analytics-data-${{ steps.analytics-cache-date.outputs.date }}
+          restore-keys: analytics-data-
+
       - name: Update analytics data
-        run: /usr/bin/rake analytics
+        run: |
+          set -euo pipefail
+
+          analytics_backup_path="$(mktemp -d)"
+          mv -v "_data/analytics" "${analytics_backup_path}/data_analytics"
+          mv -v "api/analytics" "${analytics_backup_path}/api_analytics"
+
+          if brew generate-analytics-api; then
+            exit 0
+          fi
+
+          rm -rf "_data/analytics" "api/analytics"
+          mv -v "${analytics_backup_path}/data_analytics" "_data/analytics"
+          mv -v "${analytics_backup_path}/api_analytics" "api/analytics"
+
+          echo "::notice title=Analytics fallback::Restored cached analytics data after brew generate-analytics-api failure."
         if: github.ref_name == 'main' || (github.event_name == 'pull_request' && github.event.pull_request.head.repo.fork == false && github.event.pull_request.user.login != 'dependabot[bot]')
         env:
           HOMEBREW_INFLUXDB_TOKEN: ${{ secrets.HOMEBREW_INFLUXDB_READ_TOKEN }}
@@ -183,9 +209,9 @@ jobs:
         run: |
           GENERATE_SAMPLES="${{ github.ref_name == 'main' || (github.event_name == 'pull_request' && github.event.pull_request.head.repo.fork == false && github.event.pull_request.user.login != 'dependabot[bot]') }}"
           if [ "$GENERATE_SAMPLES" = "true" ]; then
-            /usr/bin/rake "api_samples"
+            ruby script/generate-api-samples.rb
           else
-            /usr/bin/rake "api_samples[template]"
+            ruby script/generate-api-samples.rb --template
           fi
 
       - name: Build site
@@ -224,14 +250,7 @@ jobs:
 
   deploy-issue:
     name: Open/close deploy issues
-    needs:
-      [
-        generate-cask,
-        generate-core,
-        generate-analytics,
-        build,
-        deploy,
-      ]
+    needs: [generate-cask, generate-core, generate-analytics, build, deploy]
     if: ${{ always() && github.ref_name == 'main' }}
     env:
       RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
