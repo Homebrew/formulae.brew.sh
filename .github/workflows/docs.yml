@@ -44,10 +44,6 @@ jobs:
       - name: Cleanup Homebrew/brew docs
         if: github.repository == 'Homebrew/brew'
         run: |
-          # Avoid failing on broken symlinks.
-          rm Library/Homebrew/os/mac/pkgconfig/fuse/fuse.pc
-          rm Library/Homebrew/os/mac/pkgconfig/fuse/osxfuse.pc
-
           # No ignore support (https://github.com/errata-ai/vale/issues/131).
           rm -r Library/Homebrew/vendor
 
