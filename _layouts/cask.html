@@ -45,6 +45,8 @@ permalink: :title
 {%- endif %}
 <p class="homepage"><a rel="nofollow" href="{{ c.homepage | escape }}">{{ c.homepage | escape }}</a></p>
 
+<p>Development: <a rel="nofollow" href="https://github.com/Homebrew/homebrew-cask/pulls?q=sort:updated-desc+is:pr+{{ c.token | uri_escape }}+in:title">Pull requests</a></p>
+
 <p>Cask JSON API: <a rel="alternate" type="application/json" href="{{ site.baseurl }}/api/cask/{{ c.token | uri_escape }}.json"><code>/api/cask/{{ c.token | escape }}.json</code></a></p>
 
 <p>Cask code: <a rel="alternate" target="_blank" href="{{ site.taps.cask.remote }}/blob/{{ c.tap_git_head | url_encode }}/{{ c.ruby_source_path | uri_escape }}"><code>{{ c.token | escape }}.rb</code></a> on GitHub</p>
