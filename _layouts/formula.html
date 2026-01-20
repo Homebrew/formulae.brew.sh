@@ -62,6 +62,8 @@ permalink: :title
 </p>
 {%- endif %}
 
+<p>Development: <a rel="nofollow" href="https://github.com/Homebrew/homebrew-core/pulls?q=sort:updated-desc+is:pr+{{ f.name | uri_escape }}+in:title">Pull requests</a></p>
+
 <p>Formula JSON API: <a rel="alternate" type="application/json" href="{{ site.baseurl }}/api/formula/{{ f.name | uri_escape }}.json"><code>/api/formula/{{ f.name | escape }}.json</code></a></p>
 
 <p>Formula code: <a rel="alternate" target="_blank" href="{{ site.taps.core.remote }}/blob/{{ f.tap_git_head | url_encode }}/{{ f.ruby_source_path | uri_escape }}"><code>{{ f.name | escape }}.rb</code></a> on GitHub</p>
