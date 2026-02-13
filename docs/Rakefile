@@ -9,13 +9,13 @@ task default: :build
 desc "Generate documentation with YARD"
 task :yard do
   cd "#{__dir__}/../Library/Homebrew" do
-    sh "bundle", "exec", "yard", "doc", "--output", RUBYDOC_DIR
+    sh "bundle exec yard doc --output #{RUBYDOC_DIR}"
   end
 end
 
 desc "Build the site."
 task :build do
-  sh "jekyll", "build"
+  sh "bundle exec jekyll build"
 end
 
 desc "Run Markdownlint to validate the Markdown style."
