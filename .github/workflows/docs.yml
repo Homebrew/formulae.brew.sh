@@ -80,15 +80,11 @@ jobs:
       - name: Build the site without YARD and check for broken links
         working-directory: docs
         run: bundle exec rake build test
-        env:
-          JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Rebuild the site with YARD
         if: github.repository == 'Homebrew/brew'
         working-directory: docs
         run: bundle exec rake yard build
-        env:
-          JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload pages artifact
         if: github.repository == 'Homebrew/brew'
