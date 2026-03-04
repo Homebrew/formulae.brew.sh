@@ -89,6 +89,11 @@ jobs:
         working-directory: docs
         run: bundle exec rake test || bundle exec rake test
 
+      # TODO: remove once https://github.com/lsegal/yard/pull/1646 is merged.
+      - name: Apply YARD app.js patch
+        if: github.repository == 'Homebrew/brew'
+        run: git apply --verbose --directory=Library/Homebrew/yard Library/Homebrew/yard/templates/default/fulldoc/html/js/app.js.patch
+
       - name: Rebuild the site with YARD
         if: github.repository == 'Homebrew/brew'
         working-directory: docs
