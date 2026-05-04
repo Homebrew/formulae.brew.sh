@@ -69,8 +69,11 @@ permalink: :title
     {%- if c.depends_on.macos -%}
         {%- capture requirements -%}
             macOS {% for x in c.depends_on.macos -%}
-                {{ x.first | escape }} <strong>{{ c.depends_on.macos[x.first] | join: "</strong> / <strong>" }}</strong>
-                {%- unless forloop.last %} and {% endunless -%}
+                {%- assign versions = x.last | join: "" | strip -%}
+                {%- if versions.size > 0 -%}
+                    {{ x.first | escape }} <strong>{{ c.depends_on.macos[x.first] | join: "</strong> / <strong>" }}</strong>
+                    {%- unless forloop.last %} and {% endunless -%}
+                {%- endif -%}
             {%- endfor -%}
         {%- endcapture -%}
     {%- endif -%}
