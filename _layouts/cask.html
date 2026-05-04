@@ -68,13 +68,21 @@ permalink: :title
     {%- assign requirements = "" -%}
     {%- if c.depends_on.macos -%}
         {%- capture requirements -%}
-            macOS {% for x in c.depends_on.macos -%}
+            {%- assign macos_requirements = "" | split: "" -%}
+            {%- for x in c.depends_on.macos -%}
                 {%- assign versions = x.last | join: "" | strip -%}
                 {%- if versions.size > 0 -%}
-                    {{ x.first | escape }} <strong>{{ c.depends_on.macos[x.first] | join: "</strong> / <strong>" }}</strong>
-                    {%- unless forloop.last %} and {% endunless -%}
+                    {%- capture single_requirement -%}
+                        macOS {{ x.first | escape }} <strong>{{ x.last | join: "</strong> / <strong>" }}</strong>
+                    {%- endcapture -%}
+                    {%- assign macos_requirements = macos_requirements | push: single_requirement -%}
                 {%- endif -%}
             {%- endfor -%}
+            {%- if macos_requirements.size > 0 -%}
+                {{- macos_requirements | array_to_sentence_string -}}
+            {%- else -%}
+                macOS
+            {%- endif -%}
         {%- endcapture -%}
     {%- endif -%}
     {%- if c.depends_on.arch -%}
