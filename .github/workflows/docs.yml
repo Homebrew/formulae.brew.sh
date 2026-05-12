@@ -32,6 +32,7 @@ jobs:
         with:
           core: false
           cask: false
+          stable: false
 
       - name: Checkout repository
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
@@ -139,3 +140,4 @@ jobs:
           close-existing: ${{ needs.deploy.result == 'success' }}
           close-from-author: github-actions[bot]
           close-comment: The most recent [docs.brew.sh deployment succeeded](${{ env.RUN_URL }}). Closing issue.
+

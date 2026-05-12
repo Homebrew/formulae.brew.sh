@@ -223,10 +223,14 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: Set up Homebrew
+        uses: Homebrew/actions/setup-homebrew@main
+        with:
+          stable: false
+
       - name: Set up Ruby
         uses: Homebrew/actions/setup-ruby@main
         with:
-          setup-homebrew: true
           bundler-cache: true
           portable-ruby: true
 
