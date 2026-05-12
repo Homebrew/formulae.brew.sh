@@ -141,10 +141,17 @@ jobs:
           persist-credentials: false
           ref: ${{ github.event.pull_request.head.sha }}
 
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@main
+        with:
+          core: false
+          cask: false
+          stable: false
+
       - name: Set up Ruby
         uses: Homebrew/actions/setup-ruby@main
         with:
-          setup-homebrew: true
           bundler-cache: true
           portable-ruby: true
 
@@ -258,7 +265,7 @@ jobs:
         env:
           JWS_SIGNING_KEY_ID: homebrew-1
           JWS_SIGNING_KEY: ${{ secrets.JWS_HOMEBREW_1 }}
-        run: ./script/sign-json.rb
+        run: bundle exec script/sign-json.rb
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0

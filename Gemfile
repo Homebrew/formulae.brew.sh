@@ -4,6 +4,7 @@ source "https://rubygems.org"
 
 ruby file: ".ruby-version"
 
+gem "base64"
 gem "faraday-retry"
 gem "jekyll"
 gem "jekyll-redirect-from"
