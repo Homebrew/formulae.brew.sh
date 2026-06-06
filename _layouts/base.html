@@ -11,10 +11,11 @@ algolia:
   <head>
     <meta http-equiv="Content-Security-Policy"
           content="default-src 'none';
-                    connect-src https://{{ layout.algolia.appId }}-dsn.algolia.net;
+                    connect-src https://{{ layout.algolia.appId }}-dsn.algolia.net https://{{ layout.algolia.appId }}-1.algolianet.com https://{{ layout.algolia.appId }}-2.algolianet.com https://{{ layout.algolia.appId }}-3.algolianet.com;
                     font-src data: https://fonts.gstatic.com;
-                    img-src 'self' https://avatars2.githubusercontent.com https://avatars.githubusercontent.com;
+                    img-src 'self' https://avatars2.githubusercontent.com https://avatars.githubusercontent.com https://github.com;
                     object-src 'none';
+                    form-action 'self' https://buttondown.email;
                     {% comment %}
                       We could remove the 'unsafe-inline' by externalizing
                       the JavaScript and the end of the page.
@@ -179,7 +180,7 @@ algolia:
 
       function loadSearch(lang, site) {
         docsearch(Object.assign(
-          { searchParameters: { facetFilters: ['site: ' + site] } },
+          { searchParameters: { facetFilters: ['site:' + site] } },
           { initialQuery: new URLSearchParams(window.location.search).get('search') },
           { placeholder: "{% if t.pagecontent.search %}{{ t.pagecontent.search }}{% else %}Search{% endif %} {% if page.search_name %}{{ page.search_name }}{% else %}Homebrew{% endif %}" },
           {{ layout.algolia | jsonify }}
@@ -208,7 +209,7 @@ algolia:
           for (const element of document.getElementsByClassName('copyable')) {
             let text = element.innerText.trim();
             if (text.startsWith('$')) {
-              text = text.substr(1).trimLeft();
+              text = text.slice(1).trimStart();
             }
 
 
