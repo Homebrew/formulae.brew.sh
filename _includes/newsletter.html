@@ -1,7 +1,7 @@
 <form id="newsletter"
 action="https://buttondown.email/api/emails/embed-subscribe/homebrew" method="post"
 target="popupwindow"
-  onsubmit="window.open('https://buttondown.email/homebrew', 'popupwindow')"
+  onsubmit="const popup = window.open('https://buttondown.email/homebrew', 'popupwindow'); if (popup) popup.opener = null;"
   class="embeddable-buttondown-form">
   <h3>Subscribe to be notified about new posts</h3>
   <label class="hidden" for="bd-email">Email</label>
