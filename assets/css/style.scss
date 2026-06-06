@@ -234,7 +234,15 @@ table {
 }
 
 div .highlight {
+  background: $black_30;
+  @include border-radius(0.4em);
   margin-top: 0;
+  overflow-x: auto;
+
+  pre {
+    min-width: 100%;
+    width: max-content;
+  }
 }
 
 .copyable {
@@ -257,6 +265,8 @@ div .highlight {
       display: flex;
       margin: 0;
       min-height: 44px;
+      min-width: 100%;
+      width: max-content;
     }
 
     code::before {
@@ -295,9 +305,11 @@ div .highlight {
     overflow-x: visible;
   }
 
-  pre {
+  .highlight pre {
+    min-width: 0;
     padding: 10px 12px;
     white-space: pre-wrap;
+    width: auto;
   }
 
   pre code {
