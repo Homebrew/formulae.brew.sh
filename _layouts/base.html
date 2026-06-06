@@ -187,23 +187,6 @@ algolia:
         ));
       };
 
-      {% comment %}
-      This exists to slowly enable us to use the trustedTypes
-      interface to set innerHTML. It's a part of the CSP strategy.
-      {% endcomment %}
-
-      let escapeHTML = (identity) => identity;
-
-      if (window.trustedTypes && window.trustedTypes.createPolicy) {
-        let policy = trustedTypes.createPolicy(
-          "forceInner",
-          {
-            createHTML: (to_escape) => to_escape
-          }
-        );
-        escapeHTML = (html) => policy.createHTML(html);
-      };
-
       async function setupCopyables() {
         if (navigator.clipboard) {
           for (const element of document.getElementsByClassName('copyable')) {
@@ -214,12 +197,13 @@ algolia:
 
 
             const button = document.createElement('button');
-            button.innerHTML = escapeHTML('⧉');
+            button.type = 'button';
+            button.textContent = '⧉';
             button.setAttribute('aria-label', 'Copy to clipboard');
             button.onclick = () => {
               navigator.clipboard.writeText(text);
-              button.innerHTML = escapeHTML('✓');
-              setTimeout(() => button.innerHTML=escapeHTML('⧉'), 1000);
+              button.textContent = '✓';
+              setTimeout(() => button.textContent = '⧉', 1000);
             }
             element.appendChild(button);
           }
