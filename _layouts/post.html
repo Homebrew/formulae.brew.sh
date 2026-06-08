@@ -1,0 +1,33 @@
+---
+layout: base
+---
+<article id="post">
+  <h2>{{ page.title }}</h2>
+  <h3>{{ page.date | date_to_long_string }}</h3>
+  <h3 class="author"><a href="https://github.com/{{ page.author }}"><img class="avatar" src="https://github.com/{{ page.author }}.png?size=80" alt="" width="40" height="40">{{ page.author }}</a></h3>
+  <div class="postcontent singlepostcontent">
+    {{ content }}
+
+    <div class="bottomborder"></div>
+
+    <div id="latest-posts">
+      <h3>Latest Posts</h3>
+      <ul>
+        {% for post in site.posts limit:5 %}
+
+        {% if page.url == post.url %}
+        {% continue %}
+        {% endif %}
+
+        <li>
+          <a href="{{ post.url | absolute_url }}">{{ post.title }}</a>
+          <span>{{ post.date | date_to_string }}</span>
+          <p>{{ post.excerpt | strip_html | normalize_whitespace | truncate: 170 }}</p>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    {%- include newsletter.html -%}
+  </div>
+</article>
