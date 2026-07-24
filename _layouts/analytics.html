@@ -13,6 +13,15 @@ layout: base
 <h4>Total Variables: {{ analytics_data.total_items }}</h4>
 {%- endif %}
 <h4>Total Events: {{ analytics_data.total_count }}</h4>
+{%- if page.category == "homebrew-env-config" %}
+<p>
+  Each event samples one randomly-chosen configuration variable from a
+  <code>brew</code> run and records whether the user left it unset, set it to
+  its default value or set it to a non-default value. Variables Homebrew exports
+  itself (e.g. <code>HOMEBREW_EDITOR</code> from <code>EDITOR</code>) count as
+  unset. Values are never recorded.
+</p>
+{%- endif %}
 
 <table class="full-width">
     <tr>
@@ -44,11 +53,13 @@ layout: base
 {%- endcase -%}
         </th>
 {%- if page.category == "homebrew-env-config" %}
-        <th>Non-default Events</th>
-        <th>Default Events</th>
+        <th>Default Value</th>
+        <th>Set (non-default)</th>
+        <th>Set (default)</th>
+        <th>Unset</th>
 {%- endif %}
         <th>Events</th>
-        <th>{% if page.category == "homebrew-env-config" %}Non-default {% endif %}%</th>
+        <th>{% if page.category == "homebrew-env-config" %}Set (non-default) {% endif %}%</th>
     </tr>
 {%- for item in analytics_data.items -%}
     <tr>
@@ -93,8 +104,10 @@ layout: base
     {%- endcase -%}
         </td>
 {%- if page.category == "homebrew-env-config" %}
+        <td>{{ item.default_value | escape }}</td>
         <td class="number-data">{{ item.non_default_count }}</td>
-        <td class="number-data">{{ item.default_count }}</td>
+        <td class="number-data">{{ item.set_default_count }}</td>
+        <td class="number-data">{{ item.unset_count }}</td>
 {%- endif %}
         <td class="number-data">{{ item.count }}</td>
         <td class="number-data">{{ item.percent }}%</td>
