@@ -263,7 +263,7 @@ permalink: :title
 </table>
 {%- endif -%}
 
-{%- if f.vulnerabilities.open.size > 0 %}
+{%- if f.vulnerabilities and f.vulnerabilities.open.size > 0 %}
 <p>Known vulnerabilities in the current version:</p>
 <table class="full-width">
     {%- for v in f.vulnerabilities.open -%}
@@ -280,7 +280,7 @@ permalink: :title
 <p><small>Data from <a href="https://github.com/Homebrew/advisory-database">Homebrew/advisory-database</a>. Run <code>brew vulns {{ f.name | escape }}</code> for a live check.</small></p>
 {%- endif -%}
 
-{%- if f.vulnerabilities.patched.size > 0 %}
+{%- if f.vulnerabilities and f.vulnerabilities.patched.size > 0 %}
 <p>Homebrew ships patches for:
     {%- for v in f.vulnerabilities.patched -%}
     {%- assign vid = v.upstream[0] | default: v.id %}
