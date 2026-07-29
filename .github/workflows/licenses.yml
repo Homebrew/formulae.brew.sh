@@ -7,6 +7,15 @@ on:
       - main
       - master
   pull_request:
+    paths:
+      - "**/Cargo.lock"
+      - "**/Cargo.toml"
+      - "**/Gemfile.lock"
+      - "**/package-lock.json"
+      - "**/package.json"
+      - "**/requirements.txt"
+      - .github/denied-licenses.txt
+      - .github/workflows/licenses.yml
   merge_group:
 
 permissions:
