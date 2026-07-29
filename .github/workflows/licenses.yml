@@ -1,0 +1,96 @@
+# This file is synced from the `.github` repository, do not modify it directly.
+name: Licenses
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+  merge_group:
+
+permissions:
+  actions: write
+  contents: read
+
+defaults:
+  run:
+    shell: bash -euo pipefail {0}
+
+jobs:
+  licenses:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Homebrew
+        uses: Homebrew/actions/setup-homebrew@df4b09108a1de9d6f995fe68f302b3f68bd6d2ef # 2026.07.20.1
+
+      - name: Install git-pkgs
+        run: brew install git-pkgs
+
+      - name: Cache git-pkgs licence metadata
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: ${{ runner.temp }}/git-pkgs
+          key: git-pkgs-metadata-v1-${{ hashFiles('**/Gemfile.lock', '**/Cargo.toml', '**/Cargo.lock', '**/package.json', '**/package-lock.json', '**/requirements.txt') }}
+          restore-keys: git-pkgs-metadata-v1-
+
+      - name: Read denied licences
+        run: |
+          if [[ ! -f .github/denied-licenses.txt ]]; then
+            echo "::error::.github/denied-licenses.txt is required."
+            exit 1
+          fi
+          denied="$(sed -E \
+            '/^[[:space:]]*(#|$)/d; s/^[[:space:]]*//; s/[[:space:]]*$//' \
+            .github/denied-licenses.txt | paste -sd, -)"
+          if [[ -z "${denied}" ]]; then
+            echo "::error::.github/denied-licenses.txt must contain at least one licence."
+            exit 1
+          fi
+          echo "Denied licences: ${denied}"
+          echo "DENIED_LICENSES=${denied}" >> "${GITHUB_ENV}"
+
+      - name: Check licences
+        env:
+          GIT_PKGS_DB: ${{ runner.temp }}/git-pkgs/metadata.db
+          # Identify ecosyste.ms requests for its polite pool:
+          # https://github.com/git-pkgs/git-pkgs#configuration
+          GIT_PKGS_ECOSYSTEMS_FROM: leads@brew.sh
+        run: |
+          output="${RUNNER_TEMP}/licenses.json"
+          stderr="${RUNNER_TEMP}/licenses.stderr"
+          status=0
+          git \
+            -c pkgs.ecosystems=cargo \
+            -c pkgs.ecosystems=docker \
+            -c pkgs.ecosystems=rubygems \
+            -c pkgs.ecosystems=github-actions \
+            -c pkgs.ecosystems=npm \
+            -c pkgs.ecosystems=pypi \
+            pkgs licenses --format=json --deny="${DENIED_LICENSES}" \
+            > "${output}" 2> "${stderr}" || status="$?"
+          if ! jq -e 'type == "array"' "${output}" &>/dev/null; then
+            echo "git pkgs licenses failed:"
+            cat "${stderr}"
+            cat "${output}"
+            if ((status == 0)); then
+              exit 1
+            fi
+            exit "${status}"
+          fi
+
+          violations="$(jq -r \
+            '.[] | select(.flagged) | . as $dep |
+            "\($dep.name) (\($dep.ecosystem)) \($dep.version // "?"): \($dep.licenses | join(", ")) - \($dep.flag_reason)"' \
+            "${output}")"
+          if [ -n "${violations}" ]; then
+            echo "Dependencies with denied licences:"
+            echo "${violations}"
+            exit 1
+          fi
+          echo "No denied licences found in $(jq length "${output}") dependencies."
