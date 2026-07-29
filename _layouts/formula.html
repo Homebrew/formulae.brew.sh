@@ -263,6 +263,33 @@ permalink: :title
 </table>
 {%- endif -%}
 
+{%- if f.vulnerabilities and f.vulnerabilities.open.size > 0 %}
+<p>Known vulnerabilities in the current version:</p>
+<table class="full-width">
+    {%- for v in f.vulnerabilities.open -%}
+    {%- assign vid = v.upstream[0] | default: v.id -%}
+    <tr>
+        <td>
+            <a rel="nofollow" href="https://osv.dev/vulnerability/{{ vid | uri_escape }}">{{ vid | escape }}</a>
+            {%- if v.severity %} ({{ v.severity | escape }}){%- endif -%}
+        </td>
+        <td>{{ v.summary | truncate: 100 | escape }}</td>
+    </tr>
+    {%- endfor %}
+</table>
+<p><small>Data from <a href="https://github.com/Homebrew/advisory-database">Homebrew/advisory-database</a>. Run <code>brew vulns {{ f.name | escape }}</code> for a live check.</small></p>
+{%- endif -%}
+
+{%- if f.vulnerabilities and f.vulnerabilities.patched.size > 0 %}
+<p>Homebrew ships patches for:
+    {%- for v in f.vulnerabilities.patched -%}
+    {%- assign vid = v.upstream[0] | default: v.id %}
+    <a rel="nofollow" href="https://osv.dev/vulnerability/{{ vid | uri_escape }}">{{ vid | escape }}</a>
+    {%- unless forloop.last -%}, {% endunless -%}
+    {%- endfor -%}.
+</p>
+{%- endif %}
+
 <p>Analytics:</p>
 <table>
 {%- for interval in site.analytics.intervals -%}
