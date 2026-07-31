@@ -155,15 +155,8 @@ jobs:
           bundler-cache: true
           portable-ruby: true
 
-      - name: Get Python version file
-        id: get-python-version
-        run: |
-          echo "python-version-file=$(brew --repo)/Library/Homebrew/formula-analytics/.python-version" >> "$GITHUB_OUTPUT"
-
-      - name: Set up Python
-        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
-        with:
-          python-version-file: ${{ steps.get-python-version.outputs.python-version-file }}
+      - name: Set up uv
+        uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9.0.0
 
       - name: Create directories
         run: mkdir -p _data/analytics api/analytics
