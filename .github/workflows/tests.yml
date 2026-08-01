@@ -155,15 +155,21 @@ jobs:
           bundler-cache: true
           portable-ruby: true
 
-      - name: Get Python version file
-        id: get-python-version
+      - name: Get formula analytics paths
+        id: formula-analytics
         run: |
-          echo "python-version-file=$(brew --repo)/Library/Homebrew/formula-analytics/.python-version" >> "$GITHUB_OUTPUT"
+          echo "directory=$(brew --repo)/Library/Homebrew/formula-analytics" >> "$GITHUB_OUTPUT"
+          echo "uv-cache-directory=${HOME}/.cache/uv" >> "$GITHUB_OUTPUT"
 
-      - name: Set up Python
-        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+      - name: Set up uv
+        uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9.0.0
         with:
-          python-version-file: ${{ steps.get-python-version.outputs.python-version-file }}
+          working-directory: ${{ steps.formula-analytics.outputs.directory }}
+          cache-local-path: ${{ steps.formula-analytics.outputs.uv-cache-directory }}
+          cache-dependency-glob: |
+            pyproject.toml
+            uv.lock
+            .python-version
 
       - name: Create directories
         run: mkdir -p _data/analytics api/analytics
