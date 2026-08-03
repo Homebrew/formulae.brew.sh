@@ -86,8 +86,7 @@ layout: base
                 <code>{{ item.test_bot_test | escape }}</code>
         {%- when "cask-install" -%}
             {%- assign data_token = item.cask | remove: "@" | remove: "." | replace: "+", "_" -%}
-            {%- assign cdata = site.data.cask[data_token] -%}
-            {%- if cdata and cdata.token == item.cask -%}
+            {%- if site.data.cask[data_token].token == item.cask -%}
                 <a href="{{ site.baseurl }}/cask/{{ item.cask | uri_escape }}"><code>{{ item.cask | escape }}</code></a>
             {%- else -%}
                 <code>{{ item.cask | escape }}</code>
@@ -95,8 +94,7 @@ layout: base
         {%- else -%}
             {%- assign fname = item.formula | split: " " | first -%}
             {%- assign data_fname = fname | remove: "@" | remove: "." | replace: "+", "_" -%}
-            {%- assign fdata = site.data.formula[data_fname] -%}
-            {%- if fdata and fdata.name == fname -%}
+            {%- if site.data.formula[data_fname].name == fname -%}
                 <a href="{{ site.baseurl }}/formula/{{ fname | uri_escape }}"><code>{{ item.formula | escape }}</code></a>
             {%- else -%}
                 <code>{{ item.formula | escape }}</code>
