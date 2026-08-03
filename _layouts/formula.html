@@ -308,16 +308,15 @@ permalink: :title
             {%- if variant_suffix != "" %} (<code>{{ variant_suffix | escape }}</code>){% endif -%}
         </th>
         {%- for interval in site.analytics.intervals -%}
-            {%- assign interval_data = site.data.analytics[category.path].homebrew-core[interval.path] -%}
-            {%- assign match = interval_data.formulae[fname] | where: "formula", variant.formula | first -%}
-        <td class="number-data">{% if interval_data %}{{ match.count | default: "0" }}{% endif %}</td>
+            {%- assign match = site.data.analytics[category.path].homebrew-core[interval.path].formulae[fname] | where: "formula", variant.formula | first -%}
+        <td class="number-data">{% if site.data.analytics[category.path].homebrew-core[interval.path].total_items %}{{ match.count | default: "0" }}{% endif %}</td>
         {%- endfor -%}
     </tr>
     {%- else -%}
     <tr>
         <th>{{ category.name }}</th>
         {%- for interval in site.analytics.intervals -%}
-        <td class="number-data">{% if site.data.analytics[category.path].homebrew-core[interval.path] %}0{% endif %}</td>
+        <td class="number-data">{% if site.data.analytics[category.path].homebrew-core[interval.path].total_items %}0{% endif %}</td>
         {%- endfor -%}
     </tr>
     {%- endfor -%}
