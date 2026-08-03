@@ -96,7 +96,7 @@ permalink: :title
             {%- assign intel_bottle_count = intel_bottle_count | plus: 1 -%}
         {%- endif -%}
     {%- endfor %}
-<table>
+<table class="no-stack">
     {%- assign subsequent = false -%}
     {%- for b in f.bottle.stable.files -%}
         {%- if b[0] contains "arm64_" %}
@@ -159,7 +159,7 @@ permalink: :title
 {%- endif %}
 
 <p>Current versions:</p>
-<table>
+<table class="no-stack">
     <tr>
         <td><strong>stable</strong></td>
         <td>✅</td>
@@ -291,26 +291,35 @@ permalink: :title
 {%- endif %}
 
 <p>Analytics:</p>
-<table>
-{%- for interval in site.analytics.intervals -%}
-  {%- for category in site.analytics.categories.formulae -%}
-    {%- if forloop.parentloop.first == false and forloop.last -%}
-        {%- break -%}
-    {%- endif -%}
+<table class="no-stack">
     <tr>
-        <th colspan="2">{{ category.name }} ({{ interval.name }})</th>
+        <td></td>
+        {%- for interval in site.analytics.intervals -%}
+        <th class="number-data">{{ interval.name }}</th>
+        {%- endfor -%}
     </tr>
-    {%- for fa in site.data.analytics[category.path].homebrew-core[interval.path].formulae[fname] -%}
+{%- assign first_interval = site.analytics.intervals | first -%}
+{%- for category in site.analytics.categories.formulae -%}
+    {%- assign variants = site.data.analytics[category.path].homebrew-core[first_interval.path].formulae[fname] -%}
+    {%- for variant in variants -%}
     <tr>
-        <td><code>{{ fa.formula | escape }}</code></td>
-        <td class="number-data">{{ fa.count }}</td>
+        <th>{{ category.name }}
+            {%- assign variant_suffix = variant.formula | remove_first: fname | strip -%}
+            {%- if variant_suffix != "" %} (<code>{{ variant_suffix | escape }}</code>){% endif -%}
+        </th>
+        {%- for interval in site.analytics.intervals -%}
+            {%- assign interval_data = site.data.analytics[category.path].homebrew-core[interval.path] -%}
+            {%- assign match = interval_data.formulae[fname] | where: "formula", variant.formula | first -%}
+        <td class="number-data">{% if interval_data %}{{ match.count | default: "0" }}{% endif %}</td>
+        {%- endfor -%}
     </tr>
     {%- else -%}
     <tr>
-        <td><code>{{ fname | escape }}</code></td>
-        <td class="number-data">0</td>
+        <th>{{ category.name }}</th>
+        {%- for interval in site.analytics.intervals -%}
+        <td class="number-data">{% if site.data.analytics[category.path].homebrew-core[interval.path] %}0{% endif %}</td>
+        {%- endfor -%}
     </tr>
     {%- endfor -%}
-  {%- endfor -%}
 {%- endfor %}
 </table>
