@@ -6,6 +6,7 @@ bundle_bootstrap() {
     eval "$(brew bundle --check --install env)"
   fi
 
+  # Share installed gems between worktrees belonging to the same repository.
   local shared_bundle_path
   shared_bundle_path="$(dirname "$(git rev-parse --path-format=absolute --git-common-dir)")/vendor/bundle"
   export BUNDLE_AUTO_INSTALL=1
