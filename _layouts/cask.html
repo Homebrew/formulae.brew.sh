@@ -106,43 +106,44 @@ permalink: :title
 </table>
 {%- endif %}
 
-{%- if c.variations.size > 0 -%}
+{%- if c.variations.size > 0 and c.supported_platforms.size > 0 -%}
 
-{%- assign arm64_variation_count = 0 -%}
-{%- assign intel_variation_count = 0 -%}
-{%- assign linux_variation_count = 0 -%}
-{%- for variation in c.variations -%}
-    {%- if variation[0] contains "_linux" -%}
-        {%- assign linux_variation_count = linux_variation_count | plus: 1 -%}
-    {%- elsif variation[0] contains "arm64_" -%}
-        {%- assign arm64_variation_count = arm64_variation_count | plus: 1 -%}
+{%- assign arm64_platform_count = 0 -%}
+{%- assign intel_platform_count = 0 -%}
+{%- assign linux_platform_count = 0 -%}
+{%- for platform in c.supported_platforms -%}
+    {%- if platform contains "_linux" -%}
+        {%- assign linux_platform_count = linux_platform_count | plus: 1 -%}
+    {%- elsif platform contains "arm64_" -%}
+        {%- assign arm64_platform_count = arm64_platform_count | plus: 1 -%}
     {%- else -%}
-        {%- assign intel_variation_count = intel_variation_count | plus: 1 -%}
+        {%- assign intel_platform_count = intel_platform_count | plus: 1 -%}
     {%- endif -%}
 {%- endfor %}
 
-<p>Platform variations (supported platforms not listed here use the current version above):</p>
+<p>Supported platforms:</p>
 <table class="full-width no-stack">
-    {%- if arm64_variation_count > 0 %}
+    {%- if arm64_platform_count > 0 %}
     <tbody>
     {%- assign subsequent = false -%}
-    {%- for variation in c.variations -%}
-        {%- if variation[0] contains "arm64_" %}
-            {%- if variation[0] contains "_linux" -%}
+    {%- for platform in c.supported_platforms -%}
+        {%- if platform contains "arm64_" %}
+            {%- if platform contains "_linux" -%}
                 {%- continue -%}
             {%- endif -%}
+        {%- assign variation = c.variations[platform] -%}
         <tr>
             {%- unless subsequent -%}
-            <th rowspan="{{ arm64_variation_count }}" scope="rowgroup">Apple Silicon</th>
+            <th rowspan="{{ arm64_platform_count }}" scope="rowgroup">Apple Silicon</th>
             {%- endunless %}
             <td style="text-transform:capitalize;">
-                {{ variation[0] | remove_first: "arm64_" | replace: "_", "&nbsp;" }}
+                {{ platform | remove_first: "arm64_" | replace: "_", "&nbsp;" }}
                 {%- assign subsequent = true -%}
             </td>
             <td>
-                <a rel="nofollow" href="{{ variation[1].url | default: c.url | escape }}"
-                   title="Download for {{ c.token | escape }} on {{ variation[0] }}">
-                    {{ variation[1].version | default: c.version | escape }}
+                <a rel="nofollow" href="{{ variation.url | default: c.url | escape }}"
+                   title="Download for {{ c.token | escape }} on {{ platform | escape }}">
+                    {{ variation.version | default: c.version | escape }}
                 </a>
             </td>
         </tr>
@@ -150,26 +151,27 @@ permalink: :title
     {%- endfor %}
     </tbody>
     {%- endif %}
-    {%- if intel_variation_count > 0 %}
+    {%- if intel_platform_count > 0 %}
     <tbody>
     {%- assign subsequent = false -%}
-    {%- for variation in c.variations -%}
-        {%- unless variation[0] contains "arm64_" %}
-            {%- if variation[0] contains "_linux" -%}
+    {%- for platform in c.supported_platforms -%}
+        {%- unless platform contains "arm64_" %}
+            {%- if platform contains "_linux" -%}
                 {%- continue -%}
             {%- endif -%}
+        {%- assign variation = c.variations[platform] -%}
         <tr>
             {%- unless subsequent -%}
-            <th rowspan="{{ intel_variation_count }}" scope="rowgroup">Intel</th>
+            <th rowspan="{{ intel_platform_count }}" scope="rowgroup">Intel</th>
             {%- endunless %}
             <td style="text-transform:capitalize;">
-                {{ variation[0] | replace: "x86_64", "64-bit" | replace: "_", "&nbsp;" }}
+                {{ platform | replace: "x86_64", "64-bit" | replace: "_", "&nbsp;" }}
                 {%- assign subsequent = true -%}
             </td>
             <td>
-                <a rel="nofollow" href="{{ variation[1].url | default: c.url | escape }}"
-                   title="Download for {{ c.token | escape }} on {{ variation[0] }}">
-                    {{ variation[1].version | default: c.version | escape }}
+                <a rel="nofollow" href="{{ variation.url | default: c.url | escape }}"
+                   title="Download for {{ c.token | escape }} on {{ platform | escape }}">
+                    {{ variation.version | default: c.version | escape }}
                 </a>
             </td>
         </tr>
@@ -177,23 +179,24 @@ permalink: :title
     {%- endfor -%}
     </tbody>
     {%- endif %}
-    {%- if linux_variation_count > 0 %}
+    {%- if linux_platform_count > 0 %}
     <tbody>
     {%- assign subsequent = false -%}
-    {%- for variation in c.variations -%}
-        {%- if variation[0] contains "_linux" %}
+    {%- for platform in c.supported_platforms -%}
+        {%- if platform contains "_linux" %}
+        {%- assign variation = c.variations[platform] -%}
         <tr>
             {%- unless subsequent -%}
-            <th rowspan="{{ linux_variation_count }}" scope="rowgroup">Linux</th>
+            <th rowspan="{{ linux_platform_count }}" scope="rowgroup">Linux</th>
             {%- endunless %}
             <td>
-                {{ variation[0] | replace: "arm64", "ARM64" | replace: "_linux", "" }}
+                {{ platform | replace: "arm64", "ARM64" | replace: "_linux", "" }}
                 {%- assign subsequent = true -%}
             </td>
             <td>
-                <a rel="nofollow" href="{{ variation[1].url | default: c.url | escape }}"
-                   title="Download for {{ c.token | escape }} on {{ variation[0] }}">
-                    {{ variation[1].version | default: c.version | escape }}
+                <a rel="nofollow" href="{{ variation.url | default: c.url | escape }}"
+                   title="Download for {{ c.token | escape }} on {{ platform | escape }}">
+                    {{ variation.version | default: c.version | escape }}
                 </a>
             </td>
         </tr>
