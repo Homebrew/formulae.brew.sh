@@ -215,8 +215,13 @@ permalink: :title
         <th class="number-data">{{ interval.name }}</th>
         {%- endfor -%}
     </tr>
-{%- assign first_interval = site.analytics.intervals | first -%}
-{%- assign variants = site.data.analytics.cask-install.homebrew-cask[first_interval.path].formulae[token] -%}
+{%- assign variants = nil -%}
+{%- for interval in site.analytics.intervals -%}
+    {%- assign interval_variants = site.data.analytics.cask-install.homebrew-cask[interval.path].formulae[token] -%}
+    {%- if interval_variants and interval_variants != empty -%}
+        {%- assign variants = interval_variants -%}
+    {%- endif -%}
+{%- endfor -%}
 {%- for variant in variants -%}
     <tr>
         <th>Installs

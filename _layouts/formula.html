@@ -298,9 +298,14 @@ permalink: :title
         <th class="number-data">{{ interval.name }}</th>
         {%- endfor -%}
     </tr>
-{%- assign first_interval = site.analytics.intervals | first -%}
 {%- for category in site.analytics.categories.formulae -%}
-    {%- assign variants = site.data.analytics[category.path].homebrew-core[first_interval.path].formulae[fname] -%}
+    {%- assign variants = nil -%}
+    {%- for interval in site.analytics.intervals -%}
+        {%- assign interval_variants = site.data.analytics[category.path].homebrew-core[interval.path].formulae[fname] -%}
+        {%- if interval_variants and interval_variants != empty -%}
+            {%- assign variants = interval_variants -%}
+        {%- endif -%}
+    {%- endfor -%}
     {%- for variant in variants -%}
     <tr>
         <th>{{ category.name }}
