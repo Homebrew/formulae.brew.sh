@@ -215,8 +215,13 @@ permalink: :title
         <th class="number-data">{{ interval.name }}</th>
         {%- endfor -%}
     </tr>
-{%- assign first_interval = site.analytics.intervals | first -%}
-{%- assign variants = site.data.analytics.cask-install.homebrew-cask[first_interval.path].formulae[token] -%}
+{%- assign variants = nil -%}
+{%- for interval in site.analytics.intervals -%}
+    {%- assign interval_variants = site.data.analytics.cask-install.homebrew-cask[interval.path].formulae[token] -%}
+    {%- if interval_variants and interval_variants != empty -%}
+        {%- assign variants = interval_variants -%}
+    {%- endif -%}
+{%- endfor -%}
 {%- for variant in variants -%}
     <tr>
         <th>Installs
@@ -225,14 +230,14 @@ permalink: :title
         </th>
         {%- for interval in site.analytics.intervals -%}
             {%- assign match = site.data.analytics.cask-install.homebrew-cask[interval.path].formulae[token] | where: "cask", variant.cask | first -%}
-        <td class="number-data">{{ match.count | default: "0" }}</td>
+        <td class="number-data">{% if site.data.analytics.cask-install.homebrew-cask[interval.path].total_items %}{{ match.count | default: "0" }}{% endif %}</td>
         {%- endfor -%}
     </tr>
 {%- else -%}
     <tr>
         <th>Installs</th>
         {%- for interval in site.analytics.intervals -%}
-        <td class="number-data">0</td>
+        <td class="number-data">{% if site.data.analytics.cask-install.homebrew-cask[interval.path].total_items %}0{% endif %}</td>
         {%- endfor -%}
     </tr>
 {%- endfor %}
