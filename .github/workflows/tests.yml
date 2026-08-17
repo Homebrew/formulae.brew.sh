@@ -126,6 +126,51 @@ jobs:
           path: data-internal.tar.gz
           retention-days: 1
 
+  generate-advisories:
+    if: startsWith( github.repository, 'Homebrew/' )
+    name: Generate advisory API data
+    runs-on: macos-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Check out advisory database
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: Homebrew/advisory-database
+          path: advisory-database
+          persist-credentials: false
+
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@b35a29a0f83ee8b8ca07b219fc8db3d7bb88ab49 # 2026.08.10.2
+        with:
+          core: true
+          cask: true
+          stable: false
+
+      - run: brew test-bot --only-cleanup-before
+
+      - run: brew generate-advisories-api advisory-database
+        env:
+          HOMEBREW_DEVELOPER: 1
+
+      - name: Archive data
+        run: tar czvf data-advisories.tar.gz api/advisories.json
+
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: data-advisories
+          path: data-advisories.tar.gz
+          retention-days: 1
+
   generate-analytics:
     if: startsWith( github.repository, 'Homebrew/' )
     name: Generate analytics data
@@ -218,7 +263,7 @@ jobs:
           retention-days: 1
 
   build:
-    needs: [generate-cask, generate-core, generate-internal, generate-analytics]
+    needs: [generate-cask, generate-core, generate-internal, generate-advisories, generate-analytics]
     runs-on: ubuntu-latest
     timeout-minutes: 20
     permissions:
@@ -244,6 +289,7 @@ jobs:
 
       - name: Move artifacts into place
         run: |
+          tar xvf data-advisories/data-advisories.tar.gz
           tar xvf data-analytics/data-analytics.tar.gz
           tar xvf data-cask/data-cask.tar.gz
           tar xvf data-core/data-core.tar.gz
@@ -300,7 +346,7 @@ jobs:
 
   deploy-issue:
     name: Open/close deploy issues
-    needs: [generate-cask, generate-core, generate-analytics, generate-internal, build, deploy]
+    needs: [generate-cask, generate-core, generate-analytics, generate-internal, generate-advisories, build, deploy]
     if: ${{ always() && github.ref_name == 'main' }}
     env:
       RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
