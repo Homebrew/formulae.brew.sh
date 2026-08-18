@@ -172,9 +172,6 @@ jobs:
           path: api/advisories.json
           key: ${{ steps.advisory-database.outputs.key }}
 
-      - if: steps.cache.outputs.cache-hit != 'true'
-        run: brew test-bot --only-cleanup-before
-
       - name: Generate advisory API data
         if: steps.cache.outputs.cache-hit != 'true'
         # Fail closed: never republish stale advisory data.
