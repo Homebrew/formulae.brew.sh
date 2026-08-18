@@ -156,11 +156,41 @@ jobs:
           cask: true
           stable: false
 
-      - run: brew test-bot --only-cleanup-before
+      - name: Resolve advisory cache key
+        id: advisory-database
+        # advisories/ tree plus generator source, so unrelated commits keep the hit.
+        run: |
+          set -euo pipefail
+          tree="$(git -C advisory-database rev-parse HEAD:advisories)"
+          generator="$(shasum -a 256 "$(brew --repo)/Library/Homebrew/dev-cmd/generate-advisories-api.rb" | cut -c1-12)"
+          echo "key=advisories-data-${generator}-${tree}" >> "$GITHUB_OUTPUT"
 
-      - run: brew generate-advisories-api advisory-database
+      - name: Restore advisory data cache
+        id: cache
+        uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: api/advisories.json
+          key: ${{ steps.advisory-database.outputs.key }}
+
+      - if: steps.cache.outputs.cache-hit != 'true'
+        run: brew test-bot --only-cleanup-before
+
+      - name: Generate advisory API data
+        if: steps.cache.outputs.cache-hit != 'true'
+        # Fail closed: never republish stale advisory data.
         env:
           HOMEBREW_DEVELOPER: 1
+        run: brew generate-advisories-api advisory-database
+
+      - name: Validate advisory data
+        run: test -s api/advisories.json
+
+      - name: Save advisory data cache
+        if: steps.cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: api/advisories.json
+          key: ${{ steps.advisory-database.outputs.key }}
 
       - name: Archive data
         run: tar czvf data-advisories.tar.gz api/advisories.json
@@ -221,10 +251,11 @@ jobs:
 
       - name: Determine analytics cache date
         id: analytics-cache-date
-        run: echo "date=$(date -u +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
+        run: date -u +"date=%Y-%m-%d" >> "$GITHUB_OUTPUT"
 
-      - name: Cache analytics data
-        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+      - name: Restore analytics data cache
+        id: cache
+        uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
           path: |
             _data/analytics
@@ -233,6 +264,7 @@ jobs:
           restore-keys: analytics-data-
 
       - name: Update analytics data
+        id: update
         run: |
           set -euo pipefail
 
@@ -241,7 +273,13 @@ jobs:
           mv -v "api/analytics" "${analytics_backup_path}/api_analytics"
 
           if brew generate-analytics-api; then
+            echo "fresh=true" >> "$GITHUB_OUTPUT"
             exit 0
+          fi
+
+          if [[ -z "$ANALYTICS_CACHE_MATCHED_KEY" ]]; then
+            echo "::error title=Analytics generation failed::No cached analytics data is available as a fallback."
+            exit 1
           fi
 
           rm -rf "_data/analytics" "api/analytics"
@@ -249,9 +287,25 @@ jobs:
           mv -v "${analytics_backup_path}/api_analytics" "api/analytics"
 
           echo "::notice title=Analytics fallback::Restored cached analytics data after brew generate-analytics-api failure."
-        if: github.ref_name == 'main' || (github.event_name == 'pull_request' && github.event.pull_request.head.repo.fork == false && github.event.pull_request.user.login != 'dependabot[bot]')
+        if: steps.cache.outputs.cache-hit != 'true' && (github.ref_name == 'main' || (github.event_name == 'pull_request' && github.event.pull_request.head.repo.fork == false && github.event.pull_request.user.login != 'dependabot[bot]'))
         env:
+          ANALYTICS_CACHE_MATCHED_KEY: ${{ steps.cache.outputs.cache-matched-key }}
           HOMEBREW_INFLUXDB_TOKEN: ${{ secrets.HOMEBREW_INFLUXDB_READ_TOKEN }}
+
+      - name: Validate analytics data
+        run: |
+          test -s _data/analytics/install/30d.json
+          test -s api/analytics/install/30d.json
+
+      - name: Save analytics data cache
+        # Save only freshly generated data so a fallback is not pinned for the day.
+        if: steps.update.outputs.fresh == 'true'
+        uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: |
+            _data/analytics
+            api/analytics
+          key: analytics-data-${{ steps.analytics-cache-date.outputs.date }}
 
       - name: Archive data
         run: tar czvf data-analytics.tar.gz _data/analytics api/analytics
