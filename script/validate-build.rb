@@ -2,10 +2,23 @@
 # frozen_string_literal: true
 
 require "pathname"
+require "yaml"
 
 Dir.chdir Pathname(__dir__).parent
 
 error = false
+
+config = YAML.safe_load_file("_config.yml", permitted_classes: [Date, Symbol, Time], aliases: true)
+intel_macos_platforms = config["intel_macos_platforms"]
+valid_intel_macos_platforms = intel_macos_platforms.is_a?(Array) &&
+                              !intel_macos_platforms.empty? &&
+                              intel_macos_platforms.all?(String)
+unless valid_intel_macos_platforms
+  error = true
+  warn "_config.yml: intel_macos_platforms must be a non-empty list of platform names"
+  intel_macos_platforms = []
+end
+intel_macos_platform_labels = intel_macos_platforms.map { |platform| platform.tr("_", " ") }
 
 %w[
   _site/api/formula.json
@@ -25,6 +38,74 @@ Pathname("_site").find do |path|
 
   error = true
   warn "#{path}: bad file contents: '#{contents}'"
+end
+
+supported_platforms_table_regex = %r{
+  <p>Supported\ platforms:</p>\s*
+  <table\ class="full-width\ no-stack">(.*?)</table>
+}mx
+
+inspected_supported_platforms_tables = 0
+supported_platform_rowgroups = Hash.new(0)
+
+Pathname("_site/cask").glob("*.html").each do |path|
+  contents = path.read
+  table = contents[supported_platforms_table_regex, 1]
+  unless table
+    if contents.include?('scope="rowgroup"')
+      error = true
+      warn "#{path}: rowgroup markup exists but no supported platforms table matched"
+    end
+    next
+  end
+
+  inspected_supported_platforms_tables += 1
+  table.scan(%r{scope="rowgroup">([^<]*)</th>}).flatten.each do |label|
+    supported_platform_rowgroups[label] += 1
+  end
+
+  if table.scan("<tr>").empty?
+    error = true
+    warn "#{path}: supported platforms table has no rows"
+  end
+
+  table.scan(%r{<tbody>(.*?)</tbody>}m).flatten.each do |tbody|
+    row_count = tbody.scan("<tr>").count
+    rowspan = tbody[/<th rowspan="(\d+)" scope="rowgroup">/, 1]
+    if rowspan && rowspan.to_i != row_count
+      error = true
+      warn "#{path}: supported platforms rowspan #{rowspan} does not match #{row_count} rows"
+    end
+
+    next unless tbody.match?(%r{<th [^>]*>Intel</th>})
+
+    platform_labels = tbody.scan(%r{<td style="text-transform:capitalize;">\s*([^<]*?)\s*</td>}m)
+                           .flatten
+                           .map { |label| label.gsub("&nbsp;", " ").strip }
+    if platform_labels.count != row_count
+      error = true
+      warn "#{path}: could not inspect every Intel platform row"
+    end
+
+    platform_labels.each do |label|
+      next if intel_macos_platform_labels.include?(label)
+
+      error = true
+      warn "#{path}: #{label} is incorrectly advertised as an Intel platform"
+    end
+  end
+end
+
+if inspected_supported_platforms_tables.zero?
+  error = true
+  warn "_site/cask: no supported platforms table matched; the check is not running"
+end
+
+["Apple Silicon", "Intel", "Linux"].each do |rowgroup|
+  next unless supported_platform_rowgroups[rowgroup].zero?
+
+  error = true
+  warn "_site/cask: no page renders a #{rowgroup} rowgroup"
 end
 
 abort if error

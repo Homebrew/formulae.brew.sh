@@ -106,12 +106,13 @@ permalink: :title
 </table>
 {%- endif %}
 
-{%- if c.variations.size > 0 and c.supported_platforms.size > 0 -%}
+{%- assign supported_platforms = c.supported_platforms | where_exp: "platform", "platform contains 'arm64_' or platform contains '_linux' or site.intel_macos_platforms contains platform" -%}
+{%- if c.variations.size > 0 and supported_platforms.size > 0 -%}
 
 {%- assign arm64_platform_count = 0 -%}
 {%- assign intel_platform_count = 0 -%}
 {%- assign linux_platform_count = 0 -%}
-{%- for platform in c.supported_platforms -%}
+{%- for platform in supported_platforms -%}
     {%- if platform contains "_linux" -%}
         {%- assign linux_platform_count = linux_platform_count | plus: 1 -%}
     {%- elsif platform contains "arm64_" -%}
@@ -126,7 +127,7 @@ permalink: :title
     {%- if arm64_platform_count > 0 %}
     <tbody>
     {%- assign subsequent = false -%}
-    {%- for platform in c.supported_platforms -%}
+    {%- for platform in supported_platforms -%}
         {%- if platform contains "arm64_" %}
             {%- if platform contains "_linux" -%}
                 {%- continue -%}
@@ -154,7 +155,7 @@ permalink: :title
     {%- if intel_platform_count > 0 %}
     <tbody>
     {%- assign subsequent = false -%}
-    {%- for platform in c.supported_platforms -%}
+    {%- for platform in supported_platforms -%}
         {%- unless platform contains "arm64_" %}
             {%- if platform contains "_linux" -%}
                 {%- continue -%}
@@ -182,7 +183,7 @@ permalink: :title
     {%- if linux_platform_count > 0 %}
     <tbody>
     {%- assign subsequent = false -%}
-    {%- for platform in c.supported_platforms -%}
+    {%- for platform in supported_platforms -%}
         {%- if platform contains "_linux" %}
         {%- assign variation = c.variations[platform] -%}
         <tr>
