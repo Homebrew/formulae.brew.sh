@@ -23,7 +23,9 @@ layout: base
 </p>
 {%- endif %}
 
-<table class="full-width">
+<div style="overflow-x: auto; margin: 1em 0;" tabindex="0" role="region"
+     aria-label="{{ page.category_pretty | escape }} events">
+<table class="full-width" style="margin: 0;">
     <tr>
         <th></th>
         <th>
@@ -112,3 +114,4 @@ layout: base
     </tr>
 {%- endfor %}
 </table>
+</div>
