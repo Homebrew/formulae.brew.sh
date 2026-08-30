@@ -1,0 +1,31 @@
+{%- for artifact in include.artifacts -%}
+    {%- for artifact_data in artifact -%}
+        {%- assign artifact_type = artifact_data[0] -%}
+        {%- assign artifact_name = site.cask_artifact_names[artifact_type] -%}
+        {%- if artifact_name -%}
+            {%- assign artifact_arguments = artifact_data[1] -%}
+            {%- assign artifact_source = artifact_arguments.first -%}
+            {%- assign artifact_target = artifact.target -%}
+            {%- if artifact_type == "installer" -%}
+                {%- assign artifact_source = artifact_source.manual | default: artifact_source.script.executable -%}
+            {%- elsif artifact_type == "command_wrapper" -%}
+                {%- assign artifact_target = artifact_source -%}
+                {%- assign artifact_source = artifact_source | prepend: ".homebrew-command-wrappers/" -%}
+            {%- endif %}
+    <tr>
+        <td>{{ artifact_source | escape }}{% if artifact_target %} -&gt; {{ artifact_target | escape }}{% endif %}</td>
+        <td>{{ artifact_name | escape }}</td>
+        <td>
+            {%- if include.platform == "default" %}Default platforms
+            {%- elsif include.platform contains "_linux" -%}
+                Linux on {% if include.platform contains "arm64_" %}ARM64{% else %}Intel{% endif %}
+            {%- elsif include.platform contains "arm64_" -%}
+                macOS on Apple Silicon ({{ include.platform | remove_first: "arm64_" | replace: "_", " " | capitalize | escape }})
+            {%- else -%}
+                macOS on Intel ({{ include.platform | replace: "_", " " | capitalize | escape }})
+            {%- endif -%}
+        </td>
+    </tr>
+        {%- endif -%}
+    {%- endfor -%}
+{%- endfor -%}
