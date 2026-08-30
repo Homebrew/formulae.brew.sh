@@ -26,13 +26,13 @@ To instead run the site locally, run:
 ```bash
 git clone https://github.com/Homebrew/formulae.brew.sh
 cd formulae.brew.sh
-brew generate-formula-api
-brew generate-cask-api
-brew generate-analytics-api
-ruby script/generate-api-samples.rb
+script/prepare-local-preview.rb
 bundle install
 bundle exec jekyll serve
 ```
+
+This downloads the generated data from the public API, so it does not require
+local tap checkouts or Homebrew repository write access.
 
 ## Search
 

@@ -108,4 +108,46 @@ end
   warn "_site/cask: no page renders a #{rowgroup} rowgroup"
 end
 
+rendered_package_fields = {
+  "formula" => {
+    "binaries"              => %r{<p>Binaries:.*?<code>.*?</code>.*?</p>}m,
+    "conflict reasons"      => %r{<p>Conflicts with:.*?\(because .*?\).*?</p>}m,
+    "dependency qualifiers" => %r{<p>Uses from macOS:.*?</strong> \([a-z]+, [a-z]+\).*?</p>}m,
+    "keg-only reasons"      => %r{<p>Keg-only because .*?</p>}m,
+    "macOS dependencies"    => %r{<p>Uses from macOS:.*?<strong>.*?</strong>.*?</p>}m,
+    "services"              => %r{<p>Service:</p>.*?<code>brew services start .*?</code>}m,
+  },
+  "cask" => {
+    "auto-updates"        => %r{<p>Current version:.*?\(auto-updates\)</p>}m,
+    "artifacts"           => %r{<p>Artifacts:</p>.*?<table.*?<tr>.*?</table>}m,
+    "languages"           => %r{<p>Languages:.*?<strong>.*?</strong>.*?</p>}m,
+    "platform artifacts"  => %r{
+      <p>Artifacts:</p>.*?
+      <td>[^<]*\.AppImage.*?</td>.*?
+      <td>App\ Image</td>.*?
+      <td>Linux\ on\ (?:Intel|ARM64)</td>
+    }mx,
+    "relocated artifacts" => %r{<p>Artifacts:</p>.*?<td>([^/<]+) -&gt; /Applications/\1</td>}m,
+    "Rosetta caveats"     => %r{is built for Intel macOS and requires Rosetta 2 on Apple Silicon},
+  },
+}
+
+rendered_package_fields.each do |type, fields|
+  found_fields = fields.transform_values { false }
+  Pathname("_site/#{type}").glob("*.html").each do |path|
+    contents = path.read
+    fields.each do |field, regex|
+      found_fields[field] ||= contents.match?(regex)
+    end
+    break if found_fields.values.all?
+  end
+
+  found_fields.each do |field, found|
+    next if found
+
+    error = true
+    warn "_site/#{type}: no page renders #{field}"
+  end
+end
+
 abort if error

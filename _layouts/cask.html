@@ -51,7 +51,7 @@ permalink: :title
 
 <p>Cask code: <a rel="alternate" target="_blank" href="{{ site.taps.cask.remote }}/blob/{{ c.tap_git_head | url_encode }}/{{ c.ruby_source_path | uri_escape }}"><code>{{ c.token | escape }}.rb</code></a> on GitHub</p>
 
-<p>Current version: <a rel="nofollow" href="{{ c.url | escape }}" title="Download for {{ c.token | escape }}">{{ c.version | escape }}</a></p>
+<p>Current version: <a rel="nofollow" href="{{ c.url | escape }}" title="Download for {{ c.token | escape }}">{{ c.version | escape }}</a>{% if c.auto_updates %} (auto-updates){% endif %}</p>
 
 {%- if c.old_tokens.size > 0 %}
 <p class="oldnames">Former tokens:
@@ -94,15 +94,55 @@ permalink: :title
     {%- include casks.html tokens=c.conflicts_with.cask description="Conflicts with casks" -%}
 {%- endif -%}
 
-{%- if c.caveats -%}
+{%- if c.languages.size > 0 %}
+<p>Languages:
+    {%- for language in c.languages %}
+        <strong>{{ language | escape }}</strong>
+        {%- unless forloop.last -%}, {% endunless -%}
+    {%- endfor %}
+</p>
+{%- endif -%}
+
+{%- capture artifact_rows -%}
+    {%- include cask_artifact_rows.html artifacts=c.artifacts platform="default" -%}
+    {%- for variation in c.variations -%}
+        {%- assign variation_artifacts = variation[1].artifacts -%}
+        {%- if variation_artifacts -%}
+            {%- include cask_artifact_rows.html artifacts=variation_artifacts platform=variation.first -%}
+        {%- endif -%}
+    {%- endfor -%}
+{%- endcapture -%}
+{%- if artifact_rows != empty %}
+<p>Artifacts:</p>
+<table>
+    <tr>
+        <th>Artifact</th>
+        <th>Type</th>
+        <th>Platform</th>
+    </tr>
+    {{ artifact_rows }}
+</table>
+{%- endif -%}
+
+{%- if c.caveats or c.caveats_rosetta -%}
 {%- capture soft_indent %}
   {% endcapture -%}
 {%- capture hard_indent %}
 &nbsp;&nbsp;&nbsp;&nbsp;{% endcapture %}
 <table class="full-width">
+    {%- if c.caveats %}
     <tr>
         <td>{{ c.caveats | escape | replace: soft_indent, hard_indent | strip | newline_to_br }}</td>
     </tr>
+    {%- endif -%}
+    {%- if c.caveats_rosetta %}
+    <tr>
+        <td>{{ c.token | escape }} is built for Intel macOS and requires Rosetta 2 on Apple Silicon.<br>
+            Install Rosetta 2 with <code>softwareupdate --install-rosetta --agree-to-license</code>.
+            Rosetta 2 is difficult to remove once installed.
+        </td>
+    </tr>
+    {%- endif %}
 </table>
 {%- endif %}
 
