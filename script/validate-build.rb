@@ -42,7 +42,7 @@ end
 
 supported_platforms_table_regex = %r{
   <p>Supported\ platforms:</p>\s*
-  <table\ class="full-width\ no-stack">(.*?)</table>
+  <table\ class="full-width\ no-stack"\ id="bottles">(.*?)</table>
 }mx
 
 inspected_supported_platforms_tables = 0
