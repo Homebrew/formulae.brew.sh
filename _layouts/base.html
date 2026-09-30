@@ -93,7 +93,7 @@ algolia:
           <p id="subtitle"><strong>{{ t.subtitle }}</strong></p>
         {% endif -%}
         {% if t.pagecontent.install.supported -%}
-          <p class="support-note header-support">{{ t.pagecontent.install.supported }}</p>
+          <p class="support-note header-support">{{ t.pagecontent.install.supported | replace: "__MACOS_MINIMUM__", site.data.macos.oldest_supported }}</p>
         {% endif -%}
         <div id="header-controls">
           <div id="search-container"></div>
@@ -168,7 +168,10 @@ algolia:
           placement: 'left',
           visible: 'hover',
         };
-        anchors.add('#page > h2, #page > h3, #page > h4, #page > h5, #page > h6');
+        anchors.add([
+          '#page > h2, #page > h3, #page > h4, #page > h5, #page > h6',
+          '.postcontent > h2, .postcontent > h3, .postcontent > h4, .postcontent > h5, .postcontent > h6',
+        ].join(', '));
       };
 
       function loadSearch(lang, site) {
