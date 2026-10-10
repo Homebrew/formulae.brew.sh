@@ -21,6 +21,8 @@ jobs:
     timeout-minutes: 20
     permissions:
       contents: read
+    env:
+      HOMEBREW_DEVELOPER: 1
     steps:
       - name: Check out repository
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -38,8 +40,6 @@ jobs:
           stable: false
 
       - run: brew generate-cask-api
-        env:
-          HOMEBREW_DEVELOPER: 1
 
       - name: Archive data
         run: tar czvf data-cask.tar.gz _data/cask/ api/cask/ api/cask_tap_migrations.json api/internal/cask.* cask/
@@ -57,6 +57,8 @@ jobs:
     timeout-minutes: 20
     permissions:
       contents: read
+    env:
+      HOMEBREW_DEVELOPER: 1
     steps:
       - name: Check out repository
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -76,8 +78,6 @@ jobs:
       - run: brew test-bot --only-cleanup-before
 
       - run: brew generate-formula-api
-        env:
-          HOMEBREW_DEVELOPER: 1
 
       - name: Archive data
         run: tar czvf data-core.tar.gz _data/formula/ _data/formula_canonical.json api/formula/ api/formula_tap_migrations.json api/internal/formula.* formula/
@@ -95,6 +95,8 @@ jobs:
     timeout-minutes: 20
     permissions:
       contents: read
+    env:
+      HOMEBREW_DEVELOPER: 1
     steps:
       - name: Check out repository
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -114,8 +116,6 @@ jobs:
       - run: brew test-bot --only-cleanup-before
 
       - run: brew generate-internal-api
-        env:
-          HOMEBREW_DEVELOPER: 1
 
       - name: Archive data
         run: tar czvf data-internal.tar.gz api/internal/packages.*
@@ -133,6 +133,8 @@ jobs:
     timeout-minutes: 20
     permissions:
       contents: read
+    env:
+      HOMEBREW_DEVELOPER: 1
     steps:
       - name: Check out repository
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -175,8 +177,6 @@ jobs:
       - name: Generate advisory API data
         if: steps.cache.outputs.cache-hit != 'true'
         # Fail closed: never republish stale advisory data.
-        env:
-          HOMEBREW_DEVELOPER: 1
         run: brew generate-advisories-api advisory-database
 
       - name: Validate advisory data
@@ -205,6 +205,8 @@ jobs:
     timeout-minutes: 20
     permissions:
       contents: read
+    env:
+      HOMEBREW_DEVELOPER: 1
     steps:
       - name: Check out repository
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
