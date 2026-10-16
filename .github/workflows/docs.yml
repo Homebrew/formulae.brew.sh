@@ -28,7 +28,7 @@ jobs:
     steps:
       - name: Set up Homebrew
         id: set-up-homebrew
-        uses: Homebrew/actions/setup-homebrew@e99025eb970cfa124b8284a35463d87426917478 # 2026.09.28.1
+        uses: Homebrew/actions/setup-homebrew@eb02c69dbabdb66ff183c614f4ce7ab3c077592c # 2026.10.12.1
         with:
           core: false
           cask: false
@@ -55,7 +55,7 @@ jobs:
         run: vale docs/
 
       - name: Setup Ruby
-        uses: Homebrew/actions/setup-ruby@e99025eb970cfa124b8284a35463d87426917478 # 2026.09.28.1
+        uses: Homebrew/actions/setup-ruby@eb02c69dbabdb66ff183c614f4ce7ab3c077592c # 2026.10.12.1
         with:
           bundler-cache: true
           portable-ruby: true
@@ -129,7 +129,7 @@ jobs:
       issues: write # for Homebrew/actions/create-or-update-issue
     steps:
       - name: Open, update, or close deploy issue
-        uses: Homebrew/actions/create-or-update-issue@e99025eb970cfa124b8284a35463d87426917478 # 2026.09.28.1
+        uses: Homebrew/actions/create-or-update-issue@eb02c69dbabdb66ff183c614f4ce7ab3c077592c # 2026.10.12.1
         with:
           token: ${{ github.token }}
           repository: ${{ github.repository }}
