@@ -14,4 +14,5 @@ gem "jekyll-sitemap"
 group :test do
   gem "html-proofer"
   gem "mdl"
+  gem "rspec"
 end
