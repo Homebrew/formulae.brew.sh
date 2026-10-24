@@ -2,7 +2,7 @@
 layout: base
 ---
 <div id="page">
-  {% if page.title %}
+  {% if page.title and layout.title != false %}
     <h2>{{ page.title }}</h2>
   {% endif %}
   {{ content }}

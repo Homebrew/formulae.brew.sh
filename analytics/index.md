@@ -1,10 +1,11 @@
 ---
 layout: page
+title: Analytics Data
 redirect_from: /analytics-linux/
 ---
-# Analytics Data
-
 <table>
+    <thead><tr><th scope="col">Report</th><th scope="col" colspan="3">Range</th></tr></thead>
+    <tbody>
     <tr>
         <td>Formula Install Events</td>
         <td><a href="{{ site.baseurl }}/analytics/install/30d/">30 days</a></td>
@@ -107,4 +108,5 @@ redirect_from: /analytics-linux/
         <td></td>
         <td></td>
     </tr>
+    </tbody>
 </table>

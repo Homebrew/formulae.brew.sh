@@ -1,41 +1,39 @@
 ---
-layout: base
+layout: page
+title: false
 ---
 {%- assign analytics_path = page.dir | split: "/" -%}
 {%- assign analytics_path = analytics_path[1] -%}
 {%- assign analytics_data = site.data[analytics_path][page.category][page.days] -%}
 <h2>{{ page.category_pretty }} Events ({{ page.days | split: "d" | first }} days)</h2>
 
-<h3><a href="{{ site.baseurl }}/api/{{ analytics_path }}/{{ page.category }}/{{ page.days }}.json"><code>/api/{{ analytics_path }}/{{ page.category }}/{{ page.days }}.json</code> (JSON API)</a></h3>
+<p><strong>Period</strong>: {{ analytics_data.start_date }} to {{ analytics_data.end_date }}, with {{ analytics_data.total_count | number_with_delimiter }} reported events{% if page.category == "homebrew-env-config" %} across {{ analytics_data.total_items | number_with_delimiter }} variables{% endif %}.</p>
+<details><summary>Source and definitions</summary>
+<p><strong>Source</strong>: Homebrew’s InfluxDB analytics, with notice and an opportunity to opt out before events are sent; <a href="{{ site.baseurl }}/api/{{ analytics_path }}/{{ page.category }}/{{ page.days }}.json">JSON</a> and <a href="https://docs.brew.sh/Analytics">collection details</a>.</p>
+<p><strong>Category</strong>: Reported {% case page.category %}{% when "os-version", "homebrew-versions" %}version{% when "homebrew-devcmdrun-developer" %}configuration{% when "homebrew-env-config" %}environment variable{% when "homebrew-os-arch-ci" %}OS, architecture and CI setup{% when "homebrew-prefixes" %}prefix{% when "brew-command-run", "brew-command-run-options", "brew-test-bot-test" %}command{% when "cask-install" %}cask{% else %}formula, including any options{% endcase %}, not a unique user or machine.</p>
+<p><strong>Events</strong>: {% case page.category %}{% when "install" %}Reported formula installation attempts, including dependencies, source builds and CI.{% when "install-on-request" %}Reported formula installation attempts explicitly requested, excluding dependency-only requests.{% when "cask-install" %}Reported cask events after artifact installation.{% when "build-error" %}Reported formula build failures.{% when "homebrew-env-config" %}One randomly sampled configuration variable per invocation of selected common commands; values are never recorded.{% else %}Reported occurrences grouped by this category.{% endcase %}</p>
+{% if page.category == "homebrew-env-config" %}
+<p><strong>Default value</strong>: The documented default, not a user’s value.</p>
+<p><strong>Non-default / Default / Unset</strong>: Sampled events in each state, with variables exported by Homebrew itself counted as unset.</p>
+<p><strong>Non-default %</strong>: Non-default events as a percentage of this variable’s sampled events.</p>
+{% endif %}
+<p>Unreported events are excluded; counts do not establish unique users or successful formula installations.</p>
 
-<h4>Start Date: {{ analytics_data.start_date }}</h4>
-{%- if page.category == "homebrew-env-config" %}
-<h4>Total Variables: {{ analytics_data.total_items }}</h4>
-{%- endif %}
-<h4>Total Events: {{ analytics_data.total_count }}</h4>
-{%- if page.category == "homebrew-env-config" %}
-<p>
-  Each event samples one randomly-chosen configuration variable from a
-  <code>brew</code> run and records whether the user left it unset, set it to
-  its default value or set it to a non-default value. Variables Homebrew exports
-  itself (e.g. <code>HOMEBREW_EDITOR</code> from <code>EDITOR</code>) count as
-  unset. Values are never recorded.
-</p>
-{%- endif %}
+</details>
 
-<div style="overflow-x: auto; margin: 1em 0;" tabindex="0" role="region"
+<div class="wide-table" tabindex="0" role="region"
      aria-label="{{ page.category_pretty | escape }} events">
-<table class="full-width" style="margin: 0;">
-    <tr>
-        <th></th>
-        <th>
+<table class="analytics-table no-stack">
+    <thead><tr>
+        <th scope="col" class="number-data">Rank</th>
+        <th scope="col"{% if page.category == "os-version" or page.category == "homebrew-versions" %} class="version-data"{% else %} class="text-data"{% endif %}>
 {%- case page.category -%}
     {%- when "os-version" -%}
             Version
     {%- when "homebrew-devcmdrun-developer" -%}
             Configuration
     {%- when "homebrew-env-config" -%}
-            Environment Variable
+            Variable
     {%- when "homebrew-os-arch-ci" -%}
             Setup
     {%- when "homebrew-prefixes" -%}
@@ -55,18 +53,19 @@ layout: base
 {%- endcase -%}
         </th>
 {%- if page.category == "homebrew-env-config" %}
-        <th>Default Value</th>
-        <th>Set (non-default)</th>
-        <th>Set (default)</th>
-        <th>Unset</th>
+        <th scope="col" class="text-data">Default value</th>
+        <th scope="col" class="number-data">Non-default</th>
+        <th scope="col" class="number-data">Default</th>
+        <th scope="col" class="number-data">Unset</th>
 {%- endif %}
-        <th>Events</th>
-        <th>{% if page.category == "homebrew-env-config" %}Set (non-default) {% endif %}%</th>
-    </tr>
+        <th scope="col" class="number-data">Events</th>
+        <th scope="col" class="number-data">{% if page.category == "homebrew-env-config" %}Non-default {% endif %}%</th>
+    </tr></thead>
+    <tbody>
 {%- for item in analytics_data.items -%}
     <tr>
-        <td class="number-data">#{{ item.number }}</td>
-        <td>
+        <td class="number-data">#{{ item.number | number_with_delimiter }}</td>
+        <td{% if page.category == "os-version" or page.category == "homebrew-versions" %} class="version-data"{% else %} class="text-data"{% endif %}>
     {%- case page.category -%}
         {%- when "os-version" -%}
                 <code>{{ item.os_version | escape }}</code>
@@ -104,14 +103,15 @@ layout: base
     {%- endcase -%}
         </td>
 {%- if page.category == "homebrew-env-config" %}
-        <td>{{ item.default_value | escape }}</td>
-        <td class="number-data">{{ item.non_default_count }}</td>
-        <td class="number-data">{{ item.set_default_count }}</td>
-        <td class="number-data">{{ item.unset_count }}</td>
+        <td class="text-data">{{ item.default_value | escape }}</td>
+        <td class="number-data">{{ item.non_default_count | number_with_delimiter }}</td>
+        <td class="number-data">{{ item.set_default_count | number_with_delimiter }}</td>
+        <td class="number-data">{{ item.unset_count | number_with_delimiter }}</td>
 {%- endif %}
-        <td class="number-data">{{ item.count }}</td>
-        <td class="number-data">{{ item.percent }}%</td>
+        <td class="number-data">{{ item.count | number_with_delimiter }}</td>
+        <td class="number-data">{{ item.percent | number_with_delimiter }}%</td>
     </tr>
 {%- endfor %}
+    </tbody>
 </table>
 </div>
