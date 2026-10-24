@@ -271,7 +271,7 @@ permalink: :title
         </th>
         {%- for interval in site.analytics.intervals -%}
             {%- assign match = site.data.analytics.cask-install.homebrew-cask[interval.path].formulae[token] | where: "cask", variant.cask | first -%}
-        <td class="number-data">{% if site.data.analytics.cask-install.homebrew-cask[interval.path].total_items %}{{ match.count | default: "0" }}{% endif %}</td>
+        <td class="number-data">{% if site.data.analytics.cask-install.homebrew-cask[interval.path].total_items %}{{ match.count | default: "0" | number_with_delimiter }}{% endif %}</td>
         {%- endfor -%}
     </tr>
 {%- else -%}

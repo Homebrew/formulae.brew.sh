@@ -168,13 +168,13 @@ permalink: :title
     <tr>
         <td><strong>stable</strong></td>
         <td>✅</td>
-        <td>{{ f.versions.stable | escape }}</td>
+        <td class="number-data">{{ f.versions.stable | escape }}</td>
     </tr>
 {%- if f.versions.head %}
     <tr>
         <td><strong>head</strong></td>
         <td>⚡️</td>
-        <td>{{ f.versions.head | escape }}</td>
+        <td class="number-data">{{ f.versions.head | escape }}</td>
     </tr>
 {%- endif %}
 </table>
@@ -325,6 +325,44 @@ permalink: :title
 </table>
 {%- endif -%}
 
+<p>Analytics:</p>
+<table class="no-stack">
+    <tr>
+        <td></td>
+        {%- for interval in site.analytics.intervals -%}
+        <th class="number-data">{{ interval.name }}</th>
+        {%- endfor -%}
+    </tr>
+{%- for category in site.analytics.categories.formulae -%}
+    {%- assign variants = nil -%}
+    {%- for interval in site.analytics.intervals -%}
+        {%- assign interval_variants = site.data.analytics[category.path].homebrew-core[interval.path].formulae[fname] -%}
+        {%- if interval_variants and interval_variants != empty -%}
+            {%- assign variants = interval_variants -%}
+        {%- endif -%}
+    {%- endfor -%}
+    {%- for variant in variants -%}
+    <tr>
+        <th>{{ category.name }}
+            {%- assign variant_suffix = variant.formula | remove_first: fname | strip -%}
+            {%- if variant_suffix != "" %} (<code>{{ variant_suffix | escape }}</code>){% endif -%}
+        </th>
+        {%- for interval in site.analytics.intervals -%}
+            {%- assign match = site.data.analytics[category.path].homebrew-core[interval.path].formulae[fname] | where: "formula", variant.formula | first -%}
+        <td class="number-data">{% if site.data.analytics[category.path].homebrew-core[interval.path].total_items %}{{ match.count | default: "0" | number_with_delimiter }}{% endif %}</td>
+        {%- endfor -%}
+    </tr>
+    {%- else -%}
+    <tr>
+        <th>{{ category.name }}</th>
+        {%- for interval in site.analytics.intervals -%}
+        <td class="number-data">{% if site.data.analytics[category.path].homebrew-core[interval.path].total_items %}0{% endif %}</td>
+        {%- endfor -%}
+    </tr>
+    {%- endfor -%}
+{%- endfor %}
+</table>
+
 {%- if f.vulnerabilities and f.vulnerabilities.open.size > 0 %}
 <p>Known vulnerabilities in the current version:</p>
 <table class="full-width">
@@ -351,41 +389,3 @@ permalink: :title
     {%- endfor -%}.
 </p>
 {%- endif %}
-
-<p>Analytics:</p>
-<table class="no-stack">
-    <tr>
-        <td></td>
-        {%- for interval in site.analytics.intervals -%}
-        <th class="number-data">{{ interval.name }}</th>
-        {%- endfor -%}
-    </tr>
-{%- for category in site.analytics.categories.formulae -%}
-    {%- assign variants = nil -%}
-    {%- for interval in site.analytics.intervals -%}
-        {%- assign interval_variants = site.data.analytics[category.path].homebrew-core[interval.path].formulae[fname] -%}
-        {%- if interval_variants and interval_variants != empty -%}
-            {%- assign variants = interval_variants -%}
-        {%- endif -%}
-    {%- endfor -%}
-    {%- for variant in variants -%}
-    <tr>
-        <th>{{ category.name }}
-            {%- assign variant_suffix = variant.formula | remove_first: fname | strip -%}
-            {%- if variant_suffix != "" %} (<code>{{ variant_suffix | escape }}</code>){% endif -%}
-        </th>
-        {%- for interval in site.analytics.intervals -%}
-            {%- assign match = site.data.analytics[category.path].homebrew-core[interval.path].formulae[fname] | where: "formula", variant.formula | first -%}
-        <td class="number-data">{% if site.data.analytics[category.path].homebrew-core[interval.path].total_items %}{{ match.count | default: "0" }}{% endif %}</td>
-        {%- endfor -%}
-    </tr>
-    {%- else -%}
-    <tr>
-        <th>{{ category.name }}</th>
-        {%- for interval in site.analytics.intervals -%}
-        <td class="number-data">{% if site.data.analytics[category.path].homebrew-core[interval.path].total_items %}0{% endif %}</td>
-        {%- endfor -%}
-    </tr>
-    {%- endfor -%}
-{%- endfor %}
-</table>

@@ -268,6 +268,7 @@ jobs:
           set -euo pipefail
 
           analytics_backup_path="$(mktemp -d)"
+          mkdir -p "_data/analytics" "api/analytics"
           mv -v "_data/analytics" "${analytics_backup_path}/data_analytics"
           mv -v "api/analytics" "${analytics_backup_path}/api_analytics"
 
@@ -293,6 +294,7 @@ jobs:
 
       - name: Validate analytics data
         run: |
+          ruby script/prune-analytics.rb
           test -s _data/analytics/install/30d.json
           test -s api/analytics/install/30d.json
 
