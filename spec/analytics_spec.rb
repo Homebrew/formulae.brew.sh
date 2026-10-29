@@ -63,8 +63,8 @@ RSpec.describe "Formula history analytics page" do
   end
 end
 
-RSpec.describe "Analytics pages with a legacy cache" do
-  it "marks reports missing from legacy caches as unavailable" do
+RSpec.describe "Analytics pages without generated reports" do
+  it "marks missing reports as unavailable" do
     site = Jekyll::Site.new(Jekyll.configuration("source" => File.expand_path("..", __dir__), "quiet" => true))
     %w[github github-packages releases formula-history].each do |report|
       page = Jekyll::Page.new(site, site.source, "analytics", "#{report}.html")

@@ -35,9 +35,8 @@ RSpec.describe "Analytics workflow validation" do
     end
   end
 
-  def validate(key, fresh: "")
+  def validate
     Open3.capture3(
-      { "ANALYTICS_CACHE_MATCHED_KEY" => key, "ANALYTICS_FRESH" => fresh },
       "bash", "-euo", "pipefail", "-c", validation, chdir: @root
     )
   end
@@ -58,59 +57,42 @@ RSpec.describe "Analytics workflow validation" do
     end
   end
 
-  it "accepts legacy usage reports before a v9 snapshot exists" do
-    _stdout, stderr, status = validate("analytics-data-2026-10-28")
-
-    expect(status).to be_success, stderr
-  end
-
-  it "requires the new reports in a v9 snapshot" do
-    _stdout, _stderr, status = validate("analytics-data-v9-history-2026-10-28")
+  it "rejects snapshots containing only legacy usage reports" do
+    _stdout, _stderr, status = validate
 
     expect(status).not_to be_success
   end
 
-  it "discards incompatible reports from legacy snapshots" do
+  it "preserves all reports in a complete snapshot" do
     write_new_reports
 
-    _stdout, stderr, status = validate("analytics-data-2026-10-28")
+    _stdout, stderr, status = validate
 
     expect(status).to be_success, stderr
     %w[_data api].each do |prefix|
-      expect((@root/prefix/"analytics").children).to contain_exactly(@root/prefix/"analytics/install")
+      expect(@root/prefix/"analytics/github/history.json").to exist
     end
   end
 
-  it "requires the new reports after fresh generation" do
-    _stdout, _stderr, status = validate("analytics-data-2026-10-28", fresh: "true")
+  it "rejects an absent snapshot" do
+    FileUtils.rm_rf([@root/"_data/analytics", @root/"api/analytics"])
+
+    _stdout, _stderr, status = validate
 
     expect(status).not_to be_success
   end
 
-  it "does not treat an absent snapshot as legacy data" do
-    _stdout, _stderr, status = validate("")
-
-    expect(status).not_to be_success
-  end
-
-  it "rejects expired legacy usage reports" do
+  it "rejects expired usage reports" do
+    write_new_reports
     (@root/"_data/analytics/install/30d.json").write(JSON.generate(
                                                        "start_date" => (Time.now.utc.to_date - 400).iso8601,
                                                        "end_date"   => (Time.now.utc.to_date - 370).iso8601,
                                                      ))
 
-    _stdout, _stderr, status = validate("analytics-data-2026-10-28")
+    _stdout, _stderr, status = validate
 
     expect(status).not_to be_success
     expect(@root/"api/analytics/install/30d.json").not_to exist
-  end
-
-  it "accepts a complete v9 snapshot" do
-    write_new_reports
-
-    _stdout, stderr, status = validate("analytics-data-v9-history-2026-10-28")
-
-    expect(status).to be_success, stderr
   end
 
   [365, 366].each do |age|
@@ -121,7 +103,7 @@ RSpec.describe "Analytics workflow validation" do
       data.fetch("formulae")["old"] = { "fetched_at" => (Time.now.utc - (age * 86_400)).iso8601 }
       path.write(JSON.generate(data))
 
-      _stdout, stderr, status = validate("analytics-data-v9-history-2026-10-28")
+      _stdout, stderr, status = validate
 
       expect(status.success?).to eq(age == 365), stderr
       %w[_data api].each do |prefix|
@@ -134,7 +116,7 @@ RSpec.describe "Analytics workflow validation" do
     write_new_reports
     (@root/"_data/analytics/github-packages/30d.json").write(JSON.generate("formulae" => {}))
 
-    _stdout, stderr, status = validate("analytics-data-v9-history-2026-10-28")
+    _stdout, stderr, status = validate
 
     expect(status).to be_success, stderr
   end
@@ -169,7 +151,7 @@ RSpec.describe "Analytics workflow validation" do
       expect(status).to be_success, stderr
       expect(@root/"brew-calls").not_to exist
       expect(@root/"output").not_to exist
-      expect(validate("analytics-data-v9-history-2026-10-28").last).to be_success
+      expect(validate.last).to be_success
     end
 
     it "rejects a preparation failure without a snapshot" do
@@ -184,7 +166,7 @@ RSpec.describe "Analytics workflow validation" do
       (@root/"_data/analytics/install/30d.json").delete
 
       expect(update(prepared: false, key: "analytics-data-v9-history-2026-10-28").last).to be_success
-      expect(validate("analytics-data-v9-history-2026-10-28").last).not_to be_success
+      expect(validate.last).not_to be_success
     end
 
     it "still restores the snapshot after generation fails" do
@@ -193,7 +175,7 @@ RSpec.describe "Analytics workflow validation" do
       expect(status).to be_success, stderr
       expect(@root/"brew-calls").to exist
       expect(@root/"output").not_to exist
-      expect(validate("analytics-data-v9-history-2026-10-28").last).to be_success
+      expect(validate.last).to be_success
     end
 
     it "rejects a generation failure without a snapshot" do
