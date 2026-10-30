@@ -10,9 +10,6 @@ layout: null
     <language>en</language>
     <atom:link href="{{ page.url | absolute_url | xml_escape }}" rel="self" type="application/rss+xml" />
     {% assign entries = site.data.formula_feeds[page.feed] -%}
-    {% if entries.first -%}
-    <lastBuildDate>{{ entries.first.date | date_to_rfc822 }}</lastBuildDate>
-    {% endif -%}
     {% for entry in entries -%}
     {% assign name = site.data.formula_canonical[entry.name] | default: entry.name -%}
     {% assign data_name = name | remove: '@' | remove: '.' | replace: '+', '_' -%}
