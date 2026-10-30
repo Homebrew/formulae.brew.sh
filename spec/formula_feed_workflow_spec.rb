@@ -141,4 +141,30 @@ RSpec.describe "Formula feed workflow fallback" do
     save = steps.find { |step| step["name"] == "Save formula feeds" }
     expect(save.fetch("if")).to eq("steps.formula-feeds.outcome == 'success' && github.ref == 'refs/heads/main'")
   end
+
+  it "archives both feed data and security analytics for the site build" do
+    archive = steps.find { |step| step["name"] == "Archive data" }.fetch("run")
+    paths = %w[
+      _data/formula/ _data/formula_canonical.json _data/formula_feeds.json
+      api/formula/ api/formula_tap_migrations.json api/internal/formula.names.json formula/
+      _data/analytics/security/current.json api/analytics/security/current.json
+    ]
+    paths.each do |path|
+      destination = @root/path
+      if path.end_with?("/")
+        destination.mkpath
+      else
+        destination.dirname.mkpath
+        destination.write("{}")
+      end
+    end
+
+    _stdout, stderr, status = Open3.capture3("bash", "-e", "-c", archive, chdir: @root)
+    expect(status).to be_success, stderr
+    contents, stderr, status = Open3.capture3("tar", "tzf", "data-core.tar.gz", chdir: @root)
+    expect(status).to be_success, stderr
+    expect(contents.lines.map(&:strip)).to include(
+      "_data/formula_feeds.json", "_data/analytics/security/current.json", "api/analytics/security/current.json"
+    )
+  end
 end
