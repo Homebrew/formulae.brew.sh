@@ -34,10 +34,8 @@ bundle exec jekyll serve
 This downloads the generated data from the public API, so it does not require
 local tap checkouts or Homebrew repository write access.
 
-RSS feeds are published at `/feeds/formula-new.xml` (latest 50 additions) and
-`/feeds/formula-updated.xml` (latest 500 version changes or revision increases).
-Bottle-only rebuilds are excluded. Pages include RSS discovery links, and the
-formula index has subscription links.
+See the [RSS feed documentation](analytics/index.md#rss-feeds) for subscription
+links, entry limits and included changes.
 
 To populate the feeds for a local build, run `PATH="$PWD/script:$PATH" brew generate-formula-feeds`
 with a complete `homebrew/core` Git checkout installed. CI generates the feeds with
