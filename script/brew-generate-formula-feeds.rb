@@ -2,6 +2,7 @@
 
 require "json"
 require "optparse"
+require "tempfile"
 require "time"
 require "utils/analytics/formula_history"
 
@@ -31,7 +32,7 @@ class FormulaFeeds
         feed = change.fetch(:added) ? "new" : "updated"
         feeds.fetch(feed).length < @limits.fetch(feed)
       end
-      blobs = selected.flat_map { |change| [change[:before], change.fetch(:after)] }.compact.uniq - @builds.keys
+      blobs = selected.flat_map { |change| [change[:before], change.fetch(:after)] }.compact.uniq
       sources = blobs.empty? ? {} : @history.sources(blobs)
       selected.each do |change|
         feed = change.fetch(:added) ? "new" : "updated"
@@ -62,7 +63,7 @@ class FormulaFeeds
   end
 
   def builds(path, blob, sources)
-    @builds[blob] ||= @history.builds(path, sources.fetch(blob)).tap do |builds|
+    @builds[[path, blob]] ||= @history.builds(path, sources.fetch(blob)).tap do |builds|
       if builds.values.any?(&:error)
         raise "Cannot read formula metadata for #{path} at #{blob}"
       end
@@ -77,6 +78,7 @@ class FormulaFeeds
 
     tokens = output.split("\0")
     result = []
+    deleted = {}
     commit = timestamp = nil
     while (token = tokens.shift)
       if token == "commit"
@@ -86,11 +88,20 @@ class FormulaFeeds
         old_mode, mode, before, after, status = token.lstrip.delete_prefix(":").split
         old_path = tokens.shift
         path = status.start_with?("R", "C") ? tokens.shift : old_path
+        if status == "D" && %w[100644 100755].include?(old_mode) && @history.formula_path?(old_path)
+          deleted[[commit, File.basename(old_path)]] = { old_path:, before:, added: false }
+        end
         next if %w[100644 100755].exclude?(mode) || !@history.formula_path?(path)
 
         added = %w[100644 100755].exclude?(old_mode) || !@history.formula_path?(old_path)
         result << { commit:, timestamp:, path:, old_path:, before: added ? nil : before, after:, added: }
       end
+    end
+    result.each do |change|
+      next unless change.fetch(:added)
+
+      previous = deleted[[change.fetch(:commit), File.basename(change.fetch(:path))]]
+      change.merge!(previous) if previous
     end
     result
   end
@@ -106,5 +117,9 @@ end.parse!
 feeds = FormulaFeeds.new(options.fetch(:repository), revision: options.fetch(:revision)).generate
 output = options.fetch(:output)
 output.dirname.mkpath
-output.write("#{JSON.pretty_generate(feeds)}\n")
+Tempfile.create([output.basename.to_s, ".tmp"], output.dirname) do |temporary|
+  temporary.write("#{JSON.pretty_generate(feeds)}\n")
+  temporary.close
+  File.rename(temporary.path, output)
+end
 puts "Generated #{feeds.fetch("new").length} new and #{feeds.fetch("updated").length} updated formula entries"

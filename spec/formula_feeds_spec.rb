@@ -131,6 +131,70 @@ RSpec.describe "Formula RSS feeds" do
     expect(result.fetch("updated").first.fetch("versions")).to eq(["1.0", "2.1"])
   end
 
+  ["1.0", "2.0"].each do |version|
+    it "recognizes a heavily edited move with version #{version}" do
+      path = formula(extra: (1..40).map { |index| "# Original source line #{index}" }.join("\n"))
+      added = commit
+      formula(version:, extra: (1..40).map { |index| "# Replacement source line #{index}" }.join("\n"))
+      moved_path = repository/"Formula/e/example.rb"
+      moved_path.dirname.mkpath
+      FileUtils.mv(path, moved_path)
+      moved = commit
+      expect(git("diff", "HEAD^", "HEAD", "--name-status", "--find-renames=50%").lines.map(&:strip))
+        .to contain_exactly("A\tFormula/e/example.rb", "D\tFormula/example.rb")
+
+      result = feeds
+      expect(result.fetch("new").map { |entry| entry.fetch("commit") }).to eq([added])
+      updates = result.fetch("updated")
+      if version == "1.0"
+        expect(updates).to be_empty
+      else
+        expect(updates.map { |entry| entry.fetch("commit") }).to eq([moved])
+        expect(updates.first.fetch("versions")).to eq([version])
+      end
+    end
+  end
+
+  it "treats a formula reintroduced after a separate deletion as an addition" do
+    path = formula
+    added = commit
+    path.unlink
+    commit
+    formula(version: "2.0")
+    reintroduced = commit
+
+    result = feeds
+    expect(result.fetch("new").map { |entry| entry.fetch("commit") }).to eq([reintroduced, added])
+    expect(result.fetch("updated")).to be_empty
+  end
+
+  it "validates each formula path even when source blobs are identical" do
+    path = formula
+    FileUtils.cp(path, repository/"Formula/zother.rb")
+    commit
+    output.dirname.mkpath
+    output.write("previous data")
+
+    _stdout, stderr, status = generate
+    expect(status).not_to be_success
+    expect(stderr).to include("Cannot read formula metadata for Formula/zother.rb")
+    expect(output.read).to eq("previous data")
+  end
+
+  it "replaces the output without modifying the file held by existing readers" do
+    formula
+    commit
+    output.dirname.mkpath
+    output.write("previous data")
+
+    output.open do |previous|
+      result = feeds
+      expect(result.fetch("new").first.fetch("name")).to eq("example")
+      expect(previous.read).to eq("previous data")
+    end
+    expect(output.dirname.children).to eq([output])
+  end
+
   it "continues through history pages containing no formula changes" do
     formula
     commit
@@ -220,6 +284,7 @@ RSpec.describe "Formula RSS feeds" do
 
     %w[new updated].each do |type|
       xml = Nokogiri::XML((site/"_site/feeds/formula-#{type}.xml").read) { |config| config.strict.nonet }
+      expect(xml.xpath("/rss/channel/lastBuildDate")).to be_empty
       items = xml.xpath("/rss/channel/item")
       expect(items.length).to eq(result.fetch(type).length)
       expect(items.map { |item| item.at_xpath("guid")["isPermaLink"] }.uniq).to eq(["false"])
