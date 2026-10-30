@@ -49,6 +49,8 @@ algolia:
     {% endcapture -%}
     {{ plugin_output | replace: " />", ">" | replace: "/>", ">" }}
     <meta name="viewport" content="width=device-width">
+    <link rel="alternate" type="application/rss+xml" title="New Homebrew Formulae" href="{{ '/feeds/formula-new.xml' | absolute_url }}">
+    <link rel="alternate" type="application/rss+xml" title="Updated Homebrew Formulae" href="{{ '/feeds/formula-updated.xml' | absolute_url }}">
     <link rel="icon" href="https://brew.sh/assets/img/favicon.ico" sizes="48x48">
     <link rel="icon" href="https://brew.sh/assets/img/homebrew.svg" sizes="any" type="image/svg+xml">
     <link rel="apple-touch-icon" href="https://brew.sh/assets/img/apple-touch-icon.png">

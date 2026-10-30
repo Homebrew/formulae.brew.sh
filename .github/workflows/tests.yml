@@ -54,11 +54,13 @@ jobs:
     if: startsWith( github.repository, 'Homebrew/' )
     name: Generate homebrew/core data, pages and API
     runs-on: macos-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     permissions:
       contents: read
     env:
       HOMEBREW_DEVELOPER: 1
+    outputs:
+      formula-feeds-available: ${{ steps.formula-feeds-fallback.outputs.available }}
     steps:
       - name: Check out repository
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -79,8 +81,56 @@ jobs:
 
       - run: brew generate-formula-api
 
+      - name: Restore formula feeds
+        continue-on-error: true
+        timeout-minutes: 1
+        uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: _data/formula_feeds.json
+          key: formula-feeds-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: formula-feeds-
+
+      - name: Generate formula feeds
+        id: formula-feeds
+        continue-on-error: true
+        timeout-minutes: 3
+        run: |
+          core="$(brew --repo homebrew/core)"
+          if [[ "$(git -C "$core" rev-parse --is-shallow-repository)" == true ]]; then
+            git -C "$core" fetch --unshallow origin
+          fi
+          PATH="$PWD/script:$PATH" brew generate-formula-feeds --output "$RUNNER_TEMP/formula_feeds.json"
+          jq -e '(.new | length) == 50 and (.updated | length) == 500' "$RUNNER_TEMP/formula_feeds.json" >/dev/null
+          mv "$RUNNER_TEMP/formula_feeds.json" _data/formula_feeds.json
+
+      - name: Keep formula feeds available
+        id: formula-feeds-fallback
+        env:
+          FEED_GENERATION_OUTCOME: ${{ steps.formula-feeds.outcome }}
+        run: |
+          if jq -e '(.new | length) == 50 and (.updated | length) == 500' _data/formula_feeds.json >/dev/null 2>&1; then
+            if [[ "$FEED_GENERATION_OUTCOME" != success ]]; then
+              echo "::warning::Formula feed generation failed; retaining the last successful feeds."
+            fi
+            echo "available=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "::warning::Formula feeds are unavailable; publishing empty feeds until generation succeeds."
+            mkdir -p _data
+            printf '%s\n' '{"new":[],"updated":[]}' > _data/formula_feeds.json
+            echo "available=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Save formula feeds
+        if: steps.formula-feeds.outcome == 'success' && github.ref == 'refs/heads/main'
+        continue-on-error: true
+        timeout-minutes: 1
+        uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: _data/formula_feeds.json
+          key: formula-feeds-${{ github.run_id }}-${{ github.run_attempt }}
+
       - name: Archive data
-        run: tar czvf data-core.tar.gz _data/formula/ _data/formula_canonical.json api/formula/ api/formula_tap_migrations.json api/internal/formula.* formula/ _data/analytics/security/current.json api/analytics/security/current.json
+        run: tar czvf data-core.tar.gz _data/formula/ _data/formula_canonical.json _data/formula_feeds.json api/formula/ api/formula_tap_migrations.json api/internal/formula.* formula/ _data/analytics/security/current.json api/analytics/security/current.json
 
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
@@ -410,6 +460,30 @@ jobs:
           path: data-analytics.tar.gz
           retention-days: 1
 
+  test-formula-feeds:
+    name: Test formula feed generation
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Homebrew
+        uses: Homebrew/actions/setup-homebrew@d482da0e602890d3160aade42e72c8556103bf04 # 2026.10.26.1
+        with:
+          stable: false
+
+      - name: Set up Ruby
+        uses: Homebrew/actions/setup-ruby@d482da0e602890d3160aade42e72c8556103bf04 # 2026.10.26.1
+        with:
+          bundler-cache: true
+          portable-ruby: true
+
+      - run: bundle exec rspec spec/formula_feeds_spec.rb
+
   build:
     needs: [generate-cask, generate-core, generate-internal, generate-advisories, generate-analytics]
     runs-on: ubuntu-latest
@@ -464,10 +538,12 @@ jobs:
       - name: Validate build
         run: ./script/validate-build.rb
 
-      - name: Test API signing
+      - name: Test generated site
         env:
           API_SIGNING_TEST_SITE: _site
-        run: bundle exec rspec
+          FORMULA_FEEDS_TEST_SITE: _site
+          FORMULA_FEEDS_AVAILABLE: ${{ needs.generate-core.outputs.formula-feeds-available }}
+        run: bundle exec rspec --exclude-pattern spec/formula_feeds_spec.rb
 
       - name: Upload unsigned site
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
