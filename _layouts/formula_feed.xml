@@ -1,0 +1,35 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ page.title | xml_escape }}</title>
+    <link>{{ '/formula/' | absolute_url | xml_escape }}</link>
+    <description>{{ page.description | xml_escape }}</description>
+    <language>en</language>
+    <atom:link href="{{ page.url | absolute_url | xml_escape }}" rel="self" type="application/rss+xml" />
+    {% assign entries = site.data.formula_feeds[page.feed] -%}
+    {% if entries.first -%}
+    <lastBuildDate>{{ entries.first.date | date_to_rfc822 }}</lastBuildDate>
+    {% endif -%}
+    {% for entry in entries -%}
+    {% assign name = site.data.formula_canonical[entry.name] | default: entry.name -%}
+    {% assign data_name = name | remove: '@' | remove: '.' | replace: '+', '_' -%}
+    {% assign formula = site.data.formula[data_name] -%}
+    {% capture commit_url %}https://github.com/Homebrew/homebrew-core/commit/{{ entry.commit }}{% endcapture -%}
+    <item>
+      <title>{{ entry.name | xml_escape }}{% if entry.versions.size > 0 %} {{ entry.versions | join: ', ' | xml_escape }}{% endif %}</title>
+      {% if formula -%}
+      <link>{{ name | prepend: '/formula/' | absolute_url | xml_escape }}</link>
+      {% else -%}
+      <link>{{ commit_url | xml_escape }}</link>
+      {% endif -%}
+      <guid isPermaLink="false">{{ entry.id | xml_escape }}</guid>
+      <pubDate>{{ entry.date | date_to_rfc822 }}</pubDate>
+      <description>{{ formula.desc | default: entry.name | xml_escape }}</description>
+      <category>{{ page.feed }}</category>
+    </item>
+    {% endfor -%}
+  </channel>
+</rss>
