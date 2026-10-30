@@ -9,6 +9,11 @@
   {{ key_value[0] | jsonify }}:{{ key_value[1] | jsonify }},
 {%- endfor -%}
 
+{%- assign downloads = site.data.analytics.github-packages["30d"].formulae[fname] -%}
+{%- if downloads -%}
+"github_packages_downloads":{{ downloads | jsonify }},
+{%- endif -%}
+
 "analytics":{
 {%- for category in site.analytics.categories.formulae -%}
   "{{ category.path | replace: "-", "_" }}":{

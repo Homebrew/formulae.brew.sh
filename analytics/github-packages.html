@@ -1,0 +1,38 @@
+---
+layout: page
+title: Package Download Analytics
+permalink: /analytics/github-packages/
+---
+{% assign data = site.data.analytics.github-packages["30d"] %}
+{% if data %}
+<p><strong>Selection</strong>: Top {{ data.selected_formulae | number_with_delimiter }} formulae by 30-day install events, covering {{ data.analytics_coverage_percent | round: 1 | number_with_delimiter }}% of reported installs, ordered by downloads.</p>
+<details><summary>Source and definitions</summary>
+<p><strong>Source</strong>: GitHub Packages and Homebrew install analytics; <a href="{{ site.baseurl }}/api/analytics/github-packages/30d.json">JSON</a> includes source URLs, dates and {{ data.unavailable_formulae.size | number_with_delimiter }} unavailable packages.</p>
+<p><strong>Formula</strong>: Current core formula name; versioned formulae are separate, with casks and other taps excluded.</p>
+<p><strong>Downloads</strong>: GitHub’s cumulative package downloads across versions and platforms since the Bintray migration; earlier downloads are excluded.</p>
+<p><strong>30-day</strong>: Sum of GitHub’s daily download chart, including today’s incomplete value.</p>
+<p><strong>Installs</strong>: Reported installation attempts over 30 days, including dependencies, source builds and CI.</p>
+<p><strong>Ratio</strong>: 30-day downloads divided by install events, or N/A when zero; 2× means twice as many downloads.</p>
+<p>Windows can differ, and retries, caches and other clients affect counts; the ratio does not measure analytics opt-outs.</p>
+<p><strong>Top {{ data.selected_formulae | number_with_delimiter }}</strong>: Sums all available packages in the JSON; Ratio is the arithmetic mean of their available download/install ratios.</p>
+</details>
+<div class="wide-table" tabindex="0" role="region" aria-label="Package download analytics">
+<table class="analytics-table no-stack">
+  <thead><tr><th scope="col">Formula</th><th scope="col">Downloads</th><th scope="col">30-day</th><th scope="col">Installs</th><th scope="col">Ratio</th></tr></thead>
+  <tbody>
+  <tr><th scope="row">Top {{ data.selected_formulae | number_with_delimiter }}</th><td>{{ data.totals.all_time | number_with_delimiter }}</td><td>{{ data.totals.last_30_days | number_with_delimiter }}</td><td>{{ data.totals.analytics_30d | number_with_delimiter }}</td><td>{% if data.totals.analytics_ratio != nil %}{{ data.totals.analytics_ratio | round: 1 | number_with_delimiter }}×{% else %}N/A{% endif %}</td></tr>
+  {% assign formulae = data.formulae | sort_by_downloads %}
+  {% for formula in formulae limit: 1000 %}
+    <tr>
+      <th scope="row"><a href="{{ site.baseurl }}/formula/{{ formula[0] | uri_escape }}">{{ formula[0] | escape }}</a></th>
+      <td>{{ formula[1].all_time | number_with_delimiter }}</td><td>{{ formula[1].last_30_days | number_with_delimiter }}</td><td>{{ formula[1].analytics_30d | number_with_delimiter }}</td>
+      <td>{% if formula[1].analytics_ratio != nil %}{{ formula[1].analytics_ratio | round: 1 | number_with_delimiter }}×{% else %}N/A{% endif %}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+
+{% else %}
+<p>Package download analytics are not yet available.</p>
+{% endif %}

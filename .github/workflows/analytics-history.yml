@@ -1,0 +1,161 @@
+name: Archive History
+on:
+  push:
+    paths: [.github/workflows/analytics-history.yml]
+  schedule:
+    - cron: "0 2 1 1 *"
+  workflow_dispatch:
+
+concurrency:
+  group: analytics-history-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  archive:
+    if: startsWith(github.repository, 'Homebrew/')
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    permissions:
+      contents: write
+      pull-requests: write
+    env:
+      HOMEBREW_DEVELOPER: 1
+      HOMEBREW_NO_AUTO_UPDATE: 1
+      HOMEBREW_GITHUB_API_TOKEN: ${{ github.token }}
+      PUBLISH: ${{ github.ref == format('refs/heads/{0}', github.event.repository.default_branch) && (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: Homebrew/actions/setup-homebrew@4790763c0a3ba4036f72634dc079c4a7dfcd4878 # 2026.10.19.1
+        with:
+          stable: false
+
+      - name: Locate working cache
+        id: paths
+        run: |
+          echo "analytics=$(brew --cache)/analytics" >> "$GITHUB_OUTPUT"
+          echo "downloads=$(brew --cache)/github-packages-downloads" >> "$GITHUB_OUTPUT"
+
+      - name: Restore working cache
+        id: cache
+        uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: |
+            ${{ steps.paths.outputs.downloads }}
+            ${{ steps.paths.outputs.analytics }}
+          key: analytics-working-v1-archive-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: analytics-working-v1-
+
+      - name: Prepare Git histories and formula checkpoint
+        run: |
+          set -euo pipefail
+          brew tap --force homebrew/core
+          brew tap --force homebrew/cask
+          for repository in "$(brew --repo)" "$(brew --repo homebrew/core)" "$(brew --repo homebrew/cask)"; do
+            if [[ "$(git -C "$repository" rev-parse --is-shallow-repository)" == true ]]; then
+              git -C "$repository" fetch --unshallow origin
+            fi
+            git -C "$repository" fetch origin
+            git -C "$repository" checkout --detach origin/HEAD
+          done
+          git -C "$(brew --repo)" fetch --tags origin
+          legacy="$(brew --cache)/analytics/legacy-homebrew"
+          if [[ ! -d "$legacy" ]]; then
+            git clone --bare --filter=blob:none https://github.com/Homebrew/legacy-homebrew "$legacy"
+          fi
+          ruby script/bootstrap-formula-history.rb "$(brew --cache)/analytics/git/formula-history.json"
+
+      - name: Prepare brew.sh posts
+        run: |
+          posts="$(brew --cache)/analytics/brew.sh"
+          if [[ -d "$posts" ]]; then
+            git -C "$posts" fetch --depth=1 origin HEAD
+            git -C "$posts" update-ref HEAD FETCH_HEAD
+          else
+            git clone --bare --filter=blob:none --depth=1 https://github.com/Homebrew/brew.sh "$posts"
+          fi
+
+      - name: Generate completed-year data in parallel
+        run: |
+          set -euo pipefail
+          brew generate-analytics-api --repositories --homebrew-site="$(brew --cache)/analytics/brew.sh" --history=analytics/history.json \
+            --legacy-homebrew="$(brew --cache)/analytics/legacy-homebrew" &
+          repositories=$!
+          brew generate-analytics-api --releases --homebrew-site="$(brew --cache)/analytics/brew.sh" --history=analytics/history.json &
+          releases=$!
+          while :; do
+            brew generate-analytics-api --formula-history --history=analytics/history.json
+            if ruby -rjson -e 'exit(JSON.parse(File.read("_data/analytics/formula-history/history.json")).fetch("complete") ? 0 : 1)'; then
+              break
+            fi
+          done
+          wait "$repositories"
+          wait "$releases"
+          ruby script/update-analytics-history.rb --dry-run
+
+      - name: Update completed-year archive
+        if: env.PUBLISH == 'true'
+        run: ruby script/update-analytics-history.rb
+
+      - name: Save working cache
+        if: always() && env.PUBLISH == 'true' && steps.cache.outcome == 'success'
+        uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: |
+            ${{ steps.paths.outputs.downloads }}
+            ${{ steps.paths.outputs.analytics }}
+          key: ${{ steps.cache.outputs.cache-primary-key }}
+
+      - name: Configure Git user
+        if: env.PUBLISH == 'true'
+        uses: Homebrew/actions/git-user-config@4790763c0a3ba4036f72634dc079c4a7dfcd4878 # 2026.10.19.1
+        with:
+          username: github-actions[bot]
+
+      - name: Commit completed-year archive
+        id: archive
+        if: env.PUBLISH == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- analytics/history.json; then
+            exit 0
+          fi
+          year="$(( $(date -u +%Y) - 1 ))"
+          branch="analytics-history-${year}"
+          title="Archive analytics through ${year}"
+          git switch -c "$branch"
+          git add analytics/history.json
+          git -c commit.gpgsign=false commit -m "$title"
+          gh auth setup-git
+          if git ls-remote --exit-code --heads origin "$branch" &>/dev/null; then
+            git fetch origin "refs/heads/$branch"
+            if ! git diff --quiet HEAD FETCH_HEAD -- analytics/history.json; then
+              echo "::error::Existing archive branch ${branch} has different contents." >&2
+              exit 1
+            fi
+          else
+            git push origin "HEAD:refs/heads/${branch}"
+          fi
+          pull_requests="$(gh pr list --head "$branch" --state open --json number,isCrossRepository --jq '.[] | select(.isCrossRepository | not) | .number')"
+          if [[ -n "$pull_requests" ]]; then
+            echo "An archive pull request is already open for ${year}."
+            exit 0
+          fi
+          echo "branch=$branch" >> "$GITHUB_OUTPUT"
+          echo "title=$title" >> "$GITHUB_OUTPUT"
+
+      - name: Propose completed-year archive
+        if: env.PUBLISH == 'true' && steps.archive.outputs.branch != ''
+        uses: Homebrew/actions/create-pull-request@4790763c0a3ba4036f72634dc079c4a7dfcd4878 # 2026.10.19.1
+        with:
+          head: ${{ steps.archive.outputs.branch }}
+          base: ${{ github.event.repository.default_branch }}
+          title: ${{ steps.archive.outputs.title }}
+          body: |
+            Freeze completed-year repository, contributor, catalogue, formula and release aggregates.
+
+            Validated with the archive generator's dry run. Rolling InfluxDB reports are excluded.

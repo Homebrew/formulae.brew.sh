@@ -1,0 +1,85 @@
+---
+layout: page
+title: Repository Analytics
+permalink: /analytics/github/
+---
+{% assign data = site.data.analytics.github.history | analytics_report: "github" %}
+{% if data %}
+{% assign core = data.repositories["Homebrew/homebrew-core"].rows | first %}
+{% assign cask = data.repositories["Homebrew/homebrew-cask"].rows | first %}
+<p><strong>Catalogue</strong>: {{ core.formulae | number_with_delimiter }} formulae and {{ cask.casks | number_with_delimiter }} casks.</p>
+<ul>{% for entry in data.repositories %}
+  <li><a href="#{{ entry[0] | slugify }}">{{ entry[0] }}</a></li>
+{% endfor %}<li><a href="#contributors">Combined contributors</a></li></ul>
+{% for entry in data.repositories %}
+{% assign repository = entry[1] %}
+<h3 id="{{ entry[0] | slugify }}"><a href="{{ repository.source }}">{{ entry[0] }}</a></h3>
+<details><summary>Source and definitions</summary>
+<p><strong>Source</strong>: Git history and GitHub, generated {{ data.generated_at }}; <a href="{{ site.baseurl }}/api/analytics/github/history.json">JSON</a>.</p>
+{% if entry[0] == "Homebrew/legacy-homebrew" %}<p><strong>Period</strong>: Completed UTC years through 2015, with year-end catalogue counts.</p>{% else %}<p><strong>Period</strong>: Current shows cumulative activity and the present catalogue; annual rows use UTC years and year-end catalogues, with the current year incomplete.</p>{% endif %}
+<p><strong>PRs opened / Issues</strong>: GitHub records created through the previous UTC day, including bots; issues exclude PRs.</p>
+{% if entry[0] == "Homebrew/legacy-homebrew" %}<p>Legacy PR records begin on <a href="https://github.com/Homebrew/legacy-homebrew/pull/2326">1 September 2010</a>; earlier issue closures are excluded. Early applied PRs also include archived PR heads and exact patch, author and author-date matches in Git. Unmatched PRs are unknown, not rejected.</p>{% endif %}
+<p><strong>PRs merged</strong>: Unique PR numbers inferred from Git merges, squashes and <code>brew pull</code> <code>Closes</code> trailers, capped at PRs opened in the period; missing references undercount and issue-only closures can overcount.</p>
+<p><strong>Merge rate</strong>: Capped PRs merged divided by PRs opened in the period, expressed as a percentage up to 100%; no opened PRs gives N/A.</p>
+{% if entry[0] == "Homebrew/brew" %}<p><strong>Disclosures</strong>: brew.sh security incident posts for the whole project, excluding audits; kept separate from advisories to avoid treating overlapping reports as unique incidents. {% for post in data.security_disclosures %}<a href="{{ post.url }}">{{ post.date }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}.</p>{% endif %}
+<p><strong>Advisories</strong>: Published repository advisories, including withdrawn ones; package vulnerabilities are <a href="{{ site.baseurl }}/analytics/security/">separate</a>.</p>
+<p><strong>Contributors / New</strong>: Distinct non-merge author email identities active / first seen in the period, including bots and inherited history, after the repository’s mailmap.</p>
+{% if entry[0] == "Homebrew/brew" or entry[0] == "Homebrew/legacy-homebrew" %}<p><strong>Releases</strong>: Stable numeric Git tags by tagged commit year; <a href="{{ site.baseurl }}/analytics/releases/">per-release activity</a> is separate.</p>{% endif %}
+{% unless entry[0] == "Homebrew/brew" %}<p><strong>Formulae / Casks</strong>: Regular package files, including disabled and versioned packages, excluding aliases and other taps.</p>{% endunless %}
+<p>Legacy Homebrew covered brew and core before the 2016 split; inherited histories overlap, so repository contributor counts must not be added.</p>
+</details>
+{% assign rows = repository.rows | where_exp: "row", "row.contributors > 0 or row.releases > 0 or row.formulae > 0 or row.casks > 0 or row.pull_requests_opened > 0 or row.pull_requests_merged > 0 or row.issues_opened > 0 or row.security_advisories > 0" %}
+{% assign columns = "pull_requests_opened,pull_requests_merged,merge_rate,issues_opened,security_advisories,security_disclosures,contributors,new_contributors" | split: "," %}
+{% case entry[0] %}
+{% when "Homebrew/brew" %}
+  {% assign rows = rows | where_exp: "row", "row.period == 'current' or row.period >= '2016'" %}
+  {% assign extra = "releases" | split: "," %}
+{% when "Homebrew/homebrew-core" %}
+  {% assign rows = rows | where_exp: "row", "row.period == 'current' or row.period >= '2016'" %}
+  {% assign extra = "formulae" | split: "," %}
+{% when "Homebrew/homebrew-cask" %}{% assign extra = "casks" | split: "," %}
+{% when "Homebrew/legacy-homebrew" %}
+  {% assign rows = rows | where_exp: "row", "row.period <= '2015'" %}
+  {% assign extra = "releases,formulae" | split: "," %}
+{% endcase %}
+{% assign columns = columns | concat: extra %}
+{% assign columns = rows | nonzero_columns: columns %}
+<div class="wide-table" tabindex="0" role="region" aria-label="{{ entry[0] }} analytics">
+  <table class="analytics-table no-stack">
+    <thead><tr><th scope="col" class="number-data">Period</th>
+      {% include analytics/headers.html columns=columns %}
+    </tr></thead>
+    <tbody>{% for row in rows %}
+      <tr><th scope="row" class="number-data">{% if row.revision %}<a href="{{ repository.source }}/tree/{{ row.revision }}">{% endif %}{{ row.period | capitalize }}{% if row.revision %}</a>{% endif %}</th>
+        {% include analytics/cells.html columns=columns row=row %}
+      </tr>
+    {% endfor %}</tbody>
+  </table>
+</div>
+{% endfor %}
+{% if data.combined_contributors %}
+<h3 id="contributors">Combined contributors</h3>
+<details><summary>Source and definitions</summary>
+<p><strong>Source</strong>: Git history and brew’s year-end README, generated {{ data.generated_at }}; <a href="{{ site.baseurl }}/api/analytics/github/history.json">JSON</a>.</p>
+<p><strong>Period</strong>: Current includes all years; annual rows use UTC years, with the current year incomplete.</p>
+<p><strong>Unique total / Unique new</strong>: Distinct non-merge author email identities active / first seen in the period, after each repository’s mailmap; includes bots and inherited history.</p>
+<p><strong>Maintainers</strong>: Current maintainers, project leader and technical steering members in brew’s year-end README; before 2014, non-bot first-parent committers applying other authors’ work, deduplicated by name and known aliases.</p>
+<p><strong>Maintainers %</strong>: Maintainers divided by unique contributors active in the period, expressed as a percentage; Current uses today’s maintainers and all-time contributors.</p>
+<p><strong>PRs / maintainer / Issues / maintainer</strong>: Opened records across brew, core, cask and legacy divided by maintainers; Current uses cumulative records and today’s maintainers.</p>
+<p>Unique identities across brew, core and cask; email aliases may represent the same person and co-author trailers are excluded.</p>
+</details>
+<div class="wide-table" tabindex="0" role="region" aria-label="Combined contributors">
+<table class="analytics-table no-stack">
+  <thead><tr><th scope="col" class="number-data">Period</th><th scope="col">Unique total</th><th scope="col">Unique new</th><th scope="col">Maintainers</th><th scope="col">Maintainers %</th><th scope="col">PRs / maintainer</th><th scope="col">Issues / maintainer</th></tr></thead>
+  <tbody>{% for row in data.combined_contributors.rows %}
+    <tr><th scope="row" class="number-data">{{ row.period | capitalize }}</th><td>{{ row.contributors | number_with_delimiter }}</td><td>{{ row.new_contributors | number_with_delimiter }}</td><td>{% if row.maintainers != nil %}{{ row.maintainers | number_with_delimiter }}{% else %}N/A{% endif %}</td>
+      <td>{% if row.maintainer_contributor_ratio != nil %}{{ row.maintainer_contributor_ratio | round: 1 | number_with_delimiter }}%{% else %}N/A{% endif %}</td>
+      <td>{% if row.pull_requests_per_maintainer != nil %}{{ row.pull_requests_per_maintainer | round: 1 | number_with_delimiter }}{% else %}N/A{% endif %}</td>
+      <td>{% if row.issues_per_maintainer != nil %}{{ row.issues_per_maintainer | round: 1 | number_with_delimiter }}{% else %}N/A{% endif %}</td></tr>
+  {% endfor %}</tbody>
+</table>
+</div>
+{% endif %}
+{% else %}
+<p>Repository analytics are not yet available.</p>
+{% endif %}

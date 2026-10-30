@@ -1,0 +1,66 @@
+---
+layout: page
+title: Package Security Analytics
+permalink: /analytics/security/
+---
+{% assign corpus = site.data.analytics.security.corpus %}
+{% assign current = site.data.analytics.security.current %}
+{% if current or corpus %}<ul>
+  {% if current %}<li><a href="#severity">Current findings</a></li>{% endif %}
+  {% if corpus %}<li><a href="#corpus">Advisory corpus</a></li>{% endif %}
+  {% if current.available %}<li><a href="#formula-findings">Formula findings</a></li>{% endif %}
+</ul>{% endif %}
+{% if current %}
+<h3 id="severity">Current findings</h3>
+<details><summary>Source and definitions</summary>
+<p><strong>Source</strong>: <a href="{{ current.source }}">Advisory index</a> and <a href="https://github.com/Homebrew/homebrew-core/tree/{{ current.revision }}">core revision</a>, generated {{ current.generated_at }}; <a href="{{ site.baseurl }}/api/analytics/security/current.json">JSON</a>.</p>
+<p><strong>Platform</strong>: Latest supported macOS on ARM; other variants and bundled dependencies may differ.</p>
+<p><strong>Severity / Findings</strong>: Open formula-specific records affecting evaluated versions, classified by <code>brew vulns</code>; missing severity is Unknown.</p>
+<p><strong>Coverage</strong>: Recorded advisories only; missing records provide no assurance of safety and one vulnerability can affect multiple formulae.</p>
+</details>
+{% if current.available %}
+<p>{{ current.counts.formulae_with_open_findings | number_with_delimiter }} of {{ current.counts.catalogue_formulae | number_with_delimiter }} formulae have {{ current.counts.open | number_with_delimiter }} open findings referencing {{ current.counts.open_upstream_identifiers | number_with_delimiter }} upstream identifiers; {{ current.counts.patched | number_with_delimiter }} findings are patched and {{ current.counts.fixed | number_with_delimiter }} version-fixed.</p>
+
+<table class="analytics-table no-stack">
+  <thead><tr><th scope="col">Severity</th><th scope="col">Findings</th></tr></thead>
+  {% assign severities = "critical,high,medium,low,unknown" | split: "," %}
+  <tbody>{% for severity in severities %}<tr><th scope="row">{{ severity | capitalize }}</th><td>{{ current.severity[severity] | default: 0 | number_with_delimiter }}</td></tr>{% endfor %}</tbody>
+</table>
+
+{% else %}
+<p>The advisory feed was unavailable during formula generation. Findings are unavailable, not zero.</p>
+{% endif %}
+{% endif %}
+{% if corpus %}
+<h3 id="corpus">Advisory corpus</h3>
+<details><summary>Source and definitions</summary>
+<p><strong>Source</strong>: <a href="{{ corpus.source }}{% if corpus.revision %}/tree/{{ corpus.revision }}{% endif %}">Homebrew/advisory-database</a>, generated {{ corpus.generated_at }}; <a href="{{ site.baseurl }}/api/analytics/security/corpus.json">JSON</a>.</p>
+<p><strong>Upstream identifiers</strong>: Distinct CVE, GHSA and other IDs; aliases are not merged into unique vulnerabilities.</p>
+<p>Corpus counts exclude withdrawn records except where stated and may include removed formulae; this snapshot can differ from the current findings index.</p>
+</details>
+<p>{{ corpus.counts.records | number_with_delimiter }} records ({{ corpus.counts.withdrawn | number_with_delimiter }} withdrawn) cover {{ corpus.counts.formulae | number_with_delimiter }} formula names and reference {{ corpus.counts.upstream_identifiers | number_with_delimiter }} upstream identifiers.</p>
+<p><strong>Fixes</strong>: {{ corpus.counts.patch | number_with_delimiter }} records name a patch fix and {{ corpus.counts.bump | number_with_delimiter }} a version fix; {{ corpus.counts.unresolved | number_with_delimiter }} remain unresolved and {{ corpus.counts.uncomparable | number_with_delimiter }} have no comparable range.</p>
+{% endif %}
+
+{% if current.available %}
+<h3 id="formula-findings">Formula findings</h3>
+<details><summary>Source and definitions</summary>
+<p><strong>Source</strong>: <a href="{{ current.source }}">Advisory index</a> and current formula versions using <code>brew vulns</code> matching; <a href="{{ site.baseurl }}/api/analytics/security/current.json">JSON</a>.</p>
+<p><strong>Version</strong>: Upstream version followed by <code>_$REVISION</code> when the package revision is nonzero, using its actual revision number.</p>
+<p><strong>Open / Critical / High</strong>: Records affecting the evaluated version, including ranges not established as fixed, with critical and high severity counts.</p>
+<p><strong>Patched / Fixed</strong>: Records resolved by a Homebrew patch or version change; these are current statuses.</p>
+<p><strong>Total</strong>: Formula-specific findings across all rows; vulnerabilities affecting several formulae count for each.</p>
+</details>
+{% assign columns = "open,critical,high,patched,fixed" | split: "," %}
+{% assign columns = current.formulae | nonzero_columns: columns %}
+<div class="wide-table" tabindex="0" role="region" aria-label="Formula security findings">
+<table class="analytics-table no-stack">
+  <thead><tr><th scope="col">Formula</th><th scope="col" class="version-data">Version</th>{% include analytics/headers.html columns=columns %}</tr></thead>
+  <tbody>
+  <tr><th scope="row">Total</th><td></td>{% for column in columns %}<td>{% assign total = 0 %}{% for row in current.formulae %}{% assign total = total | plus: row[column] %}{% endfor %}{{ total | number_with_delimiter }}</td>{% endfor %}</tr>
+  {% for row in current.formulae %}
+  <tr><th scope="row"><a href="{{ site.baseurl }}/formula/{{ row.formula | uri_escape }}">{{ row.formula | escape }}</a></th><td class="version-data">{{ row.version | escape }}{% if row.revision > 0 %}_{{ row.revision }}{% endif %}</td>{% include analytics/cells.html columns=columns row=row missing="0" %}</tr>
+  {% endfor %}</tbody>
+</table>
+</div>
+{% endif %}

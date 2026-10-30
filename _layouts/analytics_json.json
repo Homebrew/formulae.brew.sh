@@ -13,4 +13,4 @@
 {%- else -%}
   {%- assign json = site.data[analytics_path][page.category][days] -%}
 {%- endif -%}
-{{ json | jsonify }}
+{{ json | analytics_report: page.category | jsonify }}

@@ -109,7 +109,7 @@ title: false
         <td class="number-data">{{ item.unset_count | number_with_delimiter }}</td>
 {%- endif %}
         <td class="number-data">{{ item.count | number_with_delimiter }}</td>
-        <td class="number-data">{{ item.percent | number_with_delimiter }}%</td>
+        <td class="number-data">{{ item.percent | round: 1 | number_with_delimiter }}%</td>
     </tr>
 {%- endfor %}
     </tbody>

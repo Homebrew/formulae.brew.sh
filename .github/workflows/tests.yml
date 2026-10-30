@@ -80,7 +80,7 @@ jobs:
       - run: brew generate-formula-api
 
       - name: Archive data
-        run: tar czvf data-core.tar.gz _data/formula/ _data/formula_canonical.json api/formula/ api/formula_tap_migrations.json api/internal/formula.* formula/
+        run: tar czvf data-core.tar.gz _data/formula/ _data/formula_canonical.json api/formula/ api/formula_tap_migrations.json api/internal/formula.* formula/ _data/analytics/security/current.json api/analytics/security/current.json
 
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
@@ -164,14 +164,17 @@ jobs:
         run: |
           set -euo pipefail
           tree="$(git -C advisory-database rev-parse HEAD:advisories)"
-          generator="$(shasum -a 256 "$(brew --repo)/Library/Homebrew/dev-cmd/generate-advisories-api.rb" | cut -c1-12)"
-          echo "key=advisories-data-${generator}-${tree}" >> "$GITHUB_OUTPUT"
+          generator="$(cat "$(brew --repo)/Library/Homebrew/dev-cmd/generate-advisories-api.rb" "$(brew --repo)/Library/Homebrew/utils/analytics/vulnerabilities.rb" | shasum -a 256 | cut -c1-12)"
+          echo "key=advisories-data-v2-${generator}-${tree}" >> "$GITHUB_OUTPUT"
 
       - name: Restore advisory data cache
         id: cache
         uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
-          path: api/advisories.json
+          path: |
+            api/advisories.json
+            _data/analytics/security/corpus.json
+            api/analytics/security/corpus.json
           key: ${{ steps.advisory-database.outputs.key }}
 
       - name: Generate advisory API data
@@ -180,17 +183,23 @@ jobs:
         run: brew generate-advisories-api advisory-database
 
       - name: Validate advisory data
-        run: test -s api/advisories.json
+        run: |
+          test -s api/advisories.json
+          test -s _data/analytics/security/corpus.json
+          test -s api/analytics/security/corpus.json
 
       - name: Save advisory data cache
         if: steps.cache.outputs.cache-hit != 'true'
         uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
-          path: api/advisories.json
+          path: |
+            api/advisories.json
+            _data/analytics/security/corpus.json
+            api/analytics/security/corpus.json
           key: ${{ steps.advisory-database.outputs.key }}
 
       - name: Archive data
-        run: tar czvf data-advisories.tar.gz api/advisories.json
+        run: tar czvf data-advisories.tar.gz api/advisories.json _data/analytics/security/corpus.json api/analytics/security/corpus.json
 
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
@@ -202,7 +211,7 @@ jobs:
     if: startsWith( github.repository, 'Homebrew/' )
     name: Generate analytics data
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 60
     permissions:
       contents: read
     env:
@@ -232,8 +241,12 @@ jobs:
       - name: Get formula analytics paths
         id: formula-analytics
         run: |
-          echo "directory=$(brew --repo)/Library/Homebrew/formula-analytics" >> "$GITHUB_OUTPUT"
-          echo "uv-cache-directory=${HOME}/.cache/uv" >> "$GITHUB_OUTPUT"
+          {
+            echo "directory=$(brew --repo)/Library/Homebrew/formula-analytics"
+            echo "uv-cache-directory=${HOME}/.cache/uv"
+            echo "downloads-cache-directory=$(brew --cache)/github-packages-downloads"
+            echo "analytics-cache-directory=$(brew --cache)/analytics"
+          } >> "$GITHUB_OUTPUT"
 
       - name: Set up uv
         uses: astral-sh/setup-uv@07a047e608db84b3d8c06cd9a7c7dcc9c355c18e # v10.3.2
@@ -259,20 +272,81 @@ jobs:
           path: |
             _data/analytics
             api/analytics
-          key: analytics-data-${{ steps.analytics-cache-date.outputs.date }}
-          restore-keys: analytics-data-
+          key: analytics-data-v9-${{ hashFiles('analytics/history.json') }}-${{ steps.analytics-cache-date.outputs.date }}
+          # Restricted PRs may reuse another history or a date-only legacy snapshot.
+          restore-keys: |
+            analytics-data-v9-${{ hashFiles('analytics/history.json') }}-
+            ${{ github.event_name == 'pull_request' && (github.event.pull_request.head.repo.fork || github.event.pull_request.user.login == 'dependabot[bot]') && 'analytics-data-v9-' || '' }}
+            ${{ github.event_name == 'pull_request' && (github.event.pull_request.head.repo.fork || github.event.pull_request.user.login == 'dependabot[bot]') && 'analytics-data-20' || '' }}
+
+      - name: Restore analytics working cache
+        id: working-cache
+        if: steps.cache.outputs.cache-hit != 'true'
+        uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: |
+            ${{ steps.formula-analytics.outputs.downloads-cache-directory }}
+            ${{ steps.formula-analytics.outputs.analytics-cache-directory }}
+          key: analytics-working-v1-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: analytics-working-v1-
+
+      - name: Bootstrap formula history checkpoint
+        id: bootstrap
+        continue-on-error: ${{ steps.cache.outputs.cache-matched-key != '' }}
+        if: steps.cache.outputs.cache-hit != 'true' && (github.ref_name == 'main' || (github.event_name == 'pull_request' && github.event.pull_request.head.repo.fork == false && github.event.pull_request.user.login != 'dependabot[bot]'))
+        run: ruby script/bootstrap-formula-history.rb "${ANALYTICS_CACHE_DIRECTORY}/git/formula-history.json"
+        env:
+          ANALYTICS_CACHE_DIRECTORY: ${{ steps.formula-analytics.outputs.analytics-cache-directory }}
+
+      - name: Prepare complete repository histories
+        id: histories
+        continue-on-error: ${{ steps.cache.outputs.cache-matched-key != '' }}
+        if: steps.cache.outputs.cache-hit != 'true' && (github.ref_name == 'main' || (github.event_name == 'pull_request' && github.event.pull_request.head.repo.fork == false && github.event.pull_request.user.login != 'dependabot[bot]'))
+        run: |
+          set -euo pipefail
+          brew tap --force homebrew/core
+          brew tap --force homebrew/cask
+          for repository in "$(brew --repo)" "$(brew --repo homebrew/core)" "$(brew --repo homebrew/cask)"; do
+            if [[ "$(git -C "$repository" rev-parse --is-shallow-repository)" == true ]]; then
+              git -C "$repository" fetch --unshallow origin
+            fi
+          done
+          git -C "$(brew --repo)" fetch --tags origin
+          legacy_repository="$(brew --cache)/analytics/legacy-homebrew"
+          if [[ ! -d "$legacy_repository" ]]; then
+            git clone --bare --filter=blob:none https://github.com/Homebrew/legacy-homebrew "$legacy_repository"
+          fi
+
+      - name: Prepare brew.sh posts
+        id: posts
+        continue-on-error: ${{ steps.cache.outputs.cache-matched-key != '' }}
+        if: steps.cache.outputs.cache-hit != 'true' && (github.ref_name == 'main' || (github.event_name == 'pull_request' && github.event.pull_request.head.repo.fork == false && github.event.pull_request.user.login != 'dependabot[bot]'))
+        run: |
+          posts="$(brew --cache)/analytics/brew.sh"
+          if [[ -d "$posts" ]]; then
+            git -C "$posts" fetch --depth=1 origin HEAD
+            git -C "$posts" update-ref HEAD FETCH_HEAD
+          else
+            git clone --bare --filter=blob:none --depth=1 https://github.com/Homebrew/brew.sh "$posts"
+          fi
 
       - name: Update analytics data
         id: update
         run: |
           set -euo pipefail
 
+          if [[ "$ANALYTICS_PREPARED" != true ]]; then
+            test -n "$ANALYTICS_CACHE_MATCHED_KEY"
+            echo "::notice title=Analytics fallback::Using cached analytics after preparation failed."
+            exit 0
+          fi
+
           analytics_backup_path="$(mktemp -d)"
           mkdir -p "_data/analytics" "api/analytics"
           mv -v "_data/analytics" "${analytics_backup_path}/data_analytics"
           mv -v "api/analytics" "${analytics_backup_path}/api_analytics"
 
-          if brew generate-analytics-api; then
+          if brew generate-analytics-api --history=analytics/history.json --homebrew-site="$(brew --cache)/analytics/brew.sh" --github-packages-limit=1000 --legacy-homebrew="$(brew --cache)/analytics/legacy-homebrew"; then
             echo "fresh=true" >> "$GITHUB_OUTPUT"
             exit 0
           fi
@@ -289,14 +363,34 @@ jobs:
           echo "::notice title=Analytics fallback::Restored cached analytics data after brew generate-analytics-api failure."
         if: steps.cache.outputs.cache-hit != 'true' && (github.ref_name == 'main' || (github.event_name == 'pull_request' && github.event.pull_request.head.repo.fork == false && github.event.pull_request.user.login != 'dependabot[bot]'))
         env:
+          ANALYTICS_PREPARED: ${{ steps.bootstrap.outcome == 'success' && steps.histories.outcome == 'success' && steps.posts.outcome == 'success' }}
           ANALYTICS_CACHE_MATCHED_KEY: ${{ steps.cache.outputs.cache-matched-key }}
           HOMEBREW_INFLUXDB_TOKEN: ${{ secrets.HOMEBREW_INFLUXDB_READ_TOKEN }}
+          HOMEBREW_GITHUB_API_TOKEN: ${{ github.token }}
 
       - name: Validate analytics data
         run: |
           ruby script/prune-analytics.rb
           test -s _data/analytics/install/30d.json
           test -s api/analytics/install/30d.json
+          if [[ "$ANALYTICS_FRESH" != true && "$ANALYTICS_CACHE_MATCHED_KEY" == analytics-data-20* ]]; then
+            for report in github-packages github releases formula-history; do
+              rm -rf "_data/analytics/$report" "api/analytics/$report"
+            done
+            echo "::notice title=Legacy analytics fallback::Using cached usage reports; new analytics are unavailable until a v9 snapshot exists."
+            exit 0
+          fi
+          test -s _data/analytics/github-packages/30d.json
+          test -s api/analytics/github-packages/30d.json
+          test -s _data/analytics/github/history.json
+          test -s api/analytics/github/history.json
+          test -s _data/analytics/releases/history.json
+          test -s api/analytics/releases/history.json
+          test -s _data/analytics/formula-history/history.json
+          test -s api/analytics/formula-history/history.json
+        env:
+          ANALYTICS_CACHE_MATCHED_KEY: ${{ steps.cache.outputs.cache-matched-key }}
+          ANALYTICS_FRESH: ${{ steps.update.outputs.fresh }}
 
       - name: Save analytics data cache
         # Save only freshly generated data so a fallback is not pinned for the day.
@@ -306,7 +400,17 @@ jobs:
           path: |
             _data/analytics
             api/analytics
-          key: analytics-data-${{ steps.analytics-cache-date.outputs.date }}
+          key: analytics-data-v9-${{ hashFiles('analytics/history.json') }}-${{ steps.analytics-cache-date.outputs.date }}
+
+      - name: Save analytics working cache
+        # Preserve completed queries even when generation falls back to older output.
+        if: always() && steps.update.outcome != 'skipped' && steps.update.outcome != ''
+        uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: |
+            ${{ steps.formula-analytics.outputs.downloads-cache-directory }}
+            ${{ steps.formula-analytics.outputs.analytics-cache-directory }}
+          key: ${{ steps.working-cache.outputs.cache-primary-key }}
 
       - name: Archive data
         run: tar czvf data-analytics.tar.gz _data/analytics api/analytics

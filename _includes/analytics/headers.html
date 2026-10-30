@@ -1,0 +1,14 @@
+{% for column in include.columns %}
+<th scope="col">{% case column %}
+{% when "pull_requests", "pull_requests_opened" %}PRs{% if column == "pull_requests_opened" %} opened{% endif %}
+{% when "pull_requests_merged" %}PRs merged
+{% when "merge_rate" %}Merge rate
+{% when "issues_opened" %}Issues
+{% when "security_advisories" %}Advisories
+{% when "security_disclosures" %}Disclosures
+{% when "new_contributors" %}New
+{% when "revision_bumps" %}Revisions
+{% when "bottle_rebuilds" %}Rebuilds
+{% else %}{{ column | replace: "_", " " | capitalize }}
+{% endcase %}</th>
+{% endfor %}

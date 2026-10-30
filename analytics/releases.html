@@ -1,0 +1,36 @@
+---
+layout: page
+title: Homebrew Release Analytics
+permalink: /analytics/releases/
+---
+{% assign data = site.data.analytics.releases.history %}
+{% if data %}
+<details><summary>Source and definitions</summary>
+<p><strong>Source</strong>: <a href="{{ data.source }}/tree/{{ data.revision }}">Homebrew/brew Git history and tags</a>, generated {{ data.generated_at }}; <a href="{{ site.baseurl }}/api/analytics/releases/history.json">JSON</a>.</p>
+<p><strong>Version / Date</strong>: Stable numeric release tag and its UTC commit date; missing tags cannot be counted.</p>
+<p><strong>Commits</strong>: Non-merge commits since the preceding release tag on the same branch; the first release includes preceding history.</p>
+<p><strong>PRs</strong>: Distinct PR references in merge or squash subjects within that range; missing references are excluded.</p>
+<p><strong>Contributors</strong>: Distinct non-merge author email identities in the range after the current mailmap, including bots and excluding co-author trailers.</p>
+<p><strong>New contributors</strong>: Identities appearing in a stable release for the first time, ordered by tagged commit date then version.</p>
+<p>Backports can repeat commits and contributors across releases; annual release totals are in <a href="{{ site.baseurl }}/analytics/github/">repository analytics</a>.</p>
+<p><strong>Since</strong>: Additional rows at each .0 release cover changes since the preceding major or minor .0 tag; New counts authors absent from that preceding tag’s history.</p>
+<p><strong>Current</strong>: Unique commits, PR references and contributors across all {{ data.totals.releases | number_with_delimiter }} release tags as of the generation date; overlapping ranges count once.</p>
+</details>
+{% assign columns = "commits,pull_requests,contributors,new_contributors" | split: "," %}
+{% assign columns = data.releases | nonzero_columns: columns %}
+<div class="wide-table" tabindex="0" role="region" aria-label="Homebrew releases">
+<table class="analytics-table no-stack">
+  <thead><tr><th scope="col" class="version-data">Version</th><th scope="col">Date</th>{% include analytics/headers.html columns=columns %}</tr></thead>
+  <tbody>
+  <tr><th scope="row" class="version-data">Current</th><td class="date-data">{{ data.generated_at | date: "%Y-%m-%d" }}</td>{% include analytics/cells.html columns=columns row=data.totals %}</tr>
+  {% for row in data.releases %}
+  {% assign aggregate = data.aggregates | where: "version", row.version | first %}
+  <tr><th scope="row" class="version-data"><a href="{{ data.source }}/releases/tag/{{ row.version | uri_escape }}">{{ row.version | escape }}</a></th><td class="date-data">{{ row.date }}</td>
+    {% include analytics/cells.html columns=columns row=row %}</tr>
+  {% if aggregate %}<tr><th scope="row" class="version-data">{% if aggregate.blog_url %}<a href="{{ aggregate.blog_url }}">{% endif %}{{ row.version | escape }} (since {{ aggregate.previous_version | escape }}){% if aggregate.blog_url %}</a>{% endif %}</th><td class="date-data">{{ aggregate.date }}</td>{% include analytics/cells.html columns=columns row=aggregate %}</tr>{% endif %}
+  {% endfor %}</tbody>
+</table>
+</div>
+{% else %}
+<p>Homebrew release analytics are not yet available.</p>
+{% endif %}
