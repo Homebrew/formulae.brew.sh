@@ -273,11 +273,10 @@ jobs:
             _data/analytics
             api/analytics
           key: analytics-data-v9-${{ hashFiles('analytics/history.json') }}-${{ steps.analytics-cache-date.outputs.date }}
-          # Restricted PRs may reuse another history or a date-only legacy snapshot.
+          # Restricted PRs may reuse a different history snapshot.
           restore-keys: |
             analytics-data-v9-${{ hashFiles('analytics/history.json') }}-
             ${{ github.event_name == 'pull_request' && (github.event.pull_request.head.repo.fork || github.event.pull_request.user.login == 'dependabot[bot]') && 'analytics-data-v9-' || '' }}
-            ${{ github.event_name == 'pull_request' && (github.event.pull_request.head.repo.fork || github.event.pull_request.user.login == 'dependabot[bot]') && 'analytics-data-20' || '' }}
 
       - name: Restore analytics working cache
         id: working-cache
@@ -373,13 +372,6 @@ jobs:
           ruby script/prune-analytics.rb
           test -s _data/analytics/install/30d.json
           test -s api/analytics/install/30d.json
-          if [[ "$ANALYTICS_FRESH" != true && "$ANALYTICS_CACHE_MATCHED_KEY" == analytics-data-20* ]]; then
-            for report in github-packages github releases formula-history; do
-              rm -rf "_data/analytics/$report" "api/analytics/$report"
-            done
-            echo "::notice title=Legacy analytics fallback::Using cached usage reports; new analytics are unavailable until a v9 snapshot exists."
-            exit 0
-          fi
           test -s _data/analytics/github-packages/30d.json
           test -s api/analytics/github-packages/30d.json
           test -s _data/analytics/github/history.json
@@ -388,9 +380,6 @@ jobs:
           test -s api/analytics/releases/history.json
           test -s _data/analytics/formula-history/history.json
           test -s api/analytics/formula-history/history.json
-        env:
-          ANALYTICS_CACHE_MATCHED_KEY: ${{ steps.cache.outputs.cache-matched-key }}
-          ANALYTICS_FRESH: ${{ steps.update.outputs.fresh }}
 
       - name: Save analytics data cache
         # Save only freshly generated data so a fallback is not pinned for the day.
