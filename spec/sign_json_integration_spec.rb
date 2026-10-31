@@ -119,7 +119,7 @@ RSpec.describe "Bundled API JSON signing" do
     step = workflow.fetch("jobs").fetch("build").fetch("steps")
                    .find { |candidate| candidate["name"] == "Test generated site" }
     expect(step).not_to be_nil
-    expect(step.fetch("run")).to eq("bundle exec rspec --exclude-pattern spec/formula_feeds_spec.rb")
+    expect(step.fetch("run")).to eq("bundle exec rspec")
     expect(step.fetch("env", {})).to include("API_SIGNING_TEST_SITE" => "_site")
   end
 
