@@ -99,7 +99,7 @@ jobs:
           if [[ "$(git -C "$core" rev-parse --is-shallow-repository)" == true ]]; then
             git -C "$core" fetch --unshallow origin
           fi
-          PATH="$PWD/script:$PATH" brew generate-formula-feeds --output "$RUNNER_TEMP/formula_feeds.json"
+          brew generate-formula-feeds --output="$RUNNER_TEMP/formula_feeds.json"
           jq -e '(.new | length) == 50 and (.updated | length) == 500' "$RUNNER_TEMP/formula_feeds.json" >/dev/null
           mv "$RUNNER_TEMP/formula_feeds.json" _data/formula_feeds.json
 
@@ -460,30 +460,6 @@ jobs:
           path: data-analytics.tar.gz
           retention-days: 1
 
-  test-formula-feeds:
-    name: Test formula feed generation
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    permissions:
-      contents: read
-    steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-        with:
-          persist-credentials: false
-
-      - name: Set up Homebrew
-        uses: Homebrew/actions/setup-homebrew@d482da0e602890d3160aade42e72c8556103bf04 # 2026.10.26.1
-        with:
-          stable: false
-
-      - name: Set up Ruby
-        uses: Homebrew/actions/setup-ruby@d482da0e602890d3160aade42e72c8556103bf04 # 2026.10.26.1
-        with:
-          bundler-cache: true
-          portable-ruby: true
-
-      - run: bundle exec rspec spec/formula_feeds_spec.rb
-
   build:
     needs: [generate-cask, generate-core, generate-internal, generate-advisories, generate-analytics]
     runs-on: ubuntu-latest
@@ -543,7 +519,7 @@ jobs:
           API_SIGNING_TEST_SITE: _site
           FORMULA_FEEDS_TEST_SITE: _site
           FORMULA_FEEDS_AVAILABLE: ${{ needs.generate-core.outputs.formula-feeds-available }}
-        run: bundle exec rspec --exclude-pattern spec/formula_feeds_spec.rb
+        run: bundle exec rspec
 
       - name: Upload unsigned site
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
