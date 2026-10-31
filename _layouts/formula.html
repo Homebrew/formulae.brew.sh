@@ -325,6 +325,24 @@ permalink: :title
 </table>
 {%- endif -%}
 
+{%- assign downloads = site.data.analytics.github-packages["30d"].formulae[fname] -%}
+{%- if downloads %}
+<p>GitHub Packages downloads:</p>
+<table class="no-stack">
+    <tr><th scope="row">Last 30 days</th><td class="number-data">{{ downloads.last_30_days | number_with_delimiter }}</td></tr>
+    <tr><th scope="row">Downloads</th><td class="number-data">{{ downloads.all_time | number_with_delimiter }}</td></tr>
+    <tr><th scope="row">Analytics install events (30 days)</th><td class="number-data">{{ downloads.analytics_30d | number_with_delimiter }}</td></tr>
+    <tr><th scope="row">Downloads / install events (30 days)</th><td class="number-data">{% if downloads.analytics_ratio != nil %}{{ downloads.analytics_ratio | round: 1 | number_with_delimiter }}×{% else %}N/A{% endif %}</td></tr>
+</table>
+<p><small>
+    <a href="{{ downloads.source | escape }}">Source: GitHub Packages</a>, fetched {{ downloads.fetched_at }}.
+    Analytics dates: {{ downloads.analytics_start_date }} to {{ downloads.analytics_end_date }}.
+    Totals exclude downloads from Bintray before the migration to GitHub Packages.
+    Downloads and install attempts measure different things; the difference does not count analytics opt-outs.
+    <a href="{{ site.baseurl }}/docs/api/#github-package-downloads">Definitions and limitations</a>.
+</small></p>
+{%- endif %}
+
 <p>Analytics:</p>
 <table class="no-stack">
     <tr>

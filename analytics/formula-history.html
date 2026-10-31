@@ -1,0 +1,55 @@
+---
+layout: page
+title: Package History Analytics
+permalink: /analytics/formula-history/
+---
+{% assign data = site.data.analytics.formula-history.history %}
+{% assign cask = site.data.analytics.github.history.repositories["Homebrew/homebrew-cask"] %}
+{% if data %}<ul>
+  <li><a href="#formula-history">Formula history</a></li>
+  <li><a href="#cask-history">Cask history</a></li>
+</ul>{% endif %}
+{% if data %}
+<h3 id="formula-history">Formula history</h3>
+<details><summary>Source and definitions</summary>
+<p><strong>Period</strong>: UTC commit years from {{ data.start_year }}, with Current summing that window and showing the latest catalogue; the current year is incomplete.</p>
+<p><strong>Source</strong>: <a href="{{ data.source }}/tree/{{ data.revision }}">homebrew-core Git history</a>, generated {{ data.generated_at }}; <a href="{{ site.baseurl }}/api/analytics/formula-history/history.json">JSON</a>.</p>
+{% unless data.complete %}<p><strong>Backfill in progress</strong>: Counts cover commits through {{ data.processed_through }}; pending years are not zero.</p>{% endunless %}
+<p><strong>Formulae</strong>: Regular package files at year end, or the checked revision for Current; aliases and other taps excluded.</p>
+<p><strong>Added / Removed</strong>: Package additions, including re-additions, and deletions; Git-detected renames preserve identity.</p>
+<p><strong>Versions</strong>: Distinct versions first observed per formula lifetime, excluding the initial baseline and deduplicating across platforms.</p>
+<p><strong>Major / Minor / Patch</strong>: Version changes classified by Homebrew’s version logic.</p>
+<p><strong>Other</strong>: Version changes outside the major, minor and patch components.</p>
+<p><strong>Revisions / Rebuilds</strong>: Formula commits increasing package revision or bottle rebuild without changing the version.</p>
+{% if data.historical_backfill %}<p><strong>Backfill</strong>: Historical metadata was recovered from formula source, including obsolete DSL and malformed strings; the empty file from the <code>bbcp</code> migration is excluded.</p>{% endif %}
+<p><strong>Coverage</strong>: First-parent Git history on {{ data.platforms | join: ", " }}; one version-change category per commit, excluding unrecorded upstream releases.</p>
+</details>
+{% assign columns = "formulae,added,removed,versions,major,minor,patch,other,revision_bumps,bottle_rebuilds" | split: "," %}
+{% assign columns = data.rows | nonzero_columns: columns %}
+<div class="wide-table" tabindex="0" role="region" aria-label="Formula version history">
+<table class="analytics-table no-stack">
+  <thead><tr><th scope="col" class="number-data">Period</th>{% include analytics/headers.html columns=columns %}</tr></thead>
+  <tbody>{% for row in data.rows %}
+    <tr><th scope="row" class="number-data">{{ row.period | capitalize }}</th>
+    {% include analytics/cells.html columns=columns row=row missing="Pending" %}</tr>
+  {% endfor %}</tbody>
+</table>
+</div>
+{% else %}
+<p>Formula history analytics are not yet available.</p>
+{% endif %}
+{% if cask %}
+<h3 id="cask-history">Cask history</h3>
+<details><summary>Source and definitions</summary>
+<p><strong>Source</strong>: <a href="{{ cask.source }}">homebrew-cask Git history</a>, generated {{ site.data.analytics.github.history.generated_at }}; <a href="{{ site.baseurl }}/api/analytics/github/history.json">JSON</a>.</p>
+<p><strong>Period</strong>: UTC years from the first cask, with Current summing all available history; exact-content renames are excluded, renamed-and-edited casks count as removed and added, and versions are not evaluated.</p>
+<p><strong>Casks</strong>: Regular package files at year end, or the checked revision for Current; aliases and other taps excluded.</p>
+<p><strong>Added / Removed</strong>: Additions, including re-additions, and deletions.</p>
+</details>
+<table class="analytics-table no-stack">
+  <thead><tr><th scope="col" class="number-data">Period</th><th scope="col">Casks</th><th scope="col">Added</th><th scope="col">Removed</th></tr></thead>
+  <tbody>{% for row in cask.rows %}{% if row.casks > 0 or row.added > 0 or row.removed > 0 %}
+    <tr><th scope="row" class="number-data">{{ row.period | capitalize }}</th><td>{{ row.casks | number_with_delimiter }}</td><td>{{ row.added | number_with_delimiter }}</td><td>{{ row.removed | number_with_delimiter }}</td></tr>
+  {% endif %}{% endfor %}</tbody>
+</table>
+{% endif %}

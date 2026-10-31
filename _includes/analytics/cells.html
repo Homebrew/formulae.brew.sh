@@ -1,0 +1,3 @@
+{% for column in include.columns %}
+<td>{% if include.row[column] != nil %}{{ include.row[column] | number_with_delimiter }}{% if column == "merge_rate" %}%{% endif %}{% elsif column == "merge_rate" %}N/A{% else %}{{ include.missing }}{% endif %}</td>
+{% endfor %}

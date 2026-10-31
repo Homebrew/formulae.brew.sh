@@ -3,6 +3,25 @@ layout: page
 title: Analytics Data
 redirect_from: /analytics-linux/
 ---
+Analytics include reported usage events, package downloads and repository history.
+
+<ul>
+  <li><a href="#reports">Reports</a></li>
+  <li><a href="#events">Events</a></li>
+</ul>
+
+<h3 id="reports">Reports</h3>
+
+| Report | Contents |
+| --- | --- |
+| [Repository analytics](github/) | Current and annual PR, issue, security advisory, contributor, release and catalogue counts from 2009 onwards. |
+| [Homebrew release analytics](releases/) | Release history and commits, PR references and contributors per release from Git. |
+| [Package download analytics](github-packages/) | GitHub download counts compared with 30-day install events. |
+| [Package history analytics](formula-history/) | Formula version updates, revisions and bottle rebuilds, plus formula and cask catalogue history. |
+| [Package security analytics](security/) | The advisory database and findings for current formula versions. |
+
+<h3 id="events">Events</h3>
+
 <table>
     <thead><tr><th scope="col">Report</th><th scope="col" colspan="3">Range</th></tr></thead>
     <tbody>
