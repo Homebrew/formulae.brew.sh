@@ -125,17 +125,14 @@ RSpec.describe "Formula feed workflow fallback" do
     expect(JSON.parse(feed_path.read)).to eq(cached)
   end
 
-  it "keeps generator failures and command tests outside the deployment gate" do
+  it "keeps generator failures outside the deployment gate" do
     generation = steps.find { |step| step["id"] == "formula-feeds" }
     expect(generation.fetch("continue-on-error")).to be(true)
     expect(generation.fetch("timeout-minutes")).to be <= 3
     jobs = workflow.fetch("jobs")
-    expect(jobs.fetch("build").fetch("needs")).not_to include("test-formula-feeds")
     expect(jobs.fetch("deploy").fetch("needs")).to eq("build")
-    expect(jobs.fetch("test-formula-feeds").fetch("steps").last.fetch("run"))
-      .to eq("bundle exec rspec spec/formula_feeds_spec.rb")
     built_tests = jobs.fetch("build").fetch("steps").find { |step| step["name"] == "Test generated site" }
-    expect(built_tests.fetch("run")).to include("--exclude-pattern spec/formula_feeds_spec.rb")
+    expect(built_tests.fetch("run")).to eq("bundle exec rspec")
     expect(built_tests.fetch("env").fetch("FORMULA_FEEDS_AVAILABLE"))
       .to eq("${{ needs.generate-core.outputs.formula-feeds-available }}")
     save = steps.find { |step| step["name"] == "Save formula feeds" }

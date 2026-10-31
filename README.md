@@ -34,20 +34,6 @@ bundle exec jekyll serve
 This downloads the generated data from the public API, so it does not require
 local tap checkouts or Homebrew repository write access.
 
-See the [RSS feed documentation](analytics/index.md#rss-feeds) for subscription
-links, entry limits and included changes.
-
-To populate the feeds for a local build, run `PATH="$PWD/script:$PATH" brew generate-formula-feeds`
-with a complete `homebrew/core` Git checkout installed. CI generates the feeds with
-the formula API. If generation fails, CI retains the last successfully generated
-feeds from its cache. If no cached feeds are available, it publishes empty feeds
-and reports a warning, allowing the site and package API deployment to continue.
-
-Run the tests with `bundle exec rspec`. The feed tests require `brew` on `PATH`
-and a Homebrew checkout that includes `Utils::Analytics::FormulaHistory` in
-`Library/Homebrew/utils/analytics/formula_history.rb`. They use temporary Git
-repositories, so a local `homebrew/core` checkout is not required for the tests.
-
 ## Search
 
 Search is indexed by Algolia crawler at <https://crawler.algolia.com/admin/crawlers/26b9e6e2-bce4-4f42-9930-6b6ddf06cc9e/overview>.
