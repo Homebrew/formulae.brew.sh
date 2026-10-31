@@ -7,6 +7,7 @@ Analytics include reported usage events, package downloads and repository histor
 
 <ul>
   <li><a href="#reports">Reports</a></li>
+  <li><a href="#rss-feeds">RSS feeds</a></li>
   <li><a href="#events">Events</a></li>
 </ul>
 
@@ -19,6 +20,15 @@ Analytics include reported usage events, package downloads and repository histor
 | [Package download analytics](github-packages/) | GitHub download counts compared with 30-day install events. |
 | [Package history analytics](formula-history/) | Formula version updates, revisions and bottle rebuilds, plus formula and cask catalogue history. |
 | [Package security analytics](security/) | The advisory database and findings for current formula versions. |
+
+<h3 id="rss-feeds">RSS feeds</h3>
+
+The [new formulae feed]({{ '/feeds/formula-new.xml' | relative_url }}) contains the latest 50 formula additions.
+The [updated formulae feed]({{ '/feeds/formula-updated.xml' | relative_url }}) contains the latest 500 version changes or revision increases.
+Bottle-only rebuilds and maintenance edits are excluded. Older entries drop out as new events arrive.
+
+Feeds refresh with site builds. Each entry has a stable GUID and a date taken from its Git commit.
+If generation fails, cached feeds remain available. Without a cached copy, feeds are empty until generation succeeds.
 
 <h3 id="events">Events</h3>
 
