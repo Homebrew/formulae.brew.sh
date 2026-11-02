@@ -22,6 +22,11 @@ RSpec.describe PatchFilters do
         .to eq("https://github.com/hexagonal-sun/bic/compare/631cfb449eec35a2df52eb317f4e9add33c1dea9..7748c44eed2c53ce82b9d45a9f629f68f8cc4f99")
     end
 
+    it "leaves patch files in a commit directory alone" do
+      url = "https://raw.githubusercontent.com/org/repo/main/commit/fix.patch"
+      expect(filters.patch_url(url)).to eq(url)
+    end
+
     it "leaves other patch URLs alone" do
       url = "https://bugs.gentoo.org/attachment.cgi?id=916782"
       expect(filters.patch_url(url)).to eq(url)
