@@ -185,6 +185,23 @@ permalink: :title
     {%- include attribute.html key="Revision" value=f.revision -%}
 {%- endif -%}
 
+{%- assign patches = f.patches | where_exp: "p", "p.data != true" -%}
+{%- if patches.size > 0 %}
+<p>Patches:</p>
+<table>
+    {%- for p in patches -%}
+    {%- if p.url -%}
+        {%- assign patch_link = p.url | patch_url -%}
+    {%- else -%}
+        {%- capture patch_link %}{{ site.taps.core.remote }}/blob/main/{{ p.file | uri_escape }}{% endcapture -%}
+    {%- endif %}
+    <tr>
+        <td><small><a rel="nofollow" href="{{ patch_link | escape }}">{{ patch_link | escape }}</a></small></td>
+    </tr>
+    {%- endfor %}
+</table>
+{%- endif -%}
+
 {%- if f.keg_only %}
 <p>Keg-only
     {%- if f.keg_only_reason.explanation and f.keg_only_reason.explanation != empty %} because {{ f.keg_only_reason.explanation | escape }}
