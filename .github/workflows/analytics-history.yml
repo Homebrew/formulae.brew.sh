@@ -28,7 +28,7 @@ jobs:
         with:
           persist-credentials: false
 
-      - uses: Homebrew/actions/setup-homebrew@4790763c0a3ba4036f72634dc079c4a7dfcd4878 # 2026.10.19.1
+      - uses: Homebrew/actions/setup-homebrew@c262868c096d909fc278daa87ed9772967331ea3 # 2026.11.02.1
         with:
           stable: false
 
@@ -110,7 +110,7 @@ jobs:
 
       - name: Configure Git user
         if: env.PUBLISH == 'true'
-        uses: Homebrew/actions/git-user-config@4790763c0a3ba4036f72634dc079c4a7dfcd4878 # 2026.10.19.1
+        uses: Homebrew/actions/git-user-config@c262868c096d909fc278daa87ed9772967331ea3 # 2026.11.02.1
         with:
           username: github-actions[bot]
 
@@ -150,7 +150,7 @@ jobs:
 
       - name: Propose completed-year archive
         if: env.PUBLISH == 'true' && steps.archive.outputs.branch != ''
-        uses: Homebrew/actions/create-pull-request@4790763c0a3ba4036f72634dc079c4a7dfcd4878 # 2026.10.19.1
+        uses: Homebrew/actions/create-pull-request@c262868c096d909fc278daa87ed9772967331ea3 # 2026.11.02.1
         with:
           head: ${{ steps.archive.outputs.branch }}
           base: ${{ github.event.repository.default_branch }}
