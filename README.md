@@ -6,7 +6,8 @@ It displays all packages in the [Homebrew/homebrew-core](https://github.com/Home
 
 ## JSON API
 
-It also provides a JSON API for all packages (or individual packages) in each tap and their related analytics. This JSON data is used for the creation of the HTML resources on this site.
+It also provides a JSON API for all packages (or individual packages) in each tap and their related analytics. 
+This JSON data is used for the creation of the HTML resources on this site.
 
 Currently available:
 
