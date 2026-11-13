@@ -22,6 +22,10 @@ Analytics include reported usage events, package downloads and repository histor
 
 <h3 id="events">Events</h3>
 
+Formula and cask install counts include upgrades and reinstalls, not unique users or machines.
+Package reports combine old and current names using official Homebrew renames and tap migrations; third-party packages with the same name remain separate.
+See the [install event definitions](../docs/api/#install-events-and-package-names) for details and limitations.
+
 <table>
     <thead><tr><th scope="col">Report</th><th scope="col" colspan="3">Range</th></tr></thead>
     <tbody>

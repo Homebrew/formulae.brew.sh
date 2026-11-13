@@ -56,6 +56,18 @@ curl https://formulae.brew.sh/api/cask/${CASK}.json
 
 ## Analytics
 
+### Install events and package names
+
+`install`, `install-on-request` and `cask-install` count reported operations, including upgrades and reinstalls, rather than unique users or machines.
+Formula events report installation attempts; cask events are sent after successful installation or upgrade.
+Cask upgrades from older clients that did not report them are absent from historical totals.
+
+Within each event category, reports resolve renames and tap migrations recorded by official Homebrew taps, then sum the old and current names' counts into one row.
+This combines rows, not individual users; HEAD builds remain separate where options are reported.
+Third-party packages retain their tap-qualified names; matching tokens alone do not combine them with official packages.
+Reports never read third-party rename or migration metadata, so moves recorded only in those taps cannot be inferred.
+Core-only reports filter packages after resolving these names.
+
 ### GitHub package downloads
 
 Package-wide download totals and comparisons with 30-day core formula install analytics are generated daily for the top 1,000 formulae by install events.
@@ -76,7 +88,7 @@ The HTML is not a documented API and may change.
 
 `analytics_ratio` is 30-day downloads divided by 30-day install events; 2 means twice as many downloads as reported install events.
 It is null when install events are zero.
-Formula analytics count reported installation attempts, including dependencies, source builds and CI.
+Formula analytics count reported installation attempts, including upgrades, reinstalls, dependencies, source builds and CI.
 GitHub downloads can include other clients and repeated downloads, while local cache hits can avoid downloads.
 The chart dates may not align exactly with the rolling analytics window, and today's chart count may be incomplete.
 The difference therefore does not measure people or installations with analytics disabled.
@@ -367,6 +379,7 @@ curl https://formulae.brew.sh/api/analytics/${CATEGORY}/${DAYS}.json
 - `${CATEGORY}`: the analytics event category, i.e.
   - `install`: the installation of all formulae
   - `install-on-request`: the requested installation of all formulae (i.e. not as a dependency of other formulae)
+  - `cask-install`: the installation of all casks
   - `build-error`: the installation failure of all formulae
 - `${DAYS}`: the number of days of analytics events, i.e.
   - `30d`: 30 days
