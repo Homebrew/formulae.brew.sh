@@ -206,8 +206,21 @@ algolia:
         }
       }
 
+      // GitHub Mobile drops the search term from repository pulls?q= links.
+      function setupMobileLinks() {
+        const ua = navigator.userAgent;
+        // iPadOS Safari reports a Mac user agent; only the iPad has touch.
+        const iPad = /Macintosh/.test(ua) && navigator.maxTouchPoints > 1;
+        if (/Android|iPhone|iPad|iPod/i.test(ua) || iPad) {
+          for (const link of document.querySelectorAll('a[data-mobile-href]')) {
+            link.href = link.dataset.mobileHref;
+          }
+        }
+      }
+
       window.addEventListener("DOMContentLoaded", function() {
         setupCopyables();
+        setupMobileLinks();
       });
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/5.0.0/anchor.min.js" 
