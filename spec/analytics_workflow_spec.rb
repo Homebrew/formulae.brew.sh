@@ -25,7 +25,7 @@ RSpec.describe "Analytics workflow validation" do
 
   before do
     (@root/"script").mkpath
-    FileUtils.cp("#{repository}/script/prune-analytics.rb", @root/"script")
+    FileUtils.cp(Dir["#{repository}/script/{prune,validate}-analytics.rb"], @root/"script")
     %w[_data api].each do |prefix|
       (@root/prefix/"analytics/install").mkpath
       (@root/prefix/"analytics/install/30d.json").write(JSON.generate(
@@ -82,6 +82,30 @@ RSpec.describe "Analytics workflow validation" do
     expect(status).not_to be_success
   end
 
+  it "accepts yesterday's snapshot while analytics refreshes separately" do
+    write_new_reports
+    %w[_data api].each do |prefix|
+      (@root/prefix/"analytics/install/30d.json").write(JSON.generate(
+                                                          "start_date" => (Time.now.utc.to_date - 31).iso8601,
+                                                          "end_date"   => (Time.now.utc.to_date - 1).iso8601,
+                                                        ))
+    end
+
+    _stdout, stderr, status = validate
+
+    expect(status).to be_success, stderr
+  end
+
+  it "rejects an empty API report" do
+    write_new_reports
+    (@root/"api/analytics/releases/history.json").write("")
+
+    _stdout, stderr, status = validate
+
+    expect(status).not_to be_success
+    expect(stderr).to include("Missing or empty analytics report: api/analytics/releases/history.json")
+  end
+
   it "rejects expired usage reports" do
     write_new_reports
     (@root/"_data/analytics/install/30d.json").write(JSON.generate(
@@ -122,6 +146,11 @@ RSpec.describe "Analytics workflow validation" do
   end
 
   context "when preparation or generation fails" do
+    let(:steps) do
+      YAML.safe_load_file("#{repository}/.github/workflows/analytics.yml").fetch("jobs").fetch("refresh")
+          .fetch("steps")
+    end
+
     before do
       write_new_reports
       (@root/"bin").mkpath
@@ -152,6 +181,21 @@ RSpec.describe "Analytics workflow validation" do
       expect(@root/"brew-calls").not_to exist
       expect(@root/"output").not_to exist
       expect(validate.last).to be_success
+    end
+
+    it "reports a failed refresh even when the cached snapshot is usable" do
+      expect(update(prepared: false, key: "analytics-data-v9-history-2026-10-28").last).to be_success
+      expect(validate.last).to be_success
+
+      stdout, _stderr, status = Open3.capture3(
+        { "ANALYTICS_FRESH" => "" },
+        "bash", "-euo", "pipefail", "-c",
+        steps.find { |step| step["name"] == "Check analytics refresh succeeded" }.fetch("run"),
+        chdir: @root
+      )
+
+      expect(status).not_to be_success
+      expect(stdout).to include("Analytics refresh failed")
     end
 
     it "rejects a preparation failure without a snapshot" do
