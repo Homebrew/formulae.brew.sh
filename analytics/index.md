@@ -27,8 +27,8 @@ The [new formulae feed]({{ '/feeds/formula-new.xml' | relative_url }}) contains 
 The [updated formulae feed]({{ '/feeds/formula-updated.xml' | relative_url }}) contains the latest 500 version changes or revision increases.
 Bottle-only rebuilds and maintenance edits are excluded. Older entries drop out as new events arrive.
 
-Feeds refresh with site builds. Each entry has a stable GUID and a date taken from its Git commit.
-If generation fails, cached feeds remain available. Without a cached copy, feeds are empty until generation succeeds.
+Feeds refresh hourly and appear in the next site build. Each entry has a stable GUID and a date taken from its Git commit.
+If generation fails, the last validated feeds remain available.
 
 <h3 id="events">Events</h3>
 
