@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: analytics-history-${{ github.ref }}
+  group: analytics-history-${{ github.event_name == 'push' && 'validate' || 'publish' }}-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
