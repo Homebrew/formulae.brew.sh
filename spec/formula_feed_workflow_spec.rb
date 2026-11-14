@@ -59,6 +59,11 @@ RSpec.describe "Formula feed workflow fallback" do
     end
   end
 
+  it "requests full core history for feed generation" do
+    setup = steps.find { |step| step["id"] == "set-up-homebrew" }
+    expect(setup.fetch("with").fetch("core")).to be(true)
+  end
+
   it "retains cached feeds after a failed command writes a partial replacement" do
     feed_path.dirname.mkpath
     feed_path.write(JSON.pretty_generate(cached))
