@@ -36,7 +36,6 @@ RSpec.describe "Formula feed workflow fallback" do
     script = steps.find { |step| step["id"] == id }.fetch("run")
     Open3.capture3(
       {
-        "GITHUB_OUTPUT"           => (@root/"outputs").to_s,
         "RUNNER_TEMP"             => (@root/"temporary").to_s,
         "FEED_GENERATION_OUTCOME" => outcome,
         "FEED_TEST_CORE"          => (@root/"core").to_s,
@@ -85,7 +84,6 @@ RSpec.describe "Formula feed workflow fallback" do
     stdout, stderr, fallback = run_step("formula-feeds-fallback")
     expect(fallback).to be_success, stderr
     expect(stdout).to include("::warning::", "retaining the last successful feeds")
-    expect((@root/"outputs").read).to eq("available=true\n")
     expect(feed_path.read).to eq(original)
     render_feeds.each do |type, xml|
       expect(xml.xpath("//item/guid").map(&:text)).to eq(cached.fetch(type).map { |entry| entry.fetch("id") })
@@ -93,26 +91,28 @@ RSpec.describe "Formula feed workflow fallback" do
     end
   end
 
-  it "publishes valid empty feeds when generation fails without a cache" do
-    stdout, stderr, status = run_step("formula-feeds-fallback")
-    expect(status).to be_success, stderr
-    expect(stdout).to include("::warning::", "publishing empty feeds")
-    expect((@root/"outputs").read).to eq("available=false\n")
-    expect(JSON.parse(feed_path.read)).to eq({ "new" => [], "updated" => [] })
-    render_feeds.each_value do |xml|
-      expect(xml.xpath("/rss/channel").length).to eq(1)
-      expect(xml.xpath("//item")).to be_empty
-      expect(xml.xpath("//lastBuildDate")).to be_empty
-    end
+  it "fails when generation fails without a cache" do
+    stdout, _stderr, status = run_step("formula-feeds-fallback")
+    expect(status).not_to be_success
+    expect(stdout).to include("::error::", "no valid cached feeds exist")
+    expect(feed_path).not_to exist
   end
 
-  it "discards an invalid cache without blocking the site" do
+  it "fails without replacing an invalid cache" do
     feed_path.dirname.mkpath
     feed_path.write("{invalid")
-    _stdout, stderr, status = run_step("formula-feeds-fallback")
-    expect(status).to be_success, stderr
-    expect(JSON.parse(feed_path.read)).to eq({ "new" => [], "updated" => [] })
-    expect((@root/"outputs").read).to eq("available=false\n")
+    stdout, _stderr, status = run_step("formula-feeds-fallback")
+    expect(status).not_to be_success
+    expect(stdout).to include("::error::", "no valid cached feeds exist")
+    expect(feed_path.read).to eq("{invalid")
+  end
+
+  it "fails when cached feeds are empty" do
+    feed_path.dirname.mkpath
+    feed_path.write(JSON.generate({ "new" => [], "updated" => [] }))
+    stdout, _stderr, status = run_step("formula-feeds-fallback")
+    expect(status).not_to be_success
+    expect(stdout).to include("::error::", "no valid cached feeds exist")
   end
 
   it "keeps fresh feeds without a fallback warning" do
@@ -121,20 +121,20 @@ RSpec.describe "Formula feed workflow fallback" do
     stdout, stderr, status = run_step("formula-feeds-fallback", outcome: "success")
     expect(status).to be_success, stderr
     expect(stdout).not_to include("::warning::")
-    expect((@root/"outputs").read).to eq("available=true\n")
     expect(JSON.parse(feed_path.read)).to eq(cached)
   end
 
-  it "keeps generator failures outside the deployment gate" do
+  it "requires the fallback to succeed before building and deploying" do
     generation = steps.find { |step| step["id"] == "formula-feeds" }
     expect(generation.fetch("continue-on-error")).to be(true)
     expect(generation.fetch("timeout-minutes")).to be <= 3
+    fallback = steps.find { |step| step["id"] == "formula-feeds-fallback" }
+    expect(fallback["continue-on-error"]).not_to be(true)
     jobs = workflow.fetch("jobs")
+    expect(jobs.fetch("build").fetch("needs")).to include("generate-core")
     expect(jobs.fetch("deploy").fetch("needs")).to eq("build")
     built_tests = jobs.fetch("build").fetch("steps").find { |step| step["name"] == "Test generated site" }
     expect(built_tests.fetch("run")).to eq("bundle exec rspec")
-    expect(built_tests.fetch("env").fetch("FORMULA_FEEDS_AVAILABLE"))
-      .to eq("${{ needs.generate-core.outputs.formula-feeds-available }}")
     save = steps.find { |step| step["name"] == "Save formula feeds" }
     expect(save.fetch("if")).to eq("steps.formula-feeds.outcome == 'success' && github.ref == 'refs/heads/main'")
   end

@@ -24,7 +24,6 @@ RSpec.describe "Published formula feeds" do
     it "publishes both feeds and subscription links in the built site" do
       site = Pathname(ENV.fetch("FORMULA_FEEDS_TEST_SITE")).expand_path
       { "new" => 50, "updated" => 500 }.each do |type, limit|
-        limit = 0 if ENV["FORMULA_FEEDS_AVAILABLE"] == "false"
         xml = Nokogiri::XML((site/"feeds/formula-#{type}.xml").read) { |config| config.strict.nonet }
         expect(xml.xpath("/rss/channel/lastBuildDate")).to be_empty
         items = xml.xpath("/rss/channel/item")

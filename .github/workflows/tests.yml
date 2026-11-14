@@ -58,8 +58,6 @@ jobs:
       contents: read
     env:
       HOMEBREW_DEVELOPER: 1
-    outputs:
-      formula-feeds-available: ${{ steps.formula-feeds-fallback.outputs.available }}
     steps:
       - name: Check out repository
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -98,7 +96,6 @@ jobs:
             git -C "$core" fetch --unshallow origin
           fi
           brew generate-formula-feeds --output="$RUNNER_TEMP/formula_feeds.json"
-          jq -e '(.new | length) == 50 and (.updated | length) == 500' "$RUNNER_TEMP/formula_feeds.json" >/dev/null
           mv "$RUNNER_TEMP/formula_feeds.json" _data/formula_feeds.json
 
       - name: Keep formula feeds available
@@ -110,12 +107,9 @@ jobs:
             if [[ "$FEED_GENERATION_OUTCOME" != success ]]; then
               echo "::warning::Formula feed generation failed; retaining the last successful feeds."
             fi
-            echo "available=true" >> "$GITHUB_OUTPUT"
           else
-            echo "::warning::Formula feeds are unavailable; publishing empty feeds until generation succeeds."
-            mkdir -p _data
-            printf '%s\n' '{"new":[],"updated":[]}' > _data/formula_feeds.json
-            echo "available=false" >> "$GITHUB_OUTPUT"
+            echo "::error::Formula feeds are unavailable and no valid cached feeds exist."
+            exit 1
           fi
 
       - name: Save formula feeds
@@ -513,7 +507,6 @@ jobs:
         env:
           API_SIGNING_TEST_SITE: _site
           FORMULA_FEEDS_TEST_SITE: _site
-          FORMULA_FEEDS_AVAILABLE: ${{ needs.generate-core.outputs.formula-feeds-available }}
         run: bundle exec rspec
 
       - name: Upload unsigned site
