@@ -206,8 +206,18 @@ algolia:
         }
       }
 
+      // GitHub Mobile drops the search term from repository pulls?q= links.
+      function setupMobileLinks() {
+        if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+          for (const link of document.querySelectorAll('a[data-mobile-href]')) {
+            link.href = link.dataset.mobileHref;
+          }
+        }
+      }
+
       window.addEventListener("DOMContentLoaded", function() {
         setupCopyables();
+        setupMobileLinks();
       });
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/5.0.0/anchor.min.js" 

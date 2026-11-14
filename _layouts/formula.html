@@ -62,7 +62,7 @@ permalink: :title
 </p>
 {%- endif %}
 
-<p>Development: <a rel="nofollow" href="https://github.com/search?q=repo:Homebrew/homebrew-core+is:pr+{{ f.name | uri_escape }}+in:title&amp;s=updated&amp;o=desc&amp;type=pullrequests">Pull requests</a></p>
+<p>Development: <a rel="nofollow" href="https://github.com/Homebrew/homebrew-core/pulls?q=sort:updated-desc+is:pr+{{ f.name | uri_escape }}+in:title" data-mobile-href="https://github.com/search?q=repo:Homebrew/homebrew-core+is:pr+{{ f.name | uri_escape }}+in:title&amp;s=updated&amp;o=desc&amp;type=pullrequests">Pull requests</a></p>
 
 <p>Formula JSON API: <a rel="alternate" type="application/json" href="{{ site.baseurl }}/api/formula/{{ f.name | uri_escape }}.json"><code>/api/formula/{{ f.name | escape }}.json</code></a></p>
 
