@@ -40,7 +40,7 @@ jobs:
       - run: brew generate-cask-api
 
       - name: Archive data
-        run: tar czf data-cask.tar.gz _data/cask/ api/cask/ api/cask_tap_migrations.json api/internal/cask.* cask/
+        run: tar czf data-cask.tar.gz _data/cask/ _data/cask_canonical.json api/cask/ api/cask_tap_migrations.json api/internal/cask.* cask/
 
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
@@ -88,13 +88,23 @@ jobs:
 
   generate-feeds:
     if: startsWith( github.repository, 'Homebrew/' )
-    name: Generate formula feeds
+    name: Generate ${{ matrix.package }} feeds
     runs-on: macos-latest
     timeout-minutes: 20
     permissions:
       contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - package: formula
+            tap: core
+          - package: cask
+            tap: cask
     env:
       HOMEBREW_DEVELOPER: 1
+      PACKAGE: ${{ matrix.package }}
+      TAP: ${{ matrix.tap }}
     steps:
       - name: Check out repository
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -104,58 +114,58 @@ jobs:
       - name: Set up Homebrew
         uses: Homebrew/actions/setup-homebrew@ceec4e8419bb3c97ce96e9dda7738499ed5f869d # 2026.11.14.1
         with:
-          core: shallow
-          cask: false
+          core: ${{ matrix.tap == 'core' && 'shallow' || false }}
+          cask: ${{ matrix.tap == 'cask' && 'shallow' || false }}
           stable: false
 
       - run: brew test-bot --only-cleanup-before
 
       # Cleanup removes zstd; retain compatibility with existing gzip caches.
-      - name: Restore formula feeds
+      - name: Restore feeds
         timeout-minutes: 1
         continue-on-error: true
         uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
-          path: _data/formula_feeds.json
-          key: formula-feeds-${{ github.run_id }}-${{ github.run_attempt }}
-          restore-keys: formula-feeds-
+          path: _data/${{ matrix.package }}_feeds.json
+          key: ${{ matrix.package }}-feeds-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: ${{ matrix.package }}-feeds-
 
-      - name: Generate formula feeds
+      - name: Generate feeds
         id: feeds
         timeout-minutes: 5
         continue-on-error: true
         run: |
-          repository="$(brew --repo homebrew/core)"
+          repository="$(brew --repo "homebrew/${TAP}")"
           if [[ "$(git -C "$repository" rev-parse --is-shallow-repository)" == true ]]; then
             # Shallow setup disables transports; opt in for this history fetch.
             git -C "$repository" -c protocol.https.allow=always fetch --unshallow origin
           fi
-          brew generate-formula-feeds --output="$RUNNER_TEMP/formula_feeds.json"
-          ruby script/validate-feeds.rb "$RUNNER_TEMP/formula_feeds.json"
+          brew "generate-${PACKAGE}-feeds" --output="$RUNNER_TEMP/${PACKAGE}_feeds.json"
+          ruby script/validate-feeds.rb "$RUNNER_TEMP/${PACKAGE}_feeds.json"
           mkdir -p _data
-          mv "$RUNNER_TEMP/formula_feeds.json" _data/formula_feeds.json
+          mv "$RUNNER_TEMP/${PACKAGE}_feeds.json" "_data/${PACKAGE}_feeds.json"
 
-      - name: Validate formula feeds
-        run: ruby script/validate-feeds.rb _data/formula_feeds.json
+      - name: Validate feeds
+        run: ruby script/validate-feeds.rb "_data/${PACKAGE}_feeds.json"
 
       - name: Report cached fallback
         if: steps.feeds.outcome != 'success'
-        run: echo "::warning title=Formula feed fallback::Refresh failed; publishing the last validated formula feeds."
+        run: echo "::warning title=Feed fallback::Refresh failed; publishing the last validated ${PACKAGE} feeds."
 
-      - name: Save formula feeds
+      - name: Save feeds
         if: github.ref == 'refs/heads/main' && steps.feeds.outcome == 'success'
         uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
-          path: _data/formula_feeds.json
-          key: formula-feeds-${{ github.run_id }}-${{ github.run_attempt }}
+          path: _data/${{ matrix.package }}_feeds.json
+          key: ${{ matrix.package }}-feeds-${{ github.run_id }}-${{ github.run_attempt }}
 
       - name: Archive data
-        run: tar czf data-feeds.tar.gz _data/formula_feeds.json
+        run: tar czf "data-feeds-${PACKAGE}.tar.gz" "_data/${PACKAGE}_feeds.json"
 
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
-          name: data-feeds
-          path: data-feeds.tar.gz
+          name: data-feeds-${{ matrix.package }}
+          path: data-feeds-${{ matrix.package }}.tar.gz
           compression-level: 0
           retention-days: 1
 
@@ -344,7 +354,8 @@ jobs:
           tar xf data-analytics/data-analytics.tar.gz
           tar xf data-cask/data-cask.tar.gz
           tar xf data-core/data-core.tar.gz
-          tar xf data-feeds/data-feeds.tar.gz
+          tar xf data-feeds-cask/data-feeds-cask.tar.gz
+          tar xf data-feeds-formula/data-feeds-formula.tar.gz
           tar xf data-internal/data-internal.tar.gz
 
       - name: Generate API samples
