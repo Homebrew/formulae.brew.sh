@@ -1,0 +1,53 @@
+name: Refresh Feeds
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/feeds.yml
+      - script/validate-feeds.rb
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: feeds-refresh-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    if: startsWith( github.repository, 'Homebrew/' )
+    name: Refresh formula feeds
+    runs-on: macos-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+    env:
+      HOMEBREW_DEVELOPER: 1
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Homebrew
+        uses: Homebrew/actions/setup-homebrew@ceec4e8419bb3c97ce96e9dda7738499ed5f869d # 2026.11.14.1
+        with:
+          core: true
+          cask: false
+          stable: false
+
+      - run: brew test-bot --only-cleanup-before
+
+      - name: Generate formula feeds
+        run: |
+          brew generate-formula-feeds --output="$RUNNER_TEMP/formula_feeds.json"
+          ruby script/validate-feeds.rb "$RUNNER_TEMP/formula_feeds.json"
+          mkdir -p _data
+          mv "$RUNNER_TEMP/formula_feeds.json" _data/formula_feeds.json
+
+      - name: Save formula feeds
+        if: github.ref == 'refs/heads/main'
+        uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: _data/formula_feeds.json
+          key: formula-feeds-${{ github.run_id }}-${{ github.run_attempt }}
