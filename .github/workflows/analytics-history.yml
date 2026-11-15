@@ -48,8 +48,8 @@ jobs:
           path: |
             ${{ steps.paths.outputs.downloads }}
             ${{ steps.paths.outputs.analytics }}
-          key: analytics-working-v1-archive-${{ github.run_id }}-${{ github.run_attempt }}
-          restore-keys: analytics-working-v1-
+          key: analytics-working-archive-v1-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: analytics-working-archive-v1-
 
       - name: Prepare Git histories and formula checkpoint
         run: |
