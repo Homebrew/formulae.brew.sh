@@ -1,13 +1,16 @@
 name: Archive History
 on:
   push:
+    branches: [main]
+    paths: [.github/workflows/analytics-history.yml]
+  pull_request:
     paths: [.github/workflows/analytics-history.yml]
   schedule:
     - cron: "0 2 1 1 *"
   workflow_dispatch:
 
 concurrency:
-  group: analytics-history-${{ github.ref }}
+  group: analytics-history-${{ github.event_name == 'push' && 'validate' || 'publish' }}-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
