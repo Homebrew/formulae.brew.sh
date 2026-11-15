@@ -250,7 +250,7 @@ To replace the pinned seed, upload the checkpoint to a public HTTPS URL and upda
 CI downloads it only when no local checkpoint was restored, then persists incremental updates in its working cache.
 The uploaded file must be the checkpoint, not the public report, which lacks the per-formula state needed to resume.
 Use the same Homebrew parser code and platform targets locally and in CI; the generator discards incompatible checkpoints or checkpoints whose revision is no longer an ancestor of core's current revision.
-To replace an existing CI checkpoint with a new upload, remove the `analytics-working-v1-*` Actions caches before the next analytics generation.
+To replace an existing CI checkpoint with a new upload, remove both the `analytics-working-v1-*` and `analytics-working-archive-v1-*` Actions caches before the next analytics generation.
 Neither generation nor checkpoint export needs an InfluxDB token.
 
 The JSON retains maintenance groups for current formulae into confirmed updates, no observed update, unknown history and no stable version.

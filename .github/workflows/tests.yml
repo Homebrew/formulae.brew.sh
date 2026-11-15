@@ -28,7 +28,6 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
-          ref: ${{ github.event.pull_request.head.sha }}
 
       - name: Set up Homebrew
         id: set-up-homebrew
@@ -64,7 +63,6 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
-          ref: ${{ github.event.pull_request.head.sha }}
 
       - name: Set up Homebrew
         id: set-up-homebrew
@@ -102,7 +100,6 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
-          ref: ${{ github.event.pull_request.head.sha }}
 
       - name: Set up Homebrew
         uses: Homebrew/actions/setup-homebrew@ceec4e8419bb3c97ce96e9dda7738499ed5f869d # 2026.11.14.1
@@ -130,7 +127,8 @@ jobs:
         run: |
           repository="$(brew --repo homebrew/core)"
           if [[ "$(git -C "$repository" rev-parse --is-shallow-repository)" == true ]]; then
-            git -C "$repository" fetch --unshallow origin
+            # Shallow setup disables transports; opt in for this history fetch.
+            git -C "$repository" -c protocol.https.allow=always fetch --unshallow origin
           fi
           brew generate-formula-feeds --output="$RUNNER_TEMP/formula_feeds.json"
           ruby script/validate-feeds.rb "$RUNNER_TEMP/formula_feeds.json"
@@ -175,7 +173,6 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
-          ref: ${{ github.event.pull_request.head.sha }}
 
       - name: Set up Homebrew
         id: set-up-homebrew
@@ -213,7 +210,6 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
-          ref: ${{ github.event.pull_request.head.sha }}
 
       - name: Check out advisory database
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -292,7 +288,6 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
-          ref: ${{ github.event.pull_request.head.sha }}
 
       - name: Determine analytics cache date
         id: analytics-cache-date

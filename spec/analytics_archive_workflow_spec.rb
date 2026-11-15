@@ -5,6 +5,29 @@ require "open3"
 require "tmpdir"
 require "yaml"
 
+RSpec.describe "Analytics working caches" do
+  it "keeps archive checkpoints separate from daily refresh checkpoints" do
+    archive, refresh = %w[analytics-history analytics].map do |name|
+      workflow = YAML.safe_load_file(File.expand_path("../.github/workflows/#{name}.yml", __dir__))
+      workflow.fetch("jobs").values.first.fetch("steps").find do |step|
+        step.fetch("uses", "").start_with?("actions/cache/restore@") &&
+          step.dig("with", "key").start_with?("analytics-working-")
+      end.fetch("with")
+    end
+
+    aggregate_failures do
+      [[archive, refresh], [refresh, archive]].each do |own, other|
+        prefixes = own.fetch("restore-keys").split
+        expect(prefixes.any? { |prefix| own.fetch("key").start_with?(prefix) }).to be(true)
+        expect(prefixes.any? { |prefix| other.fetch("key").start_with?(prefix) }).to be(false)
+      end
+      expect(archive.fetch("restore-keys").split.any? do |prefix|
+        "analytics-working-v1-archive-123-1".start_with?(prefix)
+      end).to be(false)
+    end
+  end
+end
+
 RSpec.describe "Analytics archive publishing" do
   let(:year) { 2020 }
   let(:branch) { "analytics-history-#{year}" }

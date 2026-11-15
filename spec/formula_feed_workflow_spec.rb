@@ -35,13 +35,13 @@ RSpec.describe "Parallel formula feed publication" do
     end
   end
 
-  def run_step(name)
+  def run_step(name, environment = {})
     script = steps.find { |step| step["name"] == name }.fetch("run")
     Open3.capture3(
       {
         "RUNNER_TEMP" => (@root/"temporary").to_s,
         "PATH"        => "#{@root}/bin:#{ENV.fetch("PATH")}",
-      },
+      }.merge(environment),
       "bash", "--noprofile", "--norc", "-e", "-o", "pipefail", "-c", script,
       chdir: @root
     )
@@ -174,23 +174,33 @@ RSpec.describe "Parallel formula feed publication" do
     expect(steps.index(warning)).to be > steps.index { |step| step["name"] == "Validate formula feeds" }
   end
 
-  it "retains usable cached feeds when fetching full history fails" do
+  it "attempts HTTPS history fetching after shallow setup and falls back on failure" do
     feed_path.dirname.mkpath
     feed_path.write(JSON.generate(cached))
     stub_brew("touch generation-ran")
-    (@root/"bin/git").write <<~SH
-      #!/bin/bash
-      if [[ "$3" == rev-parse ]]; then
-        echo true
-      else
-        echo 'History fetch failed' >&2
-        exit 1
-      fi
-    SH
+    (@root/"bin/git").delete
+    [
+      ["init", "--quiet", "tap"],
+      ["-C", "tap", "config", "protocol.allow", "never"],
+      ["-C", "tap", "remote", "add", "origin", "https://github.com/Homebrew/homebrew-core"],
+    ].each do |arguments|
+      _stdout, stderr, status = Open3.capture3("git", *arguments, chdir: @root)
+      expect(status).to be_success, stderr
+    end
+    (@root/"tap/.git/shallow").write("#{"a" * 40}\n")
+    # Exercise Git's real transport policy without making a network request.
+    (@root/"bin/git-remote-https").write("#!/bin/sh\necho 'History fetch failed' >&2\nexit 1\n")
+    (@root/"bin/git-remote-https").chmod(0755)
 
-    _stdout, stderr, status = run_step("Generate formula feeds")
+    _stdout, stderr, status = run_step(
+      "Generate formula feeds",
+      "GIT_EXEC_PATH"       => (@root/"bin").to_s,
+      "GIT_CONFIG_GLOBAL"   => File::NULL,
+      "GIT_CONFIG_NOSYSTEM" => "1",
+    )
     expect(status).not_to be_success
     expect(stderr).to include("History fetch failed")
+    expect(stderr).not_to include("transport 'https' not allowed")
     expect(@root/"generation-ran").not_to exist
     expect(run_step("Validate formula feeds").last).to be_success
     expect(JSON.parse(feed_path.read)).to eq(cached)
