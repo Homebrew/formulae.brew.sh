@@ -207,6 +207,7 @@ algolia:
       }
 
       // GitHub Mobile drops the search term from repository pulls?q= links.
+      // Remove once fixed: https://github.com/orgs/community/discussions/213084
       function setupMobileLinks() {
         const ua = navigator.userAgent;
         // iPadOS Safari reports a Mac user agent; only the iPad has touch.
