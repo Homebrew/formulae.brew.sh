@@ -27,6 +27,10 @@ The [new formulae feed]({{ '/feeds/formula-new.xml' | relative_url }}) contains 
 The [updated formulae feed]({{ '/feeds/formula-updated.xml' | relative_url }}) contains the latest 500 version changes or revision increases.
 Bottle-only rebuilds and maintenance edits are excluded. Older entries drop out as new events arrive.
 
+The [new casks feed]({{ '/feeds/cask-new.xml' | relative_url }}) contains the latest 50 cask additions.
+The [updated casks feed]({{ '/feeds/cask-updated.xml' | relative_url }}) contains the latest 500 cask version changes.
+Checksum-only and maintenance edits are excluded.
+
 Feeds refresh with each site build. Each entry has a stable GUID and a date taken from its Git commit.
 If generation fails, the last validated feeds remain available.
 

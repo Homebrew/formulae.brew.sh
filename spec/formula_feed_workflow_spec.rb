@@ -9,7 +9,7 @@ require "rspec"
 require "tmpdir"
 require "yaml"
 
-RSpec.describe "Parallel formula feed publication" do
+RSpec.describe "Parallel package feed publication" do
   let(:project) { Pathname(__dir__).parent }
   let(:workflow) { YAML.safe_load_file(project/".github/workflows/tests.yml") }
   let(:core_steps) { workflow.fetch("jobs").fetch("generate-core").fetch("steps") }
@@ -41,6 +41,8 @@ RSpec.describe "Parallel formula feed publication" do
       {
         "RUNNER_TEMP" => (@root/"temporary").to_s,
         "PATH"        => "#{@root}/bin:#{ENV.fetch("PATH")}",
+        "PACKAGE"     => "formula",
+        "TAP"         => "core",
       }.merge(environment),
       "bash", "--noprofile", "--norc", "-e", "-o", "pipefail", "-c", script,
       chdir: @root
@@ -51,6 +53,7 @@ RSpec.describe "Parallel formula feed publication" do
     (@root/"bin").mkpath
     (@root/"bin/brew").write <<~SH
       #!/bin/bash
+      echo "$*" >> brew-invocations
       if [[ "$1" == --repo ]]; then
         printf '%s' "$PWD/tap"
         exit 0
@@ -64,10 +67,11 @@ RSpec.describe "Parallel formula feed publication" do
   def render_feeds
     FileUtils.cp_r(project/"feeds", @root/"feeds")
     (@root/"_layouts").mkpath
-    FileUtils.cp(project/"_layouts/formula_feed.xml", @root/"_layouts/formula_feed.xml")
+    FileUtils.cp(project/"_layouts/package_feed.xml", @root/"_layouts/package_feed.xml")
     Jekyll::Site.new(Jekyll.configuration(
                        "source" => @root.to_s, "destination" => (@root/"_site").to_s,
-                       "url" => "https://formulae.brew.sh", "quiet" => true
+                       "url" => "https://formulae.brew.sh", "quiet" => true,
+                       "taps" => Jekyll.configuration("source" => project.to_s, "quiet" => true).fetch("taps")
                      )).process
     %w[new updated].to_h do |type|
       [type, Nokogiri::XML((@root/"_site/feeds/formula-#{type}.xml").read) { |config| config.strict.nonet }]
@@ -75,12 +79,20 @@ RSpec.describe "Parallel formula feed publication" do
   end
 
   it "fetches full history only in the independent feed job" do
-    workflow.fetch("jobs").each_value do |job|
+    workflow.fetch("jobs").except("generate-feeds").each_value do |job|
       job.fetch("steps").each do |step|
         next unless step.fetch("uses", "").start_with?("Homebrew/actions/setup-homebrew@")
 
         %w[core cask].each { |tap| expect(step.fetch("with").fetch(tap)).to eq(false).or eq("shallow") }
       end
+    end
+    expect(feed_job.dig("strategy", "matrix", "include")).to contain_exactly(
+      { "package" => "formula", "tap" => "core" }, { "package" => "cask", "tap" => "cask" },
+    )
+    expect(feed_job.dig("strategy", "fail-fast")).to be(false)
+    setup = steps.find { |step| step["name"] == "Set up Homebrew" }.fetch("with")
+    %w[core cask].each do |tap|
+      expect(setup.fetch(tap)).to eq("${{ matrix.tap == '#{tap}' && 'shallow' || false }}")
     end
     expect(core_steps.none? { |step| step.fetch("name", "").include?("feeds") }).to be(true)
     expect(feed_job).not_to have_key("needs")
@@ -91,7 +103,7 @@ RSpec.describe "Parallel formula feed publication" do
     cleanup = steps.index { |step| step["run"] == "brew test-bot --only-cleanup-before" }
     expect(cleanup).not_to be_nil
     steps.each_with_index do |step, index|
-      next if step.dig("with", "path") != "_data/formula_feeds.json"
+      next if step.dig("with", "path") != "_data/${{ matrix.package }}_feeds.json"
 
       expect(index).to be > cleanup
     end
@@ -106,10 +118,10 @@ RSpec.describe "Parallel formula feed publication" do
       exit 1
     SH
 
-    _stdout, _stderr, generation = run_step("Generate formula feeds")
+    _stdout, _stderr, generation = run_step("Generate feeds")
     expect(generation).not_to be_success
     expect(feed_path.read).to eq(original)
-    _stdout, stderr, fallback = run_step("Validate formula feeds")
+    _stdout, stderr, fallback = run_step("Validate feeds")
     expect(fallback).to be_success, stderr
     expect(feed_path.read).to eq(original)
     render_feeds.each do |type, xml|
@@ -119,7 +131,7 @@ RSpec.describe "Parallel formula feed publication" do
   end
 
   it "fails when neither generation nor a cache supplies feeds" do
-    _stdout, _stderr, status = run_step("Validate formula feeds")
+    _stdout, _stderr, status = run_step("Validate feeds")
     expect(status).not_to be_success
     expect(feed_path).not_to exist
   end
@@ -127,7 +139,7 @@ RSpec.describe "Parallel formula feed publication" do
   it "fails without replacing an invalid cache" do
     feed_path.dirname.mkpath
     feed_path.write("{invalid")
-    _stdout, _stderr, status = run_step("Validate formula feeds")
+    _stdout, _stderr, status = run_step("Validate feeds")
     expect(status).not_to be_success
     expect(feed_path.read).to eq("{invalid")
   end
@@ -135,43 +147,43 @@ RSpec.describe "Parallel formula feed publication" do
   it "fails when cached feeds are empty" do
     feed_path.dirname.mkpath
     feed_path.write(JSON.generate({ "new" => [], "updated" => [] }))
-    _stdout, _stderr, status = run_step("Validate formula feeds")
+    _stdout, _stderr, status = run_step("Validate feeds")
     expect(status).not_to be_success
   end
 
   it "accepts a validated cached snapshot as a fallback" do
     feed_path.dirname.mkpath
     feed_path.write(JSON.generate(cached))
-    stdout, stderr, status = run_step("Validate formula feeds")
+    stdout, stderr, status = run_step("Validate feeds")
     expect(status).to be_success, stderr
     expect(stdout).not_to include("::warning::")
     expect(JSON.parse(feed_path.read)).to eq(cached)
   end
 
   it "validates generated or cached feeds before building and deploying" do
-    fallback = steps.find { |step| step["name"] == "Validate formula feeds" }
+    fallback = steps.find { |step| step["name"] == "Validate feeds" }
     expect(fallback["continue-on-error"]).not_to be(true)
-    expect(steps.index(fallback)).to be > steps.index { |step| step["name"] == "Generate formula feeds" }
+    expect(steps.index(fallback)).to be > steps.index { |step| step["name"] == "Generate feeds" }
     jobs = workflow.fetch("jobs")
     expect(jobs.fetch("build").fetch("needs")).to include("generate-core", "generate-feeds")
     expect(jobs.fetch("deploy-issue").fetch("needs")).to include("generate-feeds")
     expect(jobs.fetch("deploy").fetch("needs")).to eq("build")
     built_tests = jobs.fetch("build").fetch("steps").find { |step| step["name"] == "Test generated site" }
     expect(built_tests.fetch("run")).to eq("bundle exec rspec")
-    save = steps.find { |step| step["name"] == "Save formula feeds" }
+    save = steps.find { |step| step["name"] == "Save feeds" }
     expect(save.fetch("if")).to eq("github.ref == 'refs/heads/main' && steps.feeds.outcome == 'success'")
   end
 
   it "bounds fetching and generation together before falling back to cached feeds" do
     generation = steps.find { |step| step["id"] == "feeds" }
     expect(generation).not_to have_key("if")
-    expect(generation.fetch("run")).to include("--unshallow", "brew generate-formula-feeds")
+    expect(generation.fetch("run")).to include("--unshallow", 'brew "generate-${PACKAGE}-feeds"')
     expect(generation.fetch("timeout-minutes")).to eq(5)
-    expect(steps.index(generation)).to be > steps.index { |step| step["name"] == "Restore formula feeds" }
+    expect(steps.index(generation)).to be > steps.index { |step| step["name"] == "Restore feeds" }
     expect(generation.fetch("continue-on-error")).to be(true)
     warning = steps.find { |step| step["name"] == "Report cached fallback" }
     expect(warning.fetch("if")).to eq("steps.feeds.outcome != 'success'")
-    expect(steps.index(warning)).to be > steps.index { |step| step["name"] == "Validate formula feeds" }
+    expect(steps.index(warning)).to be > steps.index { |step| step["name"] == "Validate feeds" }
   end
 
   it "attempts HTTPS history fetching after shallow setup and falls back on failure" do
@@ -193,7 +205,7 @@ RSpec.describe "Parallel formula feed publication" do
     (@root/"bin/git-remote-https").chmod(0755)
 
     _stdout, stderr, status = run_step(
-      "Generate formula feeds",
+      "Generate feeds",
       "GIT_EXEC_PATH"       => (@root/"bin").to_s,
       "GIT_CONFIG_GLOBAL"   => File::NULL,
       "GIT_CONFIG_NOSYSTEM" => "1",
@@ -202,7 +214,7 @@ RSpec.describe "Parallel formula feed publication" do
     expect(stderr).to include("History fetch failed")
     expect(stderr).not_to include("transport 'https' not allowed")
     expect(@root/"generation-ran").not_to exist
-    expect(run_step("Validate formula feeds").last).to be_success
+    expect(run_step("Validate feeds").last).to be_success
     expect(JSON.parse(feed_path.read)).to eq(cached)
   end
 
@@ -211,7 +223,7 @@ RSpec.describe "Parallel formula feed publication" do
     feed_path.dirname.mkpath
     feed_path.write(JSON.generate(cached))
 
-    expect(run_step("Validate formula feeds").last).not_to be_success
+    expect(run_step("Validate feeds").last).not_to be_success
   end
 
   it "rejects invalid entry dates before they can be cached" do
@@ -219,7 +231,7 @@ RSpec.describe "Parallel formula feed publication" do
     feed_path.dirname.mkpath
     feed_path.write(JSON.generate(cached))
 
-    expect(run_step("Validate formula feeds").last).not_to be_success
+    expect(run_step("Validate feeds").last).not_to be_success
   end
 
   it "rejects invalid successful generation without replacing previous feeds" do
@@ -230,9 +242,9 @@ RSpec.describe "Parallel formula feed publication" do
       printf '{"new": [], "updated": []}' > "$RUNNER_TEMP/formula_feeds.json"
     SH
 
-    expect(run_step("Generate formula feeds").last).not_to be_success
+    expect(run_step("Generate feeds").last).not_to be_success
     expect(feed_path.read).to eq(original)
-    expect(run_step("Validate formula feeds").last).to be_success
+    expect(run_step("Validate feeds").last).to be_success
   end
 
   %w[absent invalid valid].each do |cache_state|
@@ -244,12 +256,41 @@ RSpec.describe "Parallel formula feed publication" do
       (@root/"generated.json").write(JSON.generate(cached))
       stub_brew('cp generated.json "$RUNNER_TEMP/formula_feeds.json"')
 
-      _stdout, stderr, status = run_step("Generate formula feeds")
+      _stdout, stderr, status = run_step("Generate feeds")
 
       expect(status).to be_success, stderr
       expect(JSON.parse(feed_path.read)).to eq(cached)
-      expect(run_step("Validate formula feeds").last).to be_success
+      expect(run_step("Validate feeds").last).to be_success
     end
+  end
+
+  it "generates cask feeds from full homebrew/cask history" do
+    (@root/"generated.json").write(JSON.generate(cached))
+    stub_brew('cp generated.json "$RUNNER_TEMP/cask_feeds.json"')
+
+    _stdout, stderr, status = run_step("Generate feeds", "PACKAGE" => "cask", "TAP" => "cask")
+
+    expect(status).to be_success, stderr
+    expect((@root/"brew-invocations").read.lines(chomp: true)).to eq(
+      ["--repo homebrew/cask", "generate-cask-feeds --output=#{@root}/temporary/cask_feeds.json"],
+    )
+    expect(JSON.parse((@root/"_data/cask_feeds.json").read)).to eq(cached)
+    expect(run_step("Validate feeds", "PACKAGE" => "cask", "TAP" => "cask").last).to be_success
+  end
+
+  it "archives canonical cask names for renamed cask links" do
+    cask_steps = workflow.fetch("jobs").fetch("generate-cask").fetch("steps")
+    %w[_data/cask api/cask cask api/internal].each { |path| (@root/path).mkpath }
+    %w[_data/cask_canonical.json api/cask_tap_migrations.json api/internal/cask.names.json].each do |path|
+      (@root/path).write("{}")
+    end
+
+    archive = cask_steps.find { |step| step["name"] == "Archive data" }.fetch("run")
+    _stdout, stderr, status = Open3.capture3("bash", "-e", "-c", archive, chdir: @root)
+    expect(status).to be_success, stderr
+    contents, stderr, status = Open3.capture3("tar", "tzf", "data-cask.tar.gz", chdir: @root)
+    expect(status).to be_success, stderr
+    expect(contents.lines.map(&:strip)).to include("_data/cask_canonical.json")
   end
 
   it "archives core data without depending on feed generation" do
@@ -280,24 +321,28 @@ RSpec.describe "Parallel formula feed publication" do
     )
   end
 
-  it "passes the selected feed snapshot to the build in its own artifact" do
-    feed_path.dirname.mkpath
-    feed_path.write(JSON.generate(cached))
-    _stdout, stderr, status = run_step("Archive data")
-    expect(status).to be_success, stderr
-    FileUtils.rm(feed_path)
+  %w[formula cask].each do |package|
+    it "passes the selected #{package} feed snapshot to the build in its own artifact" do
+      path = @root/"_data/#{package}_feeds.json"
+      artifact = "data-feeds-#{package}"
+      path.dirname.mkpath
+      path.write(JSON.generate(cached))
+      _stdout, stderr, status = run_step("Archive data", "PACKAGE" => package)
+      expect(status).to be_success, stderr
+      FileUtils.rm(path)
 
-    upload = steps.find { |step| step.fetch("uses", "").start_with?("actions/upload-artifact@") }.fetch("with")
-    expect(upload.fetch("name")).to eq("data-feeds")
-    expect(upload.fetch("path")).to eq("data-feeds.tar.gz")
-    (@root/"data-feeds").mkpath
-    FileUtils.mv(@root/"data-feeds.tar.gz", @root/"data-feeds")
-    extraction = workflow.fetch("jobs").fetch("build").fetch("steps")
-                         .find { |step| step["name"] == "Move artifacts into place" }.fetch("run")
-                         .lines.find { |line| line.include?("data-feeds/") }
-    expect(extraction).not_to be_nil
-    _stdout, stderr, status = Open3.capture3("bash", "-e", "-c", extraction, chdir: @root)
-    expect(status).to be_success, stderr
-    expect(JSON.parse(feed_path.read)).to eq(cached)
+      upload = steps.find { |step| step.fetch("uses", "").start_with?("actions/upload-artifact@") }.fetch("with")
+      expect(upload.fetch("name").sub("${{ matrix.package }}", package)).to eq(artifact)
+      expect(upload.fetch("path").sub("${{ matrix.package }}", package)).to eq("#{artifact}.tar.gz")
+      (@root/artifact).mkpath
+      FileUtils.mv(@root/"#{artifact}.tar.gz", @root/artifact)
+      extraction = workflow.fetch("jobs").fetch("build").fetch("steps")
+                           .find { |step| step["name"] == "Move artifacts into place" }.fetch("run")
+                           .lines.find { |line| line.include?("#{artifact}/") }
+      expect(extraction).not_to be_nil
+      _stdout, stderr, status = Open3.capture3("bash", "-e", "-c", extraction, chdir: @root)
+      expect(status).to be_success, stderr
+      expect(JSON.parse(path.read)).to eq(cached)
+    end
   end
 end
