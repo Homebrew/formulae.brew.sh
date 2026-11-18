@@ -1,0 +1,41 @@
+name: Published package freshness
+
+"on":
+  schedule:
+    - cron: "7 * * * *"
+
+jobs:
+  check:
+    if: github.repository == 'Homebrew/formulae.brew.sh'
+    concurrency:
+      group: published-package-freshness
+      cancel-in-progress: false
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: ruby/setup-ruby@b3aaceaef7e0ee231b499e7b5f49c03fc1d32199 # v1.338.0
+
+      - name: Check published package freshness
+        id: packages
+        run: ruby script/check-published-packages.rb https://formulae.brew.sh/api/
+
+      - name: Report stale published packages
+        if: ${{ !cancelled() && (steps.packages.outcome == 'failure' || steps.packages.outcome == 'success') }}
+        uses: Homebrew/actions/create-or-update-issue@ceec4e8419bb3c97ce96e9dda7738499ed5f869d # 2026.11.14.1
+        with:
+          title: formulae.brew.sh signed package freshness check failed!
+          body: |
+            The [hourly freshness check](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) failed. Published signed packages should be at most one hour old.
+            ${{ steps.packages.outputs.failed_packages && format('Affected files: {0}.', steps.packages.outputs.failed_packages) || '' }}
+          labels: deploy failure
+          update-existing: ${{ steps.packages.outcome == 'failure' }}
+          close-existing: ${{ steps.packages.outcome == 'success' }}
+          close-from-author: github-actions[bot]
+          close-comment: Published signed packages passed the freshness check. Closing issue.
