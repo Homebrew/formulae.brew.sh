@@ -49,10 +49,9 @@ algolia:
     {% endcapture -%}
     {{ plugin_output | replace: " />", ">" | replace: "/>", ">" }}
     <meta name="viewport" content="width=device-width">
-    <link rel="alternate" type="application/rss+xml" title="New Homebrew Formulae" href="{{ '/feeds/formula-new.xml' | absolute_url }}">
-    <link rel="alternate" type="application/rss+xml" title="Updated Homebrew Formulae" href="{{ '/feeds/formula-updated.xml' | absolute_url }}">
-    <link rel="alternate" type="application/rss+xml" title="New Homebrew Casks" href="{{ '/feeds/cask-new.xml' | absolute_url }}">
-    <link rel="alternate" type="application/rss+xml" title="Updated Homebrew Casks" href="{{ '/feeds/cask-updated.xml' | absolute_url }}">
+    {% for feed in site.rss_feeds -%}
+      <link rel="alternate" type="application/rss+xml" title="{{ feed.title | escape }}" href="{{ feed.path | absolute_url }}">
+    {% endfor -%}
     <link rel="icon" href="https://brew.sh/assets/img/favicon.ico" sizes="48x48">
     <link rel="icon" href="https://brew.sh/assets/img/homebrew.svg" sizes="any" type="image/svg+xml">
     <link rel="apple-touch-icon" href="https://brew.sh/assets/img/apple-touch-icon.png">
@@ -210,22 +209,8 @@ algolia:
         }
       }
 
-      // GitHub Mobile drops the search term from repository pulls?q= links.
-      // Remove once fixed: https://github.com/orgs/community/discussions/213084
-      function setupMobileLinks() {
-        const ua = navigator.userAgent;
-        // iPadOS Safari reports a Mac user agent; only the iPad has touch.
-        const iPad = /Macintosh/.test(ua) && navigator.maxTouchPoints > 1;
-        if (/Android|iPhone|iPad|iPod/i.test(ua) || iPad) {
-          for (const link of document.querySelectorAll('a[data-mobile-href]')) {
-            link.href = link.dataset.mobileHref;
-          }
-        }
-      }
-
       window.addEventListener("DOMContentLoaded", function() {
         setupCopyables();
-        setupMobileLinks();
       });
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/5.0.0/anchor.min.js" 
