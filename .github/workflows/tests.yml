@@ -341,10 +341,19 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@ceec4e8419bb3c97ce96e9dda7738499ed5f869d # 2026.11.14.1
+        with:
+          core: false
+          cask: false
+          stable: false
+
       - name: Set up Ruby
-        uses: ruby/setup-ruby@f9c4492e86def3e644ab32a0ef185eda5b0c20d0 # v1.342.0
+        uses: Homebrew/actions/setup-ruby@ceec4e8419bb3c97ce96e9dda7738499ed5f869d # 2026.11.14.1
         with:
           bundler-cache: true
+          portable-ruby: true
 
       - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
 
@@ -368,8 +377,6 @@ jobs:
           fi
 
       - name: Build site
-        env:
-          RUBY_YJIT_ENABLE: 1
         run: bundle exec jekyll build --profile
 
       - name: Validate build
@@ -411,10 +418,21 @@ jobs:
           persist-credentials: false
           ref: ${{ github.sha }}
 
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@ceec4e8419bb3c97ce96e9dda7738499ed5f869d # 2026.11.14.1
+        with:
+          core: false
+          cask: false
+          stable: false
+          # Don't export a GitHub token into the job that holds the signing key.
+          brew-gh-api-token: ""
+
       - name: Set up Ruby
-        uses: ruby/setup-ruby@f9c4492e86def3e644ab32a0ef185eda5b0c20d0 # v1.342.0
+        uses: Homebrew/actions/setup-ruby@ceec4e8419bb3c97ce96e9dda7738499ed5f869d # 2026.11.14.1
         with:
           bundler-cache: true
+          portable-ruby: true
 
       - name: Download unsigned site from this run
         uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
