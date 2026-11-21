@@ -406,9 +406,9 @@ jobs:
     # JWS_HOMEBREW_1 must exist only in this environment, restricted to branch main.
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url || steps.deployment-retry.outputs.page_url }}
     outputs:
-      deploy_url: ${{ steps.deployment.outputs.page_url }}
+      deploy_url: ${{ steps.deployment.outputs.page_url || steps.deployment-retry.outputs.page_url }}
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
@@ -458,6 +458,28 @@ jobs:
 
       - name: Deploy to GitHub Pages
         id: deployment
+        # `deploy-pages` can fail to find an artifact that was only just uploaded.
+        continue-on-error: true
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
+        with:
+          artifact_name: github-pages-${{ github.run_attempt }}
+
+      # `page_url` is only set once a Pages deployment exists, so don't retry after that.
+      - name: Wait before retrying deployment
+        if: steps.deployment.outcome == 'failure'
+        env:
+          PAGE_URL: ${{ steps.deployment.outputs.page_url }}
+        run: |
+          if [[ -n "${PAGE_URL}" ]]
+          then
+            echo "::error::The GitHub Pages deployment was created but failed, so it won't be retried."
+            exit 1
+          fi
+          sleep 10
+
+      - name: Retry deploying to GitHub Pages
+        id: deployment-retry
+        if: steps.deployment.outcome == 'failure'
         uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
         with:
           artifact_name: github-pages-${{ github.run_attempt }}
