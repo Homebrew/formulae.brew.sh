@@ -194,7 +194,49 @@ jobs:
 
       - run: brew test-bot --only-cleanup-before
 
+      # A bottle index pinned by `manifest_sha256` never changes, so keep the ones already
+      # fetched and download only new ones. A new month starts afresh to drop superseded ones.
+      - name: Locate bottle manifests
+        id: bottle-manifests
+        run: |
+          echo "path=$(brew --cache)/downloads/*.bottle_manifest.json" >>"$GITHUB_OUTPUT"
+          echo "key=bottle-manifests-$(date -u +%Y-%m)-" >>"$GITHUB_OUTPUT"
+
+      - name: Restore bottle manifests
+        id: restore-bottle-manifests
+        timeout-minutes: 5
+        continue-on-error: true
+        uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: ${{ steps.bottle-manifests.outputs.path }}
+          key: ${{ steps.bottle-manifests.outputs.key }}
+          restore-keys: ${{ steps.bottle-manifests.outputs.key }}
+
       - run: brew generate-internal-api
+
+      # Runs after a failure too, so the next run does not fetch the same manifests again.
+      - name: Hash bottle manifest names
+        id: hash-bottle-manifests
+        if: always() && steps.bottle-manifests.outcome == 'success'
+        env:
+          KEY: ${{ steps.bottle-manifests.outputs.key }}
+        run: |
+          shopt -s nullglob
+          manifests=("$(brew --cache)"/downloads/*.bottle_manifest.json)
+          if [[ "${#manifests[@]}" -gt 0 ]]; then
+            echo "key=${KEY}$(printf '%s\n' "${manifests[@]##*/}" | shasum -a 256 | cut -d' ' -f1)" >>"$GITHUB_OUTPUT"
+          fi
+
+      - name: Save bottle manifests
+        if: >-
+          always() && github.ref == 'refs/heads/main' && steps.hash-bottle-manifests.outputs.key &&
+          steps.hash-bottle-manifests.outputs.key != steps.restore-bottle-manifests.outputs.cache-matched-key
+        timeout-minutes: 5
+        continue-on-error: true
+        uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: ${{ steps.bottle-manifests.outputs.path }}
+          key: ${{ steps.hash-bottle-manifests.outputs.key }}
 
       - name: Archive data
         run: tar czf data-internal.tar.gz api/internal/packages.*
