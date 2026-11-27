@@ -31,10 +31,12 @@ end
 RSpec.describe "Analytics archive publishing" do
   let(:year) { 2020 }
   let(:branch) { "analytics-history-#{year}" }
-  let(:publishing) do
+  let(:archive_output) { "branch=#{branch}\ntitle=Archive analytics through #{year}\n" }
+  let(:steps) do
     YAML.safe_load_file(File.expand_path("../.github/workflows/analytics-history.yml", __dir__))
-        .fetch("jobs").fetch("archive").fetch("steps").find { |step| step["id"] == "archive" }.fetch("run")
+        .fetch("jobs").fetch("archive").fetch("steps")
   end
+  let(:archive_step) { steps.find { |step| step["id"] == "archive" } }
 
   around do |example|
     Dir.mktmpdir("analytics-archive-") do |directory|
@@ -49,13 +51,13 @@ RSpec.describe "Analytics archive publishing" do
     stdout.strip
   end
 
-  def publish(environment = {})
+  def publish
     Open3.capture3(
       {
         "GITHUB_OUTPUT" => (@root/"output").to_s,
         "PATH"          => "#{@root}/bin:#{ENV.fetch("PATH")}",
-      }.merge(environment),
-      "bash", "-euo", "pipefail", "-c", publishing, chdir: @root
+      },
+      "bash", "-euo", "pipefail", "-c", archive_step.fetch("run"), chdir: @root
     )
   end
 
@@ -73,27 +75,48 @@ RSpec.describe "Analytics archive publishing" do
     (@root/"bin").mkpath
     (@root/"bin/date").write("#!/bin/sh\necho #{year + 1}\n")
     (@root/"bin/date").chmod(0755)
-    (@root/"bin/gh").write(<<~SH)
-      #!/bin/sh
-      if [ "$1 $2" = "pr list" ]; then
-        while [ "$#" -gt 0 ]; do
-          if [ "$1" = "--jq" ]; then
-            echo "$OPEN_PRS" | jq -r "$2"
-            exit
-          fi
-          shift
-        done
-      fi
-    SH
+    (@root/"bin/gh").write("#!/bin/sh\ntest \"$*\" = 'auth setup-git'\n")
     (@root/"bin/gh").chmod(0755)
+  end
+
+  it "proposes an archive using the published branch and title" do
+    proposal = steps.find do |step|
+      step.fetch("uses", "").start_with?("Homebrew/actions/get-or-create-pull-request@")
+    end
+
+    expect(steps.index(proposal)).to be > steps.index(archive_step)
+    expect(proposal.fetch("if")).to eq("env.PUBLISH == 'true' && steps.archive.outputs.branch != ''")
+    expect(proposal.fetch("with")).to include(
+      "head"  => "${{ steps.archive.outputs.branch }}",
+      "base"  => "${{ github.event.repository.default_branch }}",
+      "title" => "${{ steps.archive.outputs.title }}",
+    )
+  end
+
+  it "does not publish a branch when the archive is unchanged" do
+    _stdout, stderr, status = publish
+
+    expect(status).to be_success, stderr
+    expect(git("ls-remote", "--heads", "origin")).to be_empty
+    expect(@root/"output").not_to exist
+  end
+
+  it "publishes a new archive branch and emits its details" do
+    (@root/"analytics/history.json").write(JSON.generate("year" => year))
+
+    _stdout, stderr, status = publish
+
+    expect(status).to be_success, stderr
+    expect(git("--git-dir=remote.git", "rev-parse", "refs/heads/#{branch}")).to eq(git("rev-parse", "HEAD"))
+    expect((@root/"output").read).to eq(archive_output)
   end
 
   [
     "matching contents",
     "different archive contents",
     "unrelated default-branch changes",
-  ].product(["absent", "local", "fork"]).each do |contents, pull_request|
-    it "checks #{contents} with #{pull_request} pull requests" do
+  ].each do |contents|
+    it "checks an existing archive branch with #{contents}" do
       git("switch", "-c", branch)
       (@root/"analytics/history.json").write(JSON.generate(
                                                "year" => (contents == "different archive contents") ? year - 1 : year,
@@ -111,46 +134,17 @@ RSpec.describe "Analytics archive publishing" do
       end
       (@root/"analytics/history.json").write(JSON.generate("year" => year))
 
-      _stdout, stderr, status = publish(
-        "OPEN_PRS" => JSON.generate(
-          if pull_request == "absent"
-            []
-          else
-            [{ "number" => 123, "isCrossRepository" => pull_request == "fork" }]
-          end,
-        ),
-      )
+      _stdout, stderr, status = publish
 
       expect(git("--git-dir=remote.git", "rev-parse", "refs/heads/#{branch}")).to eq(previous)
       if contents == "different archive contents"
         expect(status).not_to be_success
         expect(stderr).to include("different contents")
+        expect(@root/"output").not_to exist
       else
         expect(status).to be_success, stderr
+        expect((@root/"output").read).to eq(archive_output)
       end
-      if contents != "different archive contents" && pull_request != "local"
-        expect((@root/"output").read).to include("branch=#{branch}\n")
-      else
-        expect(@root/"output").not_to exist
-      end
-    end
-  end
-
-  ["", "123"].each do |output|
-    it "fails when PR lookup returns #{output.inspect} and exits with an error" do
-      (@root/"analytics/history.json").write(JSON.generate("year" => year))
-      (@root/"bin/gh").write(<<~SH)
-        #!/bin/sh
-        if [ "$1 $2" = "pr list" ]; then
-          printf '%s' '#{output}'
-          exit 42
-        fi
-      SH
-
-      _stdout, stderr, status = publish
-
-      expect(status.exitstatus).to eq(42), stderr
-      expect(@root/"output").not_to exist
     end
   end
 end

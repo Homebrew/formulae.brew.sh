@@ -143,17 +143,13 @@ jobs:
           else
             git push origin "HEAD:refs/heads/${branch}"
           fi
-          pull_requests="$(gh pr list --head "$branch" --state open --json number,isCrossRepository --jq '.[] | select(.isCrossRepository | not) | .number')"
-          if [[ -n "$pull_requests" ]]; then
-            echo "An archive pull request is already open for ${year}."
-            exit 0
-          fi
           echo "branch=$branch" >> "$GITHUB_OUTPUT"
           echo "title=$title" >> "$GITHUB_OUTPUT"
 
       - name: Propose completed-year archive
         if: env.PUBLISH == 'true' && steps.archive.outputs.branch != ''
-        uses: Homebrew/actions/create-pull-request@61b401267256bb9c047d6d1481b176d5772a0ba7 # 2026.11.23.1
+        # TODO: Pin a released Homebrew/actions commit and add its version tag.
+        uses: Homebrew/actions/get-or-create-pull-request@b4c226ae32acab42c7c2c0745ad224a1e9958022
         with:
           head: ${{ steps.archive.outputs.branch }}
           base: ${{ github.event.repository.default_branch }}
