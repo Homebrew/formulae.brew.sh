@@ -50,7 +50,7 @@ jobs:
       - name: Set up Homebrew
         if: steps.cache.outputs.cache-hit != 'true'
         id: set-up-homebrew
-        uses: Homebrew/actions/setup-homebrew@ceec4e8419bb3c97ce96e9dda7738499ed5f869d # 2026.11.14.1
+        uses: Homebrew/actions/setup-homebrew@61b401267256bb9c047d6d1481b176d5772a0ba7 # 2026.11.23.1
         with:
           core: false
           cask: false
@@ -58,7 +58,7 @@ jobs:
 
       - name: Set up Ruby
         if: steps.cache.outputs.cache-hit != 'true'
-        uses: Homebrew/actions/setup-ruby@ceec4e8419bb3c97ce96e9dda7738499ed5f869d # 2026.11.14.1
+        uses: Homebrew/actions/setup-ruby@61b401267256bb9c047d6d1481b176d5772a0ba7 # 2026.11.23.1
         with:
           bundler-cache: true
           portable-ruby: true
@@ -76,7 +76,7 @@ jobs:
 
       - name: Set up uv
         if: steps.cache.outputs.cache-hit != 'true'
-        uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2 # v10.3.3
+        uses: astral-sh/setup-uv@1db35dd8eee11c5894872e0b383ae6c406cf738d # v10.4.0
         with:
           working-directory: ${{ steps.formula-analytics.outputs.directory }}
           cache-local-path: ${{ steps.formula-analytics.outputs.uv-cache-directory }}
